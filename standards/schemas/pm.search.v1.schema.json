@@ -1,0 +1,393 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pm.search.v1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "pm.search.v1"
+    },
+    "pm_id": {
+      "type": "string",
+      "pattern": "^PM-[0-9]{3}\\.[1-9][0-9]*$"
+    },
+    "canonical_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "questions_answered": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string",
+            "minLength": 1
+          },
+          "answer_anchor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "hypotheses": {
+            "type": "string",
+            "minLength": 1
+          },
+          "basis": {
+            "type": "string",
+            "enum": [
+              "stated",
+              "inferred"
+            ]
+          },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "PENDING",
+              "SUPPORTED",
+              "REJECTED"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/evidence"
+            },
+            "minItems": 1,
+            "maxItems": 4
+          }
+        },
+        "required": [
+          "question",
+          "answer_anchor",
+          "hypotheses",
+          "basis",
+          "verification",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 8
+    },
+    "engineering_tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "task": {
+            "type": "string",
+            "minLength": 1
+          },
+          "input": {
+            "type": "string",
+            "minLength": 1
+          },
+          "output": {
+            "type": "string",
+            "minLength": 1
+          },
+          "hypotheses": {
+            "type": "string",
+            "minLength": 1
+          },
+          "contract_anchor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "eng_class": {
+            "type": "string",
+            "enum": [
+              "ALGO",
+              "CRYPTO",
+              "GRAPH-NET",
+              "NUMERIC",
+              "OPTIM",
+              "PROB-SIM",
+              "GEOM-GFX",
+              "SIGNAL",
+              "PHYS-SIM",
+              "ML",
+              "VERIF",
+              "FOUNDATIONAL"
+            ]
+          },
+          "maturity": {
+            "type": "string",
+            "enum": [
+              "implementable",
+              "adaptable",
+              "inspirational"
+            ]
+          },
+          "basis": {
+            "type": "string",
+            "enum": [
+              "stated",
+              "inferred"
+            ]
+          },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "PENDING",
+              "SUPPORTED",
+              "REJECTED"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/evidence"
+            },
+            "minItems": 1,
+            "maxItems": 4
+          }
+        },
+        "required": [
+          "task",
+          "input",
+          "output",
+          "hypotheses",
+          "contract_anchor",
+          "eng_class",
+          "maturity",
+          "basis",
+          "verification",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 8
+    },
+    "synonyms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "term": {
+            "type": "string",
+            "minLength": 1
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "maxItems": 4
+          },
+          "scope_anchor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/evidence"
+            },
+            "minItems": 1,
+            "maxItems": 4
+          }
+        },
+        "required": [
+          "term",
+          "aliases",
+          "scope_anchor",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 12
+    },
+    "prerequisite_chains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "concept": {
+            "type": "string",
+            "minLength": 1
+          },
+          "requires_concepts": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "maxItems": 8
+          },
+          "supporting_pm_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "maxItems": 8
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/evidence"
+            },
+            "minItems": 1,
+            "maxItems": 4
+          }
+        },
+        "required": [
+          "concept",
+          "requires_concepts",
+          "supporting_pm_ids",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 8
+    },
+    "related_papers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "pm_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "relation": {
+            "type": "string",
+            "enum": [
+              "same_family",
+              "supersedes",
+              "uses_result",
+              "same_problem",
+              "contrasts_regime"
+            ]
+          },
+          "explanation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "basis": {
+            "type": "string",
+            "enum": [
+              "stated",
+              "inferred"
+            ]
+          },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "PENDING",
+              "SUPPORTED",
+              "REJECTED"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/evidence"
+            },
+            "minItems": 1,
+            "maxItems": 4
+          }
+        },
+        "required": [
+          "pm_id",
+          "relation",
+          "explanation",
+          "basis",
+          "verification",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 8
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/evidence"
+            },
+            "minItems": 1,
+            "maxItems": 4
+          }
+        },
+        "required": [
+          "query",
+          "reason",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 8
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "maxItems": 24
+    },
+    "retrieval_triggers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "minItems": 6,
+      "maxItems": 12,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schema",
+    "pm_id",
+    "canonical_sha256",
+    "questions_answered",
+    "engineering_tasks",
+    "synonyms",
+    "prerequisite_chains",
+    "related_papers",
+    "exclusions",
+    "keywords",
+    "retrieval_triggers"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "anchor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quote_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "anchor",
+        "quote",
+        "quote_sha256"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$comment": "All caps are design TARGETS. SUPPORTED requires an independent verifier receipt; schema validation alone proves no semantic claim. Empty arrays preserve absence."
+}

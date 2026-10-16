@@ -1,0 +1,840 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 735727,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 208986
+ },
+ "coordinate": "EN-117-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-M-0563",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-main-mixed",
+     "quote": "Under the hypotheses of Theorem <a href=\"#main:theorem\" data-reference-type=\"ref\" data-reference=\"main:theorem\">1</a>, the same lower bound holds for every sequence of density operators supported on the bosonic ground eigenspaces.",
+     "quote_sha256": "67c55969a331f38c5f91e93feb50ffd50cc7748d29e5b67a3e58e422c1a9d5b1"
+    }
+   ],
+   "query": "positive-temperature Gibbs-state condensation",
+   "reason": "The occupation theorem concerns ground eigenvectors and density operators supported on the ground eigenspaces."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-main-theorem",
+     "quote": "Fix $a,\\rho>0$ satisfying $\\rho a^3<\\varepsilon_0$.",
+     "quote_sha256": "34c355555b809638c3721e1340b1806390864dbef59d2679f4df6dd764b65632"
+    }
+   ],
+   "query": "condensation without a dilution hypothesis",
+   "reason": "The physical gas parameter must lie below the theorem's sufficiently small absolute threshold."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "main:theorem",
+     "quote": "We prove a positive fraction; we do not estimate the optimal depletion or show that the fraction tends to one as $\\rho a^3$ tends to zero.",
+     "quote_sha256": "db220d3229acef9b3323f52e5a70516545b737ae2770e107bd9aa101dfc7d693"
+    }
+   ],
+   "query": "optimal depletion or complete condensation",
+   "reason": "The source explicitly proves a positive fraction without an optimal depletion estimate or a limit of full occupation."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-bridge-midpoint-quantifier",
+     "quote": "An estimate uniform in a prescribed midpoint is false: if $u=c(t)$, the trial collides at time $t$.",
+     "quote_sha256": "c9bb8e8aae5cf2c906f04d024ff6e01546478278578c4e0288d41af42f4f892b"
+    }
+   ],
+   "query": "collision estimate uniform in a fixed midpoint",
+   "reason": "A midpoint coinciding with the obstacle at the middle time forces a collision; the midpoint must be averaged."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "lat:moment-reduction",
+     "quote": "The event retains its original mass; there is no renormalization by conditioning on acceptance and no assertion of a bound for each fixed environment.",
+     "quote_sha256": "7cbc472a839522b64257b7b3d94c079f53929830669410644f28457d8bfebb9b"
+    }
+   ],
+   "query": "quenched encounter bound for every environment",
+   "reason": "The encounter moment averages a common retained environment and independent routes, and is not asserted for each fixed environment."
+  }
+ ],
+ "family": "PM-267",
+ "id": "PM-267.5",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-main-theorem",
+    "claim_id": "claim-fixed-parameter-condensation",
+    "statement": "Fix $a,\\rho>0$ satisfying $\\rho a^3<\\varepsilon_0$."
+   },
+   {
+    "anchor": "stmt-main-mixed",
+    "claim_id": "claim-ground-space-mixtures",
+    "statement": "Under the hypotheses of Theorem <a href=\"#main:theorem\" data-reference-type=\"ref\" data-reference=\"main:theorem\">1</a>,"
+   },
+   {
+    "anchor": "stmt-setup-ground",
+    "claim_id": "claim-ground-component-phases",
+    "statement": "For every integer $n\\ge1$ with nonempty $\\Omega_n$,"
+   },
+   {
+    "anchor": "stmt-setup-slices",
+    "claim_id": "claim-allowed-sobolev-slices",
+    "statement": "a function $f\\in H_0^1(\\Omega_N)$"
+   },
+   {
+    "anchor": "stmt-setup-phase-transfer",
+    "claim_id": "claim-phase-transfer-loss",
+    "statement": "Let $\\{(x,Y):x\\in U_Y\\}$ be measurable."
+   },
+   {
+    "anchor": "stmt-setup-phase-transfer",
+    "claim_id": "claim-phase-transfer-loss",
+    "statement": "Suppose that for almost every bath with $m(Y)>0$, the set $U_Y$ is contained in one connected component of $S_Y$, or is empty."
+   },
+   {
+    "anchor": "stmt-sp-cube",
+    "claim_id": "claim-cube-kinetic-coercivity",
+    "statement": "Let $Q$ be a Euclidean cube of side $l$, and let $F\\in H^1(Q^n)$ vanish almost everywhere whenever $|x_i-x_j|\\le r$ for some $i\\ne j$."
+   },
+   {
+    "anchor": "stmt-sp-cube",
+    "claim_id": "claim-cube-kinetic-coercivity",
+    "statement": "For $D\\ge2$"
+   },
+   {
+    "anchor": "stmt-sp-close-energy",
+    "claim_id": "claim-close-neighbor-coercivity",
+    "statement": "Let $0<r<s<1$, let $F\\in H_0^1(\\Omega_N)$, and fix a label set $I\\subset\\{1,\\ldots,N\\}$."
+   },
+   {
+    "anchor": "stmt-sp-insertion",
+    "claim_id": "claim-normalized-particle-insertion",
+    "statement": "Let $w$ be a real normalized smooth one-particle orbital and $F$ an $n$-particle form function."
+   },
+   {
+    "anchor": "stmt-sp-insertion",
+    "claim_id": "claim-normalized-particle-insertion",
+    "statement": "For every configuration $X$ in the support of $F$, suppose at most $k$ old positions lie within distance $2r$ of $\\mathop{\\mathrm{supp}}w$."
+   },
+   {
+    "anchor": "stmt-sp-insertion",
+    "claim_id": "claim-normalized-particle-insertion",
+    "statement": "If $$\\label{sp:insertion-smallness}\n C\\lVert w\\rVert_\\infty^2kr^3\\le\\frac14,$$"
+   },
+   {
+    "anchor": "stmt-sp-removal",
+    "claim_id": "claim-removal-energy-and-monotonicity",
+    "statement": "For all sufficiently large $D$, uniformly in the stated $\\alpha$ window,"
+   },
+   {
+    "anchor": "stmt-sp-low-counts",
+    "claim_id": "claim-joint-deficient-cell-tail",
+    "statement": "all sufficiently large $D$,"
+   },
+   {
+    "anchor": "sp:separation-scale",
+    "claim_id": "claim-weighted-local-energy-penalty",
+    "statement": "The parameter $b$ will be fixed small below. We use $D$ large enough that $r<s_0<1/2$."
+   },
+   {
+    "anchor": "stmt-sp-joint-tails",
+    "claim_id": "claim-joint-spatial-moments-and-tails",
+    "statement": "Fix any $\\theta>0$."
+   },
+   {
+    "anchor": "stmt-sp-joint-tails",
+    "claim_id": "claim-joint-spatial-moments-and-tails",
+    "statement": "Here $Q$ is an absolute integer; $D$ is taken large enough that the displayed base is at most one."
+   },
+   {
+    "anchor": "path:law",
+    "claim_id": "claim-stationary-killed-path-law",
+    "statement": "Let $\\nu_N$ be the measure on $N$ independent torus Brownian motions of generator $\\Delta$, on $[0,2t]$, with Lebesgue initial measure."
+   },
+   {
+    "anchor": "stmt-path-deletion",
+    "claim_id": "claim-selected-path-deletion",
+    "statement": "Let $I\\subset\\{1,\\ldots,N\\}$ have cardinality $m$."
+   },
+   {
+    "anchor": "stmt-path-deletion",
+    "claim_id": "claim-selected-path-deletion",
+    "statement": "If $h$ is a nonnegative measurable single-path functional invariant under reversal,"
+   },
+   {
+    "anchor": "stmt-path-regularity",
+    "claim_id": "claim-free-path-regularity",
+    "statement": "For every fixed $q>0$ and fixed $t>0$,"
+   },
+   {
+    "anchor": "stmt-path-regularity",
+    "claim_id": "claim-free-path-regularity",
+    "statement": "If all three prescribed points lie within distance $3$ of a fixed site $v$,"
+   },
+   {
+    "anchor": "pm-h-22",
+    "claim_id": "claim-free-visit-exponential-moment",
+    "statement": "Let $\\mathcal D$ be a reversal-invariant single-path event and put $\\varepsilon_{\\mathcal D}=\\sup_y\\mathbb P^y_{\\rm free}(\\mathcal D)$."
+   },
+   {
+    "anchor": "stmt-path-visit-moments",
+    "claim_id": "claim-interacting-visit-moment",
+    "statement": "If $e^{Ct\\alpha}\\zeta\\le1$,"
+   },
+   {
+    "anchor": "stmt-path-certificates",
+    "claim_id": "claim-joint-certificate-supply",
+    "statement": "Fix any $p_1>0$."
+   },
+   {
+    "anchor": "stmt-bridge-gaussian-packing",
+    "claim_id": "claim-averaged-bridge-gaussian-density",
+    "statement": "Let $y_1,\\ldots,y_m\\in\\mathbb R^3$ have pairwise distances at least $s_0$, where $m\\ge\\ell D/2$ and $s_0=bD^{-1/3}$."
+   },
+   {
+    "anchor": "stmt-bridge-gaussian-packing",
+    "claim_id": "claim-averaged-bridge-gaussian-density",
+    "statement": "Fix $u\\in\\mathbb R^3$ and $0<s\\le t/2$."
+   },
+   {
+    "anchor": "stmt-bridge-averaged-hit",
+    "claim_id": "claim-averaged-obstacle-collision",
+    "statement": "Fix $m\\ge\\ell D/2$ pairs $(y_i,z_i)$ with $y_i\\in B_v$ and $|z_i-v|\\le3$."
+   },
+   {
+    "anchor": "stmt-bridge-averaged-hit",
+    "claim_id": "claim-averaged-obstacle-collision",
+    "statement": "Assume that each of the two endpoint lists is $s_0$-separated."
+   },
+   {
+    "anchor": "stmt-bridge-averaged-hit",
+    "claim_id": "claim-averaged-obstacle-collision",
+    "statement": "Let $c$ be a deterministic regular torus path whose outer endpoints are at distance greater than $s_0$ from the corresponding endpoints of every label under consideration."
+   },
+   {
+    "anchor": "stmt-bridge-single-hit",
+    "claim_id": "claim-single-replacement-collision",
+    "statement": "Let $y\\in B_v$, $|z-v|\\le3$, and let $c$ be a deterministic regular path satisfying $d(y,c(0))>s_0$ and $d(z,c(2t))>s_0$."
+   },
+   {
+    "anchor": "stmt-bridge-success-supply",
+    "claim_id": "claim-successful-label-target-supply",
+    "statement": "Consider a collection of deterministic torus paths with endpoints $(y_j,z_j)$, and fix a cell $v$."
+   },
+   {
+    "anchor": "stmt-bridge-success-supply",
+    "claim_id": "claim-successful-label-target-supply",
+    "statement": "Suppose that at most $H_1D$ of these paths visit the ball of radius $12$ about $v$, and that every visiting path is regular."
+   },
+   {
+    "anchor": "stmt-bridge-success-supply",
+    "claim_id": "claim-successful-label-target-supply",
+    "statement": "Suppose a list of $m\\ge\\ell D/2$ labels satisfies $y_i\\in B_v$, $|z_i-v|\\le3$, and that both endpoints of every listed label are at distance greater than $s_0$ from every other endpoint in the corresponding full configuration.*\n\n*Call a trial for label $i$ successful if it satisfies $\\mathcal C_v$ and avoids every obstacle path except the original path of $i$."
+   },
+   {
+    "anchor": "stmt-group-certified-labels",
+    "claim_id": "claim-certified-cell-eligible-labels",
+    "statement": "At a cell with a certificate"
+   },
+   {
+    "anchor": "stmt-group-certified-labels",
+    "claim_id": "claim-certified-cell-eligible-labels",
+    "statement": "After $t$ has been chosen sufficiently small and $D$ sufficiently large,"
+   },
+   {
+    "anchor": "pm-h-33",
+    "claim_id": "claim-exact-unexposed-conditional-law",
+    "statement": "No certificate event is included in this datum."
+   },
+   {
+    "anchor": "stmt-group-supply",
+    "claim_id": "claim-unconditional-good-cell-supply",
+    "statement": "for sufficiently large $D$ and $K$,"
+   },
+   {
+    "anchor": "pm-h-35",
+    "claim_id": "claim-one-path-density-and-compatibility",
+    "statement": "Let $i$ be accessible, let $B_w$ be a target cell, and let $U\\subset T_i(w)$ be a measurable set of volume at least $0.98$."
+   },
+   {
+    "anchor": "stmt-lat-paths",
+    "claim_id": "claim-good-routes-annealed-encounters",
+    "statement": "Fix an integer $R\\ge1$."
+   },
+   {
+    "anchor": "stmt-lat-paths",
+    "claim_id": "claim-good-routes-annealed-encounters",
+    "statement": "Suppose $K\\ge K_0$ and <a href=\"#lat:bad-law\" data-reference-type=\"eqref\" data-reference=\"lat:bad-law\">[lat:bad-law]</a> holds with $p\\le p_0$."
+   },
+   {
+    "anchor": "pm-h-38",
+    "claim_id": "claim-connected-good-exterior-shell",
+    "statement": "For a finite $*$-connected nonempty set $C\\subset\\mathbb Z^3$, let $\\operatorname{fill}(C)$ consist of $C$ and all finite nearest-neighbor components of $\\mathbb Z^3\\setminus C$."
+   },
+   {
+    "anchor": "stmt-lat-boundary",
+    "claim_id": "claim-connected-good-exterior-shell",
+    "statement": "If $C$ is a $*$-component of a larger bad set,"
+   },
+   {
+    "anchor": "stmt-lat-small-lifts",
+    "claim_id": "claim-small-periodic-component-lifts",
+    "statement": "Suppose $K>2a$, and a range-$a$ component on $\\mathcal L_K$ has $m$ vertices with $am<K$."
+   },
+   {
+    "anchor": "stmt-cmp-holder",
+    "claim_id": "claim-common-measure-affinity-bound",
+    "statement": "Let $P,Q$ be finite nonnegative measures and let $\\nu$ be a finite measure of mass $m>0$, absolutely continuous with respect to both."
+   },
+   {
+    "anchor": "stmt-cmp-holder",
+    "claim_id": "claim-common-measure-affinity-bound",
+    "statement": "If $$\\int\\left(\\frac{\\,\\mathrm d\\nu}{\\,\\mathrm dP}\\right)^2\\,\\mathrm dP\\le C_P,\n \\qquad\n \\int\\left(\\frac{\\,\\mathrm d\\nu}{\\,\\mathrm dQ}\\right)^2\\,\\mathrm dQ\\le C_Q,$$"
+   },
+   {
+    "anchor": "pm-h-43",
+    "claim_id": "claim-disjoint-tag-group-normalization",
+    "statement": "For every sampled path configuration, group label sets are disjoint."
+   },
+   {
+    "anchor": "stmt-cmp-cancellation",
+    "claim_id": "claim-conditional-normalizer-cancellation",
+    "statement": "Consider two changes $S,T$ of the preceding kind, with $G\\ge1$, and put $U=S\\cup T$."
+   },
+   {
+    "anchor": "stmt-cmp-cancellation",
+    "claim_id": "claim-conditional-normalizer-cancellation",
+    "statement": "There is $\\chi\\in[0,1)$ such that inserting any coordinate of $U$ from its reference $P_i$, or any factor of either proposal from its $\\Pi_{S,i}$ or $\\Pi_{T,i}$, satisfies all checks incident to that insertion with probability at least $1-\\chi$."
+   },
+   {
+    "anchor": "stmt-cmp-cancellation",
+    "claim_id": "claim-conditional-normalizer-cancellation",
+    "statement": "There are decompositions $S=C_S\\sqcup F_S$ and $T=C_T\\sqcup F_T$, with $F_S\\cap T=F_T\\cap S=\\varnothing$."
+   },
+   {
+    "anchor": "stmt-cmp-cancellation",
+    "claim_id": "claim-conditional-normalizer-cancellation",
+    "statement": "No coordinate carried by an $F_S$ factor has a check with any coordinate carried by a $T$ factor, or with the original primary coordinates indexed by $T$; the corresponding assertion holds with $S,T$ interchanged."
+   },
+   {
+    "anchor": "stmt-cmp-cancellation",
+    "claim_id": "claim-conditional-normalizer-cancellation",
+    "statement": "The reference coordinates in $F_S,F_T$ also have no mutual checks."
+   },
+   {
+    "anchor": "stmt-cmp-modulus",
+    "claim_id": "claim-uniform-modulus-occupation",
+    "statement": "After the fixed choices above,"
+   },
+   {
+    "anchor": "stmt-cmp-modulus",
+    "claim_id": "claim-uniform-modulus-occupation",
+    "statement": "whenever $D\\ge D_0$, $\\alpha=Dr\\in[\\alpha_0/2,2\\alpha_0]$, and $K$ is sufficiently large,"
+   },
+   {
+    "anchor": "pm-h-49",
+    "claim_id": "claim-retained-slice-connectivity",
+    "statement": "If the lifted bad set has an infinite component, define $\\mathcal A(Y)=\\Lambda_K$."
+   },
+   {
+    "anchor": "stmt-geom-small-fills",
+    "claim_id": "claim-small-fill-volume",
+    "statement": "For $K>10$ and $r\\le1$,"
+   },
+   {
+    "anchor": "stmt-geom-large-witnesses",
+    "claim_id": "claim-large-component-close-witnesses",
+    "statement": "for $r\\le r_1$ and $K>10$."
+   },
+   {
+    "anchor": "stmt-geom-large-witnesses",
+    "claim_id": "claim-large-component-close-witnesses",
+    "statement": "If a unit cell $B_v$ contains a microcube from a large bad component,"
+   },
+   {
+    "anchor": "stmt-geom-omitted-volume",
+    "claim_id": "claim-bath-averaged-omitted-volume",
+    "statement": "Fix the constants as above and take $D$ sufficiently large."
+   },
+   {
+    "anchor": "stmt-geom-omitted-volume",
+    "claim_id": "claim-bath-averaged-omitted-volume",
+    "statement": "for $K\\ge100$ and $C_{\\rm an}p_D\\le1/2$,"
+   },
+   {
+    "anchor": "stmt-main-scaled",
+    "claim_id": "claim-scaled-complex-ground-occupation",
+    "statement": "for $D=N/K^3\\ge D_*$ and $r=\\alpha/D$ with $\\alpha\\in[\\alpha_0/2,2\\alpha_0]$,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Complex ground-state condensation",
+    "evidence": [
+     {
+      "anchor": "pm-h-8",
+      "quote": "Equality of the kinetic energies of $\\Psi$ and $\\Phi$ forces a constant phase on each connected component of the allowed configuration set.",
+      "quote_sha256": "3d921b7f8da47b6c740f416e8e5fdd639303dca816ef51d007f5493b755cffc0"
+     },
+     {
+      "anchor": "pm-h-8",
+      "quote": "We first fix the positive modulus fraction and only then strengthen the dilution threshold to make this phase loss smaller.",
+      "quote_sha256": "a761632814cdecec8d6cba43756204d26def5317e5febfa8fad8188ec648ed93"
+     }
+    ],
+    "requires_concepts": [
+     "Hard-sphere Dirichlet form",
+     "Componentwise ground-state phases",
+     "Allowed coordinate slices",
+     "Modulus occupation",
+     "Bath-averaged omitted volume"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Good-route annealed encounter bound",
+    "evidence": [
+     {
+      "anchor": "lat:imported-soft",
+      "quote": "The law and these two bounds are the sole companion input; no interaction, density, temperature, or many-body measure occurs in their hypotheses.",
+      "quote_sha256": "2fd0b55ac20e2bea4a03999a1cf98481596671b6dfad93fa589f31ea64a74f93"
+     },
+     {
+      "anchor": "lat:moment-reduction",
+      "quote": "Both path draws use one common datum and independent skeleton seeds.",
+      "quote_sha256": "8d81f243ab147b2da77a7012ba03516b4774fb3e194f94cb79f4264b82189e57"
+     }
+    ],
+    "requires_concepts": [
+     "Random lattice skeleton",
+     "Hard encounter moment",
+     "Soft-distance encounter moment",
+     "Joint bad-set probabilities",
+     "Exterior-shell detours"
+    ],
+    "supporting_pm_ids": [
+     "PM-267.4"
+    ]
+   },
+   {
+    "concept": "Likelihood cancellation for trajectory replacements",
+    "evidence": [
+     {
+      "anchor": "pm-h-45",
+      "quote": "Thus deleting a factor is not the same operation as deleting all instances of one particle label.",
+      "quote_sha256": "ef1ab7f25296a3ac9cffc2a23a6c891d1a467ad40172d06a4cd75315ae2eec81"
+     },
+     {
+      "anchor": "cmp:factor-density",
+      "quote": "When some factors are removed, remove their coordinates and all checks incident to them.",
+      "quote_sha256": "d111ecab08512eebb5073c4f6185d7d4a5c588a7fe962b589958aa8ec238abf8"
+     }
+    ],
+    "requires_concepts": [
+     "Exact conditioned-product law",
+     "Primary and auxiliary coordinates",
+     "Uniform deterministic compatibility",
+     "Deletion of incident checks",
+     "Noninteracting far factors"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-fixed-parameter-condensation",
+   "exact_statement": "There are absolute constants $\\varepsilon_0,c_0>0$ with the following property. Fix $a,\\rho>0$ satisfying $\\rho a^3<\\varepsilon_0$. For every sequence of particle numbers $N_k$ and lengths $L_k$ such that $$N_k\\longrightarrow\\infty,\\qquad L_k\\longrightarrow\\infty,\n \\qquad \\frac{N_k}{L_k^3}\\longrightarrow\\rho,$$ and every choice of normalized, possibly complex, bosonic ground eigenvectors $\\Psi_k$ of the hard-sphere Hamiltonians, $$\\label{main:limit}\n \\liminf_{k\\to\\infty} B(\\Psi_k)\\ge c_0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-main-theorem"
+  },
+  {
+   "claim_id": "claim-ground-space-mixtures",
+   "exact_statement": "Under the hypotheses of Theorem <a href=\"#main:theorem\" data-reference-type=\"ref\" data-reference=\"main:theorem\">1</a>, the same lower bound holds for every sequence of density operators supported on the bosonic ground eigenspaces. In particular, it holds for the normalized ground-space projections $\\Pi_k/\\mathop{\\mathrm{Tr}}\\Pi_k$, and for every sequence of normalized nonnegative ground functions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-main-mixed"
+  },
+  {
+   "claim_id": "claim-ground-component-phases",
+   "exact_statement": "For every integer $n\\ge1$ with nonempty $\\Omega_n$, the full and bosonic Dirichlet operators have compact resolvent and the same bottom energy $E_n$. In particular, both $\\Psi$ and $\\Phi=|\\Psi|$ are full ground eigenfunctions at energy $E_N$. They have smooth representatives in $\\Omega_N$. On every connected component $C$ of $\\Omega_N$, either both vanish identically or $$\\Phi>0,\\qquad \\Psi=e^{i\\vartheta_C}\\Phi$$ for one constant $\\vartheta_C\\in\\mathbb R$. For every real bounded Lipschitz function $u$ on $\\Lambda_K^N$, $$\\label{setup:multiplier}\n q_N[u\\Phi]-E_N\\lVert u\\Phi\\rVert_2^2\n                 =\\int\\Phi^2|\\nabla u|^2.$$ The gradient on the right includes all particle coordinates.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-setup-ground"
+  },
+  {
+   "claim_id": "claim-allowed-sobolev-slices",
+   "exact_statement": "For almost every fixed bath $Y$, a function $f\\in H_0^1(\\Omega_N)$ restricts to an element of $H_0^1(S_Y)$, where $$S_Y=\\{x\\in\\Lambda_K:(x,Y)\\in\\Omega_N\\}.$$ The same assertion holds when any nonempty subset of coordinates is left unfixed. For the smooth ground representatives, every connected subset of $S_Y$ has one common phase on its nonzero points, or the wave function vanishes throughout it.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-setup-slices"
+  },
+  {
+   "claim_id": "claim-phase-transfer-loss",
+   "exact_statement": "Let $\\{(x,Y):x\\in U_Y\\}$ be measurable. Suppose that for almost every bath with $m(Y)>0$, the set $U_Y$ is contained in one connected component of $S_Y$, or is empty. Define $$A_Y=\\Lambda_K\\setminus U_Y,\\qquad\n \\delta_{\\rm geom}=\\int m(Y)\\frac{|A_Y|}{V}\\,\\,\\mathrm dY.$$ Then $$\\label{setup:phase-loss}\n B(\\Psi)\\ge B(\\Phi)-4\\sqrt{\\delta_{\\rm geom}}.$$ In particular, if $B(\\Phi)\\ge c_*>0$ and $\\delta_{\\rm geom}\\le c_*^2/64$, then $B(\\Psi)\\ge c_*/2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-setup-phase-transfer"
+  },
+  {
+   "claim_id": "claim-cube-kinetic-coercivity",
+   "exact_statement": "Let $Q$ be a Euclidean cube of side $l$, and let $F\\in H^1(Q^n)$ vanish almost everywhere whenever $|x_i-x_j|\\le r$ for some $i\\ne j$. With no boundary condition on the outer faces, $$\\label{sp:cube-bound}\n \\sum_{i=1}^n\\int_{Q^n}|\\nabla_iF|^2\n \\ge c_{\\rm cube}\\frac r{l^3}n(n-1)\\int_{Q^n}|F|^2,\n \\qquad c_{\\rm cube}=\\frac1{64\\sqrt3}.$$ Consequently, for every torus form function $F\\in H_0^1(\\Omega_N)$ and every fixed label subset $I\\subset\\{1,\\ldots,N\\}$, $$\\label{sp:cell-energy}\n q_I[F]\\ge c_{\\rm cube}r\\int\\sum_{v\\in\\mathcal L}\n                    n_v^I(n_v^I-1)|F|^2.$$ For $D\\ge2$ this implies $$\\label{sp:energy-lower}\n \\frac{E_N}{N}\\ge c_E\\alpha,\n \\qquad c_E=c_{\\rm cube}/2.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-sp-cube"
+  },
+  {
+   "claim_id": "claim-close-neighbor-coercivity",
+   "exact_statement": "Let $0<r<s<1$, let $F\\in H_0^1(\\Omega_N)$, and fix a label set $I\\subset\\{1,\\ldots,N\\}$. Define $d_i^I=\\min_{j\\in I\\setminus\\{i\\}}d(x_i,x_j)$, with value $+\\infty$ when the minimizing set is empty. Then $$\\label{sp:close-energy-bound}\n q_I[F]\\ge c_{\\rm near}\\,rs^{-3}\n        \\int\\#\\{i\\in I:d_i^I\\le2s\\}|F|^2,\n \\qquad c_{\\rm near}=\\frac{27}{262144\\sqrt3}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-sp-close-energy"
+  },
+  {
+   "claim_id": "claim-normalized-particle-insertion",
+   "exact_statement": "Let $w$ be a real normalized smooth one-particle orbital and $F$ an $n$-particle form function. For every configuration $X$ in the support of $F$, suppose at most $k$ old positions lie within distance $2r$ of $\\mathop{\\mathrm{supp}}w$. If $$\\label{sp:insertion-smallness}\n C\\lVert w\\rVert_\\infty^2kr^3\\le\\frac14,$$ there is an admissible function $\\widetilde F$ with one more coordinate, having the same norm as $F$, such that $$\\label{sp:insertion-cost}\n q_{n+1}[\\widetilde F]\\le q_n[F]\n       +C\\left(\\lVert\\nabla w\\rVert_2^2+\\lVert w\\rVert_\\infty^2kr\\right)\\lVert F\\rVert_2^2.$$ The constants depend only on a fixed radial cutoff profile.",
+   "kind": "construction",
+   "statement_anchor": "stmt-sp-insertion"
+  },
+  {
+   "claim_id": "claim-removal-energy-and-monotonicity",
+   "exact_statement": "For all sufficiently large $D$, uniformly in the stated $\\alpha$ window, $$\\label{sp:removal-bound}\n E_N-E_{N-m}\\le C\\alpha m\\qquad(0\\le m\\le N).$$ Moreover $E_n/n$ is nondecreasing among positive particle numbers with nonempty form domain, at fixed $K,r$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-sp-removal"
+  },
+  {
+   "claim_id": "claim-joint-deficient-cell-tail",
+   "exact_statement": "One can fix $\\alpha_0$ sufficiently large and then $\\ell>0$ sufficiently small so that, for every $A\\subset\\mathcal L$ and all sufficiently large $D$, $$\\label{sp:low-count-bound}\n \\mu\\{n_v<\\ell D\\text{ for every }v\\in A\\}\n       \\le (C/D^2)^{|A|}.$$ These choices and the constant $C$ are independent of $K$ and of the ground function.",
+   "kind": "bound",
+   "statement_anchor": "stmt-sp-low-counts"
+  },
+  {
+   "claim_id": "claim-weighted-local-energy-penalty",
+   "exact_statement": "There are constants $C,c>0$, independent of $b$, such that every $N$-particle form function $F$ satisfies $$\\label{sp:localized-form-bound}\n q_N[F]-E_N\\lVert F\\rVert_2^2\n   \\ge\\alpha\\int\\bigl(f_A-CD|A|+cb^{-3}k_A\\bigr)|F|^2.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-sp-localized-form"
+  },
+  {
+   "claim_id": "claim-joint-spatial-moments-and-tails",
+   "exact_statement": "For every $A\\subset\\mathcal L$, $$\\label{sp:count-mgf}\n \\log\\int e^{zf_A}\\,\\mathrm d\\mu\\le CzD|A|\\qquad(0\\le z\\le1),$$ where $f_\\varnothing=0$. Fix any $\\theta>0$. One can choose $b>0$ sufficiently small depending on $\\theta$, then take $D$ sufficiently large, so that the random site set $$\\label{sp:close-bad-set}\n \\mathcal Q(X)=\\left\\{v\\in\\mathcal L:\n       \\#\\{i:d(x_i,v)\\le5,\\ d_i\\le s_0\\}\\ge\\theta D\\right\\}$$ satisfies $$\\label{sp:close-tail}\n \\mu\\{A\\subset\\mathcal Q\\}\\le p_D^{|A|},\\qquad\n p_D=\\left(C_{\\theta}b^{-2}D^{-4/3}\\right)^{1/Q}\\longrightarrow0.$$ Here $Q$ is an absolute integer; $D$ is taken large enough that the displayed base is at most one. All statements are uniform for $\\alpha\\in[\\alpha_0/2,2\\alpha_0]$, $K\\ge100$, and the ground function.",
+   "kind": "bound",
+   "statement_anchor": "stmt-sp-joint-tails"
+  },
+  {
+   "claim_id": "claim-stationary-killed-path-law",
+   "exact_statement": "Equation <a href=\"#path:law\" data-reference-type=\"eqref\" data-reference=\"path:law\">[path:law]</a> defines a probability measure. Every time marginal is $\\mu$. Its restriction to an interval of length $s$ has the same construction with endpoint multiplier $e^{sE_N}\\Phi(X_-)\\Phi(X_+)$, and it is invariant under time reversal. Given both endpoint configurations, it is the product torus-bridge law conditioned on mutual hard avoidance. If the winding increments are also fixed, the underlying product consists of the corresponding Euclidean bridges.",
+   "kind": "construction",
+   "statement_anchor": "stmt-path-slab"
+  },
+  {
+   "claim_id": "claim-selected-path-deletion",
+   "exact_statement": "Let $I\\subset\\{1,\\ldots,N\\}$ have cardinality $m$. If $h$ is a nonnegative measurable single-path functional invariant under reversal, then $$\\label{path:deletion-bound}\n \\mathbb E_{\\mathcal R}\\prod_{i\\in I}h(\\omega_i)\n \\le e^{Ct\\alpha m}\n       \\int\\mu(\\,\\mathrm dY)\\prod_{i\\in I}\\mathbb E^{Y_i}_{\\rm free}h.$$ The free expectation uses a Brownian path of length $2t$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-path-deletion"
+  },
+  {
+   "claim_id": "claim-free-path-regularity",
+   "exact_statement": "For every fixed $q>0$ and fixed $t>0$, a free Brownian path fails regularity with probability at most $C_{q,t}D^{-q}$. The bound is uniform in its initial point, $K$, and the allowed $\\alpha$-window. It also holds for a Euclidean bridge of duration $2t$ with bounded endpoint displacement, or for two independent Euclidean bridge legs of duration $t$ joined at a prescribed middle point, when the endpoints and middle point lie in a fixed bounded region. The bound and the required lower threshold on $D$ may depend on that region and on $t$; the numerical regularity threshold $C_{\\rm reg}$ is fixed once for all these laws.*\n\n*If all three prescribed points lie within distance $3$ of a fixed site $v$, the probability that the two-leg path leaves the ball of radius $10$ about $v$ is at most $Ce^{-c/t}$, with numerical $c,C>0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-path-regularity"
+  },
+  {
+   "claim_id": "claim-free-visit-exponential-moment",
+   "exact_statement": "For every $\\lambda>0$, $$\\label{path:free-visit-bound}\n \\mathbb E^y_{\\rm free}\\bigl[e^{\\lambda J_A\\mathbf 1_{\\mathcal D}}-1\\bigr]\n \\le \\zeta e^{-d(y,A)},\\qquad\n \\zeta=C_\\lambda\\lambda\\varepsilon_{\\mathcal D}^{1/3}.$$ Here $d(y,A)$ is the distance from $y$ to the set of site centers. The constants $C_\\lambda$ are bounded when $\\lambda$ ranges over a bounded interval.",
+   "kind": "bound",
+   "statement_anchor": "stmt-path-free-visits"
+  },
+  {
+   "claim_id": "claim-interacting-visit-moment",
+   "exact_statement": "If $e^{Ct\\alpha}\\zeta\\le1$, then $$\\label{path:visit-mgf}\n \\mathbb E_{\\mathcal R}\\exp\\left(\\lambda\\sum_i\n             J_A(\\omega_i)\\mathbf 1_{\\mathcal D}(\\omega_i)\\right)\n \\le \\exp\\bigl(Ce^{Ct\\alpha}\\zeta D|A|\\bigr).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-path-visit-moments"
+  },
+  {
+   "claim_id": "claim-joint-certificate-supply",
+   "exact_statement": "Fix any $p_1>0$. One can choose $H_1$ large, then $t>0$ sufficiently small, and then $D_0$ sufficiently large, such that $$\\label{path:certificate-bound}\n \\mathcal R\\{v\\text{ has no certificate for every }v\\in A\\}\n \\le p_1^{|A|}$$ for every set $A$ of distinct sites, every $D\\ge D_0$, and sufficiently large $K$. The bound is uniform over the chosen ground function and the allowed $\\alpha$-window. After $H_1$ is fixed, $t$ may be reduced further before increasing $D_0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-path-certificates"
+  },
+  {
+   "claim_id": "claim-averaged-bridge-gaussian-density",
+   "exact_statement": "Let $y_1,\\ldots,y_m\\in\\mathbb R^3$ have pairwise distances at least $s_0$, where $m\\ge\\ell D/2$ and $s_0=bD^{-1/3}$. Fix $u\\in\\mathbb R^3$ and $0<s\\le t/2$. The average of the time-$s$ densities of duration-$t$ Brownian bridges from $y_i$ to $u$ is bounded everywhere by $$\\label{bridge:packed-density}\n C\\left(1+\\frac{1}{D s^{3/2}}\\right).$$ Here $C$ depends on $b,\\ell$, but not on $t,s,D$ or $u$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-bridge-gaussian-packing"
+  },
+  {
+   "claim_id": "claim-averaged-obstacle-collision",
+   "exact_statement": "Fix $m\\ge\\ell D/2$ pairs $(y_i,z_i)$ with $y_i\\in B_v$ and $|z_i-v|\\le3$. Assume that each of the two endpoint lists is $s_0$-separated. Let $c$ be a deterministic regular torus path whose outer endpoints are at distance greater than $s_0$ from the corresponding endpoints of every label under consideration. Then, for every target cell $B$, $$\\label{bridge:averaged-estimate}\n \\frac1m\\sum_{i=1}^m\n Q_{y_i,z_i}^{B}(\\mathcal C_v\\cap\\mathcal H(c))\n \\le Ctr+C\\frac{rD^{3\\gamma}}{D\\sqrt{h_0}}.$$ The same conclusion holds if $c$ is the original path of one of these labels: omit that label’s summand and retain the divisor $m$, assuming endpoint separation for all the remaining labels. The constant $C$ may depend on $b,\\ell,C_{\\rm reg}$, but is independent of small $t$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-bridge-averaged-hit"
+  },
+  {
+   "claim_id": "claim-single-replacement-collision",
+   "exact_statement": "Let $y\\in B_v$, $|z-v|\\le3$, and let $c$ be a deterministic regular path satisfying $d(y,c(0))>s_0$ and $d(z,c(2t))>s_0$. For either $Q=Q_{y,z}^{B}$, with any target cell $B$, or $Q=Q_{y,z}^{0}$, one has $$\\label{bridge:single-estimate}\n Q(\\mathcal C_v\\cap\\mathcal H(c))\n \\le Ctr+C\\frac{rD^{3\\gamma}}{\\sqrt{h_0}}\n \\le C\\alpha\\bigl(tD^{-1}+D^{-1/4}\\bigr).$$ Thus this probability tends to zero with $D$ for each fixed $t$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-bridge-single-hit"
+  },
+  {
+   "claim_id": "claim-successful-label-target-supply",
+   "exact_statement": "Consider a collection of deterministic torus paths with endpoints $(y_j,z_j)$, and fix a cell $v$. Suppose that at most $H_1D$ of these paths visit the ball of radius $12$ about $v$, and that every visiting path is regular. Suppose a list of $m\\ge\\ell D/2$ labels satisfies $y_i\\in B_v$, $|z_i-v|\\le3$, and that both endpoints of every listed label are at distance greater than $s_0$ from every other endpoint in the corresponding full configuration.*\n\n*Call a trial for label $i$ successful if it satisfies $\\mathcal C_v$ and avoids every obstacle path except the original path of $i$. For sufficiently small fixed $t>0$ and then sufficiently large $D$, at least $9m/10$ listed labels have the following property: for each of the seven target cells $B$, the set $$\\label{bridge:successful-target-set}\n T_{i,B}=\\{u\\in B:\n     Q_{y_i,z_i}^u(\\text{successful trial})\\ge9/10\\}$$ has volume at least $99/100$. All choices are uniform in the deterministic collection, $v$, and $\\alpha\\in[\\alpha_0/2,2\\alpha_0]$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-bridge-success-supply"
+  },
+  {
+   "claim_id": "claim-certified-cell-eligible-labels",
+   "exact_statement": "At a cell with a certificate there are at least $\\ell D/2$ eligible labels. After $t$ has been chosen sufficiently small and $D$ sufficiently large, at least nine tenths of these labels satisfy the following stronger property: for every target cell $B_w$, $$\\label{group:full-success}\n \\left|\\left\\{u\\in B_w:\n Q_i^u(C_i(F_i^{\\rm all}))\\ge0.9\\right\\}\\right|\\ge0.99.$$ Here $F_i^{\\rm all}$ consists of all other trajectories in the sampled configuration, and $|\\cdot|$ denotes spatial volume.",
+   "kind": "bound",
+   "statement_anchor": "stmt-group-certified-labels"
+  },
+  {
+   "claim_id": "claim-exact-unexposed-conditional-law",
+   "exact_statement": "For almost every exposed datum the normalizers in Equation <a href=\"#group:reference\" data-reference-type=\"eqref\" data-reference=\"group:reference\">[group:reference]</a> are positive, and the conditional law of the unexposed trajectories is $$\\label{group:product-law}\n \\lambda_{\\mathcal I}(\\,\\mathrm d\\omega_{\\mathcal I})\n =\\frac{1}{Z_{\\mathcal I}}\n   \\mathbf 1_{\\{\\text{all pairs in $\\mathcal I$ avoid each other}\\}}\n   \\prod_{i\\in\\mathcal I}P_i(\\,\\mathrm d\\omega_i),\n \\qquad Z_{\\mathcal I}>0.$$ All reference trajectories obey their own regularity and confinement cutoffs. Each label has at most $C M$ other labels in this group with which a collision can be possible, where $C$ is a fixed geometric constant.",
+   "kind": "construction",
+   "statement_anchor": "stmt-group-conditional-law"
+  },
+  {
+   "claim_id": "claim-unconditional-good-cell-supply",
+   "exact_statement": "For any prescribed $p>0$, the constants before $M$ can be chosen as above, and then $M$ can be chosen sufficiently large, so that for sufficiently large $D$ and $K$, $$\\label{group:bad-bound}\n \\mathbb P_{\\mathcal B}\\{A\\subset\\{\\text{bad sites}\\}\\}\\le p^{|A|}$$ for every set $A$ of distinct sites. The bound is uniform in the group index, the ground function, and the allowed $\\alpha$-window. It remains valid if $M$ is increased before increasing the lower threshold on $D$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-group-supply"
+  },
+  {
+   "claim_id": "claim-one-path-density-and-compatibility",
+   "exact_statement": "There is a constant $G\\ge2$, fixed after $t$ and independent of $D,K,M$, such that $$\\label{group:density-bound}\n \\Pi_i^U\\ll P_i,\\qquad\n 0\\le\\frac{\\,\\mathrm d\\Pi_i^U}{\\,\\mathrm dP_i}\\le G,\n \\qquad \\int\\frac{\\,\\mathrm d\\Pi_i^U}{\\,\\mathrm dP_i}\\,\\mathrm dP_i=1.$$ There is also $\\eta_D\\to0$, uniform in the exposed datum, with the following property. Fix any regular, confined trajectory of a distinct label in $\\mathcal I$, keeping its recorded endpoints. Under either $P_i$ or $\\Pi_i^U$, the probability of colliding with that deterministic trajectory is at most $\\eta_D$. Its label need not be accessible. One may take $$\\label{group:eta}\n \\eta_D=C_t\\bigl(tr+rD^{3\\gamma}h_0^{-1/2}\\bigr)\n \\le C_t' D^{-1/4}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-group-comparison"
+  },
+  {
+   "claim_id": "claim-good-routes-annealed-encounters",
+   "exact_statement": "Fix an integer $R\\ge1$. There are constants $p_0,\\kappa>0$, $C_{\\rm path}<\\infty$, and an integer $K_0$, depending only on $R$, with the following property. Suppose $K\\ge K_0$ and <a href=\"#lat:bad-law\" data-reference-type=\"eqref\" data-reference=\"lat:bad-law\">[lat:bad-law]</a> holds with $p\\le p_0$. For every admissible ordered pair $(v,w)$ there is a $\\mathcal D$-measurable event $\\mathcal E_{v,w}$ of probability at least $1/2$. On this event there is a measurable probability kernel on simple good nearest-neighbor paths from $v$ to $w$. Two independent draws from this kernel, conditional on $\\mathcal D$, satisfy $$\\label{lat:encounter}\n \\mathbb E\\left[\n   \\mathbf 1_{\\mathcal E_{v,w}}\n   \\mathbb E\\left[e^{\\kappa J_R(\\pi,\\pi')}\\mid\\mathcal D\\right]\n       \\right]\\le C_{\\rm path}.$$ The constants are uniform in the datum, its law, and the endpoint pair. For every sufficiently large $K$, at least $\\upsilon_0K^6$ ordered pairs are admissible.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lat-paths"
+  },
+  {
+   "claim_id": "claim-connected-good-exterior-shell",
+   "exact_statement": "The set $\\operatorname{fill}(C)$ lies in the coordinate bounding box of $C$. The exterior vertices at maximum distance one from $C$ form a nearest-neighbor connected set, denoted $\\partial_*^{\\rm ext}C$, with at most $26|C|$ vertices. If $C$ is a $*$-component of a larger bad set, every vertex of this shell is good.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lat-boundary"
+  },
+  {
+   "claim_id": "claim-small-periodic-component-lifts",
+   "exact_statement": "Suppose $K>2a$, and a range-$a$ component on $\\mathcal L_K$ has $m$ vertices with $am<K$. Each of its lifts to $\\mathbb Z^3$ is a finite component projecting bijectively onto it. The coordinate span of a lift is at most $a(m-1)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lat-small-lifts"
+  },
+  {
+   "claim_id": "claim-common-measure-affinity-bound",
+   "exact_statement": "Let $P,Q$ be finite nonnegative measures and let $\\nu$ be a finite measure of mass $m>0$, absolutely continuous with respect to both. If $$\\int\\left(\\frac{\\,\\mathrm d\\nu}{\\,\\mathrm dP}\\right)^2\\,\\mathrm dP\\le C_P,\n \\qquad\n \\int\\left(\\frac{\\,\\mathrm d\\nu}{\\,\\mathrm dQ}\\right)^2\\,\\mathrm dQ\\le C_Q,$$ then $\\mathsf H(P,Q)\\ge m^2/\\sqrt{C_PC_Q}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cmp-holder"
+  },
+  {
+   "claim_id": "claim-disjoint-tag-group-normalization",
+   "exact_statement": "For each ordered pair of cells, $$\\label{cmp:group-affinity}\n \\mathsf H(P_{vw},Q_{vw})\n \\ge\\frac1D\\sum_{g=1}^{G_D}\\mathsf H(\\widehat P_g,\\widehat Q_g).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cmp-tag-normalization"
+  },
+  {
+   "claim_id": "claim-conditional-normalizer-cancellation",
+   "exact_statement": "Consider two changes $S,T$ of the preceding kind, with $G\\ge1$, and put $U=S\\cup T$. Suppose that the following conditions hold.*\n\n1.  *There is $\\chi\\in[0,1)$ such that inserting any coordinate of $U$ from its reference $P_i$, or any factor of either proposal from its $\\Pi_{S,i}$ or $\\Pi_{T,i}$, satisfies all checks incident to that insertion with probability at least $1-\\chi$. This bound is uniform in every fixed choice of the other individually permitted coordinates. It remains valid when any checks or coordinates have been deleted.*\n\n2.  *There are decompositions $S=C_S\\sqcup F_S$ and $T=C_T\\sqcup F_T$, with $F_S\\cap T=F_T\\cap S=\\varnothing$. No coordinate carried by an $F_S$ factor has a check with any coordinate carried by a $T$ factor, or with the original primary coordinates indexed by $T$; the corresponding assertion holds with $S,T$ interchanged. The reference coordinates in $F_S,F_T$ also have no mutual checks.*\n\n\n*Then $$\\label{cmp:cancellation-bound}\n \\int L_SL_T\\,\\mathrm d\\lambda\n \\le G^{|S\\cap T|}(1-\\chi)^{-2(|C_S|+|C_T|)}.$$ It is enough that the assumptions hold for almost every fixed admissible configuration outside $U$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cmp-cancellation"
+  },
+  {
+   "claim_id": "claim-uniform-modulus-occupation",
+   "exact_statement": "After the fixed choices above, there are constants $D_0<\\infty$ and $$\\label{cmp:c-star}\n c_*:=\\frac{\\upsilon_0\\ell}{32M G C_{\\mathrm{path}}}>0,\n \\qquad \\upsilon_0=\\frac1{2000}$$ such that, whenever $D\\ge D_0$, $\\alpha=Dr\\in[\\alpha_0/2,2\\alpha_0]$, and $K$ is sufficiently large, every normalized nonnegative bosonic ground function satisfies $B(\\Phi)\\ge c_*$. The constant $c_*$ is unchanged if the lower threshold on $D$ is subsequently increased. The volume thresholds can be taken locally uniform for $D$ in compact subintervals of $[D_0,\\infty)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cmp-modulus"
+  },
+  {
+   "claim_id": "claim-retained-slice-connectivity",
+   "exact_statement": "For every bath $Y$, any two points of $G(Y)$ can be joined by a continuous path in $S_Y$ whose distance from the forbidden set is strictly positive.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geom-connectivity"
+  },
+  {
+   "claim_id": "claim-small-fill-volume",
+   "exact_statement": "For $K>10$ and $r\\le1$, the projected union of small fills has volume at most $C r^2 N$, with an absolute constant $C$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-geom-small-fills"
+  },
+  {
+   "claim_id": "claim-large-component-close-witnesses",
+   "exact_statement": "There are absolute constants $r_1,c_{\\rm g}>0$ such that the following holds for $r\\le r_1$ and $K>10$. If a unit cell $B_v$ contains a microcube from a large bad component, then at least $c_{\\rm g}/r$ distinct bath particles lie within distance $5$ of $v$, and each has a distinct bath particle within distance $6r$. One may take $c_{\\rm g}=1/(8C_0)$ with $C_0=343$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-geom-large-witnesses"
+  },
+  {
+   "claim_id": "claim-bath-averaged-omitted-volume",
+   "exact_statement": "Fix the constants as above and take $D$ sufficiently large. There are absolute constants $C,C_{\\rm an}$ such that, for $K\\ge100$ and $C_{\\rm an}p_D\\le1/2$, $$\\label{geom:volume-bound}\n \\delta_{\\rm geom}:=\\int\\frac{|\\mathcal A(Y)|}{V}\\,\\nu(\\,\\mathrm dY)\n \\le C r^2D+C p_D\n       +K^3(C_{\\rm an}p_D)^{\\lfloor K/10\\rfloor}.$$ The retained points belong to one component of the open slice $S_Y$ whenever the retained set is nonempty. The estimate is uniform over the normalized ground vector and $\\alpha\\in[\\alpha_0/2,2\\alpha_0]$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-geom-omitted-volume"
+  },
+  {
+   "claim_id": "claim-scaled-complex-ground-occupation",
+   "exact_statement": "There are absolute constants $\\alpha_0,D_*,c_*>0$ such that, for $D=N/K^3\\ge D_*$ and $r=\\alpha/D$ with $\\alpha\\in[\\alpha_0/2,2\\alpha_0]$, every normalized complex bosonic ground vector satisfies $$B(\\Psi)\\ge c_*/2$$ for all sufficiently large integer $K$. The volume threshold can be chosen uniformly when $D$ ranges over a fixed compact subinterval of $[D_*,\\infty)$, and is independent of the chosen ground vector.",
+   "kind": "bound",
+   "statement_anchor": "stmt-main-scaled"
+  }
+ ],
+ "paper": "papers/EN-117-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-M-0563_PM-267.5_Ground_state_condensation_in_the_dilute_hard_sphere_gas.md",
+ "purpose": "Ground-state condensation in the dilute hard-sphere gas",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "b91ee042899f126d10188cca8540b41da2f20d288fa62c39b75992504a78364b",
+   "pm.domains.v2": "3c7cea3d38ef12c865c79b8a15d88b1705be6d60453a34d78e8ba4ab5fc6b141",
+   "pm.edges.v2": "fc159ee7bd82ad159cee8a5789b7d484c8f014a9fdbbf73740083c768d4db040",
+   "pm.extraction.v2": "f4f60dac3283b027aa239044e4e651d37d23b58c13c80c9e12b527ea06f2e17b",
+   "pm.formal.v2": "6748fd2880640c876bcdacda77bcbb098f635239286939d8166cae2b7291d530",
+   "pm.limits.v2": "770ba897c0c516989bda3b73743353cd9a4442eba2cd962575d2f4eb548bb85a",
+   "pm.node.v2": "f2ff894b8c8b18f0d978470d257fd359a69f2e123742562537e982919cbe0fce",
+   "pm.objects.v2": "16887e51c34053a8482778206fb26b3e9614b4c66bdbd8f9d387783c874741e2",
+   "pm.provenance.v2": "fc16379c8488040d355519eadb64aa76df49790d180aedf3fa37a2054254c178",
+   "pm.quantities.v2": "363e36a8788cd28d5ec0465a3143c25e04e40feb83f523670b2bb5429305c7d9",
+   "pm.reading.v2": "d539b9765a9d85efacd93f160ef515bf55b679149b2d0122067c06b914d6adca",
+   "pm.roadmap.v2": "449df7fc8bc3eb0154a7a14b1154390fb525be8216025b9598e9935f2690a0b1",
+   "pm.search.v1": "2c13c705ed6425d90303260bf00e808c66616a78581b734c26b2b679725950f7",
+   "pm.triptych.v2": "82c993a436ebe5314ac01d2355deeb20647338a07465f3040e9e1f4a9d132e77"
+  },
+  "canonical_sha256": "7b6f17929917cdac6d25560e1dd003ffb9089e66232ccb2651de70203aa72ec9",
+  "paper_sha256": "1491ec608418ab8e1110e671f8678bb3ee03726a23b65f180e59a22eaa13eb28",
+  "repaired_body_sha256": "23477a0ccd8583e66896ec4c576eef9ba2cdbeee0b3a901de401a5b8508a576b"
+ },
+ "status": "ACTIVE",
+ "subject_id": 17,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "208f225c5a8b9af621ef5032e57b16bb312bc973c734bafff64d9b6f940383bd",
+   "receipt_sha256": "a27467e86a0e3a73c8c78bf68378a99fd2166153da66ff33cbd3d4e2821cd67e",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Ground-state condensation in the dilute hard-sphere gas"
+}

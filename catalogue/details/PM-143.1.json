@@ -1,0 +1,1054 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1437301,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 364222
+ },
+ "coordinate": "EN-112-000-0000-2-2026-PR-T4-UK-EX-M2-B-PH-H-0294",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "Qualitative planar polynomial dynamics",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "It does not furnish an effective formula for $B(d)$.",
+     "quote_sha256": "fbc9fc22feb1e380eeefa8a9aea0d299126103febe848a5b7055b40239b34c69"
+    }
+   ],
+   "query": "Explicit numerical cycle bound",
+   "reason": "The theorem provides existence but no effective formula."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "It is a *limit cycle* if some open neighborhood of that image contains no other periodic orbit.",
+     "quote_sha256": "8e0d820c0c252ab002d1b8726ec5e95ebf2d18a95cc4520d41e7cd4223d552d5"
+    }
+   ],
+   "query": "Count every periodic orbit of a center",
+   "reason": "Only isolated periodic orbit images are limit cycles."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-absolute-zero",
+     "quote": "No uniform bound over infinitely many generated systems, and no assertion after forgetting their original domains, is part of this theorem.",
+     "quote_sha256": "34a51f92fbd91883e93ecf665f79c0a7c2edd14da7d6ee8ece133936ef62a004"
+    }
+   ],
+   "query": "Uniform projection bounds after forgetting strict domains",
+   "reason": "The absolute-zero theorem retains original domains and excludes that extension."
+  }
+ ],
+ "family": "PM-143",
+ "id": "PM-143.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-uniform",
+    "claim_id": "stmt-thm-uniform",
+    "statement": "For each integer $d\\geq1$"
+   },
+   {
+    "anchor": "stmt-lem-flags-saturation",
+    "claim_id": "stmt-lem-flags-saturation",
+    "statement": "A finite collection of large real inputs admits a flag after a fixed linear change of coordinates and the addition of bounded ordinary coordinates."
+   },
+   {
+    "anchor": "stmt-lem-flags-stability",
+    "claim_id": "stmt-lem-flags-stability",
+    "statement": "On a saturated output flag of Lemma <a href=\"#lem:flags-saturation\" data-reference-type=\"ref\" data-reference=\"lem:flags-saturation\">3</a>, bounded variations of the backgrounds at fixed free coordinates preserve the ordered scale hierarchy, uniformly on each fixed bounded admissible real background set."
+   },
+   {
+    "anchor": "stmt-lem-flags-path",
+    "claim_id": "stmt-lem-flags-path",
+    "statement": "The paths just constructed pass through the given anchors and preserve the ordered scales under bounded controlled ordinary tests."
+   },
+   {
+    "anchor": "stmt-lem-flags-contours",
+    "claim_id": "stmt-lem-flags-contours",
+    "statement": "For a sufficiently small fixed $\\varepsilon>0$, the upper and lower $p$-good contours are defined by $$\\label{eq:flags-good}\n |\\Im f_p|\\sim\\frac\\pi2,\\qquad\n \\cos(\\Im f_p)=\\frac{\\varepsilon}{\\Lambda_p(u)}.$$ They have collars of fixed small multiples of their cosine margin and are nested in increasing order of $p$."
+   },
+   {
+    "anchor": "stmt-lem-flags-background",
+    "claim_id": "stmt-lem-flags-background",
+    "statement": "Let $q\\ge2$ be a fixed integer."
+   },
+   {
+    "anchor": "stmt-lem-flags-exceptional",
+    "claim_id": "stmt-lem-flags-exceptional",
+    "statement": "For $p<m$ set $D_p=\\log(2+x_p^0)$ if $f_p$ contains an uncapped slow additive term in Equation <a href=\"#eq:flags-uncapped\" data-reference-type=\"eqref\" data-reference=\"eq:flags-uncapped\">[eq:flags-uncapped]</a> or Equation <a href=\"#eq:flags-boundary\" data-reference-type=\"eqref\" data-reference=\"eq:flags-boundary\">[eq:flags-boundary]</a>, and set $D_p=1$ otherwise."
+   },
+   {
+    "anchor": "stmt-lem-flags-safe-columns",
+    "claim_id": "stmt-lem-flags-safe-columns",
+    "statement": "Let a fixed finite list of positive real sweeps $x_a(u)$ and real lattices $c_a+h_a\\mathbb{Z}$, $h_a>0$, satisfy, uniformly far out, $$\\label{eq:flags-sweeps}\n \\begin{gathered}\n x_a\\to\\infty,\\qquad x_a'>0,\\qquad\n \\inf_{u\\ge U}x_a'(u)\\longrightarrow\\infty\\quad(U\\to\\infty),\\\\\n \\left|\\frac{x_a''}{(x_a')^2}\\right|\\le\\frac{C_a}{x_a}.\n \\end{gathered}$$ For a sufficiently small fixed $\\delta>0$, every fixed-length real interval far out contains a common column $u_*$ with $$\\mathop{\\mathrm{dist}}(x_a(u_*),c_a+h_a\\mathbb{Z})\\ge2\\delta\n \\quad\\hbox{for all }a.$$ If their complex continuations obey $$|\\Im x_a(u_*+iv)|<1\n \\quad\\Longrightarrow\\quad\n |\\Re x_a(u_*+iv)-x_a(u_*)|=o(1),$$ these columns stay a fixed positive distance from all the listed real poles on their whole applicable angular ranges.*"
+   },
+   {
+    "anchor": "stmt-thm-separation",
+    "claim_id": "stmt-thm-separation",
+    "statement": "Suppose the data of Definition <a href=\"#def:packet\" data-reference-type=\"ref\" data-reference=\"def:packet\">11</a> satisfy its requirements on a saturated flag."
+   },
+   {
+    "anchor": "stmt-lem-separation-proxies",
+    "claim_id": "stmt-lem-separation-proxies",
+    "statement": "On a coupled level-$p$ domain, the rates of indices $l\\geq p$ have holomorphic proxies $\\widehat Z_l=Z_l+o(1)$, uniformly on a slightly smaller domain."
+   },
+   {
+    "anchor": "stmt-lem-separation-growth",
+    "claim_id": "stmt-lem-separation-growth",
+    "statement": "Suppose the first $p-1$ transitions have been isolated and coupled."
+   },
+   {
+    "anchor": "stmt-lem-separation-source-ratios",
+    "claim_id": "stmt-lem-separation-source-ratios",
+    "statement": "In a coupled level-$n$ domain put $x=\\Re\\widehat L_n$."
+   },
+   {
+    "anchor": "stmt-lem-separation-weighted",
+    "claim_id": "stmt-lem-separation-weighted",
+    "statement": "Let $G$ be coupled through level $n$ with the growth bound of Lemma <a href=\"#lem:separation-growth\" data-reference-type=\"ref\" data-reference=\"lem:separation-growth\">14</a>."
+   },
+   {
+    "anchor": "stmt-lem-separation-upgrade",
+    "claim_id": "stmt-lem-separation-upgrade",
+    "statement": "For $n>1$, under the hypotheses of Lemma <a href=\"#lem:separation-weighted\" data-reference-type=\"ref\" data-reference=\"lem:separation-weighted\">16</a>"
+   },
+   {
+    "anchor": "stmt-lem-separation-isolate",
+    "claim_id": "stmt-lem-separation-isolate",
+    "statement": "Suppose a prefix is coupled through level $p$."
+   },
+   {
+    "anchor": "stmt-lem-separation-terminal",
+    "claim_id": "stmt-lem-separation-terminal",
+    "statement": "Suppose a complete exponent vector has been isolated on the two sides and coupled, with all earlier subtrees passed as in Lemma <a href=\"#lem:separation-isolate\" data-reference-type=\"ref\" data-reference=\"lem:separation-isolate\">18</a>."
+   },
+   {
+    "anchor": "stmt-lem-separation-family-uniformity",
+    "claim_id": "stmt-lem-separation-family-uniformity",
+    "statement": "Fix finitely many packet labels, transition budgets, coupled joins, and normalizations, and a family of tests with the common quantitative controls in Definition <a href=\"#def:packet\" data-reference-type=\"ref\" data-reference=\"def:packet\">11</a>."
+   },
+   {
+    "anchor": "stmt-thm-calculus",
+    "claim_id": "stmt-thm-calculus",
+    "statement": "Assume the flag estimates of Section <a href=\"#sec:flags\" data-reference-type=\"ref\" data-reference=\"sec:flags\">2</a>, the packet separation theorem, and Assumption <a href=\"#ass:calculus-primitive\" data-reference-type=\"ref\" data-reference=\"ass:calculus-primitive\">22</a>."
+   },
+   {
+    "anchor": "stmt-lem-calculus-support",
+    "claim_id": "stmt-lem-calculus-support",
+    "statement": "Finite unions and Minkowski sums of iterated left-finite subsets of $\\mathbb{R}^m$ are iterated left-finite."
+   },
+   {
+    "anchor": "stmt-lem-calculus-differentiation",
+    "claim_id": "stmt-lem-calculus-differentiation",
+    "statement": "Every fixed derivative of a raw packet expression has the tree obtained by formal differentiation."
+   },
+   {
+    "anchor": "stmt-lem-calculus-source-pullback",
+    "claim_id": "stmt-lem-calculus-source-pullback",
+    "statement": "Fix a finite derivative and composition request."
+   },
+   {
+    "anchor": "stmt-lem-calculus-cleanup",
+    "claim_id": "stmt-lem-calculus-cleanup",
+    "statement": "Let $K$ be positive."
+   },
+   {
+    "anchor": "stmt-lem-calculus-uniform-separation",
+    "claim_id": "stmt-lem-calculus-uniform-separation",
+    "statement": "For one controlled family and one fixed finite coupled calculation, the coupled growth and zero-subtree upgrade constants of Section <a href=\"#sec:separation\" data-reference-type=\"ref\" data-reference=\"sec:separation\">3</a> are common to the family."
+   },
+   {
+    "anchor": "stmt-lem-calculus-positive-bounds",
+    "claim_id": "stmt-lem-calculus-positive-bounds",
+    "statement": "The cleaned realizations of a positive expression satisfy all the bounds in part (2) of Theorem <a href=\"#thm:calculus\" data-reference-type=\"ref\" data-reference=\"thm:calculus\">24</a>."
+   },
+   {
+    "anchor": "stmt-lem-calculus-analytic",
+    "claim_id": "stmt-lem-calculus-analytic",
+    "statement": "Let $H$ be analytic near the limiting tuple of finitely many positive expressions."
+   },
+   {
+    "anchor": "stmt-lem-calculus-interpolation",
+    "claim_id": "stmt-lem-calculus-interpolation",
+    "statement": "Fix an integer $r$ and a finite higher jet order."
+   },
+   {
+    "anchor": "stmt-lem-calculus-refinement",
+    "claim_id": "stmt-lem-calculus-refinement",
+    "statement": "Enlarge a saturated flag by finitely many permitted insertions without converting its old active free nodes."
+   },
+   {
+    "anchor": "stmt-lem-elimination-promotion",
+    "claim_id": "stmt-lem-elimination-promotion",
+    "statement": "A nonzero ordinary coordinate $x_A\\to0$ can be replaced, after a saturated flag extension, by $$\\label{eq:elimination-promotion}\n x=\\varepsilon\\rho,\\qquad\n \\rho=h^\\nu e^{-B}>0,\\qquad \\varepsilon\\in\\{1,-1\\},$$ where $h^\\nu$ has strictly positive order."
+   },
+   {
+    "anchor": "stmt-lem-elimination-local-inverse",
+    "claim_id": "stmt-lem-elimination-local-inverse",
+    "statement": "Suppose a map $\\Phi$ has, on a ball about $q_0$, bounds $$\\|D\\Phi(q_0)^{-1}\\|\\le C r^{-c},\\qquad\n \\|D^2\\Phi\\|\\le C r^{-b},$$ and the available source ball has radius at least $c_0r^a$."
+   },
+   {
+    "anchor": "stmt-lem-elimination-lift",
+    "claim_id": "stmt-lem-elimination-lift",
+    "statement": "Let an ambient chart have ordinary variables $(y,w)$ near $w=0$."
+   },
+   {
+    "anchor": "stmt-lem-elimination-common-domain",
+    "claim_id": "stmt-lem-elimination-common-domain",
+    "statement": "Fix a width $r$ equal to a strict positive-order current monomial times a bounded regular unit with positive limiting value."
+   },
+   {
+    "anchor": "stmt-prop-elimination-recursion",
+    "claim_id": "stmt-prop-elimination-recursion",
+    "statement": "Let $F$ be a real positive scalar field on an active chart with $n$ ordinary inputs."
+   },
+   {
+    "anchor": "stmt-thm-absolute-zero",
+    "claim_id": "stmt-thm-absolute-zero",
+    "statement": "Let a finite real equation system be specified on an open domain with its original strict inequalities and graph ties."
+   },
+   {
+    "anchor": "stmt-thm-additive-packets",
+    "claim_id": "stmt-thm-additive-packets",
+    "statement": "Under these assumptions, the output maps of <a href=\"#eq:additive-A\" data-reference-type=\"eqref\" data-reference=\"eq:additive-A\">[eq:additive-A]</a> and <a href=\"#eq:additive-B\" data-reference-type=\"eqref\" data-reference=\"eq:additive-B\">[eq:additive-B]</a> satisfy the packet conditions of Definition <a href=\"#def:packet\" data-reference-type=\"ref\" data-reference=\"def:packet\">11</a> and the differentiated primitive conditions of Assumption <a href=\"#ass:calculus-primitive\" data-reference-type=\"ref\" data-reference=\"ass:calculus-primitive\">22</a>."
+   },
+   {
+    "anchor": "stmt-lem-additive-slow",
+    "claim_id": "stmt-lem-additive-slow",
+    "statement": "The graph, fiber transformation in its convergent state-disk norm, and $b$ in (A) are bounded on the lateral domains."
+   },
+   {
+    "anchor": "stmt-lem-additive-primitives",
+    "claim_id": "stmt-lem-additive-primitives",
+    "statement": "There are particular formal primitives $$\\label{eq:additive-formal-word}\n \\widehat Y_{\\mathbf e}\n =w^{d_{\\mathbf e}}\\sum_{j\\ge0}w^{-j}B_{\\mathbf e,j}(X,L),\n \\qquad d_{\\mathbf e}=\\sum_{e\\in\\mathbf e}d_e,\n \\qquad L=\\log(w/q),$$ where $B_{\\mathbf e,j}$ is polynomial in $L$ of degree at most the word length and its analytic coefficient norm is at most $C^{j+1}j!$."
+   },
+   {
+    "anchor": "stmt-lem-additive-gevrey-operations",
+    "claim_id": "stmt-lem-additive-gevrey-operations",
+    "statement": "Finite sums and products, analytic operations at bounded arguments with fixed room in their convergence boxes, and regular inverses preserve the normalized Gevrey and jet conclusions above."
+   },
+   {
+    "anchor": "stmt-prop-additive-charge",
+    "claim_id": "stmt-prop-additive-charge",
+    "statement": "On any sufficiently tight $i$ fringe, through its buffered side, both actual passages have an expansion to an arbitrary fixed charge cutoff, with remainder $$\\label{eq:additive-charge-remainder}\n C_K|Q|^{C_K}|P|^{K+1}+C_Ke^{-c_K|Q|}.$$ Each coefficient is a finite expression in explicit power and fixed-degree logarithmic prefactors, bounded normalized inner kernels at $q$, and outer formal Gevrey series in a variable of size $Q^{-1}$."
+   },
+   {
+    "anchor": "stmt-prop-additive-dispersal",
+    "claim_id": "stmt-prop-additive-dispersal",
+    "statement": "Every coefficient furnished by Proposition <a href=\"#prop:additive-charge\" data-reference-type=\"ref\" data-reference=\"prop:additive-charge\">46</a> admits, on each lateral determination, a packet tree using only retained free inputs and ordinary inputs."
+   },
+   {
+    "anchor": "stmt-lem-additive-controlled-family",
+    "claim_id": "stmt-lem-additive-controlled-family",
+    "statement": "The additive constructions satisfy the common-constant requirement of Definition <a href=\"#def:calculus-controlled-family\" data-reference-type=\"ref\" data-reference=\"def:calculus-controlled-family\">21</a>."
+   },
+   {
+    "anchor": "stmt-thm-regular-packets",
+    "claim_id": "stmt-thm-regular-packets",
+    "statement": "The following two passage outputs satisfy the packet conditions of Definition <a href=\"#def:packet\" data-reference-type=\"ref\" data-reference=\"def:packet\">11</a> and the differentiated primitive conditions of Assumption <a href=\"#ass:calculus-primitive\" data-reference-type=\"ref\" data-reference=\"ass:calculus-primitive\">22</a>.*\n\n\n1."
+   },
+   {
+    "anchor": "stmt-lem-regular-charges",
+    "claim_id": "stmt-lem-regular-charges",
+    "statement": "For every integer $K\\ge0$, the layer output has, on the owning fringe, a description $$\\label{eq:regular-charge-expansion}\n z_{\\mathrm{out}}=\n \\sum_{k=0}^K P^k\\sum_{\\ell=0}^k q^\\ell\n          F_{k\\ell}^{[J]}(1/q)\n +O\\bigl((1+|q|)^{C_K}|P|^{K+1}+e^{-c_K|q|}\\bigr).$$ Each $F_{k\\ell}$ is a formal Gevrey-1 series, analytic in the ordinary inputs."
+   },
+   {
+    "anchor": "stmt-lem-regular-formal",
+    "claim_id": "stmt-lem-regular-formal",
+    "statement": "Put $h=1/q$."
+   },
+   {
+    "anchor": "stmt-lem-regular-controlled-inputs",
+    "claim_id": "stmt-lem-regular-controlled-inputs",
+    "statement": "For each fixed finite request, the preceding primitive estimates are uniform on a controlled family of Definition <a href=\"#def:calculus-controlled-family\" data-reference-type=\"ref\" data-reference=\"def:calculus-controlled-family\">21</a>."
+   },
+   {
+    "anchor": "stmt-thm-mixed-packets",
+    "claim_id": "stmt-thm-mixed-packets",
+    "statement": "Suppose that the primary inputs are affine combinations of flag scales with constant coefficients and bounded analytic parts, and that all large basis nodes in those combinations have dependent logarithms."
+   },
+   {
+    "anchor": "stmt-lem-mixed-ratio",
+    "claim_id": "stmt-lem-mixed-ratio",
+    "statement": "If a positive primary combination $J$ has leading index $p$, then $$\\label{eq:mixed-primary}\n J=A_JZ_p(1+\\Theta_J),\\qquad A_J>0,$$ where $\\Theta_J$ is a finite sum of strict-small monomials, of first index greater than $p$, times bounded analytic factors."
+   },
+   {
+    "anchor": "stmt-lem-mixed-actual",
+    "claim_id": "stmt-lem-mixed-actual",
+    "statement": "Let $i$ be the leading index of the larger primary action, or the common leading index of $L,W$ when they are comparable."
+   },
+   {
+    "anchor": "stmt-lem-mixed-tree",
+    "claim_id": "stmt-lem-mixed-tree",
+    "statement": "For comparable slopes put $\\nu_j=A_j+c_0B_j$."
+   },
+   {
+    "anchor": "stmt-lem-mixed-poles",
+    "claim_id": "stmt-lem-mixed-poles",
+    "statement": "Suppose a fixed outer formula has only finite-order poles on lattices of finitely many positive multiples of $C_\\bullet$, with fixed polynomial factors in $C_\\bullet$ and retained primary inputs, and its remaining analytic factors are uniformly bounded on the smaller argument boxes."
+   },
+   {
+    "anchor": "stmt-lem-mixed-small-formal",
+    "claim_id": "stmt-lem-mixed-small-formal",
+    "statement": "Before the first of the $n,k$ transitions, changing the moving cutoff in a fixed coefficient changes its actual value, with fixed derivatives, by $$\\label{eq:mixed-mixed-cost}\n O\\left(\\exp(-a|Z_k|\\Re R)\\right)\n =O\\left(\\exp\\{-a' e^{\\Re f_i}\\cos(\\Im f_n)\\}\\right).$$ If $n<k$, a fixed Taylor degree in $D$ removes that cutoff at the $n$ transition."
+   },
+   {
+    "anchor": "stmt-lem-mixed-charts",
+    "claim_id": "stmt-lem-mixed-charts",
+    "statement": "In these rings there are an output graph $\\phi$, an input coordinate $\\Phi$, an output coordinate $T=\\phi+\\sum_{m=1}^Mt_m u^m$ for each fixed $M$, and a balanced polynomial $\\beta$ without constant term."
+   },
+   {
+    "anchor": "stmt-lem-mixed-fast-transition",
+    "claim_id": "stmt-lem-mixed-fast-transition",
+    "statement": "On the $i$ fringe, for every fixed desired depth in $\\Re W$ the passage has the finite expansion $$\\label{eq:mixed-fast-expansion}\n \\phi_{\\rm out}+\\sum_{m=1}^{M}\n e^{-mW}e^{m\\beta_sL}t_{m,\\rm out}\\Phi_{\\rm in}^{m},\n \\qquad \\beta_s=\\beta(X,Y),$$ up to that depth, with $M$ sufficiently large."
+   },
+   {
+    "anchor": "stmt-lem-mixed-fast-gevrey",
+    "claim_id": "stmt-lem-mixed-fast-gevrey",
+    "statement": "For each fixed output fiber order, the full charts and their bounded analytic endpoint operations have consistent Gevrey–$1$ formal expansions in $h=1/C_\\bullet$."
+   },
+   {
+    "anchor": "stmt-lem-mixed-controlled-uniformity",
+    "claim_id": "stmt-lem-mixed-controlled-uniformity",
+    "statement": "The mixed constructions and their finite dispersion operations have the controlled-family uniformity of Definition <a href=\"#def:calculus-controlled-family\" data-reference-type=\"ref\" data-reference=\"def:calculus-controlled-family\">21</a>."
+   },
+   {
+    "anchor": "stmt-prop-calculus-library-uniformity",
+    "claim_id": "stmt-prop-calculus-library-uniformity",
+    "statement": "For the primitive constructions in Sections <a href=\"#sec:additive\" data-reference-type=\"ref\" data-reference=\"sec:additive\">6</a>, <a href=\"#sec:regular\" data-reference-type=\"ref\" data-reference=\"sec:regular\">7</a>, and <a href=\"#sec:mixed\" data-reference-type=\"ref\" data-reference=\"sec:mixed\">8</a>, the family requirement in Assumption <a href=\"#ass:calculus-primitive\" data-reference-type=\"ref\" data-reference=\"ass:calculus-primitive\">22</a> follows from the estimates on common argument boxes proved in those sections."
+   },
+   {
+    "anchor": "stmt-thm-subdivision-preparation",
+    "claim_id": "stmt-thm-subdivision-preparation",
+    "statement": "Let $X\\subset\\mathbb{R}^k\\times\\mathbb{R}$ and $f_1,\\ldots,f_N:X\\to\\mathbb{R}$ be globally subanalytic."
+   },
+   {
+    "anchor": "stmt-lem-subdivision-clock",
+    "claim_id": "stmt-lem-subdivision-clock",
+    "statement": "Suppose that the old clock is $D_0=(x-a_0(p))\\partial_x$."
+   },
+   {
+    "anchor": "stmt-lem-subdivision-box-data",
+    "claim_id": "stmt-lem-subdivision-box-data",
+    "statement": "After the preceding finite subdivision, each nonzero comparable-scale field has, on a fixed larger state disk $\\mathcal D$ and a smaller real interval $I\\Subset\\mathcal D$, a positive globally subanalytic scale $L(p,x)$ and constants $K,m$ such that $$\\label{eq:subdivision-jet}\n \\sup_{z\\in\\mathcal D}|F(p,x,z)|\\le KL(p,x),\\qquad\n \\sum_{j=0}^{m}|\\partial_z^jF(p,x,z)|\\ge L(p,x)\n \\quad(z\\in I).$$ The normalized rational coefficients belong to bounded sets with uniform analytic room."
+   },
+   {
+    "anchor": "stmt-lem-subdivision-resonance-redo",
+    "claim_id": "stmt-lem-subdivision-resonance-redo",
+    "statement": "Around these finitely many resonances, apply the rational weighting $U=u/\\tau^\\alpha$ and repeat the preceding rational subdivision once."
+   },
+   {
+    "anchor": "stmt-lem-subdivision-crossing",
+    "claim_id": "stmt-lem-subdivision-crossing",
+    "statement": "A periodic orbit meets each regular boundary arc on which $\\det(V,T)$ has a fixed nonzero sign at most once."
+   },
+   {
+    "anchor": "stmt-thm-finite-templates",
+    "claim_id": "stmt-thm-finite-templates",
+    "statement": "For each degree bound $d$, there is a finite collection of scalar identity pieces, coordinate charts and passage rules, and integers $N_d,E_d$, with the following properties.*\n\n1."
+   },
+   {
+    "anchor": "stmt-thm-terminal-reduction",
+    "claim_id": "stmt-thm-terminal-reduction",
+    "statement": "Fix the finite preparation data, exponent lists, and geometric tolerances of Theorem <a href=\"#thm:finite-templates\" data-reference-type=\"ref\" data-reference=\"thm:finite-templates\">71</a>."
+   },
+   {
+    "anchor": "stmt-lem-terminal-diagonal",
+    "claim_id": "stmt-lem-terminal-diagonal",
+    "statement": "Let $D_r=\\sum_j r_jX_j\\partial_{X_j}$, with fixed rational $r_j$, and let $a(X)$ be analytic near the origin, uniformly in ordinary parameters."
+   },
+   {
+    "anchor": "stmt-lem-terminal-tied-endpoints",
+    "claim_id": "stmt-lem-terminal-tied-endpoints",
+    "statement": "Every transfer constructed above computes the actual scalar mismatch for all nearby proposed endpoints on its argument graph."
+   },
+   {
+    "anchor": "stmt-lem-terminal-ambient-extension",
+    "claim_id": "stmt-lem-terminal-ambient-extension",
+    "statement": "The terminal kernels can be chosen on independent-argument neighborhoods so that every layer-vanishing identity required by its primitive theorem holds throughout that neighborhood."
+   },
+   {
+    "anchor": "stmt-lem-terminal-boundary-corners",
+    "claim_id": "stmt-lem-terminal-boundary-corners",
+    "statement": "The independent-argument domains in this section can be chosen so that the following holds for every sequence in any one of them, including a sequence on which imposed strict margins vanish."
+   },
+   {
+    "anchor": "stmt-thm-projection-count",
+    "claim_id": "stmt-thm-projection-count",
+    "statement": "Let $F(p,x)=0$ be admissible open data as in Definition <a href=\"#def:counting-domain\" data-reference-type=\"ref\" data-reference=\"def:counting-domain\">78</a>, with $p\\in\\mathbb{R}^a$, $x\\in\\mathbb{R}^n$, and $m\\le n$."
+   },
+   {
+    "anchor": "stmt-thm-matching-system",
+    "claim_id": "stmt-thm-matching-system",
+    "statement": "For each polynomial degree bound $d$, there are a finite number $T(d)$ and finitely many fixed open analytic systems $$F_w(p_w,x_w)=0,\\qquad g_w(p_w,x_w)>0,\n \\qquad w\\in\\mathcal W_d,$$ with the following properties.*\n\n1."
+   },
+   {
+    "anchor": "stmt-lem-counting-jet-lift",
+    "claim_id": "stmt-lem-counting-jet-lift",
+    "statement": "Suppose an analytic transfer $\\Phi(u)$, on an open set of its original independent arguments $u$, has an exact analytic decomposition into finitely many transfers, with auxiliary arguments and intermediate states determined by regular, locally unique graph equations."
+   },
+   {
+    "anchor": "stmt-lem-counting-cleared-closure",
+    "claim_id": "stmt-lem-counting-cleared-closure",
+    "statement": "Consider one fixed finite collection of primitive functions, their argument graphs, and a finite differential and algebraic construction from them."
+   },
+   {
+    "anchor": "stmt-lem-counting-graph-recovery",
+    "claim_id": "stmt-lem-counting-graph-recovery",
+    "statement": "Let $u_i$ be a sequence of isolated solutions of a fixed system, where $u$ denotes its full tuple, including parameters and multipliers."
+   },
+   {
+    "anchor": "stmt-lem-counting-rotation",
+    "claim_id": "stmt-lem-counting-rotation",
+    "statement": "For any finite collection of limit cycles of a planar polynomial field $V=(P,Q)$, a sufficiently small perturbation $V_\\mu=V+\\mu(-Q,P)$, of one common nonzero sign, has at least as many distinct hyperbolic periodic orbits in the union of disjoint neighborhoods of that collection."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Packet calculus",
+    "evidence": [
+     {
+      "anchor": "stmt-thm-calculus",
+      "quote": "Assume the flag estimates of Section <a href=\"#sec:flags\" data-reference-type=\"ref\" data-reference=\"sec:flags\">2</a>, the packet separation theorem, and Assumption <a href=\"#ass:calculus-primitive\" data-reference-type=\"ref\" data-reference=\"ass:calculus-primitive\">22</a>. Start with the primitive data and the initial ordinary backgrounds. The following operations can be iterated a finite number of times.*\n\n1.  *Raw finite sums, products, and any fixed independent derivatives have differentiated packet trees with iterated left-finite supports. So does multiplication by any fixed real exponential monomial $$h^\\gamma=\\exp\\left(-\\sum_i\\gamma_i Z_i\\right).$$*\n\n2.  *Positive expressions admit cleaned zeroth-prefix realizations $K_j$. Every fixed ordinary derivative is bounded and converges to the corresponding derivative of $K_0$ throughout the usable bands. If a mixed independent derivative has earliest differentiated free index $l$, then for $j\\le l$ its value on $K_j$, multiplied by $e^{C f_l(u)}$, tends to zero for every fixed $C$. Differentiated owning transitions satisfy $K_j-K_{j+1}=O(e^{-c\\Re Z_{j,j}})$. Real local uniform boundedness of a raw expression implies positivity; its real limit, when specified, identifies $K_0$.*\n\n3.  *A regular analytic operation on finitely many positive expressions, whose limiting tuple belongs to its analytic domain, is positive and has the corresponding differentiated tree. This includes inversion of a unit whose limiting value is nonzero.*\n\n4.  *Let $K(S,t,x)$ be a real square vector of positive expressions on a previous chart. If $$K_0(t_c,x_c)=0,\\qquad \\det D_xK_0(t_c,x_c)\\ne0,$$ then the actual regular branch $x=\\chi(S,t)$ near $(t_c,x_c)$ and every old raw expression pulled back to that branch have differentiated packet trees. The new backgrounds obey Equation <a href=\"#eq:calculus-background-transition\" data-reference-type=\"eqref\" data-reference=\"eq:calculus-background-transition\">[eq:calculus-background-transition]</a>. The ordinary limiting root is analytic. Band realizations are smooth regular sheets, holomorphic in band 1, with controlled jets, differentiated source bounds, safe-column estimates, and differentiated seam bounds. They retain local independence from discarded free inputs.*\n\n*For each fixed finite stack of ordinary implicit charts there is a finite coherence jet order, depending on the stack and fixed angular buffers but independent of subsequent derivative orders and transition budgets. Tests on the same free path with the same complex ordinary target and enough common real jets give the same local sheet. Every finite request can then use a larger working Taylor order and farther or narrower working domains; on overlaps these constructions agree. All assertions for a fixed finite request are uniform on controlled families in the sense of Definition <a href=\"#def:calculus-controlled-family\" data-reference-type=\"ref\" data-reference=\"def:calculus-controlled-family\">21</a>.*\n\n*All formal operations are performed separately in the two signs, by finite coefficient rules at successive prefixes. They commute with differentiation, regular analytic substitution, and the stated regular implicit solution. Identically zero terminal coefficient germs remain zero under these rules.",
+      "quote_sha256": "cdef28d3a66adfd5034fd75926b156a604ca53383873e13c6af14be84a47b336"
+     }
+    ],
+    "requires_concepts": [
+     "Saturated flag estimates",
+     "Packet separation",
+     "Differentiated primitive data"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Projection count",
+    "evidence": [
+     {
+      "anchor": "stmt-thm-projection-count",
+      "quote": "Let $F(p,x)=0$ be admissible open data as in Definition <a href=\"#def:counting-domain\" data-reference-type=\"ref\" data-reference=\"def:counting-domain\">78</a>, with $p\\in\\mathbb{R}^a$, $x\\in\\mathbb{R}^n$, and $m\\le n$. Suppose that $F_x$ has row rank $m$ throughout the zero set under consideration and that the data have the absolute zero property for their finite differential and algebraic closure. Then there is a finite constant $N$, depending on this fixed system and its domain, such that every fiber $$M_p=\\{x:(p,x)\\in U,\\ F(p,x)=0\\}$$ has at most $N$ connected components. If $m=n$, every fiber has at most $N$ points.",
+      "quote_sha256": "d7a19a13bcabe8494a1455f24494c3b3d380d22c56a279f7e744775a95b47e28"
+     }
+    ],
+    "requires_concepts": [
+     "Admissible open data",
+     "Full row rank",
+     "Absolute zero property for finite closure"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Matching systems",
+    "evidence": [
+     {
+      "anchor": "stmt-thm-matching-system",
+      "quote": "For each polynomial degree bound $d$, there are a finite number $T(d)$ and finitely many fixed open analytic systems $$F_w(p_w,x_w)=0,\\qquad g_w(p_w,x_w)>0,\n \\qquad w\\in\\mathcal W_d,$$ with the following properties.*\n\n1.  *Their domains satisfy Definition <a href=\"#def:counting-domain\" data-reference-type=\"ref\" data-reference=\"def:counting-domain\">78</a>. Every finite differential and algebraic system generated from these data, with their original ties and domain restrictions retained, has the absolute zero property.*\n\n2.  *For each field $V=(P,Q)$ of degree at most $d$, all but at most $T(d)$ of its periodic orbits contained in the fixed square of Section <a href=\"#sec:subdivision\" data-reference-type=\"ref\" data-reference=\"sec:subdivision\">9</a> have a representation in one of these systems. The parameter value $p_w(V)$ is the same for every orbit using the same word and preparation choices; endpoint-dependent quantities are unknowns with graph ties.*\n\n3.  *At a representation of a hyperbolic periodic orbit, $F_{w,x_w}$ has full row rank. In each fixed nonzero-minor chart, different represented hyperbolic orbits lie on different connected components of the fiber at $p_w(V)$.*\n\n*The minor charts and their additional margins also satisfy the first assertion.",
+      "quote_sha256": "25d35160286e791f32065595fcaf3c5e9dd738714ac32c23fb8b087536f7fd6e"
+     }
+    ],
+    "requires_concepts": [
+     "Terminal transfers",
+     "Exact endpoint graph ties",
+     "Finite differential and algebraic closure"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "stmt-thm-uniform",
+   "exact_statement": "For each integer $d\\geq1$, there is a finite nonnegative integer $B(d)$ such that every real planar polynomial vector field of degree at most $d$ has at most $B(d)$ limit cycles in the whole plane.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-uniform"
+  },
+  {
+   "claim_id": "stmt-lem-flags-saturation",
+   "exact_statement": "A finite collection of large real inputs admits a flag after a fixed linear change of coordinates and the addition of bounded ordinary coordinates. One can insert the logarithm of any free scale, retaining the old scale values, by making that scale dependent and adding at most one positive free residual or one bounded ordinary residual. The free residual is $O(\\log S)$ if the scale being converted is $S$.*\n\n*A flag admits a finite saturation by such insertions. After saturation, promoting one ordinary coordinate $t\\to0$ of known sign, by inserting $-\\log|t|$, admits a finite further saturation in which every old free coordinate stays free. The number of ordinary coordinates does not increase in this promotion.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-flags-saturation"
+  },
+  {
+   "claim_id": "stmt-lem-flags-stability",
+   "exact_statement": "On a saturated output flag of Lemma <a href=\"#lem:flags-saturation\" data-reference-type=\"ref\" data-reference=\"lem:flags-saturation\">3</a>, bounded variations of the backgrounds at fixed free coordinates preserve the ordered scale hierarchy, uniformly on each fixed bounded admissible real background set. More precisely, let $$H=\\sum_{i=1}^m c_iZ_i+B,$$ where the $c_i$ are fixed real numbers, their vector is nonzero, and $B$ is uniformly bounded on that background set. If $k$ is the first index with $c_k\\ne0$, then $$\\frac{H}{c_kZ_k}\\longrightarrow1$$ uniformly under those variations; the denominator uses the current, reevaluated value of $Z_k$. Thus the leading index and sign are preserved. Dependent logarithms may enter such a comparison after substitution of their exact triangular formulas. No sign assertion is made when the resulting large part vanishes, or for an expression containing an uninserted free logarithm.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-flags-stability"
+  },
+  {
+   "claim_id": "stmt-lem-flags-path",
+   "exact_statement": "The paths just constructed pass through the given anchors and preserve the ordered scales under bounded controlled ordinary tests. Put $\\Lambda_i=f_i'$ on the real ray. For each $G=f_i-f_j$, $i<j$, and for each fixed positive integer $r$, sufficiently far out, $$\\label{eq:flags-real}\n \\begin{gathered}\n G\\longrightarrow+\\infty,\\qquad\n cG\\le G'\\le G\\operatorname{polylog}G,\\\\\n |G^{(r)}|\\le G\\operatorname{polylog}G,\\qquad\n 0<\\frac{(f_i-f_{i+1})'}{f_i-f_{i+1}}\n       \\le C\\Lambda_{i+1}.\n \\end{gathered}$$ The first three bounds also hold with $G$ replaced by $f_i$. In particular $$\\label{eq:flags-rates}\n \\Lambda_1>\\cdots>\\Lambda_m\\longrightarrow+\\infty,\n \\qquad cf_i\\le\\Lambda_i\\le f_i\\operatorname{polylog}f_i,\n \\qquad \\frac{f_i''}{\\Lambda_i^2}=o(1).$$ Fixed backsteps can reduce $f_i$ by any prescribed fixed factor.*\n\n\n*With holomorphic background tests, the formulas for indices $j\\ge p$ have controlled holomorphic continuations on $|v|\\le C/\\Lambda_p(u)$ and satisfy $$\\label{eq:flags-angular}\n \\begin{aligned}\n \\Re f_j(u+iv)&=f_j(u)+o(1),\\\\\n \\Im f_j(u+iv)&=(1+o(1))v\\Lambda_j(u),\\\\\n \\Im(f_j-f_l)(u+iv)&=(1+o(1))v(\\Lambda_j-\\Lambda_l)(u),\n                       && l>j,\\\\\n \\partial_v\\Im f_j(u+iv)&=(1+o(1))\\Lambda_j(u).\n \\end{aligned}$$ These estimates also hold for controlled local determinations of the backgrounds that agree with the real path to their requisite finite Taylor orders; their antiholomorphic defects, if present, are accounted for separately. For a retained free input $Z_l$, every fixed path derivative is bounded by $\\exp(C_r f_l(u))$ on its applicable angular range.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-flags-path"
+  },
+  {
+   "claim_id": "stmt-lem-flags-contours",
+   "exact_statement": "For a sufficiently small fixed $\\varepsilon>0$, the upper and lower $p$-good contours are defined by $$\\label{eq:flags-good}\n |\\Im f_p|\\sim\\frac\\pi2,\\qquad\n \\cos(\\Im f_p)=\\frac{\\varepsilon}{\\Lambda_p(u)}.$$ They have collars of fixed small multiples of their cosine margin and are nested in increasing order of $p$. Put $$V_p(u)=\\frac{e^{f_p(u)}}{\\Lambda_p(u)}.$$ On a $p$-good contour, for $j>p$ and $G=f_p-f_j$, $$\\label{eq:flags-good-real}\n \\Re Z_p\\sim\\varepsilon V_p,\n \\qquad\n \\Re Z_j\\asymp\n \\frac{e^{f_j(u)}(\\varepsilon+G'(u))}{\\Lambda_p(u)}\n       =o(V_p).$$*\n\n\n*For large fixed $A$ and fixed $K\\ge2$, an outer side can be placed inside the signed vertical direction by the barrier $$\\label{eq:flags-side}\n L_p=Z_p-A\\sum_{j>p}Z_j-\\frac{Z_p}{f_p^K},\n \\qquad \\Re L_p=0.$$ We use its inward component, where $\\Re L_p>0$. Throughout this component, with harmless fixed adjustments near its boundary, $$\\label{eq:flags-buffer}\n \\Re Z_p\\ge A\\sum_{j>p}\\Re Z_j\n               +c\\frac{e^{f_p(u)}}{f_p(u)^{K+1}},\n \\qquad \\Re Z_p\\gg f_p(u)^N\n \\quad\\hbox{for every fixed }N.$$ The side and good contours can be chosen with extra room before any finite subsequent narrowing. The same conclusions hold if the quantities in the barrier are replaced by holomorphic proxies with absolute $o(1)$ errors.*\n\n\n\n*Uniformly between the $p$-good contour and its outer side, for $p<n<l$, $$\\label{eq:flags-later-real}\n \\Re Z_l=o(\\Re Z_n).$$ Every retained index $j\\ge p$ has a polynomial buffer of its own: for some fixed exponent $C$, $$\\label{eq:flags-retained-buffer}\n \\Re Z_j\\ge\\frac{e^{f_j(u)}}{(1+f_j(u))^C}.$$ In particular $\\Re Z_j/f_l(u)\\to\\infty$ for $l\\ge j$, so fixed derivative losses $\\exp(C'f_l)$ can be absorbed by any fixed positive exponential decay in $\\Re Z_j$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-flags-contours"
+  },
+  {
+   "claim_id": "stmt-lem-flags-background",
+   "exact_statement": "Let $q\\ge2$ be a fixed integer. On $|v|\\le C/\\Lambda_p(u)$, two controlled background determinations differing by $O(|v|^q)$, and agreeing on the real path, change any $f_l$, $l\\ge p$, by $$\\label{eq:flags-background}\n |\\Delta f_l|\\le C\\Lambda_l(u)|v|^q.$$ The estimate is uniform along the short segment between the two determinations when that segment is taken with the same background slack. In particular agreement through the real first jet gives $O(\\Lambda_l v^2)$. On the angular scale $|v|=O(1/\\Lambda_p)$ this error is smaller than the phase gain $(\\Lambda_p-\\Lambda_l)/\\Lambda_p$ for $l>p$. Agreement through a sufficiently high fixed jet preserves any prescribed polynomial angular buffer and good-contour collar.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-flags-background"
+  },
+  {
+   "claim_id": "stmt-lem-flags-exceptional",
+   "exact_statement": "For $p<m$ set $D_p=\\log(2+x_p^0)$ if $f_p$ contains an uncapped slow additive term in Equation <a href=\"#eq:flags-uncapped\" data-reference-type=\"eqref\" data-reference=\"eq:flags-uncapped\">[eq:flags-uncapped]</a> or Equation <a href=\"#eq:flags-boundary\" data-reference-type=\"eqref\" data-reference=\"eq:flags-boundary\">[eq:flags-boundary]</a>, and set $D_p=1$ otherwise. Set $D_0=1$. On the buffered level-$n$ wedge, $n=p+1$, $$\\label{eq:flags-D}\n \\log(2+\\Lambda_p)\\le C D_p+o(\\Re Z_n).$$ If $D_p$ is large, then throughout the fixed-backstep range $$\\label{eq:flags-D-speed}\n \\Lambda_p(u)\\ge c_B e^{D_p}e^{u-u_0}.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-flags-exceptional"
+  },
+  {
+   "claim_id": "stmt-lem-flags-safe-columns",
+   "exact_statement": "Let a fixed finite list of positive real sweeps $x_a(u)$ and real lattices $c_a+h_a\\mathbb{Z}$, $h_a>0$, satisfy, uniformly far out, $$\\label{eq:flags-sweeps}\n \\begin{gathered}\n x_a\\to\\infty,\\qquad x_a'>0,\\qquad\n \\inf_{u\\ge U}x_a'(u)\\longrightarrow\\infty\\quad(U\\to\\infty),\\\\\n \\left|\\frac{x_a''}{(x_a')^2}\\right|\\le\\frac{C_a}{x_a}.\n \\end{gathered}$$ For a sufficiently small fixed $\\delta>0$, every fixed-length real interval far out contains a common column $u_*$ with $$\\mathop{\\mathrm{dist}}(x_a(u_*),c_a+h_a\\mathbb{Z})\\ge2\\delta\n \\quad\\hbox{for all }a.$$ If their complex continuations obey $$|\\Im x_a(u_*+iv)|<1\n \\quad\\Longrightarrow\\quad\n |\\Re x_a(u_*+iv)-x_a(u_*)|=o(1),$$ these columns stay a fixed positive distance from all the listed real poles on their whole applicable angular ranges.*\n\n\n*Suppose additionally that on a band $j=p+1$ the relevant sweeps satisfy $x_a'=O(Z_j\\Lambda_j)$ and that at the chosen column $$\\label{eq:flags-D-active}\n D_p>\\frac{Z_j(u_*)}{f_j(u_*)^{K+3}}.$$ Then safety persists throughout every required fixed collar window $$|f_p(u)-f_p(u_*)|\\le C_1\\log(2+D_p)$$ in the fixed-backstep range.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-flags-safe-columns"
+  },
+  {
+   "claim_id": "stmt-thm-separation",
+   "exact_statement": "Suppose the data of Definition <a href=\"#def:packet\" data-reference-type=\"ref\" data-reference=\"def:packet\">11</a> satisfy its requirements on a saturated flag. If all paired terminal coefficients vanish, the actual function is identically zero on the real flag locus sufficiently far in the regime, locally in ordinary inputs. Otherwise, let $\\lambda=(\\lambda_1,\\ldots,\\lambda_m)$ be the first nonzero paired exponent. Its coefficients coincide as ordinary analytic germs, say $c^+_\\lambda=c^-_\\lambda=c_\\lambda$, and $$\\label{eq:separation-leading}\n \\exp\\!\\left(\\sum_{i=1}^m\\lambda_i Z_i\\right)S^1\n       \\longrightarrow c_\\lambda(t)$$ locally uniformly on the real locus.*\n\n*The same assertion holds for each selected leading prefix, with all earlier whole subtrees zero. In band $j$, use its raw packet and normalize by the remaining selected exponents, evaluating all these rates with $b_j$. The coupled normalized determinations have the same leading limit inside their selected contours and through the used bands. With <a href=\"#eq:separation-background-fringe\" data-reference-type=\"eqref\" data-reference=\"eq:separation-background-fringe\">[eq:separation-background-fringe]</a>, their leading estimates extend through the owning outer fringe for any fixed required normalization. An entire zero subtree in band $p+1$, passed at such a prefix, has size $$\\label{eq:separation-zero-fringe}\n O(e^{-cV_p})$$ on more vertical level-$p$ collars and on the subsequent portion of that fringe, where its outer determination is in use. All constants and contour choices concern fixed finite labels and requests; none is asserted uniform over the whole packet tree.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-separation"
+  },
+  {
+   "claim_id": "stmt-lem-separation-proxies",
+   "exact_statement": "On a coupled level-$p$ domain, the rates of indices $l\\geq p$ have holomorphic proxies $\\widehat Z_l=Z_l+o(1)$, uniformly on a slightly smaller domain. Their logarithms have the prescribed lifted determinations. Where needed, $f_{p-1}$ also has an absolute $o(1)$ holomorphic proxy. The level-$p$ side can be defined by $\\Re\\widehat L_p=0$, with $$\\widehat L_p=\\widehat Z_p-A\\sum_{l>p}\\widehat Z_l\n                 -\\frac{\\widehat Z_p}{(\\log\\widehat Z_p)^K}.$$ All the angular comparisons and real-part domination estimates of Section <a href=\"#sec:flags\" data-reference-type=\"ref\" data-reference=\"sec:flags\">2</a> remain valid on the resulting component containing the real ray.*\n\n*If $a(s)$ is a $\\bar\\partial$ source in a domain contained in a fixed-width strip and $|a(s)|\\leq M e^{-u}$ for $u\\geq u_b$, its Cauchy transform has norm at most $C M e^{-u_b}$, with $C$ depending only on the strip width, and tends uniformly to zero as $u\\to\\infty$ on that fixed domain. The norm bound is also uniform over families with a common $M$ and strip width; in particular it tends to zero when their left starts $u_b$ tend to infinity. These statements apply as well after multiplication by a holomorphic gauge whenever its source has the displayed envelope.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-separation-proxies"
+  },
+  {
+   "claim_id": "stmt-lem-separation-growth",
+   "exact_statement": "Suppose the first $p-1$ transitions have been isolated and coupled. Their coupled function has the level-$p$ bound $$\\label{eq:separation-coupled-growth}\n \\log^+|G|\\leq C\\Re Z_p+CD_{p-1},$$ with the exceptional term absent on the outer side and on simultaneous safe columns. If a level-$p$ term is isolated on a good collar with exponentially small error and coupled to its child, the corresponding level-$(p+1)$ function has the analogous bound, after a fixed backstep. At a terminal transition it is bounded. All old joins and source types are preserved.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-separation-growth"
+  },
+  {
+   "claim_id": "stmt-lem-separation-source-ratios",
+   "exact_statement": "In a coupled level-$n$ domain put $x=\\Re\\widehat L_n$. For $n>1$ write $$i=n-1,\\qquad g=f_i-f_n,\\qquad\n r_0=\\frac{g'(u_a)}{\\Lambda_n(u_a)},\\qquad g_0=g(u_a).$$ At a target on a sufficiently vertical level-$i$ collar, and through its further fringe, $$\\label{eq:separation-target-x}\n x_a\\asymp\\Re Z_n(s_a)\n       \\asymp e^{f_n(u_a)}\\frac{r_0}{1+r_0}.$$ For every fixed $\\rho>0$ and every fixed upper bound on $r_0$, every coupled source satisfying $x\\geq\\rho x_a$ obeys $$\\label{eq:separation-ratio-small}\n \\frac{U}{x}\\geq c\\frac{e^{g_0}}{g'(u_a)}.$$ When $r_0$ is bounded below by a positive constant this also holds for central targets with $x_a\\asymp e^{f_n(u_a)}$.*\n\n\n*For large $r_0$ and central targets with $x_a\\asymp e^{f_n(u_a)}$, one has instead $$\\label{eq:separation-ratio-large}\n \\frac{U}{x}\\geq e^{c g_0}\n \\quad\\hbox{on sources with }x\\geq\\rho x_a.$$ For a fixed coupled calculation, $U/e^u\\to\\infty$ and $U/x\\to\\infty$ uniformly on its sources at infinity. These comparisons are unchanged by the absolute proxy errors.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-separation-source-ratios"
+  },
+  {
+   "claim_id": "stmt-lem-separation-weighted",
+   "exact_statement": "Let $G$ be coupled through level $n$ with the growth bound of Lemma <a href=\"#lem:separation-growth\" data-reference-type=\"ref\" data-reference=\"lem:separation-growth\">14</a>. Suppose that on the real ray $$\\label{eq:separation-preliminary}\n |G(u)|\\leq C_N e^{-NZ_n(u)}\n \\quad(u\\geq u_N),\\qquad\\hbox{for every fixed }N>0.$$ The constants $C_N,u_N$ can depend arbitrarily on $N$. Fix the coupled functions, its joins, a safe left column, and the full domain $x=\\Re\\widehat L_n>0$. There are fixed $C,C_0,c>0$ such that for every $H>0$ and every point of that domain, $$\\label{eq:separation-weighted}\n \\log|G|+Hx-C\\Re\\widehat Z_n\n \\leq C_0+\\max\\left\\{\n H\\sup_{\\rm left}x,\n \\sup_{\\rm sources}(Hx-cU/2),\\ 0\\right\\}.$$ In particular $C_0$ is independent of $H$, $C_N$, and $u_N$. When $n=1$ there are no sources, and <a href=\"#eq:separation-preliminary\" data-reference-type=\"eqref\" data-reference=\"eq:separation-preliminary\">[eq:separation-preliminary]</a> implies exact vanishing.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-separation-weighted"
+  },
+  {
+   "claim_id": "stmt-lem-separation-upgrade",
+   "exact_statement": "For $n>1$, under the hypotheses of Lemma <a href=\"#lem:separation-weighted\" data-reference-type=\"ref\" data-reference=\"lem:separation-weighted\">16</a>, the outer packet of $G$ satisfies $|G|\\leq Ce^{-cV_{n-1}}$ on sufficiently vertical level-$(n-1)$ collars and their further fringe.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-separation-upgrade"
+  },
+  {
+   "claim_id": "stmt-lem-separation-isolate",
+   "exact_statement": "Suppose a prefix is coupled through level $p$. Fix a child exponent $a$, and assume that every earlier child has an entire zero subtree and satisfies the upgrade of Lemma <a href=\"#lem:separation-upgrade\" data-reference-type=\"ref\" data-reference=\"lem:separation-upgrade\">17</a> at level $p$. Then a sufficiently vertical fixed good collar can be chosen so that $$\\label{eq:separation-isolate}\n e^{aZ_{p,p}}S^p_{\\lambda_{<p}}\n     =S^{p+1}_{\\lambda_{<p},a}+O(e^{-cV_p})$$ on both sides, with zero insertion if necessary. It can be coupled to that child while preserving all preceding joins.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-separation-isolate"
+  },
+  {
+   "claim_id": "stmt-lem-separation-terminal",
+   "exact_statement": "Suppose a complete exponent vector has been isolated on the two sides and coupled, with all earlier subtrees passed as in Lemma <a href=\"#lem:separation-isolate\" data-reference-type=\"ref\" data-reference=\"lem:separation-isolate\">18</a>. Its two terminal ordinary coefficients are the same analytic germ. The fully normalized coupled function tends to this germ on the real ray and through the corresponding inner wedge and used bands.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-separation-terminal"
+  },
+  {
+   "claim_id": "stmt-lem-separation-family-uniformity",
+   "exact_statement": "Fix finitely many packet labels, transition budgets, coupled joins, and normalizations, and a family of tests with the common quantitative controls in Definition <a href=\"#def:packet\" data-reference-type=\"ref\" data-reference=\"def:packet\">11</a>. The fixed labels used on the coupled domain must stay in their common ordinary ranges throughout that domain. Deeper labels used only for preliminary real estimates may have smaller ranges entered at a time depending on the member of the family.*\n\n*The proxy, growth, source-ratio, and preceding-transition estimates above have constants uniform in this family. If each member has the preliminary estimates <a href=\"#eq:separation-preliminary\" data-reference-type=\"eqref\" data-reference=\"eq:separation-preliminary\">[eq:separation-preliminary]</a>, no uniformity of their $C_N,u_N$ or of their return times is needed for the weighted estimate or its upgrades. Terminal comparison is uniform at receding anchors when the tests have a common slow-variation modulus on each fixed window about those anchors. The same statements apply to any fixed finite collection of derivative packet trees satisfying the differentiated hypotheses.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-separation-family-uniformity"
+  },
+  {
+   "claim_id": "stmt-thm-calculus",
+   "exact_statement": "Assume the flag estimates of Section <a href=\"#sec:flags\" data-reference-type=\"ref\" data-reference=\"sec:flags\">2</a>, the packet separation theorem, and Assumption <a href=\"#ass:calculus-primitive\" data-reference-type=\"ref\" data-reference=\"ass:calculus-primitive\">22</a>. Start with the primitive data and the initial ordinary backgrounds. The following operations can be iterated a finite number of times.*\n\n1.  *Raw finite sums, products, and any fixed independent derivatives have differentiated packet trees with iterated left-finite supports. So does multiplication by any fixed real exponential monomial $$h^\\gamma=\\exp\\left(-\\sum_i\\gamma_i Z_i\\right).$$*\n\n2.  *Positive expressions admit cleaned zeroth-prefix realizations $K_j$. Every fixed ordinary derivative is bounded and converges to the corresponding derivative of $K_0$ throughout the usable bands. If a mixed independent derivative has earliest differentiated free index $l$, then for $j\\le l$ its value on $K_j$, multiplied by $e^{C f_l(u)}$, tends to zero for every fixed $C$. Differentiated owning transitions satisfy $K_j-K_{j+1}=O(e^{-c\\Re Z_{j,j}})$. Real local uniform boundedness of a raw expression implies positivity; its real limit, when specified, identifies $K_0$.*\n\n3.  *A regular analytic operation on finitely many positive expressions, whose limiting tuple belongs to its analytic domain, is positive and has the corresponding differentiated tree. This includes inversion of a unit whose limiting value is nonzero.*\n\n4.  *Let $K(S,t,x)$ be a real square vector of positive expressions on a previous chart. If $$K_0(t_c,x_c)=0,\\qquad \\det D_xK_0(t_c,x_c)\\ne0,$$ then the actual regular branch $x=\\chi(S,t)$ near $(t_c,x_c)$ and every old raw expression pulled back to that branch have differentiated packet trees. The new backgrounds obey Equation <a href=\"#eq:calculus-background-transition\" data-reference-type=\"eqref\" data-reference=\"eq:calculus-background-transition\">[eq:calculus-background-transition]</a>. The ordinary limiting root is analytic. Band realizations are smooth regular sheets, holomorphic in band 1, with controlled jets, differentiated source bounds, safe-column estimates, and differentiated seam bounds. They retain local independence from discarded free inputs.*\n\n*For each fixed finite stack of ordinary implicit charts there is a finite coherence jet order, depending on the stack and fixed angular buffers but independent of subsequent derivative orders and transition budgets. Tests on the same free path with the same complex ordinary target and enough common real jets give the same local sheet. Every finite request can then use a larger working Taylor order and farther or narrower working domains; on overlaps these constructions agree. All assertions for a fixed finite request are uniform on controlled families in the sense of Definition <a href=\"#def:calculus-controlled-family\" data-reference-type=\"ref\" data-reference=\"def:calculus-controlled-family\">21</a>.*\n\n*All formal operations are performed separately in the two signs, by finite coefficient rules at successive prefixes. They commute with differentiation, regular analytic substitution, and the stated regular implicit solution. Identically zero terminal coefficient germs remain zero under these rules.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-calculus"
+  },
+  {
+   "claim_id": "stmt-lem-calculus-support",
+   "exact_statement": "Finite unions and Minkowski sums of iterated left-finite subsets of $\\mathbb{R}^m$ are iterated left-finite. Each coefficient in their convolution is a finite sum. If $A\\subset\\mathbb{R}^m$ is iterated left-finite and consists of strict positives, the semigroup of finite sums of elements of $A$ is iterated left-finite. A fixed exponent has only finitely many ordered representations using nonzero factors from $A$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-calculus-support"
+  },
+  {
+   "claim_id": "stmt-lem-calculus-differentiation",
+   "exact_statement": "Every fixed derivative of a raw packet expression has the tree obtained by formal differentiation. The series for $D\\log W_i=-DZ_{i,i}$ has zeros before coordinate $i$ and has nonnegative local $i$-exponents. Its later exponents may be negative. In addition, $D_{S_l}W_i=0$ if $l<i$. Formal differentiation preserves positivity and cannot move a strict positive exponent to a negative or zero exponent.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-calculus-differentiation"
+  },
+  {
+   "claim_id": "stmt-lem-calculus-source-pullback",
+   "exact_statement": "Fix a finite derivative and composition request. Suppose that each primitive defect and each input-sheet defect in its chain rules has one of the permitted differentiated source bounds, and that every remaining factor has logarithmic size $o(U)$ at the corresponding cutoff source of cost $U$. Then the compositions have the same source bounds, with smaller positive precision constants. Holomorphic inputs contribute no input-sheet defect.*\n\n*At a level-$j$ good join, include all fixed current-level losses in $C\\Re Z_j$, where $\\Re Z_j\\asymp\\varepsilon_jV_j$. For a transition remainder $e^{-M\\Re Z_j}$, choose the finite budget $M>C$ with the required output margin before fixing the contour. The product then has precision $e^{-(M-C)\\Re Z_j}$, hence $e^{-cV_j}$ for a positive fixed $c$ on that contour. For an independently established error $e^{-c_0V_j}$ with $c_0>0$ fixed independently of the new contour choice, choose $\\varepsilon_j$ sufficiently small that $C\\Re Z_j\\le c_0V_j/2$. In either case the remaining later-rate and fixed derivative losses of logarithmic size $o(V_j)$ can be absorbed afterwards. For a controlled family, assume that the defect bounds and the $o(U)$ and $o(V_j)$ controls are common for this finite request. Then all these choices are common to the family.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-calculus-source-pullback"
+  },
+  {
+   "claim_id": "stmt-lem-calculus-cleanup",
+   "exact_statement": "Let $K$ be positive. Keep its raw zero-prefix packets $K_j=S^j_{0,\\ldots,0}$, inserting a zero packet if necessary, and in each of their transitions delete all negative local exponents. The resulting transitions still hold with arbitrarily deep errors and all requested independent derivatives. Their zero-prefix derivative packets are exactly the derivatives of $K_j$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-calculus-cleanup"
+  },
+  {
+   "claim_id": "stmt-lem-calculus-uniform-separation",
+   "exact_statement": "For one controlled family and one fixed finite coupled calculation, the coupled growth and zero-subtree upgrade constants of Section <a href=\"#sec:separation\" data-reference-type=\"ref\" data-reference=\"sec:separation\">3</a> are common to the family. Leading limits are uniform at its moving targets. Deeper preliminary estimates used to prove a zero-subtree upgrade may have member-dependent constants and starting points, including dependence on the return time to the germ.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-calculus-uniform-separation"
+  },
+  {
+   "claim_id": "stmt-lem-calculus-positive-bounds",
+   "exact_statement": "The cleaned realizations of a positive expression satisfy all the bounds in part (2) of Theorem <a href=\"#thm:calculus\" data-reference-type=\"ref\" data-reference=\"thm:calculus\">24</a>. Conversely, real locally uniform boundedness of a raw expression on an anchored ordinary neighborhood implies positivity.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-calculus-positive-bounds"
+  },
+  {
+   "claim_id": "stmt-lem-calculus-analytic",
+   "exact_statement": "Let $H$ be analytic near the limiting tuple of finitely many positive expressions. Applying $H$ to their actual values produces a positive expression with the formal analytic substitution and the differentiated packet estimates. This includes a matrix inverse at an invertible limiting matrix.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-calculus-analytic"
+  },
+  {
+   "claim_id": "stmt-lem-calculus-interpolation",
+   "exact_statement": "Fix an integer $r$ and a finite higher jet order. Let $v\\ne0$ be small. Suppose a bounded ordinary input has prescribed real jets at $u$ through that higher order, with its positive-order jets small, and the proposed complex target differs from the associated high Taylor value at $u+iv$ by $O(|v|^R)$, where $R>r+2$. After initially matching sufficiently many jets, the target can be attained exactly by a bounded real-symmetric holomorphic test that keeps all jets through order $r$. The test returns to the prescribed ordinary germ on the real ray. Its additional coefficients tend to zero as $v\\to0$. For a family with common finite jet bounds, target-error constants, and ordinary slack, the interpolants have common bounds for every fixed requested number of derivatives on a full forward strip. If the prescribed positive real jets and $|v|$ tend uniformly to zero, these derivative bounds have a common vanishing modulus. Their times of return to a smaller neighborhood of the germ need not be uniform.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-calculus-interpolation"
+  },
+  {
+   "claim_id": "stmt-lem-calculus-refinement",
+   "exact_statement": "Enlarge a saturated flag by finitely many permitted insertions without converting its old active free nodes. Suppose the primitive data can be retested on this flag with Assumption <a href=\"#ass:calculus-primitive\" data-reference-type=\"ref\" data-reference=\"ass:calculus-primitive\">22</a>, the same terminal analytic germ recipes and lateral determinations, and identity transitions at unused new nodes. Then any previously constructed finite ordinary chart recipe can be retested on the refinement. Its real expressions on the old anchored inputs are unchanged, and its positivity, normalizing divisions, regular implicit steps, and formal compatibility remain valid.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-calculus-refinement"
+  },
+  {
+   "claim_id": "stmt-lem-elimination-promotion",
+   "exact_statement": "A nonzero ordinary coordinate $x_A\\to0$ can be replaced, after a saturated flag extension, by $$\\label{eq:elimination-promotion}\n x=\\varepsilon\\rho,\\qquad\n \\rho=h^\\nu e^{-B}>0,\\qquad \\varepsilon\\in\\{1,-1\\},$$ where $h^\\nu$ has strictly positive order. A bounded log remainder $B$ is retained whenever it is the sole replacement degree of freedom, even if its values at the anchors are zero. It may be omitted only when a free residual already supplies the replacement coordinate. The replacement has a single new degree of freedom $\\xi$, either a free large variable or a bounded ordinary residual. It preserves the old free inputs and does not increase the number of active ordinary inputs. With physical ordinary variables and all other records held fixed, and $M=|\\log\\rho|$, $$\\label{eq:elimination-direct}\n 1\\le |\\partial_\\xi\\log\\rho|\\le C(1+M)^C.$$ Let $m$ be a fixed exponential monomial satisfying $\\rho^C\\le |m|\\le\\rho^{-C}$ for some fixed $C$ at the reference anchors. Every fixed derivative of $\\log|m|$ in physical ordinary backgrounds, bounded records, or absolute free increments has a power bound in $1+|\\log\\rho|$ on sufficiently small neighborhoods preserving the saturated comparisons, using the bounded background jets supplied by the packet calculus. These are the independent physical or prefix coordinates in which those jets are bounded; pullback through a power-conditioned prefix may introduce its stated power loss in $\\rho$. In particular, $$\\label{eq:elimination-feedback}\n \\rho\\,\\partial_x\\log\\rho=o(1).$$ Equation <a href=\"#eq:elimination-promotion\" data-reference-type=\"eqref\" data-reference=\"eq:elimination-promotion\">[eq:elimination-promotion]</a>, with current backgrounds depending on $x$, is therefore a regular implicit equation in $x$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-elimination-promotion"
+  },
+  {
+   "claim_id": "stmt-lem-elimination-local-inverse",
+   "exact_statement": "Suppose a map $\\Phi$ has, on a ball about $q_0$, bounds $$\\|D\\Phi(q_0)^{-1}\\|\\le C r^{-c},\\qquad\n \\|D^2\\Phi\\|\\le C r^{-b},$$ and the available source ball has radius at least $c_0r^a$. There are source and image balls of fixed power radii on which $\\Phi$ is invertible. Their exponents depend only on $a,b,c$, and a discrepancy $O(r^T)$ within the image ball is corrected by a source displacement $O(r^{T-c})$. For inverse derivatives through an order $k\\ge1$, assume in addition power bounds for the forward derivatives $D^j\\Phi$ through order $\\max(k,2)$ on that source ball. Then those inverse derivatives have fixed power bounds. A perturbation has the same conclusions if it is sufficiently power close in $C^{\\max(k,2)}$ on the same available source ball.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-elimination-local-inverse"
+  },
+  {
+   "claim_id": "stmt-lem-elimination-lift",
+   "exact_statement": "Let an ambient chart have ordinary variables $(y,w)$ near $w=0$. Suppose a full-dimensional regular recipe on $w=0$ has been constructed and is power moderate in a width $\\rho$, with its records included among its outputs. All necessary flag extensions and passive records may be included before this recipe is used. Then the recipe can be lifted to either $w=\\rho u$, for bounded ordinary $u$, or a specified promotion $w=\\varepsilon\\rho$ with replacement coordinate $\\xi$. At common independent inputs the lifted lower map and record outputs approximate the center recipe to $O(\\rho^T)$ in any specified finite $C^k$ norm, for arbitrary $T$.*\n\n*For a thickness substitution, the resulting full map is power conditioned. For a promotion the same holds if the inverse center records at fixed physical $y$ have arbitrarily power-small derivatives in its exogenous promotion coordinates. Calibrated approximate hits whose errors are sufficiently power small can be corrected to exact hits. Only finitely many monomial denominator powers are used for each choice of $T,k$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-elimination-lift"
+  },
+  {
+   "claim_id": "stmt-lem-elimination-common-domain",
+   "exact_statement": "Fix a width $r$ equal to a strict positive-order current monomial times a bounded regular unit with positive limiting value. All power bounds and moderation in this lemma refer to $r$. Consider a family of center recipes with a fixed chronological list of coordinate replacements, a fixed active flag, and fixed scaling exponents. Refining its accuracy changes finite Taylor depths and their finite formulas, but not that list. Suppose the regular equations and analytic arguments at each stage have the same ordinary limiting germs throughout the family. Suppose also that, for every chronological prefix, its actual map and record outputs, the finite forward derivatives required below, its inverse where used, and its available source neighborhood have power bounds with exponents fixed before the accuracy request. Constants and ordinary germ neighborhoods may depend on accuracy. The inverted monomials are, after the preceding whole-reciprocal preprocessing, products of powers of a fixed finite list of two-sided moderate generators; the powers in a flattened formula may depend on accuracy. Here a fixed monomial generator means a fixed exponent vector evaluated at the current backgrounds, not a frozen numerical function.*\n\n*Fix $J_0>0$ and a finite derivative request, and use the new transverse width $\\rho=r^{J_0}$. The Taylor replay in Lemma <a href=\"#lem:elimination-lift\" data-reference-type=\"ref\" data-reference=\"lem:elimination-lift\">36</a> can then be made, through every chronological stage, on source balls $B(q_A,c_{\\mathcal A} r^N)$ with $N$ independent of the accuracy request $\\mathcal A$. The same holds for graph tubes used in its regular implicit stages, with fixed power exponents. On these domains the comparison can be made arbitrarily power accurate in the requested differentiated norm. The resulting family has the same prefix properties, including power-sized image neighborhoods whenever the Schur hypotheses of Lemma <a href=\"#lem:elimination-lift\" data-reference-type=\"ref\" data-reference=\"lem:elimination-lift\">36</a> hold.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-elimination-common-domain"
+  },
+  {
+   "claim_id": "stmt-prop-elimination-recursion",
+   "exact_statement": "Let $F$ be a real positive scalar field on an active chart with $n$ ordinary inputs. The following statements hold simultaneously.*\n\n1.  *In exact mode, along anchors where $F=0$, finitely many regular changes, promotions, and exact ordinary restrictions produce a chart through those anchors on which $F$ has identically zero formal data and hence vanishes on its real regime. All old free inputs survive.*\n\n2.  *If $F_A$ is visible relative to a numerical floor, there is a full-dimensional regular chart with an exact hit and $$\\label{eq:elimination-visible}\n     F=\\tau U,$$ where $\\tau$ is a nonnegative-order monomial, possibly $1$, and $U$ is positive with nonzero exponent-zero value at the limiting hit. All added divisors, widths, and local conditioning costs are power moderate in $|F_A|$. The active ordinary count does not increase.*\n\n\n3.  *If $F_A$ is negligible, active flag additions and their reference records can be chosen without realizing the floor. For every eventual realization $r$, field tolerance $M$, finite derivative request $k$, and record accuracy $\\mathcal A$, there is a full-dimensional regular chart hitting the input, of active ordinary count at most $n$, on which $$\\label{eq:elimination-coarse}\n     |F|\\le r^M.$$ Its added divisions and widths are power moderate in $r$. Its records at the hit differ from the references by $O(r^{\\mathcal A})$, and their inverse first derivatives in the exogenous inputs, at fixed physical inputs, are $O(r^{\\mathcal A})$ on a power-sized neighborhood.*\n\n*The third assertion has the following stronger order of quantifiers. For fixed $M,r,k$, the thickness exponents, forward bounds for the actual map *and its record outputs* through order at least $\\max(k,2)$, inverse-Jacobian powers, and source and physical-image neighborhood exponents can all be fixed *before* $\\mathcal A$ is requested. Constants and sufficiently far starting points may depend on $\\mathcal A$. The denominator powers in an individual finite flattened formula may depend on $\\mathcal A$. Completed active charts remain fixed as $\\mathcal A$ increases; only pending thickness recipes and their finite Taylor replays are refined.*\n\n*The construction also has the following prefix invariant. For the fixed request before choosing $\\mathcal A$, there is a fixed finite chronological list of coordinate replacements and scaling exponents. Every prefix has the same ordinary limiting regular equations and analytic argument germs throughout the accuracy family. Its maps and records, with the unknown of a subsequent equation still an independent ordinary input, have preassigned finite derivative and source-domain powers; its inverse and image powers are preassigned where an inverse is used. Its monomial divisors belong to powers of a fixed finite list of moderate current monomials and their triangular derivative factors. Only their multiplicities inside the finite formulas can grow with accuracy. Thus the family meets the hypotheses and conclusions of Lemma <a href=\"#lem:elimination-common-domain\" data-reference-type=\"ref\" data-reference=\"lem:elimination-common-domain\">37</a> at every pending lift.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-elimination-recursion"
+  },
+  {
+   "claim_id": "stmt-thm-absolute-zero",
+   "exact_statement": "Let a finite real equation system be specified on an open domain with its original strict inequalities and graph ties. Regard all coordinates, including coefficient parameters and auxiliary coordinates, as variables. Suppose every sequence of distinct solutions has a subsequence with one of the following descriptions:*\n\n1.  *the equations extend as ordinary real analytic functions to a neighborhood of its finite limit; or*\n\n2.  *after finitely many regular graph constructions and coordinate charts, it is an anchored saturated flag regime for a library retestable in the sense of Definition <a href=\"#def:elimination-retestable\" data-reference-type=\"ref\" data-reference=\"def:elimination-retestable\">39</a>, with at least one old free input recoverable from the original solution tuple.*\n\n*In the second description every equation admits the finite normalizations and positive operations of Theorem <a href=\"#thm:calculus\" data-reference-type=\"ref\" data-reference=\"thm:calculus\">24</a>. Then the system has finitely many isolated real solutions in its full domain.*\n\n*The assertion applies separately to every finite system in the following closure whenever these same sequential hypotheses hold: independent derivatives of equations and domain margins; finite sums, products and regular analytic evaluations; inverses on their specified nonzero domains; denominator clearing with those domains retained; fixed real specializations; addition of real parameters, multiplier variables, polynomial equations, and regular graph ties, including finite derivative graphs. No uniform bound over infinitely many generated systems, and no assertion after forgetting their original domains, is part of this theorem.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-absolute-zero"
+  },
+  {
+   "claim_id": "stmt-thm-additive-packets",
+   "exact_statement": "Under these assumptions, the output maps of <a href=\"#eq:additive-A\" data-reference-type=\"eqref\" data-reference=\"eq:additive-A\">[eq:additive-A]</a> and <a href=\"#eq:additive-B\" data-reference-type=\"eqref\" data-reference=\"eq:additive-B\">[eq:additive-B]</a> satisfy the packet conditions of Definition <a href=\"#def:packet\" data-reference-type=\"ref\" data-reference=\"def:packet\">11</a> and the differentiated primitive conditions of Assumption <a href=\"#ass:calculus-primitive\" data-reference-type=\"ref\" data-reference=\"ass:calculus-primitive\">22</a>. They have no exceptional column loss: every working column is safe. Their only nonholomorphic defects above the first band have simple costs $e^{\\Re f_i}$ and, when $q$ is large, $e^{\\Re f_l}$, where $i,l$ are the leading indices of $Q,q$. Each cost is used only while its log formula is retained. The complete terminal coefficient germs, on each lateral determination, are unchanged by inserting unused nodes and by retesting a fixed finite construction on a permitted refinement preserving the old active free nodes, with the same lifted relations and limiting ordinary data. In particular this primitive library is retestable for elimination in the sense of Definition <a href=\"#def:elimination-retestable\" data-reference-type=\"ref\" data-reference=\"def:elimination-retestable\">39</a>, with the fixed local lateral determinations.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-additive-packets"
+  },
+  {
+   "claim_id": "stmt-lem-additive-slow",
+   "exact_statement": "The graph, fiber transformation in its convergent state-disk norm, and $b$ in (A) are bounded on the lateral domains. The transformation is close to the identity and has a regular inverse on a smaller disk covering the inputs. In (B), for each fixed $m$ the full $H$ tail converges on one fixed fast radius; the corresponding assertion holds with the sides interchanged. These radii cover the actual fast amplitudes with fixed slack and do not decrease with $m,n$, or $K$. State, profile, and spatial neighborhoods have common positive remaining margins. The finite balanced lists have the same estimates.*\n\n\n*Each such fixed request has a formal series in $h=1/w$, whose coefficients are analytic in independent profile and ordinary arguments on fixed smaller polydisks and satisfy $$\\label{eq:additive-Gevrey}\n \\|c_j\\|\\le C^{j+1}j!.$$ On padded interiors, for $1\\le J\\le c|w|$, $$\\label{eq:additive-Gevrey-error}\n \\left\\|c(w)-\\sum_{j<J}c_j(X)w^{-j}\\right\\|\n       \\le C^{J+1}J!|w|^{-J};$$ a sufficiently small proportional optimal cutoff gives $O(e^{-c|w|})$. For unscaled positive-profile coefficients $\\tau_j=\\chi_jQ^{-r_j}$, so that $X_j=\\tau_jw^{r_j}$, the same estimates for $\\partial_\\tau^\\alpha$ acquire the factor $|w|^{r\\cdot\\alpha}$. Fixed ordinary derivatives are allowed. Neighboring anchor choices of size comparable to $|Q|$ differ by $O(e^{-c|Q|})$ on the common working interior, including at its inner radius, with fixed polynomial derivative losses allowed. At $\\tau=0$ the finite positive-profile jets have canonical infinite-anchor determinations with these estimates.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-additive-slow"
+  },
+  {
+   "claim_id": "stmt-lem-additive-primitives",
+   "exact_statement": "There are particular formal primitives $$\\label{eq:additive-formal-word}\n \\widehat Y_{\\mathbf e}\n =w^{d_{\\mathbf e}}\\sum_{j\\ge0}w^{-j}B_{\\mathbf e,j}(X,L),\n \\qquad d_{\\mathbf e}=\\sum_{e\\in\\mathbf e}d_e,\n \\qquad L=\\log(w/q),$$ where $B_{\\mathbf e,j}$ is polynomial in $L$ of degree at most the word length and its analytic coefficient norm is at most $C^{j+1}j!$. The analogous assertion holds for $\\widehat I$ with $d=0$ and length one.*\n\n*Normalize the actual primitives by a sufficiently small proportional optimal truncation at a positive $w_*$ comparable to $|Q|$, in the common padded interior. Then $I$ is bounded on the needed paths, and on a matching outer ray the normalized outer values are approximated by their formal optimal truncations with error $O(e^{-c|Q|})$. The inner kernels $$\\label{eq:additive-inner-kernels}\n I(q),\\qquad q^{-d_{\\mathbf e}}Y_{\\mathbf e}(q)$$ are bounded, have Gevrey expansions in $1/q$ obtained by setting $L=0$ in <a href=\"#eq:additive-formal-word\" data-reference-type=\"eqref\" data-reference=\"eq:additive-formal-word\">[eq:additive-formal-word]</a>, and obey the differentiated estimates of Lemma <a href=\"#lem:additive-slow\" data-reference-type=\"ref\" data-reference=\"lem:additive-slow\">43</a>. In particular a positive-profile jet of order $\\alpha$ is bounded after division by $q^{r\\cdot\\alpha}$. Neighboring finite normalizations change these kernels by $O(e^{-c|Q|})$, allowing fixed polynomial losses.*\n\n*At zero positive profiles there are canonical infinite-anchor primitive jets. Their normalized inner values have the same Gevrey estimates. For each fixed jet and each fixed $N$, finite and infinite normalized jets differ by $O_N(|Q|^{-N})$. This last assertion is power accuracy, and does not claim exponential accuracy in $|Q|$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-additive-primitives"
+  },
+  {
+   "claim_id": "stmt-lem-additive-gevrey-operations",
+   "exact_statement": "Finite sums and products, analytic operations at bounded arguments with fixed room in their convergence boxes, and regular inverses preserve the normalized Gevrey and jet conclusions above. For two independent slow variables the resulting formal coefficients have bounds $$\\label{eq:additive-rectangular}\n \\|c_{ab}\\|\\le C^{a+b+1}a!b!.$$ Rectangular optimal evaluation has separate errors $O(e^{-c|Q_0|})+O(e^{-c|q_0|})$; changing only one optimal cutoff has the accuracy of its own variable. These conclusions remain uniform when other bounded analytic arguments vary independently on smaller fixed disks, and under fixed derivatives on those disks.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-additive-gevrey-operations"
+  },
+  {
+   "claim_id": "stmt-prop-additive-charge",
+   "exact_statement": "On any sufficiently tight $i$ fringe, through its buffered side, both actual passages have an expansion to an arbitrary fixed charge cutoff, with remainder $$\\label{eq:additive-charge-remainder}\n C_K|Q|^{C_K}|P|^{K+1}+C_Ke^{-c_K|Q|}.$$ Each coefficient is a finite expression in explicit power and fixed-degree logarithmic prefactors, bounded normalized inner kernels at $q$, and outer formal Gevrey series in a variable of size $Q^{-1}$. Their analytic operations have bounded independent arguments with fixed margins. Outer coefficients may be evaluated at bounded inner kernels such as $H_0$. Every fixed derivative has the same description with its own constants and polynomial losses.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-additive-charge"
+  },
+  {
+   "claim_id": "stmt-prop-additive-dispersal",
+   "exact_statement": "Every coefficient furnished by Proposition <a href=\"#prop:additive-charge\" data-reference-type=\"ref\" data-reference=\"prop:additive-charge\">46</a> admits, on each lateral determination, a packet tree using only retained free inputs and ordinary inputs. The numerical outer anchor for an inner kernel is removed at $p_0$ in <a href=\"#eq:additive-retirement-index\" data-reference-type=\"eqref\" data-reference=\"eq:additive-retirement-index\">[eq:additive-retirement-index]</a>; the numerical optimal outer variable is removed at $s$. When $q$ is large, its optimal variable is removed at $\\sigma(l)$. All transitions have arbitrary fixed exponential accuracy on their full owning fringes. The support is iterated left-finite and all terminal leaves are analytic ordinary germs.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-additive-dispersal"
+  },
+  {
+   "claim_id": "stmt-lem-additive-controlled-family",
+   "exact_statement": "The additive constructions satisfy the common-constant requirement of Definition <a href=\"#def:calculus-controlled-family\" data-reference-type=\"ref\" data-reference=\"def:calculus-controlled-family\">21</a>. In particular, fix one finite set of labels, derivatives, Taylor orders, and transition budgets, a compact ordinary argument box with common positive analytic slack, and common bounds for the finite real jets, Taylor errors, angular rooms, and flag inequalities used by that request. Then the additive growth, transition, source, derivative, and safe-column estimates have common constants and common numerical rate and gap thresholds throughout every member’s full forward domain where those inequalities and argument ranges hold. These constants and thresholds are independent of the member’s return time to the terminal germ.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-additive-controlled-family"
+  },
+  {
+   "claim_id": "stmt-thm-regular-packets",
+   "exact_statement": "The following two passage outputs satisfy the packet conditions of Definition <a href=\"#def:packet\" data-reference-type=\"ref\" data-reference=\"def:packet\">11</a> and the differentiated primitive conditions of Assumption <a href=\"#ass:calculus-primitive\" data-reference-type=\"ref\" data-reference=\"ass:calculus-primitive\">22</a>.*\n\n\n1.  *A regular base flow with endpoint layers, $$\\label{eq:regular-layer-model}\n     \\begin{gathered}\n     z_s=V(s,z)+qW(s,E,H,z),\\qquad W(s,0,0,z)=0,\\\\\n     E_\\nu=e_\\nu e^{-a_\\nu qs},\\qquad\n     H_\\nu=d_\\nu e^{-b_\\nu q(1-s)}.\n     \\end{gathered}$$ The weights are positive multiples of a fixed charge unit, and the amplitudes are sufficiently small. The base flow from the chosen input disk is analytic and regular throughout $[0,1]$, with room for a small perturbation.*\n\n\n2.  *A stable linear generator with bounded slow remainder, $$\\label{eq:regular-stable-model}\n     v_s=-qv+g(s,v),$$ with input in a sufficiently small disk about zero.*\n\n*Ordinary parameters may occur analytically in all the displayed data. The estimates hold for every fixed number of independent retained-free and ordinary derivatives, and for the controlled input tests of Assumption <a href=\"#ass:calculus-primitive\" data-reference-type=\"ref\" data-reference=\"ass:calculus-primitive\">22</a>. No exceptional unsafe-column loss is required. For each fixed finite request the estimates have uniform constants and far-regime thresholds on the controlled families of Definition <a href=\"#def:calculus-controlled-family\" data-reference-type=\"ref\" data-reference=\"def:calculus-controlled-family\">21</a>, independently of the individual tests’ return times to the ordinary germ. This primitive library is retestable for elimination in the sense of Definition <a href=\"#def:elimination-retestable\" data-reference-type=\"ref\" data-reference=\"def:elimination-retestable\">39</a>, with its fixed local sector determinations.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-regular-packets"
+  },
+  {
+   "claim_id": "stmt-lem-regular-charges",
+   "exact_statement": "For every integer $K\\ge0$, the layer output has, on the owning fringe, a description $$\\label{eq:regular-charge-expansion}\n z_{\\mathrm{out}}=\n \\sum_{k=0}^K P^k\\sum_{\\ell=0}^k q^\\ell\n          F_{k\\ell}^{[J]}(1/q)\n +O\\bigl((1+|q|)^{C_K}|P|^{K+1}+e^{-c_K|q|}\\bigr).$$ Each $F_{k\\ell}$ is a formal Gevrey-1 series, analytic in the ordinary inputs. Here $[J]$ denotes truncation at a locally frozen integer $J\\asymp\\delta|q|$, with $\\delta>0$ sufficiently small for the fixed request. The stable output has the same conclusion with only $\\ell=0$. Estimates persist under fixed ordinary derivatives on smaller disks. Individual constants and optimal proportions may depend on $K$ and the fixed coefficient request.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-regular-charges"
+  },
+  {
+   "claim_id": "stmt-lem-regular-formal",
+   "exact_statement": "Put $h=1/q$. For the layer model there are unique formal series in $h$ and the fast variables of the form $$y=u+t(s,E,H,u;h),\\qquad \\Pi t=0,\\qquad\n u_D=\\mathcal C(s,E,H,u;h),\\qquad \\Pi\\mathcal C=\\mathcal C,$$ determined by $$\\label{eq:regular-layer-normalization}\n \\mathcal C=\\Pi W(s,E,H,u+t),\\qquad\n (h\\partial_s+\\mathcal D_{\\rm lay})t=(1-\\Pi)\n       \\bigl(W(s,E,H,u+t)-t_u\\mathcal C\\bigr).$$ There is no constant balanced coefficient. For each fixed left multiindex the full right tail converges in a common fixed fast radius, and conversely with left and right interchanged. On any fixed finite collection of such tails and balanced coefficients, the coefficient of $h^j$ has norm at most $C^{j+1}j!$. The pure transformations and their state derivatives are small on smaller fixed fast disks.*\n\n\n\n*For the stable model there are formal series $$T(s,u;h)=v_0(s;h)+u+\\sum_{m\\ge2}t_m(s;h)u^m,\n \\qquad b(s;h)=g_v(s,v_0(s;h)),$$ with a convergent common $u$-disk norm and the same Gevrey bound, satisfying $$\\begin{aligned}\n h\\partial_sv_0&=-v_0+hg(s,v_0),\\label{eq:regular-graph}\\\\\n [h\\partial_s+(m-1)(-1+hb)]t_m\n  &=h[g(s,T)-g(s,v_0)-b(T-v_0)]_{u^m},\\quad m\\ge2.\n \\label{eq:regular-fiber}\n\\end{aligned}$$ Here $v_0$ and all $t_m$ start at positive $h$-order. All these statements allow any fixed ordinary and state derivatives on smaller disks. Constants may depend on the finite request; the fast amplitude and input bounds need not shrink with that request.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-regular-formal"
+  },
+  {
+   "claim_id": "stmt-lem-regular-controlled-inputs",
+   "exact_statement": "For each fixed finite request, the preceding primitive estimates are uniform on a controlled family of Definition <a href=\"#def:calculus-controlled-family\" data-reference-type=\"ref\" data-reference=\"def:calculus-controlled-family\">21</a>. Finite real-Taylor agreement supplies the geometric comparisons for evaluation of the independent-variable estimates. Under pullback, differentiated source bounds hold for holomorphic tests and for the smooth chart sheets with the differentiated source bounds supplied by Theorem <a href=\"#thm:calculus\" data-reference-type=\"ref\" data-reference=\"thm:calculus\">24</a>.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-regular-controlled-inputs"
+  },
+  {
+   "claim_id": "stmt-thm-mixed-packets",
+   "exact_statement": "Suppose that the primary inputs are affine combinations of flag scales with constant coefficients and bounded analytic parts, and that all large basis nodes in those combinations have dependent logarithms. For an unbalanced limit, put $P=\\max(L,W)$ and $R=\\min(L,W)$ on the reference sequence, and include a primary input $C_{\\rm aux}\\to\\infty$ tied there to $P/R$. Assume the saturated flag and controlled tests of Sections <a href=\"#sec:flags\" data-reference-type=\"ref\" data-reference=\"sec:flags\">2</a> and <a href=\"#sec:calculus\" data-reference-type=\"ref\" data-reference=\"sec:calculus\">4</a>. Then the outputs of Equations <a href=\"#eq:mixed-I\" data-reference-type=\"eqref\" data-reference=\"eq:mixed-I\">[eq:mixed-I]</a> and <a href=\"#eq:mixed-II\" data-reference-type=\"eqref\" data-reference=\"eq:mixed-II\">[eq:mixed-II]</a> satisfy the primitive hypotheses of Assumption <a href=\"#ass:calculus-primitive\" data-reference-type=\"ref\" data-reference=\"ass:calculus-primitive\">22</a>, including fixed independent derivatives, simultaneous safe columns, and refinement invariance of terminal analytic germs. They are retestable for elimination in the sense of Definition <a href=\"#def:elimination-retestable\" data-reference-type=\"ref\" data-reference=\"def:elimination-retestable\">39</a>.*\n\n*The amplitude and input smallness is independent of expansion depth. For a family of positive limiting slopes it can also be chosen independently of the slope, provided the ordinary boxes and field bounds are common and every field monomial contains a designated layer whose limiting rate has a common positive lower bound. The other rates need only be positive at each particular limiting slope. Constants and starting points for a fixed packet label may depend on that slope. The two unbalanced cases have common smallness for each fixed rate list.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-mixed-packets"
+  },
+  {
+   "claim_id": "stmt-lem-mixed-ratio",
+   "exact_statement": "If a positive primary combination $J$ has leading index $p$, then $$\\label{eq:mixed-primary}\n J=A_JZ_p(1+\\Theta_J),\\qquad A_J>0,$$ where $\\Theta_J$ is a finite sum of strict-small monomials, of first index greater than $p$, times bounded analytic factors. On every usable band $j\\leq p$, including its required side, $$\\label{eq:mixed-primary-real}\n |J|\\asymp |Z_p|,\\qquad\n \\Re J\\asymp |Z_p|\\cos(\\Im f_p)\\gg(\\log|J|)^q\n \\quad(q\\text{ fixed}).$$ For an unbalanced passage, let $i,n,k$ be the leading indices of $P,R,C_{\\rm aux}$, respectively. Then $n,k>i$, possibly $n=k$, and there is an exact identity of flag expressions $$\\label{eq:mixed-log-tie}\n f_i=f_n+f_k+b_*,\\qquad\n C:=\\frac PR=\\frac{A_P}{A_R}e^{b_*}Z_k\n                  \\frac{1+\\Theta_P}{1+\\Theta_R}.$$ Here $b_*$ is bounded background data, $\\Lambda_i=\\Lambda_n+\\Lambda_k+O(1)$, and $\\sigma(i)>\\min(n,k)$.*\n\n\n\n\n\n*Let $C_\\bullet$ denote the same ratio formula with any already dispersed small arguments set to zero in its units. While it is used meromorphically, on bands of index at most $k$, $$\\begin{aligned}\n |C_\\bullet|&\\asymp |Z_k|,&\n \\arg C_\\bullet&=(1+o(1))v_{\\rm ang}\\Lambda_k,\\label{eq:mixed-ratio-angle}\\\\\n |\\Im C_\\bullet|&\\gtrsim |Z_k|\\min(1,|v_{\\rm ang}|\\Lambda_k).&&\\label{eq:mixed-ratio-im}\n\\end{aligned}$$ The lifted argument is in $[-\\pi/2-o(1),\\pi/2+o(1)]$, and is transverse to the real axis at the $k$ fringe. If $|v_{\\rm ang}|\\Lambda_k\\ll1$, then $$\\label{eq:mixed-real-shift}\n \\Re C_\\bullet=C_\\bullet(u)\n             \\bigl(1+O((v_{\\rm ang}\\Lambda_k)^2)\\bigr).$$ Through the $i$ band the actual positive actions $P,R$ have increasing arguments, $0<\\arg R<\\arg P<\\pi/2$ on the positive side. At its fringe, $$\\label{eq:mixed-cos-gap}\n \\frac{\\cos\\arg R}{\\cos\\arg P}\\longrightarrow\\infty,\n \\qquad |\\sin(\\arg P-\\arg R)|\\gtrsim\\frac{\\Lambda_k}{\\Lambda_i}.$$ The negative side has the reflected assertions.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-mixed-ratio"
+  },
+  {
+   "claim_id": "stmt-lem-mixed-actual",
+   "exact_statement": "Let $i$ be the leading index of the larger primary action, or the common leading index of $L,W$ when they are comparable. The actual passage is bounded and holomorphic throughout band $i$, with the parameter and state room needed for fixed independent derivatives.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-mixed-actual"
+  },
+  {
+   "claim_id": "stmt-lem-mixed-tree",
+   "exact_statement": "For comparable slopes put $\\nu_j=A_j+c_0B_j$. These values belong to a finitely generated positive-weight semigroup and satisfy $$\\label{eq:mixed-comparable-costs}\n |B_j|\\leq K_0\\nu_j,\\qquad\n \\nu_j+\\nu_{j'}\\geq a|j-j'|.$$ For small slopes, $A_j$ is in a nonnegative rational lattice, $B_j$ in a signed rational lattice, and $$\\label{eq:mixed-small-costs}\n A_j+A_{j'}\\geq a|j-j'|,\\qquad\n B_j\\geq-K_0A_j,\\qquad |B_j|\\leq K_0M_0.$$ The $l$th main cost in increasing order is at least $a(l-1)/2$. For every large fixed $N$, the aggregate high-residue sum at the leading fringe has modulus at most $$\\label{eq:mixed-high-residues}\n \\frac{K_N K_*^{r+1}}{r!}\\,e^{-bN\\Re L},$$ where $b>0$ and the exponential base $K_*$ are independent of $N$. In the comparable case “high” means main costs above a threshold in $[2N,3N]$. In the small-slope case it means projected costs $p_j=A_j+\\mu B_j$ above such a threshold, where $\\mu=\\Re W/\\Re L$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-mixed-tree"
+  },
+  {
+   "claim_id": "stmt-lem-mixed-poles",
+   "exact_statement": "Suppose a fixed outer formula has only finite-order poles on lattices of finitely many positive multiples of $C_\\bullet$, with fixed polynomial factors in $C_\\bullet$ and retained primary inputs, and its remaining analytic factors are uniformly bounded on the smaller argument boxes. It then has the raw growth and simultaneous safe-column improvements of Definition <a href=\"#def:packet\" data-reference-type=\"ref\" data-reference=\"def:packet\">11</a>, with every prescribed finite number of independent derivatives. This remains true with a scalar detuning $\\beta_s$, analytic with the same smaller-box margins, satisfying $|\\beta_s|\\leq K e^{-\\omega\\Re R}$ before the first of the $n,k$ transitions. At a transition $j\\leq k$, unit arguments in $C_\\bullet$ may vary on relative radii $$\\label{eq:mixed-unit-radius}\n \\varepsilon\\min(1,\\Lambda_k/\\Lambda_j).$$ On a general usable $j$ band replace $\\Lambda_j$ by $\\Lambda_{j-1}$; on safe sets a sufficiently small inverse power of $|Z_k|$ also suffices.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-mixed-poles"
+  },
+  {
+   "claim_id": "stmt-lem-mixed-small-formal",
+   "exact_statement": "Before the first of the $n,k$ transitions, changing the moving cutoff in a fixed coefficient changes its actual value, with fixed derivatives, by $$\\label{eq:mixed-mixed-cost}\n O\\left(\\exp(-a|Z_k|\\Re R)\\right)\n =O\\left(\\exp\\{-a' e^{\\Re f_i}\\cos(\\Im f_n)\\}\\right).$$ If $n<k$, a fixed Taylor degree in $D$ removes that cutoff at the $n$ transition. At the $k$ fringe the remaining coefficients have Gevrey–$1$ expansions in $h=1/C_\\bullet$, with optimal error $O(e^{-a|Z_k|})$, uniformly on their smaller analytic argument boxes. If $k\\leq n$, the same assertion holds before $D$ is dispersed, after replacing the cutoff sum by its full sum.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-mixed-small-formal"
+  },
+  {
+   "claim_id": "stmt-lem-mixed-charts",
+   "exact_statement": "In these rings there are an output graph $\\phi$, an input coordinate $\\Phi$, an output coordinate $T=\\phi+\\sum_{m=1}^Mt_m u^m$ for each fixed $M$, and a balanced polynomial $\\beta$ without constant term. Their constructions are compatible under smaller charge quotients. Keeping a scalar $\\beta_s$ external until the final substitution, their only remaining poles are finite-order poles on finitely many positive-multiple lattices of $c-\\beta_s$. In the joint ring, after $\\beta_s=\\beta$, $$\\label{eq:mixed-chart-identities}\n \\Phi(T(u))=u\\pmod{u^{M+1}},\\qquad\n u'=(-c+\\beta)u.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-mixed-charts"
+  },
+  {
+   "claim_id": "stmt-lem-mixed-fast-transition",
+   "exact_statement": "On the $i$ fringe, for every fixed desired depth in $\\Re W$ the passage has the finite expansion $$\\label{eq:mixed-fast-expansion}\n \\phi_{\\rm out}+\\sum_{m=1}^{M}\n e^{-mW}e^{m\\beta_sL}t_{m,\\rm out}\\Phi_{\\rm in}^{m},\n \\qquad \\beta_s=\\beta(X,Y),$$ up to that depth, with $M$ sufficiently large. Each fixed-$m$ coefficient is independent of how much larger a comparison order is chosen.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-mixed-fast-transition"
+  },
+  {
+   "claim_id": "stmt-lem-mixed-fast-gevrey",
+   "exact_statement": "For each fixed output fiber order, the full charts and their bounded analytic endpoint operations have consistent Gevrey–$1$ formal expansions in $h=1/C_\\bullet$. On the transverse $k$ fringe they agree with sufficiently small proportional optimal truncations to precision $O(e^{-a|Z_k|})$. The assertion is uniform on smaller disks in all the ordinary and small arguments, and holds for their fixed jets.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-mixed-fast-gevrey"
+  },
+  {
+   "claim_id": "stmt-lem-mixed-controlled-uniformity",
+   "exact_statement": "The mixed constructions and their finite dispersion operations have the controlled-family uniformity of Definition <a href=\"#def:calculus-controlled-family\" data-reference-type=\"ref\" data-reference=\"def:calculus-controlled-family\">21</a>. For one fixed finite request, their constants and numerical far thresholds depend only on its common analytic boxes and margins, field bounds, finite rate and affine data, and finite quantitative flag and input-jet controls. They do not depend on when an individual input path returns to a smaller neighborhood of its ordinary germ.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-mixed-controlled-uniformity"
+  },
+  {
+   "claim_id": "stmt-prop-calculus-library-uniformity",
+   "exact_statement": "For the primitive constructions in Sections <a href=\"#sec:additive\" data-reference-type=\"ref\" data-reference=\"sec:additive\">6</a>, <a href=\"#sec:regular\" data-reference-type=\"ref\" data-reference=\"sec:regular\">7</a>, and <a href=\"#sec:mixed\" data-reference-type=\"ref\" data-reference=\"sec:mixed\">8</a>, the family requirement in Assumption <a href=\"#ass:calculus-primitive\" data-reference-type=\"ref\" data-reference=\"ass:calculus-primitive\">22</a> follows from the estimates on common argument boxes proved in those sections. For each fixed finite request their constants and far-regime thresholds depend only on those boxes and margins, the finite field and flag data, and the finite controls in Definition <a href=\"#def:calculus-controlled-family\" data-reference-type=\"ref\" data-reference=\"def:calculus-controlled-family\">21</a>. The time at which an ordinary test returns to its germ does not enter these constants.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-calculus-library-uniformity"
+  },
+  {
+   "claim_id": "stmt-thm-subdivision-preparation",
+   "exact_statement": "Let $X\\subset\\mathbb{R}^k\\times\\mathbb{R}$ and $f_1,\\ldots,f_N:X\\to\\mathbb{R}$ be globally subanalytic. There is a finite globally subanalytic cell decomposition of $X\\cap\\{x\\ne0\\}$ such that on each cell the functions have a common center $a(p)$ and representations $$f_\\nu(p,x)=c_\\nu(p)|x-a(p)|^{q_\\nu}\n U_\\nu\\bigl(b_{\\nu j}(p)|x-a(p)|^{r_{\\nu j}}:1\\le j\\le h_\\nu\\bigr).$$ All exponents are rational, all displayed parameter functions are globally subanalytic, and each $c_\\nu$ is identically zero or nowhere zero. The sign of $x-a(p)$ is constant. Each argument tuple lies in $[-1,1]^{h_\\nu}$, and $U_\\nu$ is real analytic on a neighborhood of that cube and positive there. Moreover, either $a=0$ or $|x-a(p)|<\\epsilon|x|$ on the cell for some $\\epsilon<1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-subdivision-preparation"
+  },
+  {
+   "claim_id": "stmt-lem-subdivision-clock",
+   "exact_statement": "Suppose that the old clock is $D_0=(x-a_0(p))\\partial_x$. After simultaneous preparation and finite subdivision, all the required data can be represented in an Euler clock $$D=(x-a(p))\\partial_x=\\tau\\partial_\\tau=hD_0,\n \\qquad \\tau=|x-a(p)|>0,\\qquad 0<|h|\\le2.$$ If the initial clock is $\\partial_x$, the same assertion holds without the multiplier bound at this first step. Previously used time data can be included in the preparation.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-subdivision-clock"
+  },
+  {
+   "claim_id": "stmt-lem-subdivision-box-data",
+   "exact_statement": "After the preceding finite subdivision, each nonzero comparable-scale field has, on a fixed larger state disk $\\mathcal D$ and a smaller real interval $I\\Subset\\mathcal D$, a positive globally subanalytic scale $L(p,x)$ and constants $K,m$ such that $$\\label{eq:subdivision-jet}\n \\sup_{z\\in\\mathcal D}|F(p,x,z)|\\le KL(p,x),\\qquad\n \\sum_{j=0}^{m}|\\partial_z^jF(p,x,z)|\\ge L(p,x)\n \\quad(z\\in I).$$ The normalized rational coefficients belong to bounded sets with uniform analytic room. The constants and degrees are fixed on each of finitely many boxes.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-subdivision-box-data"
+  },
+  {
+   "claim_id": "stmt-lem-subdivision-resonance-redo",
+   "exact_statement": "Around these finitely many resonances, apply the rational weighting $U=u/\\tau^\\alpha$ and repeat the preceding rational subdivision once. The old resonance widths and old generator smallness can be chosen so that every new annulus with state power one and time exponent zero has a slope in its own small-slope regime. In particular no second nonzero resonance redo is required.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-subdivision-resonance-redo"
+  },
+  {
+   "claim_id": "stmt-lem-subdivision-crossing",
+   "exact_statement": "A periodic orbit meets each regular boundary arc on which $\\det(V,T)$ has a fixed nonzero sign at most once. A connected nonsingular boundary arc on which this determinant vanishes identically is contained in one trajectory and hence in at most one periodic orbit.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-subdivision-crossing"
+  },
+  {
+   "claim_id": "stmt-thm-finite-templates",
+   "exact_statement": "For each degree bound $d$, there is a finite collection of scalar identity pieces, coordinate charts and passage rules, and integers $N_d,E_d$, with the following properties.*\n\n1.  *On the square, every polynomial field of degree at most $d$ has the stated finite globally subanalytic subdivision. Its interior scalar fields are constant-state fields, nozero or simple-root boxes of Equation <a href=\"#eq:subdivision-terminal-box\" data-reference-type=\"eqref\" data-reference=\"eq:subdivision-terminal-box\">[eq:subdivision-terminal-box]</a>, or monomial annuli of Equation <a href=\"#eq:subdivision-annulus\" data-reference-type=\"eqref\" data-reference=\"eq:subdivision-annulus\">[eq:subdivision-annulus]</a>. Their analytic factors have uniform larger neighborhoods and their nonconstant arguments have the prescribed fixed smallness. All changes back to physical coordinates use parameter-only data, positive rational powers, and bounded analytic operations.*\n\n2.  *The further real passage refinements in Section <a href=\"#sec:terminal\" data-reference-type=\"ref\" data-reference=\"sec:terminal\">10</a> are finite; in particular Lemma <a href=\"#lem:subdivision-resonance-redo\" data-reference-type=\"ref\" data-reference=\"lem:subdivision-resonance-redo\">69</a> allows at most one weighted redo at a nonzero generator resonance.*\n\n3.  *Apart from at most $E_d$ periodic orbits containing tangential boundary arcs, every periodic orbit is a cyclic concatenation of at most $N_d$ interior passages and physical graph connectors. There are only finitely many resulting words, including all choices of chart, sign, orientation, and the finitely many endpoint passage rules.*\n\n*The choices and bounds include all coefficient degeneracies.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-finite-templates"
+  },
+  {
+   "claim_id": "stmt-thm-terminal-reduction",
+   "exact_statement": "Fix the finite preparation data, exponent lists, and geometric tolerances of Theorem <a href=\"#thm:finite-templates\" data-reference-type=\"ref\" data-reference=\"thm:finite-templates\">71</a>. After finitely many further real subanalytic subdivisions, every terminal passage is represented by one scalar transfer equation and regular, locally unique argument graphs. The transfer is an ordinary analytic transfer, an additive transfer of Theorem <a href=\"#thm:additive-packets\" data-reference-type=\"ref\" data-reference=\"thm:additive-packets\">42</a>, a one-rate transfer of Theorem <a href=\"#thm:regular-packets\" data-reference-type=\"ref\" data-reference=\"thm:regular-packets\">49</a>, or a mixed transfer of Theorem <a href=\"#thm:mixed-packets\" data-reference-type=\"ref\" data-reference=\"thm:mixed-packets\">53</a>.*\n\n*More precisely, the following statements hold.*\n\n1.  *These are actual real ODE transfers on open independent-argument domains. The domains have finite lists of strict clock, sign, divisor, analytic-box, amplitude, and state-room margins. A bounded limit at which these margins remain positive is an analytic point of the transfer family. At bounded-clock corners, adding the indicated bounded ratios gives analytic normalized transfers also at zero clock limits, with state room.*\n\n2.  *At fixed physical parameters, on the graph of the argument ties near an actual passage, the equation is the physical mismatch in regular transverse coordinates. This identity holds for independently proposed nearby endpoints, before imposing the transfer equation.*\n\n3.  *For an arbitrary sequence of arguments and any fixed finite collection of independent-argument derivatives, the transfers and those derivatives reduce to the preceding packet primitives and bounded analytic operations. This assertion includes sequences on which any of the imposed strict margins tend to zero; it does not assume the positive-margin condition in the first assertion. When all enlarged normalized arguments stay bounded, the kernel factors have analytic extensions with state room after the finite graph additions, and algebraic divisors can be cleared. If an added argument diverges, its recoverable coordinate is included in the packet test. The reduction may introduce bounded ratios and a fixed finite internal subdivision chosen for that sequence. The old derivatives are obtained by the chain rule for exact transfer identities. The internal state and finite jet graphs are locally unique and preserve isolated solutions. The coefficient determinations are those fixed by the primitive theorems and are preserved under their allowed retests.*\n\n*The number of geometric passage types and boundary crossings is finite. Internal subdivisions in the last assertion do not enter that number. Geometric smallness is fixed before a limiting slope or any asymptotic or derivative request is selected.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-terminal-reduction"
+  },
+  {
+   "claim_id": "stmt-lem-terminal-diagonal",
+   "exact_statement": "Let $D_r=\\sum_j r_jX_j\\partial_{X_j}$, with fixed rational $r_j$, and let $a(X)$ be analytic near the origin, uniformly in ordinary parameters. For rational $\\lambda$, write $a=\\sum_\\nu a_\\nu X^\\nu$. Then $$\\label{eq:terminal-diagonal}\n a=(\\lambda+D_r)H+R,\\qquad\n H=\\sum_{\\lambda+r\\cdot\\nu\\ne0}\n       \\frac{a_\\nu}{\\lambda+r\\cdot\\nu}X^\\nu,\n \\qquad\n R=\\sum_{\\lambda+r\\cdot\\nu=0}a_\\nu X^\\nu$$ is analytic on a smaller common box and $D_rR=-\\lambda R$. For $\\lambda=0$, the decomposition is $a=\\bar a+D_rH$, with $D_r\\bar a=0$ and $H(0)=0$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-terminal-diagonal"
+  },
+  {
+   "claim_id": "stmt-lem-terminal-tied-endpoints",
+   "exact_statement": "Every transfer constructed above computes the actual scalar mismatch for all nearby proposed endpoints on its argument graph. The terminal state coordinate has nonzero transverse derivative. Endpoint-dependent normalizations and the pure-state invariant do not destroy this assertion.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-terminal-tied-endpoints"
+  },
+  {
+   "claim_id": "stmt-lem-terminal-ambient-extension",
+   "exact_statement": "The terminal kernels can be chosen on independent-argument neighborhoods so that every layer-vanishing identity required by its primitive theorem holds throughout that neighborhood. On their physical graph they give the stated transfer identity. Every fixed finite derivative of the physical identity, or of an old kernel rewritten in a new regime, is a finite expression in derivatives of these kernels, bounded analytic operations, fixed affine exponential shifts, and algebraic factors with nonzero divisors on the domain.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-terminal-ambient-extension"
+  },
+  {
+   "claim_id": "stmt-lem-terminal-boundary-corners",
+   "exact_statement": "The independent-argument domains in this section can be chosen so that the following holds for every sequence in any one of them, including a sequence on which imposed strict margins vanish. After passage to a subsequence and the finite graph additions in the displayed regime reductions, either there is a divergent enlarged coordinate to which the packet alternative applies, or the normalized kernel factors extend analytically near all their limiting arguments and retain state room. This applies to the old independent kernel and all its fixed finite derivatives through the exact identities of Lemma <a href=\"#lem:terminal-ambient-extension\" data-reference-type=\"ref\" data-reference=\"lem:terminal-ambient-extension\">76</a>. Auxiliary algebraic graphs and equations obtained by clearing their nonzero divisors are analytic at bounded limits; their regularity is required at the sequence points, not at the limiting boundary point.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-terminal-boundary-corners"
+  },
+  {
+   "claim_id": "stmt-thm-projection-count",
+   "exact_statement": "Let $F(p,x)=0$ be admissible open data as in Definition <a href=\"#def:counting-domain\" data-reference-type=\"ref\" data-reference=\"def:counting-domain\">78</a>, with $p\\in\\mathbb{R}^a$, $x\\in\\mathbb{R}^n$, and $m\\le n$. Suppose that $F_x$ has row rank $m$ throughout the zero set under consideration and that the data have the absolute zero property for their finite differential and algebraic closure. Then there is a finite constant $N$, depending on this fixed system and its domain, such that every fiber $$M_p=\\{x:(p,x)\\in U,\\ F(p,x)=0\\}$$ has at most $N$ connected components. If $m=n$, every fiber has at most $N$ points.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-projection-count"
+  },
+  {
+   "claim_id": "stmt-thm-matching-system",
+   "exact_statement": "For each polynomial degree bound $d$, there are a finite number $T(d)$ and finitely many fixed open analytic systems $$F_w(p_w,x_w)=0,\\qquad g_w(p_w,x_w)>0,\n \\qquad w\\in\\mathcal W_d,$$ with the following properties.*\n\n1.  *Their domains satisfy Definition <a href=\"#def:counting-domain\" data-reference-type=\"ref\" data-reference=\"def:counting-domain\">78</a>. Every finite differential and algebraic system generated from these data, with their original ties and domain restrictions retained, has the absolute zero property.*\n\n2.  *For each field $V=(P,Q)$ of degree at most $d$, all but at most $T(d)$ of its periodic orbits contained in the fixed square of Section <a href=\"#sec:subdivision\" data-reference-type=\"ref\" data-reference=\"sec:subdivision\">9</a> have a representation in one of these systems. The parameter value $p_w(V)$ is the same for every orbit using the same word and preparation choices; endpoint-dependent quantities are unknowns with graph ties.*\n\n3.  *At a representation of a hyperbolic periodic orbit, $F_{w,x_w}$ has full row rank. In each fixed nonzero-minor chart, different represented hyperbolic orbits lie on different connected components of the fiber at $p_w(V)$.*\n\n*The minor charts and their additional margins also satisfy the first assertion.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-matching-system"
+  },
+  {
+   "claim_id": "stmt-lem-counting-jet-lift",
+   "exact_statement": "Suppose an analytic transfer $\\Phi(u)$, on an open set of its original independent arguments $u$, has an exact analytic decomposition into finitely many transfers, with auxiliary arguments and intermediate states determined by regular, locally unique graph equations. A finite system involving $\\Phi$ and finitely many of its independent derivatives can be replaced, locally at any admissible tuple, by a system involving those transfers and finitely many of their derivatives. The replacement, with the graph equations retained, is locally analytically isomorphic to the original solution set. In particular it preserves isolated solutions. This conclusion also holds along a sequence with shrinking graph neighborhoods, provided one fixed finite decomposition is used along the sequence.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-counting-jet-lift"
+  },
+  {
+   "claim_id": "stmt-lem-counting-cleared-closure",
+   "exact_statement": "Consider one fixed finite collection of primitive functions, their argument graphs, and a finite differential and algebraic construction from them. Assume that, after one fixed exact graph enlargement, the primitive functions and defining graph equations extend analytically near a finite limiting tuple. The selected graph Jacobians and every declared divisor need be nonzero only at the points of the sequence, not at its limit. Then the constructed equations can be replaced by analytic equations near that limit, retaining all graph equations and all original open restrictions, with exactly the same solution germ at each selected point. Additional multiplier coordinates, polynomial equations, and parameter copies or specializations preserve this assertion.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-counting-cleared-closure"
+  },
+  {
+   "claim_id": "stmt-lem-counting-graph-recovery",
+   "exact_statement": "Let $u_i$ be a sequence of isolated solutions of a fixed system, where $u$ denotes its full tuple, including parameters and multipliers. Suppose an exact finite enlargement appends $v_i$ by equations $G(u,v)=0$ whose selected graph Jacobian $G_v(u_i,v_i)$ is invertible at every point. Retain all these equations. An old flag input recoverable from $(u,v)$ cannot vary along the local lifted solution set while $u$ stays fixed, provided the variation is taken within the selected graph neighborhood. These neighborhoods may shrink arbitrarily along the sequence.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-counting-graph-recovery"
+  },
+  {
+   "claim_id": "stmt-lem-counting-rotation",
+   "exact_statement": "For any finite collection of limit cycles of a planar polynomial field $V=(P,Q)$, a sufficiently small perturbation $V_\\mu=V+\\mu(-Q,P)$, of one common nonzero sign, has at least as many distinct hyperbolic periodic orbits in the union of disjoint neighborhoods of that collection. The degree bound is preserved.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-counting-rotation"
+  }
+ ],
+ "paper": "papers/EN-112-000-0000-2-2026-PR-T4-UK-EX-M2-B-PH-H-0294_PM-143.1_Uniform_bounds_for_planar_polynomial_limit_cycles.md",
+ "purpose": "Uniform bounds for planar polynomial limit cycles",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "9b9673fffe21f8758693f5ead2de14844cd1362f0a3d5a1cf9f467d5dd280a8a",
+   "pm.domains.v2": "fc225f15b125f57a10be5f6382797a5d8a90cf61f331ee832b8cb2ebe2f05a10",
+   "pm.edges.v2": "cc67f3672064bb7975cb9adbef9691cf614ed1135fbba973773e9e3e00cc4fa8",
+   "pm.extraction.v2": "7516ab2c005ab9b83dcb556dfc774a9ae6a44e6aa9e75522ee95e1b6b424f7f9",
+   "pm.formal.v2": "763fa07ea71f210e5eaf529aaad6df1edb1807834382dbebe3564bbb08686f8f",
+   "pm.limits.v2": "68e16a091188e536ef88f12ebf6d3187696ea5eef7f0b9dfe593696ee62e73bf",
+   "pm.node.v2": "63cd347c8ea2378b1826247a247832dff8039e6f39633446f89b3cc2d13895bb",
+   "pm.objects.v2": "afe970e26c8da95aa2d6e025464ae7265e9e3f34c8f002afd55d97d9ef7d576f",
+   "pm.provenance.v2": "10101b494cdf77ebd22c2b0501d6b061b998b88bab668e986bfdf4e2c0bafa09",
+   "pm.quantities.v2": "ef42e3a9523f584a673d4c00543ddc1dc6c25bbf293255b8bc3da51b6334807c",
+   "pm.reading.v2": "cea0b7800070780d04f1f6c47b985a207d328e14dad23978df2859305fb662ba",
+   "pm.roadmap.v2": "42fce61c8a60f6989c3e2a08e91370d5102f588e5f9d926b491e4700abe96118",
+   "pm.search.v1": "e9064ec72d81bdee56ecf67d6b847c524afe2e65a9dd62f99b55bc3016d5fda1",
+   "pm.triptych.v2": "454da05c60b31408c0e3ea0f33a26f178f17be8db83dc8854e2379e06e207a83"
+  },
+  "canonical_sha256": "5fcaeb08420f29fd903e30cc3e121d21bcefc4f7830630177240563830094a7e",
+  "paper_sha256": "33e608e74b8ecb06d551bfdb9487f248d894b7fdcbf17f107db19c5c61315da3",
+  "repaired_body_sha256": "383993c37aa0e7f7756455b913c850becc5b27f0445512476ad226047ca9bac5"
+ },
+ "status": "ACTIVE",
+ "subject_id": 12,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "c0b0375df72b38f48c288fe261ba745de7d8a123bebc2a368aae5e219d46d793",
+   "receipt_sha256": "a614f056db5f62d81be14e417afa729be1cf9f82e3b53df160abbae8dc4465dc",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Uniform bounds for planar polynomial limit cycles"
+}

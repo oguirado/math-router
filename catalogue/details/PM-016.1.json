@@ -1,0 +1,524 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 488933,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 144118
+ },
+ "coordinate": "EN-101-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-H-0047",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "Diophantine geometry of abelian varieties",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "it gives no effective or uniform bound for the number of maximal atypical subvarieties.",
+     "quote_sha256": "92fa1e7157805f5aacbd6a1d6b0528786fe6d1c23ea65511c83e5c7fc7d0885c"
+    }
+   ],
+   "query": "effective enumeration of maximal atypical subvarieties",
+   "reason": "The theorem provides finiteness without an effective or uniform bound."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "eq:finite-rank-inclusion",
+     "quote": "not its general formulation for semiabelian varieties over $\\mathbb C$.",
+     "quote_sha256": "49e74ce0934575e321e54bd8038f70a2760b81453c9cdcc5c76d652a7d876c24"
+    }
+   ],
+   "query": "general semiabelian complex-point translated intersections",
+   "reason": "The translated consequence is restricted to abelian varieties and algebraic translating points."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "eq:finite-rank-inclusion",
+     "quote": "In higher dimensions the conclusion is non-density, and the proper closed exceptional subset may have positive dimension.",
+     "quote_sha256": "d8a42de4c235c1ff12dcf88164f8d12d1fb05537796d7b9a1268c6a72fa09ba3"
+    }
+   ],
+   "query": "finite translated intersections in higher dimension",
+   "reason": "The general translated conclusion is non-density; the exceptional closed subset may have positive dimension."
+  }
+ ],
+ "family": "PM-016",
+ "id": "PM-016.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C1",
+    "statement": "For every number field $K$, every abelian variety $A/K$, and every irreducible subvariety $X\\subseteq A_{\\bar K}$, there are only finitely many maximal atypical subvarieties of $X$ in $S=\\langle X\\rangle_{\\mathrm{sp}}$. Equivalently, there are finitely many proper atypical subvarieties $Y_1,\\ldots,Y_m\\subsetneq X$ such that every atypical subvariety is contained in one of the $Y_j$."
+   },
+   {
+    "anchor": "stmt-thm-nondensity",
+    "claim_id": "C2",
+    "statement": "Let $A$ be an abelian variety over $\\overline{\\mathbb Q}$, and let $X\\subseteq A$ be an irreducible subvariety contained in no proper torsion coset. Then $X\\cap A^{[\\dim X+1]}$ is not Zariski dense in $X$."
+   },
+   {
+    "anchor": "stmt-cor-finite-rank-translates",
+    "claim_id": "C3",
+    "statement": "Let $A$ be an abelian variety over $\\overline{\\mathbb Q}$, let $\\Gamma\\subseteq A(\\overline{\\mathbb Q})$ be a subgroup satisfying $$\\dim_{\\mathbb Q}\\bigl(\\Gamma\\otimes_{\\mathbb Z}\\mathbb Q\\bigr)<\\infty,$$ and let $X\\subseteq A$ be an irreducible closed subvariety of dimension $d$ contained in no translate of a proper algebraic subgroup of $A$. Then $$X(\\overline{\\mathbb Q})\\cap\\bigl(A^{[d+1]}(\\overline{\\mathbb Q})+\\Gamma\\bigr)$$ is not Zariski dense in $X$. If $d=1$, this intersection is finite."
+   },
+   {
+    "anchor": "stmt-lemma-real-calculus",
+    "claim_id": "C4",
+    "statement": "Let $G,G'$ be abelian varieties over $\\overline{\\mathbb Q}$ with the preceding choices. Every element of $\\mathop{\\mathrm{Hom}}(G,G')_{\\mathbb R}=\\mathop{\\mathrm{Hom}}(G,G')\\otimes_{\\mathbb Z}\\mathbb R$ acts on both $\\mathop{\\mathrm{Lie}}(G)$ and $\\mathcal H(G)$. The Lie action is faithful. Convergence in this finite-dimensional real homomorphism space implies operator-norm convergence on the height spaces.*\n\n*The polarization adjoint of a real homomorphism is a real homomorphism. Its kernel and image in the Lie algebras have orthogonal projectors in the corresponding real endomorphism algebras, and it has a generalized inverse in the opposite real homomorphism space. In particular, if $f$ is fixed and $\\|f(x_i)\\|\\to0$, then $$\\|P_{(\\ker f)^\\perp}(x_i)\\|\\longrightarrow0.$$"
+   },
+   {
+    "anchor": "stmt-thm-sequence",
+    "claim_id": "C5",
+    "statement": "For sequence data as in Definition <a href=\"#def:sequence-data\" data-reference-type=\"ref\" data-reference=\"def:sequence-data\">5</a>, let $V\\subseteq\\mathop{\\mathrm{Lie}}(W)$ be the image of an idempotent in $\\mathop{\\mathrm{End}}(\\mathcal A)_{\\mathbb R}$. Let $\\Phi$ be the orthogonal projector with kernel $V$, and put $$q_i=(y_{i\\ell}/\\sqrt{H_{i\\ell}})_{\\ell\\in I}\n \\in\\mathcal H(\\mathcal A).$$ The following two conditions cannot both hold: $$\\label{eq:forbidden-sequence}\n \\mathop{\\mathrm{codim}}_{\\mathop{\\mathrm{Lie}}(W)}V>\\sum_{\\ell\\in I}m_\\ell,\n \\qquad \\|\\Phi(q_i)\\|\\longrightarrow0.$$"
+   },
+   {
+    "anchor": "stmt-lemma-height-decomposition",
+    "claim_id": "C6",
+    "statement": "Let $A$ be a nonzero abelian variety and $x_i\\in A(\\overline{\\mathbb Q})$. After passing to a subsequence, there is an isogeny $$\\alpha:A\\longrightarrow\\prod_{\\ell\\in I}W_\\ell$$ with nonzero factors, and scales $H_{i\\ell}\\ge1$, such that the coordinates $p_{i\\ell}$ of $\\alpha(x_i)$ have norms $O(\\sqrt{H_{i\\ell}})$ and successive scale ratios tend to zero. There is at most one bounded scale, placed first and equal to one. Every other scale tends to infinity and satisfies <a href=\"#eq:sequence-nondegenerate\" data-reference-type=\"eqref\" data-reference=\"eq:sequence-nondegenerate\">[eq:sequence-nondegenerate]</a> with $A_\\ell=W_\\ell$ for every fixed nonzero homomorphism on $W_\\ell$."
+   },
+   {
+    "anchor": "stmt-prop-sequence-implies-nondensity",
+    "claim_id": "C7",
+    "statement": "The auxiliary sequence theorem implies Theorem <a href=\"#thm:nondensity\" data-reference-type=\"ref\" data-reference=\"thm:nondensity\">2</a> for every abelian variety over $\\overline{\\mathbb Q}$."
+   },
+   {
+    "anchor": "stmt-lemma-projection",
+    "claim_id": "C8",
+    "statement": "Suppose that sequence data as in Definition <a href=\"#def:sequence-data\" data-reference-type=\"ref\" data-reference=\"def:sequence-data\">5</a>, together with $V$ and $\\Phi$ as in Theorem <a href=\"#thm:sequence\" data-reference-type=\"ref\" data-reference=\"thm:sequence\">6</a>, satisfy <a href=\"#eq:forbidden-sequence\" data-reference-type=\"eqref\" data-reference=\"eq:forbidden-sequence\">[eq:forbidden-sequence]</a> and have least $\\dim\\mathcal A$ among counterexamples with the same presence or absence of a low factor. If a low factor occurs, assume also that Theorem <a href=\"#thm:sequence\" data-reference-type=\"ref\" data-reference=\"thm:sequence\">6</a> has already been proved for all-high data in every dimension. There do not exist fixed abelian subvarieties $C_\\ell\\subseteq A_\\ell$, with $C=\\prod_\\ell C_\\ell\\ne0$, and nonnegative integers $a_\\ell$ such that, on an infinite subsequence, $$\\label{eq:projection-obstruction}\n \\dim_{y_{i\\ell}}\\bigl(Y_\\ell\\cap(y_{i\\ell}+C_\\ell)\\bigr)\n \\ge a_\\ell\\quad(\\ell\\in I),\n \\qquad\n \\sum_\\ell a_\\ell\\ge\\mathop{\\mathrm{rank}}(\\Phi|_{\\mathop{\\mathrm{Lie}}(C)}).$$"
+   },
+   {
+    "anchor": "stmt-lem-ax-product",
+    "claim_id": "C9",
+    "statement": "Let $A_\\ell$, $\\ell\\in I$, be complex abelian varieties, let $Z_\\ell\\subseteq A_\\ell$ be subvarieties, and put $Z=\\prod_{\\ell\\in I}Z_\\ell$ and $A=\\prod_{\\ell\\in I}A_\\ell$. Let $g\\colon\\mathop{\\mathrm{Lie}}(A)\\longrightarrow E$ be a complex linear map to a Hermitian vector space. If $P_Z(g)=0$, there are abelian subvarieties $C_\\ell\\subseteq A_\\ell$ such that, for every $z=(z_\\ell)_\\ell\\in Z$, $$\\label{eq:ax-product-obstruction}\n \\sum_{\\ell\\in I}\n \\dim_{z_\\ell}\\bigl(Z_\\ell\\cap(z_\\ell+C_\\ell)\\bigr)\n >\\mathop{\\mathrm{rank}}\\left(g\\bigm|_{\\bigoplus_{\\ell\\in I}\\mathop{\\mathrm{Lie}}(C_\\ell)}\\right).$$ In particular, $\\prod_\\ell C_\\ell$ is nonzero."
+   },
+   {
+    "anchor": "stmt-lem-finite-directions",
+    "claim_id": "C10",
+    "statement": "Fix subvarieties $Y_\\ell\\subseteq A_\\ell$ of complex abelian varieties. For each $\\ell$, there is a finite set $\\mathcal H_\\ell$ of abelian subvarieties of $A_\\ell$ with the following property. Suppose that $y_\\ell\\in Z_\\ell\\subseteq Y_\\ell$, that $C_\\ell\\subseteq A_\\ell$ are abelian subvarieties, and that $g\\colon\\bigoplus_\\ell\\mathop{\\mathrm{Lie}}(A_\\ell)\\longrightarrow E$ is complex linear. Put $$d_\\ell=\\dim_{y_\\ell}\\bigl(Z_\\ell\\cap(y_\\ell+C_\\ell)\\bigr).$$ If $\\varepsilon\\in\\{0,1\\}$ and $$\\sum_\\ell d_\\ell\\geq\n \\mathop{\\mathrm{rank}}\\left(g\\bigm|_{\\bigoplus_\\ell\\mathop{\\mathrm{Lie}}(C_\\ell)}\\right)\n +\\varepsilon,$$ there are $H_\\ell\\in\\mathcal H_\\ell$ such that $$\\label{eq:fixed-parent-rank}\n \\sum_\\ell\\dim_{y_\\ell}\n \\bigl(Y_\\ell\\cap(y_\\ell+H_\\ell)\\bigr)\n \\geq\\mathop{\\mathrm{rank}}\\left(g\\bigm|_{\\bigoplus_\\ell\\mathop{\\mathrm{Lie}}(H_\\ell)}\\right)\n +\\varepsilon.$$ If $\\sum_\\ell d_\\ell>0$, the product $\\prod_\\ell H_\\ell$ is nonzero."
+   },
+   {
+    "anchor": "stmt-prop-tangent",
+    "claim_id": "C11",
+    "statement": "Consider fixed sequence data as in Definition <a href=\"#def:sequence-data\" data-reference-type=\"ref\" data-reference=\"def:sequence-data\">5</a>, and let $V$ and $\\Phi$ be as in Theorem <a href=\"#thm:sequence\" data-reference-type=\"ref\" data-reference=\"thm:sequence\">6</a>. Suppose that the conclusion of Lemma <a href=\"#lemma:projection\" data-reference-type=\"ref\" data-reference=\"lemma:projection\">9</a> excludes every fixed nonzero product $C=\\prod_\\ell C_\\ell$ for which $$\\label{eq:excluded-tangent-configuration}\n \\sum_\\ell\\dim_{y_{i\\ell}}\n \\bigl(Y_\\ell\\cap(y_{i\\ell}+C_\\ell)\\bigr)\n \\geq\\mathop{\\mathrm{rank}}\\bigl(\\Phi|_{\\mathop{\\mathrm{Lie}}(C)}\\bigr)$$ holds for infinitely many $i$. Put $r=\\dim\\mathcal A+1$, and, for a linear map $g$ on $\\mathop{\\mathrm{Lie}}(\\mathcal A)$, define $$\\Delta g(v_1,\\ldots,v_r)\n   =\\bigl(g(v_2)-g(v_1),\\ldots,g(v_r)-g(v_{r-1})\\bigr).$$ Then the following assertions hold.*\n\n1.  *There are a neighborhood $\\mathcal U$ of $\\Phi$ in $\\mathop{\\mathrm{End}}(\\mathcal A)_{\\mathbb R}$ and an index $i_0$ such that $P_Z(g)>0$ for every $i\\geq i_0$, every $g\\in\\mathcal U$, and every subproduct $Z=\\prod_\\ell Z_\\ell$ with $y_{i\\ell}\\in Z_\\ell\\subseteq Y_\\ell$.*\n\n2.  *For every sufficiently large $i$ and every such subproduct $Z$, $P_{Z^r}(\\Delta\\Phi)>0$."
+   },
+   {
+    "anchor": "stmt-lemma-intersection-lower-bound",
+    "claim_id": "C12",
+    "statement": "Let $\\mathcal B$ be a fixed closed box with rational endpoints in the coordinates of an integral basis of $\\mathop{\\mathrm{End}}(\\mathcal A)$. There are positive integers $\\theta,\\omega_1$, depending only on the fixed ambients, polarizations, and box, with the following property. For every irreducible subproduct $Z\\subseteq\\mathcal A$ such that $P_Z$ is strictly positive everywhere on $\\mathcal B$, $$\\label{eq:intersection-lower-bound}\n P_Z(g)\\ge \\theta^{-1}D_Z^{-\\omega_1}\n \\qquad (g\\in\\mathcal B).$$"
+   },
+   {
+    "anchor": "stmt-thm-dill-form",
+    "claim_id": "C13",
+    "statement": "Let $X_1,\\ldots,X_s$ be fixed irreducible positive-dimensional projective varieties over $\\overline{\\mathbb Q}$, with $s\\ge2$, and fix embeddings $X_\\ell\\subseteq\\mathbb P^{N_\\ell}$ given by very ample bundles $L_\\ell$. For positive integral weights $a_\\ell$, put $N_a=\\boxtimes_\\ell L_\\ell^{a_\\ell}$. Let $\\mathcal M$ be a nef bundle on $\\prod_\\ell X_\\ell$ and $\\mathcal P=N_a^{t_1}$, with its full monomial coordinate system $\\Xi$. Suppose $\\mathcal P\\otimes\\mathcal M^{-1}$ is generated by $J$ sections $\\mathcal Z$, whose images under an injection $$\\mathcal P\\otimes\\mathcal M^{-1}\\hookrightarrow N_a^{t_2}$$ are polynomials of multidegree $t_2a$ with joint coefficient height at most $\\sum_\\ell a_\\ell\\delta_\\ell$. Assume the injection is an isomorphism on a nonempty open set $U^0$. Here $t_1,t_2,J$ are positive integers and $\\delta_\\ell\\ge1$.*\n\n\n*Let $x=(x_\\ell)\\in U^0(\\overline{\\mathbb Q})$. Suppose that, for every irreducible subproduct $Z=\\prod_\\ell Z_\\ell$ with $x_\\ell\\in Z_\\ell\\subseteq X_\\ell$, $$\\label{eq:dill-intersections}\n (\\mathcal M^{\\dim Z}\\cdot Z)\n \\ge \\theta^{-1}\\prod_\\ell\n       (\\deg Z_\\ell)^{-\\omega}a_\\ell^{\\dim Z_\\ell},$$ where $\\theta\\ge1$ and $\\omega\\ge-1$ are integers. Put $$\\begin{split}\n u_0&=\\sum_\\ell\\dim X_\\ell,\\\\\n \\Lambda&=\\theta(2t_1u_0)^{u_0}\n          \\max_\\ell(N_\\ell+1)\\prod_\\ell\\deg X_\\ell,\\\\\n \\psi(u)&=\\prod_{j=u+1}^{u_0}((3+\\omega)j+1),\n \\qquad c_1=c_2=\\Lambda^{\\psi(0)},\\\\\n c_3^{(\\ell)}&=\\Lambda^{2\\psi(0)}(Jt_2)^{u_0}\n                      (h(X_\\ell)+\\delta_\\ell).\n \\end{split}$$ If $a_\\ell\\ge c_2a_{\\ell+1}$ for $\\ell<s$ and $h(x_\\ell)\\ge c_3^{(\\ell)}$ for every $\\ell$, then $$\\label{eq:dill-height}\n \\sum_\\ell a_\\ell h(x_\\ell)\n \\le c_1\\bigl(h(\\Xi(x))-h(\\mathcal Z(x))\\bigr).$$"
+   },
+   {
+    "anchor": "stmt-thm-all-high",
+    "claim_id": "C14",
+    "statement": "Theorem <a href=\"#thm:sequence\" data-reference-type=\"ref\" data-reference=\"thm:sequence\">6</a> holds for all-high sequence data."
+   },
+   {
+    "anchor": "stmt-lemma-height-kernel",
+    "claim_id": "C15",
+    "statement": "Fix integers $N,D\\geq 1$. Let $F$ be a number field and let $\\mathcal S$ be a set of points in $\\mathbb P^N(\\overline{\\mathbb Q})$ of height at most $T$, where $T\\geq1$. Suppose the vector space of homogeneous degree-$D$ polynomials vanishing on $\\mathcal S$ is defined over $F$. This space has an $F$-basis whose coefficient heights are $O_{N,D}(T)$."
+   },
+   {
+    "anchor": "stmt-lemma-bounded-conormal",
+    "claim_id": "C16",
+    "statement": "Let $Z\\subseteq\\mathbb P^N$ be an irreducible projective variety of degree $D$ over an algebraically closed field of characteristic zero. At every smooth point of $Z$, the differentials of homogeneous equations of $Z$ of degree at most $D$, dehomogenized in an affine chart, span its conormal space."
+   },
+   {
+    "anchor": "stmt-prop-minimal-products",
+    "claim_id": "C17",
+    "statement": "For a minimal admissible choice, the following assertions hold after discarding finitely many indices and passing to a subsequence.*\n\n1.  *For every pair of positive integers $D,B$, there is an index $i_0(D,B)$ such that, for every $i\\ge i_0(D,B)$ and every factor $\\ell$, any hypersurface of degree at most $D$ defined over an extension $F_i/k_i$ with $[F_i:k_i]\\le B$ which contains $y_{i\\ell}$ also contains $Z_{i\\ell}$.*\n\n2.  *For each fixed degree, the equations of $Z_{i\\ell}$ in that degree have a $k_i$-basis of coefficient heights $O(H_{i\\ell})$. The points $y_{i\\ell}$ are smooth on $Z_{i\\ell}$, and equations of bounded degree and height $O(H_{i\\ell})$ span their conormal spaces.*\n\n3.  *The low factor belongs to a finite set of varieties. We may therefore suppose $Z_{i0}=Z_0$ independent of $i$."
+   },
+   {
+    "anchor": "stmt-lemma-fixed-low-point",
+    "claim_id": "C18",
+    "statement": "In a minimal admissible product for the putative low-factor counterexample, $d_0>0$."
+   },
+   {
+    "anchor": "stmt-prop-arithmetic-positive",
+    "claim_id": "C19",
+    "statement": "Let $Z_i=\\prod_{\\ell=0}^s Z_{i\\ell}$ be the bounded-degree, bounded-field-degree subproducts above, with fixed positive-dimensional low factor $Z_0$, dense factorwise height bounds $h_{L_\\ell}=O(H_{i\\ell})$, and fixed high cycle classes. Suppose the two tangent integrals for $\\Phi$ in Proposition <a href=\"#prop:tangent\" data-reference-type=\"ref\" data-reference=\"prop:tangent\">12</a> are positive. For the homomorphisms and scalings in <a href=\"#eq:scaled-homomorphisms\" data-reference-type=\"eqref\" data-reference=\"eq:scaled-homomorphisms\">[eq:scaled-homomorphisms]</a>, one has $$\\label{eq:arithmetic-positive}\n \\liminf_{i\\to\\infty}\n \\frac{(\\bar E_i^{d+1}\\cdot Z_i)}{M_i^2B_i}>0.$$"
+   },
+   {
+    "anchor": "stmt-lemma-small-sections",
+    "claim_id": "C20",
+    "statement": "For the products $Z_i$, bundles $\\bar E_i$, and scalings above, there is a constant $c>0$ such that, for all sufficiently large $i$, a projective resolution $\\pi_i:\\widetilde Z_i\\to Z_i$ over $k_i$ carries a nonzero section defined over $k_i$, $$s_i\\in H^0(\\widetilde Z_i,\\pi_i^*E_i^{\\otimes n_i})\n \\quad\\text{for some integer }n_i>0$$ whose adelic supremum norms satisfy $$\\label{eq:small-section-norms}\n \\|s_i\\|_{v,\\mathrm{sup}}\\le\n \\begin{cases}\n \\exp(-cn_iM_i^2),&v\\mid\\infty,\\\\\n 1,&v\\nmid\\infty.\n \\end{cases}$$ The resolution may be chosen to be an isomorphism over the smooth locus."
+   },
+   {
+    "anchor": "stmt-prop-index",
+    "claim_id": "C21",
+    "statement": "Fix projective embeddings of abelian varieties $A_\\ell$ by symmetric very ample bundles $L_\\ell$, a symmetric very ample canonically metrized bundle $\\bar L$ on $\\mathcal A=\\prod_\\ell A_\\ell$, and integral bases of the homomorphism groups between the fixed varieties. Let $F_i:\\mathcal A\\to\\mathcal A$ be homomorphisms. Suppose that:*\n\n1.  *$y_{i\\ell}$ is a smooth point of an irreducible $Z_{i\\ell}\\subset A_\\ell$, its projective height is $O(H_{i\\ell})$, and its conormal space is spanned by equations of bounded degree and coefficient height $O(H_{i\\ell})$, with $H_{i\\ell}\\ge1$;*\n\n2.  *$M_i\\longrightarrow\\infty$, the positive integers $b_{i\\ell}$ satisfy $b_{i\\ell}\\ll M_i$ and $b_{i\\ell}^2H_{i\\ell}\\asymp M_i^2$, and the coefficients of $F_i|_{A_\\ell}$ in the fixed bases are $O(b_{i\\ell})$;*\n\n\n3.  *for $\\bar E_i=F_i^*\\bar L$ one has $h_{\\bar E_i}(y_i)=o(M_i^2)$, and a nonzero section $s_i$ of $E_i^{n_i}$ on a resolution of $Z_i=\\prod_\\ell Z_{i\\ell}$ satisfies $$\\label{eq:index-small-section}\n     \\|s_i\\|_{v,\\sup}\\le\n     \\begin{cases}\n     e^{-c n_iM_i^2},&v\\mid\\infty,\\\\\n     1,&v\\nmid\\infty,\n     \\end{cases}$$ for a fixed $c>0$, over a number field containing its data.*\n\n*Assume that the resolution is an isomorphism over the smooth locus. Then, for some $\\eta>0$ independent of $i$, $\\operatorname{ind}_{n_i,b_i}(s_i;y_i)\\ge\\eta$ for all sufficiently large $i$. No bound on the degree of the field of $y_i$ is required."
+   },
+   {
+    "anchor": "stmt-lemma-conjugate-product-degree",
+    "claim_id": "C22",
+    "statement": "Suppose that $G$ is defined over a number field $k$, and that a proper geometric component $J=\\prod_{\\ell=1}^mJ_\\ell$ is common to $\\mathcal I_\\sigma$ and $\\mathcal I_{\\sigma+\\epsilon}$, where $\\sigma>0$ and $0<\\epsilon\\le1$, and neither level is a rational derivative weight. If $q$ is the number of conjugates of $J$ over $k$, then $$\\label{eq:conjugate-product-degree}\n q\\prod_\\ell\\deg J_\\ell\\le C(N,\\epsilon).$$ In particular the factors have bounded degrees and are defined over a common extension of $k$ of bounded degree."
+   },
+   {
+    "anchor": "stmt-prop-product-cut",
+    "claim_id": "C23",
+    "statement": "For the minimal products of Proposition <a href=\"#prop:minimal-products\" data-reference-type=\"ref\" data-reference=\"prop:minimal-products\">18</a> with $d_0>0$, the small sections of Lemma <a href=\"#lemma:small-sections\" data-reference-type=\"ref\" data-reference=\"lemma:small-sections\">21</a> cannot satisfy the positive index conclusion of Proposition <a href=\"#prop:index\" data-reference-type=\"ref\" data-reference=\"prop:index\">22</a> along an infinite subsequence."
+   },
+   {
+    "anchor": "stmt-prop-optimal-finite",
+    "claim_id": "C24",
+    "statement": "Every irreducible subvariety of every abelian variety over $\\overline{\\mathbb Q}$ contains only finitely many optimal subvarieties."
+   },
+   {
+    "anchor": "stmt-lem-maximal-optimal",
+    "claim_id": "C25",
+    "statement": "Let $X$ be an irreducible subvariety of an abelian variety and $S=\\langle X\\rangle_{\\mathrm{sp}}$. Every maximal atypical subvariety of $X$ in $S$ is optimal in $X$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "atypical subvariety",
+    "evidence": [
+     {
+      "anchor": "eq:atypical",
+      "quote": "Let $X\\subseteq A_{\\bar K}$ and put $S=\\langle X\\rangle_{\\mathrm{sp}}$. An irreducible component $Y$ of $X\\cap T$, for a special $T\\subseteq S$, is *atypical for $X$ in $S$* if $$\\label{eq:atypical}\n \\dim Y>\\dim X+\\dim T-\\dim S.$$",
+      "quote_sha256": "c1e6870f5d877d8670116f8e60f5ce76351bdf9ab5765e94849808894bccb07b"
+     }
+    ],
+    "requires_concepts": [
+     "abelian variety",
+     "irreducible intersection component",
+     "special subvariety",
+     "special closure",
+     "dimension"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "weighted vanishing index",
+    "evidence": [
+     {
+      "anchor": "eq:weighted-index",
+      "quote": "For a smooth point $y=(y_\\ell)_\\ell$ of a product $Z=\\prod_\\ell Z_\\ell$, choose regular parameters $T_\\ell=(T_{\\ell,1},\\ldots,T_{\\ell,d_\\ell})$ on each factor and a local frame $e$ of a line bundle $E$. If a nonzero section of $E^n$ has expansion $s=e^n\\sum_\\alpha a_\\alpha T^\\alpha$, define $$\\label{eq:weighted-index}\n \\operatorname{ind}_{n,b}(s;y)\n =\\min_{a_\\alpha\\ne0}\n       \\sum_\\ell\\frac{|\\alpha_\\ell|}{n b_\\ell^2}.$$",
+      "quote_sha256": "b521d62a95703a073d87515be1a89118e4b329894dce5bf02fc96ad7f159935e"
+     }
+    ],
+    "requires_concepts": [
+     "smooth product point",
+     "regular parameters",
+     "local bundle frame",
+     "Taylor coefficient"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C1",
+   "exact_statement": "For every number field $K$, every abelian variety $A/K$, and every irreducible subvariety $X\\subseteq A_{\\bar K}$, there are only finitely many maximal atypical subvarieties of $X$ in $S=\\langle X\\rangle_{\\mathrm{sp}}$. Equivalently, there are finitely many proper atypical subvarieties $Y_1,\\ldots,Y_m\\subsetneq X$ such that every atypical subvariety is contained in one of the $Y_j$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "C2",
+   "exact_statement": "Let $A$ be an abelian variety over $\\overline{\\mathbb Q}$, and let $X\\subseteq A$ be an irreducible subvariety contained in no proper torsion coset. Then $X\\cap A^{[\\dim X+1]}$ is not Zariski dense in $X$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-nondensity"
+  },
+  {
+   "claim_id": "C3",
+   "exact_statement": "Let $A$ be an abelian variety over $\\overline{\\mathbb Q}$, let $\\Gamma\\subseteq A(\\overline{\\mathbb Q})$ be a subgroup satisfying $$\\dim_{\\mathbb Q}\\bigl(\\Gamma\\otimes_{\\mathbb Z}\\mathbb Q\\bigr)<\\infty,$$ and let $X\\subseteq A$ be an irreducible closed subvariety of dimension $d$ contained in no translate of a proper algebraic subgroup of $A$. Then $$X(\\overline{\\mathbb Q})\\cap\\bigl(A^{[d+1]}(\\overline{\\mathbb Q})+\\Gamma\\bigr)$$ is not Zariski dense in $X$. If $d=1$, this intersection is finite.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-finite-rank-translates"
+  },
+  {
+   "claim_id": "C4",
+   "exact_statement": "Let $G,G'$ be abelian varieties over $\\overline{\\mathbb Q}$ with the preceding choices. Every element of $\\mathop{\\mathrm{Hom}}(G,G')_{\\mathbb R}=\\mathop{\\mathrm{Hom}}(G,G')\\otimes_{\\mathbb Z}\\mathbb R$ acts on both $\\mathop{\\mathrm{Lie}}(G)$ and $\\mathcal H(G)$. The Lie action is faithful. Convergence in this finite-dimensional real homomorphism space implies operator-norm convergence on the height spaces.*\n\n*The polarization adjoint of a real homomorphism is a real homomorphism. Its kernel and image in the Lie algebras have orthogonal projectors in the corresponding real endomorphism algebras, and it has a generalized inverse in the opposite real homomorphism space. In particular, if $f$ is fixed and $\\|f(x_i)\\|\\to0$, then $$\\|P_{(\\ker f)^\\perp}(x_i)\\|\\longrightarrow0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-real-calculus"
+  },
+  {
+   "claim_id": "C5",
+   "exact_statement": "For sequence data as in Definition <a href=\"#def:sequence-data\" data-reference-type=\"ref\" data-reference=\"def:sequence-data\">5</a>, let $V\\subseteq\\mathop{\\mathrm{Lie}}(W)$ be the image of an idempotent in $\\mathop{\\mathrm{End}}(\\mathcal A)_{\\mathbb R}$. Let $\\Phi$ be the orthogonal projector with kernel $V$, and put $$q_i=(y_{i\\ell}/\\sqrt{H_{i\\ell}})_{\\ell\\in I}\n \\in\\mathcal H(\\mathcal A).$$ The following two conditions cannot both hold: $$\\label{eq:forbidden-sequence}\n \\mathop{\\mathrm{codim}}_{\\mathop{\\mathrm{Lie}}(W)}V>\\sum_{\\ell\\in I}m_\\ell,\n \\qquad \\|\\Phi(q_i)\\|\\longrightarrow0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-sequence"
+  },
+  {
+   "claim_id": "C6",
+   "exact_statement": "Let $A$ be a nonzero abelian variety and $x_i\\in A(\\overline{\\mathbb Q})$. After passing to a subsequence, there is an isogeny $$\\alpha:A\\longrightarrow\\prod_{\\ell\\in I}W_\\ell$$ with nonzero factors, and scales $H_{i\\ell}\\ge1$, such that the coordinates $p_{i\\ell}$ of $\\alpha(x_i)$ have norms $O(\\sqrt{H_{i\\ell}})$ and successive scale ratios tend to zero. There is at most one bounded scale, placed first and equal to one. Every other scale tends to infinity and satisfies <a href=\"#eq:sequence-nondegenerate\" data-reference-type=\"eqref\" data-reference=\"eq:sequence-nondegenerate\">[eq:sequence-nondegenerate]</a> with $A_\\ell=W_\\ell$ for every fixed nonzero homomorphism on $W_\\ell$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-height-decomposition"
+  },
+  {
+   "claim_id": "C7",
+   "exact_statement": "The auxiliary sequence theorem implies Theorem <a href=\"#thm:nondensity\" data-reference-type=\"ref\" data-reference=\"thm:nondensity\">2</a> for every abelian variety over $\\overline{\\mathbb Q}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-sequence-implies-nondensity"
+  },
+  {
+   "claim_id": "C8",
+   "exact_statement": "Suppose that sequence data as in Definition <a href=\"#def:sequence-data\" data-reference-type=\"ref\" data-reference=\"def:sequence-data\">5</a>, together with $V$ and $\\Phi$ as in Theorem <a href=\"#thm:sequence\" data-reference-type=\"ref\" data-reference=\"thm:sequence\">6</a>, satisfy <a href=\"#eq:forbidden-sequence\" data-reference-type=\"eqref\" data-reference=\"eq:forbidden-sequence\">[eq:forbidden-sequence]</a> and have least $\\dim\\mathcal A$ among counterexamples with the same presence or absence of a low factor. If a low factor occurs, assume also that Theorem <a href=\"#thm:sequence\" data-reference-type=\"ref\" data-reference=\"thm:sequence\">6</a> has already been proved for all-high data in every dimension. There do not exist fixed abelian subvarieties $C_\\ell\\subseteq A_\\ell$, with $C=\\prod_\\ell C_\\ell\\ne0$, and nonnegative integers $a_\\ell$ such that, on an infinite subsequence, $$\\label{eq:projection-obstruction}\n \\dim_{y_{i\\ell}}\\bigl(Y_\\ell\\cap(y_{i\\ell}+C_\\ell)\\bigr)\n \\ge a_\\ell\\quad(\\ell\\in I),\n \\qquad\n \\sum_\\ell a_\\ell\\ge\\mathop{\\mathrm{rank}}(\\Phi|_{\\mathop{\\mathrm{Lie}}(C)}).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-projection"
+  },
+  {
+   "claim_id": "C9",
+   "exact_statement": "Let $A_\\ell$, $\\ell\\in I$, be complex abelian varieties, let $Z_\\ell\\subseteq A_\\ell$ be subvarieties, and put $Z=\\prod_{\\ell\\in I}Z_\\ell$ and $A=\\prod_{\\ell\\in I}A_\\ell$. Let $g\\colon\\mathop{\\mathrm{Lie}}(A)\\longrightarrow E$ be a complex linear map to a Hermitian vector space. If $P_Z(g)=0$, there are abelian subvarieties $C_\\ell\\subseteq A_\\ell$ such that, for every $z=(z_\\ell)_\\ell\\in Z$, $$\\label{eq:ax-product-obstruction}\n \\sum_{\\ell\\in I}\n \\dim_{z_\\ell}\\bigl(Z_\\ell\\cap(z_\\ell+C_\\ell)\\bigr)\n >\\mathop{\\mathrm{rank}}\\left(g\\bigm|_{\\bigoplus_{\\ell\\in I}\\mathop{\\mathrm{Lie}}(C_\\ell)}\\right).$$ In particular, $\\prod_\\ell C_\\ell$ is nonzero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-ax-product"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "Fix subvarieties $Y_\\ell\\subseteq A_\\ell$ of complex abelian varieties. For each $\\ell$, there is a finite set $\\mathcal H_\\ell$ of abelian subvarieties of $A_\\ell$ with the following property. Suppose that $y_\\ell\\in Z_\\ell\\subseteq Y_\\ell$, that $C_\\ell\\subseteq A_\\ell$ are abelian subvarieties, and that $g\\colon\\bigoplus_\\ell\\mathop{\\mathrm{Lie}}(A_\\ell)\\longrightarrow E$ is complex linear. Put $$d_\\ell=\\dim_{y_\\ell}\\bigl(Z_\\ell\\cap(y_\\ell+C_\\ell)\\bigr).$$ If $\\varepsilon\\in\\{0,1\\}$ and $$\\sum_\\ell d_\\ell\\geq\n \\mathop{\\mathrm{rank}}\\left(g\\bigm|_{\\bigoplus_\\ell\\mathop{\\mathrm{Lie}}(C_\\ell)}\\right)\n +\\varepsilon,$$ there are $H_\\ell\\in\\mathcal H_\\ell$ such that $$\\label{eq:fixed-parent-rank}\n \\sum_\\ell\\dim_{y_\\ell}\n \\bigl(Y_\\ell\\cap(y_\\ell+H_\\ell)\\bigr)\n \\geq\\mathop{\\mathrm{rank}}\\left(g\\bigm|_{\\bigoplus_\\ell\\mathop{\\mathrm{Lie}}(H_\\ell)}\\right)\n +\\varepsilon.$$ If $\\sum_\\ell d_\\ell>0$, the product $\\prod_\\ell H_\\ell$ is nonzero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-finite-directions"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "Consider fixed sequence data as in Definition <a href=\"#def:sequence-data\" data-reference-type=\"ref\" data-reference=\"def:sequence-data\">5</a>, and let $V$ and $\\Phi$ be as in Theorem <a href=\"#thm:sequence\" data-reference-type=\"ref\" data-reference=\"thm:sequence\">6</a>. Suppose that the conclusion of Lemma <a href=\"#lemma:projection\" data-reference-type=\"ref\" data-reference=\"lemma:projection\">9</a> excludes every fixed nonzero product $C=\\prod_\\ell C_\\ell$ for which $$\\label{eq:excluded-tangent-configuration}\n \\sum_\\ell\\dim_{y_{i\\ell}}\n \\bigl(Y_\\ell\\cap(y_{i\\ell}+C_\\ell)\\bigr)\n \\geq\\mathop{\\mathrm{rank}}\\bigl(\\Phi|_{\\mathop{\\mathrm{Lie}}(C)}\\bigr)$$ holds for infinitely many $i$. Put $r=\\dim\\mathcal A+1$, and, for a linear map $g$ on $\\mathop{\\mathrm{Lie}}(\\mathcal A)$, define $$\\Delta g(v_1,\\ldots,v_r)\n   =\\bigl(g(v_2)-g(v_1),\\ldots,g(v_r)-g(v_{r-1})\\bigr).$$ Then the following assertions hold.*\n\n1.  *There are a neighborhood $\\mathcal U$ of $\\Phi$ in $\\mathop{\\mathrm{End}}(\\mathcal A)_{\\mathbb R}$ and an index $i_0$ such that $P_Z(g)>0$ for every $i\\geq i_0$, every $g\\in\\mathcal U$, and every subproduct $Z=\\prod_\\ell Z_\\ell$ with $y_{i\\ell}\\in Z_\\ell\\subseteq Y_\\ell$.*\n\n2.  *For every sufficiently large $i$ and every such subproduct $Z$, $P_{Z^r}(\\Delta\\Phi)>0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-tangent"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Let $\\mathcal B$ be a fixed closed box with rational endpoints in the coordinates of an integral basis of $\\mathop{\\mathrm{End}}(\\mathcal A)$. There are positive integers $\\theta,\\omega_1$, depending only on the fixed ambients, polarizations, and box, with the following property. For every irreducible subproduct $Z\\subseteq\\mathcal A$ such that $P_Z$ is strictly positive everywhere on $\\mathcal B$, $$\\label{eq:intersection-lower-bound}\n P_Z(g)\\ge \\theta^{-1}D_Z^{-\\omega_1}\n \\qquad (g\\in\\mathcal B).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lemma-intersection-lower-bound"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "Let $X_1,\\ldots,X_s$ be fixed irreducible positive-dimensional projective varieties over $\\overline{\\mathbb Q}$, with $s\\ge2$, and fix embeddings $X_\\ell\\subseteq\\mathbb P^{N_\\ell}$ given by very ample bundles $L_\\ell$. For positive integral weights $a_\\ell$, put $N_a=\\boxtimes_\\ell L_\\ell^{a_\\ell}$. Let $\\mathcal M$ be a nef bundle on $\\prod_\\ell X_\\ell$ and $\\mathcal P=N_a^{t_1}$, with its full monomial coordinate system $\\Xi$. Suppose $\\mathcal P\\otimes\\mathcal M^{-1}$ is generated by $J$ sections $\\mathcal Z$, whose images under an injection $$\\mathcal P\\otimes\\mathcal M^{-1}\\hookrightarrow N_a^{t_2}$$ are polynomials of multidegree $t_2a$ with joint coefficient height at most $\\sum_\\ell a_\\ell\\delta_\\ell$. Assume the injection is an isomorphism on a nonempty open set $U^0$. Here $t_1,t_2,J$ are positive integers and $\\delta_\\ell\\ge1$.*\n\n\n*Let $x=(x_\\ell)\\in U^0(\\overline{\\mathbb Q})$. Suppose that, for every irreducible subproduct $Z=\\prod_\\ell Z_\\ell$ with $x_\\ell\\in Z_\\ell\\subseteq X_\\ell$, $$\\label{eq:dill-intersections}\n (\\mathcal M^{\\dim Z}\\cdot Z)\n \\ge \\theta^{-1}\\prod_\\ell\n       (\\deg Z_\\ell)^{-\\omega}a_\\ell^{\\dim Z_\\ell},$$ where $\\theta\\ge1$ and $\\omega\\ge-1$ are integers. Put $$\\begin{split}\n u_0&=\\sum_\\ell\\dim X_\\ell,\\\\\n \\Lambda&=\\theta(2t_1u_0)^{u_0}\n          \\max_\\ell(N_\\ell+1)\\prod_\\ell\\deg X_\\ell,\\\\\n \\psi(u)&=\\prod_{j=u+1}^{u_0}((3+\\omega)j+1),\n \\qquad c_1=c_2=\\Lambda^{\\psi(0)},\\\\\n c_3^{(\\ell)}&=\\Lambda^{2\\psi(0)}(Jt_2)^{u_0}\n                      (h(X_\\ell)+\\delta_\\ell).\n \\end{split}$$ If $a_\\ell\\ge c_2a_{\\ell+1}$ for $\\ell<s$ and $h(x_\\ell)\\ge c_3^{(\\ell)}$ for every $\\ell$, then $$\\label{eq:dill-height}\n \\sum_\\ell a_\\ell h(x_\\ell)\n \\le c_1\\bigl(h(\\Xi(x))-h(\\mathcal Z(x))\\bigr).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-dill-form"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "Theorem <a href=\"#thm:sequence\" data-reference-type=\"ref\" data-reference=\"thm:sequence\">6</a> holds for all-high sequence data.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-all-high"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "Fix integers $N,D\\geq 1$. Let $F$ be a number field and let $\\mathcal S$ be a set of points in $\\mathbb P^N(\\overline{\\mathbb Q})$ of height at most $T$, where $T\\geq1$. Suppose the vector space of homogeneous degree-$D$ polynomials vanishing on $\\mathcal S$ is defined over $F$. This space has an $F$-basis whose coefficient heights are $O_{N,D}(T)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-height-kernel"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "Let $Z\\subseteq\\mathbb P^N$ be an irreducible projective variety of degree $D$ over an algebraically closed field of characteristic zero. At every smooth point of $Z$, the differentials of homogeneous equations of $Z$ of degree at most $D$, dehomogenized in an affine chart, span its conormal space.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-bounded-conormal"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "For a minimal admissible choice, the following assertions hold after discarding finitely many indices and passing to a subsequence.*\n\n1.  *For every pair of positive integers $D,B$, there is an index $i_0(D,B)$ such that, for every $i\\ge i_0(D,B)$ and every factor $\\ell$, any hypersurface of degree at most $D$ defined over an extension $F_i/k_i$ with $[F_i:k_i]\\le B$ which contains $y_{i\\ell}$ also contains $Z_{i\\ell}$.*\n\n2.  *For each fixed degree, the equations of $Z_{i\\ell}$ in that degree have a $k_i$-basis of coefficient heights $O(H_{i\\ell})$. The points $y_{i\\ell}$ are smooth on $Z_{i\\ell}$, and equations of bounded degree and height $O(H_{i\\ell})$ span their conormal spaces.*\n\n3.  *The low factor belongs to a finite set of varieties. We may therefore suppose $Z_{i0}=Z_0$ independent of $i$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-minimal-products"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "In a minimal admissible product for the putative low-factor counterexample, $d_0>0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-fixed-low-point"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "Let $Z_i=\\prod_{\\ell=0}^s Z_{i\\ell}$ be the bounded-degree, bounded-field-degree subproducts above, with fixed positive-dimensional low factor $Z_0$, dense factorwise height bounds $h_{L_\\ell}=O(H_{i\\ell})$, and fixed high cycle classes. Suppose the two tangent integrals for $\\Phi$ in Proposition <a href=\"#prop:tangent\" data-reference-type=\"ref\" data-reference=\"prop:tangent\">12</a> are positive. For the homomorphisms and scalings in <a href=\"#eq:scaled-homomorphisms\" data-reference-type=\"eqref\" data-reference=\"eq:scaled-homomorphisms\">[eq:scaled-homomorphisms]</a>, one has $$\\label{eq:arithmetic-positive}\n \\liminf_{i\\to\\infty}\n \\frac{(\\bar E_i^{d+1}\\cdot Z_i)}{M_i^2B_i}>0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-arithmetic-positive"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "For the products $Z_i$, bundles $\\bar E_i$, and scalings above, there is a constant $c>0$ such that, for all sufficiently large $i$, a projective resolution $\\pi_i:\\widetilde Z_i\\to Z_i$ over $k_i$ carries a nonzero section defined over $k_i$, $$s_i\\in H^0(\\widetilde Z_i,\\pi_i^*E_i^{\\otimes n_i})\n \\quad\\text{for some integer }n_i>0$$ whose adelic supremum norms satisfy $$\\label{eq:small-section-norms}\n \\|s_i\\|_{v,\\mathrm{sup}}\\le\n \\begin{cases}\n \\exp(-cn_iM_i^2),&v\\mid\\infty,\\\\\n 1,&v\\nmid\\infty.\n \\end{cases}$$ The resolution may be chosen to be an isomorphism over the smooth locus.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-small-sections"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "Fix projective embeddings of abelian varieties $A_\\ell$ by symmetric very ample bundles $L_\\ell$, a symmetric very ample canonically metrized bundle $\\bar L$ on $\\mathcal A=\\prod_\\ell A_\\ell$, and integral bases of the homomorphism groups between the fixed varieties. Let $F_i:\\mathcal A\\to\\mathcal A$ be homomorphisms. Suppose that:*\n\n1.  *$y_{i\\ell}$ is a smooth point of an irreducible $Z_{i\\ell}\\subset A_\\ell$, its projective height is $O(H_{i\\ell})$, and its conormal space is spanned by equations of bounded degree and coefficient height $O(H_{i\\ell})$, with $H_{i\\ell}\\ge1$;*\n\n2.  *$M_i\\longrightarrow\\infty$, the positive integers $b_{i\\ell}$ satisfy $b_{i\\ell}\\ll M_i$ and $b_{i\\ell}^2H_{i\\ell}\\asymp M_i^2$, and the coefficients of $F_i|_{A_\\ell}$ in the fixed bases are $O(b_{i\\ell})$;*\n\n\n3.  *for $\\bar E_i=F_i^*\\bar L$ one has $h_{\\bar E_i}(y_i)=o(M_i^2)$, and a nonzero section $s_i$ of $E_i^{n_i}$ on a resolution of $Z_i=\\prod_\\ell Z_{i\\ell}$ satisfies $$\\label{eq:index-small-section}\n     \\|s_i\\|_{v,\\sup}\\le\n     \\begin{cases}\n     e^{-c n_iM_i^2},&v\\mid\\infty,\\\\\n     1,&v\\nmid\\infty,\n     \\end{cases}$$ for a fixed $c>0$, over a number field containing its data.*\n\n*Assume that the resolution is an isomorphism over the smooth locus. Then, for some $\\eta>0$ independent of $i$, $\\operatorname{ind}_{n_i,b_i}(s_i;y_i)\\ge\\eta$ for all sufficiently large $i$. No bound on the degree of the field of $y_i$ is required.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-index"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "Suppose that $G$ is defined over a number field $k$, and that a proper geometric component $J=\\prod_{\\ell=1}^mJ_\\ell$ is common to $\\mathcal I_\\sigma$ and $\\mathcal I_{\\sigma+\\epsilon}$, where $\\sigma>0$ and $0<\\epsilon\\le1$, and neither level is a rational derivative weight. If $q$ is the number of conjugates of $J$ over $k$, then $$\\label{eq:conjugate-product-degree}\n q\\prod_\\ell\\deg J_\\ell\\le C(N,\\epsilon).$$ In particular the factors have bounded degrees and are defined over a common extension of $k$ of bounded degree.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lemma-conjugate-product-degree"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "For the minimal products of Proposition <a href=\"#prop:minimal-products\" data-reference-type=\"ref\" data-reference=\"prop:minimal-products\">18</a> with $d_0>0$, the small sections of Lemma <a href=\"#lemma:small-sections\" data-reference-type=\"ref\" data-reference=\"lemma:small-sections\">21</a> cannot satisfy the positive index conclusion of Proposition <a href=\"#prop:index\" data-reference-type=\"ref\" data-reference=\"prop:index\">22</a> along an infinite subsequence.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-product-cut"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "Every irreducible subvariety of every abelian variety over $\\overline{\\mathbb Q}$ contains only finitely many optimal subvarieties.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-optimal-finite"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "Let $X$ be an irreducible subvariety of an abelian variety and $S=\\langle X\\rangle_{\\mathrm{sp}}$. Every maximal atypical subvariety of $X$ in $S$ is optimal in $X$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-maximal-optimal"
+  }
+ ],
+ "paper": "papers/EN-101-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-H-0047_PM-016.1_The_abelian_ZilberPink_conjecture.md",
+ "purpose": "The abelian Zilber–Pink conjecture",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "14630a7e6a3cfa9132a6425a2fbdb91451632543dd65803f8cefdd5d7d689a1c",
+   "pm.domains.v2": "e13de08b6c590e08a4d2bb1274727d64d4fb9850289e12606117d6b46d306639",
+   "pm.edges.v2": "c0c261c9b694ad1e5c5ff924e04de43b0fcfc0230ed15399a1e7a7fa67d1c416",
+   "pm.extraction.v2": "c3aa5e13872c6a37ed0c40de0827271cbf7bd7e3c27f3da5d04e268d6ad8bf71",
+   "pm.formal.v2": "2b51324fe919f7ec77f245a1fcdd74d393ded876b68ab399831cd54d4371f123",
+   "pm.limits.v2": "836847daae8173005529e1ce357e1bfb69f2f2ca119f1a7ce424d824d44f7dc8",
+   "pm.node.v2": "82477c542d5d122c1a6064800dd2ef874833850e502c00ad8a5ceb9fa78f9b5c",
+   "pm.objects.v2": "a14b36d99f5bdc8a9bd87b753778e927bc5ded742bdc917bfe0c67343dcff695",
+   "pm.provenance.v2": "e268469f1cfa6125d7e9103507dd9f0237811437e89c7d616012e5bb428f6141",
+   "pm.quantities.v2": "27cdede6ae2a3f9f0dffe0083d2bfa4baae6fc1b04d2f81379b5ad570904cf52",
+   "pm.reading.v2": "74159ba325599f23f5644379da42bce7b5b50cf3e9125034a71baf89eb2f84f3",
+   "pm.roadmap.v2": "8306a66942a74838b77a9a156320cba841b7deb9c1aacac99cd2a1faf05820bb",
+   "pm.search.v1": "badb7d27f1312f965967bc94de5ee6a4f7b15f1eda793b8c8c8855173e6f9d5f",
+   "pm.triptych.v2": "d554ca048aa55c64adc158e1d219050dd1e9dc8f197bd71b18cde54d1c6820eb"
+  },
+  "canonical_sha256": "ef556ffcdb39c0bf3adeeb5981431378edfef85b122f0b6986589ce567da19bb",
+  "paper_sha256": "bde991fea59b1bf7cb6b6ca3e613bf14cd1a3475f40c4c0f95d1e4fd5ed5c126",
+  "repaired_body_sha256": "63cf4c683fcf2699e23be163ba329ff064677732f9ae73dbf6edf7c591136dba"
+ },
+ "status": "ACTIVE",
+ "subject_id": 1,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "67d0bb045cb474f5239b257bd023e3012bc057aaa01f26fd73bc22b163ad0326",
+   "receipt_sha256": "1f177e877fbfcf29af9f0fde0e993a9cb859d9092037fccbafaeb72b1237511b",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The abelian Zilber–Pink conjecture"
+}

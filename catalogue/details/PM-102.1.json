@@ -1,0 +1,799 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 774887,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 219148
+ },
+ "coordinate": "EN-114-000-0022-2-2026-PR-T4-UK-EX-M1-B-ML-H-0221",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-10",
+     "quote": "Fourier witnesses and decoders are used only to bound game value and need not be efficient.",
+     "quote_sha256": "3622a1789f04ad01fa60ffdd9f1e4d63ae630ce7d70f3fc9a03355812395bee2"
+    }
+   ],
+   "query": "Polynomial-time algorithm for finding the soundness decoder's Fourier witnesses",
+   "reason": "The decoder establishes finite-game value bounds and is explicitly permitted to be inefficient."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-42",
+     "quote": "This uniform-demand theorem does not depend on Theorem <a href=\"#thm:ugc\" data-reference-type=\"ref\" data-reference=\"thm:ugc\">1</a> and is not supplied by the nonuniform reduction above.",
+     "quote_sha256": "4abe630544090fe9d59ee370ed940da5441edddebb8ea69eac5e4dcd22a7c23c"
+    }
+   ],
+   "query": "Uniform-demand Sparsest Cut hardness derived from this nonuniform reduction",
+   "reason": "The paper explicitly assigns the uniform-demand result to an independent companion theorem."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-cor-cut-clustering",
+     "quote": "For <span class=\"smallcaps\">Sparsest Cut</span>, this is hardness of the search task under polynomial-time Cook reductions: the algorithm must output a cutset, not only an estimate of the optimum.",
+     "quote_sha256": "250e6f1870a8e10845b2ee932948a11b76a978e5274fe2afc89918dcb2d9aecf"
+    }
+   ],
+   "query": "Optimum-estimation hardness for nonuniform Sparsest Cut without cutset output",
+   "reason": "The stated consequence concerns a cutset-output search task under Cook reductions."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-40",
+     "quote": "A constraint satisfaction problem (CSP) is specified here by a finite nonempty domain $D$ and a finite family $\\Lambda$ of Boolean predicates on $D$, of bounded arity.",
+     "quote_sha256": "f2e4856de2d88207a847b91cd0dbbbb4332bd2248fea29007292f7cb93fe96b3"
+    }
+   ],
+   "query": "Hardness for continuous-domain or unbounded-arity CSPs from the fixed-language consequence",
+   "reason": "The CSP consequence uses a fixed finite domain and a finite bounded-arity predicate language."
+  }
+ ],
+ "family": "PM-102",
+ "id": "PM-102.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-ugc",
+    "claim_id": "claim-unique-games-reduction",
+    "statement": "$\\varepsilon,\\delta\\in(0,1/2)$"
+   },
+   {
+    "anchor": "stmt-lem-latent",
+    "claim_id": "claim-latent-alphabet-separation",
+    "statement": "$p_*>0$"
+   },
+   {
+    "anchor": "stmt-lem-latent",
+    "claim_id": "claim-latent-alphabet-separation",
+    "statement": "$\\dim(G|_K)\\ge r_*$"
+   },
+   {
+    "anchor": "stmt-lem-latent-block",
+    "claim_id": "claim-quadratic-update-spaces",
+    "statement": "For every line $A$"
+   },
+   {
+    "anchor": "stmt-lem-latent-block-noise",
+    "claim_id": "claim-block-noise-response",
+    "statement": "Fix a line $A$."
+   },
+   {
+    "anchor": "stmt-lem-latent-block-noise",
+    "claim_id": "claim-block-noise-response",
+    "statement": "For independent uniform $(x,y)\\in X\\oplus B$ and $\\zeta\\in U_A\\setminus\\{0\\}$,"
+   },
+   {
+    "anchor": "stmt-lem-latent-block-kernel",
+    "claim_id": "claim-block-restriction-kernel",
+    "statement": "Let $S\\le B^*$"
+   },
+   {
+    "anchor": "stmt-lem-latent-block-kernel",
+    "claim_id": "claim-block-restriction-kernel",
+    "statement": "let $\\gamma:S\\to X^*$ be binary linear."
+   },
+   {
+    "anchor": "stmt-lem-latent-generic",
+    "claim_id": "claim-generic-character-spaces-abundant",
+    "statement": "$r\\ge1$"
+   },
+   {
+    "anchor": "stmt-lem-latent-noise",
+    "claim_id": "claim-recursive-noise-change",
+    "statement": "For independent uniform $u\\in P_t$ and noise $\\xi_t$,"
+   },
+   {
+    "anchor": "stmt-lem-latent-lift-factorization",
+    "claim_id": "claim-lift-child-factorization",
+    "statement": "Let a lift with domain $S$ be given on $P_t$, where $t\\ge1$."
+   },
+   {
+    "anchor": "stmt-prop-latent-full-lift-detection",
+    "claim_id": "claim-full-lift-noise-detection",
+    "statement": "Set $$\\label{eq:latent-depth}\n s=\\left\\lfloor\\frac{H_{r_0}}{8\\theta}\\right\\rfloor.$$"
+   },
+   {
+    "anchor": "stmt-thm-parity",
+    "claim_id": "claim-weighted-parity-gap",
+    "statement": "$\\xi>0$"
+   },
+   {
+    "anchor": "stmt-lem-distinct-parity",
+    "claim_id": "claim-distinct-parity-positions",
+    "statement": "From a weighted parity instance $\\mathcal E$"
+   },
+   {
+    "anchor": "stmt-lem-outer-completeness",
+    "claim_id": "claim-outer-matrix-completeness",
+    "statement": "If $\\mathcal E$ has an assignment of value at least $1-\\xi$,"
+   },
+   {
+    "anchor": "stmt-lem-outer-completeness",
+    "claim_id": "claim-outer-matrix-completeness",
+    "statement": "and the latent map satisfies $$\\Pr_{x\\text{ uniform in }\\mathcal V,\\ a\\sim\\mu}\n       [C(x+a)\\ne C(x)]\\le p_*,$$ then $$\\mathop{\\mathrm{val}}(\\mathcal G)\\ge 1-k\\xi-\\frac{p_*}{2}.$$"
+   },
+   {
+    "anchor": "stmt-thm-shortcode",
+    "claim_id": "claim-shortcode-slice-agreement",
+    "statement": "$\\eta\\in(0,1)$"
+   },
+   {
+    "anchor": "stmt-thm-shortcode",
+    "claim_id": "claim-shortcode-slice-agreement",
+    "statement": "$\\ell\\ge\\ell_0$"
+   },
+   {
+    "anchor": "stmt-thm-shortcode",
+    "claim_id": "claim-shortcode-slice-agreement",
+    "statement": "$m\\ge m_0$"
+   },
+   {
+    "anchor": "eq:shortcode-acceptance",
+    "claim_id": "claim-shortcode-slice-agreement",
+    "statement": "$$\\Pr_{M,a,l}\\bigl[f(M)=f(M+a l^\\top)\\bigr]\\ge\\eta,\n \\label{eq:shortcode-acceptance}$$ then some slice $\\mathcal S$ as in Equation <a href=\"#eq:shortcode-slice\" data-reference-type=\"eqref\" data-reference=\"eq:shortcode-slice\">[eq:shortcode-slice]</a>, with $n_r,n_c\\le r_{\\rm s}$, and some $z\\in\\mathbb F_2^m$, $u\\in\\mathbb F_2^\\ell$ satisfy $$\\Pr_{M\\mid\\mathcal S}[f(M)=Mz+u]\\ge\\alpha.\n \\label{eq:shortcode-conclusion}$$ Here $M$, $a\\in\\mathbb F_2^\\ell$, and $l\\in\\mathbb F_2^m$ are independent and uniform, and $M\\mid\\mathcal S$ is uniform on the slice. No folding condition is imposed on $f$."
+   },
+   {
+    "anchor": "stmt-prop-matrix-decoding",
+    "claim_id": "claim-matrix-advice-decoding",
+    "statement": "Choose the latent and shortcode parameters in the order specified by Equation <a href=\"#eq:matrix-parameters\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-parameters\">[eq:matrix-parameters]</a>, fixing $\\mathcal V=K\\oplus W$ before $k$."
+   },
+   {
+    "anchor": "eq:matrix-family-identities",
+    "claim_id": "claim-matrix-advice-decoding",
+    "statement": "*For every cube $k\\ge k_0$ and every parity instance, suppose a function $$F_Q:\\mathop{\\mathrm{Hom}}(L_Q,\\mathcal V)\\longrightarrow K$$ is given for every $Q\\in\\mathcal Q_k$. Assume folding for every such $Q$, every $P\\in\\mathop{\\mathrm{Hom}}(L_Q,\\mathcal V)$, and every $c\\in K$, and assume sharing for every permitted projection $\\bar\\pi:L_U\\to L_O$ and every $P'\\in\\mathop{\\mathrm{Hom}}(L_O,\\mathcal V)$: $$\\begin{aligned}\n F_Q(P+c e_0^\\top)&=F_Q(P)+c,\\\\\n F_U(P'\\bar\\pi)&=F_O(P').\n \\end{aligned}\n \\label{eq:matrix-family-identities}$$ If this family passes the table test of Equation <a href=\"#eq:matrix-test\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-test\">[eq:matrix-test]</a> with probability at least $0.99$, then the projected advice experiment with $\\beta=k^{-2/3}$ has local strategies whose probability of full answer agreement is at least $\\gamma$."
+   },
+   {
+    "anchor": "stmt-prop-matrix-decoding",
+    "claim_id": "claim-matrix-advice-decoding",
+    "statement": "with probability at least $0.99$,"
+   },
+   {
+    "anchor": "stmt-lem-matrix-spectral",
+    "claim_id": "claim-matrix-spectral-comparison",
+    "statement": "If the table family passes Equation <a href=\"#eq:matrix-test\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-test\">[eq:matrix-test]</a> with probability at least $0.99$,"
+   },
+   {
+    "anchor": "stmt-lem-good-row-advice",
+    "claim_id": "claim-good-row-fibers-and-answer-sets",
+    "statement": "matrix-test acceptance at least $0.99$"
+   },
+   {
+    "anchor": "eq:matrix-family-identities",
+    "claim_id": "claim-good-row-fibers-and-answer-sets",
+    "statement": "*For every cube $k\\ge k_0$ and every parity instance, suppose a function $$F_Q:\\mathop{\\mathrm{Hom}}(L_Q,\\mathcal V)\\longrightarrow K$$ is given for every $Q\\in\\mathcal Q_k$. Assume folding for every such $Q$, every $P\\in\\mathop{\\mathrm{Hom}}(L_Q,\\mathcal V)$, and every $c\\in K$, and assume sharing for every permitted projection $\\bar\\pi:L_U\\to L_O$ and every $P'\\in\\mathop{\\mathrm{Hom}}(L_O,\\mathcal V)$: $$\\begin{aligned}\n F_Q(P+c e_0^\\top)&=F_Q(P)+c,\\\\\n F_U(P'\\bar\\pi)&=F_O(P').\n \\end{aligned}\n \\label{eq:matrix-family-identities}$$ If this family passes the table test of Equation <a href=\"#eq:matrix-test\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-test\">[eq:matrix-test]</a> with probability at least $0.99$, then the projected advice experiment with $\\beta=k^{-2/3}$ has local strategies whose probability of full answer agreement is at least $\\gamma$."
+   },
+   {
+    "anchor": "pm-h-29",
+    "claim_id": "claim-padded-table-uniformity",
+    "statement": "From now on take $k$ along integer cubes larger than one and set $\\beta=k^{-2/3}$ in Definition"
+   },
+   {
+    "anchor": "stmt-lem-projected-witness",
+    "claim_id": "claim-chosen-witness-transfer",
+    "statement": "Suppose the matrix-test acceptance is at least $0.99$."
+   },
+   {
+    "anchor": "stmt-lem-fourier-coset-decoding",
+    "claim_id": "claim-fourier-coset-agreement",
+    "statement": "Fix joint data satisfying Lemma <a href=\"#lem:projected-witness\" data-reference-type=\"ref\" data-reference=\"lem:projected-witness\">20</a>."
+   },
+   {
+    "anchor": "stmt-thm-repetition",
+    "claim_id": "claim-alphabet-independent-repetition",
+    "statement": "Let $G$ be a finite bipartite projection game, with an arbitrary probability distribution on its constraint occurrences."
+   },
+   {
+    "anchor": "stmt-thm-repetition",
+    "claim_id": "claim-alphabet-independent-repetition",
+    "statement": "(Projection-game repetition). *Let $G$ be a finite bipartite projection game, with an arbitrary probability distribution on its constraint occurrences. Question sets and answer alphabets may be arbitrary finite sets, and parallel constraint occurrences are allowed. The game $G^{\\otimes n}$ samples $n$ independent occurrences, sends each prover its tuple of questions, and accepts if all $n$ projection constraints hold. For every integer $n\\ge1$ and every $0<g<1$, $$\\mathop{\\mathrm{val}}(G)\\le 1-g \\quad\\Longrightarrow\\quad \\mathop{\\mathrm{val}}(G^{\\otimes n})\\le (1-g^2/16)^n. \\label{eq:projection-repetition}$$ The bound is independent of the question-set and alphabet sizes.*"
+   },
+   {
+    "anchor": "stmt-lem-clean",
+    "claim_id": "claim-clean-coordinate-agreement-bound",
+    "statement": "If $\\mathop{\\mathrm{OPT}}(\\mathcal E)\\le 4/5$,"
+   },
+   {
+    "anchor": "stmt-prop-matrix-gap",
+    "claim_id": "claim-matrix-game-gap",
+    "statement": "Fix $p_*>0$"
+   },
+   {
+    "anchor": "eq:matrix-parameters",
+    "claim_id": "claim-matrix-game-gap",
+    "statement": "We now fix the parameters needed below. Choose $p_*>0$ and the associated $r_*$ from Lemma <a href=\"#lem:latent\" data-reference-type=\"ref\" data-reference=\"lem:latent\">2</a>. Set $$\\eta=2^{-r_*}/16,\n \\qquad\n 2^{-(\\ell-r_{\\rm s})}<\\alpha/8,\n \\qquad\n 2^{-\\ell}<\\eta/4,\n \\label{eq:matrix-parameters}$$ where $\\alpha,r_{\\rm s}$ first come from Theorem <a href=\"#thm:shortcode\" data-reference-type=\"ref\" data-reference=\"thm:shortcode\">14</a>, and $\\ell$ is then chosen sufficiently large for that theorem, for the latent lemma, and for the displayed inequalities. Obtain the latent data $(\\mathcal V,K,C,\\mu)$ at this value of $\\ell$, and fix a linear splitting $\\mathcal V=K\\oplus W$. All these objects are fixed before $k$ grows. In particular, $\\ell>r_{\\rm s}$. We write a table as $P=(M,T)$, with $M:L_U\\to K$ and $T:L_U\\to W$."
+   },
+   {
+    "anchor": "stmt-prop-matrix-gap",
+    "claim_id": "claim-matrix-game-gap",
+    "statement": "with distinct positions"
+   },
+   {
+    "anchor": "stmt-lem-unweighted-subdivision",
+    "claim_id": "claim-rounding-and-subdivision",
+    "statement": "Let $H$ be a finite permutation-constraint game with $h\\ge1$ positive rational occurrence weights summing to one."
+   },
+   {
+    "anchor": "stmt-cor-raghavendra-consequence",
+    "claim_id": "claim-fixed-csp-gap-transfer",
+    "statement": "Let $J$ be a fixed $\\Lambda$-instance with $A=\\operatorname{OPT}(J)<B=\\operatorname{SDP}_{R}(J)$."
+   },
+   {
+    "anchor": "stmt-cor-ordering-csp",
+    "claim_id": "claim-ordering-csp-threshold",
+    "statement": "Fix $k\\ge2$"
+   },
+   {
+    "anchor": "stmt-cor-ordering-csp",
+    "claim_id": "claim-ordering-csp-threshold",
+    "statement": "$\\varnothing\\ne\\Pi\\subsetneq S_k$,"
+   },
+   {
+    "anchor": "stmt-cor-cut-clustering",
+    "claim_id": "claim-cut-deletion-clustering-hardness",
+    "statement": "For every fixed real constant $C>1$"
+   },
+   {
+    "anchor": "stmt-lem-simple-strong-left",
+    "claim_id": "claim-simple-strong-left-games",
+    "statement": "Fix $0<\\zeta,\\nu<1$"
+   },
+   {
+    "anchor": "stmt-lem-simple-strong-left",
+    "claim_id": "claim-simple-strong-left-games",
+    "statement": "integers $d,H\\ge1$."
+   },
+   {
+    "anchor": "stmt-prop-finite-ordering-transfer",
+    "claim_id": "claim-finite-ordering-transfer",
+    "statement": "Fix $k\\ge2$"
+   },
+   {
+    "anchor": "stmt-prop-finite-ordering-transfer",
+    "claim_id": "claim-finite-ordering-transfer",
+    "statement": "$\\varnothing\\ne\\Pi\\subsetneq S_k$,"
+   },
+   {
+    "anchor": "stmt-prop-finite-ordering-transfer",
+    "claim_id": "claim-finite-ordering-transfer",
+    "statement": "fix $0<\\delta<(1-\\rho_\\Pi)/2$."
+   },
+   {
+    "anchor": "stmt-prop-finite-ordering-transfer",
+    "claim_id": "claim-finite-ordering-transfer",
+    "statement": "Let $\\Phi=(A,B,E)$ be a nonempty explicit unweighted simple bipartite Unique Games instance over $[R]$, oriented from $A$ to $B$, whose common left degree $h$ satisfies $h\\ge H$ and $q\\mid h$."
+   },
+   {
+    "anchor": "stmt-lem-ordering-local-data",
+    "claim_id": "claim-rational-local-ordering-data",
+    "statement": "$q\\ge1$"
+   },
+   {
+    "anchor": "stmt-lem-ordering-local-data",
+    "claim_id": "claim-rational-local-ordering-data",
+    "statement": "rational $\\eta>0$,"
+   },
+   {
+    "anchor": "stmt-lem-ordering-collision",
+    "claim_id": "claim-uniform-ordering-collision",
+    "statement": "$0<\\kappa<1/2$"
+   },
+   {
+    "anchor": "stmt-lem-ordering-collision",
+    "claim_id": "claim-uniform-ordering-collision",
+    "statement": "Let $F,G:[m]^R\\to[0,1]$ have the same mean $0<\\mu\\le\\mu_0(\\kappa)$"
+   },
+   {
+    "anchor": "stmt-lem-ordering-collision",
+    "claim_id": "claim-uniform-ordering-collision",
+    "statement": "and satisfy $$\\operatorname{Inf}_\\ell(T_{1-\\kappa}F)\\le t,\\qquad\n \\operatorname{Inf}_\\ell(T_{1-\\kappa}G)\\le t\n \\quad(\\ell\\in[R]).$$"
+   },
+   {
+    "anchor": "stmt-lem-ordering-rounding",
+    "claim_id": "claim-simplex-local-rounding",
+    "statement": "Let $J,\\mu_c,\\alpha$ be the data of Lemma <a href=\"#lem:ordering-local-data\" data-reference-type=\"ref\" data-reference=\"lem:ordering-local-data\">31</a>, and fix $0<\\lambda<1$."
+   },
+   {
+    "anchor": "stmt-lem-ordering-rounding",
+    "claim_id": "claim-simplex-local-rounding",
+    "statement": "used for every $c$ and every position,"
+   },
+   {
+    "anchor": "stmt-lem-ordering-rounding",
+    "claim_id": "claim-simplex-local-rounding",
+    "statement": "suppose that $0<t<1/(kq)$"
+   },
+   {
+    "anchor": "stmt-lem-ordering-rounding",
+    "claim_id": "claim-simplex-local-rounding",
+    "statement": "and $$\\operatorname{Inf}_\\ell(T_{1-\\lambda}F^j)\\le t\n \\quad(\\ell\\in[R],\\ j\\in[q]).$$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Latent alphabet gadget",
+    "evidence": [
+     {
+      "anchor": "sec:latent",
+      "quote": "The construction in this section separates a nonlinear observable from families of linear observables under the same additive noise.",
+      "quote_sha256": "4682bf575a960cb02d2dfbc2396df6eddbb8fd02ded52404583ae7f4d5c83ecf"
+     },
+     {
+      "anchor": "proof-stmt-prop-latent-full-lift-detection-2",
+      "quote": "The remaining products, isomorphisms, injections, quotients, function tables, and rational noise laws are obtained by finite enumeration and binary linear algebra.",
+      "quote_sha256": "06824587e4152d398bc06ff4049097bf44e82424b0c95bccc06f40ad69e1dd25"
+     }
+    ],
+    "requires_concepts": [
+     "Binary linear algebra",
+     "Trace pairing over finite fields",
+     "Quadratic polar forms",
+     "Generic character subspaces",
+     "Harmonic rank potential",
+     "Quotients and linear injections"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Matrix advice decoding",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-lem-fourier-coset-decoding-2",
+      "quote": "Use the two decoders above.",
+      "quote_sha256": "fc76378dc8a58d611a2cf4d3432bba0eda51e121517044168f29de29ca2bbdd9"
+     },
+     {
+      "anchor": "proof-stmt-lem-fourier-coset-decoding-2",
+      "quote": "They are uniform in the parity instance and table family.",
+      "quote_sha256": "7e66c148bd3e9cd04d378303288607b30de7939c30dc3d762176b64298cffacd"
+     }
+    ],
+    "requires_concepts": [
+     "Latent linear detection",
+     "Normalized Fourier analysis",
+     "Inverse shortcode theorem",
+     "Good row fibers",
+     "Total variation comparison",
+     "Fourier coset sampling"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Finite ordering hardness transfer",
+    "evidence": [
+     {
+      "anchor": "app:finite-consequences",
+      "quote": "The composition specifies the graph, the independent neighbor choices, and the conversion to constraints on distinct variables.",
+      "quote_sha256": "b642bbb82fe6d9ed77fc03c2da1ad9231ec116f5933f48fdb4b516800ea34870"
+     }
+    ],
+    "requires_concepts": [
+     "Simple strong-left games",
+     "Rational local ordering laws",
+     "Uniform collision estimates",
+     "Simplex-valued local estimates",
+     "Influential-coordinate decoding",
+     "Conditioning on distinct neighbors"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-unique-games-reduction",
+   "exact_statement": "For every fixed $\\varepsilon,\\delta\\in(0,1/2)$, there are an integer $s\\ge1$ and a deterministic polynomial-time reduction from $\\mathrm{3SAT}$ to explicit unweighted Unique Games instances $G_\\varphi$ over $K=\\mathbb F_2^s$ such that $$\\begin{aligned}\n \\varphi\\text{ satisfiable}\n &\\quad\\Longrightarrow\\quad \\mathop{\\mathrm{val}}(G_\\varphi)\\ge1-\\varepsilon,\\\\\n \\varphi\\text{ unsatisfiable}\n &\\quad\\Longrightarrow\\quad \\mathop{\\mathrm{val}}(G_\\varphi)\\le\\delta.\n\\end{aligned}$$ The graph is simple and bipartite, and every constraint is a translation $a(v_e)=a(u_e)+c_e$ of $K$. The alphabet, the degree of the running-time polynomial, and its constants depend only on $\\varepsilon,\\delta$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-ugc"
+  },
+  {
+   "claim_id": "claim-latent-alphabet-separation",
+   "exact_statement": "For every $p_*>0$ there is an integer $r_*$ such that, for every sufficiently large integer $\\ell$, the following objects exist: a finite-dimensional binary space $\\mathcal V$ containing an identified subspace $K=\\mathbb F_2^\\ell$, a map $C:\\mathcal V\\to K$, and a rational probability distribution $\\mu$ on $\\mathcal V$. They satisfy $$\\label{eq:latent-equivariance}\n C(x+k)=C(x)+k\n \\qquad(x\\in\\mathcal V,\\ k\\in K),$$ and, for independent uniform $x\\in\\mathcal V$ and $a\\sim\\mu$, $$\\label{eq:latent-small-change}\n \\Pr[C(x+a)\\ne C(x)]\\le p_*.$$ Moreover, every linear subspace $G\\le\\mathcal V^*$ with $\\dim(G|_K)\\ge r_*$ satisfies $$\\label{eq:latent-detection}\n \\Pr_{a\\sim\\mu}[\\text{there exists }g\\in G\\text{ with }g(a)\\ne0]\n \\ge\\frac18.$$ In particular, $r_*$ is fixed before $\\ell$ is chosen. For rational $p_*$, the threshold and all the finite data can be found by a terminating deterministic algorithm.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-latent"
+  },
+  {
+   "claim_id": "claim-quadratic-update-spaces",
+   "exact_statement": "For every line $A$, the space $U_A$ is binary linear of dimension $b$. For $a\\in A$ and $x\\in X$, one has $D(x,a)\\in D_A$; for $a,a'\\in A$, one has $D(a,a')=0$. The trace annihilator of $D_A$ in $B^*=F^3$ is $A$, and the spaces $U_A$ together span $X\\oplus B$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-latent-block"
+  },
+  {
+   "claim_id": "claim-block-noise-response",
+   "exact_statement": "Fix a line $A$. For independent uniform $(x,y)\\in X\\oplus B$ and $\\zeta\\in U_A\\setminus\\{0\\}$, $$\\Pr\\bigl[C_{\\mathrm{blk}}((x,y)+\\zeta)\n             \\ne C_{\\mathrm{blk}}(x,y)\\bigr]=1-\\theta.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-latent-block-noise"
+  },
+  {
+   "claim_id": "claim-block-restriction-kernel",
+   "exact_statement": "Let $S\\le B^*$ and let $\\gamma:S\\to X^*$ be binary linear. For each line $A$, define $$\\kappa_{A,\\gamma}:S\\longrightarrow U_A^*,\n \\qquad \\kappa_{A,\\gamma}(z)=(\\gamma_z,z)|_{U_A}.$$ Under the trace identification, write $\\gamma_z(x)=\\operatorname{Tr}(g(z)\\cdot x)$ for the associated binary linear map $g:S\\to F^3$. For every nonzero $z\\in S$, $$\\kappa_{A,\\gamma}(z)=0\n \\quad\\Longleftrightarrow\\quad\n A=Fz\n \\quad\\text{and}\\quad\n z\\cdot g(z)=\\sqrt{z_1z_2z_3}.$$",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-latent-block-kernel"
+  },
+  {
+   "claim_id": "claim-generic-character-spaces-abundant",
+   "exact_statement": "For each fixed $r\\ge1$, a uniformly random binary $r$-dimensional subspace of $F^3$ is generic with probability tending to one as $d\\to\\infty$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-latent-generic"
+  },
+  {
+   "claim_id": "claim-recursive-noise-change",
+   "exact_statement": "For independent uniform $u\\in P_t$ and noise $\\xi_t$, $$\\label{eq:latent-change-probability}\n p_t:=\\Pr[C_t(u+\\xi_t)\\ne C_t(u)]\n     =(1-q^{-3})(1-\\theta)^t.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-latent-noise"
+  },
+  {
+   "claim_id": "claim-lift-child-factorization",
+   "exact_statement": "Let a lift with domain $S$ be given on $P_t$, where $t\\ge1$. For each child $(A,J)$, restriction to that child’s shift space factors through $\\lambda_{t-1}$. The resulting characters on the child output space $B$ have the form $$\\label{eq:latent-child-characters}\n \\phi_{AJ}(z)=J^*\\bigl((\\gamma_z,z)|_{U_A}\\bigr)\\in B^*,$$ where $\\gamma:S\\to X^*$ is a single binary linear map common to all the children.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-latent-lift-factorization"
+  },
+  {
+   "claim_id": "claim-full-lift-noise-detection",
+   "exact_statement": "Set $$\\label{eq:latent-depth}\n s=\\left\\lfloor\\frac{H_{r_0}}{8\\theta}\\right\\rfloor.$$ Every full lift on $P_s$ detects $\\xi_s$ with probability at least $1/4$: $$\\label{eq:latent-full-lift-detection}\n \\Pr[\\text{there exists }z\\in B^*\\text{ with }\\psi_z(\\xi_s)\\ne0]\n \\ge\\frac14.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-latent-full-lift-detection"
+  },
+  {
+   "claim_id": "claim-weighted-parity-gap",
+   "exact_statement": "For every fixed rational $\\xi>0$, there is a deterministic polynomial-time reduction from Boolean satisfiability to weighted parity instances, with binary-encoded rational weights, such that $$\\begin{array}{ll}\n \\textup{YES:}&\\mathop{\\mathrm{OPT}}(\\mathcal E)\\ge 1-\\xi,\\\\\n \\textup{NO:}&\\mathop{\\mathrm{OPT}}(\\mathcal E)\\le \\frac12+\\xi.\n \\end{array}$$ The running-time polynomial may depend on $\\xi$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-thm-parity"
+  },
+  {
+   "claim_id": "claim-distinct-parity-positions",
+   "exact_statement": "From a weighted parity instance $\\mathcal E$ one can deterministically construct, in polynomial time, an instance $\\mathcal E'$ in which the three variable IDs of every occurrence are distinct. Its weights are positive rationals of polynomial bit length, and $$\\mathop{\\mathrm{OPT}}(\\mathcal E')\\ge\\mathop{\\mathrm{OPT}}(\\mathcal E),\n \\qquad\n \\mathop{\\mathrm{OPT}}(\\mathcal E')\n \\le \\frac{1+\\mathop{\\mathrm{OPT}}(\\mathcal E)}2+\\frac3{100}.$$ In particular, Theorem <a href=\"#thm:parity\" data-reference-type=\"ref\" data-reference=\"thm:parity\">11</a> with $\\xi<1/100$, followed by this preprocessing, gives completeness at least $1-\\xi$ and NO optimum at most $4/5$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-distinct-parity"
+  },
+  {
+   "claim_id": "claim-outer-matrix-completeness",
+   "exact_statement": "If $\\mathcal E$ has an assignment of value at least $1-\\xi$, and the latent map satisfies $$\\Pr_{x\\text{ uniform in }\\mathcal V,\\ a\\sim\\mu}\n       [C(x+a)\\ne C(x)]\\le p_*,$$ then $$\\mathop{\\mathrm{val}}(\\mathcal G)\\ge 1-k\\xi-\\frac{p_*}{2}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-outer-completeness"
+  },
+  {
+   "claim_id": "claim-shortcode-slice-agreement",
+   "exact_statement": "For every $\\eta\\in(0,1)$ there are $\\alpha\\in(0,1]$, an integer $r_{\\rm s}\\ge1$, and an integer $\\ell_0$, depending only on $\\eta$, with the following property. For every $\\ell\\ge\\ell_0$ there is $m_0=m_0(\\eta,\\ell)$ such that, for every $m\\ge m_0$ and every function $f:\\operatorname{Mat}_{\\ell,m}\\to\\mathbb F_2^\\ell$, if $$\\Pr_{M,a,l}\\bigl[f(M)=f(M+a l^\\top)\\bigr]\\ge\\eta,\n \\label{eq:shortcode-acceptance}$$ then some slice $\\mathcal S$ as in Equation <a href=\"#eq:shortcode-slice\" data-reference-type=\"eqref\" data-reference=\"eq:shortcode-slice\">[eq:shortcode-slice]</a>, with $n_r,n_c\\le r_{\\rm s}$, and some $z\\in\\mathbb F_2^m$, $u\\in\\mathbb F_2^\\ell$ satisfy $$\\Pr_{M\\mid\\mathcal S}[f(M)=Mz+u]\\ge\\alpha.\n \\label{eq:shortcode-conclusion}$$ Here $M$, $a\\in\\mathbb F_2^\\ell$, and $l\\in\\mathbb F_2^m$ are independent and uniform, and $M\\mid\\mathcal S$ is uniform on the slice. No folding condition is imposed on $f$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-shortcode"
+  },
+  {
+   "claim_id": "claim-matrix-advice-decoding",
+   "exact_statement": "Choose the latent and shortcode parameters in the order specified by Equation <a href=\"#eq:matrix-parameters\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-parameters\">[eq:matrix-parameters]</a>, fixing $\\mathcal V=K\\oplus W$ before $k$. There are a constant $\\gamma>0$ and an integer $k_0\\ge8$, depending only on these fixed parameters, with the following property.*\n\n\n*For every cube $k\\ge k_0$ and every parity instance, suppose a function $$F_Q:\\mathop{\\mathrm{Hom}}(L_Q,\\mathcal V)\\longrightarrow K$$ is given for every $Q\\in\\mathcal Q_k$. Assume folding for every such $Q$, every $P\\in\\mathop{\\mathrm{Hom}}(L_Q,\\mathcal V)$, and every $c\\in K$, and assume sharing for every permitted projection $\\bar\\pi:L_U\\to L_O$ and every $P'\\in\\mathop{\\mathrm{Hom}}(L_O,\\mathcal V)$: $$\\begin{aligned}\n F_Q(P+c e_0^\\top)&=F_Q(P)+c,\\\\\n F_U(P'\\bar\\pi)&=F_O(P').\n \\end{aligned}\n \\label{eq:matrix-family-identities}$$ If this family passes the table test of Equation <a href=\"#eq:matrix-test\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-test\">[eq:matrix-test]</a> with probability at least $0.99$, then the projected advice experiment with $\\beta=k^{-2/3}$ has local strategies whose probability of full answer agreement is at least $\\gamma$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-matrix-decoding"
+  },
+  {
+   "claim_id": "claim-matrix-spectral-comparison",
+   "exact_statement": "If the table family passes Equation <a href=\"#eq:matrix-test\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-test\">[eq:matrix-test]</a> with probability at least $0.99$, then $$\\mathbb E_{U,T}\\Pr_{M,a,l}\n   [F_U(M,T)=F_U(M+a l^\\top,T)]\n \\ge 0.9\\,2^{-r_*},\n \\label{eq:surrogate-acceptance}$$ where $a$ is uniform in $K$ and the other matrix and vector samples are uniform in their respective spaces. Consequently at least $10\\eta$ of the pairs $(U,T)$ have the inner probability at least $4\\eta$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-matrix-spectral"
+  },
+  {
+   "claim_id": "claim-good-row-fibers-and-answer-sets",
+   "exact_statement": "For all sufficiently large $k$, a table family with matrix-test acceptance at least $0.99$ satisfies $$\\Pr_{U,T,A,M}[(U,T,A,AM)\\text{ is good}]\n \\ge g_0,\n \\qquad\n g_0=10\\eta^2\\,2^{-\\ell r_{\\rm s}}>0.\n \\label{eq:good-advice-mass}$$ The lower bound and the required largeness of $k$ are independent of the parity instance and the family.*\n\n*For every positive integer $k$ and every family satisfying Equation <a href=\"#eq:matrix-family-identities\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-family-identities\">[eq:matrix-family-identities]</a>, one can select deterministically for each good row advice at most $r_{\\rm s}$ column specifications $Mq_j=t_j$, with $q_j\\in L_U$ and $t_j\\in K$, and a target $Mz+u$, with $z\\in L_U$, $u\\in K$, and $e_0^\\top z=1$, satisfying the definition of goodness. Writing $Z=\\mathop{\\mathrm{span}}\\{q_j\\}$, the chosen witness determines the answer set $$\\mathcal A=(z+Z)\\cap\\{v\\in L_U:e_0^\\top v=1\\},\n \\qquad 1\\le |\\mathcal A|\\le 2^{r_{\\rm s}}.\n \\label{eq:row-answer-set}$$ The witness and $\\mathcal A$ depend only on $(U,T,A,S_0)$ and the fixed table family. The slice and its target retain the agreement guarantee in the definition of goodness.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-good-row-advice"
+  },
+  {
+   "claim_id": "claim-padded-table-uniformity",
+   "exact_statement": "Conditional on every $U$, the distribution of $$(M,T)=(M_O\\bar\\pi,T_O\\bar\\pi)$$ has total variation distance $o(1)$ from the unrestricted uniform distribution on $\\mathop{\\mathrm{Hom}}(L_U,K)\\times\\mathop{\\mathrm{Hom}}(L_U,W)$, as $k$ tends to infinity along cubes. The bound is uniform in $U$ and the parity instance. The projection choices are averaged out in this comparison.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-projected-tv"
+  },
+  {
+   "claim_id": "claim-chosen-witness-transfer",
+   "exact_statement": "Suppose the matrix-test acceptance is at least $0.99$. For all sufficiently large cubes $k$, a set of probability at least $$\\gamma_1=\\frac{\\alpha g_0}{8}\\,2^{-\\ell r_{\\rm s}}>0\n \\label{eq:projected-witness-mass}$$ of the joint data $D$ in Definition <a href=\"#def:projected-advice\" data-reference-type=\"ref\" data-reference=\"def:projected-advice\">15</a> has the following properties. The padded $U$-advice is good, with the chosen answer set $\\mathcal A$ and its certifying witness. Writing $z'=\\bar\\pi z$, that witness transfers to a nonempty slice $$AM_O=S_O,\\qquad M_O\\bar\\pi q_j=t_j,$$ on which $$\\Pr\\bigl[F_O(M_O,T_O)=M_Oz'+u\\mid\n           AM_O=S_O,\\ M_O\\bar\\pi q_j=t_j\\text{ for all }j\\bigr]\n \\ge\\alpha/4.\n \\label{eq:transferred-witness}$$ The probability in this equation is taken over a uniform matrix in the specified slice.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-projected-witness"
+  },
+  {
+   "claim_id": "claim-fourier-coset-agreement",
+   "exact_statement": "Fix joint data satisfying Lemma <a href=\"#lem:projected-witness\" data-reference-type=\"ref\" data-reference=\"lem:projected-witness\">20</a>. Conditional on these data, the two rules just defined, using independent randomness, agree under $\\bar\\pi$ with probability at least $$2^{-\\ell r_{\\rm s}}(\\alpha/8)^2\\,2^{-r_{\\rm s}}.\n \\label{eq:conditional-decoding}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-fourier-coset-decoding"
+  },
+  {
+   "claim_id": "claim-alphabet-independent-repetition",
+   "exact_statement": "Let $G$ be a finite bipartite projection game, with an arbitrary probability distribution on its constraint occurrences. Question sets and answer alphabets may be arbitrary finite sets, and parallel constraint occurrences are allowed. The game $G^{\\otimes n}$ samples $n$ independent occurrences, sends each prover its tuple of questions, and accepts if all $n$ projection constraints hold. For every integer $n\\ge1$ and every $0<g<1$, $$\\mathop{\\mathrm{val}}(G)\\le 1-g\n \\quad\\Longrightarrow\\quad\n \\mathop{\\mathrm{val}}(G^{\\otimes n})\\le (1-g^2/16)^n.\n \\label{eq:projection-repetition}$$ The bound is independent of the question-set and alphabet sizes.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-repetition"
+  },
+  {
+   "claim_id": "claim-clean-coordinate-agreement-bound",
+   "exact_statement": "If $\\mathop{\\mathrm{OPT}}(\\mathcal E)\\le 4/5$, every pair of local randomized strategies in the advice experiment satisfies $$\\Pr\\bigl[\\bar\\pi(a_U)=a_O\\bigr]\n \\le \\left(1-\\frac{\\beta\\,2^{-\\dim W-r_{\\rm s}}}{3600}\\right)^k\n \\le\n \\exp\\!\\left(\n -\\frac{2^{-\\dim W-r_{\\rm s}}}{3600}\\,k^{1/3}\n \\right).\n \\label{eq:clean-agreement-bound}$$ In particular, the upper bound tends to zero uniformly over the parity instance as $k$ tends to infinity along cubes, with the advice spaces fixed.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-clean"
+  },
+  {
+   "claim_id": "claim-matrix-game-gap",
+   "exact_statement": "Fix $p_*>0$ and choose the latent and shortcode data in the order of Equation <a href=\"#eq:matrix-parameters\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-parameters\">[eq:matrix-parameters]</a>. For every sufficiently large cube $k$, the matrix game $\\mathcal G$ constructed from a weighted parity instance $\\mathcal E$ with distinct positions satisfies $$\\begin{aligned}\n \\mathop{\\mathrm{OPT}}(\\mathcal E)\\ge1-\\xi\n &\\quad\\Longrightarrow\\quad\n \\mathop{\\mathrm{val}}(\\mathcal G)\\ge1-k\\xi-p_*/2,\\\\\n \\mathop{\\mathrm{OPT}}(\\mathcal E)\\le4/5\n &\\quad\\Longrightarrow\\quad\n \\mathop{\\mathrm{val}}(\\mathcal G)\\le99/100.\n \\end{aligned}$$ The lower threshold on $k$ depends only on the fixed latent and shortcode data, not on $\\mathcal E$ or $\\xi$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-matrix-gap"
+  },
+  {
+   "claim_id": "claim-rounding-and-subdivision",
+   "exact_statement": "Let $H$ be a finite permutation-constraint game with $h\\ge1$ positive rational occurrence weights summing to one. For every positive rational $\\tau$, put $Q=\\lceil h/\\tau\\rceil$. There is a deterministic construction of an unweighted simple bipartite game $B$ with $4Q$ edges and the same alphabet such that $$\\left|\\mathop{\\mathrm{val}}(B)-\\left(1-\\frac{1-\\mathop{\\mathrm{val}}(H)}4\\right)\\right|\n \\le\\frac{\\tau}{4}.\n \\label{eq:rounded-subdivision-value}$$ If the constraints of $H$ are translations on a finite binary vector space, so are those of $B$. For fixed $\\tau$, when $H$ is listed by its vertices, occurrences, permutation tables, and binary rational weights, the construction takes polynomial time in its encoding length.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-unweighted-subdivision"
+  },
+  {
+   "claim_id": "claim-fixed-csp-gap-transfer",
+   "exact_statement": "Let $J$ be a fixed $\\Lambda$-instance with $A=\\operatorname{OPT}(J)<B=\\operatorname{SDP}_{R}(J)$. For every fixed $0<\\eta<(B-A)/2$, it is NP-hard to distinguish $\\Lambda$-instances $I$ satisfying $$\\operatorname{OPT}(I)\\ge B-\\eta\n \\qquad\\text{from those satisfying}\\qquad\n \\operatorname{OPT}(I)\\le A+\\eta.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cor-raghavendra-consequence"
+  },
+  {
+   "claim_id": "claim-ordering-csp-threshold",
+   "exact_statement": "Fix $k\\ge2$ and $\\varnothing\\ne\\Pi\\subsetneq S_k$, and put $\\rho_\\Pi=|\\Pi|/k!$. For every fixed $0<\\varepsilon<(1-\\rho_\\Pi)/2$, it is NP-hard to distinguish finite weighted $\\Pi$-ordering-CSP instances $I$ satisfying $$\\mathop{\\mathrm{OPT}}_\\Pi(I)\\ge1-\\varepsilon\n \\qquad\\text{from those satisfying}\\qquad\n \\mathop{\\mathrm{OPT}}_\\Pi(I)\\le\\rho_\\Pi+\\varepsilon.$$ Consequently, approximation at every fixed ratio $r\\in(\\rho_\\Pi,1]$ is NP-hard. Together with the random-ordering guarantee, this gives the optimal threshold $\\rho_\\Pi$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-ordering-csp"
+  },
+  {
+   "claim_id": "claim-cut-deletion-clustering-hardness",
+   "exact_statement": "For every fixed real constant $C>1$, it is NP-hard to approximate each of the four minimization problems above within factor $C$. For <span class=\"smallcaps\">Sparsest Cut</span>, this is hardness of the search task under polynomial-time Cook reductions: the algorithm must output a cutset, not only an estimate of the optimum. Consequently, unless $\\mathrm P=\\mathrm{NP}$, none of these problems admits a deterministic polynomial-time approximation with any fixed constant factor.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-cut-clustering"
+  },
+  {
+   "claim_id": "claim-simple-strong-left-games",
+   "exact_statement": "Fix $0<\\zeta,\\nu<1$ and integers $d,H\\ge1$. There are integers $h,R\\ge1$, with $h\\ge H$ and $d\\mid h$, and a deterministic polynomial-time reduction from $\\mathrm{3SAT}$ to nonempty explicit unweighted simple bipartite Unique Games instances $\\Phi_\\varphi=(A,B,E)$ over $[R]$ with the following properties. Every left vertex has degree $h$. If $\\varphi$ is satisfiable, one labeling strongly satisfies at least a $1-\\zeta$ fraction of $A$. If $\\varphi$ is unsatisfiable, then $\\mathop{\\mathrm{val}}(\\Phi_\\varphi)<\\nu$. The degree $h$ and the two errors used in Theorem <a href=\"#thm:ugc\" data-reference-type=\"ref\" data-reference=\"thm:ugc\">1</a> may be chosen from $\\zeta,\\nu,d,H$ before that theorem supplies the alphabet $R$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-simple-strong-left"
+  },
+  {
+   "claim_id": "claim-finite-ordering-transfer",
+   "exact_statement": "Fix $k\\ge2$ and $\\varnothing\\ne\\Pi\\subsetneq S_k$, put $\\rho_\\Pi=|\\Pi|/k!$, and fix $0<\\delta<(1-\\rho_\\Pi)/2$. There are integers $q,H\\ge1$ and positive rationals $\\zeta,\\nu<1$, depending only on $k,\\Pi,\\delta$, with the following property for every fixed integer $R\\ge1$.*\n\n*Let $\\Phi=(A,B,E)$ be a nonempty explicit unweighted simple bipartite Unique Games instance over $[R]$, oriented from $A$ to $B$, whose common left degree $h$ satisfies $h\\ge H$ and $q\\mid h$. There is a deterministic transformation, polynomial in the explicit size of $\\Phi$ for fixed $R$, producing an explicit list of $\\Pi$-ordering constraints on distinct variables within each constraint, with nonnegative rational weights, each encoded by a binary numerator and a positive binary denominator, summing to one. If some labeling strongly satisfies at least $(1-\\zeta)|A|$ left vertices, then $\\mathop{\\mathrm{OPT}}_\\Pi(I)\\ge1-\\delta$. If $\\mathop{\\mathrm{val}}(\\Phi)\\le\\nu$, then $\\mathop{\\mathrm{OPT}}_\\Pi(I)\\le\\rho_\\Pi+\\delta$. The constants $q,H,\\zeta,\\nu$ are independent of both $R$ and $h$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-finite-ordering-transfer"
+  },
+  {
+   "claim_id": "claim-rational-local-ordering-data",
+   "exact_statement": "For every integer $q\\ge1$ and rational $\\eta>0$, there are a finite local instance $J=(U,\\mathcal C,\\omega)$, with $|U|=m\\ge2$, and probability laws $\\mu_c$ on $[m]^k$ with the following properties. Every tuple $c$ has $k$ distinct variables; the weights $\\omega_c$ and all atoms of $\\mu_c$ are rational. Every one-position marginal of $\\mu_c$ is uniform on $[m]$, and there is a fixed $0<\\alpha\\le1/2$ such that $\\mu_c(x)>\\alpha$ for every $c,x$. Moreover $$\\operatorname{opt}_q(J)\\le\\rho_\\Pi+\\eta,\\qquad\n v_{\\mathrm{loc}}:=\n \\sum_c\\omega_c\\mathbb E_{X\\sim\\mu_c}\\overline{P_0}(X)\n \\ge1-\\eta.\n\\label{eq:ordering-local-gap}$$ The local laws have common feasible Gram data for the relaxation in (Guruswami et al. 2011, sec. 8.3) [[GuruswamiEtAl2011OrderingCSP](#ref-GuruswamiEtAl2011OrderingCSP)]: there are a unit vector $I$ and vectors $b_{u,j}$, $u\\in U,j\\in[m]$, with $$\\sum_j b_{u,j}=I,\\quad\n \\langle b_{u,i},b_{u,j}\\rangle=0\\ (i\\ne j),\\quad\n \\|b_{u,j}\\|^2=\\frac1m,$$ and, for every two positions $r,s$ of $c$, $$\\langle b_{u_{c,r},i},b_{u_{c,s},j}\\rangle\n =\\Pr_{X\\sim\\mu_c}[X_r=i,\\ X_s=j].\n\\label{eq:ordering-local-moments}$$ All these data are fixed by $k,\\Pi,q,\\eta$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-ordering-local-data"
+  },
+  {
+   "claim_id": "claim-uniform-ordering-collision",
+   "exact_statement": "For every $0<\\kappa<1/2$, there is $\\mu_0(\\kappa)>0$. For each $m\\ge2$, there is a nonnegative function $r_c^{m,\\kappa}(t)\\to0$ as $t\\downarrow0$ with the following property, uniformly over all $R\\ge1$. Let $F,G:[m]^R\\to[0,1]$ have the same mean $0<\\mu\\le\\mu_0(\\kappa)$ and satisfy $$\\operatorname{Inf}_\\ell(T_{1-\\kappa}F)\\le t,\\qquad\n \\operatorname{Inf}_\\ell(T_{1-\\kappa}G)\\le t\n \\quad(\\ell\\in[R]).$$ For every coupling $(Z,Z')$ whose two marginals are uniform on $[m]^R$, $$\\mathbb E\\bigl[\n   (T_{1-2\\kappa}F)(Z)(T_{1-2\\kappa}G)(Z')\\bigr]\n \\le \\mu^{1+\\kappa/2}+r_c^{m,\\kappa}(t).\n\\label{eq:ordering-collision}$$ The function $r_c^{m,\\kappa}$ is independent of $R,\\mu,F,G$ and the coupling.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-ordering-collision"
+  },
+  {
+   "claim_id": "claim-simplex-local-rounding",
+   "exact_statement": "Let $J,\\mu_c,\\alpha$ be the data of Lemma <a href=\"#lem:ordering-local-data\" data-reference-type=\"ref\" data-reference=\"lem:ordering-local-data\">31</a>, and fix $0<\\lambda<1$. For an integer $R\\ge1$, choose $c$ with probability $\\omega_c$. Conditional on this one choice of $c$, choose the $R$ coordinate tuples independently from $\\mu_c$, producing strings $Z_1,\\ldots,Z_k\\in[m]^R$. Then obtain $\\widetilde Z_i$ by independently resampling every position and coordinate uniformly with probability $\\lambda$. For a single function $F=(F^1,\\ldots,F^q):[m]^R\\to\\mathcal S_q$, used for every $c$ and every position, suppose that $0<t<1/(kq)$ and $$\\operatorname{Inf}_\\ell(T_{1-\\lambda}F^j)\\le t\n \\quad(\\ell\\in[R],\\ j\\in[q]).$$ Then $$\\mathbb E_{c,Z,\\widetilde Z}\n P_0^{\\mathrm{ml}}\\bigl(F(\\widetilde Z_1),\\ldots,\n                         F(\\widetilde Z_k)\\bigr)\n \\le \\operatorname{opt}_q(J)+r_s(kqt),\n\\label{eq:ordering-rounding}$$ where $r_s(u)\\to0$ as $u\\downarrow0$, independently of $R$. The function $r_s$ depends only on the fixed local data, $k,q,\\lambda$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-ordering-rounding"
+  }
+ ],
+ "paper": "papers/EN-114-000-0022-2-2026-PR-T4-UK-EX-M1-B-ML-H-0221_PM-102.1_The_Unique_Games_Theorem.md",
+ "purpose": "The Unique Games Theorem",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "924177a44b034860ed761c14dad7922202de21916ae0c41643e4dd5b3a34e9c5",
+   "pm.domains.v2": "da649f4958e21ad60e24272555380e076e7e8a325cdefa71ec5644f2944e0d12",
+   "pm.edges.v2": "3620df7778dc84b8960675ba6656c21c1a0f3c368ac119829c5589954826edc8",
+   "pm.extraction.v2": "1aa1300bea65f66413d4929b8db71f3d52dbdcf820ade596d2bec89356b52969",
+   "pm.formal.v2": "cb5b0dda06bf9fbedb37bf565b0d1c238934c329491543e8d22f83d8180f5b9f",
+   "pm.limits.v2": "9e641d0bb6864f12f24a870c27f24b41a7dbb9469b6f79b98f940651d4120519",
+   "pm.node.v2": "d919320f06a5c061b5b589337dd5546c8a736e84d668862a524bc4a3f74c65af",
+   "pm.objects.v2": "568163f89837789223f3fd3524bfc10fb8b5f396698d643630fa4c13a8eb4339",
+   "pm.provenance.v2": "b6540ff3d7cba45465e985db7bf7c240274aba139a026707299255ca1fdb7b49",
+   "pm.quantities.v2": "51cd2c9608d5a0edca8e3782a083d1b669172b7220ba3b7ca8da5f33d61ce2d8",
+   "pm.reading.v2": "e0ce7b62e4b06618e94e2dc3579a699a2273f1299d55d2ff3509aeb94eabe9f4",
+   "pm.roadmap.v2": "20c16a3ed803e3de3a377211390914079532df7e415f351e27da60c456319e4a",
+   "pm.search.v1": "83843ce6a93421b92ed6befcb7c28622c4c5bb702be1d707df39d36ce2f02091",
+   "pm.triptych.v2": "62616bc5dba9f21bbcb930b92bdaf2845369d083bc728ac6ad17229f0547ea58"
+  },
+  "canonical_sha256": "20a9168f2efbf3b03e21662bb7ab62717c7ccc78a7629a9aa25a8848cc6ba479",
+  "paper_sha256": "03a1af0db6b6b27543d8120e7a330d4fee1983ce439327a0177faad8e9e63383",
+  "repaired_body_sha256": "10e7cb9aabab51cc9d6b4211d8e5d15fb7835408d9ac662987818332fddccee3"
+ },
+ "status": "ACTIVE",
+ "subject_id": 14,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "c78dbbaf328f2def74f1e7fbc7589ef9d44e704c1d947ed81dcb6e13f3ff217c",
+   "receipt_sha256": "6d64785ba231bbfab3b94ab657ac8678db0efa16196a1a9257495d810eca9eb4",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "The six listed binary translation games, including unequal remainders and an occurrence rounded to zero.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-rounded-occurrence-budget",
+     "oracle_basis": "Exact rational quotas and independent exhaustive optimization over subsets receiving the rounding increments."
+    },
+    {
+     "checked_domain": "Every emitted vertex and edge on the listed inputs, including source loops and parallel occurrences.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-simple-bipartite-translations",
+     "oracle_basis": "Partition checks, unique endpoint-pair checks, adjacency-based recovery of disjoint path interiors, and comparison of composed offsets with the rounded occurrence multiset."
+    },
+    {
+     "checked_domain": "All binary labelings of every original and emitted graph in the listed vectors.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-subdivision-value-identity",
+     "oracle_basis": "Exhaustive exact maximization independently computes the rounded and subdivided values and checks the exact value identity."
+    },
+    {
+     "checked_domain": "The listed rational tolerances and occurrence weights; no claim about untested alphabets or arbitrary inputs.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-rounded-subdivision-error",
+     "oracle_basis": "Exhaustive exact original and final optima are compared against the rational error budget."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-missing-path-edge",
+     "observed_exit": 1,
+     "receipt_sha256": "19c698f54be950336105d0eb3a58edd8cae8dec830c4b2a07572625701adaaa8"
+    },
+    {
+     "id": "mutant-erased-translation",
+     "observed_exit": 1,
+     "receipt_sha256": "421a066ac3ac56f94c854bfc299da61a597723d575221d0d22c52e4bd688d455"
+    },
+    {
+     "id": "mutant-flipped-identity-edge",
+     "observed_exit": 1,
+     "receipt_sha256": "eb54e8c21f27fc7d3931f82d23f77474b8311b74e0c047b059d43299fa2be713"
+    },
+    {
+     "id": "mutant-smallest-remainder-first",
+     "observed_exit": 1,
+     "receipt_sha256": "bf99305d7c88e7890c743a4562ce1c23c4d96c69676936117175e8aad7e4ee04"
+    }
+   ],
+   "receipt_sha256": "401332d1daf763a179860d678a68e5654b05434fb02db5a90b22b5cde9539757",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The Unique Games Theorem"
+}

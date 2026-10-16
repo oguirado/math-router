@@ -1,0 +1,674 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 771121,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 241649
+ },
+ "coordinate": "EN-101-000-0007-2-2026-PR-T4-UK-EX-M1-C-AL-H-0066",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-5",
+     "quote": "The construction produces many primes of the form",
+     "quote_sha256": "d66e148a3e2e7b51b8ab8829609fb48465bd6686a5f0ce7995bed00bc5bb9ef8"
+    }
+   ],
+   "query": "safe prime generation",
+   "reason": "The predecessor has nontrivial intermediate prime factors, so the primes are not of the form twice a prime plus one."
+  }
+ ],
+ "family": "PM-029",
+ "id": "PM-029.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "sec:introduction",
+    "claim_id": "claim-main-primitive-root",
+    "statement": "Call $a$ *admissible* if $a\\ne-1$ and $a$ is not the square of an integer."
+   },
+   {
+    "anchor": "stmt-thm-hecke-zero-free",
+    "claim_id": "claim-hecke-zero-free",
+    "statement": "Let $F$ be a cyclotomic number field containing $\\mu_{12}$."
+   },
+   {
+    "anchor": "stmt-prop-prime-reservoir",
+    "claim_id": "claim-prime-reservoir",
+    "statement": "Let $M$ be a fixed positive multiple of $8$, let $c\\in\\{2,4\\}$,"
+   },
+   {
+    "anchor": "stmt-prop-splitting",
+    "claim_id": "claim-uniform-splitting",
+    "statement": "Fix an integer $a$ with $|a|>1$, and put $\\delta_0=10^{-6}$."
+   },
+   {
+    "anchor": "stmt-alg-splitting-test",
+    "claim_id": "claim-splitting-test",
+    "statement": "Let $a\\ne0$ be an integer, and let $p,q$ be primes with $p\\nmid aq$."
+   },
+   {
+    "anchor": "stmt-alg-quadratic-progression",
+    "claim_id": "claim-quadratic-progression",
+    "statement": "Let $a\\in\\mathbb{Z}$ be neither $-1$ nor an integer square"
+   },
+   {
+    "anchor": "sec:introduction",
+    "claim_id": "claim-remark-powers",
+    "statement": "Call $a$ *admissible* if $a\\ne-1$ and $a$ is not the square of an integer."
+   },
+   {
+    "anchor": "sec:arithmetic",
+    "claim_id": "claim-s-lattice",
+    "statement": "Fix a cyclotomic field $F$ containing $\\mu_{12}$, and put $[F:\\mathbb{Q}]=2r$."
+   },
+   {
+    "anchor": "sec:arithmetic",
+    "claim_id": "claim-balanced-generators",
+    "statement": "Fix a cyclotomic field $F$ containing $\\mu_{12}$, and put $[F:\\mathbb{Q}]=2r$."
+   },
+   {
+    "anchor": "stmt-lem-kummer-characters",
+    "claim_id": "claim-kummer-characters",
+    "statement": "For $u\\in R\\setminus\\{0\\}$"
+   },
+   {
+    "anchor": "sec:arithmetic",
+    "claim_id": "claim-gauss-characters",
+    "statement": "Fix a cyclotomic field $F$ containing $\\mu_{12}$, and put $[F:\\mathbb{Q}]=2r$."
+   },
+   {
+    "anchor": "stmt-prop-reflection",
+    "claim_id": "claim-reflected-second-moment",
+    "statement": "Let $F$ be a fixed cyclotomic field containing $\\mu_{12}$, let $S$ and the arithmetic data be as above, and fix a compact subset $\\mathscr K\\subset F_S^\\times$."
+   },
+   {
+    "anchor": "stmt-prop-theta-input",
+    "claim_id": "claim-theta-input",
+    "statement": "For the fixed field $F$"
+   },
+   {
+    "anchor": "stmt-cor-theta-exterior-coefficient",
+    "claim_id": "claim-theta-exterior-coefficient",
+    "statement": "At every exterior prime use an allowed prime generator as the uniformizer in"
+   },
+   {
+    "anchor": "stmt-cor-theta-exterior-coefficient",
+    "claim_id": "claim-theta-exterior-coefficient",
+    "statement": "Let $A\\in R\\setminus\\{0\\}$ be an allowed generator of an integral exterior ideal $\\mathfrak A$."
+   },
+   {
+    "anchor": "stmt-lem-finite-whittaker-cutoff",
+    "claim_id": "claim-finite-whittaker-cutoff",
+    "statement": "Let $S_f$ be a finite set of nonarchimedean places and let $\\lambda_f\\ne0$ be a Whittaker functional"
+   },
+   {
+    "anchor": "stmt-lem-sheet-profile",
+    "claim_id": "claim-sheet-profile",
+    "statement": "Let $\\mathcal I$ be a finite index set."
+   },
+   {
+    "anchor": "stmt-lem-gaussian-smoothing",
+    "claim_id": "claim-gaussian-smoothing",
+    "statement": "For $V$ in"
+   },
+   {
+    "anchor": "stmt-lem-reflection-theta-representation",
+    "claim_id": "claim-reflection-theta-representation",
+    "statement": "Let $V$ and $\\mathcal K$ be the common unrotated profile and Gaussian averaging weight from"
+   },
+   {
+    "anchor": "stmt-lem-reflection-local-weyl",
+    "claim_id": "claim-local-weyl",
+    "statement": "Let $\\mathfrak p$ be an exterior prime and put $W_e=W_{\\mathfrak p}(a(p^e))$."
+   },
+   {
+    "anchor": "stmt-lem-reflection-quadratic-pairing",
+    "claim_id": "claim-reflected-expansion",
+    "statement": "let $(m)_S=\\mathfrak h\\mathfrak d$ and $\\upsilon=\\upsilon_m$"
+   },
+   {
+    "anchor": "stmt-lem-reflection-quadratic-sieve",
+    "claim_id": "claim-quadratic-sieve",
+    "statement": "complex coefficients $z_{\\mathfrak c}$ supported on squarefree exterior ideals with $q_{\\mathfrak c}\\leq C$"
+   },
+   {
+    "anchor": "stmt-lem-additive-sieve",
+    "claim_id": "claim-additive-sieve",
+    "statement": "Let $K$ be a fixed compact subset of $F_S$, and let $N,V\\ge2$."
+   },
+   {
+    "anchor": "stmt-prop-probe-low",
+    "claim_id": "claim-probe-low",
+    "statement": "For the weights above"
+   },
+   {
+    "anchor": "stmt-prop-euler-product",
+    "claim_id": "claim-euler-product",
+    "statement": "For every $u\\in\\mathcal U$"
+   },
+   {
+    "anchor": "stmt-lem-conductor-sieve",
+    "claim_id": "claim-conductor-sieve",
+    "statement": "Fix $C_0>0$ and a finite set $\\mathscr L_S$ of possible local components at $S$."
+   },
+   {
+    "anchor": "stmt-prop-zero-density",
+    "claim_id": "claim-zero-density",
+    "statement": "For the fixed $F,S,\\eta$ there are $\\rho>0$ and $U_0$ with the following property."
+   },
+   {
+    "anchor": "stmt-spl-field-bounds",
+    "claim_id": "claim-field-bounds",
+    "statement": "Fix an integer $a$ with $|a|>1$."
+   },
+   {
+    "anchor": "stmt-spl-smooth-estimate",
+    "claim_id": "claim-smooth-estimate",
+    "statement": "Fix $0<\\delta<1/2$ and a nonnegative function $f\\in C_c^\\infty((0,\\infty))$."
+   },
+   {
+    "anchor": "stmt-spl-smooth-estimate",
+    "claim_id": "claim-smooth-estimate",
+    "statement": "Let $K$ be a number field of degree $n$ and absolute discriminant $D$"
+   },
+   {
+    "anchor": "stmt-thm-marked-type-ii",
+    "claim_id": "claim-marked-type-ii",
+    "statement": "Fix $\\delta,C,D_*>0$ and $q\\in(0,1)$."
+   },
+   {
+    "anchor": "stmt-thm-marked-type-ii",
+    "claim_id": "claim-marked-type-ii",
+    "statement": "Suppose $H_m,H_n\\ge x^\\delta$ and $X=H_mH_n\\asymp x$."
+   },
+   {
+    "anchor": "stmt-lem-marked-coefficient-transfer",
+    "claim_id": "claim-coefficient-transfer",
+    "statement": "Fix $\\delta,C,D_*>0$ and $q\\in(0,1)$."
+   },
+   {
+    "anchor": "stmt-prop-rough-type-ii",
+    "claim_id": "claim-rough-type-ii",
+    "statement": "Retain the marked data and all the hypotheses on $F,\\beta,H_m,H_n$ of"
+   },
+   {
+    "anchor": "stmt-prop-rough-type-ii",
+    "claim_id": "claim-rough-type-ii",
+    "statement": "Fix real numbers $0<\\gamma<w_-<w_+<1$, and suppose"
+   },
+   {
+    "anchor": "stmt-lem-block",
+    "claim_id": "claim-block-sieve",
+    "statement": "Let $\\mathcal A$ be a finite set with nonnegative weights, and let $\\mathcal P$ be a set of primes at most $z$, where $z\\ge2$."
+   },
+   {
+    "anchor": "stmt-lem-density",
+    "claim_id": "claim-rough-density",
+    "statement": "For $0<b<1/2$"
+   },
+   {
+    "anchor": "stmt-con-type-ii",
+    "claim_id": "claim-progression-type-ii",
+    "statement": "Fix $\\delta>0$ and $0<\\gamma<s_-<s_+<1$."
+   },
+   {
+    "anchor": "stmt-con-harmonic",
+    "claim_id": "claim-harmonic-mass",
+    "statement": "For each group put"
+   },
+   {
+    "anchor": "sec:prime-construction",
+    "claim_id": "claim-distribution",
+    "statement": "Fix its data $M,c,u$"
+   },
+   {
+    "anchor": "stmt-con-bin-mass",
+    "claim_id": "claim-bin-mass",
+    "statement": "For any fixed $b\\le\\gamma<\\gamma'\\le1/2-\\kappa$"
+   },
+   {
+    "anchor": "stmt-con-rough-pairs",
+    "claim_id": "claim-rough-pairs",
+    "statement": "Let $\\mathcal B=[M_1,2M_1)\\times[M_2,2M_2)$ be any dyadic box such that"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "uniform splitting estimate",
+    "evidence": [
+     {
+      "anchor": "sec:splitting",
+      "quote": "We prove Proposition <a href=\"#prop:splitting\" data-reference-type=\"ref\" data-reference=\"prop:splitting\">4</a> for the fields $K_q=\\mathbb{Q}(\\mu_q,a^{1/q})$",
+      "quote_sha256": "4c2970dcf97b30570c6e73c338ea7d87baf96a47f86be1cb377ba413e87869a7"
+     }
+    ],
+    "requires_concepts": [
+     "Hecke zero-free region",
+     "Kummer field splitting",
+     "smoothed explicit formula"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-primitive-root",
+   "exact_statement": "<span id=\"thm:primitive-root\" label=\"thm:primitive-root\"></span>For every admissible integer $a$, there are constants $c_a>0$ and $x_a\\ge2$ such that, for every real $x\\ge x_a$, $$\\#\\{p\\text{ prime}:x<p<2x,\\ p\\nmid a,\\ \\mathop{\\mathrm{ord}}_p(a)=p-1\\}\n       \\ge c_a\\frac{x}{(\\log x)^2}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-hecke-zero-free",
+   "exact_statement": "Let $F$ be a cyclotomic number field containing $\\mu_{12}$. For every finite-order Hecke character $\\eta$ of $F$, the meromorphic continuation of $L_F(s,\\eta)$ has no zeros in $$\\operatorname{Re}s>1-10^{-6}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-hecke-zero-free"
+  },
+  {
+   "claim_id": "claim-prime-reservoir",
+   "exact_statement": "<span id=\"prop:controlled\" label=\"prop:controlled\"></span>Let $M$ be a fixed positive multiple of $8$, let $c\\in\\{2,4\\}$, and let $u$ be an integer satisfying $$(u,M)=1,\\qquad c\\mid u-1,\\qquad\n \\left(\\frac{u-1}{c},\\frac Mc\\right)=1.\n \\label{alg:progression-conditions}$$ For every sufficiently large real $x$, there are $\\gg_{M,c,u}x/L^2$ distinct primes $p\\in(x,2x)$ satisfying $$p\\equiv u\\pmod M,\\qquad p-1=crQ,\n \\qquad Q>x^{0.9}\\ \\text{prime},\n \\label{eq:controlled-predecessor}$$ where $r$ is a positive integer all of whose prime divisors lie in $$\\bigl(\\exp(L^{0.1}),\\exp(L^{0.3})\\bigr).$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-prime-reservoir"
+  },
+  {
+   "claim_id": "claim-uniform-splitting",
+   "exact_statement": "Fix an integer $a$ with $|a|>1$, and put $\\delta_0=10^{-6}$. For all sufficiently large real $x$ and all primes $q$ sufficiently large in terms of $a$, with $q\\le\\exp(L^{0.3})$, one has $$\\#\\{p\\text{ prime}:x<p\\le2x,\\ p\\text{ splits completely in }K_q\\}\n \\ll_a \\frac{x}{q(q-1)L}+x^{1-\\delta_0}.\n \\label{eq:uniform-splitting}$$ The implied constant and the threshold for $x$ are independent of $q$. For $a=2$, every prime $q\\ge5$ is allowed, with absolute constants and an absolute threshold for $x$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-splitting"
+  },
+  {
+   "claim_id": "claim-splitting-test",
+   "exact_statement": "Let $a\\ne0$ be an integer, and let $p,q$ be primes with $p\\nmid aq$. Then $p$ splits completely in $K_q$ if and only if $$p\\equiv1\\pmod q,\\qquad a^{(p-1)/q}\\equiv1\\pmod p.\n \\label{eq:kummer-frobenius-test}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-alg-splitting-test"
+  },
+  {
+   "claim_id": "claim-quadratic-progression",
+   "exact_statement": "Let $a\\in\\mathbb{Z}$ be neither $-1$ nor an integer square, and set $$M=8\\prod_{\\substack{\\ell\\mid a\\\\\\ell\\text{ odd prime}}}\\ell.$$ There are $c\\in\\{2,4\\}$ and an integer $u$ satisfying <a href=\"#alg:progression-conditions\" data-reference-type=\"eqref\" data-reference=\"alg:progression-conditions\">[alg:progression-conditions]</a> such that every prime $p\\equiv u\\pmod M$ satisfies $p\\nmid a$ and $(a/p)=-1$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-alg-quadratic-progression"
+  },
+  {
+   "claim_id": "claim-remark-powers",
+   "exact_statement": "Negative squares are covered by the row $d_0=-1$ in the progression lemma. Odd perfect powers also require no separate exclusion. If $a=b^h$ with fixed odd $h>1$, every prime divisor of $h$ is eventually smaller than every prime factor of $rQ$; hence $(h,p-1)=1$ for the constructed primes. This explains directly how the controlled predecessor removes the obstruction from the fixed exponent.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-auto-remark-1"
+  },
+  {
+   "claim_id": "claim-s-lattice",
+   "exact_statement": "The diagonal copy of $R$ is a discrete cocompact subgroup of $F_S$, is its own annihilator for the pairing $\\mathrm{e}(xy)$, and has covolume $1$. For every Bruhat–Schwartz function $f$ on $F_S$, $$\\sum_{m\\in R}f(m)=\\sum_{\\nu\\in R}\\widehat f(\\nu).$$ If $\\mathfrak a=aR$ is an exterior fractional ideal, then $$q_a=q_{\\mathfrak a},\\qquad\n (aR)^\\perp=a^{-1}R,\\qquad\n \\sum_{m\\in aR}f(m)\n   =q_{\\mathfrak a}^{-1}\\sum_{\\nu\\in a^{-1}R}\\widehat f(\\nu).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-s-lattice"
+  },
+  {
+   "claim_id": "claim-balanced-generators",
+   "exact_statement": "The pairing $H_S$ on $\\mathcal V$ is nondegenerate and alternating. The map $U_S/U_S^6\\to\\mathcal V$ is injective, its image $E$ satisfies $E^\\perp=E$, and there is an isotropic subgroup $B$ such that $\\mathcal V=E\\oplus B$.*\n\n*Every exterior fractional ideal $\\mathfrak a$ has a generator $a$ whose class $[a]$ in $\\mathcal V$ belongs to $B$. Any two such generators differ by an element of $U_S^6$. They can be chosen so that $$a/\\ell_{q_{\\mathfrak a}}\\in\\mathcal K_{\\mathrm{bal}}$$ for one fixed compact subset $\\mathcal K_{\\mathrm{bal}}\\subset F_S^1$, independent of $\\mathfrak a$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-balanced-generators"
+  },
+  {
+   "claim_id": "claim-kummer-characters",
+   "exact_statement": "For $u\\in R\\setminus\\{0\\}$, the ideal function $$\\chi_\\bullet(u)(\\mathfrak a)=\\chi_{\\mathfrak a}(u)$$ is induced away from $S$ and the prime divisors of $(u)R$ by a finite-order Hecke character. Its values at those prime divisors are set equal to zero. If $\\mathfrak f_u$ is the conductor of the inducing primitive character, then $$\\mathrm{N}\\mathfrak f_u\\le C_{F,S}\\mathrm{N}\\mathop{\\mathrm{rad}}((u)R)\n                       \\le C_{F,S}q_u.\\label{eq:kummer-conductor}$$ The same bound, with a changed constant, holds after twisting by the fixed $\\eta$. The inducing characters associated to $u$ and $v$ agree if and only if $u/v\\in F^{\\times6}$.*\n\n*Every character of the finite group $B$, evaluated on allowed generators, extends to a finite-order Hecke character unramified outside $S$.*\n\n*The following parametrization will index the nonzero Poisson frequencies; its character distinctness and conductor bound will be used in zero detection. Choose a complete set of representatives $\\mathcal U$ modulo $U_S^6$ among the nonzero S-integers whose exterior valuations belong to $\\{0,1,\\ldots,5\\}$, with $1\\in\\mathcal U$. For allowed generators $r$, the map $$(u,\\mathfrak r)\\longmapsto [u r^6]\n \\quad\\text{from }\\mathcal U\\times\\{\\text{exterior ideals}\\}\n \\quad\\text{to }(R\\setminus\\{0\\})/U_S^6\\label{eq:frequency-decomposition}$$ is a bijection. Among $u\\in\\mathcal U$, only $u=1$ induces the principal character, and distinct $u$’s induce distinct characters, also after the fixed twist by $\\eta$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-kummer-characters"
+  },
+  {
+   "claim_id": "claim-gauss-characters",
+   "exact_statement": "There are a unitary Hecke character $\\Lambda$, unramified outside $S$, and a finite-order Hecke character $G$, unramified outside $S$, such that for every exterior prime $\\mathfrak p$, $$\\gamma_2(\\mathfrak p)^3=-\\Lambda(\\mathfrak p),\\qquad\n G(\\mathfrak p)=\\overline{\\chi_{\\mathfrak p}(4)}\\,\n                     \\gamma_3(\\mathfrak p),\\qquad\n \\gamma_1(\\mathfrak p)\\gamma_2(\\mathfrak p)\n                      =-\\Lambda(\\mathfrak p)G(\\mathfrak p).\n\\label{eq:gauss-corrections}$$ At each complex place the infinity type of $\\Lambda$ is purely angular of exponent $1$ or $-1$, in the ordinary angular coordinate. The values $\\gamma_3(\\mathfrak p)$ are signs and depend multiplicatively on the class of an allowed $p$ in $B$.*\n\n*For coprime squarefree exterior ideals, $$\\gamma_j(\\mathfrak c_1\\mathfrak c_2)\n =\\chi_{\\mathfrak c_1}(c_2)^j\n  \\chi_{\\mathfrak c_2}(c_1)^j\n  \\gamma_j(\\mathfrak c_1)\\gamma_j(\\mathfrak c_2).\n\\label{eq:gauss-crt}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-gauss-characters"
+  },
+  {
+   "claim_id": "claim-reflected-second-moment",
+   "exact_statement": "Let $F$ be a fixed cyclotomic field containing $\\mu_{12}$, let $S$ and the arithmetic data be as above, and fix a compact subset $\\mathscr K\\subset F_S^\\times$. For every $\\epsilon>0$, every $Z\\geq2$, and all dyadic lengths $P,D\\geq1$, $$\\label{eq:reflection-dyadic-mass}\n \\sum_{\\substack{m\\in\\mathscr B_Z(\\mathscr K)\\\\\n        P\\leq q_{\\mathfrak h(m)}<2P\\\\\n        D\\leq q_{\\mathfrak d(m)}<2D}}\n |B_m(Z)|^2\n \\ll_{F,S,\\eta,\\mathscr K,\\epsilon}\n Z^\\epsilon P^{1/2}\\left(D+\\frac{D^2P}{Z}\\right).$$ In particular, $$\\label{eq:reflection-total-mass}\n \\sum_{m\\in\\mathscr B_Z(\\mathscr K)}|B_m(Z)|^2\n \\ll_{F,S,\\eta,\\mathscr K,\\epsilon} Z^{2M_0-1+\\epsilon}.$$ The estimate is uniform if $\\mathscr K$ is multiplied by an element of any fixed compact subset of the norm-one group of $F_S^\\times$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-reflection"
+  },
+  {
+   "claim_id": "claim-theta-input",
+   "exact_statement": "For the fixed field $F$, there is a threefold central cover $$1\\longrightarrow\\mu_3\n \\longrightarrow\\widetilde{\\mathrm{PGL}}_2(\\mathbb{A}_F)\n \\longrightarrow\\mathrm{PGL}_2(\\mathbb{A}_F)\\longrightarrow1$$ which splits over $\\mathrm{PGL}_2(F)$, and an irreducible genuine automorphic representation $\\Theta=\\bigotimes'_v\\Theta_v$ on this cover, with the following properties.*\n\n\n1.  **Global representation and Fourier expansion.* The cover is the quotient of the $c=2$ cover $\\widetilde{\\mathrm{GL}}_2^{(2)}$ by the ordinary split scalar subgroup. The inducing character of $\\Theta_v$, on the center of the covering torus before this quotient, is $$\\label{eq:theta-central-datum}\n      \\omega_v\\!\\left(\\zeta\\,s_v(\\operatorname{diag}(x^3,y^3))s_v(zI)\\right)\n       =\\iota(\\zeta)\\left|x^3/y^3\\right|_v^{1/6}.$$ Here $s_v$ is the ordinary torus section. The normalized inducing norm exponents are $1/6,-1/6$. The local exceptional representation is the irreducible quotient for these exponents and the irreducible subrepresentation for their Weyl conjugates. Every $\\Theta_v$ has a one-dimensional Whittaker space. The global functional $$\\lambda(\\varphi)=\n        \\int_{F\\backslash\\mathbb{A}_F}\\theta_\\varphi(n(x))\n              \\overline{\\psi(x)}\\,\\,\\mathrm{d}x$$ on the automorphic realization $\\varphi\\mapsto\\theta_\\varphi$ is nonzero. The representation is spherical at all but finitely many finite places. There is a preliminary pure tensor $\\varphi^\\circ$ on which $\\lambda$ is nonzero. Its finitely many nondistinguished finite places lie in the final fixed $S$, along with the archimedean places, the places over $6$, and the places where $\\psi_v$ has nonzero conductor.*\n\n\n\n    *For a pure tensor $\\varphi=\\varphi_S\\otimes\\bigotimes_{v\\notin S}\\varphi_v$, with the distinguished spherical vector at almost every $v\\notin S$, the global Whittaker function factors as $$\\label{eq:theta-normalized-factorization}\n      \\mathcal W_\\varphi(g)\n       :=\\lambda(\\pi(g)\\varphi)\n       =\\mathcal W_{S,\\varphi_S}(g_S)\n           \\prod_{v\\notin S}W_{v,\\varphi_v}(g_v).$$ Each exterior spherical functional is normalized at one, so only finitely many factors in this product differ from one for adelic $g$. The functional at $S$ factors at its complex places; at its finite places it may be retained as a finite sum of products of local Whittaker functionals. For a smooth automorphic vector, $$\\label{eq:theta-fourier-expansion}\n       \\theta_\\varphi(g)=\\theta_{\\varphi,N}(g)\n        +\\sum_{\\nu\\in F^\\times}\\mathcal W_\\varphi(a(\\nu)g),\\qquad\n       \\theta_{\\varphi,N}(g)\n        =\\int_{F\\backslash\\mathbb{A}_F}\\theta_\\varphi(n(x)g)\\,\\,\\mathrm{d}x .$$ This expansion converges absolutely and locally uniformly on compact sets of $g$.*\n\n\n2.  **Exact lifts and exterior local values.* On the quotient the chosen lifts satisfy $$\\label{eq:theta-lift-identities}\n      \\begin{gathered}\n       n(x)a(y)=a(y)n(x/y),\\qquad\n       wa(y)w^{-1}=a(y^{-1}),\\\\\n       wn(H)=n(H^{-1})a(-H^{-2})\\bar n(H^{-1}).\n      \\end{gathered}$$ In [(eq:theta-normalized-factorization)](#eq:theta-normalized-factorization) the last identity $H\\ne0$. At an exterior prime, when $H^{-1}$ is integral the last factor is compact, and a compact diagonal may absorb the minus sign.*\n\n\n\n    *For every exterior prime $\\mathfrak p$, choose a uniformizer $\\varpi$, put $q_{\\mathfrak p}=\\mathrm{N}\\mathfrak p$, and use the compact splitting on $\\mathrm{PGL}_2(\\mathcal O_{\\mathfrak p})$. The orientation of $\\iota$, equivalently that of the Hilbert-symbol convention, can be fixed so that the scalar by which the torus cocycle acts in a genuine representation is $$\\label{eq:theta-effective-cocycle}\n       \\mathcal C_{\\mathfrak p}(\\varpi,u)=\\chi_{\\mathfrak p}(u)^{-2}\n           \\qquad(u\\in\\mathcal O_{\\mathfrak p}^{\\times}).$$ The compact splitting agrees with the chosen sections on unit diagonals, Weyl elements, and integral upper and lower root elements. Define $$g_{2,\\mathfrak p}\n        =q_{\\mathfrak p}^{-1/2}\n           \\sum_{x\\bmod\\mathfrak p}\n           \\chi_{\\mathfrak p}(x)^2\\psi_{\\mathfrak p}(x/\\varpi).$$ Then $|g_{2,\\mathfrak p}|=1$. If $W_{\\mathfrak p}$ is the spherical Whittaker function normalized by $W_{\\mathfrak p}(1)=1$, then, for $u\\in\\mathcal O_{\\mathfrak p}^{\\times}$, $$\\label{eq:theta-local-values}\n      W_{\\mathfrak p}(a(\\varpi^e u))\n       =\\chi_{\\mathfrak p}(u)^{2e}\n       \\begin{cases}\n        0,&e<0,\\\\\n        q_{\\mathfrak p}^{-k},&e=3k,\\quad k\\ge0,\\\\\n        q_{\\mathfrak p}^{-k-1/2}g_{2,\\mathfrak p},\n            &e=3k+1,\\quad k\\ge0,\\\\\n        0,&e=3k+2,\\quad k\\ge0.\n       \\end{cases}$$ In particular a shift by three nonnegative valuations multiplies the value by $q_{\\mathfrak p}^{-1}$.*\n\n\n3.  **Complex local behavior.* At a complex place, $\\Theta_v$ is the ordinary spherical $\\mathrm{PGL}_2(\\mathbb{C})$ principal series with normalized characters $(|\\cdot|_v^{1/6},|\\cdot|_v^{-1/6})$, where $|y|_v$ is the square of the ordinary modulus. Its spherical Whittaker function is a nonzero constant times $$\\label{eq:theta-complex-bessel}\n       |y|_v^{1/2}K_{1/3}\\bigl(c_v|y|_v^{1/2}\\bigr),\\qquad c_v>0.$$ The constant term of the automorphic theta function belongs to the Weyl-conjugate torus induction. In particular its dependence on a complex diagonal $a(y)$ is radial, also when the vector on its right has been acted on by a fixed compact element.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-theta-input"
+  },
+  {
+   "claim_id": "claim-theta-exterior-coefficient",
+   "exact_statement": "At every exterior prime use an allowed prime generator as the uniformizer in [prop:theta-input](#prop:theta-input). Let $A\\in R\\setminus\\{0\\}$ be an allowed generator of an integral exterior ideal $\\mathfrak A$. Then $$\\label{eq:theta-exterior-coefficient}\n \\prod_{\\mathfrak p\\notin S}W_{\\mathfrak p}(a(A))\n =\n \\begin{cases}\n \\displaystyle\n \\frac{\\gamma_2(\\mathfrak c)}\n      {q_{\\mathfrak c}^{1/2}q_{\\mathfrak n}},\n   &\\mathfrak A=\\mathfrak c\\mathfrak n^3,\\quad\n     \\mathfrak c\\ \\text{squarefree},\\\\[2mm]\n 0,&\\text{otherwise}.\n \\end{cases}$$ In the first case $\\mathfrak c,\\mathfrak n$ are uniquely determined; they need not be coprime.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-theta-exterior-coefficient"
+  },
+  {
+   "claim_id": "claim-finite-whittaker-cutoff",
+   "exact_statement": "Let $S_f$ be a finite set of nonarchimedean places and let $\\lambda_f\\ne0$ be a Whittaker functional with character $\\prod_{v\\in S_f}\\psi_v$ on a smooth representation of the product of the local covers. For a vector $\\varphi$, put $$W_\\varphi(y)=\\lambda_f\\!\\left(\\pi\\bigl((a(y_v))_{v\\in S_f}\\bigr)\n                         \\varphi\\right),\n \\qquad y\\in\\prod_{v\\in S_f}F_v^\\times.$$ Given any open subgroup $H_f$ of the product of the unit groups, there are a compact open product subgroup $U\\subset H_f$ and a smooth vector $\\varphi_U$ for which $$W_{\\varphi_U}(y)=\\mathbf{1}_U(y)\n \\qquad\\left(y\\in\\prod_{v\\in S_f}F_v^\\times\\right).$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-finite-whittaker-cutoff"
+  },
+  {
+   "claim_id": "claim-sheet-profile",
+   "exact_statement": "Let $\\mathcal I$ be a finite index set. For every $\\kappa\\in\\mathcal I$, let $f_\\kappa$ be a finite sum of products $$f_\\kappa(y)=\\sum_{\\ell=1}^{L_\\kappa}\n                \\prod_{v\\in S}f_{\\kappa,\\ell,v}(y_v),\n \\qquad y\\in F_S^\\times.$$ Assume that for one $\\delta>0$ all these local factors satisfy the following conditions.*\n\n1.  *At a finite $v$, $f_{\\kappa,\\ell,v}$ is locally constant, vanishes for $|y_v|_v>C_v$, and is $O(|y_v|_v^\\delta)$ for $|y_v|_v\\le1$.*\n\n2.  *At a complex $v$, the factor is smooth on $F_v^\\times$ and, for every $j\\ge0$ and $A>0$, $$|\\mathcal D_v^j f_{\\kappa,\\ell,v}(y_v)|\n          \\le C_{A,j}\\min(|y_v|_v^\\delta,|y_v|_v^{-A}).$$*\n\n\n\n*All constants may depend on the finite family. Define $$H_\\kappa(u)=\\int_{X_u}f_\\kappa(y)\\,\\,\\mathrm{d}^\\times_u y,\\qquad\n D=u\\frac{\\,\\mathrm{d}}{\\,\\mathrm{d}u}.$$ Fix one complex place $v_0$, and define the nonnegative absolute derivative profile $$H^{\\mathrm{abs}}_{\\kappa,j}(u)\n =\\sum_{\\ell=1}^{L_\\kappa}\\int_{X_u}\n   |\\mathcal D_{v_0}^j f_{\\kappa,\\ell,v_0}(y_{v_0})|\n   \\prod_{v\\ne v_0}|f_{\\kappa,\\ell,v}(y_v)|\\,\\,\\mathrm{d}^\\times_u y.$$ Then $H_\\kappa$ is smooth, and for every $j\\ge0$ and $\\sigma>-\\delta$, $$\\label{eq:sheet-weighted-bound}\n |D^jH_\\kappa(u)|\\le H^{\\mathrm{abs}}_{\\kappa,j}(u)\n      \\le C_{\\sigma,j}u^{-\\sigma}\\qquad(u>0).$$ In particular, for any $0<\\alpha<\\delta$ and every $A>0$, $$\\label{eq:sheet-two-ended-bound}\n |D^jH_\\kappa(u)|+H^{\\mathrm{abs}}_{\\kappa,j}(u)\n    \\le C_{A,j}\\min(u^\\alpha,u^{-A}).$$ The conclusions are unchanged if each $f_\\kappa$ is multiplied by a fixed smooth unitary character of $F_S^\\times$ and by a bounded function of its class in the finite group $\\mathcal V$.*\n\n\n*Let $\\mathcal K:(0,\\infty)\\to\\mathbb{C}$ have every absolute moment $$M_\\beta(\\mathcal K)=\\int_0^\\infty|\\mathcal K(T)|T^\\beta\n                          \\,\\frac{\\,\\mathrm{d}T}{T}<\\infty\n \\qquad(\\beta\\in\\mathbb{R}).$$ Both convolutions $$\\int_0^\\infty\\mathcal K(T)H_\\kappa(uT)\\,\\frac{\\,\\mathrm{d}T}{T},\n \\qquad\n \\Phi_\\kappa(u):=\\int_0^\\infty\\mathcal K(T)H_\\kappa(u/T)\n                                      \\,\\frac{\\,\\mathrm{d}T}{T}$$ and their norm derivatives obey <a href=\"#eq:sheet-two-ended-bound\" data-reference-type=\"eqref\" data-reference=\"eq:sheet-two-ended-bound\">[eq:sheet-two-ended-bound]</a>, with constants depending also on the indicated moments. For every $j$, the two absolute majorants $\\int|\\mathcal K(T)|H^{\\mathrm{abs}}_{\\kappa,j}(uT^{\\pm1})\\,\\,\\mathrm{d}T/T$ satisfy the same two-ended size bound. For any $x_i>0$, complex $a_i$, indices $\\kappa_i\\in\\mathcal I$, $\\tau\\in\\{1,-1\\}$, and $\\sigma>-\\delta$, one has the absolute bound $$\\label{eq:sheet-absolute-sum}\n\\begin{split}\n &\\int_0^\\infty|\\mathcal K(T)|\n       \\sum_i|a_i|H^{\\mathrm{abs}}_{\\kappa_i,0}(u x_iT^\\tau)\n                                     \\,\\frac{\\,\\mathrm{d}T}{T}\\\\\n &\\hspace{12mm}\\le\n C_{\\sigma,0}u^{-\\sigma}M_{-\\tau\\sigma}(\\mathcal K)\n       \\sum_i|a_i|x_i^{-\\sigma}.\n\\end{split}$$ In particular the sum and integral may be interchanged if the final series is finite.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-sheet-profile"
+  },
+  {
+   "claim_id": "claim-gaussian-smoothing",
+   "exact_statement": "For $V$ in <a href=\"#eq:theta-V-profile\" data-reference-type=\"eqref\" data-reference=\"eq:theta-V-profile\">[eq:theta-V-profile]</a>, there are constants $C_0>0$ and $A_0>0$ such that $$\\label{eq:theta-V-mellin}\n \\widehat V(s)\n =C_0 A_0^s\n       \\bigl[\\Gamma(s+5/6)\\Gamma(s+7/6)\\bigr]^r\n \\qquad(\\operatorname{Re}s>-5/6).$$ There is a smooth function $\\mathcal K:(0,\\infty)\\to\\mathbb{C}$ such that, for every $N>0$ and $j\\ge0$, $$\\label{eq:theta-kernel-bounds}\n \\left|(T\\partial_T)^j\\mathcal K(T)\\right|\n       \\le C_{N,j}\\min(T^N,T^{-N}),$$ and, for every $u>0$, $$\\label{eq:theta-exact-gaussian}\n \\int_0^\\infty\\mathcal K(T)V(uT)\\,\\frac{\\,\\mathrm{d}T}{T}\n  =P_G(u)=\\frac{1}{2\\sqrt{\\pi}}\n       \\exp\\!\\left(-\\frac{(\\log u)^2}{4}\\right).$$ Its Mellin transform satisfies the exact sign convention $$\\label{eq:theta-kernel-mellin}\n \\widehat{\\mathcal K}(-s)\n       =\\frac{e^{s^2}}{\\widehat V(s)}.$$ The quotient on the right is interpreted by its entire continuation. For every fixed finite family of rotated $S$-profiles $H_\\kappa$ covered by [lem:sheet-profile](#lem:sheet-profile), the functions $\\Phi_\\kappa(u)=\\int\\mathcal K(T)H_\\kappa(u/T)\\,\\,\\mathrm{d}T/T$ obey the signed and absolute bounds of that lemma.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-gaussian-smoothing"
+  },
+  {
+   "claim_id": "claim-reflection-theta-representation",
+   "exact_statement": "Let $V$ and $\\mathcal K$ be the common unrotated profile and Gaussian averaging weight from [lem:gaussian-smoothing](#lem:gaussian-smoothing). For $l,Z>0$, $$\\begin{aligned}\n \\mathcal T_m(l)\n &=\\sum_{\\substack{\\mathfrak c\\ \\mathrm{squarefree}\\\\\\mathfrak n}}\n    \\frac{\\gamma_2(\\mathfrak c)}{q_{\\mathfrak c}^{1/2}q_{\\mathfrak n}}\n    L(A)\\prod_{\\mathfrak p\\mid\\mathfrak m}\n                  \\chi_{\\mathfrak p}(A)^{j_{\\mathfrak p}}\n    V(q_{\\mathfrak A}l),                                      \\label{eq:reflection-unreflected}\\\\\n B_m(Z)\n &=\\int_0^\\infty\\mathcal K(T)\\mathcal T_m(T/Z)\\,\\frac{\\,\\mathrm{d}T}{T}.\n                                                               \\label{eq:reflection-exact-average}\n\\end{aligned}$$ Here $\\mathfrak A=\\mathfrak c\\mathfrak n^3$ and $A=cn^3$ is an allowed product generator. The ideal sums are over integral exterior ideals. Both formulas converge absolutely after the sheet integrations, and the second converges absolutely after the $T$-integration.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-reflection-theta-representation"
+  },
+  {
+   "claim_id": "claim-local-weyl",
+   "exact_statement": "Let $\\mathfrak p$ be an exterior prime and put $W_e=W_{\\mathfrak p}(a(p^e))$. For $j\\in\\{0,\\ldots,5\\}$, a unit $t$, and an integer $e$, define $$\\mathcal R_{\\mathfrak p,j,e}(t)\n =\\sum_{v\\in k_{\\mathfrak p}^{\\times}}\\alpha_{\\mathfrak p,j}(v)\n       W_{\\mathfrak p}(a(p^{e-2}t)w n(v/p)).$$ It vanishes for $e<0$. For $e\\ge0$, $$\\label{eq:reflection-local-formula}\n \\mathcal R_{\\mathfrak p,j,e}(t)\n =W_e\\chi_{\\mathfrak p}(t)^{4+2e}\n   \\sum_{v\\in k_{\\mathfrak p}^{\\times}}\n     \\alpha_{\\mathfrak p,j}(v)\\chi_{\\mathfrak p}(v)^4\n     \\psi_{\\mathfrak p}(p^{e-1}t/v).$$ For $j=1$, it vanishes for $e>0$, while $$\\label{eq:reflection-valuation-one}\n\\begin{split}\n \\mathcal R_{\\mathfrak p,1,0}(t)\n      &=\\omega_{\\mathfrak p}\\chi_{\\mathfrak p}(t),\n       \\qquad |\\omega_{\\mathfrak p}|=1,\\\\\n \\omega_{\\mathfrak p}\n &=\\frac{\\sum_{x\\ne0}\\chi_{\\mathfrak p}(x)^3\\psi_{\\mathfrak p}(x/p)}\n        {\\tau_{\\mathfrak p,1}}.\n\\end{split}$$ For all $j$, its magnitude at $e=0$ is at most $1$, and for $e>0$ is at most $q_{\\mathfrak p}^{1/2}|W_e|$. More precisely, for $e\\ge0$ put $s_{\\mathfrak p,j,e}=\\mathcal R_{\\mathfrak p,j,e}(1)$ and choose the exponents modulo $6$ by $$\\label{eq:reflection-local-monomial}\n b_{j,0}\\equiv8-j,\\qquad b_{j,e}\\equiv4+2e\\ (e>0),\\qquad\n \\mathcal R_{\\mathfrak p,j,e}(t)\n       =s_{\\mathfrak p,j,e}\\chi_{\\mathfrak p}(t)^{b_{j,e}}.$$ For $e>0$, $s_{\\mathfrak p,j,e}=0$ unless $j=4$, and it also vanishes for $e\\equiv2\\pmod3$. The zero-digit term is available only for $j=0$; at a frequency $\\nu$ it is $(1-q_{\\mathfrak p}^{-1})W_{\\mathfrak p}(a(\\nu))$, with ordinary spherical support.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-reflection-local-weyl"
+  },
+  {
+   "claim_id": "claim-reflected-expansion",
+   "exact_statement": "For every nonzero $m\\in R$ and $Z>0$, let $(m)_S=\\mathfrak h\\mathfrak d$ and $\\upsilon=\\upsilon_m$. Then $$\\label{eq:reflection-global-expansion}\n\\begin{split}\n B_m(Z)\n  ={}&\\sum_{\\mathfrak f\\in\\mathcal F(\\mathfrak h)}\n      \\sum_{\\substack{\\mathfrak a'_{\\mathfrak f}\\in\\mathcal A(\\mathfrak f)\\\\\n                      \\mathfrak n'\\\\(\\mathfrak n',\\mathfrak f)=1}}\n      \\sum_{\\substack{u\\in U_6\\\\s_d,s_c\\in B}}\n       \\frac{\\omega_{\\upsilon,\\mathfrak t}}{q_{\\mathfrak n'}}\\\\\n   &{}\\times\\rho_{\\upsilon,\\mathfrak t,s_d}(\\mathfrak d)\n      \\Biggl[\\sum_{\\mathfrak c'\\ \\mathrm{squarefree}}\n       \\frac{\\lambda_{\\upsilon,\\mathfrak t,s_c}(\\mathfrak c')}\n            {q_{\\mathfrak c'}^{1/2}}\n       \\chi_{\\mathfrak d}(c')^3\\\\\n   &{}\\times\\Phi_{\\upsilon,\\kappa_6(\\mathfrak t;s_d,s_c)}\n       \\!\\left(\\frac{Zq_{\\mathfrak a'_{\\mathfrak f}}\n                     q_{\\mathfrak c'}q_{\\mathfrak n'}^3}\n                    {q_{\\mathfrak d}^2q_{\\mathfrak f}^2}\\right)\\Biggr].\n\\end{split}$$ All ideal sums are over integral exterior ideals, and the expansion is absolutely convergent. The coefficients satisfy $$|\\omega_{\\upsilon,\\mathfrak t}|\n     \\le\\beta_{\\mathfrak f}(\\mathfrak a'_{\\mathfrak f}),\\qquad\n |\\rho_{\\upsilon,\\mathfrak t,s_d}|\\le1,\\qquad\n |\\lambda_{\\upsilon,\\mathfrak t,s_c}|\\le1.$$ The row-unit class $\\upsilon$ is fixed; $u$ is the independently summed frequency-unit class.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-reflection-quadratic-pairing"
+  },
+  {
+   "claim_id": "claim-quadratic-sieve",
+   "exact_statement": "For $C,D\\geq1$ and complex coefficients $z_{\\mathfrak c}$ supported on squarefree exterior ideals with $q_{\\mathfrak c}\\leq C$, one has, for every $\\epsilon>0$, $$\\label{eq:reflection-quadratic-sieve}\n \\sum_{\\substack{\\mathfrak d\\ \\mathrm{squarefree}\\\\q_{\\mathfrak d}\\leq D}}\n   \\left|\\sum_{\\substack{\\mathfrak c\\ \\mathrm{squarefree}\\\\q_{\\mathfrak c}\\leq C}}\n       z_{\\mathfrak c}\\chi_{\\mathfrak d}(c)^3\\right|^2\n \\ll_{F,S,\\epsilon}(C+D)(CD)^\\epsilon\n             \\sum_{\\mathfrak c}|z_{\\mathfrak c}|^2.$$ Arbitrary restrictions on the rows and separate restrictions or unitary factors on the columns are allowed by deleting rows and changing the coefficients.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-reflection-quadratic-sieve"
+  },
+  {
+   "claim_id": "claim-additive-sieve",
+   "exact_statement": "Let $K$ be a fixed compact subset of $F_S$, and let $N,V\\ge2$. Choose balanced generators $s$ for the exterior ideals with $q_{\\mathfrak s}\\le V$. Let $\\mathcal P$ be any subset of the distinct points $$\\left\\{\\frac d s+R:\n       q_{\\mathfrak s}\\le V,\\ d\\in(R/\\mathfrak s)^\\times\\right\\}\n       \\subset F_S/R.$$ For any complex $b_\\alpha$, $$\\sum_{m\\in R\\cap\\ell_NK}\n       \\left|\\sum_{\\alpha\\in\\mathcal P}b_\\alpha\\mathrm{e}(m\\alpha)\\right|^2\n \\ll_{F,S,K}(N+V^2)\\sum_{\\alpha\\in\\mathcal P}|b_\\alpha|^2 .\n\\label{eq:additive-sieve}$$ The dual inequality, with the sums over $m$ and $\\alpha$ interchanged, has the same constant.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-additive-sieve"
+  },
+  {
+   "claim_id": "claim-probe-low",
+   "exact_statement": "For the weights above, for every $\\epsilon>0$ and $Z\\ge2$, $$I(Z^a,Z^b,Z)\\ll_{F,S,\\eta,W_0,W_1,\\epsilon}\n Z^{(2M_0-1-b)/2+\\epsilon}\n       =Z^{933/2000+\\epsilon}.\n\\label{eq:probe-low}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-probe-low"
+  },
+  {
+   "claim_id": "claim-euler-product",
+   "exact_statement": "For every $u\\in\\mathcal U$, the series in [eq:calF-definition](#eq:calF-definition) has the Euler factorization $$\\mathcal F_u(\\xi,w,z)=\n \\frac{\\zeta_F^S(6z)L^S(w,\\chi_\\bullet(u))}\n      {L^S(\\xi,\\eta\\overline{\\chi_\\bullet(u)})}\n             \\mathcal H_u(\\xi,w,z)\n\\label{eq:probe-euler-product}$$ initially in absolute convergence. The correction $\\mathcal H_u$ is holomorphic in open neighborhoods of both real-part regions $$\\begin{array}{lll}\n \\operatorname{Re}\\xi\\ge .998,&\\operatorname{Re}w\\ge .003,&\\operatorname{Re}z\\ge .4,\\\\\n \\operatorname{Re}\\xi\\ge .998,&\\operatorname{Re}w\\ge .95,&\\operatorname{Re}z\\ge .16.\n \\end{array}\n\\label{eq:euler-regions}$$ For every $\\epsilon>0$ it satisfies $$|\\mathcal H_u(\\xi,w,z)|\\ll_{F,S,\\eta,\\epsilon}q_u^\\epsilon$$ there, uniformly in all heights. If $S$ contains every prime of norm at most a sufficiently large fixed constant, then $\\mathcal H_1$ is bounded and nowhere zero on both neighborhoods.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-euler-product"
+  },
+  {
+   "claim_id": "claim-conductor-sieve",
+   "exact_statement": "Fix $C_0>0$ and a finite set $\\mathscr L_S$ of possible local components at $S$. Let $\\mathscr X(U)$ be any family of distinct primitive finite-order Hecke characters of $F$ whose conductor norms are at most $C_0U$ and whose components at $S$ belong to that set. For $N,U\\ge2$, any complex coefficients $b_{\\mathfrak n}$, and every $\\epsilon>0$, $$\\sum_{\\omega\\in\\mathscr X(U)}\n \\left|\\sum_{q_{\\mathfrak n}\\le N}\n               b_{\\mathfrak n}\\omega(\\mathfrak n)\\right|^2\n \\ll_{F,S,C_0,\\mathscr L_S,\\epsilon}\n       (N+U^2)(NU)^\\epsilon\n       \\sum_{q_{\\mathfrak n}\\le N}|b_{\\mathfrak n}|^2 .\n\\label{eq:conductor-sieve}$$ As usual a primitive character is extended by zero on ideals meeting its conductor.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-conductor-sieve"
+  },
+  {
+   "claim_id": "claim-zero-density",
+   "exact_statement": "For the fixed $F,S,\\eta$ there are $\\rho>0$ and $U_0$ with the following property. For every $U\\ge U_0$, there is a set $\\mathcal E(U)\\subset\\{u\\in\\mathcal U:U\\le q_u<2U\\}$ of cardinality $$|\\mathcal E(U)|\\ll_{F,S,\\eta}U^{1/2}$$ which contains every row for which $\\omega_u$ is principal or $L_F(s,\\omega_u)$ has a zero with $\\operatorname{Re}s\\ge .996$ and $|\\operatorname{Im}s|\\le4U^\\rho$. For $u\\notin\\mathcal E(U)$ and every $\\epsilon>0$, $$\\left|L^S(\\xi,\\eta\\overline{\\chi_\\bullet(u)})^{-1}\\right|\n       \\ll_{F,S,\\eta,\\epsilon}U^\\epsilon\n \\qquad\n       (\\operatorname{Re}\\xi\\ge .998,\\ |\\operatorname{Im}\\xi|\\le2U^\\rho).\n\\label{eq:good-reciprocal}$$ The exponents $.996,.998,1/2$ are absolute. The height exponent $\\rho$, the constants, and $U_0$ may depend on the fixed data.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-zero-density"
+  },
+  {
+   "claim_id": "claim-field-bounds",
+   "exact_statement": "Fix an integer $a$ with $|a|>1$. For every sufficiently large prime $q$, the degree $n_q=[K_q:\\mathbb{Q}]$ and absolute discriminant $D_q$ satisfy $$n_q=q(q-1),\\qquad\n D_q\\le q^{q(q-2)}(q^q|a|^{q-1})^{q-1},\\qquad\n \\log D_q+n_q\\ll_a n_q\\log(2q).\n \\label{spl:degree-discriminant}$$ Every rational prime $p\\nmid aq$ is unramified in $K_q$, and $$\\zeta_{K_q}(s)\\ne0\n \\qquad(\\operatorname{Re}s>1-\\delta_0,\\ s\\ne1).\n \\label{spl:kummer-zero-free}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-spl-field-bounds"
+  },
+  {
+   "claim_id": "claim-smooth-estimate",
+   "exact_statement": "Fix $0<\\delta<1/2$ and a nonnegative function $f\\in C_c^\\infty((0,\\infty))$. Let $K$ be a number field of degree $n$ and absolute discriminant $D$ whose Dedekind zeta function has no zero in $\\operatorname{Re}s>1-\\delta$. For every real $x\\ge2$, $$\\Theta_{K,f}(x)\n :=\\sum_{\\mathfrak p}\\sum_{j\\ge1}\n       (\\log\\operatorname{N}\\mathfrak p)\n       f\\left(\\frac{(\\operatorname{N}\\mathfrak p)^j}{x}\\right)\n \\ll_f x+x^{1-\\delta}(\\log D+n),\n \\label{spl:smooth-prime-ideal-bound}$$ where $\\mathfrak p$ ranges over the nonzero prime ideals of $K$. The implied constant is independent of $K$ and $x$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-spl-smooth-estimate"
+  },
+  {
+   "claim_id": "claim-marked-type-ii",
+   "exact_statement": "Fix $\\delta,C,D_*>0$ and $q\\in(0,1)$. Suppose $H_m,H_n\\ge x^\\delta$ and $X=H_mH_n\\asymp x$. Let $F$ satisfy $|F(h)|\\le1$ and $F(ph)=F(h)$ for every prime in the groups defined in [eq:marked-prime-groups](#eq:marked-prime-groups). Let $\\alpha_m$ be supported on an arbitrary interval in $[H_m,2H_m]$, where it has the value $$\\alpha_m=m^{iv}\\left(\\mathbf{1}_{m\\text{ prime}}\n       -\\frac{\\mathbf{1}_{P^-(m)>W}}{V(W)\\log m}\\right),\n \\qquad |v|\\le L^C.$$ Let $\\beta_n$ be supported on $W$-rough integers in $[H_n,2H_n]$, with $|\\beta_n|\\le L^C$. If $K$ is sufficiently large in terms of $\\delta,C,D_*,q$, then $$\\label{eq:marked-type-ii}\n \\left|\\sum_{m,n}\\alpha_m\\beta_n F(mn-1)\\mathcal W(mn-1)\\right|\n       \\ll X L^{-D_*}.$$ The required lower bound on $K$ is independent of the particular $a_i$. The implicit constant and the threshold for $x$ may depend on all the fixed parameters, including the $a_i$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-marked-type-ii"
+  },
+  {
+   "claim_id": "claim-coefficient-transfer",
+   "exact_statement": "Fix $\\delta,C,D_*>0$ and $q\\in(0,1)$. Retain the marked data and the hypotheses on $F,H_m,H_n$ in [thm:marked-type-ii](#thm:marked-type-ii), with fixed comparison constants in $X=H_mH_n\\asymp x$. Let $(\\alpha_m)$ and $(\\beta_n)$ be scalar sequences indexed by positive integers, supported on $W$-rough integers in their respective dyads, with $\\alpha$ supported on an arbitrary interval $I\\subseteq[H_m,2H_m]$, and with $|\\alpha_m|,|\\beta_n|\\le L^C$. Suppose that for every fixed $A_0,B,A>0$, every Dirichlet character $\\chi$ modulo $k\\le L^{A_0}$, and every $|t|\\le2XL^B$, $$\\label{eq:type-ii-long-coefficient-interface}\n \\left|\\frac1{H_m}\\sum_m\\alpha_m\\chi(m)m^{it}\\right|\\ll_A L^{-A},$$ uniformly in the permitted interval, character, and frequency. The constant and threshold in this hypothesis may depend on $A_0,B,A$, the fixed setup, and all further fixed parameters defining the coefficients; these parameters are chosen before $x$ grows.*\n\n*Then [eq:marked-type-ii](#eq:marked-type-ii) holds when $K$ is sufficiently large in terms of the fixed data, independently of the particular band exponents $a_i$. Its implicit constant and threshold may depend on all the fixed data, including the $a_i$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-marked-coefficient-transfer"
+  },
+  {
+   "claim_id": "claim-rough-type-ii",
+   "exact_statement": "Retain the marked data and all the hypotheses on $F,\\beta,H_m,H_n$ of [thm:marked-type-ii](#thm:marked-type-ii). Fix real numbers $0<\\gamma<w_-<w_+<1$, and suppose $$[\\log H_m/L,\\log(2H_m)/L]\\subseteq[w_-,w_+].$$ On an arbitrary interval $I\\subseteq[H_m,2H_m]$, set $$\\label{eq:rough-type-ii-coefficient}\n \\alpha_m=m^{iv}\\left(\n    \\mathbf{1}_{P^-(m)>x^\\gamma}\n    -\\frac{D_\\gamma(\\log m/L)}{L V(W)}\\mathbf{1}_{P^-(m)>W}\n                         \\right),\\qquad |v|\\le L^C,$$ and set $\\alpha_m=0$ outside $I$. Then [eq:marked-type-ii](#eq:marked-type-ii) holds for every fixed $D_*>0$ when $K$ is sufficiently large in terms of the fixed data. Its required lower bound is independent of the particular band exponents $a_i$; the threshold and implicit constant may depend on all the fixed data. In particular, $\\gamma$ and the gap $w_--\\gamma$ are fixed before $x$ grows.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-rough-type-ii"
+  },
+  {
+   "claim_id": "claim-block-sieve",
+   "exact_statement": "Let $\\mathcal A$ be a finite set with nonnegative weights, and let $\\mathcal P$ be a set of primes at most $z$, where $z\\ge2$. For each $p\\in\\mathcal P$, specify a bad condition on $\\mathcal A$. Suppose that, for every squarefree product $d$ of primes in $\\mathcal P$, the weight of the objects satisfying all conditions at $p\\mid d$ is $$A(d)=X'g(d)+E(d),$$ including $d=1$, where $X'\\ge0$, $g(1)=1$, and $g$ is multiplicative. Assume that, for fixed constants $\\eta_0>0$ and $C_0<\\infty$, $$\\label{eq:block-hypotheses}\n 0\\le g(p)\\le1-\\eta_0,\n \\qquad\n \\sum_{\\substack{v<p\\le v^2\\\\p\\in\\mathcal P}}g(p)\\le C_0\n \\quad(v>1).$$ For every sufficiently large even integer $H$, the weight $S$ of objects avoiding all the bad conditions satisfies $$\\label{eq:block-sieve}\n S=X'\\prod_{p\\in\\mathcal P}(1-g(p))\n       \\bigl(1+O(\\exp(-H))\\bigr)\n   +O\\left(\\sum_{\\substack{d\\le z^{4H+2}\\\\d\\mid\\prod_{p\\in\\mathcal P}p}}\n                  |E(d)|\\right).$$ The constants and the lower bound on $H$ depend only on $\\eta_0,C_0$. In particular, the estimate is uniform when $H$ grows. For $H=2$ there is the upper bound $$\\label{eq:block-sieve-upper}\n S\\ll_{\\eta_0,C_0}X'\\prod_{p\\in\\mathcal P}(1-g(p))\n       +\\sum_{\\substack{d\\le z^{10}\\\\d\\mid\\prod_{p\\in\\mathcal P}p}}\n                    |E(d)|.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-block"
+  },
+  {
+   "claim_id": "claim-rough-density",
+   "exact_statement": "For $0<b<1/2$, $$\\label{eq:density-identity}\n \\int_b^{1/2}D_t(1-t)\\,\\frac{dt}{t}=D_b(1)-1,$$ where the integrand at $1/2$ is interpreted by its left limit. There are absolute constants $b_0,c_d,C_d>0$ such that, for $0<b<b_0$, $$\\label{eq:density-upper}\n D_b(1)\\le\\frac{\\exp(-\\gamma_E)}{b}\n                 \\bigl(1+C_d\\exp(-c_d/b)\\bigr).$$ One may take $c_d=1/20$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-density"
+  },
+  {
+   "claim_id": "claim-progression-type-ii",
+   "exact_statement": "Fix $\\delta>0$ and $0<\\gamma<s_-<s_+<1$. Let $H_m,H_n\\ge x^\\delta$, with $X=H_mH_n\\asymp x$ and fixed comparison constants, and let $I\\subseteq[H_m,2H_m]$ be an interval. Suppose $$\\label{con:exponent-range}\n [\\log H_m/L,\\log(2H_m)/L]\\subseteq[s_-,s_+].$$ Let $|b_n|\\le1$ be supported on $W$-rough integers in $[H_n,2H_n]$. For sufficiently large $K$, $$\\label{con:type-ii-bound}\n \\left|\\sum_{m\\in I,n}\n       \\bigl(R_\\gamma(m)-B_\\gamma(m)\\bigr)b_n w(mn)\\right|\n       \\ll XL^{-6}.$$ This is uniform in the dyads, interval, and coefficients. The lower bound on $K$ is independent of the $a_i$. Constants and thresholds may depend on all fixed parameters, including the band exponents.",
+   "kind": "bound",
+   "statement_anchor": "stmt-con-type-ii"
+  },
+  {
+   "claim_id": "claim-harmonic-mass",
+   "exact_statement": "For each group put $$E_i(t)=\\prod_{p\\in\\mathcal P_i}\\left(1+\\frac{t}{p-1}\\right).$$ The harmonic mass has the exact Euler-product expression $$\\label{con:harmonic-identity}\n \\begin{aligned}\n J_0&=\\prod_{i=1}^K\\frac{E_i'(1/2)}{V_i}\\\\\n    &=\\prod_{i=1}^K\\left\\{\n       \\frac{E_i(1/2)}{V_i}\n       \\sum_{p\\in\\mathcal P_i}\\frac1{p-1+1/2}\\right\\}.\n \\end{aligned}$$ For every fixed $\\varepsilon>0$, $$\\label{con:harmonic-bounds}\n 1\\le J_0\\ll_K1,\\qquad\n \\sum_{r>x^\\varepsilon}\\frac{\\mathcal W(r)}r\n       \\ll_K\\exp(-\\varepsilon L^{1-a_K}).$$ Consequently the part of $X_0$ with $r>x^\\varepsilon$ is $O_K(x\\exp(-\\varepsilon L^{1-a_K}))$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-con-harmonic"
+  },
+  {
+   "claim_id": "claim-distribution",
+   "exact_statement": "For every fixed $A>0$, $$\\label{con:bv-sum}\n \\sum_{r\\le x^\\varepsilon}\\mathcal W(r)\n \\sum_{\\substack{\\ell\\le D\\\\\\ell\\text{ odd squarefree}}}|E_r(\\ell)|\n       \\ll xJ_0L^{-A}.$$ Moreover, writing $A_\\Psi=\\int_1^2\\Psi(y)\\,dy$, we have $$\\label{con:mass-asymptotic}\n X_0\\sim\\frac{xJ_0A_\\Psi}{c\\varphi(M/c)L}\n \\qquad(x\\to\\infty),$$ with all construction parameters fixed and $J_0=J_0(x)$. In particular, $$\\label{con:total-mass}\n X_0\\asymp_{M,\\Psi}\\frac{xJ_0}{L},$$ with comparison constants independent of $K,\\kappa,\\varepsilon,b$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-con-distribution"
+  },
+  {
+   "claim_id": "claim-bin-mass",
+   "exact_statement": "For any fixed $b\\le\\gamma<\\gamma'\\le1/2-\\kappa$, $$\\label{con:bin-mass-formula}\n \\sum_{\\substack{x^\\gamma<n\\le x^{\\gamma'}\\\\n\\text{ prime}}}\n \\sum_{\\substack{n\\mid d\\\\P^-(d)>W}}w(d)\n =\\mathfrak S_M X_0 V(W)\n                  \\left(\\log\\frac{\\gamma'}\\gamma+o(1)\\right).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-con-bin-mass"
+  },
+  {
+   "claim_id": "claim-rough-pairs",
+   "exact_statement": "Let $\\mathcal B=[M_1,2M_1)\\times[M_2,2M_2)$ be any dyadic box such that $$\\label{con:rough-box-range}\n x/4\\le M_1M_2\\le2x,\\qquad\n x^{0.46}/2\\le M_i\\le2x^{0.54}\\quad(i=1,2).$$ Then $$\\label{con:rough-pair-bound}\n \\sum_{\\substack{(m,n)\\in\\mathcal B\\\\P^-(m)>W,\\ P^-(n)>W}}w(mn)\n       \\le C_1X_0V(W)^2,$$ where $C_1$ depends at most on $M,\\Psi$, and is independent of $K,\\kappa,b,\\varepsilon$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-con-rough-pairs"
+  }
+ ],
+ "paper": "papers/EN-101-000-0007-2-2026-PR-T4-UK-EX-M1-C-AL-H-0066_PM-029.1_Primitive_roots_for_every_admissible_integer_base.md",
+ "purpose": "Primitive roots for every admissible integer base",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "18fc8e40819fb0108592cd0a93a8efada7ad3f0774f52db96fb291765b581e2a",
+   "pm.domains.v2": "4be47931d4acfce68b94f0349765c54802792f5d97d4ee707356d56ec7f72a4f",
+   "pm.edges.v2": "1583779256946543954afa9b0490625e0c980640693d3b2a8ce1370394568d90",
+   "pm.extraction.v2": "1f78f05c0ccd980013bab6c4d075d345973d3f6ae925de8e872a53dfe2c5e7dc",
+   "pm.formal.v2": "b85077ae0df172090e935c6c1d84ef33faf0c0088c4806ea5d730c3a2c17dec5",
+   "pm.limits.v2": "1494078661958b9306395e9adbb6092f387af13c4f256ab2d793f894259081e3",
+   "pm.node.v2": "3902fa82180d3604ffd876db3e195f699030916df965025bd537cc4143198fd3",
+   "pm.objects.v2": "89d473fca4d3904c2af684ebc220d983b0ef2340384114870c0977c97f5dceda",
+   "pm.provenance.v2": "58db8a05b166e8831e3f99f4ad39bcaefe81a2ae5d93a2775a86251a2061dc02",
+   "pm.quantities.v2": "d5b9944695d71d11bb41e86c10fbf2dda4f976b6f1ba385f9836f67e4cbc1619",
+   "pm.reading.v2": "c944743d6cabd3df5a4c62f666220aaf91d518139078d8d2106a83bfbe2d3762",
+   "pm.roadmap.v2": "6d027f666d30820e83901bfdfbea09a2cab04fe9e62d7ecbe768a9823dfe9ae2",
+   "pm.search.v1": "8bc26e3caa452f6eac88ac3c4c4085de0e1219141fa2009221688a40feeb8589",
+   "pm.triptych.v2": "fb8856b47b0dbd9b1cf70c4578f851593aacd92f3cd7f4336a55bef29a60cb06"
+  },
+  "canonical_sha256": "4f51962eb48b89a8a86b12d7dc1a2b03e207d084df03aac244cf3cd7198443f8",
+  "paper_sha256": "ae2292eb0262cb6bf12104939abec57d8713aab0a25569f38fbb5e9d48fe8701",
+  "repaired_body_sha256": "c81747a73ab5a086b72ff75460948f7e115c25e1633503dd83bb04b437932d40"
+ },
+ "status": "ACTIVE",
+ "subject_id": 1,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "522cec997f3563573e35b65fc72d2d48ce51f83d10ef1580979b9fd5c160d91b",
+   "receipt_sha256": "059417eab714bef05cc78f528a99bcfce54eb59bfddc618e2a1dd3b6b1f24501",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "integers a in a small set including a negative base, primes p from 2 to 101",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-splitting-test",
+     "oracle_basis": "brute-force order computation compared with the reference output and the expected token"
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-wrong-test-value",
+     "observed_exit": 1,
+     "receipt_sha256": "82b9017655db4c745cc1b7e4d4404e4f751b176cb3fda5975aae329dface61c1"
+    },
+    {
+     "id": "mut-drop-large-prime",
+     "observed_exit": 1,
+     "receipt_sha256": "e6a148cd1d9adcafafa6d1e79d27041155ac56053fcb9227ea3262bff6ef4690"
+    },
+    {
+     "id": "mut-wrong-exponent-base",
+     "observed_exit": 1,
+     "receipt_sha256": "db16f003b6b216355a04094b6736e578ee23a71089081dd1de696e43bef421dc"
+    },
+    {
+     "id": "mut-wrong-exponent",
+     "observed_exit": 1,
+     "receipt_sha256": "5bb0bfad04997b720223a6b091b1c5524c58c358b045010e2c534dbd05dda8ed"
+    }
+   ],
+   "receipt_sha256": "a7be2efa5c5b991dd0ebae149ab4fda303cfbce678a1346eaa7227101b0e0308",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Primitive roots for every admissible integer base"
+}

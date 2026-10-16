@@ -1,0 +1,897 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 786445,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 236590
+ },
+ "coordinate": "EN-112-000-0000-2-2026-PR-T4-UK-EX-M2-C-PH-M-0312",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Harmonic analysis and ergodic theory",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "Let $(X,\\mathcal F,\\mu)$ be an arbitrary probability space and let $T:X\\to X$ be an invertible mixing probability preserving transformation with measurable inverse.",
+     "quote_sha256": "e49eee8b42087a70dfe5ad84748eab091303bb2906c70d93ec4b0a6abe9f8e96"
+    }
+   ],
+   "query": "Product factorization for arbitrary irreversible or nonmixing processes",
+   "reason": "The main pointwise product-limit theorem assumes an invertible mixing probability preserving transformation with measurable inverse."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "For every triple of bounded measurable functions $f_1,f_2,f_3:X\\to\\mathbb C$, $$A_N(f_1,f_2,f_3)(x)\n \\longrightarrow \\prod_{j=1}^3\\int_X f_j\\,d\\mu\n \\quad\\text{for $\\mu$-almost every }x$$ as $N\\to\\infty$ through all positive integers.",
+     "quote_sha256": "6347eb37e20cf070d19b1d675e4c9113e3a4249d119336c4b39d0f4971a788cb"
+    },
+    {
+     "anchor": "proof-stmt-lem-ergodic-cesaro",
+     "quote": "No convergence rate uniform in $h$ is needed.",
+     "quote_sha256": "ab3933df827489a1aa46d842bbfba6309e9a29bb6d31f5f25ff407247a454508"
+    }
+   ],
+   "query": "Finite-sample error tolerance or a stopping time for the empirical progression average",
+   "reason": "The stated conclusion is asymptotic almost-everywhere convergence; the norm induction expressly needs no lag-uniform convergence rate."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-lem-ergodic-cesaro",
+     "quote": "On every invertible probability preserving system satisfying <a href=\"#eq:mixing\" data-reference-type=\"eqref\" data-reference=\"eq:mixing\">[eq:mixing]</a>, for every integer $r\\geq1$, every list of pairwise distinct nonzero integers $\\lambda_1,\\ldots,\\lambda_r$, and every list of bounded measurable $f_1,\\ldots,f_r:X\\to\\mathbb C$, $$\\left\\|\n \\frac1N\\sum_{n=1}^N\\prod_{j=1}^r f_j(T^{\\lambda_jn}\\,\\cdot)\n       -\\prod_{j=1}^r\\int_Xf_j\\,d\\mu\n \\right\\|_{L^2(\\mu)}\n \\longrightarrow0\\qquad(N\\to\\infty).$$",
+     "quote_sha256": "3d664bfb30b7e361257dd0cf35a7ce653687f1bf969ed0346879740eb270bc26"
+    },
+    {
+     "anchor": "eq:main-average",
+     "quote": "For bounded measurable functions $f_1,f_2,f_3:X\\to\\mathbb C$, put $$A_N(f_1,f_2,f_3)(x)\n =\\frac1N\\sum_{n=1}^N\n       f_1(T^n x)f_2(T^{2n}x)f_3(T^{3n}x),\\qquad N\\ge1.\n \\label{eq:main-average}$$",
+     "quote_sha256": "59b0d96a3e99d1de9a9dc703ea4b9cddeb3bdd35cd4ecc16f961e105df40e52a"
+    }
+   ],
+   "query": "Pointwise convergence at every list of distinct integer slopes",
+   "reason": "The distinct-slope lemma establishes norm convergence. The main pointwise theorem is stated for the specific triple progression average."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "The exceptional null set may depend on the triple of functions.",
+     "quote_sha256": "7fee4821f39374ada65484188627268ed9459848df79f0e788f68367a7ce4eda"
+    }
+   ],
+   "query": "A universal exceptional set valid for every bounded observable triple",
+   "reason": "The theorem explicitly permits dependence of the exceptional null set on the chosen functions."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-lem-row-depth",
+     "quote": "Let the root, catalog, partitions, and rows satisfy every hypothesis of Lemma 17.",
+     "quote_sha256": "f8de245996648af806482f7e049a94b11383726175cc8b5a87ec03b04b6beedf"
+    },
+    {
+     "anchor": "stmt-lem-row-depth",
+     "quote": "Choose $s_n\\in\\mathsf S$ with $s_1\\le s_2\\le\\cdots\\le s_N$, and let every row of round $n$ read the same input $F_{s_n}$.",
+     "quote_sha256": "0aa5f2a8fadc70bd30cea5bb73357f442ce72d90fe15fe6798fb137e736b2c9b"
+    }
+   ],
+   "query": "Arbitrary depth-dependent changes under an ordinary Bessel bound alone",
+   "reason": "The varying-input row estimate also requires persistent catalog structure, partition refinement, normalized block variation, and nondecreasing common reads."
+  }
+ ],
+ "family": "PM-154",
+ "id": "PM-154.4",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-mixing-triple-pointwise-limit",
+    "statement": "Let $(X,\\mathcal F,\\mu)$ be an arbitrary probability space and let $T:X\\to X$ be an invertible mixing probability preserving transformation with measurable inverse."
+   },
+   {
+    "anchor": "stmt-prop-orbit-oscillation",
+    "claim_id": "claim-smooth-orbit-oscillation",
+    "statement": "On every invertible probability preserving system, let $f_1,f_2,f_3:X\\to\\mathbb C$ be measurable with $|f_j(x)|\\leq1$ for all $x$,"
+   },
+   {
+    "anchor": "stmt-lem-ergodic-cauchy",
+    "claim_id": "claim-oscillation-forces-convergence",
+    "statement": "Let $(X,\\mathcal F,\\mu)$ be any probability space and let $Z_k:X\\to\\mathbb C$, $k\\geq0$, be measurable."
+   },
+   {
+    "anchor": "stmt-lem-ergodic-cauchy",
+    "claim_id": "claim-oscillation-forces-convergence",
+    "statement": "Suppose that $|Z_k(x)|\\leq M<\\infty$ for every $k,x$,"
+   },
+   {
+    "anchor": "stmt-lem-ergodic-cauchy",
+    "claim_id": "claim-oscillation-forces-convergence",
+    "statement": "and that there is $C<\\infty$ such that, for every integer $w\\geq1$ and every deterministic list $0\\leq k_1<\\cdots<k_{w+1}$, $$\\sum_{i=1}^w\\int_X\n   \\max_{k_i\\leq\\ell\\leq k_{i+1}}|Z_\\ell-Z_{k_i}|\\,d\\mu\n       \\leq C\\sqrt w.$$"
+   },
+   {
+    "anchor": "stmt-lem-ergodic-vdc",
+    "claim_id": "claim-hilbert-correlation-criterion",
+    "statement": "Let $\\mathcal H$ be a complex Hilbert space, with inner product linear in the first variable."
+   },
+   {
+    "anchor": "stmt-lem-ergodic-vdc",
+    "claim_id": "claim-hilbert-correlation-criterion",
+    "statement": "Let $u_n\\in\\mathcal H$, $n\\geq1$, satisfy $\\|u_n\\|\\leq M<\\infty$."
+   },
+   {
+    "anchor": "stmt-lem-ergodic-vdc",
+    "claim_id": "claim-hilbert-correlation-criterion",
+    "statement": "Suppose that, for each fixed integer $h\\geq1$, $$\\gamma_h=\\lim_{N\\to\\infty}\n       \\frac1N\\sum_{n=1}^{N-h}\\langle u_{n+h},u_n\\rangle$$ exists, with a sum over an empty range interpreted as zero."
+   },
+   {
+    "anchor": "stmt-lem-ergodic-vdc",
+    "claim_id": "claim-hilbert-correlation-criterion",
+    "statement": "If $\\gamma_h\\to0$ as $h\\to\\infty$,"
+   },
+   {
+    "anchor": "stmt-lem-ergodic-cesaro",
+    "claim_id": "claim-distinct-slopes-norm-limit",
+    "statement": "On every invertible probability preserving system satisfying [eq:mixing],"
+   },
+   {
+    "anchor": "stmt-lem-ergodic-cesaro",
+    "claim_id": "claim-distinct-slopes-norm-limit",
+    "statement": "every list of pairwise distinct nonzero integers $\\lambda_1,\\ldots,\\lambda_r$,"
+   },
+   {
+    "anchor": "stmt-lem-ergodic-cesaro",
+    "claim_id": "claim-distinct-slopes-norm-limit",
+    "statement": "and every list of bounded measurable $f_1,\\ldots,f_r:X\\to\\mathbb C$,"
+   },
+   {
+    "anchor": "stmt-lem-ergodic-smooth-norm",
+    "claim_id": "claim-smooth-weight-norm-limit",
+    "statement": "On every invertible probability preserving system satisfying <a href=\"#eq:mixing\" data-reference-type=\"eqref\" data-reference=\"eq:mixing\">[eq:mixing]</a>, fix an integer $r\\geq1$, pairwise distinct nonzero integers $\\lambda_1,\\ldots,\\lambda_r$, and bounded measurable $f_1,\\ldots,f_r:X\\to\\mathbb C$."
+   },
+   {
+    "anchor": "stmt-lem-ergodic-smooth-norm",
+    "claim_id": "claim-smooth-weight-norm-limit",
+    "statement": "For every $\\varphi\\in C_c^1(\\mathbb R;\\mathbb C)$ with $\\int_{\\mathbb R}\\varphi=1$,"
+   },
+   {
+    "anchor": "stmt-lem-ergodic-moments",
+    "claim_id": "claim-signed-moment-approximation",
+    "statement": "For every $c\\in[1,2]$ and every $\\epsilon>0$,"
+   },
+   {
+    "anchor": "stmt-thm-depth-local",
+    "claim_id": "claim-depth-varying-local-bound",
+    "statement": "Fix the admissibility parameters $c_0,C_0$."
+   },
+   {
+    "anchor": "stmt-thm-depth-local",
+    "claim_id": "claim-depth-varying-local-bound",
+    "statement": "Let $J$ be an interval in any dyadic lattice, let $\\mathcal T$ be a finite rooted tree below $J$, and let $d$ be its largest depth in $J$."
+   },
+   {
+    "anchor": "stmt-thm-depth-local",
+    "claim_id": "claim-depth-varying-local-bound",
+    "statement": "Let $\\mathcal I\\subseteq\\mathcal T$, with an admissible kernel on each of its intervals."
+   },
+   {
+    "anchor": "stmt-thm-depth-local",
+    "claim_id": "claim-depth-varying-local-bound",
+    "statement": "For each $j\\in\\{0,1,2,3\\}$, let $f_{j,s}:J\\to\\mathbb C$, $0\\le s\\le d$, be measurable,"
+   },
+   {
+    "anchor": "stmt-thm-depth-local",
+    "claim_id": "claim-depth-varying-local-bound",
+    "statement": "Suppose that $\\{0,\\ldots,d\\}$ is partitioned into $W_j\\ge1$ deterministic nonempty consecutive blocks and that, on every block $B$, $$\\mathcal V_B(f_j)(y)\\le W_j^{-1/2}\n \\quad\\text{for almost every }y\\in J.$$"
+   },
+   {
+    "anchor": "stmt-thm-depth-local",
+    "claim_id": "claim-depth-varying-local-bound",
+    "statement": "Extend the inputs by zero outside $J$."
+   },
+   {
+    "anchor": "stmt-lem-transfer-kernel",
+    "claim_id": "claim-exact-scale-difference-kernel",
+    "statement": "For every averaging profile $\\varphi$ in Definition 2,"
+   },
+   {
+    "anchor": "stmt-lem-transfer-kernel",
+    "claim_id": "claim-exact-scale-difference-kernel",
+    "statement": "For every $a>0$ and every interval $I$ of length $r=D_\\varphi a$, with midpoint $m_I$,"
+   },
+   {
+    "anchor": "stmt-lem-transfer-continuous",
+    "claim_id": "claim-continuous-translation-test",
+    "statement": "For the fixed profile $\\varphi$ and $D=D_\\varphi$,"
+   },
+   {
+    "anchor": "stmt-lem-transfer-continuous",
+    "claim_id": "claim-continuous-translation-test",
+    "statement": "Let $k_-\\leq k_+$ be integers, and partition $\\{k_-,\\ldots,k_+\\}$ into $w\\geq1$ deterministic nonempty consecutive blocks."
+   },
+   {
+    "anchor": "stmt-lem-transfer-continuous",
+    "claim_id": "claim-continuous-translation-test",
+    "statement": "Let $K\\subset\\mathbb R$ be an interval of length $L>0$."
+   },
+   {
+    "anchor": "stmt-lem-transfer-continuous",
+    "claim_id": "claim-continuous-translation-test",
+    "statement": "Let $f_1,f_2,f_3:\\mathbb R\\to\\mathbb C$ and $f_{0,k}:\\mathbb R\\to\\mathbb C$, $k_-\\leq k\\leq k_+$, be measurable and vanish almost everywhere outside $K$."
+   },
+   {
+    "anchor": "stmt-lem-transfer-continuous",
+    "claim_id": "claim-continuous-translation-test",
+    "statement": "Suppose $|f_j|\\leq1$ almost everywhere for $j=1,2,3$, and $\\mathcal V_B(f_0)(x)\\leq w^{-1/2}$ for almost every $x\\in\\mathbb R$ and every block $B$."
+   },
+   {
+    "anchor": "stmt-lem-transfer-discrete",
+    "claim_id": "claim-integer-sequence-test",
+    "statement": "For the fixed profile $\\varphi$ and $D=D_\\varphi$,"
+   },
+   {
+    "anchor": "stmt-lem-transfer-discrete",
+    "claim_id": "claim-integer-sequence-test",
+    "statement": "Let $0\\leq k_-\\leq k_+$ be integers, and partition $\\{k_-,\\ldots,k_+\\}$ into $w\\geq1$ deterministic nonempty consecutive blocks."
+   },
+   {
+    "anchor": "stmt-lem-transfer-discrete",
+    "claim_id": "claim-integer-sequence-test",
+    "statement": "Let $\\mathcal K=\\{q,\\ldots,q+L-1\\}$, with $q\\in\\mathbb Z$ and integer $L\\geq1$."
+   },
+   {
+    "anchor": "stmt-lem-transfer-discrete",
+    "claim_id": "claim-integer-sequence-test",
+    "statement": "Suppose $f_1,f_2,f_3:\\mathbb Z\\to\\mathbb C$ and $f_{0,k}:\\mathbb Z\\to\\mathbb C$, $k_-\\leq k\\leq k_+$, are supported in $\\mathcal K$, with $|f_j(m)|\\leq1$ for every $m$ and $j=1,2,3$."
+   },
+   {
+    "anchor": "stmt-lem-transfer-discrete",
+    "claim_id": "claim-integer-sequence-test",
+    "statement": "Suppose also that $\\mathcal V_B(f_0)(m)\\leq w^{-1/2}$ for every $m\\in\\mathbb Z$ and every block."
+   },
+   {
+    "anchor": "stmt-lem-depth-input-size",
+    "claim_id": "claim-normalized-input-size-variation",
+    "statement": "Assume Equation [eq:row-input-normalization]."
+   },
+   {
+    "anchor": "stmt-lem-depth-input-size",
+    "claim_id": "claim-normalized-input-size-variation",
+    "statement": "Let $\\mathcal J$ be a finite collection of pairs $[r,t]$ with $r,t\\in\\mathsf S$ and $r\\le t$."
+   },
+   {
+    "anchor": "eq:row-catalog-budget",
+    "claim_id": "claim-private-catalog-comparison",
+    "statement": "We assume that $D\\ge2$ and $$\\|\\Phi_v\\|_{L^\\infty(J_v;\\mathcal H)}\\le D,\\qquad\n |\\gamma_v|\\ge D^{-1},\\qquad\n \\sum_{v\\in\\mathcal V}\\mathbf1_{J_v}(y)\\le D\n \\quad\\hbox{for almost every }y\\in R.\n \\label{eq:row-catalog-budget}$$"
+   },
+   {
+    "anchor": "stmt-lem-row-maximal",
+    "claim_id": "claim-catalog-row-maximal-bound",
+    "statement": "Use a root and catalog satisfying Equation [eq:row-catalog-budget]."
+   },
+   {
+    "anchor": "stmt-lem-row-maximal",
+    "claim_id": "claim-catalog-row-maximal-bound",
+    "statement": "Let $N\\ge1$, and for $1\\le n\\le N$ let $\\pi_n$ and $\\sigma_n$ be finite dyadic partitions of $R$ such that $$\\sigma_n\\text{ refines }\\pi_n,\\qquad\n \\pi_{n+1}\\text{ refines }\\sigma_n\\quad(1\\le n<N).$$"
+   },
+   {
+    "anchor": "stmt-lem-row-maximal",
+    "claim_id": "claim-catalog-row-maximal-bound",
+    "statement": "Let $\\mathcal R_1,\\ldots,\\mathcal R_N$ be pairwise disjoint finite row index sets, with union $\\mathcal R$."
+   },
+   {
+    "anchor": "stmt-lem-row-maximal",
+    "claim_id": "claim-catalog-row-maximal-bound",
+    "statement": "For every $\\nu\\in\\mathcal R_n$, let $\\mathcal Y_\\nu$ be a Hilbert space, let $Q_\\nu\\in\\pi_n$, and let $A_\\nu:L^2(R;\\mathcal H)\\to\\mathcal Y_\\nu$ be bounded and linear."
+   },
+   {
+    "anchor": "stmt-lem-row-maximal",
+    "claim_id": "claim-catalog-row-maximal-bound",
+    "statement": "The whole row has support $Q_\\nu$: $A_\\nu=A_\\nu\\mathbf1_{Q_\\nu}$. For every $K\\in\\sigma_n$ and every $c\\in\\mathcal Y_\\nu$, there are spatially constant coefficients $a_{\\nu,K,v}(c)$ such that, in $L^2(R;\\mathcal H)$, $$\\mathbf1_K A_\\nu^*c\n           =\\mathbf1_K\\sum_{v\\in\\mathcal V(K)}\n                            a_{\\nu,K,v}(c)\\Phi_v.$$ There is no asserted uniform bound on these coefficients."
+   },
+   {
+    "anchor": "stmt-lem-row-maximal",
+    "claim_id": "claim-catalog-row-maximal-bound",
+    "statement": "For some $B\\ge0$ the original rows satisfy the joint operator estimate $$\\sum_{\\nu\\in\\mathcal R}\\|A_\\nu z\\|_{\\mathcal Y_\\nu}^2\n           \\le B^2\\|z\\|_{L^2(R;\\mathcal H)}^2\n           \\qquad(z\\in L^2(R;\\mathcal H)).$$"
+   },
+   {
+    "anchor": "stmt-lem-row-depth",
+    "claim_id": "claim-depth-varying-row-bound",
+    "statement": "Let the root, catalog, partitions, and rows satisfy every hypothesis of Lemma 17."
+   },
+   {
+    "anchor": "stmt-lem-row-depth",
+    "claim_id": "claim-depth-varying-row-bound",
+    "statement": "Let $(F_s)_{s\\in\\mathsf S}$ satisfy Equation <a href=\"#eq:row-input-normalization\" data-reference-type=\"eqref\" data-reference=\"eq:row-input-normalization\">[eq:row-input-normalization]</a> on $R$."
+   },
+   {
+    "anchor": "stmt-lem-row-depth",
+    "claim_id": "claim-depth-varying-row-bound",
+    "statement": "Choose $s_n\\in\\mathsf S$ with $s_1\\le s_2\\le\\cdots\\le s_N$, and let every row of round $n$ read the same input $F_{s_n}$."
+   },
+   {
+    "anchor": "stmt-cor-row-projections",
+    "claim_id": "claim-inherited-projection-increments",
+    "statement": "Use the catalog of Lemma 16."
+   },
+   {
+    "anchor": "stmt-cor-row-projections",
+    "claim_id": "claim-inherited-projection-increments",
+    "statement": "On a finite interval of integers $h\\ge s_R$, let $\\mathcal P_h$ be the full partition of $R$ into cells of depth $h$."
+   },
+   {
+    "anchor": "stmt-cor-row-projections",
+    "claim_id": "claim-inherited-projection-increments",
+    "statement": "On each $Q\\in\\mathcal P_h$, let $P_{h,Q}$ be the orthogonal projection in $L^2(Q;\\mathcal H)$ onto constant-coefficient combinations of a subset $\\mathcal M_h(Q)\\subset\\mathcal V(Q)$."
+   },
+   {
+    "anchor": "stmt-cor-row-projections",
+    "claim_id": "claim-inherited-projection-increments",
+    "statement": "Assume inheritance: if $Q'\\in\\mathcal P_{h+1}$ is contained in $Q$, then $\\mathcal M_h(Q)\\subset\\mathcal M_{h+1}(Q')$."
+   },
+   {
+    "anchor": "stmt-cor-row-projections",
+    "claim_id": "claim-inherited-projection-increments",
+    "statement": "Suppose $(F_s)_{s\\in\\mathsf S}$ satisfies Equation <a href=\"#eq:row-input-normalization\" data-reference-type=\"eqref\" data-reference=\"eq:row-input-normalization\">[eq:row-input-normalization]</a>."
+   },
+   {
+    "anchor": "stmt-lem-smooth-depth",
+    "claim_id": "claim-smooth-rows-on-depth-inputs",
+    "statement": "Let $R$ be a finite dyadic root and let $\\mathcal N$ be a finite set of carrier labels."
+   },
+   {
+    "anchor": "stmt-lem-smooth-depth",
+    "claim_id": "claim-smooth-rows-on-depth-inputs",
+    "statement": "For each $\\nu\\in\\mathcal N$ fix one measurable function $m_\\nu:R\\to\\mathbb C$ with $\\|m_\\nu\\|_\\infty\\le1$."
+   },
+   {
+    "anchor": "stmt-lem-smooth-depth",
+    "claim_id": "claim-smooth-rows-on-depth-inputs",
+    "statement": "This function is the same for every interval using the label $\\nu$."
+   },
+   {
+    "anchor": "stmt-lem-smooth-depth",
+    "claim_id": "claim-smooth-rows-on-depth-inputs",
+    "statement": "Let $\\mathcal E$ be a finite set of pairs $(I,\\nu)$, where $I\\subset R$ is a dyadic interval of depth $s(I)$ and $\\nu\\in\\mathcal N$."
+   },
+   {
+    "anchor": "stmt-lem-smooth-depth",
+    "claim_id": "claim-smooth-rows-on-depth-inputs",
+    "statement": "For each selected pair, let $\\omega_{I,\\nu}\\in C^1(\\overline I)$ satisfy $$\\int_I\\omega_{I,\\nu}(y)\\,dy=0,\\qquad\n \\|\\omega_{I,\\nu}\\|_\\infty+\n       |I|\\|\\omega_{I,\\nu}'\\|_\\infty\\le A$$ for one $A\\ge0$."
+   },
+   {
+    "anchor": "stmt-lem-smooth-depth",
+    "claim_id": "claim-smooth-rows-on-depth-inputs",
+    "statement": "Suppose the selected physical rows $$\\mathcal W_{I,\\nu}f\n   =|I|^{-1/2}\\int_I m_\\nu(y)\\omega_{I,\\nu}(y)f(y)\\,dy$$ satisfy, for one $B_H\\ge0$, $$\\sum_{(I,\\nu)\\in\\mathcal E}|\\mathcal W_{I,\\nu}f|^2\n \\le B_H^2\\|f\\|_{L^2(R)}^2\\qquad(f\\in L^2(R)).$$"
+   },
+   {
+    "anchor": "stmt-lem-smooth-depth",
+    "claim_id": "claim-smooth-rows-on-depth-inputs",
+    "statement": "Let the scalar functions $(f_s)_{s\\in\\mathsf S}$ satisfy Equation <a href=\"#eq:row-input-normalization\" data-reference-type=\"eqref\" data-reference=\"eq:row-input-normalization\">[eq:row-input-normalization]</a>, with absolute values in place of Hilbert norms, and assume that every $s(I)$ belongs to $\\mathsf S$."
+   },
+   {
+    "anchor": "stmt-lem-hbase-trial",
+    "claim_id": "claim-capped-insertion-packing",
+    "statement": "Let $R$ be an attempt root with a restricted normalized input schedule $F_s$."
+   },
+   {
+    "anchor": "stmt-lem-hbase-trial",
+    "claim_id": "claim-capped-insertion-packing",
+    "statement": "Let the candidate request cells belong to a fixed finite original request tree below $R$."
+   },
+   {
+    "anchor": "stmt-lem-hbase-trial",
+    "claim_id": "claim-capped-insertion-packing",
+    "statement": "Fix $0<\\rho\\le1$, $D_0\\ge2$, and an integer cap $T\\ge1$."
+   },
+   {
+    "anchor": "stmt-lem-hbase-trial",
+    "claim_id": "claim-capped-insertion-packing",
+    "statement": "Process candidates in nondecreasing request-cell depth, allowing repetitions at one cell."
+   },
+   {
+    "anchor": "stmt-lem-hbase-trial",
+    "claim_id": "claim-capped-insertion-packing",
+    "statement": "For each successful request $v$ at $I_v$, suppose there is a set $\\mathcal R_v$ of charged row indices, with these sets pairwise disjoint, such that $$\\sum_{\\nu\\in\\mathcal R_v}\n       \\|\\Delta_\\nu F_{s(\\nu)}\\|_2^2\n \\ge c\\rho^2|I_v|.$$"
+   },
+   {
+    "anchor": "stmt-lem-hbase-trial",
+    "claim_id": "claim-capped-insertion-packing",
+    "statement": "Assume all charged rows are a Bessel-norm-one subfamily of one realized finite nested sequence of full-partition projections and satisfy every hypothesis of Lemma <a href=\"#lem:row-depth\" data-reference-type=\"ref\" data-reference=\"lem:row-depth\">18</a>."
+   },
+   {
+    "anchor": "stmt-lem-hbase-trial",
+    "claim_id": "claim-capped-insertion-packing",
+    "statement": "Suppose its completed catalog has budget $$D_T\\le C D_0(T+1)^C,$$ where $D_0$ includes all predetermined columns, including their future admissions on this attempt."
+   },
+   {
+    "anchor": "stmt-lem-hbase-x-output",
+    "claim_id": "claim-two-earliest-increments",
+    "statement": "On each original summation cell $I$, put $s=s(I)$, its original spatial depth in $J$."
+   },
+   {
+    "anchor": "stmt-lem-hbase-x-output",
+    "claim_id": "claim-two-earliest-increments",
+    "statement": "At a finite terminal level $n$, write $g_{e,n,I}$ for the last fit in slot $e$ at or before $n$, or zero if there is none, and put $r_{e,n,I}=F_{e,s}-g_{e,n,I}$."
+   },
+   {
+    "anchor": "stmt-lem-hbase-x-output",
+    "claim_id": "claim-two-earliest-increments",
+    "statement": "For $u<t$ with $\\iota(u)=i\\ne j=\\iota(t)$, let $a,b$ be the other slots"
+   },
+   {
+    "anchor": "stmt-lem-hbase-scale",
+    "claim_id": "claim-separated-scale-sum",
+    "statement": "For the fixed separated term above, let both opponents be admissible on $K$ with parameters $D_{\\rm h},L$."
+   },
+   {
+    "anchor": "stmt-lem-hbase-scale",
+    "claim_id": "claim-separated-scale-sum",
+    "statement": "For $m\\in\\mathbb Z_{\\ge0}$, let $\\mathcal U_m\\subseteq\\mathcal U$ consist of any selected cells on which $e^{-m-1}<A_{|I|}\\le e^{-m}$."
+   },
+   {
+    "anchor": "stmt-cor-hbase-predictor-list",
+    "claim_id": "claim-opponent-independent-predictor-list",
+    "statement": "Fix the two bounded scalar atoms $\\varphi_i,\\varphi_j$ on $J'$, of complexity at most $H_{\\rm low}$, and let $B\\ge1$."
+   },
+   {
+    "anchor": "stmt-lem-hbase-delayed",
+    "claim_id": "claim-delayed-predictor-replacement",
+    "statement": "Use the fixed list and a dyadic $K\\subseteq J'$ from Corollary 24."
+   },
+   {
+    "anchor": "stmt-lem-hbase-delayed",
+    "claim_id": "claim-delayed-predictor-replacement",
+    "statement": "Fix $\\alpha\\in\\mathfrak A$ and a selected collection $\\mathcal U$ below $K$ on which $|\\lambda_\\alpha||I|^2\\le D_{\\rm pred}$."
+   },
+   {
+    "anchor": "stmt-lem-hbase-delayed",
+    "claim_id": "claim-delayed-predictor-replacement",
+    "statement": "Let $K_0\\in\\mathbb Z_{\\ge0}$ and $0<\\epsilon\\le1$."
+   },
+   {
+    "anchor": "stmt-lem-hbase-delayed",
+    "claim_id": "claim-delayed-predictor-replacement",
+    "statement": "Suppose an inherited family $P_{a,h}$ on the full partitions of $K$, with budget $D_{\\rm h}$, contains the same predictor $$\\Phi_v=(\\overline{\\psi_{a,\\alpha}},\\sqrt\\epsilon\\,\\mathbf e_v)$$ on every use cell and all its continued descendants."
+   },
+   {
+    "anchor": "stmt-lem-hbase-delayed",
+    "claim_id": "claim-delayed-predictor-replacement",
+    "statement": "Let $z_{b,I}$ be an admissible opposing sequence on $K$."
+   },
+   {
+    "anchor": "stmt-prop-hbase-data",
+    "claim_id": "claim-base-data-active-pattern-reduction",
+    "statement": "Fix the constructed tuple with later accuracy $t$, put $k=k_t$, and use its final segments $R\\in\\mathcal R_{\\rm base}$ and original owner sets $\\mathcal I_R$ from Equation [eq:hbase-high-replacement]."
+   },
+   {
+    "anchor": "stmt-prop-hbase-data",
+    "claim_id": "claim-base-data-active-pattern-reduction",
+    "statement": "For $t\\ge12$,"
+   },
+   {
+    "anchor": "stmt-lem-h-certified-variation",
+    "claim_id": "claim-certified-endpoint-variation",
+    "statement": "For the full endpoint outputs $Z_{G,s}=\\overline L_{G,s}\\mathcal B_sB_s$ just defined, let $\\mathcal J$ be a common finite collection of depth intervals $[r,t]$ with edge-overlap multiplicity at most $a$."
+   },
+   {
+    "anchor": "stmt-lem-h-certified-variation",
+    "claim_id": "claim-certified-endpoint-variation",
+    "statement": "For each $G,[r,t]$, let $E_{G,r,t}$ be a union of $t$-cells having a downstream actual-use certificate for $G$."
+   },
+   {
+    "anchor": "stmt-lem-h-certified-variation",
+    "claim_id": "claim-certified-endpoint-variation",
+    "statement": "For one shared output $Z_s^{\\rm sh}$ in the stated source class, let $E_{r,t}$ be the union of the required $t$-cells across all its uses."
+   },
+   {
+    "anchor": "stmt-cor-h-transfer-endpoint-variation",
+    "claim_id": "claim-transfer-endpoint-histories",
+    "statement": "Fix one source search leaf, one step in the *Outgoing filters and near-band defects* Lemma of (OpenAI 2026, sec. 6) [[H](#ref-H)], and one choice in that step’s expansion of the complementary factors."
+   },
+   {
+    "anchor": "stmt-cor-h-transfer-endpoint-variation",
+    "claim_id": "claim-transfer-endpoint-histories",
+    "statement": "All endpoint evaluations use the complete inherited families, with coupled pads at compared depths, and may occur when the group is not current."
+   },
+   {
+    "anchor": "stmt-lem-h-frozen-composition",
+    "claim_id": "claim-frozen-mode-composition",
+    "statement": "Fix a slot, one search leaf and its color, and a prospective choice of the offsets for its groups, with the corresponding block-independent maps $\\mathcal R_{l,G}$."
+   },
+   {
+    "anchor": "stmt-lem-h-frozen-composition",
+    "claim_id": "claim-frozen-mode-composition",
+    "statement": "For every group $G$ of that color, let $P_e$ be finitely many local mode projections: $P_e$ is the orthogonal projection in $L^2(J_e;\\mathcal H_{\\rm mode})$ onto constant-coefficient combinations of the restrictions of its available augmented modes."
+   },
+   {
+    "anchor": "stmt-lem-h-frozen-composition",
+    "claim_id": "claim-frozen-mode-composition",
+    "statement": "Suppose these rows have joint squared Bessel bound at most $G_0$ in each group."
+   },
+   {
+    "anchor": "stmt-lem-h-frozen-composition",
+    "claim_id": "claim-frozen-mode-composition",
+    "statement": "Suppose $J_e\\subseteq U_e$, where $U_e$ is a main endpoint cell with a downstream actual-use certificate and is usable for each nonzero pad range contributing to $\\overline L_{l,G,U_e}$."
+   },
+   {
+    "anchor": "stmt-lem-h-frozen-composition",
+    "claim_id": "claim-frozen-mode-composition",
+    "statement": "The row’s mode labels are available already at $U_e$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Pointwise product limit for triple progression averages",
+    "evidence": [
+     {
+      "anchor": "sec:ergodic",
+      "quote": "The oscillation estimate forces almost everywhere convergence on every invertible probability preserving system.",
+      "quote_sha256": "2ca83854d2f9a2784e17dac39c2c270318dcae265e5f5e1d2714943b223b9da8"
+     },
+     {
+      "anchor": "sec:ergodic",
+      "quote": "### Smooth orbit averages and the pointwise theorem\n\nThis section deduces Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> from a finite oscillation estimate for smooth orbit averages.",
+      "quote_sha256": "86795bc5c8fdfdc95512e6f19d432ed974aea16cb9949fbbf5f55b7b13c553e7"
+     }
+    ],
+    "requires_concepts": [
+     "Invertible probability preserving systems",
+     "Mixing",
+     "Finite-block oscillation",
+     "Smooth weighted norm convergence",
+     "Signed moment approximation"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Depth-varying local-form estimate",
+    "evidence": [
+     {
+      "anchor": "sec:base",
+      "quote": "The scalar analytic and finite combinatorial estimates remain those of H.",
+      "quote_sha256": "39205714078ce2a412c8fdc3568b93b5fed3723be4b2682ab909c7c1ccb90273"
+     },
+     {
+      "anchor": "sec:base",
+      "quote": "### The base reduction with varying depth inputs\n\nWe prove Theorem <a href=\"#thm:depth-local\" data-reference-type=\"ref\" data-reference=\"thm:depth-local\">11</a> by adapting the local-form construction of (OpenAI 2026, secs.",
+      "quote_sha256": "cdb787d8025f305477282be0c3a05c531f293e453132f07cdb0be6494c8f68b4"
+     }
+    ],
+    "requires_concepts": [
+     "Admissible local kernels",
+     "Persistent private columns",
+     "Ordinary Bessel bounds",
+     "Nondecreasing input reads",
+     "Inherited orthogonal projections",
+     "Companion fixed-input local estimates"
+    ],
+    "supporting_pm_ids": [
+     "PM-086.1"
+    ]
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-mixing-triple-pointwise-limit",
+   "exact_statement": "Let $(X,\\mathcal F,\\mu)$ be an arbitrary probability space and let $T:X\\to X$ be an invertible mixing probability preserving transformation with measurable inverse. For every triple of bounded measurable functions $f_1,f_2,f_3:X\\to\\mathbb C$, $$A_N(f_1,f_2,f_3)(x)\n \\longrightarrow \\prod_{j=1}^3\\int_X f_j\\,d\\mu\n \\quad\\text{for $\\mu$-almost every }x$$ as $N\\to\\infty$ through all positive integers. The exceptional null set may depend on the triple of functions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-smooth-orbit-oscillation",
+   "exact_statement": "For every averaging profile $\\varphi$, there is a constant $C_\\varphi<\\infty$ with the following property. On every invertible probability preserving system, let $f_1,f_2,f_3:X\\to\\mathbb C$ be measurable with $|f_j(x)|\\leq1$ for all $x$, and define $$V_k^\\varphi(x)=\\sum_{n\\in\\mathbb Z}\\varphi_{2^k}(n)\n                 \\prod_{j=1}^3f_j(T^{jn}x),\n       \\qquad k=0,1,2,\\ldots .$$ For every integer $w\\geq1$ and every deterministic list of integers $0\\leq k_1<\\cdots<k_{w+1}$, $$\\sum_{i=1}^w\\int_X\n   \\max_{k_i\\leq\\ell\\leq k_{i+1}}\n      |V_\\ell^\\varphi-V_{k_i}^\\varphi|\\,d\\mu\n       \\leq C_\\varphi\\sqrt w.\n \\label{eq:orbit-oscillation}$$ The constant is independent of the system, the inputs, $w$, and the endpoints.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-orbit-oscillation"
+  },
+  {
+   "claim_id": "claim-oscillation-forces-convergence",
+   "exact_statement": "Let $(X,\\mathcal F,\\mu)$ be any probability space and let $Z_k:X\\to\\mathbb C$, $k\\geq0$, be measurable. Suppose that $|Z_k(x)|\\leq M<\\infty$ for every $k,x$, and that there is $C<\\infty$ such that, for every integer $w\\geq1$ and every deterministic list $0\\leq k_1<\\cdots<k_{w+1}$, $$\\sum_{i=1}^w\\int_X\n   \\max_{k_i\\leq\\ell\\leq k_{i+1}}|Z_\\ell-Z_{k_i}|\\,d\\mu\n       \\leq C\\sqrt w.$$ Then $Z_k(x)$ converges in $\\mathbb C$ on a measurable conull set.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-ergodic-cauchy"
+  },
+  {
+   "claim_id": "claim-hilbert-correlation-criterion",
+   "exact_statement": "Let $\\mathcal H$ be a complex Hilbert space, with inner product linear in the first variable. Let $u_n\\in\\mathcal H$, $n\\geq1$, satisfy $\\|u_n\\|\\leq M<\\infty$. Suppose that, for each fixed integer $h\\geq1$, $$\\gamma_h=\\lim_{N\\to\\infty}\n       \\frac1N\\sum_{n=1}^{N-h}\\langle u_{n+h},u_n\\rangle$$ exists, with a sum over an empty range interpreted as zero. If $\\gamma_h\\to0$ as $h\\to\\infty$, then $\\|N^{-1}\\sum_{n=1}^Nu_n\\|\\to0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-ergodic-vdc"
+  },
+  {
+   "claim_id": "claim-distinct-slopes-norm-limit",
+   "exact_statement": "On every invertible probability preserving system satisfying <a href=\"#eq:mixing\" data-reference-type=\"eqref\" data-reference=\"eq:mixing\">[eq:mixing]</a>, for every integer $r\\geq1$, every list of pairwise distinct nonzero integers $\\lambda_1,\\ldots,\\lambda_r$, and every list of bounded measurable $f_1,\\ldots,f_r:X\\to\\mathbb C$, $$\\left\\|\n \\frac1N\\sum_{n=1}^N\\prod_{j=1}^r f_j(T^{\\lambda_jn}\\,\\cdot)\n       -\\prod_{j=1}^r\\int_Xf_j\\,d\\mu\n \\right\\|_{L^2(\\mu)}\n \\longrightarrow0\\qquad(N\\to\\infty).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-ergodic-cesaro"
+  },
+  {
+   "claim_id": "claim-smooth-weight-norm-limit",
+   "exact_statement": "On every invertible probability preserving system satisfying <a href=\"#eq:mixing\" data-reference-type=\"eqref\" data-reference=\"eq:mixing\">[eq:mixing]</a>, fix an integer $r\\geq1$, pairwise distinct nonzero integers $\\lambda_1,\\ldots,\\lambda_r$, and bounded measurable $f_1,\\ldots,f_r:X\\to\\mathbb C$. Set $$F_n=\\prod_{j=1}^r f_j(T^{\\lambda_jn}\\,\\cdot),\\qquad\n p=\\prod_{j=1}^r\\int_Xf_j\\,d\\mu,\\qquad n\\in\\mathbb Z.$$ For every $\\varphi\\in C_c^1(\\mathbb R;\\mathbb C)$ with $\\int_{\\mathbb R}\\varphi=1$, $$\\left\\|\\sum_{n\\in\\mathbb Z}a^{-1}\\varphi(n/a)F_n-p\\right\\|_2\n       \\longrightarrow0\\qquad(a\\to\\infty,\\ a\\geq1).$$ In particular the conclusion holds for every averaging profile.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-ergodic-smooth-norm"
+  },
+  {
+   "claim_id": "claim-compact-gevrey-bump",
+   "exact_statement": "There is a real nonnegative $\\rho\\in C_c^\\infty(\\mathbb R)$, supported in $[-1,1]$, with integral $1$, whose derivatives obey a bound of the form <a href=\"#eq:profile-derivatives\" data-reference-type=\"eqref\" data-reference=\"eq:profile-derivatives\">[eq:profile-derivatives]</a> for some constant $G\\geq1$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-ergodic-bump"
+  },
+  {
+   "claim_id": "claim-signed-moment-approximation",
+   "exact_statement": "For every $c\\in[1,2]$ and every $\\epsilon>0$, there is an averaging profile $\\varphi$ with $$\\|\\varphi-h_c\\|_{L^1(\\mathbb R)}<\\epsilon,\\qquad\n h_c(t)=c^{-1}\\mathbf 1_{(0,c]}(t).$$ The support and derivative constant may depend on $c,\\epsilon$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-ergodic-moments"
+  },
+  {
+   "claim_id": "claim-depth-varying-local-bound",
+   "exact_statement": "Fix the admissibility parameters $c_0,C_0$. Let $J$ be an interval in any dyadic lattice, let $\\mathcal T$ be a finite rooted tree below $J$, and let $d$ be its largest depth in $J$. Let $\\mathcal I\\subseteq\\mathcal T$, with an admissible kernel on each of its intervals. For each $j\\in\\{0,1,2,3\\}$, let $f_{j,s}:J\\to\\mathbb C$, $0\\le s\\le d$, be measurable, and write $f_j=(f_{j,s})_{s=0}^d$. Suppose that $\\{0,\\ldots,d\\}$ is partitioned into $W_j\\ge1$ deterministic nonempty consecutive blocks and that, on every block $B$, $$\\mathcal V_B(f_j)(y)\\le W_j^{-1/2}\n \\quad\\text{for almost every }y\\in J.$$ The four partitions may differ. Extend the inputs by zero outside $J$. Then $$\\sum_{I\\in\\mathcal I}|I|\n  \\bigl|H_I(f_{0,s(I)},f_{1,s(I)},f_{2,s(I)},f_{3,s(I)})\\bigr|\n \\le C_{\\mathrm{loc}}(c_0,C_0)|J|.\n \\label{eq:depth-local}$$ The constant is independent of the lattice, root, tree, kernels, depth range, blocks, and their numbers.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-depth-local"
+  },
+  {
+   "claim_id": "claim-exact-scale-difference-kernel",
+   "exact_statement": "For every averaging profile $\\varphi$ in Definition <a href=\"#def:averaging-profile\" data-reference-type=\"ref\" data-reference=\"def:averaging-profile\">2</a>, there are a dyadic integer $D_\\varphi=2^d$, $d\\in\\mathbb Z_{\\geq0}$, a constant $C_{0,\\varphi}\\geq1$, and $\\mathcal W_\\varphi\\in C_c^\\infty(\\mathbb R^2;\\mathbb R)$ such that the following holds. For every $a>0$ and every interval $I$ of length $r=D_\\varphi a$, with midpoint $m_I$, the kernel $$w_I(x,t)=\\mathcal W_\\varphi\\left(\\frac{x-m_I}{r},\\frac{t}{r}\\right)$$ is admissible with $c_0=1/8$ and $C_0=C_{0,\\varphi}$. Moreover, for every $t\\in\\mathbb R$, $$\\frac1r\\int_{\\mathbb R}\\mathcal W_\\varphi(z,t/r)\\,dz\n    =\\varphi_{2a}(t)-\\varphi_a(t).\n \\label{eq:transfer-kernel-normalization}$$ The parameters are fixed once $\\varphi$ is fixed.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-transfer-kernel"
+  },
+  {
+   "claim_id": "claim-continuous-translation-test",
+   "exact_statement": "For the fixed profile $\\varphi$ and $D=D_\\varphi$, there is $C_\\varphi^{\\mathrm c}<\\infty$ with the following property. Let $k_-\\leq k_+$ be integers, and partition $\\{k_-,\\ldots,k_+\\}$ into $w\\geq1$ deterministic nonempty consecutive blocks. Let $K\\subset\\mathbb R$ be an interval of length $L>0$. Let $f_1,f_2,f_3:\\mathbb R\\to\\mathbb C$ and $f_{0,k}:\\mathbb R\\to\\mathbb C$, $k_-\\leq k\\leq k_+$, be measurable and vanish almost everywhere outside $K$. Suppose $|f_j|\\leq1$ almost everywhere for $j=1,2,3$, and $\\mathcal V_B(f_0)(x)\\leq w^{-1/2}$ for almost every $x\\in\\mathbb R$ and every block $B$. Then $$\\left|\\sum_{k=k_-}^{k_+}\\int_{\\mathbb R^2}\n       f_{0,k}(x)\\prod_{j=1}^3f_j(x+jt)\\Delta_k(t)\\,dx\\,dt\\right|\n       \\leq C_\\varphi^{\\mathrm c}(L+D2^{k_+}).\n \\label{eq:transfer-continuous}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-transfer-continuous"
+  },
+  {
+   "claim_id": "claim-integer-sequence-test",
+   "exact_statement": "For the fixed profile $\\varphi$ and $D=D_\\varphi$, there is $C_\\varphi^{\\mathrm d}<\\infty$ with the following property. Let $0\\leq k_-\\leq k_+$ be integers, and partition $\\{k_-,\\ldots,k_+\\}$ into $w\\geq1$ deterministic nonempty consecutive blocks. Let $\\mathcal K=\\{q,\\ldots,q+L-1\\}$, with $q\\in\\mathbb Z$ and integer $L\\geq1$. Suppose $f_1,f_2,f_3:\\mathbb Z\\to\\mathbb C$ and $f_{0,k}:\\mathbb Z\\to\\mathbb C$, $k_-\\leq k\\leq k_+$, are supported in $\\mathcal K$, with $|f_j(m)|\\leq1$ for every $m$ and $j=1,2,3$. Suppose also that $\\mathcal V_B(f_0)(m)\\leq w^{-1/2}$ for every $m\\in\\mathbb Z$ and every block. Then $$\\left|\\sum_{k=k_-}^{k_+}\\sum_{m,n\\in\\mathbb Z}\n    f_{0,k}(m)\\prod_{j=1}^3f_j(m+jn)\\Delta_k(n)\\right|\n       \\leq C_\\varphi^{\\mathrm d}(L+D2^{k_+}).\n \\label{eq:transfer-discrete}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-transfer-discrete"
+  },
+  {
+   "claim_id": "claim-normalized-input-size-variation",
+   "exact_statement": "Assume Equation <a href=\"#eq:row-input-normalization\" data-reference-type=\"eqref\" data-reference=\"eq:row-input-normalization\">[eq:row-input-normalization]</a>. For every measurable $E\\subset R$ of positive measure, every $s\\in\\mathsf S$, and $1\\le q\\le\\infty$, one has $$\\|F_s\\|_{q,E}\\le W^{-1/2}\\le1,\n \\qquad\n \\|\\mathbf1_EF_s\\|_2\\le W^{-1/2}|E|^{1/2}\\le |E|^{1/2}.$$ Here the first norm uses normalized measure on $E$, with the usual essential-supremum interpretation when $q=\\infty$.*\n\n\n*Let $\\mathcal J$ be a finite collection of pairs $[r,t]$ with $r,t\\in\\mathsf S$ and $r\\le t$. Its edge overlap is $$\\mathfrak m=\n \\max_{s_-\\le j<s_+}\n       \\#\\{[r,t]\\in\\mathcal J:r\\le j<t\\},$$ where a maximum over an empty set is zero. Then $$\\sum_{[r,t]\\in\\mathcal J}\n       \\|\\mathbf1_E(F_t-F_r)\\|_2^2\n \\le \\mathfrak m\\left(1+\\frac{4(W-1)}W\\right)|E|\n \\le 5\\mathfrak m|E|.\n \\label{eq:row-variation}$$ In particular the constant is independent of the number of blocks and depths. The same statements hold on a nondecreasing subsequence of the schedule, with repeated indices allowed and overlap counted in that subsequence.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-depth-input-size"
+  },
+  {
+   "claim_id": "claim-private-catalog-comparison",
+   "exact_statement": "For every dyadic cell $Q\\subset R$ and every vector $a=(a_v)_{v\\in\\mathcal V(Q)}$, one has $$D^{-1}\\|a\\|_{\\ell^2}\n \\le \\left\\|\\sum_{v\\in\\mathcal V(Q)}a_v\\Phi_v(y)\\right\\|_{\\mathcal H}\n \\le D^{3/2}\\|a\\|_{\\ell^2}\n \\quad\\hbox{for almost every }y\\in Q.\n \\label{eq:row-catalog-comparison}$$ In particular constant coefficients in such a representation are unique. Coefficients may be regarded as vectors in the one space $\\ell^2(\\mathcal V)$ by extending them by zero; the vector for a combination on $Q$ is unchanged when the combination is restricted to a descendant.*\n\n*These assertions and the same value of $D$ hold after restriction to a dyadic subroot $R'\\subset R$: discard birth cells disjoint from $R'$, give an inherited label with $R'\\subset J_v$ the new birth cell $R'$, and retain the other birth cells contained in $R'$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-row-catalog"
+  },
+  {
+   "claim_id": "claim-catalog-row-maximal-bound",
+   "exact_statement": "Use a root and catalog satisfying Equation <a href=\"#eq:row-catalog-budget\" data-reference-type=\"eqref\" data-reference=\"eq:row-catalog-budget\">[eq:row-catalog-budget]</a>. Let $N\\ge1$, and for $1\\le n\\le N$ let $\\pi_n$ and $\\sigma_n$ be finite dyadic partitions of $R$ such that $$\\sigma_n\\text{ refines }\\pi_n,\\qquad\n \\pi_{n+1}\\text{ refines }\\sigma_n\\quad(1\\le n<N).$$ Let $\\mathcal R_1,\\ldots,\\mathcal R_N$ be pairwise disjoint finite row index sets, with union $\\mathcal R$. For every $\\nu\\in\\mathcal R_n$, let $\\mathcal Y_\\nu$ be a Hilbert space, let $Q_\\nu\\in\\pi_n$, and let $A_\\nu:L^2(R;\\mathcal H)\\to\\mathcal Y_\\nu$ be bounded and linear. Assume the following two properties.*\n\n1.  *The whole row has support $Q_\\nu$: $A_\\nu=A_\\nu\\mathbf1_{Q_\\nu}$. For every $K\\in\\sigma_n$ and every $c\\in\\mathcal Y_\\nu$, there are spatially constant coefficients $a_{\\nu,K,v}(c)$ such that, in $L^2(R;\\mathcal H)$, $$\\mathbf1_K A_\\nu^*c\n           =\\mathbf1_K\\sum_{v\\in\\mathcal V(K)}\n                            a_{\\nu,K,v}(c)\\Phi_v.$$ There is no asserted uniform bound on these coefficients.*\n\n2.  *For some $B\\ge0$ the original rows satisfy the joint operator estimate $$\\sum_{\\nu\\in\\mathcal R}\\|A_\\nu z\\|_{\\mathcal Y_\\nu}^2\n           \\le B^2\\|z\\|_{L^2(R;\\mathcal H)}^2\n           \\qquad(z\\in L^2(R;\\mathcal H)).$$*\n\n\n*Cells with no rows and empty rounds are allowed, as are multiple rows with the same support cell. Define $$L_D=1+\\lceil5\\log_2D\\rceil,\\qquad\n \\mathfrak C_D=\\frac83\\sqrt{9+L_D^2}\n \\le \\frac{40}{3}\\log_2(2D).$$ For $1\\le p\\le q\\le N$ and any tests $c_\\nu\\in\\mathcal Y_\\nu$ in these rounds, put $$\\begin{split}\n E_c&=\\sum_{n=p}^q\\sum_{\\nu\\in\\mathcal R_n}\\|c_\\nu\\|_{\\mathcal Y_\\nu}^2,\\\\\n g_n&=\\sum_{\\nu\\in\\mathcal R_n}A_\\nu^*c_\\nu,\\qquad\n S_j=\\sum_{n=p}^j g_n,\\quad S_{p-1}=0,\\\\\n M(y)&=\\max_{p-1\\le j\\le q}\\|S_j(y)\\|_{\\mathcal H}.\n \\end{split}$$ Then, for every $\\lambda>0$, $$|\\{y\\in R:M(y)>\\lambda\\}|\n \\le \\min\\left\\{|R|,\n       \\frac{\\mathfrak C_D^2 B^2 E_c}{4\\lambda^2}\\right\\},\n \\qquad\n \\|M\\|_{L^1(R)}\n \\le \\mathfrak C_D B\\,|R|^{1/2}E_c^{1/2}.\n \\label{eq:row-maximal}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-row-maximal"
+  },
+  {
+   "claim_id": "claim-depth-varying-row-bound",
+   "exact_statement": "Let the root, catalog, partitions, and rows satisfy every hypothesis of Lemma <a href=\"#lem:row-maximal\" data-reference-type=\"ref\" data-reference=\"lem:row-maximal\">17</a>. Let $(F_s)_{s\\in\\mathsf S}$ satisfy Equation <a href=\"#eq:row-input-normalization\" data-reference-type=\"eqref\" data-reference=\"eq:row-input-normalization\">[eq:row-input-normalization]</a> on $R$. Choose $s_n\\in\\mathsf S$ with $s_1\\le s_2\\le\\cdots\\le s_N$, and let every row of round $n$ read the same input $F_{s_n}$. These read indices label the input schedule independently of the spatial depths of the support cells. Then $$\\left(\\sum_{n=1}^N\\sum_{\\nu\\in\\mathcal R_n}\n          \\|A_\\nu F_{s_n}\\|_{\\mathcal Y_\\nu}^2\\right)^{1/2}\n \\le \\mathfrak C_D B\\,|R|^{1/2}\n \\le \\frac{40}{3} B\\log_2(2D)\\,|R|^{1/2}.\n \\label{eq:row-depth}$$ The constant is independent of the number of rows, depths, and input blocks.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-row-depth"
+  },
+  {
+   "claim_id": "claim-inherited-projection-increments",
+   "exact_statement": "Use the catalog of Lemma <a href=\"#lem:row-catalog\" data-reference-type=\"ref\" data-reference=\"lem:row-catalog\">16</a>. On a finite interval of integers $h\\ge s_R$, let $\\mathcal P_h$ be the full partition of $R$ into cells of depth $h$. On each $Q\\in\\mathcal P_h$, let $P_{h,Q}$ be the orthogonal projection in $L^2(Q;\\mathcal H)$ onto constant-coefficient combinations of a subset $\\mathcal M_h(Q)\\subset\\mathcal V(Q)$. Assume inheritance: if $Q'\\in\\mathcal P_{h+1}$ is contained in $Q$, then $\\mathcal M_h(Q)\\subset\\mathcal M_{h+1}(Q')$. Let $P_h$ be the direct sum of the $P_{h,Q}$ on $L^2(R;\\mathcal H)$.*\n\n\n*Suppose $(F_s)_{s\\in\\mathsf S}$ satisfies Equation <a href=\"#eq:row-input-normalization\" data-reference-type=\"eqref\" data-reference=\"eq:row-input-normalization\">[eq:row-input-normalization]</a>. For any integer $J\\ge1$ and $$r_1\\le t_1\\le r_2\\le t_2\\le\\cdots\\le r_J\\le t_J$$ in the projection depth range and nondecreasing $s_1,\\ldots,s_J\\in\\mathsf S$, one has $$\\sum_{j=1}^J\\|(P_{t_j}-P_{r_j})F_{s_j}\\|_2^2\n \\le \\mathfrak C_D^2|R|.\n \\label{eq:row-disjoint-increments}$$ If the intervals can be divided into $\\mathfrak m$ such ordered families whose reads are nondecreasing, the right side is multiplied by $\\mathfrak m$.*\n\n\n\n*For each $s\\in\\mathsf S$ with $s\\ge s_R$, let $\\mathcal U_s$ be any subcollection of the depth-$s$ cells of $R$. In particular fix an integer $\\ell$ and retain only those $s$ for which $s+\\ell$ and $s+\\ell+1$ are in the projection range. Then $$\\sum_s\\sum_{I\\in\\mathcal U_s}|I|\\,\n       \\|(P_{s+\\ell+1}-P_{s+\\ell})F_s\\|_{2,I}^2\n \\le \\mathfrak C_D^2|R|.\n \\label{eq:row-increment}$$ For every integer $L\\ge0$, retaining only $s\\in\\mathsf S$ with $s\\ge s_R$ for which $s$ and $s+L$ are in the projection range, $$\\left(\\sum_s\\sum_{I\\in\\mathcal U_s}|I|\\,\n       \\|(P_{s+L}-P_s)F_s\\|_{2,I}^2\\right)^{1/2}\n \\le L\\mathfrak C_D|R|^{1/2}\n \\le (1+L)\\mathfrak C_D|R|^{1/2}.\n \\label{eq:row-delay}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-row-projections"
+  },
+  {
+   "claim_id": "claim-smooth-rows-on-depth-inputs",
+   "exact_statement": "Let $R$ be a finite dyadic root and let $\\mathcal N$ be a finite set of carrier labels. For each $\\nu\\in\\mathcal N$ fix one measurable function $m_\\nu:R\\to\\mathbb C$ with $\\|m_\\nu\\|_\\infty\\le1$. This function is the same for every interval using the label $\\nu$. Let $\\mathcal E$ be a finite set of pairs $(I,\\nu)$, where $I\\subset R$ is a dyadic interval of depth $s(I)$ and $\\nu\\in\\mathcal N$. Thus at most one row is selected for a given pair $(I,\\nu)$.*\n\n\n*For each selected pair, let $\\omega_{I,\\nu}\\in C^1(\\overline I)$ satisfy $$\\int_I\\omega_{I,\\nu}(y)\\,dy=0,\\qquad\n \\|\\omega_{I,\\nu}\\|_\\infty+\n       |I|\\|\\omega_{I,\\nu}'\\|_\\infty\\le A$$ for one $A\\ge0$. Suppose the selected physical rows $$\\mathcal W_{I,\\nu}f\n   =|I|^{-1/2}\\int_I m_\\nu(y)\\omega_{I,\\nu}(y)f(y)\\,dy$$ satisfy, for one $B_H\\ge0$, $$\\sum_{(I,\\nu)\\in\\mathcal E}|\\mathcal W_{I,\\nu}f|^2\n \\le B_H^2\\|f\\|_{L^2(R)}^2\\qquad(f\\in L^2(R)).$$ Let the scalar functions $(f_s)_{s\\in\\mathsf S}$ satisfy Equation <a href=\"#eq:row-input-normalization\" data-reference-type=\"eqref\" data-reference=\"eq:row-input-normalization\">[eq:row-input-normalization]</a>, with absolute values in place of Hilbert norms, and assume that every $s(I)$ belongs to $\\mathsf S$. Put $$d=2+\\#\\mathcal N,\\qquad h_0=\\lceil10\\log_2(2d)\\rceil.$$ Then $$\\begin{split}\n \\left(\\sum_{(I,\\nu)\\in\\mathcal E}\n           |\\mathcal W_{I,\\nu}f_{s(I)}|^2\\right)^{1/2}\n &\\le \\mathfrak C_d\\left[\n       (h_0+1)(B_H+3A)\n       +2A\\sqrt d\\,(h_0+3)2^{-h_0}\\right]|R|^{1/2}\\\\\n &\\le 760(B_H+A)\\bigl(\\log_2(2d)\\bigr)^2|R|^{1/2}.\n \\end{split}\n \\label{eq:smooth-depth}$$ The estimate uses only the displayed Bessel inequality for the selected set $\\mathcal E$, not for any larger array of intervals and carriers.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-smooth-depth"
+  },
+  {
+   "claim_id": "claim-capped-insertion-packing",
+   "exact_statement": "Let $R$ be an attempt root with a restricted normalized input schedule $F_s$. Let the candidate request cells belong to a fixed finite original request tree below $R$. Fix $0<\\rho\\le1$, $D_0\\ge2$, and an integer cap $T\\ge1$. Process candidates in nondecreasing request-cell depth, allowing repetitions at one cell. Stop before the first request that would exceed $T$ successful requests on its spatial path, and remove that cut cell and its candidate descendants from the trial.*\n\n\n*For each successful request $v$ at $I_v$, suppose there is a set $\\mathcal R_v$ of charged row indices, with these sets pairwise disjoint, such that $$\\sum_{\\nu\\in\\mathcal R_v}\n       \\|\\Delta_\\nu F_{s(\\nu)}\\|_2^2\n \\ge c\\rho^2|I_v|.$$ Assume all charged rows are a Bessel-norm-one subfamily of one realized finite nested sequence of full-partition projections and satisfy every hypothesis of Lemma <a href=\"#lem:row-depth\" data-reference-type=\"ref\" data-reference=\"lem:row-depth\">18</a>. Suppose its completed catalog has budget $$D_T\\le C D_0(T+1)^C,$$ where $D_0$ includes all predetermined columns, including their future admissions on this attempt. Then the disjoint first-excess cells $\\mathcal C_T$, which are original request-tree cells, obey $$\\sum_{I\\in\\mathcal C_T}|I|\n \\le C T^{-1}\\rho^{-2}\\log^2(2D_T)|R|.                        \\label{eq:hbase-trial-cut}$$ If $$a=1+\\log(2D_0)+\\log(1/\\rho),\\qquad\n T=\\left\\lceil C_*\\rho^{-4}(1+a)^8\\right\\rceil,$$ then a sufficiently large fixed $C_*$ makes the right side at most $|R|/4$, and $\\log(2T)\\le C(a+\\log C_*)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-hbase-trial"
+  },
+  {
+   "claim_id": "claim-two-earliest-increments",
+   "exact_statement": "On each original summation cell $I$, put $s=s(I)$, its original spatial depth in $J$. At a finite terminal level $n$, write $g_{e,n,I}$ for the last fit in slot $e$ at or before $n$, or zero if there is none, and put $r_{e,n,I}=F_{e,s}-g_{e,n,I}$. For $u<t$ with $\\iota(u)=i\\ne j=\\iota(t)$, let $a,b$ be the other slots and set $$\\begin{aligned}\n X_i^{u,t}&=g_{u,I}-g_{u-4,I},&\n X_j^{u,t}&=g_{t,I}-g_{t-4,I},\\\\\n X_a^{u,t}&=F_{a,s}-g_{a,\\mathrm{prev},I},&\n X_b^{u,t}&=F_{b,s}-g_{b,\\mathrm{prev},I}.\n \\end{aligned}                                                   \\label{eq:hbase-X}$$ Here $g_{e,\\mathrm{prev},I}$ is the last fit in slot $e$ strictly before $t$, or zero. In original slot order, $$H_I(F_{\\cdot,s})\n  =\\sum_{\\substack{1\\le u<t\\le n\\\\\\iota(u)\\ne\\iota(t)}}\n       H_I(X^{u,t}_I)+\\mathrm{Rem}_{n,I},\\qquad\n \\sum_{I\\in\\mathcal U}|I||\\mathrm{Rem}_{n,I}|\\longrightarrow0     \\label{eq:hbase-X-remainder}$$ for every fixed finite $\\mathcal U\\subseteq\\mathcal I$. The remainder is the term with four $r_{e,n,I}$’s plus, for each slot $e$, the term with $g_{e,n,I}$ there and $r_{l,n,I}$ in the other three slots.*\n\n*For sufficiently large $A$, there is an absolute $0<\\theta_0<A^{-7}<1$ such that, whenever $t\\ge12$, every pair of factors $X_l^{u,t}$ has form norm at most $e^{-2k_t^{\\theta_0}}$. All four factors have bounded normalized $L^2(I)$ size.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-hbase-x-output"
+  },
+  {
+   "claim_id": "claim-separated-scale-sum",
+   "exact_statement": "For the fixed separated term above, let both opponents be admissible on $K$ with parameters $D_{\\rm h},L$. For $m\\in\\mathbb Z_{\\ge0}$, let $\\mathcal U_m\\subseteq\\mathcal U$ consist of any selected cells on which $e^{-m-1}<A_{|I|}\\le e^{-m}$. Then $$\\sum_{I\\in\\mathcal U_m}|I|\n   |H_I(\\psi_a z_{a,I},\\psi_b z_{b,I};Q)|\n \\le e^{-m}\\operatorname{poly}\n       \\bigl(1+m,\\log(2H),\\log(2D_{\\rm h}),1+L\\bigr)|K|.       \\label{eq:hbase-scale-sum}$$ These bands cover every positive $A_{|I|}$. If $A_{|I|}=0$, the corresponding two-input form vanishes.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-hbase-scale"
+  },
+  {
+   "claim_id": "claim-opponent-independent-predictor-list",
+   "exact_statement": "Fix the two bounded scalar atoms $\\varphi_i,\\varphi_j$ on $J'$, of complexity at most $H_{\\rm low}$, and let $B\\ge1$. There is a finite index set $\\mathfrak A$, a bound $D_{\\rm pred}$, scalar coefficients $c_{r,\\alpha}$, and fixed triples $(\\psi_{a,\\alpha},\\psi_{b,\\alpha},\\lambda_\\alpha)$ on $J'$ with $\\|\\psi_{e,\\alpha}\\|_\\infty\\le1$, such that $$\\#\\mathfrak A,\\quad\n \\operatorname{complexity}(\\psi_{e,\\alpha}),\\quad\n |c_{r,\\alpha}|\\le D_{\\rm pred},\\qquad\n \\log D_{\\rm pred}\\le\n \\operatorname{poly}\\bigl(1+B+\\log(2H_{\\rm low})\\bigr).$$ Here $c_{r,\\alpha}$ is a scalar depending only on the fixed pair, its scalar construction, $B$, and the dyadic scale $r$; it is zero unless $|\\lambda_\\alpha|r^2\\le D_{\\rm pred}$. The list and these coefficients are chosen before any opposing sequences or completed high catalogs.*\n\n\n*Define its forms explicitly by $$\\begin{split}\n T_I^\\alpha(z_a,z_b)\n :=|I|^{-2}\\int_{\\mathbb R^2}&w_I(x,t)e(\\lambda_\\alpha t^2)\n       \\psi_{a,\\alpha}(y_a)z_a(y_a)\\\\\n       &\\qquad\\cdot\\psi_{b,\\alpha}(y_b)z_b(y_b)\\,dx\\,dt .\n \\end{split}                                                   \\label{eq:hbase-predictor-list}$$ For every dyadic $K\\subseteq J'$, selected finite use collection $\\mathcal U$ below $K$, and pair of admissible opposing sequences on $K$, define the actual error $e_I$ by the per-cell identity $$\\mathcal L_I^{\\varphi_i,\\varphi_j}(z_{a,I},z_{b,I})\n =\\sum_{\\alpha\\in\\mathfrak A}c_{|I|,\\alpha}\n       T_I^\\alpha(z_{a,I},z_{b,I})+e_I.                        \\label{eq:hbase-list-identity}$$ Then, uniformly over those opposing sequences and their completed catalogs, $$\\sum_{I\\in\\mathcal U}|I||e_I|\n \\le e^{-B}\\operatorname{poly}\n       \\bigl(\\log(2D_{\\rm h}),1+L\\bigr)|K|.                    \\label{eq:hbase-list-error}$$ The error $e_I$ may depend on the opposing sequence; the assertion is its aggregate bound.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cor-hbase-predictor-list"
+  },
+  {
+   "claim_id": "claim-delayed-predictor-replacement",
+   "exact_statement": "Use the fixed list and a dyadic $K\\subseteq J'$ from Corollary <a href=\"#cor:hbase-predictor-list\" data-reference-type=\"ref\" data-reference=\"cor:hbase-predictor-list\">24</a>. Fix $\\alpha\\in\\mathfrak A$ and a selected collection $\\mathcal U$ below $K$ on which $|\\lambda_\\alpha||I|^2\\le D_{\\rm pred}$. Let $K_0\\in\\mathbb Z_{\\ge0}$ and $0<\\epsilon\\le1$. Suppose an inherited family $P_{a,h}$ on the full partitions of $K$, with budget $D_{\\rm h}$, contains the same predictor $$\\Phi_v=(\\overline{\\psi_{a,\\alpha}},\\sqrt\\epsilon\\,\\mathbf e_v)$$ on every use cell and all its continued descendants. Other columns are allowed within that budget. Let $z_{b,I}$ be an admissible opposing sequence on $K$. Then $$\\begin{aligned}\n &\\sum_{I\\in\\mathcal U}|I|\n \\left|T_I^\\alpha(F_{a,s(I)},z_{b,I})\n       -T_I^\\alpha(P_{a,s(I)+K_0}F_{a,s(I)},z_{b,I})\\right|\n \\nonumber\\\\\n &\\qquad\\le\n C\\bigl(2^{-K_0}+(1+K_0)\\sqrt\\epsilon\\bigr)\n \\operatorname{poly}\\bigl(D_{\\rm pred},\\log(2D_{\\rm h}),1+L\\bigr)|K|.\n                                                                    \\label{eq:hbase-delayed}\n\\end{aligned}$$ For sequential replacement, let $e$ denote the opposing slot and take its full inherited family $P_{e,h}$ on $K$, under the stated joint budget. On a use cell $I$ of depth $s=s(I)$, the restriction of $P_{e,s+K_0}F_{e,s}$ to $I$ is a current constituent plus one whole rolling energy constituent with parameter $C(1+K_0)\\log(2D_{\\rm h})$. Subtracting one older current constituent still gives an admissible opponent.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-hbase-delayed"
+  },
+  {
+   "claim_id": "claim-base-data-active-pattern-reduction",
+   "exact_statement": "Fix the constructed tuple with later accuracy $t$, put $k=k_t$, and use its final segments $R\\in\\mathcal R_{\\rm base}$ and original owner sets $\\mathcal I_R$ from Equation <a href=\"#eq:hbase-high-replacement\" data-reference-type=\"eqref\" data-reference=\"eq:hbase-high-replacement\">[eq:hbase-high-replacement]</a>. On an owned cell of depth $s$, define $$\\begin{gathered}\n Y_l=B_l+U_l,\\qquad B_i=X_i,\\quad B_j=X_j,\\quad U_i=U_j=0,\\\\\n B_e=P^{\\rm new}_{e,s}F_{e,s}-g_{e,\\mathrm{prev},I},\\qquad\n U_e=(P^{\\rm new}_{e,s+K_0}-P^{\\rm new}_{e,s})F_{e,s}\n       \\quad(e=a,b),\\\\\n \\|B_{l,I}\\|_{2,I},\\ \\|U_{l,I}\\|_{2,I},\\ \\|Y_{l,I}\\|_{2,I}\\le C,\\\\\n \\Lambda_k=C(1+K_0)\\log(2D_{\\rm base})\\le k^C,\\qquad\n \\sum_{I\\in\\mathcal I_R}|I|\\|U_{e,I}\\|_{2,I}^2\n       \\le\\Lambda_k^2|R|\\quad(e=a,b).\n \\end{gathered}                                               \\label{eq:h-base-data}$$ Each $B_l$ is a signed sum of at most two current nested-catalog projections applied to $F_{l,s}$. Their basic catalogs have distinct private directions and inherited masks. Their path counts, column sizes, inverse private weights, bounded scalar atom complexities, and current coefficient sums are bounded by $D_{\\rm base}$, with $$e^k\\le D_{\\rm base}\\le\\exp(k^C).$$ For $t\\ge12$, the associated full $Y$ tuple has the pair bound and pointwise form bound $\\eta$ of Equation <a href=\"#eq:hbase-quality\" data-reference-type=\"eqref\" data-reference=\"eq:hbase-quality\">[eq:hbase-quality]</a>.*\n\n\n\n*For three available basic scalar columns $\\boldsymbol\\varphi$ in distinct slots, let $\\operatorname{act}_I(\\boldsymbol\\varphi)$ be their form norm against a normalized $L^2(I)$ input in the fourth slot. For a sufficiently large fixed $C_{\\rm act}$, put $$\\mathcal A_R=\n \\left\\{I\\in\\mathcal I_R:\n   \\operatorname{act}_I(\\boldsymbol\\varphi)>D_{\\rm base}^{-C_{\\rm act}}\n   \\text{ for some available triple }\\boldsymbol\\varphi\\right\\}.$$ This common active set has path multiplicity $$\\sum_{I\\in\\mathcal A_R}\\mathbf1_I(y)\\le M\\le D_{\\rm base}^C.$$ Define three patterns in their original slots by $$\\begin{array}{lll}\n z^\\varnothing_l=B_l&\\text{for every }l,\\\\\n z^a_a=U_a,&z^a_l=B_l& (l\\ne a),\\\\\n z^b_b=U_b,&z^b_l=B_l& (l\\ne b),\n \\end{array}\n \\qquad \\mathcal P=\\{z^\\varnothing,z^a,z^b\\}.$$ For $z\\in\\mathcal P$, let $$\\mathfrak M_R(z)\n :=\\sum_{I\\in\\mathcal A_R}|I|\n       \\min\\{\\eta,|H_I(z_I)|\\}.                               \\label{eq:h-active-pattern-target}$$ Then for $t\\ge12$, $$\\sum_{I\\in\\mathcal I_R}|I|\\,|H_I(Y_I)|\n \\le C\\eta\\Lambda_k^2|R|+e^{-k}|R|\n       +\\sum_{z\\in\\mathcal P}\\mathfrak M_R(z).                 \\label{eq:h-active-minimum}$$ The $e^{-k}|R|$ term is the total inactive error for the three patterns. The finitely many leading accuracy levels have a bound independent of the number of spatial depths. These base data and their estimates hold anew on normalized subroots with the inherited basic lists and their local continuations.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-hbase-data"
+  },
+  {
+   "claim_id": "claim-certified-endpoint-variation",
+   "exact_statement": "For the full endpoint outputs $Z_{G,s}=\\overline L_{G,s}\\mathcal B_sB_s$ just defined, let $\\mathcal J$ be a common finite collection of depth intervals $[r,t]$ with edge-overlap multiplicity at most $a$. For each $G,[r,t]$, let $E_{G,r,t}$ be a union of $t$-cells having a downstream actual-use certificate for $G$. Then $$\\sum_{G,[r,t]\\in\\mathcal J}\n   \\|\\mathbf1_{E_{G,r,t}}(Z_{G,t}-Z_{G,r})\\|_2^2\n       \\le aG_0|R|.\n \\label{eq:h-certified-variation}$$ For one shared output $Z_s^{\\rm sh}$ in the stated source class, let $E_{r,t}$ be the union of the required $t$-cells across all its uses. Then $$\\sum_{[r,t]\\in\\mathcal J}\n   \\|\\mathbf1_{E_{r,t}}(Z_t^{\\rm sh}-Z_r^{\\rm sh})\\|_2^2\n       \\le aG_0|R|.$$ This shared assertion has no group sum or group certificate. All outputs before the attempt root are zero.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-h-certified-variation"
+  },
+  {
+   "claim_id": "claim-transfer-endpoint-histories",
+   "exact_statement": "Fix one source search leaf, one step in the *Outgoing filters and near-band defects* Lemma of (OpenAI 2026, sec. 6) [[H](#ref-H)], and one choice in that step’s expansion of the complementary factors. In its outgoing complementary slot write $x_{c,s}=\\mathcal C_{c,s}B_{c,s}$ for exactly the input-side source history left after deleting the outgoing positive filter. This inner history is shared across groups. It retains the source order, its normalized averages or identities, its $O(\\log\\mathcal L)$ length, and the specified input-side basic $Q_s^\\tau$ in each nonzero constituent. Write $x_{d,s}$ for the whole remaining source history in the other complementary slot. All endpoint evaluations use the complete inherited families, with coupled pads at compared depths, and may occur when the group is not current.*\n\n*Let $Q_{c,p,s}$, $1\\le p\\le P$, be exactly that step’s individual outgoing projections, and put $Q_{c,0,s}=0$, $Q_{c,P+1,s}=1$. For a ball transfer, each $Q_{c,p,s}x_{c,s}$ with $1\\le p\\le P$ is an eligible group-indexed ball endpoint, while $x_{c,s}$ is shared. For a cumulative transfer the outer ball has already been removed and all these endpoints are shared. The other endpoint $x_{d,s}$ either has its one source positive ball average outermost, with shared inner history, or is shared after that ball has been removed.*\n\n*Each specified eligible ball output, using its source positive average or one individual allowed pad as a singleton average, satisfies <a href=\"#eq:h-certified-variation\" data-reference-type=\"eqref\" data-reference=\"eq:h-certified-variation\">[eq:h-certified-variation]</a>. Each specified shared output satisfies the shared conclusion of Lemma <a href=\"#lem:h-certified-variation\" data-reference-type=\"ref\" data-reference=\"lem:h-certified-variation\">27</a>, with one union of required right-endpoint cells across its uses.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-h-transfer-endpoint-variation"
+  },
+  {
+   "claim_id": "claim-frozen-mode-composition",
+   "exact_statement": "Fix a slot, one search leaf and its color, and a prospective choice of the offsets for its groups, with the corresponding block-independent maps $\\mathcal R_{l,G}$. For every group $G$ of that color, let $P_e$ be finitely many local mode projections: $P_e$ is the orthogonal projection in $L^2(J_e;\\mathcal H_{\\rm mode})$ onto constant-coefficient combinations of the restrictions of its available augmented modes. Extend it to $L^2(R;\\mathcal H_{\\rm mode})$ by restricting the input to $J_e$ and extending the output by zero. Suppose these rows have joint squared Bessel bound at most $G_0$ in each group.*\n\n\n*Suppose $J_e\\subseteq U_e$, where $U_e$ is a main endpoint cell with a downstream actual-use certificate and is usable for each nonzero pad range contributing to $\\overline L_{l,G,U_e}$. The row’s mode labels are available already at $U_e$. Write $$B_{l,U_e}=\\sum_{\\tau=1}^{h_0}\\varepsilon_\\tau\n       Q^\\tau_{l,U_e}F_{l,s(U_e)},\\qquad h_0\\le2,$$ for its specified basic-$B$ expression, and let $\\mathcal B_{l,U_e}$ be the shared main history of the leaf. Then $$\\sum_{G,e}\n \\|P_e\\mathcal R_{l,G}\\overline L_{l,G,U_e}\n                  \\mathcal B_{l,U_e}B_{l,U_e}\\|_2^2\n       \\le G_0|R|.\n \\label{eq:h-frozen-composition}$$ Endpoint depths may be arbitrary and need not be current; any number of rows may share one endpoint cell. The bound is uniform in the prospective choices of offsets.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-h-frozen-composition"
+  }
+ ],
+ "paper": "papers/EN-112-000-0000-2-2026-PR-T4-UK-EX-M2-C-PH-M-0312_PM-154.4_Pointwise_convergence_of_triple_ergodic_averages_for_mixing_transformations.md",
+ "purpose": "Pointwise convergence of triple ergodic averages for mixing transformations",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "98a2a4844579e5c499f5e646336b8c02f294168d48e0a90409f811895e1109ee",
+   "pm.domains.v2": "8c10869b167ddb3e25a3e2e7c8c7179e157a375fdb56ba1b9cff45d64a6e94fc",
+   "pm.edges.v2": "c0fec7a2cb5b7f256fe263caca24c93d8c416bff8e1390611d81de5d34558409",
+   "pm.extraction.v2": "6ebe8f749db9fecfb14ae17609f94049b7a4b711fcc52f663f80fc989a935544",
+   "pm.formal.v2": "a3e6629d1eb5216f337454de93109e0addcac6684f1afd2bf86e1f0593e5d0fc",
+   "pm.limits.v2": "d1c900acb881b01370f5598e1ee40acb57b53c4bfaceeacfaec2159a2b709cef",
+   "pm.node.v2": "44d2d371d77b90f5a2783734bca7fce7bca675f82cc67b9606983b086360a9d7",
+   "pm.objects.v2": "c86a23b3668230dcadff2dd4de1d7f5b9d77e862af5fd02b43437a777edd033f",
+   "pm.provenance.v2": "5083dd0c8bf60e7e97c1c9c9292546e98557bb2ea62ee14a8ffba8c5564a2f49",
+   "pm.quantities.v2": "5e7adc13a2423bc93d883bf4454e8479fb918eabe9cce7cc0934f6e2d5447185",
+   "pm.reading.v2": "2d165f96c229b315272a9ba333f53d053f2e8090171d722c8d433d6e4565bddd",
+   "pm.roadmap.v2": "c3db1b4e3303c95693667bd8e1b40e131f2fcd9a167237fa872b9ea745e94c64",
+   "pm.search.v1": "38aa1ecee3137ff5fda418571563f52853c5177f2bc732bdb3330291ff8306f0",
+   "pm.triptych.v2": "065bc6f5fc58716030acb260f4f156b2c61ecb47345abd66583315377b79c6f4"
+  },
+  "canonical_sha256": "682a9df8d86c725e93b34f3b92412100a49df029e1a393f2f41261e8668de908",
+  "paper_sha256": "8748bb7382513039c28ae75eca866606f3234225fec6c3dace340036ea003f8b",
+  "repaired_body_sha256": "e34ddbeb1a1c457211540a35450a209b3c91aa4ea90063c1129c51f69b197530"
+ },
+ "status": "ACTIVE",
+ "subject_id": 12,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "a08cb026fd6d3db356c600db5a5aae32d4a4fc986c9235ddf1d1b2d881816af6",
+   "receipt_sha256": "39a30bfebec239b19fec60354ae3e28eac338a5abda0d10aca8e795cc9982030",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Pointwise convergence of triple ergodic averages for mixing transformations"
+}

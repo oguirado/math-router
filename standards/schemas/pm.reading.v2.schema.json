@@ -1,0 +1,120 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "pm.reading.v2"
+    },
+    "pm_id": {
+      "type": "string",
+      "pattern": "^PM-[0-9]{3}\\.[1-9][0-9]*$"
+    },
+    "generation_status": {
+      "type": "string",
+      "enum": [
+        "ASSEMBLED"
+      ]
+    },
+    "full_body_anchor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "context_bytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "context_tokens": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "tokenizer": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "over_512_kib": {
+      "type": "boolean"
+    },
+    "slices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "anchor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "heading": {
+            "type": "string",
+            "minLength": 1
+          },
+          "start_byte": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "end_byte": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "content_kinds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "statement",
+                "proof",
+                "definition",
+                "equation",
+                "figure",
+                "bibliography",
+                "appendix",
+                "other"
+              ]
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "anchor",
+          "heading",
+          "start_byte",
+          "end_byte",
+          "bytes",
+          "content_kinds"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema",
+    "pm_id",
+    "generation_status",
+    "full_body_anchor",
+    "context_bytes",
+    "context_tokens",
+    "tokenizer",
+    "over_512_kib",
+    "slices"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pm.reading.v2"
+}

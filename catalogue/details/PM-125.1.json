@@ -1,0 +1,680 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 628502,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 179768
+ },
+ "coordinate": "EN-114-000-0022-2-2026-PR-T4-UK-EX-M1-B-ML-H-0262",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "implementable",
+   "proposed_domain": "finite metric preprocessing",
+   "strength": "moderate",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "ref:section",
+     "quote": "Its polynomial running time still requires logarithmically many bad clusters.",
+     "quote_sha256": "c88efec47cebee54118d126cd216953ec1db5cc6fe0a5dac849e4dcd9b9e1155"
+    }
+   ],
+   "query": "Polynomial anchor recovery for unrestricted exceptional-cluster counts",
+   "reason": "The polynomial recovery regime requires logarithmically many bad clusters; the exceptional-count dependence is single-exponential."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "The normalized promise matters.",
+     "quote_sha256": "73033521bad7d52dc665fb2ad6a5bf15edc4565880d1fd98ce2a4f1a03b65266"
+    },
+    {
+     "anchor": "pm-h-3",
+     "quote": "The general-metric application below instead constructs its anchors *after* normalization and proves a separate transfer of the final cost bound.",
+     "quote_sha256": "f0753a62007a447eeaa9dce68fe763876beb120eb75e230fb642da4d86f48379"
+    }
+   ],
+   "query": "Transporting arbitrary original proxy certificates through metric normalization",
+   "reason": "The paper explicitly withholds that promise and instead constructs anchors after normalization."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-imp-surplus-history",
+     "quote": "No facility deletion, change of price, or movement of a free copy during the construction’s search is used as a step of this history.",
+     "quote_sha256": "9456e3ccc7dbff70797e5ff0ded12c51cb2be2c3f78e79036e7d19c0cf346729"
+    }
+   ],
+   "query": "Using interpolation search steps as the strictness replay",
+   "reason": "The certificate uses only final sequences at fixed final price and copy lengths."
+  }
+ ],
+ "family": "PM-125",
+ "id": "PM-125.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-ref-recovery",
+    "claim_id": "claim-refined-anchor-recovery",
+    "statement": "Let $D$ and $F$ be disjoint indexed sets in a metric whose distances between distinct indices are positive integers bounded by a fixed polynomial in $N=|D|+|F|$."
+   },
+   {
+    "anchor": "stmt-ref-recovery",
+    "claim_id": "claim-refined-anchor-recovery",
+    "statement": "Let $S\\subseteq F$ have cardinality $h\\ge1$."
+   },
+   {
+    "anchor": "ref:proxy-hypothesis",
+    "claim_id": "claim-refined-anchor-recovery",
+    "statement": "Let $D$ and $F$ be disjoint indexed sets in a metric whose distances between distinct indices are positive integers bounded by a fixed polynomial in $N=|D|+|F|$. Fix $\\varepsilon>0$ and $0<L_0<\\infty$, and choose a fixed rational parameter $$0<\\mu\\le \\min\\{1/4,\\varepsilon/12\\}.$$ Let $S\\subseteq F$ have cardinality $h\\ge1$. Suppose there exists a comparison solution $O\\subseteq F$ of cardinality $h$ and cost $P>0$, with a partition into good and bad centers and distinct proxies $\\phi_i\\in S$ for the good centers, such that $$\\label{ref:proxy-hypothesis}\n \\sum_{i\\ \\mathrm{good}}\\sum_{p\\in C_i}d(p,\\phi_i)\n \\le P_g+\\mu P,\n \\qquad m:=|\\{i:i\\ \\mathrm{bad}\\}|\\le L_0\\log N.$$ Given $S$, $\\mu$, $L_0$, and a failure parameter $\\zeta\\in(0,1)$, a randomized algorithm returns $\\widehat S\\subseteq F$ with $$|\\widehat S|\\le h\n \\quad\\text{always},\\qquad\n \\operatorname{cost}(\\widehat S)\n \\le (1+2/e+\\varepsilon)P\n \\quad\\text{with probability at least }1-\\zeta.$$ Its running time is polynomial in $N$ and $\\log(1/\\zeta)$ for the fixed parameters. The algorithm is not given $O$, $P$, the partition, or its proxies."
+   },
+   {
+    "anchor": "stmt-pre-rounding",
+    "claim_id": "claim-metric-rounding-transfer",
+    "statement": "Fix rational $0<\\varepsilon_0\\le1$."
+   },
+   {
+    "anchor": "stmt-pre-rounding",
+    "claim_id": "claim-metric-rounding-transfer",
+    "statement": "Suppose a polynomial-time algorithm for the bounded integral instances just described always returns at most $k$ facilities of cost at most $5\\operatorname{opt}_k$, and, with probability at least $1-p$, returns cost at most $A\\operatorname{opt}_k$, where $A\\le5$."
+   },
+   {
+    "anchor": "stmt-loc-descent",
+    "claim_id": "claim-exact-local-descent",
+    "statement": "Suppose all distances are integers at most $B$, where $B$ is bounded by a fixed polynomial in $N=n+|F|$."
+   },
+   {
+    "anchor": "stmt-loc-swap",
+    "claim_id": "claim-protected-weighted-swaps",
+    "statement": "Under the preceding hypotheses,"
+   },
+   {
+    "anchor": "stmt-loc-swap",
+    "claim_id": "claim-protected-weighted-swaps",
+    "statement": "if $S$ is a width-$5$ local optimum and $u=6/5$,"
+   },
+   {
+    "anchor": "stmt-loc-anchoring",
+    "claim_id": "claim-separated-cluster-anchoring",
+    "statement": "Let $S$ be a width-$5$ local optimum, and let $O$ be a comparison set with $2\\le h=|O|\\le|S|$ and $P=\\operatorname{cost}(O)>0$."
+   },
+   {
+    "anchor": "loc:scale-condition",
+    "claim_id": "claim-separated-cluster-anchoring",
+    "statement": "Let $S$ be a width-$5$ local optimum, and let $O$ be a comparison set with $2\\le h=|O|\\le|S|$ and $P=\\operatorname{cost}(O)>0$. Suppose $b>0$ satisfies $$b\\left(\\ell+\n   \\bigl|\\{i\\in O:n_i\\operatorname{sep}_i<b\\}\\bigr|\\right)\n \\le10P.\n \\label{loc:scale-condition}$$ For every fixed $\\mu\\in(0,1]$, there is a partition $O=O_g\\mathbin{\\dot\\cup}O_b$ and distinct proxies $\\phi_i\\in S$ for $i\\in O_g$ such that, with $m=|O_b|$, $$\\sum_{i\\in O_g}\\sum_{p\\in C_i}d(p,\\phi_i)\n \\le P_g+\\mu P,\n \\qquad m\\le C_\\mu\\frac{P}{b},\n \\label{loc:anchoring-conclusion}$$ where the finite constant $$J_\\mu=\\left\\lceil\\frac{40}{\\mu}\\right\\rceil,\n \\qquad\n C_\\mu=10+\\frac{600}{\\mu}\\,2^{J_\\mu-1}\n \\label{loc:anchoring-constant}$$ depends only on $\\mu$."
+   },
+   {
+    "anchor": "stmt-sam-computable-radius",
+    "claim_id": "claim-population-radius-computation",
+    "statement": "If $d_1\\le\\cdots\\le d_n$ are the client distances from $w$, including the zero distance from $w$ to itself, then"
+   },
+   {
+    "anchor": "stmt-sam-computable-radius",
+    "claim_id": "claim-population-radius-computation",
+    "statement": "Suppose that $A\\subseteq\\mathcal B$"
+   },
+   {
+    "anchor": "stmt-sam-computable-radius",
+    "claim_id": "claim-population-radius-computation",
+    "statement": "where $a>0$."
+   },
+   {
+    "anchor": "stmt-sam-dummy-metric",
+    "claim_id": "claim-leaf-metric-and-assignment-monotonicity",
+    "statement": "If $R_i\\ge d(w_i,O)$,"
+   },
+   {
+    "anchor": "stmt-sam-dummy-metric",
+    "claim_id": "claim-leaf-metric-and-assignment-monotonicity",
+    "statement": "If $x_i\\in\\mathcal F_i$,"
+   },
+   {
+    "anchor": "stmt-sam-radius-budget",
+    "claim_id": "claim-amortized-radius-menu-budget",
+    "statement": "Fix $0<\\kappa\\le1$."
+   },
+   {
+    "anchor": "stmt-sam-radius-budget",
+    "claim_id": "claim-amortized-radius-menu-budget",
+    "statement": "Consider a sequence with at most $m$ ball additions, each using the prescribed correct radius above, and suppose that every previously added leaf remains present at every later addition."
+   },
+   {
+    "anchor": "stmt-sam-probability",
+    "claim_id": "claim-adaptive-guide-likelihood",
+    "statement": "Fix $O,P,m$, $0<\\kappa\\le1$, and a number $\\rho\\in(0,1]$ independent of the instance size."
+   },
+   {
+    "anchor": "stmt-sam-probability",
+    "claim_id": "claim-adaptive-guide-likelihood",
+    "statement": "Leaves are retained throughout,"
+   },
+   {
+    "anchor": "stmt-sam-probability",
+    "claim_id": "claim-adaptive-guide-likelihood",
+    "statement": "Suppose the guide stops after at most $2m$ steps on every supported trajectory."
+   },
+   {
+    "anchor": "stmt-sam-near-clients",
+    "claim_id": "claim-near-client-witness-bounds",
+    "statement": "Let $n_i>0$, $a>1$, and $N_i(a)=\\{p\\in C_i:d_p^*\\le a\\bar d_i\\}$."
+   },
+   {
+    "anchor": "stmt-sam-sampling-mass",
+    "claim_id": "claim-sampling-progress-mass",
+    "statement": "At every correct main state with $\\kappa=10^{-6}$,"
+   },
+   {
+    "anchor": "stmt-sam-sampling-mass",
+    "claim_id": "claim-sampling-progress-mass",
+    "statement": "If the first stopping inequality fails,"
+   },
+   {
+    "anchor": "stmt-sam-sampling-mass",
+    "claim_id": "claim-sampling-progress-mass",
+    "statement": "If the first stopping inequality holds and the second fails,"
+   },
+   {
+    "anchor": "stmt-sam-successful-prefix",
+    "claim_id": "claim-successful-recorded-prefix",
+    "statement": "Assume the equal-size comparison setup and Equation <a href=\"#sam:proxy-hypothesis\" data-reference-type=\"eqref\" data-reference=\"sam:proxy-hypothesis\">[sam:proxy-hypothesis]</a>, with $1\\le m\\le M_0$, and use $\\kappa=10^{-6}$."
+   },
+   {
+    "anchor": "stmt-sam-successful-prefix",
+    "claim_id": "claim-successful-recorded-prefix",
+    "statement": "Given $S$ and the correct guesses $P,m$,"
+   },
+   {
+    "anchor": "stmt-comp-partition-max",
+    "claim_id": "claim-categorical-submodular-maximization",
+    "statement": "Let $g$ be a normalized, monotone, submodular function given by an exact value oracle, and let $E$ have a partition into $a$ parts."
+   },
+   {
+    "anchor": "stmt-comp-partition-max",
+    "claim_id": "claim-categorical-submodular-maximization",
+    "statement": "If the parts are nonempty,"
+   },
+   {
+    "anchor": "stmt-comp-surrogate-properties",
+    "claim_id": "claim-surrogate-realization-and-savings",
+    "statement": "For every finite branch and feasible $X$,"
+   },
+   {
+    "anchor": "stmt-comp-completion",
+    "claim_id": "claim-prefix-completion-with-slack",
+    "statement": "In the prefix setting above,"
+   },
+   {
+    "anchor": "stmt-comp-completion",
+    "claim_id": "claim-prefix-completion-with-slack",
+    "statement": "fix a rational $1/e<\\theta<1$."
+   },
+   {
+    "anchor": "stmt-comp-recovery",
+    "claim_id": "claim-single-exponential-recovery",
+    "statement": "Suppose $|S|=|O|=h\\ge1$,"
+   },
+   {
+    "anchor": "stmt-comp-recovery",
+    "claim_id": "claim-single-exponential-recovery",
+    "statement": "$P=\\operatorname{cost}(O)>0$,"
+   },
+   {
+    "anchor": "stmt-comp-recovery",
+    "claim_id": "claim-single-exponential-recovery",
+    "statement": "Assume the number $m$ of bad centers is at most a supplied bound $M_0$."
+   },
+   {
+    "anchor": "ref:parameters",
+    "claim_id": "claim-two-stage-sampling-endpoint",
+    "statement": "We use the notation $P_i=\\sum_{p\\in C_i}d_p^*$, and put $\\bar d_i=P_i/n_i$ when $n_i>0$. Empty clusters have mean zero and all the near sets below are empty. Fix $$\\label{ref:parameters}\n a_1=1+\\mu,\\qquad a_2=\\frac32,\\qquad\n q=1-\\frac1{a_1}=\\frac{\\mu}{1+\\mu},\\qquad\n \\kappa=\\mu^3,\n \\qquad \\frac1e<\\theta\\le\\frac1e+\\mu,$$ where $\\theta$ is rational. For $z\\in\\{1,2\\}$ define $$N_i^z=\\{p\\in C_i:d_p^*\\le a_z\\bar d_i\\}.$$ All these parameters are fixed before the input is processed. The choice of $\\theta$ is available in Lemma <a href=\"#comp:partition-max\" data-reference-type=\"ref\" data-reference=\"comp:partition-max\">14</a>; the resulting completion guarantee is Theorem <a href=\"#comp:completion\" data-reference-type=\"ref\" data-reference=\"comp:completion\">16</a>."
+   },
+   {
+    "anchor": "ref:radius",
+    "claim_id": "claim-two-stage-sampling-endpoint",
+    "statement": "Assume for now that $m>0$, and let $$S_0=S\\setminus\\{\\phi_i:i\\ \\mathrm{good}\\},\\qquad |S_0|=m.$$"
+   },
+   {
+    "anchor": "stmt-ref-charges",
+    "claim_id": "claim-refined-completion-charges",
+    "statement": "For the endpoint above,"
+   },
+   {
+    "anchor": "stmt-imp-cglss",
+    "claim_id": "claim-surplus-construction-interface",
+    "statement": "For the metric range above and fixed $v$,"
+   },
+   {
+    "anchor": "stmt-imp-cglss",
+    "claim_id": "claim-surplus-construction-interface",
+    "statement": "With precision $\\eta=2^{-N}$,"
+   },
+   {
+    "anchor": "stmt-imp-surplus-history",
+    "claim_id": "claim-compatible-final-sequence-replay",
+    "statement": "Given valid sequences of either output form in Theorem <a href=\"#imp:cglss\" data-reference-type=\"ref\" data-reference=\"imp:cglss\">20</a>, with their price, fixed copy lengths, opening witnesses and certified bids,"
+   },
+   {
+    "anchor": "stmt-str-strictness",
+    "claim_id": "claim-bounded-price-strictness",
+    "statement": "Assume $0\\le\\delta<1$, $0<v\\le1$,"
+   },
+   {
+    "anchor": "str:v-condition",
+    "claim_id": "claim-bounded-price-strictness",
+    "statement": "For $T>0$ define $$\\label{str:constants}\n B=T+2,\\qquad \\rho=\\frac{1}{200B},\\qquad\n c(T)=\\frac{\\rho^2}{100}>0.$$ Assume $0\\le\\delta<1$, $0<v\\le1$, and $$\\label{str:v-condition}\n v^2\\le\\frac{c(T)}{6(T+2)}.$$ For any regular facility $i\\in F$ and nonempty client set $C\\subseteq D$ of positive cost $P_C=\\sum_{p\\in C}d(i,p)$, the history in Lemma <a href=\"#imp:surplus-history\" data-reference-type=\"ref\" data-reference=\"imp:surplus-history\">21</a> satisfies $$\\label{str:conclusion}\n \\lambda\\le TP_C\n \\quad\\Longrightarrow\\quad\n \\sum_{p\\in C}\\alpha_p\n \\le \\lambda+\\left(2-\\frac{c(T)}2\\right)P_C.$$ The set $C$ need not be a cluster of the algorithm or of an optimal solution."
+   },
+   {
+    "anchor": "str:conclusion",
+    "claim_id": "claim-bounded-price-strictness",
+    "statement": "For $T>0$ define $$\\label{str:constants}\n B=T+2,\\qquad \\rho=\\frac{1}{200B},\\qquad\n c(T)=\\frac{\\rho^2}{100}>0.$$ Assume $0\\le\\delta<1$, $0<v\\le1$, and $$\\label{str:v-condition}\n v^2\\le\\frac{c(T)}{6(T+2)}.$$ For any regular facility $i\\in F$ and nonempty client set $C\\subseteq D$ of positive cost $P_C=\\sum_{p\\in C}d(i,p)$, the history in Lemma <a href=\"#imp:surplus-history\" data-reference-type=\"ref\" data-reference=\"imp:surplus-history\">21</a> satisfies $$\\label{str:conclusion}\n \\lambda\\le TP_C\n \\quad\\Longrightarrow\\quad\n \\sum_{p\\in C}\\alpha_p\n \\le \\lambda+\\left(2-\\frac{c(T)}2\\right)P_C.$$ The set $C$ need not be a cluster of the algorithm or of an optimal solution."
+   },
+   {
+    "anchor": "stmt-sur-low-sensitivity",
+    "claim_id": "claim-low-sensitivity-candidate",
+    "statement": "With these fixed parameters, suppose $k>2L$"
+   },
+   {
+    "anchor": "sur:sensitivity",
+    "claim_id": "claim-low-sensitivity-candidate",
+    "statement": "With these fixed parameters, suppose $k>2L$ and $$\\label{sur:sensitivity}\n \\operatorname{opt}_{k-2L}\\le(1+\\xi)\\operatorname{opt}_k.$$ Put $h=k-L$. In polynomial time one can compute a real facility set $S$ of size $k$ with $$\\label{sur:conclusion}\n \\operatorname{cost}(S)\n \\le\\left(2-\\frac{c}{100}\\right)\\operatorname{opt}_h\n \\le\\left(2-\\frac{c}{100}\\right)(1+\\xi)\n       \\operatorname{opt}_k.$$ The algorithm does not need to test Equation <a href=\"#sur:sensitivity\" data-reference-type=\"eqref\" data-reference=\"sur:sensitivity\">[sur:sensitivity]</a>."
+   },
+   {
+    "anchor": "stmt-asm-sensitive",
+    "claim_id": "claim-sensitive-cardinality-separation",
+    "statement": "Suppose $k>2L$, $0<\\xi\\le1$,"
+   },
+   {
+    "anchor": "stmt-asm-sensitive",
+    "claim_id": "claim-sensitive-cardinality-separation",
+    "statement": "Put $\\beta=\\xi/(4L)$."
+   },
+   {
+    "anchor": "stmt-asm-integral",
+    "claim_id": "claim-integral-instance-candidate-selection",
+    "statement": "With the constants above,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Exact-budget anchor recovery",
+    "evidence": [
+     {
+      "anchor": "pm-h-6",
+      "quote": "An exact subset dynamic program handles removal destinations without a sampled ball, while a submodular surrogate handles destinations represented by proxies or balls.",
+      "quote_sha256": "faf1035eab1ec45cdbd15f8fea66f909c84a9f89e7bf3ead1b081ffe6d32d020"
+     },
+     {
+      "anchor": "pm-h-6",
+      "quote": "The construction adds at most $m$ real facilities after removing $m$ original ones, so every candidate respects the original budget.",
+      "quote_sha256": "f6cc8c2fee596512c072c902a4a3014bbf77ecae95622f9d8516e29bbbef5e9a"
+     }
+    ],
+    "requires_concepts": [
+     "Metric nearest-facility assignment",
+     "Distinct comparison proxies",
+     "Distance-proportional sampling",
+     "Leaf metric extension",
+     "Subset dynamic programming",
+     "Partition-constrained submodular maximization"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Bounded-price strictness",
+    "evidence": [
+     {
+      "anchor": "str:section",
+      "quote": "The contribution of this section is a different elementary proof, through a suffix maximum and two slack bounds, followed by an explicit transfer to the fixed valid-sequence replay.",
+      "quote_sha256": "1c29500817c5f6598a0ceec17206c3dc8e8598ee5fd95ea1efc0dccdc3edc4ae"
+     }
+    ],
+    "requires_concepts": [
+     "Valid sequences",
+     "Compatible final replay",
+     "No-overbidding",
+     "Suffix maximum",
+     "Complementary slack bounds"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-refined-anchor-recovery",
+   "exact_statement": "Let $D$ and $F$ be disjoint indexed sets in a metric whose distances between distinct indices are positive integers bounded by a fixed polynomial in $N=|D|+|F|$. Fix $\\varepsilon>0$ and $0<L_0<\\infty$, and choose a fixed rational parameter $$0<\\mu\\le \\min\\{1/4,\\varepsilon/12\\}.$$ Let $S\\subseteq F$ have cardinality $h\\ge1$. Suppose there exists a comparison solution $O\\subseteq F$ of cardinality $h$ and cost $P>0$, with a partition into good and bad centers and distinct proxies $\\phi_i\\in S$ for the good centers, such that $$\\label{ref:proxy-hypothesis}\n \\sum_{i\\ \\mathrm{good}}\\sum_{p\\in C_i}d(p,\\phi_i)\n \\le P_g+\\mu P,\n \\qquad m:=|\\{i:i\\ \\mathrm{bad}\\}|\\le L_0\\log N.$$ Given $S$, $\\mu$, $L_0$, and a failure parameter $\\zeta\\in(0,1)$, a randomized algorithm returns $\\widehat S\\subseteq F$ with $$|\\widehat S|\\le h\n \\quad\\text{always},\\qquad\n \\operatorname{cost}(\\widehat S)\n \\le (1+2/e+\\varepsilon)P\n \\quad\\text{with probability at least }1-\\zeta.$$ Its running time is polynomial in $N$ and $\\log(1/\\zeta)$ for the fixed parameters. The algorithm is not given $O$, $P$, the partition, or its proxies.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-ref-recovery"
+  },
+  {
+   "claim_id": "claim-global-budgeted-approximation",
+   "exact_statement": "There is an absolute constant $\\sigma>0$ with the following property. For every fixed $a>0$, a randomized polynomial-time algorithm for metric $k$-median always returns a set $S\\subseteq F$ with $|S|\\le k$ and satisfies $$\\Pr\\!\\left\\{\\operatorname{cost}(S)\n       \\le(2-\\sigma)\\operatorname{opt}_k\\right\\}\n \\ge 1-(|D|+|F|+2)^{-a}.$$ The same algorithm can be chosen to satisfy $\\mathbb E\\operatorname{cost}(S)\\le(2-\\sigma)\\operatorname{opt}_k$. The running time is polynomial in the bit length of the finite rational metric input. Its degree may depend on the fixed constants.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-main-theorem"
+  },
+  {
+   "claim_id": "claim-metric-rounding-transfer",
+   "exact_statement": "Fix rational $0<\\varepsilon_0\\le1$. Suppose a polynomial-time algorithm for the bounded integral instances just described always returns at most $k$ facilities of cost at most $5\\operatorname{opt}_k$, and, with probability at least $1-p$, returns cost at most $A\\operatorname{opt}_k$, where $A\\le5$. Then a randomized polynomial-time algorithm for arbitrary finite rational metric instances always returns at most $k$ facilities of cost at most $5(1+\\varepsilon_0)\\operatorname{opt}_k$ and, with probability at least $1-p$, returns cost at most $A(1+\\varepsilon_0)\\operatorname{opt}_k$. The bounded integral distances needed are at most $\\lceil20n^2/\\varepsilon_0\\rceil+1$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-pre-rounding"
+  },
+  {
+   "claim_id": "claim-exact-local-descent",
+   "exact_statement": "Suppose all distances are integers at most $B$, where $B$ is bounded by a fixed polynomial in $N=n+|F|$. From any nonempty initial set of $r$ facilities, a width-$5$ local optimum of size $r$ can be found in polynomial time, with no increase in cost.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-loc-descent"
+  },
+  {
+   "claim_id": "claim-protected-weighted-swaps",
+   "exact_statement": "Under the preceding hypotheses, if $S$ is a width-$5$ local optimum and $u=6/5$, then $$S_b+uS_g\\le (1+2u)P_b+uD_g.\n \\label{loc:strong-swap}$$ Consequently, $$\\operatorname{cost}(S)\\le uD_g+(1+2u)P_b.\n \\label{loc:swap-bound}$$ In particular, for any comparison set $O$ of size at most $|S|$, $\\operatorname{cost}(S)\\le(17/5)P\\le5P$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-loc-swap"
+  },
+  {
+   "claim_id": "claim-separated-cluster-anchoring",
+   "exact_statement": "Let $S$ be a width-$5$ local optimum, and let $O$ be a comparison set with $2\\le h=|O|\\le|S|$ and $P=\\operatorname{cost}(O)>0$. Suppose $b>0$ satisfies $$b\\left(\\ell+\n   \\bigl|\\{i\\in O:n_i\\operatorname{sep}_i<b\\}\\bigr|\\right)\n \\le10P.\n \\label{loc:scale-condition}$$ For every fixed $\\mu\\in(0,1]$, there is a partition $O=O_g\\mathbin{\\dot\\cup}O_b$ and distinct proxies $\\phi_i\\in S$ for $i\\in O_g$ such that, with $m=|O_b|$, $$\\sum_{i\\in O_g}\\sum_{p\\in C_i}d(p,\\phi_i)\n \\le P_g+\\mu P,\n \\qquad m\\le C_\\mu\\frac{P}{b},\n \\label{loc:anchoring-conclusion}$$ where the finite constant $$J_\\mu=\\left\\lceil\\frac{40}{\\mu}\\right\\rceil,\n \\qquad\n C_\\mu=10+\\frac{600}{\\mu}\\,2^{J_\\mu-1}\n \\label{loc:anchoring-constant}$$ depends only on $\\mu$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-loc-anchoring"
+  },
+  {
+   "claim_id": "claim-population-radius-computation",
+   "exact_statement": "If $d_1\\le\\cdots\\le d_n$ are the client distances from $w$, including the zero distance from $w$ to itself, then $$r^0(w)=\\min_{1\\le j\\le n}\\max\\{d_j,P/(mj)\\}>0.\n \\label{sam:r0-formula}$$ In particular the minimum in Equation <a href=\"#sam:r0-definition\" data-reference-type=\"eqref\" data-reference=\"sam:r0-definition\">[sam:r0-definition]</a> is attained and its closed ball satisfies the defining population inequality. Suppose that $A\\subseteq\\mathcal B$ and each $i\\in A$ has a client $w_i\\in C_i$ with $r_i=d(w_i,i)\\le a\\bar d_i$, where $a>0$. Then $$\\begin{aligned}\n r^0(w_i)&\\le(a+2)\\bar d_i+\\frac{2P}{mn_i},\\\\\n \\sum_{i\\in A}n_i r^0(w_i)\n &\\le(a+2)\\sum_{i\\in A}P_i+\\frac{2|A|}{m}P\n \\le(a+4)P.\n \\end{aligned}\n \\label{sam:leader-radius-sum}$$ The last bound is $5.2P$ when $a=1.2$, and is at most $5.5P$ when $a\\le3/2$.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-sam-computable-radius"
+  },
+  {
+   "claim_id": "claim-leaf-metric-and-assignment-monotonicity",
+   "exact_statement": "The construction above extends the original metric without changing its distances. For every original point $x$, $$d(x,\\delta_i)=d(x,w_i)+R_i,\\qquad\n d(\\delta_\\infty,\\delta_i)=\\Delta+R_i.$$ If $R_i\\ge d(w_i,O)$, then $d(x,\\delta_i)\\ge d(x,O)$ for every original point $x$. If $x_i\\in\\mathcal F_i$, then $d(x,x_i)\\le d(x,\\delta_i)$ for every original point $x$. Every nonempty real solution similarly dominates the permanent dummy.*\n\n*There is a fixed assignment rule, independent of $O,S_0$, and $Q$, such that after any state in which further operations only add leaves, the client set assigned to any fixed subset of surviving original centers can only shrink.",
+   "kind": "construction",
+   "statement_anchor": "stmt-sam-dummy-metric"
+  },
+  {
+   "claim_id": "claim-amortized-radius-menu-budget",
+   "exact_statement": "Fix $0<\\kappa\\le1$. Consider a sequence with at most $m$ ball additions, each using the prescribed correct radius above, and suppose that every previously added leaf remains present at every later addition. Arbitrary removals of original centers may occur between additions. Among additions using the third prescribed menu, the closed client balls $\\mathcal D(w,r^0(w))$ are pairwise disjoint. Writing $r=d(w,O)$ and $q=r^0(w)$ for these additions, one has $$\\sum_{\\text{third menu}}\\frac rq\\le\\frac{10m}{9},\n \\qquad\n \\sum_{\\text{third menu}}j\n \\le\\left(\\frac{10}{9\\kappa}+1\\right)m.\n \\label{sam:third-menu-budget}$$ Consequently each prescribed third-menu index is at most $J_{\\kappa,m}$. There is a constant $c_\\kappa\\in(0,1]$ such that the product of the probabilities of all prescribed menu-and-entry choices is at least $$c_\\kappa^m\\,\n 2^{-(10/(9\\kappa)+1)m}=\\exp(-O_\\kappa(m)).\n \\label{sam:menu-probability}$$ These statements do not require a fixed order of additions or a fixed rule for selecting their leaders.",
+   "kind": "bound",
+   "statement_anchor": "stmt-sam-radius-budget"
+  },
+  {
+   "claim_id": "claim-adaptive-guide-likelihood",
+   "exact_statement": "Fix $O,P,m$, $0<\\kappa\\le1$, and a number $\\rho\\in(0,1]$ independent of the instance size. Suppose an analytical guided process uses the same initial state and, at each of its nonterminal histories, does the following:*\n\n1.  *From that history it deterministically specifies ball mode or removal mode and a set of eligible clients such that, under the actual weighted client draw and fair mode choice, the joint probability of this event is at least $\\rho$.*\n\n2.  *It draws the client from the actual law conditioned on that event. It performs exactly the actual update for the sampled outcome. Thus a removal deletes the original reference center assigned to that client, which must be a previously unremoved member of $S_0$. A ball addition has a leader in a previously uncovered bad cluster and uses its prescribed correct menu and entry.*\n\n\n*Suppose the guide stops after at most $2m$ steps on every supported trajectory. Leaves are retained throughout, and there are at most $m$ ball additions and $m$ removals. The eligible sets, modes, and stopping rules may depend on the entire preceding augmented history and on $O$; they may also have several successive stages, with their stage determined by that history. Then the actual experiment records a terminal state of this guide with probability at least $$\\rho^{2m}c_\\kappa^m\n       2^{-(10/(9\\kappa)+1)m}\n =\\exp(-O_{\\kappa,\\rho}(m)).\n \\label{sam:guided-likelihood}$$ The same conclusion, with a changed constant in the exponent, holds with a polynomial-time implementation using a bounded number of random bits per operation.",
+   "kind": "bound",
+   "statement_anchor": "stmt-sam-probability"
+  },
+  {
+   "claim_id": "claim-near-client-witness-bounds",
+   "exact_statement": "Let $n_i>0$, $a>1$, and $N_i(a)=\\{p\\in C_i:d_p^*\\le a\\bar d_i\\}$. For any nonempty reference set in a metric extension, set $T_i(a)=\\sum_{p\\in N_i(a)}d(p,H)$. Then $$|N_i(a)|\\ge(1-1/a)n_i,\\qquad\n d(i,H)\\le a\\bar d_i+\n              \\frac{T_i(a)}{(1-1/a)n_i}.\n \\label{sam:general-near-bound}$$ For the main cutoff $N_i=N_i(1.2)$ and $T_i=\\sum_{p\\in N_i}d(p,H)$ one also has $$d(i,H)\\le1.02\\bar d_i+\\frac{60T_i}{n_i},\\qquad\n d(p,H)\\le1.85d_p^*+\\frac{60T_i}{n_i}\\quad(p\\in C_i\\setminus N_i).\n \\label{sam:far-client-bound}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-sam-near-clients"
+  },
+  {
+   "claim_id": "claim-sampling-progress-mass",
+   "exact_statement": "At every correct main state with $\\kappa=10^{-6}$, $$W(H)\\le3.42P+61T_{\\rm near}(H).\n \\label{sam:weight-bound}$$ If the first stopping inequality fails, the joint event of sampling a client in $\\bigcup_{i\\in B}N_i$ and choosing ball mode has probability at least $$\\rho_\\kappa=\\frac{\\kappa}{2(3.42+61\\kappa)}>0.\n \\label{sam:progress-constant}$$ If the first stopping inequality holds and the second fails, the same lower bound holds for sampling a client assigned to $R^*$ and choosing removal mode.",
+   "kind": "bound",
+   "statement_anchor": "stmt-sam-sampling-mass"
+  },
+  {
+   "claim_id": "claim-successful-recorded-prefix",
+   "exact_statement": "Assume the equal-size comparison setup and Equation <a href=\"#sam:proxy-hypothesis\" data-reference-type=\"eqref\" data-reference=\"sam:proxy-hypothesis\">[sam:proxy-hypothesis]</a>, with $1\\le m\\le M_0$, and use $\\kappa=10^{-6}$. Given $S$ and the correct guesses $P,m$, one run of the actual experiment has, with probability at least $\\exp(-C_\\kappa m)$ for an absolute constant $C_\\kappa<\\infty$, a recorded prefix with the following properties:*\n\n1.  *$Q\\subseteq S_0$, and the balls correspond to distinct $i\\in A\\subseteq\\mathcal B$, one per such cluster, with $w_i\\in N_i$ and $$r_i=d(w_i,i)=d(w_i,O)\\le R_i\n           \\le(1+\\kappa)r_i+\\kappa r^0(w_i).$$ Consequently $i\\in\\mathcal F_i$ and $\\sum_{i\\in A}n_i r^0(w_i)\\le5.2P$.*\n\n2.  *For $H$ in Equation <a href=\"#sam:reference\" data-reference-type=\"eqref\" data-reference=\"sam:reference\">[sam:reference]</a>, $B=\\mathcal B\\setminus A$, $R^*=S_0\\setminus Q$, and the nearest assignment sets $J_s$, $$\\sum_{i\\in B}\\sum_{p\\in N_i}d(p,H)\\le\\kappa P,\n           \\qquad\n           \\sum_{s\\in R^*}\\sum_{p\\in J_s}d(p,H)\\le\\kappa P.$$*\n\n3.  *The reference retains every good proxy. The covered-client bound in Equation <a href=\"#sam:covered-client-bound\" data-reference-type=\"eqref\" data-reference=\"sam:covered-client-bound\">[sam:covered-client-bound]</a> holds, and for each uncovered nonempty cluster the far-client bound in Equation <a href=\"#sam:far-client-bound\" data-reference-type=\"eqref\" data-reference=\"sam:far-client-bound\">[sam:far-client-bound]</a> holds with $T_i=\\sum_{p\\in N_i}d(p,H)$.*\n\n*The run has at most $2m+1$ recorded prefixes and takes polynomial time for fixed $\\kappa$, with rational numbers of polynomial bit length. Neither its input nor its stopping decisions require $O$, its partition, the proxies, or $S_0$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-sam-successful-prefix"
+  },
+  {
+   "claim_id": "claim-categorical-submodular-maximization",
+   "exact_statement": "Let $g$ be a normalized, monotone, submodular function given by an exact value oracle, and let $E$ have a partition into $a$ parts. For every $0<\\varepsilon<1-1/e$, a randomized algorithm uses $\\operatorname{poly}(|E|,a,1/\\varepsilon)$ oracle calls and returns a feasible $X$ satisfying $$\\mathbb E[g(X)]\\ge(1-1/e-\\varepsilon)\n       \\max\\{g(Y): |Y\\cap E_j|\\le1\\text{ for all }j\\}.$$ Every random draw can be made using a bounded polynomial number of fair bits. If the parts are nonempty, filling unoccupied parts preserves the guarantee. In particular, one obtains the factor $0.62$; more generally, for every fixed rational $\\theta>1/e$ with $\\theta<1$, one obtains expected gain at least $1-\\theta$ times the maximum.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-comp-partition-max"
+  },
+  {
+   "claim_id": "claim-surrogate-realization-and-savings",
+   "exact_statement": "For every finite branch and feasible $X$, one can construct a nonempty real solution $U_X\\subseteq F$ with $|U_X|\\le h$ and $\\operatorname{cost}(U_X)\\le\\Psi(X)$. Moreover $g(X)=\\Psi(\\varnothing)-\\Psi(X)$ is normalized, nonnegative, monotone, and submodular on all subsets of $E$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-comp-surrogate-properties"
+  },
+  {
+   "claim_id": "claim-prefix-completion-with-slack",
+   "exact_statement": "In the prefix setting above, fix a rational $1/e<\\theta<1$. Define $$R^*=S_0\\setminus Q,\\qquad\n J=\\bigcup_{s\\in R^*}J_s,\\qquad\n I=\\sum_{p\\in J}d(p,H),\\qquad\n X^*=\\{(i,i):i\\in A\\}.$$ For $p\\in C_i$, let $$c_p=\\begin{cases}\n d(p,\\phi_i),&i\\text{ good},\\\\\n d_p^*+\\theta(r_i+R_i),&i\\in A,\\\\\n d_p^*,&i\\in B,\n \\end{cases}\n \\qquad\n b_p=\\theta d(p,H)+(1-\\theta)\\min\\{d(p,H),d(p,X^*)\\}.\n \\label{comp:client-charges}$$ There is an algorithm, using only $S,m,Q$ and the given balls, whose outputs always have at most $h$ real facilities and whose work is $\\exp(O(m))\\operatorname{poly}(N,1/(\\theta-1/e))$, with polynomial dependence also on the input bit length. There is an event in its color and label choices of probability at least $\\exp(-O(m))$ such that, for every realization of those choices in the event, its output $U$ satisfies $$\\mathbb E[\\operatorname{cost}(U)]\n       \\le 2I+\\sum_{p\\in J}c_p+\\sum_{p\\notin J}b_p.\n \\label{comp:completion-bound}$$ The expectation is over the remaining optimization randomness. For good clients $b_p\\le c_p$; for clients of $A$ also $b_p\\le c_p$; for clients of $B$ one always has $b_p\\le d(p,H)$. No upper bound on $\\operatorname{cost}(H)$, proxy error, or ball radii is needed for this theorem beyond containment of $i$ in its designated ball.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-comp-completion"
+  },
+  {
+   "claim_id": "claim-single-exponential-recovery",
+   "exact_statement": "Suppose $|S|=|O|=h\\ge1$, $P=\\operatorname{cost}(O)>0$, and $O$ has an injective proxy map into $S$ for its good centers such that $$\\sum_{i\\text{ good}}\\sum_{p\\in C_i}d(p,\\phi_i)\n       \\le P_g+0.01P.$$ Assume the number $m$ of bad centers is at most a supplied bound $M_0$. On the positive bounded integral instances used in the body of the proof, for every $0<\\zeta<1$ an algorithm knowing only $S,M_0,\\zeta$ returns a real solution of size at most $h$ and cost at most $1.97P$ with probability at least $1-\\zeta$. Its running time is $$\\exp(O(M_0))\\operatorname{poly}(N)\\log(2/\\zeta).$$ In particular this is polynomial time for every fixed constant in $M_0=O(\\log N)$. Local optimality of $S$ is not an additional hypothesis of this theorem.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-comp-recovery"
+  },
+  {
+   "claim_id": "claim-two-stage-sampling-endpoint",
+   "exact_statement": "The blind sampling procedure, run for at most $2m$ steps and retaining all prefixes, has probability at least $\\exp(-O_\\mu(m))$ of producing a prefix with the following properties.*\n\n\n\n\n*There is an earlier prefix $H^0$, with covered set $A^1$ and remaining bad set $B^0$, at which the deleted set is the final set $Q$. Put $$R^*=S_0\\setminus Q,\\qquad\n J^0=\\bigcup_{s\\in R^*}J_s(H^0),\\qquad\n T_i=\\sum_{p\\in N_i^1}d(p,H^0)\\quad(i\\in B^0).$$ Then $$\\label{ref:first-stop}\n \\sum_{i\\in B^0}T_i\\le\\kappa P,\n \\qquad \\sum_{p\\in J^0}d(p,H^0)\\le\\kappa P.$$ For each nonempty cluster $i\\in B^0$, define $f_i=|C_i\\cap J^0|/n_i$. All balls added after $H^0$ correspond to a set $A^2\\subseteq\\{i\\in B^0:n_i>0,\\ f_i<1/3\\}$, and their leaders lie in $N_i^2$; the leaders for $A^1$ lie in $N_i^1$. At the final prefix, set $A=A^1\\cup A^2$, $B=B^0\\setminus A^2$, and $J=\\bigcup_{s\\in R^*}J_s(H)$. We have $$\\label{ref:second-stop}\n J\\subseteq J^0,\\qquad\n \\sum_{p\\in J}d(p,H)\\le\\kappa P,\\qquad\n \\sum_{\\substack{i\\in B:n_i>0\\\\ f_i<1/3}}\n       \\sum_{p\\in N_i^2}d(p,H)\\le\\kappa P.$$ Every ball satisfies Equation <a href=\"#ref:radius\" data-reference-type=\"eqref\" data-reference=\"ref:radius\">[ref:radius]</a>, and the collection satisfies $$\\label{ref:radius-sum}\n \\sum_{i\\in A}n_i r^0(w_i)\\le\\frac{11}{2}P.$$ The earlier prefix and the conditions defining it need not be recognized by the algorithm.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ref-two-stage"
+  },
+  {
+   "claim_id": "claim-refined-completion-charges",
+   "exact_statement": "For the endpoint above, the cost bound in Equation <a href=\"#ref:completion-bound\" data-reference-type=\"eqref\" data-reference=\"ref:completion-bound\">[ref:completion-bound]</a> is at most $$\\label{ref:explicit-bound}\n \\left(1+2\\theta a_1+\\mu+11\\kappa+\\frac\\kappa q\\right)P\n \\le (1+2/e+6\\mu)P.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-ref-charges"
+  },
+  {
+   "claim_id": "claim-surplus-construction-interface",
+   "exact_statement": "For the metric range above and fixed $v$, the construction underlying Theorem 1.2 of (Cohen-Addad, Grandoni, Lee, Schwiegelshohn, and Svensson 2026) [[CGLSS2026](#ref-CGLSS2026)] can be run in polynomial time at any target $2\\le h\\le |F|$. With precision $\\eta=2^{-N}$, its output has one of the following forms.*\n\n1.  *A solution of $\\eta$-valid sequences with exactly $h$ distinct regular facilities and at most $L=O_v(\\log N)$ free copies, for some final price $f>0$ and specified final copy lengths.*\n\n2.  *A solution of $0$-valid sequences containing only regular facilities, at price $f=N^{-2}$, with at most $h$ facilities.*\n\n*One common integer $L$ can be used for all targets on an instance. For every regular opening, the algorithm also returns its witness set and certified bids.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-imp-cglss"
+  },
+  {
+   "claim_id": "claim-compatible-final-sequence-replay",
+   "exact_statement": "Given valid sequences of either output form in Theorem <a href=\"#imp:cglss\" data-reference-type=\"ref\" data-reference=\"imp:cglss\">20</a>, with their price, fixed copy lengths, opening witnesses and certified bids, a polynomial-time replay produces final budgets $(\\alpha_p)_{p\\in D}$ and a real solution $U\\subseteq F$ of size at most $h+L$ with the following properties.*\n\n\n\n\n\n\n*The history replays the *final* sequences using their fixed final price and fixed final copy lengths. Each atomic step opens one facility or performs one simultaneous phase update. Its actual pre-step and post-step open sets satisfy $Q_t^-\\subseteq Q_t^+$, and these sets accumulate throughout the history. We call a client’s transition to inactivity its removal from the active set. Let $t(p)$ be the step at which $p$ becomes inactive and $z_p$ the phase value immediately *before* that step. At this pre-step state all active clients have budget $z_p$, and $$\\begin{aligned}\n z_p&\\le(1-\\delta)d(p,Q_{t(p)}^-),\\label{imp:active-threshold}\\\\\n \\alpha_p&\\le Kz_p,\\label{imp:final-cap}\\\\\n (1-\\delta)d(p,Q_{t(p)}^+)&\\le\\alpha_p\\le Kz_p.\n \\label{imp:post-removal}\n\\end{aligned}$$ The distance on the left of <a href=\"#imp:post-removal\" data-reference-type=\"eqref\" data-reference=\"imp:post-removal\">[imp:post-removal]</a> cannot increase at any later step. If $I_t$ is the actual inactive set just before step $t=t(p)$, then, for every regular facility $i\\in F$, $$\\sum_{j\\notin I_t}[z_p-d(i,j)]^+\n +\\sum_{j\\in I_t}[(1-\\delta)d(j,Q_t^-)-d(i,j)]^+\n \\le\\lambda.\n \\label{imp:no-overbid}$$ For these same final budgets, the dual inequality is $$\\sum_{p\\in D}[\\alpha_p-2d(i,p)]^+\\le\\lambda\n \\qquad(i\\in F).\n \\label{imp:dual}$$*\n\n\n\n\n*In the normal branch the history opens exactly $h$ paid regular facilities before projecting free copies, and $$(1-\\delta)\\operatorname{cost}(U)+h(\\lambda-N\\eta)\n       \\le\\sum_{p\\in D}\\alpha_p,\n \\qquad \\eta=2^{-N}.\n \\label{imp:payment}$$ In the small-price branch, $|U|\\le h$, $\\lambda=2/N^2$, $\\eta=0$, and, writing $r=|U|$, the stronger exact-payment inequality is $$(1-\\delta)\\operatorname{cost}(U)+r\\lambda\n       \\le\\sum_{p\\in D}\\alpha_p.\n \\label{imp:small-payment}$$ In particular its paid term can be dropped. For every nonempty real comparison solution $H\\subseteq F$ one also has $$\\sum_{p\\in D}\\alpha_p\n       \\le |H|\\lambda+2\\operatorname{cost}(H).\n \\label{imp:comparison}$$",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-imp-surplus-history"
+  },
+  {
+   "claim_id": "claim-bounded-price-strictness",
+   "exact_statement": "For $T>0$ define $$\\label{str:constants}\n B=T+2,\\qquad \\rho=\\frac{1}{200B},\\qquad\n c(T)=\\frac{\\rho^2}{100}>0.$$ Assume $0\\le\\delta<1$, $0<v\\le1$, and $$\\label{str:v-condition}\n v^2\\le\\frac{c(T)}{6(T+2)}.$$ For any regular facility $i\\in F$ and nonempty client set $C\\subseteq D$ of positive cost $P_C=\\sum_{p\\in C}d(i,p)$, the history in Lemma <a href=\"#imp:surplus-history\" data-reference-type=\"ref\" data-reference=\"imp:surplus-history\">21</a> satisfies $$\\label{str:conclusion}\n \\lambda\\le TP_C\n \\quad\\Longrightarrow\\quad\n \\sum_{p\\in C}\\alpha_p\n \\le \\lambda+\\left(2-\\frac{c(T)}2\\right)P_C.$$ The set $C$ need not be a cluster of the algorithm or of an optimal solution.",
+   "kind": "bound",
+   "statement_anchor": "stmt-str-strictness"
+  },
+  {
+   "claim_id": "claim-low-sensitivity-candidate",
+   "exact_statement": "With these fixed parameters, suppose $k>2L$ and $$\\label{sur:sensitivity}\n \\operatorname{opt}_{k-2L}\\le(1+\\xi)\\operatorname{opt}_k.$$ Put $h=k-L$. In polynomial time one can compute a real facility set $S$ of size $k$ with $$\\label{sur:conclusion}\n \\operatorname{cost}(S)\n \\le\\left(2-\\frac{c}{100}\\right)\\operatorname{opt}_h\n \\le\\left(2-\\frac{c}{100}\\right)(1+\\xi)\n       \\operatorname{opt}_k.$$ The algorithm does not need to test Equation <a href=\"#sur:sensitivity\" data-reference-type=\"eqref\" data-reference=\"sur:sensitivity\">[sur:sensitivity]</a>.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-sur-low-sensitivity"
+  },
+  {
+   "claim_id": "claim-sensitive-cardinality-separation",
+   "exact_statement": "Suppose $k>2L$, $0<\\xi\\le1$, and $$\\operatorname{opt}_{k-2L}>(1+\\xi)\\operatorname{opt}_k.$$ Put $\\beta=\\xi/(4L)$. There is an integer $h'$ with $k-2L<h'\\le k$ such that $$\\label{asm:sensitive-ratios}\n \\operatorname{opt}_{h'-1}\\ge(1+\\beta)\\operatorname{opt}_{h'},\n \\qquad\n \\operatorname{opt}_{h'}\\le(1+\\xi)\\operatorname{opt}_k.$$ For an optimum $O$ of size $h'$, of cost $P=\\operatorname{opt}_{h'}$, every comparison cluster satisfies $$\\label{asm:separation}\n n_i\\operatorname{sep}_i\\ge\\beta P,\n \\qquad \\operatorname{sep}_i=d(i,O\\setminus\\{i\\}).$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-asm-sensitive"
+  },
+  {
+   "claim_id": "claim-integral-instance-candidate-selection",
+   "exact_statement": "With the constants above, for every $0<\\zeta<1$ there is a randomized algorithm which always returns at most $k$ facilities and cost at most $5\\operatorname{opt}_k$, and with probability at least $1-\\zeta$ returns cost at most $$\\label{asm:integral-guarantee}\n (2-\\gamma)(1+\\xi)\\operatorname{opt}_k.$$ Its running time is polynomial in $N$ and $\\log(2/\\zeta)$ for the fixed constants and the fixed polynomial distance bound.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-asm-integral"
+  }
+ ],
+ "paper": "papers/EN-114-000-0022-2-2026-PR-T4-UK-EX-M1-B-ML-H-0262_PM-125.1_Single_exponential_recovery_and_bounded_price_strictness_for_metric_k_median.md",
+ "purpose": "Single-exponential recovery and bounded-price strictness for metric k-median",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "4946244ea5239b2f42b3733641f76ab3be55c4b0ee83d3903dc9f62b70160ea4",
+   "pm.domains.v2": "6020ab3cde7f754de714c8d432d6b7900b89d3563b4c74b2ec2f17c192024f7b",
+   "pm.edges.v2": "d18d2126a8d348adc273a1e0635a7a38973574767126954e33ce1b3e79bb6a81",
+   "pm.extraction.v2": "262bf823d7ec72f43a3e410338927d0d5be4e35fcb6c41d94cdc0c21fc823b16",
+   "pm.formal.v2": "a8da80762fe92b2791ad752f1b21aff9d46976cfbe7c7a46e52d7efdd939ab68",
+   "pm.limits.v2": "0fb9572d6a7042edc07408f23fde9840935865ff08ee3c685eabc5144e881975",
+   "pm.node.v2": "bbd6e1e59b6d3623f66ed19c84a690a2ffe0ea163e4b5240fa6c45f4196309d2",
+   "pm.objects.v2": "7ffb12473ccffc14d8b7650382e94dc5b03b8b25d882e01219b2eab0d098171f",
+   "pm.provenance.v2": "bbb368c7cce3d5f6ba343718778780025792c35f4d7fe0c7ad2ffcfdd5fc82b4",
+   "pm.quantities.v2": "f259ba1011732b274d3b4f58de98c6adfa47d0671a12b43ab7146de3564bde1f",
+   "pm.reading.v2": "474f4a25f356dd56ece227de5270f2cb18b292306fc28c4e46bdcca7235e32e6",
+   "pm.roadmap.v2": "f395627a53ccfcfd9246aeccaacae495fa1a98aed1027aa505e81494bc52f300",
+   "pm.search.v1": "cc01646340b0265e4009c212ba9d3d430de14800853822d80b149f79e3edb9e0",
+   "pm.triptych.v2": "5a8fd89197b8cc5bab551068fa24dd3e88fdbfcef99f8296292d9e754e3039fe"
+  },
+  "canonical_sha256": "a5998502c7f59ec241db19de7f1b35ffbce63f92d9da5ec9efe8bfd1120b8321",
+  "paper_sha256": "2c064cdbc50eb784c30dccf0cb0bdb4139004d881478aff226e38623fa81350e",
+  "repaired_body_sha256": "178840aaad6c74aa565e8e35134034599d207d6f8ccca2fec0c4a2a2f93fbc55"
+ },
+ "status": "ACTIVE",
+ "subject_id": 14,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "6c308abd2ab5aabdba6a4b954eed91d3bd9b0d7b8968fc2f78ea8f65fb6a3042",
+   "receipt_sha256": "6ff76a927fd94e3530c02214882880abac267a5fd80ab3675fb3b9ba907aa752",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "The listed deterministic vectors with between 1 and 8 indexed client distances, including singleton inputs, tied distances, zero-distance repetitions, rational comparison cost, and thresholds between distance breakpoints.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-population-radius",
+     "oracle_basis": "An independent exact characterization checks the closed-ball population for feasibility and the strict-ball population for minimality on every supplied input. This decides the minimum on these inputs without establishing the formula universally."
+    },
+    {
+     "checked_domain": "Every listed vector has positive P and m and includes the leader at zero distance. Tests cover both equality at a distance breakpoint and equality at a population threshold.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-attained-positive-radius",
+     "oracle_basis": "The oracle checks positivity and the actual closed-ball population inequality. Minimality follows from requiring the candidate radius times the strict-ball population to be at most the population threshold."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-largest-prefix-radius",
+     "observed_exit": 1,
+     "receipt_sha256": "d8449e8990c45256e324e4fac2d34f7a0ed64f27777fdd1b6067bb4a337e44dc"
+    },
+    {
+     "id": "mutant-ignore-bad-count",
+     "observed_exit": 1,
+     "receipt_sha256": "b260a65c2f1c794983edf230166d0d76bbb5fbd481f07b1ae4ff8596213ca538"
+    },
+    {
+     "id": "mutant-ignore-containment",
+     "observed_exit": 1,
+     "receipt_sha256": "7b35a710f57b0819ec4968487dece4cbe2781b75dc1324adae195730ee3c41ca"
+    }
+   ],
+   "receipt_sha256": "9932eb5c12ebf73d2fb5035d5d30c4135ae01badf3a11d999be4e53ad99137d3",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Single-exponential recovery and bounded-price strictness for metric k-median"
+}

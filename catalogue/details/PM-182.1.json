@@ -1,0 +1,573 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 466459,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 143017
+ },
+ "coordinate": "EN-113-000-0000-2-2026-PR-T4-UK-EX-M1-B-AL-H-0348",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "additive_combinatorics",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "The theorem concerns ordinary integer differences; zero values of $h$ impose no restriction on $A$.",
+     "quote_sha256": "86b8ba5be11c85c2e8b90c733b1d2127a6b4d8d1bf1d99f0dbd7aec8f5b741c7"
+    }
+   ],
+   "query": "Avoidance of zero polynomial values",
+   "reason": "Zero polynomial values impose no restriction on the avoiding set."
+  }
+ ],
+ "family": "PM-182",
+ "id": "PM-182.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "thm-main",
+    "statement": "For every integer $k\\ge2$, there is a constant $c_k\\in(0,1)$ with the following property. For every intersective polynomial $h\\in\\mathbb Z[x]$ of degree $k$ with positive leading coefficient, there are a constant $C_h\\ge1$ and an integer $N_h\\ge1$ such that, whenever $N\\ge N_h$ and $A\\subseteq[N]$ satisfy $$(A-A)\\cap h(\\mathbb N_+)\\subseteq\\{0\\},$$ one has $$|A|\\le C_h N^{1-c_k}.$$"
+   },
+   {
+    "anchor": "stmt-local-normalization",
+    "claim_id": "local-normalization",
+    "statement": "There are positive integers $D_0,M$, an integer $-D_0<r\\le0$, and an intersective polynomial $$g(x)=\\frac{h(r+D_0x)}{M}\\in\\mathbb Z[x]$$ of degree $k$ with positive leading coefficient such that, for every prime $p$, the element $w_p=(\\mathfrak z_p-r)/D_0$ belongs to $\\mathbb Z_p$ and $$g(w_p+X)=\\sum_{j=m_p}^k b^*_{j,p}X^j,\n \\qquad b^*_{j,p}\\in\\mathbb Z_p,\n \\qquad b^*_{m_p,p}\\in\\mathbb Z_p^\\times.$$ Thus $g$, with these chosen roots, satisfies Condition <a href=\"#local:unit-condition\" data-reference-type=\"eqref\" data-reference=\"local:unit-condition\">[local:unit-condition]</a>. Moreover, for every $n\\in\\mathbb N_+$, $$Mg(n)=h(r+D_0n),\\qquad r+D_0n\\ge1.$$"
+   },
+   {
+    "anchor": "stmt-local-family",
+    "claim_id": "local-family",
+    "statement": "For every $l\\ge1$, the polynomial $h_l$ belongs to $\\mathbb Z[x]$, is intersective, and has degree $k$ and positive leading coefficient $a_l$. Every coefficient of $h_l$ is $O_h(a_l)$. For every prime $p$, the element $\\mathfrak z_{p,l}=(\\mathfrak z_p-r_l)/l$ belongs to $\\mathbb Z_p$, and $$\\label{local:centered-expansion}\n \\begin{aligned}\n h_l(\\mathfrak z_{p,l}+X)\n   &=\\sum_{j=m_p}^k b_{j,p}\\frac{l^j}{\\lambda(l)}X^j,\\\\\n v_p\\!\\left(b_{m_p,p}\\frac{l^{m_p}}{\\lambda(l)}\\right)\n   &=v_p(b_{m_p,p}).\n \\end{aligned}$$ In particular, the root multiplicity remains $m_p$, and Condition <a href=\"#local:unit-condition\" data-reference-type=\"eqref\" data-reference=\"local:unit-condition\">[local:unit-condition]</a>, when it holds for $h$, holds for every $h_l$ at these roots. For all positive integers $l,D$, there is an integer $i$, $0\\le i<D$, such that $$\\label{eq:1}\n \\begin{gathered}\n h_l(Dx-i)=\\lambda(D)h_{lD}(x),\\\\\n D\\mid\\lambda(D),\\qquad \\lambda(D)\\le D^k,\n \\qquad \\mathop{\\mathrm{rad}}(\\lambda(D))=\\mathop{\\mathrm{rad}}(D).\n \\end{gathered}$$ In particular, the argument $Dx-i$ is positive whenever $x\\in\\mathbb N_+$."
+   },
+   {
+    "anchor": "stmt-local-sums",
+    "claim_id": "local-sums",
+    "statement": "There is a threshold $P_1>\\max(k,2)$, depending only on $h$, such that for every prime $p\\ge P_1$ and every $l\\ge1$, all but at most $k-1$ arguments modulo $p$ are regular for $F=h_l$, and at least half are regular. If Condition <a href=\"#local:unit-condition\" data-reference-type=\"eqref\" data-reference=\"local:unit-condition\">[local:unit-condition]</a> holds, one may choose $P_1=P_1(k)$, uniformly over all such polynomials and chosen roots of degree $k$. For every integer $u$ with $p\\nmid u$, $$\\label{eq:2}\n \\left|\\mathbb E_{x\\bmod p^j}e\\!\\left(\\frac{uF(x)}{p^j}\\right)\\right|\n \\le p^{-8\\delta j}\\quad(j\\ge1),\n \\qquad\n \\left|\\mathbb E_{\\substack{x\\bmod p\\\\x\\text{ regular}}}\n        e\\!\\left(\\frac{uF(x)}p\\right)\\right|\n \\le p^{-4\\delta}.$$ The second average is normalized by the number of regular arguments."
+   },
+   {
+    "anchor": "stmt-local-small-primes",
+    "claim_id": "local-small-primes",
+    "statement": "Let $$V_k=(i^j)_{0\\le i,j\\le k-1},\\qquad\n T_{k,p}=\\max_{1\\le j\\le k}v_p(j).$$ For every prime $p<P_1$, one may take $$\\label{local:small-prime-choice}\n S_p=v_p(b_{m_p,p})+T_{k,p}+v_p(\\det V_k)$$ so that for every $l\\ge1$ some integer $x\\in\\{0,\\ldots,k-1\\}$ satisfies $v_p(h_l'(x))\\le S_p$. In general this choice depends only on the fixed $h$, its chosen roots, and $p$. Under Condition <a href=\"#local:unit-condition\" data-reference-type=\"eqref\" data-reference=\"local:unit-condition\">[local:unit-condition]</a>, it reduces to $$S_p=T_{k,p}+v_p(\\det V_k),\n \\qquad \\det V_k=\\prod_{j=1}^{k-1}j!,$$ and hence depends only on $k$ and $p$."
+   },
+   {
+    "anchor": "stmt-local-lifting",
+    "claim_id": "local-lifting",
+    "statement": "Let $F\\in\\mathbb Z[x]$, let $p$ be a prime, and suppose $s=v_p(F'(x_0))<\\infty$ for an integer $x_0$. If $E$ is an integer with $E\\ge2s+1$, then $F$ is constant modulo $p^E$ on the argument class $x_0\\bmod p^{E-s}$. For every integer $j>E$, a uniform argument in that class modulo $p^j$ gives a uniform value among the residues modulo $p^j$ congruent to $F(x_0)\\bmod p^E$."
+   },
+   {
+    "anchor": "stmt-local-cycles",
+    "claim_id": "local-cycles",
+    "statement": "For every prime $p$ and every positive integer $l$, there are $L$ admissible residues $r_1,\\ldots,r_L\\bmod p^{E_p}$ such that $r_1+\\cdots+r_L=0\\bmod p^{E_p}$."
+   },
+   {
+    "anchor": "stmt-tuple-list-mixing",
+    "claim_id": "tuple-list-mixing",
+    "statement": "Let $G$ be a fixed directed graph with no loops and with at most one edge on each unordered pair of vertices. Write $e_G$ for its number of edges. All averages below use the normalized uniform measures on the indicated label configurations. Then $$\\left|\\mathbb E\\prod_{x\\to y\\in E(G)}W(Y_y-Y_x)-c_p^{e_G}\\right|\n       \\le e_Gp^{-4\\delta}.$$ If every edge joins a vertex in one list $X$ to a vertex in a disjoint list $Y$, in either direction, let $K_G(X,Y)$ denote this product of edge weights. As a kernel acting by normalized averaging between the uniform $L^2$ spaces of the two lists, $$\\|K_G-c_p^{e_G}\\|_{\\mathrm{op}}\n       \\le(32e_G)^{1/4}p^{-\\delta}.\n \\label{eq:3}$$ Both bounds are uniform in $l$ and $p$ and include $e_G=0$, when the products are one and both errors are zero."
+   },
+   {
+    "anchor": "stmt-tuple-marked-positive",
+    "claim_id": "tuple-marked-positive",
+    "statement": "There is a constant $c_*>0$, independent of $l,p,S$ and the cut, such that if $b\\in S$, then $$Q_S(J)\\ge c_*\\,\n \\mathbb E_{Y,j_+} I_S(Y)\n       J\\bigl((Y_{u_S(v),j_v})_{v\\in V_+}\\bigr)^2.\n \\label{eq:4}$$ Here $j_+$ consists of independent uniform indices on $V_+$."
+   },
+   {
+    "anchor": "stmt-tuple-unmarked-defect",
+    "claim_id": "tuple-unmarked-defect",
+    "statement": "Suppose $b\\notin S$. Split the address lists into the two halves of the cut. Denote the plus lists by $Y_+$, and let $I_+(Y_+)$ be the product of the weights on edges internal to them. Put $$\\mathcal D_S(J)=\\mathbb E_{Y_+,j_+} I_+(Y_+)\n       J\\bigl((Y_{u_S(v),j_v})_{v\\in V_+}\\bigr)^2.$$ If $|S|\\le t$, then $$Q_S(J)\\ge-Cp^{-\\delta}\\mathcal D_S(J).\n \\label{eq:5}$$ If $|S|=t+1$, then $Q_S(J)\\ge0$."
+   },
+   {
+    "anchor": "stmt-tuple-marking-domination",
+    "claim_id": "tuple-marking-domination",
+    "statement": "If $b\\notin S$ and $|S|\\le t$, then, with $S'=S\\cup\\{b\\}$, $$Q_{S'}(J)\\ge c_*r_*^{-n_*}\\mathcal D_S(J).\n \\label{eq:6}$$"
+   },
+   {
+    "anchor": "stmt-tuple-laws",
+    "claim_id": "tuple-laws",
+    "statement": "For all sufficiently large primes $p$, uniformly in $l\\ge1$, define $$\\begin{aligned}\n M_{l,p}&=\\sum_{\\substack{S\\subseteq[w]\\\\|S|\\le t+1}}\n                 p^{-|S|\\delta/2}\\nu_{l,p,S},\\\\\n \\mu_{l,p}&=\\frac{M_{l,p}}{M_{l,p}(1)},\\\\\n \\varepsilon_{l,p}&=\\frac{1}{M_{l,p}(1)}\n       \\sum_{|S|=t+1}p^{-(t+1)\\delta/2}\\nu_{l,p,S}.\n\\end{aligned}$$ Then $\\mu_{l,p}$ is a reflection-positive probability law and $0\\le\\varepsilon_{l,p}\\le\\mu_{l,p}$. Its exceptional mass satisfies $$\\eta_{l,p}:=\\varepsilon_{l,p}(1)\\le p^{-4}.$$ The probability law $$\\mu_{l,p}^{\\circ}\n       =\\frac{\\mu_{l,p}-\\varepsilon_{l,p}}{1-\\eta_{l,p}}$$ has only admissible increments $z_{v_{j+1}}-z_{v_j}$ along the designated cycle. Every component and both measures $\\mu_{l,p}$, $\\varepsilon_{l,p}$ are invariant under simultaneous translation of all labels. Every positive-mass component or subsum therefore has uniform single-slot marginals after normalization. In either $\\mu_{l,p}$ or $\\mu_{l,p}^{\\circ}$, the total probability of components with $S\\ne\\varnothing$ is $O(p^{-\\delta/2})$."
+   },
+   {
+    "anchor": "stmt-tuple-covariance",
+    "claim_id": "tuple-covariance",
+    "statement": "For every $l\\ge1$, every sufficiently large prime $p$, and every integer $D\\ge1$ with $p\\nmid D$, the following holds. For each $a'\\in\\mathbb F_p$, the map $$(z_v)_{v\\in V}\\longmapsto\n       \\bigl(\\lambda(D)^{-1}(z_v-a')\\bigr)_{v\\in V}\n \\label{eq:7}$$ pushes $\\mu_{l,p}$ to $\\mu_{lD,p}$ and $\\varepsilon_{l,p}$ to $\\varepsilon_{lD,p}$."
+   },
+   {
+    "anchor": "stmt-tuple-conditional-mixing",
+    "claim_id": "tuple-conditional-mixing",
+    "statement": "For all sufficiently large $p$, uniformly in $l$, let $\\rho_p$ be either $\\mu_{l,p}$ or $\\mu_{l,p}^{\\circ}$. For every $v\\in V$ and every function $f:\\mathbb F_p\\to\\mathbb C$ of uniform mean zero, $$\\left\\|\\mathbb E_{\\rho_p}\\bigl(f(z_v)\\mid\n                         (z_{v'})_{v'\\ne v}\\bigr)\\right\\|_2\n       \\le p^{-\\gamma}\\|f\\|_2.\n \\label{eq:8}$$ The norm on the left is taken in the other-label marginal of $\\rho_p$; the norm on the right is uniform on $\\mathbb F_p$."
+   },
+   {
+    "anchor": "stmt-tuple-threshold-dependence",
+    "claim_id": "tuple-threshold-dependence",
+    "statement": "For the auxiliary family and local choices above, the threshold $P$ can be chosen as a function of $k,P_1,L,t$ alone so that Proposition <a href=\"#tuple:laws\" data-reference-type=\"ref\" data-reference=\"tuple:laws\">12</a>, Lemmas <a href=\"#tuple:covariance\" data-reference-type=\"ref\" data-reference=\"tuple:covariance\">13</a> and <a href=\"#tuple:conditional-mixing\" data-reference-type=\"ref\" data-reference=\"tuple:conditional-mixing\">14</a>, and <a href=\"#eq:9\" data-reference-type=\"eqref\" data-reference=\"eq:9\">[eq:9]</a> hold uniformly in $l$. For general fixed data, $P_1$ may depend on $h$, and $L$ may depend on $h$ and its chosen roots. If $h$ satisfies Condition <a href=\"#local:unit-condition\" data-reference-type=\"eqref\" data-reference=\"local:unit-condition\">[local:unit-condition]</a> and the degree-dependent choices of $P_1$, $E_p$, and $L$ from Section <a href=\"#sec:local\" data-reference-type=\"ref\" data-reference=\"sec:local\">2</a> are used, then $P$ and $M_0$ depend only on $k$."
+   },
+   {
+    "anchor": "stmt-lift-signed-holder",
+    "claim_id": "lift-signed-holder",
+    "statement": "For every positive integer $l$, finite set $\\mathcal P$ of primes at least $P$, and real functions $g,g_v:X_{\\mathcal P}\\to\\mathbb R$, $$Z_{l,\\mathcal P}(g)\\ge0,\n \\qquad\n \\left|\\mathcal Z_{l,\\mathcal P}((g_v)_{v\\in V})\\right|\n \\le\\prod_{v\\in V} Z_{l,\\mathcal P}(g_v)^{1/d}.\n \\label{eq:10}$$"
+   },
+   {
+    "anchor": "stmt-lift-seminorm",
+    "claim_id": "lift-seminorm",
+    "statement": "The map $g\\mapsto\\|g\\|_{l,\\mathcal P}$ is a seminorm on the real functions on $X_{\\mathcal P}$. It satisfies $$|\\mathbb Eg|\\le\\|g\\|_{l,\\mathcal P},\n \\qquad\n \\|\\mathbb E_Bg\\|_{l,\\mathcal P\\setminus B}\n =\\|\\mathbb E_Bg\\|_{l,\\mathcal P}\n \\le\\|g\\|_{l,\\mathcal P}.$$ Translations of the input are isometries. Moreover, if $D$ is a positive integer coprime to every prime of $\\mathcal P$, then for any $a'\\in X_{\\mathcal P}$, $$\\left\\|g\\bigl(\\lambda(D)^{-1}(\\,\\cdot-a')\\bigr)\n       \\right\\|_{l,\\mathcal P}\n =\\|g\\|_{lD,\\mathcal P}.\n \\label{lift:transport}$$ Here the affine change is interpreted separately at each prime."
+   },
+   {
+    "anchor": "stmt-lift-large-denominator",
+    "claim_id": "lift-large-denominator",
+    "statement": "Fix $l\\ge1$ and a finite prime set $\\mathcal P$ as above. At each prime choose either $\\rho_p=\\mu_{l,p}$ or $\\rho_p=\\mu_{l,p}^{\\circ}$. Let $g_v:X_{\\mathcal P}\\to\\mathbb C$ be arbitrary functions. If, in one distinguished slot $v$, every Fourier coefficient at a denominator at most $R$ vanishes, where $R\\ge1$, then $$\\left|\\int\\prod_{u\\in V}g_u(z_u)\\,\n                  d\\bigotimes_{p\\in\\mathcal P}\\rho_p\\right|\n \\le R^{-\\gamma}\\|g_v\\|_2\n                     \\prod_{u\\ne v}\\|g_u\\|_{2(d-1)}.\n \\label{eq:11}$$"
+   },
+   {
+    "anchor": "stmt-lift-moments",
+    "claim_id": "lift-moments",
+    "statement": "Let $\\mathcal P$ be any finite set of primes, $Q\\ge1$, and let $I$ be a consecutive integer interval with $|I|\\ge10Q^6$. For every integer $r\\ge1$, every $\\epsilon>0$, every function $f:I\\to\\mathbb C$, and every subfamily $\\mathcal F\\subseteq\\{B\\subseteq\\mathcal P:q_B\\le Q\\}$, $$\\left\\|\\sum_{B\\in\\mathcal F}f_B\\right\\|_{2r}\n \\le C_{r,\\epsilon}\\|f\\|_\\infty Q^\\epsilon.\n \\label{eq:12}$$ The constant is independent of the prime set, the interval and its location, the function, and the subfamily."
+   },
+   {
+    "anchor": "stmt-lift-specialization",
+    "claim_id": "lift-specialization",
+    "statement": "Let $B\\subseteq\\mathcal P$, fix $z_B\\in X_B$, and let $G:X_{\\mathcal P}\\to\\mathbb C$. For $1\\le s<\\infty$, $$\\|G(z_B,\\cdot)\\|_{L^s(X_{\\mathcal P\\setminus B})}\n \\le q_B^{1/s}\\|G\\|_{L^s(X_{\\mathcal P})}.$$ In particular, a Fourier lift or a subfamily of its complete supports satisfies <a href=\"#eq:12\" data-reference-type=\"eqref\" data-reference=\"eq:12\">[eq:12]</a> after specialization with the additional factor $q_B^{1/(2r)}$. The same bound holds after retaining either the remaining denominators at most a given $H\\ge1$, or those greater than $H$."
+   },
+   {
+    "anchor": "stmt-lift-density",
+    "claim_id": "lift-density",
+    "statement": "For all positive integers $l,N$ and all $A\\subseteq[N]$, $$Y_l(N,A)\\ge\\left(\\frac{|A|}{N}\\right)^d\\ge0.$$ For every $\\epsilon>0$, there is a constant $C_\\epsilon$, independent of $l,N,A$, such that $$Y_l(N,A)\\le C_\\epsilon N^\\epsilon.$$"
+   },
+   {
+    "anchor": "stmt-kernel-estimate",
+    "claim_id": "kernel-estimate",
+    "statement": "Use the fixed parameters in <a href=\"#eq:14\" data-reference-type=\"eqref\" data-reference=\"eq:14\">[eq:14]</a>, and let $N$ be a sufficiently large integer. Suppose $1\\le l\\le N^\\zeta$ and $$D=M_0\\prod_{p\\in B}p\\le N^\\beta,$$ where $B$ is a finite set of primes at least $P$. Let $J_1,J_2:[N]\\to\\mathbb C$ satisfy $|J_1|,|J_2|\\le1$ and be supported in residue classes $a_1,a_2$ modulo $D$, respectively. Suppose that $r=a_2-a_1$ is admissible for $l$ modulo $D$, that $x<y$ whenever $x\\in\\operatorname{supp}J_1$ and $y\\in\\operatorname{supp}J_2$, and that no such difference $y-x$ belongs to $F(\\mathbb N_+)$. Put $H=N^{\\beta/2}$ and $$\\Xi=\\{\\xi\\in\\mathbb Q/\\mathbb Z:q(\\xi)\\le H,\\quad q(\\xi)\\text{ squarefree},\n                         \\quad(q(\\xi),D)=1\\}.$$ Then $$D\\left|\\sum_{\\xi\\in\\Xi}\\Gamma(\\xi)\n          \\widehat{J_1}_{[N]}(-\\xi)\\widehat{J_2}_{[N]}(\\xi)\\right|\n \\ll H^{-\\gamma/2}.\n \\label{eq:16}$$ The implied constant and the threshold for $N$ depend only on the fixed polynomial and the fixed parameters, not on $l,D,r,J_1,J_2$."
+   },
+   {
+    "anchor": "stmt-kernel-comparison",
+    "claim_id": "kernel-comparison",
+    "statement": "For the kernels just constructed, $$\\sup_{\\alpha\\in\\mathbb R/\\mathbb Z}|S_1(\\alpha)-S_0(\\alpha)|\n       \\ll H^{-\\gamma/2},\n \\label{eq:18}$$ uniformly in the data of Proposition <a href=\"#kernel:estimate\" data-reference-type=\"ref\" data-reference=\"kernel:estimate\">22</a>."
+   },
+   {
+    "anchor": "stmt-kernel-weyl",
+    "claim_id": "kernel-weyl",
+    "statement": "If $\\alpha$ lies on the minor arcs, then, for every real $y'$ and every integer interval $I\\subseteq(x_*,X]$, $$\\left|\\sum_{m\\in I}e\\bigl(\\alpha F(m)+y'm\\bigr)\\right|\n       \\ll U N^{-\\nu}.\n \\label{eq:21}$$"
+   },
+   {
+    "anchor": "stmt-kernel-coefficients",
+    "claim_id": "kernel-coefficients",
+    "statement": "For every $\\alpha_0\\in\\mathbb Q/\\mathbb Z$, write $\\alpha_0=\\alpha_D+\\alpha_1$ for the unique decomposition in which $q(\\alpha_D)$ has only prime factors dividing $D$ and $(q(\\alpha_1),D)=1$. Then the coefficients defined by <a href=\"#eq:20\" data-reference-type=\"eqref\" data-reference=\"eq:20\">[eq:20]</a> and <a href=\"#eq:23\" data-reference-type=\"eqref\" data-reference=\"eq:23\">[eq:23]</a> satisfy $$|c(\\alpha_0)-c_0(\\alpha_0)|\\le H^{-\\gamma/2}.$$ In fact they agree when $q(\\alpha_1)\\le H$."
+   },
+   {
+    "anchor": "stmt-transfer-specialization",
+    "claim_id": "transfer-specialization",
+    "statement": "Let $I\\subseteq[N]$ be a nonempty integer interval, let $B\\subseteq\\mathcal P_N$, and put $D=M_0q_B$. Fix $s\\in\\mathbb Z/M_0\\mathbb Z$ and $b=(b_p)_{p\\in B}\\in X_B$. Let $g$ be the function on $X_{\\mathcal P_N\\setminus B}$ obtained by specializing $\\mathcal L_{I,\\mathcal P_N,Q}f_s$ at $z_B=b$. For every remaining-coordinate frequency $\\xi$ with $q(\\xi)q_B\\le Q$, one has $$\\label{eq:25}\n \\widehat g(\\xi)\n =\\frac{D}{|I|}\n   \\sum_{\\substack{x\\in I\\\\x\\equiv a'\\pmod D}}\n       \\mathbf 1_A(x)e(-x\\xi),$$ where $a'\\pmod D$ is determined by $a'\\equiv s\\pmod{M_0}$ and $a'\\equiv b_p\\pmod p$ for $p\\in B$."
+   },
+   {
+    "anchor": "stmt-transfer-shorter-scale",
+    "claim_id": "transfer-shorter-scale",
+    "statement": "Let $N$ be sufficiently large, let $l\\ge1$, and let $A\\subseteq[N]$ satisfy <a href=\"#eq:24\" data-reference-type=\"eqref\" data-reference=\"eq:24\">[eq:24]</a>. Suppose that $B\\subseteq\\mathcal P_N$ and $q_B\\le N^\\tau$. Set $$\\begin{gathered}\n \\mathcal S=\\mathcal P_N\\setminus B,\n \\qquad D=M_0q_B,\n \\qquad L_D=\\lambda(D),\\\\\n n_B=\\left\\lceil\\frac{N}{L_D}\\right\\rceil,\n \\qquad \\Lambda_B=\\frac{L_Dn_B}{N}.\n\\end{gathered}$$ For each $v\\in V$, choose $s_v\\in\\mathbb Z/M_0\\mathbb Z$ and specialize $G_{s_v}$ at an arbitrary vector of coordinates on $B$, obtaining a function $g_v$ on $X_{\\mathcal S}$. Then $$\\label{eq:26}\n \\bigl|\\mathcal Z_{l,\\mathcal S}((g_v)_{v\\in V})\\bigr|\n \\le \\Lambda_B^d\\mathcal Y_{lD}(n_B)+O(N^{-\\sigma}).$$ The scale and the rounding factor satisfy $1\\le n_B<N$ and $$\\label{eq:27}\n 1\\le\\Lambda_B\\le1+M_0^kN^{k\\tau-1}.$$ The implied constant and the threshold for $N$ are independent of $l,A,B$ and all specializations."
+   },
+   {
+    "anchor": "stmt-transfer-good-assignments",
+    "claim_id": "transfer-good-assignments",
+    "statement": "For every $l\\ge1$, the proportion $\\rho_l$ of good assignments under independent uniform choices of all the $s_v$ satisfies $$\\rho_l\\ge\\rho_*:=M_0^{1-L}>0.$$"
+   },
+   {
+    "anchor": "stmt-transfer-cancellation",
+    "claim_id": "transfer-cancellation",
+    "statement": "Let $N$ be sufficiently large, let $l\\le N^\\zeta$, and let $A\\subseteq[N]$ satisfy <a href=\"#eq:24\" data-reference-type=\"eqref\" data-reference=\"eq:24\">[eq:24]</a>. If $(s_v)_{v\\in V}$ is good for $l$, then $$\\label{eq:29}\n \\left|\n  \\int\\prod_{v\\in V}G_{s_v}(z_v)\\,\n    d\\bigotimes_{p\\in\\mathcal P_N}\n       (\\mu_{l,p}-\\varepsilon_{l,p})\n \\right|\\ll N^{-\\sigma}.$$ The bound is uniform in $l,A$ and the good assignment."
+   },
+   {
+    "anchor": "stmt-induction-recurrence",
+    "claim_id": "induction-recurrence",
+    "statement": "There are constants $C_1\\ge1$ and $N_1\\ge3$, depending only on the fixed polynomial $h$, its chosen roots, and the fixed structural choices, such that for every integer $N\\ge N_1$ and every positive integer $l\\le N^\\zeta$, $$\\begin{split}\n \\mathcal Y_l(N)\\le C_1N^{-\\sigma}\n +(1+u_N)\\Bigg(&\n   (1-\\rho_l)\\mathcal Y_{lD_\\varnothing}(n_\\varnothing)\\\\\n &+\\rho_l\n   \\sum_{\\substack{\\varnothing\\ne B\\subseteq\\mathcal P_N\\\\q_B\\le N^\\tau}}\n      \\eta_{l,B}\\mathcal Y_{lD_B}(n_B)\\Bigg),\n \\end{split}\n \\label{eq:31}$$ where $$u_N=\\bigl(1+M_0^kN^{k\\tau-1}\\bigr)^d-1\\longrightarrow0.$$ Every scale $n_B$ appearing on the right belongs to $[1,N-1]$."
+   },
+   {
+    "anchor": "stmt-induction-decay",
+    "claim_id": "induction-decay",
+    "statement": "There are constants $a_0,b_0>0$ and $C_0\\ge1$, depending only on the fixed polynomial $h$, its chosen roots, and the fixed structural choices, such that for all positive integers $l,N$, $$\\mathcal Y_l(N)\\le C_0l^{b_0}N^{-a_0}.\n \\label{eq:33}$$ The exponents $a_0,b_0$ can be chosen as functions only of the structural parameters $k,\\zeta,\\sigma,M_0,\\rho_*$. If the chosen roots of $h$ satisfy Condition <a href=\"#local:unit-condition\" data-reference-type=\"eqref\" data-reference=\"local:unit-condition\">[local:unit-condition]</a> and the choices depending only on $k$ from Sections <a href=\"#sec:local\" data-reference-type=\"ref\" data-reference=\"sec:local\">2</a> and <a href=\"#sec:tuples\" data-reference-type=\"ref\" data-reference=\"sec:tuples\">3</a> are used, then $a_0,b_0,d$ depend only on $k$, while $C_0$ may still depend on the fixed data."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Polynomial density contraction",
+    "evidence": [
+     {
+      "anchor": "pm-h-9",
+      "quote": "combines the kernel estimate with the seminorm comparison.",
+      "quote_sha256": "486494e7030f334ba5f98a9afc5b2cce3d54f6519e9234c4304954068c6232a4"
+     }
+    ],
+    "requires_concepts": [
+     "Auxiliary polynomials",
+     "Reflection positivity",
+     "Fourier lifts",
+     "Signed polynomial kernels"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "thm-main",
+   "exact_statement": "For every integer $k\\ge2$, there is a constant $c_k\\in(0,1)$ with the following property. For every intersective polynomial $h\\in\\mathbb Z[x]$ of degree $k$ with positive leading coefficient, there are a constant $C_h\\ge1$ and an integer $N_h\\ge1$ such that, whenever $N\\ge N_h$ and $A\\subseteq[N]$ satisfy $$(A-A)\\cap h(\\mathbb N_+)\\subseteq\\{0\\},$$ one has $$|A|\\le C_h N^{1-c_k}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "local-normalization",
+   "exact_statement": "There are positive integers $D_0,M$, an integer $-D_0<r\\le0$, and an intersective polynomial $$g(x)=\\frac{h(r+D_0x)}{M}\\in\\mathbb Z[x]$$ of degree $k$ with positive leading coefficient such that, for every prime $p$, the element $w_p=(\\mathfrak z_p-r)/D_0$ belongs to $\\mathbb Z_p$ and $$g(w_p+X)=\\sum_{j=m_p}^k b^*_{j,p}X^j,\n \\qquad b^*_{j,p}\\in\\mathbb Z_p,\n \\qquad b^*_{m_p,p}\\in\\mathbb Z_p^\\times.$$ Thus $g$, with these chosen roots, satisfies Condition <a href=\"#local:unit-condition\" data-reference-type=\"eqref\" data-reference=\"local:unit-condition\">[local:unit-condition]</a>. Moreover, for every $n\\in\\mathbb N_+$, $$Mg(n)=h(r+D_0n),\\qquad r+D_0n\\ge1.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-local-normalization"
+  },
+  {
+   "claim_id": "local-family",
+   "exact_statement": "For every $l\\ge1$, the polynomial $h_l$ belongs to $\\mathbb Z[x]$, is intersective, and has degree $k$ and positive leading coefficient $a_l$. Every coefficient of $h_l$ is $O_h(a_l)$. For every prime $p$, the element $\\mathfrak z_{p,l}=(\\mathfrak z_p-r_l)/l$ belongs to $\\mathbb Z_p$, and $$\\label{local:centered-expansion}\n \\begin{aligned}\n h_l(\\mathfrak z_{p,l}+X)\n   &=\\sum_{j=m_p}^k b_{j,p}\\frac{l^j}{\\lambda(l)}X^j,\\\\\n v_p\\!\\left(b_{m_p,p}\\frac{l^{m_p}}{\\lambda(l)}\\right)\n   &=v_p(b_{m_p,p}).\n \\end{aligned}$$ In particular, the root multiplicity remains $m_p$, and Condition <a href=\"#local:unit-condition\" data-reference-type=\"eqref\" data-reference=\"local:unit-condition\">[local:unit-condition]</a>, when it holds for $h$, holds for every $h_l$ at these roots. For all positive integers $l,D$, there is an integer $i$, $0\\le i<D$, such that $$\\label{eq:1}\n \\begin{gathered}\n h_l(Dx-i)=\\lambda(D)h_{lD}(x),\\\\\n D\\mid\\lambda(D),\\qquad \\lambda(D)\\le D^k,\n \\qquad \\mathop{\\mathrm{rad}}(\\lambda(D))=\\mathop{\\mathrm{rad}}(D).\n \\end{gathered}$$ In particular, the argument $Dx-i$ is positive whenever $x\\in\\mathbb N_+$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-local-family"
+  },
+  {
+   "claim_id": "local-sums",
+   "exact_statement": "There is a threshold $P_1>\\max(k,2)$, depending only on $h$, such that for every prime $p\\ge P_1$ and every $l\\ge1$, all but at most $k-1$ arguments modulo $p$ are regular for $F=h_l$, and at least half are regular. If Condition <a href=\"#local:unit-condition\" data-reference-type=\"eqref\" data-reference=\"local:unit-condition\">[local:unit-condition]</a> holds, one may choose $P_1=P_1(k)$, uniformly over all such polynomials and chosen roots of degree $k$. For every integer $u$ with $p\\nmid u$, $$\\label{eq:2}\n \\left|\\mathbb E_{x\\bmod p^j}e\\!\\left(\\frac{uF(x)}{p^j}\\right)\\right|\n \\le p^{-8\\delta j}\\quad(j\\ge1),\n \\qquad\n \\left|\\mathbb E_{\\substack{x\\bmod p\\\\x\\text{ regular}}}\n        e\\!\\left(\\frac{uF(x)}p\\right)\\right|\n \\le p^{-4\\delta}.$$ The second average is normalized by the number of regular arguments.",
+   "kind": "bound",
+   "statement_anchor": "stmt-local-sums"
+  },
+  {
+   "claim_id": "local-small-primes",
+   "exact_statement": "Let $$V_k=(i^j)_{0\\le i,j\\le k-1},\\qquad\n T_{k,p}=\\max_{1\\le j\\le k}v_p(j).$$ For every prime $p<P_1$, one may take $$\\label{local:small-prime-choice}\n S_p=v_p(b_{m_p,p})+T_{k,p}+v_p(\\det V_k)$$ so that for every $l\\ge1$ some integer $x\\in\\{0,\\ldots,k-1\\}$ satisfies $v_p(h_l'(x))\\le S_p$. In general this choice depends only on the fixed $h$, its chosen roots, and $p$. Under Condition <a href=\"#local:unit-condition\" data-reference-type=\"eqref\" data-reference=\"local:unit-condition\">[local:unit-condition]</a>, it reduces to $$S_p=T_{k,p}+v_p(\\det V_k),\n \\qquad \\det V_k=\\prod_{j=1}^{k-1}j!,$$ and hence depends only on $k$ and $p$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-local-small-primes"
+  },
+  {
+   "claim_id": "local-lifting",
+   "exact_statement": "Let $F\\in\\mathbb Z[x]$, let $p$ be a prime, and suppose $s=v_p(F'(x_0))<\\infty$ for an integer $x_0$. If $E$ is an integer with $E\\ge2s+1$, then $F$ is constant modulo $p^E$ on the argument class $x_0\\bmod p^{E-s}$. For every integer $j>E$, a uniform argument in that class modulo $p^j$ gives a uniform value among the residues modulo $p^j$ congruent to $F(x_0)\\bmod p^E$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-local-lifting"
+  },
+  {
+   "claim_id": "local-cycles",
+   "exact_statement": "For every prime $p$ and every positive integer $l$, there are $L$ admissible residues $r_1,\\ldots,r_L\\bmod p^{E_p}$ such that $r_1+\\cdots+r_L=0\\bmod p^{E_p}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-local-cycles"
+  },
+  {
+   "claim_id": "tuple-list-mixing",
+   "exact_statement": "Let $G$ be a fixed directed graph with no loops and with at most one edge on each unordered pair of vertices. Write $e_G$ for its number of edges. All averages below use the normalized uniform measures on the indicated label configurations. Then $$\\left|\\mathbb E\\prod_{x\\to y\\in E(G)}W(Y_y-Y_x)-c_p^{e_G}\\right|\n       \\le e_Gp^{-4\\delta}.$$ If every edge joins a vertex in one list $X$ to a vertex in a disjoint list $Y$, in either direction, let $K_G(X,Y)$ denote this product of edge weights. As a kernel acting by normalized averaging between the uniform $L^2$ spaces of the two lists, $$\\|K_G-c_p^{e_G}\\|_{\\mathrm{op}}\n       \\le(32e_G)^{1/4}p^{-\\delta}.\n \\label{eq:3}$$ Both bounds are uniform in $l$ and $p$ and include $e_G=0$, when the products are one and both errors are zero.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tuple-list-mixing"
+  },
+  {
+   "claim_id": "tuple-marked-positive",
+   "exact_statement": "There is a constant $c_*>0$, independent of $l,p,S$ and the cut, such that if $b\\in S$, then $$Q_S(J)\\ge c_*\\,\n \\mathbb E_{Y,j_+} I_S(Y)\n       J\\bigl((Y_{u_S(v),j_v})_{v\\in V_+}\\bigr)^2.\n \\label{eq:4}$$ Here $j_+$ consists of independent uniform indices on $V_+$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tuple-marked-positive"
+  },
+  {
+   "claim_id": "tuple-unmarked-defect",
+   "exact_statement": "Suppose $b\\notin S$. Split the address lists into the two halves of the cut. Denote the plus lists by $Y_+$, and let $I_+(Y_+)$ be the product of the weights on edges internal to them. Put $$\\mathcal D_S(J)=\\mathbb E_{Y_+,j_+} I_+(Y_+)\n       J\\bigl((Y_{u_S(v),j_v})_{v\\in V_+}\\bigr)^2.$$ If $|S|\\le t$, then $$Q_S(J)\\ge-Cp^{-\\delta}\\mathcal D_S(J).\n \\label{eq:5}$$ If $|S|=t+1$, then $Q_S(J)\\ge0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tuple-unmarked-defect"
+  },
+  {
+   "claim_id": "tuple-marking-domination",
+   "exact_statement": "If $b\\notin S$ and $|S|\\le t$, then, with $S'=S\\cup\\{b\\}$, $$Q_{S'}(J)\\ge c_*r_*^{-n_*}\\mathcal D_S(J).\n \\label{eq:6}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-tuple-marking-domination"
+  },
+  {
+   "claim_id": "tuple-laws",
+   "exact_statement": "For all sufficiently large primes $p$, uniformly in $l\\ge1$, define $$\\begin{aligned}\n M_{l,p}&=\\sum_{\\substack{S\\subseteq[w]\\\\|S|\\le t+1}}\n                 p^{-|S|\\delta/2}\\nu_{l,p,S},\\\\\n \\mu_{l,p}&=\\frac{M_{l,p}}{M_{l,p}(1)},\\\\\n \\varepsilon_{l,p}&=\\frac{1}{M_{l,p}(1)}\n       \\sum_{|S|=t+1}p^{-(t+1)\\delta/2}\\nu_{l,p,S}.\n\\end{aligned}$$ Then $\\mu_{l,p}$ is a reflection-positive probability law and $0\\le\\varepsilon_{l,p}\\le\\mu_{l,p}$. Its exceptional mass satisfies $$\\eta_{l,p}:=\\varepsilon_{l,p}(1)\\le p^{-4}.$$ The probability law $$\\mu_{l,p}^{\\circ}\n       =\\frac{\\mu_{l,p}-\\varepsilon_{l,p}}{1-\\eta_{l,p}}$$ has only admissible increments $z_{v_{j+1}}-z_{v_j}$ along the designated cycle. Every component and both measures $\\mu_{l,p}$, $\\varepsilon_{l,p}$ are invariant under simultaneous translation of all labels. Every positive-mass component or subsum therefore has uniform single-slot marginals after normalization. In either $\\mu_{l,p}$ or $\\mu_{l,p}^{\\circ}$, the total probability of components with $S\\ne\\varnothing$ is $O(p^{-\\delta/2})$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-tuple-laws"
+  },
+  {
+   "claim_id": "tuple-covariance",
+   "exact_statement": "For every $l\\ge1$, every sufficiently large prime $p$, and every integer $D\\ge1$ with $p\\nmid D$, the following holds. For each $a'\\in\\mathbb F_p$, the map $$(z_v)_{v\\in V}\\longmapsto\n       \\bigl(\\lambda(D)^{-1}(z_v-a')\\bigr)_{v\\in V}\n \\label{eq:7}$$ pushes $\\mu_{l,p}$ to $\\mu_{lD,p}$ and $\\varepsilon_{l,p}$ to $\\varepsilon_{lD,p}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tuple-covariance"
+  },
+  {
+   "claim_id": "tuple-conditional-mixing",
+   "exact_statement": "For all sufficiently large $p$, uniformly in $l$, let $\\rho_p$ be either $\\mu_{l,p}$ or $\\mu_{l,p}^{\\circ}$. For every $v\\in V$ and every function $f:\\mathbb F_p\\to\\mathbb C$ of uniform mean zero, $$\\left\\|\\mathbb E_{\\rho_p}\\bigl(f(z_v)\\mid\n                         (z_{v'})_{v'\\ne v}\\bigr)\\right\\|_2\n       \\le p^{-\\gamma}\\|f\\|_2.\n \\label{eq:8}$$ The norm on the left is taken in the other-label marginal of $\\rho_p$; the norm on the right is uniform on $\\mathbb F_p$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tuple-conditional-mixing"
+  },
+  {
+   "claim_id": "tuple-threshold-dependence",
+   "exact_statement": "For the auxiliary family and local choices above, the threshold $P$ can be chosen as a function of $k,P_1,L,t$ alone so that Proposition <a href=\"#tuple:laws\" data-reference-type=\"ref\" data-reference=\"tuple:laws\">12</a>, Lemmas <a href=\"#tuple:covariance\" data-reference-type=\"ref\" data-reference=\"tuple:covariance\">13</a> and <a href=\"#tuple:conditional-mixing\" data-reference-type=\"ref\" data-reference=\"tuple:conditional-mixing\">14</a>, and <a href=\"#eq:9\" data-reference-type=\"eqref\" data-reference=\"eq:9\">[eq:9]</a> hold uniformly in $l$. For general fixed data, $P_1$ may depend on $h$, and $L$ may depend on $h$ and its chosen roots. If $h$ satisfies Condition <a href=\"#local:unit-condition\" data-reference-type=\"eqref\" data-reference=\"local:unit-condition\">[local:unit-condition]</a> and the degree-dependent choices of $P_1$, $E_p$, and $L$ from Section <a href=\"#sec:local\" data-reference-type=\"ref\" data-reference=\"sec:local\">2</a> are used, then $P$ and $M_0$ depend only on $k$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tuple-threshold-dependence"
+  },
+  {
+   "claim_id": "lift-signed-holder",
+   "exact_statement": "For every positive integer $l$, finite set $\\mathcal P$ of primes at least $P$, and real functions $g,g_v:X_{\\mathcal P}\\to\\mathbb R$, $$Z_{l,\\mathcal P}(g)\\ge0,\n \\qquad\n \\left|\\mathcal Z_{l,\\mathcal P}((g_v)_{v\\in V})\\right|\n \\le\\prod_{v\\in V} Z_{l,\\mathcal P}(g_v)^{1/d}.\n \\label{eq:10}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lift-signed-holder"
+  },
+  {
+   "claim_id": "lift-seminorm",
+   "exact_statement": "The map $g\\mapsto\\|g\\|_{l,\\mathcal P}$ is a seminorm on the real functions on $X_{\\mathcal P}$. It satisfies $$|\\mathbb Eg|\\le\\|g\\|_{l,\\mathcal P},\n \\qquad\n \\|\\mathbb E_Bg\\|_{l,\\mathcal P\\setminus B}\n =\\|\\mathbb E_Bg\\|_{l,\\mathcal P}\n \\le\\|g\\|_{l,\\mathcal P}.$$ Translations of the input are isometries. Moreover, if $D$ is a positive integer coprime to every prime of $\\mathcal P$, then for any $a'\\in X_{\\mathcal P}$, $$\\left\\|g\\bigl(\\lambda(D)^{-1}(\\,\\cdot-a')\\bigr)\n       \\right\\|_{l,\\mathcal P}\n =\\|g\\|_{lD,\\mathcal P}.\n \\label{lift:transport}$$ Here the affine change is interpreted separately at each prime.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lift-seminorm"
+  },
+  {
+   "claim_id": "lift-large-denominator",
+   "exact_statement": "Fix $l\\ge1$ and a finite prime set $\\mathcal P$ as above. At each prime choose either $\\rho_p=\\mu_{l,p}$ or $\\rho_p=\\mu_{l,p}^{\\circ}$. Let $g_v:X_{\\mathcal P}\\to\\mathbb C$ be arbitrary functions. If, in one distinguished slot $v$, every Fourier coefficient at a denominator at most $R$ vanishes, where $R\\ge1$, then $$\\left|\\int\\prod_{u\\in V}g_u(z_u)\\,\n                  d\\bigotimes_{p\\in\\mathcal P}\\rho_p\\right|\n \\le R^{-\\gamma}\\|g_v\\|_2\n                     \\prod_{u\\ne v}\\|g_u\\|_{2(d-1)}.\n \\label{eq:11}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lift-large-denominator"
+  },
+  {
+   "claim_id": "lift-moments",
+   "exact_statement": "Let $\\mathcal P$ be any finite set of primes, $Q\\ge1$, and let $I$ be a consecutive integer interval with $|I|\\ge10Q^6$. For every integer $r\\ge1$, every $\\epsilon>0$, every function $f:I\\to\\mathbb C$, and every subfamily $\\mathcal F\\subseteq\\{B\\subseteq\\mathcal P:q_B\\le Q\\}$, $$\\left\\|\\sum_{B\\in\\mathcal F}f_B\\right\\|_{2r}\n \\le C_{r,\\epsilon}\\|f\\|_\\infty Q^\\epsilon.\n \\label{eq:12}$$ The constant is independent of the prime set, the interval and its location, the function, and the subfamily.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lift-moments"
+  },
+  {
+   "claim_id": "lift-specialization",
+   "exact_statement": "Let $B\\subseteq\\mathcal P$, fix $z_B\\in X_B$, and let $G:X_{\\mathcal P}\\to\\mathbb C$. For $1\\le s<\\infty$, $$\\|G(z_B,\\cdot)\\|_{L^s(X_{\\mathcal P\\setminus B})}\n \\le q_B^{1/s}\\|G\\|_{L^s(X_{\\mathcal P})}.$$ In particular, a Fourier lift or a subfamily of its complete supports satisfies <a href=\"#eq:12\" data-reference-type=\"eqref\" data-reference=\"eq:12\">[eq:12]</a> after specialization with the additional factor $q_B^{1/(2r)}$. The same bound holds after retaining either the remaining denominators at most a given $H\\ge1$, or those greater than $H$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lift-specialization"
+  },
+  {
+   "claim_id": "lift-density",
+   "exact_statement": "For all positive integers $l,N$ and all $A\\subseteq[N]$, $$Y_l(N,A)\\ge\\left(\\frac{|A|}{N}\\right)^d\\ge0.$$ For every $\\epsilon>0$, there is a constant $C_\\epsilon$, independent of $l,N,A$, such that $$Y_l(N,A)\\le C_\\epsilon N^\\epsilon.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lift-density"
+  },
+  {
+   "claim_id": "kernel-estimate",
+   "exact_statement": "Use the fixed parameters in <a href=\"#eq:14\" data-reference-type=\"eqref\" data-reference=\"eq:14\">[eq:14]</a>, and let $N$ be a sufficiently large integer. Suppose $1\\le l\\le N^\\zeta$ and $$D=M_0\\prod_{p\\in B}p\\le N^\\beta,$$ where $B$ is a finite set of primes at least $P$. Let $J_1,J_2:[N]\\to\\mathbb C$ satisfy $|J_1|,|J_2|\\le1$ and be supported in residue classes $a_1,a_2$ modulo $D$, respectively. Suppose that $r=a_2-a_1$ is admissible for $l$ modulo $D$, that $x<y$ whenever $x\\in\\operatorname{supp}J_1$ and $y\\in\\operatorname{supp}J_2$, and that no such difference $y-x$ belongs to $F(\\mathbb N_+)$. Put $H=N^{\\beta/2}$ and $$\\Xi=\\{\\xi\\in\\mathbb Q/\\mathbb Z:q(\\xi)\\le H,\\quad q(\\xi)\\text{ squarefree},\n                         \\quad(q(\\xi),D)=1\\}.$$ Then $$D\\left|\\sum_{\\xi\\in\\Xi}\\Gamma(\\xi)\n          \\widehat{J_1}_{[N]}(-\\xi)\\widehat{J_2}_{[N]}(\\xi)\\right|\n \\ll H^{-\\gamma/2}.\n \\label{eq:16}$$ The implied constant and the threshold for $N$ depend only on the fixed polynomial and the fixed parameters, not on $l,D,r,J_1,J_2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-kernel-estimate"
+  },
+  {
+   "claim_id": "kernel-comparison",
+   "exact_statement": "For the kernels just constructed, $$\\sup_{\\alpha\\in\\mathbb R/\\mathbb Z}|S_1(\\alpha)-S_0(\\alpha)|\n       \\ll H^{-\\gamma/2},\n \\label{eq:18}$$ uniformly in the data of Proposition <a href=\"#kernel:estimate\" data-reference-type=\"ref\" data-reference=\"kernel:estimate\">22</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-kernel-comparison"
+  },
+  {
+   "claim_id": "kernel-weyl",
+   "exact_statement": "If $\\alpha$ lies on the minor arcs, then, for every real $y'$ and every integer interval $I\\subseteq(x_*,X]$, $$\\left|\\sum_{m\\in I}e\\bigl(\\alpha F(m)+y'm\\bigr)\\right|\n       \\ll U N^{-\\nu}.\n \\label{eq:21}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-kernel-weyl"
+  },
+  {
+   "claim_id": "kernel-coefficients",
+   "exact_statement": "For every $\\alpha_0\\in\\mathbb Q/\\mathbb Z$, write $\\alpha_0=\\alpha_D+\\alpha_1$ for the unique decomposition in which $q(\\alpha_D)$ has only prime factors dividing $D$ and $(q(\\alpha_1),D)=1$. Then the coefficients defined by <a href=\"#eq:20\" data-reference-type=\"eqref\" data-reference=\"eq:20\">[eq:20]</a> and <a href=\"#eq:23\" data-reference-type=\"eqref\" data-reference=\"eq:23\">[eq:23]</a> satisfy $$|c(\\alpha_0)-c_0(\\alpha_0)|\\le H^{-\\gamma/2}.$$ In fact they agree when $q(\\alpha_1)\\le H$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-kernel-coefficients"
+  },
+  {
+   "claim_id": "transfer-specialization",
+   "exact_statement": "Let $I\\subseteq[N]$ be a nonempty integer interval, let $B\\subseteq\\mathcal P_N$, and put $D=M_0q_B$. Fix $s\\in\\mathbb Z/M_0\\mathbb Z$ and $b=(b_p)_{p\\in B}\\in X_B$. Let $g$ be the function on $X_{\\mathcal P_N\\setminus B}$ obtained by specializing $\\mathcal L_{I,\\mathcal P_N,Q}f_s$ at $z_B=b$. For every remaining-coordinate frequency $\\xi$ with $q(\\xi)q_B\\le Q$, one has $$\\label{eq:25}\n \\widehat g(\\xi)\n =\\frac{D}{|I|}\n   \\sum_{\\substack{x\\in I\\\\x\\equiv a'\\pmod D}}\n       \\mathbf 1_A(x)e(-x\\xi),$$ where $a'\\pmod D$ is determined by $a'\\equiv s\\pmod{M_0}$ and $a'\\equiv b_p\\pmod p$ for $p\\in B$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-transfer-specialization"
+  },
+  {
+   "claim_id": "transfer-shorter-scale",
+   "exact_statement": "Let $N$ be sufficiently large, let $l\\ge1$, and let $A\\subseteq[N]$ satisfy <a href=\"#eq:24\" data-reference-type=\"eqref\" data-reference=\"eq:24\">[eq:24]</a>. Suppose that $B\\subseteq\\mathcal P_N$ and $q_B\\le N^\\tau$. Set $$\\begin{gathered}\n \\mathcal S=\\mathcal P_N\\setminus B,\n \\qquad D=M_0q_B,\n \\qquad L_D=\\lambda(D),\\\\\n n_B=\\left\\lceil\\frac{N}{L_D}\\right\\rceil,\n \\qquad \\Lambda_B=\\frac{L_Dn_B}{N}.\n\\end{gathered}$$ For each $v\\in V$, choose $s_v\\in\\mathbb Z/M_0\\mathbb Z$ and specialize $G_{s_v}$ at an arbitrary vector of coordinates on $B$, obtaining a function $g_v$ on $X_{\\mathcal S}$. Then $$\\label{eq:26}\n \\bigl|\\mathcal Z_{l,\\mathcal S}((g_v)_{v\\in V})\\bigr|\n \\le \\Lambda_B^d\\mathcal Y_{lD}(n_B)+O(N^{-\\sigma}).$$ The scale and the rounding factor satisfy $1\\le n_B<N$ and $$\\label{eq:27}\n 1\\le\\Lambda_B\\le1+M_0^kN^{k\\tau-1}.$$ The implied constant and the threshold for $N$ are independent of $l,A,B$ and all specializations.",
+   "kind": "bound",
+   "statement_anchor": "stmt-transfer-shorter-scale"
+  },
+  {
+   "claim_id": "transfer-good-assignments",
+   "exact_statement": "For every $l\\ge1$, the proportion $\\rho_l$ of good assignments under independent uniform choices of all the $s_v$ satisfies $$\\rho_l\\ge\\rho_*:=M_0^{1-L}>0.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-transfer-good-assignments"
+  },
+  {
+   "claim_id": "transfer-cancellation",
+   "exact_statement": "Let $N$ be sufficiently large, let $l\\le N^\\zeta$, and let $A\\subseteq[N]$ satisfy <a href=\"#eq:24\" data-reference-type=\"eqref\" data-reference=\"eq:24\">[eq:24]</a>. If $(s_v)_{v\\in V}$ is good for $l$, then $$\\label{eq:29}\n \\left|\n  \\int\\prod_{v\\in V}G_{s_v}(z_v)\\,\n    d\\bigotimes_{p\\in\\mathcal P_N}\n       (\\mu_{l,p}-\\varepsilon_{l,p})\n \\right|\\ll N^{-\\sigma}.$$ The bound is uniform in $l,A$ and the good assignment.",
+   "kind": "bound",
+   "statement_anchor": "stmt-transfer-cancellation"
+  },
+  {
+   "claim_id": "induction-recurrence",
+   "exact_statement": "There are constants $C_1\\ge1$ and $N_1\\ge3$, depending only on the fixed polynomial $h$, its chosen roots, and the fixed structural choices, such that for every integer $N\\ge N_1$ and every positive integer $l\\le N^\\zeta$, $$\\begin{split}\n \\mathcal Y_l(N)\\le C_1N^{-\\sigma}\n +(1+u_N)\\Bigg(&\n   (1-\\rho_l)\\mathcal Y_{lD_\\varnothing}(n_\\varnothing)\\\\\n &+\\rho_l\n   \\sum_{\\substack{\\varnothing\\ne B\\subseteq\\mathcal P_N\\\\q_B\\le N^\\tau}}\n      \\eta_{l,B}\\mathcal Y_{lD_B}(n_B)\\Bigg),\n \\end{split}\n \\label{eq:31}$$ where $$u_N=\\bigl(1+M_0^kN^{k\\tau-1}\\bigr)^d-1\\longrightarrow0.$$ Every scale $n_B$ appearing on the right belongs to $[1,N-1]$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-induction-recurrence"
+  },
+  {
+   "claim_id": "induction-decay",
+   "exact_statement": "There are constants $a_0,b_0>0$ and $C_0\\ge1$, depending only on the fixed polynomial $h$, its chosen roots, and the fixed structural choices, such that for all positive integers $l,N$, $$\\mathcal Y_l(N)\\le C_0l^{b_0}N^{-a_0}.\n \\label{eq:33}$$ The exponents $a_0,b_0$ can be chosen as functions only of the structural parameters $k,\\zeta,\\sigma,M_0,\\rho_*$. If the chosen roots of $h$ satisfy Condition <a href=\"#local:unit-condition\" data-reference-type=\"eqref\" data-reference=\"local:unit-condition\">[local:unit-condition]</a> and the choices depending only on $k$ from Sections <a href=\"#sec:local\" data-reference-type=\"ref\" data-reference=\"sec:local\">2</a> and <a href=\"#sec:tuples\" data-reference-type=\"ref\" data-reference=\"sec:tuples\">3</a> are used, then $a_0,b_0,d$ depend only on $k$, while $C_0$ may still depend on the fixed data.",
+   "kind": "bound",
+   "statement_anchor": "stmt-induction-decay"
+  }
+ ],
+ "paper": "papers/EN-113-000-0000-2-2026-PR-T4-UK-EX-M1-B-AL-H-0348_PM-182.1_A_power_saving_for_intersective_polynomial_differences_with_an_exponent_depending_only_on_the.md",
+ "purpose": "A power saving for intersective polynomial differences with an exponent depending only on the degree",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "f98ebdd03400e828400a94e292d990f8e7a824f60195018c0d149ee4c212f4bc",
+   "pm.domains.v2": "0a6f7472900c3cae0ee6a0fd1cdda21847fc2349ee1213b53fd20f5f9a1be7dc",
+   "pm.edges.v2": "5bac64a3cc7fb727f23c3a25e1c2450e11808d38d5ad87da6238b845f49bbc5b",
+   "pm.extraction.v2": "0b6697b8a2d8c09b3aa292a464f471bad3e81d6dc1cb4bcfc45b4ef48a90c0a1",
+   "pm.formal.v2": "3c1b8cbff60f320f25d113bf78c097b8a3ce59b4edd88200e19de45212cbda86",
+   "pm.limits.v2": "68950163be964f422cd09a2ff20736a9f8134037ad528c04ad6a986ec6127106",
+   "pm.node.v2": "9455b629f974c183a4b76d2d93044f40ef585b208810eeeba3812ab113e4f10d",
+   "pm.objects.v2": "1dd57e720924b1987688c70f5d32fcc81c88f665dd41b48bff2f56163d6228db",
+   "pm.provenance.v2": "a94c65d3b387be2a6b31156857f90da060e60dad4ffa0f884e6604967e5b5670",
+   "pm.quantities.v2": "106a19b13a379ac10ab0702e7ad9f107f684c45c5bdc0d013f3c9f739e10ca9b",
+   "pm.reading.v2": "8c74df2f043fe32d68083e06f3172877f7a51bce88cf30c96efbddaf70e2ffc8",
+   "pm.roadmap.v2": "442664ec68d2f498c016045f3369f77f528097f788cdbe98ffca4e06217f01b6",
+   "pm.search.v1": "88f328bcc131215c50e35a77cce0681c325ed088b8b5a3d90130756a92e59600",
+   "pm.triptych.v2": "f84f7e10bb2483ccdc7dba4159d8d0903f40d89275a8d9d2fe583662b2f3303a"
+  },
+  "canonical_sha256": "3a2b0a7e031fb627143968a156aeadc153c7c4a641c8a2d7e8fdd84336b61101",
+  "paper_sha256": "748b09d3e97769213ef7cbefeb238d1849e93d5d09e0aecc849a453e3aac75bc",
+  "repaired_body_sha256": "f590dc645ad608658bcd7518233bebc495b7df853ef818e98389002ff818ea18"
+ },
+ "status": "ACTIVE",
+ "subject_id": 13,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "f918f93495abd34f6fbf99f7fdbf6738bb395ca4de0265d6442a68ecffbff9a0",
+   "receipt_sha256": "4e7dbe2f8523fb1e72b0c7a53c52ddf609e8a0e220286dbc04ca86fb3454598c",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive argument residues in each admitted class: all binary-coefficient polynomials of degree 1 through 3 with nonzero leading coefficient, primes 2 and 3, origins 0 and 1, finite derivative valuation, E=2*s+1, j=E+1, p**j<=729; separate shifted, higher-conductor and rejected boundary cases.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I-LIFT",
+     "oracle_basis": "Exact closed-form uniform-lift histogram plus independent SymPy polynomial evaluation of every argument in the class; no solver witnesses."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M-GUARD",
+     "observed_exit": 8,
+     "receipt_sha256": "b86b2dbcc7bf716a684ed5860f4e2e5d8c3dc229a335f0e346fd8aae793df1fb"
+    },
+    {
+     "id": "M-CLASS",
+     "observed_exit": 8,
+     "receipt_sha256": "755d3fd42adff4c7e29bfa5af8bb60f4ab683718f22e0356330fa04f0807d57a"
+    },
+    {
+     "id": "M-ENDPOINT",
+     "observed_exit": 8,
+     "receipt_sha256": "0a01f1128ec4e5305d4eef3a885cc966b16935296b39a8cada546d77f9b127b8"
+    }
+   ],
+   "receipt_sha256": "631b976e7954af6f2a01828eb8bb2c4f378198337d09e99ebdfc4898212a43a1",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "A power saving for intersective polynomial differences with an exponent depending only on the degree"
+}

@@ -1,0 +1,924 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1039551,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 312309
+ },
+ "coordinate": "EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-M-0478",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "implementable",
+   "proposed_domain": "Lattice statistical mechanics",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-4",
+     "quote": "The reciprocal $1/\\nu=4/3$ motivates the length exponent in our finite chord law, whose normalization and boundary conditions are specified above.",
+     "quote_sha256": "c0e7ea233753606ab9429971be7d1c645262abcc350f9256917ec23419f5cc46"
+    }
+   ],
+   "query": "Mean-length theorem for uniformly sampled walks of prescribed length",
+   "reason": "The source specifies a finite critical chord law with its own free-port normalization and diameter cutoff; it does not identify that law with a uniform prescribed-length ensemble."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-38",
+     "quote": "Thus the all-ones count bound below cannot be uniform through $d=0$.",
+     "quote_sha256": "a9b8a36e9700ddb77d15f74113326f7006c361d472299a16bff21191142b9f33"
+    }
+   ],
+   "query": "Uniform absolute stability at the collision displacement",
+   "reason": "The confinement constants depend on the fixed nonzero displacement, and the source explicitly explains why the physical count bound cannot be uniform through collision."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "c7:stability",
+     "quote": "The horizontal representation has signed and complex weights.",
+     "quote_sha256": "25f942a54635232ccda7a96d8c0160bd0b65d1a002101864c5be48100d805dc2"
+    }
+   ],
+   "query": "Positive Monte Carlo gas weights supplied by the horizontal representation",
+   "reason": "The auxiliary horizontal gas has signed or complex weights; its absolute stability does not convert it into a positive sampling law."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-j-unequal",
+     "quote": "Their respective counts differ from $m(1-f),mf$ in the first unmarked list and from $n(1-f),nf$ in the second by at most a fixed constant.",
+     "quote_sha256": "f57582ef2599373232989bd672cf1ad259394ff9f8f49c05266d7370002e3e21"
+    }
+   ],
+   "query": "Arbitrary tilted lists satisfy the quantitative unequal-interval bound",
+   "reason": "The physical identity has a broader domain than the quantitative estimate, which requires controlled proportions and bounded discrepancies."
+  }
+ ],
+ "family": "PM-237",
+ "id": "PM-237.5",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-j-cylinder",
+    "claim_id": "claim-cylinder-pressure-and-nesting",
+    "statement": "As $m\\to\\infty$ through even integers,"
+   },
+   {
+    "anchor": "stmt-j-hexagon",
+    "claim_id": "claim-finite-chords-and-polygon-moment",
+    "statement": "For the chord law just defined,"
+   },
+   {
+    "anchor": "stmt-j-hexagon",
+    "claim_id": "claim-finite-chords-and-polygon-moment",
+    "statement": "Uniformly for honeycomb vertices $v$ at distance at most $R/10$ from the hexagon center,"
+   },
+   {
+    "anchor": "stmt-j-hexagon",
+    "claim_id": "claim-finite-chords-and-polygon-moment",
+    "statement": "Furthermore, for planar polygons modulo lattice translations,"
+   },
+   {
+    "anchor": "stmt-j-local-exchange-fusion",
+    "claim_id": "claim-meromorphic-exchange-and-fusion",
+    "statement": "For $\\delta=2,3$,"
+   },
+   {
+    "anchor": "stmt-j-local-restriction",
+    "claim_id": "claim-fusion-restriction-and-quotient",
+    "statement": "Fix $\\delta\\in\\{2,3\\}$, put $W_\\delta=\\operatorname{im}J_\\delta\n\\subset V_1\\otimes V_2$, and for another factor $V_k$ set $$F_{\\delta,k}(\\psi)=R_{2k}(\\psi)R_{1k}(\\psi+\\delta\\alpha).$$"
+   },
+   {
+    "anchor": "stmt-j-fourier-kernel",
+    "claim_id": "claim-scalar-fourier-transform",
+    "statement": "For $0<\\beta<\\pi$ and $|\\Im y|<\\pi-\\beta$,"
+   },
+   {
+    "anchor": "stmt-j-scalar-normalizers",
+    "claim_id": "claim-normalizer-polynomials-and-reductions",
+    "statement": "For $l=1,2$ and $X=(u,Z)$ of size $M\\ge1$,"
+   },
+   {
+    "anchor": "stmt-j-scalar-normalizers",
+    "claim_id": "claim-normalizer-polynomials-and-reductions",
+    "statement": "For $\\delta=2,3$"
+   },
+   {
+    "anchor": "stmt-j-separated-scales",
+    "claim_id": "claim-separated-scale-transfer-blocks",
+    "statement": "Let positive scales $\\rho_1,\\ldots,\\rho_r$ satisfy $\\rho_{k+1}/\\rho_k\\to\\infty$, and suppose $x_i/\\rho_{k_i}$ tends to a finite nonzero limit."
+   },
+   {
+    "anchor": "stmt-j-separated-scales",
+    "claim_id": "claim-separated-scale-transfer-blocks",
+    "statement": "Choose consistent local square roots."
+   },
+   {
+    "anchor": "stmt-j-separated-scales",
+    "claim_id": "claim-separated-scale-transfer-blocks",
+    "statement": "Probe with $w/\\rho_j$ tending to a finite nonzero limit for which the active local matrices are regular."
+   },
+   {
+    "anchor": "stmt-j-selected-vacuum-vectors",
+    "claim_id": "claim-selected-vacuum-polynomial-components",
+    "statement": "Let $M\\ge1$, let $X=(x_1,\\ldots,x_M)$ be generic and nonzero, and choose $t_j$ with $t_j^2=x_j$."
+   },
+   {
+    "anchor": "stmt-j-selected-vacuum-vectors",
+    "claim_id": "claim-selected-vacuum-polynomial-components",
+    "statement": "For $\\sigma\\in\\{-1,0,1\\}^M$ with $\\sum_j\\sigma_j=0$,"
+   },
+   {
+    "anchor": "stmt-j-selected-vacuum-vectors",
+    "claim_id": "claim-selected-vacuum-polynomial-components",
+    "statement": "If $\\sigma_j=0$,"
+   },
+   {
+    "anchor": "stmt-j-scalar-vacuum-polynomial",
+    "claim_id": "claim-cleared-scalar-vacuum-polynomial",
+    "statement": "For two consecutive lists $A,B$, allowing either to be empty, and $h\\ne0$, put $\\mathscr G(X;A,B)=L_-D_A R_+$."
+   },
+   {
+    "anchor": "stmt-j-scalar-vacuum-polynomial",
+    "claim_id": "claim-cleared-scalar-vacuum-polynomial",
+    "statement": "For $M\\ge1$"
+   },
+   {
+    "anchor": "stmt-j-scalar-characterization",
+    "claim_id": "claim-unique-scalar-characterization",
+    "statement": "For $M=|A|+|B|\\ge1$,"
+   },
+   {
+    "anchor": "stmt-j-scalar-characterization",
+    "claim_id": "claim-unique-scalar-characterization",
+    "statement": "For two sites $u,q^\\delta u$ in one group, $\\delta=2,3$,"
+   },
+   {
+    "anchor": "stmt-j-scalar-characterization",
+    "claim_id": "claim-unique-scalar-characterization",
+    "statement": "When $|A|=|B|$,"
+   },
+   {
+    "anchor": "stmt-j-finite-spin-formula",
+    "claim_id": "claim-exact-finite-spin-sum",
+    "statement": "For $h\\ne0$ and the two-list vacuum observable at generic sites,"
+   },
+   {
+    "anchor": "stmt-c7-regulated-pfaffian",
+    "claim_id": "claim-regulated-pfaffian-and-fixed-site-limit",
+    "statement": "For every fixed $T>0$, $m\\in\\mathbb N_0$, and $\\theta\\in\\mathbb C$, on the full-probability event of analytic samples described above,"
+   },
+   {
+    "anchor": "stmt-c7-regulated-pfaffian",
+    "claim_id": "claim-regulated-pfaffian-and-fixed-site-limit",
+    "statement": "For fixed $m\\ge1$ and $\\theta\\in\\mathbb C$,"
+   },
+   {
+    "anchor": "stmt-c7-angular-trace",
+    "claim_id": "claim-conditional-angular-trace",
+    "statement": "Fix $T>0$, $m\\in\\mathbb N_0$, $\\theta\\in\\mathbb C$, and a homogeneous analytic sample as above."
+   },
+   {
+    "anchor": "stmt-c7-angular-trace",
+    "claim_id": "claim-conditional-angular-trace",
+    "statement": "For $s\\ge1$, if the folded coordinates have strictly increasing imaginary parts with total range less than $1$,"
+   },
+   {
+    "anchor": "stmt-c7-angular-trace",
+    "claim_id": "claim-conditional-angular-trace",
+    "statement": "For a fixed finite word $Y$ of exponentials of the currents $X_{bc}(f)$, with periodic coefficients analytic on a common strip of positive width,"
+   },
+   {
+    "anchor": "stmt-c7-gas-identity",
+    "claim_id": "claim-exact-horizontal-gas",
+    "statement": "Fix $d_-<0<d$ in the respective nonzero displacement ranges of Theorem <a href=\"#j:absolute-stability\" data-reference-type=\"ref\" data-reference=\"j:absolute-stability\">15</a>, with $0<|d_-|<d<1/2$. Fix also a compact set $\\Omega\\subset\\mathbb C$ of values of $\\theta$."
+   },
+   {
+    "anchor": "stmt-j-absolute-stability",
+    "claim_id": "claim-absolute-gas-stability",
+    "statement": "Fix a compact set $\\Theta\\subset\\mathbb C$, and fix either a pre-collision displacement $-d_0<d<0$ or a post-collision displacement $0<d<d_0$."
+   },
+   {
+    "anchor": "stmt-j-absolute-stability",
+    "claim_id": "claim-absolute-gas-stability",
+    "statement": "Consider a finite configuration $\\mathcal Y$ with distinct real positions on $\\mathbb R/T\\mathbb Z$, using the six basic labels in the pre-collision case and those labels together with $F_{\\rm pair}$ in the post-collision case."
+   },
+   {
+    "anchor": "stmt-j-absolute-stability",
+    "claim_id": "claim-absolute-gas-stability",
+    "statement": "Give it a state path $p$ with jumps $-q_i$ and closure in $\\mathbb Z^2/8\\mathbb Z(1,-1)$."
+   },
+   {
+    "anchor": "stmt-j-stability-coercivity",
+    "claim_id": "claim-coercive-height-matrix",
+    "statement": "For each fixed displacement in Theorem 15,"
+   },
+   {
+    "anchor": "stmt-j-block-kernel",
+    "claim_id": "claim-block-kernel-trace-realization",
+    "statement": "Use the state space, measure, and successor rule [j:successor-state]."
+   },
+   {
+    "anchor": "stmt-j-block-kernel",
+    "claim_id": "claim-block-kernel-trace-realization",
+    "statement": "Suppose the local kernel satisfies <a href=\"#j:local-gauge\" data-reference-type=\"eqref\" data-reference=\"j:local-gauge\">[j:local-gauge]</a>, and use the tail data and edge operator <a href=\"#j:tail-data\" data-reference-type=\"eqref\" data-reference=\"j:tail-data\">[j:tail-data]</a>–<a href=\"#j:bargmann-edge\" data-reference-type=\"eqref\" data-reference=\"j:bargmann-edge\">[j:bargmann-edge]</a> with the bounds just proved."
+   },
+   {
+    "anchor": "stmt-j-block-kernel",
+    "claim_id": "claim-block-kernel-trace-realization",
+    "statement": "For sufficiently large fixed $b$,"
+   },
+   {
+    "anchor": "stmt-j-trace-extraction",
+    "claim_id": "claim-signed-trace-coefficient-extraction",
+    "statement": "Let $E$ be a Hilbert–Schmidt operator on a complex Hilbert space with spectral radius one."
+   },
+   {
+    "anchor": "stmt-j-trace-extraction",
+    "claim_id": "claim-signed-trace-coefficient-extraction",
+    "statement": "Let $C$ be trace class."
+   },
+   {
+    "anchor": "stmt-j-trace-extraction",
+    "claim_id": "claim-signed-trace-coefficient-extraction",
+    "statement": "Suppose two countable families of bounded operators $W_+,W_-$ have integer lengths $\\ell(W_\\pm)\\ge0$ and, for some $\\epsilon>0$,"
+   },
+   {
+    "anchor": "stmt-j-trace-extraction",
+    "claim_id": "claim-signed-trace-coefficient-extraction",
+    "statement": "Assume that $a\\ge0$ is an integer and $R\\in\\mathbb C$ satisfy $F_s-R\\operatorname{tr}E^{s+a}\\to0$ as $s\\to\\infty$."
+   },
+   {
+    "anchor": "stmt-j-even-log-statistic",
+    "claim_id": "claim-even-polynomial-logarithmic-statistic",
+    "statement": "Let $\\mu(u)=2u/\\sinh(\\pi u)$, with its continuous value at zero, and let $P_m$ project in $L^2(\\mu(u)\\,du)$ onto the even polynomials of degree at most $2m-2$."
+   },
+   {
+    "anchor": "stmt-j-even-log-statistic",
+    "claim_id": "claim-even-polynomial-logarithmic-statistic",
+    "statement": "If $f:\\mathbb R\\to\\mathbb R$ is continuous and even and satisfies $|f(u)|\\le C e^{-c|u|}$ for some $C,c>0$,"
+   },
+   {
+    "anchor": "stmt-j-boundary",
+    "claim_id": "claim-boundary-arch-mass",
+    "statement": "Fix a port on a horizontal tessellation half-plane boundary. Let $W_R$ be the total critical weight $x^N$ of first-exit same-boundary arches reaching Euclidean distance at least $R$ from that port."
+   },
+   {
+    "anchor": "stmt-j-orbital-pin",
+    "claim_id": "claim-pinned-orbital-density",
+    "statement": "Let $\\rho(0)$ be the one-point intensity at zero of <a href=\"#j:boundary-orbital-law\" data-reference-type=\"eqref\" data-reference=\"j:boundary-orbital-law\">[j:boundary-orbital-law]</a>."
+   },
+   {
+    "anchor": "stmt-j-orbital-ward",
+    "claim_id": "claim-orbital-logarithmic-derivative",
+    "statement": "For either orbital factor,"
+   },
+   {
+    "anchor": "stmt-j-boundary-gamma-comparison",
+    "claim_id": "claim-gamma-stochastic-comparisons",
+    "statement": "For fixed $0<b_-<6\\alpha$ and $0<\\epsilon<1$,"
+   },
+   {
+    "anchor": "stmt-j-boundary-gamma-comparison",
+    "claim_id": "claim-gamma-stochastic-comparisons",
+    "statement": "for sufficiently large $N$,"
+   },
+   {
+    "anchor": "stmt-j-extremal-segment",
+    "claim_id": "claim-extremal-segment-mass",
+    "statement": "Fix a honeycomb vertex and two distinct height levels, with the fixed vertex on one level."
+   },
+   {
+    "anchor": "stmt-j-convex-cap",
+    "claim_id": "claim-convex-cap-boundary-comparison",
+    "statement": "Let $K\\subset D$ be finite convex tessellation polygons sharing a starting port with the same inward direction."
+   },
+   {
+    "anchor": "stmt-j-convex-cap",
+    "claim_id": "claim-convex-cap-boundary-comparison",
+    "statement": "Let $L$ be the raw weight of first-exit chords of $D$ other than those confined to $K$ and ending at a boundary port shared by $K$ and $D$. Let $E$ be the raw weight of first-exit chords of $K$ ending on ports newly created by the restriction."
+   },
+   {
+    "anchor": "stmt-j-visit",
+    "claim_id": "claim-interior-visit-and-nesting-identities",
+    "statement": "Let $D$ be a finite convex tessellation polygon and let $v$ be a honeycomb vertex not adjacent to a boundary port."
+   },
+   {
+    "anchor": "stmt-j-visit",
+    "claim_id": "claim-interior-visit-and-nesting-identities",
+    "statement": "Sum over all ordered first-exit boundary chords of $D$ that visit $v$,"
+   },
+   {
+    "anchor": "stmt-j-localization-escape",
+    "claim_id": "claim-separating-cycle-escape-bound",
+    "statement": "Fix $C>1$."
+   },
+   {
+    "anchor": "stmt-j-localization-escape",
+    "claim_id": "claim-separating-cycle-escape-bound",
+    "statement": "For a contractible separating cycle, measure horizontal coordinates relative to the enclosed mark in its chosen disk lift."
+   },
+   {
+    "anchor": "stmt-j-localization-escape",
+    "claim_id": "claim-separating-cycle-escape-bound",
+    "statement": "Let $\\mathcal E_M$ consist of all noncontractible separating cycles and all contractible separating cycles whose chosen disk either reaches $|x_{\\rm horiz}|\\ge M/4$ or has diameter greater than $CM$."
+   },
+   {
+    "anchor": "stmt-j-marked-physical",
+    "claim_id": "claim-physical-marked-bond-identity",
+    "statement": "Let the permitted cut have even $M$, and let both marked sites be horizontal."
+   },
+   {
+    "anchor": "stmt-j-unequal",
+    "claim_id": "claim-unequal-marked-interval-bound",
+    "statement": "Use the physical tilted cylinder and horizontal-type marked bonds just defined. Its two cut intervals have $m+1$ and $n+1$ sites, with $n\\ge m$ and $M=m+n+2$ even. In each unmarked list the logarithmic site coordinates have imaginary parts $-f$ and $1-f$, where $0\\le f\\le0.6$. Their respective counts differ from $m(1-f),mf$ in the first unmarked list and from $n(1-f),nf$ in the second by at most a fixed constant."
+   },
+   {
+    "anchor": "stmt-j-marked-flip-formula",
+    "claim_id": "claim-generic-long-flip-spin-formula",
+    "statement": "For generic nonzero $X$ on consecutive nonempty lists $A,B$,"
+   },
+   {
+    "anchor": "stmt-j-shifted-nonvanishing",
+    "claim_id": "claim-shifted-orbital-nonvanishing",
+    "statement": "Let $M=2L\\ge2$, $w_j=i h_j$ with $h_j\\in\\mathbb R$ of spread at most one, and $x_j=e^{\\eta w_j}$, where $\\eta=\\pi/4$."
+   },
+   {
+    "anchor": "stmt-j-period-excluded",
+    "claim_id": "claim-period-excluding-walk-summability",
+    "statement": "Fix a nonzero lattice translation $P$ and a honeycomb vertex $v$."
+   },
+   {
+    "anchor": "stmt-j-marked-phase",
+    "claim_id": "claim-arc-turn-and-seam-phase",
+    "statement": "Let $T(X)$ be the total turn of the lifted arc, and let $K$ be its integer signed number of eastward crossings of the upper seam rays $\\{\\ell M\\}\\times(0,\\infty)$, summed over $\\ell$."
+   },
+   {
+    "anchor": "stmt-j-marked-regulated-limit",
+    "claim_id": "claim-fixed-list-marked-regulator",
+    "statement": "with generic initial data fixed,"
+   },
+   {
+    "anchor": "stmt-j-marked-regulated-limit",
+    "claim_id": "claim-fixed-list-marked-regulator",
+    "statement": "This statement is initially at values where the displayed denominator is nonzero."
+   },
+   {
+    "anchor": "stmt-j-marked-gas-identity",
+    "claim_id": "claim-exact-marked-horizontal-gas",
+    "statement": "Fix a sufficiently small negative pre-collision displacement $d_-$ in the stability range, with $|d_-|<1/8$, and use post-collision displacement $d=1/8$."
+   },
+   {
+    "anchor": "stmt-j-shifted-normalizer-bound",
+    "claim_id": "claim-uniform-shifted-normalizer-growth",
+    "statement": "uniformly over real $h_j$ of spread at most one,"
+   },
+   {
+    "anchor": "stmt-j-stability-eighth",
+    "claim_id": "claim-stability-at-eighth-displacement",
+    "statement": "For the post-collision gas at $d=1/8$,"
+   },
+   {
+    "anchor": "stmt-j-shifted-suppression",
+    "claim_id": "claim-uniform-shifted-site-suppression",
+    "statement": "Partition a list of $n$ real heights into groups $I_0,I_1$ such that"
+   },
+   {
+    "anchor": "stmt-j-shifted-suppression",
+    "claim_id": "claim-uniform-shifted-site-suppression",
+    "statement": "Suppose $$|h_a+f|<\\delta_0\\quad(a\\in I_0),\\qquad\n|h_a-(1-f)|<\\delta_0\\quad(a\\in I_1).$$"
+   },
+   {
+    "anchor": "stmt-c7-mixed-radius",
+    "claim_id": "claim-mixed-propagation-radius",
+    "statement": "For every real $\\theta$"
+   },
+   {
+    "anchor": "stmt-c7-two-gap",
+    "claim_id": "claim-two-exterior-gap-coefficients",
+    "statement": "Let $E_+,E_-$ be Hilbert–Schmidt operators on a complex Hilbert space, each with spectral radius one."
+   },
+   {
+    "anchor": "stmt-c7-two-gap",
+    "claim_id": "claim-two-exterior-gap-coefficients",
+    "statement": "Let $C$ be trace class."
+   },
+   {
+    "anchor": "stmt-c7-two-gap",
+    "claim_id": "claim-two-exterior-gap-coefficients",
+    "statement": "For $i=1,2,3,4$, let $\\mathscr W_i$ be a countable family of bounded operators with integer lengths $\\ell(W)\\ge0$ such that, for fixed $\\varepsilon,B>0$,"
+   },
+   {
+    "anchor": "stmt-c7-two-gap",
+    "claim_id": "claim-two-exterior-gap-coefficients",
+    "statement": "Fix an integer $L\\ge0$."
+   },
+   {
+    "anchor": "stmt-c7-two-gap",
+    "claim_id": "claim-two-exterior-gap-coefficients",
+    "statement": "Suppose $F_{N,L}-R\\operatorname{tr}E_+^{4N}\\to0$ for a scalar $R$ as $N\\to\\infty$ at this fixed $L$."
+   },
+   {
+    "anchor": "stmt-c7-bad-windows",
+    "claim_id": "claim-few-good-vertices-summability",
+    "statement": "where polygons are counted modulo translations."
+   },
+   {
+    "anchor": "stmt-c7-selected-pair",
+    "claim_id": "claim-selected-bond-pair-cylinder-construction",
+    "statement": "Let $\\lambda$ be a planar polygon of diameter at most $H$, and let $v_1,v_2$ be good vertices."
+   },
+   {
+    "anchor": "stmt-c7-selected-pair",
+    "claim_id": "claim-selected-bond-pair-cylinder-construction",
+    "statement": "If $|v_2-v_1|>4\\sqrt{19}\\,r_K$,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Finite spin representation of the cylinder observable",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-j-finite-spin-formula",
+      "quote": "<summary>Proof of stmt-j-finite-spin-formula</summary>\n\n*Proof.* We verify the properties in Lemma <a href=\"#j:scalar-characterization\" data-reference-type=\"ref\" data-reference=\"j:scalar-characterization\">10</a>.",
+      "quote_sha256": "8585547411bf14e5dcc26c743daa07cb87cf7440c3e3b276c25322a43fc50df2"
+     },
+     {
+      "anchor": "c7:finite",
+      "quote": "We then identify the scalar factor that clears the denominators of these particular vectors and use their polynomial degrees and fusion values to determine the spin formula.",
+      "quote_sha256": "579da274e42c62c995a2d5af7947ec9c5b2e6459a3e1cc2aeee1842fae5d6839"
+     }
+    ],
+    "requires_concepts": [
+     "Local exchange and fusion",
+     "Vacuum projector",
+     "Scalar normalizer polynomials",
+     "Selected vacuum component polynomiality",
+     "Scalar interpolation characterization"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Planar polygon length-square bound",
+    "evidence": [
+     {
+      "anchor": "pm-h-91",
+      "quote": "#### From selected bond pairs to planar polygons\n\n\nWe finish the length-square estimate for planar polygons modulo lattice translations: $$\\label{c7:eq-Pol}\n \\sum_{\\lambda:\\,\\operatorname{diam}\\lambda\\le H}\n x^{|\\lambda|}|\\lambda|^2\\le H^{2/3+o(1)}.$$",
+      "quote_sha256": "037e7b76abb24ec4ce99a3805c6c6c629efc740a5b7243d8ac561d245a69d7d4"
+     }
+    ],
+    "requires_concepts": [
+     "Physical marked-bond identity",
+     "Unequal-interval marked estimate",
+     "Uniform shifted normalizer bound",
+     "Shifted site suppression",
+     "Mixed spectral radius",
+     "Good-vertex windows",
+     "Selected-pair cylinder injection"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-cylinder-pressure-and-nesting",
+   "exact_statement": "As $m\\to\\infty$ through even integers, $$G_m(2)=m^{1/6+o(1)},\\qquad\n -\\left.\\frac{d^2}{dg^2}\\log G_m(g)\\right|_{g=0}=O(\\log m).$$ The derivative is the total basic weight of ordered incompatible pairs of separating cycles, including a cycle paired with itself. Locally uniformly for complex $\\Theta$ with $|\\Re\\Theta|<\\pi$, $$|G_m(2\\cos\\Theta)|\n \\le m^{\\Re(1/6-2\\Theta^2/(3\\pi^2))+o(1)}.$$ The planar partition satisfies $\\mathcal Z(R)=R^{1/12+o(1)}$ as $R$ tends to infinity through integers.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-cylinder"
+  },
+  {
+   "claim_id": "claim-finite-chords-and-polygon-moment",
+   "exact_statement": "For the chord law just defined, $$Z_R^{\\rm chord}=R^{3/4+o(1)},\\qquad\n \\mathbb E_R^{\\rm chord}N=R^{4/3+o(1)}.$$ Uniformly for honeycomb vertices $v$ at distance at most $R/10$ from the hexagon center, $$\\mathbb P_R^{\\rm chord}(v\\in\\gamma)=R^{-2/3+o(1)}.$$ Furthermore, for planar polygons modulo lattice translations, $$\\label{j:polygon-square}\n \\sum_{\\operatorname{diam}\\lambda\\le H}\n      x^{|\\lambda|}|\\lambda|^2\\le H^{2/3+o(1)}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-hexagon"
+  },
+  {
+   "claim_id": "claim-meromorphic-exchange-and-fusion",
+   "exact_statement": "The entries of $R(\\psi)$ are meromorphic, with possible poles at $\\Delta_R(\\psi)=0$. The following are identities of meromorphic matrix functions: $$\\begin{split}\nR_{12}(t)R_{13}(t+\\phi)R_{23}(\\phi)\n &=R_{23}(\\phi)R_{13}(t+\\phi)R_{12}(t),\\\\\nR_{12}(\\phi)R_{21}(-\\phi)&=I.\n\\end{split}$$ In particular the second equality is a pointwise inverse identity where both factors are regular, and $R_{12}(0)=P_{12}$.*\n\n*For $\\delta=2,3$, let $E_2=V$, $E_3=\\mathbb C$, and define injective maps $J_\\delta:E_\\delta\\to V\\otimes V$ by $$\\begin{aligned}\nJ_2|0\\rangle&=|00\\rangle+x\\sum_{k=\\pm1}\\lambda^k|k,-k\\rangle,\n&J_2|k\\rangle&=x(|k,0\\rangle+|0,k\\rangle)\\quad(k=\\pm1),\\\\\nJ_3(1)&=\\sum_{k=0,\\pm1}\\lambda^k|k,-k\\rangle.\n\\end{aligned}$$ On $E_2$ let $s_{\\rm f}|k\\rangle=k|k\\rangle$, and on $E_3$ let $s_{\\rm f}=0$. Then $R_{12}(\\delta\\alpha)=J_\\delta J_\\delta^*$ and, writing $J=J_\\delta$, $$R_{23}(\\phi)R_{13}(\\phi+\\delta\\alpha)(J\\otimes I)\n =(J\\otimes I)R_{\\rm f}(\\phi),\\qquad\nR_{\\rm f}(\\phi)=\n\\begin{cases}\nR(\\phi+\\alpha),&\\delta=2,\\\\\nI,&\\delta=3.\n\\end{cases}$$ The intertwining equality is again meromorphic in $\\phi$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-local-exchange-fusion"
+  },
+  {
+   "claim_id": "claim-fusion-restriction-and-quotient",
+   "exact_statement": "Fix $\\delta\\in\\{2,3\\}$, put $W_\\delta=\\operatorname{im}J_\\delta\n\\subset V_1\\otimes V_2$, and for another factor $V_k$ set $$F_{\\delta,k}(\\psi)=R_{2k}(\\psi)R_{1k}(\\psi+\\delta\\alpha).$$ At regular parameters the subspace $W_\\delta\\otimes V_k$ is invariant, and transporting the restriction through $J_\\delta\\otimes I$ gives $R_{\\rm f}(\\psi)$ from Lemma <a href=\"#j:local-exchange-fusion\" data-reference-type=\"ref\" data-reference=\"j:local-exchange-fusion\">3</a>. At $\\psi=0$ the full image of $F_{\\delta,k}(0)$ lies in this subspace. Hence the induced operator on $\\bigl((V_1\\otimes V_2)/W_\\delta\\bigr)\\otimes V_k$ is zero there and, near $z=e^{2i\\psi}=1$, is holomorphic and divisible by $z-1$.*\n\n\n*The twist restricts by $p^{s_1+s_2}J_2=J_2p^{s_{\\rm f}}$ and $p^{s_1+s_2}J_3=J_3$ for every $p\\ne0$. There is also the meromorphic site intertwining $$\\label{j:site-fusion}\nR_{a1}(\\psi)R_{a2}(\\psi+\\delta\\alpha)(I_a\\otimes J_\\delta)\n =(I_a\\otimes J_\\delta)\n\\begin{cases}\nR_{a{\\rm f}}(\\psi+\\alpha),&\\delta=2,\\\\\nI_a,&\\delta=3.\n\\end{cases}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-local-restriction"
+  },
+  {
+   "claim_id": "claim-scalar-fourier-transform",
+   "exact_statement": "For $0<\\beta<\\pi$ and $|\\Im y|<\\pi-\\beta$, $$\\int_{\\mathbb R}e^{iky}\\frac{\\sinh(\\beta k)}{\\sinh(\\pi k)}\\,dk\n =\\frac{\\sin\\beta}{\\cosh y+\\cos\\beta}.$$ The integral and its parameter derivatives converge locally uniformly on the indicated strip.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-fourier-kernel"
+  },
+  {
+   "claim_id": "claim-normalizer-polynomials-and-reductions",
+   "exact_statement": "For every list size $M$, the functions $N_l$ are symmetric homogeneous polynomials of individual degree at most $l(M-1)$ for $M\\ge1$, and $$\\mathcal J=N N_2^*.$$ For $l=1,2$ and $X=(u,Z)$ of size $M\\ge1$, their deletion values are $$\\label{j:normalizer-deletion}\nN_l(0,Z)=\\left(\\prod_{z\\in Z}z^l\\right)N_l(Z),\n\\qquad [u^{l(M-1)}]N_l(u,Z)=N_l(Z).$$ For $\\delta=2,3$ all three satisfy $$\\label{j:normalizer-fusion}\nN_l(u,q^\\delta u,Z)=N_l(u,q^\\delta u)\\ \\prod_{z\\in Z}\\ell_\\delta(u,z)^l\\ N_l(X_{\\rm red}),\\qquad\n X_{\\rm red}=\\begin{cases}(qu,Z)&\\delta=2,\\\\Z&\\delta=3.\\end{cases}$$ At two sites, $$N(u,v)=u+v,\\qquad\nN_2^*(u,v)=u^2+2(1+\\sqrt2)uv+v^2.$$ Finally, $N$ and $N_2^*$ are nonzero at every homogeneous list $(b,\\ldots,b)$ with $b\\ne0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-scalar-normalizers"
+  },
+  {
+   "claim_id": "claim-separated-scale-transfer-blocks",
+   "exact_statement": "Let positive scales $\\rho_1,\\ldots,\\rho_r$ satisfy $\\rho_{k+1}/\\rho_k\\to\\infty$, and suppose $x_i/\\rho_{k_i}$ tends to a finite nonzero limit. Choose consistent local square roots. Probe with $w/\\rho_j$ tending to a finite nonzero limit for which the active local matrices are regular. The limiting row matrices are triangular in the grading $\\sum_i k_i s_i$, with row grade at least column grade. Their diagonal grade blocks preserve every scale total $S_k=\\sum_{i:k_i=k}s_i$ and act on the active scale $j$ with effective twist $$p_j=p q^{3\\sum_{k\\ne j}\\operatorname{sgn}(j-k) S_k} .$$ Each block entry is the corresponding active-transfer entry multiplied by $F(s^{\\rm row})/F(s^{\\rm col})$, using the same diagonal matrix for every probe and twist, where $$F(s)=q^{(3/2)\\sum_{l<i}\\operatorname{sgn}(k_l-k_i)s_l s_i} ,$$ restricted to the block in question.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-separated-scales"
+  },
+  {
+   "claim_id": "claim-selected-vacuum-polynomial-components",
+   "exact_statement": "Let $M\\ge1$, let $X=(x_1,\\ldots,x_M)$ be generic and nonzero, and choose $t_j$ with $t_j^2=x_j$. For $\\sigma\\in\\{-1,0,1\\}^M$ with $\\sum_j\\sigma_j=0$, define from the vacuum-normalized vectors $R_i=\\Pi_i|0\\rangle$ and $L_{-i}=\\langle0|\\Pi_{-i}$ the functions $$V_\\sigma^R(X)=\n\\frac{N(X)(R_i)_\\sigma}{\\prod_jt_j^{\\sigma_j^2}},\n\\qquad\nV_\\sigma^L(X)=\n\\frac{N(X)(L_{-i})_\\sigma}{\\prod_jt_j^{\\sigma_j^2}}.$$ They are independent of the choices of square-root signs and extend to polynomials in $\\mathbb C[x_1,\\ldots,x_M]$ satisfying $$\\deg_{x_j}V_\\sigma^\\epsilon\\le M-1-\\sigma_j^2\n\\qquad(\\epsilon=R,L).$$ Write $X_{\\widehat j}$ and $\\widehat\\sigma$ for deletion of coordinate $j$, and set $V_\\varnothing^R=V_\\varnothing^L=1$. If $\\sigma_j=0$, then for either superscript $$\\left.V_\\sigma(X)\\right|_{x_j=0}\n =\\left(\\prod_{k\\ne j}x_k\\right)V_{\\widehat\\sigma}(X_{\\widehat j}),\n\\qquad\n[x_j^{M-1}]V_\\sigma(X)=V_{\\widehat\\sigma}(X_{\\widehat j}).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-selected-vacuum-vectors"
+  },
+  {
+   "claim_id": "claim-cleared-scalar-vacuum-polynomial",
+   "exact_statement": "For two consecutive lists $A,B$, allowing either to be empty, and $h\\ne0$, put $\\mathscr G(X;A,B)=L_-D_A R_+$. Then $$\\begin{split}\nN(X)^2\\mathscr G(X;A,B)\n =\\sum_{\\substack{\\sigma\\in\\{-1,0,1\\}^M\\\\ \\sum_j\\sigma_j=0}}\n (ih)^{\\sum_{j\\in A}\\sigma_j}\n \\left(\\prod_jx_j^{\\sigma_j^2}\\right)\n V_\\sigma^L(X)V_\\sigma^R(X).\n\\end{split}$$ The empty-list value is 1. For $M\\ge1$ it is a polynomial in $X$ with Laurent polynomial coefficients in $h$, of individual degree at most $2(M-1)$. For a deleted site $j$, its value at $x_j=0$ is the reduced polynomial times $\\prod_{k\\ne j}x_k^2$, and its coefficient of $x_j^{2(M-1)}$ is the reduced polynomial. Moreover $\\mathscr G$ itself tends to the reduced $\\mathscr G$ as $x_j\\to0,\\infty$ with generic spectators.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-scalar-vacuum-polynomial"
+  },
+  {
+   "claim_id": "claim-unique-scalar-characterization",
+   "exact_statement": "The family $\\mathscr F_{A,B}$ is the unique family in $\\mathbb C(h)[X]$ with the following properties. The empty-list value is 1. For $M=|A|+|B|\\ge1$, each polynomial is symmetric within the two groups and has individual degree at most $2(M-1)$. Deleting a site $j$ gives $$\\left.\\mathscr F_{A,B}\\right|_{x_j=0}\n =\\left(\\prod_{k\\ne j}x_k^2\\right)\\mathscr F_{\\widehat j},\n\\qquad\n[x_j^{2(M-1)}]\\mathscr F_{A,B}=\\mathscr F_{\\widehat j}.$$ For two sites $u,q^\\delta u$ in one group, $\\delta=2,3$, it satisfies $$\\mathscr F_{A,B}(u,q^\\delta u,Z)\n =(u+q^\\delta u)^2\n \\left(\\prod_{z\\in Z}\\ell_\\delta(u,z)^2\\right)\n \\mathscr F_{\\rm red}(X_{\\rm red}),$$ with $X_{\\rm red}$ as in <a href=\"#j:normalizer-fusion\" data-reference-type=\"eqref\" data-reference=\"j:normalizer-fusion\">[j:normalizer-fusion]</a>. When $|A|=|B|$, its quotient by $N^2$ has the paired-scale limit <a href=\"#j:paired-vacuum-limit\" data-reference-type=\"eqref\" data-reference=\"j:paired-vacuum-limit\">[j:paired-vacuum-limit]</a> at generic fixed pair ratios.",
+   "kind": "classification",
+   "statement_anchor": "stmt-j-scalar-characterization"
+  },
+  {
+   "claim_id": "claim-exact-finite-spin-sum",
+   "exact_statement": "For $h\\ne0$ and the two-list vacuum observable at generic sites, $$\\label{j:finite-spin-sum}\n\\begin{aligned}\nN(X)^2\\mathscr G\n ={}&\\sum_{\\substack{(s_i)\\\\ \\sum_{i\\in A}s_i=\\sum_{i\\in B}s_i=Q}}\n h^Q \\prod_i (d_{\\sigma(i)}x_i)^{s_i^2}\\\\\n &\\qquad\\cdot\\prod_{\\text{same-group pairs }i,j}p_{s_i s_j}(x_i,x_j)\n \\prod_{\\text{cross pairs }i,j}p'_{s_i s_j}(x_i,x_j),\n\\end{aligned}$$ where $\\sigma(i)={\\rm a},{\\rm b}$ indicates group and $Q$ ranges freely subject to the displayed equality. These auxiliary spins in group $B$ use the equal-sum convention. The combined expression is evaluated at same-group coincidences by its polynomial limit.",
+   "kind": "construction",
+   "statement_anchor": "stmt-j-finite-spin-formula"
+  },
+  {
+   "claim_id": "claim-regulated-pfaffian-and-fixed-site-limit",
+   "exact_statement": "For every fixed $T>0$, $m\\in\\mathbb N_0$, and $\\theta\\in\\mathbb C$, on the full-probability event of analytic samples described above, the Wick expansion in <a href=\"#c7:contour-current\" data-reference-type=\"eqref\" data-reference=\"c7:contour-current\">[c7:contour-current]</a> terminates after order $m$ in each species. Its value is independent of the admissible circle enclosing $W$, and its contour coefficients extend holomorphically to the coalescing lists $|w_l|<r/4$. The average <a href=\"#c7:regulated-contour\" data-reference-type=\"eqref\" data-reference=\"c7:regulated-contour\">[c7:regulated-contour]</a> is holomorphic there and its denominator is nonzero. In particular $\\mathfrak C_{0,T}=1$.*\n\n\n*For fixed $m\\ge1$ and $\\theta\\in\\mathbb C$, $$\\label{c7:regulated-limit}\n\\lim_{T\\longrightarrow\\infty}\\mathfrak C_{m,T}\n=\\frac{N(1,\\ldots,1)^2}{P_0}\\,\nG_{A,B}(h+h^{-1}),\\qquad |A|=|B|=m.$$ This limit is locally uniform in $\\theta$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c7-regulated-pfaffian"
+  },
+  {
+   "claim_id": "claim-conditional-angular-trace",
+   "exact_statement": "Fix $T>0$, $m\\in\\mathbb N_0$, $\\theta\\in\\mathbb C$, and a homogeneous analytic sample as above. The normalizing trace is $$Z_\\Gamma:=\\operatorname{Tr}\\Gamma\n=\\prod_{r\\in\\frac12+\\mathbb N_0}(1-\\mathbf q^{6r})>0.$$ For $s\\ge1$, if the folded coordinates have strictly increasing imaginary parts with total range less than $1$, then $$\\label{c7:angular-wick}\n\\left(-\\frac{2\\pi i}{a_*T}\\right)^s\n\\frac{\\operatorname{Tr}\\bigl(\\Gamma\\Psi_{j_1}(v_1)\\cdots\n \\Psi_{j_{2s}}(v_{2s})\\bigr)}{Z_\\Gamma}\n=\n\\operatorname{Pf}_{1\\le a,b\\le2s}\n C^{[T]}\\bigl(v_b-v_a+i(j_b-j_a)\\bigr).$$ The trace in this display denotes its absolutely convergent ordered mode sum. For $s=0$ both sides are $1$. The formula at other nonsingular coordinates is its meromorphic continuation; odd products vanish.*\n\n\n*Let $P_N$ project onto the energy-$N$ subspace, for $N\\in\\frac12\\mathbb N_0$. For a fixed finite word $Y$ of exponentials of the currents $X_{bc}(f)$, with periodic coefficients analytic on a common strip of positive width, there are $C,c>0$ such that $$\\label{c7:graded-current-bound}\n\\|P_{N'}YP_N\\|\\le C e^{C\\sqrt{N+1}}e^{-c|N'-N|}.$$ The constants can be taken locally uniform in numerical parameters multiplying the currents in the exponentials. In particular the energy-level trace with $\\Gamma$ is absolutely convergent, as are its exponential series of scalar trace coefficients.*\n\n\n*For the homogeneous contour expression <a href=\"#c7:contour-current\" data-reference-type=\"eqref\" data-reference=\"c7:contour-current\">[c7:contour-current]</a> and the fixed analytic sample, $$\\label{c7:four-current-trace}\n\\mathcal C_\\sigma\n=\\frac1{Z_\\Gamma}\\operatorname{Tr}_{\\rm gr}\\!\\left(\n \\Gamma e^{X_{23}(b_+^{-1})}e^{X_{21}(b)}\n e^{-X_{12}(b^{-1})}e^{-X_{16}(b_-)}\\right).$$ Here the absolutely convergent trace furnished by <a href=\"#c7:graded-current-bound\" data-reference-type=\"eqref\" data-reference=\"c7:graded-current-bound\">[c7:graded-current-bound]</a> is $$\\operatorname{Tr}_{\\rm gr}(\\Gamma Y)\n=\\sum_N\\mathbf q^N\n \\operatorname{tr}_{P_N\\mathcal F}(\\mathcal U P_NYP_N),$$ where $\\mathcal F$ is the fermionic exterior space. The convergence assertions concern this fixed sample.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c7-angular-trace"
+  },
+  {
+   "claim_id": "claim-exact-horizontal-gas",
+   "exact_statement": "Fix $d_-<0<d$ in the respective nonzero displacement ranges of Theorem <a href=\"#j:absolute-stability\" data-reference-type=\"ref\" data-reference=\"j:absolute-stability\">15</a>, with $0<|d_-|<d<1/2$. Fix also a compact set $\\Omega\\subset\\mathbb C$ of values of $\\theta$. There is an integer $T_0$, independent of $m$, such that for every integer $T\\ge T_0$ and every finite integer $m\\ge0$, the gas <a href=\"#c7:gas-definition\" data-reference-type=\"eqref\" data-reference=\"c7:gas-definition\">[c7:gas-definition]</a> converges absolutely, uniformly for $\\theta\\in\\Omega$ at that $m,T$, and satisfies $$\\label{c7:regulator-gas}\n\\mathfrak C_{m,T}=c(T)e^{m^2\\kappa_T}Z_{m,T},\\qquad\nc(T)=\\frac{\\sqrt{8/9}}{8\\sqrt{2T}\\,D_\\ell}\n \\left(\\frac{\\sqrt T D_W}{Z_\\Gamma}\\right)^2D_g,\n\\qquad D_\\ell=\\sum_{j\\in8\\mathbb Z}e^{-4\\pi j^2/T}.$$ In particular it holds along $T=bn$ for any fixed integer block length $b\\ge T_0$ and every positive integer $n$. This common period domain allows $T$ to remain fixed while $m$ varies through finite integers. The absolute bounds may depend on $m,T$ and the fixed displacements; no bound uniform in $m$ or limiting assertion as $d_-\\uparrow0$ or $d\\downarrow0$ is made.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c7-gas-identity"
+  },
+  {
+   "claim_id": "claim-absolute-gas-stability",
+   "exact_statement": "There is $0<d_0<1/2$ with the following property. Fix a compact set $\\Theta\\subset\\mathbb C$, and fix either a pre-collision displacement $-d_0<d<0$ or a post-collision displacement $0<d<d_0$. There are constants $c>0$ and $C<\\infty$, depending on $d$ and $\\Theta$, such that the following holds for every positive integer $T$ and $\\theta\\in\\Theta$.*\n\n*Consider a finite configuration $\\mathcal Y$ with distinct real positions on $\\mathbb R/T\\mathbb Z$, using the six basic labels in the pre-collision case and those labels together with $F_{\\rm pair}$ in the post-collision case. Give it a state path $p$ with jumps $-q_i$ and closure in $\\mathbb Z^2/8\\mathbb Z(1,-1)$. Let $n_j$ be the number of physical particles in $[j,j+1)$, and let $$p_{c,j}=\\frac{p_1(j+)+p_2(j+)}{\\sqrt2},\n\\qquad 0\\le j<T.$$ Then $$\\left|W_{d,\\theta}(\\mathcal Y,p)\\right|\n\\ \\le\\\n\\exp\\!\\left(CT-c\\sum_{j=0}^{T-1}(n_j^2+p_{c,j}^2)\\right)$$ in the post-collision case. The same bound holds for $W^{\\rm pre}_{d,\\Re\\theta}(\\mathcal Y,p)$ in the pre-collision case.",
+   "kind": "bound",
+   "statement_anchor": "stmt-j-absolute-stability"
+  },
+  {
+   "claim_id": "claim-coercive-height-matrix",
+   "exact_statement": "For each fixed displacement in Theorem <a href=\"#j:absolute-stability\" data-reference-type=\"ref\" data-reference=\"j:absolute-stability\">15</a>, the physical matrix $\\mathcal H'(k)$ has nullspace $\\mathcal N$ for every $k>0$. On the quotient by $\\mathcal N$, it is bounded below near zero by a positive constant times $$kI+\\frac{\\boldsymbol c\\boldsymbol c^t}{k},$$ and it converges exponentially at infinity to a strictly positive matrix $\\mathcal H'(\\infty)$. The physical limit $Q_\\infty=\\mathcal H(\\infty)$ is entrywise nonnegative.*\n\n\n*Consequently one can choose $0<e<2$ and $\\gamma>0$, depending on the fixed displacement, such that $$\\label{j:stability-J}\nJ(k):=\\mathcal H'(k)-\\mathcal H'(\\infty)\\tanh(ek),\n\\qquad\n\\frac{J(k)}{k}\\ge\n\\gamma e^{-k^2}\\left(\n\\mathfrak n\\mathfrak n^t+\n\\frac{\\boldsymbol c\\boldsymbol c^t}{k^2}\\right),\\quad k>0,$$ where $\\mathfrak n$ is the all-ones vector on the actual physical labels. In the pre-collision case the matrices in this statement are restricted to the six basic labels.",
+   "kind": "bound",
+   "statement_anchor": "stmt-j-stability-coercivity"
+  },
+  {
+   "claim_id": "claim-block-kernel-trace-realization",
+   "exact_statement": "Use the state space, measure, and successor rule <a href=\"#j:successor-state\" data-reference-type=\"eqref\" data-reference=\"j:successor-state\">[j:successor-state]</a>. Suppose the local kernel satisfies <a href=\"#j:local-gauge\" data-reference-type=\"eqref\" data-reference=\"j:local-gauge\">[j:local-gauge]</a>, and use the tail data and edge operator <a href=\"#j:tail-data\" data-reference-type=\"eqref\" data-reference=\"j:tail-data\">[j:tail-data]</a>–<a href=\"#j:bargmann-edge\" data-reference-type=\"eqref\" data-reference=\"j:bargmann-edge\">[j:bargmann-edge]</a> with the bounds just proved. On $L^2$ of states with these Bargmann fibers, give an allowed edge the operator-valued kernel $$\\label{j:gauged-kernel}\n e^{\\Phi(S')-\\Phi(S)}w_\\theta(S,S')\\,\\mu(Y)\\,\\mathcal K(S,S'),$$ and give every other edge value zero. The choices of $\\mu(Y)$ used in this section are one, the indicator that every label is $M$ or $F_{\\rm pair}$, and the products of the specified balanced periodized or infinite-volume $B$ factors. Their per-particle factors have modulus at most one. For sufficiently large fixed $b$, these kernels are Hilbert–Schmidt uniformly in those choices and in $\\theta\\in D$. The same conclusion permits fixed polynomial factors in the particle counts. For the fixed gauge on $D$, the kernels form holomorphic families in Hilbert–Schmidt norm on the open parameter neighborhood $\\mathcal U_\\theta$, with bounds uniform on compact subsets.*\n\n\n*For a product of $n\\ge2$ such kernels, its trace is the absolutely convergent integral over closed successor sequences, with the gauge factors canceled and the Bargmann trace given by <a href=\"#j:bargmann-cycle\" data-reference-type=\"eqref\" data-reference=\"j:bargmann-cycle\">[j:bargmann-cycle]</a>. In particular, let $T_j$ carry the specified periodized $B_T$ site factors for block $j$. Then, in increasing block order, $$\\label{j:operator-gas-trace}\n \\operatorname{tr}\\prod_{j=0}^{n-1}T_j\n =\\det(I-A_0^n)^{-1}Z_{m,bn}.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-j-block-kernel"
+  },
+  {
+   "claim_id": "claim-signed-trace-coefficient-extraction",
+   "exact_statement": "Let $E$ be a Hilbert–Schmidt operator on a complex Hilbert space with spectral radius one. Let $\\mathcal P=\\{\\zeta\\in\\sigma(E):|\\zeta|=1\\}$. For each $\\zeta\\in\\mathcal P$ let $P_\\zeta$ be its Riesz projection, $d_\\zeta=\\operatorname{rank}P_\\zeta$, and $J_\\zeta=(E-\\zeta I)P_\\zeta$, with $J_\\zeta^{q_\\zeta}=0$ on $\\operatorname{ran}P_\\zeta$. Let $C$ be trace class. Suppose two countable families of bounded operators $W_+,W_-$ have integer lengths $\\ell(W_\\pm)\\ge0$ and, for some $\\epsilon>0$, $$\\label{j:word-moment}\n \\sum_{W_\\pm}e^{\\epsilon\\ell(W_\\pm)}\\|W_\\pm\\|<\\infty.$$ For integers $s\\ge0$ put $$F_s=\\sum_{\\ell(W_+)+\\ell(W_-)\\le s}\n \\operatorname{tr}(CW_+E^{s-\\ell(W_+)-\\ell(W_-)}W_-).$$ Assume that $a\\ge0$ is an integer and $R\\in\\mathbb C$ satisfy $F_s-R\\operatorname{tr}E^{s+a}\\to0$ as $s\\to\\infty$. Only sufficiently large $s$, with $s+a\\ge2$, are used in this limit. Then the coefficientwise absolutely convergent polynomial $$\\mathcal P_\\zeta(z)=\\sum_{W_+,W_-}\\zeta^{-\\ell}\n \\operatorname{tr}\\left(CW_+\n \\left[\\sum_{t=0}^{q_\\zeta-1}\n \\binom{z-\\ell}{t}\\zeta^{-t}J_\\zeta^tP_\\zeta\\right]W_-\\right),\n \\quad \\ell=\\ell(W_+)+\\ell(W_-),$$ is identically $R d_\\zeta\\zeta^a$. In particular, $$R=\\frac{\\mathcal P_\\zeta(0)}{d_\\zeta\\zeta^a},\\qquad\n |R|\\le K\\|C\\|_1,$$ where $K$ depends on $E$ and the bounds in <a href=\"#j:word-moment\" data-reference-type=\"eqref\" data-reference=\"j:word-moment\">[j:word-moment]</a>, but not on $C$ or $a$. More precisely it may be chosen in terms of $\\epsilon$, the two weighted word sums, the finite nilpotent orders $q_\\zeta$, and the norms $\\|J_\\zeta^tP_\\zeta\\|$. Thus the conclusion is uniform for a family with uniform bounds on these data. No peripheral semisimplicity is assumed.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-trace-extraction"
+  },
+  {
+   "claim_id": "claim-even-polynomial-logarithmic-statistic",
+   "exact_statement": "Let $\\mu(u)=2u/\\sinh(\\pi u)$, with its continuous value at zero, and let $P_m$ project in $L^2(\\mu(u)\\,du)$ onto the even polynomials of degree at most $2m-2$. If $f:\\mathbb R\\to\\mathbb R$ is continuous and even and satisfies $|f(u)|\\le C e^{-c|u|}$ for some $C,c>0$, then $$\\log\\det(P_m e^fP_m|_{\\operatorname{ran}P_m})\n =\\frac{\\log m}{2\\pi}\\int_{\\mathbb R}f(u)\\,du+o(\\log m).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-even-log-statistic"
+  },
+  {
+   "claim_id": "claim-boundary-arch-mass",
+   "exact_statement": "Fix a port on a horizontal tessellation half-plane boundary. Let $W_R$ be the total critical weight $x^N$ of first-exit same-boundary arches reaching Euclidean distance at least $R$ from that port. Then $W_R=R^{-1/4+o(1)}$. If $H(d)$ is the mass of arches ending $d$ boundary steps to the right, then $$2\\sin(\\pi/8)\\sum_{d>0}H(d)=1,\\qquad\n \\sum_{d\\ge n}H(d)\\le n^{-1/4+o(1)}.$$ The constants are unchanged by lattice translations and rotations.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-boundary"
+  },
+  {
+   "claim_id": "claim-pinned-orbital-density",
+   "exact_statement": "Let $\\rho(0)$ be the one-point intensity at zero of <a href=\"#j:boundary-orbital-law\" data-reference-type=\"eqref\" data-reference=\"j:boundary-orbital-law\">[j:boundary-orbital-law]</a>. Pinning one point there leaves $N=M-1$ positive points with density proportional to $$\\Delta(k^2)^2\\prod_{j=1}^N k_j^4w_0(k_j)\\,I(k_1,\\ldots,k_N,0).$$ The orbital integral here still uses the $2M$-dimensional orbit, with one zero pair in $D_k$. For its expectation $\\mathbb E_{\\rm pin}$, $$\\begin{aligned}\n \\frac{\\sin\\alpha}{\\alpha}\\frac{\\rho(0)}{w_0(0)}\n   \\mathbb E_{\\rm pin}\\prod_{j=1}^N(1+k_j^{-2})\n &\\le -iK(i)\\\\\n &\\le\\frac{\\rho(0)}{w_0(0)}\n   \\mathbb E_{\\rm pin}\\prod_{j=1}^N(1+k_j^{-2}).\n \\end{aligned}$$ Empty products have value one.",
+   "kind": "bound",
+   "statement_anchor": "stmt-j-orbital-pin"
+  },
+  {
+   "claim_id": "claim-orbital-logarithmic-derivative",
+   "exact_statement": "For either orbital factor, there are numbers $q_j$ such that $$\\partial_{k_j}\\log I^{(e)}=2q_j,\\qquad\n 0\\le q_j\\le\n \\min\\left\\{\\alpha,\\alpha^2k_j,\n \\frac{\\alpha^2}{\\sum_{\\ell=1}^N(k_j+k_\\ell)^{-1}}\\right\\}.$$ The bounds are uniform in $N$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-j-orbital-ward"
+  },
+  {
+   "claim_id": "claim-gamma-stochastic-comparisons",
+   "exact_statement": "For every fixed $b_+>6\\alpha$, there is $\\ell_+>0$ such that, with $\\beta_+=b_+/\\pi$, for all $N$ and $e=0,4$, $$\\mathbb P_N[k^e W_{\\ell_+,\\beta_+}]\n \\preceq_{\\rm st}\\mathbb O_N^{(e)}.$$ For fixed $0<b_-<6\\alpha$ and $0<\\epsilon<1$, there is $\\ell_->0$ such that, with $\\beta_-=b_-/\\pi$ and for sufficiently large $N$, $$\\mathcal L_{\\mathbb O_N^{(e)}}(k_{\\le m}\\mid E,k_{>m})\n \\preceq_{\\rm st}\\mathbb P_m[k^eW_{\\ell_-,\\beta_-}]$$ for almost every later configuration compatible with $E$, where $m=\\lfloor N^{1-\\epsilon}\\rfloor$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-j-boundary-gamma-comparison"
+  },
+  {
+   "claim_id": "claim-extremal-segment-mass",
+   "exact_statement": "Fix a honeycomb vertex and two distinct height levels, with the fixed vertex on one level. The total critical weight of SAW segments from that vertex to any vertex on the other level, whose endpoints are opposite height extrema of the segment, is bounded by an absolute constant independent of the levels.",
+   "kind": "bound",
+   "statement_anchor": "stmt-j-extremal-segment"
+  },
+  {
+   "claim_id": "claim-convex-cap-boundary-comparison",
+   "exact_statement": "Let $K\\subset D$ be finite convex tessellation polygons sharing a starting port with the same inward direction. Let $L$ be the raw weight of first-exit chords of $D$ other than those confined to $K$ and ending at a boundary port shared by $K$ and $D$. Let $E$ be the raw weight of first-exit chords of $K$ ending on ports newly created by the restriction. Then $$\\sin\\alpha\\,L\\le E\\le L/\\sin\\alpha.$$ The same conclusion holds with $D$ the saturated tessellation half-plane and $K$ a finite convex cap.",
+   "kind": "bound",
+   "statement_anchor": "stmt-j-convex-cap"
+  },
+  {
+   "claim_id": "claim-interior-visit-and-nesting-identities",
+   "exact_statement": "Let $D$ be a finite convex tessellation polygon and let $v$ be a honeycomb vertex not adjacent to a boundary port. Sum over all ordered first-exit boundary chords of $D$ that visit $v$, and put $$S_D(v)=\\sum_{\\gamma\\ni v}x^{N(\\gamma)}\\cos(3T(\\gamma)/8).$$ Let $Z_v$ be the partition of disjoint unoriented cycles in $D$ strictly enclosing $v$ and avoiding it, with cycle weight $2x^{|\\lambda|}$. Let $Z_{\\rm out}(\\lambda)$ count disjoint cycles in $D$ surrounding and disjoint from $\\lambda$ with the same weights. At a vertex of $\\lambda$, call the corner convex or reflex when its interior angle is $2\\pi/3$ or $4\\pi/3$, respectively, and put $$c_\\lambda=\n \\begin{cases}\n \\sqrt2,&v\\text{ is a convex corner of }\\lambda,\\\\\n 2+\\sqrt2,&v\\text{ is a reflex corner of }\\lambda.\n \\end{cases}$$ Then $$\\label{j:visit-identity}\n S_D(v)=3Z_v+\\sum_{\\lambda\\ni v}c_\\lambda\n       x^{|\\lambda|}Z_{\\rm out}(\\lambda).$$*\n\n\n*For each of the three incident face centers $f$, let $Z_D(f)$ be the partition of disjoint cycles in $D$ surrounding $f$, again with weight $2x^{|\\lambda|}$. Put $k_\\lambda=1$ at a convex corner and $k_\\lambda=2$ at a reflex corner. Then $$\\label{j:incident-face-partition}\n \\sum_{f\\sim v}Z_D(f)\n =3Z_v+\\sum_{\\lambda\\ni v}2k_\\lambda x^{|\\lambda|}\n                         Z_{\\rm out}(\\lambda).$$ In particular the ordinary visit mass $\\sum_{\\gamma\\ni v}x^{N(\\gamma)}$ is comparable, with absolute positive constants, to $\\sum_{f\\sim v}Z_D(f)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-visit"
+  },
+  {
+   "claim_id": "claim-separating-cycle-escape-bound",
+   "exact_statement": "Fix $C>1$. For a contractible separating cycle, measure horizontal coordinates relative to the enclosed mark in its chosen disk lift. Let $\\mathcal E_M$ consist of all noncontractible separating cycles and all contractible separating cycles whose chosen disk either reaches $|x_{\\rm horiz}|\\ge M/4$ or has diameter greater than $CM$. Then $$\\sum_{\\lambda\\in\\mathcal E_M}w_\\lambda\n \\le (5\\sqrt2+2)\\sqrt{I_M}.$$ Every cycle outside $\\mathcal E_M$ has a disk lift contained in the closed Euclidean ball of radius $CM$ about its enclosed mark.",
+   "kind": "bound",
+   "statement_anchor": "stmt-j-localization-escape"
+  },
+  {
+   "claim_id": "claim-physical-marked-bond-identity",
+   "exact_statement": "Let the permitted cut have even $M$, and let both marked sites be horizontal. The positive sum $H^{\\rm poly}$ is finite. The generic matrix element $H^{\\rm flip}$ has a regular limit at the associated physical site list, and at that list $$H^{\\rm flip}=H^{\\rm poly}.$$ This holds for every order and every number of the two site types in the two nonempty lists; the unmarked lists may be empty.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-marked-physical"
+  },
+  {
+   "claim_id": "claim-unequal-marked-interval-bound",
+   "exact_statement": "Use the physical tilted cylinder and horizontal-type marked bonds just defined. Its two cut intervals have $m+1$ and $n+1$ sites, with $n\\ge m$ and $M=m+n+2$ even. In each unmarked list the logarithmic site coordinates have imaginary parts $-f$ and $1-f$, where $0\\le f\\le0.6$. Their respective counts differ from $m(1-f),mf$ in the first unmarked list and from $n(1-f),nf$ in the second by at most a fixed constant. Let $H^{\\rm poly}$ be the sum of $x^{|\\lambda|}$ over single unoriented polygons through the two specified bonds. Uniformly over these lists and their orders, for every $\\epsilon>0$ there are $C_\\epsilon$ and $m_\\epsilon$ such that $$H^{\\rm poly}\\le C_\\epsilon n^\\epsilon m^{-4/3}(n/m)^{1/3}\n \\qquad(n\\ge m\\ge m_\\epsilon).$$ Both $C_\\epsilon$ and $m_\\epsilon$ may depend on the fixed bound for the count discrepancies.",
+   "kind": "bound",
+   "statement_anchor": "stmt-j-unequal"
+  },
+  {
+   "claim_id": "claim-generic-long-flip-spin-formula",
+   "exact_statement": "For generic nonzero $X$ on consecutive nonempty lists $A,B$, $$\\label{c7:eq-L}\n\\begin{aligned}\n N(X)^2 H^{\\rm flip}(X)\n &=cUV\\sum_s q^{-6Q}C_s\n       \\prod_{a\\in A'\\cup B'}F_{s_a}(U,x_a)F_{s_a}(V,x_a),\\\\\n (F_+,F_0,F_-)&=(e_5e_6,e_3e_5,e_2e_3),\\qquad c=2-\\sqrt2.\n\\end{aligned}$$ The two endpoint variables $U,V$ are independent in this identity.",
+   "kind": "construction",
+   "statement_anchor": "stmt-j-marked-flip-formula"
+  },
+  {
+   "claim_id": "claim-shifted-orbital-nonvanishing",
+   "exact_statement": "Let $M=2L\\ge2$, $w_j=i h_j$ with $h_j\\in\\mathbb R$ of spread at most one, and $x_j=e^{\\eta w_j}$, where $\\eta=\\pi/4$. Define $$\\mathcal S(X)=\\mathcal P(X)\\prod_{j<l}C(w_j-w_l),\n \\qquad C(r)=\\tanh(\\pi r/6),$$ using the confluent value for equal sites. Then $\\mathcal S(X)\\ne0$ and $$\\label{j:shifted-orbital-ratio}\n \\frac{N(X)}{\\mathcal S(X)}\n =\\left(\\frac23\\right)^L\n   \\mathbb E_h\\exp\\!\\left(\\sum_{a=1}^L\\phi(k_a)\\right)>0,\n \\qquad\n \\phi(k)=\\log\\left(1+\\frac{e^{-2k}}{1+e^{-4k}}\\right).$$ Here $\\mathbb E_h$ has ordered density on $0<k_1<\\cdots<k_L$ proportional to $$\\Delta(k^2)^2\\prod_{a=1}^L\\frac{k_a}{\\sinh3k_a}\\ I_h(k),\n \\qquad\n I_h(k)=\\int_{U(2L)}\n     e^{\\operatorname{tr}(D_k\\mathcal U D_h\\mathcal U^*)}\\,d\\mathcal U,$$ where $D_k=\\operatorname{diag}(k_1,\\ldots,k_L,-k_1,\\ldots,-k_L)$ and $D_h=\\operatorname{diag}(h_1-h_*,\\ldots,h_M-h_*)$ for $h_*=(\\max h_j+\\min h_j)/2$. The measure on $U(2L)$ is normalized Haar measure. In particular $N(X)\\ne0$. The nonvanishing also holds after multiplying every $x_j$ by the same nonzero scalar.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-shifted-nonvanishing"
+  },
+  {
+   "claim_id": "claim-period-excluding-walk-summability",
+   "exact_statement": "Fix a nonzero lattice translation $P$ and a honeycomb vertex $v$. The total critical weight of plane SAWs starting at $v$ whose visited vertices are distinct modulo $P$ is finite. The empty walk may be included. The bound may depend on $P$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-period-excluded"
+  },
+  {
+   "claim_id": "claim-arc-turn-and-seam-phase",
+   "exact_statement": "Let $T(X)$ be the total turn of the lifted arc, and let $K$ be its integer signed number of eastward crossings of the upper seam rays $\\{\\ell M\\}\\times(0,\\infty)$, summed over $\\ell$. Then $$\\label{j:marked-phase-identities}\n T(X)=-2\\pi\\bigl(C_{\\rm per}(i)+C_{\\rm per}(j)+2C_0\\bigr),\n \\qquad K=C_0+\\frac{k}{2}.$$ Consequently, for $q=e^{i\\pi/4}$, $$q^{4C_0}i^k(-1)^K=e^{2\\pi iK}=1.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-marked-phase"
+  },
+  {
+   "claim_id": "claim-fixed-list-marked-regulator",
+   "exact_statement": "For every $T>8r$ and fixed finite initial lists and endpoint coordinate as above, the Wick expansion in species $\\sigma$ terminates after order $n_\\sigma$ and extends to coalescing own lists in the same neighborhood. As $T\\to\\infty$ with generic initial data fixed, $$\\label{j:marked-regulator-limit}\n \\mathfrak C_T^L\\longrightarrow\n \\frac{N(X)^2H^{\\rm flip}(X)}\n {cU^2P_0(W_1,W_2)\\prod_{a\\in A'\\cup B'}F_0(U,x_a)^2}.$$ This statement is initially at values where the displayed denominator is nonzero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-marked-regulated-limit"
+  },
+  {
+   "claim_id": "claim-exact-marked-horizontal-gas",
+   "exact_statement": "Fix a sufficiently small negative pre-collision displacement $d_-$ in the stability range, with $|d_-|<1/8$, and use post-collision displacement $d=1/8$. For all sufficiently large integer periods $T$, chosen independently of the finite site counts, and for every pair of finite initial real lists and real endpoint coordinate in the fixed neighborhood above, the gas $Z_T^L$ converges absolutely and $$\\label{c7:eq-M}\n\\begin{aligned}\n \\mathfrak C_T^L\n &=c(T)Z_T^L\n \\exp\\left(\\frac12\\int_T A^tD(I+gE)A\n       -i\\int_T A^tD\\mathbf1\\,d_T+R_T^d\\right),\\\\\n R_T^d&=-\\frac{|\\mathbf1|^2}{4\\pi}\n              \\int_T d_T(l-L_*)d_T,\\qquad \\mathbf1=(1,1)^t.\n\\end{aligned}$$ Here $c(T)$ is exactly the scalar in <a href=\"#c7:regulator-gas\" data-reference-type=\"eqref\" data-reference=\"c7:regulator-gas\">[c7:regulator-gas]</a>. The identity includes coalescing own lists by continuity. The absolute convergence bounds may depend on the fixed lists, $T$, and the fixed displacements. The same identity holds along $T=bn$ for a sufficiently large fixed integer block length $b$ and positive integers $n$. No estimate uniform as a displacement tends to zero is asserted.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-j-marked-gas-identity"
+  },
+  {
+   "claim_id": "claim-uniform-shifted-normalizer-growth",
+   "exact_statement": "For every $\\varepsilon>0$, for all sufficiently large even $M$, uniformly over real $h_j$ of spread at most one, $$\\label{c7:eq-P}\n \\frac{N(X)}{\\mathcal S(X)}\n \\ge \\left(\\frac23\\right)^{M/2}M^{5/48-\\varepsilon},\n \\qquad x_j=e^{i\\eta h_j}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-j-shifted-normalizer-bound"
+  },
+  {
+   "claim_id": "claim-stability-at-eighth-displacement",
+   "exact_statement": "For the post-collision gas at $d=1/8$, the conclusion of Theorem <a href=\"#j:absolute-stability\" data-reference-type=\"ref\" data-reference=\"j:absolute-stability\">15</a> holds, with constants uniform in $T$ and in $\\theta$ in a fixed compact subset of $\\mathbb C$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-j-stability-eighth"
+  },
+  {
+   "claim_id": "claim-uniform-shifted-site-suppression",
+   "exact_statement": "There are constants $0<\\delta_0<1/16$ and $c_1>0$ with the following property. For every fixed discrepancy bound $0\\le C_0<\\infty$ there is $n_0(C_0)$ such that, for integers $n\\ge n_0(C_0)$, the conclusion below holds uniformly in $f\\in[0,3/5]$.*\n\n\n*Partition a list of $n$ real heights into groups $I_0,I_1$ such that $$\\bigl||I_0|-n(1-f)\\bigr|\\le C_0,\\qquad\n\\bigl||I_1|-nf\\bigr|\\le C_0.$$ Suppose $$|h_a+f|<\\delta_0\\quad(a\\in I_0),\\qquad\n|h_a-(1-f)|<\\delta_0\\quad(a\\in I_1).$$ For every real $x$ and every $\\tau\\in\\{P,O_+,O_-,U,L\\}$, $$\\label{j:shifted-suppression-bound}\n\\left|\\prod_{a=1}^n\\omega_\\tau(x;h_a)\\right|\n\\le \\exp\\!\\left(-c_1 n e^{-\\kappa_1|x|}\\right),\n\\qquad \\kappa_1=\\pi/3.$$ The sums of the one-site logarithms chosen to vanish at either infinity are $O(n e^{-\\kappa_1|x|})$ there, uniformly in these lists. The proposition applies separately to each species.",
+   "kind": "bound",
+   "statement_anchor": "stmt-j-shifted-suppression"
+  },
+  {
+   "claim_id": "claim-mixed-propagation-radius",
+   "exact_statement": "For every real $\\theta$, $$\\label{c7:eq-X}\n r(X_\\theta)\\le r_X^+,\n \\qquad r_X^+=\\exp\\!\\left[b\\left(-\\frac{5\\pi}{96}\n                              +\\frac1{6\\sqrt3}\\right)\\right].$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-c7-mixed-radius"
+  },
+  {
+   "claim_id": "claim-two-exterior-gap-coefficients",
+   "exact_statement": "Let $E_+,E_-$ be Hilbert–Schmidt operators on a complex Hilbert space, each with spectral radius one. Write $\\mathcal P_\\pm=\\{\\zeta\\in\\sigma(E_\\pm):|\\zeta|=1\\}$ for their finite nonempty peripheral spectra. For $\\zeta\\in\\mathcal P_\\pm$, let $P_\\zeta^\\pm$ be the Riesz projection, $J_\\zeta^\\pm=(E_\\pm-\\zeta I)P_\\zeta^\\pm$, and choose $q_\\zeta^\\pm\\ge1$ to be its nilpotent order on $\\operatorname{ran}P_\\zeta^\\pm$. Let $C$ be trace class. For $i=1,2,3,4$, let $\\mathscr W_i$ be a countable family of bounded operators with integer lengths $\\ell(W)\\ge0$ such that, for fixed $\\varepsilon,B>0$, $$\\sum_{W\\in\\mathscr W_i}e^{\\varepsilon\\ell(W)}\\|W\\|\\le B.$$ Fix an integer $L\\ge0$. For integers $N\\ge1$ with $g=2N-L\\ge0$, put $$\\begin{gathered}\n F_{N,L}=\\sum_{\\substack{W_i\\in\\mathscr W_i\\\\\n                \\ell_+\\le g,\\ \\ell_-\\le g}}\n \\operatorname{tr}\\bigl(CW_1E_+^{g-\\ell_+}W_2W_3\n                           E_-^{g-\\ell_-}W_4\\bigr),\\\\\n \\ell_+=\\ell(W_1)+\\ell(W_2),\\quad\n       \\ell_-=\\ell(W_3)+\\ell(W_4).\n\\end{gathered}$$ Suppose $F_{N,L}-R\\operatorname{tr}E_+^{4N}\\to0$ for a scalar $R$ as $N\\to\\infty$ at this fixed $L$. For either sign define $$\\mathcal B_\\zeta^\\pm(z,\\ell)=\n \\sum_{a=0}^{q_\\zeta^\\pm-1}\n \\binom{z-\\ell}{a}\\zeta^{-a}(J_\\zeta^\\pm)^aP_\\zeta^\\pm.$$ The following series is coefficientwise absolutely convergent and defines a polynomial: $$\\begin{aligned}\n \\mathscr P_{\\zeta,\\eta}(z)={}&\n \\sum_{W_1,W_2,W_3,W_4}\\zeta^{-\\ell_+}\\eta^{-\\ell_-}\\\\\n &\\quad\\cdot\\operatorname{tr}\\bigl(CW_1\\mathcal B_\\zeta^+(z,\\ell_+)W_2W_3\n                              \\mathcal B_\\eta^-(z,\\ell_-)W_4\\bigr).\n\\end{aligned}$$ Then for every frequency $\\beta$ in $\\{\\alpha^4:\\alpha\\in\\mathcal P_+\\}\\cup\n \\{(\\zeta\\eta)^2:\\zeta\\in\\mathcal P_+,\\eta\\in\\mathcal P_-\\}$, $$\\label{c7:two-gap-frequency}\n\\begin{aligned}\n R\\sum_{\\substack{\\alpha\\in\\mathcal P_+\\\\\\alpha^4=\\beta}}\n       \\operatorname{rank}P_\\alpha^+\n &=\\sum_{\\substack{\\zeta\\in\\mathcal P_+,\\eta\\in\\mathcal P_-\\\\\n                   (\\zeta\\eta)^2=\\beta}}\n       (\\zeta\\eta)^{-L}\\mathscr P_{\\zeta,\\eta}(-L).\n\\end{aligned}$$ In particular $$|R|\\le K(1+L)^h\\|C\\|_1,\n \\qquad h=\\max_{\\zeta,\\eta}(q_\\zeta^++q_\\eta^--2),$$ where $K$ depends only on $E_\\pm$, $\\varepsilon$, and $B$, and is independent of $C,L,R$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c7-two-gap"
+  },
+  {
+   "claim_id": "claim-few-good-vertices-summability",
+   "exact_statement": "For a sufficiently large fixed $K$, $$\\sum_{\\lambda:\\,\\#\\{\\text{good vertices of }\\lambda\\}<|\\lambda|/2}\n x^{|\\lambda|}|\\lambda|^2<\\infty,$$ where polygons are counted modulo translations.",
+   "kind": "bound",
+   "statement_anchor": "stmt-c7-bad-windows"
+  },
+  {
+   "claim_id": "claim-selected-bond-pair-cylinder-construction",
+   "exact_statement": "Let $\\lambda$ be a planar polygon of diameter at most $H$, and let $v_1,v_2$ be good vertices. Put $r_K=(K-1/2)/\\sqrt3$. If $|v_2-v_1|>4\\sqrt{19}\\,r_K$, one can assign used bonds $e_1,e_2$ within their respective windows so that the following holds after a lattice rotation or reflection. Both bonds cross horizontal tessellation sides, and their midpoint displacement is $$\\delta=a+b\\tau,\\qquad a\\ge1,\\quad b\\ge0,\\quad\n f=\\frac{b}{a+b}<0.6.$$ There is a permitted cut with these two horizontal marked sites and, after a common rescaling, physical logarithmic heights $-f,1-f$. Its interval sizes are $m+1,n+1$, its period has an even number $M=m+n+2$ of sites, and its unmarked count discrepancies from the proportions $1-f,f$ are at most $f$. It has $n\\ge m$, $m\\asymp|\\delta|$, and $n\\asymp H$ above a fixed distance cutoff. Projection to this cylinder is injective on the polygons of diameter at most $H$ containing the fixed ordered bond pair, when their first bond is fixed in the plane.",
+   "kind": "construction",
+   "statement_anchor": "stmt-c7-selected-pair"
+  }
+ ],
+ "paper": "papers/EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-M-0478_PM-237.5_Signed_cylinder_propagation_and_marked_polygons_on_the_honeycomb_lattice.md",
+ "purpose": "Signed cylinder propagation and marked polygons on the honeycomb lattice",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "89f676c5ea841653d1bbf0515e56b2adcc6fb8b03d68d1d395aab713e746b433",
+   "pm.domains.v2": "7592cbacaabfa1f7a2842480c3f6ad28872ad2f2a37ae7d4c137c40aed607011",
+   "pm.edges.v2": "d0f3ec4383f8ed813d3ed38640c9fcbb4057201da6d1c3c663798fa6d7ac756e",
+   "pm.extraction.v2": "e82a752d367fab12e24a9e6fa38ab503bdf5b159f0922667e0fca3cb6be3b400",
+   "pm.formal.v2": "c95b762cbd18c4c8f30c1212c6a0f46ccd0784413cbc5b1168add5febf7adcaf",
+   "pm.limits.v2": "2da9b2940716e2a1d21145ac171a2028ef8b1725e2aa486b21c7433454e8f91e",
+   "pm.node.v2": "e1ab484ca0b1629cbf44bc3999dbf07702c4b6c3353452a9bcf244915d324918",
+   "pm.objects.v2": "318d05f35b72b9b6f788a68d28ee7f8dab85364afb445bf426ad05211c7b0c35",
+   "pm.provenance.v2": "7fe94390a89f9dbcda4d11e50397c2592b15aa89a7e58a3ff51e29c7b89562cc",
+   "pm.quantities.v2": "ece38865c365580615e73010b1887872c47dd3b14be56a071fa4a1c4a4bf6eb4",
+   "pm.reading.v2": "6244f5b486f799a766a7e6b02e53698425e4ce0265d5441403aff0a35f967521",
+   "pm.roadmap.v2": "30cd160a1d8aaf96bf693afb70cc8d3600dae5f860e3d0ef1c32dc7c055337d2",
+   "pm.search.v1": "e0754e00a3b5f93fd3283962668a27cc61968d8805decc803354678e4feb2bf3",
+   "pm.triptych.v2": "9ffda222ae2c6cf3bd90cedffb2dd80c475dd1ba16d40a0a973cc2de70331465"
+  },
+  "canonical_sha256": "e49c668e3391ec41d508d60794ed1d0a2da1ada11f5d8aabc99e429b3809df79",
+  "paper_sha256": "bd95d29ea204c10b6a557e53fc144b004fbc213884f92e07d89cf88404c85cd4",
+  "repaired_body_sha256": "a559c94c27f20498f3f87e80af902004d2161a4036b8dba054306703544808e6"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "4c958d9871593521587c7176beb0814ca491772c62e8f116278b721151bb1fcf",
+   "receipt_sha256": "1e1951df6e46fb1b9ae1cd31d6531a9339036d87696c12fb94e9dab3055948de",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "The listed integer site pairs in [-4, 4], including unequal, opposite, equal, and zero coordinates.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-two-site-normalizers",
+     "oracle_basis": "Independent integer evaluation of the explicit site-pair polynomial formulas; the candidate derives the same quantities from the rational Pfaffian entry and determinant."
+    },
+    {
+     "checked_domain": "Listed equal-site and zero-site boundary vectors, together with a swapped unequal pair.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-polynomial-continuation",
+     "oracle_basis": "Boundary outputs are evaluated directly as polynomials by the oracle, while the candidate must first cancel apparent symbolic denominators. This does not decide polynomiality for arbitrary list sizes."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-skew-numerator",
+     "observed_exit": 1,
+     "receipt_sha256": "063d1be866f6e01378bcce587d781592990f0edea8109755485df53444295e0f"
+    },
+    {
+     "id": "mutant-determinant-cross-term",
+     "observed_exit": 1,
+     "receipt_sha256": "8920ffd9230f410746706cf3ce56c125eb31857a2c75eef95eb92039fca95889"
+    },
+    {
+     "id": "mutant-algebraic-conjugation",
+     "observed_exit": 1,
+     "receipt_sha256": "e4007eb81eae3ec55e4b56b180f619a5fb22eeed97e8aaf5e731acffc2caa81c"
+    }
+   ],
+   "receipt_sha256": "a37caef2c4cfbe60dfab82a8af539cffef882589a4a295cc3171f26937041b35",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Signed cylinder propagation and marked polygons on the honeycomb lattice"
+}

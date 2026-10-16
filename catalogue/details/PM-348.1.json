@@ -1,0 +1,588 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 473479,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 157991
+ },
+ "coordinate": "EN-107-000-0022-2-2026-PR-T4-UK-EX-M3-B-ML-H-0692",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Riemannian differential geometry",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "Let $(M^4,g)$ be a connected smooth closed Riemannian manifold satisfying $$\\operatorname{Ric}_g=3g,\\qquad K_g(\\sigma)\\ge0$$ for every tangent two-plane $\\sigma$. If $K_g(\\sigma_0)=0$ for at least one tangent two-plane, then the universal Riemannian cover is isometric to $$S^2(1/\\sqrt3)\\times S^2(1/\\sqrt3)$$ with its product metric. In particular, the tangent bundle of the universal cover is the orthogonal sum of two parallel rank-two subbundles.",
+     "quote_sha256": "150929c428970be35e756242ca971591150412e576da8e0996d7363e1272e654"
+    }
+   ],
+   "query": "Rigidity for arbitrary noncompact or non-Einstein geometries.",
+   "reason": "The rigidity theorem requires the stated closed Riemannian Einstein hypotheses."
+  }
+ ],
+ "family": "PM-348",
+ "id": "PM-348.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C01",
+    "statement": "Let $(M^4,g)$ be a connected smooth closed Riemannian manifold satisfying $$\\operatorname{Ric}_g=3g,\\qquad K_g(\\sigma)\\ge0$$ for every tangent two-plane $\\sigma$. If $K_g(\\sigma_0)=0$ for at least one tangent two-plane, then the universal Riemannian cover is isometric to $$S^2(1/\\sqrt3)\\times S^2(1/\\sqrt3)$$ with its product metric. In particular, the tangent bundle of the universal cover is the orthogonal sum of two parallel rank-two subbundles."
+   },
+   {
+    "anchor": "stmt-cor-nonnegative-classification",
+    "claim_id": "C02",
+    "statement": "Let $(M^4,g)$ be connected, smooth, and closed, with $\\operatorname{Ric}=3g$ and nonnegative sectional curvature. Its universal Riemannian cover is one of the round $S^4$ of curvature $1$, the complex projective plane with its Fubini–Study metric normalized by $\\operatorname{Ric}=3g$, or $S^2(1/\\sqrt3)\\times S^2(1/\\sqrt3)$."
+   },
+   {
+    "anchor": "stmt-lem-curvature-blocks",
+    "claim_id": "C03",
+    "statement": "There are symmetric trace-free endomorphisms $T\\in\\operatorname{Sym}_0(\\Lambda^+)$ and $U\\in\\operatorname{Sym}_0(\\Lambda^-)$ such that the curvature operator is $$\\mathcal R_{\\Lambda^2}\n =\\begin{pmatrix}\\operatorname{Id}+T&0\\\\\n                  0&\\operatorname{Id}+U\\end{pmatrix}.$$ At a point where these endomorphisms are diagonal, with eigenvalues $t_s,u_s$, the curvature tensor is $$R_{ikjl}\n =\\frac12\\sum_s(1+t_s)I_{s,ik}I_{s,jl}\n  +\\frac12\\sum_s(1+u_s)J_{s,ik}J_{s,jl}.$$ Put $$x=-\\min_s t_s,\\qquad y=-\\min_s u_s,\\qquad\n v=\\frac{|T|}{\\sqrt6},\\qquad b=\\frac{|U|}{\\sqrt6},$$ where the matrix norms are Hilbert–Schmidt norms. Then $$\\sec_g\\ge0\\quad\\Longleftrightarrow\\quad x+y\\le2,\n \\qquad\n v\\le x\\le2v,\\qquad b\\le y\\le2b.$$ Both Weyl blocks, viewed as curvature four-tensors, have zero divergence. In particular, for $Z=\\nabla T$, whose matrix entries are one-forms, the differential Bianchi constraint is $$\\sum_s I_s Z_{sr}=0\\qquad(r=1,2,3).$$"
+   },
+   {
+    "anchor": "stmt-lem-spin-algebra",
+    "claim_id": "C04",
+    "statement": "A spin-$j$ representation has weights $-j,-j+1,\\ldots,j$ for $\\Sigma_3/(2i)$, each once, and $$H_j\\otimes H_\\ell\n \\cong H_{j+\\ell}\\oplus H_{j+\\ell-1}\\oplus\\cdots\\oplus H_{|j-\\ell|}.$$ In particular, the tangent, plus two-form, and plus trace-free symmetric-matrix representations have types $$\\left(\\frac12,\\frac12\\right),\\qquad (1,0),\\qquad (2,0).$$ The Casimir operators and the orthogonal projections onto these irreducible types are parallel bundle endomorphisms."
+   },
+   {
+    "anchor": "stmt-lem-quadratic-curvature-action",
+    "claim_id": "C05",
+    "statement": "If $A$ has smallest eigenvalue $-x$, then $$Q_j(A)\\le \\frac{x(j+1)}{2j-1}\\operatorname{Id}.$$ Moreover, $Q_2(A)=B_F(A)$. The compression of $B_F(A)$, acting on an $F$ factor, to a highest-spin coupling of total plus spin $j$ is $Q_j(A)$, provided the operator acts trivially on any additional irreducible minus factor."
+   },
+   {
+    "anchor": "stmt-prop-weyl-derivative-equations",
+    "claim_id": "C06",
+    "statement": "The tensor $Z=\\nabla T$ belongs to the parallel subbundle $G$ of type $(5/2,1/2)$. On this bundle, put $B_{\\mathrm{op}}=Q_{5/2}(T)$. Then $$\\Delta T=6(T-N),\\qquad\n N=(T^2)_0=T^2-2v^2\\operatorname{Id},$$ and $$\\Delta Z=(13-20B_{\\mathrm{op}})Z.\n \\tag{1}\\label{eq:1}$$ Every statement has an exchanged counterpart for $U$."
+   },
+   {
+    "anchor": "stmt-lem-gradient-parametrization",
+    "claim_id": "C07",
+    "statement": "There are unique vectors $k,l$ such that $$\\begin{gathered}\n Z_{ii}=s_i p-\\sqrt3\\,\\widetilde s_i k,\\qquad\n Z_{jk}=-I_i\\left(l+s_i k+\\frac{\\widetilde s_i}{\\sqrt3}p\\right),\n \\qquad (i,j,k)\\ \\text{cyclic},\\\\\n e=\\frac53|p|^2+5|k|^2+|l|^2.\n \\end{gathered}\n \\tag{2}\\label{eq:2}$$ More generally, for any fixed normalized trace-free diagonal triple $s$, the same formulas parametrize the entire algebraic space $G$ by three arbitrary real four-vectors."
+   },
+   {
+    "anchor": "stmt-prop-weak-norm-equation",
+    "claim_id": "C08",
+    "statement": "The function $e/v$, defined to be zero on $\\{v=0\\}$, belongs to $L^1(M)$, and $$\\Delta v=6v(1-\\sigma v)+\\frac{e-|p|^2}{v}\n \\tag{3}\\label{eq:3}$$ holds as an equality of distributions with an $L^1$ density. The quotient is zero almost everywhere on the zero set. This identity may be tested against bounded Lipschitz functions. The corresponding assertions hold for $b$."
+   },
+   {
+    "anchor": "stmt-prop-weighted-variance",
+    "claim_id": "C09",
+    "statement": "For every real $a\\in H^1(M)$, $$\\operatorname{Var}(a)\n :=\\mathbf E\\bigl[(a-\\mathbf E a)^2\\bigr]\n \\le\\mathbf E\\frac{|\\nabla a|^2}{K},\n \\qquad K=4+v^2+b^2.\n \\tag{4}\\label{eq:4}$$"
+   },
+   {
+    "anchor": "stmt-prop-sharp-sobolev",
+    "claim_id": "C10",
+    "statement": "For every real $f\\in H^1(M)$, $$\\bigl(\\mathbf E|f|^4\\bigr)^{1/2}\n \\le\\mathbf E\\left(f^2+\\frac12|\\nabla f|^2\\right).$$"
+   },
+   {
+    "anchor": "stmt-prop-weyl-gap",
+    "claim_id": "C11",
+    "statement": "For either Weyl block, $$v\\equiv0\\qquad\\text{or}\\qquad \\mathbf E v^2\\ge1.\n \\tag{5}\\label{eq:5}$$ If $T\\not\\equiv0$ and $\\mathbf E v^2=1$, then $\\nabla T=0$ and $v=\\sigma=1$. The corresponding statements hold for $U$."
+   },
+   {
+    "anchor": "stmt-prop-characteristic-identities",
+    "claim_id": "C12",
+    "statement": "Let $n_+$ and $n_-$ be the finite nonnegative integer dimensions of the spaces of harmonic self-dual and anti-self-dual two-forms. The Euler characteristic and signature of $M$ are, respectively, $$\\chi=2+n_++n_-,\\qquad \\tau=n_+-n_-.$$ Then $$\\begin{aligned}\n 8\\pi^2\\chi\n   &=6\\operatorname{Vol}(M)\n        \\bigl(1+\\mathbf E(v^2+b^2)\\bigr),\\\\\n 12\\pi^2\\tau\n   &=6\\operatorname{Vol}(M)\\,\\mathbf E(v^2-b^2).\n \\end{aligned}\n \\tag{6}\\label{eq:6}$$"
+   },
+   {
+    "anchor": "stmt-prop-upper-volume-deficit",
+    "claim_id": "C13",
+    "statement": "One has $$\\frac{V_M}{8\\pi^2/3}\\le 1-\\frac{3}{40}s_0.\n \\tag{7}\\label{eq:7}$$"
+   },
+   {
+    "anchor": "stmt-lem-geodesic-averages",
+    "claim_id": "C14",
+    "statement": "At every time along the geodesic flow, $$\\mathcal E|A|^2=\\frac32s_0,\\qquad\n \\mathcal E|A'|^2\\le\\frac32\\,\\mathcal E|A|^2.\n \\tag{8}\\label{eq:8}$$"
+   },
+   {
+    "anchor": "stmt-lem-upper-polar",
+    "claim_id": "C15",
+    "statement": "One has $$V_M\\le2\\pi^2\\int_0^\\pi\\mathcal E D_c(t)\\,dt.$$"
+   },
+   {
+    "anchor": "stmt-lem-discrete-jacobi",
+    "claim_id": "C16",
+    "statement": "Fix a smooth symmetric normal curvature matrix on $[0,t]$, put $a=t/N$, and let $\\mathcal L_N$ be the block tridiagonal matrix on nodes $1,\\ldots,N-1$ with diagonal blocks $2\\mathrm{Id}-a^2\\mathcal R(ia)$ and off-diagonal blocks $-\\mathrm{Id}$. Then $$a^3\\det\\mathcal L_N\\longrightarrow D(t).$$ If $t$ is before the first conjugate time, $\\mathcal L_N$ is positive definite for all sufficiently large $N$. The Jacobi convergence is uniform over families with uniformly bounded coefficients and first derivatives."
+   },
+   {
+    "anchor": "stmt-lem-upper-radial",
+    "claim_id": "C17",
+    "statement": "For $0<t<\\pi$, set $$\\beta=\\frac{t^2}{\\pi^2-t^2},\\qquad\n B=\\frac2t\\int_0^t A(s)\\sin^2(\\pi s/t)\\,ds.$$ Before conjugacy, $$D(t)\\le\\sin^3t\\,\\det(\\mathrm{Id}-\\beta B),\n \\qquad \\mathrm{Id}-\\beta B\\succeq0.$$ At every time $0<t<\\pi$, $$1-\\frac{D_c(t)}{\\sin^3t}\n \\ge\\frac16\\min\\{1,\\beta^2\\max(1,3-\\beta)\\}\\,|B|^2.$$"
+   },
+   {
+    "anchor": "stmt-lem-sine-minorant",
+    "claim_id": "C18",
+    "statement": "Put $$a_0=\\frac{157}{50},\\qquad b_0=\\frac{22}{7},\\qquad\n S(z)=a_0z-\\frac{(b_0z)^3}{6}\n          +\\frac{(a_0z)^5}{120}-\\frac{(b_0z)^7}{5040}.$$ The constants satisfy $a_0<\\pi<b_0$, and $0\\le S(z)\\le\\sin(\\pi z)$ for $0\\le z\\le1/2$. Its coefficients are $$S(z)=\\frac{157}{50}z-\\frac{5324}{1029}z^3\n       +\\frac{95388992557}{37500000000}z^5\n       -\\frac{155897368}{259416045}z^7.$$"
+   },
+   {
+    "anchor": "stmt-lem-moment-obstruction",
+    "claim_id": "C19",
+    "statement": "Every probability measure $\\mu$ on $[0,2]$ satisfying $$\\int z^2\\,d\\mu\\ge1,\\qquad\n \\int(28z+6z^2)\\,d\\mu\\le25$$ satisfies $$16\\left(\\int H\\,d\\mu\\right)^2-\\int\\Phi\\,d\\mu<0.$$"
+   },
+   {
+    "anchor": "stmt-prop-balanced-moments",
+    "claim_id": "C20",
+    "statement": "If neither Weyl block is identically zero, then $\\tau=0$ and $\\mathbf E v^2=\\mathbf E b^2$."
+   },
+   {
+    "anchor": "stmt-lem-hessian-components",
+    "claim_id": "C21",
+    "statement": "Let $\\mathcal H=T^*M\\otimes G$, and write $X=\\nabla Z$, so $X_{ij}=\\nabla_i\\nabla_jT$. Then $$X=Y+D_0,\n \\qquad\n Y\\text{ has type }(3,1),\\qquad\n D_0\\text{ has type }(2,0).$$ If $\\operatorname{Tr}:\\mathcal H\\to F$ is contraction of the two derivative slots and $\\operatorname{Tr}^*$ its adjoint, then $$\\operatorname{Tr}\\operatorname{Tr}^*=\\frac{12}{5}\\mathrm{Id},\n \\qquad\n D_0=\\frac5{12}\\operatorname{Tr}^*\\Delta T,\n \\qquad\n |D_0|^2=\\frac5{12}|\\Delta T|^2.$$ All the type projections in this statement are parallel."
+   },
+   {
+    "anchor": "stmt-lem-hessian-operator",
+    "claim_id": "C22",
+    "statement": "The combined compressed operator $\\mathcal P$ preserves all four types in $\\mathcal H$. On $(3,1)$ it satisfies $\\mathcal P\\ge(4-2x-2y)\\operatorname{Id}\\ge0$, and on the trace type it satisfies $$\\mathcal P\\operatorname{Tr}^*\n   =\\operatorname{Tr}^*(4-B_F(T)).$$ The individual derivative-slot and matrix-slot summands need not preserve the four types."
+   },
+   {
+    "anchor": "stmt-prop-weighted-hessian",
+    "claim_id": "C23",
+    "statement": "**Proposition 23** (Weighted Hessian inequality). *For every global Lipschitz scalar weight $m\\ge m_0>0$, $$0\\le\\mathbf E\\left[\n mG_v(p,k,l)\n -\\frac56\\sum_i m_i\\,\n    \\frac{\\operatorname{tr}\\bigl(Z_i\\sum_jZ_j^2\\bigr)}6\n +\\frac{\\langle\\mathcal P(L_m)_Y,(L_m)_Y\\rangle}{24m}\n \\right],\n \\tag{10}\\label{eq:10}$$ where $i,j$ in the middle term are derivative indices and $$G_v=\\left(-42-3b^2-\\frac{10}{3}v^2\\right)e\n       +75B+\\frac{25}{3}C_N-\\frac{100}{3}E_B\n       +5v^2|p|^2.$$ More precisely, if $\\mathcal W_v(m)$ denotes the integrand in <a href=\"#eq:10\" data-reference-type=\"eqref\" data-reference=\"eq:10\">[eq:10]</a>, then the exact identity is"
+   },
+   {
+    "anchor": "stmt-lem-hessian-matrices",
+    "claim_id": "C24",
+    "statement": "At a point where $v>0$, use the three vector parameters $p,k,l$ in <a href=\"#eq:2\" data-reference-type=\"eqref\" data-reference=\"eq:2\">[eq:2]</a>. Then $G_v$ is the quadratic form, with scalar entries multiplying vector dot products, whose matrix is $$\\begin{pmatrix}\n -70-5b^2+100\\sigma v-25v^2\n   &-100\\sqrt3\\rho v&-35\\rho v^2/\\sqrt3\\\\\n -100\\sqrt3\\rho v\n   &-210-15b^2-300\\sigma v-190v^2&-75v-35\\sigma v^2\\\\\n -35\\rho v^2/\\sqrt3\n   &-75v-35\\sigma v^2&-42-3b^2-10v^2\n \\end{pmatrix}.\n \\tag{11}\\label{eq:11}$$"
+   },
+   {
+    "anchor": "stmt-lem-cubic-contraction",
+    "claim_id": "C25",
+    "statement": "For every real tangent vector $a$, with $Z_a=\\sum_i a_iZ_i$, $$\\left|\\frac{\\operatorname{tr}\\bigl(Z_a\\sum_jZ_j^2\\bigr)}6\\right|\n \\le \\frac45\\sqrt{\\frac35}\\,|a|e^{3/2}.\n \\tag{13}\\label{eq:13}$$"
+   },
+   {
+    "anchor": "stmt-lem-real-vector-projections",
+    "claim_id": "C26",
+    "statement": "Let $P_+$ be the projection in $\\mathcal H$ onto total plus spin $3$, retaining both possible minus spins. For any real tangent vector $a$ and any $Z\\in G$, $$|P_+(a\\otimes Z)|^2=\\frac7{12}|a|^2|Z|^2,$$ $$\\left\\langle\\widetilde QP_+(a\\otimes Z),P_+(a\\otimes Z)\\right\\rangle\n =\\frac12|a|^2\\langle Q_{5/2}(T)Z,Z\\rangle.$$"
+   },
+   {
+    "anchor": "stmt-prop-hessian-projection-cost",
+    "claim_id": "C27",
+    "statement": "For the weight <a href=\"#eq:12\" data-reference-type=\"eqref\" data-reference=\"eq:12\">[eq:12]</a>, $$\\frac{\\langle\\mathcal P(L_m)_Y,(L_m)_Y\\rangle}{24m}\n \\le\\frac9{64}|p-q|^2\n       \\left[\\frac7{12}(4+y)e-\\frac54B\\right].\n \\tag{14}\\label{eq:14}$$ The bracket on the right is nonnegative. Both assertions remain valid under the closed inequalities $v+b\\le2$ and $x+y\\le2$."
+   },
+   {
+    "anchor": "stmt-prop-coupling-estimates",
+    "claim_id": "C28",
+    "statement": "For this decomposition, define $$r=R_v|p|^2+R_b|q|^2,\\qquad\n j=(|p|^2+|q|^2)\n       \\left(\\frac{|p|^2}{v}+\\frac{|q|^2}{b}\\right).$$ Then, almost everywhere, $$\\mathcal I_4\\le-cj,\\qquad\n \\mathcal I_2\\le2\\Theta r,\\qquad\n \\mathcal I_0\\le-\\frac{\\Theta^2}{c}.$$ The corresponding derivative summands are assigned value zero on a zero set, as in <a href=\"#eq:3\" data-reference-type=\"eqref\" data-reference=\"eq:3\">[eq:3]</a>. The total integrand and the bounds are integrable, and $\\mathbf E\\mathcal I\\ge0$."
+   },
+   {
+    "anchor": "stmt-prop-constant-norms",
+    "claim_id": "C29",
+    "statement": "On a closed, simply connected, oriented four-manifold with $\\operatorname{Ric}=3g$, nonnegative sectional curvature, and neither Weyl block identically zero, one has $v=b=1$ everywhere."
+   },
+   {
+    "anchor": "stmt-prop-parallel-blocks",
+    "claim_id": "C30",
+    "statement": "Both $T$ and $U$ are parallel, with eigenvalues $(2,-1,-1)$."
+   },
+   {
+    "anchor": "stmt-lem-bernstein-conversion",
+    "claim_id": "C31",
+    "statement": "Let $p$ be a polynomial of degree at most $N$ on an interval $[r,s]$, and write $$p(r+(s-r)z)=\\sum_{j=0}^N a_jz^j.$$ Its degree-$N$ Bernstein expansion is $$p(r+(s-r)z)=\\sum_{i=0}^N h_i\\binom Ni z^i(1-z)^{N-i},\n \\qquad\n h_i=\\sum_{j=0}^i a_j\\frac{\\binom ij}{\\binom Nj}.$$ In particular, $h_i\\ge\\eta$ for all $i$ implies $p\\ge\\eta$ on $[r,s]$.*\n\n*For a polynomial on a triangle with ordered vertices $p_\\ell=(r_\\ell,s_\\ell)$, set $$V=r_3+(r_1-r_3)z+(r_2-r_3)w,\\qquad\n W=s_3+(s_1-s_3)z+(s_2-s_3)w.$$ If $P(z,w)=p(V,W)=\\sum_{d,e}P_{de}z^dw^e$ has degree at most $N$, then its normalized degree-$N$ triangular coefficients are $$[p]_{ij}=s_{ij}(P):=\n \\sum_{d=0}^i\\sum_{e=0}^j\n \\frac{\\binom id\\binom je}\n      {\\binom N{d+e}\\binom{d+e}d}\\,P_{de},\n \\qquad i,j\\ge0,\\quad i+j\\le N.$$ On $z,w\\ge0$, $z+w\\le1$, the polynomial is the sum of these coefficients times the nonnegative basis functions $$\\frac{N!}{i!j!(N-i-j)!}\n       z^iw^j(1-z-w)^{N-i-j}.$$ These basis functions sum to one. The same expansion applies entrywise to a symmetric polynomial matrix: positive semidefiniteness of every coefficient matrix implies positive semidefiniteness throughout the triangle."
+   },
+   {
+    "anchor": "stmt-lem-scalar-certificates",
+    "claim_id": "C32",
+    "statement": "For the polynomials in Section <a href=\"#sec:coupling\" data-reference-type=\"ref\" data-reference=\"sec:coupling\">6</a>, the following bounds hold: $$\\begin{gathered}\n C_0>0,\\qquad\n 4C_0\\left((h-A_0)(2-v)+\\frac25hv\\right)\n       -(2-v)(2A_0+L_0)^2>0\\quad(0\\le v\\le2),\\\\\n G,H>0\\quad(0\\le u\\le1),\\qquad\n Z_*\\le0\\quad(0\\le u\\le1/16),\\\\\n Z_*^2\\le64A^2u^2GH\\quad(1/16\\le u\\le1).\n\\end{gathered}$$"
+   },
+   {
+    "anchor": "stmt-lem-matrix-certificates",
+    "claim_id": "C33",
+    "statement": "The symmetric matrix represented by $\\mathcal A$ is positive semidefinite on $$\\mathcal D=\\{(v,b):v,b\\ge0,\\ v+b\\le2\\}.$$ The symmetric matrix represented by $\\mathcal B$ is positive semidefinite on $$\\mathcal D_+=\\{(v,b)\\in\\mathcal D:v\\ge b\\}.$$ On $\\mathcal D_+$ one also has $$L_v\\ge0,\\qquad F+12c\\delta^2L_b\\ge0.$$"
+   },
+   {
+    "anchor": "stmt-lem-potential-certificate",
+    "claim_id": "C34",
+    "statement": "The polynomial $F=cE_0-\\Theta^2$ is nonnegative on $\\mathcal D$."
+   }
+  ],
+  "prerequisites": []
+ },
+ "outputs": [
+  {
+   "claim_id": "C01",
+   "exact_statement": "Let $(M^4,g)$ be a connected smooth closed Riemannian manifold satisfying $$\\operatorname{Ric}_g=3g,\\qquad K_g(\\sigma)\\ge0$$ for every tangent two-plane $\\sigma$. If $K_g(\\sigma_0)=0$ for at least one tangent two-plane, then the universal Riemannian cover is isometric to $$S^2(1/\\sqrt3)\\times S^2(1/\\sqrt3)$$ with its product metric. In particular, the tangent bundle of the universal cover is the orthogonal sum of two parallel rank-two subbundles.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "C02",
+   "exact_statement": "Let $(M^4,g)$ be connected, smooth, and closed, with $\\operatorname{Ric}=3g$ and nonnegative sectional curvature. Its universal Riemannian cover is one of the round $S^4$ of curvature $1$, the complex projective plane with its Fubini–Study metric normalized by $\\operatorname{Ric}=3g$, or $S^2(1/\\sqrt3)\\times S^2(1/\\sqrt3)$.",
+   "kind": "classification",
+   "statement_anchor": "stmt-cor-nonnegative-classification"
+  },
+  {
+   "claim_id": "C03",
+   "exact_statement": "There are symmetric trace-free endomorphisms $T\\in\\operatorname{Sym}_0(\\Lambda^+)$ and $U\\in\\operatorname{Sym}_0(\\Lambda^-)$ such that the curvature operator is $$\\mathcal R_{\\Lambda^2}\n =\\begin{pmatrix}\\operatorname{Id}+T&0\\\\\n                  0&\\operatorname{Id}+U\\end{pmatrix}.$$ At a point where these endomorphisms are diagonal, with eigenvalues $t_s,u_s$, the curvature tensor is $$R_{ikjl}\n =\\frac12\\sum_s(1+t_s)I_{s,ik}I_{s,jl}\n  +\\frac12\\sum_s(1+u_s)J_{s,ik}J_{s,jl}.$$ Put $$x=-\\min_s t_s,\\qquad y=-\\min_s u_s,\\qquad\n v=\\frac{|T|}{\\sqrt6},\\qquad b=\\frac{|U|}{\\sqrt6},$$ where the matrix norms are Hilbert–Schmidt norms. Then $$\\sec_g\\ge0\\quad\\Longleftrightarrow\\quad x+y\\le2,\n \\qquad\n v\\le x\\le2v,\\qquad b\\le y\\le2b.$$ Both Weyl blocks, viewed as curvature four-tensors, have zero divergence. In particular, for $Z=\\nabla T$, whose matrix entries are one-forms, the differential Bianchi constraint is $$\\sum_s I_s Z_{sr}=0\\qquad(r=1,2,3).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-curvature-blocks"
+  },
+  {
+   "claim_id": "C04",
+   "exact_statement": "A spin-$j$ representation has weights $-j,-j+1,\\ldots,j$ for $\\Sigma_3/(2i)$, each once, and $$H_j\\otimes H_\\ell\n \\cong H_{j+\\ell}\\oplus H_{j+\\ell-1}\\oplus\\cdots\\oplus H_{|j-\\ell|}.$$ In particular, the tangent, plus two-form, and plus trace-free symmetric-matrix representations have types $$\\left(\\frac12,\\frac12\\right),\\qquad (1,0),\\qquad (2,0).$$ The Casimir operators and the orthogonal projections onto these irreducible types are parallel bundle endomorphisms.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-spin-algebra"
+  },
+  {
+   "claim_id": "C05",
+   "exact_statement": "If $A$ has smallest eigenvalue $-x$, then $$Q_j(A)\\le \\frac{x(j+1)}{2j-1}\\operatorname{Id}.$$ Moreover, $Q_2(A)=B_F(A)$. The compression of $B_F(A)$, acting on an $F$ factor, to a highest-spin coupling of total plus spin $j$ is $Q_j(A)$, provided the operator acts trivially on any additional irreducible minus factor.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-quadratic-curvature-action"
+  },
+  {
+   "claim_id": "C06",
+   "exact_statement": "The tensor $Z=\\nabla T$ belongs to the parallel subbundle $G$ of type $(5/2,1/2)$. On this bundle, put $B_{\\mathrm{op}}=Q_{5/2}(T)$. Then $$\\Delta T=6(T-N),\\qquad\n N=(T^2)_0=T^2-2v^2\\operatorname{Id},$$ and $$\\Delta Z=(13-20B_{\\mathrm{op}})Z.\n \\tag{1}\\label{eq:1}$$ Every statement has an exchanged counterpart for $U$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-weyl-derivative-equations"
+  },
+  {
+   "claim_id": "C07",
+   "exact_statement": "There are unique vectors $k,l$ such that $$\\begin{gathered}\n Z_{ii}=s_i p-\\sqrt3\\,\\widetilde s_i k,\\qquad\n Z_{jk}=-I_i\\left(l+s_i k+\\frac{\\widetilde s_i}{\\sqrt3}p\\right),\n \\qquad (i,j,k)\\ \\text{cyclic},\\\\\n e=\\frac53|p|^2+5|k|^2+|l|^2.\n \\end{gathered}\n \\tag{2}\\label{eq:2}$$ More generally, for any fixed normalized trace-free diagonal triple $s$, the same formulas parametrize the entire algebraic space $G$ by three arbitrary real four-vectors.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-gradient-parametrization"
+  },
+  {
+   "claim_id": "C08",
+   "exact_statement": "The function $e/v$, defined to be zero on $\\{v=0\\}$, belongs to $L^1(M)$, and $$\\Delta v=6v(1-\\sigma v)+\\frac{e-|p|^2}{v}\n \\tag{3}\\label{eq:3}$$ holds as an equality of distributions with an $L^1$ density. The quotient is zero almost everywhere on the zero set. This identity may be tested against bounded Lipschitz functions. The corresponding assertions hold for $b$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-weak-norm-equation"
+  },
+  {
+   "claim_id": "C09",
+   "exact_statement": "For every real $a\\in H^1(M)$, $$\\operatorname{Var}(a)\n :=\\mathbf E\\bigl[(a-\\mathbf E a)^2\\bigr]\n \\le\\mathbf E\\frac{|\\nabla a|^2}{K},\n \\qquad K=4+v^2+b^2.\n \\tag{4}\\label{eq:4}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-weighted-variance"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "For every real $f\\in H^1(M)$, $$\\bigl(\\mathbf E|f|^4\\bigr)^{1/2}\n \\le\\mathbf E\\left(f^2+\\frac12|\\nabla f|^2\\right).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-sharp-sobolev"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "For either Weyl block, $$v\\equiv0\\qquad\\text{or}\\qquad \\mathbf E v^2\\ge1.\n \\tag{5}\\label{eq:5}$$ If $T\\not\\equiv0$ and $\\mathbf E v^2=1$, then $\\nabla T=0$ and $v=\\sigma=1$. The corresponding statements hold for $U$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-weyl-gap"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Let $n_+$ and $n_-$ be the finite nonnegative integer dimensions of the spaces of harmonic self-dual and anti-self-dual two-forms. The Euler characteristic and signature of $M$ are, respectively, $$\\chi=2+n_++n_-,\\qquad \\tau=n_+-n_-.$$ Then $$\\begin{aligned}\n 8\\pi^2\\chi\n   &=6\\operatorname{Vol}(M)\n        \\bigl(1+\\mathbf E(v^2+b^2)\\bigr),\\\\\n 12\\pi^2\\tau\n   &=6\\operatorname{Vol}(M)\\,\\mathbf E(v^2-b^2).\n \\end{aligned}\n \\tag{6}\\label{eq:6}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-characteristic-identities"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "One has $$\\frac{V_M}{8\\pi^2/3}\\le 1-\\frac{3}{40}s_0.\n \\tag{7}\\label{eq:7}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-upper-volume-deficit"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "At every time along the geodesic flow, $$\\mathcal E|A|^2=\\frac32s_0,\\qquad\n \\mathcal E|A'|^2\\le\\frac32\\,\\mathcal E|A|^2.\n \\tag{8}\\label{eq:8}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-geodesic-averages"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "One has $$V_M\\le2\\pi^2\\int_0^\\pi\\mathcal E D_c(t)\\,dt.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-upper-polar"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "Fix a smooth symmetric normal curvature matrix on $[0,t]$, put $a=t/N$, and let $\\mathcal L_N$ be the block tridiagonal matrix on nodes $1,\\ldots,N-1$ with diagonal blocks $2\\mathrm{Id}-a^2\\mathcal R(ia)$ and off-diagonal blocks $-\\mathrm{Id}$. Then $$a^3\\det\\mathcal L_N\\longrightarrow D(t).$$ If $t$ is before the first conjugate time, $\\mathcal L_N$ is positive definite for all sufficiently large $N$. The Jacobi convergence is uniform over families with uniformly bounded coefficients and first derivatives.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-discrete-jacobi"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "For $0<t<\\pi$, set $$\\beta=\\frac{t^2}{\\pi^2-t^2},\\qquad\n B=\\frac2t\\int_0^t A(s)\\sin^2(\\pi s/t)\\,ds.$$ Before conjugacy, $$D(t)\\le\\sin^3t\\,\\det(\\mathrm{Id}-\\beta B),\n \\qquad \\mathrm{Id}-\\beta B\\succeq0.$$ At every time $0<t<\\pi$, $$1-\\frac{D_c(t)}{\\sin^3t}\n \\ge\\frac16\\min\\{1,\\beta^2\\max(1,3-\\beta)\\}\\,|B|^2.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-upper-radial"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "Put $$a_0=\\frac{157}{50},\\qquad b_0=\\frac{22}{7},\\qquad\n S(z)=a_0z-\\frac{(b_0z)^3}{6}\n          +\\frac{(a_0z)^5}{120}-\\frac{(b_0z)^7}{5040}.$$ The constants satisfy $a_0<\\pi<b_0$, and $0\\le S(z)\\le\\sin(\\pi z)$ for $0\\le z\\le1/2$. Its coefficients are $$S(z)=\\frac{157}{50}z-\\frac{5324}{1029}z^3\n       +\\frac{95388992557}{37500000000}z^5\n       -\\frac{155897368}{259416045}z^7.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-sine-minorant"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "Every probability measure $\\mu$ on $[0,2]$ satisfying $$\\int z^2\\,d\\mu\\ge1,\\qquad\n \\int(28z+6z^2)\\,d\\mu\\le25$$ satisfies $$16\\left(\\int H\\,d\\mu\\right)^2-\\int\\Phi\\,d\\mu<0.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-moment-obstruction"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "If neither Weyl block is identically zero, then $\\tau=0$ and $\\mathbf E v^2=\\mathbf E b^2$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-balanced-moments"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "Let $\\mathcal H=T^*M\\otimes G$, and write $X=\\nabla Z$, so $X_{ij}=\\nabla_i\\nabla_jT$. Then $$X=Y+D_0,\n \\qquad\n Y\\text{ has type }(3,1),\\qquad\n D_0\\text{ has type }(2,0).$$ If $\\operatorname{Tr}:\\mathcal H\\to F$ is contraction of the two derivative slots and $\\operatorname{Tr}^*$ its adjoint, then $$\\operatorname{Tr}\\operatorname{Tr}^*=\\frac{12}{5}\\mathrm{Id},\n \\qquad\n D_0=\\frac5{12}\\operatorname{Tr}^*\\Delta T,\n \\qquad\n |D_0|^2=\\frac5{12}|\\Delta T|^2.$$ All the type projections in this statement are parallel.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-hessian-components"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "The combined compressed operator $\\mathcal P$ preserves all four types in $\\mathcal H$. On $(3,1)$ it satisfies $\\mathcal P\\ge(4-2x-2y)\\operatorname{Id}\\ge0$, and on the trace type it satisfies $$\\mathcal P\\operatorname{Tr}^*\n   =\\operatorname{Tr}^*(4-B_F(T)).$$ The individual derivative-slot and matrix-slot summands need not preserve the four types.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-hessian-operator"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "For every global Lipschitz scalar weight $m\\ge m_0>0$, $$0\\le\\mathbf E\\left[\n mG_v(p,k,l)\n -\\frac56\\sum_i m_i\\,\n    \\frac{\\operatorname{tr}\\bigl(Z_i\\sum_jZ_j^2\\bigr)}6\n +\\frac{\\langle\\mathcal P(L_m)_Y,(L_m)_Y\\rangle}{24m}\n \\right],\n \\tag{10}\\label{eq:10}$$ where $i,j$ in the middle term are derivative indices and $$G_v=\\left(-42-3b^2-\\frac{10}{3}v^2\\right)e\n       +75B+\\frac{25}{3}C_N-\\frac{100}{3}E_B\n       +5v^2|p|^2.$$ More precisely, if $\\mathcal W_v(m)$ denotes the integrand in <a href=\"#eq:10\" data-reference-type=\"eqref\" data-reference=\"eq:10\">[eq:10]</a>, then the exact identity is $$\\mathbf E\\mathcal W_v(m)\n =\\mathbf E\\left[\\frac m6\\left\\langle\n \\mathcal P\\left(Y+\\frac{(L_m)_Y}{2m}\\right),\n               Y+\\frac{(L_m)_Y}{2m}\\right\\rangle\\right].\n \\tag{10a}\\label{eq:weighted-hessian-square}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-weighted-hessian"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "At a point where $v>0$, use the three vector parameters $p,k,l$ in <a href=\"#eq:2\" data-reference-type=\"eqref\" data-reference=\"eq:2\">[eq:2]</a>. Then $G_v$ is the quadratic form, with scalar entries multiplying vector dot products, whose matrix is $$\\begin{pmatrix}\n -70-5b^2+100\\sigma v-25v^2\n   &-100\\sqrt3\\rho v&-35\\rho v^2/\\sqrt3\\\\\n -100\\sqrt3\\rho v\n   &-210-15b^2-300\\sigma v-190v^2&-75v-35\\sigma v^2\\\\\n -35\\rho v^2/\\sqrt3\n   &-75v-35\\sigma v^2&-42-3b^2-10v^2\n \\end{pmatrix}.\n \\tag{11}\\label{eq:11}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-hessian-matrices"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "For every real tangent vector $a$, with $Z_a=\\sum_i a_iZ_i$, $$\\left|\\frac{\\operatorname{tr}\\bigl(Z_a\\sum_jZ_j^2\\bigr)}6\\right|\n \\le \\frac45\\sqrt{\\frac35}\\,|a|e^{3/2}.\n \\tag{13}\\label{eq:13}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cubic-contraction"
+  },
+  {
+   "claim_id": "C26",
+   "exact_statement": "Let $P_+$ be the projection in $\\mathcal H$ onto total plus spin $3$, retaining both possible minus spins. For any real tangent vector $a$ and any $Z\\in G$, $$|P_+(a\\otimes Z)|^2=\\frac7{12}|a|^2|Z|^2,$$ $$\\left\\langle\\widetilde QP_+(a\\otimes Z),P_+(a\\otimes Z)\\right\\rangle\n =\\frac12|a|^2\\langle Q_{5/2}(T)Z,Z\\rangle.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-real-vector-projections"
+  },
+  {
+   "claim_id": "C27",
+   "exact_statement": "For the weight <a href=\"#eq:12\" data-reference-type=\"eqref\" data-reference=\"eq:12\">[eq:12]</a>, $$\\frac{\\langle\\mathcal P(L_m)_Y,(L_m)_Y\\rangle}{24m}\n \\le\\frac9{64}|p-q|^2\n       \\left[\\frac7{12}(4+y)e-\\frac54B\\right].\n \\tag{14}\\label{eq:14}$$ The bracket on the right is nonnegative. Both assertions remain valid under the closed inequalities $v+b\\le2$ and $x+y\\le2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-hessian-projection-cost"
+  },
+  {
+   "claim_id": "C28",
+   "exact_statement": "For this decomposition, define $$r=R_v|p|^2+R_b|q|^2,\\qquad\n j=(|p|^2+|q|^2)\n       \\left(\\frac{|p|^2}{v}+\\frac{|q|^2}{b}\\right).$$ Then, almost everywhere, $$\\mathcal I_4\\le-cj,\\qquad\n \\mathcal I_2\\le2\\Theta r,\\qquad\n \\mathcal I_0\\le-\\frac{\\Theta^2}{c}.$$ The corresponding derivative summands are assigned value zero on a zero set, as in <a href=\"#eq:3\" data-reference-type=\"eqref\" data-reference=\"eq:3\">[eq:3]</a>. The total integrand and the bounds are integrable, and $\\mathbf E\\mathcal I\\ge0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-coupling-estimates"
+  },
+  {
+   "claim_id": "C29",
+   "exact_statement": "On a closed, simply connected, oriented four-manifold with $\\operatorname{Ric}=3g$, nonnegative sectional curvature, and neither Weyl block identically zero, one has $v=b=1$ everywhere.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-constant-norms"
+  },
+  {
+   "claim_id": "C30",
+   "exact_statement": "Both $T$ and $U$ are parallel, with eigenvalues $(2,-1,-1)$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-parallel-blocks"
+  },
+  {
+   "claim_id": "C31",
+   "exact_statement": "Let $p$ be a polynomial of degree at most $N$ on an interval $[r,s]$, and write $$p(r+(s-r)z)=\\sum_{j=0}^N a_jz^j.$$ Its degree-$N$ Bernstein expansion is $$p(r+(s-r)z)=\\sum_{i=0}^N h_i\\binom Ni z^i(1-z)^{N-i},\n \\qquad\n h_i=\\sum_{j=0}^i a_j\\frac{\\binom ij}{\\binom Nj}.$$ In particular, $h_i\\ge\\eta$ for all $i$ implies $p\\ge\\eta$ on $[r,s]$.*\n\n*For a polynomial on a triangle with ordered vertices $p_\\ell=(r_\\ell,s_\\ell)$, set $$V=r_3+(r_1-r_3)z+(r_2-r_3)w,\\qquad\n W=s_3+(s_1-s_3)z+(s_2-s_3)w.$$ If $P(z,w)=p(V,W)=\\sum_{d,e}P_{de}z^dw^e$ has degree at most $N$, then its normalized degree-$N$ triangular coefficients are $$[p]_{ij}=s_{ij}(P):=\n \\sum_{d=0}^i\\sum_{e=0}^j\n \\frac{\\binom id\\binom je}\n      {\\binom N{d+e}\\binom{d+e}d}\\,P_{de},\n \\qquad i,j\\ge0,\\quad i+j\\le N.$$ On $z,w\\ge0$, $z+w\\le1$, the polynomial is the sum of these coefficients times the nonnegative basis functions $$\\frac{N!}{i!j!(N-i-j)!}\n       z^iw^j(1-z-w)^{N-i-j}.$$ These basis functions sum to one. The same expansion applies entrywise to a symmetric polynomial matrix: positive semidefiniteness of every coefficient matrix implies positive semidefiniteness throughout the triangle.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-bernstein-conversion"
+  },
+  {
+   "claim_id": "C32",
+   "exact_statement": "For the polynomials in Section <a href=\"#sec:coupling\" data-reference-type=\"ref\" data-reference=\"sec:coupling\">6</a>, the following bounds hold: $$\\begin{gathered}\n C_0>0,\\qquad\n 4C_0\\left((h-A_0)(2-v)+\\frac25hv\\right)\n       -(2-v)(2A_0+L_0)^2>0\\quad(0\\le v\\le2),\\\\\n G,H>0\\quad(0\\le u\\le1),\\qquad\n Z_*\\le0\\quad(0\\le u\\le1/16),\\\\\n Z_*^2\\le64A^2u^2GH\\quad(1/16\\le u\\le1).\n\\end{gathered}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-scalar-certificates"
+  },
+  {
+   "claim_id": "C33",
+   "exact_statement": "The symmetric matrix represented by $\\mathcal A$ is positive semidefinite on $$\\mathcal D=\\{(v,b):v,b\\ge0,\\ v+b\\le2\\}.$$ The symmetric matrix represented by $\\mathcal B$ is positive semidefinite on $$\\mathcal D_+=\\{(v,b)\\in\\mathcal D:v\\ge b\\}.$$ On $\\mathcal D_+$ one also has $$L_v\\ge0,\\qquad F+12c\\delta^2L_b\\ge0.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-matrix-certificates"
+  },
+  {
+   "claim_id": "C34",
+   "exact_statement": "The polynomial $F=cE_0-\\Theta^2$ is nonnegative on $\\mathcal D$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-potential-certificate"
+  }
+ ],
+ "paper": "papers/EN-107-000-0022-2-2026-PR-T4-UK-EX-M3-B-ML-H-0692_PM-348.1_Zero_Plane_Rigidity_for_Einstein_Four_Manifolds.md",
+ "purpose": "Zero-Plane Rigidity for Einstein Four-Manifolds",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "dcb0e6776406663cff816513e4faed6e2af42079c81a4181b7d49c0bc3ac4203",
+   "pm.domains.v2": "38fbe71ca5623f26ae9ee89955ada5a0446c285333904ec2f30e07025977aa00",
+   "pm.edges.v2": "654c645d3a104736c5c4091058e5c923cb8cdd79c6cc5ce3197de1bc35c1c80c",
+   "pm.extraction.v2": "3805b4982458b4421d6663f1efa14c99d94a7c320ce9a15cc8d81d0d4a0e62e7",
+   "pm.formal.v2": "c094e050044b5c8cfe930dd638b75b018cbd26f4693b7f33377eec807bce44b0",
+   "pm.limits.v2": "4e27761c32f30e98d602272dbe0fe5f5ef04325b8c31122787e89b538855db50",
+   "pm.node.v2": "fafd72ac7570ad77c7298ea99d29165fcac29ca684f3eb8b4323f01cfe2f71b6",
+   "pm.objects.v2": "0978a7a3d84be868bcaa8847b7345a3e4ff7f516f0eea48ea0df968f1802e07c",
+   "pm.provenance.v2": "977177c567810bf66e79467af0297e219e8aceb75c98e9dd6bc2a8ddd142dbe8",
+   "pm.quantities.v2": "ee186261c0c174340d3217b45481a29a4d662cab12df3441fb8b55ae2708e94a",
+   "pm.reading.v2": "bb766bc9ad209d0a0d6924d4a2a60950561b577ba1ca109f79adba9b9c9a56f2",
+   "pm.roadmap.v2": "db0688245d981ec952253960da598ee552006d716f0d363bf7ec05b2883d311c",
+   "pm.search.v1": "0aee67123e803dfc8776c13b4f6d4400565e26d559f275ab34b1a8f3c843c786",
+   "pm.triptych.v2": "dde2e01187eb6bf6b98129748b496fb411fdb4013e074f39025e4f11da154db5"
+  },
+  "canonical_sha256": "a1925e982730ae0968f8e14aaf37ee6c788e7275d616beda974fb130cb271a86",
+  "paper_sha256": "49be9c97ad0ca2eba3e71a2dcff86947c2c670a7073b6c39a2162fe40b8b514d",
+  "repaired_body_sha256": "90d5e4f3075dc49402140302f37c9edc4912bd6ff4ad60404511845e4008f6eb"
+ },
+ "status": "ACTIVE",
+ "subject_id": 7,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "af3a9441981db7cd4e9ccc9d0c1a2d8a34e67b045b6db81a8fa4dd85b1d01a5e",
+   "receipt_sha256": "2a0178b85ad1cfdcdcfc673d2265cecf16e5b5b638d759a17bb43db926712e58",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive coefficients in {-1,0,1} for degrees 0 through 3 on [0,1], [-1,1], [1/2,3/2]; degree elevation and rejected invalid contracts; source L(2x^2) degree 8 on [0,1].",
+     "coverage": "PARTIAL",
+     "invariant_id": "bernstein-interval",
+     "oracle_basis": "Independent Fraction polynomial multiplication reconstructs the power polynomial from the returned Bernstein basis; exact minimum check, no floating point."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M1",
+     "observed_exit": 7,
+     "receipt_sha256": "d7f58609a7b072bcf518f3e11075c66ef26ee93cc36444db32619d1294b27af1"
+    },
+    {
+     "id": "M2",
+     "observed_exit": 7,
+     "receipt_sha256": "f1f1f770190ca7af439f11b879315566b915b79df26e74fa19d810a4db9ccd7d"
+    },
+    {
+     "id": "M3",
+     "observed_exit": 7,
+     "receipt_sha256": "453b97b5a7d924ec30d5cdeb6918340a8897b5e9ac382af9c976c1f9559f43b4"
+    }
+   ],
+   "receipt_sha256": "5013c9493ad4b45f4d1ad761dbf0f6c0f060cac7863eb64f46ee57dbe15d4915",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Zero-Plane Rigidity for Einstein Four-Manifolds"
+}

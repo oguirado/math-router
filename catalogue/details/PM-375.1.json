@@ -1,0 +1,735 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 849410,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 259158
+ },
+ "coordinate": "EN-109-000-0020-2-2026-PR-T4-UK-EX-M2-C-PH-H-0735",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-88",
+     "quote": "##### The dimension-nine comparison\n\nThere are two dimension-sensitive steps in the proof.",
+     "quote_sha256": "3901633bc54d1369b81d87c5dad5f377c41d9a026c8e97fc559da136b9deb6cb"
+    }
+   ],
+   "query": "nonplanar monotone solutions in dimension nine or higher",
+   "reason": "Such solutions exist; the rigidity theorems stop at dimension eight."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-2",
+     "quote": "##### Introduction\n\n\nConsider the scalar Allen–Cahn equation $$\\label{eq:allen-cahn}\n \\Delta u=u^3-u.$$",
+     "quote_sha256": "76d33f189a9cd0734143892bbec4360d48b73c805dba8aa4be19ca3255adfcbd"
+    }
+   ],
+   "query": "stable solutions in dimension eight",
+   "reason": "Nonplanar stable solutions exist there, so the stable classification is sharp."
+  }
+ ],
+ "family": "PM-375",
+ "id": "PM-375.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-monotone",
+    "claim_id": "claim-monotone-rigidity",
+    "statement": "Let $u\\in C^2(\\mathbb R^8,(-1,1))$ satisfy $$\\Delta u=u^3-u,\\qquad \\partial_8u>0\\quad\\text{in }\\mathbb R^8.$$"
+   },
+   {
+    "anchor": "stmt-thm-stable",
+    "claim_id": "claim-stable-rigidity",
+    "statement": "Let $v\\in C^2(\\mathbb R^7,[-1,1])$ be a stable solution of $\\Delta v=v^3-v$."
+   },
+   {
+    "anchor": "stmt-thm-finite",
+    "claim_id": "claim-finite-density-rigidity",
+    "statement": "Let $4\\le n\\le7$."
+   },
+   {
+    "anchor": "stmt-thm-finite",
+    "claim_id": "claim-finite-density-rigidity",
+    "statement": "Suppose $v\\in C^2(\\mathbb R^n,[-1,1])$ solves $\\Delta v=v^3-v$ and satisfies $$\\int_{\\mathbb R^n}\\bigl(|\\nabla\\varphi|^2+(3v^2-1)\\varphi^2\\bigr)\\,\\mathrm dx\n \\ge0\n \\qquad\\text{for every }\\varphi\\in C_c^1(\\mathbb R^n).$$"
+   },
+   {
+    "anchor": "stmt-lem-monotone-ends",
+    "claim_id": "lemma-end-profiles",
+    "statement": "Let $u\\in C^2(\\mathbb R^8,(-1,1))$ solve $\\Delta u=u^3-u$ and satisfy $u_8>0$."
+   },
+   {
+    "anchor": "stmt-lem-monotone-minimizer",
+    "claim_id": "lemma-minimizing-barriers",
+    "statement": "Let $N\\ge2$, and suppose a bounded solution $u:\\mathbb R^{N-1}\\times\\mathbb R\\to(-1,1)$ of $\\Delta u=W'(u)$ is strictly increasing in the last coordinate."
+   },
+   {
+    "anchor": "stmt-lem-monotone-minimizer",
+    "claim_id": "lemma-minimizing-barriers",
+    "statement": "Suppose its vertical limits $a_\\pm(x')$, extended to $\\mathbb R^N$, are global minimizers."
+   },
+   {
+    "anchor": "stmt-prop-monotone-exact-limit",
+    "claim_id": "claim-exact-perimeter-limit",
+    "statement": "Let $u:\\mathbb R^N\\to[-1,1]$ be an entire global minimizer with $\\mathcal E(u;B_R)\\le CR^{N-1}$ for $R\\ge2$."
+   },
+   {
+    "anchor": "stmt-lem-monotone-flat-cone",
+    "claim_id": "lemma-flat-directed-cone",
+    "statement": "Let $E\\subset\\mathbb R^8$ be locally perimeter minimizing."
+   },
+   {
+    "anchor": "stmt-lem-monotone-flat-cone",
+    "claim_id": "lemma-flat-directed-cone",
+    "statement": "Suppose its nonempty boundary support $C$ is a cone with vertex $0$ and $\\partial_8\\mathbf1_E\\ge0$."
+   },
+   {
+    "anchor": "pm-h-20",
+    "claim_id": "lemma-uniform-defect-estimates",
+    "statement": "Throughout this section the ambient dimension $n\\ge2$ is fixed."
+   },
+   {
+    "anchor": "pm-h-20",
+    "claim_id": "lemma-phase-clearing",
+    "statement": "Throughout this section the ambient dimension $n\\ge2$ is fixed."
+   },
+   {
+    "anchor": "pm-h-20",
+    "claim_id": "lemma-phase-clearing",
+    "statement": "We henceforth assume $|v|<1$."
+   },
+   {
+    "anchor": "stmt-lem-diffuse-compactness",
+    "claim_id": "lemma-small-defect-limits",
+    "statement": "Let $v_j$ be entire solutions in the fixed dimension, and let $z_j$ be zeros with $\\epsilon_j=D_j(z_j)>0$ and $\\epsilon_j\\to0$."
+   },
+   {
+    "anchor": "stmt-lem-diffuse-positive",
+    "claim_id": "lemma-positive-decomposition",
+    "statement": "Let $F\\ge0$ be a smooth entire function on $\\mathbb R^{n-1}\\times\\mathbb R$ and suppose $\\mathcal L_0 F=S$, where $S\\ge0$ is smooth and $S(x',s)=S(x',-s)$."
+   },
+   {
+    "anchor": "pm-h-20",
+    "claim_id": "lemma-mean-curvature-defect",
+    "statement": "Throughout this section the ambient dimension $n\\ge2$ is fixed."
+   },
+   {
+    "anchor": "stmt-lem-finite-critical",
+    "claim_id": "lemma-critical-solution",
+    "statement": "If Theorem <a href=\"#thm:finite\" data-reference-type=\"ref\" data-reference=\"thm:finite\">3</a> fails in a fixed dimension $4\\le n\\le7$, there is a nonplanar entire stable solution with finite integer density $M_\\infty=K\\ge2$, and a nonempty closed set $Z$, with the following properties."
+   },
+   {
+    "anchor": "stmt-lem-finite-measures",
+    "claim_id": "lemma-tube-mass-hardy",
+    "statement": "For any prescribed finite $P$, increasing $S$ makes $$\\Phi(z,t)=z+t\\nu(z),\\qquad z\\in\\Sigma_{S/2},\\quad |t|\\le P,$$ injective, with Jacobian $1+\\varepsilon_S$ and $q(\\Phi(z,t))=G(t)+o_S(1)$, uniformly."
+   },
+   {
+    "anchor": "stmt-lem-finite-gap",
+    "claim_id": "lemma-nearest-gap",
+    "statement": "On $\\Sigma_S$, for $S$ sufficiently large, let $l(z)$ be the shortest Euclidean distance to a distinct sheet in the local good chart."
+   },
+   {
+    "anchor": "stmt-lem-finite-green",
+    "claim_id": "lemma-green-inequality",
+    "statement": "Suppose that <a href=\"#eq:B6\" data-reference-type=\"eqref\" data-reference=\"eq:B6\">[eq:B6]</a> holds, with $L\\le2$, and that $\\psi(l)$ is bounded uniformly on each fixed range $S<s<A$."
+   },
+   {
+    "anchor": "stmt-lem-finite-rough",
+    "claim_id": "lemma-rough-gap",
+    "statement": "There is $C<\\infty$ such that, at all sufficiently distant good zeros, $$\\label{eq:B8}\n l(z)\\le C\\bigl((\\log s(z))^2+s(z)^{1/10}\\bigr).$$"
+   },
+   {
+    "anchor": "stmt-cor-finite-subcritical",
+    "claim_id": "cor-uniform-regularity",
+    "statement": "Fix $4\\le n\\le7$ and $0<K_f<\\infty$."
+   },
+   {
+    "anchor": "pm-h-37",
+    "claim_id": "lemma-elementary-chord",
+    "statement": "We now work in the only case left by finite-density rigidity: an entire stable solution $v:\\mathbb R^7\\to(-1,1)$ with $D>0$ and unbounded energy density."
+   },
+   {
+    "anchor": "pm-h-37",
+    "claim_id": "lemma-density-window",
+    "statement": "We now work in the only case left by finite-density rigidity: an entire stable solution $v:\\mathbb R^7\\to(-1,1)$ with $D>0$ and unbounded energy density."
+   },
+   {
+    "anchor": "stmt-lem-reach-half-line-barrier",
+    "claim_id": "lemma-half-line-barrier",
+    "statement": "Let $g(t)=\\tanh(t/\\sqrt2)$ and $V_g(t)=3g(t)^2-1$."
+   },
+   {
+    "anchor": "pm-h-37",
+    "claim_id": "lemma-isolated-graph",
+    "statement": "We now work in the only case left by finite-density rigidity: an entire stable solution $v:\\mathbb R^7\\to(-1,1)$ with $D>0$ and unbounded energy density."
+   },
+   {
+    "anchor": "pm-h-37",
+    "claim_id": "lemma-phase-ball",
+    "statement": "We now work in the only case left by finite-density rigidity: an entire stable solution $v:\\mathbb R^7\\to(-1,1)$ with $D>0$ and unbounded energy density."
+   },
+   {
+    "anchor": "pm-h-37",
+    "claim_id": "prop-reach-inequality",
+    "statement": "We now work in the only case left by finite-density rigidity: an entire stable solution $v:\\mathbb R^7\\to(-1,1)$ with $D>0$ and unbounded energy density."
+   },
+   {
+    "anchor": "pm-h-37",
+    "claim_id": "cor-reach-base-defect",
+    "statement": "We now work in the only case left by finite-density rigidity: an entire stable solution $v:\\mathbb R^7\\to(-1,1)$ with $D>0$ and unbounded energy density."
+   },
+   {
+    "anchor": "pm-h-45",
+    "claim_id": "lemma-sharp-means",
+    "statement": "None of the estimates in this section assumes an energy density bound."
+   },
+   {
+    "anchor": "pm-h-45",
+    "claim_id": "lemma-mean-derivative",
+    "statement": "None of the estimates in this section assumes an energy density bound."
+   },
+   {
+    "anchor": "stmt-lem-interface-immersed-test",
+    "claim_id": "lemma-lifted-test",
+    "statement": "Let $\\Omega\\subset\\Sigma_{\\rm reg}$ be open and $\\Phi(z,s)=z+s\\nu(z)$."
+   },
+   {
+    "anchor": "pm-h-45",
+    "claim_id": "prop-strengthened-stability",
+    "statement": "None of the estimates in this section assumes an energy density bound."
+   },
+   {
+    "anchor": "pm-h-45",
+    "claim_id": "prop-exact-comparison",
+    "statement": "None of the estimates in this section assumes an energy density bound."
+   },
+   {
+    "anchor": "stmt-lem-interface-halfspace-inverse",
+    "claim_id": "lemma-halfspace-inverse",
+    "statement": "Let $p_0>n$, $V_g=3g^2-1$, and $L_g=-\\Delta_y-\\partial_t^2+V_g(t)$ on $\\mathbb R^m\\times(0,\\infty)$, with zero Dirichlet trace."
+   },
+   {
+    "anchor": "pm-h-45",
+    "claim_id": "lemma-good-area",
+    "statement": "None of the estimates in this section assumes an energy density bound."
+   },
+   {
+    "anchor": "stmt-lem-interface-integral",
+    "claim_id": "lemma-weighted-integral",
+    "statement": "Let $\\mathcal X$ be a maximal unit-separated subset of $X$, with $\\mathcal X=\\varnothing$ when $X=\\varnothing$."
+   },
+   {
+    "anchor": "stmt-lem-interface-log-windows",
+    "claim_id": "lemma-clean-windows",
+    "statement": "Fix $\\omega>0$, $C_0<\\infty$, and a fractional margin $0<\\theta_0<1$."
+   },
+   {
+    "anchor": "stmt-lem-interface-log-windows",
+    "claim_id": "prop-sharp-gaps",
+    "statement": "Fix $\\omega>0$, $C_0<\\infty$, and a fractional margin $0<\\theta_0<1$."
+   },
+   {
+    "anchor": "pm-h-51",
+    "claim_id": "prop-fourth-order-growth",
+    "statement": "Throughout this section $v:\\mathbb R^7\\to(-1,1)$ is an entire stable solution of $\\Delta v=v^3-v$, $D>0$, and its energy density is unbounded,"
+   },
+   {
+    "anchor": "pm-h-51",
+    "claim_id": "lemma-curvature-moment",
+    "statement": "Throughout this section $v:\\mathbb R^7\\to(-1,1)$ is an entire stable solution of $\\Delta v=v^3-v$, $D>0$, and its energy density is unbounded,"
+   },
+   {
+    "anchor": "stmt-lem-growth-gluing",
+    "claim_id": "lemma-uniform-gluing",
+    "statement": "Fix $0<\\tau\\le .001$ among the interface tolerances, before the final choice of $\\delta$, and choose the preceding data with this tolerance."
+   },
+   {
+    "anchor": "stmt-lem-growth-multiplier",
+    "claim_id": "lemma-reach-multiplier",
+    "statement": "Let $\\zeta_0=.01$ and $k=1.53$."
+   },
+   {
+    "anchor": "pm-h-76",
+    "claim_id": "lemma-weight-identities",
+    "statement": "Throughout this section $m=6$."
+   },
+   {
+    "anchor": "pm-h-76",
+    "claim_id": "lemma-summable-errors",
+    "statement": "Throughout this section $m=6$."
+   },
+   {
+    "anchor": "pm-h-76",
+    "claim_id": "lemma-radial-reach-budget",
+    "statement": "Throughout this section $m=6$."
+   },
+   {
+    "anchor": "stmt-lem-radial-clean-geometry",
+    "claim_id": "lemma-radial-geometry",
+    "statement": "Fix $C_0<\\infty$."
+   },
+   {
+    "anchor": "pm-h-76",
+    "claim_id": "lemma-switching-cost",
+    "statement": "Throughout this section $m=6$."
+   },
+   {
+    "anchor": "pm-h-76",
+    "claim_id": "lemma-small-reach-area",
+    "statement": "Throughout this section $m=6$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "stable rigidity in dimension seven",
+    "evidence": [
+     {
+      "anchor": "pm-h-5",
+      "quote": "For stable solutions in $\\mathbb R^7$, the remaining task is to prove that $M_\\infty$ is finite.",
+      "quote_sha256": "bfe646520baeeac944daddb26421cbbefb9680bed7262c6140db9784be8dd103"
+     }
+    ],
+    "requires_concepts": [
+     "finite-density rigidity",
+     "penalized reach",
+     "fourth-order growth bound",
+     "Modica gradient bound"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-monotone-rigidity",
+   "exact_statement": "Let $u\\in C^2(\\mathbb R^8,(-1,1))$ satisfy $$\\Delta u=u^3-u,\\qquad \\partial_8u>0\\quad\\text{in }\\mathbb R^8.$$ Then there are $e\\in\\mathbb S^7$ with $e_8>0$ and $c\\in\\mathbb R$ such that $$u(x)=\\tanh\\!\\left(\\frac{e\\cdot x-c}{\\sqrt2}\\right)\n \\qquad\\text{for every }x\\in\\mathbb R^8.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-monotone"
+  },
+  {
+   "claim_id": "claim-stable-rigidity",
+   "exact_statement": "Let $v\\in C^2(\\mathbb R^7,[-1,1])$ be a stable solution of $\\Delta v=v^3-v$. Then either $v\\equiv1$, $v\\equiv-1$, or $$v(x)=\\tanh\\!\\left(\\frac{a\\cdot x-b}{\\sqrt2}\\right)\n \\qquad\\text{for some }a\\in\\mathbb S^6,\\ b\\in\\mathbb R.$$ No energy-growth assumption is required.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-stable"
+  },
+  {
+   "claim_id": "claim-finite-density-rigidity",
+   "exact_statement": "Let $4\\le n\\le7$. Suppose $v\\in C^2(\\mathbb R^n,[-1,1])$ solves $\\Delta v=v^3-v$ and satisfies $$\\int_{\\mathbb R^n}\\bigl(|\\nabla\\varphi|^2+(3v^2-1)\\varphi^2\\bigr)\\,\\mathrm dx\n \\ge0\n \\qquad\\text{for every }\\varphi\\in C_c^1(\\mathbb R^n).$$ If $M_\\infty<\\infty$, then $v\\equiv1$, $v\\equiv-1$, or $v(x)=g(a\\cdot x-b)$ for some $a\\in\\mathbb S^{n-1}$ and $b\\in\\mathbb R$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-finite"
+  },
+  {
+   "claim_id": "lemma-end-profiles",
+   "exact_statement": "Let $u\\in C^2(\\mathbb R^8,(-1,1))$ solve $\\Delta u=u^3-u$ and satisfy $u_8>0$. There are smooth stable solutions $v_-,v_+:\\mathbb R^7\\to[-1,1]$ such that $$u(x',t+s)\\longrightarrow v_\\pm(x')\n \\quad\\text{in }C^k_{\\mathrm{loc}}(\\mathbb R^8)\n \\quad\\text{as }s\\to\\pm\\infty,\n \\qquad k\\ge0.\n \\label{eq:monotone-end-convergence}$$ They satisfy $v_-(x')<u(x',t)<v_+(x')$ everywhere. Their extensions independent of the eighth coordinate are global minimizers in $\\mathbb R^8$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-monotone-ends"
+  },
+  {
+   "claim_id": "lemma-minimizing-barriers",
+   "exact_statement": "Let $N\\ge2$, and suppose a bounded solution $u:\\mathbb R^{N-1}\\times\\mathbb R\\to(-1,1)$ of $\\Delta u=W'(u)$ is strictly increasing in the last coordinate. Suppose its vertical limits $a_\\pm(x')$, extended to $\\mathbb R^N$, are global minimizers. Then $u$ is a global minimizer. Moreover there is a dimensional constant $C_N$ such that $$\\mathcal E(u;B_R(y))\\le C_N R^{N-1}\n \\qquad (y\\in\\mathbb R^N,\\ R\\ge2).\n \\label{eq:monotone-energy-growth}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-monotone-minimizer"
+  },
+  {
+   "claim_id": "claim-exact-perimeter-limit",
+   "exact_statement": "Let $u:\\mathbb R^N\\to[-1,1]$ be an entire global minimizer with $\\mathcal E(u;B_R)\\le CR^{N-1}$ for $R\\ge2$. Given $R_j\\to\\infty$, set $\\varepsilon_j=R_j^{-1}$ and $u_j(x)=u(R_jx)$. After taking a subsequence there is a locally finite-perimeter set $E$ such that $$\\begin{aligned}\n u_j&\\longrightarrow 2\\mathbf1_E-1\n                    &&\\text{in }L^1_{\\mathrm{loc}}(\\mathbb R^N),\\\\\n \\left(\\frac{\\varepsilon_j}2|\\nabla u_j|^2+\n                \\frac{W(u_j)}{\\varepsilon_j}\\right)\\,\\mathrm dx\n   &\\rightharpoonup s_0|D\\mathbf1_E|\n                    &&\\text{as local Radon measures}.\n \\end{aligned}\n \\label{eq:monotone-exact-limit}$$ The set $E$ is locally perimeter minimizing against compact perturbations.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-monotone-exact-limit"
+  },
+  {
+   "claim_id": "lemma-flat-directed-cone",
+   "exact_statement": "Let $E\\subset\\mathbb R^8$ be locally perimeter minimizing. Suppose its nonempty boundary support $C$ is a cone with vertex $0$ and $\\partial_8\\mathbf1_E\\ge0$. Then $C$ is a hyperplane, with perimeter multiplicity one.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-monotone-flat-cone"
+  },
+  {
+   "claim_id": "lemma-uniform-defect-estimates",
+   "exact_statement": "There is a constant $C=C(n)$, and for each $\\gamma>0$ a constant $C_\\gamma=C(n,\\gamma)$, such that every solution with $D>0$ satisfies $$\\label{eq:diffuse-local}\n |T(x)|^2\\le CD(x),\\qquad |\\nabla D(x)|\\le CD(x),\\qquad\n D(y)\\le C_\\gamma e^{(2\\sqrt2+\\gamma)|y-z|}D(z)\n \\quad(y,z\\in\\mathbb R^n).$$ For every $R<\\infty$ and integer $k\\ge0$ there is $C_{R,k}=C(n,R,k)$ such that, for every center $z$, $$\\label{eq:diffuse-normalized-bounds}\n \\left\\|\\frac{D}{D(z)}\\right\\|_{C^k(B_R(z))}\n +\\left\\|\\frac{T}{\\sqrt{D(z)}}\\right\\|_{C^k(B_R(z))}\n \\le C_{R,k}.$$ Moreover $\\inf_{B_R(z)}D\\ge C_R^{-1}D(z)$. The dependence on a growing observation radius can be made explicit: for every $k\\ge0$ and $\\gamma>0$, with $\\kappa=2\\sqrt2+\\gamma$, $$\\label{eq:diffuse-derivative-growth}\n \\begin{split}\n |\\nabla^kD(x)|&\\le C_{k,\\gamma}e^{\\kappa|x-z|}D(z),\\\\\n |\\nabla^kT(x)|&\\le C_{k,\\gamma}e^{\\kappa|x-z|/2}\\sqrt{D(z)}\n \\qquad(x,z\\in\\mathbb R^n).\n \\end{split}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-diffuse-local"
+  },
+  {
+   "claim_id": "lemma-phase-clearing",
+   "exact_statement": "A solution with $|v|<1$ has a nonempty zero set $\\Sigma=\\{v=0\\}$. For every $0<\\gamma<\\sqrt2$ there is $C_\\gamma=C(n,\\gamma)$ such that $$\\label{eq:phase-decay}\n q(x)\\le C_\\gamma\n       e^{-(\\sqrt2-\\gamma)\\mathop{\\mathrm{dist}}(x,\\Sigma)}.$$ More generally the same estimate, with $\\mathop{\\mathrm{dist}}(x,\\partial\\Omega)$ in place of $\\mathop{\\mathrm{dist}}(x,\\Sigma)$, holds for any solution in an open set $\\Omega$ with $0<v\\le1$ there, and also with the signs reversed.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-diffuse-phase"
+  },
+  {
+   "claim_id": "lemma-small-defect-limits",
+   "exact_statement": "Let $v_j$ be entire solutions in the fixed dimension, and let $z_j$ be zeros with $\\epsilon_j=D_j(z_j)>0$ and $\\epsilon_j\\to0$. Translate and rotate so that $z_j=0$ and $\\nu_j(0)=e_n$, and write $x=(x',s)\\in\\mathbb R^{n-1}\\times\\mathbb R$. After a subsequence, $$\\label{eq:diffuse-limits}\n U_j\\longrightarrow s,\\qquad\n \\frac{D_j}{\\epsilon_j}\\longrightarrow\\mathcal D>0,\\qquad\n \\frac{T_j}{\\sqrt{\\epsilon_j}}\\longrightarrow\\mathcal T\n \\quad\\hbox{in }C^k_{\\rm loc}\\text{ for every }k\\ge0.$$ Here $\\mathcal D(0)=1$. The tensor $\\mathcal T$ has only tangential components, is independent of $s$, is trace free, and is harmonic in $x'$. The positive function $F(x',s)=G(s)\\mathcal D(x',s)$ obeys $$\\label{eq:diffuse-limit-operator}\n \\mathcal L_0 F=2G(s)|\\mathcal T(x')|^2,\n \\qquad \\mathcal L_0=-\\Delta+2-G(s).$$ Moreover $$\\label{eq:diffuse-mean-limit}\n \\frac{H_j(0)}{\\epsilon_j}\\longrightarrow\\frac12F_s(0).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-diffuse-compactness"
+  },
+  {
+   "claim_id": "lemma-positive-decomposition",
+   "exact_statement": "Let $F\\ge0$ be a smooth entire function on $\\mathbb R^{n-1}\\times\\mathbb R$ and suppose $\\mathcal L_0 F=S$, where $S\\ge0$ is smooth and $S(x',s)=S(x',-s)$. There is a decomposition $$\\label{eq:diffuse-Riesz}\n F=E+h,\\qquad E\\ge0,\\quad h\\ge0,\\quad\n \\mathcal L_0 E=S,\\quad \\mathcal L_0 h=0,\n \\quad E(x',s)=E(x',-s).$$ In particular $E_s(x',0)=0$ and $\\nabla' E_s(x',0)=0$. With integrals permitted to have value $+\\infty$, $$\\label{eq:diffuse-sharp-positive}\n \\frac{|F_s(0)|}{2}\n \\le\\frac{1}{2\\sqrt2}\\,\\frac1\\sigma\n                       \\int_\\mathbb RG(s)^2F(0,s)\\,\\,\\mathrm ds.$$ For every $c>1/(2\\sqrt2)$ there exists $P=P(c)<\\infty$ such that $$\\label{eq:diffuse-positive-window}\n \\frac{|F_s(0)|}{2}\n \\le\\frac{c}{\\sigma}\\int_{-P}^P G(s)^2F(0,s)\\,\\,\\mathrm ds$$ for all such $F$. The choice of $P$ is independent of the source and of $F$.*\n\n*More precisely, every extreme point of $$\\mathcal K=\\{h\\ge0:\\mathcal L_0 h=0\\text{ on }\\mathbb R^n,\\ h(0)=1\\}$$ has the form $e^{b\\cdot x'}f(s/\\sqrt2)$, where $a=\\sqrt{4-2|b|^2}\\in[1,2]$. If $a>1$, $f$ is one of $$\\label{eq:diffuse-extremals}\n \\frac1a e^{ay}(a-\\tanh y),\\qquad\n \\frac1a e^{-ay}(a+\\tanh y);$$ if $a=1$, $f(y)=\\mathop{\\mathrm{sech}}y$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-diffuse-positive"
+  },
+  {
+   "claim_id": "lemma-mean-curvature-defect",
+   "exact_statement": "For every $c>1/(2\\sqrt2)$ there exist $P=P(c)<\\infty$ and $\\delta=\\delta(n,c)\\in(0,1/2]$ such that every entire solution and every zero $z$ with $0<D(z)<\\delta$ satisfy $$\\label{eq:diffuse-mean-window}\n |H(z)|\\le\\frac c\\sigma\n     \\int_{-P}^P q(z+s\\nu(z))^3D(z+s\\nu(z))\\,\\,\\mathrm ds.$$ The point is regular and the normal is oriented by $p$. The inequality also holds with any larger normal interval. In particular one can fix $$\\label{eq:diffuse-strict-mean}\n \\frac{1}{2\\sqrt2}<c_*<\\frac{\\sqrt2}{3}$$ and obtain constants $P_*,\\delta_*>0$ used in the finite-density argument.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-diffuse-mean"
+  },
+  {
+   "claim_id": "lemma-critical-solution",
+   "exact_statement": "If Theorem <a href=\"#thm:finite\" data-reference-type=\"ref\" data-reference=\"thm:finite\">3</a> fails in a fixed dimension $4\\le n\\le7$, there is a nonplanar entire stable solution with finite integer density $M_\\infty=K\\ge2$, and a nonempty closed set $Z$, with the following properties. Put $s(x)=\\mathop{\\mathrm{dist}}(x,Z)$ and $\\Sigma=\\{v=0\\}$.*\n\n1.  *Uniformly for $y\\in Z$, $$M_r(y)\\longrightarrow K,\\qquad\n     r^{2-m}|B_1(Z)\\cap B_r(y)|\\longrightarrow0\n     \\quad(r\\to\\infty).$$ The second conclusion holds with $B_h(Z)$ in place of $B_1(Z)$ for each fixed $h<\\infty$.*\n\n2.  *There are $c>0,C<\\infty$ and uniform moduli tending to zero as $s\\to\\infty$ such that, about each $z\\in\\Sigma$ with $s(z)$ large, the zero set in an interior cylinder of radius $c s(z)$ consists of exactly $K$ ordered smooth graphs. They are defined on a disk of that radius over a hyperplane through $z$, their heights are $o(s(z))$, their slopes are $o(1)$, and $$\\|\\nabla^2 f_i\\|_\\infty+\n     s(z)^{1/2}[\\nabla^2 f_i]_{C^{1/2}}\\le C/s(z),\n     \\qquad |H_i|\\le C_\\iota s(z)^{-2+\\iota}.$$ Their separations tend uniformly to infinity. At the inner zero points $D=o(1)$, and every fixed normal window converges smoothly to the oriented $g$-profile.*\n\n3.  *Uniformly for $y\\in Z$, $$\\label{eq:finite-discrepancy}\n     r^{-m}\\int_{B_r(y)}q^2D\\longrightarrow0.$$*\n\n*Constants and moduli in this lemma may depend on the fixed critical solution and dimension.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-finite-critical"
+  },
+  {
+   "claim_id": "lemma-tube-mass-hardy",
+   "exact_statement": "For any prescribed finite $P$, increasing $S$ makes $$\\Phi(z,t)=z+t\\nu(z),\\qquad z\\in\\Sigma_{S/2},\\quad |t|\\le P,$$ injective, with Jacobian $1+\\varepsilon_S$ and $q(\\Phi(z,t))=G(t)+o_S(1)$, uniformly. Good-surface area in every ball of radius $r\\ge1$ is at most $Cr^m$, and $$\\label{eq:B1}\n \\int_{\\Sigma_{S/2}\\cap B_r(x)}D\\,\\,\\mathrm dS\n \\le C\\int_{B_{r+1}(x)}q^3D\\,\\,\\mathrm dx\n \\le Cr^{m-2}\\qquad(x\\in\\mathbb R^n,\\ r\\ge1).$$ For $y\\in Z$, put $r=|z-y|$ on the surface and $e_r=(z-y)/r$. Uniformly in $y$, $$\\label{eq:B2}\n \\int_{\\Sigma_S\\cap\\{r>R_0\\}}\n \\left((e_r\\cdot\\nu)^2r^{-m}+|H|r^{1-m}\\right)\\,\\mathrm dS\n \\le \\eta(R_0),\\qquad \\eta(R_0)\\longrightarrow0.$$ The same function $\\eta$ may be used for every $S$ above one fixed unit-tube threshold $S_*$. Choose a smooth ambient $0\\le\\chi\\le1$, supported in $\\{s>S\\}$ and equal to one on $\\{s\\ge2S\\}$, with bounded first two derivatives. For fixed nonnegative Lipschitz $F$, supported in $[1/2,2]$, and every $\\delta>0$, $S$ can be chosen so that $$\\label{eq:B3}\n \\liminf_{R\\to\\infty}R^{-m}\n \\int_{\\Sigma}\\chi F(r/R)\\,\\,\\mathrm dS\n \\ge K m\\omega_m\\int_0^\\infty t^{m-1}F(t)\\,\\,\\mathrm dt-\\delta.$$ Finally, for each fixed $R_0\\ge10$, $$\\label{eq:B4}\n \\limsup_{R\\to\\infty}\\frac{1}{\\sigma\\log R}\n \\int_{\\{R_0/2<|x-y|<4R\\}}q^3D\\,|x-y|^{2-m}\\,\\,\\mathrm dx\n \\le K m\\omega_m\\frac{(m-2)^2}{4}.$$ The limiting estimates are uniform for $y\\in Z$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-finite-measures"
+  },
+  {
+   "claim_id": "lemma-nearest-gap",
+   "exact_statement": "On $\\Sigma_S$, for $S$ sufficiently large, let $l(z)$ be the shortest Euclidean distance to a distinct sheet in the local good chart. This definition is independent of the chart. Uniformly as $s(z)\\to\\infty$, $$l(z)\\longrightarrow\\infty,\\qquad l(z)=o(s(z)).$$ Locally $l$ is the minimum of the smooth distance functions to the one or two adjacent sheets. On an active branch $l_b$, with nearest foot $z'=\\pi_b(z)$, one has $$\\label{eq:B5}\n \\Delta_\\Sigma l_b\n \\le |H(z)|+|H(z')|+\\frac{C}{s(z)}|\\nabla_\\Sigma l_b|^2.$$ Every measurable choice of an active foot has inverse multiplicity at most two. The branch area Jacobian is $1+o_S(1)$, and $$s(z')/s(z)=1+o_S(1),\\qquad\n |z'-y|/|z-y|=1+o_S(1)\\quad(y\\in Z).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-finite-gap"
+  },
+  {
+   "claim_id": "lemma-green-inequality",
+   "exact_statement": "Suppose that <a href=\"#eq:B6\" data-reference-type=\"eqref\" data-reference=\"eq:B6\">[eq:B6]</a> holds, with $L\\le2$, and that $\\psi(l)$ is bounded uniformly on each fixed range $S<s<A$. For fixed sufficiently large $S$ and $R_0\\ge10$, all caps $T_0>0$, all $y\\in Z$, and large $R$, one has $$\\label{eq:B7}\n \\begin{split}\n R^{-m}\\int_\\Sigma w\\chi F(r/R)\\,\\,\\mathrm dS\n &\\le L\\int_{\\Sigma_S\\cap\\{R_0<r<2R\\}}\n       r^{2-m}\\bigl(|H(z)|+|H(\\pi(z))|\\bigr)\\,\\,\\mathrm dS\\\\\n &\\quad+C_{R_0,S}+o_{R\\to\\infty;R_0,S}(\\log R)\n       +T_0\\eta(R_0).\n \\end{split}$$ Here $C_{R_0,S}$ is independent of $T_0,y,R$. The $o(\\log R)$ remainder is independent of $T_0$ and uniform in $y$; $\\eta(R_0)\\to0$ is uniform in $y$. These constants may depend on the fixed function $\\psi$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-finite-green"
+  },
+  {
+   "claim_id": "lemma-rough-gap",
+   "exact_statement": "There is $C<\\infty$ such that, at all sufficiently distant good zeros, $$\\label{eq:B8}\n l(z)\\le C\\bigl((\\log s(z))^2+s(z)^{1/10}\\bigr).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-finite-rough"
+  },
+  {
+   "claim_id": "cor-uniform-regularity",
+   "exact_statement": "Fix $4\\le n\\le7$ and $0<K_f<\\infty$. There are $c>0,C<\\infty,r_0<\\infty$, depending only on $n,K_f$, such that every entire stable parameter-one solution with $M_r(z)\\le K_f$, $r\\ge r_0$, satisfies $$|\\nabla v|\\ge C^{-1},\\qquad\n \\left|\\nabla\\frac{\\nabla v}{|\\nabla v|}\\right|\\le C/r\n \\quad\\hbox{on }B_{cr}(z)\\cap\\{|v|\\le0.9\\}.$$ For each prescribed slope tolerance and each fixed $\\iota>0$, if $v(z)=0$, a sufficiently thin slab confinement of the zero set in this ball about a hyperplane through $z$ gives, on a smaller cylinder, ordered graphs with that slope tolerance and $$\\|\\nabla^2 f_i\\|_\\infty+\n r^{1/2}[\\nabla^2 f_i]_{C^{1/2}}\\le C'/r,\\qquad\n |H_i|\\le C'_\\iota r^{-2+\\iota}.$$ The constants and interior fractions depend only on the stated parameters. On each fixed window about an inner zero, the solution converges smoothly to its oriented planar profile as $r\\to\\infty$, uniformly among these solutions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-finite-subcritical"
+  },
+  {
+   "claim_id": "lemma-elementary-chord",
+   "exact_statement": "The function $d$ is finite and positive on $\\Sigma_{\\rm reg}$. At every such point, writing $\\lambda_i$ for the eigenvalues of $A$, $$\\label{eq:reach-elementary}\n d\\max_i|\\lambda_i|\\le2,\n \\qquad |(y-z)\\cdot\\nu(z)|\\le C_\\Gamma |y-z|^2/d(z)\n \\quad(y\\in\\Sigma).$$ For each $J<\\infty$ there is a uniform $\\delta(J)>0$ such that $v(z)=0$ and $D(z)<\\delta(J)$ imply $d(z)>J$. Moreover, at every regular base there are zero-free open balls tangent at that base on both normal sides, of radius $c_\\Gamma d(z)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-reach-small-defect"
+  },
+  {
+   "claim_id": "lemma-density-window",
+   "exact_statement": "There are fixed $C,c>0$ and a fixed density bound $K_0<\\infty$ such that, if $d=d(z)$ is sufficiently large, then $$\\label{eq:C1}\n h=d\\exp\\{-C\\sqrt{\\log(K(d)+1)}\\},\\qquad M_h(z)\\le K_0.$$ The constant $C$ can be increased without invalidating the conclusion. In particular $h\\ge d^{1-o(1)}$, uniformly as $d\\to\\infty$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-reach-density-window"
+  },
+  {
+   "claim_id": "lemma-half-line-barrier",
+   "exact_statement": "Let $g(t)=\\tanh(t/\\sqrt2)$ and $V_g(t)=3g(t)^2-1$. For each fixed $a_0\\in\\mathbb R$, the function $$\\label{eq:reach-half-line-barrier}\n v_{a_0}(t)=g'(t)\\left[1+\\int_{a_0}^t(g'(s))^{-2}\n                         \\int_s^\\infty g'(r)\\,\\,\\mathrm dr\\,\\,\\mathrm ds\\right],\n \\qquad t\\ge a_0,$$ satisfies $$(-\\partial_t^2+V_g)v_{a_0}=1,\\qquad\n 0<c_{a_0}\\le v_{a_0}\\le C_{a_0}.$$ Every fixed derivative of $v_{a_0}$ is bounded on this half-line. The constants can be chosen uniformly when $a_0$ varies over a fixed compact interval. Translating the independent variable gives the same assertion for a translated profile and half-line.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-reach-half-line-barrier"
+  },
+  {
+   "claim_id": "lemma-isolated-graph",
+   "exact_statement": "There are uniform $c,c',C,\\gamma>0$ such that, for sufficiently large $d(z)$ and $h$ in <a href=\"#eq:C1\" data-reference-type=\"eqref\" data-reference=\"eq:C1\">[eq:C1]</a>, the zero set in $B_{ch}(z)$ is a single graph over $T_z\\Sigma$, extending over the tangent disk of radius $c'h$. On a smaller concentric portion, $$\\label{eq:C2}\n \\begin{gathered}\n |A|+h^{1/2}[A]_{C^{1/2}}\\le C h^{-1},\\qquad\n |\\nabla_\\Sigma A|\\le C h^{-2},\\qquad |H|\\le C h^{-2},\\\\\n |\\nabla_\\Sigma H|+|\\nabla_\\Sigma^2H|\\le C h^{-3-\\gamma}.\n \\end{gathered}$$ The estimates hold uniformly on every inner patch having a fixed fractional margin from the original chart boundary. Hölder norms may be computed in its graph coordinates.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-reach-isolation"
+  },
+  {
+   "claim_id": "lemma-phase-ball",
+   "exact_statement": "There are uniform $r_0,C,\\gamma>0$ with the following property. If an open ball of radius $r\\ge r_0$ is disjoint from $\\Sigma$ and its boundary contains $x\\in\\Sigma$, and $N$ is its inward normal at $x$, then $$\\label{eq:C5}\n x\\in\\Sigma_{\\rm reg},\\qquad D(x)\\le C/r,\n \\qquad a(x)\\le C/r,\\qquad H_N(x)\\le Cr^{-1-\\gamma}.$$ After changing the sign of $v$ so that it is positive inside the ball, along the inward radius one also has $$\\label{eq:C6}\n U(x+sN)\\ge s-C(1+s)/r\\qquad(0\\le s\\le\\log r).$$ Only the last curvature estimate is one-sided; no absolute-value improvement for $H_N$ is asserted.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-reach-phase-ball"
+  },
+  {
+   "claim_id": "prop-reach-inequality",
+   "exact_statement": "Given $\\eta_0>0$, the penalty parameters can be chosen, in the order specified above, so that the following holds for all sufficiently large $d$. The function $d$ is locally semiconcave on $\\Sigma_{\\rm reg}$, and the singular part of its distributional surface Laplacian is nonpositive. Almost everywhere, $$\\label{eq:C7}\n |\\nabla_\\Sigma d|\\le\n C_\\Gamma\\exp\\{C_\\Gamma\\sqrt{\\log(K(d)+1)}\\}.$$ At an active non-plateau or diagonal contact, $$\\label{eq:C8}\n \\Delta_\\Sigma d\\le(1+\\eta_0+C_\\Gamma d^{-\\gamma})a^2d\n                  +B\\,\\frac{|\\nabla_\\Sigma d|^2}{d},\n \\qquad B\\le1+C_\\Gamma d^{-\\gamma}.$$ If $ad$ is sufficiently small, the same bound can be used with $B\\le\\eta_0+C_\\Gamma ad+C_\\Gamma d^{-\\gamma}$, and then $|\\nabla_\\Sigma d|\\ge c_\\Gamma>0$. At an active plateau contact, meaning $s\\ge1-\\delta_2$, one has $$\\label{eq:C9}\n \\Delta_\\Sigma d\\le\n G_1\\bigl(|H(z)|+H_{N_y}(y)_+\\bigr)\n +\\eta_0\\frac{|\\nabla_\\Sigma d|^2}{d},\\qquad N_y=-e.$$ For any measurable choice of such contacts, the positive foot charge can be transferred to $y$ with multiplicity at most one and area factor $$\\label{eq:C10}\n J_{y\\to z}=\n \\frac{|\\det(\\mathrm{Id}+\\ell A_{N_y}(y))|}{s}\\le C_\\Gamma,\n \\qquad d(y)\\le d(z)=G_1\\ell,\n \\qquad a(y)+D(y)\\le C_\\Gamma/d(z).$$ More precisely, $J_{y\\to z}\\le1+C\\delta_2+C a(y)\\ell$ whenever $a(y)\\ell$ is bounded by a sufficiently small fixed constant. The constants and the large-reach threshold are fixed before any later defect threshold, collar scale, or exhaustion radius is chosen.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-reach-calculus"
+  },
+  {
+   "claim_id": "cor-reach-base-defect",
+   "exact_statement": "For sufficiently large $d(z)$, $D(z)+a(z)\\le C_\\Gamma/d(z)$. If $X=\\{z\\in\\Sigma:D(z)\\ge\\delta\\}$ with fixed $\\delta>0$, then for every fixed $L_0$ there is a finite uniform upper bound for $d(z)$ at all good zeros with $\\mathop{\\mathrm{dist}}(z,X)\\le10L_0$. The same conclusion holds for a contact reach $d(z)$ when its second foot $y$ satisfies $\\mathop{\\mathrm{dist}}(y,X)\\le10L_0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-reach-base-defect"
+  },
+  {
+   "claim_id": "lemma-sharp-means",
+   "exact_statement": "For each $\\varepsilon>0$ there exist $P_\\varepsilon<\\infty$ and, for each fixed $P\\ge P_\\varepsilon$, a number $\\delta_{\\varepsilon,P}>0$ such that every zero with $0<D(z)<\\delta_{\\varepsilon,P}$ is regular and satisfies $$\\label{eq:L1}\n cD(z)\\le I_P(z)\\le C_P D(z),\\qquad\n I_P(z)\\ge(1-\\varepsilon)|A(z)|^2,\\qquad\n |H(z)|\\le\\left(\\frac1{2\\sqrt2}+\\varepsilon\\right)I_P(z).$$ The constants and thresholds are independent of the solution and center. The constant $c>0$ can be chosen independently of $P\\ge1$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-interface-sharp-means"
+  },
+  {
+   "claim_id": "lemma-mean-derivative",
+   "exact_statement": "For every $\\varepsilon>0$ there are $S\\ge10$ and $\\delta>0$ such that, if $z\\in\\Sigma$ and $D(z)<\\delta$, all zeros in $B_{4S}(z)$ belong to one regular graph converging smoothly to the tangent plane as the threshold decreases, and $$\\label{eq:L2}\n |\\nabla_\\Sigma H(z)|^2\\le\n \\frac{\\varepsilon}{S^m}\\int_{B_S(z)\\cap\\Sigma_{\\rm reg}}D^2\\,\\,\\mathrm dS.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-interface-mean-gradient"
+  },
+  {
+   "claim_id": "lemma-lifted-test",
+   "exact_statement": "Let $\\Omega\\subset\\Sigma_{\\rm reg}$ be open and $\\Phi(z,s)=z+s\\nu(z)$. Fix $0<\\alpha<1/4$ and an even smooth function $\\beta(z,s)=\\beta_0(sa(z))$, equal to $1$ for $|s|a\\le\\alpha/2$ and supported in $|s|a<\\alpha$. For a compactly supported Lipschitz amplitude on the lifted tube, write $\\xi_j$ for its local inverse branches and put $\\xi=(\\sum_j\\xi_j^2)^{1/2}$. Then $\\xi$ is an admissible physical test. Its quadratic form is the lifted form minus $\\int\\mathcal V\\,\\,\\mathrm dx$, where the nonnegative variance density is $$\\mathcal V=\\min_{b\\in\\mathbb R^n}\\sum_j|\\nabla\\xi_j-\\xi_j b|^2.$$ For the lifted amplitude $G(s)\\beta(z,s)\\psi(z)$, the lifted form is $$\\label{eq:L4}\n \\int_{\\Omega\\times\\mathbb R}\\left\\{\n G^2J|\\nabla(\\beta\\psi)|^2+\n \\beta^2\\psi^2\\left[-J_sGG'\n       +3\\bigl(v(\\Phi)^2-g(s)^2\\bigr)G^2J\\right]\\right\\}\n       \\,\\,\\mathrm dS\\,\\,\\mathrm ds,\n \\qquad J=\\det(\\mathrm{Id}+sA).$$ Here the gradient and volume use the pullback Euclidean metric. Formula <a href=\"#eq:L4\" data-reference-type=\"eqref\" data-reference=\"eq:L4\">[eq:L4]</a> also holds when $\\psi$ includes a bounded Lipschitz factor depending on $x=\\Phi(z,s)$, initially with compact support and a finite normal cap.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-interface-immersed-test"
+  },
+  {
+   "claim_id": "prop-strengthened-stability",
+   "exact_statement": "For each $\\varepsilon>0$, choose $P$ sufficiently large as in Lemma <a href=\"#lem:interface-sharp-means\" data-reference-type=\"ref\" data-reference=\"lem:interface-sharp-means\">28</a>. There exists $\\delta>0$ such that every compactly supported Lipschitz function on $\\{z\\in\\Sigma: D(z)<\\delta\\}$ satisfies $$\\label{eq:L3}\n (1-\\varepsilon)\\int_\\Sigma\\frac{a^2+I_P}{2}\\psi^2\\,\\,\\mathrm dS\n \\le\\int_\\Sigma|\\nabla_\\Sigma\\psi|^2\\,\\,\\mathrm dS.$$ In the lifted computation the gradient coefficient can be made arbitrarily close to $\\sigma$, and the negative coefficient arbitrarily close to $\\sigma(a^2+I_P)/2$, with the same choices.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-interface-strengthened-stability"
+  },
+  {
+   "claim_id": "prop-exact-comparison",
+   "exact_statement": "There exist $\\lambda>0$ and $C<\\infty$, depending on the fixed penalty and dimension but independent of $\\delta\\in(0,1/4]$, such that $$\\label{eq:L5}\n D(z)\\le C\\bigl(J_0(z)+E(z)\\bigr),\\qquad\n E(z)\\le C\\bigl(J_0(z)+D(z)\\bigr),\\qquad z\\in\\Sigma\\setminus X,\n \\quad J_0(z)=\\sup_{y\\in\\Sigma}e^{-\\lambda|y-z|}\\bar a(y)^2.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-interface-exact-comparison"
+  },
+  {
+   "claim_id": "lemma-halfspace-inverse",
+   "exact_statement": "Let $p_0>n$, $V_g=3g^2-1$, and $L_g=-\\Delta_y-\\partial_t^2+V_g(t)$ on $\\mathbb R^m\\times(0,\\infty)$, with zero Dirichlet trace. For some $b_0>0$, uniformly in $0\\le b\\le b_0$, its inverse maps the norm $$\\sup_{(y,t)}e^{-b|y|}\\|f\\|_{L^{p_0}(B_1(y,t)\\cap\\{t>0\\})}$$ to the analogous uniformly local $W^{2,p_0}$ norm. The inverse is unique in this weighted class.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-interface-halfspace-inverse"
+  },
+  {
+   "claim_id": "lemma-good-area",
+   "exact_statement": "For $0<\\delta\\le1/4$, the area of $\\Sigma\\setminus X$ in any unit ball is bounded by a dimensional constant, independently of $\\delta$. Consequently its area in an ambient ball of radius $r\\ge1$ is at most $C(1+r)^n$. At a good zero whose distance from $X$ exceeds $2$, there is a fixed-size graph neighborhood on which $D$ is comparable to its value at that zero and $|\\nabla_\\Sigma A|\\le C\\sqrt D$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-interface-good-area"
+  },
+  {
+   "claim_id": "lemma-weighted-integral",
+   "exact_statement": "Let $\\mathcal X$ be a maximal unit-separated subset of $X$, with $\\mathcal X=\\varnothing$ when $X=\\varnothing$. For an arbitrary center $x_c$, set $\\chi_R(x)=\\exp(-\\sqrt{1+|x-x_c|^2}/R)$. There are $C_D,R_D<\\infty$, independent of $0<\\delta\\le1/4$ and $x_c$, such that for $R\\ge R_D$, $$\\label{eq:L11}\n \\int_{\\Sigma\\setminus X}(D^2+E^2)\\chi_R^2\\,\\,\\mathrm dS\n \\le C_D\\left\\{\n \\int_{\\Sigma\\setminus X}(a^4+DE)\\chi_R^2\\,\\,\\mathrm dS\n             +\\sum_{x\\in\\mathcal X}\\chi_R(x)^2\\right\\}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-interface-integral"
+  },
+  {
+   "claim_id": "lemma-clean-windows",
+   "exact_statement": "Fix $\\omega>0$, $C_0<\\infty$, and a fractional margin $0<\\theta_0<1$. Suppose that $z_0\\in\\Sigma$ and $$D(w)\\le N^{-\\omega}\\qquad\n (w\\in\\Sigma\\cap B_{N^\\omega}(z_0)),\\qquad N\\longrightarrow\\infty.$$ The following conclusions hold uniformly for bases $z\\in\\Sigma\\cap B_{(1-\\theta_0)N^\\omega}(z_0)$. Local zero pieces within $C_0\\log N$ of $z$ are finitely many ordered smooth graphs over $T_z\\Sigma$. Their domains contain a disk of radius $cN^{\\omega/8}$, with a further comparable graph buffer. They have curvature at most $CN^{-\\omega/2}$ and slopes and differences of unoriented normals at most $$C\\bigl(N^{-\\omega/8}\\log N+N^{-3\\omega/8}\\bigr).$$ Distinct graphs have Euclidean separation at least $c_0\\log N$ where they participate in these neighborhoods.*\n\n*For every fixed $k>0$, these descriptions extend over lateral disks of radius $(\\log N)^k$ and through every fixed multiple of $\\log N$ in normal depth. They contain every zero piece meeting the corresponding smaller cylinder. Projection to each participating local graph is unique and smooth there. Differences between its Euclidean distance and its vertical distance, and differences between its height increments and those of its tangent plane, are additive errors bounded by $$C_kN^{-c}(1+\\log N)^{C_k}=o(1),\\qquad c=c(\\omega)>0.$$ The same bounds hold uniformly as the center moves in the stated fractional interior. In particular the lateral domains include $(\\log N)^2$ boxes and disks of radius $\\ell^{2/3}$ whenever $\\ell=O(\\log N)$. The polynomial buffers and unique projections make these descriptions consistent on overlaps.*\n\n*If a distinct graph is within $C_0\\log N$ of the base $z$, then $$d(z)=G_1\\ell_{\\min}(z),$$ where $\\ell_{\\min}(z)$ is the shortest Euclidean distance from $z$ to an adjacent graph. All thresholds may depend on the fixed parameters and on $k$, but not on the solution or the base.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-interface-log-windows"
+  },
+  {
+   "claim_id": "prop-sharp-gaps",
+   "exact_statement": "Under the hypotheses of Lemma <a href=\"#lem:interface-log-windows\" data-reference-type=\"ref\" data-reference=\"lem:interface-log-windows\">36</a>, for each $\\varepsilon>0$ there is $P_\\varepsilon<\\infty$ such that every fixed $P\\ge P_\\varepsilon$ has the following properties when $N$ is sufficiently large. If a different sheet is within $C_0\\log N$ of the base, then $$\\label{eq:L12}\n I_P(z)\\ge(32-\\varepsilon)e^{-\\sqrt2\\ell_{\\min}(z)}.$$ If $x$ lies between two adjacent sheets, their distances $s_i,s_j$ from $x$ are both at most $C_0\\log N$, they are the nearest sheets, and $|s_i-s_j|\\le C_1$ for a fixed $C_1$, then $$\\label{eq:L13}\n q(x)\\le(4+\\varepsilon)\n       \\left(e^{-\\sqrt2s_i}+e^{-\\sqrt2s_j}\\right).$$ Largeness of $N$ may depend on all the fixed parameters, including $P,C_1,\\varepsilon$. The window geometry and conclusions are uniform in the solution and center.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-interface-sharp-gaps"
+  },
+  {
+   "claim_id": "prop-fourth-order-growth",
+   "exact_statement": "In the seven-dimensional stable setting above, fix the penalty $\\Gamma$ sufficiently close to the choices specified in Section <a href=\"#sec:reach\" data-reference-type=\"ref\" data-reference=\"sec:reach\">1</a>, with $\\eta_0<10^{-4}$ and $G_1-1,(1-\\delta_2)^{-1}-1<10^{-3}$, decreasing these errors if required by Section <a href=\"#sec:radial\" data-reference-type=\"ref\" data-reference=\"sec:radial\">1</a>. There are a finite $P$, a positive $\\delta$, and constants $R_0,C<\\infty$ such that, for every solution in the setting above, every $x_c\\in\\mathbb R^7$, every maximal net $\\mathcal X$, and every $R\\ge R_0$, $$\\label{eq:M1}\n \\mathcal Y_R:=\n \\int_{\\Sigma_g}\\chi^2(a^4+D^2+E^2)+N_R\n \\le C K(R)R^{m-4}.$$ The constants depend on the fixed penalty and tolerances, including $\\delta$, but are independent of the solution, the center, the net, and $R$. Any prescribed smaller positive tolerances in <a href=\"#eq:L1\" data-reference-type=\"eqref\" data-reference=\"eq:L1\">[eq:L1]</a>–<a href=\"#eq:L4\" data-reference-type=\"eqref\" data-reference=\"eq:L4\">[eq:L4]</a> and <a href=\"#eq:L12\" data-reference-type=\"eqref\" data-reference=\"eq:L12\">[eq:L12]</a>–<a href=\"#eq:L13\" data-reference-type=\"eqref\" data-reference=\"eq:L13\">[eq:L13]</a> may be imposed before $P$ and $\\delta$ are fixed.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-growth-fourth-order"
+  },
+  {
+   "claim_id": "lemma-curvature-moment",
+   "exact_statement": "For each $\\varepsilon_2>0$ there are choices of the interface tolerances and $\\delta>0$ such that, uniformly for all centers and sufficiently large $R$, $$\\label{eq:M2}\n A_4:=\\int_{\\Sigma_g}\\chi^2a^4\n \\le\\varepsilon_2\\int_{\\Sigma_g}\\chi^2D^2\n       +C_{\\varepsilon_2,\\delta}N_R\n       +C_{\\varepsilon_2,\\delta}K(R)R^{m-4}.$$ The constants remain valid on decreasing $\\delta$ once the preceding interface tolerances have been fixed, except for the displayed allowed dependence of the last two coefficients on $\\delta$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-growth-curvature"
+  },
+  {
+   "claim_id": "lemma-uniform-gluing",
+   "exact_statement": "Fix $0<\\tau\\le .001$ among the interface tolerances, before the final choice of $\\delta$, and choose the preceding data with this tolerance. There exist $L_0,t_*,c_0>0$ and $R_1,C<\\infty$ with the following property. Let $f:[t_{\\min},\\infty)\\to(0,1]$ be nonincreasing and locally Lipschitz, equal to one on $[t_{\\min},t_*]$, and a positive multiple of $e^{-\\kappa t/2}$ for sufficiently large $t$. Suppose also that $|f'|\\le C_f^{(0)}f$ for some finite constant. Then for every center and $R\\ge R_1$, writing $s_X=\\mathop{\\mathrm{dist}}(\\cdot,X)$, $$\\label{eq:M3}\n \\begin{aligned}\n &(1-\\tau)\\int_{\\Sigma_g\\cap\\{s_X\\ge4L_0\\}}S_0 f(d)^2\\chi^2+c_0N_R\\\\\n &\\qquad\\le(1+\\tau)\\int_{\\Sigma_g}\\chi^2 f'(d)^2|\\nabla_\\Sigma d|^2\n       +\\frac C{R^2}\\int_{\\Sigma_g}\\chi^2f(d)^2.\n \\end{aligned}$$ In particular $c_0$ is independent of $f$. The constants $L_0,t_*,R_1,C$ can also be chosen independently of $f$; its stated tail and slope conditions are used only to justify exhaustion.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-growth-gluing"
+  },
+  {
+   "claim_id": "lemma-reach-multiplier",
+   "exact_statement": "Let $\\zeta_0=.01$ and $k=1.53$. Increase $t_{\\min}$, before fixing $\\delta$, so that $\\exp(C/(\\gamma t_{\\min}^{\\gamma}))<1.001$, where $C,\\gamma$ dominate the errors in <a href=\"#eq:C8\" data-reference-type=\"eqref\" data-reference=\"eq:C8\">[eq:C8]</a>. For every finite $t_*\\ge t_{\\min}$, every $\\varepsilon_3>0$, and every $\\eta>0$, there are $t_0>t_*$ and a function $f$ as in Lemma <a href=\"#lem:growth-gluing\" data-reference-type=\"ref\" data-reference=\"lem:growth-gluing\">40</a> such that, with $$B_*(t)=1+Ct^{-\\gamma}+\\zeta_0\\mathbf1_{\\{t\\ge t_0\\}},\\quad\n p_*(t)=\\exp\\int_{t_{\\min}}^t\\frac{B_*(s)}s\\,\\,\\mathrm ds,\\quad\n P_*(t)=\\frac1{p_*(t)}\\int_t^\\infty p_*(s)f'(s)^2\\,\\,\\mathrm ds,$$ one has $-P_*'=f'^2+B_*P_*/t$ almost everywhere and $$\\label{eq:M6}\n \\begin{gathered}\n tP_*(t)\\le .79f(t)^2\\qquad(t_{\\min}\\le t<t_0),\\\\\n P_*(t)\\le(\\kappa/4+.001)f(t)^2,\\qquad\n t^3f(t)^2\\le\\varepsilon_3\\qquad(t\\ge t_0),\\\\\n \\sup_{[t_{\\min},t_*]}P_*\\le\\eta.\n \\end{gathered}$$ Moreover $$e^{-\\kappa t}\\le f(t)^2\\le C_f e^{-\\kappa t},\\qquad\n \\Psi(t):=\\int_t^\\infty P_*(s)\\,\\,\\mathrm ds\\le C_f f(t)^2$$ for a finite constant $C_f$ depending on the final construction.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-growth-multiplier"
+  },
+  {
+   "claim_id": "lemma-weight-identities",
+   "exact_statement": "Uniformly for $\\tau\\ge\\log R$ and $t\\ge t_{\\min}$, where $t_{\\min}>0$ is any fixed lower bound for the reach on the good set, $$\\label{eq:R1}\n\\begin{split}\n \\mathcal F_\\tau\n &=(1+o_R(1))\\,cW_*\n       \\left(\\frac{t}{c\\tau\\vee b(t)}\\right)^\\vartheta,\\\\\n \\frac{\\mathcal F_\\tau+\\mathcal F}{W_*}&\\le C(L+\\tau),\\qquad\n \\frac{\\mathcal F}{W_*}\\ge\\frac1{q_*+\\vartheta/t_{\\min}},\\\\\n \\mathcal F&\\le C(L+\\tau)^{1-\\vartheta}.\n\\end{split}$$ On the regular zero surface the following is a distributional measure inequality: $$\\label{eq:R2}\n\\begin{split}\n \\Delta_\\Sigma\\mathcal F\\ge{}&\n \\mathcal F_\\tau\\Delta_\\Sigma\\tau\n -c^2\\vartheta J_1|\\nabla_\\Sigma\\tau|^2\n -W_*(\\Delta_\\Sigma d)_{\\rm upper}\\\\\n &+\\frac{\\vartheta W_*}{d}|\\nabla_\\Sigma d|^2\n +\\frac{W_*\\lambda}{b'}|\\nabla_\\Sigma(c\\tau-b(d))|^2,\\\\\n J_1={}&\\int_{b(d)}^\\infty\n u^{-\\vartheta-1}f_*'(c\\tau-u)\\,\\mathrm du\n \\le C\\mathcal F_\\tau/\\tau.\n\\end{split}$$ The last square is defined to be zero where $b'=0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-radial-weight"
+  },
+  {
+   "claim_id": "lemma-summable-errors",
+   "exact_statement": "Write $s_j=2^jR$, $j\\ge0$; a shell $\\rho\\asymp s_j$ may be enlarged by any fixed factor. The good surface area and ambient volume within $C s_j^{\\beta_0}$ of $Z$ on this shell are bounded by $C K(s_j)s_j^{m-4+2\\alpha+n\\beta_0}$. Each of the following two shell bounds has negligible sum: $$\\label{eq:R3}\n C K(s)s^{-2+2\\alpha+n\\beta_0}(1+\\log s)^C\n       (L+\\log s)^{1-\\vartheta},$$ $$\\label{eq:R4}\n C K(s)e^{C\\sqrt{\\log(K(s)+1)}}s^{-2}\n       (L+\\log s)^{3-\\vartheta}.$$ Moreover, for some $\\epsilon'>0$ and every fixed $R,L$, $$\\label{eq:R5}\n \\int_{\\{\\rho\\asymp s\\}\\cap(\\Sigma\\setminus X)}W_*\\,\\mathrm dS\n \\le C_Rs^{m-\\epsilon'}\\qquad(s\\longrightarrow\\infty).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-radial-errors"
+  },
+  {
+   "claim_id": "lemma-radial-reach-budget",
+   "exact_statement": "With the fixed parameter choices above, for large $R$ and $B$, $$\\label{eq:R6}\n\\begin{split}\n &\\int_\\Sigma\\phi m_c^2W_*\n \\left[\n \\frac{3.44+24(\\mathcal F/W_*)T_r}{\\rho^2}\n +\\frac{.012}{d}|\\nabla d|^2\n +\\frac{\\lambda}{b'}|\\nabla(c\\tau-b(d))|^2\n \\right]\\,\\mathrm dS\\\\\n &\\hspace{2em}\\le .73\\mathcal L+o_R(\\mathcal A)+o_{B\\to\\infty;R}(1).\n\\end{split}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-radial-reach-budget"
+  },
+  {
+   "claim_id": "lemma-radial-geometry",
+   "exact_statement": "Fix $C_0<\\infty$. For all sufficiently large $R$, the common graph and projection conclusions of Lemma <a href=\"#lem:interface-log-windows\" data-reference-type=\"ref\" data-reference=\"lem:interface-log-windows\">36</a> apply within distance $C_0\\log\\rho(z)$ of every zero satisfying $\\mathop{\\mathrm{dist}}(z,Z)>\\rho(z)^{\\beta_0}/3$. They apply in particular at every base with $m_H\\ne0$, uniformly for $\\rho\\ge R$ and independently of $B$. The polynomial graph buffers accommodate every fixed logarithmic-power lateral disk. Besides the exact identity $d(z)=G_1\\ell(z)$ whenever a distinct sheet is at logarithmic distance, where $\\ell(z)$ is the shortest adjacent Euclidean gap, the following conclusions hold.*\n\n1.  *Two sheet distances within a fixed bounded amount of the least distance can compete only across an adjacent gap, on opposite sides of the point. Three sheets cannot so compete.*\n\n2.  *Fix a base $z_i$ and one normal side. Its only possible partner in a middle band is the first adjacent graph on that side. Write $\\ell_{ij}$ for the distance from the fixed base to that graph, and suppose $\\ell_{ij}\\le C_0\\log\\rho$. Before the ray reaches that graph, at logarithmic depths in the stated window, its two sheet distances $s_i,s_j$ satisfy $$s_i+s_j=\\ell_{ij}+o_R(1),\\qquad\n     \\frac{\\,\\mathrm d}{\\,\\mathrm ds_i}\\frac{s_i-s_j}{2}=1+o_R(1).$$ The ray traverses a fixed-width middle band at most once. The partner graph and $\\ell_{ij}$ are fixed although the projected receiving point can move on that graph.*\n\n*All distance errors are additive and uniformly vanish. Buffered graph families and their projections agree on overlaps.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-radial-clean-geometry"
+  },
+  {
+   "claim_id": "lemma-switching-cost",
+   "exact_statement": "With the preceding fixed parameter choices, for sufficiently large $R$ and uniformly in the subsequent outer radius $B$, $$\\label{eq:R7}\n .895\\mathcal L\\le1.005\\int_\\Sigma|\\nabla_\\Sigma\\psi|^2\\,\\mathrm dS\n                  +o_R(\\mathcal A)+o_{B\\to\\infty;R}(1).$$ The constructed ambient test has normalized switching cost at most $.087853\\mathcal L$, apart from negligible collar and cutoff terms.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-radial-switch-cost"
+  },
+  {
+   "claim_id": "lemma-small-reach-area",
+   "exact_statement": "For all sufficiently large $R$, the set $$\\{z\\in\\Sigma\\cap B_{2R}:m_H(z)=1,\\ d(z)\\le L/2\\}$$ has area at least $c K(R)R^m$, with $c>0$ independent of $R$ and of the selected center.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-radial-area"
+  }
+ ],
+ "paper": "papers/EN-109-000-0020-2-2026-PR-T4-UK-EX-M2-C-PH-H-0735_PM-375.1_A_positive_resolution_of_De_Giorgi_s_conjecture_in_dimension_eight.md",
+ "purpose": "A positive resolution of De Giorgi's conjecture in dimension eight",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "257db45c2178f43dd7617ddaa4df30ab82128b37b7386572c32567d84b421b47",
+   "pm.domains.v2": "3bfa7521388d5e6d559b2171e87d20d47f3027f209701afd494f361873c6b321",
+   "pm.edges.v2": "82388c9774ff88a108079c5d4b9542e406c2dcec40418be1826f8b77f7114fe7",
+   "pm.extraction.v2": "4266eaa21e275c14ae1cbd9a01fab4a1f8b429136829c69571fcc36d9b6c9c3a",
+   "pm.formal.v2": "72c7bd8368df7e40fb3a3771d4937f41c126e1ec4847a20764b0a95544ed4d71",
+   "pm.limits.v2": "70197aa32c9fe9a778a8e83b8a2bf6289cf634905da9faa843cc5d27576ce056",
+   "pm.node.v2": "0d6c11c84948bb6cabd8e5f995b0c2d7ccd1be862f86904afd86166fc6ce3498",
+   "pm.objects.v2": "a652d513cf3a523a931ac9cbc0bd5b334ebe5d5fb82b4badb43def52fb580793",
+   "pm.provenance.v2": "251ce67ac2a8e7af06066d70bae26455d6339fb4edda1be9f352c50a9075d5e9",
+   "pm.quantities.v2": "6da8495e3fd6437a31f2ac6a9fbcc9e529adbe288a363d942f2f5def222d91dd",
+   "pm.reading.v2": "97e6d05a1813a5c036c01efa0fef23e3d027985e06753dbf74bef6f1c608a028",
+   "pm.roadmap.v2": "835a3e73b01976bbddc93eaaeb2c9bb8a186d667ee55e48203ddc6d4f3b07a22",
+   "pm.search.v1": "feb569ff3908aef42d9709ef1c9ad64052052a656d0d4cf89f62c00609ff9adb",
+   "pm.triptych.v2": "83262207fc27513bbebc8e0edcc0b6195e418e0a6a4e6ccaae8fcf93b9ec2e34"
+  },
+  "canonical_sha256": "d7dfed0ebced41c7ed4dc57a825bd8e8aa65760bfd9e418f1a367e7b6b9213a7",
+  "paper_sha256": "a5c1688cfd1e8af13d436a723f1cd3317f98b8cdc75fa2fce57b3778bb8bbc78",
+  "repaired_body_sha256": "d97cb8f77f5fe7c06a88e5ce72fede276afbfb17a5cad196e6efcbf259a14980"
+ },
+ "status": "ACTIVE",
+ "subject_id": 9,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "49aa75efa10d0a6f3f28517d9aab2688a707767ecc73d531a9c55f7504d9c93e",
+   "receipt_sha256": "0b78cb9bb7e78709f15ffbe9107d16e0aa5676b8fa1cd29724795586124691a7",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "A positive resolution of De Giorgi's conjecture in dimension eight"
+}

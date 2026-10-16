@@ -1,0 +1,1000 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 942877,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 258808
+ },
+ "coordinate": "EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-B-TO-H-0154",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-6",
+     "quote": "All varieties in characteristic zero are over an algebraically closed field.",
+     "quote_sha256": "7466d166bdaaa99c7ff5d35edf696e988c373498311fb66ec9e966244dde6617"
+    }
+   ],
+   "query": "positive characteristic bounded complements",
+   "reason": "Varieties are over algebraically closed fields of characteristic zero; positive characteristic appears only as auxiliary calculations."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-cor-finite-coefficients",
+     "quote": "The conclusion concerns klt complements;",
+     "quote_sha256": "abded3d7f57302cec3f0e3d9a269fbda8aac8c804ede206b4419aad3cce19314"
+    }
+   ],
+   "query": "epsilon-lc complement",
+   "reason": "The conclusion concerns klt complements only."
+  }
+ ],
+ "family": "PM-066",
+ "id": "PM-066.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-bounded-klt-complement",
+    "statement": "Let $k$ be an algebraically closed field of characteristic zero, and let $f\\colon X\\to Z$ be a projective surjective morphism of normal integral $k$-varieties such that $f_*\\mathcal O_X=\\mathcal O_Z$, $\\dim X=d$, $K_X$ is $\\mathbb Q$-Cartier, $X$ is $\\epsilon$-lc, and $-K_X$ is ample over $Z$."
+   },
+   {
+    "anchor": "stmt-cor-finite-coefficients",
+    "claim_id": "claim-finite-coefficient-complement",
+    "statement": "Fix a positive integer $d$, a real number $\\epsilon>0$, and a finite set $I\\subset[0,1]\\cap\\mathbb Q$."
+   },
+   {
+    "anchor": "stmt-cor-finite-coefficients",
+    "claim_id": "claim-finite-coefficient-complement",
+    "statement": "Let $(X,\\Delta)$ be an $\\epsilon$-lc pair of dimension $d$ with coefficients in $I$, over $\\mathbb C$."
+   },
+   {
+    "anchor": "stmt-prop-birational-threshold",
+    "claim_id": "claim-birational-threshold",
+    "statement": "Let $f\\colon X\\to Z$ be a birational contraction of $d$-dimensional normal varieties, let $X$ be of Fano type over $Z$, and assume that $K_X$ is $\\mathbb Q$-Cartier, $-K_X$ is nef over $Z$, and $X$ is $\\epsilon$-lc."
+   },
+   {
+    "anchor": "stmt-lem-threshold-to-complement",
+    "claim_id": "claim-threshold-implies-complement",
+    "statement": "Proposition <a href=\"#prop:birational-threshold\" data-reference-type=\"ref\" data-reference=\"prop:birational-threshold\">3</a> in all dimensions implies Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> over $\\mathbb C$."
+   },
+   {
+    "anchor": "stmt-lem-field-descent",
+    "claim_id": "claim-field-descent",
+    "statement": "If Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> holds over $\\mathbb C$ with a fixed index depending only on $d$ and $\\epsilon$, it holds over every algebraically closed field of characteristic zero with a fixed multiple of that index."
+   },
+   {
+    "anchor": "subsec:contradiction-sequence",
+    "claim_id": "claim-crepant-ample-model",
+    "statement": "Choose a sequence of its data with threshold tending to zero."
+   },
+   {
+    "anchor": "stmt-a-abhyankar",
+    "claim_id": "claim-abhyankar-monomial",
+    "statement": "A real valuation of a function field of characteristic zero satisfying Abhyankar equality"
+   },
+   {
+    "anchor": "pm-h-12",
+    "claim_id": "claim-canonical-cone",
+    "statement": "Fix a rational volume form $\\omega$ on $k(X)=k(Z)$ and use $K_X=\\mathop{\\mathrm{Div}}_X(\\omega)$."
+   },
+   {
+    "anchor": "pm-h-12",
+    "claim_id": "claim-gaussian-discrepancy",
+    "statement": "Fix a rational volume form $\\omega$ on $k(X)=k(Z)$ and use $K_X=\\mathop{\\mathrm{Div}}_X(\\omega)$."
+   },
+   {
+    "anchor": "stmt-a-index-hypersurface",
+    "claim_id": "claim-index-hypersurface",
+    "statement": "If $(U,G)$ is klt near a closed point $x$, $G\\geq0$, $\\dim U=p$, and $N(K_U+G)$ is Cartier,"
+   },
+   {
+    "anchor": "a:cone",
+    "claim_id": "claim-initial-lc-place",
+    "statement": "Thus $X\\to Z$ is birational, $Z$ is affine, $-K_X$ is relatively ample, $z\\in Z$ is closed, and $d=\\dim X>0$."
+   },
+   {
+    "anchor": "stmt-a-minimizer-comparison",
+    "claim_id": "claim-minimizer-comparison",
+    "statement": "Let $b$ minimize normalized volume for a $p$-dimensional klt pair."
+   },
+   {
+    "anchor": "stmt-a-exact-penalization",
+    "claim_id": "claim-exact-penalization",
+    "statement": "Let $x\\in U$ be an affine klt germ of dimension $p$, and let $I_0,J$ be nonzero ideals."
+   },
+   {
+    "anchor": "stmt-a-exact-penalization",
+    "claim_id": "claim-exact-penalization",
+    "statement": "Suppose $c>0$ is rational, $(U,I_0^c)$ is lc, and an lc quasi-monomial place is centred at $x$."
+   },
+   {
+    "anchor": "stmt-a-leading-form",
+    "claim_id": "claim-leading-form",
+    "statement": "Let $b$ be a real Abhyankar valuation of a characteristic-zero function field $K/k$, and choose $s_1,\\ldots,s_q\\in K^*$ whose initials form a transcendence basis of $K_b/k$, where $q=\\mathop{\\mathrm{trdeg}}_k K$."
+   },
+   {
+    "anchor": "stmt-a-adapted-presentation",
+    "claim_id": "claim-adapted-presentation",
+    "statement": "Let $x\\in U$ be an affine klt germ and let $b$ be a quasi-monomial valuation centred at $x$."
+   },
+   {
+    "anchor": "stmt-a-adapted-presentation",
+    "claim_id": "claim-adapted-presentation",
+    "statement": "Suppose $R_b=\\mathop{\\mathrm{gr}}_b k[U]$ is finitely generated."
+   },
+   {
+    "anchor": "stmt-a-canonical-specialization",
+    "claim_id": "claim-canonical-specialization",
+    "statement": "In Lemma <a href=\"#a:adapted-presentation\" data-reference-type=\"ref\" data-reference=\"a:adapted-presentation\">15</a>, suppose further that $R_b$ is normal and that $U$ has a canonical generator $\\Omega_U$."
+   },
+   {
+    "anchor": "stmt-a-boundary-specialization",
+    "claim_id": "claim-boundary-specialization",
+    "statement": "In the preceding situation,"
+   },
+   {
+    "anchor": "stmt-a-flattening",
+    "claim_id": "claim-compatible-flattening",
+    "statement": "Let $b$ be as in Lemma <a href=\"#a:adapted-presentation\" data-reference-type=\"ref\" data-reference=\"a:adapted-presentation\">15</a>, and let $T$ be the value torus of $R=\\mathop{\\mathrm{gr}}_b k[U]$, so that $b$ is injective on its character lattice."
+   },
+   {
+    "anchor": "a:quotient",
+    "claim_id": "claim-gauss-lifts",
+    "statement": "The character $\\chi$ lies in the interior of the rational polyhedral cone of occurring weights."
+   },
+   {
+    "anchor": "stmt-a-weak-essentiality",
+    "claim_id": "claim-weak-essentiality",
+    "statement": "On the chosen maximal-rank sequence"
+   },
+   {
+    "anchor": "b:discrepancy-push",
+    "claim_id": "claim-push-threshold",
+    "statement": "We continue over $\\mathbb C$, and retain the chosen rational volume forms."
+   },
+   {
+    "anchor": "b:discrepancy-push",
+    "claim_id": "claim-ordinary-approximation",
+    "statement": "We continue over $\\mathbb C$, and retain the chosen rational volume forms."
+   },
+   {
+    "anchor": "stmt-b-controlled-extraction",
+    "claim_id": "claim-controlled-extraction",
+    "statement": "Let $(Y,B)$ be an effective klt log Fano pair."
+   },
+   {
+    "anchor": "stmt-b-primary-minimization",
+    "claim_id": "claim-primary-minimization",
+    "statement": "Fix a positive integer $r_{\\mathrm{ind}}$."
+   },
+   {
+    "anchor": "stmt-b-primary-minimization",
+    "claim_id": "claim-primary-minimization",
+    "statement": "Let $A,C$ have Calabi–Yau presentations on $Y$, effective in horizontal trace over $V$."
+   },
+   {
+    "anchor": "stmt-b-principal-denominators",
+    "claim_id": "claim-principal-denominators",
+    "statement": "In Lemma <a href=\"#b:primary-minimization\" data-reference-type=\"ref\" data-reference=\"b:primary-minimization\">26</a>, with the fixed positive integer $r_{\\mathrm{ind}}$ as there, assume in addition that $r_{\\mathrm{ind}}\\mathbf M_A$ is principal."
+   },
+   {
+    "anchor": "stmt-b-push-presentation",
+    "claim_id": "claim-push-presentation",
+    "statement": "Let $a=a_{K,Y}+\\mathbf M$ be a Calabi–Yau presentation, sub-generalized klt over the generic point of $V$ and effective in horizontal trace."
+   },
+   {
+    "anchor": "b:scale-tower",
+    "claim_id": "claim-scale-bad-primes",
+    "statement": "All varieties in this section are over $\\mathbb C$."
+   },
+   {
+    "anchor": "b:scale-tower",
+    "claim_id": "claim-scale-birationality",
+    "statement": "All varieties in this section are over $\\mathbb C$."
+   },
+   {
+    "anchor": "b:scale-tower",
+    "claim_id": "claim-scale-collapse",
+    "statement": "All varieties in this section are over $\\mathbb C$."
+   },
+   {
+    "anchor": "b:scale-tower",
+    "claim_id": "claim-scale-inheritance",
+    "statement": "All varieties in this section are over $\\mathbb C$."
+   },
+   {
+    "anchor": "b:scale-tower",
+    "claim_id": "claim-scale-terminal",
+    "statement": "All varieties in this section are over $\\mathbb C$."
+   },
+   {
+    "anchor": "b:width-estimates",
+    "claim_id": "claim-horizontal-estimates",
+    "statement": "The tower controls discrepancies one relative field at a time."
+   },
+   {
+    "anchor": "stmt-b-pure-upper",
+    "claim_id": "claim-pure-upper",
+    "statement": "For $D_1\\ge0$, $D_1\\sim_\\mathbb QH_1$ on $S_1$,"
+   },
+   {
+    "anchor": "stmt-b-class-lattices",
+    "claim_id": "claim-class-lattices",
+    "statement": "For projective normal klt varieties of Fano type occurring in a bounded family with bounded polarizations,"
+   },
+   {
+    "anchor": "stmt-b-principal-descent",
+    "claim_id": "claim-principal-descent",
+    "statement": "An integral Weil divisor defined on a proper geometrically integral normal arithmetic fiber which becomes principal geometrically"
+   },
+   {
+    "anchor": "stmt-b-twist-saturation",
+    "claim_id": "claim-twist-saturation",
+    "statement": "If $\\beta\\in M_0$, $\\|\\beta\\|\\le L$, and $L\\ge1$,"
+   },
+   {
+    "anchor": "stmt-b-coefficient-dimension",
+    "claim_id": "claim-coefficient-dimension",
+    "statement": "For every occurring weight $\\mu=m\\chi+\\beta$ of positive cost $B'=\\widetilde v(\\mu)$,"
+   },
+   {
+    "anchor": "b:width-estimates",
+    "claim_id": "claim-actual-probes",
+    "statement": "The tower controls discrepancies one relative field at a time."
+   },
+   {
+    "anchor": "b:bounded-axes",
+    "claim_id": "claim-bounded-axes-estimates",
+    "statement": "Pass to a subsequence on which each width is either bounded above or tends to infinity."
+   },
+   {
+    "anchor": "stmt-b-pure-descent",
+    "claim_id": "claim-pure-descent",
+    "statement": "Suppose, along the sequence, that"
+   },
+   {
+    "anchor": "b:bounded-axes",
+    "claim_id": "claim-guard-model",
+    "statement": "Pass to a subsequence on which each width is either bounded above or tends to infinity."
+   },
+   {
+    "anchor": "b:bounded-axes",
+    "claim_id": "claim-bounded-guard-boundary",
+    "statement": "Pass to a subsequence on which each width is either bounded above or tends to infinity."
+   },
+   {
+    "anchor": "b:bounded-axes",
+    "claim_id": "claim-generic-marked-fano",
+    "statement": "Pass to a subsequence on which each width is either bounded above or tends to infinity."
+   },
+   {
+    "anchor": "b:bounded-axes",
+    "claim_id": "claim-marked-cone-test",
+    "statement": "Pass to a subsequence on which each width is either bounded above or tends to infinity."
+   },
+   {
+    "anchor": "stmt-b-slow-charge-bound",
+    "claim_id": "claim-slow-charge-bound",
+    "statement": "For sequences of actual candidates above satisfying $(m'+\\sum|a_j|)s_{\\exp}\\to0$,"
+   },
+   {
+    "anchor": "c:optimization-section",
+    "claim_id": "claim-finite-barrier",
+    "statement": "We return to the actual function field $K=k(X)=k(Z)$, the fractional form $\\theta$, the valuation $v$, and the nested multiplicative systems $V_m$ constructed above."
+   },
+   {
+    "anchor": "stmt-c-ordered-monomialization",
+    "claim_id": "claim-ordered-monomialization",
+    "statement": "An ordered-group valuation of a characteristic-zero function field satisfying Abhyankar equality"
+   },
+   {
+    "anchor": "stmt-c-log-determinant",
+    "claim_id": "claim-log-determinant",
+    "statement": "If $a_1,\\ldots,a_d$ are a transcendence basis and $w$ is a real Abhyankar valuation in characteristic zero,"
+   },
+   {
+    "anchor": "stmt-c-invariantization",
+    "claim_id": "claim-invariantization",
+    "statement": "Let $Q^*$ be a real Abhyankar valuation of $K_w=E(\\mathbf z)$."
+   },
+   {
+    "anchor": "c:optimization-section",
+    "claim_id": "claim-secondary-flattening",
+    "statement": "We return to the actual function field $K=k(X)=k(Z)$, the fractional form $\\theta$, the valuation $v$, and the nested multiplicative systems $V_m$ constructed above."
+   },
+   {
+    "anchor": "c:optimization-section",
+    "claim_id": "claim-skeleton-retraction",
+    "statement": "We return to the actual function field $K=k(X)=k(Z)$, the fractional form $\\theta$, the valuation $v$, and the nested multiplicative systems $V_m$ constructed above."
+   },
+   {
+    "anchor": "c:optimization-section",
+    "claim_id": "claim-compact-optimization",
+    "statement": "We return to the actual function field $K=k(X)=k(Z)$, the fractional form $\\theta$, the valuation $v$, and the nested multiplicative systems $V_m$ constructed above."
+   },
+   {
+    "anchor": "pm-h-53",
+    "claim_id": "claim-relative-budget",
+    "statement": "Fix parameters admitting an optimizer with $q>q_{\\rm bar}$, and let $\\mathcal M$ be the compact set of all optimizers."
+   },
+   {
+    "anchor": "pm-h-53",
+    "claim_id": "claim-strict-budget",
+    "statement": "Fix parameters admitting an optimizer with $q>q_{\\rm bar}$, and let $\\mathcal M$ be the compact set of all optimizers."
+   },
+   {
+    "anchor": "stmt-c-trace-existence",
+    "claim_id": "claim-trace-existence",
+    "statement": "Let $L$ be a finitely generated field over an algebraically closed field $k$ of characteristic zero, let $\\vartheta=\\nu/f^{1/n}$ be a fractional rational volume form, and let $I\\subset L^*$ be a nonempty finite system whose ratios generate $L/k$."
+   },
+   {
+    "anchor": "stmt-c-trace-initial-survival",
+    "claim_id": "claim-trace-initial-survival",
+    "statement": "Transport $w$ to a reduction of its monomial chart, using the same positive normal weights."
+   },
+   {
+    "anchor": "stmt-c-trace-degree",
+    "claim_id": "claim-trace-degree",
+    "statement": "In the retained reductions of the angular algebra,"
+   },
+   {
+    "anchor": "stmt-c-trace-taylor-flags",
+    "claim_id": "claim-trace-taylor-flags",
+    "statement": "Suppose a product of restrictions of homogeneous initials gives a nonzero relative trace as in <a href=\"#eq:E7\" data-reference-type=\"eqref\" data-reference=\"eq:E7\">[eq:E7]</a>, and let $H$ denote the lift of that product by the same factors to the full initial field."
+   },
+   {
+    "anchor": "stmt-c-trace-finite-data",
+    "claim_id": "claim-trace-finite-data",
+    "statement": "For each single application of the preceding trace constructions"
+   },
+   {
+    "anchor": "stmt-c-trace-budget",
+    "claim_id": "claim-trace-budget",
+    "statement": "Apply the strict budget <a href=\"#eq:E5\" data-reference-type=\"eqref\" data-reference=\"eq:E5\">[eq:E5]</a> on the geometric generic field of $K_w$ over the independent probes $g$, choosing the optional $\\bar U_j$ to include generators of the relative field."
+   },
+   {
+    "anchor": "stmt-c-cheap-box-count",
+    "claim_id": "claim-cheap-box-count",
+    "statement": "Fix $r\\ge1$ and $A>0$."
+   },
+   {
+    "anchor": "c:cheap-section",
+    "claim_id": "claim-cheap-collapse",
+    "statement": "We continue with the actual field $K$, the fractional form $\\theta$, and the nested multiplicative angular systems $V_m$."
+   },
+   {
+    "anchor": "stmt-c-cheap-exact-zero",
+    "claim_id": "claim-cheap-exact-zero",
+    "statement": "For each sequence index $i$, let $V_{m,i}$ be nested multiplicative $k_i$-linear subspaces of a field, containing $1\\in V_{0,i}$, and let $v_i,w_i$ be real valuations trivial on $k_i$."
+   },
+   {
+    "anchor": "stmt-c-cheap-two-sided",
+    "claim_id": "claim-cheap-two-sided",
+    "statement": "Fix the constant $B_0$ of Proposition <a href=\"#c:cheap-collapse\" data-reference-type=\"ref\" data-reference=\"c:cheap-collapse\">64</a> and a positive constant $c$."
+   },
+   {
+    "anchor": "c:rank-section",
+    "claim_id": "claim-layer-dimension",
+    "statement": "Consider a layer with scale $S$, and let $s$ be the number of axes up to and including this layer."
+   },
+   {
+    "anchor": "c:rank-section",
+    "claim_id": "claim-rank-increase",
+    "statement": "Consider a layer with scale $S$, and let $s$ be the number of axes up to and including this layer."
+   },
+   {
+    "anchor": "stmt-c-layer-slopes",
+    "claim_id": "claim-layer-slopes",
+    "statement": "For the enlarged optimization with $s$ probes,"
+   },
+   {
+    "anchor": "c:rank-section",
+    "claim_id": "claim-integral-rounding",
+    "statement": "Consider a layer with scale $S$, and let $s$ be the number of axes up to and including this layer."
+   },
+   {
+    "anchor": "stmt-c-divisorial-index",
+    "claim_id": "claim-divisorial-index",
+    "statement": "At a final optimizer with $d$ independent probe initials and integral probe parameters"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "bounded klt complement",
+    "evidence": [
+     {
+      "anchor": "pm-h-4",
+      "quote": "Our first tools come from normalized-volume minimization.",
+      "quote_sha256": "e88e6bf2b339f035990fcbb925cf86221f9c8e96d0e4fa83016de8802ea4a901"
+     }
+    ],
+    "requires_concepts": [
+     "log discrepancy",
+     "Fano type",
+     "log canonical threshold",
+     "normalized volume minimization",
+     "Abhyankar valuation"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-bounded-klt-complement",
+   "exact_statement": "For every positive integer $d$ and positive rational number $\\epsilon$ there is a positive integer $N=N(d,\\epsilon)$ with the following property. Let $k$ be an algebraically closed field of characteristic zero, and let $f\\colon X\\to Z$ be a projective surjective morphism of normal integral $k$-varieties such that $f_*\\mathcal O_X=\\mathcal O_Z$, $\\dim X=d$, $K_X$ is $\\mathbb Q$-Cartier, $X$ is $\\epsilon$-lc, and $-K_X$ is ample over $Z$. For every closed point $z\\in Z$ there are an effective $\\mathbb Q$-divisor $B$ on $X$ and a Zariski open neighbourhood $U$ of $z$ such that $(X,B)$ is klt over $U$ and $$N(K_X+B)|_{f^{-1}(U)}\\sim 0$$ is an integral Cartier divisor.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-finite-coefficient-complement",
+   "exact_statement": "Fix a positive integer $d$, a real number $\\epsilon>0$, and a finite set $I\\subset[0,1]\\cap\\mathbb Q$. There is a positive integer $M=M(d,\\epsilon,I)$ with the following property. Let $(X,\\Delta)$ be an $\\epsilon$-lc pair of dimension $d$ with coefficients in $I$, over $\\mathbb C$. Let $f\\colon X\\to Z$ be a contraction of quasi-projective normal varieties, assume that $X$ is of Fano type over $Z$, and assume that $-(K_X+\\Delta)$ is nef over $Z$. For every closed $z\\in Z$, there is an effective $\\mathbb Q$-divisor $\\Delta^+\\ge\\Delta$ such that, near $f^{-1}(z)$, the pair $(X,\\Delta^+)$ is klt and $M(K_X+\\Delta^+)$ is Cartier and linearly trivial after shrinking the base about $z$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-finite-coefficients"
+  },
+  {
+   "claim_id": "claim-birational-threshold",
+   "exact_statement": "For every positive integer $d$ and every $\\epsilon>0$ there is $c(d,\\epsilon)>0$ such that, over $\\mathbb C$, the following holds. Let $f\\colon X\\to Z$ be a birational contraction of $d$-dimensional normal varieties, let $X$ be of Fano type over $Z$, and assume that $K_X$ is $\\mathbb Q$-Cartier, $-K_X$ is nef over $Z$, and $X$ is $\\epsilon$-lc. For each closed point $z\\in Z$, $$\\label{eq:A1}\n \\mathop{\\mathrm{lct}}\\bigl(X;\\mathfrak m_z\\mathcal O_X\\bigr)\\ge c(d,\\epsilon).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-birational-threshold"
+  },
+  {
+   "claim_id": "claim-threshold-implies-complement",
+   "exact_statement": "Proposition <a href=\"#prop:birational-threshold\" data-reference-type=\"ref\" data-reference=\"prop:birational-threshold\">3</a> in all dimensions implies Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> over $\\mathbb C$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-threshold-to-complement"
+  },
+  {
+   "claim_id": "claim-field-descent",
+   "exact_statement": "If Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> holds over $\\mathbb C$ with a fixed index depending only on $d$ and $\\epsilon$, it holds over every algebraically closed field of characteristic zero with a fixed multiple of that index.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-field-descent"
+  },
+  {
+   "claim_id": "claim-crepant-ample-model",
+   "exact_statement": "The sequence may be chosen with $-K_X$ ample over $Z$. This replacement preserves all discrepancies and the threshold in <a href=\"#eq:A1\" data-reference-type=\"eqref\" data-reference=\"eq:A1\">[eq:A1]</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-ample-model"
+  },
+  {
+   "claim_id": "claim-abhyankar-monomial",
+   "exact_statement": "A real valuation of a function field of characteristic zero satisfying Abhyankar equality is quasi-monomial on a smooth proper model. The model can dominate a prescribed model and resolve finitely many additional functions and divisors. Its restriction to a subfunction field again satisfies Abhyankar equality. In particular, the restriction of a prime-divisor valuation is either trivial or a positive integral multiple of a prime-divisor valuation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-a-abhyankar"
+  },
+  {
+   "claim_id": "claim-canonical-cone",
+   "exact_statement": "The algebra $\\mathcal A$ is finitely generated and normal, with fraction field $k(X)(t)$. The variety $W$ is klt, and $$\\Omega=t\\,\\omega\\wedge d\\log t$$ has divisor zero on $W$. In particular it is a canonical generator, of $D$-weight one.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-a-canonical-cone"
+  },
+  {
+   "claim_id": "claim-gaussian-discrepancy",
+   "exact_statement": "For a prime divisor $P$ over $X$, extend $P$ by the Gauss rule with $t$-weight $q-P(K_X)$. If $q\\geq0$, the extension $\\widetilde P$ is centred on $W$, and $$\\widetilde P(gt^m)=mq+P(\\mathop{\\mathrm{Div}}_X(g)-mK_X),\\qquad\n A_W(\\widetilde P)=q+A_X(P).$$ If $q$ is rational it is divisorial up to positive scaling. Every $D$-invariant divisorial valuation centred on $W$ has this form, allowing a positive multiple of $P$, or has trivial restriction to $k(X)$, in which case its discrepancy is $q$. The ideal $I_n=(\\mathcal A_n)\\subset\\mathcal A$ satisfies $(W,I_n^{1/n})$ lc.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-a-cone-gauss"
+  },
+  {
+   "claim_id": "claim-index-hypersurface",
+   "exact_statement": "Given $p\\geq2$ and an integer $N>0$, there is $\\tau(p,N)>0$ with the following property. If $(U,G)$ is klt near a closed point $x$, $G\\geq0$, $\\dim U=p$, and $N(K_U+G)$ is Cartier, then, after shrinking at $x$, an effective Cartier divisor $H_x$ through $x$ satisfies $(U,G+\\tau(p,N)H_x)$ lc.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-a-index-hypersurface"
+  },
+  {
+   "claim_id": "claim-initial-lc-place",
+   "exact_statement": "After passing to a subsequence, there are divisorial valuations $u^0$ centred at $o$, and integers $N\\to\\infty$, such that $$u^0(I_n)=nA_W(u^0),\\qquad\n u^0(\\mathfrak m_z)\\geq N A_W(u^0).\n \\label{eq:A2}$$ Here and below $\\mathfrak m_z$ denotes also its extension to $\\mathcal A$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-a-initial-lc-place"
+  },
+  {
+   "claim_id": "claim-minimizer-comparison",
+   "exact_statement": "Let $b$ minimize normalized volume for a $p$-dimensional klt pair. For every centred quasi-monomial valuation $u$ and every nonzero $F\\in\\mathcal O_{U,x}$, $$u(F)\\leq C_p\\frac{A(u)}{A(b)}\\,b(F),\n \\label{eq:A3}$$ where $C_p$ depends only on $p$. Multiplying the discrepancy function by a common positive constant does not change this inequality.",
+   "kind": "bound",
+   "statement_anchor": "stmt-a-minimizer-comparison"
+  },
+  {
+   "claim_id": "claim-exact-penalization",
+   "exact_statement": "Let $x\\in U$ be an affine klt germ of dimension $p$, and let $I_0,J$ be nonzero ideals. Suppose $c>0$ is rational, $(U,I_0^c)$ is lc, and an lc quasi-monomial place is centred at $x$. Let $b_0\\geq1$ and $c'\\geq0$ be rational, and assume $$a(u)=b_0A_U(u)-c'u(J),\\qquad A_U(u)\\leq a(u)\\leq b_0A_U(u).$$ The minimum of $a(u)^p\\mathop{\\mathrm{vol}}(u)$ among centred quasi-monomial lc places of $I_0^c$ is attained at a unique ray. This same ray minimizes normalized volume for a family of ordinary effective rational klt pairs for every sufficiently small positive rational parameter. In particular its associated graded is finitely generated. It is invariant, after an invariant normalization, under any torus preserving $x,I_0,J$.*\n\n*All smallness thresholds and constants in the proof may depend on the fixed germ and ideals.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-a-exact-penalization"
+  },
+  {
+   "claim_id": "claim-leading-form",
+   "exact_statement": "Let $b$ be a real Abhyankar valuation of a characteristic-zero function field $K/k$, and choose $s_1,\\ldots,s_q\\in K^*$ whose initials form a transcendence basis of $K_b/k$, where $q=\\mathop{\\mathrm{trdeg}}_k K$. If $\\eta=g\\bigwedge_{i=1}^q d\\log s_i$, then $$A_\\eta(b)=b(g),\\qquad\n \\eta_b=\\bar g\\bigwedge_{i=1}^q d\\log\\bar s_i.\n \\label{eq:A6}$$ The second formula is independent of the probes $s_i$, is equivariant for actions preserving $b$, and applies to fractional forms by taking tensor powers.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-a-leading-form"
+  },
+  {
+   "claim_id": "claim-adapted-presentation",
+   "exact_statement": "Let $x\\in U$ be an affine klt germ and let $b$ be a quasi-monomial valuation centred at $x$. Suppose $R_b=\\mathop{\\mathrm{gr}}_b k[U]$ is finitely generated. One can choose affine algebra generators $x_i$, all vanishing at $x$, whose initials generate $R_b$. If $J\\subset k[X_1,\\ldots,X_N]$ is their relation ideal, then $$R_b=k[X_1,\\ldots,X_N]/\\operatorname{in}_{b(x_i)}J,$$ where $\\operatorname{in}$ always means the *minimum*-weight initial ideal. Every regular function has a polynomial representative attaining its valuation and prescribed initial; the analogous statement holds for rational functions using fractions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-a-adapted-presentation"
+  },
+  {
+   "claim_id": "claim-canonical-specialization",
+   "exact_statement": "In Lemma <a href=\"#a:adapted-presentation\" data-reference-type=\"ref\" data-reference=\"a:adapted-presentation\">15</a>, suppose further that $R_b$ is normal and that $U$ has a canonical generator $\\Omega_U$. Then $(\\Omega_U)_b$ generates the canonical divisor of $\\mathop{\\mathrm{Spec}}R_b$: its divisor is zero. There is a one-parameter weight family realizing this specialization and preserving initial identifications on any prescribed finite set of rational functions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-a-canonical-specialization"
+  },
+  {
+   "claim_id": "claim-boundary-specialization",
+   "exact_statement": "In the preceding situation, a rational effective boundary expressed as a sum of divisors of regular equations specializes to the same sum of the divisors of their initial equations. This identification agrees with specializing its prime components, with all multiplicities.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-a-boundary-specialization"
+  },
+  {
+   "claim_id": "claim-compatible-flattening",
+   "exact_statement": "Let $b$ be as in Lemma <a href=\"#a:adapted-presentation\" data-reference-type=\"ref\" data-reference=\"a:adapted-presentation\">15</a>, and let $T$ be the value torus of $R=\\mathop{\\mathrm{gr}}_b k[U]$, so that $b$ is injective on its character lattice. Let $u$ be a $T$-invariant quasi-monomial valuation centred at the vertex of $\\mathop{\\mathrm{Spec}}R$, with $R'=\\mathop{\\mathrm{gr}}_u R$ finitely generated. Any stipulated old grading on $U$ is assumed to preserve $b$ and to act on $R$ through $T$.*\n\n*For arbitrarily small positive real $\\xi$, there is an Abhyankar valuation $b_\\xi$ on the *actual* field $k(U)$ with associated graded ring $R'$, graded by first weights plus $\\xi$ times second weights. Its value torus is the joint torus generated by $T$ and the value torus of $u$ on $R'$. It preserves the stipulated grading. For any finite set of rational functions, one can preserve both their double initials and the formula $$b_\\xi(F)=b(F)+\\xi u(\\operatorname{in}_b F).$$ One can also arrange, on every nonzero regular function, $$\\tfrac12 b(F)\\leq b_\\xi(F)\\leq2b(F).$$ If $U,R$ have the canonical generators in Lemma <a href=\"#a:canonical-specialization\" data-reference-type=\"ref\" data-reference=\"a:canonical-specialization\">16</a> and both $b,u$ have their respective form discrepancies equal to one, the finite tests can be chosen so that $$A_{\\Omega_U}(b_\\xi)=1+\\xi,\\qquad\n          (\\Omega_U)_{b_\\xi}=((\\Omega_U)_b)_u.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-a-flattening"
+  },
+  {
+   "claim_id": "claim-gauss-lifts",
+   "exact_statement": "For every prime-divisor valuation $P$ over $S$, there is a rational Gaussian extension to $k(R)$, centred on $\\mathop{\\mathrm{Spec}}R$, whose restriction is $P$ and whose value on $z^\\chi$ is $P(L)$. It is divisorial up to scaling. The pair $(S,B)$ is klt log Fano, and $B$ is effective with coefficients in $\\{1-1/j:j\\in\\mathbb Z_{>0}\\}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-a-gauss-lifts"
+  },
+  {
+   "claim_id": "claim-weak-essentiality",
+   "exact_statement": "On the chosen maximal-rank sequence, there are numbers $\\eta\\to0$ such that, for every prime divisor $P$ over $S$ with $A^+(P)=0$, $$\\sup_{H'\\geq0,\\ H'\\sim_{\\mathbb Q}H} P(H')\n                            \\leq(1+\\eta)P(H).\n \\label{eq:A12}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-a-weak-essentiality"
+  },
+  {
+   "claim_id": "claim-push-threshold",
+   "exact_statement": "The minimum in <a href=\"#eq:B1\" data-reference-type=\"eqref\" data-reference=\"eq:B1\">[eq:B1]</a> is finite and attained. Pullback terms from the base translate it exactly, and successive pushes compose.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-push-threshold"
+  },
+  {
+   "claim_id": "claim-ordinary-approximation",
+   "exact_statement": "Effective generalized klt data with big b-nef part admit an ordinary effective klt representative in the same rational adjoint class, whose discrepancies do not exceed the generalized ones. Generalized $\\delta$-lc data, $0<\\delta\\le1$, admit such a representative which is $\\delta/2$-lc. A sufficiently small ample class on the low model may be reserved before taking the representative. In particular, effective relatively Calabi–Yau generalized klt data with big b-nef part make the underlying variety of Fano type over the base.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-ordinary-approximation"
+  },
+  {
+   "claim_id": "claim-controlled-extraction",
+   "exact_statement": "Let $(Y,B)$ be an effective klt log Fano pair. Any finite collection of exceptional prime divisors with discrepancies in $(0,1]$ can be extracted on a projective $\\mathbb Q$-factorial birational model having no other exceptional prime divisors. This model is of Fano type. An empty collection gives a small $\\mathbb Q$-factorialization.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-controlled-extraction"
+  },
+  {
+   "claim_id": "claim-primary-minimization",
+   "exact_statement": "Fix a positive integer $r_{\\mathrm{ind}}$. Let $A,C$ have Calabi–Yau presentations on $Y$, effective in horizontal trace over $V$. Assume that $A$ is sub-generalized lc over the generic point, that $C$ is generalized klt there with big b-nef part, and that $r_{\\mathrm{ind}}\\mathbf M_A$ is integral b-Cartier. There is $t_0>0$, depending only on the dimension and $r_{\\mathrm{ind}}$, such that for every rational $0<t<t_0$, every prime $T$ computing $\\pi_\\#((1-t)A+tC)(P)$ also computes $\\pi_\\#A(P)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-primary-minimization"
+  },
+  {
+   "claim_id": "claim-principal-denominators",
+   "exact_statement": "In Lemma <a href=\"#b:primary-minimization\" data-reference-type=\"ref\" data-reference=\"b:primary-minimization\">26</a>, with the fixed positive integer $r_{\\mathrm{ind}}$ as there, assume in addition that $r_{\\mathrm{ind}}\\mathbf M_A$ is principal. Then every value $(\\pi_\\#A)(P)$ has bounded denominator, in terms only of the dimension and $r_{\\mathrm{ind}}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-principal-denominators"
+  },
+  {
+   "claim_id": "claim-push-presentation",
+   "exact_statement": "Let $a=a_{K,Y}+\\mathbf M$ be a Calabi–Yau presentation, sub-generalized klt over the generic point of $V$ and effective in horizontal trace. If $\\mathbf M$ is b-semiample or b-nef and big, then $$\\pi_\\#a=a_{K,V}+\\mathbf N$$ for a b-nef b-$\\mathbb Q$-Cartier divisor $\\mathbf N$. Positive rational scaling and translation by base Cartier pullbacks give the corresponding presentations with their scaled canonical coefficient and prescribed total divisor.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-push-presentation"
+  },
+  {
+   "claim_id": "claim-scale-bad-primes",
+   "exact_statement": "For a sufficiently small fixed $e>0$, every prime with $A'(P)<e$ is lc for $A^+$. There are finitely many such primes for each member. At a collapsing level they satisfy $$\\frac s2\\le H(P)\\le\\frac ea.$$ At the last level the constants may be chosen so there are none. One can extract exactly their exceptional members on a projective $\\mathbb Q$-factorial Fano type model $S'\\to S$. At a collapsing level one may additionally extract a prime $G_*$ with $A^+(G_*)=0$ and $\\Lambda(G_*)=s$. On this model the trace of $A'$ is effective and $B_0\\ge H$ still holds, where $H$ now denotes its pullback.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-scale-bad-primes"
+  },
+  {
+   "claim_id": "claim-scale-birationality",
+   "exact_statement": "At every level there is a positive integer $k\\le C_1/s$ such that $$\\label{eq:B3}\n                         |kH|\\text{ is birational on }S.$$ For a rational divisor this denotes the space of rational functions $f$ with $\\mathop{\\mathrm{Div}}(f)+kH\\ge0$; no bounded Cartier index for $H$ is asserted.",
+   "kind": "bound",
+   "statement_anchor": "stmt-b-scale-birationality"
+  },
+  {
+   "claim_id": "claim-scale-collapse",
+   "exact_statement": "At a collapsing level there are a projective $\\mathbb Q$-factorial Fano type model $Y$ of $K$, a contraction $\\pi:Y\\to V$ with $\\dim V<\\dim S$, an effective ample rational Cartier divisor $H_V$ on $V$, and a rational $x\\asymp s^{-1}$ with the following properties. The pivot survives on $Y$, and it is the only horizontal prime in the positive support of the trace $H''$ of $H$. Moreover $$x=\\frac{b_*}{H_*},\\qquad H_*\\asymp s,\n \\qquad xH''-J''=x\\pi^*H_V,$$ with $J$ as just defined. On common higher models, $$\\label{eq:B4}\n                          H\\ge\\pi^*H_V.$$ The datum with b-nef part $\\mathbf M_C=\\mathbf M'+(x-d')\\overline H$ and boundary obtained by subtracting $J$ from the $A'$-boundary has effective uniformly generalized positive-lc trace on $Y$, with total adjoint $x\\pi^*H_V$. The geometric generic fibres of $\\pi$ form a bounded family.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-scale-collapse"
+  },
+  {
+   "claim_id": "claim-scale-inheritance",
+   "exact_statement": "At a collapsing level the construction of Lemma <a href=\"#b:scale-collapse\" data-reference-type=\"ref\" data-reference=\"b:scale-collapse\">31</a> supplies data at the next level satisfying all the stated invariants. More precisely, with the CY discrepancy $$C=A'+xH=a_K+\\mathbf M_C,$$ put $$\\label{b:scale-next-data}\n \\begin{aligned}\n A^+_{\\rm next}&=\\pi_\\#A^+,&\n Q_{\\rm next}&=\\pi_\\#(C-x\\pi^*H_V),\\\\\n \\lambda_{\\rm next}&=x^{-1},&\n S_{\\rm next}&=V,\\qquad H_{\\rm next}=H_V.\n \\end{aligned}$$ Then $\\Lambda_{\\rm next}=x^{-1}\\pi_\\#C$, $\\lambda_{\\rm next}\\asymp s\\to0$, and $s_{\\rm next}\\gtrsim s$. The CY moduli of $A^+_{\\rm next}$ have a bounded b-Cartier multiple, and $Q_{\\rm next}$ has a uniform positive discrepancy bound on every prime over $V$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-scale-inheritance"
+  },
+  {
+   "claim_id": "claim-scale-terminal",
+   "exact_statement": "At the final level one may take $Y=S$ up to a small $\\mathbb Q$-factorialization, with target a point, and choose a fixed small rational $x>0$ so that $$C=A'+xH=a_K+\\mathbf M_C,\n \\qquad \\mathbf M_C=\\mathbf M'+(x-d')\\overline H$$ is effective and uniformly generalized klt. Its b-nef big part has a fixed positive $H$-reserve, its boundary dominates a fixed positive multiple of $H$, and the underlying $Y$ belongs to a bounded family. For every invariant prime with restriction $E|_{k(S)}=cP\\ne0$, $$\\label{b:scale-terminal-bound}\n                         cC(P)\\le1-\\frac{h_E}{2}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-scale-terminal"
+  },
+  {
+   "claim_id": "claim-horizontal-estimates",
+   "exact_statement": "For every effective rational $\\mathbb Q$-Cartier divisor $L'$ on $\\mathcal F_i$ and every horizontal test $P$, $$\\label{eq:C1}\n              P(L')\\le C_0\\deg(L')C_i(P).$$ If $\\mathbf U$ is rational b-Cartier and b-nef, with trace $U_{\\rm tr}$ on $Y_i$, then $$\\label{eq:C2}\n 0\\le P(\\overline{U_{\\rm tr}}-\\mathbf U)\n                  \\le C_0\\deg(U_{\\rm tr})C_i(P).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-b-horizontal-estimates"
+  },
+  {
+   "claim_id": "claim-pure-upper",
+   "exact_statement": "For $D_1\\ge0$, $D_1\\sim_\\mathbb QH_1$ on $S_1$, and every divisorial test $P_1$, with restriction multiplicities included in $P_i=P_1|_{K_i}$, one has $$\\label{eq:C3}\n                         D_1(P_1)\\le C_0\\sum_i a_i(P_i).$$ For tests trivial on $K_f$, this implies $$\\label{eq:C4}\n D_1(P_1)\\le C_0\\bigl(H_1(P_1)+s_{\\exp}A_1^+(P_1)\\bigr),\n \\qquad s_{\\exp}:=\\max_{i<f}s_i\\longrightarrow0,$$ where an empty maximum is zero.",
+   "kind": "bound",
+   "statement_anchor": "stmt-b-pure-upper"
+  },
+  {
+   "claim_id": "claim-class-lattices",
+   "exact_statement": "For projective normal klt varieties of Fano type occurring in a bounded family with bounded polarizations, the groups $\\mathop{\\mathrm{Cl}}/\\mathrm{torsion}$ can be identified with Euclidean lattices of finitely many types, so that $$\\label{b:class-norm}\n                   \\|[G]\\|_{\\rm cl}\\le C_0\\deg(G)$$ for effective rational Weil divisors and for pseudo-effective rationally Cartier rational classes. The orders of $\\mathop{\\mathrm{Cl}}$-torsion are bounded. For the $\\mathbb Q$-factorial members, a single bounded positive multiple of every integral Weil divisor is Cartier. A numerically trivial rational Cartier divisor is rationally linearly trivial.",
+   "kind": "classification",
+   "statement_anchor": "stmt-b-class-lattices"
+  },
+  {
+   "claim_id": "claim-principal-descent",
+   "exact_statement": "An integral Weil divisor defined on a proper geometrically integral normal arithmetic fiber which becomes principal geometrically is already principal over the arithmetic field. No extension-degree factor is needed. The same holds for a rational divisor after clearing its specified denominator.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-principal-descent"
+  },
+  {
+   "claim_id": "claim-twist-saturation",
+   "exact_statement": "If $\\beta\\in M_0$, $\\|\\beta\\|\\le L$, and $L\\ge1$, then there are $m\\in n\\mathbb Z_{\\ge0}$ and a bounded positive integer $d_0$, with $m\\lesssim L$, such that $$\\label{eq:C5}\n                R_{m\\chi+d_0\\beta}\\ne0,\\qquad\n                R_{m\\chi-d_0\\beta}\\ne0 .$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-twist-saturation"
+  },
+  {
+   "claim_id": "claim-coefficient-dimension",
+   "exact_statement": "For every occurring weight $\\mu=m\\chi+\\beta$ of positive cost $B'=\\widetilde v(\\mu)$, $$\\label{eq:C7}\n                     \\dim R_\\mu\\lesssim\n                           \\prod_i(1+B's_i)^{p_i}.$$ At each fixed physical degree $m$, the dimension through cost $S'\\ge0$, including constants if present, is at most $$\\label{eq:C8}\n                           C_3\\prod_j(1+S'/W_j).$$ For $m\\in n\\mathbb Z_{\\ge0}$, the same expression bounds the truncated associated graded dimension of $V_m$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-b-coefficient-dimension"
+  },
+  {
+   "claim_id": "claim-actual-probes",
+   "exact_statement": "Each residual level has $p_i$ actual probes in some $V_m$, of degree and cost $O(1/s_i)$, whose initials are in $K_i$ and algebraically independent over $K_{i+1}$. Each torus axis has opposite angular probes in $V_{m_j}$ with initial weights $\\pm d_j\\beta_j$ in the full initial field; their corresponding degree-$m_j$ sections have weights $m_j\\chi\\pm d_j\\beta_j$. Here $d_j$ are bounded positive integers, $m_j\\in n\\mathbb Z_{\\ge0}$, and degrees and costs are $O(1+L_j)$. The residual and positive torus initials together are algebraically independent, and their monomials give box lower bounds with widths $\\max(1,W_j)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-actual-probes"
+  },
+  {
+   "claim_id": "claim-bounded-axes-estimates",
+   "exact_statement": "All widths $W_j$ are bounded below by a uniform positive constant. There are cutoffs $S_0\\to\\infty$ and a uniform constant $C_4$ such that $$\\label{eq:D3}\n\\begin{gathered}\n b=\\tilde v(\\text{weight})\\leq C_4m\n       \\qquad(0<b\\leq S_0),\\\\\n \\dim\\bigl(\\text{initial spaces at degree }m\n                  \\text{ through cost }S_0\\bigr)\n       \\leq C_4(1+m)^r,\n \\qquad r=|J|+p_f.\n\\end{gathered}$$ The independent probes after <a href=\"#eq:C8\" data-reference-type=\"eqref\" data-reference=\"eq:C8\">[eq:C8]</a> give matching box lower bounds, up to uniform factors, for all the widths. There are $r$ algebraically independent probes of bounded degree and cost: the positive cheap torus probes and the $p_f$ residual probes from $K_f$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-b-bounded-axes-estimates"
+  },
+  {
+   "claim_id": "claim-pure-descent",
+   "exact_statement": "Suppose, along the sequence, that $$g\\in K_1^*,\\qquad \\operatorname{div}_{S_1}(g)+MH_1\\geq0,\n \\qquad M\\in\\mathbb Q_{\\geq0},\\qquad Ms_{\\exp}\\longrightarrow0.$$ Then, for all sufficiently late members, $$g\\in K_f^*,\\qquad \\operatorname{div}_{F}(g)+CMH_f\\geq0$$ for a uniform constant $C$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-pure-descent"
+  },
+  {
+   "claim_id": "claim-guard-model",
+   "exact_statement": "After passing to a subsequence, there are bounded projective $\\mathbb Q$-factorial varieties of Fano type $F'\\to F$ and labelled prime divisors on $F'$, of bounded number and degree, with the following properties. Every nontrivial projection in <a href=\"#eq:D1\" data-reference-type=\"eqref\" data-reference=\"eq:D1\">[eq:D1]</a> for which $h_E>0$, or whose centre is contained in $\\Sigma$, is one of the marked prime valuations. Every component of $\\Sigma$ has marked strict transform, and every exceptional prime of $F'\\to F$ is marked. The pullback of $H_f$ has bounded degree on $F'$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-guard-model"
+  },
+  {
+   "claim_id": "claim-bounded-guard-boundary",
+   "exact_statement": "The models of Lemma <a href=\"#b:guard-model\" data-reference-type=\"ref\" data-reference=\"b:guard-model\">43</a> admit effective integral divisors $P'$ of bounded degree, supported on the marks, such that $|P'|$ is birational. They also admit klt boundaries $\\Theta^+$, with bounded degrees and coefficients in a fixed finite rational set, satisfying $$\\Theta^+\\geq e'P',\\qquad N(K_{F'}+\\Theta^+)\\sim0$$ for a fixed positive rational $e'$ and a bounded positive integer $N$. The marks, $P'$, and $\\Theta^+$ together form a bounded family of labelled divisor data.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-bounded-guard-boundary"
+  },
+  {
+   "claim_id": "claim-generic-marked-fano",
+   "exact_statement": "After the finite covers and dense open restrictions just described, the geometric generic marked fibre $X^0_{\\bar\\eta}$ is $\\mathbb Q$-factorial and of Fano type. Its marked divisor $P'_{\\bar\\eta}$ is big, and its marked boundary $\\Theta^+_{\\bar\\eta}$ is klt with $N(K+\\Theta^+_{\\bar\\eta})\\sim0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-generic-marked-fano"
+  },
+  {
+   "claim_id": "claim-marked-cone-test",
+   "exact_statement": "In <a href=\"#eq:D2\" data-reference-type=\"eqref\" data-reference=\"eq:D2\">[eq:D2]</a>, replace the last condition by $$\\sum_{P\\ \\mathrm{marked}}r_P[P_{\\bar\\eta}]\n       \\in\\overline{\\operatorname{Eff}}(X^0_{\\bar\\eta}).$$ This is a finite rational polyhedral test. After the allowed covers and open restrictions, every actual candidate satisfies this test. Conversely, each fixed rational solution has, after one clearing multiple fixed for that solution, regular eigenfunction realizations on all retained sufficiently late members of the sequence.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-b-marked-cone-test"
+  },
+  {
+   "claim_id": "claim-slow-charge-bound",
+   "exact_statement": "For sequences of actual candidates above satisfying $(m'+\\sum|a_j|)s_{\\exp}\\to0$, the ratio $\\sum|a_j|/m'$ cannot tend to infinity, with the convention already specified at degree zero.",
+   "kind": "bound",
+   "statement_anchor": "stmt-b-slow-charge-bound"
+  },
+  {
+   "claim_id": "claim-finite-barrier",
+   "exact_statement": "There are finitely many pairs $(m_i,F_i)$, with $b_i=m_i+v(F_i)>0$, such that whenever their minimum ratio, including $q_*$, is at least $q_{\\rm bar}$, it equals $q(w)$. An index attaining the minimum is called active; the cap is an additional active entry when $q(w)=q_*$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-finite-barrier"
+  },
+  {
+   "claim_id": "claim-ordered-monomialization",
+   "exact_statement": "An ordered-group valuation of a characteristic-zero function field satisfying Abhyankar equality is monomial on a smooth projective model, which may dominate a prescribed model and resolve prescribed finite divisor data. Its centre is the generic point of a transverse stratum; the positive normal-parameter values are rationally independent. Its full initial field is the stratum field with independent normal variables.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-ordered-monomialization"
+  },
+  {
+   "claim_id": "claim-log-determinant",
+   "exact_statement": "If $a_1,\\ldots,a_d$ are a transcendence basis and $w$ is a real Abhyankar valuation in characteristic zero, then $$A_{\\bigwedge_i d\\log a_i}(w)\\ge0.$$ Equality holds exactly when the initials of the $a_i$ are algebraically independent.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-log-determinant"
+  },
+  {
+   "claim_id": "claim-invariantization",
+   "exact_statement": "Let $Q^*$ be a real Abhyankar valuation of $K_w=E(\\mathbf z)$. Put $P=Q^*|_E$, and let $Q$ be the Gauss valuation with restriction $P$ and the same values as $Q^*$ on $\\mathbf z$. Then $Q$ is Abhyankar, agrees with $Q^*$ on every homogeneous element, and $$\\label{eq:E1}\n                    A_{\\theta_w}(Q^*)\\ge A_{\\theta_w}(Q).$$ Equality implies $Q^*=Q$. Gaussianity of $Q^*$ on a list of homogeneous probes is preserved by $Q$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-invariantization"
+  },
+  {
+   "claim_id": "claim-secondary-flattening",
+   "exact_statement": "For the invariant valuation $Q$ of Lemma <a href=\"#c:invariantization\" data-reference-type=\"ref\" data-reference=\"c:invariantization\">51</a>, there are real monomial valuations $w_\\lambda$, for small $\\lambda>0$, such that $$\\label{eq:E2}\n \\begin{split}\n w_\\lambda(F)&=w(F)+\\lambda Q(\\overline F),\\\\\n A_\\theta(w_\\lambda)&=A_\\theta(w)+\\lambda A_{\\theta_w}(Q).\n \\end{split}$$ For each fixed nonzero rational function the first identity holds for all sufficiently small $\\lambda$, with the interval allowed to depend on that function. If $w$ is Gaussian on a prescribed finite list $y$, and $Q$ is Gaussian on $\\overline y$, then $w_\\lambda$ may be kept Gaussian on $y$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-flattening"
+  },
+  {
+   "claim_id": "claim-skeleton-retraction",
+   "exact_statement": "Resolve on a smooth projective model the divisor supports of $\\theta^n,F_i,y_j$. Retraction to its normal crossing skeleton preserves the finite barrier data, probe values and probe Gaussianity, and does not increase $A_\\theta$. The discrepancy decreases strictly for a real Abhyankar valuation outside the skeleton. On every closed skeleton cone, each fixed rational function has a continuous finite piecewise-linear value, with a finite Lipschitz constant.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-skeleton"
+  },
+  {
+   "claim_id": "claim-compact-optimization",
+   "exact_statement": "The optimization in <a href=\"#eq:E3\" data-reference-type=\"eqref\" data-reference=\"eq:E3\">[eq:E3]</a> is a finite polyhedral optimization with compact sublevels, and attains its minimum whenever feasible. Every optimizer lies on the fixed skeleton. At any parameter admitting an optimizer with $q>q_{\\rm bar}$, the minimum is locally finite and continuous. On full-dimensional generic parameter cells it is affine. Through every optimizer at such a generic parameter there is a local affine continuation by optimizers within its same open stratum cone and with the same active mask.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-optimization"
+  },
+  {
+   "claim_id": "claim-relative-budget",
+   "exact_statement": "For every nontrivial real Abhyankar valuation $Q^\\dagger$ of $L/k'$, $$\\label{eq:E4}\n A_{\\theta_{w,\\mathrm{rel}}}(Q^\\dagger)\n       \\ge \\kappa\\min_{i\\ \\mathrm{active}}\n                       \\frac{Q^\\dagger(\\overline F_i)}{b_i}.$$ An active cap contributes the entry zero. If equality holds, then $Q^\\dagger(\\overline F)<0$ for some actual angular function $F$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-c-relative-budget"
+  },
+  {
+   "claim_id": "claim-strict-budget",
+   "exact_statement": "On the same geometric generic fibre, one can choose positive rational numbers $\\alpha_i$ arbitrarily close to $\\kappa/b_i$, a finite list of additional actual angular functions $U_j$, and arbitrarily small positive rational $e_j$, so that every prime divisor $P$ over a proper model satisfies $$\\label{eq:E5}\n A_{\\theta_{w,\\mathrm{rel}}}(P)>\n       \\min_{i\\ \\mathrm{active}}\\alpha_i P(\\overline F_i)\n            +\\sum_j e_j\\min\\{0,P(\\overline U_j)\\}.$$ The same zero-entry convention applies to an active cap. The list may include field generators over $k'$. The added $e_j$-weighted terms and the errors from approximating $\\kappa/b_i$ may meet any prescribed finite degree, value and Lipschitz tolerances along a specified local affine optimizer continuation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-strict-budget"
+  },
+  {
+   "claim_id": "claim-trace-existence",
+   "exact_statement": "Let $L$ be a finitely generated field over an algebraically closed field $k$ of characteristic zero, let $\\vartheta=\\nu/f^{1/n}$ be a fractional rational volume form, and let $I\\subset L^*$ be a nonempty finite system whose ratios generate $L/k$. Let $k_I$ be a positive integer. Suppose that every prime divisor $P$ over a proper model of $L/k$ satisfies $$\\label{eq:E6}\n A_\\vartheta(P)>\\frac{\\min P(I)}{k_I}.$$ After spreading these data, in sufficiently general reductions of arbitrarily large characteristic $\\mathfrak p\\equiv1\\pmod{nk_I}$ there are $l\\ge1$ and $H\\in\\operatorname{span}(I^{(P_0-1)/k_I})$, where $P_0=\\mathfrak p^l$, such that $$\\label{eq:E7}\n \\mathcal C^l_\\vartheta(H)\n :=\\frac{\\mathcal C^l\\bigl(Hf^{(P_0-1)/n}\\nu\\bigr)}{\\nu}\\ne0.$$ Here $\\mathcal C^l$ is iterated Cartier trace on rational top forms over perfect constants. One may choose $H$ to be a single product from $I^{(P_0-1)/k_I}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-trace-existence"
+  },
+  {
+   "claim_id": "claim-trace-initial-survival",
+   "exact_statement": "Transport $w$ to a reduction of its monomial chart, using the same positive normal weights. Let $x$ consist of its normal parameters and a unit separating tangential basis. Retain the conditions that $x$ is a $\\mathfrak p$-basis of the actual field and that its initials form a $\\mathfrak p$-basis of $K_w$. Write $$\\theta=\\frac{\\bigwedge_jd\\log x_j}{f_x^{1/n}}.$$ For $\\mathfrak p\\equiv1\\pmod n$, $P_0=\\mathfrak p^l$, and every $G$ in the reduced actual field, $$\\label{eq:E8}\n w\\bigl(\\mathcal C^l_\\theta(G)\\bigr)\n \\ge \\frac{w(G)}{P_0}\n      -\\left(1-\\frac1{P_0}\\right)A_\\theta(w).$$ We set $w(0)=+\\infty$. For $G\\ne0$, equality holds if and only if $\\mathcal C^l_{\\theta_w}(\\bar G)\\ne0$; in that case $$\\overline{\\mathcal C^l_\\theta(G)}\n       =\\mathcal C^l_{\\theta_w}(\\bar G).$$ The discrepancy in <a href=\"#eq:E8\" data-reference-type=\"eqref\" data-reference=\"eq:E8\">[eq:E8]</a> is the characteristic-zero numerical quantity transported by the chart formula. The same assertions hold with ordered monomial weights, and the inequality holds under local real weight variation within the same open stratum cone.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-trace-initial-survival"
+  },
+  {
+   "claim_id": "claim-trace-degree",
+   "exact_statement": "In the retained reductions of the angular algebra, if $G\\in V_M$, then $\\mathcal C^l_\\theta(G)\\in V_{m'}$ for some $m'\\in n\\mathbb Z_{\\ge0}$ with $$m'\\le\\frac{M}{P_0}+n.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-c-trace-degree"
+  },
+  {
+   "claim_id": "claim-trace-taylor-flags",
+   "exact_statement": "Suppose a product of restrictions of homogeneous initials gives a nonzero relative trace as in <a href=\"#eq:E7\" data-reference-type=\"eqref\" data-reference=\"eq:E7\">[eq:E7]</a>, and let $H$ denote the lift of that product by the same factors to the full initial field. Then $\\mathcal C^l_{\\theta_w}$ is nonzero on $$\\label{eq:E9}\n H\\prod_{j=1}^{r_g}(u_j')^{P_0-1}.$$ More precisely, give $u_j'$ the standard positive basis values in lexicographically ordered $\\mathbb Z^{r_g}$, and use the resulting Taylor valuation at $\\eta$. If a shift input $B$ has Taylor order $P_0a$, with $a\\in\\mathbb Z^{r_g}$, and has a nonzero scalar leading coefficient, then $$\\operatorname{ord}_{\\mathrm T}\\left(\n \\mathcal C^l_{\\theta_w}\\left(\n B H\\prod_j(u_j')^{P_0-1}\\right)\\right)=a.$$ For $r_g=0$ the empty product is one and the statement is the original relative nonvanishing assertion.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-trace-taylor-flags"
+  },
+  {
+   "claim_id": "claim-trace-finite-data",
+   "exact_statement": "For each single application of the preceding trace constructions one may retain simultaneously the following data on a sufficiently general spread: the specified actual and initial monomial charts and fractional forms; the total and relative charts for the geometric generic component; finitely many functions, field identities and initial identifications; finitely many Taylor leading terms; and all specified finite-degree, finite-cutoff comparisons between the angular filtrations of $v$ and $w$. The last assertion concerns every element of each tested space, including elements with arbitrary coefficients in the extended reduced constants. A strict lower $w$-bound on the part of high $v$-cost also persists locally under positive weight variation in the specified chart.*\n\n*These data, and all required output degrees and cutoffs, are fixed before $\\mathfrak p$ and $P_0$. They may depend on the sequence member, the optimizer, the parameter, and the particular application. Products formed later from the retained finite lists, with multiplicities depending on $P_0$, require no new spreading assertion.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-trace-finite-data"
+  },
+  {
+   "claim_id": "claim-trace-budget",
+   "exact_statement": "Apply the strict budget <a href=\"#eq:E5\" data-reference-type=\"eqref\" data-reference=\"eq:E5\">[eq:E5]</a> on the geometric generic field of $K_w$ over the independent probes $g$, choosing the optional $\\bar U_j$ to include generators of the relative field. Assume each probe has a fixed angular lift $g_j=\\overline{G_j}$ with $G_j\\in V_{d_j}$. Any prescribed shift is assumed to satisfy the Taylor leading-term hypothesis of Lemma <a href=\"#c:trace-taylor-flags\" data-reference-type=\"ref\" data-reference=\"c:trace-taylor-flags\">60</a> and to have an expansion in fixed homogeneous factors with angular lifts and bounded factor counts divided by $P_0$. Clear all the rational exponents by one positive integer $k_I$. The trace product may be chosen so that the multiplicities of the active factors in its lift $H$ are $$\\label{eq:E10}\n (P_0-1)\\tau_i\\alpha_i,\\qquad\n \\tau_i\\ge0,\\qquad\n \\sum_i\\tau_i=1\n \\quad\\text{or}\\quad \\sum_i\\tau_i\\le1\\ \\text{if the cap is active}.$$ The multiplicity of a tiny factor $\\bar U_j$ is at most $(P_0-1)e_j$. Expanding the Taylor flags adds between zero and $P_0-1$ copies of each probe. Every surviving homogeneous initial summand has an actual traced output $F'$ of degree at most its total physical input degree divided by $P_0$, plus $n$. At the chosen $w$ its value satisfies equality in <a href=\"#eq:E8\" data-reference-type=\"eqref\" data-reference=\"eq:E8\">[eq:E8]</a>; on a local affine continuation in the same open stratum cone the lower inequality remains available.*\n\n*Common mandatory factors included in every generator of the input system remain in every product and every expanded summand. All output spaces and finite cutoff comparisons needed for this conclusion may be chosen before $\\mathfrak p$ and $P_0$, from bounds for the normalized factor counts.",
+   "kind": "bound",
+   "statement_anchor": "stmt-c-trace-budget"
+  },
+  {
+   "claim_id": "claim-cheap-box-count",
+   "exact_statement": "Fix $r\\ge1$ and $A>0$. There are constants $N_0,D_0,C_0$, depending only on $r,A$, with the following property. Let $T\\ge1$, let $t_1,\\ldots,t_r$ be linearly independent over $\\mathbb Q$, and let $s\\in\\mathbb R$. For an integer $N\\ge N_0$, set $L=\\lceil NT\\rceil$. Suppose that $$\\#\\{as+\\alpha\\cdot t:0\\le a<N,\\quad\n                    \\alpha\\in\\{0,\\ldots,L-1\\}^r\\}\n       \\le A(NT)^r.$$ Then $s=\\gamma\\cdot t$ for a unique $\\gamma\\in\\mathbb Q^r$. The order of $\\gamma$ in $\\mathbb Q^r/\\mathbb Z^r$ is at most $D_0$, and $|\\gamma|\\le C_0T$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-c-cheap-box-count"
+  },
+  {
+   "claim_id": "claim-cheap-collapse",
+   "exact_statement": "There are fixed sufficiently large positive constants $B_0$ and $\\kappa$ such that every sufficiently late member of the sequence admits a monomial valuation $w_c$, Gaussian on $y$, satisfying $$w_c(y)=0,\\qquad A_\\theta(w_c)\\le\\kappa,\\qquad\n                 w_c(F)+B_0m\\ge\\tfrac12 b(F)\n       \\quad(0\\ne F\\in V_m).$$ The choices are made in the order $B_0$, then $\\kappa$, before passing to a sufficiently late member.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-cheap-collapse"
+  },
+  {
+   "claim_id": "claim-cheap-exact-zero",
+   "exact_statement": "For each sequence index $i$, let $V_{m,i}$ be nested multiplicative $k_i$-linear subspaces of a field, containing $1\\in V_{0,i}$, and let $v_i,w_i$ be real valuations trivial on $k_i$. Suppose there are $r$ probes $y_{j,i}$ of uniformly bounded degree, Gaussian for both valuations, such that $|v_i(y_{j,i})|$ is uniformly bounded and $w_i(y_{j,i})=0$. Suppose also that there are $M_i,S_i,R_i\\to\\infty$ and a fixed $C_4$ with the following properties in every tested degree $m\\le M_i$. Costs $b_i(F)=m+v_i(F)$ are nonnegative, $$\\begin{gathered}\n \\{b_i:C_4m<b_i\\le S_i\\}=\\varnothing,\\\\\n \\dim_{k_i}\\bigl(V_{m,i}/\\{F:b_i(F)>S_i\\}\\bigr)\n                  \\le C_4(1+m)^r,\\\\\n               b_i(F)>S_i\\ \\Longrightarrow\\ w_i(F)>R_i.\n \\end{gathered}$$ The high-cost subspaces include zero, whose value is $+\\infty$. Then any sequence of nonzero $F_i$ of bounded degree and bounded $v_i(F_i)$ satisfies $w_i(F_i)=0$ eventually.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-cheap-exact-zero"
+  },
+  {
+   "claim_id": "claim-cheap-two-sided",
+   "exact_statement": "Fix the constant $B_0$ of Proposition <a href=\"#c:cheap-collapse\" data-reference-type=\"ref\" data-reference=\"c:cheap-collapse\">64</a> and a positive constant $c$. For each sufficiently small fixed $\\delta>0$, consider any actual monomial valuation $w$, Gaussian on $y$, such that $w(y)=0$, $A_\\theta(w)\\le1$, and $$\\label{eq:F3}\n               w(F)+\\delta B_0m\\ge c\\delta b(F)\n               \\qquad(0\\ne F\\in V_m).$$ For all sufficiently late sequence members, uniformly over all these valuations and angular functions, $$\\label{eq:F4}\n                        |w(F)|\\le C_6\\delta b(F).$$ The constant $C_6$ is independent of the small fixed $\\delta$; the index after which the assertion holds may depend on $\\delta$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-c-cheap-two-sided"
+  },
+  {
+   "claim_id": "claim-layer-dimension",
+   "exact_statement": "For every fixed $J\\ge1$, on sufficiently late members, $$\\label{eq:G2}\n                   \\dim E_J\\asymp\n                      J^s\\prod_{j\\le s}\\frac{S}{W_j}.$$ The comparison constants are independent of $J$ and $\\delta$; the required lateness may depend on both.",
+   "kind": "bound",
+   "statement_anchor": "stmt-c-layer-dimension"
+  },
+  {
+   "claim_id": "claim-rank-increase",
+   "exact_statement": "There is a bounded $J$, independent of the small fixed $\\delta$, such that the old probe initials extend to $s$ algebraically independent homogeneous initials in $E_J$. Their actual lifts can be chosen with degree and cost $O(S)$, and absolute $w$-value $O(\\delta S)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-rank-increase"
+  },
+  {
+   "claim_id": "claim-layer-slopes",
+   "exact_statement": "For the enlarged optimization with $s$ probes, on full-dimensional generic cells with $|t_j|\\le C\\delta W_j$ and minimum $<1/8$, $$\\label{eq:G3}\n       \\left|\\partial_{t_j}\\min\\mathcal L_\\delta\\right|\n                            \\le C_9\\,S/W_j\n                            \\qquad(j\\le s).$$ The same assertion holds in slightly enlarged fixed parameter boxes and at each of the later fixed scalings. In particular the new-coordinate slopes are uniformly bounded independently of the small fixed $\\delta$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-c-layer-slopes"
+  },
+  {
+   "claim_id": "claim-integral-rounding",
+   "exact_statement": "For every absolute tolerance $\\sigma>0$, a rank increase followed by a bounded integral scaling and rounding of the new parameters changes a small objective bound according to $$\\label{eq:G4}\n e_{\\mathrm{new}}=K(\\sigma,d)e_{\\mathrm{old}}\n                                    +C_{10}\\sigma.$$ Old parameters remain integral and cheap parameters remain zero. The constants for probe and parameter sizes remain uniform at every later fixed scaling.",
+   "kind": "bound",
+   "statement_anchor": "stmt-c-integral-rounding"
+  },
+  {
+   "claim_id": "claim-divisorial-index",
+   "exact_statement": "At a final optimizer with $d$ independent probe initials and integral probe parameters, there is a uniformly bounded positive integer $e$ such that $ew$ is a positive integral multiple of a prime-divisor valuation over $X$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-c-divisorial-index"
+  }
+ ],
+ "paper": "papers/EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-B-TO-H-0154_PM-066.1_Bounded_klt_complements_for_Fano_contractions.md",
+ "purpose": "Bounded klt complements for Fano contractions",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "8e1e496c2b5ac1729e0b93f9f02c83606f9943dd7a1d15d35dddf7090582c670",
+   "pm.domains.v2": "2f0d59a12de40d63e575ee51dba70c7191b1f8a27879fdcc7d78794550ea0452",
+   "pm.edges.v2": "6e663a20091739aec70a6dcd28a0f34f5ae00d3c5b3546062f83b76ad619f661",
+   "pm.extraction.v2": "74ec3d9ed3523a67fcc5c7c91cb21b8951761424518e6ba55ecb87df38d6fe56",
+   "pm.formal.v2": "6e77037b138a42acd9244199e8df97a1059b5639086ea9dccf114245eb324f12",
+   "pm.limits.v2": "cbdfb723b1069cbadbdb488e1b4a4d64354ee97535f12019a63cea2216626c98",
+   "pm.node.v2": "883f12f0f0d63bb3475acef6a5bcc8eb6e62cc8ac81605b8153685515ee56bea",
+   "pm.objects.v2": "35fe90d15b867a1d5dc42a02fe1c8ebefe9b2e732c23c802869af2c3c55de0c9",
+   "pm.provenance.v2": "90ead32bf4d5ecf47912ab2617e22d110b2d68bed364bac852a7829a8958e613",
+   "pm.quantities.v2": "e370654e8c6cccf7971d56ff53537b657db0a2d13a99447247a2efe00dcbff0a",
+   "pm.reading.v2": "744c9b6eb11d50703da399eca6f97dba73c0f648fb04724fcec8a087de7fe890",
+   "pm.roadmap.v2": "9c77f0348e711935aa059a8f4a853c171803fb6d7b5a8a897a4e809a9123df67",
+   "pm.search.v1": "8e608bb9b91fe9b8637e70e8bbc651bab665fde49083b0872d6d17a63e678372",
+   "pm.triptych.v2": "41d480af6c4cf9e6fd4a9547fccb0120f29825b58a85ae8fe58267e8d94d6bc9"
+  },
+  "canonical_sha256": "277046a4fdacdd19d57b31acc34585f5b4d4809c1cb7b3acde9da7e1472d3d0e",
+  "paper_sha256": "be2269c57ba2866a8238591a5b7f8a981ea2d06a9b446c69e2678db9debe5246",
+  "repaired_body_sha256": "79f9a267243c976577ac6b58cd829e8681d1da3473fbb249bc58c8d0a04c201c"
+ },
+ "status": "ACTIVE",
+ "subject_id": 3,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "4f4c9e622b88c1d015bcfeda4d0e8eb1f1733ff5b4883348e0acedf42652d7f7",
+   "receipt_sha256": "82c398a53728e6afad40a6c07350747372022d1e561cfc85194aed0f699ce7f1",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Bounded klt complements for Fano contractions"
+}

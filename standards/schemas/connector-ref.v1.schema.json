@@ -1,0 +1,54 @@
+{
+  "$id": "urn:pm:connector-ref:v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "detail": {
+      "pattern": "^catalogue/details/PM-\\d{3}\\.\\d+\\.json$",
+      "type": "string"
+    },
+    "detail_context": {
+      "additionalProperties": false,
+      "properties": {
+        "bytes": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "tokenizer": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "tokens": {
+          "minimum": 0,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "bytes",
+        "tokens",
+        "tokenizer"
+      ],
+      "type": "object"
+    },
+    "id": {
+      "pattern": "^PM-\\d{3}\\.\\d+$",
+      "type": "string"
+    },
+    "paper": {
+      "pattern": "^papers/[^/]+\\.md$",
+      "type": "string"
+    },
+    "schema": {
+      "const": "pm.connector-ref.v1"
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "paper",
+    "detail",
+    "detail_context"
+  ],
+  "title": "Oversized connector node pointer",
+  "type": "object"
+}

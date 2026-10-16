@@ -1,0 +1,151 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "pm.provenance.v2"
+    },
+    "pm_id": {
+      "type": "string",
+      "pattern": "^PM-[0-9]{3}\\.[1-9][0-9]*$"
+    },
+    "generation_status": {
+      "type": "string",
+      "enum": [
+        "ASSEMBLED"
+      ]
+    },
+    "license": {
+      "const": "Apache-2.0"
+    },
+    "original_title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "original_slug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "original_date": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "attribution": {
+      "type": "string",
+      "minLength": 1
+    },
+    "modification_notice": {
+      "type": "string",
+      "minLength": 1
+    },
+    "canonical_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "repaired_body_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_kind": {
+            "type": "string",
+            "enum": [
+              "preprint",
+              "registry",
+              "bibliography",
+              "figure",
+              "formal_scope"
+            ]
+          },
+          "public_relative_reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "anchor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "source_kind",
+          "public_relative_reference",
+          "anchor",
+          "sha256"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "formal_scope_note": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "verified_sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "section_anchor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "verifier_receipt_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "section_anchor",
+          "verifier_receipt_sha256"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "pm_id",
+    "generation_status",
+    "license",
+    "original_title",
+    "original_slug",
+    "original_date",
+    "attribution",
+    "modification_notice",
+    "canonical_sha256",
+    "repaired_body_sha256",
+    "source_references",
+    "formal_scope_note",
+    "verified_sections"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pm.provenance.v2"
+}

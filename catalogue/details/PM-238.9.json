@@ -1,0 +1,1453 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1325394,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 374261
+ },
+ "coordinate": "EN-115-000-0000-2-2026-PR-T4-UK-EX-M2-B-ML-M-0495",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-2",
+     "quote": "The proof does not optimize the constant multiplying $d$ or establish a cutoff profile.",
+     "quote_sha256": "40a745a0877007cc129fa17c17f69fe8a034887f0c03ef5c0358c62c827dcaa7"
+    }
+   ],
+   "query": "Concrete optimal hardware stage count or sharp cutoff profile",
+   "reason": "The source gives an asymptotic order and existential exponents without optimizing the physical-time leading constant."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-7",
+     "quote": "Number positions by $x=(x_1,\\ldots,x_d)\\in\\mathbb F_2^d$, most significant bit first.",
+     "quote_sha256": "57c63a5e16da799023b4d3e2c05994afb285e4f1abd679519414a0fb08f7f7cd"
+    }
+   ],
+   "query": "Arbitrary deck sizes or arbitrary routing graphs",
+   "reason": "The sweep and physical-law identification require binary positions and the specified coordinate matching layers."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-2",
+     "quote": "Powers of $T_n$ instead describe repeated forward sweeps.",
+     "quote_sha256": "a4da2b028059615d384ebd0c6fc6caf64daa6dc3aafb44cdf9c4311ef6f1291d"
+    },
+    {
+     "anchor": "proof-stmt-e-nonnormal-moment-conversion",
+     "quote": "The power estimate uses the matrix product, rather than a spectral identification.",
+     "quote_sha256": "e5b00b65e50db567c6b0ea87dd430acde8888dcfea84c2a237defe46e964db1b"
+    }
+   ],
+   "query": "Replace forward powers by powers of the positive square",
+   "reason": "The source distinguishes repeated forward sweeps from a forward sweep followed by its reverse; moment conversion uses matrix inequalities."
+  }
+ ],
+ "family": "PM-238",
+ "id": "PM-238.9",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-tra-duality-weighted-statement",
+    "claim_id": "claim-weighted-compatibility",
+    "statement": "Put $m=\\sqrt n$, assume $m/2\\le A,D\\le2m$, and take $m$ sufficiently large that $\\theta=1-L/\\log m>0$."
+   },
+   {
+    "anchor": "stmt-cor-intro-consequences",
+    "claim_id": "claim-singular-ranks-and-mixing",
+    "statement": "For every nontrivial $\\lambda\\vdash n$ and $1\\le r\\le D_\\lambda$"
+   },
+   {
+    "anchor": "stmt-lem-annihilation",
+    "claim_id": "claim-matching-annihilation",
+    "statement": "The sign representation is annihilated by every nonempty fair layer. Every irreducible of $S_n$ indexed by a shape with more than $n/2$ rows is annihilated by a sweep."
+   },
+   {
+    "anchor": "stmt-lem-finitegap",
+    "claim_id": "claim-finite-size-gap",
+    "statement": "For every fixed dyadic $n\\ge2$"
+   },
+   {
+    "anchor": "stmt-tra-fractional-density-support-order-conclusion",
+    "claim_id": "claim-support-obstruction",
+    "statement": "<span id=\"lem:support\" label=\"lem:support\"></span>For every integer $t\\ge0$, $$\\|q_d^{*t}-U_{S_n}\\|_{\\mathrm{TV}}\\ge1-2^{tn/2}/n!.$$ Consequently $t_{\\mathrm{mix}}(d)\\ge\\lceil(2/n)\\log_2(3n!/4)\\rceil=2d-O(1)$."
+   },
+   {
+    "anchor": "stmt-lem-schatten",
+    "claim_id": "claim-safe-nonnormal-powers",
+    "statement": "For integers $r\\ge s\\ge1$"
+   },
+   {
+    "anchor": "stmt-lem-schatten",
+    "claim_id": "claim-safe-nonnormal-powers",
+    "statement": "setting $Q=T^*T$,"
+   },
+   {
+    "anchor": "stmt-lem-degrees",
+    "claim_id": "claim-inverse-degree-sums",
+    "statement": "If $\\ell=n-\\max(\\lambda_1,\\lambda'_1)$,"
+   },
+   {
+    "anchor": "stmt-lem-positive-power-comparison",
+    "claim_id": "claim-positive-power-comparison",
+    "statement": "For square matrices $A_1,A_2$"
+   },
+   {
+    "anchor": "stmt-lem-positive-power-comparison",
+    "claim_id": "claim-positive-power-comparison",
+    "statement": "real $P\\ge q\\ge1$,"
+   },
+   {
+    "anchor": "stmt-lem-positive-power-comparison",
+    "claim_id": "claim-positive-power-comparison",
+    "statement": "if $T=K_CK_R$,"
+   },
+   {
+    "anchor": "stmt-lem-positive-power-comparison",
+    "claim_id": "claim-positive-power-comparison",
+    "statement": "$X=K_RK_R^*$ and $Y=K_C^*K_C$,"
+   },
+   {
+    "anchor": "stmt-lem-positive-power-comparison",
+    "claim_id": "claim-positive-power-comparison",
+    "statement": "for $p\\ge2$,"
+   },
+   {
+    "anchor": "stmt-lem-inverse-fourier-bound",
+    "claim_id": "claim-inverse-fourier-integrability",
+    "statement": "Let $G$ be a finite group,"
+   },
+   {
+    "anchor": "stmt-lem-inverse-fourier-bound",
+    "claim_id": "claim-inverse-fourier-integrability",
+    "statement": "let $\\mathcal L(g)$ denote left regular translation,"
+   },
+   {
+    "anchor": "stmt-lem-inverse-fourier-bound",
+    "claim_id": "claim-inverse-fourier-integrability",
+    "statement": "let $f$ be a complex coefficient density,"
+   },
+   {
+    "anchor": "stmt-lem-inverse-fourier-bound",
+    "claim_id": "claim-inverse-fourier-integrability",
+    "statement": "For $2\\le u\\le\\infty$"
+   },
+   {
+    "anchor": "stmt-lem-inverse-fourier-bound",
+    "claim_id": "claim-inverse-fourier-integrability",
+    "statement": "$u'=u/(u-1)$, with $u'=1$ at infinity,"
+   },
+   {
+    "anchor": "stmt-lem-power-product-comparison",
+    "claim_id": "claim-leading-singular-products",
+    "statement": "If $A,C$ are positive semidefinite matrices of size $N$ and $v\\ge1$,"
+   },
+   {
+    "anchor": "stmt-tra-duality-sparse-statement",
+    "claim_id": "claim-duality-sparse-forest",
+    "statement": "for all sufficiently large $n$,"
+   },
+   {
+    "anchor": "stmt-tra-duality-sparse-statement",
+    "claim_id": "claim-duality-sparse-forest",
+    "statement": "with $1\\le h\\le n^{.60}$,"
+   },
+   {
+    "anchor": "stmt-tra-duality-entropy-statement",
+    "claim_id": "claim-compatible-law-entropy",
+    "statement": "Use $\\epsilon=1/100$."
+   },
+   {
+    "anchor": "stmt-tra-duality-entropy-statement",
+    "claim_id": "claim-compatible-law-entropy",
+    "statement": "If $Q$ is any distribution supported on $\\mathcal I$, with marginals $Q_{r_i},Q_{c_k}$,"
+   },
+   {
+    "anchor": "stmt-tra-duality-entropy-statement",
+    "claim_id": "claim-compatible-law-entropy",
+    "statement": "for sufficiently large $m$"
+   },
+   {
+    "anchor": "stmt-lem-coefficient-compatibility",
+    "claim_id": "claim-positive-coefficient-compatibility",
+    "statement": "Let $R,C\\le S_n$ be the row and column groups of a rectangle."
+   },
+   {
+    "anchor": "stmt-lem-coefficient-compatibility",
+    "claim_id": "claim-positive-coefficient-compatibility",
+    "statement": "For each line $v$, let $Z_v\\ne0$ be a positive operator in that line’s group algebra, acting on its regular representation."
+   },
+   {
+    "anchor": "stmt-tra-duality-trace-recursion-statement",
+    "claim_id": "claim-duality-grid-recursion",
+    "statement": "Suppose at the two child sizes $A,D$ we have $Z_{A}(p), Z_{D}(p)\\le 2$, $p\\ge 4$."
+   },
+   {
+    "anchor": "stmt-tra-duality-trace-recursion-statement",
+    "claim_id": "claim-duality-grid-recursion",
+    "statement": "for sufficiently large $m$."
+   },
+   {
+    "anchor": "stmt-e-nonnormal-moment-conversion",
+    "claim_id": "claim-moment-rank-conversion",
+    "statement": "Suppose, for $p>0$ and $0<\\varepsilon\\le1/2$,"
+   },
+   {
+    "anchor": "e:nonconstant-moment",
+    "claim_id": "claim-moment-rank-conversion",
+    "statement": "Suppose, for $p>0$ and $0<\\varepsilon\\le1/2$, that $$\\label{e:nonconstant-moment}\n \\sum_{\\rho\\ne\\mathbf1}D_\\rho\\mathop{\\mathrm{Tr}}|B_\\rho|^p\\le\\varepsilon.$$ Then every nontrivial $\\rho$ and every $1\\le r\\le D_\\rho$ satisfy $$\\label{e:block-rank}\n s_r(B_\\rho)\\le\\left(\\frac{\\varepsilon}{D_\\rho r}\\right)^{1/p}.$$ The full regular singular list, with its constant value at index $1$, satisfies $$\\label{e:regular-rank}\n s_j(B)\\le j^{-1/p}\\qquad(1\\le j\\le|G|).$$ For every integer $M$ with $2M\\ge p$, $M$ independent convolution steps have worst-start total-variation distance at most $\\tfrac12\\sqrt\\varepsilon$ from uniform."
+   },
+   {
+    "anchor": "stmt-e-vanishing-mixing",
+    "claim_id": "claim-vanishing-fixed-sweep-error",
+    "statement": "Fix $p>0$ and $0<\\varepsilon\\le1/2$."
+   },
+   {
+    "anchor": "stmt-e-vanishing-mixing",
+    "claim_id": "claim-vanishing-fixed-sweep-error",
+    "statement": "Suppose <a href=\"#e:nonconstant-moment\" data-reference-type=\"eqref\" data-reference=\"e:nonconstant-moment\">[e:nonconstant-moment]</a> holds uniformly for a sequence of groups, and every nonconstant block which is not zero has dimension at least $D_{\\min}\\to\\infty$."
+   },
+   {
+    "anchor": "stmt-lem-dyadic-exponents",
+    "claim_id": "claim-rounded-halving-products",
+    "statement": "Fix $\\gamma>0$ and an integer base $d_0\\ge3$."
+   },
+   {
+    "anchor": "stmt-lem-dyadic-exponents",
+    "claim_id": "claim-rounded-halving-products",
+    "statement": "if each factor is at least $1/2$."
+   },
+   {
+    "anchor": "stmt-lem-balanced-moment-closure",
+    "claim_id": "claim-balanced-moment-closure",
+    "statement": "Fix $0<\\varepsilon<1$ and $P>0$."
+   },
+   {
+    "anchor": "stmt-lem-balanced-moment-closure",
+    "claim_id": "claim-balanced-moment-closure",
+    "statement": "Suppose that, above an absolute bit length $d_0\\ge3$, the nonconstant irreducible blocks at $n=2^d$ are divided into two classes with the following properties. Each class includes all regular copies of every singular value in its blocks."
+   },
+   {
+    "anchor": "stmt-lem-balanced-moment-closure",
+    "claim_id": "claim-balanced-moment-closure",
+    "statement": "Suppose further that numbers $\\delta_d>0$ satisfy $$(1+\\delta_d)E_n-\\delta_d H_n\\le\\log(\\varepsilon/2),\n \\qquad\n \\alpha_d(1+\\delta_d)\\le1+C d^{-\\gamma}$$ for some fixed $C<\\infty$ and $\\gamma>0$."
+   },
+   {
+    "anchor": "stmt-lem-conditional-column-entropy",
+    "claim_id": "claim-conditional-column-entropy",
+    "statement": "Let $Q$ be any probability law on compatible pairs $(h,u)$,"
+   },
+   {
+    "anchor": "stmt-lem-conditional-column-entropy",
+    "claim_id": "claim-conditional-column-entropy",
+    "statement": "For all sufficiently large $n$,"
+   },
+   {
+    "anchor": "stmt-e-conditional-rank-crossing",
+    "claim_id": "claim-conditional-projection-crossing",
+    "statement": "For the balanced grid above, let $A,D$ be nonzero orthogonal projections in the group algebras of $H,K$, respectively, each a tensor product over its individual lines."
+   },
+   {
+    "anchor": "stmt-e-conditional-rank-crossing",
+    "claim_id": "claim-conditional-projection-crossing",
+    "statement": "Let $q,s$ be their ranks in the regular representations of $H,K$."
+   },
+   {
+    "anchor": "stmt-e-conditional-rank-crossing",
+    "claim_id": "claim-conditional-projection-crossing",
+    "statement": "For all sufficiently large $n$,"
+   },
+   {
+    "anchor": "stmt-tra-conditional-sparse-statement",
+    "claim_id": "claim-conditional-sparse-cancellation",
+    "statement": "Let $V_\\lambda$ be the irreducible representation indexed by $\\lambda\\vdash n$, with first row $n-k$."
+   },
+   {
+    "anchor": "stmt-tra-conditional-sparse-statement",
+    "claim_id": "claim-conditional-sparse-cancellation",
+    "statement": "For sufficiently large $n$,"
+   },
+   {
+    "anchor": "stmt-tra-conditional-sparse-statement",
+    "claim_id": "claim-conditional-sparse-cancellation",
+    "statement": "1\\le k\\le n^{.61}."
+   },
+   {
+    "anchor": "stmt-tra-inverse-color-compatibility-statement",
+    "claim_id": "claim-inverse-color-compatibility",
+    "statement": "Let $n=qm$,"
+   },
+   {
+    "anchor": "stmt-tra-inverse-color-compatibility-statement",
+    "claim_id": "claim-inverse-color-compatibility",
+    "statement": "with $m\\le q\\le2m$"
+   },
+   {
+    "anchor": "stmt-tra-inverse-color-compatibility-statement",
+    "claim_id": "claim-inverse-color-compatibility",
+    "statement": "$m$ sufficiently large."
+   },
+   {
+    "anchor": "stmt-tra-inverse-color-compatibility-statement",
+    "claim_id": "claim-inverse-color-compatibility",
+    "statement": "On a $q\\times m$ grid choose all row and column permutations independently."
+   },
+   {
+    "anchor": "stmt-tra-inverse-color-compatibility-statement",
+    "claim_id": "claim-inverse-color-compatibility",
+    "statement": "Relative to uniform in each line, suppose their laws have bounded densities, and let $L_R,L_C$ be the sums for rows and columns, respectively, of the logarithms of these density bounds."
+   },
+   {
+    "anchor": "stmt-tra-inverse-color-trace-recursion-statement",
+    "claim_id": "claim-inverse-color-grid-recursion",
+    "statement": "when $d$ is sufficiently large."
+   },
+   {
+    "anchor": "stmt-tra-inverse-color-trace-recursion-statement",
+    "claim_id": "claim-inverse-color-grid-recursion",
+    "statement": "Suppose for some $s\\ge 2$"
+   },
+   {
+    "anchor": "tra:inverse-color:eq5",
+    "claim_id": "claim-inverse-color-grid-recursion",
+    "statement": "<span id=\"tra:inverse-color:recursion\" label=\"tra:inverse-color:recursion\"></span> **Trace bound on splitting the cube.** We next show the following implication when $d$ is sufficiently large."
+   },
+   {
+    "anchor": "stmt-tra-inverse-color-sparse-statement",
+    "claim_id": "claim-inverse-color-sparse-kernel",
+    "statement": "all sufficiently large $n$,"
+   },
+   {
+    "anchor": "stmt-tra-inverse-color-sparse-statement",
+    "claim_id": "claim-inverse-color-sparse-kernel",
+    "statement": "1\\le k\\le n^{0.64},"
+   },
+   {
+    "anchor": "stmt-tra-inverse-color-dimension-statement",
+    "claim_id": "claim-inverse-color-dimension-split",
+    "statement": "for all sufficiently large $n$,"
+   },
+   {
+    "anchor": "stmt-tra-tilted-arrays-weighted-statement",
+    "claim_id": "claim-survival-tilted-weighted-arrays",
+    "statement": "Use as reference $U$ independent uniform permutations in these rows and columns."
+   },
+   {
+    "anchor": "stmt-tra-tilted-arrays-weighted-statement",
+    "claim_id": "claim-survival-tilted-weighted-arrays",
+    "statement": "for $m$ sufficiently large,"
+   },
+   {
+    "anchor": "stmt-tra-tilted-arrays-weighted-statement",
+    "claim_id": "claim-survival-tilted-weighted-arrays",
+    "statement": "putting $$\\alpha=1-\\frac{C_0}{\\log m}>0,$$"
+   },
+   {
+    "anchor": "stmt-tra-tilted-arrays-recursion-statement",
+    "claim_id": "claim-tilted-array-rough-moment",
+    "statement": "Suppose $$\\mathcal Z_m(u_m)\\le 6/5,\\qquad \\mathcal Z_n(u_n)\\le 6/5$$ with $u_m,u_n\\ge 2$,"
+   },
+   {
+    "anchor": "stmt-tra-tilted-arrays-sparse-statement",
+    "claim_id": "claim-unordered-exception-sparse-norm",
+    "statement": "Fix $0<\\delta<1$."
+   },
+   {
+    "anchor": "stmt-tra-tilted-arrays-sparse-statement",
+    "claim_id": "claim-unordered-exception-sparse-norm",
+    "statement": "if $\\lambda_1=N-k$"
+   },
+   {
+    "anchor": "stmt-tra-tilted-arrays-sparse-statement",
+    "claim_id": "claim-unordered-exception-sparse-norm",
+    "statement": "where $1\\le k\\le N^{1-\\delta}$,"
+   },
+   {
+    "anchor": "stmt-tra-tilted-arrays-sparse-statement",
+    "claim_id": "claim-unordered-exception-sparse-norm",
+    "statement": "$d$ sufficiently large."
+   },
+   {
+    "anchor": "stmt-tra-tilted-arrays-main-statement",
+    "claim_id": "claim-tilted-array-bounded-exponents",
+    "statement": "<span id=\"tra:tilted-arrays:moment\" label=\"tra:tilted-arrays:moment\"></span> There is a sequence $r(d)\\ge2$ with $\\sup_d r(d)<\\infty$ such that $$\\mathcal Z_N(r(d))\\le 6/5\n\\qquad(d\\ge1). \\label{tra:tilted-arrays:eq1}$$ For every deterministic initial deck and every integer $w\\ge\\sup_d r(d)$, the law after $wd$ physical shuffles has chi-square divergence at most $1/5$ from uniform, and hence total-variation distance at most $\\frac12\\sqrt{1/5}$ from uniform."
+   },
+   {
+    "anchor": "stmt-tra-fractional-density-step-and-rough-moment",
+    "claim_id": "claim-fractional-density-induction-step",
+    "statement": "For all sufficiently large $d$,"
+   },
+   {
+    "anchor": "stmt-tra-fractional-density-step-and-rough-moment",
+    "claim_id": "claim-fractional-density-induction-step",
+    "statement": "if a real $q\\ge16/\\beta$ satisfies"
+   },
+   {
+    "anchor": "tra:fractional-density:eq5",
+    "claim_id": "claim-fractional-density-induction-step",
+    "statement": "*For all sufficiently large $d$, if a real $q\\ge16/\\beta$ satisfies $$M_b(q), M_a(q) \\ \\le\\ 1+c_0,\n \\label{tra:fractional-density:eq5}$$ then $p_0=(1+\\delta)q$ satisfies $$M_n((1+\\delta)p_0)\\le 1+c_0\n \\label{tra:fractional-density:eq6}$$ and $$M_n(p_0)\\le \\exp(n^{1-\\alpha}).\n \\label{tra:fractional-density:eq7}$$ The lower threshold for $d$ is absolute and independent of $q$."
+   },
+   {
+    "anchor": "tra:fractional-density:eq10",
+    "claim_id": "claim-fractional-compatibility-probability",
+    "statement": "Define the product probability law $\\nu$ on these arrays by the independent line densities"
+   },
+   {
+    "anchor": "stmt-tra-fractional-density-harmonic-infinity-statement",
+    "claim_id": "claim-harmonic-infinity-contraction",
+    "statement": "Let $n=2^d$ with $d\\ge1$,"
+   },
+   {
+    "anchor": "stmt-tra-fractional-density-harmonic-infinity-statement",
+    "claim_id": "claim-harmonic-infinity-contraction",
+    "statement": "let $T_n$ be one coordinate sweep,"
+   },
+   {
+    "anchor": "stmt-tra-fractional-density-harmonic-infinity-statement",
+    "claim_id": "claim-harmonic-infinity-contraction",
+    "statement": "put $Q_n=T_n^*T_n$."
+   },
+   {
+    "anchor": "stmt-tra-fractional-density-harmonic-infinity-statement",
+    "claim_id": "claim-harmonic-infinity-contraction",
+    "statement": "Take $1\\le k\\le n/(2d)$"
+   },
+   {
+    "anchor": "stmt-e-harmonic-singular-conversion",
+    "claim_id": "claim-harmonic-irrep-conversion",
+    "statement": "Let $\\lambda\\vdash n$ have first row $n-k$,"
+   },
+   {
+    "anchor": "stmt-e-harmonic-singular-conversion",
+    "claim_id": "claim-harmonic-irrep-conversion",
+    "statement": "where $1\\le k\\le n/(2d)$."
+   },
+   {
+    "anchor": "stmt-tra-fractional-density-bounded-moment-conclusion",
+    "claim_id": "claim-fractional-bounded-moment",
+    "statement": "<span id=\"tra:fractional-density:moment\" label=\"tra:fractional-density:moment\"></span>*\n\n*There are numbers $p(d)>0$, with $\\sup_d p(d)<\\infty$, such that for every $n=2^d$, $$M_n(p(d))\\le 1+c_0,\\qquad c_0=\\frac18.\n \\label{tra:fractional-density:eq2}$$"
+   },
+   {
+    "anchor": "stmt-tra-asymmetric-sparse-statement",
+    "claim_id": "claim-asymmetric-sparse-trace",
+    "statement": "For all sufficiently large powers of two $n$,"
+   },
+   {
+    "anchor": "stmt-tra-asymmetric-sparse-statement",
+    "claim_id": "claim-asymmetric-sparse-trace",
+    "statement": "1\\le k=n-\\lambda_1\\le n^{.995},"
+   },
+   {
+    "anchor": "stmt-tra-asymmetric-sparse-statement",
+    "claim_id": "claim-asymmetric-sparse-trace",
+    "statement": "p\\ge p_*"
+   },
+   {
+    "anchor": "stmt-tra-asymmetric-dimension-and-annihilation",
+    "claim_id": "claim-asymmetric-dimension-annihilation",
+    "statement": "If $\\lambda$ has length greater than $n/2$,"
+   },
+   {
+    "anchor": "stmt-tra-asymmetric-dimension-and-annihilation",
+    "claim_id": "claim-asymmetric-dimension-annihilation",
+    "statement": "For all sufficiently large $n$,"
+   },
+   {
+    "anchor": "stmt-tra-asymmetric-dimension-and-annihilation",
+    "claim_id": "claim-asymmetric-dimension-annihilation",
+    "statement": "for the partitions of length at most $n/2$ with $k>n^{.995}$,"
+   },
+   {
+    "anchor": "stmt-tra-asymmetric-compatibility-statement",
+    "claim_id": "claim-asymmetric-array-compatibility",
+    "statement": "Arrange the points in $b$ rows of $a$ cells each."
+   },
+   {
+    "anchor": "stmt-tra-asymmetric-compatibility-statement",
+    "claim_id": "claim-asymmetric-array-compatibility",
+    "statement": "Independently in each row $i$, assign the labels $h_{ij}\\in[a]$ by a permutation, with an arbitrary law of density at most $D_i$ relative to uniform."
+   },
+   {
+    "anchor": "stmt-tra-asymmetric-compatibility-statement",
+    "claim_id": "claim-asymmetric-array-compatibility",
+    "statement": "Independently each column $j$ has labels $l_{ij}\\in[b]$ likewise assigned by a permutation, say with density at most $D'_j$, also independent across columns and from the row assignments."
+   },
+   {
+    "anchor": "stmt-tra-asymmetric-projection-crossing-statement",
+    "claim_id": "claim-asymmetric-projection-overlap",
+    "statement": "For each row of size $a$, let $P_i$ be an orthogonal projection in its group algebra supported just on one irrep $\\mu_i$, of rank $r_i>0$ there"
+   },
+   {
+    "anchor": "stmt-tra-asymmetric-projection-crossing-statement",
+    "claim_id": "claim-asymmetric-projection-overlap",
+    "statement": "Likewise take projections for the columns in their group algebras with $D'_j$ defined similarly."
+   },
+   {
+    "anchor": "stmt-tra-asymmetric-trace-statement",
+    "claim_id": "claim-asymmetric-subexponential-trace",
+    "statement": "<span id=\"tra:asymmetric:trace\" label=\"tra:asymmetric:trace\"></span> We prove that for each sweep size there is $p_n\\ge 4$, all bounded above by an absolute constant, such that $$d_\\lambda\\,{\\rm Tr}|T_n(\\lambda)|^{p_n}\n                            \\ \\le\\ \\exp(n^{.99})\n                     \\qquad\\text{for all }\\lambda.\n                          \\label{tra:asymmetric:eq10}$$ For all sufficiently large $n$, the proof also bounds the complete regular Schatten power by $\\exp(n^{.99})$."
+   },
+   {
+    "anchor": "stmt-tra-asymmetric-mixing",
+    "claim_id": "claim-asymmetric-vanishing-remainder",
+    "statement": "Let $p^*=\\sup_n p_n<\\infty$ be the bound obtained above and let $\\Pi$ be uniform averaging."
+   },
+   {
+    "anchor": "stmt-tra-projection-deletion-level-statement",
+    "claim_id": "claim-projection-deletion-level-contraction",
+    "statement": "k=n-\\lambda_1\\ge 1,"
+   },
+   {
+    "anchor": "stmt-tra-projection-deletion-entropy-statement",
+    "claim_id": "claim-valid-law-marginal-entropy",
+    "statement": "all sufficiently large $a$,"
+   },
+   {
+    "anchor": "stmt-tra-projection-deletion-weighted-statement",
+    "claim_id": "claim-deletion-weighted-validity",
+    "statement": "Put $\\theta=C_3/\\log a$"
+   },
+   {
+    "anchor": "stmt-tra-projection-deletion-weighted-statement",
+    "claim_id": "claim-deletion-weighted-validity",
+    "statement": "$0<\\theta<1$ for sufficiently large $a$."
+   },
+   {
+    "anchor": "stmt-tra-projection-deletion-weighted-statement",
+    "claim_id": "claim-deletion-weighted-validity",
+    "statement": "Under uniform independent permutations, for nonnegative functions $z_i$ of a row permutation and $w_c$ of a column permutation,"
+   },
+   {
+    "anchor": "stmt-tra-projection-deletion-trace-recursion-statement",
+    "claim_id": "claim-deletion-dense-trace-recursion",
+    "statement": "Suppose for some $p\\ge2$"
+   },
+   {
+    "anchor": "tra:projection-deletion:eq17",
+    "claim_id": "claim-deletion-dense-trace-recursion",
+    "statement": "<span id=\"tra:projection-deletion:recursion\" label=\"tra:projection-deletion:recursion\"></span> Suppose for some $p\\ge2$ we have $$\\operatorname{Tr}_{G_a}|T_a|^{2p}\\le 2,\\qquad\n\\operatorname{Tr}_{G_b}|T_b|^{2p}\\le 2.\n\\label{tra:projection-deletion:eq17}$$ Let $p'=p(1+\\theta)$ with $\\theta$ as in <a href=\"#tra:projection-deletion:eq16\" data-reference-type=\"eqref\" data-reference=\"tra:projection-deletion:eq16\">[tra:projection-deletion:eq16]</a>. We claim $$\\log\\operatorname{Tr}_{G_n}|T_n|^{2p'}\\ \\le\\ O(n a^{-1/16}+\\sqrt n\\log n).\n\\label{tra:projection-deletion:eq18}$$"
+   },
+   {
+    "anchor": "stmt-tra-projection-deletion-trace-recursion-statement",
+    "claim_id": "claim-deletion-dense-trace-recursion",
+    "statement": "Let $p'=p(1+\\theta)$"
+   },
+   {
+    "anchor": "stmt-tra-projection-deletion-main-statement",
+    "claim_id": "claim-deletion-bounded-regular-moment",
+    "statement": "<span id=\"tra:projection-deletion:moment\" label=\"tra:projection-deletion:moment\"></span> There are real numbers $p_n\\ge2$, indexed by dyadic $n\\ge2$, with $\\sup_n p_n<\\infty$ such that $$\\operatorname{Tr}_{G_n}|T_n|^{2p_n}\\ \\le\\ 1+\\tfrac{1}{8}.\n\\label{tra:projection-deletion:eq1}$$"
+   },
+   {
+    "anchor": "stmt-tra-first-interactions-indexed-conclusion",
+    "claim_id": "claim-first-interaction-indexed-decay",
+    "statement": "<span id=\"tra:first-interactions:singular\" label=\"tra:first-interactions:singular\"></span>*\n\n\n*There is an absolute finite $p_*>0$ such that, for every dyadic $n$, every partition $\\lambda\\vdash n$, and every $1\\le i\\le D_\\lambda$, $$\\label{tra:first-interactions:eq1}\n s_i(T_n(\\lambda))\\le(D_\\lambda i)^{-1/(2p_*)}.$$ The singular values are listed in decreasing order within one copy of $V_\\lambda$."
+   },
+   {
+    "anchor": "stmt-grid-occupation",
+    "claim_id": "claim-mixed-occupation-factorial-moments",
+    "statement": "Start a set of $r$ cards at distinct sites of the binary cube and move them by one complete coordinate sweep."
+   },
+   {
+    "anchor": "stmt-grid-occupation",
+    "claim_id": "claim-mixed-occupation-factorial-moments",
+    "statement": "Independently, move $s$ further walkers, each by its own fair bit in every coordinate; these walkers may have coincident endpoints."
+   },
+   {
+    "anchor": "stmt-grid-occupation",
+    "claim_id": "claim-mixed-occupation-factorial-moments",
+    "statement": "For disjoint sets of sites $A_1,\\ldots,A_L$,"
+   },
+   {
+    "anchor": "stmt-grid-occupation",
+    "claim_id": "claim-mixed-occupation-factorial-moments",
+    "statement": "For nonnegative integers $h_i$,"
+   },
+   {
+    "anchor": "stmt-tra-first-interactions-sparse-statement",
+    "claim_id": "claim-first-interaction-sparse-norm",
+    "statement": "all sufficiently large $n$,"
+   },
+   {
+    "anchor": "stmt-tra-first-interactions-sparse-statement",
+    "claim_id": "claim-first-interaction-sparse-norm",
+    "statement": "if $1\\le k=n-\\lambda_1\\le n^{.99}$,"
+   },
+   {
+    "anchor": "stmt-tra-first-interactions-grid-statement",
+    "claim_id": "claim-first-interaction-grid-probability",
+    "statement": "Draw elements $h\\in H$ (column permutations $h_v,\\ 1\\le v\\le b$) and $j\\in J_0$ (row permutations $j_r,\\ 1\\le r\\le a$) with all permutations independent, from possibly nonuniform laws."
+   },
+   {
+    "anchor": "stmt-tra-first-interactions-grid-statement",
+    "claim_id": "claim-first-interaction-grid-probability",
+    "statement": "Suppose on each factor the pointwise density versus uniform is bounded, with the product of those upper bounds $e^z$."
+   },
+   {
+    "anchor": "stmt-tra-first-interactions-projection-fourth-moment",
+    "claim_id": "claim-first-interaction-projection-fourth",
+    "statement": "For orthogonal projections $P,Q$ in the subgroup algebras of $H,J_0$, suppose each is a tensor product over that subgroup’s factors."
+   },
+   {
+    "anchor": "stmt-tra-first-interactions-projection-fourth-moment",
+    "claim_id": "claim-first-interaction-projection-fourth",
+    "statement": "Let their regular ranks, meaning their ranks in the regular representation of the respective subgroup, be $r_H,r_J$, assumed nonzero."
+   },
+   {
+    "anchor": "stmt-tra-first-interactions-projection-fourth-moment",
+    "claim_id": "claim-first-interaction-projection-fourth",
+    "statement": "Put $z=\\log(r_H r_J)$."
+   },
+   {
+    "anchor": "stmt-tra-harmonic-overlaps-all-index-conclusion",
+    "claim_id": "claim-harmonic-overlap-indexed-decay",
+    "statement": "<span id=\"tra:harmonic-overlaps:singular\" label=\"tra:harmonic-overlaps:singular\"></span> There is an absolute $a>0$ such that*\n\n\n*$$s_r(T_n\\text{ in }\\lambda)\\ \\le\\ (D_\\lambda r)^{-a},\n \\qquad 1\\le r\\le D_\\lambda,\\quad n\\text{ a power of }2,             \\label{tra:harmonic-overlaps:eq1}$$ with singular values ordered largest first. The claim as written allows 1 on a one-dimensional representation; on the nontrivial sign we can in fact use 0."
+   },
+   {
+    "anchor": "stmt-tra-harmonic-overlaps-dense-overlap-statement",
+    "claim_id": "claim-harmonic-dense-overlap",
+    "statement": "For the balanced sizes $m,q$ here,"
+   },
+   {
+    "anchor": "stmt-tra-harmonic-overlaps-dense-overlap-statement",
+    "claim_id": "claim-harmonic-dense-overlap",
+    "statement": "let $L=\\log n$,"
+   },
+   {
+    "anchor": "stmt-tra-harmonic-overlaps-dense-overlap-statement",
+    "claim_id": "claim-harmonic-dense-overlap",
+    "statement": "for sufficiently large $n$"
+   },
+   {
+    "anchor": "stmt-tra-harmonic-overlaps-dense-overlap-statement",
+    "claim_id": "claim-harmonic-dense-overlap",
+    "statement": "write $\\epsilon=L^{-1/5}$."
+   },
+   {
+    "anchor": "stmt-tra-harmonic-overlaps-lifting-statement",
+    "claim_id": "claim-harmonic-injection-lifting",
+    "statement": "in the component of such a shape, if we write functions on $t$ slots as sums of lifts from just $j$ slots,"
+   },
+   {
+    "anchor": "stmt-tra-harmonic-overlaps-sparse-overlap-statement",
+    "claim_id": "claim-harmonic-sparse-deficit-overlap",
+    "statement": "<span id=\"tra:harmonic-overlaps:sparse-overlap\" label=\"tra:harmonic-overlaps:sparse-overlap\"></span>*\n\n\n*For every $\\lambda\\vdash n$ with deficit $k=n-\\lambda_1\\ge 1$, $$\\|P_H P_J\\|_{4,\\lambda}^4\n                    \\le \\exp(C k)\\,\\frac{R_H R_J}{D_\\lambda}.             \\label{tra:harmonic-overlaps:eq13}$$"
+   },
+   {
+    "anchor": "stmt-tra-harmonic-overlaps-very-sparse-statement",
+    "claim_id": "claim-harmonic-very-sparse-paths",
+    "statement": "$1\\le k=n-\\lambda_1\\le n^{0.51}$"
+   },
+   {
+    "anchor": "stmt-tra-harmonic-overlaps-very-sparse-statement",
+    "claim_id": "claim-harmonic-very-sparse-paths",
+    "statement": "For all sufficiently large $n$"
+   },
+   {
+    "anchor": "stmt-tra-regular-ranks-sparse-statement",
+    "claim_id": "claim-regular-rank-sparse-row-defects",
+    "statement": "Fix an absolute $\\delta>0$,"
+   },
+   {
+    "anchor": "stmt-tra-regular-ranks-sparse-statement",
+    "claim_id": "claim-regular-rank-sparse-row-defects",
+    "statement": "$1\\le k\\le N^{1-\\delta}$,"
+   },
+   {
+    "anchor": "stmt-tra-regular-ranks-sparse-statement",
+    "claim_id": "claim-regular-rank-sparse-row-defects",
+    "statement": "for all sufficiently large $N$,"
+   },
+   {
+    "anchor": "stmt-tra-regular-ranks-crossing-statement",
+    "claim_id": "claim-regular-rank-projection-crossing",
+    "statement": "Suppose sites, $N=mn$,"
+   },
+   {
+    "anchor": "stmt-tra-regular-ranks-crossing-statement",
+    "claim_id": "claim-regular-rank-projection-crossing",
+    "statement": "with $\\sqrt{N}/2\\le m,n\\le2\\sqrt N$."
+   },
+   {
+    "anchor": "stmt-tra-regular-ranks-crossing-statement",
+    "claim_id": "claim-regular-rank-projection-crossing",
+    "statement": "We require that the projections separately on the subgroups be tensor products over the rows and over the columns."
+   },
+   {
+    "anchor": "stmt-tra-regular-ranks-crossing-statement",
+    "claim_id": "claim-regular-rank-projection-crossing",
+    "statement": "for nonzero ranks in the regular representations on the subgroups."
+   },
+   {
+    "anchor": "stmt-tra-regular-ranks-mixing",
+    "claim_id": "claim-regular-rank-fixed-sweep-mixing",
+    "statement": "For an absolute integer $t$"
+   },
+   {
+    "anchor": "stmt-tra-collision-series-compatibility-statement",
+    "claim_id": "claim-collision-series-compatibility",
+    "statement": "The following estimate holds for sufficiently large $n$ factored as $n=l m$ with $1/2\\le l/m\\le 2$."
+   },
+   {
+    "anchor": "stmt-tra-collision-series-compatibility-statement",
+    "claim_id": "claim-collision-series-compatibility",
+    "statement": "Suppose $h,k$ are chosen with independent component permutations (all $l+m$ permutations independent)."
+   },
+   {
+    "anchor": "stmt-tra-collision-series-weak-moment-statement",
+    "claim_id": "claim-collision-series-weak-moment",
+    "statement": "Suppose the two smaller sizes satisfy"
+   },
+   {
+    "anchor": "stmt-tra-collision-series-weak-moment-statement",
+    "claim_id": "claim-collision-series-weak-moment",
+    "statement": "$$\\operatorname{Tr}\\mathcal Q_m^{q_m}\\le 1+\\tfrac18,\n \\qquad\n \\operatorname{Tr}\\mathcal Q_l^{q_l}\\le 1+\\tfrac18,\n \\qquad q_m,q_l\\ge300.$$"
+   },
+   {
+    "anchor": "stmt-tra-collision-series-weak-moment-statement",
+    "claim_id": "claim-collision-series-weak-moment",
+    "statement": "for all sufficiently large $n$."
+   },
+   {
+    "anchor": "stmt-tra-collision-series-sparse-trace-statement",
+    "claim_id": "claim-collision-series-positive-level-trace",
+    "statement": "for all large enough $n$:"
+   },
+   {
+    "anchor": "stmt-tra-collision-series-sparse-trace-statement",
+    "claim_id": "claim-collision-series-positive-level-trace",
+    "statement": "1\\le k\\le n^{0.62}."
+   },
+   {
+    "anchor": "stmt-tra-collision-series-main-statement",
+    "claim_id": "claim-collision-series-closed-moment",
+    "statement": "<span id=\"tra:collision-series:moment\" label=\"tra:collision-series:moment\"></span> There are uniformly bounded real exponents $q_n\\ge 300$, for the powers of two $n\\ge 2$, such that $$\\operatorname{Tr} \\mathcal Q_n^{q_n}\\ \\le\\ 1+\\tfrac18. \\label{tra:collision-series:eq1}$$ An absolute integer number of sweeps therefore has chi-square divergence at most $1/8$."
+   },
+   {
+    "anchor": "stmt-rec-biased-grid-fourth",
+    "claim_id": "claim-biased-grid-fourth-overlap",
+    "statement": "For each row or column line $i$, choose an irreducible type $\\rho_i$ of its line symmetric group."
+   },
+   {
+    "anchor": "stmt-rec-biased-grid-fourth",
+    "claim_id": "claim-biased-grid-fourth-overlap",
+    "statement": "choose an orthogonal projection $E_i$ on $V_{\\rho_i}$, extended by zero on the other Fourier types."
+   },
+   {
+    "anchor": "stmt-grid-perspective-power-interpolation",
+    "claim_id": "claim-perspective-power-product-interpolation",
+    "statement": "If $A,C$ are positive semidefinite operators on a finite-dimensional Hilbert space and $v\\ge1$,"
+   },
+   {
+    "anchor": "stmt-rec-band-grid-entropy",
+    "claim_id": "claim-singular-band-grid-fourth",
+    "statement": "Put $m=\\min(a,b)$"
+   },
+   {
+    "anchor": "stmt-rec-band-grid-entropy",
+    "claim_id": "claim-singular-band-grid-fourth",
+    "statement": "assume $a,b\\le2m$,"
+   },
+   {
+    "anchor": "stmt-rec-band-grid-entropy",
+    "claim_id": "claim-singular-band-grid-fourth",
+    "statement": "with $m$ sufficiently large."
+   },
+   {
+    "anchor": "stmt-rec-band-grid-entropy",
+    "claim_id": "claim-singular-band-grid-fourth",
+    "statement": "Assume each local factor is supported in one irreducible Fourier matrix of dimension $D_i$, has rank at most $r_i$, and has operator norm at most $b_i$."
+   },
+   {
+    "anchor": "stmt-rec-pointwise-smoothing",
+    "claim_id": "claim-pointwise-smoothed-density",
+    "statement": "Let $\\mu\\vdash q$,"
+   },
+   {
+    "anchor": "stmt-rec-pointwise-smoothing",
+    "claim_id": "claim-pointwise-smoothed-density",
+    "statement": "$j=q-\\mu_1$,"
+   },
+   {
+    "anchor": "stmt-rec-pointwise-smoothing",
+    "claim_id": "claim-pointwise-smoothed-density",
+    "statement": "$\\ell=\\log m$,"
+   },
+   {
+    "anchor": "stmt-rec-pointwise-smoothing",
+    "claim_id": "claim-pointwise-smoothed-density",
+    "statement": "where $m\\le q\\le2m$"
+   },
+   {
+    "anchor": "stmt-rec-pointwise-smoothing",
+    "claim_id": "claim-pointwise-smoothed-density",
+    "statement": "$m$ is sufficiently large."
+   },
+   {
+    "anchor": "stmt-rec-smoothed-grid-fourth",
+    "claim_id": "claim-conditioned-smoothed-grid-fourth",
+    "statement": "Let $m=\\min(a,b)\\ge2$,"
+   },
+   {
+    "anchor": "stmt-rec-smoothed-grid-fourth",
+    "claim_id": "claim-conditioned-smoothed-grid-fourth",
+    "statement": "with $a,b\\le2m$."
+   },
+   {
+    "anchor": "stmt-rec-smoothed-grid-fourth",
+    "claim_id": "claim-conditioned-smoothed-grid-fourth",
+    "statement": "For product Fourier projections $I,J$ in the line groups, of local types $\\mu_i$ with at most half as many rows as line sites and carrier ranks $r_i$,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Full-deck mixing from a regular singular moment",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-e-nonnormal-moment-conversion",
+      "quote": "The power estimate uses the matrix product, rather than a spectral identification.",
+      "quote_sha256": "e5b00b65e50db567c6b0ea87dd430acde8888dcfea84c2a237defe46e964db1b"
+     },
+     {
+      "anchor": "sec:spectral-conversion",
+      "quote": "Its singular values appear $D_\\rho$ times in the regular representation.",
+      "quote_sha256": "561c10819763b721647d582c810f15b9b21a91fbabe5ada144d7bb88560c4619"
+     }
+    ],
+    "requires_concepts": [
+     "Finite-group convolution",
+     "Irreducible regular multiplicities",
+     "Schatten Hölder",
+     "Plancherel",
+     "Total variation"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Weighted compatibility from entropy",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-tra-duality-entropy-statement-2",
+      "quote": "Dropping the requirement that those marginals arise from a common compatible law only increases the supremum.",
+      "quote_sha256": "1bf63a8752180c6532e558e48993a5f3d82aa383415f5334ebf57de18c9dab42"
+     }
+    ],
+    "requires_concepts": [
+     "Rectangle permutation groups",
+     "Compatibility",
+     "Marginal relative entropy",
+     "Gibbs variational formula"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-weighted-compatibility",
+   "exact_statement": "<span id=\"tra:duality:weighted\" label=\"tra:duality:weighted\"></span>There are absolute constants $L,C_0>0$ such that the following holds. Put $m=\\sqrt n$, assume $m/2\\le A,D\\le2m$, and take $m$ sufficiently large that $\\theta=1-L/\\log m>0$. For all nonnegative functions $w_i:S_D\\to[0,\\infty)$ and $v_k:S_A\\to[0,\\infty)$, $$\\label{tra:duality:eq5}\n \\frac{n!}{|R||C|}\\,\n \\mathbb E_U\\!\\left[\\mathbf1_{\\mathcal I}\n       \\prod_{i=1}^A w_i(r_i)\\prod_{k=1}^D v_k(c_k)\\right]\n \\le e^{C_0n^{.54}}\n       \\prod_{i=1}^A(\\mathbb E w_i^{1/\\theta})^\\theta\n       \\prod_{k=1}^D(\\mathbb E v_k^{1/\\theta})^\\theta .$$ The expectations on the right are uniform on the indicated symmetric groups, and logarithms are natural.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-duality-weighted-statement"
+  },
+  {
+   "claim_id": "claim-bounded-regular-moment",
+   "exact_statement": "There is an absolute finite $p_*>0$ such that, for every dyadic $n$, $$\\label{tra:duality:eq7}\n Z_n(p_*)\\le1+\\frac1{16}.$$ For every integer $M\\ge p_*$, $M$ independent forward sweeps have worst-start total-variation distance at most $1/8$ from uniform.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tra-duality-moment"
+  },
+  {
+   "claim_id": "claim-singular-ranks-and-mixing",
+   "exact_statement": "For every nontrivial $\\lambda\\vdash n$ and $1\\le r\\le D_\\lambda$, $$s_r(T_{n,\\lambda})\\le(16D_\\lambda r)^{-1/(2p_*)}.$$ If $s_j(T_n)$ denotes the full regular singular list, including all multiplicities and zeros, then $$s_j(T_n)\\le j^{-1/(2p_*)}\\qquad(1\\le j\\le n!).$$ The constant singular value is the first value. The physical Thorp chain has worst-start $1/4$ mixing time $\\Theta(d)$; more precisely its lower bound is $2d-O(1)$. For every fixed integer $M>p_*$, the worst-start total-variation distance after $Md$ physical shuffles tends to zero as $d\\to\\infty$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-intro-consequences"
+  },
+  {
+   "claim_id": "claim-matching-annihilation",
+   "exact_statement": "The sign representation is annihilated by every nonempty fair layer. Every irreducible of $S_n$ indexed by a shape with more than $n/2$ rows is annihilated by a sweep.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-annihilation"
+  },
+  {
+   "claim_id": "claim-finite-size-gap",
+   "exact_statement": "For every fixed dyadic $n\\ge2$, $\\|T_n(\\lambda)\\|_{\\mathrm{op}}<1$ on every nontrivial irreducible.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-finitegap"
+  },
+  {
+   "claim_id": "claim-support-obstruction",
+   "exact_statement": "<span id=\"lem:support\" label=\"lem:support\"></span>For every integer $t\\ge0$, $$\\|q_d^{*t}-U_{S_n}\\|_{\\mathrm{TV}}\\ge1-2^{tn/2}/n!.$$ Consequently $t_{\\mathrm{mix}}(d)\\ge\\lceil(2/n)\\log_2(3n!/4)\\rceil=2d-O(1)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-fractional-density-support-order-conclusion"
+  },
+  {
+   "claim_id": "claim-safe-nonnormal-powers",
+   "exact_statement": "For integers $r\\ge s\\ge1$ and any matrix $T$, setting $Q=T^*T$, $$\\|T^r\\|_{\\mathrm{HS}}^2\\le\\|Q\\|_{\\mathrm{op}}^{r-s}\\mathop{\\mathrm{Tr}}Q^s.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-schatten"
+  },
+  {
+   "claim_id": "claim-inverse-degree-sums",
+   "exact_statement": "Uniformly in $n$, $\\sum_{\\lambda\\vdash n}D_\\lambda^{-1}$ is bounded, and $$\\sum_{\\lambda\\ne(n),(1^n)}D_\\lambda^{-1}\\longrightarrow0.$$ If $\\ell=n-\\max(\\lambda_1,\\lambda'_1)$, then $$\\log D_\\lambda\\ge(\\log2)\\sqrt\\ell/2,\n \\qquad \\sup_n\\sum_{\\lambda\\vdash n}D_\\lambda^{-32}<\\infty.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-degrees"
+  },
+  {
+   "claim_id": "claim-positive-power-comparison",
+   "exact_statement": "For square matrices $A_1,A_2$ and real $P\\ge q\\ge1$, $$\\label{eq:positive-power-comparison}\n \\|A_2A_1\\|_{S^P}\n \\le\\big\\||A_2|^{P/q}|A_1^*|^{P/q}\\big\\|_{S^q}^{q/P}.$$ In particular, if $T=K_CK_R$, $X=K_RK_R^*$ and $Y=K_C^*K_C$, then for $p\\ge2$, $$\\label{eq:fourth-positive-trace}\n \\mathop{\\mathrm{Tr}}(T^*T)^p\n \\le\\mathop{\\mathrm{Tr}}(X^{p/2}Y^{p/2}X^{p/2}Y^{p/2}).$$ All Schatten norms and traces are unnormalized.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-positive-power-comparison"
+  },
+  {
+   "claim_id": "claim-inverse-fourier-integrability",
+   "exact_statement": "Let $G$ be a finite group, let $\\mathcal L(g)$ denote left regular translation, and let $f$ be a complex coefficient density, so its convolution operator is $|G|^{-1}\\sum_g f(g)\\mathcal L(g)$. Write $E_\\rho=\\mathbb E_g f(g)\\rho(g)$ for its matrix on an irreducible carrier of dimension $D_\\rho$. For $2\\le u\\le\\infty$ and $u'=u/(u-1)$, with $u'=1$ at infinity, $$\\label{eq:inverse-fourier-bound}\n \\|f\\|_{L^u(U_G)}\n \\le\\left(\\sum_\\rho D_\\rho\\mathop{\\mathrm{Tr}}|E_\\rho|^{u'}\\right)^{1/u'}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-inverse-fourier-bound"
+  },
+  {
+   "claim_id": "claim-leading-singular-products",
+   "exact_statement": "If $A,C$ are positive semidefinite matrices of size $N$ and $v\\ge1$, then for every $1\\le j\\le N$, $$\\label{eq:power-product-comparison}\n \\prod_{i=1}^j s_i(CA)\n \\le\\left(\\prod_{i=1}^j s_i(C^vA^v)\\right)^{1/v}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-power-product-comparison"
+  },
+  {
+   "claim_id": "claim-duality-sparse-forest",
+   "exact_statement": "<span id=\"tra:duality:sparse\" label=\"tra:duality:sparse\"></span> There is an absolute $b>0$ such that for all sufficiently large $n$, on all $(n-h,\\ldots)$ representations with $1\\le h\\le n^{.60}$, $$\\|T_{n,\\lambda}\\|\\le n^{-bh}.       \\label{tra:duality:eq1}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-duality-sparse-statement"
+  },
+  {
+   "claim_id": "claim-compatible-law-entropy",
+   "exact_statement": "<span id=\"tra:duality:entropy\" label=\"tra:duality:entropy\"></span> Here is the relative entropy estimate. Use $\\epsilon=1/100$. If $Q$ is any distribution supported on $\\mathcal I$, with marginals $Q_{r_i},Q_{c_k}$, then (for sufficiently large $m$) $${\\cal D}(Q\\|U_{R\\times C})\\ \\ge\\\n n-O(n^{.54})\n +\\left(1-\\frac{L}{\\log m}\\right)\n   \\left(\\sum_i{\\cal D}(Q_{r_i}\\|U_{S_D})\n                +\\sum_k {\\cal D}(Q_{c_k}\\|U_{S_A})\\right),       \\label{tra:duality:eq2}$$ for an absolute $L$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-duality-entropy-statement"
+  },
+  {
+   "claim_id": "claim-positive-coefficient-compatibility",
+   "exact_statement": "Let $R,C\\le S_n$ be the row and column groups of a rectangle. For each line $v$, let $Z_v\\ne0$ be a positive operator in that line’s group algebra, acting on its regular representation. Write $z_v$ for its coefficient density relative to uniform measure, and put $$w_v=\\operatorname{Tr}_{\\rm reg}Z_v^2,\\qquad\n R_v=\\operatorname{rank}_{\\rm reg}Z_v,\\qquad\n \\rho_v=|z_v|^2/w_v.$$ Then $\\rho_v$ is a probability density and $\\|\\rho_v\\|_\\infty\\le R_v$. Let $F$ and $G$ be the tensor products of the row and column operators, respectively, acting on the full regular representation of $S_n$. For the compatibility event $\\mathcal I=\\{(r,c):cr\\in RC\\}$, $$\\label{e:positive-coefficient-probability}\n \\operatorname{Tr}_{\\rm reg}(FGFG)\n \\le\\frac{n!}{|R||C|}\\left(\\prod_vw_v\\right)\n       \\mathbb P_{\\otimes_v\\rho_v}(\\mathcal I).$$ For projections, $w_v=R_v$. A projection of carrier rank $r$ in an irreducible of dimension $D$ has regular rank $R_v=Dr$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-coefficient-compatibility"
+  },
+  {
+   "claim_id": "claim-duality-grid-recursion",
+   "exact_statement": "<span id=\"tra:duality:recursion\" label=\"tra:duality:recursion\"></span> **Grid trace estimate.** Suppose at the two child sizes $A,D$ we have $Z_{A}(p), Z_{D}(p)\\le 2$, $p\\ge 4$. Splitting a sweep into independent sweeps within rows, then independent sweeps within columns, we have $$Z_n(t)\\ \\le\\ \\exp(O(n^{.54})),\\qquad\n                  t=p(1+O(1/\\log m)),                             \\label{tra:duality:eq6}$$ where $t$ can be taken as $p(1+L'/\\log m)$ for a suitable absolute $L'$, for sufficiently large $m$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tra-duality-trace-recursion-statement"
+  },
+  {
+   "claim_id": "claim-moment-rank-conversion",
+   "exact_statement": "Suppose, for $p>0$ and $0<\\varepsilon\\le1/2$, that $$\\label{e:nonconstant-moment}\n \\sum_{\\rho\\ne\\mathbf1}D_\\rho\\mathop{\\mathrm{Tr}}|B_\\rho|^p\\le\\varepsilon.$$ Then every nontrivial $\\rho$ and every $1\\le r\\le D_\\rho$ satisfy $$\\label{e:block-rank}\n s_r(B_\\rho)\\le\\left(\\frac{\\varepsilon}{D_\\rho r}\\right)^{1/p}.$$ The full regular singular list, with its constant value at index $1$, satisfies $$\\label{e:regular-rank}\n s_j(B)\\le j^{-1/p}\\qquad(1\\le j\\le|G|).$$ For every integer $M$ with $2M\\ge p$, $M$ independent convolution steps have worst-start total-variation distance at most $\\tfrac12\\sqrt\\varepsilon$ from uniform.*\n\n*Conversely, if $s_j(B)\\le j^{-c}$ for an absolute $c>0$ over a family of finite groups and their convolution operators, then for each fixed $\\varepsilon>0$ there is a fixed $p'>0$, independent of the group, for which <a href=\"#e:nonconstant-moment\" data-reference-type=\"eqref\" data-reference=\"e:nonconstant-moment\">[e:nonconstant-moment]</a> holds with $p'$ in place of $p$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-e-nonnormal-moment-conversion"
+  },
+  {
+   "claim_id": "claim-vanishing-fixed-sweep-error",
+   "exact_statement": "Fix $p>0$ and $0<\\varepsilon\\le1/2$. Suppose <a href=\"#e:nonconstant-moment\" data-reference-type=\"eqref\" data-reference=\"e:nonconstant-moment\">[e:nonconstant-moment]</a> holds uniformly for a sequence of groups, and every nonconstant block which is not zero has dimension at least $D_{\\min}\\to\\infty$. For any fixed integer $M$ with $2M>p$, $$4\\|\\mu_M-U_G\\|_{\\mathrm{TV}}^2\n \\le\\varepsilon\\left(\\frac{\\varepsilon}{D_{\\min}}\\right)^{(2M-p)/p}\n \\longrightarrow0.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-e-vanishing-mixing"
+  },
+  {
+   "claim_id": "claim-rounded-halving-products",
+   "exact_statement": "Fix $\\gamma>0$ and an integer base $d_0\\ge3$. Along any branch obtained by replacing $d>d_0$ with $\\lfloor d/2\\rfloor$ or $\\lceil d/2\\rceil$, the sum of $d^{-\\gamma}$ over the terms above the base is uniformly bounded. For each fixed $C\\ge0$, products of $1+C d^{-\\gamma}$ are uniformly bounded, and products of $1-C d^{-\\gamma}$ are bounded away from zero if each factor is at least $1/2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-dyadic-exponents"
+  },
+  {
+   "claim_id": "claim-balanced-moment-closure",
+   "exact_statement": "Fix $0<\\varepsilon<1$ and $P>0$. Suppose that, above an absolute bit length $d_0\\ge3$, the nonconstant irreducible blocks at $n=2^d$ are divided into two classes with the following properties. Each class includes all regular copies of every singular value in its blocks.*\n\n1.  *For every $p\\ge P$, the first class contributes at most $\\varepsilon/2$ to $Z_n(p)$.*\n\n2.  *Each value in the second class occurs with its irreducible regular multiplicity at least $e^{H_n}$.*\n\n3.  *Put $a=2^{\\lfloor d/2\\rfloor}$ and $b=2^{\\lceil d/2\\rceil}$. For every $p\\ge P$, $$Z_a(p),Z_b(p)\\le1+\\varepsilon\n     \\quad\\Longrightarrow\\quad\n     Z_n(\\alpha_d p)\\le e^{E_n},$$ where $\\alpha_d\\ge1$ and the size threshold is independent of $p$.*\n\n*Suppose further that numbers $\\delta_d>0$ satisfy $$(1+\\delta_d)E_n-\\delta_d H_n\\le\\log(\\varepsilon/2),\n \\qquad\n \\alpha_d(1+\\delta_d)\\le1+C d^{-\\gamma}$$ for some fixed $C<\\infty$ and $\\gamma>0$. Then $Z_n(p_*)\\le1+\\varepsilon$ for all dyadic $n$, at one finite exponent $p_*$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-balanced-moment-closure"
+  },
+  {
+   "claim_id": "claim-conditional-column-entropy",
+   "exact_statement": "Let $Q$ be any probability law on compatible pairs $(h,u)$, and write $u_k$ for the permutation in intermediate column $k$. Let $H_Q$ denote Shannon entropy in nats under $Q$. Define $$F=\\mathcal D(Q_h\\|U_H),\\qquad\n J=\\sum_{k=1}^c\\mathbb E_h\\mathcal D(Q_{u_k\\mid h}\\|U_{S_r}),\\qquad\n I=\\sum_{k=1}^cH_Q(u_k\\mid h)-H_Q(u\\mid h).$$ For all sufficiently large $n$, $$I\\ge n-O(n^{.57})-O((F+J)/\\log n).\n \\label{tra:conditional:eq4}$$ The constants are absolute, uniformly over $Q$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-conditional-column-entropy"
+  },
+  {
+   "claim_id": "claim-conditional-projection-crossing",
+   "exact_statement": "<span id=\"tra:conditional:crossing\" label=\"tra:conditional:crossing\"></span> <span id=\"tra:conditional:crossing-statement\" label=\"tra:conditional:crossing-statement\"></span>For the balanced grid above, let $A,D$ be nonzero orthogonal projections in the group algebras of $H,K$, respectively, each a tensor product over its individual lines. Let $q,s$ be their ranks in the regular representations of $H,K$. For all sufficiently large $n$, in the regular representation of $S_n$, $$\\|AD\\|_4^4\\le(qs)^{1+C/\\log n}\\exp(O(n^{.57})).\n \\label{tra:conditional:eq2}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-e-conditional-rank-crossing"
+  },
+  {
+   "claim_id": "claim-conditional-sparse-cancellation",
+   "exact_statement": "<span id=\"tra:conditional:sparse\" label=\"tra:conditional:sparse\"></span> Let $V_\\lambda$ be the irreducible representation indexed by $\\lambda\\vdash n$, with first row $n-k$. For sufficiently large $n$, the sweep on $V_\\lambda$ satisfies $$\\|T_n(\\lambda)\\|_{\\rm op} \\le n^{-.005 k},\n                     \\qquad 1\\le k\\le n^{.61}.                         \\label{tra:conditional:eq5}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-conditional-sparse-statement"
+  },
+  {
+   "claim_id": "claim-conditional-bounded-moment",
+   "exact_statement": "There is an absolute $p_*\\ge4$ such that $${\\rm Tr}|T_n|^{p_*}\\ \\le\\ 1+1/8                         \\label{tra:conditional:eq1}$$ for every power of two $n$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tra-conditional-moment"
+  },
+  {
+   "claim_id": "claim-inverse-color-compatibility",
+   "exact_statement": "<span id=\"tra:inverse-color:compatibility\" label=\"tra:inverse-color:compatibility\"></span> Let $n=qm$, with $m\\le q\\le2m$ and $m$ sufficiently large. On a $q\\times m$ grid choose all row and column permutations independently. Relative to uniform in each line, suppose their laws have bounded densities, and let $L_R,L_C$ be the sums for rows and columns, respectively, of the logarithms of these density bounds.*\n\n\n*Consider the product of the row permutation layer and then the column permutation layer. Call the product reversible in order if it can also be written as a column layer followed by a row layer (this just refers to a factorization of a permutation). With $C$ an absolute constant, $$\\Pr(\\text{reversible in order})\n \\ \\le\\\n \\exp\\left(-n+n^{0.58}+\\frac{C}{\\log n}(L_R+L_C)\\right).                         \\label{tra:inverse-color:eq1}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-inverse-color-compatibility-statement"
+  },
+  {
+   "claim_id": "claim-inverse-color-grid-recursion",
+   "exact_statement": "<span id=\"tra:inverse-color:recursion\" label=\"tra:inverse-color:recursion\"></span> **Trace bound on splitting the cube.** We next show the following implication when $d$ is sufficiently large. Split the $d$ bits contiguously into groups of $\\lfloor d/2\\rfloor,\\lceil d/2\\rceil$, and put $m,q$ equal to 2 to those respective powers. Suppose for some $s\\ge 2$ that $$Z_m(s), Z_q(s)\\le 2.$$ Then for $p=s(1+C_0/\\log n)$, with an absolute constant $C_0$, we have $$Z_n(p)\\le \\exp(n^{0.60}).                         \\label{tra:inverse-color:eq5}$$ In particular the loss here has $\\log$ much smaller than $n$; the order multiplier matters as well, and has been chosen to work with balanced splitting.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tra-inverse-color-trace-recursion-statement"
+  },
+  {
+   "claim_id": "claim-inverse-color-sparse-kernel",
+   "exact_statement": "<span id=\"tra:inverse-color:sparse\" label=\"tra:inverse-color:sparse\"></span> The loss in <a href=\"#tra:inverse-color:eq5\" data-reference-type=\"eqref\" data-reference=\"tra:inverse-color:eq5\">[tra:inverse-color:eq5]</a> requires a separate bound for sparse first-row levels. Call $k=n-\\lambda_1$ the level of an irreducible, where $\\lambda_1$ is the length of the first row of its diagram. We show, for some absolute $c_2>0$, all sufficiently large $n$, and $$1\\le k\\le n^{0.64},$$ that the sweep has squared operator norm (square of its largest singular value), within each level $k$ irreducible, bounded by $$n^{-c_2 k}.                              \\label{tra:inverse-color:eq9}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-inverse-color-sparse-statement"
+  },
+  {
+   "claim_id": "claim-inverse-color-dimension-split",
+   "exact_statement": "<span id=\"tra:inverse-color:dimension\" label=\"tra:inverse-color:dimension\"></span> We specify why this covers the relevant small dimensional part. Any irreducible with diagram height bigger than $n/2$ is killed by a switch-layer average: the switch subgroup is a Young subgroup with $n/2$ parts of size 2, and by Young’s rule such an irreducible has no invariants there (cannot have a strictly increasing column for a semistandard filling with $n/2$ symbols). Moreover for all sufficiently large $n$, any remaining irreducible not of level $\\le n^{0.64}$ has dimension at least $$\\exp(n^{0.62}).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-inverse-color-dimension-statement"
+  },
+  {
+   "claim_id": "claim-inverse-color-bounded-moment",
+   "exact_statement": "There is an absolute finite $s_*>0$ such that $Z_n(s_*)\\le1+1/8$ for every dyadic $n$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tra-inverse-color-moment"
+  },
+  {
+   "claim_id": "claim-survival-tilted-weighted-arrays",
+   "exact_statement": "<span id=\"tra:tilted-arrays:weighted\" label=\"tra:tilted-arrays:weighted\"></span> Use as reference $U$ independent uniform permutations in these rows and columns. Say $A,B$ are **compatible** if the symbol pairs $(A_{ij},B_{ij})$ are all distinct. There are absolute $C_0,C_1,\\varepsilon>0$ such that, for $m$ sufficiently large, putting $$\\alpha=1-\\frac{C_0}{\\log m}>0,$$ we have the following bound on nonnegative weights, with uniform expectations on its right: $$\\begin{split}\n\\mathbf E_U\\left[\\mathbf 1_{\\mathrm{comp}}\\prod_i L_i(A_i)\\prod_j M_j(B_j)\\right]\n\\ \\le\\ &\\exp\\{-N+C_1N m^{-\\varepsilon}\\}\\\\\n&{}\\cdot\n\\prod_i\\left(\\mathbf E L_i^{1/\\alpha}\\right)^\\alpha\n\\prod_j\\left(\\mathbf E M_j^{1/\\alpha}\\right)^\\alpha .\n\\end{split}\\label{tra:tilted-arrays:eq2}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-tilted-arrays-weighted-statement"
+  },
+  {
+   "claim_id": "claim-tilted-array-rough-moment",
+   "exact_statement": "<span id=\"tra:tilted-arrays:recursion\" label=\"tra:tilted-arrays:recursion\"></span> Suppose $$\\mathcal Z_m(u_m)\\le 6/5,\\qquad \\mathcal Z_n(u_n)\\le 6/5$$ with $u_m,u_n\\ge 2$, and, using $\\alpha$ from <a href=\"#tra:tilted-arrays:eq2\" data-reference-type=\"eqref\" data-reference=\"tra:tilted-arrays:eq2\">[tra:tilted-arrays:eq2]</a>, set $$\\bar r=(2-\\alpha)\\max(u_m,u_n),\\qquad p=\\bar r/2 .$$ Then for some absolute $\\eta\\in(0,1)$, $$\\mathcal Z_N(\\bar r)\\le \\exp\\left(N^{1-\\eta}\\right). \\label{tra:tilted-arrays:eq6}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tra-tilted-arrays-recursion-statement"
+  },
+  {
+   "claim_id": "claim-unordered-exception-sparse-norm",
+   "exact_statement": "<span id=\"tra:tilted-arrays:sparse\" label=\"tra:tilted-arrays:sparse\"></span> Fix $0<\\delta<1$. We need the following bound: if $\\lambda_1=N-k$ where $1\\le k\\le N^{1-\\delta}$, then the operator norm in this representation of $T_N$ is at most $$N^{-b k} \\label{tra:tilted-arrays:eq10}$$ for some $b=b(\\delta)>0$ and $d$ sufficiently large. On the sign twist it is even zero (this latter statement also holds for $k=0$).",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-tilted-arrays-sparse-statement"
+  },
+  {
+   "claim_id": "claim-tilted-array-bounded-exponents",
+   "exact_statement": "<span id=\"tra:tilted-arrays:moment\" label=\"tra:tilted-arrays:moment\"></span> There is a sequence $r(d)\\ge2$ with $\\sup_d r(d)<\\infty$ such that $$\\mathcal Z_N(r(d))\\le 6/5\n\\qquad(d\\ge1). \\label{tra:tilted-arrays:eq1}$$ For every deterministic initial deck and every integer $w\\ge\\sup_d r(d)$, the law after $wd$ physical shuffles has chi-square divergence at most $1/5$ from uniform, and hence total-variation distance at most $\\frac12\\sqrt{1/5}$ from uniform.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tra-tilted-arrays-main-statement"
+  },
+  {
+   "claim_id": "claim-fractional-density-induction-step",
+   "exact_statement": "<span id=\"tra:fractional-density:step\" label=\"tra:fractional-density:step\"></span>*\n\n\n\n\n*For all sufficiently large $d$, if a real $q\\ge16/\\beta$ satisfies $$M_b(q), M_a(q) \\ \\le\\ 1+c_0,\n \\label{tra:fractional-density:eq5}$$ then $p_0=(1+\\delta)q$ satisfies $$M_n((1+\\delta)p_0)\\le 1+c_0\n \\label{tra:fractional-density:eq6}$$ and $$M_n(p_0)\\le \\exp(n^{1-\\alpha}).\n \\label{tra:fractional-density:eq7}$$ The lower threshold for $d$ is absolute and independent of $q$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tra-fractional-density-step-and-rough-moment"
+  },
+  {
+   "claim_id": "claim-fractional-compatibility-probability",
+   "exact_statement": "<span id=\"tra:fractional-density:compatibility\" label=\"tra:fractional-density:compatibility\"></span>*\n\n\n*The compatibility probability satisfies $$\\nu(\\mathcal E)\n \\ \\le\\ \\exp\\left(-n+O\\left(n a^{-1/16}\\log a+(a+b)\\log d\\right)\\right).\n \\label{tra:fractional-density:eq14}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-fractional-density-compatibility-probability"
+  },
+  {
+   "claim_id": "claim-harmonic-infinity-contraction",
+   "exact_statement": "<span id=\"tra:fractional-density:harmonic\" label=\"tra:fractional-density:harmonic\"></span><span id=\"e:harmonic-smoothing\" label=\"e:harmonic-smoothing\"></span>*\n\n\n*Let $n=2^d$ with $d\\ge1$, let $T_n$ be one coordinate sweep, and put $Q_n=T_n^*T_n$. Take $1\\le k\\le n/(2d)$ and consider the representation on functions on ordered injective $k$-tuples of positions, with $g\\in S_n$ acting by $$(\\pi_k(g)F)(v)=F(g^{-1}v)$$ where the notation on $v$ acts on all its positions. Write $\\pi_k$ also for the corresponding action of group algebra elements. Call a function harmonic here if the sum in any one coordinate with the others fixed is 0 (taking the sum over the remaining available positions for that coordinate). The space of these functions is invariant under the permutation actions. We claim an infinity norm bound on this space: $$\\|\\pi_k(Q_n) F\\|_\\infty\n \\ \\le\\ \\left(\\frac{C_* d k}{n}\\right)^{k/2}\\|F\\|_\\infty\n \\qquad(F\\ \\text{harmonic})\n \\label{tra:fractional-density:eq19}$$ with $C_*=2(4e)^2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-fractional-density-harmonic-infinity-statement"
+  },
+  {
+   "claim_id": "claim-harmonic-irrep-conversion",
+   "exact_statement": "Let $\\lambda\\vdash n$ have first row $n-k$, where $1\\le k\\le n/(2d)$. Then $$\\|Q_n(\\lambda)\\|_{\\mathrm{op}}\n \\le \\left(\\frac{2(4e)^2dk}{n}\\right)^{k/2},\n \\qquad\n \\|T_n(\\lambda)\\|_{\\mathrm{op}}\n \\le \\left(\\frac{2(4e)^2dk}{n}\\right)^{k/4}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-e-harmonic-singular-conversion"
+  },
+  {
+   "claim_id": "claim-fractional-bounded-moment",
+   "exact_statement": "<span id=\"tra:fractional-density:moment\" label=\"tra:fractional-density:moment\"></span>*\n\n*There are numbers $p(d)>0$, with $\\sup_d p(d)<\\infty$, such that for every $n=2^d$, $$M_n(p(d))\\le 1+c_0,\\qquad c_0=\\frac18.\n \\label{tra:fractional-density:eq2}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tra-fractional-density-bounded-moment-conclusion"
+  },
+  {
+   "claim_id": "claim-asymmetric-sparse-trace",
+   "exact_statement": "<span id=\"tra:asymmetric:sparse\" label=\"tra:asymmetric:sparse\"></span> **Long first row.** For all sufficiently large powers of two $n$, if $$1\\le k=n-\\lambda_1\\le n^{.995},$$ there is a bound $$d_\\lambda\\,{\\rm Tr}|T_n(\\lambda)|^p\\le n^{-10k}\n                       \\qquad (p\\ge p_*)\n               \\label{tra:asymmetric:eq1}$$ with $p_*<\\infty$ absolute.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-asymmetric-sparse-statement"
+  },
+  {
+   "claim_id": "claim-asymmetric-dimension-annihilation",
+   "exact_statement": "<span id=\"tra:asymmetric:dimension\" label=\"tra:asymmetric:dimension\"></span> We record two further partition details. If $\\lambda$ has length greater than $n/2$, we have $T_n(\\lambda)=0$. Indeed there are no invariants under even one full pair layer subgroup. This also follows immediately in the Specht module realization: the irrep is spanned by column-antisymmetrized vectors (polytabloids) from tableaux, and the column of length greater than $n/2$ must contain both endpoints of some pair, so averaging kills such vectors. For all sufficiently large $n$, for the partitions of length at most $n/2$ with $k>n^{.995}$, we have $$\\log d_\\lambda\\ \\ge\\ n^{.995}.\n                      \\label{tra:asymmetric:eq5}$$ In fact if the first row has length $r\\ge n/10$, keep a subshape of the diagram with this row and $t=\\lfloor n^{.995}/2\\rfloor$ boxes below. Even on this shape we get at least $\\binom rt$ tableaux: after the first $t$ boxes of the first row are filled we can interleave the rest of that row and a standard filling of the lower boxes. They extend to the whole shape. This count suffices for <a href=\"#tra:asymmetric:eq5\" data-reference-type=\"eqref\" data-reference=\"tra:asymmetric:eq5\">[tra:asymmetric:eq5]</a>. We can do the same with the first column if it has length at least $n/10$ (there are enough boxes outside the column by the length condition). If neither holds, <a href=\"#tra:asymmetric:eq5\" data-reference-type=\"eqref\" data-reference=\"tra:asymmetric:eq5\">[tra:asymmetric:eq5]</a> follows by the hook length formula with all hooks at most $n/5$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-asymmetric-dimension-and-annihilation"
+  },
+  {
+   "claim_id": "claim-asymmetric-array-compatibility",
+   "exact_statement": "<span id=\"tra:asymmetric:compatibility\" label=\"tra:asymmetric:compatibility\"></span> Arrange the points in $b$ rows of $a$ cells each. We need a probability bound, which we prove first. Independently in each row $i$, assign the labels $h_{ij}\\in[a]$ by a permutation, with an arbitrary law of density at most $D_i$ relative to uniform. Independently each column $j$ has labels $l_{ij}\\in[b]$ likewise assigned by a permutation, say with density at most $D'_j$, also independent across columns and from the row assignments. Put $D_H=\\prod_i D_i,\\ D_L=\\prod_j D'_j$. Then, with an absolute constant $C$, the probability that the pairs $(h_{ij},l_{ij})$ are all distinct is at most $$\\exp\\left(-n+C n^{.98}\n                        +\\frac{C}{\\log n}\\log(D_H D_L)\\right).\n                     \\label{tra:asymmetric:eq6}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-asymmetric-compatibility-statement"
+  },
+  {
+   "claim_id": "claim-asymmetric-projection-overlap",
+   "exact_statement": "<span id=\"tra:asymmetric:projection-crossing\" label=\"tra:asymmetric:projection-crossing\"></span> We apply the estimate to products of group projections. Use $R$ and $Y$ for the subgroups of $S_n$ permuting within rows and within columns, respectively. For each row of size $a$, let $P_i$ be an orthogonal projection in its group algebra supported just on one irrep $\\mu_i$, of rank $r_i>0$ there (so acting on the regular representation, this block action is repeated with multiplicity $d_{\\mu_i}$). Put $D_i=d_{\\mu_i}r_i$. Likewise take projections for the columns in their group algebras with $D'_j$ defined similarly. Write $P_R,P_Y$ for the two product projections, viewed also in the group algebra of $S_n$. On its regular representation, $$\\|P_Y P_R\\|_4^4\n                  \\le \\exp(C n^{.98})\\,\n                         \\left(\\prod_i D_i \\prod_j D'_j\\right)^{1+C/\\log n}\n                        \\label{tra:asymmetric:eq9}$$ for an absolute $C$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-asymmetric-projection-crossing-statement"
+  },
+  {
+   "claim_id": "claim-asymmetric-subexponential-trace",
+   "exact_statement": "<span id=\"tra:asymmetric:trace\" label=\"tra:asymmetric:trace\"></span> We prove that for each sweep size there is $p_n\\ge 4$, all bounded above by an absolute constant, such that $$d_\\lambda\\,{\\rm Tr}|T_n(\\lambda)|^{p_n}\n                            \\ \\le\\ \\exp(n^{.99})\n                     \\qquad\\text{for all }\\lambda.\n                          \\label{tra:asymmetric:eq10}$$ For all sufficiently large $n$, the proof also bounds the complete regular Schatten power by $\\exp(n^{.99})$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tra-asymmetric-trace-statement"
+  },
+  {
+   "claim_id": "claim-asymmetric-vanishing-remainder",
+   "exact_statement": "Let $p^*=\\sup_n p_n<\\infty$ be the bound obtained above and let $\\Pi$ be uniform averaging. For every integer $j\\ge2p^*$, $\\|T_n^j-\\Pi\\|_{\\mathrm{HS}}^2\\longrightarrow0$ as $n\\to\\infty$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tra-asymmetric-mixing"
+  },
+  {
+   "claim_id": "claim-projection-deletion-level-contraction",
+   "exact_statement": "<span id=\"tra:projection-deletion:level\" label=\"tra:projection-deletion:level\"></span> There are absolute $\\alpha>0$, $M_0<\\infty$, and $0<h<1$, with $$\\|T_n\\|_\\lambda^2\\ \\le\\ h\\left(\\frac{M_0 k}{n}\\right)^{\\alpha k}, \\qquad k=n-\\lambda_1\\ge 1,\n\\label{tra:projection-deletion:eq3}$$ where the norm is operator norm on the indicated representation.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-projection-deletion-level-statement"
+  },
+  {
+   "claim_id": "claim-valid-law-marginal-entropy",
+   "exact_statement": "<span id=\"tra:projection-deletion:entropy\" label=\"tra:projection-deletion:entropy\"></span> For every probability law $\\nu$ supported on valid configurations, with absolute constants and all sufficiently large $a$, $$D_{\\rm joint}\n\\ \\ge\\ n-O(n a^{-1/16})\n +\\left(1-\\frac{C_3}{\\log a}\\right)\\left(\\sum_i D_{A_i}+\\sum_c D_{B_c}\\right).\n\\label{tra:projection-deletion:eq9}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-projection-deletion-entropy-statement"
+  },
+  {
+   "claim_id": "claim-deletion-weighted-validity",
+   "exact_statement": "<span id=\"tra:projection-deletion:weighted\" label=\"tra:projection-deletion:weighted\"></span> Here is a useful weighted form. Put $\\theta=C_3/\\log a$ (increasing the absolute constant if needed), so $0<\\theta<1$ for sufficiently large $a$. Under uniform independent permutations, for nonnegative functions $z_i$ of a row permutation and $w_c$ of a column permutation, $$\\begin{split}\n\\log\\mathbb E_{\\rm unif}\\left[\\mathbf 1_{\\rm valid}\n       \\prod_i z_i(A_i)^2\\prod_c w_c(B_c)^2\\right]\n\\ \\le\\ &-n+O(n a^{-1/16})\\\\\n &+2\\sum_i\\log\\|z_i\\|_{2/(1-\\theta)}\n    +2\\sum_c\\log\\|w_c\\|_{2/(1-\\theta)}\n\\end{split}\n\\label{tra:projection-deletion:eq16}$$ where the norms are under the marginal uniform probabilities.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-projection-deletion-weighted-statement"
+  },
+  {
+   "claim_id": "claim-deletion-dense-trace-recursion",
+   "exact_statement": "<span id=\"tra:projection-deletion:recursion\" label=\"tra:projection-deletion:recursion\"></span> Suppose for some $p\\ge2$ we have $$\\operatorname{Tr}_{G_a}|T_a|^{2p}\\le 2,\\qquad\n\\operatorname{Tr}_{G_b}|T_b|^{2p}\\le 2.\n\\label{tra:projection-deletion:eq17}$$ Let $p'=p(1+\\theta)$ with $\\theta$ as in <a href=\"#tra:projection-deletion:eq16\" data-reference-type=\"eqref\" data-reference=\"tra:projection-deletion:eq16\">[tra:projection-deletion:eq16]</a>. We claim $$\\log\\operatorname{Tr}_{G_n}|T_n|^{2p'}\\ \\le\\ O(n a^{-1/16}+\\sqrt n\\log n).\n\\label{tra:projection-deletion:eq18}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tra-projection-deletion-trace-recursion-statement"
+  },
+  {
+   "claim_id": "claim-deletion-bounded-regular-moment",
+   "exact_statement": "<span id=\"tra:projection-deletion:moment\" label=\"tra:projection-deletion:moment\"></span> There are real numbers $p_n\\ge2$, indexed by dyadic $n\\ge2$, with $\\sup_n p_n<\\infty$ such that $$\\operatorname{Tr}_{G_n}|T_n|^{2p_n}\\ \\le\\ 1+\\tfrac{1}{8}.\n\\label{tra:projection-deletion:eq1}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tra-projection-deletion-main-statement"
+  },
+  {
+   "claim_id": "claim-first-interaction-indexed-decay",
+   "exact_statement": "<span id=\"tra:first-interactions:singular\" label=\"tra:first-interactions:singular\"></span>*\n\n\n*There is an absolute finite $p_*>0$ such that, for every dyadic $n$, every partition $\\lambda\\vdash n$, and every $1\\le i\\le D_\\lambda$, $$\\label{tra:first-interactions:eq1}\n s_i(T_n(\\lambda))\\le(D_\\lambda i)^{-1/(2p_*)}.$$ The singular values are listed in decreasing order within one copy of $V_\\lambda$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-first-interactions-indexed-conclusion"
+  },
+  {
+   "claim_id": "claim-mixed-occupation-factorial-moments",
+   "exact_statement": "Start a set of $r$ cards at distinct sites of the binary cube and move them by one complete coordinate sweep. Independently, move $s$ further walkers, each by its own fair bit in every coordinate; these walkers may have coincident endpoints. For disjoint sets of sites $A_1,\\ldots,A_L$, let $N_i$ count all $r+s$ endpoints in $A_i$, with repetitions counted for the independent walkers. For nonnegative integers $h_i$, $$\\mathbb E\\prod_i\\binom{N_i}{h_i}\n \\le\\prod_i\\frac{((r+s)|A_i|/n)^{h_i}}{h_i!}.$$ In particular the same right side bounds $\\Pr\\{N_i\\ge h_i\\text{ for every }i\\}$. The assertion also holds with the coordinate order reversed.",
+   "kind": "bound",
+   "statement_anchor": "stmt-grid-occupation"
+  },
+  {
+   "claim_id": "claim-first-interaction-sparse-norm",
+   "exact_statement": "<span id=\"tra:first-interactions:sparse\" label=\"tra:first-interactions:sparse\"></span>*\n\n\n*For some absolute $c_s>0$ and all sufficiently large $n$, if $1\\le k=n-\\lambda_1\\le n^{.99}$, then $$\\|T_n(\\lambda)\\|_{\\rm op}\\le n^{-c_s k}.\\label{tra:first-interactions:eq2}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-first-interactions-sparse-statement"
+  },
+  {
+   "claim_id": "claim-first-interaction-grid-probability",
+   "exact_statement": "<span id=\"tra:first-interactions:grid\" label=\"tra:first-interactions:grid\"></span>*\n\n\n*Draw elements $h\\in H$ (column permutations $h_v,\\ 1\\le v\\le b$) and $j\\in J_0$ (row permutations $j_r,\\ 1\\le r\\le a$) with all permutations independent, from possibly nonuniform laws. Suppose on each factor the pointwise density versus uniform is bounded, with the product of those upper bounds $e^z$. Then $$\\Pr\\{ h j\\in J_0 H\\}\n                  \\le \\exp\\{-n+C n^{.98} + C z/\\log n\\}.\\label{tra:first-interactions:eq6}$$ Here $h j$ means apply $j$ and then $h$. The coefficient of $-n$ is essential: the later regular-trace normalization contributes $+n$ to leading order.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-first-interactions-grid-statement"
+  },
+  {
+   "claim_id": "claim-first-interaction-projection-fourth",
+   "exact_statement": "<span id=\"tra:first-interactions:crossing\" label=\"tra:first-interactions:crossing\"></span>*\n\n\n*For orthogonal projections $P,Q$ in the subgroup algebras of $H,J_0$, suppose each is a tensor product over that subgroup’s factors. Let their regular ranks, meaning their ranks in the regular representation of the respective subgroup, be $r_H,r_J$, assumed nonzero. Put $z=\\log(r_H r_J)$. We claim that on any irreducible $\\lambda$ of $G$, $$D_\\lambda \\| (P Q)(\\lambda) \\|_4^4\n                 \\ \\le\\ \\exp\\big(C n^{.98}+(1+C/\\log n)z\\big),\\label{tra:first-interactions:eq12}$$ where $\\|\\cdot\\|_4$ is Schatten 4-norm.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-first-interactions-projection-fourth-moment"
+  },
+  {
+   "claim_id": "claim-harmonic-overlap-indexed-decay",
+   "exact_statement": "<span id=\"tra:harmonic-overlaps:singular\" label=\"tra:harmonic-overlaps:singular\"></span> There is an absolute $a>0$ such that*\n\n\n*$$s_r(T_n\\text{ in }\\lambda)\\ \\le\\ (D_\\lambda r)^{-a},\n \\qquad 1\\le r\\le D_\\lambda,\\quad n\\text{ a power of }2,             \\label{tra:harmonic-overlaps:eq1}$$ with singular values ordered largest first. The claim as written allows 1 on a one-dimensional representation; on the nontrivial sign we can in fact use 0.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-harmonic-overlaps-all-index-conclusion"
+  },
+  {
+   "claim_id": "claim-harmonic-dense-overlap",
+   "exact_statement": "<span id=\"tra:harmonic-overlaps:dense\" label=\"tra:harmonic-overlaps:dense\"></span>*\n\n\n*For the balanced sizes $m,q$ here, let $L=\\log n$, and for sufficiently large $n$ write $\\epsilon=L^{-1/5}$. We claim $$\\|P_H P_J\\|_{4,\\mathrm{reg}(G)}^4\n              \\le (R_H R_J)^{1+\\epsilon}\n                       \\exp\\{ n\\exp(-L^{1/2})\\}.                            \\label{tra:harmonic-overlaps:eq5}$$ This estimate in particular bounds the Schatten norm within shape $\\lambda$, with the fourth power on the right divided by $D_\\lambda$, by the multiplicity in the regular representation.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-harmonic-overlaps-dense-overlap-statement"
+  },
+  {
+   "claim_id": "claim-harmonic-injection-lifting",
+   "exact_statement": "<span id=\"tra:harmonic-overlaps:lifting\" label=\"tra:harmonic-overlaps:lifting\"></span>*\n\n*The harmonic part of $\\mathcal I_{M,t}$ consists exactly of the shapes $\\mu\\vdash M$ with $M-\\mu_1=t$, each with multiplicity $D_{\\bar\\mu}$. More generally an occurring shape has $j=M-\\mu_1\\le t$. Also, in the component of such a shape, if we write functions on $t$ slots as sums of lifts from just $j$ slots, we can take coefficient functions from the same shape with sum of squared norms bounded by $e^{C t}$ times the squared norm on $t$ slots, using a linear choice of coefficients. The coefficient selection respects group algebra projections acting on the $S_M$ shape.",
+   "kind": "construction",
+   "statement_anchor": "stmt-tra-harmonic-overlaps-lifting-statement"
+  },
+  {
+   "claim_id": "claim-harmonic-sparse-deficit-overlap",
+   "exact_statement": "<span id=\"tra:harmonic-overlaps:sparse-overlap\" label=\"tra:harmonic-overlaps:sparse-overlap\"></span>*\n\n\n*For every $\\lambda\\vdash n$ with deficit $k=n-\\lambda_1\\ge 1$, $$\\|P_H P_J\\|_{4,\\lambda}^4\n                    \\le \\exp(C k)\\,\\frac{R_H R_J}{D_\\lambda}.             \\label{tra:harmonic-overlaps:eq13}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-harmonic-overlaps-sparse-overlap-statement"
+  },
+  {
+   "claim_id": "claim-harmonic-very-sparse-paths",
+   "exact_statement": "<span id=\"tra:harmonic-overlaps:very-sparse\" label=\"tra:harmonic-overlaps:very-sparse\"></span>*\n\n\n*There is one more preparatory bound. We can deal with $1\\le k=n-\\lambda_1\\le n^{0.51}$ directly using the binary layers in the sweep. For all sufficiently large $n$ we will have $$\\|T_n\\text{ in }\\lambda\\|_{\\rm op}\n                                             \\le n^{-c k}                 \\label{tra:harmonic-overlaps:eq27}$$ for an absolute $c>0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-harmonic-overlaps-very-sparse-statement"
+  },
+  {
+   "claim_id": "claim-full-regular-singular-decay",
+   "exact_statement": "There is an absolute $c>0$ such that $$s_j(T_N)\\le j^{-c}\\qquad (1\\le j\\le N!)\\label{tra:regular-ranks:eq1}$$ for every power of two $N$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-regular-ranks-main"
+  },
+  {
+   "claim_id": "claim-regular-rank-sparse-row-defects",
+   "exact_statement": "<span id=\"tra:regular-ranks:sparse\" label=\"tra:regular-ranks:sparse\"></span> Fix an absolute $\\delta>0$, small (we can take $10^{-4}$). On the representation indexed by a first row of length $N-k$, $1\\le k\\le N^{1-\\delta}$, the following estimate holds $$\\|T_N\\|\\le \\exp(-b k\\log N)\\label{tra:regular-ranks:eq2}$$ for all sufficiently large $N$, with fixed $b>0$. For $k=1$ this follows from uniform one-card marginals, so we consider $k\\ge2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-regular-ranks-sparse-statement"
+  },
+  {
+   "claim_id": "claim-regular-rank-projection-crossing",
+   "exact_statement": "<span id=\"tra:regular-ranks:crossing\" label=\"tra:regular-ranks:crossing\"></span> Suppose sites, $N=mn$, are arranged in $m$ rows and $n$ columns, with $\\sqrt{N}/2\\le m,n\\le2\\sqrt N$. Let $K,L$ be the row and column permutation groups. Consider orthogonal convolution projections on these groups, and denote also by $Q_K,Q_L$ the operators given by them in the regular representation on $G=S_N$. We require that the projections separately on the subgroups be tensor products over the rows and over the columns. Write $$R=\\operatorname{rank}_{K} Q_K,\\qquad\n                    S=\\operatorname{rank}_{L} Q_L$$ for nonzero ranks in the regular representations on the subgroups. Then $$\\operatorname{Tr}_{G}(Q_K Q_L Q_K Q_L)\n       \\ \\le\\ R S\\,\\exp\\!\\left(O\\!\\left(N^{.995}\n                          +\\frac{\\log(RS)}{\\sqrt{\\log N}}\\right)\\right).\\label{tra:regular-ranks:eq4}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-regular-ranks-crossing-statement"
+  },
+  {
+   "claim_id": "claim-regular-rank-fixed-sweep-mixing",
+   "exact_statement": "For an absolute integer $t$, $t$ sweeps meet the total-variation threshold $1/4$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tra-regular-ranks-mixing"
+  },
+  {
+   "claim_id": "claim-collision-series-compatibility",
+   "exact_statement": "<span id=\"tra:collision-series:compatibility\" label=\"tra:collision-series:compatibility\"></span> The following estimate holds for sufficiently large $n$ factored as $n=l m$ with $1/2\\le l/m\\le 2$. Let $G$ be the permutation group of $[l]\\times[m]$, with $H$ its subgroup of permutations acting separately in each row and $K$ the subgroup acting separately in each column. For $h\\in H,\\ k\\in K$, consider the event $$hk\\in KH. \\label{tra:collision-series:eq2}$$ Suppose $h,k$ are chosen with independent component permutations (all $l+m$ permutations independent). Use $L_v$ as bounds on the supremum densities, relative to uniform, for the individual permutation laws, indexing these components by $v$. Then for an absolute $C$, $$\\mathbb P\\{hk\\in KH\\}\n\\ \\le\\\n\\exp\\left(-n+C n^{0.55}+\\frac{C}{\\log n}\\sum_v\\log L_v\\right). \\label{tra:collision-series:eq3}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-collision-series-compatibility-statement"
+  },
+  {
+   "claim_id": "claim-collision-series-weak-moment",
+   "exact_statement": "<span id=\"tra:collision-series:weak-moment\" label=\"tra:collision-series:weak-moment\"></span> Suppose the two smaller sizes satisfy $$\\operatorname{Tr}\\mathcal Q_m^{q_m}\\le 1+\\tfrac18,\n \\qquad\n \\operatorname{Tr}\\mathcal Q_l^{q_l}\\le 1+\\tfrac18,\n \\qquad q_m,q_l\\ge300.$$ No uniform upper bound on these powers is needed at this step. These are the child bounds for the invariant <a href=\"#tra:collision-series:eq1\" data-reference-type=\"eqref\" data-reference=\"tra:collision-series:eq1\">[tra:collision-series:eq1]</a> closed below. There is an absolute $A$ such that with $$p=(1+A/\\log n)\\max(q_m,q_l)$$ we have $$\\operatorname{Tr} \\mathcal Q_n^p\\ \\le\\ \\exp(n^{0.57}) \\label{tra:collision-series:eq6}$$ for all sufficiently large $n$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tra-collision-series-weak-moment-statement"
+  },
+  {
+   "claim_id": "claim-collision-series-positive-level-trace",
+   "exact_statement": "<span id=\"tra:collision-series:sparse-trace\" label=\"tra:collision-series:sparse-trace\"></span> For small levels $k$, by which we refer to $k=n-\\lambda_1$, we use the following estimate, independent of <a href=\"#tra:collision-series:eq6\" data-reference-type=\"eqref\" data-reference=\"tra:collision-series:eq6\">[tra:collision-series:eq6]</a>, for all large enough $n$: $$B_k:=\\sum_{\\lambda:\\ n-\\lambda_1=k} f^{\\bar\\lambda}\\operatorname{Tr}_\\lambda \\mathcal Q_n\n\\ \\le\\ n^{-0.01 k},\n\\qquad 1\\le k\\le n^{0.62}. \\label{tra:collision-series:eq9}$$ Here $\\bar\\lambda$ is the partition obtained by omitting the first row. We include $B_0$ in the notation in deriving the estimate, with empty tableau dimension 1.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tra-collision-series-sparse-trace-statement"
+  },
+  {
+   "claim_id": "claim-collision-series-closed-moment",
+   "exact_statement": "<span id=\"tra:collision-series:moment\" label=\"tra:collision-series:moment\"></span> There are uniformly bounded real exponents $q_n\\ge 300$, for the powers of two $n\\ge 2$, such that $$\\operatorname{Tr} \\mathcal Q_n^{q_n}\\ \\le\\ 1+\\tfrac18. \\label{tra:collision-series:eq1}$$ An absolute integer number of sweeps therefore has chi-square divergence at most $1/8$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tra-collision-series-main-statement"
+  },
+  {
+   "claim_id": "claim-convex-perspective-singular-bound",
+   "exact_statement": "There is an absolute $c>0$ such that, for every dyadic $n\\ge2$, every nontrivial partition $\\lambda\\vdash n$, and $1\\le j\\le D_\\lambda$, $$s_j(T_n|_{V_\\lambda})\\le\n       \\exp\\{-c\\mathcal W(k\\log n,\\log(D_\\lambda j))\\}.$$ In particular all singular values are bounded by a fixed negative power of $D_\\lambda j$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rec-perspective-singular"
+  },
+  {
+   "claim_id": "claim-biased-grid-fourth-overlap",
+   "exact_statement": "There is an absolute constant $C>0$ such that the following holds for every $n=2^d$ with $d\\ge1$, on the balanced grid $a=2^{\\lfloor d/2\\rfloor}$, $b=2^{\\lceil d/2\\rceil}$. For each row or column line $i$, choose an irreducible type $\\rho_i$ of its line symmetric group. Let $V_{\\rho_i}$ be one carrier, put $D_{\\rho_i}=\\dim V_{\\rho_i}$, and choose an orthogonal projection $E_i$ on $V_{\\rho_i}$, extended by zero on the other Fourier types. Let $R$ and $S$ be the tensor products of these projections over the rows and columns, respectively, viewed as group-algebra operators for $S_n$. If any $E_i$ is zero, then $RS=0$. Otherwise put $$r_i=\\operatorname{rank}_{V_{\\rho_i}}E_i,\\qquad\n D_c=\\sum_i\\log(D_{\\rho_i}r_i),$$ where the sum includes both directions. Thus $r_i$ is a positive carrier rank, and the corresponding line group-algebra projection has rank $D_{\\rho_i}r_i$ in the regular representation. For every $\\lambda\\vdash n$, write $R_\\lambda,S_\\lambda$ for the actions on one copy of $V_\\lambda$. Then, with unnormalized trace, $$D_\\lambda\\mathop{\\mathrm{Tr}}_{V_\\lambda}\n   (R_\\lambda S_\\lambda R_\\lambda S_\\lambda)\n \\le\\exp\\{D_c+C D_c/\\log n+C n^{1-1/40}\\}.$$ The factor $D_\\lambda$ is the multiplicity in the regular representation. No restriction is imposed on the parent partition $\\lambda$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rec-biased-grid-fourth"
+  },
+  {
+   "claim_id": "claim-perspective-power-product-interpolation",
+   "exact_statement": "If $A,C$ are positive semidefinite operators on a finite-dimensional Hilbert space and $v\\ge1$, then, for every admissible $j$, $$\\label{grid:perspective-power-products}\n \\prod_{i=1}^j s_i(CA)\n \\le \\left(\\prod_{i=1}^j s_i(C^vA^v)\\right)^{1/v}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-grid-perspective-power-interpolation"
+  },
+  {
+   "claim_id": "claim-singular-band-grid-fourth",
+   "exact_statement": "Put $m=\\min(a,b)$ and assume $a,b\\le2m$, with $m$ sufficiently large. Write $K=(S_b)^a$ and $L=(S_a)^b$ for the row and column groups. Let $Y=Y_LY_K$, where $Y_K$ and $Y_L$ are tensor products of operators on the row and column permutation groups. Assume each local factor is supported in one irreducible Fourier matrix of dimension $D_i$, has rank at most $r_i$, and has operator norm at most $b_i$. If a local factor is zero, then $Y=0$. Otherwise $r_i>0$ for every $i$; put $x=\\sum_i\\log(D_ir_i)$. In this case, for every $\\lambda\\vdash n=ab$, $$D_\\lambda\\mathop{\\mathrm{Tr}}|Y_\\lambda|^4\n \\le \\exp\\{Cn m^{-1/16}+Cx/\\log m\\}\n                         \\prod_i D_ir_i b_i^4.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rec-band-grid-entropy"
+  },
+  {
+   "claim_id": "claim-singular-band-all-rank-power",
+   "exact_statement": "There is an absolute $\\alpha>0$ such that $s_t(T_n|_{V_\\lambda})\\le(D_\\lambda t)^{-\\alpha}$ for every dyadic $n\\ge2$, every $\\lambda\\vdash n$, and every $1\\le t\\le D_\\lambda$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rec-all-rank-power"
+  },
+  {
+   "claim_id": "claim-pointwise-smoothed-density",
+   "exact_statement": "Let $\\mu\\vdash q$, $j=q-\\mu_1$, and $\\ell=\\log m$, where $m\\le q\\le2m$ and $m$ is sufficiently large. Let $\\mathcal C_\\mu$ be the space spanned by the matrix coefficients of $V_\\mu$, with the $L^2$ inner product for uniform measure on $S_q$. Put $$p_t=e^{-\\sqrt\\ell-t},\\quad\n 0\\le t\\le\\lfloor\\ell/32-\\sqrt\\ell\\rfloor,\n \\qquad h_0=\\lfloor\\ell^{-4}j\\rfloor.$$ For each $a\\in\\mathcal C_\\mu$ with $\\mathbb E|a|^2=1$, there is a positive sum $Y$ of squared functions in $\\mathcal C_\\mu$ such that $\\mathbb E Y=1$, $|a(g)|^2\\le2Y(g)$, and $Y(g)\\le D_\\mu^2$ for every $g\\in S_q$. For every allowed $t$, every $g$ with $Y(g)>0$, and a Bernoulli-$p_t$ subset $A$ of sites, $$\\label{rec:smoothing-ratio}\n \\mathbb E_A\\log\\frac{Y(g)}{(Q_A Y)(g)}\n \\le\\log4+C\\ell^{-4}j\\log q.$$ Here $(Q_A Y)(g)=|S_A|^{-1}\\sum_{h\\in S_A}Y(gh)$, where $S_A$ fixes every site outside $A$. The same assertion holds if the initial $|a|^2$ is any positive sum of squared coefficient functions of mean one.",
+   "kind": "construction",
+   "statement_anchor": "stmt-rec-pointwise-smoothing"
+  },
+  {
+   "claim_id": "claim-conditioned-smoothed-grid-fourth",
+   "exact_statement": "Let $m=\\min(a,b)\\ge2$, with $a,b\\le2m$. For product Fourier projections $I,J$ in the line groups, of local types $\\mu_i$ with at most half as many rows as line sites and carrier ranks $r_i$, a zero local rank makes $I$ or $J$ zero. Otherwise put $D_0=\\sum_i\\log(D_{\\mu_i}r_i)$. Then $$\\mathop{\\mathrm{Tr}}_{\\mathrm{reg}}|JI|^4\n \\le\\exp\\{(1+C/\\sqrt{\\log m})D_0+Cn m^{-1/40}\\}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rec-smoothed-grid-fourth"
+  },
+  {
+   "claim_id": "claim-smoothed-all-index-recursion",
+   "exact_statement": "There is a bounded sequence $p_d\\ge8$ such that $s_r(T_n|_{V_\\lambda})\\le(D_\\lambda r)^{-1/p_d}$ for every $n=2^d$, every $\\lambda\\vdash n$, and $1\\le r\\le D_\\lambda$. One may take, above a fixed base dimension, $$p_d=(1+A/\\sqrt d)\\max\\{p_{\\lfloor d/2\\rfloor},\n                              p_{\\lceil d/2\\rceil}\\}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rec-smoothed-singular"
+  }
+ ],
+ "paper": "papers/EN-115-000-0000-2-2026-PR-T4-UK-EX-M2-B-ML-M-0495_PM-238.9_Compatibility_entropy_and_the_spectrum_of_a_Thorp_sweep.md",
+ "purpose": "Compatibility entropy and the spectrum of a Thorp sweep",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "787be9e43c6249bbcb19940910e937e35a4c81da162058a358b541cedd875906",
+   "pm.domains.v2": "d01740fbe480fab7e83f26d629dc147db37efc1f251c2718a908bef53edbd272",
+   "pm.edges.v2": "3d7456c2607df555b990c63519cf830293bb0bd613b7d532098c24ebaf844509",
+   "pm.extraction.v2": "25ec47bb30983a9fac46623c745f0e2998452e3443c2a6ae38810908e58dbab8",
+   "pm.formal.v2": "a646d9e26512b1cb05a7aa1252970699d428cb1efa062aad75fb0843822c352c",
+   "pm.limits.v2": "5b47528a14b2bbd55412af8fefc807bc4fa812a6c531735733f0bf251ea8a5e9",
+   "pm.node.v2": "0200b7d02695f54698bd30ab88158273c64e37fd99f909e7ea6643b11170bad1",
+   "pm.objects.v2": "eeb19116231ee139f386a53787c4f35a6b83c8a6764a72a2512970aea7bfea1b",
+   "pm.provenance.v2": "11e1ea5ac57ef7664f7923e97022bbf431f0b5719d6e12ef2bf31ce9525d1d53",
+   "pm.quantities.v2": "6f2621e0ae7b814930ff2e2fdc9ae709a298498fd579c0cc30a04675ff3ed5ab",
+   "pm.reading.v2": "e7263c1a96c6a0065137c9d9e855f3a32740e375931fad3b2d4023c13f67f992",
+   "pm.roadmap.v2": "abfe2a83347fde58035a380070344dc3afcd26a6727360b179d213d67c23a18f",
+   "pm.search.v1": "db70b77ed74f42e6020d910ba319ccf8557f6ec43268479e67178d71b6b67c88",
+   "pm.triptych.v2": "a44457f216df4211235d1a4dd054bcb76eae895f774242fea7621f6193ebb6d6"
+  },
+  "canonical_sha256": "e6e5ac96147bd12c9f600e8816936a51d587cd95231df388a856365480f7abd3",
+  "paper_sha256": "dc758c4dc15eb1afbac9194ef008c074551d84906da8a41dcb1d53885678e9a1",
+  "repaired_body_sha256": "de10c836690e4f861fb59d1fdb649b36a7c37b1bce7ca47b750d6f10441d95ff"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "56f8d780c6ad7795cdcdacb6ebc30d40852e0daa9d692ae426e1fb719db6eb71",
+   "receipt_sha256": "b12fcab26799fd78069ddba54806d3d9139fa71cb8159c280c9c16406b3b55ba",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Compatibility entropy and the spectrum of a Thorp sweep"
+}

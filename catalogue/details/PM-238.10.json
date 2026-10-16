@@ -1,0 +1,616 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 822894,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 249302
+ },
+ "coordinate": "EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-M-0496",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-cor-decision-forest",
+     "quote": "For $n=2^d$ there is a decision forest whose output is always a permutation of $[n]$, whose input consists of independent fair bits, and whose coordinate trees have depth $O(\\log n)$, such that the output law has total variation distance $o(1)$ from uniform as $d\\to\\infty$.",
+     "quote_sha256": "fa21549b30441da5f6983d1781160e3b309593e84fa6580933dbe2dfbe2a25ed"
+    }
+   ],
+   "query": "keyed pseudorandom permutation security",
+   "reason": "The construction needs fresh independent fair bits at every switch, not a compact key."
+  }
+ ],
+ "family": "PM-238",
+ "id": "PM-238.10",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-s-spin-moment",
+    "claim_id": "claim-spin-moment",
+    "statement": "<span id=\"ten:spin:main\" label=\"ten:spin:main\"></span>For each sufficiently small fixed $\\bar\\eta>0$, choose a sufficiently small $\\bar\\kappa>0$ with $\\bar\\kappa<\\bar\\eta/256$."
+   },
+   {
+    "anchor": "stmt-cor-spin-full-deck",
+    "claim_id": "claim-full-deck-convergence",
+    "statement": "There is an absolute positive integer $L$ such that $$\\mathbb E_{U_{S_n}}|f_{d,L}-1|^2\\longrightarrow0\n \\qquad(d\\longrightarrow\\infty).$$"
+   },
+   {
+    "anchor": "stmt-lem-annihilation",
+    "claim_id": "claim-annihilation",
+    "statement": "The sign representation is annihilated by every nonempty fair layer."
+   },
+   {
+    "anchor": "stmt-lem-finitegap",
+    "claim_id": "claim-finite-gap",
+    "statement": "For every fixed dyadic $n\\ge2$, $\\|B_n(\\lambda)\\|_{\\mathrm{op}}<1$ on every nontrivial irreducible."
+   },
+   {
+    "anchor": "stmt-ten-support",
+    "claim_id": "claim-support-obstruction",
+    "statement": "<span id=\"lem:support\" label=\"lem:support\"></span>For every integer $t\\ge0$, $$\\|q_d^{*t}-U_{S_n}\\|_{\\mathrm{TV}}\\ge1-2^{tn/2}/n!.$$"
+   },
+   {
+    "anchor": "stmt-lem-schatten",
+    "claim_id": "claim-schatten-powers",
+    "statement": "For integers $r\\ge s\\ge1$ and any matrix $T$, setting $Q=T^*T$, $$\\|T^r\\|_{\\mathrm{HS}}^2\\le\\|Q\\|_{\\mathrm{op}}^{r-s}\\mathop{\\mathrm{Tr}}Q^s.$$"
+   },
+   {
+    "anchor": "stmt-lem-degrees",
+    "claim_id": "claim-degree-sums",
+    "statement": "Uniformly in $n$, $\\sum_{\\lambda\\vdash n}D_\\lambda^{-1}$ is bounded, and $$\\sum_{\\lambda\\ne(n),(1^n)}D_\\lambda^{-1}\\longrightarrow0.$$"
+   },
+   {
+    "anchor": "stmt-lem-signed-type-density",
+    "claim_id": "claim-signed-type-density",
+    "statement": "For every such $(a,b)$ there is a probability distribution on even densities $R$ such that $$Q_{a,b}\\preceq e^{F(a,b)}u(a,b)\\,\\mathbb E R^{\\otimes p}.\n \\label{eq:signed-type-density-exact}$$ For every even density $T$ and every type $(a,b)$, $$\\|T^{\\otimes p}Q_{a,b}\\|_{\\rm op}\\le e^{-F(a,b)}.\n \\label{eq:signed-global-density-upper}$$ Moreover $u(a,b)\\le(p+1)^{q(q-1)}$.*\n\n\n*For arbitrary parity dimensions, the upper bound has the following carrier form."
+   },
+   {
+    "anchor": "stmt-thm-one-sided-type-angle",
+    "claim_id": "claim-one-sided-angle",
+    "statement": "Let $W$ be any set of $p=sm-l$ occupied cells of an $s$-row, $m$-column rectangle."
+   },
+   {
+    "anchor": "stmt-lem-pointwise-positive-restriction",
+    "claim_id": "claim-positive-restriction",
+    "statement": "Let $G$ be finite, let $H\\le G$, and let $x=\\sum_{g\\in G}x_g g$ be positive in $\\mathbb C[G]$."
+   },
+   {
+    "anchor": "stmt-lem-signed-hook-carriers",
+    "claim_id": "claim-hook-carriers",
+    "statement": "Fix $N\\ge p\\ge0$, $q\\ge1$, and put $B=N+q+1$."
+   },
+   {
+    "anchor": "stmt-s-local-stabilizer-trace",
+    "claim_id": "claim-local-stabilizer-trace",
+    "statement": "Suppose $x\\succeq0$ is in $\\mathbb C[S_t]$, $h$ specified points are fixed, and $a,b$ each have at most $q$ parts and total size $t-h$."
+   },
+   {
+    "anchor": "stmt-lem-spin-dimension-range",
+    "claim_id": "claim-dimension-range",
+    "statement": "There is an absolute $c>0$ such that, for all sufficiently large $n$, if $\\lambda\\vdash n$ has at most $n/2$ rows and $k=n-\\lambda_1\\ge1$, then $$\\log D_\\lambda\\ge\n \\begin{cases}\n c k\\log(n/k),&k\\le n/4,\\\\\n c n,&k\\ge n/4.\n \\end{cases}$$"
+   },
+   {
+    "anchor": "stmt-lem-spin-zero-hole",
+    "claim_id": "claim-zero-hole",
+    "statement": "There is an absolute $C_0$ such that, for all sufficiently large $n$, every $\\lambda\\vdash n$ with at most $n/2$ rows has an occurrence <a href=\"#ten:spin:eq:1\" data-reference-type=\"eqref\" data-reference=\"ten:spin:eq:1\">[ten:spin:eq:1]</a> with $l=0$ and $$F(\\alpha,\\beta)\\le C_0\\log D_\\lambda.\n \\label{ten:spin:eq:4}$$"
+   },
+   {
+    "anchor": "stmt-cor-decision-forest",
+    "claim_id": "claim-decision-forest",
+    "statement": "For $n=2^d$ there is a decision forest whose output is always a permutation of $[n]$, whose input consists of independent fair bits, and whose coordinate trees have depth $O(\\log n)$, such that the output law has total variation distance $o(1)$ from uniform as $d\\to\\infty$."
+   },
+   {
+    "anchor": "stmt-thm-signed-isotypic-density",
+    "claim_id": "claim-isotypic-density",
+    "statement": "Let $P_\\rho$ be the symmetric-group isotypic projection of shape $\\rho\\vdash p$ on the signed tensor power $V^{\\otimes p}$."
+   },
+   {
+    "anchor": "stmt-cor-signed-isotypic-angle",
+    "claim_id": "claim-isotypic-angle",
+    "statement": "On the board $W$ of Theorem <a href=\"#thm:one-sided-type-angle\" data-reference-type=\"ref\" data-reference=\"thm:one-sided-type-angle\">9</a>, let $P_\\gamma$ be a full $S_p$-isotypic projection, and let $P_R,P_C$ be products of full symmetric-group isotypic projections on the occupied row and column sites."
+   },
+   {
+    "anchor": "stmt-s-one-sided-marked-overlap",
+    "claim_id": "claim-marked-overlap",
+    "statement": "Let $W$ contain $n-t$ occupied cells in an $a$ by $b$ board, $n=ab$."
+   },
+   {
+    "anchor": "stmt-ten-positive-mixtures",
+    "claim_id": "claim-positive-mixtures",
+    "statement": "Let $A,B\\succeq0$ and suppose $A\\preceq c_A\\int A_x\\,d\\mu(x)$ and $B\\preceq c_B\\int B_y\\,d\\nu(y)$, where $c_A,c_B\\ge0$, all integrands are positive, and $\\mu,\\nu$ are probability measures."
+   },
+   {
+    "anchor": "stmt-ten-missing-cells",
+    "claim_id": "claim-missing-cells",
+    "statement": "Let $\\rho_i$ and $\\sigma_j$ be trace-one positive matrices indexed by $a$ rows and $b$ columns."
+   },
+   {
+    "anchor": "stmt-s-compact-coefficient-extraction",
+    "claim_id": "claim-coefficient-extraction",
+    "statement": "Let $K$ be a compact group, let $\\rho$ be a finite-dimensional unitary representation on $\\mathcal H$, and let $\\pi$ be an irreducible unitary representation on $\\mathcal U$ of dimension $M$."
+   },
+   {
+    "anchor": "stmt-s-general-marked-recurrence",
+    "claim_id": "claim-general-marked-recurrence",
+    "statement": "Let $n=ab\\ge4$, where $a,b\\ge2$ are powers of two and $|\\log_2a-\\log_2b|\\le1$."
+   },
+   {
+    "anchor": "stmt-s-inverse-budget-specialization",
+    "claim_id": "claim-inverse-budget-specialization",
+    "statement": "Under the hypotheses of Proposition <a href=\"#s:general-marked-recurrence\" data-reference-type=\"ref\" data-reference=\"s:general-marked-recurrence\">22</a>, let $0\\le\\theta\\le1$, let $c$ be real, and let $\\mathcal B_a,\\mathcal B_b\\ge0$."
+   },
+   {
+    "anchor": "stmt-ten-named-main",
+    "claim_id": "claim-named-main",
+    "statement": "For the constants fixed above, there are absolute choices of $C_0$ and an integer $h\\ge1$ such that, for every dyadic $n\\ge2$, every $\\lambda\\vdash n$, and every occurrence shown below with $m=|\\tau|$, $$\\lambda\\ \\text{in}\\ \\mu*\\nu^{\\rm t}*\\tau\n \\quad\\Longrightarrow\\quad\n W_n(\\lambda)\n \\le\n \\exp\\{ \\beta_n \\mathcal S(\\mu,\\nu)+ R_n(m)\\}.\n \\label{ten:named:eq:9}$$"
+   },
+   {
+    "anchor": "stmt-s-lowering-norm",
+    "claim_id": "claim-lowering-norm",
+    "statement": "There are absolute constants $c>0$ and $C$ such that, for every dyadic $n\\ge2$ and every $\\lambda\\vdash n$ with $2\\le k=n-\\lambda_1\\le n/2$, $$\\|B_n\\|_\\lambda^2 \\le \\exp(-c k\\log(n/k)+C k),\\qquad\n                         2\\le k\\le n/2                     \\label{ten:lowering:eq:1}$$ The block with defect one is zero."
+   },
+   {
+    "anchor": "stmt-ten-lowering-main",
+    "claim_id": "claim-lowering-main",
+    "statement": "For the fixed constants above, there is a family of real powers $p_n\\ge8$, bounded uniformly over dyadic $n\\ge2$, such that every $\\lambda\\vdash n$ satisfies $$\\label{ten:lowering:eq:6}\n D_\\lambda\\operatorname{Tr}_\\lambda |B_n|^{p_n}\n \\le \\exp L_n(\\lambda),\\qquad\n L_n(\\lambda)=\\min_{\\substack{\\eta\\subseteq\\lambda\\\\q_n\\text{-hook}}}\n             \\{\\beta F(\\eta)+G_n(n-|\\eta|)\\}.$$"
+   },
+   {
+    "anchor": "stmt-s-lowering-inherited-hook",
+    "claim_id": "claim-inherited-hook",
+    "statement": "Suppose, at a sufficiently large dyadic size $m$, positive numbers $E_\\mu$ satisfy $$\\log E_\\mu\\le \\beta F(\\eta_0)+G_m(m-|\\eta_0|)\n \\quad\\text{for every $q_m$-hook $\\eta_0\\subseteq\\mu$.}\n \\label{ten:lowering:eq:4}$$ Then every subdiagram $\\eta\\subseteq\\mu$, of size $m-l$, satisfies $$\\log E_\\mu\\le\\beta F(\\eta)+G_m(l).\n                                                                  \\label{ten:lowering:eq:5}$$ The same conclusion is automatic when $E_\\mu=0$, with logarithm $-\\infty$."
+   },
+   {
+    "anchor": "stmt-ten-compressed-main",
+    "claim_id": "claim-compressed-main",
+    "statement": "For sufficiently small fixed $b>0$ and then sufficiently small fixed $c>0$, there are a constant $C$ and exponents $p_d\\ge2$ with $\\sup_{d\\ge1}p_d<\\infty$ such that, for every $d\\ge1$ and every $\\lambda\\vdash n=2^d$, $$D_\\lambda {\\rm tr}|\\rho_\\lambda(B_n)|^{p_d}\\le\n \\exp\\{L_n(\\lambda)+C n^{1-c/2}\\}.\n \\label{ten:compressed:eq:1}$$"
+   },
+   {
+    "anchor": "stmt-ten-simultaneous-main",
+    "claim_id": "claim-simultaneous-main",
+    "statement": "There are an absolute threshold $D$ and, after $D$ is fixed, an absolute power of two $p\\ge1$ such that the following bounds hold at every level $l\\ge0$ and every size $n=2^d$ with $1\\le d\\le2^lD$."
+   },
+   {
+    "anchor": "stmt-s-inverse-bounded-exponent",
+    "claim_id": "claim-inverse-bounded-exponent",
+    "statement": "There are real exponents $p_d\\ge2$, with $\\sup_{d\\ge1}p_d<\\infty$, such that for every $d\\ge1$ and every $\\lambda\\vdash n=2^d$, $$\\log J_n(\\lambda,p_d)\\le\n \\begin{cases}\n G_n(\\lambda),&n-\\lambda_1>n^{1-\\epsilon},\\\\\n 0,&n-\\lambda_1\\le n^{1-\\epsilon}.\n \\end{cases}$$ For all sufficiently large $n$, the second bound strengthens to $\\log J_n(\\lambda,p_d)\\le-10k\\log n$ when $1\\le k=n-\\lambda_1\\le n^{1-\\epsilon}$."
+   },
+   {
+    "anchor": "stmt-ten-inverse-main",
+    "claim_id": "claim-inverse-main",
+    "statement": "Say that a diagram fits the $q$-hook if all cells belong to its first $q$ rows or its first $q$ columns."
+   },
+   {
+    "anchor": "stmt-s-arbitrary-hook-child-allowance",
+    "claim_id": "claim-arbitrary-hook-allowance",
+    "statement": "There are absolute $C$ and $m_0$ with the following property."
+   },
+   {
+    "anchor": "stmt-rec-deletion-moment",
+    "claim_id": "claim-deletion-moment",
+    "statement": "There are real exponents $p(d)\\ge1$, indexed by integers $d\\ge1$, with $\\sup_{d\\ge1}p(d)<\\infty$ such that, for every integer $d\\ge1$ and every partition $\\lambda\\vdash n=2^d$, $$D_\\lambda\\mathop{\\mathrm{Tr}}|B_n|^{2p(d)}\\le e^{E_n^+(\\lambda)}.$$"
+   },
+   {
+    "anchor": "stmt-rec-hybrid-main",
+    "claim_id": "claim-hybrid-main",
+    "statement": "There is a fixed positive integer $p$ such that, simultaneously for every integer $d\\ge1$ and every partition $\\lambda=(n-k,\\beta)\\vdash n=2^d$ with $\\lambda\\ne(n)$ and $\\lambda'_1\\le n/2$, where $k=n-\\lambda_1\\ge1$, $$\\begin{aligned}\n \\log T_n^\\lambda(p)&\\le\n k\\log n\\left(u_d-\\Lambda\n          \\left(\\frac{\\log(n/k)}{\\log n}\\right)^2\\right),\n       \\label{rec:hybrid-level-budget}\\\\\n \\log T_n^\\lambda(p)&\\le\\mathcal D_d(\\lambda).\n       \\label{rec:hybrid-diagram-budget}\n\\end{aligned}$$ If $\\log(n/k)/\\log n\\ge\\epsilon$, the first bound is at most $-k\\log n$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "fixed-sweep mixing",
+    "evidence": [
+     {
+      "anchor": "stmt-lem-schatten",
+      "quote": "For integers $r\\ge s\\ge1$ and any matrix $T$, setting $Q=T^*T$, $$\\|T^r\\|_{\\mathrm{HS}}^2\\le\\|Q\\|_{\\mathrm{op}}^{r-s}\\mathop{\\mathrm{Tr}}Q^s.$$",
+      "quote_sha256": "4e92cf2b034124d08833952aef5a9f86634bfa95afa5c309e35595d85d818f21"
+     }
+    ],
+    "requires_concepts": [
+     "Plancherel on the symmetric group",
+     "Specht module dimensions",
+     "Schatten Holder"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-spin-moment",
+   "exact_statement": "<span id=\"ten:spin:main\" label=\"ten:spin:main\"></span>For each sufficiently small fixed $\\bar\\eta>0$, choose a sufficiently small $\\bar\\kappa>0$ with $\\bar\\kappa<\\bar\\eta/256$. There is an integer $r\\ge1$, depending only on these fixed constants, such that for every $d\\ge1$, every $\\lambda\\vdash n=2^d$, and every occurrence <a href=\"#ten:spin:eq:1\" data-reference-type=\"eqref\" data-reference=\"ten:spin:eq:1\">[ten:spin:eq:1]</a>, $$\\label{ten:spin:eq:3}\n \\log\\!\\left(D_\\lambda\\operatorname{Tr}_{V_\\lambda}(B_n^*B_n)^r\\right)\n \\le\\eta_d F(\\alpha,\\beta)+g_n(l),$$ where $$\\eta_d=\\bar\\eta\\left(1-\\frac1{2\\sqrt d}\\right),\\qquad\n \\kappa_d=\\bar\\kappa\\left(1-\\frac1{2\\sqrt d}\\right),\\qquad\n g_n(l)=\\max\\{0,\\kappa_d l\\log n-l\\log(n/l)\\}.$$ Set $g_n(0)=0$ and interpret the logarithm of a zero trace as $-\\infty$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-s-spin-moment"
+  },
+  {
+   "claim_id": "claim-full-deck-convergence",
+   "exact_statement": "There is an absolute positive integer $L$ such that $$\\mathbb E_{U_{S_n}}|f_{d,L}-1|^2\\longrightarrow0\n \\qquad(d\\longrightarrow\\infty).$$ The convergence is uniform over starting orders. Moreover $t_{\\mathrm{mix}}(d)=\\Theta(d)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-spin-full-deck"
+  },
+  {
+   "claim_id": "claim-annihilation",
+   "exact_statement": "The sign representation is annihilated by every nonempty fair layer. Every irreducible of $S_n$ indexed by a shape with more than $n/2$ rows is annihilated by a sweep.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-annihilation"
+  },
+  {
+   "claim_id": "claim-finite-gap",
+   "exact_statement": "For every fixed dyadic $n\\ge2$, $\\|B_n(\\lambda)\\|_{\\mathrm{op}}<1$ on every nontrivial irreducible.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-finitegap"
+  },
+  {
+   "claim_id": "claim-support-obstruction",
+   "exact_statement": "<span id=\"lem:support\" label=\"lem:support\"></span>For every integer $t\\ge0$, $$\\|q_d^{*t}-U_{S_n}\\|_{\\mathrm{TV}}\\ge1-2^{tn/2}/n!.$$ Consequently $t_{\\mathrm{mix}}(d)\\ge\\lceil(2/n)\\log_2(3n!/4)\\rceil=2d-O(1)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ten-support"
+  },
+  {
+   "claim_id": "claim-schatten-powers",
+   "exact_statement": "For integers $r\\ge s\\ge1$ and any matrix $T$, setting $Q=T^*T$, $$\\|T^r\\|_{\\mathrm{HS}}^2\\le\\|Q\\|_{\\mathrm{op}}^{r-s}\\mathop{\\mathrm{Tr}}Q^s.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-schatten"
+  },
+  {
+   "claim_id": "claim-degree-sums",
+   "exact_statement": "Uniformly in $n$, $\\sum_{\\lambda\\vdash n}D_\\lambda^{-1}$ is bounded, and $$\\sum_{\\lambda\\ne(n),(1^n)}D_\\lambda^{-1}\\longrightarrow0.$$ If $\\ell=n-\\max(\\lambda_1,\\lambda'_1)$, then $$\\log D_\\lambda\\ge(\\log2)\\sqrt\\ell/2,\n \\qquad \\sup_n\\sum_{\\lambda\\vdash n}D_\\lambda^{-32}<\\infty.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-degrees"
+  },
+  {
+   "claim_id": "claim-signed-type-density",
+   "exact_statement": "For every such $(a,b)$ there is a probability distribution on even densities $R$ such that $$Q_{a,b}\\preceq e^{F(a,b)}u(a,b)\\,\\mathbb E R^{\\otimes p}.\n \\label{eq:signed-type-density-exact}$$ For every even density $T$ and every type $(a,b)$, $$\\|T^{\\otimes p}Q_{a,b}\\|_{\\rm op}\\le e^{-F(a,b)}.\n \\label{eq:signed-global-density-upper}$$ Moreover $u(a,b)\\le(p+1)^{q(q-1)}$.*\n\n\n*For arbitrary parity dimensions, the upper bound has the following carrier form. Let $E_+=\\mathbb C^{r_+}$ and $E_-=\\mathbb C^{r_-}$, for nonnegative integers $r_+,r_-$, and let $a,b$ have at most $r_+,r_-$ parts, respectively, with $|a|+|b|=p$. Write $\\mathbf S_a(E_+)$ and $\\mathbf S_b(E_-)$ for the ordinary polynomial carriers of highest weights $a,b$. For a positive parity-preserving matrix $T$ on $E_+\\oplus E_-$, let its induced carrier action be $\\pi_{a,b}(T)=\\mathbf S_a(T|_{E_+})\\otimes\\mathbf S_b(T|_{E_-})$. With $F(a,b)$ given by the same entropy formula, $$\\|\\pi_{a,b}(T)\\|_{\\rm op}\n \\le (\\operatorname{Tr}T)^p e^{-F(a,b)}.\n \\label{eq:signed-carrier-density-upper}$$ A zero-dimensional factor has the empty partition and contributes the scalar identity. If $p=0$, then $\\pi_{a,b}(T)=1$ and the right-hand side is interpreted as one, even when $\\operatorname{Tr}T=0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-signed-type-density"
+  },
+  {
+   "claim_id": "claim-one-sided-angle",
+   "exact_statement": "Let $W$ be any set of $p=sm-l$ occupied cells of an $s$-row, $m$-column rectangle. On $V^{\\otimes W}$, let $P$ be the global $G_q$-type projection with type $(\\alpha,\\beta)$, and let $P_H$ and $P_K$ be products of prescribed column and row $G_q$-type projections. Write $(a^j,b^j)$ for the column types and $(c^i,d^i)$ for the row types, with sizes equal to their respective occupied block sizes. Put $$\\begin{gathered}\n F=F(\\alpha,\\beta),\\qquad F_H=\\sum_jF(a^j,b^j),\\qquad\n F_K=\\sum_iF(c^i,d^i),\\\\\n U_H=\\prod_ju(a^j,b^j),\\qquad U_K=\\prod_iu(c^i,d^i).\n \\end{gathered}$$ If $b_i$ cells are missing from row $i$, put $$\\Phi_K(W)=\\prod_{i:b_i<m}\n       \\left(\\frac m{m-b_i}\\right)^{m-b_i},$$ using factor one when a row is empty. Then $$\\|P_H P_KP\\|_{\\rm op}^2\n \\le\\min\\{1,e^{F_H+F_K-F}U_HU_K\\Phi_K(W)\\}\n \\le\\min\\{1,e^{F_H+F_K-F+l}U_HU_K\\}.\n \\label{eq:one-sided-type-angle-exact}$$ In particular $U_HU_K\\le(p+1)^{(s+m)q(q-1)}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-one-sided-type-angle"
+  },
+  {
+   "claim_id": "claim-positive-restriction",
+   "exact_statement": "Let $G$ be finite, let $H\\le G$, and let $x=\\sum_{g\\in G}x_g g$ be positive in $\\mathbb C[G]$. Set $E_Hx=\\sum_{h\\in H}x_hh$. For $\\rho\\in\\widehat H$ let $\\Lambda_\\rho$ be the set of $\\mu\\in\\widehat G$ whose restriction to $H$ contains $\\rho$. With $d_\\rho=\\dim\\rho$ and $d_\\mu=\\dim\\mu$, $$0\\le\\operatorname{Tr}_\\rho(E_Hx)\n \\le\\frac1{[G:H]d_\\rho}\n       \\sum_{\\mu\\in\\Lambda_\\rho}d_\\mu\\operatorname{Tr}_\\mu(x).\n \\label{eq:pointwise-positive-restriction}$$ For $G=S_s$ and $H=S_{s-h}$ fixing $h$ specified points, the index is $(s)_h=s!/(s-h)!$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-pointwise-positive-restriction"
+  },
+  {
+   "claim_id": "claim-hook-carriers",
+   "exact_statement": "Fix $N\\ge p\\ge0$, $q\\ge1$, and put $B=N+q+1$. If $V_\\rho$ occurs in $\\mathcal M_{a,b}$ from <a href=\"#eq:signed-sector-decomposition\" data-reference-type=\"eqref\" data-reference=\"eq:signed-sector-decomposition\">[eq:signed-sector-decomposition]</a>, then $\\rho_{q+1}\\le q$ and $$e^{F(a,b)}B^{-7q^2}\\le D_\\rho,\n \\qquad\n \\dim\\mathcal M_{a,b}\\le e^{F(a,b)}.\n \\label{eq:hook-dimension-explicit}$$ The multiplicity of any $V_\\rho$ in $V^{\\otimes p}$ is at most $B^{10q^2}$. The occurring shapes are exactly the $(q,q)$-hook shapes. There are at most $(p+1)^{2q}$ such shapes.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-signed-hook-carriers"
+  },
+  {
+   "claim_id": "claim-local-stabilizer-trace",
+   "exact_statement": "Suppose $x\\succeq0$ is in $\\mathbb C[S_t]$, $h$ specified points are fixed, and $a,b$ each have at most $q$ parts and total size $t-h$. Fix an arbitrary real scalar $G$. Assume, for every $\\mu\\vdash t$ extending a constituent of $\\mathcal M_{a,b}$, $$D_\\mu\\operatorname{Tr}_\\mu x\n \\le \\exp\\{\\eta F(a,b)+G\\},\\qquad 0\\le\\eta\\le1.$$ Write $\\mathsf p(t)$ for the number of partitions of $t$, and let $B=N+q+1$ with $N\\ge t$. Then $$\\operatorname{Tr}(Q_{a,b}E_{S_{t-h}}x)\n \\le \\frac{\\mathsf p(t)}{(t)_h}\n    B^{15q^2}\\exp\\{-(1-\\eta)F(a,b)+G\\}.\n \\label{eq:local-stabilizer-trace-explicit}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-s-local-stabilizer-trace"
+  },
+  {
+   "claim_id": "claim-dimension-range",
+   "exact_statement": "There is an absolute $c>0$ such that, for all sufficiently large $n$, if $\\lambda\\vdash n$ has at most $n/2$ rows and $k=n-\\lambda_1\\ge1$, then $$\\log D_\\lambda\\ge\n \\begin{cases}\n c k\\log(n/k),&k\\le n/4,\\\\\n c n,&k\\ge n/4.\n \\end{cases}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-spin-dimension-range"
+  },
+  {
+   "claim_id": "claim-zero-hole",
+   "exact_statement": "There is an absolute $C_0$ such that, for all sufficiently large $n$, every $\\lambda\\vdash n$ with at most $n/2$ rows has an occurrence <a href=\"#ten:spin:eq:1\" data-reference-type=\"eqref\" data-reference=\"ten:spin:eq:1\">[ten:spin:eq:1]</a> with $l=0$ and $$F(\\alpha,\\beta)\\le C_0\\log D_\\lambda.\n \\label{ten:spin:eq:4}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-spin-zero-hole"
+  },
+  {
+   "claim_id": "claim-decision-forest",
+   "exact_statement": "For $n=2^d$ there is a decision forest whose output is always a permutation of $[n]$, whose input consists of independent fair bits, and whose coordinate trees have depth $O(\\log n)$, such that the output law has total variation distance $o(1)$ from uniform as $d\\to\\infty$. The same conclusion holds with independent uniform $[n]$-valued input cells.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cor-decision-forest"
+  },
+  {
+   "claim_id": "claim-isotypic-density",
+   "exact_statement": "Let $P_\\rho$ be the symmetric-group isotypic projection of shape $\\rho\\vdash p$ on the signed tensor power $V^{\\otimes p}$. There is a probability distribution on even densities such that $$P_\\rho\\preceq D_\\rho B^{10q^2}\\mathbb E R^{\\otimes p},\n \\qquad B=N+q+1,\\quad N\\ge p.\n \\label{eq:signed-isotypic-density}$$ If $P_\\rho=0$, the assertion is read with any density distribution.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-signed-isotypic-density"
+  },
+  {
+   "claim_id": "claim-isotypic-angle",
+   "exact_statement": "On the board $W$ of Theorem <a href=\"#thm:one-sided-type-angle\" data-reference-type=\"ref\" data-reference=\"thm:one-sided-type-angle\">9</a>, let $P_\\gamma$ be a full $S_p$-isotypic projection, and let $P_R,P_C$ be products of full symmetric-group isotypic projections on the occupied row and column sites. Write their diagrams as $\\rho_i$ and $\\sigma_j$, and set $D_R=\\prod_iD_{\\rho_i}$, $D_C=\\prod_jD_{\\sigma_j}$. With $N=sm$ and $B=N+q+1$, $$\\|P_C P_\\gamma P_R\\|_{\\rm op}^2\n \\le\\min\\left\\{1,\n  \\frac{D_RD_C}{D_\\gamma}B^{10(s+m)q^2}e^l\\right\\}.\n \\label{eq:signed-isotypic-angle}$$ Empty blocks use the trivial partition and dimension one. The conclusion is uniform over the location of the $l$ missing cells.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-signed-isotypic-angle"
+  },
+  {
+   "claim_id": "claim-marked-overlap",
+   "exact_statement": "Let $W$ contain $n-t$ occupied cells in an $a$ by $b$ board, $n=ab$. Assume $\\omega\\vdash n-t$ and every prescribed row and column type $\\eta_g$ are $(q,q)$-hook shapes: their $(q+1)$st part is at most $q$. Here $1\\le q\\le n$. Suppose $X=\\prod_{g\\text{ row}}X_g$ and $Y=\\prod_{g\\text{ column}}Y_g$ are positive group-algebra elements, with each $X_g,Y_g$ supported on the indicated local type. Write $c_g$ for its unnormalized trace on one copy of $V_{\\eta_g}$ and $S=\\sum_g\\log D_{\\eta_g}$. Then $$\\operatorname{Tr}_{\\omega}(XY)\n \\le\\Bigl(\\prod_g c_g\\Bigr)\n \\exp\\{C(a+b+1)q^2\\log(n+1)+t\n                  +\\min(0,S-\\log D_\\omega)\\}.$$ The constant is absolute. On the $\\omega$-isotypic part of the signed tensor power, the same bound is multiplied by its multiplicity $w_\\omega$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-s-one-sided-marked-overlap"
+  },
+  {
+   "claim_id": "claim-positive-mixtures",
+   "exact_statement": "Let $A,B\\succeq0$ and suppose $A\\preceq c_A\\int A_x\\,d\\mu(x)$ and $B\\preceq c_B\\int B_y\\,d\\nu(y)$, where $c_A,c_B\\ge0$, all integrands are positive, and $\\mu,\\nu$ are probability measures. Then, for every $P$, $$\\|A^{1/2}PB^{1/2}\\|\\le\\sqrt{c_Ac_B}\\sup_{x,y}\\|A_x^{1/2}PB_y^{1/2}\\|.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ten-positive-mixtures"
+  },
+  {
+   "claim_id": "claim-missing-cells",
+   "exact_statement": "Let $\\rho_i$ and $\\sigma_j$ be trace-one positive matrices indexed by $a$ rows and $b$ columns. Put $\\bar\\rho=a^{-1}\\sum_i\\rho_i$ and use its inverse on its support. For a unitary $U$ set $$z_{ij}=\\operatorname{Tr}(\\bar\\rho^{-1/2}\\rho_i\\bar\\rho^{-1/2}U\\sigma_jU^*)\\ge0.$$ Then $\\sum_{i,j}z_{ij}\\le ab$. On any $ab-t$ occupied cells their product is at most $e^t$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ten-missing-cells"
+  },
+  {
+   "claim_id": "claim-coefficient-extraction",
+   "exact_statement": "Let $K$ be a compact group, let $\\rho$ be a finite-dimensional unitary representation on $\\mathcal H$, and let $\\pi$ be an irreducible unitary representation on $\\mathcal U$ of dimension $M$. Identify the $\\pi$-isotypic subspace with $\\mathcal U\\otimes\\mathcal M$. For $A\\in\\operatorname{End}(\\mathcal U)$, let $\\widetilde A$ act there as $A\\otimes I_{\\mathcal M}$ and be zero on all other isotypes. With normalized Haar measure, $$\\widetilde A=\\int_K f_A(g)\\rho(g)\\,dg,\n \\qquad f_A(g)=M\\operatorname{Tr}(A\\pi(g)^*),$$ and $$\\int_K|f_A(g)|\\,dg\n \\le\\sqrt M\\,\\|A\\|_{\\mathrm{HS}}\n \\le M\\|A\\|_{\\mathrm{op}}.$$ If the type does not occur, $\\widetilde A=0$ and the same identity holds.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-s-compact-coefficient-extraction"
+  },
+  {
+   "claim_id": "claim-general-marked-recurrence",
+   "exact_statement": "Let $n=ab\\ge4$, where $a,b\\ge2$ are powers of two and $|\\log_2a-\\log_2b|\\le1$. Arrange the positions as $a$ rows of length $b$, so that $B_n=CR$, where $R$ consists of the $a$ independent row sweeps $B_b$ and $C$ consists of the $b$ independent column sweeps $B_a$. Let $p\\ge2$ be real and let $q\\ge1$ be any integer. For every $\\lambda\\vdash n$ with positive moment and every $q$-hook subpartition $\\omega\\subseteq\\lambda$, put $t=n-|\\omega|$. Then $$\\begin{aligned}\n E_n(\\lambda;p)+j_n(t)\n &\\le \\max_{\\mathcal A}\\left\\{\n    \\sum_g\\bigl(E_{m_g}(\\xi_g;p)+j_{m_g}(l_g)\\bigr)\n      -\\left(\\sum_g H_{\\eta_g}-H_\\omega\\right)_+\n                         \\right\\}\\notag\\\\\n &\\hspace{12mm}\n    +C\\left[t+(a+b)(q^2+n^{1/4})\\log(n+1)\\right].\n \\label{s:eq:general-marked-recurrence}\n\\end{aligned}$$ Here $g$ ranges over all rows and columns, and $m_g=b$ on a row and $m_g=a$ on a column. The set $\\mathcal A$ consists of choices satisfying $$0\\le l_g\\le m_g,\\qquad\n \\sum_{g\\text{ row}}l_g=\\sum_{g\\text{ column}}l_g=t,$$ $$\\xi_g\\vdash m_g,\\quad E_{m_g}(\\xi_g;p)>-\\infty,\n \\qquad \\eta_g\\subseteq\\xi_g,\\quad |\\eta_g|=m_g-l_g,\n \\quad (\\eta_g)_{q+1}\\le q.$$ The set $\\mathcal A$ is nonempty when the parent moment is positive. The constant $C$ is absolute, independent of $p,q,a,b,\\lambda,\\omega$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-s-general-marked-recurrence"
+  },
+  {
+   "claim_id": "claim-inverse-budget-specialization",
+   "exact_statement": "Under the hypotheses of Proposition <a href=\"#s:general-marked-recurrence\" data-reference-type=\"ref\" data-reference=\"s:general-marked-recurrence\">22</a>, let $0\\le\\theta\\le1$, let $c$ be real, and let $\\mathcal B_a,\\mathcal B_b\\ge0$. Suppose that, for $m\\in\\{a,b\\}$, every $\\xi\\vdash m$ and every $q$-hook $\\eta\\subseteq\\xi$, with $l=m-|\\eta|$, satisfy $$E_m(\\xi;p)\\le \\mathcal B_m+\\theta H_\\eta+c\\,l\\log m-j_m(l).\n \\label{s:eq:inverse-child-budget}$$ Then every prescribed $q$-hook $\\omega\\subseteq\\lambda$, with $t=n-|\\omega|$, satisfies $$\\begin{aligned}\n E_n(\\lambda;p)\n &\\le\\theta H_\\omega+c\\,t\\log n-j_n(t)+a\\mathcal B_b+b\\mathcal B_a\\notag\\\\\n &\\hspace{9mm}+C\\left[t+(a+b)(q^2+n^{1/4})\\log(n+1)\\right].\n \\label{s:eq:inverse-budget-specialization}\n\\end{aligned}$$ The constant $C$ does not depend on $p,q,\\theta,c,\\mathcal B_a,\\mathcal B_b$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-s-inverse-budget-specialization"
+  },
+  {
+   "claim_id": "claim-named-main",
+   "exact_statement": "For the constants fixed above, there are absolute choices of $C_0$ and an integer $h\\ge1$ such that, for every dyadic $n\\ge2$, every $\\lambda\\vdash n$, and every occurrence shown below with $m=|\\tau|$, $$\\lambda\\ \\text{in}\\ \\mu*\\nu^{\\rm t}*\\tau\n \\quad\\Longrightarrow\\quad\n W_n(\\lambda)\n \\le\n \\exp\\{ \\beta_n \\mathcal S(\\mu,\\nu)+ R_n(m)\\}.\n \\label{ten:named:eq:9}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-ten-named-main"
+  },
+  {
+   "claim_id": "claim-lowering-norm",
+   "exact_statement": "There are absolute constants $c>0$ and $C$ such that, for every dyadic $n\\ge2$ and every $\\lambda\\vdash n$ with $2\\le k=n-\\lambda_1\\le n/2$, $$\\|B_n\\|_\\lambda^2 \\le \\exp(-c k\\log(n/k)+C k),\\qquad\n                         2\\le k\\le n/2                     \\label{ten:lowering:eq:1}$$ The block with defect one is zero.",
+   "kind": "bound",
+   "statement_anchor": "stmt-s-lowering-norm"
+  },
+  {
+   "claim_id": "claim-lowering-main",
+   "exact_statement": "For the fixed constants above, there is a family of real powers $p_n\\ge8$, bounded uniformly over dyadic $n\\ge2$, such that every $\\lambda\\vdash n$ satisfies $$\\label{ten:lowering:eq:6}\n D_\\lambda\\operatorname{Tr}_\\lambda |B_n|^{p_n}\n \\le \\exp L_n(\\lambda),\\qquad\n L_n(\\lambda)=\\min_{\\substack{\\eta\\subseteq\\lambda\\\\q_n\\text{-hook}}}\n             \\{\\beta F(\\eta)+G_n(n-|\\eta|)\\}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-ten-lowering-main"
+  },
+  {
+   "claim_id": "claim-inherited-hook",
+   "exact_statement": "Suppose, at a sufficiently large dyadic size $m$, positive numbers $E_\\mu$ satisfy $$\\log E_\\mu\\le \\beta F(\\eta_0)+G_m(m-|\\eta_0|)\n \\quad\\text{for every $q_m$-hook $\\eta_0\\subseteq\\mu$.}\n \\label{ten:lowering:eq:4}$$ Then every subdiagram $\\eta\\subseteq\\mu$, of size $m-l$, satisfies $$\\log E_\\mu\\le\\beta F(\\eta)+G_m(l).\n                                                                  \\label{ten:lowering:eq:5}$$ The same conclusion is automatic when $E_\\mu=0$, with logarithm $-\\infty$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-s-lowering-inherited-hook"
+  },
+  {
+   "claim_id": "claim-compressed-main",
+   "exact_statement": "For sufficiently small fixed $b>0$ and then sufficiently small fixed $c>0$, there are a constant $C$ and exponents $p_d\\ge2$ with $\\sup_{d\\ge1}p_d<\\infty$ such that, for every $d\\ge1$ and every $\\lambda\\vdash n=2^d$, $$D_\\lambda {\\rm tr}|\\rho_\\lambda(B_n)|^{p_d}\\le\n \\exp\\{L_n(\\lambda)+C n^{1-c/2}\\}.\n \\label{ten:compressed:eq:1}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-ten-compressed-main"
+  },
+  {
+   "claim_id": "claim-simultaneous-main",
+   "exact_statement": "There are an absolute threshold $D$ and, after $D$ is fixed, an absolute power of two $p\\ge1$ such that the following bounds hold at every level $l\\ge0$ and every size $n=2^d$ with $1\\le d\\le2^lD$. For every $\\lambda\\vdash n$ with positive trace, (G) holds. For every such $\\lambda$ and every $\\mu\\subseteq\\lambda$ with $\\mu_{K_n+1}\\le K_n$, put $t=n-|\\mu|$. If $t>0$ and $\\log(n/t)\\le u\\log n$, then (H) holds: $$\\begin{array}{ll}\n \\text{(G)} & e_\\lambda\\le A_l B_\\lambda,\\\\\n \\text{(H)} & e_\\lambda+J(t,n)\\le A_l B_\\mu+b_l W(t,n).\n \\end{array}                                                         \\label{ten:simultaneous:eq:8}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-ten-simultaneous-main"
+  },
+  {
+   "claim_id": "claim-inverse-bounded-exponent",
+   "exact_statement": "There are real exponents $p_d\\ge2$, with $\\sup_{d\\ge1}p_d<\\infty$, such that for every $d\\ge1$ and every $\\lambda\\vdash n=2^d$, $$\\log J_n(\\lambda,p_d)\\le\n \\begin{cases}\n G_n(\\lambda),&n-\\lambda_1>n^{1-\\epsilon},\\\\\n 0,&n-\\lambda_1\\le n^{1-\\epsilon}.\n \\end{cases}$$ For all sufficiently large $n$, the second bound strengthens to $\\log J_n(\\lambda,p_d)\\le-10k\\log n$ when $1\\le k=n-\\lambda_1\\le n^{1-\\epsilon}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-s-inverse-bounded-exponent"
+  },
+  {
+   "claim_id": "claim-inverse-main",
+   "exact_statement": "Say that a diagram fits the $q$-hook if all cells belong to its first $q$ rows or its first $q$ columns. Write $e_m(l)=l\\log(m/l)$, with $e_m(0)=0$. Fix $\\theta=1/2$, $c_0=1/100$. Consider $n=ab\\ge2$, where $a,b$ are powers of two with $\\log_2 a,\\log_2 b$ differing by at most one, and $q\\le n^{1/16}$ a positive integer. Let $p\\ge2$ be real and let $\\mathcal B_a,\\mathcal B_b\\ge0$. Suppose that, for each $m\\in\\{a,b\\}$, every diagram $\\xi\\vdash m$, and every $q$-hook subdiagram $\\eta\\subseteq\\xi$ of size $m-l$, $$\\log J_m(\\xi,p)\\le \\mathcal B_m+\\theta H_\\eta+c_0\\log(m)l-e_m(l),\n \\label{ten:inverse:eq:2}$$ using $-\\infty$ for log zero. Then for every $\\lambda\\vdash n$ and every $q$-hook subdiagram $\\omega\\subseteq\\lambda$ of size $g=n-t$, $$\\log J_n(\\lambda,p)\n \\le \\theta H_\\omega+c_0\\log(n)t-e_n(t)+\n a\\mathcal B_b+b\\mathcal B_a+O\\big(t+(a+b)(q^2+n^{1/4})\\log(n+1)\\big),\n \\label{ten:inverse:eq:3}$$ The implicit constant is absolute.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ten-inverse-main"
+  },
+  {
+   "claim_id": "claim-arbitrary-hook-allowance",
+   "exact_statement": "There are absolute $C$ and $m_0$ with the following property. Let $m\\ge m_0$ be a power of two and let $p\\ge2$. Suppose $$E_m(\\xi;p)\\le G_m(\\xi)\\quad\\hbox{for large-level $\\xi$},\n \\qquad\n E_m(\\xi;p)\\le0\\quad\\hbox{for the other $\\xi$}.$$ Then, for every $\\xi\\vdash m$ and every subpartition $\\eta\\subseteq\\xi$, putting $l=m-|\\eta|$ gives $$E_m(\\xi;p)\n \\le \\mathcal B_m+\\theta H_\\eta+c_0l\\log m-j_m(l),\n \\qquad \\mathcal B_m=Cm^{1-4\\epsilon}\\log(m+1).\n \\label{s:eq:arbitrary-hook-child-allowance}$$ This includes every $q$-hook subpartition, for any inherited $q\\ge1$. The constants do not depend on $p$ or $q$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-s-arbitrary-hook-child-allowance"
+  },
+  {
+   "claim_id": "claim-deletion-moment",
+   "exact_statement": "There are real exponents $p(d)\\ge1$, indexed by integers $d\\ge1$, with $\\sup_{d\\ge1}p(d)<\\infty$ such that, for every integer $d\\ge1$ and every partition $\\lambda\\vdash n=2^d$, $$D_\\lambda\\mathop{\\mathrm{Tr}}|B_n|^{2p(d)}\\le e^{E_n^+(\\lambda)}.$$ There is a fixed integer $d_*\\ge1$ above which one may take $$p(d)=(1+d^{-1/2})\n       \\max\\{p(\\lfloor d/2\\rfloor),p(\\lceil d/2\\rceil)\\}.$$ In particular $E_n^+\\le aW_\\lambda$ yields a fixed negative power of $D_\\lambda$ for the sweep norm.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rec-deletion-moment"
+  },
+  {
+   "claim_id": "claim-hybrid-main",
+   "exact_statement": "There is a fixed positive integer $p$ such that, simultaneously for every integer $d\\ge1$ and every partition $\\lambda=(n-k,\\beta)\\vdash n=2^d$ with $\\lambda\\ne(n)$ and $\\lambda'_1\\le n/2$, where $k=n-\\lambda_1\\ge1$, $$\\begin{aligned}\n \\log T_n^\\lambda(p)&\\le\n k\\log n\\left(u_d-\\Lambda\n          \\left(\\frac{\\log(n/k)}{\\log n}\\right)^2\\right),\n       \\label{rec:hybrid-level-budget}\\\\\n \\log T_n^\\lambda(p)&\\le\\mathcal D_d(\\lambda).\n       \\label{rec:hybrid-diagram-budget}\n\\end{aligned}$$ If $\\log(n/k)/\\log n\\ge\\epsilon$, the first bound is at most $-k\\log n$. For all sufficiently large $d$, in the complementary range, $\\mathcal D_d(\\lambda)\\le\\tfrac14\\log D_\\lambda$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rec-hybrid-main"
+  }
+ ],
+ "paper": "papers/EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-M-0496_PM-238.10_Signed_tensor_densities_and_diagram_budgets_for_the_Thorp_shuffle.md",
+ "purpose": "Signed tensor densities and diagram budgets for the Thorp shuffle",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "e0d9da68caf4f85dc2f94b49910197132e5e25bcaa0545fb14bdc5e869111211",
+   "pm.domains.v2": "b7b7fc3756ec59544beff25150cfb1bb310460836a161836b17a8725650cdfd3",
+   "pm.edges.v2": "675f56cf83d5648e7e8dafcfb35f47d5decaf254352fe75c18488e85a64afb62",
+   "pm.extraction.v2": "0566a7acb3831b0edf590002e840392fc741dce90dfd101767717154dab3a233",
+   "pm.formal.v2": "0d1db8a74b6ffcfa4b647c389e412237e7061628f9d1fd834972c60e4304a4b2",
+   "pm.limits.v2": "459d8e23bfd79380d68518466ebf39a3eeacf9f072fb6bc1a834b30013330fa1",
+   "pm.node.v2": "1aa2a7ac3fc4ed5cf04a0d19d3ec8ed6fb60119af7fdd3aae1cd5ab2d759f0c7",
+   "pm.objects.v2": "236fcebec522a26c6a4587deca0e7e2f27b4e080e4e77b3516e61abb3efeb68e",
+   "pm.provenance.v2": "d2e9e9d1bed02c40bc7786e1702bf3ce808bfcbe04c7594cf08fb0ad53050f42",
+   "pm.quantities.v2": "e646048513c2712968af691aa2c13727208f322087e4b6790594280c6ad619b3",
+   "pm.reading.v2": "f3f6bc8aa1e7c374e61155b60f07fd22caa30f6be81b584bea9a84e16bef4505",
+   "pm.roadmap.v2": "3787121a77005ffe4245cae47316f6ba9fed47cd766346468e5d85cfa1385201",
+   "pm.search.v1": "1d7bbdf089343bb08d82ae4a0dceb18754f0ac327bb01e97f8f7d0afc8583439",
+   "pm.triptych.v2": "d5b841ea13e1d5363091314233366dca4934fe4488d5a1edb8ea42f11800c553"
+  },
+  "canonical_sha256": "f3196fb363b198b500b09e359b1d320865fcbcaa9cf8f611a3c2527e3fc497ec",
+  "paper_sha256": "d0af2f5417e00cf85fe13cfe1308e4adf9a9dd846157d43f0c04d6db9cc17f6b",
+  "repaired_body_sha256": "fa11cbfa2870ed265f583594d9dbb29532573a09011889dbae5f5a2f2895dea0"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "199237eb7f300141a54f74693ee11896b6eef2f42e539beca47f62d25e9f1422",
+   "receipt_sha256": "808446be784d2126e059651686c5ec84ad4a2ec0cf0aa766909d9aff92ab273a",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "d in {1,2,3}, L in {1,2}, selected switch-bit strings including all-zero and all-one",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-always-permutation",
+     "oracle_basis": "independent whole-array layer application plus permutation check and exact comparison with expected output"
+    },
+    {
+     "checked_domain": "same small cases; the code performs exactly L*d lookups per card",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-query-depth",
+     "oracle_basis": "output equals the result of applying exactly L*d layers, so using fewer or shifted layers is detected"
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-coordinate-shift",
+     "observed_exit": 1,
+     "receipt_sha256": "e33c128da26099479bde2a90e1c1e96e6058f3020af6f7f22d0e5746afaa1dd5"
+    },
+    {
+     "id": "mut-inverted-bit",
+     "observed_exit": 1,
+     "receipt_sha256": "4bf1335231b08492c09537be9ee692b0272026e3383270354196e0241c66565e"
+    },
+    {
+     "id": "mut-bit-index",
+     "observed_exit": 1,
+     "receipt_sha256": "469ba2df05806bc592b1357176b4811f9d08241de5204397bb4a001e5398f5ec"
+    },
+    {
+     "id": "mut-one-sweep",
+     "observed_exit": 1,
+     "receipt_sha256": "6c79e46d5307299694b08a35bec40d3d2f836de02dcfac20dc637e7c0dc28d32"
+    }
+   ],
+   "receipt_sha256": "5c3e41fd67d2f5391d7e15c8eddc46bd3d9361e73bdb662626f815614b29285c",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Signed tensor densities and diagram budgets for the Thorp shuffle"
+}

@@ -1,0 +1,1148 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1306726,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 357488
+ },
+ "coordinate": "EN-115-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-H-0404",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Constructive mathematical physics",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "eq:lattice-model",
+     "quote": "We consider no topological term and no external field.",
+     "quote_sha256": "c322f7d462686f0de7864ee0b89203226f7a3497ca4219941ff8d36a2a99e8cc"
+    }
+   ],
+   "query": "Continuum construction with an external field or a topological term",
+   "reason": "The microscopic action explicitly excludes both modifications."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-canonical",
+     "quote": "It does not introduce a comparison with other lattice actions, external fields, or topological terms.",
+     "quote_sha256": "e008cbfda4abf5e90081d3e063a44ce8988c01479494d9f1666d0f857e74a657"
+    }
+   ],
+   "query": "Universality across arbitrary lattice actions",
+   "reason": "Canonical normalization fixes physical units for the specified action and periodic state; it does not compare distinct actions."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-prop-os-reconstruction",
+     "quote": "The Schwinger functions $S_n$ reconstruct a tempered Wightman theory in $1+1$ dimensions with a three-component Hermitian scalar field.",
+     "quote_sha256": "4e2b061fe15fccc708df9af68c7a6abaf2d2cf350c8f8e6714a298fffb665595"
+    },
+    {
+     "anchor": "stmt-prop-continuum-limit",
+     "quote": "Their finite-dimensional laws converge, and the limiting laws are determined by their moments.",
+     "quote_sha256": "d9f283d5fd4bffe03acd55be6fb4bf12feebb65456dc3e5f83de98ebb8dd262e"
+    }
+   ],
+   "query": "A finite numerical certificate of the full continuum theory",
+   "reason": "The construction requires cutoff and volume limits, distributional convergence, and Hilbert-space reconstruction."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "A connected four-point distribution is nonzero on smooth tests with strictly separated time supports. In particular, the limiting field correlations do not satisfy Wick factorization.",
+     "quote_sha256": "d22e2a574a0221af2b03bb93f19e497dd356ba8572474c31128a358373641ca5"
+    }
+   ],
+   "query": "Gaussian replacement of all limiting field correlations",
+   "reason": "A connected separated correlation survives, so a Wick-only representation loses a proved property of the hierarchy."
+  }
+ ],
+ "family": "PM-215",
+ "id": "PM-215.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-canonical",
+    "claim_id": "claim-canonical-continuum",
+    "statement": "For the nearest-neighbor probability"
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-prescribed-trajectory",
+    "statement": "There are a dyadic integer $L>1$, a constant $H>0$, bare couplings $\\beta_N\\to\\infty$, and field normalizations $B_N>0$, such that $$\\label{eq:main-prescription}\n a_N=L^{-N},\\qquad\n \\beta_N=H+\\frac{\\log L}{2\\pi}N+O(\\log(N+1)),$$ and the following assertions hold for the model <a href=\"#eq:lattice-model\" data-reference-type=\"eqref\" data-reference=\"eq:lattice-model\">[eq:lattice-model]</a>.*\n\n1."
+   },
+   {
+    "anchor": "stmt-cor-canonical-physics",
+    "claim_id": "claim-canonical-physical-properties",
+    "statement": "The canonical limiting hierarchy is Euclidean invariant, internally $O(3)$ invariant, reflection positive, symmetric, and clustering. It satisfies factorial tempered-distribution bounds and reconstructs a local, unitary relativistic theory in $1+1$ dimensions. The reconstructed Hamiltonian has a unique vacuum, a nonzero vacuum complement, and a strictly positive lower bound on that entire complement. A connected four-point distribution is nonzero on smooth tests with strictly separated time supports."
+   },
+   {
+    "anchor": "stmt-prop-preliminary",
+    "claim_id": "claim-preliminary-mixing",
+    "statement": "for all bond strengths $0\\le\\beta_e\\le b$"
+   },
+   {
+    "anchor": "stmt-prop-preliminary",
+    "claim_id": "claim-preliminary-mixing",
+    "statement": "for even $n,w$"
+   },
+   {
+    "anchor": "stmt-lem-prelim-iteration",
+    "claim_id": "claim-stiffness-iteration",
+    "statement": "Fix a sufficiently large $D$."
+   },
+   {
+    "anchor": "stmt-lem-prelim-iteration",
+    "claim_id": "claim-stiffness-iteration",
+    "statement": "where $B^{-D}\\le h\\le B$"
+   },
+   {
+    "anchor": "stmt-lem-prelim-iteration",
+    "claim_id": "claim-stiffness-iteration",
+    "statement": "$B\\ge b$ is sufficiently large."
+   },
+   {
+    "anchor": "stmt-lem-prelim-initial-reduction",
+    "claim_id": "claim-initial-stiffness-saving",
+    "statement": "for all sufficiently large $b$,"
+   },
+   {
+    "anchor": "stmt-lem-free-inclined-geometry",
+    "claim_id": "claim-inclined-cell-geometry",
+    "statement": "For either choice of $O$,"
+   },
+   {
+    "anchor": "stmt-cor-free-small-chord-mean",
+    "claim_id": "claim-small-chord-mean",
+    "statement": "suppose that $r_e\\le T_j$"
+   },
+   {
+    "anchor": "stmt-cor-free-small-chord-mean",
+    "claim_id": "claim-small-chord-mean",
+    "statement": "For $H\\ge H_0(L)$"
+   },
+   {
+    "anchor": "stmt-prop-free-bounds",
+    "claim_id": "claim-free-history-contraction",
+    "statement": "Suppose two histories share their last $r\\ge0$"
+   },
+   {
+    "anchor": "stmt-prop-free-bounds",
+    "claim_id": "claim-free-history-contraction",
+    "statement": "using the same ordinary $Q$"
+   },
+   {
+    "anchor": "stmt-prop-free-positive",
+    "claim_id": "claim-positive-kinetic-completion",
+    "statement": "A common $c_0>0$ and real analytic edge operators $\\ell_{h}$ can be chosen so that $$\\mathsf A_{h}\n   =\\binom{\\sqrt{c_0}\\mathbf 1}{\\ell_{h}},\n \\qquad X_{h}=\\mathsf A_{h}d,\n \\qquad X_{h}^*X_{h}=K_{h}.$$ There are real maps $$\\mathcal M:\\mathcal X_{\\rm coarse}\n        \\longrightarrow\\mathcal X_{\\rm fine}\\oplus\\ell^2(\\Lambda';\\mathbb R),\n \\qquad\n \\mathcal N:\\mathcal X_{\\rm coarse}\n        \\longrightarrow\\mathcal X_{\\rm coarse}\\oplus\\ell^2(\\Lambda';\\mathbb R)$$ with $$\\begin{aligned}\n \\mathcal M^*\\mathcal M+\\mathcal N^*\\mathcal N&=\\mathbf 1,\n &\\mathcal N X'&=0,\\label{eq:free-positive-isometry}\\\\\n \\mathcal M^*(Xu,V-Qu)&=X'V,\n &\\mathcal M X'&=(XP,\\mathbf 1-QP).\n \\label{eq:free-positive-ambient}\n\\end{aligned}$$ Their kernels have exponential moments. For a block side $l\\in\\{L,L_*\\}$, the fine-output part of $\\mathcal M$ has row bound $C/l$, column bound $Cl$, and first and second fine-difference row bounds $C/l^2$ and $C/l^3$. The coarse slots have bounded row and column norms. For a common next ordinary step, every history difference has the factor $(A_0/L^2)^r$ of Equation <a href=\"#eq:free-history\" data-reference-type=\"eqref\" data-reference=\"eq:free-history\">[eq:free-history]</a>, with prefactor $C_L$ allowed. At empty history one may take $\\ell_{\\varnothing}=\\sqrt{1-c_0}\\mathbf 1$.*\n\n*The construction commutes with simultaneous square symmetries of its geometry and its input data. An individual inclined history has C4 covariance; reflection transports it to the reflected history. Ordinary histories, including empty history, have the full square symmetries."
+   },
+   {
+    "anchor": "stmt-thm-rg-step",
+    "claim_id": "claim-exact-block-step",
+    "statement": "Fix $\\upsilon>0$ sufficiently small."
+   },
+   {
+    "anchor": "stmt-thm-rg-step",
+    "claim_id": "claim-exact-block-step",
+    "statement": "For two regular steps with common geometric scales,"
+   },
+   {
+    "anchor": "stmt-lem-rg-ambient",
+    "claim_id": "claim-ambient-gaussian-completion",
+    "statement": "Fix a primary pattern, the frozen spins,"
+   },
+   {
+    "anchor": "stmt-lem-rg-ambient",
+    "claim_id": "claim-ambient-gaussian-completion",
+    "statement": "the tags in the observation,"
+   },
+   {
+    "anchor": "stmt-lem-rg-prediction",
+    "claim_id": "claim-spin-prediction",
+    "statement": "in the empty pattern or away from nearby cores,"
+   },
+   {
+    "anchor": "stmt-lem-rg-reserves",
+    "claim_id": "claim-core-and-tail-reserves",
+    "statement": "on its angular-cutoff support,"
+   },
+   {
+    "anchor": "stmt-prop-rg-joint",
+    "claim_id": "claim-joint-factor-estimates",
+    "statement": "in a fixed pattern, including the compulsory cores,"
+   },
+   {
+    "anchor": "stmt-lem-rg-canonical-contraction",
+    "claim_id": "claim-canonical-slot-contraction",
+    "statement": "For the diagonal response of each nonzero canonical slot,"
+   },
+   {
+    "anchor": "stmt-lem-rg-error-contraction",
+    "claim_id": "claim-regular-error-contraction",
+    "statement": "chosen before $L$,"
+   },
+   {
+    "anchor": "stmt-lem-kinetic-increment",
+    "claim_id": "claim-limiting-kinetic-increment",
+    "statement": "For the nearest-neighbor action"
+   },
+   {
+    "anchor": "stmt-prop-shooting",
+    "claim_id": "claim-shooting-admission",
+    "statement": "After the choices of $L$ and $P_0$,"
+   },
+   {
+    "anchor": "stmt-prop-shooting",
+    "claim_id": "claim-shooting-admission",
+    "statement": "take $H$ sufficiently large."
+   },
+   {
+    "anchor": "stmt-prop-endpoint-matching",
+    "claim_id": "claim-endpoint-matching",
+    "statement": "For every sufficiently small fixed $\\upsilon>0$,"
+   },
+   {
+    "anchor": "stmt-prop-integrated-comparison",
+    "claim_id": "claim-integrated-covering-comparison",
+    "statement": "Fix any constant multiplier of the covering cap"
+   },
+   {
+    "anchor": "stmt-prop-integrated-comparison",
+    "claim_id": "claim-integrated-covering-comparison",
+    "statement": "For sufficiently large $H$,"
+   },
+   {
+    "anchor": "stmt-lem-comparison-remainder",
+    "claim_id": "claim-energy-remainder",
+    "statement": "On a terminal torus of volume $v$,"
+   },
+   {
+    "anchor": "stmt-lem-comparison-remainder",
+    "claim_id": "claim-energy-remainder",
+    "statement": "whenever $q,q'$ differ at at most $n$ sites."
+   },
+   {
+    "anchor": "stmt-lem-row-exponential-moment",
+    "claim_id": "claim-selected-row-moments",
+    "statement": "On tori whose periods are multiples of $2B_T$,"
+   },
+   {
+    "anchor": "stmt-lem-editable-regions",
+    "claim_id": "claim-editable-regions",
+    "statement": "for all sufficiently large $H$"
+   },
+   {
+    "anchor": "stmt-lem-editable-regions",
+    "claim_id": "claim-editable-regions",
+    "statement": "sufficiently large admitted periods."
+   },
+   {
+    "anchor": "stmt-cor-terminal-alignment",
+    "claim_id": "claim-terminal-alignment",
+    "statement": "On every standard terminal axis torus"
+   },
+   {
+    "anchor": "stmt-prop-trace-small-box",
+    "claim_id": "claim-uniform-reference-box",
+    "statement": "Let $\\mathcal U\\subset(\\mathbb Q_{>0})^2$ be finite."
+   },
+   {
+    "anchor": "stmt-prop-trace-small-box",
+    "claim_id": "claim-uniform-reference-box",
+    "statement": "With the contraction slack $\\upsilon>0$"
+   },
+   {
+    "anchor": "stmt-lem-trace-concentration",
+    "claim_id": "claim-transfer-trace-concentration",
+    "statement": "If $p(n,w)\\le1/4$,"
+   },
+   {
+    "anchor": "stmt-prop-trace-doubling",
+    "claim_id": "claim-rectangular-doubling",
+    "statement": "Let $\\beta\\ge0$"
+   },
+   {
+    "anchor": "stmt-prop-trace-doubling",
+    "claim_id": "claim-rectangular-doubling",
+    "statement": "let $n,w\\ge4$ be integers."
+   },
+   {
+    "anchor": "stmt-prop-trace-doubling",
+    "claim_id": "claim-rectangular-doubling",
+    "statement": "If $\\Delta_\\beta(n,w)\\le2^{-10}$,"
+   },
+   {
+    "anchor": "stmt-thm-trace-uniform",
+    "claim_id": "claim-uniform-volume-and-slabs",
+    "statement": "Let $\\mathcal A\\subset(\\mathbb Q_{>0})^2$ be a finite list containing $(1,1)$ and $(1,25)$, and put $$\\mathcal U=\\mathcal A\n    \\cup\\{(u_1/2,u_2):(u_1,u_2)\\in\\mathcal A\\}\n    \\cup\\{(2u_1,u_2/2):(u_1,u_2)\\in\\mathcal A\\}.$$"
+   },
+   {
+    "anchor": "stmt-thm-trace-uniform",
+    "claim_id": "claim-uniform-volume-and-slabs",
+    "statement": "Choose $K_0,M_0$ by Proposition <a href=\"#prop:trace-small-box\" data-reference-type=\"ref\" data-reference=\"prop:trace-small-box\">26</a> for $\\mathcal U$, with all displayed periods even and at least four."
+   },
+   {
+    "anchor": "stmt-cor-trace-physical-gap",
+    "claim_id": "claim-cutoff-physical-gap",
+    "statement": "For $N\\ge K_0$,"
+   },
+   {
+    "anchor": "stmt-prop-source-step",
+    "claim_id": "claim-exact-source-step",
+    "statement": "Consider an admitted source-free step"
+   },
+   {
+    "anchor": "stmt-prop-source-step",
+    "claim_id": "claim-exact-source-step",
+    "statement": "with precise coupling $b\\in[H_j/2,2H_j]$,"
+   },
+   {
+    "anchor": "stmt-prop-source-step",
+    "claim_id": "claim-exact-source-step",
+    "statement": "For two compatible inputs to a regular step,"
+   },
+   {
+    "anchor": "stmt-cor-source-endpoints",
+    "claim_id": "claim-fixed-bottom-sources",
+    "statement": "For the trajectory comparisons"
+   },
+   {
+    "anchor": "stmt-prop-source-products",
+    "claim_id": "claim-normalization-product-comparison",
+    "statement": "For the same bare coupling $\\beta_N$"
+   },
+   {
+    "anchor": "stmt-prop-moment-majorants",
+    "claim_id": "claim-moment-majorants",
+    "statement": "$N\\ge K_0$"
+   },
+   {
+    "anchor": "stmt-prop-continuum-limit",
+    "claim_id": "claim-shooting-continuum-limit",
+    "statement": "On every fixed axis or tilted physical torus used in Section 7, all joint moments of the fields $\\phi_N(f)$ converge for continuous tests. Their finite-dimensional laws converge, and the limiting laws are determined by their moments. The moment measures converge on arbitrary continuous compactly supported tests in the insertion coordinates.*\n\n*In the periodic plane state these assertions hold for compactly supported tests. The same plane limit is obtained by taking the continuum limit on the axis tori and then their exhaustion, or by taking any simultaneous sequence of cutoffs and axis tori for which both the cutoff depth and the doubling index tend to infinity.*\n\n*Finally, let $O_+$ be the rotation with cosine $3/5$ and sine $4/5$. The plane limits obtained with regulator orientations $\\mathbf 1$ and $O_+^2$ have identical finite-dimensional laws when tested in the same physical coordinates."
+   },
+   {
+    "anchor": "stmt-prop-euclidean-regularity",
+    "claim_id": "claim-euclidean-regularity",
+    "statement": "The plane correlation functions are nonnegative Radon measures componentwise, and for every scalar Schwartz test $F\\in\\mathcal S((\\mathbb R^2)^n)$ they satisfy $$|S_n^{\\boldsymbol\\alpha}(F)|\n   \\le C^n n!\\,\n       \\sup_{x\\in(\\mathbb R^2)^n}\n         \\bigl[(1+|x|^2)^{2n}|F(x)|\\bigr].\n \\label{eq:orig-35}$$ The lattice moment measures converge on Schwartz tests, with the same bound. Finite component norms can be incorporated by changing $C$. The limiting correlations have permutation symmetry, internal $O(3)$ covariance, and invariance under all Euclidean isometries of $\\mathbb R^2$. Bounds for products of separately translated tests are uniform in their separate translation parameters when the decay weights are centered at those parameters."
+   },
+   {
+    "anchor": "stmt-lem-boundary-strips",
+    "claim_id": "claim-boundary-strip-control",
+    "statement": "Fix an order $n$, a bounded region $K\\subset\\mathbb R^2$, and a bounded axis rectangle $A$."
+   },
+   {
+    "anchor": "stmt-lem-reflection-positivity",
+    "claim_id": "claim-joint-reflection-positivity",
+    "statement": "Let $F$ be a polynomial in finitely many component fields $\\phi^a(f)$, where the smooth compactly supported tests $f$ have support in $\\{x^0>0\\}$."
+   },
+   {
+    "anchor": "stmt-prop-slab-clustering",
+    "claim_id": "claim-polynomial-slab-clustering",
+    "statement": "Let $F$ and $G$ be fixed polynomials in finitely many smooth compactly supported smeared component fields."
+   },
+   {
+    "anchor": "stmt-prop-slab-clustering",
+    "claim_id": "claim-polynomial-slab-clustering",
+    "statement": "If time translation separates the slabs containing their supports by a distance $R\\ge0$, then $$\\bigl|\\operatorname{Cov}(F,\\tau_sG)\\bigr|\n       \\le C_{F,G}e^{-mR}.\n \\label{eq:polynomial-slab-clustering}$$ The exponent $m$ is common to all such polynomials."
+   },
+   {
+    "anchor": "stmt-prop-os-reconstruction",
+    "claim_id": "claim-relativistic-reconstruction",
+    "statement": "The Schwinger functions $S_n$ reconstruct a tempered Wightman theory in $1+1$ dimensions with a three-component Hermitian scalar field. Its Hilbert space $\\mathcal H$ is positive, its fields are local, and its unitary representation of the Poincaré group satisfies the spectrum condition. The vacuum $\\Omega$ is unique and normalized. In the positive-time reflection realization of $\\mathcal H$, Euclidean time translations induce a strongly continuous semigroup $e^{-sH_{\\rm phys}}$, $s\\ge0$, with $H_{\\rm phys}\\ge0$ and $H_{\\rm phys}\\Omega=0$."
+   },
+   {
+    "anchor": "stmt-prop-continuum-gap",
+    "claim_id": "claim-full-continuum-gap",
+    "statement": "For the Hamiltonian in Proposition"
+   },
+   {
+    "anchor": "stmt-prop-non-gaussian",
+    "claim_id": "claim-separated-non-gaussianity",
+    "statement": "For a sufficiently large fixed terminal coupling $H$,"
+   },
+   {
+    "anchor": "stmt-prop-rg-input",
+    "claim_id": "claim-canonical-increments",
+    "statement": "As long as the input couplings lie in their admitted bands,"
+   },
+   {
+    "anchor": "stmt-lem-sensitivity",
+    "claim_id": "claim-summable-kinetic-sensitivity",
+    "statement": "on a common ordinary step with common reference scales,"
+   },
+   {
+    "anchor": "stmt-prop-admission",
+    "claim_id": "claim-bounded-offset-admission",
+    "statement": "For $H$ sufficiently large,"
+   },
+   {
+    "anchor": "stmt-prop-admission",
+    "claim_id": "claim-bounded-offset-admission",
+    "statement": "with $|s|\\le R'$"
+   },
+   {
+    "anchor": "stmt-lem-retuning",
+    "claim_id": "claim-arbitrary-depth-retuning",
+    "statement": "After increasing $H$ once more,"
+   },
+   {
+    "anchor": "stmt-lem-retuning",
+    "claim_id": "claim-arbitrary-depth-retuning",
+    "statement": "bare offset $|s|\\le R$."
+   },
+   {
+    "anchor": "stmt-prop-matching",
+    "claim_id": "claim-corrected-offset-matching",
+    "statement": "Fix $H$ sufficiently large as above."
+   },
+   {
+    "anchor": "eq:offset-matching-hypothesis",
+    "claim_id": "claim-corrected-offset-matching",
+    "statement": "Fix $H$ sufficiently large as above. For $i\\in\\{1,2\\}$, let $P_i\\in\\{r,+,-\\}$ be fixed and let a sequence of depth-$N_{i,n}$ trajectories have bare couplings $\\vartheta_{N_{i,n}}+s_{i,n}$, where $N_{i,n}\\longrightarrow\\infty$ and $|s_{i,n}|\\le R'$. Suppose $$(s_{2,n}+A_{P_2})-(s_{1,n}+A_{P_1})\\longrightarrow0.\n \\label{eq:offset-matching-hypothesis}$$ Compare their bulk representations in common layer coordinates, using the same ordinary observations on their common bottom steps. Then, for every fixed integer $j\\ge0$, $$u_{j,n}\\longrightarrow0,\\qquad\n \\lambda_{j,n}\\longrightarrow0.\n \\label{eq:offset-fixed-layer-matching}$$ The same statement holds on each fixed common compatible terminal period and its corresponding bottom-layer periods."
+   },
+   {
+    "anchor": "stmt-lem-finite-beta",
+    "claim_id": "claim-finite-coupling-positivity",
+    "statement": "For every sufficiently large fixed $\\beta$,"
+   },
+   {
+    "anchor": "stmt-lem-band-endpoints",
+    "claim_id": "claim-terminal-band-endpoints",
+    "statement": "Fix a finite covering-cap multiplier"
+   },
+   {
+    "anchor": "stmt-lem-band-endpoints",
+    "claim_id": "claim-terminal-band-endpoints",
+    "statement": "$C_0>0$"
+   },
+   {
+    "anchor": "stmt-lem-band-endpoints",
+    "claim_id": "claim-terminal-band-endpoints",
+    "statement": "with terminal coupling $b_0\\in[H/2,2H]$."
+   },
+   {
+    "anchor": "stmt-prop-endpoint-comparison",
+    "claim_id": "claim-common-terminal-comparison",
+    "statement": "Fix $L,R,R'$"
+   },
+   {
+    "anchor": "stmt-prop-endpoint-comparison",
+    "claim_id": "claim-common-terminal-comparison",
+    "statement": "with offsets bounded by $R'$,"
+   },
+   {
+    "anchor": "stmt-prop-endpoint-comparison",
+    "claim_id": "claim-common-terminal-comparison",
+    "statement": "the same precise terminal coupling $b_0$."
+   },
+   {
+    "anchor": "stmt-lem-offset-box-test",
+    "claim_id": "claim-offset-reference-box",
+    "statement": "$N\\ge K_0$"
+   },
+   {
+    "anchor": "stmt-lem-offset-box-test",
+    "claim_id": "claim-offset-reference-box",
+    "statement": "$\\beta=\\vartheta_N+s$"
+   },
+   {
+    "anchor": "stmt-lem-offset-box-test",
+    "claim_id": "claim-offset-reference-box",
+    "statement": "$|s|\\le R$"
+   },
+   {
+    "anchor": "stmt-prop-uniform-volume",
+    "claim_id": "claim-offset-volume-and-decay",
+    "statement": "Fix $K_0,M_0$"
+   },
+   {
+    "anchor": "stmt-prop-uniform-volume",
+    "claim_id": "claim-offset-volume-and-decay",
+    "statement": "$\\beta=\\vartheta_N+s$."
+   },
+   {
+    "anchor": "stmt-lem-inclined-periods",
+    "claim_id": "claim-common-inclined-periods",
+    "statement": "Let $M_k=2^kM_0$."
+   },
+   {
+    "anchor": "stmt-prop-source-input",
+    "claim_id": "claim-offset-source-transport",
+    "statement": "For a comparison on a common ordinary step,"
+   },
+   {
+    "anchor": "eq:field-offset-matching",
+    "claim_id": "claim-offset-source-products",
+    "statement": "Throughout, the parameters have the choices of Propositions <a href=\"#prop:admission\" data-reference-type=\"ref\" data-reference=\"prop:admission\">45</a> and <a href=\"#prop:uniform-volume\" data-reference-type=\"ref\" data-reference=\"prop:uniform-volume\">52</a>. Write $I=(-R,R)$, and let a run of type $P\\in\\{r,+,-\\}$, depth $N$, and offset $s$ have bare coupling $\\beta=\\vartheta_N+s$. Recall the matching condition $$(s_2+A_{P_2})-(s_1+A_{P_1})\\longrightarrow0,\n \\label{eq:field-offset-matching}$$ for two sequences of runs whose depths tend to infinity. The discrepancies $u_j$ and $\\lambda_j$ are the source-free density and precise-coupling discrepancies at layer $j$. By Proposition <a href=\"#prop:matching\" data-reference-type=\"ref\" data-reference=\"prop:matching\">47</a>, both tend to zero at each fixed layer under <a href=\"#eq:field-offset-matching\" data-reference-type=\"eqref\" data-reference=\"eq:field-offset-matching\">[eq:field-offset-matching]</a>. All finite-period comparisons below use the same reference thresholds and the common record lists, with zero padding, prescribed in Section <a href=\"#sec:setup\" data-reference-type=\"ref\" data-reference=\"sec:setup\">2</a>."
+   },
+   {
+    "anchor": "stmt-lem-source-comparison",
+    "claim_id": "claim-offset-source-products",
+    "statement": "with $|s|\\le R$,"
+   },
+   {
+    "anchor": "stmt-lem-moment-bound",
+    "claim_id": "claim-offset-moment-bounds",
+    "statement": "For $N\\ge K_0$,"
+   },
+   {
+    "anchor": "stmt-lem-moment-bound",
+    "claim_id": "claim-offset-moment-bounds",
+    "statement": "$|s|\\le R$,"
+   },
+   {
+    "anchor": "stmt-prop-offset-limits",
+    "claim_id": "claim-offset-continuum-hierarchies",
+    "statement": "Let $N\\to\\infty$"
+   },
+   {
+    "anchor": "stmt-prop-offset-limits",
+    "claim_id": "claim-offset-continuum-hierarchies",
+    "statement": "$s\\to s_*$ with $|s|\\le R$,"
+   },
+   {
+    "anchor": "stmt-prop-offset-limits",
+    "claim_id": "claim-offset-continuum-hierarchies",
+    "statement": "for a fixed type $P$."
+   },
+   {
+    "anchor": "stmt-lem-two-point-tails",
+    "claim_id": "claim-uniform-relative-tails",
+    "statement": "$N\\ge K_0$"
+   },
+   {
+    "anchor": "stmt-lem-two-point-tails",
+    "claim_id": "claim-uniform-relative-tails",
+    "statement": "$|s|\\le R$"
+   },
+   {
+    "anchor": "stmt-prop-normalization",
+    "claim_id": "claim-positive-canonical-normalization",
+    "statement": "For every $s\\in I$,"
+   },
+   {
+    "anchor": "stmt-lem-shooting-normalization",
+    "claim_id": "claim-shooting-normalization",
+    "statement": "The shooting hierarchy constructed in Proposition <a href=\"#prop:continuum-limit\" data-reference-type=\"ref\" data-reference=\"prop:continuum-limit\">35</a> has finite positive susceptibility and finite positive second-moment length. Applying the unique positive rescaling <a href=\"#eq:canonical-hierarchy-normalization\" data-reference-type=\"eqref\" data-reference=\"eq:canonical-hierarchy-normalization\">[eq:canonical-hierarchy-normalization]</a> to it is the limit of applying canonical susceptibility and length normalization to its cutoff fields. These assertions also hold when its sufficiently large auxiliary parameters are fixed independently of those used for the offset trajectories."
+   },
+   {
+    "anchor": "stmt-prop-two-scales",
+    "claim_id": "claim-depth-and-inclination-relations",
+    "statement": "For $s,s-\\gamma\\in I$,"
+   },
+   {
+    "anchor": "stmt-prop-two-scales",
+    "claim_id": "claim-depth-and-inclination-relations",
+    "statement": "For $s,s+d\\in I$,"
+   },
+   {
+    "anchor": "stmt-lem-dense-periods",
+    "claim_id": "claim-dense-period-uniqueness",
+    "statement": "Let $L>1$ be a power of two,"
+   },
+   {
+    "anchor": "stmt-lem-dense-periods",
+    "claim_id": "claim-dense-period-uniqueness",
+    "statement": "let $\\gamma>0$,"
+   },
+   {
+    "anchor": "stmt-lem-dense-periods",
+    "claim_id": "claim-dense-period-uniqueness",
+    "statement": "let $I=(-R,R)$."
+   },
+   {
+    "anchor": "stmt-lem-dense-periods",
+    "claim_id": "claim-dense-period-uniqueness",
+    "statement": "Suppose $\\ell:I\\to(0,\\infty)$ is continuous"
+   },
+   {
+    "anchor": "stmt-lem-dense-periods",
+    "claim_id": "claim-dense-period-uniqueness",
+    "statement": "suppose $2R-|d|>\\gamma$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Canonical normalization after continuum convergence",
+    "evidence": [
+     {
+      "anchor": "stmt-lem-two-point-tails",
+      "quote": "Along each convergent-offset sequence of Proposition <a href=\"#prop:offset-limits\" data-reference-type=\"ref\" data-reference=\"prop:offset-limits\">57</a>, the measures $\\nu^{\\mathrm{cut}}$ converge vaguely, in total mass, and in second moment to a finite nonnegative measure $\\nu$.",
+      "quote_sha256": "9e171f025769404b32307ec9ee1f89b668a529f9a386fbb77180e8a9a462478a"
+     },
+     {
+      "anchor": "stmt-prop-normalization",
+      "quote": "For every $s\\in I$, the quantities $m(s)$ and $\\ell(s)$ in <a href=\"#eq:offset-mass-length\" data-reference-type=\"eqref\" data-reference=\"eq:offset-mass-length\">[eq:offset-mass-length]</a> are finite and strictly positive.",
+      "quote_sha256": "99afc53289fa6276b912342a55abb945e4d927003e4e2f4ebef966402c6dbbe7"
+     }
+    ],
+    "requires_concepts": [
+     "Periodic thermodynamic limit",
+     "Nonnegative component moment measures",
+     "Uniform relative two-point tails",
+     "Finite positive susceptibility",
+     "Finite positive second-moment length"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Relativistic reconstruction and full vacuum-complement gap",
+    "evidence": [
+     {
+      "anchor": "stmt-prop-os-reconstruction",
+      "quote": "The Schwinger functions $S_n$ reconstruct a tempered Wightman theory in $1+1$ dimensions with a three-component Hermitian scalar field.",
+      "quote_sha256": "4e2b061fe15fccc708df9af68c7a6abaf2d2cf350c8f8e6714a298fffb665595"
+     },
+     {
+      "anchor": "stmt-prop-continuum-gap",
+      "quote": "For the Hamiltonian in Proposition <a href=\"#prop:os-reconstruction\" data-reference-type=\"ref\" data-reference=\"prop:os-reconstruction\">40</a>, the vacuum complement obeys $$H_{\\rm phys}\\big|_{\\Omega^\\perp}\\ge m>0,\n \\label{eq:orig-36}$$ where $m$ is the common exponent of Proposition <a href=\"#prop:slab-clustering\" data-reference-type=\"ref\" data-reference=\"prop:slab-clustering\">39</a>.",
+      "quote_sha256": "f9ab87569d5be27103e2cae8455e776e1cb241e65b8934ee0ddea9537368f64b"
+     }
+    ],
+    "requires_concepts": [
+     "Euclidean covariance",
+     "Joint reflection positivity",
+     "Factorial tempered-distribution bounds",
+     "Polynomial clustering",
+     "Density of ordered positive-time states"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-canonical-continuum",
+   "exact_statement": "For the nearest-neighbor probability <a href=\"#eq:lattice-model\" data-reference-type=\"eqref\" data-reference=\"eq:lattice-model\">[eq:lattice-model]</a>, the periodic thermodynamic limit $\\mu_\\beta$ exists for all sufficiently large $\\beta$. Both sums in <a href=\"#eq:canonical-lattice-scales\" data-reference-type=\"eqref\" data-reference=\"eq:canonical-lattice-scales\">[eq:canonical-lattice-scales]</a> are finite, $\\chi_\\beta,\\xi_\\beta>0$, and $\\xi_\\beta\\to\\infty$ as $\\beta\\to\\infty$. The following limits hold through all real values of $\\beta$ tending to infinity.*\n\n1.  *For every finite list of vector tests in $C_c^\\infty(\\mathbb R^2;\\mathbb R^3)$, the fields <a href=\"#eq:canonical-field\" data-reference-type=\"eqref\" data-reference=\"eq:canonical-field\">[eq:canonical-field]</a> converge jointly in law and in all joint moments to one common limiting hierarchy.*\n\n2.  *For every order and every choice of spin components, the associated Schwinger distributions converge in the strong topology of $\\mathcal S'((\\mathbb R^2)^n)$, that is, uniformly on bounded sets of Schwartz tests.*\n\n3.  *The limiting hierarchy has susceptibility and second-moment length equal to one. It is the hierarchy constructed in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">2</a>, after the unique positive constant length and field rescalings imposing these two normalizations.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-canonical"
+  },
+  {
+   "claim_id": "claim-prescribed-trajectory",
+   "exact_statement": "There are a dyadic integer $L>1$, a constant $H>0$, bare couplings $\\beta_N\\to\\infty$, and field normalizations $B_N>0$, such that $$\\label{eq:main-prescription}\n a_N=L^{-N},\\qquad\n \\beta_N=H+\\frac{\\log L}{2\\pi}N+O(\\log(N+1)),$$ and the following assertions hold for the model <a href=\"#eq:lattice-model\" data-reference-type=\"eqref\" data-reference=\"eq:lattice-model\">[eq:lattice-model]</a>.*\n\n1.  *Every finite list of the variables $\\phi_N(f)=\\phi_{a_N,B_N}(f)$, under $\\mu_{\\beta_N}$, converges jointly in law and in all moments. The component Schwinger distributions converge in $\\mathcal S'((\\mathbb R^2)^n)$ at every order. The same limits are obtained with suitable periodic physical tori tending to the plane as $N\\to\\infty$.*\n\n2.  *The limiting Schwinger distributions are Euclidean invariant, internally $O(3)$ invariant, reflection positive, symmetric and clustering. For every component distribution and $F\\in\\mathcal S((\\mathbb R^2)^n)$, $$|S_n(F)|\\le C^n n!\\sup_{x\\in(\\mathbb R^2)^n}\n           (1+|x|^2)^{2n}|F(x)|,$$ with a constant $C$ independent of $n$. They reconstruct a local, unitary, relativistic theory in $1+1$ dimensions.*\n\n3.  *The reconstructed theory has a unique vacuum $\\Omega$, a nonzero vacuum complement, and a Hamiltonian $H_{\\mathrm{phys}}$ satisfying $$H_{\\mathrm{phys}}\\big|_{\\Omega^\\perp}\\ge m\\mathbf 1\n     \\quad\\text{for some }m>0.$$*\n\n4.  *A connected four-point distribution is nonzero on smooth tests with strictly separated time supports. In particular, the limiting field correlations do not satisfy Wick factorization.*\n\n*The trajectory is selected by fixing its terminal kinetic coupling to $H$ at a fixed physical block length.",
+   "kind": "construction",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-canonical-physical-properties",
+   "exact_statement": "The canonical limiting hierarchy is Euclidean invariant, internally $O(3)$ invariant, reflection positive, symmetric, and clustering. It satisfies factorial tempered-distribution bounds and reconstructs a local, unitary relativistic theory in $1+1$ dimensions. The reconstructed Hamiltonian has a unique vacuum, a nonzero vacuum complement, and a strictly positive lower bound on that entire complement. A connected four-point distribution is nonzero on smooth tests with strictly separated time supports.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-canonical-physics"
+  },
+  {
+   "claim_id": "claim-preliminary-mixing",
+   "exact_statement": "There are constants $b_0,C,c,p>0$ and $\\eta>0$ such that, with $$X(b)=C\\exp\\bigl((4\\pi-\\eta)b\\bigr),\\qquad b\\ge b_0,\n \\label{eq:orig-1}$$ the following statements hold uniformly for all bond strengths $0\\le\\beta_e\\le b$, including zero.*\n\n\n1.  *On every unpinned rectangular torus whose sides are at least $CX(b)$, and on every finite free subgraph of the square lattice, local Lipschitz observables $F,G$ supported on $A,A'$ at distance $d$ satisfy $$|\\operatorname{Cov}(F,G)|\\le\n     C(1+b+|A|+|A'|+d)^p\\mathcal L(F)\\mathcal L(G)\n     e^{-cd/X(b)}.\n     \\label{eq:prelim-mixing}$$ In the homogeneous model the periodic infinite-plane limit exists and is unique.*\n\n\n2.  *For each fixed aspect bound $\\kappa\\ge1$, the constants may be chosen so that, for even $n,w$ with $\\kappa^{-1}\\le n/w\\le\\kappa$ and $\\min(n,w)\\ge CX(b)$, $$0\\le4\\log Z_b(n,w)-\\log Z_b(2n,2w)\n     \\le C(1+b+n+w)^p e^{-c\\min(n,w)/X(b)}.\n     \\label{eq:prelim-doubling}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-preliminary"
+  },
+  {
+   "claim_id": "claim-stiffness-iteration",
+   "exact_statement": "Fix a sufficiently large $D$. Suppose that, on squares of side $R$, $H_R\\le h\\mathbf 1$ uniformly over all boundary pins and all strengths in $[0,b]$, where $B^{-D}\\le h\\le B$ and $B\\ge b$ is sufficiently large. The pinned-cell iteration produces a common side $R_*$ with $$H_{R_*}\\le B^{-D}\\mathbf 1,\\qquad\n \\log(R_*/R)\\le4\\pi h+C_D\\sqrt{B\\log B},\n \\label{eq:prelim-iteration-conclusion}$$ provided Equation <a href=\"#eq:prelim-size-restriction\" data-reference-type=\"eqref\" data-reference=\"eq:prelim-size-restriction\">[eq:prelim-size-restriction]</a> holds throughout the iteration, including each proposed next square. All stiffness bounds remain uniform in the original pin and strength class.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-prelim-iteration"
+  },
+  {
+   "claim_id": "claim-initial-stiffness-saving",
+   "exact_statement": "There is a fixed sufficiently small $u>0$ such that, for all sufficiently large $b$, the square of side $S=\\lfloor e^{2\\pi bu}\\rfloor$ satisfies $$H_S\\le b(1-3u/4)\\mathbf 1$$ uniformly in all its boundary pins and all strengths $0\\le\\beta_e\\le b$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-prelim-initial-reduction"
+  },
+  {
+   "claim_id": "claim-inclined-cell-geometry",
+   "exact_statement": "For either choice of $O$, the cells $\\mathcal B_Y^O$ partition $\\mathbb Z^2$, have exactly $L_*^2$ sites, and are connected by nearest-neighbor edges. There are no fine sites on their boundaries. Quarter turns about cell centers preserve the blocking. Reflection in a fine coordinate axis interchanges the two inclined types, with the reflected choice of centers. Every site of a cell can be joined to its central region by a path in the cell of length $O(L_*)$. Moreover, for every spin field, every cell, and every value of its tag, $$|m_Y-\\widehat m_Y|\n \\le \\frac{C}{L_*}\\sum_{e\\subset\\mathcal B_Y^O}r_e,\n \\qquad r_{\\{x,y\\}}=|q_x-q_y|.\n \\label{eq:orig-3}$$ The ordinary cells satisfy the corresponding estimate with $L$ in place of $L_*$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-free-inclined-geometry"
+  },
+  {
+   "claim_id": "claim-small-chord-mean",
+   "exact_statement": "For either block geometry, suppose that $r_e\\le T_j$ on the within-cell coordinate paths joining weighted sites in the proof of Lemma <a href=\"#lem:free-inclined-geometry\" data-reference-type=\"ref\" data-reference=\"lem:free-inclined-geometry\">7</a>; in particular, this holds if all nearest-neighbor chords in the cell are at most $T_j$. For $H\\ge H_0(L)$ the normalized-mean branch is forced and $$|m_Y-\\widehat m_Y|\\le C_L T_j^2.$$ The bound is uniform in the layer $j$ and the cell.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-free-small-chord-mean"
+  },
+  {
+   "claim_id": "claim-free-history-contraction",
+   "exact_statement": "There are $L_0,A_0,c,C>0$ such that, for every dyadic $L\\ge L_0$ and every admissible history, $K_{h}$ is analytic and bounded on a common complex neighborhood of the momentum torus and $$cD(p)\\le K_{h}(p)\\le CD(p)\\quad(p\\in\\mathbb R^2),\n \\qquad K_{h}(p)-D(p)=O(|p|^4).$$ There is a real, self-adjoint analytic edge lift $B_{h}$ with $$K_{h}=d^*B_{h}d,\n \\qquad c\\mathbf 1\\le B_{h}\\le C\\mathbf 1,\n \\qquad B_{h}(0)=\\mathbf 1.$$ The lifts and their inverses have uniform exponential kernel bounds. For a step of side $l=L$ or $l=L_*$, the operators in Equation <a href=\"#eq:free-operators\" data-reference-type=\"eqref\" data-reference=\"eq:free-operators\">[eq:free-operators]</a> satisfy $$KP=Q^*K',\\qquad \\mathbf 1-QP=K',\n \\qquad\n \\sup_x\\sum_Y e^{c\\operatorname{dist}(x,Y)/l}\n       |\\nabla_f^sP(x,Y)|\\le C_s l^{-s}$$ for every fixed nonnegative integer $s$. Here the distance is between the physical fine site and coarse center, in fine units. The mean $P$ preserves constants and centered affine fields, with the rotation and scale of the output frame included. The covariance $C$ has exponential kernel bounds in coarse units with constants $C_L$.*\n\n\n*Suppose two histories share their last $r\\ge0$ ordinary observation steps, using the same ordinary $Q$ in these steps and identifying their output coordinates. Then on a common fixed smaller complex strip, $$\\left\\lVert K_{h_1}-K_{h_2}\\right\\rVert_{\\rm an}\n \\le C\\left(\\frac{A_0}{L^2}\\right)^r.\n \\label{eq:free-history}$$ Here $\\left\\lVert\\cdot\\right\\rVert_{\\rm an}$ is the supremum norm on that strip. The difference vanishes through degree three at the origin, and the same estimate holds for any prescribed finite set of analytic derivative and exponential kernel norms, after decreasing the strip or exponential weight. The corresponding differences of lifts and their inverses obey this bound. When the two histories are followed by a common next ordinary observation, their $P$ and $C$ differences obey the same bound with a permitted prefactor $C_L$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-free-bounds"
+  },
+  {
+   "claim_id": "claim-positive-kinetic-completion",
+   "exact_statement": "A common $c_0>0$ and real analytic edge operators $\\ell_{h}$ can be chosen so that $$\\mathsf A_{h}\n   =\\binom{\\sqrt{c_0}\\mathbf 1}{\\ell_{h}},\n \\qquad X_{h}=\\mathsf A_{h}d,\n \\qquad X_{h}^*X_{h}=K_{h}.$$ There are real maps $$\\mathcal M:\\mathcal X_{\\rm coarse}\n        \\longrightarrow\\mathcal X_{\\rm fine}\\oplus\\ell^2(\\Lambda';\\mathbb R),\n \\qquad\n \\mathcal N:\\mathcal X_{\\rm coarse}\n        \\longrightarrow\\mathcal X_{\\rm coarse}\\oplus\\ell^2(\\Lambda';\\mathbb R)$$ with $$\\begin{aligned}\n \\mathcal M^*\\mathcal M+\\mathcal N^*\\mathcal N&=\\mathbf 1,\n &\\mathcal N X'&=0,\\label{eq:free-positive-isometry}\\\\\n \\mathcal M^*(Xu,V-Qu)&=X'V,\n &\\mathcal M X'&=(XP,\\mathbf 1-QP).\n \\label{eq:free-positive-ambient}\n\\end{aligned}$$ Their kernels have exponential moments. For a block side $l\\in\\{L,L_*\\}$, the fine-output part of $\\mathcal M$ has row bound $C/l$, column bound $Cl$, and first and second fine-difference row bounds $C/l^2$ and $C/l^3$. The coarse slots have bounded row and column norms. For a common next ordinary step, every history difference has the factor $(A_0/L^2)^r$ of Equation <a href=\"#eq:free-history\" data-reference-type=\"eqref\" data-reference=\"eq:free-history\">[eq:free-history]</a>, with prefactor $C_L$ allowed. At empty history one may take $\\ell_{\\varnothing}=\\sqrt{1-c_0}\\mathbf 1$.*\n\n*The construction commutes with simultaneous square symmetries of its geometry and its input data. An individual inclined history has C4 covariance; reflection transports it to the reflected history. Ordinary histories, including empty history, have the full square symmetries.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-free-positive"
+  },
+  {
+   "claim_id": "claim-exact-block-step",
+   "exact_statement": "Fix $\\upsilon>0$ sufficiently small. There are choices of $L$, the canonical caps and comparison weights, $P_0$, and finally $H$ such that integration against one normalized block observation sends every admitted retained density at $b\\in[H_j/2,2H_j]$ to an exact representation of the same form in layer $j-1$, with all renewed shape caps. The representation may be iterated when its new coupling belongs to $[H_{j-1}/2,2H_{j-1}]$; that admission is established separately by shooting in Section 5. Its precise coupling is $$b'=b+\\alpha_h(\\mathbf P)+\\frac{\\kappa_h(\\mathbf P)}b+\\Delta,\n \\qquad |\\Delta|\\le C_LH_j^{-1.05}.\n \\label{eq:orig-4}$$ Here $h$ is the free history, and the bulk scalar, canonical slots, and kicks use the prescriptions of Rloc@rg:canonical-mapRloc@rg:canonical-map**\\[unresolved R locator: rg:canonical-map\\]** adapted below to $S^2$. All retained norm caps are renewed.*\n\n\n*For two regular steps with common geometric scales, let $\\lambda=b_2-b_1$, and let $u$ be the fixed weighted shape discrepancy: canonical coefficient differences, regular-error difference divided by its cap, and covering-gas difference divided by its cap. The regular error difference is measured through order $k-1$. Then $$\\begin{aligned}\n u'&\\le q u+C_L\\operatorname{poly}(H_j)\\epsilon_h\n       +C_L(\\log H_j)^C|\\lambda|/H_j,\\nonumber\\\\\n |\\lambda'-\\lambda|&\\le C_Lu+C_L\\operatorname{poly}(H_j)\\epsilon_h\n       +C_L(\\log H_j)^C|\\lambda|/H_j,\n \\qquad q<L^{-2+\\upsilon}.\n \\label{eq:orig-5}\n\\end{aligned}$$ For identical histories $\\epsilon_h=0$. If the histories share their last $r$ regular observations, one may take $\\epsilon_h=(A_0/L^2)^r$, with the constant $A_0$ of Section 3. The same-step Lipschitz bounds with no history change hold also for an inclined first step. The representation classes and constants are common to all the admitted histories and periods. Signed covering activities are allowed: the logarithm used in constructing the regular exponent is the convergent connected logarithm of the small background factor, based at one. The mandatory-cover factor is retained as a sum, and no logarithm of the full signed density is taken.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-thm-rg-step"
+  },
+  {
+   "claim_id": "claim-ambient-gaussian-completion",
+   "exact_statement": "Fix a primary pattern, the frozen spins, the tags in the observation, and the output data with their statuses. Let $D$ be the scalar column matrix, on the nonfrozen sites, of the selected rows of $$D_0=(\\mathsf A_s d,-\\sqrt a Q),\\qquad A=D^*D.$$ Adjoining the normalized scalar Gaussian with negative log density $b|Dv|^2/2$ and setting $$\\xi_x=u_x+T_xv_x$$ gives an exact integration in $\\mathbb R^3$ at every nonfrozen site, with Lebesgue Jacobian one for this change of variables. The matrix $A$ satisfies $c_L\\mathbf 1\\le A\\le C_L\\mathbf 1$, uniformly in the pattern and period. No cutoff on $v$ is required.*\n\n\n*For a selected row with reference $T_i=V_{o(i)}$, let its affine constant be the projection onto $T_i^\\perp$ of the physical row $R_i(0,V)$, where $R=(X-\\nu,Y-w)$. Insert the smoothly extended frozen coordinates in $D_0$ and denote the resulting affine row by $D_i\\xi+F_i$. On the selected-row and smooth angular-cutoff supports, the additional error caused by the scalar coordinate in subtracting the affine square is bounded in absolute value by $$C_LM^D\\left(t^2\\sum_x|v_x|+t\\sum_x|v_x|^2\\right).\n \\label{eq:orig-6}$$ The sums run over that row’s complete coordinate reads. The same estimate holds on the enlarged no-output-flag graph domains.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-rg-ambient"
+  },
+  {
+   "claim_id": "claim-spin-prediction",
+   "exact_statement": "On a stencil with the margins of Rloc@app:read-setsRloc@app:read-sets**\\[unresolved R locator: app:read-sets\\]**, in the empty pattern or away from nearby cores, put $$q_x^0=\\operatorname{Exp}_{T_x}\n                     (\\operatorname{proj}_{T_x^\\perp}\\mu_x).$$ Then the three estimates Rloc@rg:predictionRloc@rg:prediction**\\[unresolved R locator: rg:prediction\\]** hold with this spin: $$r_s=O\\bigl(C_LM^D(t^2+te^{-c_LM})\\bigr),\\qquad\n |dq^0|\\le Ct/L+C_LM^Dt^2,\\qquad\n |\\mu|\\le Ct+C_LM^Dt^2.$$ They hold with the fixed normalized derivatives and with a single history or precise-coupling difference. The leading constants are uniform before $L$ is chosen. Everywhere, including on extensions near cores, $|\\mu|\\le C_LM^Dt$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-rg-prediction"
+  },
+  {
+   "claim_id": "claim-core-and-tail-reserves",
+   "exact_statement": "The core factor retains the reserve $e^{-c_Lp^2s_c}$ of Rloc@app:explicit-coreRloc@app:explicit-core**\\[unresolved R locator: app:explicit-core\\]**, apart from the additional envelope $$\\exp\\left\\{e_0\\left(M^Ds_c+\n                         \\sum_{x\\in I_c}|Z_x|^2\\right)\\right\\},\n \\qquad e_0=C_Lg\\operatorname{poly}(M,p).\n \\label{eq:orig-7}$$ The bounds hold on every attached profile’s closed derivative support. On a selected unassigned row the exponent to be opened has, on its angular-cutoff support, the envelope $$C_Lg\\operatorname{poly}(M,p)\n                 \\left(1+\\sum_{x\\in I_i}|Z_x|^2\\right),\n \\label{eq:orig-8}$$ where $I_i$ is its Gaussian read set. Such a row is the sum of an ordinary letter supported where $\\max_{I_i}|Z_x|\\le2p$ and a tail letter requiring $\\max_{I_i}|Z_x|\\ge p$. The former has ordinary majorant $C_Lg\\operatorname{poly}(M,p)$; the latter has an exceptional Gaussian reserve. Both assertions hold with every fixed required normalized derivative and a single marked discrepancy.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-rg-reserves"
+  },
+  {
+   "claim_id": "claim-joint-factor-estimates",
+   "exact_statement": "For every finite admissible selection $\\mathcal A$ of prepared factors in a fixed pattern, including the compulsory cores, there are nonnegative majorants $a_\\alpha$ such that $$\\left|D^r\\mathbb E\\prod_{\\alpha\\in\\mathcal A}F_\\alpha\\right|\n \\le C_k\\left(1+\\sum_{\\alpha\\in\\mathcal A}s_\\alpha\\right)^{d_k}\n                        \\prod_{\\alpha\\in\\mathcal A}a_\\alpha,\n \\qquad r\\le k.$$ The expectation includes the Gaussian, frozen spins and tags. For nonempty output inventory this asserts only the undifferentiated and parameter-comparison estimates. A single marked discrepancy retains its size in this product bound. An ordinary primitive of order $r_0>0$ has summed majorant $C_Lg^{r_0}\\operatorname{poly}(M,p)$ with the prescribed support weights. Exceptional factors have arbitrary fixed power accuracy, and seeded connected sums retain an $e^{-p^{3/10}}$ reserve after all decorations. Disjoint complete supports factor exactly.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-rg-joint"
+  },
+  {
+   "claim_id": "claim-canonical-slot-contraction",
+   "exact_statement": "For the diagonal response of each nonzero canonical slot, the coefficient norm of the output is at most $CL^{-2}$ times the input norm, where $C$ is independent of $L$ and the history before the block size is chosen. The corresponding quadratic transfer has zero affine Hessian. The same conclusion holds for an inclined step in its rotated physical coordinates.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-rg-canonical-contraction"
+  },
+  {
+   "claim_id": "claim-regular-error-contraction",
+   "exact_statement": "For every fixed required output support exponent chosen before $L$, $$\\left\\lVert\\mathcal Tf\\right\\rVert_{k,j-1,B}\n   \\le\\bigl(C/L^2+o_H(1)\\bigr)\\left\\lVert f\\right\\rVert_{k,j,A}.\n \\label{eq:orig-9}$$ The little-oh may depend on $L$ and is uniform for $H_j\\ge H$. The same bound holds for an input difference through order $k-1$. A map change acting on an unchanged input satisfies the original map-difference estimate of Rloc@rg:error-contractionRloc@rg:error-contraction**\\[unresolved R locator: rg:error-contraction\\]**, with its polynomial losses and one extra derivative on that input.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-rg-error-contraction"
+  },
+  {
+   "claim_id": "claim-limiting-kinetic-increment",
+   "exact_statement": "For the nearest-neighbor action and the normalized observations used here, $$\\alpha_\\infty=-\\gamma,\n \\qquad \\gamma=\\frac{\\log L}{2\\pi}.\n \\label{eq:orig-11}$$",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-kinetic-increment"
+  },
+  {
+   "claim_id": "claim-shooting-admission",
+   "exact_statement": "After the choices of $L$ and $P_0$, take $H$ sufficiently large. For every integer $N\\ge1$ there is a microscopic coupling $\\beta_N>0$ whose $N$ regular transformations remain strictly inside the bands $[H_j/2,2H_j]$ and end at $b_0=H$. Every such choice satisfies $$\\beta_N=H+\\gamma N+O_{L,H}(\\log(2+N)).\n \\label{eq:orig-12}$$ Along these trajectories, $$b_j=\\vartheta_j+O_L(1),\\qquad 0\\le j\\le N,\n \\label{eq:orig-13}$$ uniformly in $N$, with constants bounded as $H$ is increased. The trajectories starting at the same $\\beta_N$ with either inclined first step are also strictly admitted and satisfy Equation <a href=\"#eq:orig-13\" data-reference-type=\"eqref\" data-reference=\"eq:orig-13\">[eq:orig-13]</a>. Their terminal couplings agree with one another, although they need not equal $H$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-shooting"
+  },
+  {
+   "claim_id": "claim-endpoint-matching",
+   "exact_statement": "For every sufficiently small fixed $\\upsilon>0$, the parameters may be chosen so that some $\\rho<L^{-2+\\upsilon}$ satisfies $$u_j+|\\lambda_j|\n \\le C_H(1+K)^C\\rho^{K-j},\n \\qquad 0\\le j\\le K,\n \\label{eq:orig-14}$$ uniformly in $N\\ge K$. After the respective bulk scalars have been removed, write the endpoint densities as $e^{X_i(q)}\\Xi_i(q)$. On every common admitted terminal torus of volume $v$, $$\\begin{aligned}\n \\left\\lVert X_1-X_2\\right\\rVert_\\infty&\\le D_Hv\\delta_K,\\nonumber\\\\\n \\sup_x\\sum_{\\lambda:x\\in P_\\lambda}\n e^{As_\\lambda}\\left\\lVert k_{1,\\lambda}-k_{2,\\lambda}\\right\\rVert_\\infty\n &\\le D_H\\delta_K,\n \\qquad \\delta_K=L^{-(2-\\upsilon)K}.\n \\label{eq:orig-15}\n\\end{aligned}$$ The constants are independent of depths and periods. The two mirrored inclined trajectories at depth $N$ have the same endpoint estimates with $K=N$, when their output lists are expressed in common coordinates.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-endpoint-matching"
+  },
+  {
+   "claim_id": "claim-integrated-covering-comparison",
+   "exact_statement": "Fix any constant multiplier of the covering cap in Section <a href=\"#sec:setup\" data-reference-type=\"ref\" data-reference=\"sec:setup\">2</a>. For sufficiently large $H$, let $e^X\\Xi$ be a standard endpoint density on an axis torus as above, and suppose $$\\sup_x\\sum_{\\lambda:x\\in P_\\lambda}\n                     e^{As_\\lambda}p_\\lambda$$ is at most that multiplier times the covering cap. The exponent $A$ is the fixed support exponent of the endpoint class. Then $$\\frac1Z\\int e^X|\\widetilde\\Xi-\\Xi|\\,\\,\\mathrm dq\n \\le \\exp\\left(\\sum_\\lambda d_\\lambda e^{2s_\\lambda}\\right)-1.\n \\label{eq:orig-16}$$ The statement is uniform in cutoff depth and in the admitted periods. Only the base density $e^X\\Xi$ is required to be positive and reflection positive.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-integrated-comparison"
+  },
+  {
+   "claim_id": "claim-energy-remainder",
+   "exact_statement": "On a terminal torus of volume $v$, $$X=-\\sum_eY_e+X_{\\mathrm{rem}},\\qquad\n |X_{\\mathrm{rem}}|\\le C_Lv,\n \\qquad\n |X_{\\mathrm{rem}}(q)-X_{\\mathrm{rem}}(q')|\\le C_Ln\n \\label{eq:orig-17}$$ whenever $q,q'$ differ at at most $n$ sites. Moreover, $$Z\\ge e^{-C_Lv\\log H},\\qquad |\\Xi(q)|\\le e^v.\n \\label{eq:orig-18}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-comparison-remainder"
+  },
+  {
+   "claim_id": "claim-selected-row-moments",
+   "exact_statement": "Let $B_T$ be a sufficiently large dyadic integer comparable with a fixed power of $\\log H$. On tori whose periods are multiples of $2B_T$, every set $I$ of unoriented rows satisfies $$\\mathbb E_\\mu\\exp\\left(\\theta\\sum_{e\\in I}Y_e\\right)\n \\le\\exp(C_L|I|B_T^2\\log H),\n \\qquad \\theta=1-C_LD_1/B_T.\n \\label{eq:orig-19}$$ In particular $B_T$ may be chosen so that $\\theta>0$ and $1-\\theta$ is smaller than any prescribed fixed inverse power of $\\log H$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-row-exponential-moment"
+  },
+  {
+   "claim_id": "claim-editable-regions",
+   "exact_statement": "The constants $\\varepsilon$ and $C$ can be chosen so that the following statements hold for all sufficiently large $H$ and sufficiently large admitted periods.*\n\n1.  *The unchanged values on $U^c$ have a measurable extension to all sites in $S^2$ with nearest-neighbor chords at most $C'a$. For each region $E_C$, independently sampling every spin in a cap of radius $c't$ about this extension removes all its true bad bonds and creates none. Any subset of the regions may be replaced in this way. The conditional sampling density for $n$ replaced sites is at most $\\exp(Cn\\log H)$ with respect to product normalized area measure.*\n\n\n\n2.  *For a union $E$ of selected regions, let $n=|E|$. There is a set $I_E$ of rows, consisting of all rows within distance $C'D_1$ of $E$, which includes every changed kinetic stencil and satisfies $|I_E|\\le Cd^2n$. Its total stencil enlargement is less than $d/2$. For the original configuration and every sampled replacement $q'$, $$\\begin{aligned}\n     \\sum_{e\\in I_E}Y_e(q)&\\ge cp^2n/d^2,\n     \\label{eq:orig-20}\\\\\n     \\sum_{e\\in I_E}Y_e(q')&\\le C_Ld^2p^2n.\n     \\label{eq:orig-21}\n    \\end{aligned}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-editable-regions"
+  },
+  {
+   "claim_id": "claim-terminal-alignment",
+   "exact_statement": "On every standard terminal axis torus considered in this section, for each fixed $C>0$ there is $c>0$ such that every bond satisfies $$\\mu\\{|q_x-q_y|>t/C\\}\\le e^{-cHt^2}.\n \\label{eq:orig-23}$$ The constants are uniform in the cutoff depth and the admitted periods.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-terminal-alignment"
+  },
+  {
+   "claim_id": "claim-uniform-reference-box",
+   "exact_statement": "Let $\\mathcal U\\subset(\\mathbb Q_{>0})^2$ be finite. Assume the preliminary estimate of Section <a href=\"#sec:preliminary\" data-reference-type=\"ref\" data-reference=\"sec:preliminary\">1</a>, the shooting asymptotics <a href=\"#eq:orig-12\" data-reference-type=\"eqref\" data-reference=\"eq:orig-12\">[eq:orig-12]</a>, the endpoint discrepancy estimate <a href=\"#eq:orig-15\" data-reference-type=\"eqref\" data-reference=\"eq:orig-15\">[eq:orig-15]</a>, and the integrated comparison <a href=\"#eq:orig-16\" data-reference-type=\"eqref\" data-reference=\"eq:orig-16\">[eq:orig-16]</a>. With the contraction slack $\\upsilon>0$ chosen sufficiently small, there exist an integer $K_0$ and a positive integer $M_0$, independent of $N$, such that, for every $N\\ge K_0$ and every $(u_1,u_2)\\in\\mathcal U$, $$\\Delta_{\\beta_N}(n,w)\\le 2^{-10},\n \\qquad (n,w)=(u_1,u_2)M_0L^N.\n \\label{eq:orig-24}$$ The number $M_0$ may be required to exceed any prescribed fixed constant and to be divisible by any prescribed fixed integer. In particular, all periods and tile counts needed in Section 6 may be taken to be even integers.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-trace-small-box"
+  },
+  {
+   "claim_id": "claim-transfer-trace-concentration",
+   "exact_statement": "For every integer $n\\ge4$, $s_n(w)\\le e^{p(n,w)}-1$. If $p(n,w)\\le1/4$, then $$\\left(\\frac{\\lambda_2(w)}{\\lambda_1(w)}\\right)^n\n       \\le2p(n,w),\\qquad\n p(2n,w)\\le4p(n,w)^2.\n \\label{eq:trace-squaring}$$ The corresponding conclusions hold for $q$ with the coordinate directions interchanged.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-trace-concentration"
+  },
+  {
+   "claim_id": "claim-rectangular-doubling",
+   "exact_statement": "Let $\\beta\\ge0$ and let $n,w\\ge4$ be integers. If $\\Delta_\\beta(n,w)\\le2^{-10}$, then, for every $k\\ge0$, $$\\Delta_\\beta(2^kn,2^kw)\\le64^{-1}2^{-2^k}.\n \\label{eq:orig-25}$$ For a square with $n=w$, the transfer operators at circumferences $2^kn$ also satisfy $$\\frac{\\lambda_2(2^kn)}{\\lambda_1(2^kn)}\n       \\le e^{-(\\log2)/n}.\n \\label{eq:trace-width-gap}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-trace-doubling"
+  },
+  {
+   "claim_id": "claim-uniform-volume-and-slabs",
+   "exact_statement": "Let $\\mathcal A\\subset(\\mathbb Q_{>0})^2$ be a finite list containing $(1,1)$ and $(1,25)$, and put $$\\mathcal U=\\mathcal A\n    \\cup\\{(u_1/2,u_2):(u_1,u_2)\\in\\mathcal A\\}\n    \\cup\\{(2u_1,u_2/2):(u_1,u_2)\\in\\mathcal A\\}.$$ Choose $K_0,M_0$ by Proposition <a href=\"#prop:trace-small-box\" data-reference-type=\"ref\" data-reference=\"prop:trace-small-box\">26</a> for $\\mathcal U$, with all displayed periods even and at least four. Let $\\omega_{\\beta_N}$ be the periodic infinite-plane state supplied by Section <a href=\"#sec:preliminary\" data-reference-type=\"ref\" data-reference=\"sec:preliminary\">1</a>. There are constants $C,c>0$, independent of $N\\ge K_0$ and $k\\ge0$, with the following properties.*\n\n\n*For $(u_1,u_2)\\in\\mathcal A$, set $(n,w)=(u_1,u_2)2^kM_0L^N$. If a bounded local observable $F$ can be placed in a rectangle of time extent at most $n/2$ and spatial extent at most $w/2$, then $$|\\mu_{\\beta_N;n,w}(F)-\\omega_{\\beta_N}(F)|\n       \\le C\\left\\lVert F\\right\\rVert_\\infty e^{-c2^k}.\n \\label{eq:trace-uniform-volume}$$ The same estimate holds for a torus obtained by closing time with any integer spatial translation, provided the support has a lift of time extent at most $n/2$ and spatial extent at most $w/2$.*\n\n\n*For bounded local observables $F,G$ on the plane whose supporting time slabs are separated by $d\\ge0$ transfer edges, $$|\\operatorname{Cov}_{\\omega_{\\beta_N}}(F,G)|\n    \\le\\left\\lVert F\\right\\rVert_\\infty\\left\\lVert G\\right\\rVert_\\infty\n       e^{-c d/(M_0L^N)}.\n \\label{eq:orig-26}$$ The constant in this last estimate may be taken to be $c=\\log2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-trace-uniform"
+  },
+  {
+   "claim_id": "claim-cutoff-physical-gap",
+   "exact_statement": "For $N\\ge K_0$, let $\\mathcal T_N$ be the one-step transfer contraction in the reflection-positive Hilbert space of $\\omega_{\\beta_N}$, and let $\\Omega_N$ be its vacuum vector. Then $$\\operatorname{spec}\\bigl(\\mathcal T_N|_{\\Omega_N^\\perp}\\bigr)\n    \\subset\\left[0,e^{-(\\log2)/(M_0L^N)}\\right].$$ At lattice spacing $a_N=L^{-N}$, the lower energy scale in physical units is consequently $$\\frac{1}{a_N}\\frac{\\log2}{M_0L^N}\n       =\\frac{\\log2}{M_0}>0.\n \\label{eq:trace-physical-scale}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-trace-physical-gap"
+  },
+  {
+   "claim_id": "claim-exact-source-step",
+   "exact_statement": "Consider an admitted source-free step of Section 4 from layer $j$ to layer $j-1$, with precise coupling $b\\in[H_j/2,2H_j]$, together with source lists satisfying Equation <a href=\"#eq:orig-27\" data-reference-type=\"eqref\" data-reference=\"eq:orig-27\">[eq:orig-27]</a> and the normalization and support conditions above. There is a real number $c_j>0$, determined by the bulk linear response, such that $$z_x=\\frac{z'_{[x]}}{l^2c_j},\n \\qquad |c_j-1|\\le C_LR_j,\n \\label{eq:orig-28}$$ gives an exact output representation with leading exponent $\\sum_Yz'_Y\\cdot V_Y$ and renewed source bounds Equation <a href=\"#eq:orig-27\" data-reference-type=\"eqref\" data-reference=\"eq:orig-27\">[eq:orig-27]</a> at layer $j-1$. The source-free output is exactly the output at zero source. No further source-dependent volume scalar is extracted.*\n\n\n*For two compatible inputs to a regular step, let $u,\\lambda,\n\\epsilon_h$ be the source-free discrepancies of Equation <a href=\"#eq:orig-5\" data-reference-type=\"eqref\" data-reference=\"eq:orig-5\">[eq:orig-5]</a>. Let $u_s$ be a fixed positively weighted sum of the regular and covering source discrepancies divided by $R_j$ and $w_j$, respectively; the regular discrepancy is measured through order $k-1$, with absent records padded by zero. The weights can be chosen so that, for some $q_s<1$, $$\\begin{split}\n u_s'&\\le q_su_s+\n   C_L(\\log H_j)^D\n          \\bigl(u+\\epsilon_h+|\\lambda|/H_j\\bigr),\\\\\n |c_{2,j}-c_{1,j}|&\\le C_LR_j\n    \\left[u_s+(\\log H_j)^D\n          \\bigl(u+\\epsilon_h+|\\lambda|/H_j\\bigr)\\right].\n \\end{split}\n \\label{eq:orig-29}$$ These estimates hold in bulk and simultaneously on the compatible admitted periods. The fixed exponent $D$ may depend on $P_0$. The order of choices is a sufficiently large $L$, then $P_0$ large enough for the fixed polynomial losses, and finally sufficiently large $H$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-source-step"
+  },
+  {
+   "claim_id": "claim-fixed-bottom-sources",
+   "exact_statement": "For the trajectory comparisons in Equation <a href=\"#eq:orig-14\" data-reference-type=\"eqref\" data-reference=\"eq:orig-14\">[eq:orig-14]</a>, the source discrepancy $u_s$ tends to zero at each fixed bottom layer, and the difference of the step coefficients $c_j$ tends to zero at each fixed bottom step. In every fixed compatible finite period, the resulting source exponents and covering activities converge in their coefficient norms, with the step dilations above that layer included.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-source-endpoints"
+  },
+  {
+   "claim_id": "claim-normalization-product-comparison",
+   "exact_statement": "For the same bare coupling $\\beta_N$ in the standard run and either inclined run, there is a constant $C_{L,H}<\\infty$, independent of depth, such that $$C_{L,H}^{-1}\\le\\frac{B_N^*}{B_N}\\le C_{L,H}.\n \\label{eq:orig-33}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-source-products"
+  },
+  {
+   "claim_id": "claim-moment-majorants",
+   "exact_statement": "For every $n\\ge1$ and every component array $\\boldsymbol\\alpha$, the measure $S_{n,N}^{\\boldsymbol\\alpha}$ is nonnegative. There is a constant $C$, independent of $N\\ge K_0$, the axis torus in the exhaustion of Section 7, and the positions of the unit boxes, such that $$S_{n,N}^{\\boldsymbol\\alpha}(Q_1\\times\\cdots\\times Q_n)\n       \\le C^n n!\n \\label{eq:unit-box-majorant}$$ for all unit boxes $Q_1,\\ldots,Q_n$. The same bound holds in the periodic infinite-plane state.*\n\n\n*For each fixed number $D$ of terminal cells, their component field sums have joint exponential moments in a neighborhood of the origin, uniformly in these cutoffs and axis tori. If $\\mu$ is the source-free terminal probability law and $z_Y\\in\\mathbb C^3$ is supported on at most $D$ terminal sites with $|z_Y^\\alpha|\\le1$, their generating function differs from $$\\mathbb E_\\mu\\exp\\!\\left(\\sum_Y z_Y\\cdot V_Y\\right)\n \\label{eq:orig-34}$$ by $o_H(1)$, uniformly for fixed $D$.*\n\n*On each fixed tilted physical torus of Section 7, the exponential-moment bounds and Equation <a href=\"#eq:unit-box-majorant\" data-reference-type=\"eqref\" data-reference=\"eq:unit-box-majorant\">[eq:unit-box-majorant]</a> hold with constants that may depend on that torus and on $H$, but remain independent of $N$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-moment-majorants"
+  },
+  {
+   "claim_id": "claim-shooting-continuum-limit",
+   "exact_statement": "On every fixed axis or tilted physical torus used in Section 7, all joint moments of the fields $\\phi_N(f)$ converge for continuous tests. Their finite-dimensional laws converge, and the limiting laws are determined by their moments. The moment measures converge on arbitrary continuous compactly supported tests in the insertion coordinates.*\n\n*In the periodic plane state these assertions hold for compactly supported tests. The same plane limit is obtained by taking the continuum limit on the axis tori and then their exhaustion, or by taking any simultaneous sequence of cutoffs and axis tori for which both the cutoff depth and the doubling index tend to infinity.*\n\n*Finally, let $O_+$ be the rotation with cosine $3/5$ and sine $4/5$. The plane limits obtained with regulator orientations $\\mathbf 1$ and $O_+^2$ have identical finite-dimensional laws when tested in the same physical coordinates.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-continuum-limit"
+  },
+  {
+   "claim_id": "claim-euclidean-regularity",
+   "exact_statement": "The plane correlation functions are nonnegative Radon measures componentwise, and for every scalar Schwartz test $F\\in\\mathcal S((\\mathbb R^2)^n)$ they satisfy $$|S_n^{\\boldsymbol\\alpha}(F)|\n   \\le C^n n!\\,\n       \\sup_{x\\in(\\mathbb R^2)^n}\n         \\bigl[(1+|x|^2)^{2n}|F(x)|\\bigr].\n \\label{eq:orig-35}$$ The lattice moment measures converge on Schwartz tests, with the same bound. Finite component norms can be incorporated by changing $C$. The limiting correlations have permutation symmetry, internal $O(3)$ covariance, and invariance under all Euclidean isometries of $\\mathbb R^2$. Bounds for products of separately translated tests are uniform in their separate translation parameters when the decay weights are centered at those parameters.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-euclidean-regularity"
+  },
+  {
+   "claim_id": "claim-boundary-strip-control",
+   "exact_statement": "Fix an order $n$, a bounded region $K\\subset\\mathbb R^2$, and a bounded axis rectangle $A$. Let $E_\\varepsilon=K\\cap\\{x:\\operatorname{dist}(x,\\partial A)<\\varepsilon\\}$. In the plane, uniformly in $N\\ge K_0$ and in the microscopic origin, $$S_{n,N}^{\\boldsymbol\\alpha}\n       (E_\\varepsilon\\times K^{n-1})\n       \\le C_{n,K,A}(\\varepsilon+a_N).\n \\label{eq:boundary-strip-bound}$$ The same estimate holds on the axis tori, with the sets interpreted in fixed bounded periodic charts. It also holds with any one insertion in the strip. Consequently continuum convergence extends to products of bounded axis-box indicators, to smooth approximations of these indicators, and to cell boxes whose boundaries converge to the given box boundaries. More generally the same conclusion holds for bounded Jordan measurable sets.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-boundary-strips"
+  },
+  {
+   "claim_id": "claim-joint-reflection-positivity",
+   "exact_statement": "Let $F$ be a polynomial in finitely many component fields $\\phi^a(f)$, where the smooth compactly supported tests $f$ have support in $\\{x^0>0\\}$. Then $$\\mathbb E\\bigl[(\\Theta F)F\\bigr]\\ge0.\n \\label{eq:continuum-reflection-positivity}$$ This holds jointly for all three components. The Schwinger functions also satisfy the reality relations for a Hermitian multiplet and $S_0=1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-reflection-positivity"
+  },
+  {
+   "claim_id": "claim-polynomial-slab-clustering",
+   "exact_statement": "There is $m>0$ with the following property. Let $F$ and $G$ be fixed polynomials in finitely many smooth compactly supported smeared component fields. If time translation separates the slabs containing their supports by a distance $R\\ge0$, then $$\\bigl|\\operatorname{Cov}(F,\\tau_sG)\\bigr|\n       \\le C_{F,G}e^{-mR}.\n \\label{eq:polynomial-slab-clustering}$$ The exponent $m$ is common to all such polynomials. The Schwinger functions satisfy the Euclidean clustering axiom also for Schwartz tests.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-slab-clustering"
+  },
+  {
+   "claim_id": "claim-relativistic-reconstruction",
+   "exact_statement": "The Schwinger functions $S_n$ reconstruct a tempered Wightman theory in $1+1$ dimensions with a three-component Hermitian scalar field. Its Hilbert space $\\mathcal H$ is positive, its fields are local, and its unitary representation of the Poincaré group satisfies the spectrum condition. The vacuum $\\Omega$ is unique and normalized. In the positive-time reflection realization of $\\mathcal H$, Euclidean time translations induce a strongly continuous semigroup $e^{-sH_{\\rm phys}}$, $s\\ge0$, with $H_{\\rm phys}\\ge0$ and $H_{\\rm phys}\\Omega=0$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-os-reconstruction"
+  },
+  {
+   "claim_id": "claim-full-continuum-gap",
+   "exact_statement": "For the Hamiltonian in Proposition <a href=\"#prop:os-reconstruction\" data-reference-type=\"ref\" data-reference=\"prop:os-reconstruction\">40</a>, the vacuum complement obeys $$H_{\\rm phys}\\big|_{\\Omega^\\perp}\\ge m>0,\n \\label{eq:orig-36}$$ where $m$ is the common exponent of Proposition <a href=\"#prop:slab-clustering\" data-reference-type=\"ref\" data-reference=\"prop:slab-clustering\">39</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-continuum-gap"
+  },
+  {
+   "claim_id": "claim-separated-non-gaussianity",
+   "exact_statement": "For a sufficiently large fixed terminal coupling $H$, there exist four smooth compactly supported real tests $f_1,\\ldots,f_4$ with strictly disjoint ordered time ranges for which $$\\begin{aligned}\n &\\mathbb E\\prod_{i=1}^4\\phi^1(f_i)\n -\\mathbb E[\\phi^1(f_1)\\phi^1(f_2)]\\mathbb E[\\phi^1(f_3)\\phi^1(f_4)] \\notag\\\\\n &\\quad\n -\\mathbb E[\\phi^1(f_1)\\phi^1(f_3)]\\mathbb E[\\phi^1(f_2)\\phi^1(f_4)]\n -\\mathbb E[\\phi^1(f_1)\\phi^1(f_4)]\\mathbb E[\\phi^1(f_2)\\phi^1(f_3)]\n \\ne0.\n \\label{eq:nonzero-fourth-cumulant}\n\\end{aligned}$$ The reconstructed Hilbert space satisfies $\\Omega^\\perp\\ne\\{0\\}$. Consequently the spectral bottom on $\\Omega^\\perp$ is both positive and finite.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-non-gaussian"
+  },
+  {
+   "claim_id": "claim-canonical-increments",
+   "exact_statement": "For every type $P\\in\\{r,+,-\\}$, initialize the nearest-neighbor model as in Section 5. As long as the input couplings lie in their admitted bands, the exact observations produce representations with all renewed shape caps and the recursion $$b_{j-1}=b_j+\\alpha^P_{N-j}\n              +\\frac{\\kappa^P_{N-j}}{b_j}+\\Delta_j,\n \\qquad |\\Delta_j|\\le C_LH_j^{-1.05}.\n \\label{eq:offset-flow}$$ There are $C_L<\\infty$, $0<\\sigma_1<1$, and a number $\\kappa_\\infty$ such that $$|\\alpha_h^P+\\gamma|+|\\kappa_h^P-\\kappa_\\infty|\n       \\le C_L\\sigma_1^h \\qquad(h\\ge0).\n \\label{eq:offset-increment-convergence}$$ These sequences are independent of the precise running couplings, and remain fixed when $H$ is increased. The two inclined types have the same scalar sequences.*\n\n\n\n*On common ordinary steps, with discrepancy variables defined above, $$\\begin{aligned}\n u_{j-1}&\\le q u_j+C_L\\operatorname{poly}(H_j)\\epsilon_h\n                        +e_j|\\lambda_j|,\\nonumber\\\\\n |\\lambda_{j-1}-\\lambda_j|\n     &\\le C_Lu_j+C_L\\operatorname{poly}(H_j)\\epsilon_h\n                        +e_j|\\lambda_j|,\n & e_j&=C_L(\\log H_j)^C/H_j.\n \\label{eq:offset-weak-comparison}\n\\end{aligned}$$ If the histories share their last $m$ ordinary observations, $\\epsilon_h$ may be taken to be $r_0^m$, where $r_0=A_0/L^2$. The choices can be made with $$\\max\\{q,r_0\\}<\\rho<L^{-2+\\upsilon}<1\n \\label{eq:offset-contraction-width}$$ and strict spare width. Here $q$ and $\\rho$ are fixed bounds valid for every subsequent sufficiently large $H$. The corresponding free kernels and their lifts compare in the exponential kernel norms of Proposition <a href=\"#prop:free-bounds\" data-reference-type=\"ref\" data-reference=\"prop:free-bounds\">9</a> with the same history bound.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-rg-input"
+  },
+  {
+   "claim_id": "claim-summable-kinetic-sensitivity",
+   "exact_statement": "For two admitted compatible representation families, including their prescribed bulk lists, on a common ordinary step with common reference scales, the discrepancies in Proposition <a href=\"#prop:rg-input\" data-reference-type=\"ref\" data-reference=\"prop:rg-input\">43</a> satisfy $$|\\Delta_{2,j}-\\Delta_{1,j}|\n \\le C_L H_j^{-1.01}(u_j+|\\lambda_j|)\n             +C_L\\operatorname{poly}(H_j)\\epsilon_h.\n \\label{eq:offset-sensitivity}$$ The constant is uniform over the bulk prescriptions and their compatible admitted finite-period representations, once $H$ is sufficiently large.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-sensitivity"
+  },
+  {
+   "claim_id": "claim-bounded-offset-admission",
+   "exact_statement": "For $H$ sufficiently large, every depth $N\\ge1$, every type $P\\in\\{r,+,-\\}$, and every bare coupling $\\beta=\\vartheta_N+s$ with $|s|\\le R'$ give a strictly admitted trajectory. Uniformly over these choices, $$b_j=\\vartheta_j+D_j,\\qquad\n \\max_{0\\le j\\le N}|D_j|\\le C_{L,R'}.\n \\label{eq:offset-admission}$$ Moreover, $$\\begin{aligned}\n D_{j-1}-D_j&=\\alpha^P_{N-j}+\\gamma+E_{j,N},\\nonumber\\\\\n |E_{j,N}|&\\le C_L\\left[\n H_j^{-1.05}\n +H_j^{-2}\\bigl(\\log(2+H_j/H)+|D_j|\\bigr)\n +H_j^{-1}\\sigma_1^{N-j}\\right],\n \\label{eq:offset-error-recursion}\n\\end{aligned}$$ and $$\\sup_{N,P,\\,|s|\\le R'}\\sum_{j=1}^{N}|E_{j,N}|\n       =o_H(1).\n \\label{eq:offset-error-sum}$$ The constants in <a href=\"#eq:offset-admission\" data-reference-type=\"eqref\" data-reference=\"eq:offset-admission\">[eq:offset-admission]</a> stay bounded as $H$ is increased, with all earlier parameters fixed.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-admission"
+  },
+  {
+   "claim_id": "claim-arbitrary-depth-retuning",
+   "exact_statement": "After increasing $H$ once more, let an ordinary trajectory have any depth $N\\ge1$ and bare offset $|s|\\le R$. For every integer $K\\ge1$ there is $s_K\\in[-R',R']$ such that the ordinary trajectory of depth $K$ with bare coupling $\\vartheta_K+s_K$ has exactly the same terminal coupling $b_0$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-retuning"
+  },
+  {
+   "claim_id": "claim-corrected-offset-matching",
+   "exact_statement": "Fix $H$ sufficiently large as above. For $i\\in\\{1,2\\}$, let $P_i\\in\\{r,+,-\\}$ be fixed and let a sequence of depth-$N_{i,n}$ trajectories have bare couplings $\\vartheta_{N_{i,n}}+s_{i,n}$, where $N_{i,n}\\longrightarrow\\infty$ and $|s_{i,n}|\\le R'$. Suppose $$(s_{2,n}+A_{P_2})-(s_{1,n}+A_{P_1})\\longrightarrow0.\n \\label{eq:offset-matching-hypothesis}$$ Compare their bulk representations in common layer coordinates, using the same ordinary observations on their common bottom steps. Then, for every fixed integer $j\\ge0$, $$u_{j,n}\\longrightarrow0,\\qquad\n \\lambda_{j,n}\\longrightarrow0.\n \\label{eq:offset-fixed-layer-matching}$$ The same statement holds on each fixed common compatible terminal period and its corresponding bottom-layer periods.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-matching"
+  },
+  {
+   "claim_id": "claim-finite-coupling-positivity",
+   "exact_statement": "For every sufficiently large fixed $\\beta$, the periodic plane law $\\mu_\\beta$ exists and is translation and $O(3)$ invariant. Every component moment $$\\mathbb E_{\\mu_\\beta}\\prod_{r=1}^n q_{x_r}^{i_r},\n \\qquad x_r\\in\\mathbb Z^2,\\quad i_r\\in\\{1,2,3\\},$$ is nonnegative. If $$C_\\beta(x)=\\mathbb E_{\\mu_\\beta}[q_0^1q_x^1],\\qquad\n \\chi_\\beta=\\sum_{x\\in\\mathbb Z^2}C_\\beta(x),\\qquad\n \\xi_\\beta^2=\\frac{\\sum_x|x|^2C_\\beta(x)}{4\\chi_\\beta},$$ then both sums converge absolutely and $0<\\chi_\\beta,\\xi_\\beta<\\infty$, where $\\xi_\\beta$ is the positive square root. More precisely, $C_\\beta(0)=1/3$ and, for each nearest-neighbor vector $e$, $$C_\\beta(e)\\ge\\frac{\\beta}{9}e^{-7\\beta}>0.\n \\label{eq:offset-edge-positive}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-finite-beta"
+  },
+  {
+   "claim_id": "claim-terminal-band-endpoints",
+   "exact_statement": "Fix a finite covering-cap multiplier and $C_0>0$ before choosing $H$ sufficiently large. Let a trajectory obtained from the microscopic Gibbs law by the exact ordinary observations satisfy the admission and cap conditions of Section <a href=\"#sec:setup\" data-reference-type=\"ref\" data-reference=\"sec:setup\">2</a>, with terminal coupling $b_0\\in[H/2,2H]$. On a standard terminal axis torus of bounded aspect, with the lower bounds and divisibilities of Section 6, its scalar-stripped endpoint density is an admissible base for Proposition <a href=\"#prop:integrated-comparison\" data-reference-type=\"ref\" data-reference=\"prop:integrated-comparison\">21</a> and Corollary <a href=\"#cor:terminal-alignment\" data-reference-type=\"ref\" data-reference=\"cor:terminal-alignment\">25</a>, with constants uniform in the trajectory, its depth, its period, and $b_0$ in this band. In particular, every endpoint bond obeys $$\\mu\\{|q_x-q_y|>t_0/C_0\\}\\le e^{-cHt_0^2}\n \\label{eq:offset-terminal-alignment}$$ for a corresponding $c>0$. The integrated comparison also permits complex comparison weights whose support-hit envelope obeys the chosen multiplier of the covering cap, as in its original statement.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-band-endpoints"
+  },
+  {
+   "claim_id": "claim-common-terminal-comparison",
+   "exact_statement": "Fix $L,R,R'$ and choose $H$ sufficiently large as in Proposition <a href=\"#prop:admission\" data-reference-type=\"ref\" data-reference=\"prop:admission\">45</a>. Consider two admitted ordinary trajectories of depths $N\\ge K\\ge1$, with offsets bounded by $R'$, common reference scales and caps, and the same precise terminal coupling $b_0$. Align their last $K$ layers on common compatible periods. Write their scalar-stripped endpoint densities as $e^{X_i}\\Xi_i$. On each common admitted terminal torus of volume $v$, their common refined activity lists satisfy $$\\begin{aligned}\n \\|X_1-X_2\\|_\\infty\n    &\\le C_Hv\\epsilon_K,\\notag\\\\\n \\sup_x\\sum_{\\lambda:x\\in P_\\lambda}\n e^{As_\\lambda}\\|k_{1,\\lambda}-k_{2,\\lambda}\\|_\\infty\n    &\\le C_H\\epsilon_K,\n \\qquad \\epsilon_K=L^{-(2-\\upsilon)K}.\n \\label{eq:offset-endpoint-comparison}\n\\end{aligned}$$ Here $P_\\lambda$ and $s_\\lambda$ are the complete support and load of a covering label, and $A$ is the support exponent of the endpoint class. If the common torus is an axis torus satisfying Lemma <a href=\"#lem:band-endpoints\" data-reference-type=\"ref\" data-reference=\"lem:band-endpoints\">49</a> and $C_Hv\\epsilon_K$ is sufficiently small, its scalar-stripped partition functions satisfy $$|\\log\\widehat Z_1-\\log\\widehat Z_2|\n       \\le C_Hv\\epsilon_K.\n \\label{eq:offset-endpoint-logZ}$$ The constants are independent of $N,K$, the periods, and the common terminal value.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-endpoint-comparison"
+  },
+  {
+   "claim_id": "claim-offset-reference-box",
+   "exact_statement": "The contraction slack $\\upsilon>0$ and then the parameters may be chosen so that there exist integers $K_0,M_0\\ge1$ with $$0\\le\\Delta_\\beta(u_1M_0L^N,u_2M_0L^N)\\le2^{-10}\n \\label{eq:offset-box-test}$$ whenever $N\\ge K_0$, $\\beta=\\vartheta_N+s$, $|s|\\le R$, and $(u_1,u_2)\\in\\mathcal U$. The integer $M_0$ may be required to exceed any fixed lower bound and to be divisible by any fixed integer. In particular all displayed half-periods and all tile counts required in Section 6 can be even.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-offset-box-test"
+  },
+  {
+   "claim_id": "claim-offset-volume-and-decay",
+   "exact_statement": "Fix $K_0,M_0$ as in Lemma <a href=\"#lem:offset-box-test\" data-reference-type=\"ref\" data-reference=\"lem:offset-box-test\">51</a>. There exist $C,c>0$, independent of $N\\ge K_0$, $|s|\\le R$, and $k\\ge0$, such that the following hold for $\\beta=\\vartheta_N+s$.*\n\n\n*Let $(u_1,u_2)\\in\\mathcal A$ and $(n,w)=(u_1,u_2)2^kM_0L^N$. If a bounded local observable $F$ has support contained in a rectangle of time extent at most $n/2$ and spatial extent at most $w/2$, then $$|\\mu_{\\beta;n,w}(F)-\\mu_\\beta(F)|\n       \\le C\\|F\\|_\\infty e^{-c2^k}.\n \\label{eq:offset-uniform-volume}$$ The same bound holds when time is closed by any integer spatial translation, provided the support has a lift satisfying these two extent bounds. The constant is uniform in the closing translation.*\n\n\n*If two bounded local plane observables $F,G$ have supporting slabs separated by $d\\ge0$ transfer edges, in either microscopic axial direction, then $$|\\operatorname{Cov}_{\\mu_\\beta}(F,G)|\n \\le \\|F\\|_\\infty\\|G\\|_\\infty\n           e^{-(\\log2)d/(M_0L^N)}.\n \\label{eq:offset-slab-decay}$$ For complex observables the covariance uses $\\overline F G$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-uniform-volume"
+  },
+  {
+   "claim_id": "claim-common-inclined-periods",
+   "exact_statement": "Let $M_k=2^kM_0$. Embed an ordinary depth-$N$ run with spacing $L^{-N}$ and axes the identity, and a type $\\pm$ run with spacing $a=L^{-N}/5$ and axes $O_\\pm^{-1}$. The square physical torus of side $M_k$ has ordinary microscopic periods $M_kL^N e_1$ and $M_kL^N e_2$. For type $+$ its microscopic periods, in $(\\mathrm{space},\\mathrm{time})$ coordinates, are $$v_1=M_kL^N(3,4),\\qquad v_2=M_kL^N(-4,3).\n \\label{eq:offset-inclined-periods}$$ They are equivalent to spatial circumference $25M_kL^N$ and time height $M_kL^N$, closed by the spatial shift $7M_kL^N$. The reflected type has the same circumference and height, with shift $-7M_kL^N$. These periods are compatible with the initial inclined blocking and the subsequent ordinary blockings, and have terminal square periods $M_k$.*\n\n*Let $F_N$ be any bounded observable whose physical support in the chosen embedding is contained in one fixed compact set, and put $\\beta=\\vartheta_N+s$, $|s|\\le R$. Its support has lifts obeying the half-extent hypotheses of Proposition <a href=\"#prop:uniform-volume\" data-reference-type=\"ref\" data-reference=\"prop:uniform-volume\">52</a> for all sufficiently large $k$, uniformly in $N\\ge K_0$ and $s$. Its torus expectation therefore differs from its plane expectation by $C\\|F_N\\|_\\infty e^{-c2^k}$ in all three embeddings.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-inclined-periods"
+  },
+  {
+   "claim_id": "claim-offset-source-transport",
+   "exact_statement": "Every admitted run above carries the microscopic source $\\exp(\\sum_x z_x\\cdot q_x)$ exactly through its block integrations. The additional source lists begin at zero and satisfy their caps at each layer. A step of side $l_j$, from layer $j$ to layer $j-1$, has a bulk coefficient $c_j>0$ with $$z_x=\\frac{z'_{[x]}}{l_j^2c_j},\\qquad\n |c_j-1|\\le C_LR_j^{\\mathrm{src}}.\n \\label{eq:offset-source-substitution}$$ For a comparison on a common ordinary step, $$\\begin{aligned}\n v_{j-1}^{\\mathrm{src}}\n &\\le q_s v_j^{\\mathrm{src}}\n +C_L(\\log H_j)^D\n        (u_j+\\epsilon_h+|\\lambda_j|/H_j),\\notag\\\\\n |c_{2,j}-c_{1,j}|\n &\\le C_LR_j^{\\mathrm{src}}\n \\bigl[v_j^{\\mathrm{src}}+(\\log H_j)^D\n        (u_j+\\epsilon_h+|\\lambda_j|/H_j)\\bigr],\n \\qquad q_s<1.\n \\label{eq:offset-source-comparison}\n\\end{aligned}$$ The statements hold in bulk and on every compatible admitted period. The coefficient $c_j$ is the same bulk coefficient in all these periods.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-source-input"
+  },
+  {
+   "claim_id": "claim-offset-source-products",
+   "exact_statement": "Under <a href=\"#eq:field-offset-matching\" data-reference-type=\"eqref\" data-reference=\"eq:field-offset-matching\">[eq:field-offset-matching]</a>, the source discrepancy tends to zero at each fixed layer, and $c_{2,j}-c_{1,j}\\to0$ at every fixed step $j\\ge1$. In addition, for the ordinary and either inclined run at the same $N$ and $\\beta=\\vartheta_N+s$, with $|s|\\le R$, one has $$C_H^{-1}\\le \\frac{B_{\\pm,N,s}}{B_{r,N,s}}\\le C_H,\n \\label{eq:offset-product-ratio}$$ uniformly in $N$. The products for the two mirror inclinations agree.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-source-comparison"
+  },
+  {
+   "claim_id": "claim-offset-moment-bounds",
+   "exact_statement": "For $N\\ge K_0$, $|s|\\le R$, and every type $P$, the component moment measures in the plane are nonnegative and satisfy $$S_{n,P,N,s}^{\\boldsymbol\\alpha,\\mathrm{cut}}\n      (Q_1\\times\\cdots\\times Q_n)\\le C^n n!\n \\label{eq:offset-unit-box-bound}$$ for arbitrary physical unit boxes. The ordinary torus estimates are uniform in $k$; on each fixed inclined physical torus the same assertion holds with a constant depending on that torus.*\n\n*Every fixed finite list of real bounded compactly supported vector tests consequently has a joint exponential moment in a neighborhood of zero, uniformly in these cutoffs. The same is true of continuous periodic tests on each fixed torus.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-moment-bound"
+  },
+  {
+   "claim_id": "claim-offset-continuum-hierarchies",
+   "exact_statement": "Let $N\\to\\infty$ and $s\\to s_*$ with $|s|\\le R$, for a fixed type $P$. The fields <a href=\"#eq:offset-fields\" data-reference-type=\"eqref\" data-reference=\"eq:offset-fields\">[eq:offset-fields]</a> converge jointly in law and in all joint moments for every finite list of continuous compactly supported vector tests in the plane. The analogous assertions hold for continuous periodic tests on each fixed common physical torus. The limiting laws are determined by their moments.*\n\n*Two such sequences satisfying <a href=\"#eq:field-offset-matching\" data-reference-type=\"eqref\" data-reference=\"eq:field-offset-matching\">[eq:field-offset-matching]</a> have the same limits in their specified embeddings. At every order and component choice, the plane measures <a href=\"#eq:offset-moment-measures\" data-reference-type=\"eqref\" data-reference=\"eq:offset-moment-measures\">[eq:offset-moment-measures]</a> converge on continuous compact tests and in the strong topology of $\\mathcal S'((\\mathbb R^2)^n)$.*\n\n\n*Denote the ordinary limiting hierarchy at offset $s\\in I$ by $F_s$, including its moment-determined joint laws. For either inclined type, the limit at offset $s$ is $$F_{s+d},\\qquad s,s+d\\in I,\\qquad d=A_+-A_r=A_--A_r.\n \\label{eq:inclined-offset-limit}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-offset-limits"
+  },
+  {
+   "claim_id": "claim-uniform-relative-tails",
+   "exact_statement": "There are constants $C,c>0$, uniform over $N\\ge K_0$, $|s|\\le R$, and the three types, such that for physical unit boxes with center separation $T$, $$S_2^{\\mathrm{cut}}(Q\\times Q')\\le Ce^{-cT}.\n \\label{eq:offset-two-point-decay}$$ Consequently, for a unit box $Q_u$ centered at $u$, $$\\nu^{\\mathrm{cut}}(Q_u)\\le Ce^{-c|u|}.\n \\label{eq:relative-unit-tail}$$ Along each convergent-offset sequence of Proposition <a href=\"#prop:offset-limits\" data-reference-type=\"ref\" data-reference=\"prop:offset-limits\">57</a>, the measures $\\nu^{\\mathrm{cut}}$ converge vaguely, in total mass, and in second moment to a finite nonnegative measure $\\nu$. Its tensor product with Lebesgue measure is the limiting first-component two-point measure in the relative coordinates.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-two-point-tails"
+  },
+  {
+   "claim_id": "claim-positive-canonical-normalization",
+   "exact_statement": "For every $s\\in I$, the quantities $m(s)$ and $\\ell(s)$ in <a href=\"#eq:offset-mass-length\" data-reference-type=\"eqref\" data-reference=\"eq:offset-mass-length\">[eq:offset-mass-length]</a> are finite and strictly positive. For an ordinary sequence with $N\\to\\infty$ and offset tending to $s$, $$B^2a^2\\chi_\\beta\\longrightarrow m(s),\\qquad\n a\\xi_\\beta\\longrightarrow\\ell(s).\n \\label{eq:offset-cutoff-normalization}$$ For an inclined sequence with limiting offset $s$ and $s,s+d\\in I$, the limits are $m(s+d)$ and $\\ell(s+d)$.*\n\n\n*Define $G_s$ by applying to $F_s$ the change of smeared fields $$\\phi(f)\\longmapsto\\frac{1}{\\ell(s)\\sqrt{m(s)}}\n                     \\phi\\bigl(f(\\,\\cdot/\\ell(s))\\bigr).\n \\label{eq:canonical-hierarchy-normalization}$$ This is the unique positive constant length and field rescaling that sets both susceptibility and second-moment length to one. Along the ordinary sequences in <a href=\"#eq:offset-cutoff-normalization\" data-reference-type=\"eqref\" data-reference=\"eq:offset-cutoff-normalization\">[eq:offset-cutoff-normalization]</a>, the canonical cutoff fields $\\Psi_\\beta$ converge to $G_s$ in joint law and all joint moments, and their component Schwinger measures converge strongly in $\\mathcal S'$ at every order. The analogous normalized inclined fields converge to $G_{s+d}$.*\n\n*The functions $m,\\ell$ are continuous on $I$. At every order and component choice, evaluation of $F_s$ and of $G_s$ on any fixed Schwartz test is continuous in $s$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-normalization"
+  },
+  {
+   "claim_id": "claim-shooting-normalization",
+   "exact_statement": "The shooting hierarchy constructed in Proposition <a href=\"#prop:continuum-limit\" data-reference-type=\"ref\" data-reference=\"prop:continuum-limit\">35</a> has finite positive susceptibility and finite positive second-moment length. Applying the unique positive rescaling <a href=\"#eq:canonical-hierarchy-normalization\" data-reference-type=\"eqref\" data-reference=\"eq:canonical-hierarchy-normalization\">[eq:canonical-hierarchy-normalization]</a> to it is the limit of applying canonical susceptibility and length normalization to its cutoff fields. These assertions also hold when its sufficiently large auxiliary parameters are fixed independently of those used for the offset trajectories.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-shooting-normalization"
+  },
+  {
+   "claim_id": "claim-depth-and-inclination-relations",
+   "exact_statement": "For $s,s-\\gamma\\in I$, $$\\label{eq:uni-depth}\n G_{s-\\gamma}=G_s,\n \\qquad \\ell(s-\\gamma)=L^{-1}\\ell(s).$$ Let $d=A_+-A_{\\mathrm r}=A_--A_{\\mathrm r}$ be the offset shift defined in Section <a href=\"#sec:trajectories\" data-reference-type=\"ref\" data-reference=\"sec:trajectories\">1</a>. For $s,s+d\\in I$, $$\\label{eq:uni-incline}\n \\ell(s+d)=5^{-1}\\ell(s),\\qquad\n G_{s+d}=(O_+^{-1})_*G_s=(O_-^{-1})_*G_s.$$",
+   "kind": "classification",
+   "statement_anchor": "stmt-prop-two-scales"
+  },
+  {
+   "claim_id": "claim-dense-period-uniqueness",
+   "exact_statement": "Let $L>1$ be a power of two, let $\\gamma>0$, and let $I=(-R,R)$. Suppose $\\ell:I\\to(0,\\infty)$ is continuous and $s\\mapsto G_s$ is a family of distribution hierarchies whose evaluation on every Schwartz test is continuous. Let $O_\\pm$ be rotations by $\\pm\\vartheta$, where $\\cos\\vartheta=3/5$ and $\\sin\\vartheta=4/5$. Suppose <a href=\"#eq:uni-depth\" data-reference-type=\"eqref\" data-reference=\"eq:uni-depth\">[eq:uni-depth]</a> and <a href=\"#eq:uni-incline\" data-reference-type=\"eqref\" data-reference=\"eq:uni-incline\">[eq:uni-incline]</a> hold wherever both offsets belong to $I$, and suppose $2R-|d|>\\gamma$. Then every $G_s$ is Euclidean rotation invariant, and $G_s$ is independent of $s$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-dense-periods"
+  }
+ ],
+ "paper": "papers/EN-115-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-H-0404_PM-215.1_The_canonical_massive_continuum_limit_of_the_two_dimensional_O_3_model.md",
+ "purpose": "The canonical massive continuum limit of the two-dimensional O(3) model",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "75da69a8ca343bbac0e8177144ea684465c73981b63aa0591059ae01a55ea0de",
+   "pm.domains.v2": "d6b7f3459f4eabc7c91507af1082729a54b238aa6f432bd4e2afc4df6c9abd28",
+   "pm.edges.v2": "fc8590af61e63313f27f9256dfcc5e4889c13af1e6f45b9f77c5d08358a1e441",
+   "pm.extraction.v2": "31cdc17cbe468560d523010aafbaf650fc7d13a3acf272b558eaa9a8584690b2",
+   "pm.formal.v2": "adeb49b8200bd08af85779a89e24c5d62a790423d032332e17d651ea10703d92",
+   "pm.limits.v2": "370606dc655d9ce14247f71b8f111f2c3897dfc6415645c449de6ebdaca3dd06",
+   "pm.node.v2": "ecba6e224fdb6ed793675abfeb8edf476162cd2f812ac0d3f71b0d29809341ea",
+   "pm.objects.v2": "f04566c14a2bb326ae1a5de00f469cccd94ea2b094012b45e24b4a1b3a258b91",
+   "pm.provenance.v2": "ad94837ba6f9e22bad081b80b3fff7971a1473b0d0033abb04fcbcefefffb5a7",
+   "pm.quantities.v2": "580ccf751d8f56feb34f6a363f3c9faee4067c7e4f910635f8a5c3340ec78372",
+   "pm.reading.v2": "60308d0f1dd0b2b3572069fa663045d3f5bea57201e7b37f6284bd1454a1f7ab",
+   "pm.roadmap.v2": "c877ea0d5acec72b69396f453a7c35070a38e24b288ac33266f2c5a3f1119614",
+   "pm.search.v1": "4c0b4aa5651793cc8926b5d596a66e8a074ce5b431a30ae74febd5e986fefaa1",
+   "pm.triptych.v2": "05a813be8486ad48163ad09f2b7daa4e59b8a5890df2174fce1cd5ba112f208f"
+  },
+  "canonical_sha256": "36205ddc7023235c03fc9960605353070028e9415bfbca2a400c879ec719c59a",
+  "paper_sha256": "61d5c068a68454df23ff54d4cd81a8b86a53f1d09e6c7619f5001798008adfb8",
+  "repaired_body_sha256": "dc7abc98ad4f07791f9e08b9b01ea9c503df90cd699e71cca5e3e0a42f2bc3f5"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "5652e685ceb18a7b1d2c24b27c08354816d3feedc45d7d9652dab401956034df",
+   "receipt_sha256": "98c23ec7fdbb3289da6aad5279252651211c6a1f364b8be847daa1ce7ac4f590",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The canonical massive continuum limit of the two-dimensional O(3) model"
+}

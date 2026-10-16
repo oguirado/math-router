@@ -1,0 +1,892 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 846623,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 229140
+ },
+ "coordinate": "EN-109-000-0020-2-2026-PR-T4-UK-EX-M2-C-PH-M-0721",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "Our conclusion extends the time interval away from equilibrium but concerns finite-dimensional laws, rather than process convergence.",
+     "quote_sha256": "1e2b4f712013a3da900b2ac5d2b74dec49957223314762e97c6ee4a31e5a08bf"
+    },
+    {
+     "anchor": "sec:introduction",
+     "quote": "It does not assert global regularity for the Boltzmann equation or a path-space tightness theorem.",
+     "quote_sha256": "abdd6c8b00e28ec82eb798cf920dd529a1178ead6755e5eb58112375fe83dbaa"
+    }
+   ],
+   "query": "Path-space convergence or fluctuation-trajectory tightness",
+   "reason": "The conclusion is restricted to finite-dimensional laws; no path-space tightness theorem is asserted."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "It does not assert global regularity for the Boltzmann equation or a path-space tightness theorem.",
+     "quote_sha256": "abdd6c8b00e28ec82eb798cf920dd529a1178ead6755e5eb58112375fe83dbaa"
+    }
+   ],
+   "query": "Global regularity of the Boltzmann equation",
+   "reason": "A regular classical solution with Gaussian decay is assumed on the prescribed interval rather than proved globally."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-auto-remark-1",
+     "quote": "The shift in <a href=\"#eq:initial-centering-shift\" data-reference-type=\"eqref\" data-reference=\"eq:initial-centering-shift\">[eq:initial-centering-shift]</a> is generally nonzero. The exact microscopic centering in [thm:main](#thm:main) is therefore essential even at the initial time.",
+     "quote_sha256": "13ea2c69302333922685dddc5adef26b7d794693c5a7935dc76eff54c3d0ade3"
+    }
+   ],
+   "query": "Fluctuations centered only by the kinetic density",
+   "reason": "Excluded-volume corrections can survive fluctuation scaling and introduce a deterministic mean shift."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-4",
+     "quote": "There is no random collision rule or resampling.",
+     "quote_sha256": "df7bead09fadf37916ea45b544b06f4e056bb793eeaa683b6833105a4dd68408"
+    }
+   ],
+   "query": "Random collision rules or particle resampling",
+   "reason": "The microscopic model uses deterministic elastic hard-sphere evolution."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "The initial covariance in <a href=\"#eq:initial-covariance\" data-reference-type=\"eqref\" data-reference=\"eq:initial-covariance\">[eq:initial-covariance]</a> has no subtraction of $(\\int f_0\\phi)(\\int f_0\\psi)$: the particle count in <a href=\"#eq:grand-canonical\" data-reference-type=\"eqref\" data-reference=\"eq:grand-canonical\">[eq:grand-canonical]</a> is random.",
+     "quote_sha256": "2a034fbdef8848fc02b6b7eaa33e9ac027778a4b36dc5b5875d6a6ed05b357fe"
+    }
+   ],
+   "query": "Fixed-particle-count initial covariance with a mean-product subtraction",
+   "reason": "The source initial law has a random particle count, and its limiting covariance keeps the same-particle contribution without that subtraction."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-sharp-cumulants",
+     "quote": "The assertions about Gaussian weights concern retained diagrams and their limits; no weighted estimate for a microscopic expansion remainder is asserted.",
+     "quote_sha256": "b29b4471a8b1add36e7d9d5082b2e4adcb2fb395b2a22dc08ebd468683224ee0"
+    }
+   ],
+   "query": "Gaussian-weighted control of the actual microscopic expansion remainder",
+   "reason": "Weighted estimates are asserted for retained diagrams and their limits; the microscopic expansion remainder has unweighted variation control."
+  }
+ ],
+ "family": "PM-364",
+ "id": "PM-364.2",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-finite-dimensional-fluctuations",
+    "statement": "Under [ass:kinetic](#ass:kinetic),"
+   },
+   {
+    "anchor": "stmt-prop-initial",
+    "claim_id": "claim-initial-ensemble",
+    "statement": "For all sufficiently small $\\epsilon$,"
+   },
+   {
+    "anchor": "stmt-ass-kinetic",
+    "claim_id": "claim-global-weighted-integrability",
+    "statement": "The function $f_0\\ge0$ is a smooth probability density and, for some $\\beta>0$, $$\\label{eq:initial-bol-bounds}\n \\|f_0\\|_{\\mathrm{Bol},2\\beta}\n +\\|\\nabla_xf_0\\|_{\\mathrm{Bol},2\\beta}<\\infty.$$ There is a nonnegative classical solution $f$ of <a href=\"#eq:boltzmann\" data-reference-type=\"eqref\" data-reference=\"eq:boltzmann\">[eq:boltzmann]</a> with initial datum $f_0$ on a prescribed finite interval $[0,T]$, $T>0$, such that $$\\label{eq:kinetic-gaussian}\n M:=\\sup_{0\\le t\\le T}\\sup_{x,v}\n       e^{2\\beta|v|^2}f(t,x,v)<\\infty.$$"
+   },
+   {
+    "anchor": "stmt-lem-target-propagator",
+    "claim_id": "claim-backward-propagator",
+    "statement": "For $0\\le a<b<2\\beta$ and $0\\le r\\le t\\le T$,"
+   },
+   {
+    "anchor": "stmt-ass-kinetic",
+    "claim_id": "claim-gaussian-target",
+    "statement": "The function $f_0\\ge0$ is a smooth probability density and, for some $\\beta>0$, $$\\label{eq:initial-bol-bounds}\n \\|f_0\\|_{\\mathrm{Bol},2\\beta}\n +\\|\\nabla_xf_0\\|_{\\mathrm{Bol},2\\beta}<\\infty.$$ There is a nonnegative classical solution $f$ of <a href=\"#eq:boltzmann\" data-reference-type=\"eqref\" data-reference=\"eq:boltzmann\">[eq:boltzmann]</a> with initial datum $f_0$ on a prescribed finite interval $[0,T]$, $T>0$, such that $$\\label{eq:kinetic-gaussian}\n M:=\\sup_{0\\le t\\le T}\\sup_{x,v}\n       e^{2\\beta|v|^2}f(t,x,v)<\\infty.$$"
+   },
+   {
+    "anchor": "stmt-lem-kinetic-envelopes",
+    "claim_id": "claim-kinetic-envelopes",
+    "statement": "Under [ass:kinetic](#ass:kinetic),"
+   },
+   {
+    "anchor": "stmt-thm-dhm-package",
+    "claim_id": "claim-layered-analytic-package",
+    "statement": "Assume [ass:kinetic](#ass:kinetic), the parameter hierarchy <a href=\"#eq:dhm-cutoffs\" data-reference-type=\"eqref\" data-reference=\"eq:dhm-cutoffs\">[eq:dhm-cutoffs]</a>–<a href=\"#eq:dhm-exponents\" data-reference-type=\"eqref\" data-reference=\"eq:dhm-exponents\">[eq:dhm-exponents]</a>, and a common bound on the Gaussian Bol norms of all birth inputs."
+   },
+   {
+    "anchor": "stmt-thm-dhm-package",
+    "claim_id": "claim-layered-analytic-package",
+    "statement": "Suppose the independent input $g$ in slab $i$ satisfies $$\\label{eq:dhm-input-closeness}\n     \\|g-f_{(i-1)\\tau}\\|_{\\mathrm{Bol},\\beta_{i-1}}\n           \\le\\epsilon^{\\theta_{i-1}}.$$"
+   },
+   {
+    "anchor": "stmt-lem-dhm-dummies",
+    "claim_id": "claim-coarse-boundary-modifications",
+    "statement": "If continuation condition (iv) is omitted in the top slab with $h$ roots,"
+   },
+   {
+    "anchor": "stmt-lem-dhm-dummies",
+    "claim_id": "claim-coarse-boundary-modifications",
+    "statement": "A connected pure-C terminal component with at most $3\\Lambda_i$ lines and excess at most $2\\Gamma$, meeting a continuation below but having no designated top root,"
+   },
+   {
+    "anchor": "stmt-lem-dhm-dummies",
+    "claim_id": "claim-coarse-boundary-modifications",
+    "statement": "provided the root cutoffs have the corresponding fixed slack."
+   },
+   {
+    "anchor": "stmt-lem-autonomous-partition",
+    "claim_id": "claim-autonomous-partition",
+    "statement": "For a finite set $V$,"
+   },
+   {
+    "anchor": "stmt-lem-autonomous-partition",
+    "claim_id": "claim-autonomous-partition",
+    "statement": "If $S\\subseteq V$ is a root set"
+   },
+   {
+    "anchor": "stmt-lem-autonomous-partition",
+    "claim_id": "claim-autonomous-partition",
+    "statement": "and $H$ tests the root histories,"
+   },
+   {
+    "anchor": "stmt-lem-rooted-forest",
+    "claim_id": "claim-rooted-forest-stopping",
+    "statement": "Let $W$ be a finite vertex set,"
+   },
+   {
+    "anchor": "stmt-lem-rooted-forest",
+    "claim_id": "claim-rooted-forest-stopping",
+    "statement": "let $R\\subseteq W$ be nonempty,"
+   },
+   {
+    "anchor": "stmt-lem-rooted-forest",
+    "claim_id": "claim-rooted-forest-stopping",
+    "statement": "and attach $a_e\\in\\{0,1\\}$ to each unordered pair of vertices."
+   },
+   {
+    "anchor": "stmt-lem-rooted-forest",
+    "claim_id": "claim-rooted-forest-stopping",
+    "statement": "Fix $M\\ge2$"
+   },
+   {
+    "anchor": "stmt-lem-one-slab-expansion",
+    "claim_id": "claim-one-slab-variation-identity",
+    "statement": "For a positive input point-process law,"
+   },
+   {
+    "anchor": "stmt-lem-one-slab-expansion",
+    "claim_id": "claim-one-slab-variation-identity",
+    "statement": "If its factorial measures up to the order in <a href=\"#eq:stopped-input-order\" data-reference-type=\"eqref\" data-reference=\"eq:stopped-input-order\">[eq:stopped-input-order]</a> are finite, then"
+   },
+   {
+    "anchor": "stmt-lem-one-root-bridge",
+    "claim_id": "claim-one-root-bridge",
+    "statement": "after replacing inputs by $|g|$,"
+   },
+   {
+    "anchor": "stmt-prop-one-root",
+    "claim_id": "claim-independent-one-root-factors",
+    "statement": "for sufficiently small $\\epsilon$,"
+   },
+   {
+    "anchor": "eq:retained-hierarchy",
+    "claim_id": "claim-marked-regrouping",
+    "statement": "Define the retained hierarchy by the finite composition $$\\label{eq:retained-hierarchy}\n \\widehat F^R_i=\\mathcal L_i\\mathcal L_{i-1}\\cdots\\mathcal L_1F^R_0.$$ For a fixed output order, each factor uses only finitely many previous orders, so this definition needs no convergence of a series in the number of layers or particles. The initial hierarchy is expanded by [prop:initial](#prop:initial) into its exact factorial cumulant blocks. Initial observation pulses, if any, act by the separate one-particle update maps on these blocks."
+   },
+   {
+    "anchor": "stmt-lem-diagram-labels",
+    "claim_id": "claim-component-factorials",
+    "statement": "At fixed root order $h=|S|$ and bounded DHM complexity $\\rho\\le K$,"
+   },
+   {
+    "anchor": "stmt-lem-stopped-variation",
+    "claim_id": "claim-stopped-variation",
+    "statement": "Choose $L$ sufficiently large in terms of the fixed data and $\\Gamma$."
+   },
+   {
+    "anchor": "stmt-thm-marked-expansion",
+    "claim_id": "claim-marked-component-expansion",
+    "statement": "Choose $\\Gamma$ and then $L$ as above."
+   },
+   {
+    "anchor": "stmt-cor-terminal-witness",
+    "claim_id": "claim-terminal-witness-expansion",
+    "statement": "In slab $i$, let a terminal witness be a connected true C history on $n\\le3\\Lambda_i$ incoming labels, of excess at most $2\\Gamma$, stopped at a contact time in that slab."
+   },
+   {
+    "anchor": "stmt-cor-terminal-witness",
+    "claim_id": "claim-terminal-witness-expansion",
+    "statement": "For the terminal classes in (ii),"
+   },
+   {
+    "anchor": "stmt-thm-sharp-cumulants",
+    "claim_id": "claim-sharp-connected-cumulants",
+    "statement": "Choose the parameters $\\Gamma,L$ as in [thm:marked-expansion](#thm:marked-expansion), increasing $L$, if necessary, by an amount depending only on the uniform bounds for the Boltzmann solution and on $T$."
+   },
+   {
+    "anchor": "stmt-lem-sharp-merger-coordinates",
+    "claim_id": "claim-chronological-merger-coordinates",
+    "statement": "Fix a finite line graph, the C/O choices, the chronological order, and which contacts are redundant in that order."
+   },
+   {
+    "anchor": "stmt-lem-sharp-merger-coordinates",
+    "claim_id": "claim-chronological-merger-coordinates",
+    "statement": "Away from nontransversal contacts and simultaneous events,"
+   },
+   {
+    "anchor": "stmt-lem-sharp-factorials",
+    "claim_id": "claim-sharp-fresh-label-factorials",
+    "statement": "For diagrams of complexity at most $K$,"
+   },
+   {
+    "anchor": "stmt-lem-sharp-summability",
+    "claim_id": "claim-uniform-diagram-summability",
+    "statement": "For fixed $K$,"
+   },
+   {
+    "anchor": "stmt-lem-sharp-no-extra",
+    "claim_id": "claim-tree-extra-contact-nullsets",
+    "statement": "Consider a finite chronological forest with no physical initial links, with a prescribed C/O choice on each edge, on its incoming merger branches."
+   },
+   {
+    "anchor": "stmt-lem-sharp-no-extra",
+    "claim_id": "claim-tree-extra-contact-nullsets",
+    "statement": "Outside a null set of its merger parameters"
+   },
+   {
+    "anchor": "stmt-lem-sharp-spatial-traces",
+    "claim_id": "claim-tree-spatial-traces",
+    "statement": "Let $\\mathcal T$ be any of the absolutely summable tree measures just constructed, and designate a line and a time at which its position is required."
+   },
+   {
+    "anchor": "stmt-lem-sharp-tree-completeness",
+    "claim_id": "claim-retained-tree-completeness",
+    "statement": "For fixed designated roots, fixed required records, and fixed $L$,"
+   },
+   {
+    "anchor": "stmt-lem-sharp-tree-splitting",
+    "claim_id": "claim-last-contact-tree-products",
+    "statement": "In the leading tree sums,"
+   },
+   {
+    "anchor": "stmt-prop-tree-evolution",
+    "claim_id": "claim-marked-tree-evolution",
+    "statement": "Between observation updates"
+   },
+   {
+    "anchor": "stmt-prop-tree-evolution",
+    "claim_id": "claim-marked-tree-evolution",
+    "statement": "for smooth tests for which the displayed integrals exist."
+   },
+   {
+    "anchor": "stmt-prop-cumulant-clt",
+    "claim_id": "claim-pasted-gaussian-limit",
+    "statement": "For the single pasted dynamics fixed above"
+   },
+   {
+    "anchor": "stmt-prop-cutoff",
+    "claim_id": "claim-pasted-dynamics-accuracy",
+    "statement": "Fix $\\Gamma\\geq\\Gamma_0$."
+   },
+   {
+    "anchor": "stmt-prop-cutoff",
+    "claim_id": "claim-pasted-dynamics-accuracy",
+    "statement": "coupled using the same initial configuration,"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-energy-tail",
+    "claim_id": "claim-high-birth-energy-removal",
+    "statement": "For the positive graph majorants in <a href=\"#eq:cutoff-low-complexity\" data-reference-type=\"eqref\" data-reference=\"eq:cutoff-low-complexity\">[eq:cutoff-low-complexity]</a>, there is a fixed power $H_*$ such that"
+   },
+   {
+    "anchor": "stmt-lem-dhm-local",
+    "claim_id": "claim-conditional-elementary-kernels",
+    "statement": "Consider the positive kernel <a href=\"#eq:edge-integral\" data-reference-type=\"eqref\" data-reference=\"eq:edge-integral\">[eq:edge-integral]</a> of a regular piece, with its fixed ends prescribed."
+   },
+   {
+    "anchor": "stmt-lem-dhm-local",
+    "claim_id": "claim-conditional-elementary-kernels",
+    "statement": "Suppose the support has $|v_e|\\le |\\log\\epsilon|^{C_*}$, and each $x_e$ lies in a prescribed ball of radius $|\\log\\epsilon|^{C_*}$."
+   },
+   {
+    "anchor": "stmt-lem-dhm-local",
+    "claim_id": "claim-conditional-elementary-kernels",
+    "statement": "Suppose $|t_1-t_2|\\ge\\epsilon^\\upsilon$, and at each of its atoms every pair of distinct incident edges satisfies $|v_e-v_{e'}|\\ge\\epsilon^\\upsilon$."
+   },
+   {
+    "anchor": "stmt-item-cutoff-main",
+    "claim_id": "claim-pure-collision-cutting-alternatives",
+    "statement": "Let $M$ be a connected, full, realizable graph containing only scattering contacts."
+   },
+   {
+    "anchor": "stmt-item-cutoff-main",
+    "claim_id": "claim-pure-collision-cutting-alternatives",
+    "statement": "$A$ is assumed to be connected."
+   },
+   {
+    "anchor": "stmt-lem-cutoff-neutral",
+    "claim_id": "claim-neutral-cut-completion",
+    "statement": "Suppose an exposed set is order-convex in the directed contact graph."
+   },
+   {
+    "anchor": "stmt-lem-cutoff-pair",
+    "claim_id": "claim-adjacent-pair-gains",
+    "statement": "a primitive pair satisfying <a href=\"#eq:cutoff-close\" data-reference-type=\"eqref\" data-reference=\"eq:cutoff-close\">[eq:cutoff-close]</a>, cut freely as one piece,"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-pair",
+    "claim_id": "claim-adjacent-pair-gains",
+    "statement": "in the absence of every strongly close primitive pair,"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-amplified",
+    "claim_id": "claim-amplified-collision-cut",
+    "statement": "For a sufficiently large dimensional $\\Gamma_0$,"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-amplified",
+    "claim_id": "claim-amplified-collision-cut",
+    "statement": "with $\\Gamma<r(M)\\leq2\\Gamma$, $\\Gamma\\geq\\Gamma_0$,"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-extraction",
+    "claim_id": "claim-literal-parameter-extraction",
+    "statement": "Consider a finite ordered composition of positive cut kernels."
+   },
+   {
+    "anchor": "stmt-lem-cutoff-extraction",
+    "claim_id": "claim-literal-parameter-extraction",
+    "statement": "Suppose every exceptional kernel $K_\\ell(h,\\mathrm dz)$ has mass at most $H_\\ell$, uniformly in admissible data $h$ from earlier cuts."
+   },
+   {
+    "anchor": "stmt-lem-cutoff-extraction",
+    "claim_id": "claim-literal-parameter-extraction",
+    "statement": "If $E$ is a set of complete histories and $\\mathcal D$ is a measurable set containing its projection onto the literal variables $\\vartheta=(\\vartheta_1,\\ldots,\\vartheta_q)$,"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-ellipsoid",
+    "claim_id": "claim-common-velocity-containing-set",
+    "statement": "Fix one original history graph and its ordinary normals."
+   },
+   {
+    "anchor": "stmt-lem-cutoff-ellipsoid",
+    "claim_id": "claim-common-velocity-containing-set",
+    "statement": "Suppose the sum of squared velocities at all its births is at most $P$, and suppose there are $s$ exceptional atoms, counting both atoms of a pair."
+   },
+   {
+    "anchor": "stmt-lem-cutoff-ellipsoid",
+    "claim_id": "claim-common-velocity-containing-set",
+    "statement": "For $q\\geq1$,"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-time",
+    "claim_id": "claim-causal-time-speed-bound",
+    "statement": "In a slab containing $q_i$ ordinary atoms,"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-time",
+    "claim_id": "claim-causal-time-speed-bound",
+    "statement": "On the original support with total birth energy at most $P$,"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-sum",
+    "claim_id": "claim-exceptional-piece-summation",
+    "statement": "Consider the positive low-complexity graph integrals obtained above."
+   },
+   {
+    "anchor": "stmt-lem-cutoff-sum",
+    "claim_id": "claim-exceptional-piece-summation",
+    "statement": "Suppose a cut sequence has $q=b-O_K(1)$ ordinary atoms and boundedly many exceptional pieces, whose conditional mass bounds have product $\\epsilon^\\alpha|\\log\\epsilon|^{C_*}$."
+   },
+   {
+    "anchor": "stmt-lem-center-transfer",
+    "claim_id": "claim-exact-centering-transfer",
+    "statement": "Let the true and pasted dynamics start from the same initial ensemble."
+   },
+   {
+    "anchor": "stmt-lem-center-transfer",
+    "claim_id": "claim-exact-centering-transfer",
+    "statement": "Under the cutoff estimate of [prop:cutoff](#prop:cutoff),"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Finite-dimensional hard-sphere fluctuation limit",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-lem-center-transfer-2",
+      "quote": "The Gaussian generalized field, its initial covariance, its noise normalization, and its well-posedness have been established in [prop:gaussian-target](#prop:gaussian-target).",
+      "quote_sha256": "6aa37cbbba7d883ec1f5e3095796c96b60d3414487097df1c749adabb46719d0"
+     },
+     {
+      "anchor": "stmt-lem-center-transfer",
+      "quote": "Let the true and pasted dynamics start from the same initial ensemble. Under the cutoff estimate of [prop:cutoff](#prop:cutoff), the expectation of any fixed bounded empirical observation list differs between the two dynamics by $o(\\mu^{-1/2})$. Consequently the corresponding exact-centered fluctuation vectors have the same weak limits.",
+      "quote_sha256": "1ece0b4412d83712e2a3aee220c2e33f742d33a9ed355803046f34ed95748066"
+     }
+    ],
+    "requires_concepts": [
+     "Grand-canonical exclusion law",
+     "Exact microscopic centering",
+     "Regular classical Boltzmann solution",
+     "Sharp connected factorial cumulants",
+     "Gaussian backward covariance",
+     "True-pasted centering transfer"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Last-contact covariance evolution",
+    "evidence": [
+     {
+      "anchor": "stmt-lem-sharp-tree-splitting",
+      "quote": "In the leading tree sums, deleting a last contact of the highest slab that meets a designated root splits its global tree into the product of the two component tree measures, with the incident lines designated before that contact.",
+      "quote_sha256": "4068f211671bfba2f7f5226047349c0287f0a7082481b52c2b5edbf0e355b78f"
+     },
+     {
+      "anchor": "pm-h-32",
+      "quote": "Restore the same-particle term by defining $$\\label{eq:limit-G-definition}\n              G_t(\\Phi,\\Psi)=J_t(\\Phi\\otimes\\Psi)+F_t(\\Phi\\Psi).$$",
+      "quote_sha256": "3d05618e1259b00cde69152682e1f661751e84862ddaf1e5dc20ba713f457bc3"
+     }
+    ],
+    "requires_concepts": [
+     "Marked particle records",
+     "Absolute tree summability",
+     "Spatial disintegration",
+     "Label-preserving tree splitting",
+     "Same-particle covariance contribution"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-finite-dimensional-fluctuations",
+   "exact_statement": "Under [ass:kinetic](#ass:kinetic), the centered Gaussian generalized field $\\zeta$ with weak equation $$\\label{eq:fluctuating-equation}\n \\mathrm d\\zeta_t(\\phi)=\\zeta_t(A_t\\phi)\\,\\mathrm dt+\\mathrm dW_t(\\phi)$$ is well defined by its backward mild form on a scale of tests with small Gaussian growth. Its initial field is independent of $W$, and $$\\begin{aligned}\n \\mathbb E[\\zeta_0(\\phi)\\zeta_0(\\psi)]\n   &=\\int_{\\mathbb R^6}f_0\\phi\\psi\\,\\mathrm dz,\\label{eq:initial-covariance}\\\\\n \\mathbb E[W_t(\\phi)W_s(\\psi)]\n   &=\\int_0^{t\\wedge s}C_r(\\phi,\\psi)\\,\\mathrm dr.\\label{eq:noise-covariance}\n\\end{aligned}$$ The Gaussian noise $W$ has independent increments. For every integer $m\\ge1$, fixed times $t_1,\\ldots,t_m\\in[0,T]$, and real tests $\\phi_1,\\ldots,\\phi_m\\in C_c^\\infty(\\mathbb R^6)$, $$\\label{eq:main-convergence}\n \\bigl(\\zeta_{t_1}^\\epsilon(\\phi_1),\\ldots,\n       \\zeta_{t_m}^\\epsilon(\\phi_m)\\bigr)\n \\quad\\Longrightarrow\\quad\n \\bigl(\\zeta_{t_1}(\\phi_1),\\ldots,\n       \\zeta_{t_m}(\\phi_m)\\bigr)\n \\qquad(\\epsilon\\downarrow0).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-initial-ensemble",
+   "exact_statement": "For all sufficiently small $\\epsilon$, the following assertions hold.*\n\n\n\n1.  *The factorial densities satisfy $$\\label{eq:initial-factorial-upper}\n     0\\le F_{h,0}^{\\epsilon}\\le\\prod_{j=1}^h f_0(z_j),\n     \\qquad (1-C\\epsilon)f_0\\le g_0\\le f_0.$$ Consequently $\\|g_0-f_0\\|_{\\mathrm{Bol},2\\beta}=O(\\epsilon)$ and, for every fixed integer $p\\ge1$, $$\\label{eq:initial-N-moments}\n     \\mathbb E(N)_p\\le\\mu^p,\n     \\qquad \\sup_{0<\\epsilon\\le\\epsilon_0}\\mathbb E(N/\\mu)^p<\\infty.$$*\n\n\n\n\n2.  *With $\\upsilon=1/81$, for every $h\\ge2$, $$\\label{eq:initial-coarse-links}\n     |c_{h,0}^{\\epsilon}(Z_h)|\n     \\le (Ch)^{Ch}\\prod_{j=1}^h f_0(z_j)\n       \\sum_{\\mathcal T\\text{ tree on }[h]}\n         \\prod_{\\{i,j\\}\\in\\mathcal T}\n           \\bigl(\\mathbf 1_{|x_i-x_j|\\le\\epsilon}+\\epsilon^\\upsilon\\bigr).$$ Here $C$ and the upper bound on $\\epsilon$ are independent of $h$. For fixed $h\\ge2$ and $D>0$ there is $C_{D,h}<\\infty$ such that $$\\label{eq:initial-sharp-links}\n     |c_{h,0}^{\\epsilon}(Z_h)|\n     \\le C_{D,h}\\prod_{j=1}^h f_0(z_j)\n       \\sum_{\\mathcal T\\text{ tree on }[h]}\n         \\prod_{\\{i,j\\}\\in\\mathcal T}\n           \\bigl(\\mathbf 1_{|x_i-x_j|\\le C_{D,h}\\epsilon}+\\epsilon^D\\bigr).$$ Moreover, $$\\label{eq:initial-integrated-cumulants}\n     \\|c_{h,0}^{\\epsilon}\\|_{L^1}\\le C_h\\epsilon^{3(h-1)}\n     \\qquad(h\\ge2).$$*\n\n\n3.  *For every finite list of bounded real tests, the exact-centered initial fluctuations converge jointly to a centered Gaussian vector with covariance $\\int f_0\\phi\\psi$. For a smooth compactly supported real test $\\phi$, one also has $$\\label{eq:initial-centering-shift}\n     \\lim_{\\epsilon\\to0}\\sqrt\\mu\n     \\left(\\mathbb E\\pi_0^\\epsilon(\\phi)-\\int f_0\\phi\\right)\n     =-\\frac{4\\pi}{3}\\int_{\\mathbb R^6}\n           f_0(x,v)\\phi(x,v)\\varrho_0(x)\\,\\mathrm dx\\,\\mathrm dv.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-initial"
+  },
+  {
+   "claim_id": "claim-global-weighted-integrability",
+   "exact_statement": "For every $0<q<2\\beta$, $$\\label{eq:target-velocity-moments}\n \\sup_{0\\le t\\le T}\\int_{\\mathbb R^6}\n       f_t(x,v)e^{q|v|^2}\\,\\mathrm dx\\,\\mathrm dv<\\infty.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-target-moments"
+  },
+  {
+   "claim_id": "claim-backward-propagator",
+   "exact_statement": "For $0\\le a<b<2\\beta$ and $0\\le r\\le t\\le T$, there is a bounded backward propagator $U(r,t):E_a^0\\to E_b^0$. It solves $$\\label{eq:target-backward-mild}\n U(r,t)h=\\mathsf S_{t-r}h\n   +\\int_r^t\\mathsf S_{s-r}K_sU(s,t)h\\,\\mathrm ds,$$ has the composition law with intermediate exponents, and is the unique mild propagator in these scales. For $\\phi\\in C_c^\\infty$, $$\\label{eq:target-upper-end-identity}\n U(r,t)\\phi-\\phi=\\int_r^t U(r,s)A_s\\phi\\,\\mathrm ds.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-target-propagator"
+  },
+  {
+   "claim_id": "claim-gaussian-target",
+   "exact_statement": "The fluctuation equation in [thm:main](#thm:main) has a centered Gaussian solution on the test scales $E_a^0$, $0\\le a<\\beta$. It is a continuous linear map from each such test space to $L^2$ of its probability space, uniformly on $[0,T]$. Its covariance is $$\\label{eq:target-covariance}\n \\begin{split}\n \\mathbb E[\\zeta_t(\\phi)\\zeta_s(\\psi)]\n ={}&\\int f_0(z)\\,U(0,t)\\phi(z)\\,U(0,s)\\psi(z)\\,\\mathrm dz\\\\\n &+\\int_0^{\\min(s,t)}\n     C_r\\bigl(U(r,t)\\phi,U(r,s)\\psi\\bigr)\\,\\mathrm dr.\n \\end{split}$$ It is unique in the class of solutions extending to these scales with uniformly bounded second-moment operator norms. In particular, the law required in [thm:main](#thm:main) is well defined.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-gaussian-target"
+  },
+  {
+   "claim_id": "claim-kinetic-envelopes",
+   "exact_statement": "Under [ass:kinetic](#ass:kinetic), $$\\label{eq:kinetic-bol-propagated}\n \\sup_{0\\le t\\le T}\n \\bigl(\\|f_t\\|_{\\mathrm{Bol},\\beta}\n       +\\|\\nabla_x f_t\\|_{\\mathrm{Bol},\\beta}\\bigr)<\\infty.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-kinetic-envelopes"
+  },
+  {
+   "claim_id": "claim-layered-analytic-package",
+   "exact_statement": "Assume [ass:kinetic](#ass:kinetic), the parameter hierarchy <a href=\"#eq:dhm-cutoffs\" data-reference-type=\"eqref\" data-reference=\"eq:dhm-cutoffs\">[eq:dhm-cutoffs]</a>–<a href=\"#eq:dhm-exponents\" data-reference-type=\"eqref\" data-reference=\"eq:dhm-exponents\">[eq:dhm-exponents]</a>, and a common bound on the Gaussian Bol norms of all birth inputs. For sufficiently large fixed $L$ and sufficiently small $\\epsilon$, the following hold.*\n\n\n1.  *For admissible dependent histories with prescribed labeled roots, fixed $b$, and complexity $\\rho$, the sum of their normalized positive integrals is at most $$\\label{eq:dhm-coarse}\n     C^b\\tau^{b/10}\\epsilon^{c_*\\rho}\n           |\\log\\epsilon|^{C_*\\rho}.$$ The sum includes the graph enumeration and the admissible indicator restrictions; a bounded observable multiplier costs its supremum. The birth inputs need not equal the approximate density constructed in the source, but must satisfy its common Gaussian Bol envelope.*\n\n\n\n2.  *Suppose the independent input $g$ in slab $i$ satisfies $$\\label{eq:dhm-input-closeness}\n     \\|g-f_{(i-1)\\tau}\\|_{\\mathrm{Bol},\\beta_{i-1}}\n           \\le\\epsilon^{\\theta_{i-1}}.$$ Let $\\mathsf T_i^\\epsilon[g]$ be the leading signed sum just defined. Then $$\\label{eq:dhm-signed-trees}\n     \\|\\mathsf T_i^\\epsilon[g]-f_{i\\tau}\\|_{\\mathrm{Bol},\\beta_i}\n           \\le\\tfrac12\\epsilon^{\\theta_i}.$$ In the fixed-top-endpoint norm $\\mathrm{Bol},\\widetilde\\beta_i$, the summed absolute contributions of cyclic members of $\\mathcal T_i$, members of $\\mathcal T_i^{\\mathrm{err}}$, and tree members of $\\mathcal T_i$ with at least $\\Lambda_i/3$ lines are $o(\\epsilon^{\\theta_i})$. Fixed powers of the cutoffs, arising from a bounded number of selected edge positions, can be included. A fixed exponential factor per atom can also be included by choosing $L$ sufficiently large.*\n\n\n*Part (b) also holds uniformly when the final slab stops at any $0\\le\\sigma\\le\\tau$. With the same cutoffs and exponent budgets, write $\\mathsf T_{i,\\sigma}^\\epsilon$ for its signed tree sum. Then $$\\label{eq:dhm-partial-slab}\n \\sup_{0\\le\\sigma\\le\\tau}\n \\|\\mathsf T_{i,\\sigma}^\\epsilon[g]\n          -f_{(i-1)\\tau+\\sigma}\\|_{\\mathrm{Bol},\\beta_i}\n       \\le\\tfrac12\\epsilon^{\\theta_i},$$ and the positive error classes obey the same full-$\\tau$ upper majorants uniformly in $\\sigma$. At $\\sigma=0$ the map is the identity and its contact error classes vanish. The assertion in (b) is about the specified complete signed tree sum and positive error classes. Identifying a different one-root operator with that sum up to those errors requires a separate combinatorial argument.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-thm-dhm-package"
+  },
+  {
+   "claim_id": "claim-coarse-boundary-modifications",
+   "exact_statement": "The following modifications of the positive coarse bound are allowed.*\n\n1.  *If continuation condition (iv) is omitted in the top slab with $h$ roots, the bound may lose $\\epsilon^{-C_*h}$.*\n\n2.  *A connected pure-C terminal component with at most $3\\Lambda_i$ lines and excess at most $2\\Gamma$, meeting a continuation below but having no designated top root, can be treated by adding one artificial root at cost $\\mu$.*\n\n3.  *A fixed number $q$ of specified lines, continued to zero, can be supplied with initial-link continuations by adding $q$ dummy straight root lines at cost at most $\\epsilon^{-q\\upsilon}$, provided the root cutoffs have the corresponding fixed slack.*\n\n*Bounded records carried by these lines can be kept in the integral.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-dhm-dummies"
+  },
+  {
+   "claim_id": "claim-autonomous-partition",
+   "exact_statement": "For a finite set $V$, $$\\label{eq:autonomous-partition}\n \\sum_{\\mathcal C\\in\\mathcal P(V)}\n \\prod_{C\\in\\mathcal C}\\kappa_C\n \\prod_{\\{C,D\\}\\subseteq\\mathcal C}\\chi(C,D)=1.$$ Here $\\mathcal P(V)$ denotes the partitions of $V$. If $S\\subseteq V$ is a root set and $H$ tests the root histories, then $$\\label{eq:autonomous-observation}\n H(\\Psi_V|_S)=\n \\sum_{\\mathcal C\\in\\mathcal P(V)}\n \\prod_{C\\in\\mathcal C}\\kappa_C\n \\prod_{\\{C,D\\}\\subseteq\\mathcal C}\\chi(C,D)\n H(\\Psi_{\\mathcal C}|_S),$$ where $\\Psi_{\\mathcal C}$ is the juxtaposition of the autonomous histories.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-autonomous-partition"
+  },
+  {
+   "claim_id": "claim-rooted-forest-stopping",
+   "exact_statement": "Let $W$ be a finite vertex set, let $R\\subseteq W$ be nonempty, and attach $a_e\\in\\{0,1\\}$ to each unordered pair of vertices. Fix $M\\ge2$ and set $$\\label{eq:ursell-block}\n u(B)=\\sum_{\\substack{G\\text{ connected}\\\\V(G)=B}}\n             \\prod_{e\\in E(G)}(-a_e),\\qquad u(\\{w\\})=1.$$ There is a finite signed remainder $\\mathcal R$ such that $$\\begin{aligned}\n\\label{eq:finite-rooted-identity}\n \\prod_{e\\subseteq W}(1-a_e)\n &=\\sum_{I:\\,R\\subseteq I\\subseteq W}\n   \\sum_{\\substack{\\mathcal B\\in\\mathcal P(I)\\\\\n               B\\cap R\\ne\\varnothing,\\ |B|<M\\ (B\\in\\mathcal B)}}\n       \\prod_{B\\in\\mathcal B}u(B)\n       \\prod_{e\\subseteq W\\setminus I}(1-a_e)+\\mathcal R.\n\\end{aligned}$$ Its absolute value is bounded by a sum of rooted forests. Each forest in this bound has exactly one component with $M\\le |B|\\le2M-2$; its other components have fewer than $M$ vertices. All these components meet $R$. Vertices outside the forest retain their full mutual compatibility product. The coefficient of each selected forest in this domination is at most one. Moreover, $$\\label{eq:ursell-tree-bound}\n |u(B)|\\le\\sum_{T\\text{ spanning tree on }B}\\prod_{e\\in E(T)}a_e.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-rooted-forest"
+  },
+  {
+   "claim_id": "claim-one-slab-variation-identity",
+   "exact_statement": "For a positive input point-process law, let $F'$ be its factorial hierarchy after the truncated slab. If its factorial measures up to the order in <a href=\"#eq:stopped-input-order\" data-reference-type=\"eqref\" data-reference=\"eq:stopped-input-order\">[eq:stopped-input-order]</a> are finite, then $$\\label{eq:one-slab-exact}\n F'_s=\\mathcal L_sF+R_s,\\qquad |R_s|\\le\\mathcal E_sF.$$ The same statements hold with prescribed records on root labels. The positive expression $\\mathcal E_sF$ is a domination of $R_s$, not an assertion that the signed remainder has this local kernel.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-one-slab-expansion"
+  },
+  {
+   "claim_id": "claim-one-root-bridge",
+   "exact_statement": "The difference between $\\mathcal U_i(g)$ and the signed unrestricted one-root particle-tree sum with $n<\\Lambda_i/3$ is dominated, after replacing inputs by $|g|$, by the following positive history integrals:*\n\n1.  *retained one-root molecules with $r\\ge1$;*\n\n2.  *retained one-root molecules with $n\\ge\\Lambda_i/3$;*\n\n3.  *the small unrestricted trees with one additional incoming O contact inserted between a pair of their flight segments.*\n\n*The first two families are subsets of the DHM one-root graph class. The third is its additional-overlap error class. Coefficients in these dominations have at most a fixed power of the cutoffs. The leading tree coefficient is exactly $(-1)^{\\#\\mathrm O}$, with the labelled factorial just stated.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-one-root-bridge"
+  },
+  {
+   "claim_id": "claim-independent-one-root-factors",
+   "exact_statement": "The measures $g_i$ have Gaussian Bol-bounded density representatives. With the exponents $\\beta_i,\\theta_i$ of [thm:dhm-package](#thm:dhm-package), for sufficiently small $\\epsilon$, $$\\label{eq:one-root-convergence}\n \\|g_i-f_{i\\tau}\\|_{\\mathrm{Bol},\\beta_i}\\le\\epsilon^{\\theta_i},\\qquad\n \\sup_{0\\le i\\le L}\\|g_i\\|_{\\mathrm{Bol},\\beta_i}\\le C.$$ The same estimates hold for the one-root map run through any portion $\\sigma\\in[0,\\tau]$ of slab $i$, with target $f_{(i-1)\\tau+\\sigma}$ and exponent $\\beta_i$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-one-root"
+  },
+  {
+   "claim_id": "claim-marked-regrouping",
+   "exact_statement": "The retained hierarchy admits an exact finite expansion $$\\label{eq:dependent-subsets}\n \\widehat F^R_{i,S}\n   =\\sum_{H:\\,R\\subseteq H\\subseteq S}\n        E^R_{i,H}\\otimes g_i^{\\otimes(S\\setminus H)}.$$ The coefficients can be represented by layered diagrams with the following rule. Every retained block in slab $i$ contains a root from the interface above it. A block is retained in $E^R_{i,H}$ if it contains at least two such roots, or it meets a dependent input label from the interface below. All other blocks sum to the independent factor $g_i$ on their unique root. Every record-bearing line continues to time zero. Forgetting any record commutes with <a href=\"#eq:retained-hierarchy\" data-reference-type=\"eqref\" data-reference=\"eq:retained-hierarchy\">[eq:retained-hierarchy]</a>; at the diagram level it is effected by resumming the newly unmarked one-root histories.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-marked-regrouping"
+  },
+  {
+   "claim_id": "claim-component-factorials",
+   "exact_statement": "The retained expansion factors over its global components. If $D^R_{i,B}$ is the sum of its diagrams connected on the designated roots $B$, then $$\\label{eq:component-exponential-formula}\n \\widehat F^R_{i,S}\n       =\\sum_{\\pi\\in\\mathcal P(S)}\n                         \\bigotimes_{B\\in\\pi}D^{R\\cap B}_{i,B}.$$ Consequently factorial-cumulant inversion of the retained hierarchy keeps exactly its connected diagrams. This assertion is unchanged by the resummations into $g_i$.*\n\n\n*At fixed root order $h=|S|$ and bounded DHM complexity $\\rho\\le K$, let $n_i$ denote the number of particle lines in slab $i$, and $j_i$ its fresh input labels. The labelled denominator is $\\prod_i j_i!$, where $$\\label{eq:bounded-crossing-factorials}\n n_i-j_i=O_{K,h,m,L}(1),\\qquad\n \\prod_i\\frac1{j_i!}\n      \\le\\frac{(1+\\sum_i n_i)^{C_{K,h,m,L}}}{\\prod_i n_i!}.$$ Apart from the choices of ordinary contact pairs and their order, all distinguished-label, gluing, initial-block, and record-placement multiplicities are bounded by a fixed polynomial in total size times $C^b$, where $b$ is the atom count and the exponential base $C$ does not depend on $K$ or the moment order. In the coarse regime the same choices cost a power of the cutoffs with exponent $O(\\rho)$, in addition to the exponential atom factor.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-diagram-labels"
+  },
+  {
+   "claim_id": "claim-stopped-variation",
+   "exact_statement": "Choose $L$ sufficiently large in terms of the fixed data and $\\Gamma$. For any fixed bound on the number of recorded labels, there are $c_i>0$ such that $$\\label{eq:retained-variation-error}\n \\|F^R_{i,S}-\\widehat F^R_{i,S}\\|_{\\mathrm{TV}}\n                  \\le e^{-c_i\\Lambda_i},\n \\qquad |S|\\le A_i/2.$$ The constants may decrease with $i$ and the fixed record bound. The statement is uniform for a partial final slab. No velocity weight is claimed for this error.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-stopped-variation"
+  },
+  {
+   "claim_id": "claim-marked-component-expansion",
+   "exact_statement": "Choose $\\Gamma$ and then $L$ as above. These choices are independent of the moment order and the fixed observation list. On this single pasted dynamics the following statements hold.*\n\n1.  *The factorial hierarchy with any fixed finite list of records has the finite componentwise expansion <a href=\"#eq:retained-hierarchy\" data-reference-type=\"eqref\" data-reference=\"eq:retained-hierarchy\">[eq:retained-hierarchy]</a>, with the variation error <a href=\"#eq:retained-variation-error\" data-reference-type=\"eqref\" data-reference=\"eq:retained-variation-error\">[eq:retained-variation-error]</a>. Its independent inputs are the $g_i$ in [prop:one-root](#prop:one-root); its label weights, continuations, and record projections are those of [lem:marked-regrouping](#lem:marked-regrouping), [lem:diagram-labels](#lem:diagram-labels).*\n\n2.  *At each fixed final order $h$, the actual normalized marked factorial cumulant $c_h^\\epsilon$ is the sum of retained globally connected diagrams, plus an error of total variation at most $C_h e^{-c\\Lambda_L}$. A nontrivial initial cumulant block is part of this connectivity. Dummy links are not.*\n\n3.  *For any fixed accuracy power $P$, one can choose a constant $K$ after the observation list and $h$ such that all remaining retained diagrams with $\\rho>K$ have summed absolute variation at most $\\epsilon^P$. At $\\rho\\le K$ the original fresh-label factorials satisfy <a href=\"#eq:bounded-crossing-factorials\" data-reference-type=\"eqref\" data-reference=\"eq:bounded-crossing-factorials\">[eq:bounded-crossing-factorials]</a>. Neither increasing $K$ nor increasing a fixed moment order changes the exponential base per ordinary atom in the preceding estimates.",
+   "kind": "construction",
+   "statement_anchor": "stmt-thm-marked-expansion"
+  },
+  {
+   "claim_id": "claim-terminal-witness-expansion",
+   "exact_statement": "In slab $i$, let a terminal witness be a connected true C history on $n\\le3\\Lambda_i$ incoming labels, of excess at most $2\\Gamma$, stopped at a contact time in that slab. It may carry arbitrary further nonnegative realizability restrictions. Sum its indicator with the full activity normalization $$\\label{eq:terminal-witness-functional}\n \\sum_n\\frac{\\mu^n}{n!}\n       \\int F_{i-1,n}(\\mathrm dZ_n)\\,\n                       \\mathbf 1_{\\text{terminal witness}}(Z_n).$$ For the terminal classes in (ii), this expression has the preceding retained layer expansion, with independent $g$ inputs and initial blocks. All lower C/O components attach through particle lines to the terminal witness. The preceding variation error is smaller than every fixed power of $\\epsilon$. After the artificial-top-root normalization cost $\\mu$, the coarse part with $\\rho>K$ can also be made smaller than any assigned power by choosing $K$ sufficiently large. The remaining low-complexity witness integrals retain their realizability restrictions.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cor-terminal-witness"
+  },
+  {
+   "claim_id": "claim-sharp-connected-cumulants",
+   "exact_statement": "Choose the parameters $\\Gamma,L$ as in [thm:marked-expansion](#thm:marked-expansion), increasing $L$, if necessary, by an amount depending only on the uniform bounds for the Boltzmann solution and on $T$. This one choice works for every fixed factorial order and every fixed bounded observation list. For each fixed $h$, $$\\label{eq:sharp-full-cumulant}\n \\|c_h^\\epsilon\\|_{\\mathrm{TV}}\\le C_h\\mu^{1-h}.$$ For $h=1,2$, the measures $\\mu^{h-1}c_h^\\epsilon$ converge against bounded continuous record tests to the signed sums of the retained global trees with trivial initial cumulants. At a contact their weight is the incoming flux $[(v-v_*)\\cdot\\omega]_+\\,\\mathrm dt\\,\\mathrm d\\omega$; a scattering contact has sign $+1$, and a non-scattering contact has sign $-1$. The independent birth factors are $f_{i\\tau}$.*\n\n*The sums of the absolute retained diagram measures, after multiplication by $\\mu^{h-1}$, are bounded uniformly with a sufficiently small Gaussian weight in their designated endpoint velocities. The same bound holds for the limiting tree measures, and for the Gaussian weights in finitely many retained record velocities after decreasing the exponent. Among the retained connected diagrams, the sum of the absolute measures having a nontrivial initial cumulant or a global cycle is $o(\\mu^{1-h})$. The assertions about Gaussian weights concern retained diagrams and their limits; no weighted estimate for a microscopic expansion remainder is asserted.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-sharp-cumulants"
+  },
+  {
+   "claim_id": "claim-chronological-merger-coordinates",
+   "exact_statement": "Fix a finite line graph, the C/O choices, the chronological order, and which contacts are redundant in that order. Away from nontransversal contacts and simultaneous events, its history integral has coordinates consisting of the birth velocities, one absolute translation for each global component, a vector in a ball of radius $R_{K,D}\\epsilon$ for each physical initial merger, and $(t,\\omega)\\in\\mathbb R\\times S^2$ for each dynamic merger. The positional Jacobian at a dynamic merger is $$\\label{eq:sharp-jacobian}\n       \\epsilon^2[(v-v_*)\\cdot\\omega]_+\\,\\mathrm dt\\,\\mathrm d\\omega.$$ A specified redundant contact has no free continuous parameter and requires no extra Jacobian. The coordinate map has multiplicity at most one on each prescribed incoming straight-segment branch.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-sharp-merger-coordinates"
+  },
+  {
+   "claim_id": "claim-sharp-fresh-label-factorials",
+   "exact_statement": "For diagrams of complexity at most $K$, the absolute sum with slab sizes $(n_1,\\ldots,n_L)$ is bounded by a sum over chronologically ordered merger pair lists with denominator $\\prod_i n_i!$, multiplied by $$\\label{eq:sharp-polynomial-count}\n C_K(1+n)^{d_K}C^{\\sum_i a_i},\n \\qquad n=\\sum_i n_i,$$ where the base $C$ does not depend on $K$. The merger pairs themselves are not counted in <a href=\"#eq:sharp-polynomial-count\" data-reference-type=\"eqref\" data-reference=\"eq:sharp-polynomial-count\">[eq:sharp-polynomial-count]</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-sharp-factorials"
+  },
+  {
+   "claim_id": "claim-uniform-diagram-summability",
+   "exact_statement": "For fixed $K$, the sum of the absolute connected diagram measures with slab sizes $(n_i)$, after removal of the factor $\\mu^{1-h}$, is bounded by $$\\label{eq:sharp-summable}\n       C_K(1+n)^{d_K}(C\\tau\\sqrt L)^n.$$ The same bound, with the appropriate factor $\\mu^{c-h}$, holds after a bounded number of initial links are erased. It also holds after prescribing the absolute spatial position of one observation in each component, or after inserting a sufficiently small Gaussian weight in the designated velocities.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-sharp-summability"
+  },
+  {
+   "claim_id": "claim-tree-extra-contact-nullsets",
+   "exact_statement": "Consider a finite chronological forest with no physical initial links, with a prescribed C/O choice on each edge, on its incoming merger branches. Outside a null set of its merger parameters the following hold.*\n\n1.  *All specified contacts occur at distinct times away from interfaces and observation times and are transversal.*\n\n2.  *Before the first redundant contact, the demand for such a contact is false for all sufficiently small $\\epsilon$.*\n\n3.  *On a full tree, an additional contact not in the prescribed list, including a contact preceding the prescribed joining of its two groups, is absent for all sufficiently small $\\epsilon$.*\n\n*In (ii), the independent parameters used are those of the forest prefix; arbitrary remaining merger parameters may be appended. In (iii), an outgoing crossing following an O contact is not an additional contact, because only incoming crossings are counted.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-sharp-no-extra"
+  },
+  {
+   "claim_id": "claim-tree-spatial-traces",
+   "exact_statement": "Let $\\mathcal T$ be any of the absolutely summable tree measures just constructed, and designate a line and a time at which its position is required. It has a version of the disintegration $$\\label{eq:sharp-disintegration}\n               \\mathcal T=\\mathrm dx\\,\\mathcal T_x$$ with respect to that position. For a sufficiently small $\\alpha>0$, the Gaussian-weighted variation of $\\mathcal T_x$ is bounded uniformly in $x$; its integral over $x$ is finite. For every bounded continuous test of the other coordinates, and also for continuous tests of smaller Gaussian growth, $x\\mapsto\\mathcal T_x(\\Phi)$ is continuous.*\n\n*If two separate tree components are joined at their designated positions, the product of their conditional measures at a common position, integrated against incoming flux, is an absolutely defined measure. It is the result of imposing the joining position in the merger coordinates. Equivalently it is obtained by a smooth approximate identity for equality of the two positions. These facts apply to the marked one-root and connected two-root tree measures and their record projections.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-sharp-spatial-traces"
+  },
+  {
+   "claim_id": "claim-retained-tree-completeness",
+   "exact_statement": "For fixed designated roots, fixed required records, and fixed $L$, all global trees with trivial initial cumulants in the retained expansion after the one-root regrouping of [lem:marked-regrouping](#lem:marked-regrouping) have complexity at most a fixed constant $K_0$. This bound is independent of their number of ordinary contact vertices. Undoing and reapplying an unmarked one-root regrouping preserves their weights and their record projections.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-sharp-tree-completeness"
+  },
+  {
+   "claim_id": "claim-last-contact-tree-products",
+   "exact_statement": "In the leading tree sums, deleting a last contact of the highest slab that meets a designated root splits its global tree into the product of the two component tree measures, with the incident lines designated before that contact. Their product at the collision position is the conditional product in [lem:sharp-spatial-traces](#lem:sharp-spatial-traces). Conversely, joining such two disjoint component histories at that contact gives exactly the corresponding retained tree, with its original factorial weight. Record portions not used by a test are projected out. These operations are valid for bounded continuous record tests and, with a smaller exponent, for tests of Gaussian velocity growth.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-sharp-tree-splitting"
+  },
+  {
+   "claim_id": "claim-marked-tree-evolution",
+   "exact_statement": "Between observation updates the limiting measures satisfy $$\\begin{aligned}\n \\partial_tF_t(\\Phi)\n  &=F_t(D\\Phi)+\\frac12\\int BF_tF_{t,*}\\Delta\\Phi,\n       \\label{eq:limit-F-evolution}\\\\\n \\partial_tJ_t(\\Phi\\otimes\\Psi)\n  &=J_t\\bigl((D+H_t)\\Phi\\otimes\\Psi\n                     +\\Phi\\otimes(D+H_t)\\Psi\\bigr)\\notag\\\\\n  &\\quad+\\int BF_tF_{t,*}\n          \\bigl(\\Phi(\\xi')\\Psi(\\xi_*')\n                         -\\Phi(\\xi)\\Psi(\\xi_*)\\bigr).\n       \\label{eq:limit-J-evolution}\n\\end{aligned}$$ The identities hold in transport mild form, and hence in weak differential form for smooth tests for which the displayed integrals exist. At an update $t_j$, $$\\label{eq:limit-pushforwards}\n       F_{t_j+}=(\\Theta_j)_\\#F_{t_j-},\n       \\qquad\n       J_{t_j+}=(\\Theta_j\\otimes\\Theta_j)_\\#J_{t_j-}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-tree-evolution"
+  },
+  {
+   "claim_id": "claim-pasted-gaussian-limit",
+   "exact_statement": "For the single pasted dynamics fixed above and every fixed observation list, $$\\frac{\\sum_i y_i(T)-\\mathbb E\\sum_i y_i(T)}{\\sqrt\\mu}\n       \\ \\Longrightarrow\\\n           \\sum_j\\zeta_{t_j}(\\phi_j).$$ All centered moments of the scalar random variable on the left converge to the corresponding Gaussian moments.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-cumulant-clt"
+  },
+  {
+   "claim_id": "claim-pasted-dynamics-accuracy",
+   "exact_statement": "There is a sufficiently large dimensional integer $\\Gamma_0$ with the following property. Fix $\\Gamma\\geq\\Gamma_0$. There is $L_0=L_0(\\Gamma,f_0,f,T,\\beta)$ such that, for any fixed $L\\geq L_0$, the true dynamics and the pasted dynamics of [thm:marked-expansion](#thm:marked-expansion), coupled using the same initial configuration, satisfy $$\\label{eq:cutoff-probability}\n \\mathbb P\\{\\text{the two trajectories differ at some time in }[0,T]\\}\n \\leq C\\epsilon^{1+\\eta}$$ for all sufficiently small $\\epsilon$, where one may take $\\eta=1/20$. Here the size cutoffs are the $A_i,\\Lambda_i$ of [thm:dhm-package](#thm:dhm-package), and $C$ and the upper bound on $\\epsilon$ may depend on the displayed fixed parameters.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-cutoff"
+  },
+  {
+   "claim_id": "claim-high-birth-energy-removal",
+   "exact_statement": "For the positive graph majorants in <a href=\"#eq:cutoff-low-complexity\" data-reference-type=\"eqref\" data-reference=\"eq:cutoff-low-complexity\">[eq:cutoff-low-complexity]</a>, there is a fixed power $H_*$ such that restricting the total birth energy $P=\\sum_{j\\text{ a birth}}|v_j|^2$ to $$P\\leq P_{\\epsilon}:=(1+|\\log\\epsilon|)^{H_*}$$ changes their sum by $O(\\epsilon^M)$ for every fixed $M$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cutoff-energy-tail"
+  },
+  {
+   "claim_id": "claim-conditional-elementary-kernels",
+   "exact_statement": "Consider the positive kernel <a href=\"#eq:edge-integral\" data-reference-type=\"eqref\" data-reference=\"eq:edge-integral\">[eq:edge-integral]</a> of a regular piece, with its fixed ends prescribed. Suppose the support has $|v_e|\\le |\\log\\epsilon|^{C_*}$, and each $x_e$ lies in a prescribed ball of radius $|\\log\\epsilon|^{C_*}$. The centers of those balls and all exterior variables may be arbitrary. Then:*\n\n\n1.  *A $\\{2\\}$ piece has kernel mass at most one. For a $\\{3\\}$ piece the kernel is parameterized by $$\\label{eq:local-three-parameters}\n       \\mathrm dt\\,\\mathrm d\\omega\\,\\mathrm dw\\,\n             |(v-w)\\cdot\\omega|,$$ with $(t,\\omega,w)\\in\\mathbb R\\times S^2\\times\\mathbb R^3$ and the appropriate incoming hemisphere. Here $v$ is the fixed-end velocity. If that end is outgoing, use the inverse elastic parametrization. All other states are determined by these parameters and the fixed end. A $\\{4\\}$ piece has in addition the measure $\\mu\\,\\mathrm dx\\,\\mathrm dv$. Consequently their masses are respectively bounded by $|\\log\\epsilon|^{C_*}$ and $\\mu|\\log\\epsilon|^{C_*}$. A neutral type-A $\\{33\\}$ bound is obtained by a $\\{3\\}$ integration followed by a $\\{2\\}$ integration.*\n\n2.  *A $\\{3\\}$ piece gains $\\epsilon^\\upsilon$ over its neutral bound if its support satisfies any one of $$\\label{eq:good-three-conditions}\n     \\begin{split}\n     |t-t_*|&\\le\\epsilon^\\upsilon,\\qquad\n     |v_e-v_{e'}|\\le\\epsilon^\\upsilon,\\\\\n     |x_e-x_*|&\\le\\epsilon^{1-\\upsilon},\\qquad\n     |x_e-x_{e'}|\\le\\epsilon^{1-\\upsilon}.\n     \\end{split}$$ The two-edge conditions require distinct edges and, for O-atoms, exclude serial pairs. In the external-position condition $e$ cannot be the fixed edge, or, for an O-atom, its serial free edge. The quantities $t_*,x_*$ are fixed exterior parameters. The bound is uniform in their values.*\n\n3.  *For a type-B $\\{33\\}$ piece, both atoms are C. Suppose $|t_1-t_2|\\ge\\epsilon^\\upsilon$, and at each of its atoms every pair of distinct incident edges satisfies $|v_e-v_{e'}|\\ge\\epsilon^\\upsilon$. Its kernel mass is at most $\\epsilon^\\upsilon|\\log\\epsilon|^{C_*}$, uniformly in its two fixed ends.*\n\n*In all three assertions, multiplying by an arbitrary bounded function on the stated support costs its supremum. There is no assumption that a fixed-end velocity has an independent Gaussian distribution.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-dhm-local"
+  },
+  {
+   "claim_id": "claim-pure-collision-cutting-alternatives",
+   "exact_statement": "<span id=\"prop:cutoff-import\" label=\"prop:cutoff-import\"></span> Let $M$ be a connected, full, realizable graph containing only scattering contacts. Full means that all its end variables are integrated. Define a transversal set $A\\subset M$ to be a set for which $M\\setminus A=A^-\\sqcup A^+$, with no directed bond from $A^+$ to $A\\cup A^-$, or from $A$ to $A^-$. Let $X_0(A)$ consist of vertices outside $A$ with two bonds to $A$, and let $X(A)$ be the closure obtained by repeatedly adding vertices with two bonds to the set already grown. The following statements hold; in parts <span class=\"upright\">(ii)–(iv)</span>, $A$ is assumed to be connected.*\n\n1.  *<span id=\"item:cutoff-growth\" label=\"item:cutoff-growth\"></span> There is a chain of connected transversal sets $A_1,\\ldots,A_m=M$, with $A_1$ a tree, such that $X_0(A_j)\\neq\\varnothing$ for $j<m$, $$A_j\\cup X(A_j)\\subset A_{j+1},\\qquad\n     r(A_{j+1})=r(A_j\\cup X(A_j)),\\qquad\n     r(A_{j+1})-r(A_j)\\leq10|X(A_j)|.$$ The intermediate growth from $A_j\\cup X(A_j)$ to $A_{j+1}$ adds one bond at each new vertex. For any $D$ transitions in this chain there is a cutting sequence of all of $M$ with one type $\\{4\\}$, no type $\\{44\\}$ or type-B pair, and at least $D$ type-A pairs.*\n\n2.  *<span id=\"item:cutoff-bfk\" label=\"item:cutoff-bfk\"></span> One can choose $A^\\pm$ such that each component of $A^+$ is attached to $A$. The two parts $X^\\pm(A)=X(A)\\cap A^\\pm$ are equivalently obtained by adding vertices with two predecessors, or two successors, in the grown set. They are convex along particle lines. If $m_\\pm$ is the number of bonds from $A$ to $X^\\pm(A)$, then $$|X^\\pm(A)|\\leq G(m_\\pm),\n     \\qquad\n     G(q)=(2q+1)\\binom q2(32q^{3/2})^{q^2}\\quad(q\\geq2).$$ The harmless values $G(0),G(1)$ may be replaced by one.*\n\n3.  *<span id=\"item:cutoff-trans\" label=\"item:cutoff-trans\"></span> Put $z=|X_0^\\pm(A)|$ and $a=r(A)$. There is a cutting sequence of $M$ having one type $\\{4\\}$, no type $\\{44\\}$ or type-B pair, and at least $z/2-a-1$ type-A pairs.*\n\n4.  *For this same choice of side there is a finite Borel partition of the contact-parameter domain, with a subcase-dependent integer $y\\geq0$, and the following two available sequences in each subcase:*\n\n    - *a sequence with one type $\\{4\\}$, no type $\\{44\\}$ or type-B pair, and at least $y/10-3(a+1)$ uniformly good singletons;*\n\n    - *a sequence with no type $\\{44\\}$, at most $S=a+z+y$ type $\\{4\\}$ singletons, all type-B pairs uniformly good, and at least $$\\frac{m_\\pm-10^5S}{10}$$ type-A or type-B pairs in total.*\n\n*The singleton and pair types not counted for a gain have the neutral kernels described above. On graphs of polylogarithmic size and bounded excess the indicated partitions and operation sequences have at most $C^b|\\log\\epsilon|^{C_*}$ subcases. The exponential base $C$ depends on dimensional choices, not on $L$. The required local restrictions at each uniformly good piece involve its own variables and data exposed earlier in the cutting order.",
+   "kind": "construction",
+   "statement_anchor": "stmt-item-cutoff-main"
+  },
+  {
+   "claim_id": "claim-neutral-cut-completion",
+   "exact_statement": "Suppose an exposed set is order-convex in the directed contact graph. Every remaining component touching this set can be cut using only type $\\{2\\}$ and type $\\{3\\}$ singletons. The same conclusion holds with given top ends in place of the exposed set. Scattering and nonscattering contacts are both allowed.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-cutoff-neutral"
+  },
+  {
+   "claim_id": "claim-adjacent-pair-gains",
+   "exact_statement": "Consider every possible choice $e_1,e_2$ of the two prospective fixed edges of a type-A pair, with $t_1,t_2$ the corresponding contact times. Call that choice strongly close if $$\\label{eq:cutoff-close}\n |t_2-t_1|\\leq\\epsilon^{9/10},\\qquad\n |v_{e_2}-v_{e_1}|\\leq\\epsilon^{4/5}.$$ Then:*\n\n\n1.  *a primitive pair satisfying <a href=\"#eq:cutoff-close\" data-reference-type=\"eqref\" data-reference=\"eq:cutoff-close\">[eq:cutoff-close]</a>, cut freely as one piece, has mass at most $$\\label{eq:cutoff-free-pair}\n     C R^C\\mu\\epsilon^{9/10+3(4/5)}\n     =C R^C\\epsilon^{13/10};$$*\n\n2.  *in the absence of every strongly close primitive pair, each type-A pair used by a cutting sequence has conditional mass at most $C R^C\\epsilon^{1/20}$, or may be split into a neutral type-two piece and a singleton with this same improved bound.*\n\n*The conditional bounds are uniform in the previously exposed lines and times.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cutoff-pair"
+  },
+  {
+   "claim_id": "claim-amplified-collision-cut",
+   "exact_statement": "For a sufficiently large dimensional $\\Gamma_0$, every connected realizable full scattering graph with $\\Gamma<r(M)\\leq2\\Gamma$, $\\Gamma\\geq\\Gamma_0$, has a finite decomposition into cut sequences of the following form. Either it contains a freely cut pair estimated by <a href=\"#eq:cutoff-free-pair\" data-reference-type=\"eqref\" data-reference=\"eq:cutoff-free-pair\">[eq:cutoff-free-pair]</a> and no other activity loss, or its retained improved pieces and free singletons satisfy $$\\label{eq:cutoff-gain-balance}\n \\delta\\,g-2s_4\\geq6/5 .$$ Here $g$ counts the retained improved pieces, and $s_4$ counts free singleton pieces. The number of subcases is at most $C^b|\\log\\epsilon|^{C_*}$. The number of pieces other than neutral type-three singletons is bounded in terms of $\\Gamma$ and the fixed choices.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cutoff-amplified"
+  },
+  {
+   "claim_id": "claim-literal-parameter-extraction",
+   "exact_statement": "Consider a finite ordered composition of positive cut kernels. At an ordinary step its free variables are $\\vartheta_j=(t_j,\\omega_j,w_j)$, with measure $$a_j\\,\\mathrm dt_j\\,\\mathrm d\\omega_j\\,\\mathrm dw_j ,$$ followed by a deterministic update of the exposed data. Suppose every exceptional kernel $K_\\ell(h,\\mathrm dz)$ has mass at most $H_\\ell$, uniformly in admissible data $h$ from earlier cuts. Include in that kernel every restriction needed for this bound, and set it to zero outside its admissibility domain.*\n\n\n*Remove the factors $a_j$ from the ordinary measures, obtaining a positive measure $\\nu$. If $E$ is a set of complete histories and $\\mathcal D$ is a measurable set containing its projection onto the literal variables $\\vartheta=(\\vartheta_1,\\ldots,\\vartheta_q)$, then $$\\label{eq:cutoff-extraction}\n \\nu(E)\\leq\n \\left(\\prod_\\ell H_\\ell\\right)\n \\int_{\\mathcal D}\\prod_{j=1}^q\n       \\mathrm dt_j\\,\\mathrm d\\omega_j\\,\\mathrm dw_j .$$ The same assertion holds when the ordinary density after division by $a_j$ is merely bounded by one.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cutoff-extraction"
+  },
+  {
+   "claim_id": "claim-common-velocity-containing-set",
+   "exact_statement": "Fix one original history graph and its ordinary normals. Suppose the sum of squared velocities at all its births is at most $P$, and suppose there are $s$ exceptional atoms, counting both atoms of a pair. For $q\\geq1$, the concatenated ordinary parameters $W=(w_1,\\ldots,w_q)$ lie in a set of volume at most $$\\label{eq:cutoff-ellipsoid}\n C_s\\{(1+P)(1+q)\\}^{C s}\n \\left(C\\sqrt{1+P/q}\\right)^{3q}.$$ The exponential base $C$ is absolute. The containing set depends on the ordinary normals and the graph but not on the numerical contact times or on the exceptional parameters. If $P,q$ are bounded by fixed powers of $|\\log\\epsilon|$, the prefactor is a fixed power of $|\\log\\epsilon|$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cutoff-ellipsoid"
+  },
+  {
+   "claim_id": "claim-causal-time-speed-bound",
+   "exact_statement": "In a slab containing $q_i$ ordinary atoms, retain the partial order induced on those atoms by the full original graph, including chains through exceptional atoms. Let $\\mathcal T_i$ be its time-order region in that slab. On the original support with total birth energy at most $P$, $$\\label{eq:cutoff-time}\n |\\mathcal T_i|\\,\n \\sup \\prod_{a\\text{ ordinary in slab }i}|v_a-v_{*a}|\n \\leq\n \\frac{\\tau^{q_i}(2q_iP)^{q_i/2}}{q_i!}.$$ An empty slab contributes the factor one.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cutoff-time"
+  },
+  {
+   "claim_id": "claim-exceptional-piece-summation",
+   "exact_statement": "Consider the positive low-complexity graph integrals obtained above. Suppose a cut sequence has $q=b-O_K(1)$ ordinary atoms and boundedly many exceptional pieces, whose conditional mass bounds have product $\\epsilon^\\alpha|\\log\\epsilon|^{C_*}$. After summing spatial cells and energy bins in a polylogarithmic energy region, its integral is at most $$\\label{eq:cutoff-sum}\n \\epsilon^\\alpha|\\log\\epsilon|^{C_*}\n       (C\\tau\\sqrt L)^q .$$ The exponential base $C$ depends on the fixed kinetic envelopes and dimension, but not on $K,L$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cutoff-sum"
+  },
+  {
+   "claim_id": "claim-exact-centering-transfer",
+   "exact_statement": "Let the true and pasted dynamics start from the same initial ensemble. Under the cutoff estimate of [prop:cutoff](#prop:cutoff), the expectation of any fixed bounded empirical observation list differs between the two dynamics by $o(\\mu^{-1/2})$. Consequently the corresponding exact-centered fluctuation vectors have the same weak limits.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-center-transfer"
+  }
+ ],
+ "paper": "papers/EN-109-000-0020-2-2026-PR-T4-UK-EX-M2-C-PH-M-0721_PM-364.2_Hard_sphere_fluctuations_on_the_regular_Boltzmann_lifespan.md",
+ "purpose": "Hard-sphere fluctuations on the regular Boltzmann lifespan",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "b2e4b2b475f8a81da16403113ae168fa211d338676f7cb09721b991b6c193a8e",
+   "pm.domains.v2": "7b200b030f2ed28a2679fe797cafc47e1820e40723483c43ada69e8a7d611352",
+   "pm.edges.v2": "e133e9ada683f47f2ad557769abd717821cea3ae8ac0564947b727e2b1b57a91",
+   "pm.extraction.v2": "293d060093bcdca9956fc9fbd800a9179d017b428b761e604e8594da8c5a455d",
+   "pm.formal.v2": "e404833e2019d39c473abcd1a8e8ce7d25e134cc2945b97d9b941778b21ce24a",
+   "pm.limits.v2": "6dc070267446c666a53a8534b9fc713950109e53dd61c8f0d32c96e890868d6d",
+   "pm.node.v2": "d050afe9294debc50bdfb0eef410d1b9ec106ef26f896248ad9495cebf23def9",
+   "pm.objects.v2": "a9f201fffd3a3a759e2cebc6842fa464322b5c3381f81c028440a5219cd27f35",
+   "pm.provenance.v2": "3269ff5de68d7a3703fae465380fb098d476738192389236511f58eae6dd1f55",
+   "pm.quantities.v2": "3b85e200ba676e9a7c55b61a8ed74a7d5ef9871654c2e9e9eb8a554bb86a5cd9",
+   "pm.reading.v2": "0aa2579ca9c751c14bb21c2088ef46cccc5e4f571b606a0eebfedf3ac8462439",
+   "pm.roadmap.v2": "b5e6a449a4f535571354fe12b105e9016a98efa4ed7b2972423f688e0d223bf8",
+   "pm.search.v1": "bef242aa77d2ccc414d93269003563f3cc2f3961237b6dad70a2f64828e4cd79",
+   "pm.triptych.v2": "804708c614787b1f47282d553b17ada0d497560a31968e316d93b95320ed87a5"
+  },
+  "canonical_sha256": "e8395a2067b82d665069be96b771a7dbf42cb28ca2a97cc54ea08084b940e10b",
+  "paper_sha256": "c0d5cf11a0b0f348a4c5730fc024a591e0872c5a44cf03369089f0de16ee5a5f",
+  "repaired_body_sha256": "abe46e30b2ecf1e94e24b0eb92c55b851db0a31be4cfe1d8e1448a12d5e2b7cf"
+ },
+ "status": "ACTIVE",
+ "subject_id": 9,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "d5f5a7e0a751bcffee2d1a3fe9c39678c6d23468332bf7963d66b4bdeebc0b00",
+   "receipt_sha256": "c6dfe74ed9b081596d96129805a23c44388fe08a5e491157f86a44c6b69438c6",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "All Boolean active graphs on vertex sets of sizes one through four, and the declared complete, path, and disconnected graphs on five vertices.",
+     "coverage": "DECIDED",
+     "invariant_id": "invariant-finite-connected-tree-bound",
+     "oracle_basis": "Exact connected-component recurrence and exact matrix-tree determinant independently determine each coefficient and tree count. Every returned row is checked. Coverage is confined to these inputs; the general finite lemma and the analytic kinetic theorem are not certified."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-remove-alternating-sign",
+     "observed_exit": 1,
+     "receipt_sha256": "569f79306381d3dc701ab45ea25a44b157de44b48f5f35ac0655dc7d3a0e1ce7"
+    },
+    {
+     "id": "mutant-accept-disconnected-subsets",
+     "observed_exit": 1,
+     "receipt_sha256": "48bbbbf69d292d2e4d621c9be9e3db7a3ddc98e30fde439c469c6e6a937876ad"
+    },
+    {
+     "id": "mutant-tree-edge-count",
+     "observed_exit": 1,
+     "receipt_sha256": "db41f9d798c2b35c09b40193befb807873bbc34774c15580b0080aafc6682737"
+    }
+   ],
+   "receipt_sha256": "3897a975118fbbed3fd5ed57bb3dca0a5eddb9990ed8e377948b42bd74deeb09",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Hard-sphere fluctuations on the regular Boltzmann lifespan"
+}

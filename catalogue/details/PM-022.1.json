@@ -1,0 +1,1063 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 880704,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 237252
+ },
+ "coordinate": "EN-101-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-H-0059",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Exact finite probability models on integer divisors",
+   "strength": "moderate",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "The integer nearest to $qx-\\gamma$ is unrestricted: no coprimality condition is imposed on the numerator.",
+     "quote_sha256": "2d9f6d13e596efcce534eff2c778f22177a6af97c0f92374b67381fe18ab7964"
+    }
+   ],
+   "query": "Coprime-numerator inhomogeneous approximation for every fixed shift",
+   "reason": "The proved statement allows unrestricted numerators, and the paper explicitly distinguishes the stronger coprime formulation and its counterexamples."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "The conclusion is a divergence statement, not a convergence converse or a quantitative asymptotic.",
+     "quote_sha256": "a17f40b05b7a0f491a57eaebcd9b987ab39b1813e845f762cbc759c41f76cd49"
+    }
+   ],
+   "query": "A convergence converse or quantitative counting asymptotic",
+   "reason": "The main conclusion is a sufficient divergence result and supplies neither a converse nor an asymptotic frequency."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "In the inhomogeneous problem, even unrestricted numerators do not make unweighted divergence sufficient.",
+     "quote_sha256": "499ce981b13053af969d00ccf9c3ce581a8abbdf2a82a6f2d513aa4d48d404ad"
+    }
+   ],
+   "query": "Unweighted divergence for arbitrary nonmonotone inhomogeneous tolerances",
+   "reason": "The paper explicitly states that unrestricted numerators do not make unweighted divergence sufficient."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-tab-prime-update",
+     "quote": "The orbit is a simultaneous translation of all lists; the assertion does not require independent success colors.",
+     "quote_sha256": "febb3ea40af6f0b3cfa92a0a6f98120dc77973d3720dcf0821302613e0e21d88"
+    }
+   ],
+   "query": "Independent success outcomes in adaptive matching tables",
+   "reason": "The update identity relies on simultaneous finite orbit averaging and does not assume independence of success colours."
+  }
+ ],
+ "family": "PM-022",
+ "id": "PM-022.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-weak-inhomogeneous-divergence",
+    "statement": "Let $\\gamma\\in\\mathbb R$ be fixed, and let $\\psi:\\mathbb N\\to[0,\\infty)$ be finite-valued."
+   },
+   {
+    "anchor": "eq:main-divergence",
+    "claim_id": "claim-weak-inhomogeneous-divergence",
+    "statement": "$$\\label{eq:main-divergence}\n  \\sum_{q=1}^{\\infty}\\frac{\\phi(q)}q\\,\\psi(q)=\\infty,$$ then, for Lebesgue-almost every $x\\in\\mathbb R$, the inequality $$\\|qx-\\gamma\\|<\\psi(q)$$ holds for infinitely many positive integers $q$."
+   },
+   {
+    "anchor": "stmt-cor-hausdorff",
+    "claim_id": "claim-hausdorff-divergence",
+    "statement": "Fix $\\gamma\\in\\mathbb R$ and a finite-valued $\\psi:\\mathbb N\\to[0,\\infty)$."
+   },
+   {
+    "anchor": "stmt-cor-hausdorff",
+    "claim_id": "claim-hausdorff-divergence",
+    "statement": "Let $f:(0,\\infty)\\to(0,\\infty)$ be continuous and nondecreasing, with $f(r)\\to0$ as $r\\downarrow0$, and suppose that $f(r)/r$ is monotone."
+   },
+   {
+    "anchor": "stmt-cor-hausdorff",
+    "claim_id": "claim-hausdorff-divergence",
+    "statement": "If $$\\sum_{q=1}^{\\infty}\\phi(q)f\\!\\left(\\frac{\\psi(q)}q\\right)=\\infty,$$"
+   },
+   {
+    "anchor": "stmt-pre-large-widths",
+    "claim_id": "claim-nonvanishing-widths",
+    "statement": "If $v r(v)$ does not tend to zero,"
+   },
+   {
+    "anchor": "stmt-pre-blocks",
+    "claim_id": "claim-late-fixed-mass-blocks",
+    "statement": "For every fixed $0<w\\le1/2$"
+   },
+   {
+    "anchor": "stmt-pre-elementary-prime-bounds",
+    "claim_id": "claim-elementary-prime-divisor-bounds",
+    "statement": "Uniformly for $z\\ge2$, $b\\ge a\\ge2$, and integers $n\\ge1$,"
+   },
+   {
+    "anchor": "stmt-ar-pivot",
+    "claim_id": "claim-common-prime-coordinate-pivot",
+    "statement": "Fix $1/2<u<1$ and $A\\ge1$."
+   },
+   {
+    "anchor": "stmt-ar-pivot",
+    "claim_id": "claim-common-prime-coordinate-pivot",
+    "statement": "For probability vectors $\\alpha,\\beta$ and $0<q<1/2$,"
+   },
+   {
+    "anchor": "stmt-ar-pivot",
+    "claim_id": "claim-common-prime-coordinate-pivot",
+    "statement": "Moreover, if a probability array $(m_{ij})$ satisfies $$m_{ij}\\le q^{|i-j|}A^{\\mathbf1_{i\\ne j}}\n (\\alpha_i\\beta_j)^u,$$"
+   },
+   {
+    "anchor": "stmt-ar-tensor",
+    "claim_id": "claim-integer-tensor-kernel",
+    "statement": "For $1/2<u<1$, $s>1-u$, and nonnegative sequences $(x_L),(y_M)$ on the positive integers,"
+   },
+   {
+    "anchor": "stmt-ar-cycle",
+    "claim_id": "claim-determinant-cycle-residue-averages",
+    "statement": "Fix divisors $D_1\\mid v$, $D_2\\mid w$ and a nonnegative function of $z\\bmod D_1,z'\\bmod D_2$."
+   },
+   {
+    "anchor": "stmt-ar-cycle",
+    "claim_id": "claim-determinant-cycle-residue-averages",
+    "statement": "If one also requires $n\\equiv n_0\\pmod Q$ and $(Q,D_1D_2)=1$,"
+   },
+   {
+    "anchor": "stmt-cen-density",
+    "claim_id": "claim-density-above-original-hosts",
+    "statement": "Let $\\mathcal V$ be a subfamily of rows of a common width $r$, all dividing an integer $L$."
+   },
+   {
+    "anchor": "stmt-cen-density",
+    "claim_id": "claim-density-above-original-hosts",
+    "statement": "Suppose that $L$ is at least the original host of every nonraw row in $\\mathcal V$; raw rows are allowed as well."
+   },
+   {
+    "anchor": "stmt-cen-kernel",
+    "claim_id": "claim-centre-kernel-superlinear-summation",
+    "statement": "Consider centre families satisfying Lemma <a href=\"#cen:density\" data-reference-type=\"ref\" data-reference=\"cen:density\">11</a>, with at most one family for each pair $(L,r)$ and total mass at most $W\\le1$."
+   },
+   {
+    "anchor": "stmt-cen-kernel",
+    "claim_id": "claim-centre-kernel-superlinear-summation",
+    "statement": "For every fixed $\\alpha>1/2$ and sufficiently small fixed $\\epsilon>0$,"
+   },
+   {
+    "anchor": "stmt-cen-raw",
+    "claim_id": "claim-raw-row-mass-suffices",
+    "statement": "If raw rows have mass at least $w/4$ on arbitrarily late blocks,"
+   },
+   {
+    "anchor": "stmt-cen-adjusted",
+    "claim_id": "claim-adjusted-centre-scale-and-purge",
+    "statement": "Every adjusted centre satisfies Lemma <a href=\"#cen:density\" data-reference-type=\"ref\" data-reference=\"cen:density\">11</a> and $$|\\log k_{L_i}|\\le B_i^*+1,\\qquad\n \\log k_{L_i}\\le .1(B_i^*+1).$$ The number of original popular centres at a fixed width $r$ and with $-\\log(Dr)\\in[b,b+1)$ is $$\\ll W_r e^{(1+3H_0)b}.$$ The total number of adjusted centre objects with $B_i^*\\le t$, including all widths, is $\\ll e^{2t}$. Deleting objects with $\\delta_{L_i}<e^{-.32B_i^*}$ loses $o(W)$ as $k_0\\to0$."
+   },
+   {
+    "anchor": "stmt-cen-exterior",
+    "claim_id": "claim-exterior-band-separation",
+    "statement": "If $B_i/B_j$ is sufficiently small,"
+   },
+   {
+    "anchor": "eq:centre-lower",
+    "claim_id": "claim-width-height-decay-kernels",
+    "statement": "Retain the remaining objects. In addition to their upper density bound, their original assigned families satisfy the following lower bounds, before any subsequent mask or numerator removals: $$\\delta_L\\ge e^{-.32B_i^*},\\qquad\n m_L\\gg e^{-1.32B_i^*}.\n \\label{eq:centre-lower}$$"
+   },
+   {
+    "anchor": "stmt-cen-decay-kernels",
+    "claim_id": "claim-width-height-decay-kernels",
+    "statement": "First, restrict to pairs with sufficiently small $B_i/B_j$ and $\\log(r_i/r_j)>.65B_j^*$."
+   },
+   {
+    "anchor": "stmt-cen-decay-kernels",
+    "claim_id": "claim-width-height-decay-kernels",
+    "statement": "Second, fix $c>0$ and $C>0$."
+   },
+   {
+    "anchor": "stmt-cen-decay-kernels",
+    "claim_id": "claim-width-height-decay-kernels",
+    "statement": "Sum over dyadic $Y$ and pairs with $B_i,B_j\\le Y/A_0$."
+   },
+   {
+    "anchor": "stmt-pre-mask-purge",
+    "claim_id": "claim-negligible-good-mask-purge",
+    "statement": "With the order of choices in Section <a href=\"#cen:hierarchy\" data-reference-type=\"ref\" data-reference=\"cen:hierarchy\">3.5</a>,"
+   },
+   {
+    "anchor": "stmt-pre-tag-prescription",
+    "claim_id": "claim-tagged-numerator-prescription",
+    "statement": "In each tag bin in which $m$ has at least one prime divisor,"
+   },
+   {
+    "anchor": "stmt-pre-model-uniqueness",
+    "claim_id": "claim-recognized-model-uniqueness",
+    "statement": "If a medium row has distinct broad and narrow models,"
+   },
+   {
+    "anchor": "stmt-pre-hard-mean",
+    "claim_id": "claim-hard-birth-first-mass",
+    "statement": "once it is sufficiently small,"
+   },
+   {
+    "anchor": "stmt-pre-soft-loss",
+    "claim_id": "claim-soft-test-relative-loss",
+    "statement": "Under the probability measure obtained by normalizing a row’s hard birth weights,"
+   },
+   {
+    "anchor": "stmt-tab-prime-update",
+    "claim_id": "claim-prime-update-mass-and-cap",
+    "statement": "On averaging over pre-core $p$-translations,"
+   },
+   {
+    "anchor": "stmt-tab-first-join-input",
+    "claim_id": "claim-first-sharing-comparison-input",
+    "statement": "For the selected finite blocks,"
+   },
+   {
+    "anchor": "stmt-tab-first-join-input",
+    "claim_id": "claim-first-sharing-comparison-input",
+    "statement": "For any fixed required absolute $C$,"
+   },
+   {
+    "anchor": "stmt-tab-sparse-input",
+    "claim_id": "claim-sparse-alignment-input",
+    "statement": "Uniformly under the allowed prior histories,"
+   },
+   {
+    "anchor": "stmt-tab-partition-input",
+    "claim_id": "claim-chronological-operational-partitions",
+    "statement": "The cells and accounting classes described above can be constructed chronologically for every finite block. The construction preserves current-core equivariance, the cell spans and padding stated in <a href=\"#tab:cell-span\" data-reference-type=\"eqref\" data-reference=\"tab:cell-span\">[tab:cell-span]</a> and the paragraph following it, all inherited accounting classes without splitting, and the property that one new cell meets at most one surviving old cell of each old child. After clipping, the raw cap per cell and remaining mask is $N_0$. It supports the coarsening rule of Proposition <a href=\"#tab:sparse-input\" data-reference-type=\"ref\" data-reference=\"tab:sparse-input\">26</a> at each subsequent sparse step.*\n\n*Aside from the cap clipping separately bounded by <a href=\"#tab:narrow-input\" data-reference-type=\"eqref\" data-reference=\"tab:narrow-input\">[tab:narrow-input]</a>, its total first-mass loss can be made arbitrarily small relative to the selected block mass by the fixed parameter cutoffs. An expected loss bound over the specified finite partition jitters suffices; the structural assertions and core equivariance hold for every realized construction. The comparison bounds apply to the actual running tables or to the nonnegative majorants indicated in their proofs."
+   },
+   {
+    "anchor": "stmt-tab-variance-budget",
+    "claim_id": "claim-accounting-variance-budget",
+    "statement": "Let $J_p$ be the increment of <a href=\"#tab:accounting-energy\" data-reference-type=\"eqref\" data-reference=\"tab:accounting-energy\">[tab:accounting-energy]</a> on old classes during a sparse-prime update, before coarsening, and let $K_p'\\ge0$ be the increment from the subsequent coarsening."
+   },
+   {
+    "anchor": "stmt-tab-energy-bound",
+    "claim_id": "claim-uniform-final-broad-energy",
+    "statement": "Assuming Propositions <a href=\"#tab:first-join-input\" data-reference-type=\"ref\" data-reference=\"tab:first-join-input\">25</a>–<a href=\"#tab:partition-input\" data-reference-type=\"ref\" data-reference=\"tab:partition-input\">27</a>,"
+   },
+   {
+    "anchor": "stmt-tab-virtual-marginals",
+    "claim_id": "claim-virtual-product-marginals",
+    "statement": "At fixed static anchor choices,"
+   },
+   {
+    "anchor": "stmt-tab-intermediate-fields",
+    "claim_id": "claim-intermediate-product-upper-fields",
+    "statement": "Fix an admissible realized table history and a row whose current projected grid is $(z+a\\gamma)/(L_i/d)$, where $I$ is the remaining prime-power part and $a\\mid I$."
+   },
+   {
+    "anchor": "stmt-tab-equidistribution",
+    "claim_id": "claim-virtual-first-mass-equidistribution",
+    "statement": "as the denominators tend to infinity."
+   },
+   {
+    "anchor": "stmt-tab-conditional-reduction",
+    "claim_id": "claim-finite-block-transfer",
+    "statement": "Assume the selections and birth prescriptions of Sections <a href=\"#sec:centres\" data-reference-type=\"ref\" data-reference=\"sec:centres\">3</a> and <a href=\"#sec:prescriptions\" data-reference-type=\"ref\" data-reference=\"sec:prescriptions\">4</a>, and Propositions <a href=\"#tab:first-join-input\" data-reference-type=\"ref\" data-reference=\"tab:first-join-input\">25</a>–<a href=\"#tab:partition-input\" data-reference-type=\"ref\" data-reference=\"tab:partition-input\">27</a>."
+   },
+   {
+    "anchor": "stmt-ar-sieve",
+    "claim_id": "claim-small-prime-grid-sieve",
+    "statement": "Suppose $\\eta=[v,w]\\max(r_1,r_2)\\ge2$."
+   },
+   {
+    "anchor": "stmt-ar-sieve",
+    "claim_id": "claim-small-prime-grid-sieve",
+    "statement": "At any chosen primes $p\\le\\eta^\\xi$, impose one forbidden numerator residue on either or both grids, and impose a residue condition only when $p$ divides that grid’s denominator."
+   },
+   {
+    "anchor": "stmt-ar-rotation",
+    "claim_id": "claim-integer-prime-rotation-alternative",
+    "statement": "Let $\\alpha,y\\in\\mathbb R$, $0\\le\\Delta\\le e^{-C_1u}$ and $N\\ge e^{C_1u}$."
+   },
+   {
+    "anchor": "stmt-ar-lcm",
+    "claim_id": "claim-weighted-lcm-bound",
+    "statement": "Suppose $f(v)\\le\\phi(v)$, $g(w)\\le\\phi(w)$, and $$e(v,w)\\le f(v)g(w)\n h\\bigl(v/(v,w)\\bigr)h\\bigl(w/(v,w)\\bigr).$$"
+   },
+   {
+    "anchor": "stmt-ar-lcm",
+    "claim_id": "claim-weighted-lcm-bound",
+    "statement": "If every positive edge satisfies $[v,w]\\le Z$,"
+   },
+   {
+    "anchor": "stmt-ar-extraction",
+    "claim_id": "claim-small-scale-arithmetic-extraction",
+    "statement": "Fix positive constants $c_-,c_+$."
+   },
+   {
+    "anchor": "stmt-ar-extraction",
+    "claim_id": "claim-small-scale-arithmetic-extraction",
+    "statement": "Suppose $F,G\\le1$ and every positive edge satisfies $$c_-\\eta/r_+'\\le[v,w]\\le c_+\\eta/r_+',\\qquad 0<\\eta<1.$$"
+   },
+   {
+    "anchor": "stmt-ar-box-sampling",
+    "claim_id": "claim-saturated-box-auxiliary-sampling",
+    "statement": "Use a box given by Proposition <a href=\"#ar:extraction\" data-reference-type=\"ref\" data-reference=\"ar:extraction\">37</a>."
+   },
+   {
+    "anchor": "stmt-ar-box-sampling",
+    "claim_id": "claim-saturated-box-auxiliary-sampling",
+    "statement": "Suppose that each vertex weight is obtained by integrating a nonnegative density bounded by its normalized totient weight against a probability law of auxiliary variables; restrictions may reduce this density."
+   },
+   {
+    "anchor": "stmt-ar-box-sampling",
+    "claim_id": "claim-saturated-box-auxiliary-sampling",
+    "statement": "Suppose also that the edge majorant holds before integration against the independent product of the two auxiliary laws.*\n\n*Sample $a,c$ uniformly from their dyadic integer intervals, sample $b,d_1$ independently with law $\\pi_N$, and then sample the auxiliary variables with their unrestricted laws."
+   },
+   {
+    "anchor": "stmt-dir-birth-comparisons",
+    "claim_id": "claim-direct-birth-comparison-bounds",
+    "statement": "Use the retained centres of one type and colour, the good masks, and the birth prescriptions of Sections <a href=\"#sec:centres\" data-reference-type=\"ref\" data-reference=\"sec:centres\">3</a> and <a href=\"#sec:prescriptions\" data-reference-type=\"ref\" data-reference=\"sec:prescriptions\">4</a>, with the hierarchy fixed in Section <a href=\"#cen:hierarchy\" data-reference-type=\"ref\" data-reference=\"cen:hierarchy\">3.5</a>."
+   },
+   {
+    "anchor": "stmt-dir-birth-comparisons",
+    "claim_id": "claim-direct-birth-comparison-bounds",
+    "statement": "Let the finite block have mass $W\\le1$."
+   },
+   {
+    "anchor": "stmt-dir-ultra-switch",
+    "claim_id": "claim-ultra-divisor-prime-switching",
+    "statement": "For ultra comparisons,"
+   },
+   {
+    "anchor": "stmt-dir-ultra-switch",
+    "claim_id": "claim-ultra-divisor-prime-switching",
+    "statement": "If any switch is available,"
+   },
+   {
+    "anchor": "stmt-dir-ultra-switch",
+    "claim_id": "claim-ultra-divisor-prime-switching",
+    "statement": "If no switch is available,"
+   },
+   {
+    "anchor": "stmt-dir-tag-fold",
+    "claim_id": "claim-tag-arrangements-and-folding",
+    "statement": "Apart from the exceptions of Lemma <a href=\"#dir:ultra-switch\" data-reference-type=\"ref\" data-reference=\"dir:ultra-switch\">40</a>,"
+   },
+   {
+    "anchor": "stmt-dir-tag-fold",
+    "claim_id": "claim-tag-arrangements-and-folding",
+    "statement": "For a fixed arrangement,"
+   },
+   {
+    "anchor": "stmt-dir-exact-equalities",
+    "claim_id": "claim-linear-exact-model-equalities",
+    "statement": "The total folded comparison count with exact modeled equality, using all recognized tiers and either the broad or narrow outer-mask law, is $O(W)$."
+   },
+   {
+    "anchor": "stmt-dir-ultra-count",
+    "claim_id": "claim-ultra-comparison-total",
+    "statement": "All ultra comparisons in Proposition <a href=\"#dir:birth-comparisons\" data-reference-type=\"ref\" data-reference=\"dir:birth-comparisons\">39</a> have total cost $O(W)+O_{k_0}(W^{1+c})$."
+   },
+   {
+    "anchor": "stmt-dir-row-kernel",
+    "claim_id": "claim-nonexact-folded-row-kernel",
+    "statement": "At fixed masks,"
+   },
+   {
+    "anchor": "stmt-dir-hole-rule",
+    "claim_id": "claim-static-low-rational-holes",
+    "statement": "Fix a medium group and exact width, and let $F$ be its aggregate list mass."
+   },
+   {
+    "anchor": "stmt-dir-holes",
+    "claim_id": "claim-small-cost-of-static-holes",
+    "statement": "when $\\lambda_0$ is sufficiently large."
+   },
+   {
+    "anchor": "stmt-dir-high-box",
+    "claim_id": "claim-exclusion-of-high-saturated-boxes",
+    "statement": "No saturated configuration <a href=\"#dir:saturated-form\" data-reference-type=\"eqref\" data-reference=\"dir:saturated-form\">[dir:saturated-form]</a> occurs on high type among the remaining non-ultra comparisons."
+   },
+   {
+    "anchor": "stmt-dir-shallow-box",
+    "claim_id": "claim-exclusion-of-shallow-medium-boxes",
+    "statement": "on medium type with $\\lambda<\\ell_{\\rm sh}B$"
+   },
+   {
+    "anchor": "stmt-dir-shallow-box",
+    "claim_id": "claim-exclusion-of-shallow-medium-boxes",
+    "statement": "after Construction <a href=\"#dir:hole-rule\" data-reference-type=\"ref\" data-reference=\"dir:hole-rule\">45</a>."
+   },
+   {
+    "anchor": "stmt-dir-deep-box",
+    "claim_id": "claim-deep-medium-linear-charge",
+    "statement": "For medium type with $\\ell_{\\rm sh}B\\le\\lambda\\le Q_0B+O(1)$,"
+   },
+   {
+    "anchor": "stmt-sp-sparse-estimates",
+    "claim_id": "claim-sparse-step-comparison-estimates",
+    "statement": "Consider any finite table history up to a sparse-prime update that satisfies the centre and good-mask prescriptions and the preceding chronological core-equivariance rules."
+   },
+   {
+    "anchor": "stmt-sp-sparse-estimates",
+    "claim_id": "claim-sparse-step-comparison-estimates",
+    "statement": "Suppose its operational cells have the span and padding required in Section <a href=\"#sec:tables\" data-reference-type=\"ref\" data-reference=\"sec:tables\">5</a>."
+   },
+   {
+    "anchor": "stmt-sp-danger-trains",
+    "claim_id": "claim-deterministic-danger-train-construction",
+    "statement": "For a centre $i$, current prime $q$ in bin $Y$, and processed deficit $d$ such that $dq$ is the processed portion of some good mask,"
+   },
+   {
+    "anchor": "stmt-part-target-grid",
+    "claim_id": "claim-weighted-target-grid-source-train",
+    "statement": "For every sufficiently small fixed $\\epsilon>0$, every fixed constant $C_0$, and $0<R\\le C_0$,"
+   },
+   {
+    "anchor": "stmt-part-mask-sums",
+    "claim_id": "claim-source-mask-target-deficit-sums",
+    "statement": "For the source masks of bin $Y'$,"
+   },
+   {
+    "anchor": "stmt-part-mask-sums",
+    "claim_id": "claim-source-mask-target-deficit-sums",
+    "statement": "Under the unrestricted deficit law on the processed target mask,"
+   },
+   {
+    "anchor": "stmt-part-history-test-cost",
+    "claim_id": "claim-history-test-first-mass-cost",
+    "statement": "For either kind of test,"
+   },
+   {
+    "anchor": "stmt-part-inherited-hulls",
+    "claim_id": "claim-inherited-hulls-stay-in-history",
+    "statement": "Every positive-length inherited class hull lies in the union of the danger intervals belonging to its old child. It lies in its old cell, and the hull operation respects current-core translations."
+   },
+   {
+    "anchor": "stmt-join-remaining-first-joins",
+    "claim_id": "claim-remaining-first-join-bounds",
+    "statement": "Consider a finite block and the retained centres, masks, and table operations of Sections <a href=\"#sec:centres\" data-reference-type=\"ref\" data-reference=\"sec:centres\">3</a>–<a href=\"#sec:partitions\" data-reference-type=\"ref\" data-reference=\"sec:partitions\">9</a>, with the stated parameter hierarchy."
+   },
+   {
+    "anchor": "stmt-join-remaining-first-joins",
+    "claim_id": "claim-remaining-first-join-bounds",
+    "statement": "At each first sharing of a component, omit the simultaneous-birth comparisons already treated in Section <a href=\"#sec:direct\" data-reference-type=\"ref\" data-reference=\"sec:direct\">7</a>."
+   },
+   {
+    "anchor": "stmt-join-classification",
+    "claim_id": "claim-distant-or-mixed-first-joins",
+    "statement": "Suppose centres $i,j$ first share a component at height $Y$, and their comparison is not a simultaneous-birth comparison treated in Section <a href=\"#sec:direct\" data-reference-type=\"ref\" data-reference=\"sec:direct\">7</a>."
+   },
+   {
+    "anchor": "stmt-join-backward-decomposition",
+    "claim_id": "claim-backward-actual-prefix-decomposition",
+    "statement": "For the fixed current grids, masks, and distance predicate,"
+   },
+   {
+    "anchor": "stmt-join-endpoint-count",
+    "claim_id": "claim-remaining-field-period-and-roundoff",
+    "statement": "by choosing $\\rho$ sufficiently small"
+   },
+   {
+    "anchor": "stmt-join-endpoint-count",
+    "claim_id": "claim-remaining-field-period-and-roundoff",
+    "statement": "after $\\epsilon>0$ is fixed."
+   },
+   {
+    "anchor": "stmt-join-later-omissions",
+    "claim_id": "claim-later-omission-exact-averaging",
+    "statement": "For each mapped side, write $$d=d_{<p}b_i^+,$$ where $b_i^+$ is the processed portion of its actual mask above $p$ and below the join bin."
+   },
+   {
+    "anchor": "stmt-join-capacity",
+    "claim_id": "claim-matching-capacity-unique-epoch",
+    "statement": "After the averaging of Lemma <a href=\"#join:later-omissions\" data-reference-type=\"ref\" data-reference=\"join:later-omissions\">60</a>,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Finite-block transfer to full Lebesgue measure",
+    "evidence": [
+     {
+      "anchor": "pm-h-5",
+      "quote": "These bounds contradict the existence of a positive-measure set avoiding all sufficiently late rows: approximate that set by one fixed finite union of intervals, then use the second moment to control the approximation error.",
+      "quote_sha256": "0fea986fc4e36322a8b270d449ab0893c7e36f58edc148a34d9397f207add558"
+     }
+    ],
+    "requires_concepts": [
+     "Uniform broad-energy bounds",
+     "Virtual product marginals",
+     "Relative equidistribution",
+     "First-moment discard accounting",
+     "Approximation of measurable sets by finite interval unions"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Small-scale arithmetic extraction",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-ar-extraction",
+      "quote": "We shall first fix exceptional exponent coordinates, then concentrate the remaining coordinates at common pivots, and finally select one occupied pair of dyadic ranges.",
+      "quote_sha256": "5faa86ba4afdf487213c2004be0357b7afd8e027d9a426adba0d4c7495987c5d"
+     }
+    ],
+    "requires_concepts": [
+     "Totient vertex capacities",
+     "Moment-controlled edge inflation",
+     "Prime-coordinate concentration",
+     "Entropy budgets",
+     "Dyadic capacity selection"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Hausdorff-measure consequence",
+    "evidence": [
+     {
+      "anchor": "sec:consequences",
+      "quote": "We now apply the proved Lebesgue-measure theorem to the transformed radii in the mass transference principle.",
+      "quote_sha256": "f7daa07dce08bb689bbf912dc65888fee0b2fc8930dcd352049f086d68f5d174"
+     }
+    ],
+    "requires_concepts": [
+     "The weak Lebesgue-measure theorem",
+     "Gauge-transformed radii",
+     "Mass transference principle"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-weak-inhomogeneous-divergence",
+   "exact_statement": "Let $\\gamma\\in\\mathbb R$ be fixed, and let $\\psi:\\mathbb N\\to[0,\\infty)$ be finite-valued. If $$\\label{eq:main-divergence}\n  \\sum_{q=1}^{\\infty}\\frac{\\phi(q)}q\\,\\psi(q)=\\infty,$$ then, for Lebesgue-almost every $x\\in\\mathbb R$, the inequality $$\\|qx-\\gamma\\|<\\psi(q)$$ holds for infinitely many positive integers $q$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-hausdorff-divergence",
+   "exact_statement": "Fix $\\gamma\\in\\mathbb R$ and a finite-valued $\\psi:\\mathbb N\\to[0,\\infty)$. Let $f:(0,\\infty)\\to(0,\\infty)$ be continuous and nondecreasing, with $f(r)\\to0$ as $r\\downarrow0$, and suppose that $f(r)/r$ is monotone. Set $f(0)=0$ and $$W_\\gamma(\\psi)=\\{x\\in\\mathbb R:\n    \\|qx-\\gamma\\|<\\psi(q)\\text{ for infinitely many }q\\}.$$ If $$\\sum_{q=1}^{\\infty}\\phi(q)f\\!\\left(\\frac{\\psi(q)}q\\right)=\\infty,$$ then, for every bounded interval $I$, $$\\mathcal H^f(I\\cap W_\\gamma(\\psi))=\\mathcal H^f(I),$$ where $\\mathcal H^f$ denotes Hausdorff $f$-measure.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-hausdorff"
+  },
+  {
+   "claim_id": "claim-nonvanishing-widths",
+   "exact_statement": "If $v r(v)$ does not tend to zero, then $\\limsup_v E_v$ has full measure.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-pre-large-widths"
+  },
+  {
+   "claim_id": "claim-late-fixed-mass-blocks",
+   "exact_statement": "For every fixed $0<w\\le1/2$ there are arbitrarily late, pairwise disjoint finite sets $\\mathcal B$ of positive-width rows such that $$\\label{eq:block-mass}\n w\\le W:=\\sum_{v\\in\\mathcal B}\\phi(v)r(v)\\le2w.$$ Their least denominator tends to infinity, and all their spatial widths tend uniformly to zero.",
+   "kind": "construction",
+   "statement_anchor": "stmt-pre-blocks"
+  },
+  {
+   "claim_id": "claim-elementary-prime-divisor-bounds",
+   "exact_statement": "Uniformly for $z\\ge2$, $b\\ge a\\ge2$, and integers $n\\ge1$, $$\\begin{aligned}\n \\sum_{p\\le z}\\log p&\\ll z,\n &\\sum_{p\\le z}\\frac{\\log p}{p}&\\ll\\log(2z),\\label{eq:prime-log-sums}\\\\\n \\sum_{a\\le p\\le b}\\frac1p\n &\\ll \\frac1{\\log a}+\\log\\frac{\\log b}{\\log a},\n &\\prod_{p\\le z}R_p^{-1}&\\ge\\sum_{1\\le m\\le z}\\frac1m.\n \\label{eq:prime-reciprocals}\n\\end{aligned}$$ For every fixed $C,\\epsilon>0$, $$\\label{eq:divisor-small-power}\n \\tau(n)^C+R(n)^{-C}\\ll_{C,\\epsilon}n^\\epsilon.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-pre-elementary-prime-bounds"
+  },
+  {
+   "claim_id": "claim-common-prime-coordinate-pivot",
+   "exact_statement": "Fix $1/2<u<1$ and $A\\ge1$. For probability vectors $\\alpha,\\beta$ and $0<q<1/2$, put $$T_q(\\alpha,\\beta)=\\sum_{i,j}\n q^{|i-j|}A^{\\mathbf1_{i\\ne j}}(\\alpha_i\\beta_j)^u.$$ Then $$T_q(\\alpha,\\beta)\\le 1+O_{u,A}(q^{1/(1-u)}).$$ Moreover, if a probability array $(m_{ij})$ satisfies $$m_{ij}\\le q^{|i-j|}A^{\\mathbf1_{i\\ne j}}\n (\\alpha_i\\beta_j)^u,$$ there is, for sufficiently small $q$, an index $k$ such that $$d:=(1-\\alpha_k)+(1-\\beta_k)\\ll_{u,A}q^{1/(1-u)}.$$ For this index the mass on $i,j\\ne k$ is $O_{u,A}(d^{2u})$, and the mass on pairs with exactly one index equal to $k$ and the other at distance at least $a\\ge1$ is $O_{u,A}(q^a d^u)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ar-pivot"
+  },
+  {
+   "claim_id": "claim-integer-tensor-kernel",
+   "exact_statement": "For $1/2<u<1$, $s>1-u$, and nonnegative sequences $(x_L),(y_M)$ on the positive integers, $$\\sum_{L,M\\ge1}\n \\frac{(x_Ly_M)^u}{\\bigl(L/(L,M)\\cdot M/(L,M)\\bigr)^s}\n \\ll_{u,s}\\left(\\sum_Lx_L\\sum_My_M\\right)^u.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-ar-tensor"
+  },
+  {
+   "claim_id": "claim-determinant-cycle-residue-averages",
+   "exact_statement": "Fix divisors $D_1\\mid v$, $D_2\\mid w$ and a nonnegative function of $z\\bmod D_1,z'\\bmod D_2$. At every integer determinant there are $g$ solutions per unit first-point translate; let $A(n)$ be their average value. Then $A$ has a period dividing $D_1D_2$, and its mean $\\overline A$ is the independent uniform residue mean of the function. For any real interval $J$, $$\\sum_{n\\in J\\cap\\mathbb Z}A(n)\n =|J|\\overline A+O(D_1D_2\\overline A).$$ If one also requires $n\\equiv n_0\\pmod Q$ and $(Q,D_1D_2)=1$, the main term is $|J|\\overline A/Q$ with the same error bound.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ar-cycle"
+  },
+  {
+   "claim_id": "claim-density-above-original-hosts",
+   "exact_statement": "Let $\\mathcal V$ be a subfamily of rows of a common width $r$, all dividing an integer $L$. Suppose that $L$ is at least the original host of every nonraw row in $\\mathcal V$; raw rows are allowed as well. Define $$k_L=Lr,\\qquad\n \\delta_L=\\sum_{v\\in\\mathcal V}\\frac{\\phi(v)}L,\\qquad\n m_L=k_L\\delta_L.$$ Then $$\\delta_L\\ll_{k_0} k_L^{H_0}.\n \\label{eq:centre-density}$$ Moreover $\\delta_L\\le1$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cen-density"
+  },
+  {
+   "claim_id": "claim-centre-kernel-superlinear-summation",
+   "exact_statement": "Consider centre families satisfying Lemma <a href=\"#cen:density\" data-reference-type=\"ref\" data-reference=\"cen:density\">11</a>, with at most one family for each pair $(L,r)$ and total mass at most $W\\le1$. For every fixed $\\alpha>1/2$ and sufficiently small fixed $\\epsilon>0$, there is $c>0$ such that $$\\sum_{i,j}\\Theta_{ij}(\\delta_{L_i}\\delta_{L_j})^\\alpha\n (U_{ij}T_{ij})^\\epsilon\n \\ll_{k_0,\\alpha,\\epsilon} W^{1+c}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cen-kernel"
+  },
+  {
+   "claim_id": "claim-raw-row-mass-suffices",
+   "exact_statement": "If raw rows have mass at least $w/4$ on arbitrarily late blocks, the positive-measure avoided set fixed in Section <a href=\"#sec:preliminaries\" data-reference-type=\"ref\" data-reference=\"sec:preliminaries\">2</a> cannot exist.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cen-raw"
+  },
+  {
+   "claim_id": "claim-adjusted-centre-scale-and-purge",
+   "exact_statement": "Every adjusted centre satisfies Lemma <a href=\"#cen:density\" data-reference-type=\"ref\" data-reference=\"cen:density\">11</a> and $$|\\log k_{L_i}|\\le B_i^*+1,\\qquad\n \\log k_{L_i}\\le .1(B_i^*+1).$$ The number of original popular centres at a fixed width $r$ and with $-\\log(Dr)\\in[b,b+1)$ is $$\\ll W_r e^{(1+3H_0)b}.$$ The total number of adjusted centre objects with $B_i^*\\le t$, including all widths, is $\\ll e^{2t}$. Deleting objects with $\\delta_{L_i}<e^{-.32B_i^*}$ loses $o(W)$ as $k_0\\to0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cen-adjusted"
+  },
+  {
+   "claim_id": "claim-exterior-band-separation",
+   "exact_statement": "If $B_i/B_j$ is sufficiently small, then every row $v$ assigned to $j$ satisfies at least one of $$\\frac{v}{(v,L_i)}\\frac{r_j}{r_{\\min}}>e^{.015B_j^*},\n \\qquad\n \\log(r_i/r_j)>.7B_j^*.\n \\label{eq:exterior-gain}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cen-exterior"
+  },
+  {
+   "claim_id": "claim-width-height-decay-kernels",
+   "exact_statement": "Under <a href=\"#eq:centre-lower\" data-reference-type=\"eqref\" data-reference=\"eq:centre-lower\">[eq:centre-lower]</a>, the following kernels are summable with a positive power of total mass beyond linear. First, restrict to pairs with sufficiently small $B_i/B_j$ and $\\log(r_i/r_j)>.65B_j^*$. For sufficiently small absolute $c_s,\\epsilon>0$, the kernel is $$\\Theta_{ij}e^{c_sB_j}(UT)^\\epsilon.$$ Second, fix $c>0$ and $C>0$. Sum over dyadic $Y$ and pairs with $B_i,B_j\\le Y/A_0$. For $A_0$ sufficiently large the kernel is $$\\Theta_{ij}e^{-cY}\\tau(UT)^C.$$ The bounds permit the shell multiplicities of the adjusted objects and the displayed height summation.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cen-decay-kernels"
+  },
+  {
+   "claim_id": "claim-negligible-good-mask-purge",
+   "exact_statement": "With the order of choices in Section <a href=\"#cen:hierarchy\" data-reference-type=\"ref\" data-reference=\"cen:hierarchy\">3.5</a>, deleting all assigned masks that are not good loses $o(W)$ as $k_0\\to0$. Uniformly for each retained centre, its unrestricted failure probability is $o(\\delta_L)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-pre-mask-purge"
+  },
+  {
+   "claim_id": "claim-tagged-numerator-prescription",
+   "exact_statement": "In each tag bin in which $m$ has at least one prime divisor, sample an anchor uniformly from those divisors. In an ordinary bin of height $Y'$, try to find a reduced rational $F_i$ satisfying $$F_i\\equiv\\mathcal L_i\\pmod {p_{\\rm anchor}},\\qquad\n |F_i|,\\ \\operatorname{den}(F_i)\n \\le\\exp(\\exp(h_HY')).$$ In the extra medium bin, replace this bound by $e^{EB}$. The key $F_i$ is local to this bin and anchor choice; different bins may use different keys despite the suppressed bin index. If such a rational is found, then at every full tag factor in that bin, namely $p\\mid P_M$ with $p\\nmid m$, forbid $$d^0z+\\mathcal L_i\\equiv F_i\\pmod p.$$ If reconstruction fails, or if the bin has no anchor because its tag mask is empty, use the scalar weight $R_p$ at those full factors. At every omitted tag factor with positive residual exponent, use the scalar $R_p$ as well. Average jointly over the independent anchor choices in the different bins.",
+   "kind": "construction",
+   "statement_anchor": "stmt-pre-tag-prescription"
+  },
+  {
+   "claim_id": "claim-recognized-model-uniqueness",
+   "exact_statement": "Each tier recognizes at most one rational. The same statement holds across rows with a fixed $\\alpha$ and the same tier parameters: a fixed $B$ on medium type, or a fixed $Y_d$ on high type, even if the latter rows have different bands. At fixed $\\alpha,B$, a large broad model and a narrow model recognized on different medium rows must also coincide. If a medium row has distinct broad and narrow models, the broad tier is the small one and the narrow model has denominator at least $e^{cB}$ for a fixed $c>0$.",
+   "kind": "classification",
+   "statement_anchor": "stmt-pre-model-uniqueness"
+  },
+  {
+   "claim_id": "claim-hard-birth-first-mass",
+   "exact_statement": "There is $c_{\\rm hard}>0$, independent of $k_0$ once it is sufficiently small, such that the mean hard birth weight on a row’s projected numerator grid lies in $$[c_{\\rm hard}R(VP_M/m),\\ R(VP_M/m)].$$ Consequently its first mass, including the single coefficient $\\pi_{P_I}(a)$ and the spatial width, lies between $c_{\\rm hard}\\phi(v)r(v)$ and $\\phi(v)r(v)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-pre-hard-mean"
+  },
+  {
+   "claim_id": "claim-soft-test-relative-loss",
+   "exact_statement": "Under the probability measure obtained by normalizing a row’s hard birth weights, the probability that at least one of the tests <a href=\"#pre:soft-tests\" data-reference-type=\"eqref\" data-reference=\"pre:soft-tests\">[pre:soft-tests]</a> fails is $O(\\epsilon_s/h_s)$, with an absolute implied constant. In particular their relative first-mass loss can be made arbitrarily small compared with $\\mu$ by the stated choice of $\\epsilon_s$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-pre-soft-loss"
+  },
+  {
+   "claim_id": "claim-prime-update-mass-and-cap",
+   "exact_statement": "The matching rule preserves the cap on raw cell load per after-prime mask. On averaging over pre-core $p$-translations, each transported label’s weighted mass after the update has mean equal to its before-prime weighted mass. In particular, the total first mass per unit length is preserved by every sparse update.",
+   "kind": "construction",
+   "statement_anchor": "stmt-tab-prime-update"
+  },
+  {
+   "claim_id": "claim-first-sharing-comparison-input",
+   "exact_statement": "For the selected finite blocks, there is a static additional birth test, depending only on the row data and squarefree low numerator moduli and not on the running tables, with arbitrarily small relative first-mass loss against the hard birth means, such that the following statements hold.*\n\n*For any fixed required absolute $C$, the sum, over first-sharing times and centre pairs, of the broad currencies <a href=\"#tab:product-law\" data-reference-type=\"eqref\" data-reference=\"tab:product-law\">[tab:product-law]</a> for point pairs at distance at most $Cr_{xy}^+$ is $O(1)$.*\n\n\n*For exact same-width, same-remaining-mask point pairs in one new cell, sum the currencies <a href=\"#tab:one-law\" data-reference-type=\"eqref\" data-reference=\"tab:one-law\">[tab:one-law]</a>, excluding pairs from the same old child and including all newborn self and diagonal contributions. This sum is $$\\ll W+O_{k_0}(W^{1+c})\n \\label{tab:narrow-input}$$ for a fixed $c>0$. Both bounds are uniform in the finite block and in prior table histories obeying the stated operations and core symmetries. The constants in <a href=\"#tab:narrow-input\" data-reference-type=\"eqref\" data-reference=\"tab:narrow-input\">[tab:narrow-input]</a> may depend on the preceding fixed cutoffs but not on $N_0$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-tab-first-join-input"
+  },
+  {
+   "claim_id": "claim-sparse-alignment-input",
+   "exact_statement": "For each sparse-prime step in bin $Y$, there is an equivariant selection of exceptional same-width successful plus pairs at distance at most $$r_i\\exp\\left(-\\tfrac12\\exp(\\sigma_gY)\\right).$$ Coarsen accounting classes by every nonexceptional pair in this range whose two arriving masses are retained. Uniformly under the allowed prior histories, the following three sums over components, steps, applicable centre pairs, masks, and locations are bounded.*\n\n1.  *Actual simultaneous plus successes at distances between $r_{xy}^+\\exp(-\\exp(\\sigma_gY))$ and $Cr_{xy}^+$, weighted by $r_{xy}^-$ times the product of their raw arrival weights and their two after-prime mask probabilities.*\n\n2.  *Before-prime plus pairs at distance at most $Cr_{xy}^+$, weighted by $r_{xy}^-/p^2$ times the product of their before-prime raw weights and their two after-prime mask probabilities.*\n\n3.  *The selected exceptional actual successful pairs in the relaxed same-width range above, with the same product-law currency as in the first item.*\n\n*The constants are uniform in the block, in $N_0$, and in the allowed preceding histories. In the first and third items one may use raw arrival weights immediately after the update and before coarsening. The successful linked and unpaired portions of a plus entry have total mass at most that raw arrival weight. The first two items impose no equality of widths, and $C$ may be any required fixed absolute constant.",
+   "kind": "construction",
+   "statement_anchor": "stmt-tab-sparse-input"
+  },
+  {
+   "claim_id": "claim-chronological-operational-partitions",
+   "exact_statement": "The cells and accounting classes described above can be constructed chronologically for every finite block. The construction preserves current-core equivariance, the cell spans and padding stated in <a href=\"#tab:cell-span\" data-reference-type=\"eqref\" data-reference=\"tab:cell-span\">[tab:cell-span]</a> and the paragraph following it, all inherited accounting classes without splitting, and the property that one new cell meets at most one surviving old cell of each old child. After clipping, the raw cap per cell and remaining mask is $N_0$. It supports the coarsening rule of Proposition <a href=\"#tab:sparse-input\" data-reference-type=\"ref\" data-reference=\"tab:sparse-input\">26</a> at each subsequent sparse step.*\n\n*Aside from the cap clipping separately bounded by <a href=\"#tab:narrow-input\" data-reference-type=\"eqref\" data-reference=\"tab:narrow-input\">[tab:narrow-input]</a>, its total first-mass loss can be made arbitrarily small relative to the selected block mass by the fixed parameter cutoffs. An expected loss bound over the specified finite partition jitters suffices; the structural assertions and core equivariance hold for every realized construction. The comparison bounds apply to the actual running tables or to the nonnegative majorants indicated in their proofs.",
+   "kind": "construction",
+   "statement_anchor": "stmt-tab-partition-input"
+  },
+  {
+   "claim_id": "claim-accounting-variance-budget",
+   "exact_statement": "Let $J_p$ be the increment of <a href=\"#tab:accounting-energy\" data-reference-type=\"eqref\" data-reference=\"tab:accounting-energy\">[tab:accounting-energy]</a> on old classes during a sparse-prime update, before coarsening, and let $K_p'\\ge0$ be the increment from the subsequent coarsening. Then $$J_p\\ge0,\\qquad\n \\sum_p(J_p+K_p')\\ll N_0W,$$ where the sum includes all component steps.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tab-variance-budget"
+  },
+  {
+   "claim_id": "claim-uniform-final-broad-energy",
+   "exact_statement": "Assuming Propositions <a href=\"#tab:first-join-input\" data-reference-type=\"ref\" data-reference=\"tab:first-join-input\">25</a>–<a href=\"#tab:partition-input\" data-reference-type=\"ref\" data-reference=\"tab:partition-input\">27</a>, the final broad energy is bounded uniformly down the finite-block tail. The bound may depend on the fixed cap $N_0$ and preceding hierarchy parameters, but not on the block.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tab-energy-bound"
+  },
+  {
+   "claim_id": "claim-virtual-product-marginals",
+   "exact_statement": "For each retained good row, there is a nonnegative virtual weight on its true numerator grid with the following properties.*\n\n1.  *It dominates the actual final weight, and its first mass lies between $c_{\\rm hard}\\phi(v)r(v)$ and $\\phi(v)r(v)$.*\n\n2.  *Its total excess over the actual final first mass is exactly accounted for by the first-moment discard losses in the projected tables, when the virtual weight omits the soft and additional static tests, cap clipping, and partition discards.*\n\n3.  *At fixed static anchor choices, every subset of the actual hard and adaptive fields has mean equal to the product of its local means. An actual hard field has mean $1-b_p/p$ when it forbids $b_p\\le2$ distinct residues, or mean $R_p$ when it is a prescribed scalar; adaptive full fields have mean $R_p$. For upper counts one may retain just one hard birth exclusion at each applicable prime, or the scalar $R_p$ when there is no exclusion. Any subset of the resulting hard and adaptive fields has the product of its ordinary local means.*\n\n4.  *Fields through a prime $p$, restricted to a later projection of denominator $v'$, have a joint period dividing $v'$ of size at most $\\exp(O(p))$.*\n\n*Domination in the first item is after the static anchor average; it is not required separately for each auxiliary anchor choice.",
+   "kind": "construction",
+   "statement_anchor": "stmt-tab-virtual-marginals"
+  },
+  {
+   "claim_id": "claim-intermediate-product-upper-fields",
+   "exact_statement": "Fix an admissible realized table history and a row whose current projected grid is $(z+a\\gamma)/(L_i/d)$, where $I$ is the remaining prime-power part and $a\\mid I$. On this grid the actual raw weight is bounded, after averaging static anchors, by a product of fields at the processed primes. Each nonconstant field lies in $[0,1]$. At a full adaptive prime use the multiplier computed from the actual matching, extended by $R_p$ where its prefix is unavailable; at a birth prime retain one active hard exclusion, or its prescribed scalar if none is active. An adaptive omission contributes only its residual scalar when a positive power remains.*\n\n*For every fixed choice of the static anchors, every subset of these fields has mean equal to the product of its ordinary local means. In particular the full upper product has mean $$R_{\\mathrm{done}}(L_i/d)\n :=R\\bigl((L_i/I)/d\\bigr).$$ The joint numerator period of any retained fields through a prime $p$ divides the current projected denominator and is at most $\\exp(O(p))$, with the same fixed-parameter uniformity as in Proposition <a href=\"#tab:virtual-marginals\" data-reference-type=\"ref\" data-reference=\"tab:virtual-marginals\">30</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tab-intermediate-fields"
+  },
+  {
+   "claim_id": "claim-virtual-first-mass-equidistribution",
+   "exact_statement": "On every fixed nondegenerate spatial interval, the virtual weighted mass is the interval’s length times the total virtual row mass, with relative error tending to zero uniformly as the denominators tend to infinity. The same statement holds for their weighted trains of interval indicators of half-width $r(v)/2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tab-equidistribution"
+  },
+  {
+   "claim_id": "claim-finite-block-transfer",
+   "exact_statement": "Assume the selections and birth prescriptions of Sections <a href=\"#sec:centres\" data-reference-type=\"ref\" data-reference=\"sec:centres\">3</a> and <a href=\"#sec:prescriptions\" data-reference-type=\"ref\" data-reference=\"sec:prescriptions\">4</a>, and Propositions <a href=\"#tab:first-join-input\" data-reference-type=\"ref\" data-reference=\"tab:first-join-input\">25</a>–<a href=\"#tab:partition-input\" data-reference-type=\"ref\" data-reference=\"tab:partition-input\">27</a>. Then no measurable set of positive measure can avoid the original approximation intervals in a whole tail. Consequently these inputs imply Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tab-conditional-reduction"
+  },
+  {
+   "claim_id": "claim-small-prime-grid-sieve",
+   "exact_statement": "For every fixed $C>0$ there is an absolute sufficiently small $\\xi>0$ with the following property. Suppose $\\eta=[v,w]\\max(r_1,r_2)\\ge2$. At any chosen primes $p\\le\\eta^\\xi$, impose one forbidden numerator residue on either or both grids, and impose a residue condition only when $p$ divides that grid’s denominator. The number of surviving pairs at distance at most $C\\max(r_1,r_2)$, per unit first-point translate, is $$\\ll_C g\\eta\\prod R_p,$$ where the product has one factor for each imposed one-row exclusion.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ar-sieve"
+  },
+  {
+   "claim_id": "claim-integer-prime-rotation-alternative",
+   "exact_statement": "There are absolute constants $C_1\\gg C_2\\gg1$ such that, for all sufficiently large $u$, the following holds. Let $\\alpha,y\\in\\mathbb R$, $0\\le\\Delta\\le e^{-C_1u}$ and $N\\ge e^{C_1u}$. Either $\\alpha$ lies within $e^{C_2u}\\Delta/N$ of a rational with reduced denominator at most $e^{C_2u}$, or $$\\begin{aligned}\n \\#\\{n\\in[N,2N)\\cap\\mathbb Z:\\|n\\alpha-y\\|\\le\\Delta\\}\n &\\ll e^{-u}N,\\\\\n \\#\\{p\\in[N,2N)\\text{ prime}:\\|p\\alpha-y\\|\\le\\Delta\\}\n &\\ll e^{-u}N/\\log N.\n\\end{aligned}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-ar-rotation"
+  },
+  {
+   "claim_id": "claim-weighted-lcm-bound",
+   "exact_statement": "Suppose $f(v)\\le\\phi(v)$, $g(w)\\le\\phi(w)$, and $$e(v,w)\\le f(v)g(w)\n h\\bigl(v/(v,w)\\bigr)h\\bigl(w/(v,w)\\bigr).$$ If every positive edge satisfies $[v,w]\\le Z$, then, for each fixed $1/2<u<1$, $$\\label{eq:lcm}\n \\mathcal E\\ll Z^{2(1-u)}(FG)^u.$$ More generally, in a cell fixing the exponents $i_p,j_p$ at a specified set of primes, its edge total satisfies the same bound with its own vertex totals and the additional factor $$h(K)K^{-(1-u)},\\qquad K=\\prod_p p^{|i_p-j_p|}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-ar-lcm"
+  },
+  {
+   "claim_id": "claim-small-scale-arithmetic-extraction",
+   "exact_statement": "Fix positive constants $c_-,c_+$. Suppose $F,G\\le1$ and every positive edge satisfies $$c_-\\eta/r_+'\\le[v,w]\\le c_+\\eta/r_+',\\qquad 0<\\eta<1.$$ Given any sufficiently small fixed $\\vartheta>0$, there are $u\\in(1/2,1)$, $\\chi>0$, and $\\eta_0>0$ such that for $\\eta<\\eta_0$ either $$\\label{eq:small-saving}\n \\mathcal E\\le\\eta^{1+\\chi}\\mathcal R^{-1/10}(FG)^u,$$ or $\\mathcal R\\le\\eta^{-\\vartheta}$ and a subfamily of edges has the form $$v=NU_0a/b,\\qquad w=NT_0c/d_1,\\qquad\n [v,w]=NU_0T_0ac.$$ Here $N,U_0,T_0$ are fixed positive integers, $$(U_0,T_0)=1,\\qquad U_0T_0\\le\\eta^{-\\vartheta},$$ $b,d_1\\mid N$, and $a,b,c,d_1$ are pairwise coprime squarefree integers coprime to $U_0T_0$. Moreover, $a\\in[A,2A)$ and $c\\in[C,2C)$ for fixed dyadic $A,C$. The capacities $$D_1=r_1'NU_0A^2,\\qquad D_2=r_2'NT_0C^2$$ satisfy $\\eta^{2+\\vartheta}\\le D_i\\le\\eta^{-\\vartheta}$, and the captured normalized edge weight is at least $\\eta^\\vartheta D_1D_2$. Every prime in the parameters occurs in the original lists.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-ar-extraction"
+  },
+  {
+   "claim_id": "claim-saturated-box-auxiliary-sampling",
+   "exact_statement": "Use a box given by Proposition <a href=\"#ar:extraction\" data-reference-type=\"ref\" data-reference=\"ar:extraction\">37</a>. Suppose that each vertex weight is obtained by integrating a nonnegative density bounded by its normalized totient weight against a probability law of auxiliary variables; restrictions may reduce this density. Suppose also that the edge majorant holds before integration against the independent product of the two auxiliary laws.*\n\n*Sample $a,c$ uniformly from their dyadic integer intervals, sample $b,d_1$ independently with law $\\pi_N$, and then sample the auxiliary variables with their unrestricted laws. Invalid or nonintegral parameter choices may be assigned zero weight. An event of sampling probability $O(\\eta^{10\\vartheta})$ carries $o(\\eta^\\vartheta D_1D_2)$ of the normalized edge weight. The same is true of edges whose first vertex belongs to a set of total normalized vertex weight $O(\\eta^{10\\vartheta}D_1)$. The auxiliary law on a side may be conditional on that side’s vertex parameters. This statement is only an event-mass bound: an application that varies an integer factor while holding an auxiliary phase fixed must separately verify the required independence or a uniform conditional sampling law.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ar-box-sampling"
+  },
+  {
+   "claim_id": "claim-direct-birth-comparison-bounds",
+   "exact_statement": "Use the retained centres of one type and colour, the good masks, and the birth prescriptions of Sections <a href=\"#sec:centres\" data-reference-type=\"ref\" data-reference=\"sec:centres\">3</a> and <a href=\"#sec:prescriptions\" data-reference-type=\"ref\" data-reference=\"sec:prescriptions\">4</a>, with the hierarchy fixed in Section <a href=\"#cen:hierarchy\" data-reference-type=\"ref\" data-reference=\"cen:hierarchy\">3.5</a>. Let the finite block have mass $W\\le1$. For every fixed $C>0$, the sum over all direct pairs of $$r_{\\min}\\iint_{|x-y|\\le C r_{\\max}}\n       d\\lambda_i(x)\\,d\\lambda_j(y)$$ is $O(1)$. The same-width, one-law sum $$\\sum_{\\substack{(i,j)\\text{ direct}\\\\r_i=r_j=r}}\n r\\sum_{a\\mid P_I}\\pi_{P_I}(a)\n \\iint_{|x-y|\\le C r e^{-E_gX_0}}\n       d\\nu_{i,a}(x)\\,d\\nu_{j,a}(y)$$ is $O(W)+O_{k_0}(W^{1+c})$ for some fixed $c>0$. Each ordered centre pair is counted once, at its common birth. Constants may depend on the fixed hierarchy, cutoffs, and distance constant, but not on the finite block or the slot cap $N_0$.*\n\n*The additional discard used here is a static rule on medium groups, determined by their good assigned-row lists before any running-table deletions. Given any fixed $\\delta>0$, its total first-mass loss is at most $\\delta W$ after choosing the fixed threshold $\\lambda_0$ sufficiently large. It uses only squarefree low numerator moduli. The comparison bounds remain valid after any further nonincreasing thinning of birth weights.",
+   "kind": "bound",
+   "statement_anchor": "stmt-dir-birth-comparisons"
+  },
+  {
+   "claim_id": "claim-ultra-divisor-prime-switching",
+   "exact_statement": "For ultra comparisons, discard an exceptional count of total size $O_{k_0}(W^{1+c})$, for some $c>0$. On the remaining pairs, apply all divisor switches $$h\\mid(d_i,\\sigma_0),\\qquad\n e^{C_1D'X_0}\\lesssim h\\lesssim e^{3C_1D'X_0},$$ all prime switches above the lower cutoff, and the corresponding switches on side $j$. If any switch is available, there are coupled rationals $A_i,A_j$ of denominators at most $e^{O(D')X_0}$ such that $$|A_i-\\sigma_0\\alpha_i|+|A_j-\\tau_0\\alpha_j|\n       \\ll\\Delta e^{O(D')X_0},\n \\qquad A_i-A_j=-(\\sigma_0z_i-\\tau_0z_j).$$ They are unique within these bounds. For every switched divisor $h$ on side $i$, the reduced denominator of $A_i/h$ is at most $e^{C_3D'X_0}$, where $C_3\\ll C_1$ is absolute; the analogous assertion holds on side $j$. In particular, switched large primes divide the appropriate reduced numerator. There is a fixed $E'\\ll E$ such that $A_i/\\sigma_0$ and $A_j/\\tau_0$ have denominators at most $e^{E'X_0}$. If no switch is available, both $\\sigma_0,\\tau_0\\le e^{E'X_0}$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-dir-ultra-switch"
+  },
+  {
+   "claim_id": "claim-tag-arrangements-and-folding",
+   "exact_statement": "Apart from the exceptions of Lemma <a href=\"#dir:ultra-switch\" data-reference-type=\"ref\" data-reference=\"dir:ultra-switch\">40</a>, tag masks in each bin may be restricted to the following arrangements: they are identical, or they are disjoint. There are only boundedly many bin arrangements. If $f=1$, all bins are disjoint.*\n\n*For a fixed arrangement, let $P_{\\rm eq}$ and $P_{\\rm dis}$ be the products of full prime powers in its identical and disjoint bins. Under $$y=(P/f)x,\\qquad \\rho_i=(P/f)r_i,\\qquad m_i'=m_i/f,$$ the folded low arrays have the form $$y_i=(Z_i+m_i'\\alpha_i)/V,\n \\qquad Z_i\\in\\mathbb Z,$$ with transformed low tests. An upper bound for their tag-averaged coefficient is, up to a fixed constant, the prescribed outer-law coefficient times $$f\\pi_{P_{\\rm eq}}(f)\n       \\pi_{P_{\\rm dis}}(m_i')\\pi_{P_{\\rm dis}}(m_j').$$ The low arrays may be counted without the original integrality $m_i'\\mid Z_i$, which has already been included in this coefficient. One may still retain the predicate that a surviving actual cohit exists at the original masks and anchor choices.",
+   "kind": "classification",
+   "statement_anchor": "stmt-dir-tag-fold"
+  },
+  {
+   "claim_id": "claim-linear-exact-model-equalities",
+   "exact_statement": "The total folded comparison count with exact modeled equality, using all recognized tiers and either the broad or narrow outer-mask law, is $O(W)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-dir-exact-equalities"
+  },
+  {
+   "claim_id": "claim-ultra-comparison-total",
+   "exact_statement": "All ultra comparisons in Proposition <a href=\"#dir:birth-comparisons\" data-reference-type=\"ref\" data-reference=\"dir:birth-comparisons\">39</a> have total cost $O(W)+O_{k_0}(W^{1+c})$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-dir-ultra-count"
+  },
+  {
+   "claim_id": "claim-nonexact-folded-row-kernel",
+   "exact_statement": "At fixed masks, the weighted folded count of the remaining broad determinants is at most a constant times $$\\label{eq:row-kernel}\n (r_i'\\phi(V))(r_j'\\phi(W'))\n \\max(1,1/\\eta_1)\n \\prod_{\\substack{p\\mid st\\\\p>\\eta_1^{c_1}}}R_p^{-C},$$ where $c_1>0$ is a small absolute constant and mask probabilities are applied outside the expression. This bound may retain the predicate that there is an actual integral, surviving, nonexact cohit for the specified masks and anchors, including its hole tests.",
+   "kind": "bound",
+   "statement_anchor": "stmt-dir-row-kernel"
+  },
+  {
+   "claim_id": "claim-static-low-rational-holes",
+   "exact_statement": "Fix a medium group and exact width, and let $F$ be its aggregate list mass. For each integer $\\lambda\\ge\\lambda_0$ put $\\eta=e^{-\\lambda}$. For every dyad $[A,2A)$ with $A\\ge\\eta^{-16}$, test all positive integer pivots $L_*$ satisfying $$\\eta^4\\le D_0'=r_i'L_*A^2\\le\\eta^{-1}$$ whose incidence class $$\\{V: V/(V,L_*)\\in[A,2A)\\}$$ has list mass at least $\\eta^{.1}D_0'$.\n\nFor each such pivot, test only rows in its incidence class for which $n=V/(V,L_*)$ is squarefree. On these rows, discard a birth point $x_i$ if $$\\left\\|L_*P x_i-\\frac{b}{q}\\right\\|\\le\\frac1A\n \\quad\\hbox{for some }1\\le q\\le\\eta^{-.1},\\quad b\\in\\mathbb Z.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-dir-hole-rule"
+  },
+  {
+   "claim_id": "claim-small-cost-of-static-holes",
+   "exact_statement": "For every fixed $\\delta>0$, Construction <a href=\"#dir:hole-rule\" data-reference-type=\"ref\" data-reference=\"dir:hole-rule\">45</a> loses at most $\\delta W$ in total birth first mass when $\\lambda_0$ is sufficiently large. The choice is uniform over all groups and widths. The rule depends on numerator residues only through squarefree low moduli.",
+   "kind": "bound",
+   "statement_anchor": "stmt-dir-holes"
+  },
+  {
+   "claim_id": "claim-exclusion-of-high-saturated-boxes",
+   "exact_statement": "No saturated configuration <a href=\"#dir:saturated-form\" data-reference-type=\"eqref\" data-reference=\"dir:saturated-form\">[dir:saturated-form]</a> occurs on high type among the remaining non-ultra comparisons.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-dir-high-box"
+  },
+  {
+   "claim_id": "claim-exclusion-of-shallow-medium-boxes",
+   "exact_statement": "No saturated configuration occurs on medium type with $\\lambda<\\ell_{\\rm sh}B$ after Construction <a href=\"#dir:hole-rule\" data-reference-type=\"ref\" data-reference=\"dir:hole-rule\">45</a>.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-dir-shallow-box"
+  },
+  {
+   "claim_id": "claim-deep-medium-linear-charge",
+   "exact_statement": "For medium type with $\\ell_{\\rm sh}B\\le\\lambda\\le Q_0B+O(1)$, an additional nonexact comparison count of size $O(W)$ may be charged directly. No saturated configuration remains after that charge.",
+   "kind": "bound",
+   "statement_anchor": "stmt-dir-deep-box"
+  },
+  {
+   "claim_id": "claim-sparse-step-comparison-estimates",
+   "exact_statement": "Consider any finite table history up to a sparse-prime update that satisfies the centre and good-mask prescriptions and the preceding chronological core-equivariance rules. Suppose its operational cells have the span and padding required in Section <a href=\"#sec:tables\" data-reference-type=\"ref\" data-reference=\"sec:tables\">5</a>. Uniformly in that history and in the slot cap, the following costs, for a fixed centre pair and bin, are at most $$C\\Theta_{ij}e^{-cY}\\tau(UT)^C,$$ where $c>0$ and $C$ are fixed independently of the block:*\n\n1.  *the width-weighted product-mask counts of actual successful plus pairs at distances between $r_{\\max}\\exp(-\\exp(\\sigma_gY))$ and $C_0r_{\\max}$;*\n\n2.  *the corresponding counts of before-$q$ plus pairs at distance at most $C_0r_{\\max}$, multiplied by $1/q^2$, with after-$q$ mask coefficients;*\n\n3.  *for equal widths $r$, the actual successful plus pairs at distance at most $r\\exp(-\\tfrac12\\exp(\\sigma_gY))$ that fail the deterministic train test of Construction <a href=\"#sp:danger-trains\" data-reference-type=\"ref\" data-reference=\"sp:danger-trains\">51</a> at either endpoint.*\n\n*Here each count is summed over the primes of the bin and uses the factor $r_{\\min}$, or $r$ in the third case. The first and third counts may use the actual raw arrival weights immediately after the update; the second uses the before-update raw plus weights. The constant $C_0$ can be any fixed positive constant.*\n\n*Join accounting classes by all actual surviving equal-width successful plus pairs at the relaxed scale in the third case that pass both train tests. Each connecting segment is covered by the deterministic train history, which is invariant under the post-generation core translations. Summing the displayed errors over centre pairs, bins, and components is bounded. Consequently this construction proves Proposition <a href=\"#tab:sparse-input\" data-reference-type=\"ref\" data-reference=\"tab:sparse-input\">26</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-sp-sparse-estimates"
+  },
+  {
+   "claim_id": "claim-deterministic-danger-train-construction",
+   "exact_statement": "For a centre $i$, current prime $q$ in bin $Y$, and processed deficit $d$ such that $dq$ is the processed portion of some good mask, put $V'=L_i/(dq)$ and use a list of residues $y_0\\pmod1$ of size at most $$Z_Y=\\exp(\\exp(h_aY)).$$ Include in the list every rational residue of denominator at most $\\exp(\\exp(h_*Y))$. Also include $0$ and generalized inverse cumulative quantiles for the distribution of $a\\gamma\\pmod1$ under the unrestricted deficit law on the prime powers of $L_i$ above $q$, using $$N=\\left\\lceil\\exp(\\exp(2h_*Y))\\right\\rceil$$ equal probability increments. Repeated quantiles are included only once. Each open arc disjoint from the marks then has probability $O(1/N)$.\n\nThe endpoint test requires $x$ to lie within $$r_i\\exp\\bigl(-.4\\exp(\\sigma_gY)\\bigr)$$ of a point $(z+y_0)/V'$, for an integer $z$ and a listed residue. The stored train history uses the same grids with the larger radius $$r_i\\exp\\bigl(-.3\\exp(\\sigma_gY)\\bigr).$$ The supply consists of all these grids for the indicated good processed masks, whether or not any actual arrival uses them.",
+   "kind": "construction",
+   "statement_anchor": "stmt-sp-danger-trains"
+  },
+  {
+   "claim_id": "claim-weighted-target-grid-source-train",
+   "exact_statement": "For every sufficiently small fixed $\\epsilon>0$, every fixed constant $C_0$, and $0<R\\le C_0$, one has $$\\begin{split}\n \\frac{1}{W'}\\sum_{z\\bmod W'}w_z\n \\sum_{n\\in\\mathbb Z}\n \\mathbf 1_{\\{|x_z-(n+y_0)/V'|\\le C_0rR\\}}\n \\ll_{\\epsilon,C_0}\n R_{\\mathrm{done}}(W')e^{CY'}\n \\left(V'rR+\\frac{(2UT)^\\epsilon}{m}\\right).\n\\end{split}\n\\label{eq:target-grid}$$ The constant $C$ in the harmonic factor is absolute. The estimate is uniform in the preceding history, fixed masks and phases. It holds also at a new insertion, where only static target fields are present.",
+   "kind": "bound",
+   "statement_anchor": "stmt-part-target-grid"
+  },
+  {
+   "claim_id": "claim-source-mask-target-deficit-sums",
+   "exact_statement": "For the source masks of bin $Y'$, $$\\sum_d\\frac1d\\le e^{CY'}.$$ At every fixed target mask $c$, put $$E_{\\mathrm{ext}}=\n \\frac{W'}{(W',L)}=\\frac{T}{(T,c)}.$$ Then $$\\sum_d\\frac1m\n \\ll E_{\\mathrm{ext}}^{-1}\n       \\tau(U)\\tau(c_{\\le Y'})e^{CY'}.\n\\label{part:conditional-mask-sum}$$ Under the unrestricted deficit law on the processed target mask, $$\\mathbb E\\bigl[(T,c)\\tau(c_{\\le Y'})\\bigr]\n \\le \\tau(T)^C e^{CY'}.\n\\label{part:target-mask-moment}$$ All the harmonic exponents here have absolute coefficients.",
+   "kind": "bound",
+   "statement_anchor": "stmt-part-mask-sums"
+  },
+  {
+   "claim_id": "claim-history-test-first-mass-cost",
+   "exact_statement": "For either kind of test, the first mass discarded from the tested target array on $M=L_j$ by one source centre-bin pair $(i,Y')$ is at most $e^{-cY'}m_M$. Here $c>0$ can be taken sufficiently large for the centre-count summations below, after the fixed parameter choices and then a sufficiently small $k_0$. The bound is uniform in the prior history and does not depend on the slot cap $N_0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-part-history-test-cost"
+  },
+  {
+   "claim_id": "claim-inherited-hulls-stay-in-history",
+   "exact_statement": "Every positive-length inherited class hull lies in the union of the danger intervals belonging to its old child. It lies in its old cell, and the hull operation respects current-core translations.",
+   "kind": "classification",
+   "statement_anchor": "stmt-part-inherited-hulls"
+  },
+  {
+   "claim_id": "claim-remaining-first-join-bounds",
+   "exact_statement": "Consider a finite block and the retained centres, masks, and table operations of Sections <a href=\"#sec:centres\" data-reference-type=\"ref\" data-reference=\"sec:centres\">3</a>–<a href=\"#sec:partitions\" data-reference-type=\"ref\" data-reference=\"sec:partitions\">9</a>, with the stated parameter hierarchy. At each first sharing of a component, omit the simultaneous-birth comparisons already treated in Section <a href=\"#sec:direct\" data-reference-type=\"ref\" data-reference=\"sec:direct\">7</a>. For the remaining comparisons, the following estimates hold uniformly over the permitted prior table history.*\n\n1.  *The sum of broad pair counts in $\\lambda\\otimes\\lambda$, at distance at most $C r_{\\max}$ and with width weight $r_{\\min}$, is $O(1)$. Here $C$ is any fixed positive constant.*\n\n2.  *The same-width, same-remaining-mask counts in common new cells, weighted by the single factor $r_i\\pi_I(a)$ and the product of the two raw weights, have total $$O(W)+O_{k_0}(W^{1+c})$$ for some fixed $c>0$.*\n\n*The constants are independent of the slot cap $N_0$ and of the finite block. Thus, together with the direct comparisons, these estimates establish Proposition <a href=\"#tab:first-join-input\" data-reference-type=\"ref\" data-reference=\"tab:first-join-input\">25</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-join-remaining-first-joins"
+  },
+  {
+   "claim_id": "claim-distant-or-mixed-first-joins",
+   "exact_statement": "Suppose centres $i,j$ first share a component at height $Y$, and their comparison is not a simultaneous-birth comparison treated in Section <a href=\"#sec:direct\" data-reference-type=\"ref\" data-reference=\"sec:direct\">7</a>. Either $$\\label{join:distant}\n \\log(UT)>\\beta Y/2,$$ or, after interchanging the centres, $i$ is old, $j$ is a medium-type newborn, and $$\\label{join:mixed}\n Y=A_0 B_j.$$ In this case $B_i/B_j$ is a sufficiently small fixed fraction, $\\log(UT)=O(\\beta A_0 B_j)$, and the sum of the reciprocals of all prime divisors of both centres below bin $Y$ is at most $s_{\\rm low}B_j$, with the arbitrarily small constant specified in the parameter hierarchy. The same alternatives apply after replacing an old endpoint by a centre in one of its earlier components.",
+   "kind": "classification",
+   "statement_anchor": "stmt-join-classification"
+  },
+  {
+   "claim_id": "claim-backward-actual-prefix-decomposition",
+   "exact_statement": "Read in decreasing order every prime divisor of either centre above $P_0$ whose size lies in the union of the two adaptive ranges. For the fixed current grids, masks, and distance predicate, the weighted pair count is bounded by the sum of the following nonnegative terms:*\n\n1.  *a continuing product term, stopped at the low fields or at the first bad omission;*\n\n2.  *one separately stopped joint-loss term at each common full factor where both deleted parts are nonconstant and at least one is an adaptive linked deletion.*\n\n*On the continuing term, already read primes supply, up to a uniform constant, the product of the corresponding ordinary $R_p$ factors on the two rows. Each adaptive joint-loss term has the actual raw link masses as coefficients. No condition inherited from a larger-prime alignment remains on the continuing term.",
+   "kind": "bound",
+   "statement_anchor": "stmt-join-backward-decomposition"
+  },
+  {
+   "claim_id": "claim-remaining-field-period-and-roundoff",
+   "exact_statement": "The retained fields through $P_0$ on the two projected grids have periods dividing those denominators, of sizes at most $\\exp(O(P_0))$, and their separate product means are the corresponding ordinary factors. Remaining high static fields, if present, increase the main-term constant by a bounded factor and the roundoff by at most $\\exp(C\\Sigma)$, where $$\\Sigma=\\sum_{\\substack{p\\mid LM\\\\ \\log\\log p<Y}}\\frac1p.$$ The period loss can be taken at most $\\exp(\\epsilon H)$ by choosing $\\rho$ sufficiently small after $\\epsilon>0$ is fixed.",
+   "kind": "bound",
+   "statement_anchor": "stmt-join-endpoint-count"
+  },
+  {
+   "claim_id": "claim-later-omission-exact-averaging",
+   "exact_statement": "For each mapped side, write $$d=d_{<p}b_i^+,$$ where $b_i^+$ is the processed portion of its actual mask above $p$ and below the join bin. In the linked comparison, expansion to the full minus grid at the $p$-step, followed by averaging its later projection congruences, costs exactly $1/b_i^+$. These factors multiply over the mapped sides.",
+   "kind": "bound",
+   "statement_anchor": "stmt-join-later-omissions"
+  },
+  {
+   "claim_id": "claim-matching-capacity-unique-epoch",
+   "exact_statement": "After the averaging of Lemma <a href=\"#join:later-omissions\" data-reference-type=\"ref\" data-reference=\"join:later-omissions\">60</a>, summing all originating full-factor labels charges at most the weight of each successful image plus entry. With two mapped endpoints the bound is the product of these capacities. The charged image pair first shares a component at the same join as the original pair, and there is no extra sum over origin masks or comparison epochs. This holds for both the product-law broad count and the one-law clipping count.",
+   "kind": "bound",
+   "statement_anchor": "stmt-join-capacity"
+  }
+ ],
+ "paper": "papers/EN-101-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-H-0059_PM-022.1_The_Weak_Inhomogeneous_DuffinSchaeffer_Conjecture.md",
+ "purpose": "The Weak Inhomogeneous Duffin–Schaeffer Conjecture",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "5a47326a7918198277614e223e285ecb311342e792b3fe5204abd58bb9c92f19",
+   "pm.domains.v2": "af15e7898d93a4a1fbc257b94df4f5ac9fdf9b207ac10e1a40206167d093d97b",
+   "pm.edges.v2": "6cd44faf5251705ce40ac1bbbf7923f334eb1686c8150f51961ae0ea73ee483f",
+   "pm.extraction.v2": "aae1fa652c265bb2b7456326042c8eadf3b5c98e85713c6b3ae1b4924c8a5774",
+   "pm.formal.v2": "c127662da72c6bd2a8cc6cf8f0969b167847f27f07e30b9f57b04729628e0e80",
+   "pm.limits.v2": "6098de23a4d04e6acb2e35169eae86712847b33ed9900d2e1cbfc94c7ed564ae",
+   "pm.node.v2": "c2e37e1d6dede1e40e154fa5f009db255a28d7d57706cec29639f1130cdcb884",
+   "pm.objects.v2": "6a0c45ab5bab7ca3ae5d0da7fc754282c5b966bce6b7f65c76afbdd6e6d99931",
+   "pm.provenance.v2": "5548538619e7408c86647cce50d1fa63e878f6b88332c867373ae3484211dc83",
+   "pm.quantities.v2": "0b7cc8b05c4ff6865bc3805db6d0f6775d1225b18a4633807b13658c4705f5bb",
+   "pm.reading.v2": "7d9c07ff29b1781179799fc490877b61b5241bc7378ee96f40537835a54047f0",
+   "pm.roadmap.v2": "c95b2bbfee4311af93af5251ba0b47ba6521f1701b7af6196ac8ca83152f2527",
+   "pm.search.v1": "99d22dca1d0c26616e7cfdd33badd9b1e05c8f7d876931eff70a23380dbe2a1e",
+   "pm.triptych.v2": "f2d671339a5232928abbd7751b8e8116d02c6a7a5e728c4bc35d37de9e99db07"
+  },
+  "canonical_sha256": "d4860f87e77dae01ee9c7d06f0d65413608e777a2b3ddd813f211a448aecf9db",
+  "paper_sha256": "87f0a6f43a2f81b8effa26bd4c77ea62e866824295416712bf4f966671ad0127",
+  "repaired_body_sha256": "849c4c607798ab101d85352849409ef4451d06f2ddfa2f363d5e495151147398"
+ },
+ "status": "ACTIVE",
+ "subject_id": 1,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "1df2ad0b9be0883ded58520770afb4ef145664274076f9fd16ad97a901b094c5",
+   "receipt_sha256": "3f99c7f2c9d647c09f9cddb6cbf1437e19af20ae78bb8f2c1c4f10ff41ecf192",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Every common translation of the supplied finite cells, including balanced loads, unequal loads, residual prime powers, empty lists, and zero cap.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-prime-cell-cap",
+     "oracle_basis": "Exact independent arrival reconstruction and direct comparison of every realized total load with the incoming scaled-list maximum and declared cap."
+    },
+    {
+     "checked_domain": "Every input label on every supplied finite prime orbit; the normalized after-prime coefficient is one.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-prime-label-marginals",
+     "oracle_basis": "Exact orbit sums compared with original plus weight times residual scaling divided by p, and original minus weight times (p-1)/p."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-drop-residual-scalar",
+     "observed_exit": 1,
+     "receipt_sha256": "7c1ef77e39d03b438f8f2872856ece810241b1ffaae9dd91ca8bbf7850aea1e8"
+    },
+    {
+     "id": "mutant-reverse-success-colour",
+     "observed_exit": 1,
+     "receipt_sha256": "28160ff7a1af8d2e38248db1685343ada93bc9316ae2ecdeab7c98f654810b3c"
+    },
+    {
+     "id": "mutant-retain-unpaired-minus",
+     "observed_exit": 1,
+     "receipt_sha256": "55bfa6beedd410f614ca6cc54643a722b8ed58cce393d1df567874d84b3076ab"
+    }
+   ],
+   "receipt_sha256": "b53aa30856061fe4bc6991665df3ec67b5e6b696fe52c980cdf658e414b83c91",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The Weak Inhomogeneous Duffin–Schaeffer Conjecture"
+}

@@ -1,0 +1,820 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1354750,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 390144
+ },
+ "coordinate": "EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-M-0451",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "exactly the critical, zero-field Gaussian model",
+     "quote_sha256": "8d5c217586b59eb6dcc34af100e57cd01a196582c1acc88b8d87c1e46fcd0eb9"
+    }
+   ],
+   "query": "mixing exponent at inverse temperature different from one or with nonzero field",
+   "reason": "The result concerns exactly the critical zero-field Gaussian model."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "does not assert a cutoff, a cutoff window",
+     "quote_sha256": "bc7943b0da3b168a0e2d2e97d089f58fd5c3d910e9dd8e343daed45fb599430e"
+    }
+   ],
+   "query": "cutoff window or leading constant",
+   "reason": "Only exponents are determined, not cutoff profile or constants."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-4",
+     "quote": "None of these fixed-subcritical bounds supplies a bound",
+     "quote_sha256": "8dbf46c5e2f19108723241567d06f94ee3befc3fad067e07824a13642b33c980"
+    }
+   ],
+   "query": "limit of fixed-subcritical bounds as inverse temperature tends to one",
+   "reason": "Subcritical bounds do not give a bound at the endpoint by taking a limit."
+  }
+ ],
+ "family": "PM-227",
+ "id": "PM-227.8",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "eq:gibbs-law",
+    "claim_id": "claim-critical-mixing-exponents",
+    "statement": "independent $J^\\circ_{ij}\\sim N(0,1/n)$ for $i<j$"
+   },
+   {
+    "anchor": "stmt-thm-accepted-critical",
+    "claim_id": "claim-companion-lower-bounds",
+    "statement": "with $t_n=o(n^{2/3})$"
+   },
+   {
+    "anchor": "prof:subsec:conventions",
+    "claim_id": "claim-spectral-edge-estimates",
+    "statement": "The matrix $J$ has the GOE normalization"
+   },
+   {
+    "anchor": "stmt-prof-quadratic-mean-density",
+    "claim_id": "claim-density-at-mean",
+    "statement": "$A\\succeq0$"
+   },
+   {
+    "anchor": "prof:subsec:conventions",
+    "claim_id": "claim-spherical-normalization",
+    "statement": "The matrix $J$ has the GOE normalization"
+   },
+   {
+    "anchor": "stmt-prof-lem-spherical-observation",
+    "claim_id": "claim-spherical-observation",
+    "statement": "when $k\\gg\\log n$"
+   },
+   {
+    "anchor": "stmt-prof-prop-unconstrained",
+    "claim_id": "claim-unrestricted-orbit-comparison",
+    "statement": "$k=nr^3\\gg\\log n$"
+   },
+   {
+    "anchor": "stmt-prof-prop-polylog",
+    "claim_id": "claim-edge-window-comparison",
+    "statement": "Set $L=n^{2/3}$ and $A_0=2I-J$."
+   },
+   {
+    "anchor": "prof:subsec:conventions",
+    "claim_id": "claim-exact-root-count",
+    "statement": "The matrix $J$ has the GOE normalization"
+   },
+   {
+    "anchor": "stmt-prof-determinant-square",
+    "claim_id": "claim-determinant-second-moment",
+    "statement": "on $\\|y\\|\\le n^D$"
+   },
+   {
+    "anchor": "stmt-prof-scalar-diagnostics",
+    "claim_id": "claim-scalar-root-diagnostics",
+    "statement": "Fix an exclusion budget $A>0$"
+   },
+   {
+    "anchor": "stmt-prof-conditioned-precision",
+    "claim_id": "claim-conditioned-precision-bounds",
+    "statement": "Fix a sufficiently small $\\eta>0$"
+   },
+   {
+    "anchor": "stmt-prof-unique-root",
+    "claim_id": "claim-unique-root",
+    "statement": "On the retained field event"
+   },
+   {
+    "anchor": "stmt-prof-trace-from-three-densities",
+    "claim_id": "claim-trace-from-three-densities",
+    "statement": "Fix positive constants $c_0,C_0,M$."
+   },
+   {
+    "anchor": "stmt-prof-median-covariance",
+    "claim_id": "claim-median-covariance",
+    "statement": "Fix $1/2<\\gamma<1$"
+   },
+   {
+    "anchor": "stmt-prof-common-angular-kernel",
+    "claim_id": "claim-common-angular-kernel",
+    "statement": "Let $0<q<1$, $b=1-q$"
+   },
+   {
+    "anchor": "stmt-prof-mixed-coordinate-transfer",
+    "claim_id": "claim-mixed-coordinate-transfer",
+    "statement": "Suppose $r_i=L_i+e_i$"
+   },
+   {
+    "anchor": "stmt-prof-gaussian-signed-kernel",
+    "claim_id": "claim-gaussian-signed-kernel",
+    "statement": "Fix a derivative order $h\\ge0$."
+   },
+   {
+    "anchor": "stmt-prof-surviving-coefficients",
+    "claim_id": "claim-surviving-coefficients",
+    "statement": "Put $v_i=1-m_i^2$ and $\\kappa_2=\\langle v^2\\rangle$"
+   },
+   {
+    "anchor": "stmt-prof-weighted-kernel-transfer",
+    "claim_id": "claim-weighted-kernel-transfer",
+    "statement": "Let $A$ be symmetric"
+   },
+   {
+    "anchor": "stmt-prof-lem-compact-bridge",
+    "claim_id": "claim-compact-interval-overlap",
+    "statement": "There are $r_0>0$ and $a_*>0$"
+   },
+   {
+    "anchor": "stmt-prof-lem-conditional-variance",
+    "claim_id": "claim-conditional-variance",
+    "statement": "Fix an observation bound $T<\\infty$"
+   },
+   {
+    "anchor": "stmt-prof-prop-amplified-covariance",
+    "claim_id": "claim-amplified-covariance",
+    "statement": "at every deterministic time in the indicated range"
+   },
+   {
+    "anchor": "stmt-prof-prop-bottom-covariance",
+    "claim_id": "claim-bottom-scale-covariance",
+    "statement": "at each deterministic time satisfying"
+   },
+   {
+    "anchor": "stmt-prof-endpoint-words",
+    "claim_id": "claim-endpoint-word-estimates",
+    "statement": "Let $W$ be GOE with off-diagonal variance $1/n$"
+   },
+   {
+    "anchor": "stmt-prof-endpoint-logdet",
+    "claim_id": "claim-endpoint-logdet",
+    "statement": "Fix $\\kappa,\\varepsilon>0$, a rank bound $r_0$"
+   },
+   {
+    "anchor": "stmt-prof-endpoint-scalar",
+    "claim_id": "claim-endpoint-scalar-rate",
+    "statement": "Let $P$ have finite second moment"
+   },
+   {
+    "anchor": "stmt-prof-positive-stability",
+    "claim_id": "claim-positive-time-stability",
+    "statement": "Fix $0<s_1<T<\\infty$."
+   },
+   {
+    "anchor": "stmt-prof-endpoint-posterior",
+    "claim_id": "claim-endpoint-posterior-consequences",
+    "statement": "Fix a matrix norm bound."
+   },
+   {
+    "anchor": "stmt-prof-terminal-extension",
+    "claim_id": "claim-terminal-extension",
+    "statement": "There are fixed $T,C,c>0$"
+   },
+   {
+    "anchor": "stmt-prof-restricted-profile",
+    "claim_id": "claim-restricted-support-profile",
+    "statement": "0<p:=\\mu(f\\ne0)\\le\\tfrac12"
+   },
+   {
+    "anchor": "stmt-prof-thm-profile",
+    "claim_id": "claim-uniform-support-profile",
+    "statement": "with $p=\\mu_J(f\\ne0)\\le1/2$"
+   },
+   {
+    "anchor": "stmt-cap-static-comparison",
+    "claim_id": "claim-static-cap-comparison",
+    "statement": "Fix a field radius $R<\\infty$"
+   },
+   {
+    "anchor": "stmt-cap-curvature-induction",
+    "claim_id": "claim-curvature-induction-step",
+    "statement": "Fix a bounded child field range"
+   },
+   {
+    "anchor": "stmt-cap-deterministic-evaluation",
+    "claim_id": "claim-deterministic-evaluation",
+    "statement": "Under the parent hypotheses of"
+   },
+   {
+    "anchor": "stmt-cap-frozen-evaluation-support",
+    "claim_id": "claim-frozen-evaluation-support",
+    "statement": "Fix a child field radius $R$"
+   },
+   {
+    "anchor": "stmt-cap-classical-input",
+    "claim_id": "claim-classical-posterior-input",
+    "statement": "Fix $0<\\beta<1$"
+   },
+   {
+    "anchor": "stmt-cap-restricted-words",
+    "claim_id": "claim-restricted-endpoint-words",
+    "statement": "Fix $a_+<\\infty$ and $\\kappa\\in(0,1)$."
+   },
+   {
+    "anchor": "stmt-cap-endpoint-stability",
+    "claim_id": "claim-cap-endpoint-stability",
+    "statement": "For a critical GOE interaction"
+   },
+   {
+    "anchor": "stmt-cap-boundary-noise",
+    "claim_id": "claim-boundary-noise",
+    "statement": "At every fixed sufficiently small $t>0$"
+   },
+   {
+    "anchor": "stmt-cap-tap-expansion",
+    "claim_id": "claim-tap-expansion",
+    "statement": "and $|P_t^Wh|_n\\ge ct^{5/4}$"
+   },
+   {
+    "anchor": "stmt-cap-marked-terminal-tests",
+    "claim_id": "claim-marked-terminal-tests",
+    "statement": "Fix the preceding geometric tolerances"
+   },
+   {
+    "anchor": "stmt-cap-auxiliary-initialization",
+    "claim_id": "claim-auxiliary-initialization",
+    "statement": "For the preceding choices"
+   },
+   {
+    "anchor": "stmt-cap-gradient-transport",
+    "claim_id": "claim-gradient-error-transport",
+    "statement": "Consider a deterministic increasing matrix precision"
+   },
+   {
+    "anchor": "stmt-cap-gradient-contraction",
+    "claim_id": "claim-gradient-contraction",
+    "statement": "Suppose the parent auxiliary potential is intrinsic"
+   },
+   {
+    "anchor": "stmt-cap-remove-auxiliary",
+    "claim_id": "claim-remove-auxiliary",
+    "statement": "Fix $\\gamma$ and the curvature tolerances."
+   },
+   {
+    "anchor": "stmt-cap-true-curvature",
+    "claim_id": "claim-true-curvature",
+    "statement": "Fix a finite field radius $L_0$."
+   },
+   {
+    "anchor": "stmt-cap-layer-lemma",
+    "claim_id": "claim-layer-lemma",
+    "statement": "Let $\\eta$ be a strictly positive probability measure"
+   },
+   {
+    "anchor": "stmt-cap-observation-identities",
+    "claim_id": "claim-observation-identities",
+    "statement": "Along the continuous portions of this path"
+   },
+   {
+    "anchor": "eq:gibbs-law",
+    "claim_id": "claim-critical-log-sobolev",
+    "statement": "Gaussian SK at inverse temperature one"
+   },
+   {
+    "anchor": "stmt-cap-lower-test",
+    "claim_id": "claim-linear-lower-test",
+    "statement": "Fix $0<\\epsilon<1/3$ and take $p=n^{-1/3+\\epsilon}$."
+   },
+   {
+    "anchor": "stmt-lem-profile-to-mixing",
+    "claim_id": "claim-profile-to-mixing",
+    "statement": "Let $\\mu$ be a full-support law on the cube"
+   },
+   {
+    "anchor": "stmt-cor-entropy-production",
+    "claim_id": "claim-entropy-production-exponent",
+    "statement": "for the critical zero-field Gaussian model"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "critical mixing upper bound",
+    "evidence": [
+     {
+      "anchor": "sec:proof-overview",
+      "quote": "Both proofs use the geometry of the upper spectral edge",
+      "quote_sha256": "c17eadcf9f296b89e642e1aa54f9359cad81e0703f0efab9b4a1e9a79240d1bc"
+     }
+    ],
+    "requires_concepts": [
+     "GOE completion",
+     "upper spectral edge resolvent estimates",
+     "Gaussian stochastic localization",
+     "TAP root counting",
+     "spherical comparison",
+     "support profile",
+     "spectral caps"
+    ],
+    "supporting_pm_ids": [
+     "PM-227.5",
+     "PM-227.3"
+    ]
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-critical-mixing-exponents",
+   "exact_statement": "For every fixed $\\varepsilon\\in(0,1/2)$, in probability over the Gaussian disorder, $$\\begin{aligned}\n t_{\\mathrm{mix},J}(\\varepsilon)&=n^{2/3+o(1)},&\n k_{\\mathrm{mix},J}(\\varepsilon)&=n^{5/3+o(1)},\\\\\n R_J&=n^{2/3+o(1)},& C_{\\mathrm{LS},J}&=n^{2/3+o(1)}.\n\\end{aligned}$$ In each expression, $X_n=n^{a+o(1)}$ means that for every fixed $\\delta>0$, $\\mathbb P\\{n^{a-\\delta}\\le X_n\\le n^{a+\\delta}\\}\\to1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-companion-lower-bounds",
+   "exact_statement": "For every deterministic sequence $t_n\\ge0$ with $t_n=o(n^{2/3})$, $$\\mu_J\\!\\left\\{x:\n \\left\\lVert e^{t_n\\mathcal L_J}(x,\\cdot)-\\mu_J\\right\\rVert_{\\mathrm{TV}}>\\frac14\\right\\}\n \\longrightarrow1$$ in probability over disorder. For every deterministic nonnegative integer sequence $k_n=o(n^{5/3})$, the same assertion holds with $P_J^{k_n}$. Let $\\Sigma_J=\\mathop{\\mathrm{Cov}}_{\\mu_J}(X)$ and $$R_{\\mathrm{lin},J}=\\sup_{a\\in\\mathbb R^n\\setminus\\{0\\}}\n       \\frac{\\mathop{\\mathrm{Var}}_{\\mu_J}(a^{\\mathsf T}X)}{\\mathcal D_J(a^{\\mathsf T}X)}.$$ For every positive deterministic $M_n\\to\\infty$, with probability tending to one both $\\left\\lVert\\Sigma_J\\right\\rVert$ and $R_{\\mathrm{lin},J}$ belong to $[n^{2/3}/M_n,M_n n^{2/3}]$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-accepted-critical"
+  },
+  {
+   "claim_id": "claim-spectral-edge-estimates",
+   "exact_statement": "There are events of ordinary probability tending to one on which, uniformly for $d_0\\le d\\le D_*$ with any fixed $D_*<\\infty$, $$\\label{prof:eq1}\n \\lambda_{\\max}(J)\\le 2+o(d_0^2),\\qquad\n \\frac1n\\mathop{\\mathrm{Tr}}(2+d^2-J)^{-1}\n =b_{\\mathrm{sc}}(2+d^2)\n   +o\\!\\left(\\frac{d}{\\sqrt{nd^3}}\\right).$$ For every fixed integer $p\\ge2$, the trace of the $p$th resolvent power is asymptotic to its semicircle value and is $O_p(nd^{3-2p})$. There are order $nd^3$ eigenvalues at depth comparable to $d^2$ below $2$, and at most $Cnd^3$ within an upper-edge interval of that width. Moreover $\\|J\\|\\le3$ and the empirical spectral measure converges to $\\rho_{\\mathrm{sc}}$. Fixed-rank interlacings preserve the resolvent estimates when the evaluation point stays at least a fixed positive multiple of $d^2$ from every pole in both spectra.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prof-lem-spectrum"
+  },
+  {
+   "claim_id": "claim-density-at-mean",
+   "exact_statement": "Let $g$ be a finite-dimensional standard Gaussian vector and let $Q=g^TAg+b^Tg$ with $A\\succeq0$ and $\\sigma^2=\\mathop{\\mathrm{Var}}Q>0$. The density of $Q$ at $\\mathbb EQ$ is at least $c/\\sigma$, for an absolute $c>0$. The same lower bound, with a smaller absolute constant, holds at a displacement $o(\\sigma)$ along any sequence of such forms.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prof-quadratic-mean-density"
+  },
+  {
+   "claim_id": "claim-spherical-normalization",
+   "exact_statement": "With ordinary probability tending to one, $$\\label{prof:eq3}\n e^{n/4}n^{-C}\\le Z_{\\mathrm o}(0)\\le e^{n/4+o(n)}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prof-lem-spherical-z"
+  },
+  {
+   "claim_id": "claim-spherical-observation",
+   "exact_statement": "Assume the spectral event in Lemma <a href=\"#prof:lem:spectrum\" data-reference-type=\"ref\" data-reference=\"prof:lem:spectrum\">3</a>. For every fixed tolerance $\\epsilon>0$, when $k\\gg\\log n$ and the allowed upper bound on $r$ is sufficiently small, the spherical observation satisfies $$\\lambda=2+(1\\pm\\epsilon)s,\n \\qquad \\|m_{\\mathrm o}\\|^2=(1\\pm2\\epsilon)nr,$$ except with probability $e^{-c_\\epsilon k}$. For every fixed $B<\\infty$ there are constants $c_B,C_B>0$ such that $$c_Bs\\le\\lambda-2\\le C_Bs,\n \\qquad \\|h_s\\|\\le C_Br\\sqrt n,$$ except with probability $e^{-Bk}$. Polynomial conditioning factors can be accommodated already at $k>K\\log n$, with $K$ chosen after the tolerance and rate budget. For every deterministic actual time $0\\le t\\le s=r^2$, the same upper test gives $$\\lambda(h_t)-2\\le C_Bs,\\qquad \\|h_t\\|\\le C_Br\\sqrt n$$ outside probability $e^{-Bk}$, where $k=nr^3$ is the nominal scale. The lower and sharp width bounds and the sharp mean estimate above concern the actual time $s$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prof-lem-spherical-observation"
+  },
+  {
+   "claim_id": "claim-unrestricted-orbit-comparison",
+   "exact_statement": "Assume Lemma <a href=\"#prof:lem:spectrum\" data-reference-type=\"ref\" data-reference=\"prof:lem:spectrum\">3</a>, let $d=\\sqrt{\\lambda-2}$ be comparable to $r>0$, and suppose $\\|h\\|\\le Cr\\sqrt n$ and $k=nr^3\\gg\\log n$. Fix the width-comparison factors. For every fixed $B$ and every requested fixed relative accuracy, the following holds outside Haar mass $e^{-Bk}$ once the allowed upper bound on $r$ is sufficiently small: $$\\label{prof:eq4}\n \\left|\\log\\frac{Z(h)}{Z_{\\mathrm o}(h)}\\right|\\le o(k).$$ For each fixed replica number $p$ and fixed symmetric zero-diagonal $p\\times p$ matrix $P$ of sufficiently small norm, chosen before the upper scale and exceptional set, the same Haar bound holds for $$\\label{prof:eq5}\n \\log\\mathbb E_{\\mu_h^{\\otimes p}}\n \\exp\\!\\left\\{\n \\frac{s}{2}\\sum_{a,b}P_{ab}(X^a-m_{\\mathrm o})^T(X^b-m_{\\mathrm o})\n \\right\\}\n \\le C\\mathop{\\mathrm{Tr}}(P^2)k+o(k).$$ The leading constant and the norm threshold depend only on the width-comparison factors; the allowed upper scale may also depend on the fixed replica data. The joint Haar–posterior probability that a pair overlap differs from $\\|m_{\\mathrm o}\\|^2/n$ by more than any prescribed fixed tolerance times $r$ is at most $e^{-ck}$, with $c>0$ depending on that tolerance.*\n\n*The same conclusions are available at $k>K\\log n$ with explicit polynomial losses. For any prescribed $\\eta>0$, the errors $o(k)$ in <a href=\"#prof:eq4\" data-reference-type=\"eqref\" data-reference=\"prof:eq4\">[prof:eq4]</a> and <a href=\"#prof:eq5\" data-reference-type=\"eqref\" data-reference=\"prof:eq5\">[prof:eq5]</a> may be replaced by $\\eta k+C_*\\log n$. The unabsorbed exceptional masses have the form $n^{C_*}e^{-B'k}$ for the partition and moment bounds and $n^{C_*}e^{-c'k}$ for the joint pair bound. Here $C_*$ may depend on the fixed replica data, accuracy, and preliminary rate budget. Choose $B'>B$ and then $K$ to absorb these losses; for the pair bound retain a smaller positive rate than $c'$. At fixed $K$ the logarithmic loss is a chosen small fraction of $k$, rather than an error vanishing with $n$. The exceptional-mass conclusions also hold after weighting Haar measure by $Z(h)/Z_{\\mathrm o}(h)$, with an arbitrarily small decrease of the rate exponents.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-prop-unconstrained"
+  },
+  {
+   "claim_id": "claim-edge-window-comparison",
+   "exact_statement": "Assume the spectral event of Lemma <a href=\"#prof:lem:spectrum\" data-reference-type=\"ref\" data-reference=\"prof:lem:spectrum\">3</a>. Suppose $$r\\le n^{-1/3}\\log^{C_1}n,\\qquad\n \\lambda-\\lambda^0\\le n^{-2/3}\\log^{C_2}n,\\qquad\n \\|h\\|\\le\\sqrt n\\,r\\log n,$$ where $C_1,C_2$ are fixed. Set $L=n^{2/3}$ and $A_0=2I-J$. Outside Haar mass $o(1)$, $$\\frac{Z(h)}{Z_{\\mathrm o}(h)}=1+o(1).$$ The cube and spherical raw second moments about $m_{\\mathrm o}$ differ in operator norm by at most $n^{1/2+o(1)}$. The cube raw second moment, sandwiched by $A_0$, has operator norm at most $n^{1/6+o(1)}$. Each exponent bound can be read with any fixed positive exponent slack. Unspecified powers of logarithms may depend on $C_1,C_2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-prop-polylog"
+  },
+  {
+   "claim_id": "claim-exact-root-count",
+   "exact_statement": "For every nonnegative Borel test $T(y,J)$, $$\\mathbb E_{\\rm pl}\\sum_{\\substack{y:\\,\\Phi_J(y)=h_s\\\\\n                         \\det D\\Phi_J(y)\\ne0}}T(y,J)\n =\\int (1+j_0)^{-1/2}G(y)\\,\n       \\mathbb E_{\\mathsf Q_y}\\!\\left[T(y,J)\\mathcal W(y,J)\\right]\\,dy,$$ where $$G(y)=\\prod_i \\varphi_{d,\\nu}(y_i)\\exp\\{n(1+j_0)\\alpha^2/2\\}$$ and $$\\label{prof:eq8}\n\\mathcal W(y,J)\n=e^{-nb^2/2}|\\det(I+(bI-J-2mm^{\\mathsf T}/n)V)|.$$ Here $\\varphi_{d,\\nu}$ is the density of a real Gaussian with mean $d$ and variance $\\nu$. Matrix restrictions are included in $T$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-root-count"
+  },
+  {
+   "claim_id": "claim-determinant-second-moment",
+   "exact_statement": "For each fixed $D$, the conditional second moment $\\mathbb E_{\\mathsf Q_y}\\mathcal W(y,J)^2$ is at most $n^{C_D}$ on $\\|y\\|\\le n^D$, uniformly over the parameters under consideration. Outside these balls the bound has a fixed polynomial envelope in $\\|y\\|$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prof-determinant-square"
+  },
+  {
+   "claim_id": "claim-scalar-root-diagnostics",
+   "exact_statement": "Fix an exclusion budget $A>0$ and an accuracy for the little-oh terms. After choosing a sufficiently small upper bound on $r$ and then a sufficiently large $n$, the following statements hold for $k=nr^3\\ge\\log^{10}n$.*\n\n*The total integral of $G(y)\\,dy$ is at most polynomial in $n$. Outside mass $n^Ce^{-Ak}$ under this scalar integral, $$q\\asymp_A r,\\qquad |M|=O_A(q),\\qquad |\\alpha|=O_A(q).$$ There are absolute $L,c>0$ such that the part with $q\\ge q_{\\min}\\ge Lr$ has mass at most $n^Ce^{-cnq_{\\min}^3}$. For a sufficiently small fixed exclusion budget, the retained parameters instead satisfy $q,M=(1\\pm\\epsilon)r$ and $|\\alpha|\\le\\epsilon q$, for any requested fixed $\\epsilon>0$.*\n\n\n*Under either budget the retained empirical moments satisfy $$\\label{prof:eq9}\n \\langle m^4\\rangle=3q^2-8q^3+o(q^3),\\qquad\n \\langle m^6\\rangle=15q^3+o(q^3),\\qquad\n \\langle m^3\\rangle=3qM+O_A(q^3).$$ For $l=\\langle ym\\rangle/q$, $|\\langle y-lm\\rangle|\\le C_Aq^3$, with an arbitrarily small leading constant under a sufficiently small budget. For any fixed sufficiently small $\\eta>0$, one may also retain $$\\langle y^2\\mathbf1_{\\{|y|>q^{1/2-\\eta}\\}}\\rangle\\le C_Aq^4,\n \\qquad\n \\frac1n\\|P_{\\operatorname{span}(m,\\mathbf1)^\\perp}y\\|^2\\asymp q^3.$$ Finally, fix $\\tau>0$ and $D<\\infty$. There are constants $c,C>0$ such that, for every $(t_1,t_3)$ with $\\tau\\le\\|(t_1,t_3)\\|\\le n^D$ and every $\\theta\\in\\mathbb R$, at least $cn$ indices satisfy $$|m_i|\\le C\\sqrt q,\\qquad |y_i-lm_i|\\le Cq^{3/2},\\qquad\n \\operatorname{dist}\\left(\n t_1\\frac{m_i}{\\sqrt q}+t_3\\frac{y_i-lm_i}{q^{3/2}}+\\theta,\n \\pi\\mathbb Z\\right)\\ge c.$$*\n\n*The determinant-weighted exclusions follow from Lemma <a href=\"#prof:determinant-square\" data-reference-type=\"ref\" data-reference=\"prof:determinant-square\">10</a> after increasing the preliminary budget. Through Lemma <a href=\"#prof:root-count\" data-reference-type=\"ref\" data-reference=\"prof:root-count\">9</a>, they bound the expected number of excluded regular roots. After removing the null set of critical target fields, the probability that any root is excluded is at most that expected count. This is the simultaneous-root meaning of the diagnostics.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-scalar-diagnostics"
+  },
+  {
+   "claim_id": "claim-conditioned-precision-bounds",
+   "exact_statement": "Fix a sufficiently small $\\eta>0$, an accuracy $\\epsilon>0$, and a budget $B>0$. On retained scalar data with the required accuracies, the following estimates hold with the integrated exclusion specified below. For $\\mathsf K\\in\\{K,K_o,K_T\\}$, $$\\label{prof:eq10}\n \\mathsf K\\succeq(1-\\epsilon)q^2I,\\qquad\n \\operatorname{Tr}\\mathsf K^{-2}\\le Cn/q,\\qquad\n \\|A_0\\mathsf K^{-1/2}\\|\\le Cq^{-\\eta},\n \\quad A_0=2I-J.$$ For $K_o$ the last bound holds with $\\eta=0$. Each precision has at least $c_A nq^3$ eigenvalues below $C_Aq^2$, and $\\operatorname{Tr}K_o^{-1}=nb+o(\\sqrt{n/q})$. For $\\mathsf K\\in\\{K,K_o\\}$, the three projection bounds are $$u^{\\mathsf T}\\mathsf K^{-1}u\\le C_Aq^{-2},\\qquad\n e^{\\mathsf T}\\mathsf K^{-1}e\\le C_Aq^{-1},\\qquad\n c_3^{\\mathsf T}\\mathsf K^{-1}c_3\\le C_A.$$*\n\n*Let $\\mathcal S$ be the retained scalar set, let $\\mathcal G_{\\rm spec}$ be the original spectral event, and let $\\mathcal F_y$ be failure of any estimate above. In the conditional law $\\mathsf Q_y$ of Lemma <a href=\"#prof:root-count\" data-reference-type=\"ref\" data-reference=\"prof:root-count\">9</a>, the bound is $$\\int_{\\mathcal S}G(y)\\,\n       \\mathsf Q_y(\\mathcal G_{\\rm spec}\\cap\\mathcal F_y)\\,dy\n \\le n^C e^{-Bk}.$$ The same bound with the determinant weight follows after increasing the preliminary budget. The spectral restriction stays inside the event being estimated; the argument does not condition on its probability.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-conditioned-precision"
+  },
+  {
+   "claim_id": "claim-unique-root",
+   "exact_statement": "On the retained field event every root is regular and the root is unique. The excluded root-count mass, and hence the exceptional field probability under the spectral restriction, have the chosen exponential rate.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-unique-root"
+  },
+  {
+   "claim_id": "claim-trace-from-three-densities",
+   "exact_statement": "Fix positive constants $c_0,C_0,M$. Let $0<q\\le q_0$ and $nq^3\\ge\\log^{10}n$, and put $L=\\sqrt{n/q}$. Let $C$ be a positive definite matrix of dimension $n-O(1)$ such that $$\\|C\\|\\le C_0q^{-2},\\qquad\n c_0L^2\\le\\operatorname{Tr}C^2\\le C_0L^2.$$ Assume also that at least $c_0n$ eigenvalues of $C$ exceed $c_0$. Let $f$ be the density of $\\|C^{1/2}g\\|^2$, with $g$ standard Gaussian, and let $x_0\\in[c_0n,C_0n]$. If $$f(x_0+L)\\le M f(x_0),\\qquad\n f(x_0-L)\\le M f(x_0),$$ then $|\\operatorname{Tr}C-x_0|\\le C_1L$, where $C_1$ depends only on the fixed constants. The assertion holds for all sufficiently large $n$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prof-trace-from-three-densities"
+  },
+  {
+   "claim_id": "claim-median-covariance",
+   "exact_statement": "Let $\\mathcal S$ be suitable base orbit data retained by the preceding exclusions in [prof:orbits](#prof:orbits). On $\\mathcal S$, use the disintegration $d\\pi\\,d\\mathrm{Haar}$ before the determinant weight $w$. Here $d\\pi$ includes the scalar root factors and the imposed rotation-invariant spectral restriction, $\\mathrm{Haar}$ is normalized measure on rotations fixing $\\mathcal P$, and $w_0$ is the median reference weight defined there.*\n\n\n*Fix $1/2<\\gamma<1$ and positive accuracies $\\epsilon,\\eta$, together with the requested implied small constants below. Choose a sufficiently small fixed rate $a_{\\mathrm{orb}}>0$, then the upper bound on $r$ sufficiently small. At each scale $k=nr^3\\ge\\log^{10}n$, for sufficiently large $n$, one may discard a further set $\\mathcal E\\subseteq\\mathcal S$ satisfying $$\\int_{\\mathcal E}w_0\\,d\\pi\\le Cn^C e^{-a_{\\mathrm{orb}}k}.$$ On each remaining orbit, a set of Haar orientations of mass $>3/4$ satisfies simultaneously $$\\label{prof:eq13}\n\\begin{split}\n \\|\\Sigma_s\\|&\\le (1+\\epsilon)/s,\\qquad\n \\|A_0 \\Sigma_s A_0\\|\\ll r^{-\\gamma},\\\\\n \\|m_s^{\\mathrm{post}}-m\\|&\\ll r^{-1-\\eta},\\qquad\n \\|A_0(m_s^{\\mathrm{post}}-m)\\|\\ll r^{-\\gamma/2}.\n \\end{split}$$ Here $m_s^{\\mathrm{post}}$ and $\\Sigma_s$ are the posterior mean and covariance. Every implied small constant can be prescribed in advance by shrinking the upper bound on $r$ and then taking $n$ sufficiently large. The previously excluded unsuitable data retain their preceding integrated bounds; $w_0$ is used only on $\\mathcal S$. No bound uniform conditional on each spectrum is asserted.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-median-covariance"
+  },
+  {
+   "claim_id": "claim-common-angular-kernel",
+   "exact_statement": "Let $0<q<1$, $b=1-q$, $L=\\sqrt{n/q}$, and $\\mathsf P^T\\mathsf P=nI_3$, $m=\\sqrt q\\mathsf P_1$, $M=n^{-1}\\sum m_i$, and $c=(1-M^2/q)^{1/2}>0$, with $\\mathsf P_2=c^{-1}(\\mathbf1-(M/q)m)$. For $z=x-m$ on $\\|z\\|^2+2m^Tz=nb$, set $a=\\mathsf P^Tz/\\sqrt n$ and $z_\\perp=z-\\mathsf P a/\\sqrt n$. Define primed variables likewise, and set $U=z_\\perp^Tz'_\\perp/L$. Then $$\\rho(a)^2=nb-2\\sqrt{nq}\\,a_1-|a|^2,\\qquad\n \\Gamma(a,a',U)=\n \\begin{pmatrix}\\rho(a)^2&LU\\\\LU&\\rho(a')^2\\end{pmatrix}.$$ On $\\Gamma\\succ0$, the statistic $(a,a',U)$ is a complete invariant for simultaneous proper rotations of $\\operatorname{ran}(\\mathsf P)^\\perp$, provided $n-3\\ge3$. Thus every integrable physical pair insertion has one Haar angular average, independent of the choice of prior. To specify the reference used in the application, put $\\mathbf s=(a,a',U)$, let $T(z,z')=\\mathbf s$, and define the exact unweighted density $$f_{oo}^{\\rm unw}=\\frac{d\\,T_\\#(o\\otimes o)}{d^3a\\,d^3a'\\,dU}$$ on the positive Gram region. It includes both rank factors, both raw shell densities, and $\\mathfrak c_o^2$. It is distinct from the formal product of single saddle functions and a conditional saddle function.*\n\n*For a pair insertion $F$, write $$\\mathcal A_F(\\mathbf s)=\\int_{\\rm Haar}\n e^{\\mathcal E(gz)+\\mathcal E(gz')}F(gz,gz')\\,dg,\n \\qquad \\mathcal E(z)=z^T(J-bI)z/2,$$ using any representative of $\\mathbf s$. All physical matrices in $F$ are fixed together in this vector-rotation representation. Let $k_F$ be the signed statistic density under two independent normalized physical reference shells, with insertion $F$. Then $$Z_*^{-2}f_{oo}^{\\rm unw}(\\mathbf s)\\mathcal A_F(\\mathbf s)\n       =k_F(\\mathbf s)$$ for almost every regular $\\mathbf s$. This includes the mass insertion and the centered matrix insertion of Lemma <a href=\"#prof:gaussian-signed-kernel\" data-reference-type=\"ref\" data-reference=\"prof:gaussian-signed-kernel\">18</a>.*\n\n*There is one smooth chart for the four pair priors. Put $S=\\sum x_i$, $S'=\\sum x_i'$, and $R=\\sum x_ix_i'$, and use $w=(a_1,a_3,a'_1,a'_3,S,S',R)$. Its map $\\Phi:w\\mapsto(a,a',U)$ is $$a_2=\\frac{S-nM}{\\sqrt n c}-\\frac{M}{\\sqrt q c}a_1,\\qquad\n a'_2=\\frac{S'-nM}{\\sqrt n c}-\\frac{M}{\\sqrt q c}a'_1,$$ $$U=\\frac{R-nq-\\sqrt{nq}(a_1+a'_1)-a\\cdot a'}{L},\n \\qquad |\\det D\\Phi|=\\frac{1}{nc^2L}=:J_\\Phi.$$ For $pp$, the raw triple belongs to the affine lattice $n(1,1,1)+\\Lambda$, where $$\\Lambda=\\operatorname{span}_{\\mathbb Z}\n \\{(2,0,2),(0,2,2),(0,0,4)\\},\\qquad\n \\operatorname{covol}(\\Lambda)=16.$$ For $pg$ only $S\\in n+2\\mathbb Z$ is retained as a lattice coordinate, and for $gp$ only $S'\\in n+2\\mathbb Z$ is retained; these covolumes are $2$. The $gg$ measure has no lattice coordinates.*\n\n*Let $dm_{pp}$ be $16$ times counting measure in its lattice coordinates times Lebesgue measure in the remaining coordinates; define $dm_{pg},dm_{gp}$ with factor $2$, and $dm_{gg}=dw$. Smooth only the nonlattice coordinates, preserving the exact translated shell constraints. For cut or multiplied priors apply their smooth factors after this convolution; the preceding commutator estimate charges the change from the original prior. If $f_i^{\\rm sm}$ denotes the resulting density with respect to $dm_i$, set $$r_i(w)=\\frac{f_i^{\\rm sm}(w)}{J_\\Phi f_{oo}^{\\rm unw}(\\Phi(w))},\\qquad\n \\widetilde k_F(w)=J_\\Phi f_{oo}^{\\rm unw}(\\Phi(w))\n                         \\mathcal A_F(\\Phi(w)).$$ Then the smoothed pair integral is exactly $I_i^{\\rm sm}=\\int r_i\\widetilde k_F\\,dm_i$, and $$Z_*^{-2}\\widetilde k_F(w)=J_\\Phi k_F(\\Phi(w)).$$ For a fixed insertion we abbreviate $\\widetilde k_F$ by $\\widetilde k$ below. In particular, a scalar density remainder multiplies the same signed reference kernel at each actual mixed mesh point.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-common-angular-kernel"
+  },
+  {
+   "claim_id": "claim-mixed-coordinate-transfer",
+   "exact_statement": "Suppose $r_i=L_i+e_i$, where $L_i$ extends smoothly to the common chart, while $e_i$ need only be defined at its own mixed points. Let $\\mathscr E$ be a nonnegative envelope on the chart. Assume $|e_i|\\le\\varepsilon\\mathscr E$ and $$\\int\\mathscr E|\\widetilde k|\\,dm_i\\le B,\\qquad\n \\left|\\int L_i\\widetilde k\\,dm_i\n             -\\int L_i\\widetilde k\\,dw\\right|\\le\\delta_i.$$ Then, with pair signs $+,-,-,+$, $$\\left|\\sum_i s_iI_i^{\\rm sm}\n       -\\int\\Big(\\sum_i s_iL_i\\Big)\\widetilde k\\,dw\\right|\n \\le4\\varepsilon B+\\sum_i\\delta_i.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prof-mixed-coordinate-transfer"
+  },
+  {
+   "claim_id": "claim-gaussian-signed-kernel",
+   "exact_statement": "Fix a derivative order $h\\ge0$. There is a threshold $N_0=N_0(h)$ for the following statement. Let $0<q\\le q_0<1$, $N=nq^3\\ge N_0$, and $L=\\sqrt{n/q}$. Let $C$ be positive definite, and let $E$ have a fixed number $d$ of orthonormal columns. Put $\\Pi=I-EE^T$. Assume $$c_0I\\preceq C,\\quad \\|C\\|\\le C_0q^{-2},\\quad\n \\operatorname{Tr}C\\le C_0n,\\quad \\operatorname{Tr}C^2\\le C_0n/q,$$ and that at least $c_0N$ eigenvalues belong to $[c_0q^{-2},C_0q^{-2}]$. Suppose $m\\in\\operatorname{ran}E$ and $\\|C^{1/2}m\\|/L\\le C_0$. Let $A$ be symmetric, and assume $D=C^{1/2}A^2C^{1/2}$ has norm at most $C_0$. For independent standard normal vectors $\\eta_1,\\eta_2$, set $$z_i=C^{1/2}\\eta_i,\\quad\n T_i=(\\|z_i\\|^2+2m^Tz_i-nb)/L,\\quad\n a_i=E^Tz_i,\\quad U=z_1^T\\Pi z_2/L.$$ Assume the density of each $T_i$ at zero belongs to $[c_0,C_0]$. Write $k_1(a_1,a_2,U)$ for the density conditional on $T_1=T_2=0$, and $k_H$ for the signed density with insertion $$H=(\\eta_1^TD\\eta_2)^2-\\eta_1^TD^2\\eta_1\n       -\\eta_2^TD^2\\eta_2+\\operatorname{Tr}D^2.$$ Put $\\alpha_i=(E^TCE)^{-1/2}a_i$ and $J_E=\\det(E^TCE)^{-1}$. For every multi-index $\\beta$ with $|\\beta|\\le h$, on $|U|\\le\\epsilon\\sqrt N$, with sufficiently small fixed $\\epsilon$, one has $$|\\partial^\\beta k_1|\\le C_\\beta P_\\beta\n e^{-c(|\\alpha_1|^2+|\\alpha_2|^2+U^2)}J_E,\\qquad\n |\\partial^\\beta k_H|\\le C_\\beta nq P_\\beta\n e^{-c(|\\alpha_1|^2+|\\alpha_2|^2+U^2)}J_E,$$ where $P_\\beta$ is a fixed polynomial in $1+|\\alpha_1|+|\\alpha_2|+|U|$. After integrating both projection variables, the resulting densities $\\overline k_1,\\overline k_H$ obey $$|\\overline k_1(U)-\\overline k_1(-U)|\n \\le CN^{-1/2}P(U)e^{-cU^2},\\qquad\n |\\overline k_H(U)-\\overline k_H(-U)|\n \\le CnqN^{-1/2}P(U)e^{-cU^2}.$$ The same bounds hold for derivatives of order at most $h$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prof-gaussian-signed-kernel"
+  },
+  {
+   "claim_id": "claim-surviving-coefficients",
+   "exact_statement": "Put $v_i=1-m_i^2$ and $\\kappa_2=\\langle v^2\\rangle$, $\\kappa_3=4\\langle m^2v^2\\rangle$. For $i,j\\in\\{p,g_0\\}$, let $F_{ij}(\\beta)$ be the per-site cross log moment after optimizing all single-replica constraints. At zero projection, $$F'_{ij}(0)=0,\\quad F''_{ij}(0)=\\kappa_2,\\quad\n F'''_{ij}(0)=\\kappa_3\\mathbf1_{\\{i=j=p\\}}.$$ The common quadratic coefficient relative to the reference is $c_2=(\\kappa_2-b^2)/(2q^2\\kappa_2b^2)$. Up to the common prefactor $b/\\sqrt{\\kappa_2}$ and an error $O(qE_*^Ce^{\\zeta E_*^2}/N)$, the signed zero-projection sum is $$\\frac{q}{\\sqrt N}e^{c_2qU^2}\n \\left(-\\frac{\\kappa_3}{2\\kappa_2^2}U+\\frac{\\kappa_3}{6q\\kappa_2^3}U^3\\right).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-surviving-coefficients"
+  },
+  {
+   "claim_id": "claim-weighted-kernel-transfer",
+   "exact_statement": "Use the priors, cuts, and shell-constrained reference mass $Z_*$ of the preceding mixed comparison, whose physical reference covariance is $C_o=K_o^{-1}$. Let $A$ be symmetric and assume the hypotheses of Lemma <a href=\"#prof:gaussian-signed-kernel\" data-reference-type=\"ref\" data-reference=\"prof:gaussian-signed-kernel\">18</a> with $C=C_o$. Suppose the mixed-coordinate disintegration and local saddle estimates give the preceding expansion, with scalar remainder $O(qE_*^Ce^{\\zeta E_*^2}/N)$ at each actual mixed mesh point. Suppose centered-cell quadrature for the smooth leading terms costs $O(1/n)$ times the signed kernel envelope. Then, with the common normalization by $Z_*$, $$\\mathbb E_{\\rm Haar}\\left\\|\n Z_*^{-1}\\int A(zz^T-C_o)A\\,d(p-g)_{\\rm tilted}\n \\right\\|_{\\rm HS}^2\\le Cnq^2/N.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prof-weighted-kernel-transfer"
+  },
+  {
+   "claim_id": "claim-compact-interval-overlap",
+   "exact_statement": "There are $r_0>0$ and $a_*>0$, with $a_*$ independent of a lower endpoint $r_1$, such that the following holds. For every fixed $0<r_1\\le r_0$ and $\\chi>0$, there is $c=c(r_1,r_0,\\chi)>0$ for which, at each $r\\in[r_1,r_0]$, $$\\mu_{h_s}^{\\otimes2}\n \\bigl( |(X-m)^T(X'-m)|>\\chi nr\\bigr)\\le e^{-cn}$$ outside an integrated planted exceptional set of mass at most $e^{-a_*k}$, with $\\mathcal G$ imposed. The root is the unique regular root on the retained event.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-lem-compact-bridge"
+  },
+  {
+   "claim_id": "claim-conditional-variance",
+   "exact_statement": "Fix an observation bound $T<\\infty$ and positive constants $\\alpha,\\beta$. Suppose $0<s<u=(1+d)s\\le T$, $k=ns^{3/2}$, and $$P\\{\\tau\\|\\Sigma_u\\|>1/4\\}\\le e^{-\\beta k},\n \\qquad\n \\log\\int e^{2L_P}\\,dG\\le\\alpha k,\n \\label{prof:eq20}$$ where $\\alpha/\\beta$ is less than a sufficiently small absolute constant. For every fixed $D>0$ and smooth test $\\phi$ whose values and required derivatives have fixed polynomial bounds, $$\\operatorname{Var}_P\\phi\n \\le3\\mathbb E_P\\|\\nabla_g\\phi\\|^2+n^{-D},\n \\label{prof:eq21}$$ provided $\\beta k/\\log n$ is sufficiently large in terms of those bounds and $D$. Bounded tests with polynomial cutoffs are included.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prof-lem-conditional-variance"
+  },
+  {
+   "claim_id": "claim-amplified-covariance",
+   "exact_statement": "For every sufficiently small fixed $\\epsilon>0$, there are $s_0,a>0$ and $K_{\\log}<\\infty$ such that, at every deterministic time in the indicated range, $$\\|\\Sigma_s\\|\\le\\frac{1+\\epsilon}{s},\n \\qquad 0<s\\le s_0,\\qquad ns^{3/2}\\ge K_{\\log}\\log n,\n \\label{prof:eq22}$$ outside an integrated planted exceptional set, intersected with $\\mathcal G$, of mass at most $e^{-ans^{3/2}}$. For fixed $1/2<\\gamma<\\gamma'<1$, the same exceptional set may be used for $$\\begin{split}\n \\|A_0\\Sigma_sA_0\\|&\\le r^{-\\gamma},\\qquad A_0=2I-J,\\\\\n v_s&:=\\sup_{\\substack{H^T=-H\\\\ \\|H\\|_{\\mathrm{HS}}\\le1}}\n \\operatorname{Var}_{\\mu_{h_s}}\n \\bigl((X-m_s^{\\mathrm{post}})^T[H,J](X-m_s^{\\mathrm{post}})\\bigr)\n       \\le C_v s^{-1-\\gamma'/2}.\n \\end{split}\n \\label{prof:eq23}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-prop-amplified-covariance"
+  },
+  {
+   "claim_id": "claim-bottom-scale-covariance",
+   "exact_statement": "For every fixed $B>0$ and $K_{\\log}<\\infty$, at each deterministic time satisfying $ns^{3/2}\\le K_{\\log}\\log n$, $$\\|\\Sigma_s\\|\\le Cn^{2/3}\\ell^C,\n \\qquad \\ell=\\log\\log(n+1000),\n \\label{prof:eq25}$$ except on an integrated planted event, intersected with $\\mathcal G$, of mass at most $n^{-B}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-prop-bottom-covariance"
+  },
+  {
+   "claim_id": "claim-endpoint-word-estimates",
+   "exact_statement": "Let $W$ be GOE with off-diagonal variance $1/n$ and diagonal variance $2/n$, and let $W^\\circ$ be its zero-diagonal version. Fix a word length $L$, a bound $M_0$ on ordinary diagonal factors, and an inverse margin $c>0$. Except on an event of probability $Ce^{-c_1n}$, simultaneously for $M=W,W^\\circ$ and all such words $Q$, $$\\|Q\\|+\n \\left(\\sum_{i\\ne j}|Q_{ij}|^4\\right)^{1/4}\n +\\|\\operatorname{diag}(Q-\\mathsf P(Q))\\|_2\\le C.$$ For inverse words this assertion is restricted to $A\\in\\mathcal A_\\kappa$ and $S_A(1;M)\\succeq cI$. All diagonal parameters and permitted word choices within the fixed bounds may be selected after observing $M$; the bounds $L,M_0,c,a_+,\\kappa$ are fixed beforehand. Constants depend on the displayed fixed bounds, including $\\kappa$. The prediction for a word with $r$ ordinary matrix letters outside its inverse is a polynomial in $z$ of degree at most $r$.*\n\n*For each deterministic $A\\in\\mathcal A_\\kappa$ there is a constant $c_\\kappa>0$ such that $S_A(z;W)\\succeq c_\\kappa I$ for all $z\\in[0,1]$ except with probability $Ce^{-c_2n}$. For any fixed finite family of deterministic bounded vectors, the bilinear deterministic equivalents are, to any fixed positive accuracy, $$G_A\\simeq A,\\qquad G_AW\\simeq\\chi_A A,\\qquad\n WG_AW\\simeq\\chi_A I+\\chi_A^2 A,\n \\quad G_A=A^{1/2}S_A(1;W)^{-1}A^{1/2},$$ with the same exponential form of exceptional probability. Here each comparison concerns only the specified bilinear forms.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-endpoint-words"
+  },
+  {
+   "claim_id": "claim-endpoint-logdet",
+   "exact_statement": "Fix $\\kappa,\\varepsilon>0$, a rank bound $r_0$, and a norm bound $M_2$. There is $\\gamma_0>0$ such that for each fixed $0<\\gamma\\le\\gamma_0$ and each fixed $B>0$, with probability at least $1-e^{-Bn}$ for sufficiently large $n$, simultaneously for $$V\\ \\text{diagonal},\\qquad 0\\le V\\le I,\\qquad\n b=n^{-1}\\operatorname{Tr}V\\le1-\\kappa,\n \\qquad \\operatorname{rank}E\\le r_0,\\quad\\|E\\|\\le M_2,$$ the matrix $L=I+(bI-W)V+E$ satisfies $$n^{-1}\\log\\det(L^{\\mathsf T}L+\\gamma I)\\le b^2+\\varepsilon.$$ The choices of $\\gamma_0$ and the threshold on $n$ may depend on the fixed margins. The threshold on $n$ may also depend on $B$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prof-endpoint-logdet"
+  },
+  {
+   "claim_id": "claim-endpoint-scalar-rate",
+   "exact_statement": "Let $P$ have finite second moment, put $q=\\mathbb E_P\\tanh^2 y$, $b=1-q$, and $a=\\mathbb E_P[(y-d)\\tanh y]$. For $\\nu>0$ with $\\nu\\ge q$, $$D(P\\Vert N(d,\\nu))\\ge\\frac{(a-\\nu b)^2}{2\\nu(\\nu+q)}.$$ Equality holds exactly when $P=N(d,\\nu)$. At every observation time $s>0$ the consistent equality law, with $d=s+\\mathbb E_P\\tanh y$ and $\\nu=s+q$, is uniquely $N(v_*(s),v_*(s))$, where $$v_*(s)=s+\\mathbb E_{N(v_*(s),v_*(s))}\\tanh y.$$ On compact positive time intervals this curve is continuous and its $q$ is bounded away from zero. The scalar integral and rate conclusions of Lemma 5.4(i), (ii), and (iv) of (OpenAI 2026a) [[AcceptedGap](#ref-AcceptedGap)] therefore hold at $j=1$ on such intervals. In particular, outside any fixed neighborhood of the equality curve, the smoothed scalar integral has strictly negative rate for sufficiently small smoothing variance.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-endpoint-scalar"
+  },
+  {
+   "claim_id": "claim-positive-time-stability",
+   "exact_statement": "Fix $0<s_1<T<\\infty$. There are positive constants $\\rho_0,\\eta_0,\\epsilon_A,c_0,c_*,a$, depending on this interval, such that, at every deterministic $s\\in[s_1,T]$, the probability under the planted law, restricted to the original spectral event, of either failure of <a href=\"#prof:eq26\" data-reference-type=\"eqref\" data-reference=\"prof:eq26\">[prof:eq26]</a> or existence of $y$ with $$\\|F_{h_s}(y)\\|\\le\\rho_0\\sqrt n,\\qquad q(y)<c_*$$ is at most $e^{-an}$ for sufficiently large $n$. The same assertion holds uniformly on each fixed compact interval after decreasing the residual threshold.*\n\n*There are also absolute $c,C>0$ with the following small-time refinement. For each fixed $A_*>0$, at all sufficiently small $r=\\sqrt s>0$, failure of <a href=\"#prof:eq26\" data-reference-type=\"eqref\" data-reference=\"prof:eq26\">[prof:eq26]</a> has probability at most $e^{-A_*nr^3}$; its margins may depend on the scale. For $u\\ge Cr$ in a sufficiently small fixed range, existence of an approximate zero with $q(y)>u$ has probability at most $e^{-cnu^3}$. The approximate-zero tolerance is fixed before taking $n\\to\\infty$ and may depend on $s,u,A_*$. Uniformity is asserted only on compact positive bands; finitely many or dyadic values of $u$ may be imposed together. In the small-time assertions a vanishing maximum diagonal may be included in the external disorder restriction.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-positive-stability"
+  },
+  {
+   "claim_id": "claim-endpoint-posterior-consequences",
+   "exact_statement": "Fix a matrix norm bound. For the covariance conclusion, assume positive margins in <a href=\"#prof:eq26\" data-reference-type=\"eqref\" data-reference=\"prof:eq26\">[prof:eq26]</a> and suppose that every point in its small-residual region has $q(y)\\ge c_*>0$. On the fixed-length ordinary and restricted inverse-word events specified below, $$\\|\\operatorname{Cov}_{\\mu_h}(G,X)\\|\n \\le C\\bigl(\\operatorname{Var}_{\\mu_h}(G)+\\mathcal D_h(G)\\bigr)^{1/2}\n \\quad\\text{for every }G.$$ In particular $\\|\\Sigma_h\\|\\le C$.*\n\n\n\n*For the following mean conclusion, only the whole-region root stability implication $$\\|F_h(y)\\|\\le\\rho_0\\sqrt n\n \\quad\\Longrightarrow\\quad\n \\mathcal H(y,V_y)\\succeq c_0I$$ is required, together with ordinary word diagnostics. No lower bound on $q(y)$ is assumed in this mean conclusion. For $N=\\mu_h(f^2)>0$ and $\\nu_h=f^2\\mu_h/N$, and each sufficiently small fixed $\\zeta>0$, $$\\label{prof:eq27}\n \\frac{\\|\\mathbb E_{\\nu_h}X-\\mathbb E_{\\mu_h}X\\|}{\\sqrt n}\n \\le C\\zeta+\\frac{C_\\zeta}{\\sqrt n}\n                   \\left(1+\\frac{\\mathcal D_h(f)}N\\right).$$ The leading constant $C$ depends on the fixed norm and stability margins, but not on $\\zeta$. Without the stability hypothesis, put $$Q_\\delta(h)=\\sup_{\\|F_h(y)\\|\\le\\delta\\sqrt n}q(y),$$ with an empty supremum equal to zero. The same ordinary diagnostics give $$\\label{prof:eq27-coarse}\n \\frac{\\|\\mathbb E_{\\nu_h}X-\\mathbb E_{\\mu_h}X\\|}{\\sqrt n}\n \\le 2\\sqrt{Q_\\delta(h)}+\n       \\frac{C_\\delta}{\\sqrt n}\n                   \\left(1+\\frac{\\mathcal D_h(f)}N\\right).$$ For each fixed $\\delta>0$ this assertion holds for sufficiently large $n$ on the corresponding ordinary diagnostics. All events are independent of $f,G$ and the unit directions used to test these inequalities.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-endpoint-posterior"
+  },
+  {
+   "claim_id": "claim-terminal-extension",
+   "exact_statement": "There are fixed $T,C,c>0$ and disorder events of ordinary probability at least $1-e^{-cn}$ with the following property. For every matrix in these events, let $X$ have any probability law on the cube, possibly depending on the matrix, and let the observation noises be independent of $X$. Set $h_T=TX+\\sqrt T\\,g$. The reference Gibbs law $\\mu_{h_T}$ has unscaled gap at least $1/2$ except with probability $e^{-cn}$.*\n\n*On the original spectral event choose a fixed $c_+$ such that $R=J+c_+I\\succeq0$. For one further time unit add observations with drift $RX$ and covariance rate $R$, obtaining $h_{T+\\lambda}$. Define the reference laws $$\\mu_{h,\\lambda}(x)\\ \\propto\\\n \\exp\\left(\\frac{1-\\lambda}{2}x^{\\mathsf T}J^\\circ x\n                         +h^{\\mathsf T}x\\right),\n \\qquad 0\\le\\lambda\\le1.$$ The covariance and inverse unscaled gap of $\\mu_{h_{T+\\lambda},\\lambda}$ are bounded by $C$, simultaneously in $\\lambda$, outside an event of conditional probability $e^{-cn}$, uniformly over the law generating $X$. At $\\lambda=1$ the reference law is product. These reference laws are the posteriors of the original Gibbs prior evaluated at the observations; no assertion about the posterior of the arbitrary law generating $X$ is made.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-terminal-extension"
+  },
+  {
+   "claim_id": "claim-restricted-support-profile",
+   "exact_statement": "For every fixed $\\omega>0$ there are $c_\\omega>0$ and disorder events $\\mathcal G_n(\\omega)$ with probability tending to one such that, on $\\mathcal G_n(\\omega)$, simultaneously for every real $f$ satisfying $$\\mu(f^2)=1,\\qquad\n 0<p:=\\mu(f\\ne0)\\le\\tfrac12,\\qquad\n \\|f\\|_\\infty^2\\le100p^{-2},$$ one has $$\\mathcal D_J(f)\\ge c_\\omega n^{-2/3-\\omega}\\log(1/p).\n \\label{prof:eq29}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-restricted-profile"
+  },
+  {
+   "claim_id": "claim-uniform-support-profile",
+   "exact_statement": "<span id=\"prof:support-profile\" label=\"prof:support-profile\"></span> For every fixed $\\omega>0$ there are $c_\\omega>0$ and disorder events of probability tending to one on which, simultaneously for every nonzero real function $f$ with $p=\\mu_J(f\\ne0)\\le1/2$, $$\\mathcal D_J(f)\n   \\ge c_\\omega n^{-2/3-\\omega}\\log(1/p)\\,\\mu_J(f^2).\n \\label{prof:full-profile}$$ In particular the spectral gap for rate-one-per-site heat-bath dynamics is at least $c_\\omega(\\log2)n^{-2/3-\\omega}$ on the same event.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-thm-profile"
+  },
+  {
+   "claim_id": "claim-static-cap-comparison",
+   "exact_statement": "Fix a field radius $R<\\infty$, an error tolerance $\\eta>0$, and a geometric ratio in $(0,1)$. There is a sufficiently small upper scale $p_0>0$ such that, with probability tending to one, simultaneously over a geometric list of caps $p\\le p_0$ with $np^3\\ge c\\sqrt{\\log n}$ and all $h\\in P_p\\mathbb R^n$ satisfying $\\|h\\|\\le R p^2 M_p$, one has $$\\label{cap:static-values}\n |\\log Z_p(h)-\\log Z_p^{\\rm sp}(h)|\\le \\eta k_p,\\qquad\n \\|P_p m_p(h)-a_p(h)\\|\\le \\eta M_p,\n \\qquad m_p(h)=\\nabla\\log Z_p(h).$$ The projected norm tails proved above hold, with a decreased positive exponential constant, under these cube posteriors and under the uncapped zero-field cube posterior. The statement remains valid for any fixed finite collection of auxiliary geometric cap lists. The zero-field concentration and density estimates used in the proof also allow bounded scalar modifications of the cap interaction whose spherical saddle gaps remain comparable to $p^2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-static-comparison"
+  },
+  {
+   "claim_id": "claim-curvature-induction-step",
+   "exact_statement": "Fix a bounded child field range for the one-off evaluation conclusion below. There are a sufficiently large absolute $K_0$ and a sufficiently small ratio $\\gamma>0$ with the following property. Choose $\\sigma$ as a sufficiently high fixed power of $\\gamma$, and then choose $\\delta$ as a still higher fixed power, allowing these tolerances to depend on the prescribed field range. Let a parent potential at scale $p$ be intrinsic to the capped data, satisfy the value and gradient comparisons above, and satisfy <a href=\"#cap:invariant\" data-reference-type=\"eqref\" data-reference=\"cap:invariant\">[cap:invariant]</a> at all fields in <a href=\"#cap:annulus\" data-reference-type=\"eqref\" data-reference=\"cap:annulus\">[cap:annulus]</a>. Use the semiconcave extension just described when forming an auxiliary child potential. For a true parent, retain the true child potential. Condition on the parent data and used auxiliary randomness $\\mathscr F_p$ described below, on which these hypotheses and the $\\mathscr F_p$-measurable parent-level conclusions of the static comparison hold, including the projected posterior tail and moment bounds for this capped parent. The separate $o(1)$ failure probability used to obtain these parent conclusions remains outside the conditional estimate below. Then, uniformly over such parent data, the probability over the unused Haar refinement $O$ that <a href=\"#cap:invariant\" data-reference-type=\"eqref\" data-reference=\"cap:invariant\">[cap:invariant]</a> fails at $c=\\gamma p$ anywhere on the child annulus is at most $$C e^{-a k_p}+C e^{-a' k_c}$$ for fixed positive $a,a'$. The same inequalities hold with strict slack on the complementary event. These failure probabilities are summable over the geometric cap list.*\n\n*At intermediate ratios $c/p\\in[\\gamma,1)$, if the frozen parameter stays inside the agreement domain with fixed slack, the transverse error and mixed block tend to zero with the parent errors, the total scaled Hessian is bounded, and the radial deficit is at least $0.26$. The same deterministic evaluation bounds hold for $c/p\\in[\\gamma^2,\\gamma]$ under this interior-parameter condition. For a true parent and the prescribed bounded child field range there is also a sufficiently small fixed evaluation-ratio interval on which the upper child curvature is at most $C/c^2$, with $C$ depending only on that field range. This last evaluation uses supports centered at the frozen parameter, constructed at the end of the proof. All statements are uniform down to $np^3\\asymp\\sqrt{\\log n}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-curvature-induction"
+  },
+  {
+   "claim_id": "claim-deterministic-evaluation",
+   "exact_statement": "Under the parent hypotheses of Proposition <a href=\"#cap:curvature-induction\" data-reference-type=\"ref\" data-reference=\"cap:curvature-induction\">34</a>, the deterministic intermediate-scale conclusions hold also for $x=c/p\\in[\\gamma^2,\\gamma]$, whenever the frozen parameter is inside parent agreement with fixed slack. At fixed $\\gamma$, the transverse and mixed errors tend to zero with the parent errors, the scaled Hessian is bounded, and the radial deficit is at least $0.26$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cap-deterministic-evaluation"
+  },
+  {
+   "claim_id": "claim-frozen-evaluation-support",
+   "exact_statement": "Fix a child field radius $R$ before choosing the curvature and comparison tolerances. Suppose a true parent at scale $p$ satisfies the invariant and the static comparisons. There is a fixed $b_1>0$, depending on $R,\\sigma$, such that the following holds for every $x\\in[\\gamma b_1,b_1]$, $c=xp$, and $h\\in H_c$ with $\\|h\\|\\le R c^2M_c$. Put $\\alpha=\\alpha_c(h)$. With sufficiently small fixed tolerances, there is an upper-semiconcave extension agreeing with the true parent on a neighborhood of the frozen typical length sphere. Its convolution has a strict margin, and its terminal mean and covariance differ from those of the true transition by exponentially small errors in the corresponding scaled units. Consequently, $$\\label{cap:ball-evaluation-bound}\n K_c(h)\\preceq C(R)c^{-2}I_{H_c},$$ where $C(R)$ is independent of the chosen ratios and sharp curvature tolerances. The construction and estimates are uniform on the indicated fixed ratio interval, with $n$ taken large after those choices.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cap-frozen-evaluation-support"
+  },
+  {
+   "claim_id": "claim-classical-posterior-input",
+   "exact_statement": "Fix $0<\\beta<1$, an operator-norm bound for $J_*$, and fixed positive parameters in <a href=\"#cap:stability-test\" data-reference-type=\"eqref\" data-reference=\"cap:stability-test\">[cap:stability-test]</a>, with $j(1+\\eta)^2<1$. On the fixed-length matrix-word events described below, every field satisfying <a href=\"#cap:stability-test\" data-reference-type=\"eqref\" data-reference=\"cap:stability-test\">[cap:stability-test]</a> has a unique root $y_*$ of $F_h$. If $m_* =\\tanh y_*$ and $$\\mu_h(x)\\propto\\exp\\{x^{\\mathsf T}J_*x/2+h^{\\mathsf T}x\\},\n \\qquad\n \\mathcal D_h(f)=\\sum_i\\mathbb E_{\\mu_h}\n                 \\operatorname{Var}(f\\mid x_{\\ne i}),$$ then $$\\label{cap:classical-mean-covariance}\n \\|\\mathbb E_{\\mu_h}x-m_*\\|\\le C,\n \\qquad \\|\\operatorname{Cov}_{\\mu_h}(x)\\|\\le C.$$ For every sufficiently small fixed $\\epsilon>0$, every real $f$ with $N=\\mathbb E_{\\mu_h}f^2>0$, and $\\nu=f^2\\mu_h/N$, $$\\label{cap:square-reweighting}\n |\\mathbb E_\\nu x-m_*|_n\n \\le C\\epsilon+\\frac{C_\\epsilon}{\\sqrt n}\n                    \\left(1+\\frac{\\mathcal D_h(f)}{N}\\right).$$ The event and constants are independent of $h$ and $f$ under the stated diagnostics and stability parameters. The required word length is finite and may depend on $\\epsilon$.*\n\n*The same conclusions hold at $j=1$ if, in addition, every approximate root in the residual region has $q\\ge q_{\\min}>0$, and the inverse-word event is restricted to the diagonal class specified in Lemma <a href=\"#cap:restricted-words\" data-reference-type=\"ref\" data-reference=\"cap:restricted-words\">38</a>. Constants may depend on $q_{\\min}$. This endpoint assertion is a consequence of the proof below, rather than an application of a theorem with $\\beta<1$ at $\\beta=1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-classical-input"
+  },
+  {
+   "claim_id": "claim-restricted-endpoint-words",
+   "exact_statement": "Fix $a_+<\\infty$ and $\\kappa\\in(0,1)$. At $j=1$, restrict inverse diagonals to $$\\label{cap:restricted-diagonals}\n \\mathcal A_\\kappa=\n \\{A:\\ A\\text{ diagonal},\\ 0\\le A\\le a_+I,\n                     \\ \\|A\\|\\langle A\\rangle\\le1-\\kappa\\}.$$ For each fixed word length and bounded diagonal coefficients, the preceding word diagnostics hold simultaneously over this class and all stable inverse parameters, with probability $1-Ce^{-cn}$. The fixed-parameter bilinear equivalents of (OpenAI 2026a, Lemma 3.4) [[AcceptedGap](#ref-AcceptedGap)] also hold, uniformly for deterministic $A\\in\\mathcal A_\\kappa$ and finitely many deterministic bounded-norm test vectors. They are not asserted simultaneously over all test vectors. The regularized determinant bound of (OpenAI 2026a, Lemma 3.5) [[AcceptedGap](#ref-AcceptedGap)] holds simultaneously for diagonal $0\\le V\\le I$ with $\\langle V\\rangle\\le1-\\kappa$, including its bounded-rank, bounded-norm perturbations.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-restricted-words"
+  },
+  {
+   "claim_id": "claim-cap-endpoint-stability",
+   "exact_statement": "For a critical GOE interaction the following assertions hold with probability tending to one over the disorder. For every fixed $q_0>0$ there is $\\rho_0>0$ such that $|F_0(y)|_n\\le\\rho_0$ implies $q(y)<q_0$. For every fixed $0<t_b\\le T<\\infty$, there are positive constants in <a href=\"#cap:stability-test\" data-reference-type=\"eqref\" data-reference=\"cap:stability-test\">[cap:stability-test]</a> and $a>0$ such that, conditionally on typical disorder, that test holds simultaneously along $$Y(t)=tX+B(t),\\qquad t_b\\le t\\le T,\n \\qquad X\\sim\\mu_0,$$ outside conditional probability $e^{-an}$. It also holds throughout a fixed normalized neighborhood of these fields. The conclusions persist for sufficiently small fixed changes of the interaction coefficient and sufficiently small normalized field displacements.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-endpoint-stability"
+  },
+  {
+   "claim_id": "claim-boundary-noise",
+   "exact_statement": "At every fixed sufficiently small $t>0$, the spectral band, sparse-row, and clipped-average diagnostics just described can be imposed on an event depending only on $(W,g)$ and the fixed parameter family. They hold there uniformly over all shifts in <a href=\"#cap:boundary-field\" data-reference-type=\"eqref\" data-reference=\"cap:boundary-field\">[cap:boundary-field]</a> and the coefficient balls, sparse supports, and recipe and filter types specified above. Their conditional failure probability tends to zero for typical $W$; with fixed buffered tolerances it is at most $e^{-c_tn}$ after decreasing $c_t>0$. The event is independent of any square-density test function.*\n\n\n*Suppose additionally that the covariance of $g$ is at least $ct$ on a spectral band contained in $\\{2-W\\le t\\}$ of rank at least $cnt^{3/2}$. Then, for every fixed center $v\\in\\mathbb R^n$, $$\\label{cap:small-ball}\n \\mathbb P_g\\bigl\\{|P_t^W(g+v)|_n<c't^{5/4}\\mid W\\bigr\\}\n \\le e^{-c''nt^{3/2}}.$$ The constants are uniform in the center. This is a probability bound for each center, not a simultaneous event over all centers. In particular, both types of estimate apply after averaging over any spin law that is fixed before the fresh Gaussian noise is drawn.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-boundary-noise"
+  },
+  {
+   "claim_id": "claim-tap-expansion",
+   "exact_statement": "Assume the preceding spectral and noise diagnostics, the zero-field approximate-root exclusion in Lemma <a href=\"#cap:endpoint-stability\" data-reference-type=\"ref\" data-reference=\"cap:endpoint-stability\">39</a>, the field representation <a href=\"#cap:boundary-field\" data-reference-type=\"eqref\" data-reference=\"cap:boundary-field\">[cap:boundary-field]</a>, and $|P_t^Wh|_n\\ge ct^{5/4}$. The test <a href=\"#cap:stability-test\" data-reference-type=\"eqref\" data-reference=\"cap:stability-test\">[cap:stability-test]</a> holds with positive fixed slack; in particular $F_h$ has a unique root $y_*(h)$. At all roots of $F_h$, and with arbitrarily small additional errors at sufficiently accurate approximate roots, set $$z=r+r^{-1},\\qquad R=(z-W)^{-1}.$$ For sufficiently small fixed $t$ and then sufficiently large $n$, $$\\label{cap:tap-leading}\n \\begin{gathered}\n q\\ge c\\sqrt t,\\qquad |y-r^{-1}Rh|_n=o(\\sqrt q),\\\\\n K_{\\mathrm{TAP}}\n =R-\\frac{4q\\,Ryy^{\\mathsf T}R/n}\n                 {1+4q\\langle yRy\\rangle}+o(q^{-2}).\n \\end{gathered}$$ Here $K_{\\mathrm{TAP}}=\\partial_h\\tanh y_*(h)$, and the last error is in operator norm. The errors tend to zero as the boundary scales decrease, after which all dimensional errors and perturbation tolerances are chosen.*\n\n\n*If $q$ is comparable to $\\sqrt t$, define the TAP potential per site by $$\\mathcal T(h)=\\langle hm\\rangle+\\tfrac12\\langle mWm\\rangle\n                  -\\langle I(m)\\rangle+\\tfrac14r^2,\n \\quad\n I(v)=\\tfrac12(1+v)\\log(1+v)+\\tfrac12(1-v)\\log(1-v).$$ With $\\kappa_0=1/3$, the value expansion is $$\\label{cap:tap-value}\n \\mathcal T(h)-\\tfrac12\\langle hRh\\rangle\n =\\frac{r^2}{4}+\\frac{zq}{2}-\\langle I(m)\\rangle\n                    -\\frac{\\langle eRe\\rangle}{2r^2}\n =\\frac14+\\kappa_0q^3+o(q^3),\n \\qquad e=\\tanh y-ry.$$ All assertions persist to any prescribed small macroscopic error under sufficiently small changes of the interaction coefficient, operator-norm perturbations, and normalized field displacements, with the TAP potential using the actual interaction and $jr^2/4$ at its actual root.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-tap-expansion"
+  },
+  {
+   "claim_id": "claim-marked-terminal-tests",
+   "exact_statement": "Fix the preceding geometric tolerances and a filtered-length tolerance $\\varepsilon_{\\rm len}>0$. For a sufficiently small fixed $p=p_0$ and then sufficiently small fixed $1-\\beta>0$, with probability tending to one in the capped data and auxiliary refinement, uniformly for $h\\in\\mathcal A_p(\\sigma)$, $$\\label{cap:terminal-test-input}\n \\mathsf T_h(D_0^c)\\le e^{-a k_p},$$ and $$\\label{cap:terminal-filtered-test}\n \\mathsf T_h\\!\\left\\{\n \\left|\\|R_fZ\\|^2-(n-\\operatorname{Tr}R_f)\\right|\n       >\\varepsilon_{\\rm len}n\\sqrt t\\right\\}\\le e^{-a k_p}.$$ Here $a>0$ may depend on $p_0$ and the fixed parameters. For either exceptional event, the same conclusion holds, with constants $C_j,a_j>0$, after inserting any fixed power of $1+\\|Z\\|/\\sqrt n+\\|R_fZ\\|/M_p$ in the expectation. A finite collection of stricter filtered-length tolerances may be imposed simultaneously. The same assertions hold for the actual refinement at this starting cap.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-marked-terminal-tests"
+  },
+  {
+   "claim_id": "claim-auxiliary-initialization",
+   "exact_statement": "For the preceding choices, with probability tending to one there is an intrinsic auxiliary cap potential $$\\widetilde\\phi_p(h)=\n \\log\\mathbb E_g\\exp\\overline\\Psi(h+\\sqrt\\Delta\\,g),\n \\qquad h\\in P_p,$$ whose Hessian satisfies <a href=\"#cap:invariant\" data-reference-type=\"eqref\" data-reference=\"cap:invariant\">[cap:invariant]</a> on the used annulus, with slack. Moreover, for a finite constant $C$ independent of $n$, $$\\label{cap:initial-gradient-error}\n \\sup_{h\\in\\mathcal A_p(\\sigma)}\n \\|\\nabla\\widetilde\\phi_p(h)-P_p\\nabla\\phi_p(h)\\|\\le C.$$ The constant may depend on all the fixed initialization parameters.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-auxiliary-initialization"
+  },
+  {
+   "claim_id": "claim-gradient-error-transport",
+   "exact_statement": "<span id=\"cap:error-transport\" label=\"cap:error-transport\"></span>Consider a deterministic increasing matrix precision $B_s$, with derivative $G_s\\succeq0$, and a terminal potential extended with a strict semiconcavity margin relative to the total remaining precision. Let $f_s$ be its backward log heat convolution and $K_s=\\nabla^2 f_s$. Along the true observation process, write $m_s$ for the posterior mean and $e_s=m_s-\\nabla f_s$. For a starting direction $v$, let $v_s$ solve $$\\label{cap:linear-flow}\n dv_s=dB_s\\,K_s v_s=G_sK_sv_s\\,ds.$$ Then $$e_{s_0}^{\\mathsf T}v\n      =\\mathbb E[e_{s_1}^{\\mathsf T}v_{s_1}\\mid h_{s_0}],$$ whenever the indicated polynomial moments are finite. The same identity holds by approximation for the extensions used here.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-gradient-transport"
+  },
+  {
+   "claim_id": "claim-gradient-contraction",
+   "exact_statement": "Suppose the parent auxiliary potential is intrinsic, satisfies the curvature invariant with slack, and its true gradient discrepancy is bounded by $D/p$ on its agreement annulus, where $D<\\infty$ is fixed. Put $c=\\gamma p$. Extend the parent potential as in Proposition <a href=\"#cap:curvature-induction\" data-reference-type=\"ref\" data-reference=\"cap:curvature-induction\">34</a> and take its log heat convolution to $c$. For the parameter choices above, with probability tending to one over the unused refinement, $$\\label{cap:gradient-contraction-bound}\n \\sup_{h\\in\\mathcal A_c(\\sigma)}\n \\|P_c\\nabla\\phi_c(h)-\\nabla\\widetilde\\phi_c(h)\\|\n       \\le\\frac1c\\bigl(\\tfrac12D+o_n(1)\\bigr).$$ This conclusion is uniform in the child field. For a fixed finite number of comparison steps, the additive errors tend to zero simultaneously.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-gradient-contraction"
+  },
+  {
+   "claim_id": "claim-remove-auxiliary",
+   "exact_statement": "Fix $\\gamma$ and the curvature tolerances. If the parent gradient discrepancy is at most $D/p$ on the used annulus, then one further convolution makes the true and auxiliary output Hessians differ by $O_\\gamma(D)+o_n(1)$ in child $c^2$ units. In particular, for $D$ sufficiently small, the true output satisfies <a href=\"#cap:invariant\" data-reference-type=\"eqref\" data-reference=\"cap:invariant\">[cap:invariant]</a> whenever the auxiliary output satisfies it with the established slack.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cap-remove-auxiliary"
+  },
+  {
+   "claim_id": "claim-true-curvature",
+   "exact_statement": "Fix a finite field radius $L_0$. There is $C=C(L_0)<\\infty$ such that for every $\\epsilon>0$ there are constants $p_{\\rm top}>0$ and $s_0>0$ for which, with probability tending to one, the following assertions hold simultaneously for every $$p_{\\min}(n)\\le p\\le p_{\\rm top},\\qquad\n p_{\\min}(n)=\\left(\\frac{\\sqrt{\\log n}}{n}\\right)^{1/3}.$$ For all $h\\in P_p$ with $|\\alpha_p(h)|\\le s_0p^2$, $$\\label{cap:true-sharp-curvature}\n P_p\\nabla^2\\phi_p(h)P_p\n       \\preceq \\frac{1+\\epsilon}{p^2}P_p.$$ For all $h\\in P_p$ with $\\|h\\|\\le L_0p^2M_p$, $$\\label{cap:true-ball-curvature}\n P_p\\nabla^2\\phi_p(h)P_p\\preceq\\frac C{p^2}P_p.$$ The constants are independent of $n,p,h$. The field radius and all coarse constants may be fixed before the sharp curvature tolerances. The lower endpoint $p_{\\min}(n)$ may be changed by a fixed factor.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-true-curvature"
+  },
+  {
+   "claim_id": "claim-layer-lemma",
+   "exact_statement": "Let $\\eta$ be a strictly positive probability measure on a finite state space, let $\\mathcal E$ be a reversible Markov Dirichlet form, and suppose $\\min_x\\eta(x)\\ge e^{-M}$, with $M\\ge\\log2$. Suppose that, for some $A>0$, $$\\mathcal E(g)\\ge A\\eta[g^2]\\log\\frac1{\\eta[g^2]}$$ for every $0\\le g\\le1$ supported on a set of measure at most $1/2$ and satisfying $$D\\!\\left(\\frac{g^2\\eta}{\\eta[g^2]}\\middle\\Vert\\eta\\right)\n \\ge\\frac12\\log\\frac1{\\eta[g^2]},\\qquad\n 0<\\log\\frac1{\\eta[g^2]}\\le M.$$ Then, with an absolute constant $C$, $$\\label{cap:layer-lsi}\n \\operatorname{Ent}_{\\eta}(f^2)\n \\le \\frac{C(1+\\log_+M)^2}{A}\\,\\mathcal E(f)\n \\qquad\\text{for every real-valued }f.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-layer-lemma"
+  },
+  {
+   "claim_id": "claim-observation-identities",
+   "exact_statement": "Along the continuous portions of this path, $$\\begin{aligned}\n -\\dot H(s)\n &=\\tfrac12\\mathbb E_{Q_\\nu}\n       \\|m_{\\nu,s}-m_{\\mu,s}\\|_{G_s}^2,\n       \\label{cap:entropy-identity}\\\\\n \\mathbb E_{Q_\\nu}\n     \\frac{\\mathcal D_{\\mu_s}(f)}{N_s}\n &\\le\\frac{\\mathcal D_0(f)}N.\n       \\label{cap:energy-conditioning}\n\\end{aligned}$$ The continuous entropy-loss integral up to a stopping time, together with the information from preceding precision jumps, gives the relative entropy of the stopped observation laws. Moreover, for $v\\ge0$, $$\\label{cap:conditional-entropy-tail}\n Q_\\nu(l_s>L+v)\\le e^{-v},\\qquad\n Q_\\nu(E)\\le e^L Q_\\mu(E)$$ for every observation event $E$, including stopped-path events.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-observation-identities"
+  },
+  {
+   "claim_id": "claim-critical-log-sobolev",
+   "exact_statement": "For every fixed $\\rho>0$, with probability tending to one over the Gaussian couplings, the critical zero-field Gibbs measure satisfies $$\\label{cap:final-lsi}\n \\operatorname{Ent}_\\mu(f^2)\n \\le n^{2/3+\\rho}\\mathcal D_0(f)\n \\qquad\\text{for every }f:\\{-1,1\\}^n\\longrightarrow\\mathbb R.$$ The form is normalized for the generator $\\mathcal L=\\sum_{i=1}^n(Q_i-I)$, where $Q_i$ is conditional expectation given $X_{-i}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cap-thm-lsi"
+  },
+  {
+   "claim_id": "claim-linear-lower-test",
+   "exact_statement": "The static comparison also gives a direct, weaker-in-quantifiers route to the matching worst-start lower exponent. Fix $0<\\epsilon<1/3$ and take $p=n^{-1/3+\\epsilon}$. In the uncapped zero-field spherical model, $\\|P_pX\\|\\ge cM_p$ with probability tending to one. To see this, compare with the Gaussian of precision $2+\\xi p^2-J$. A spectral band with gaps comparable to $p^2$ already has this lower bound outside $e^{-ck_p}$. The lower norm-density estimate and the bounded density of the remaining coordinates transfer it through norm conditioning, when $\\xi>0$ is sufficiently small. Haar first moments and the zero-field second-moment comparison in Proposition <a href=\"#cap:static-comparison\" data-reference-type=\"ref\" data-reference=\"cap:static-comparison\">33</a> transfer the conclusion to the cube with high Gibbs probability for typical disorder. Spin symmetry and $\\operatorname{rank}P_p\\le Cnp^3$ imply that some Euclidean unit vector $a$ has $$\\operatorname{Var}_\\mu(a^{\\mathsf T}X)\\ge c p^{-2},\n \\qquad\n \\mathcal D_0(a^{\\mathsf T}X)\n =\\sum_i a_i^2\\mu[\\operatorname{Var}(X_i\\mid X_{-i})]\\le1.$$ Thus the rate-one spectral gap is at most $Cp^2$. Testing a gap eigenfunction from a state where its absolute value is maximal gives $t_{\\rm mix}(1/4)\\ge c p^{-2}$; the discrete gap is smaller by $n$. Letting the fixed $\\epsilon$ decrease proves the same lower exponents. The realized-start statement and the bounds for every arbitrarily slowly diverging $M_n$ remain the separate conclusions of Theorem <a href=\"#thm:accepted-critical\" data-reference-type=\"ref\" data-reference=\"thm:accepted-critical\">2</a>.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cap-lower-test"
+  },
+  {
+   "claim_id": "claim-profile-to-mixing",
+   "exact_statement": "Let $\\mu$ be a full-support law on the cube, with heat-bath form $\\mathcal D$, generator $\\mathcal L$, and one-attempt kernel $P$. Suppose that for some $\\alpha>0$ and every nonnegative $f$ with support mass $0<p=\\mu(f>0)\\le1/2$, $$\\mathcal D(f)\\ge \\alpha\\,\\mu(f^2)\\log(1/p).\n \\label{eq:common-support-profile}$$ Write $t_{\\mathrm{mix}}^{\\mathrm{ct}}(\\varepsilon)$ and $t_{\\mathrm{mix}}^{\\mathrm{dt}}(\\varepsilon)$ for the worst-start total-variation mixing times of $e^{t\\mathcal L}$ and $P^k$, respectively. Put $$\\mu_{\\min}=\\min_x\\mu(x),\\qquad\n M=\\max\\{8,\\mu_{\\min}^{-1}\\},\\qquad\n k_0=\\left\\lceil\\frac{2n}\\alpha\n            \\log\\frac{\\log(M/4)}{\\log2}\\right\\rceil.$$ Then, for every $0<\\varepsilon<1/2$, $$\\begin{aligned}\n t_{\\mathrm{mix}}^{\\mathrm{ct}}(\\varepsilon)\n &\\le\\frac1\\alpha\\log\\frac{\\log(M/4)}{\\log2}\n      +\\frac1{2\\alpha\\log2}\\log\\frac7{4\\varepsilon^2},\n \\label{prof:continuous-mixing}\\\\\n t_{\\mathrm{mix}}^{\\mathrm{dt}}(\\varepsilon)\n &\\le k_0+\n    \\left\\lceil\\frac n{\\alpha\\log2}\n                       \\log\\frac7{4\\varepsilon^2}\\right\\rceil.\n \\label{prof:discrete-mixing}\n\\end{aligned}$$ In particular, if $\\log(1/\\mu_{\\min})\\le Cn$, then for every fixed $\\varepsilon>0$ the worst-start mixing time is $O_{C,\\varepsilon}(\\alpha^{-1}\\log(n+1))$ in per-site time and $O_{C,\\varepsilon}(n\\alpha^{-1}\\log(n+1))$ attempts.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-profile-to-mixing"
+  },
+  {
+   "claim_id": "claim-entropy-production-exponent",
+   "exact_statement": "For every realization of the disorder, $$\\frac{R_J}{2}\\le C_{\\mathrm{EP},J}\\le\\frac{C_{\\mathrm{LS},J}}4.$$ Consequently, for the critical zero-field Gaussian model, $C_{\\mathrm{EP},J}=n^{2/3+o(1)}$ in disorder probability, with the fixed exponent-slack meaning of [thm:main](#thm:main). For every initial probability law $\\nu$ on the cube and every $t\\ge0$, $$\\operatorname{KL}(\\nu e^{t\\mathcal L_J}\\Vert\\mu_J)\n \\le e^{-t/C_{\\mathrm{EP},J}}\\operatorname{KL}(\\nu\\Vert\\mu_J)\n \\le e^{-4t/C_{\\mathrm{LS},J}}\\operatorname{KL}(\\nu\\Vert\\mu_J).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-entropy-production"
+  }
+ ],
+ "paper": "papers/EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-M-0451_PM-227.8_Critical_mixing_in_the_SherringtonKirkpatrick_model.md",
+ "purpose": "Critical mixing in the Sherrington–Kirkpatrick model",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "50c8925166903922c263b661891262ffa9a15e1484d1394abc19dc8fc61a6e00",
+   "pm.domains.v2": "ae6db6c809acff66fdcd303c5d9220440844923fc4a58f36f6beacde082583ae",
+   "pm.edges.v2": "885600ffcbbd622eeaf925fd35b8d78a4aba3f10926eae7ea700351ed440e553",
+   "pm.extraction.v2": "be24c083abce69e8c40a1d741802b4245ba3d1f4d5bd17126e43b9804190ae5e",
+   "pm.formal.v2": "57974df2a63fb2d214ae395a4b5a8371fc15fd7686dc163f13fdf06d41faad41",
+   "pm.limits.v2": "fe8d0081c36588e651185e096d2bd1c5f931f9f17d5442c98f880594269efe99",
+   "pm.node.v2": "a8eef88b7fb0d058206f4fd06ace08cfdcef0498ba30ace67b373e41cfcdb7a0",
+   "pm.objects.v2": "d31411791e3ad7961a8f57040fd82cb7f90c7eedb2a3edab9e6a9625a482bc9a",
+   "pm.provenance.v2": "5a39ebd552d5d6cc12f43e9fadb7c12c1eb190caddae317a9ee034255f48a0f7",
+   "pm.quantities.v2": "324af148c44721c8d3ae7bdc1eed300ed5eea39fec7aea5ce400932d8d944303",
+   "pm.reading.v2": "1edd880d83997c29b85899f418a1cfd7e9e4510b63dd065df1c1b8cecb726857",
+   "pm.roadmap.v2": "c8ae6163619f8239bc16ff88a3f0f94ed3ff6c348e1f54bad0e4296b37ad64fd",
+   "pm.search.v1": "337c487d1151d79d142f00c26f5412c027317e47508c0c5b2d8749731367a026",
+   "pm.triptych.v2": "1fb939bba88ebaa08334a2fe4b04c316c3904c822d4e41fbab7aa6b891947237"
+  },
+  "canonical_sha256": "7d9574b11afedc29946079e6a70ab12f408027c3e255452dd508e874e09485c6",
+  "paper_sha256": "5ef58040e06c860d21e9e31703dcc71c4083162dd434a456c08df4b0f5706f16",
+  "repaired_body_sha256": "6a9e39b41174128a614eac4bc9b055101ce270a2ddc7a33a486360200b3d16d8"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "7be16c05acd28342ecce1a0cb3e0c71f02a6f450cf767b0942bda52fcf98d6d9",
+   "receipt_sha256": "b9af10f90887496fa752aacaf546c3414d191856c4683b13abebc885676f68b6",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Critical mixing in the Sherrington–Kirkpatrick model"
+}

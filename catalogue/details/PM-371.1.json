@@ -1,0 +1,677 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 621739,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 187060
+ },
+ "coordinate": "EN-109-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-H-0731",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-cor-gaussian",
+     "quote": "In particular, the following assertion is false",
+     "quote_sha256": "6c0493177e5e1d8eee7a2bf319c1aa39304ab84a37a0f45ac3948e5ff6f2d12c"
+    }
+   ],
+   "query": "universal almost-sure global existence for Gaussian data in energy-supercritical Schrödinger equations",
+   "reason": "The corollary shows this assertion is false for a fixed pair of dimension and power."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-blowup",
+     "quote": "a nonempty open set $\\mathcal U\\subset H^k(\\mathbb T^{12};\\mathbb C)$",
+     "quote_sha256": "3d59b9eb85802d743d4662030fa641767fe0b132f8246a6fb05f375e2aea646f"
+    }
+   ],
+   "query": "blowup for arbitrary data outside the neighborhood",
+   "reason": "The theorem only gives blowup for data in a nonempty open set."
+  }
+ ],
+ "family": "PM-371",
+ "id": "PM-371.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "eq:nls",
+    "claim_id": "claim-blowup-open-set",
+    "statement": "where $p\\geq3$ is odd."
+   },
+   {
+    "anchor": "stmt-cor-gaussian",
+    "claim_id": "claim-gaussian-blowup",
+    "statement": "for every $\\alpha>k+6$"
+   },
+   {
+    "anchor": "stmt-free-main",
+    "claim_id": "claim-free-matching",
+    "statement": "$(b,Z)\\in\\mathcal D$"
+   },
+   {
+    "anchor": "stmt-free-slow",
+    "claim_id": "claim-slow-solution",
+    "statement": "$\\operatorname{Re}q>-1$, $\\operatorname{Re}x\\ge0$, $x\\ne0$"
+   },
+   {
+    "anchor": "stmt-free-laguerre",
+    "claim_id": "claim-laguerre-recurrence",
+    "statement": "Let $L_n(t)=e^t\\partial_t^n(e^{-t}t^n)/n!$ be the Laguerre polynomials"
+   },
+   {
+    "anchor": "stmt-free-cone",
+    "claim_id": "claim-strict-cone",
+    "statement": "Suppose $\\operatorname{Re}\\lambda\\ge-1/32$ and $K\\ge3$."
+   },
+   {
+    "anchor": "stmt-free-columns",
+    "claim_id": "claim-matching-columns",
+    "statement": "including parameters where an individual $t_n$ or $d_n$ vanishes"
+   },
+   {
+    "anchor": "stmt-free-high-angular",
+    "claim_id": "claim-high-angular-exclusion",
+    "statement": "For $(b,Z)\\in\\mathcal D$, $\\ell\\ge4$, and $\\operatorname{Re}\\lambda\\ge-1/32$"
+   },
+   {
+    "anchor": "stmt-free-boundary",
+    "claim_id": "claim-counting-boundary",
+    "statement": "uniformly for $(b,Z)\\in\\mathcal D$ and $0\\le\\rho\\le1$"
+   },
+   {
+    "anchor": "stmt-free-winding",
+    "claim_id": "claim-winding-count",
+    "statement": "For $0\\le\\ell\\le3$"
+   },
+   {
+    "anchor": "stmt-free-profile-degree",
+    "claim_id": "claim-profile-matching-degree",
+    "statement": "((b,Z)\\in\\mathcal D)"
+   },
+   {
+    "anchor": "stmt-free-exterior",
+    "claim_id": "claim-exterior-inequalities",
+    "statement": "For $(b,Z)\\in\\mathcal D$"
+   },
+   {
+    "anchor": "stmt-profile-existence",
+    "claim_id": "claim-profile-existence",
+    "statement": "normalized by $Q_a(0)>0$"
+   },
+   {
+    "anchor": "stmt-profile-boundary-modulus",
+    "claim_id": "claim-boundary-modulus",
+    "statement": "Uniformly on $\\mathcal D$"
+   },
+   {
+    "anchor": "stmt-profile-inner",
+    "claim_id": "claim-inner-amplitude",
+    "statement": "For all sufficiently small $a>0$ and all $(b,Z)\\in\\mathcal D$"
+   },
+   {
+    "anchor": "stmt-profile-core-limit",
+    "claim_id": "claim-core-identification",
+    "statement": "suppose $a_n\\downarrow0$ and $(b_n,Z_n)\\to(b,Z)\\in\\mathcal D$."
+   },
+   {
+    "anchor": "stmt-profile-exterior",
+    "claim_id": "claim-slow-exterior",
+    "statement": "For all sufficiently small $a>0$ and $(b,Z)\\in\\mathcal D$"
+   },
+   {
+    "anchor": "stmt-profile-matching",
+    "claim_id": "claim-degree-matching",
+    "statement": "For every sufficiently small $a>0$"
+   },
+   {
+    "anchor": "stmt-profile-pressure",
+    "claim_id": "claim-pressure-deformation",
+    "statement": "The matched profiles"
+   },
+   {
+    "anchor": "stmt-spectrum-classification",
+    "claim_id": "claim-mode-classification",
+    "statement": "For all sufficiently small admissible $a>0$"
+   },
+   {
+    "anchor": "stmt-spec-block-reduction",
+    "claim_id": "claim-block-reduction",
+    "statement": "on a half-line, where $\\Lambda$ is diagonal"
+   },
+   {
+    "anchor": "stmt-spec-slow-basis",
+    "claim_id": "claim-slow-basis",
+    "statement": "For bounded $\\lambda,\\ell$ and small $a$"
+   },
+   {
+    "anchor": "stmt-spec-real-bound",
+    "claim_id": "claim-real-part-bound",
+    "statement": "For all sufficiently small $a$"
+   },
+   {
+    "anchor": "stmt-spec-remote-data",
+    "claim_id": "claim-remote-robin",
+    "statement": "Every outgoing solution along this sequence"
+   },
+   {
+    "anchor": "stmt-spec-scalar-turn",
+    "claim_id": "claim-scalar-turning-point",
+    "statement": "Fix one channel and write $F=F_h$."
+   },
+   {
+    "anchor": "stmt-spec-boundary-estimate",
+    "claim_id": "claim-shell-robin",
+    "statement": "After subselection, every outgoing solution along an escaping parameter sequence"
+   },
+   {
+    "anchor": "stmt-spec-high-exclusion",
+    "claim_id": "claim-escaping-exclusion",
+    "statement": "$-1/32\\le\\operatorname{Re}\\lambda\\le4$"
+   },
+   {
+    "anchor": "stmt-spec-inverse-limit",
+    "claim_id": "claim-inverse-convergence",
+    "statement": "Fix $\\ell$ and a convergent profile subsequence."
+   },
+   {
+    "anchor": "stmt-spec-compact-pencil",
+    "claim_id": "claim-compact-pencil",
+    "statement": "Near each bounded candidate $\\lambda$, choose $B_2$ sufficiently large."
+   },
+   {
+    "anchor": "stmt-spec-interface",
+    "claim_id": "claim-interface-conditions",
+    "statement": "consists of free slow exterior modes satisfying"
+   },
+   {
+    "anchor": "stmt-spec-simplicity",
+    "claim_id": "claim-symmetry-roots",
+    "statement": "At the limiting disk root $j(b,Z)=0$"
+   },
+   {
+    "anchor": "stmt-lin-spatial",
+    "claim_id": "claim-spatial-estimates",
+    "statement": "uniformly for $L\\ge1$"
+   },
+   {
+    "anchor": "stmt-lin-compact-error",
+    "claim_id": "claim-compact-errors",
+    "statement": "The constants are uniform for all sufficiently large current torus scales."
+   },
+   {
+    "anchor": "stmt-lin-observation",
+    "claim_id": "claim-energy-observation",
+    "statement": "every torus linear solution with sufficiently large starting scale"
+   },
+   {
+    "anchor": "stmt-linear-decay",
+    "claim_id": "claim-stable-evolution",
+    "statement": "Constants depend on the fixed profile, $a$, and $k$."
+   },
+   {
+    "anchor": "stmt-linear-torus",
+    "claim_id": "claim-torus-transfer",
+    "statement": "For each fixed $M>0$"
+   },
+   {
+    "anchor": "stmt-nl-step",
+    "claim_id": "claim-nonlinear-step",
+    "statement": "whenever $\\|v(0)\\|_{Y_L}\\leq\\delta$"
+   },
+   {
+    "anchor": "stmt-nl-graph",
+    "claim_id": "claim-stable-graph",
+    "statement": "For all sufficiently large $L$"
+   },
+   {
+    "anchor": "stmt-nl-parameter-expansion",
+    "claim_id": "claim-parameter-expansion",
+    "statement": "For $|d'|\\leq\\rho$ with $\\rho$ fixed and small"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "stable finite-time blowup on an open set of data",
+    "evidence": [
+     {
+      "anchor": "pm-h-4",
+      "quote": "Write $a=1/(p-1)$.",
+      "quote_sha256": "512dafc6cba1def9054eb5b1d7e5ce47a6e8b021f8d528092425a5e1fce2af40"
+     }
+    ],
+    "requires_concepts": [
+     "Sobolev spaces on the torus",
+     "self-similar stationary profiles",
+     "spectrum of the linearization",
+     "Brouwer degree"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-blowup-open-set",
+   "exact_statement": "There exist an odd integer $p\\geq3$, a finite integer $k>8$, and a nonempty open set $\\mathcal U\\subset H^k(\\mathbb T^{12};\\mathbb C)$ with the following property. For every $u_0\\in\\mathcal U$, the unique local solution of <a href=\"#eq:nls\" data-reference-type=\"eqref\" data-reference=\"eq:nls\">[eq:nls]</a> extends to $$u\\in C([0,T);H^k)\\cap C^1([0,T);H^{k-2})$$ for some finite $T>0$, but has no continuous $H^k$ extension through $T$. More precisely, there are $x_*\\in\\mathbb T^{12}$ and $c_0>0$ such that $$\\lim_{t\\uparrow T}(T-t)^{1/(p-1)}|u(t,x_*)|=c_0.$$ The power can be chosen sufficiently large, and $k$ is then fixed after that choice.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-blowup"
+  },
+  {
+   "claim_id": "claim-gaussian-blowup",
+   "exact_statement": "For the fixed power $p$ and index $k$ in Theorem <a href=\"#thm:blowup\" data-reference-type=\"ref\" data-reference=\"thm:blowup\">1</a>, and for every $\\alpha>k+6$, the initial datum $$\\label{eq:gaussian}\n u_0^\\omega(x)=\\sum_{n\\in\\mathbb Z^{12}}\n       g_n(\\omega)\\langle n\\rangle^{-\\alpha}e^{in\\cdot x}$$ belongs to $H^k$ almost surely and has positive probability of finite-time blowup. In particular, the following assertion is false: for every energy-supercritical pair $(d,p)$ there is a finite $\\alpha_0(d,p)$ such that, for every $\\alpha>\\alpha_0(d,p)$ and every $$d/2+2<m<\\alpha-d/2,$$ the local $H^m$ solution with the Gaussian datum extends almost surely to $C(\\mathbb R;H^m(\\mathbb T^d))$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-gaussian"
+  },
+  {
+   "claim_id": "claim-free-matching",
+   "exact_statement": "For every $(b,Z)\\in\\mathcal D$, the following conclusions hold.*\n\n1.  *The quotient $$j(b,Z)=-\\frac{H'(-ib,6,-iZ)}{H(-ib,6,-iZ)}$$ is well defined and satisfies $|j(b,Z)|<3\\cdot10^{-9}$. It is nonzero on $\\partial\\mathcal D$, and, identifying $\\mathbb C$ with $\\mathbb R^2$ in the order real part, imaginary part, $$\\deg(j,\\mathcal D,0)=-1.$$*\n\n\n2.  *For every real $z\\ge Z$, $H(-ib,6,-iz)\\ne0$ and $$\\label{free:exterior-bounds}\n     \\operatorname{Re}j(b,z)<.043.$$ For $z\\ge3$ one also has $\\operatorname{Im}j(b,z)>0$.*\n\n3.  *For $\\ell\\in\\{0,1,2,\\ldots\\}$ and $h\\in\\{1,-1\\}$ define $$\\label{free:jet}\n     q_h=\\lambda+\\ell/2-hi b,\\qquad\n     J_h(\\lambda)=\n     \\begin{pmatrix}H(q_h,6+\\ell,-hiZ)\\\\-H'(q_h,6+\\ell,-hiZ)\\end{pmatrix}.$$ The columns $J_h$ are holomorphic and nonzero on a neighborhood of $\\operatorname{Re}\\lambda\\ge-1/32$. The determinant $\\Delta_\\ell(\\lambda;b,Z)=\\det(J_+(\\lambda),J_-(\\lambda))$ has no zero on $\\operatorname{Re}\\lambda=-1/32$. In the closed half-plane $\\operatorname{Re}\\lambda\\ge-1/32$ its numbers of zeros, counted with holomorphic multiplicity, are $$\\begin{array}{c|ccc}\n     \\ell&0&1&\\ell\\ge2\\\\ \\hline\n     \\#\\{\\Delta_\\ell=0\\}&2&1&0.\n     \\end{array}$$*\n\n*The locations of the symmetry zeros are identified later at parameters where $j(b,Z)=0$; the count in this proposition holds on the entire disk.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-free-main"
+  },
+  {
+   "claim_id": "claim-slow-solution",
+   "exact_statement": "For $\\operatorname{Re}q>-1$, $\\operatorname{Re}x\\ge0$, $x\\ne0$, define, with principal powers, $$\\label{free:H-definition}\n H(q,m,x)=x^{-q}\\left\\{1+\\frac1{\\Gamma(q)}\n \\int_0^\\infty e^{-u}u^{q-1}\n \\left[(1+u/x)^{m-1-q}-1\\right]\\,du\\right\\}.$$ Here $m$ may in particular be any positive integer used below. This definition is holomorphic in $q$, including $q=0$, and in $x$ on the interior of the indicated region, with holomorphic continuation across each nonzero point of its imaginary boundary. Primes on $H$ denote derivatives in its last argument. It satisfies $$\\label{free:H-equation}\n xH''+(m-x)H'-qH=0,\\qquad\n H'(q,m,x)=-qH(q+1,m+1,x),\\qquad H(0,m,x)=1.$$ For every $N\\ge1$ it has the expansion $$\\label{free:H-expansion}\n H(q,m,x)=x^{-q}\\left\\{\n \\sum_{j=0}^{N-1}\\frac{(-1)^j(q)_j(1+q-m)_j}{j!x^j}\n +O(|x|^{-N})\\right\\}.$$ Here $(q)_0=1$ and $(q)_j=\\prod_{n=0}^{j-1}(q+n)$ for $j\\ge1$. The expansion is uniform for $\\operatorname{Re}x\\ge0$, $|x|\\ge1$, and compact parameter sets. The same remainder estimate holds after any fixed number of $x\\partial_x$ derivatives of the bracket. The symbol expansion specifies the slow solution, without an oscillatory component on the imaginary rays.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-free-slow"
+  },
+  {
+   "claim_id": "claim-laguerre-recurrence",
+   "exact_statement": "Let $L_n(t)=e^t\\partial_t^n(e^{-t}t^n)/n!$ be the Laguerre polynomials, orthonormal for $e^{-t}\\,dt$ on $[0,\\infty)$. Write $$G=\\sum_{n\\ge0}g_nL_n,\\qquad\n B_n=\\sum_{k\\ge n}g_k,\\qquad C_n=\\sum_{k\\ge n}(k-n)g_k.$$ These series and their parameter derivatives converge rapidly. With $t_n=q+n$ and $d_n=t_n-M$, one has $$\\begin{aligned}\n &(B_0,C_0)=(G(0),-G'(0)),\\label{free:initial-tail}\\\\\n &t_ng_n=-MB_{n+1}-sC_n,\\qquad\n d_nB_{n+1}=t_nB_n+sC_n,\\qquad\n C_{n+1}=C_n-B_{n+1}.\\label{free:recurrence}\n\\end{aligned}$$ The real quadratic form $$\\label{free:cone-form}\n p_n=\\frac M2|B_n|^2+\\operatorname{Re}(s\\overline{B_n}C_n)$$ satisfies the exact identity $$\\label{free:cone-increment}\n p_{n+1}-p_n=\n (\\operatorname{Re}\\lambda+n-5/2)|g_n|^2.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-free-laguerre"
+  },
+  {
+   "claim_id": "claim-strict-cone",
+   "exact_statement": "Suppose $\\operatorname{Re}\\lambda\\ge-1/32$ and $K\\ge3$. For $n\\ge K$ the normalized coefficients $\\widehat g_n=g_n/(q)_K$, and their sums $\\widehat B_K=B_K/(q)_K$, $\\widehat C_K=C_K/(q)_K$, extend holomorphically across $q=0$. They satisfy $$\\label{free:strict-cone}\n \\frac M2|\\widehat B_K|^2+\n \\operatorname{Re}(s\\overline{\\widehat B_K}\\widehat C_K)\n =-\\sum_{n\\ge K}(\\operatorname{Re}\\lambda+n-5/2)\n |\\widehat g_n|^2<0.$$ Consequently $\\widehat C_K\\ne0$, and $$\\label{free:tail-disk}\n R_h=\\widehat B_K/\\widehat C_K\\quad\\hbox{is holomorphic},\\qquad\n |R_h+s/M|<Z/M.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-free-cone"
+  },
+  {
+   "claim_id": "claim-matching-columns",
+   "exact_statement": "Define $$\\label{free:backward}\n F_n=\\begin{pmatrix}d_n-s&-s\\\\t_n&t_n\\end{pmatrix},\\qquad\n P_K=F_0F_1\\cdots F_{K-1}.$$ Then, including parameters where an individual $t_n$ or $d_n$ vanishes, $$\\label{free:column-identity}\n P_K\\begin{pmatrix}R_h\\\\1\\end{pmatrix}\n =\\frac1{\\widehat C_K}\n \\begin{pmatrix}H(q,M+1,-s)\\\\-H'(q,M+1,-s)\\end{pmatrix}.$$ The scalar on the right is holomorphic and nonzero. The column is nonzero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-free-columns"
+  },
+  {
+   "claim_id": "claim-high-angular-exclusion",
+   "exact_statement": "For $(b,Z)\\in\\mathcal D$, $\\ell\\ge4$, and $\\operatorname{Re}\\lambda\\ge-1/32$, one has $\\Delta_\\ell(\\lambda;b,Z)\\ne0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-free-high-angular"
+  },
+  {
+   "claim_id": "claim-counting-boundary",
+   "exact_statement": "There is a rectangle with left edge $\\operatorname{Re}\\lambda=-1/32$ and other edges sufficiently far to the right and above and below, uniformly for $(b,Z)\\in\\mathcal D$ and $0\\le\\rho\\le1$, on whose boundary the homotoped determinant is nonzero. The same exclusions hold on every larger such rectangle.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-free-boundary"
+  },
+  {
+   "claim_id": "claim-winding-count",
+   "exact_statement": "For $0\\le\\ell\\le3$ the zero counts in Proposition <a href=\"#free:main\" data-reference-type=\"ref\" data-reference=\"free:main\">3</a> are $2,1,0,0$, respectively.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-free-winding"
+  },
+  {
+   "claim_id": "claim-profile-matching-degree",
+   "exact_statement": "The first conclusion of Proposition <a href=\"#free:main\" data-reference-type=\"ref\" data-reference=\"free:main\">3</a> holds. More precisely there is an invertible real-linear map $\\mathcal L:\\mathbb R^2\\to\\mathbb C$ with negative determinant and minimum stretch greater than $.048$ such that $$\\label{free:profile-linearization}\n |j(b,Z)-\\mathcal L(b-b_*,Z-Z_*)|<2.5\\cdot10^{-11}\n \\qquad((b,Z)\\in\\mathcal D).$$ In particular $|j|>4.55\\cdot10^{-10}$ on $\\partial\\mathcal D$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-free-profile-degree"
+  },
+  {
+   "claim_id": "claim-exterior-inequalities",
+   "exact_statement": "For $(b,Z)\\in\\mathcal D$, $H(-ib,6,-iz)$ is nonzero for all $z\\ge Z$, and the inequalities in <a href=\"#free:exterior-bounds\" data-reference-type=\"eqref\" data-reference=\"free:exterior-bounds\">[free:exterior-bounds]</a> and $\\operatorname{Im}j(b,z)>0$ for $z\\ge3$ hold. In radial variables, for any nonzero constant multiple $Q(r)$ of $H(-ib,6,-ir^2/4)$, $$\\label{free:radial-quotients}\n \\frac{A'}A=-\\frac r2\\operatorname{Im}j(b,r^2/4),\\qquad\n \\frac wr=\\frac12+\\operatorname{Re}j(b,r^2/4),\n \\quad A=|Q|,\\quad w=r/2+2\\partial_r\\arg Q.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-free-exterior"
+  },
+  {
+   "claim_id": "claim-profile-existence",
+   "exact_statement": "There is $a_0>0$ such that, for every $0<a<a_0$, there are $(b_a,Z_a)\\in\\mathcal D$ and a smooth nonvanishing radial stationary solution $Q_a=A_ae^{i\\phi_a}$ of <a href=\"#profile:similarity\" data-reference-type=\"eqref\" data-reference=\"profile:similarity\">[profile:similarity]</a>, normalized by $Q_a(0)>0$. They have the following properties.*\n\n\n1.  *The identities <a href=\"#profile:amplitude\" data-reference-type=\"eqref\" data-reference=\"profile:amplitude\">[profile:amplitude]</a>–<a href=\"#profile:divergence\" data-reference-type=\"eqref\" data-reference=\"profile:divergence\">[profile:divergence]</a> hold, $0<P_a\\le1$, and there are constants $c,C>0$, independent of small $a$, such that $$\\label{profile:coercive-bounds}\n     C^{-1}\\langle r\\rangle^{-4a}\\le\\mu_a(r)\n           \\le C\\langle r\\rangle^{-4a},\\qquad\n     \\nabla w_a\\ge c I.$$*\n\n\n2.  *If $a_n\\downarrow0$ and $(b_{a_n},Z_{a_n})\\to(b,Z)$, then $j(b,Z)=0$, where $j$ is the free matching function of Proposition <a href=\"#free:main\" data-reference-type=\"ref\" data-reference=\"free:main\">3</a>. With $R=2\\sqrt Z$, the profiles converge in $C^1$ on every compact ball to $$\\label{profile:limit}\n     Q_0(r)=\n     \\begin{cases}\n     1,&0\\le r\\le R,\\\\[2pt]\n     \\displaystyle\\frac{H(-ib,6,-ir^2/4)}{H(-ib,6,-iZ)},&r\\ge R.\n     \\end{cases}$$ The exterior amplitude is strictly decreasing and has a positive limit at infinity. The convergence is $C^\\infty$ on compact subsets of $\\{r>R\\}$. On every fixed ball, $$\\label{profile:pressure-limit}\n     P_{a_n}\\ \\stackrel{*}{\\rightharpoonup}\\ b\\mathbf1_{\\{r<R\\}}\n           \\quad\\hbox{in }L^\\infty,$$ and $\\mu_{a_n},w_{a_n}$ converge in $C^1$. In particular $P_{a_n}/a_n\\to0$ locally uniformly on $\\{r>R\\}$.*\n\n\n\n\n\n3.  *On the fixed exterior $r\\ge r_b$, $$\\label{profile:tail}\n     Q_a(r)=r^{\\nu_a}f_a(r),\\qquad \\nu_a=-2a+2ib_a,\n     \\qquad 0<\\kappa\\le|f_a(r)|\\le\\rho<1,$$ with $\\kappa,\\rho$ independent of $a$. There are coefficients $m_{a,j}$, with $|m_{a,0}|\\ge\\kappa$, such that for every pair of fixed nonnegative integers $N,J$, $$\\label{profile:symbol-expansion}\n     \\left|D^j\\left(f_a(r)-\\sum_{q=0}^{N}m_{a,q}r^{-2q}\\right)\\right|\n           \\le C_{N,J}r^{-2N-2},\\qquad 0\\le j\\le J,\\quad r\\ge r_b.$$ The constants are uniform as $a\\downarrow0$. In particular, $$\\label{profile:exterior-pressure}\n     |D^j(P_a/a)|\\le\\eta_j(a)r^{-2},\\qquad\n     |D^je^{2i\\phi_a}|\\le C_j,\\qquad \\eta_j(a)\\longrightarrow0$$ for each fixed $j$. On the inner ball, $$\\label{profile:pressure-transport}\n     W_a(P_a/a)\\le Ca(P_a/a),\\qquad r\\le r_b,$$ whereas $|W_a(P_a/a)|\\le\\eta(a)r^{-2}$ for $r\\ge r_b$, with $\\eta(a)\\to0$. Consequently the positive part of $W_a(P_a/a)$ is bounded uniformly on the whole space.*\n\n\n\n4.  *For each fixed $a$, every Cartesian derivative obeys $$\\label{profile:fixed-power-symbols}\n     |\\partial^\\beta Q_a(y)|\\le C_{a,\\beta}\\langle y\\rangle^{-2a-|\\beta|},\n     \\qquad\n     \\left|\\partial^\\beta\\big((P_a/a)e^{2i\\phi_a}\\big)\\right|\n           +|\\partial^\\beta(P_a/a)|\n           \\le C_{a,\\beta}\\langle y\\rangle^{-2-|\\beta|}.$$ The time-symmetry combination has the improved exterior order $$\\label{profile:time-symbol}\n     \\left|D^j\\left((a-ib_a+D/2)Q_a\\right)\\right|\n           \\le C_j r^{-2a-2},\\qquad r\\ge r_b.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-profile-existence"
+  },
+  {
+   "claim_id": "claim-boundary-modulus",
+   "exact_statement": "Uniformly on $\\mathcal D$, $$\\label{profile:boundary-gap}\n 1-.2\\varepsilon^2<h_b<1-.15\\varepsilon^2.$$ For fixed $b$ in the projection of $\\mathcal D$, the function $R'\\mapsto|F(r_b;b,R')|$ is strictly increasing on $[r_0,r_b)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-profile-boundary-modulus"
+  },
+  {
+   "claim_id": "claim-inner-amplitude",
+   "exact_statement": "For all sufficiently small $a>0$ and all $(b,Z)\\in\\mathcal D$, the system <a href=\"#profile:amplitude\" data-reference-type=\"eqref\" data-reference=\"profile:amplitude\">[profile:amplitude]</a> has a positive radial solution on $[0,r_b]$ with $A'(0)=0$ and $A(r_b)=h_b$. Within the bounds $$\\label{profile:inner-bounds}\n h_b\\le A\\le .5^a,$$ it is unique. It depends continuously on $(b,Z)$, and obeys $$\\label{profile:bulk-barrier}\n A(r)\\ge .2^a-.02(r-r_0)_+^2.$$ The amplitudes are bounded uniformly in $C^{1,1}[0,r_b]$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-profile-inner"
+  },
+  {
+   "claim_id": "claim-core-identification",
+   "exact_statement": "For the inner solutions of Lemma <a href=\"#profile:inner\" data-reference-type=\"ref\" data-reference=\"profile:inner\">15</a>, suppose $a_n\\downarrow0$ and $(b_n,Z_n)\\to(b,Z)\\in\\mathcal D$. Then their complex reconstructions converge in $C^1[0,r_b]$ to the function equal to $1$ on $[0,R(Z)]$ and to $F_{\\rm in}$ on $[R(Z),r_b]$. Their pressures converge weak star to $b\\mathbf1_{\\{r<R(Z)\\}}$. These convergence assertions are uniform over the compact parameter disk in the sequential sense just stated.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-profile-core-limit"
+  },
+  {
+   "claim_id": "claim-slow-exterior",
+   "exact_statement": "For all sufficiently small $a>0$ and $(b,Z)\\in\\mathcal D$, there is a nonvanishing exterior stationary solution $Q^{\\rm out}_a$ with $Q^{\\rm out}_a(r_b)=h_b$. It depends continuously on $(a,b,Z)$, down to the limit <a href=\"#profile:normalized-free\" data-reference-type=\"eqref\" data-reference=\"profile:normalized-free\">[profile:normalized-free]</a>, with convergence in every fixed derivative on compact exterior intervals. Its factor $f=r^{2a-2ib}Q^{\\rm out}_a$ satisfies the bounds and expansions in <a href=\"#profile:tail\" data-reference-type=\"eqref\" data-reference=\"profile:tail\">[profile:tail]</a>–<a href=\"#profile:symbol-expansion\" data-reference-type=\"eqref\" data-reference=\"profile:symbol-expansion\">[profile:symbol-expansion]</a>, uniformly over the entire parameter disk.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-profile-exterior"
+  },
+  {
+   "claim_id": "claim-degree-matching",
+   "exact_statement": "For every sufficiently small $a>0$ there is $(b_a,Z_a)\\in\\mathcal D$ at which the inner and outer profiles have the same logarithmic derivative at $r_b$. After a constant phase rotation of the outer profile they form a smooth nonvanishing stationary profile. Every parameter limit as $a\\downarrow0$ is a zero of $j$ in $\\mathcal D$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-profile-matching"
+  },
+  {
+   "claim_id": "claim-pressure-deformation",
+   "exact_statement": "The matched profiles satisfy <a href=\"#profile:coercive-bounds\" data-reference-type=\"eqref\" data-reference=\"profile:coercive-bounds\">[profile:coercive-bounds]</a> and <a href=\"#profile:exterior-pressure\" data-reference-type=\"eqref\" data-reference=\"profile:exterior-pressure\">[profile:exterior-pressure]</a>–<a href=\"#profile:pressure-transport\" data-reference-type=\"eqref\" data-reference=\"profile:pressure-transport\">[profile:pressure-transport]</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-profile-pressure"
+  },
+  {
+   "claim_id": "claim-mode-classification",
+   "exact_statement": "For all sufficiently small admissible $a>0$, the only regular outgoing modes with $\\operatorname{Re}\\lambda\\ge-1/32$ are the phase, translation, and time modes. Their first circular components and eigenvalues are $$iQ\\quad(\\lambda=0),\\qquad\n \\partial_jQ\\quad(\\lambda=1/2, 1\\le j\\le12),\\qquad\n (a-ib+D/2)Q\\quad(\\lambda=1).$$ The second component of each listed real symmetry generator is the conjugate of the displayed component. Their complex spans are the corresponding complexified eigenspaces. In each fixed spherical harmonic, each eigenvalue that occurs is algebraically simple; degrees $\\ell\\ge2$ have no such eigenvalue.*\n\n\n*Here “outgoing” means that, in each component, for every fixed integer $j\\ge0$, $$\\label{spec:slow-condition}\n D^jv_h=O(r^{-2(a+\\operatorname{Re}\\lambda)})\\qquad(r\\longrightarrow\\infty).$$ The same classification holds for regular solutions for which $\\partial_r^kv_h\\in L^2(r^{11}\\,dr)$ for some integer $k\\ge7$. There is no regular generalized mode above any of these eigenvectors with this top-derivative integrability. Algebraic simplicity for outgoing modes means simplicity of the analytic regular/outgoing boundary problem, including its differentiated outgoing condition.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-spectrum-classification"
+  },
+  {
+   "claim_id": "claim-block-reduction",
+   "exact_statement": "Suppose that $$DY=(r^2\\Lambda(r)+B(r))Y$$ on a half-line, where $\\Lambda$ is diagonal, its selected blocks have uniformly separated spectra, and $\\Lambda,B$ and their fixed Euler derivatives are bounded. For every fixed $m$ there is an invertible change $I+O_m(r^{-2})$, with the same symbol bounds, after which the off-block remainder is $O_m(r^{-m})$. The bounded part in each diagonal block changes by $O_m(r^{-2})$. The changes preserve holomorphic dependence on any parameters on which the original system depends holomorphically.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-spec-block-reduction"
+  },
+  {
+   "claim_id": "claim-slow-basis",
+   "exact_statement": "For bounded $\\lambda,\\ell$ and small $a$, the exterior solution space of <a href=\"#spec:circular\" data-reference-type=\"eqref\" data-reference=\"spec:circular\">[spec:circular]</a> has a two-dimensional outgoing subspace, locally holomorphic in $\\lambda$. Its bases and parameter derivatives converge locally on $r\\ge r_b$ to free outgoing bases as $a\\to0$. Every homogeneous solution satisfying the top-derivative condition in Theorem <a href=\"#spectrum:classification\" data-reference-type=\"ref\" data-reference=\"spectrum:classification\">20</a> belongs to this subspace.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-spec-slow-basis"
+  },
+  {
+   "claim_id": "claim-real-part-bound",
+   "exact_statement": "For all sufficiently small $a$, there is no nonzero regular outgoing mode with $\\operatorname{Re}\\lambda\\ge4$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-spec-real-bound"
+  },
+  {
+   "claim_id": "claim-remote-robin",
+   "exact_statement": "Every outgoing solution along this sequence satisfies $$\\label{spec:remote-robin}\n q_h'(E)-hi\\sqrt{F_h(E)}q_h(E)=O(E^{-1})|q(E)|.$$ The constant is uniform after discarding finitely many sequence terms.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-spec-remote-data"
+  },
+  {
+   "claim_id": "claim-scalar-turning-point",
+   "exact_statement": "Fix one channel and write $F=F_h$. For $R\\in[B_0,B_1]$, let $U$ solve $$U''+(F+hi\\gamma)U=0,\\qquad\n U(E)=F(E)^{-1/4},\\quad U'(E)=hi\\sqrt{F(E)}U(E).$$ If $F$ has a zero $r_0\\in[R,E]$, define $$\\label{spec:turn-scales}\n \\begin{split}\n A_0&=r_0^2/16,\\qquad H_0=L_\\ell/r_0^2,\\qquad k_0^2=A_0+H_0,\\\\\n d_0&=(r_0/(2k_0^2))^{1/3},\\qquad\n K(r)=(|F(r)|+d_0^{-2})^{1/2},\\\\\n H_f(r)&=\\int_{\\min(r,r_0)}^{r_0}\\sqrt{-F(t)}\\,dt.\n \\end{split}$$ If there is no zero, put $K=\\sqrt F$ and $H_f=0$. For $N_r(u)=K(r)^{1/2}|u(r)|+K(r)^{-1/2}|u'(r)|$, after taking a subsequence common to the two channels, there are $c,C>0$ such that $$\\begin{aligned}\n N_r(u)&\\le C e^{|H_f(r)-H_f(t)|}N_t(u),\\label{spec:scalar-transfer}\\\\\n |U(R)|&\\ge cK(R)^{-1/2}e^{H_f(R)},\\label{spec:scalar-value}\\\\\n U'(R)/U(R)&=\\mathcal B_h(R)+o(n_*),\\label{spec:scalar-slope}\n \n\\end{aligned}$$ where $$\\mathcal B_h(R)=\n \\begin{cases}-\\sqrt{-F_h(R)},&F_h(R)<0,\\\\\n hi\\sqrt{F_h(R)},&F_h(R)>0.\n \\end{cases}$$ The first estimate holds for every scalar homogeneous solution and all $r,t\\in[R,E]$. All left endpoint statements are uniform for $R\\in[B_0,B_1]$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-spec-scalar-turn"
+  },
+  {
+   "claim_id": "claim-shell-robin",
+   "exact_statement": "After subselection, every outgoing solution along an escaping parameter sequence satisfies, uniformly on $B_0\\le R\\le B_1$, $$\\label{spec:shell-robin}\n q_h'(R)=\\mathcal B_h(R)q_h(R)+o(n_*)|q(R)|.$$ The error is an operator bound on the two-dimensional outgoing space.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-spec-boundary-estimate"
+  },
+  {
+   "claim_id": "claim-escaping-exclusion",
+   "exact_statement": "There is no sequence of nonzero regular outgoing modes with $a\\to0$, $-1/32\\le\\operatorname{Re}\\lambda\\le4$, and $\\ell+|\\operatorname{Im}\\lambda|\\to\\infty$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-spec-high-exclusion"
+  },
+  {
+   "claim_id": "claim-inverse-convergence",
+   "exact_statement": "Fix $\\ell$ and a convergent profile subsequence. Let $R=2\\sqrt Z$ be its limiting core radius, and fix a sufficiently large outer radius $B_2>r_b$. Let $E$ be the Hilbert space of $H^1$ pairs in this harmonic on the ball $r<B_2$, and let $$\\mathscr Z=L^2(r<B_2;\\mathbb C^2)\\oplus\\mathbb C^2,\\qquad\n j_E X=(X,X(B_2)).$$ The map $j_E:E\\to\\mathscr Z$ is compact. Define $T_a:E'\\to E$ by the coercive form $$\\label{spec:base-form}\n \\mathfrak b_a(X,\\Theta)=\n \\int\\left(\\nabla\\Theta^*\\nabla X+\\Theta^*X\n                         +(P/a)\\overline{\\Theta_f}f\\right)\\mu.$$ The dual $E'$ consists of conjugate-linear functionals on test vectors. Let $$E_0=\\{(f,g)\\in E:f=0\\text{ a.e. on }r<R\\},$$ and let $T_0:E'\\to E_0$ be the inverse of the limiting form, with no pressure term and tests restricted to $E_0$. Then $$\\label{spec:inverse-norm}\n \\|j_ET_a-j_ET_0\\|_{E'\\to\\mathscr Z}\\longrightarrow0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-spec-inverse-limit"
+  },
+  {
+   "claim_id": "claim-compact-pencil",
+   "exact_statement": "Near each bounded candidate $\\lambda$, choose $B_2$ sufficiently large. The regular outgoing mode equation is equivalent to $$\\label{spec:compact-equation}\n (I-\\mathcal C_a(\\lambda))z=0\\quad\\hbox{on }\\mathscr Z,\\qquad\n \\mathcal C_a(\\lambda)=j_ET_aK_a(\\lambda).$$ These are compact holomorphic families, and $\\mathcal C_a\\to\\mathcal C_0$ locally uniformly in operator norm.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-spec-compact-pencil"
+  },
+  {
+   "claim_id": "claim-interface-conditions",
+   "exact_statement": "The limiting kernel in <a href=\"#spec:compact-equation\" data-reference-type=\"eqref\" data-reference=\"spec:compact-equation\">[spec:compact-equation]</a> consists of free slow exterior modes satisfying $$\\label{spec:matching}\n f(R)=0,\\qquad g(R+)=g(R-),\\qquad g'(R+)=g'(R-),\\qquad\n g(r)=c r^\\ell\\quad(r<R).$$ It is nonzero exactly when the two-column determinant of Proposition <a href=\"#free:main\" data-reference-type=\"ref\" data-reference=\"free:main\">3</a> vanishes.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-spec-interface"
+  },
+  {
+   "claim_id": "claim-symmetry-roots",
+   "exact_statement": "At the limiting disk root $j(b,Z)=0$, the only roots of <a href=\"#spec:free-determinant\" data-reference-type=\"eqref\" data-reference=\"spec:free-determinant\">[spec:free-determinant]</a> in $\\operatorname{Re}\\lambda\\ge-1/32$ are $0,1$ for $\\ell=0$ and $1/2$ for $\\ell=1$, each simple. The compact pencil $I-\\mathcal C_0$ has a one-dimensional kernel at each such root and no first-order analytic chain.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-spec-simplicity"
+  },
+  {
+   "claim_id": "claim-spatial-estimates",
+   "exact_statement": "The embeddings $Y\\hookrightarrow C_0(\\mathbb R^{12})$ and $Y_L\\hookrightarrow L^\\infty(\\mathbb T_L^{12})$ are bounded, uniformly for $L\\ge1$. Both spaces are algebras, with a uniform algebra constant for $Y_L$. For a ball or annulus of radius $R\\ge1$, contained in one torus cell when appropriate and with $R\\le C_0L$, one has $$\\label{lin:local-derivatives}\n \\|\\nabla^jv\\|_{L^2(\\text{ball or annulus})}\n \\le C R^{\\max(s_0-j,0)}\\|v\\|,\n \\qquad 0\\le j\\le k.$$ Here and below an undecorated norm denotes the applicable $Y$ or $Y_L$ norm, and constants may depend on the fixed geometric constant $C_0$.*\n\n\n*If $F$ satisfies $|\\nabla^jF|\\le C_j\\langle y\\rangle^{-\\beta-j}$, then a smooth dyadic piece supported where $|y|\\asymp R$ satisfies $$\\label{lin:symbol-norm}\n \\|\\psi_RF\\|\\le C\\big(R^{6-\\beta-s_0}+R^{6-\\beta-k}\\big),$$ also on the tori for $R\\le C_0L$. In particular $Q\\in Y$, and for every fixed $\\chi\\in C_c^\\infty(B_1)$ the cutoff profiles $\\chi(y/L)Q(y)$ have uniformly bounded $Y_L$ norms.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lin-spatial"
+  },
+  {
+   "claim_id": "claim-compact-errors",
+   "exact_statement": "For every $\\varepsilon>0$ there are $R_\\varepsilon,C_\\varepsilon<\\infty$ such that $$\\label{lin:compact-bound}\n \\|\\mathcal V_*v\\|_{s_0,*}\n +\\|\\nabla^k(\\mathcal V_*v)-\\mathcal V_*\\nabla^kv\\|_2\n \\le\\varepsilon\\|v\\|+C_\\varepsilon\\|v\\|_{L^2(B_{R_\\varepsilon})}.$$ Here $*$ denotes either the whole-space potential and homogeneous low-order norm, or a torus potential at its current scale and the regularized low-order norm in <a href=\"#lin:YL\" data-reference-type=\"eqref\" data-reference=\"lin:YL\">[lin:YL]</a>. The constants are uniform for all sufficiently large current torus scales. The potential acts componentwise on the ordered tensor in the second term.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lin-compact-error"
+  },
+  {
+   "claim_id": "claim-energy-observation",
+   "exact_statement": "There are $c>0$, $C<\\infty$, and $R_0<\\infty$ such that every whole-space linear solution, and every torus linear solution with sufficiently large starting scale, satisfies $$\\label{lin:energy-observation}\n \\frac{d}{ds}\\|v(s)\\|^2\n \\le-c\\|v(s)\\|^2+C\\|v(s)\\|_{L^2(B_{R_0})}^2.$$ The derivative can equivalently be understood through the integrated inequality. The constants are independent of the torus scale and of the slab length. In particular, for $t\\ge0$, $$\\label{lin:integrated-observation}\n \\|v(t)\\|^2\\le e^{-ct}\\|v(0)\\|^2\n   +C\\int_0^t e^{-c(t-s)}\\|v(s)\\|_{L^2(B_{R_0})}^2\\,ds.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lin-observation"
+  },
+  {
+   "claim_id": "claim-stable-evolution",
+   "exact_statement": "There is a bounded real-linear map $\\pi:Y\\to\\mathbb R^{14}$ such that $$\\label{lin:spectral-coordinates}\n \\pi E=I,\\qquad S(s)E=Ee^{s\\Lambda},\\qquad\n \\pi S(s)=e^{s\\Lambda}\\pi\\quad(s\\in\\mathbb R).$$ For some $C_S<\\infty$ and $\\eta>0$, $$\\label{lin:stable-decay}\n \\|S(s)v\\|_Y\\le C_Se^{-\\eta s}\\|v\\|_Y,\n \\qquad s\\ge0,\\quad \\pi v=0.$$ Thus $E\\pi$ is the symmetry spectral projection. Constants depend on the fixed profile, $a$, and $k$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-linear-decay"
+  },
+  {
+   "claim_id": "claim-torus-transfer",
+   "exact_statement": "For each fixed $M>0$ the step maps $\\mathcal F_L^{(M)}$ are uniformly bounded for all sufficiently large $L$. Writing $L'=Le^{M/2}$, $$\\label{lin:coordinate-defect}\n \\lim_{L\\to\\infty}\n \\|\\pi_{L'}\\mathcal F_L^{(M)}-e^{M\\Lambda}\\pi_L\\|\n _{\\mathcal L(Y_L,\\mathbb R^{14})}=0.$$ There exists $M_0<\\infty$ such that for every fixed $M\\ge M_0$ there is $L_0(M)<\\infty$ for which $$\\label{lin:torus-stable-contraction}\n \\|(I-P_{L'})\\mathcal F_L^{(M)}|_{\\ker\\pi_L}\\|\n       _{\\mathcal L(Y_L,Y_{L'})}\\le\\frac18,\n \\qquad L\\ge L_0(M).$$ Moreover $\\|(I-P_{L'})\\mathcal F_L^{(M)}E_L\\|\\le C_M$. Any prescribed positive bound on the coordinate defect can be imposed by enlarging $L_0(M)$ after $M$ has been fixed. These bounds persist after restarting a step at any larger scale.*\n\n*After identifying torus spaces by dilation, the maps above and the step propagator are continuous when the scale and the input vary continuously. This last assertion is strong continuity for varying inputs, and does not assert operator-norm continuity of Schrödinger time evolution.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-linear-torus"
+  },
+  {
+   "claim_id": "claim-nonlinear-step",
+   "exact_statement": "There are $\\delta>0$, $L_0<\\infty$ and $C_M<\\infty$ such that, for $L\\geq L_0$, the perturbation equation $U=Q_s+v$ has a unique solution through the step whenever $\\|v(0)\\|_{Y_L}\\leq\\delta$. Its endpoint is $$v(M)=\\mathcal F_Lv(0)+h_L(v(0)),$$ where $$\\begin{aligned}\n \\|h_L(0)\\|&\\leq C_M L^{-2-a},\\label{nl:step-zero}\\\\\n \\operatorname{Lip}_{\\|v\\|\\leq d}h_L\n   &\\leq C_M(d+L^{-2-a})\\qquad(0<d\\leq\\delta).\n \\label{nl:step-lip}\n\\end{aligned}$$ During the step, $$\\sup_{0\\leq s\\leq M}\\|v(s)\\|_{Y_{L_s}}\n \\leq C_M\\bigl(\\|v(0)\\|_{Y_L}+L^{-2-a}\\bigr).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-nl-step"
+  },
+  {
+   "claim_id": "claim-stable-graph",
+   "exact_statement": "For all sufficiently large $L$ there is a continuous map $G_L$, defined on a fixed small ball in $\\ker\\pi_L$, such that the initial perturbation $$v_0=w_0+E_LG_L(w_0)$$ generates a solution on every similarity-time slab and $$\\|v(s)\\|_{Y_{L_s}}\\longrightarrow0\\quad(s\\to\\infty).$$ Uniformly in $L$, $$\\label{nl:graph-size}\n |G_L(w_0)|\\leq C\\bigl(\\|w_0\\|+L^{-2-a}\\bigr).$$ The coordinate $G_L(w_0)$ is jointly continuous in $L$ and $w_0$ after identifying periodic functions by dilation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-nl-graph"
+  },
+  {
+   "claim_id": "claim-parameter-expansion",
+   "exact_statement": "For $|d'|\\leq\\rho$ with $\\rho$ fixed and small, uniformly as $T_0\\to0$, $$\\label{nl:leading-expansion}\n v_0(d';u_{\\mathrm{ref}})\n =E_L C d'+r(d'),\\qquad\n C d'=(-\\theta+b\\beta,\\zeta,\\beta),$$ and $$\\|r(d')\\|_{Y_L}\\leq C\\bigl(|d'|^2+\\sqrt{T_0}|d'|\\bigr).$$ For fixed $T_0$, replacing $u_{\\mathrm{ref}}$ by $u_{\\mathrm{in}}$ adds at most $C(T_0)\\|u_{\\mathrm{in}}-u_{\\mathrm{ref}}\\|_{H^k}$, uniformly on the parameter ball. All these maps are continuous.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-nl-parameter-expansion"
+  }
+ ],
+ "paper": "papers/EN-109-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-H-0731_PM-371.1_Stable_self_similar_blowup_for_a_supercritical_defocusing_Schrodinger_equation_on_the_torus.md",
+ "purpose": "Stable self-similar blowup for a supercritical defocusing Schrödinger equation on the torus",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "04f3d4e85384f056415820b4f9d266f3f053a8638cb94a58dcf10dd1d6a3e8c9",
+   "pm.domains.v2": "73a3ea399070a6c0b0aa327c3191e5024844330ea80f2bc3b74b62226cab0677",
+   "pm.edges.v2": "186419bc20523a053e75d134497a5844b9c2909fe2e80aabf1f11d45d0fec4f6",
+   "pm.extraction.v2": "c10a5b4f2028ccac65df5b8bc7265e037981e7dde1c061485f03577ee1a95ba9",
+   "pm.formal.v2": "4afc3282ba6a31681986a0da7250c94832341462c22e63b39a24eaef72240a06",
+   "pm.limits.v2": "d3ba4e065d577b9b8c276d80edfcfa8d47b275e61158e02152658c7bd4f9a3da",
+   "pm.node.v2": "607d236194be7ca21315dbeef41fd6fb927cf60caa78dc47fcf17bb8c0357571",
+   "pm.objects.v2": "c408927139977e4ad0eadc1581ad12e6a2e2db9edc85518bbb97bf28c5367134",
+   "pm.provenance.v2": "5be5bd70f75f5debbd1924c5917840c5b3696d9165f4bb91a391dc64464bbc80",
+   "pm.quantities.v2": "f7aab2d33c980be04cff1d32cb63238437ee1a45363effeeb9aacf7d61ff2684",
+   "pm.reading.v2": "360babec9bb9452222b6a873883b8f8660beb971ecb78e27230ae2355e8c74a1",
+   "pm.roadmap.v2": "f44a467c5eb6a442996f118475e84b85735385566fb94bcce112280c6645011f",
+   "pm.search.v1": "b7bd5892114a5dc2f15fb652d6ac8741e625c2784adcd9c4bc0a8549da36c234",
+   "pm.triptych.v2": "50789553405858adc962ca4b66654f82adcef5157f43a3a9446f86883af1751e"
+  },
+  "canonical_sha256": "6ea1ba1b71a9bf9c493391e5bd04b711df11320899e364728d738aa300135abb",
+  "paper_sha256": "846391ee39f2d8f6624587827dadbcdb2a642f1fca0abf35d0810fce0748ff98",
+  "repaired_body_sha256": "e4efb1984555126092f00bcb52aba61e71de2192e7e34075e16bdb7257085368"
+ },
+ "status": "ACTIVE",
+ "subject_id": 9,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "37ed90b7ef44fd061a390d68e4122f5edcc347dd7e8f2222ca19ab531841215c",
+   "receipt_sha256": "866f82c498626a96d01eb584ebf563b6065dd5ef517643faada66bd85c54aba1",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exact discriminant sign of seven quadratics including the two from the high angular certificate",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-matching-degree",
+     "oracle_basis": "Independent Decimal-to-fraction computation"
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-wrong-coefficient",
+     "observed_exit": 2,
+     "receipt_sha256": "ee08990873eccd2d7bdbe8b3414d167d5f40ca13e1f4c0448013e564a91dcab7"
+    },
+    {
+     "id": "mut-zero-as-negative",
+     "observed_exit": 2,
+     "receipt_sha256": "716ed7ef2ff10c52a4266f9aafacfaf1a6c07f26e7c6c785811fba427c4ac25e"
+    },
+    {
+     "id": "mut-drop-square",
+     "observed_exit": 2,
+     "receipt_sha256": "8558d00b1ec98665ca170a2bddfb59f87a0f0a5bd35dae9bbf5c966395323cde"
+    },
+    {
+     "id": "mut-zero-label",
+     "observed_exit": 2,
+     "receipt_sha256": "1d9796b9c263cadfc773dd388a7a3430d76265c0a7086e546dc8e655876f99bd"
+    }
+   ],
+   "receipt_sha256": "465c8f89bcf95ebfd9483482fef563bab33d55e7452b8bbf30da57b46df69e34",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Stable self-similar blowup for a supercritical defocusing Schrödinger equation on the torus"
+}

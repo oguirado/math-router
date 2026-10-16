@@ -1,0 +1,872 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 801165,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 230904
+ },
+ "coordinate": "EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-M-0445",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-prop-functional-randomness",
+     "quote": "For every fixed $s>0$, the finite random variable $\\mathcal A_g(s)$ is essentially unbounded. In particular $Q_{\\rm crit}$ is not a point mass.",
+     "quote_sha256": "d61f4e89a6103ebda976277da02a21d3a2eb8d05458e83e961e48dee5da3a452"
+    }
+   ],
+   "query": "A deterministic universal critical autocorrelation curve for individual disorder samples",
+   "reason": "The source proves a non-point-mass law and essential unboundedness at each fixed positive time."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "The restriction to positive times is necessary: $A_{n,J}(0)=n^{1/3}$.",
+     "quote_sha256": "9871e1bfe71a98cf5608070521e4af52fb3ab7a6040f624c9b00d8bf84d3ad7d"
+    }
+   ],
+   "query": "Uniform functional convergence through the initial time",
+   "reason": "The topology is restricted to positive times; the rescaled initial autocorrelation diverges with system size."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "This is the zero-field model at inverse temperature one.",
+     "quote_sha256": "3177a05fd5479151766347160a9f53464b0f4e2f172147e5694731b734dfce3a"
+    }
+   ],
+   "query": "Critical relaxation guarantees for arbitrary temperatures or external fields",
+   "reason": "The stated model is zero field at critical inverse temperature. No such extension is established here."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "Let $D$ be either the standard Gaussian distribution or the uniform distribution on $\\{-1,1\\}$.",
+     "quote_sha256": "42c5d2362af3b0eedd57fa6060d32946d91a2b4ed6e040dbe930c3d1d74f947e"
+    }
+   ],
+   "query": "Universality for arbitrary heavy-tailed or dependent interactions",
+   "reason": "The main result specifies independent Gaussian and uniform sign couplings."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-35",
+     "quote": "Define $c_*=\\omega(\\{0\\})$.",
+     "quote_sha256": "33920ef994607e34ba440bfd1d2ee42e4b80f75dad9acb7dc3bd7c7104433ccb"
+    },
+    {
+     "anchor": "stmt-prop-micro-moment-measure",
+     "quote": "There is a deterministic finite positive measure $\\omega$ on $[0,\\infty)$ whose moments are given by <a href=\"#eq:source-3\" data-reference-type=\"eqref\" data-reference=\"eq:source-3\">[eq:source-3]</a>.",
+     "quote_sha256": "c1508a9372f48424e457c3f4aaf0fe1e246754f409b4a7d26b9a554114f15ad6"
+    }
+   ],
+   "query": "A computable numerical value of the microscopic time coefficient",
+   "reason": "The source characterizes the coefficient through a limiting moment measure and proves positivity, without supplying a finite numerical evaluation."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-4",
+     "quote": "An exponent statement alone does not identify the dynamics at a fixed multiple of $n^{2/3}$; we need quantitative improvements and an identification of the limiting energy.",
+     "quote_sha256": "b9e877ddd821c918877b8c9a26498569c2b45decd265bea598742af0f62274b1"
+    }
+   ],
+   "query": "A mixing-time certificate obtained solely from stationary autocorrelation scaling",
+   "reason": "The proved observable is stationary spin autocorrelation; the history distinguishes it from companion mixing results."
+  }
+ ],
+ "family": "PM-227",
+ "id": "PM-227.2",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "pm-h-3",
+    "claim_id": "claim-functional-universality",
+    "statement": "Let $D$ be either the standard Gaussian distribution or the uniform distribution on $\\{-1,1\\}$."
+   },
+   {
+    "anchor": "stmt-lem-edge-spectral",
+    "claim_id": "claim-goe-spectral-control",
+    "statement": "The GOE eigenvalues have the following additional properties.*\n\n1.  *$\\max_a|\\lambda_a|\\le3$ with probability tending to one.*\n\n2.  *There are tight random bounds $K_n\\ge0$ and $C_n>0$ such that $g_{a,n}\\ge C_n^{-1}a^{2/3}$ for every $a>K_n$.*\n\n\n3.  *For every $\\epsilon>0$, $$\\label{eq:edge-trace-double-limit}\n     \\lim_{L\\to\\infty}\\limsup_{n\\to\\infty}\n     \\mathbb P\\!\\left(\n     g_{1,n}+L\\le0\\ \\text{or}\\\n     \\left|n^{1/3}-\\sum_{a=1}^n\\frac1{g_{a,n}+L}-\\sqrt L\\right|\n           >\\epsilon\\right)=0.$$*\n\n*In the event appearing in the last formula, the sum is evaluated only when $g_{1,n}+L>0$."
+   },
+   {
+    "anchor": "pm-h-8",
+    "claim_id": "claim-conditioned-edge-equilibrium",
+    "statement": "Choose an admissible parameter $b$ with $b+g_1>0$, and write $l_a=(g_a+b)^{-1}$."
+   },
+   {
+    "anchor": "stmt-lem-edge-bulk-weight",
+    "claim_id": "claim-spherical-bulk-weight",
+    "statement": "For a spherical Gibbs spin,"
+   },
+   {
+    "anchor": "stmt-lem-edge-biased-law",
+    "claim_id": "claim-haar-biased-spherical-identity",
+    "statement": "Under $\\mathbf P$,"
+   },
+   {
+    "anchor": "stmt-prop-edge-cap-inputs",
+    "claim_id": "claim-gaussian-cap-inputs",
+    "statement": "Fix a finite field radius $R$ and positive fixed error tolerances."
+   },
+   {
+    "anchor": "stmt-lem-edge-static-interpolation",
+    "claim_id": "claim-cap-scale-interpolation",
+    "statement": "after prescribing slightly smaller errors on a sufficiently fine fixed geometric list and decreasing the upper cutoff."
+   },
+   {
+    "anchor": "sec:observations",
+    "claim_id": "claim-observation-path-annulus",
+    "statement": "Recall that $$r=n^{-1/3+\\delta},\\qquad \\delta=10^{-4},\\qquad k_p=np^3,\n \\qquad M_p=(np)^{1/2}.$$"
+   },
+   {
+    "anchor": "stmt-lem-observations-replicas",
+    "claim_id": "claim-replica-likelihood-comparison",
+    "statement": "Fix a bounded range for $\\|h\\|/(p^2M_p)$ and take the upper scale sufficiently small."
+   },
+   {
+    "anchor": "stmt-cor-observations-static",
+    "claim_id": "claim-cube-edge-marginal-convergence",
+    "statement": "Jointly with the spectral variables, in the sense of Remark"
+   },
+   {
+    "anchor": "stmt-cor-observations-means",
+    "claim_id": "claim-mean-moments-initial-score",
+    "statement": "after reducing the fixed upper scale if needed,"
+   },
+   {
+    "anchor": "stmt-lem-observations-score",
+    "claim_id": "claim-integrated-observation-score",
+    "statement": "on each scale interval of a fixed bounded ratio about $q$,"
+   },
+   {
+    "anchor": "stmt-lem-observations-curvature",
+    "claim_id": "claim-integrated-covariance-error",
+    "statement": "After decreasing $\\tau>0$ if necessary,"
+   },
+   {
+    "anchor": "stmt-lem-observations-angular",
+    "claim_id": "claim-angular-observation-score",
+    "statement": "Let $A$ be a fixed skew-symmetric matrix supported on finitely many leading spectral coordinates, and set $\\mathcal R=(A\\widetilde h)\\cdot\\nabla_{\\widetilde h}$."
+   },
+   {
+    "anchor": "eq:source-16",
+    "claim_id": "claim-exact-scale-conditional-variance",
+    "statement": "There is a fixed $p_*>0$ with the following property."
+   },
+   {
+    "anchor": "eq:source-16",
+    "claim_id": "claim-exact-scale-conditional-variance",
+    "statement": "For every $\\varepsilon>0$"
+   },
+   {
+    "anchor": "eq:source-16",
+    "claim_id": "claim-exact-scale-conditional-variance",
+    "statement": "for every real function $f$ on the cube and every $r\\le p\\le p_*"
+   },
+   {
+    "anchor": "stmt-prop-variance-curvature",
+    "claim_id": "claim-positive-covariance-error",
+    "statement": "away from the activation scales,"
+   },
+   {
+    "anchor": "stmt-lem-variance-extension",
+    "claim_id": "claim-annular-potential-extension",
+    "statement": "Choose $\\eta>0$ sufficiently small compared with $\\gamma^2$, then the coarse curvature tolerance $\\varepsilon_0$ sufficiently small compared with $\\eta$."
+   },
+   {
+    "anchor": "stmt-lem-variance-radial",
+    "claim_id": "claim-transverse-covariance-domination",
+    "statement": "On the coarse annulus,"
+   },
+   {
+    "anchor": "stmt-lem-variance-compression",
+    "claim_id": "claim-unused-frame-compression",
+    "statement": "For $x=c/p\\in[\\gamma,2\\gamma]$,"
+   },
+   {
+    "anchor": "stmt-lem-variance-start",
+    "claim_id": "claim-fixed-scale-variance-start",
+    "statement": "On disorder events of probability tending to one, for a sufficiently small fixed $p_{\\mathrm{top}}>0$"
+   },
+   {
+    "anchor": "stmt-prop-gradient-domain",
+    "claim_id": "claim-conditioned-gradient-domain",
+    "statement": "The Euclidean gradient on smooth compact cylinder functions is closable from $L^2(\\Pi)$ to $L^2(\\Pi;\\ell^2)$. Its closed graph consists exactly of the pairs satisfying <a href=\"#eq:source-23\" data-reference-type=\"eqref\" data-reference=\"eq:source-23\">[eq:source-23]</a>. In particular, the vector $G$ in that identity is unique; we denote it by $\\nabla F$.*\n\n*The closed form $$\\mathcal E_\\Pi(F)=\\int|\\nabla F|^2\\,d\\Pi$$ has kernel equal to the constants. Each coordinate $x_a$ belongs to its domain and satisfies $\\nabla x_a=e_a$, so that $\\mathcal E_\\Pi(x_a)=1$."
+   },
+   {
+    "anchor": "stmt-lem-gradient-compensated",
+    "claim_id": "claim-compensated-derivative-density",
+    "statement": "Let $\\gamma=\\bigotimes_{i\\ge1}\\mathsf N(0,l_i)$, where $l_i>0$, $\\sum_i l_i=\\infty$ and $\\sum_i l_i^2<\\infty$, and let $S_y=\\sum_i(y_i^2-l_i)$."
+   },
+   {
+    "anchor": "stmt-lem-gradient-compensated",
+    "claim_id": "claim-compensated-derivative-density",
+    "statement": "Suppose that $f,a\\in L^2(\\gamma)$ and $G\\in L^2(\\gamma;\\ell^2)$ satisfy, coordinatewise in the weak sense, $$\\partial_{y_i}f-2y_i a=G_i.$$"
+   },
+   {
+    "anchor": "stmt-lem-gradient-smoothing",
+    "claim_id": "claim-cap-smoothing-slopes",
+    "statement": "For $r\\le p\\le p_*$"
+   },
+   {
+    "anchor": "stmt-prop-gradient-observation",
+    "claim_id": "claim-observation-gradient-identification",
+    "statement": "Suppose $f_n$ satisfies the preceding bounds and has weak cylinder limit $F$."
+   },
+   {
+    "anchor": "pm-h-27",
+    "claim_id": "claim-observation-gradient-identification",
+    "statement": "Consider functions $f=f_n$ such that $$\\mu|f|^2+T\\mathcal E(f)\\le C,\n \\qquad \\|f\\|_\\infty\\le Cn^D$$ for a fixed exponent $D$."
+   },
+   {
+    "anchor": "sec:microscopic",
+    "claim_id": "claim-microscopic-moment-measure",
+    "statement": "Throughout this section the couplings are Gaussian."
+   },
+   {
+    "anchor": "eq:source-33",
+    "claim_id": "claim-microscopic-moment-measure",
+    "statement": "For fixed leading indices $a,a'$, polynomials $Q,Q'$, and a bounded continuous cylinder $\\psi$,"
+   },
+   {
+    "anchor": "stmt-lem-micro-contractions",
+    "claim_id": "claim-connected-haar-contractions",
+    "statement": "Suppose the edge matrices have uniformly bounded operator norms and that the traces and paths in <a href=\"#eq:micro-spectral-words\" data-reference-type=\"eqref\" data-reference=\"eq:micro-spectral-words\">[eq:micro-spectral-words]</a> converge for every fixed word."
+   },
+   {
+    "anchor": "stmt-lem-micro-contractions",
+    "claim_id": "claim-connected-haar-contractions",
+    "statement": "For a fixed connected $G$ and fixed continuous vertex functions of polynomial growth,"
+   },
+   {
+    "anchor": "stmt-lem-micro-weighted-recursion",
+    "claim_id": "claim-weighted-difference-recursion",
+    "statement": "Fix $K<\\infty$."
+   },
+   {
+    "anchor": "stmt-lem-micro-weighted-recursion",
+    "claim_id": "claim-weighted-difference-recursion",
+    "statement": "Suppose that $W$ is symmetric, has zero diagonal, and obeys $$\\|W\\|\\le K,\\qquad \\epsilon_n:=\\max_{i,j}|W_{ij}|\\le n^{-49/100}.$$"
+   },
+   {
+    "anchor": "stmt-cor-micro-moment-density",
+    "claim_id": "claim-moment-determinacy-polynomial-density",
+    "statement": "Let the matrices and normalized linear functions above vary with $n$, and suppose the moments of the finite measures $$\\omega_{n,a}(B)=\\langle Y_a,H\\mathbf1_B(H)Y_a\\rangle_{L^2(\\mu)},\n \\qquad B\\subset[0,\\infty)\\text{ Borel},$$ converge at every fixed nonnegative integer order."
+   },
+   {
+    "anchor": "stmt-lem-micro-recovery",
+    "claim_id": "claim-cylinder-corrector-recovery",
+    "statement": "Let $F$ be a smooth compact cylinder, and let $Q$ be a polynomial with $Q(0)=1$."
+   },
+   {
+    "anchor": "stmt-lem-micro-positivity",
+    "claim_id": "claim-effective-coefficient-positive",
+    "statement": "One has $c_*=\\omega(\\{0\\})>0$."
+   },
+   {
+    "anchor": "stmt-lem-micro-divergence",
+    "claim_id": "claim-corrector-multiplied-divergence",
+    "statement": "For a fixed polynomial $Q$, fixed leading index $a$, and smooth compact cylinder $\\psi$,"
+   },
+   {
+    "anchor": "stmt-thm-micro-relaxation",
+    "claim_id": "claim-relaxed-dirichlet-energy",
+    "statement": "On any quenched represented subsequence, suppose that $\\|f_n\\|_\\infty\\le Cn^D$ for fixed $C,D$, that the $L^2$ norms and $T\\mathcal E(f_n)$ are bounded, and that $f_n$ converges weakly against cylinders to $F$."
+   },
+   {
+    "anchor": "stmt-prop-trace-goe",
+    "claim_id": "claim-gaussian-resolvent-trace",
+    "statement": "For almost every edge configuration $g$,"
+   },
+   {
+    "anchor": "stmt-lem-trace-fixed",
+    "claim_id": "claim-fixed-coordinate-resolvents",
+    "statement": "For every fixed $\\ell$ and every finite collection of positive $z$"
+   },
+   {
+    "anchor": "stmt-lem-trace-replacement",
+    "claim_id": "claim-vector-observation-replacement",
+    "statement": "Uniformly over vector tests satisfying $\\|f\\|_{z,n}\\leq1$ and a fixed polynomial supremum bound,"
+   },
+   {
+    "anchor": "stmt-prop-trace-second",
+    "claim_id": "claim-gaussian-quadratic-trace-vanishes",
+    "statement": "For Gaussian disorder"
+   },
+   {
+    "anchor": "stmt-thm-comparison-universality",
+    "claim_id": "claim-sign-trace-universality",
+    "statement": "For every $z>0$"
+   },
+   {
+    "anchor": "stmt-lem-comparison-overlap",
+    "claim_id": "claim-mixture-static-overlap",
+    "statement": "uniformly over nonnegative, possibly disorder-dependent functions $p$ satisfying $\\mu p\\le1$ and $\\|p\\|_\\infty\\le Cn^K$,"
+   },
+   {
+    "anchor": "stmt-lem-comparison-residual",
+    "claim_id": "claim-pair-residual-sensitivity",
+    "statement": "Uniformly over the disorder and the pair $e$, $$\\label{eq:source-44}\n R_e^2\\le\\frac{2T}{z}\\Gamma_e.$$ For $S=S^{[2]}$ one also has $R_e^2\\le C_z$, whereas for $S=S^{[1]}$, $$\\label{eq:source-45}\n R_e^2\\le C_z\\bigl(1+n^{1/3}\\sqrt{B_n^{[2]}(z)}\\bigr).$$ Consequently $\\operatorname{avg}_eR_e^2\\le C_z n^{-1/3}$. Its fourth-power analogue is $\\operatorname{avg}_eR_e^4\\le C_z n^{-1/3}$ for $S^{[2]}$, and $$\\label{eq:source-46}\n \\operatorname{avg}_eR_e^4\n \\le C_z\\bigl(n^{-1/3}+\\sqrt{B_n^{[2]}(z)}\\bigr)\n \\qquad\\text{for }S^{[1]}.$$"
+   },
+   {
+    "anchor": "stmt-lem-comparison-average",
+    "claim_id": "claim-averaged-feature-sensitivities",
+    "statement": "For either feature"
+   },
+   {
+    "anchor": "stmt-lem-comparison-derivative",
+    "claim_id": "claim-compactified-trace-fourth-derivatives",
+    "statement": "Fix finitely many traces $B_a=B_n^{[k_a]}(z_a)$, with $k_a\\in\\{1,2\\}$ and $z_a>0$, and a smooth function $F$ on a neighborhood of $[0,1]^m$."
+   },
+   {
+    "anchor": "stmt-lem-functional-spectral",
+    "claim_id": "claim-stieltjes-laplace-functional-continuity",
+    "statement": "Let $\\nu_n$ and $\\nu$ be random nonnegative measures on $[0,\\infty)$ such that their integrals against $(1+\\lambda)^{-1}$ are finite almost surely, for every $n$ and for $\\nu$."
+   },
+   {
+    "anchor": "stmt-lem-functional-spectral",
+    "claim_id": "claim-stieltjes-laplace-functional-continuity",
+    "statement": "Suppose the corresponding integrals against $(z+\\lambda)^{-1}$ converge jointly in law for every finite collection of positive $z$, including $z=1$."
+   },
+   {
+    "anchor": "stmt-prop-functional-identification",
+    "claim_id": "claim-common-functional-limit-identification",
+    "statement": "The series <a href=\"#eq:source-2\" data-reference-type=\"eqref\" data-reference=\"eq:source-2\">[eq:source-2]</a> has a Borel version $g\\mapsto\\mathcal A_g$ with values in $C_{\\rm loc}((0,\\infty))$. For both Gaussian and symmetric-sign entries, $$\\operatorname{Law}(A_{n,J})\\Longrightarrow\n Q_{\\rm crit}=\\operatorname{Law}(\\mathcal A_g),$$ where the same edge law and the same deterministic coefficient $c_*$ are used in <a href=\"#eq:source-2\" data-reference-type=\"eqref\" data-reference=\"eq:source-2\">[eq:source-2]</a>."
+   },
+   {
+    "anchor": "pm-h-48",
+    "claim_id": "claim-edge-finite-shift-absolute-continuity",
+    "statement": "and let $\\mathcal O_h$ be the event that this sequence is still strictly increasing."
+   },
+   {
+    "anchor": "stmt-prop-functional-randomness",
+    "claim_id": "claim-positive-time-essential-unboundedness",
+    "statement": "For every fixed $s>0$"
+   },
+   {
+    "anchor": "stmt-prop-support-constant",
+    "claim_id": "claim-constant-function-in-closed-support",
+    "statement": "The constant function $s\\mapsto 1$ belongs to the closed topological support of $Q_{\\rm crit}$ in $C_{\\rm loc}((0,\\infty))$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Stationary critical autocorrelation universality",
+    "evidence": [
+     {
+      "anchor": "pm-h-5",
+      "quote": "We establish convergence of these traces and then recover convergence of the functions on every compact positive time interval.",
+      "quote_sha256": "a52c9d9e45314a162baa9523a951df2a907af96a89444d3af043edf645df9796"
+     },
+     {
+      "anchor": "stmt-prop-functional-identification",
+      "quote": "The series <a href=\"#eq:source-2\" data-reference-type=\"eqref\" data-reference=\"eq:source-2\">[eq:source-2]</a> has a Borel version $g\\mapsto\\mathcal A_g$ with values in $C_{\\rm loc}((0,\\infty))$.",
+      "quote_sha256": "c3b7c69b36eee926c3c0bcfae4563a6dae761b334e029b1c6cc750804991e0b9"
+     }
+    ],
+    "requires_concepts": [
+     "Stationary Gibbs measure",
+     "Rate-one-per-site heat-bath dynamics",
+     "Conditioned GOE edge measure",
+     "Closed conditioned gradient",
+     "Microscopic energy relaxation",
+     "Resolvent trace tail control",
+     "Coupling-law comparison",
+     "Spectral functional continuity"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Exact cap-scale conditional variance",
+    "evidence": [
+     {
+      "anchor": "sec:variance",
+      "quote": "The integrated estimates of Section <a href=\"#sec:observations\" data-reference-type=\"ref\" data-reference=\"sec:observations\">3</a> allow us to replace this fixed error by one that is integrable in logarithmic scale.",
+      "quote_sha256": "c7431b839d09d7fe42e2b68b91ef52a873df60d50d849d12605060e0736e21ea"
+     },
+     {
+      "anchor": "stmt-prop-variance-main",
+      "quote": "The constants and the disorder event are independent of $f$.",
+      "quote_sha256": "fe9bce2cf8efb9e357494d2fec4eb2dc320fab19c1a5446883afa6966a0c2d4a"
+     }
+    ],
+    "requires_concepts": [
+     "Spectral cap observations",
+     "Integrated likelihood score",
+     "Integrated covariance error",
+     "Radial covariance deficit",
+     "Unused Haar frame compression",
+     "Fixed-scale variance continuation"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Microscopic effective time coefficient",
+    "evidence": [
+     {
+      "anchor": "stmt-prop-micro-moment-measure",
+      "quote": "The measure is uniquely determined by its moments, and polynomials are dense in $L^2((1+\\lambda)\\omega+\\delta_0)$.",
+      "quote_sha256": "1c16165b7ba2873d13bd4c16021d2686aac4ee713aa3ec01a7d486adec97fbda"
+     },
+     {
+      "anchor": "stmt-lem-micro-positivity",
+      "quote": "One has $c_*=\\omega(\\{0\\})>0$.",
+      "quote_sha256": "b9967308362d9d038c032ad5e65fc88076dc25499975827cfe23eb44bebc5796"
+     }
+    ],
+    "requires_concepts": [
+     "Fixed-order Haar contractions",
+     "Weighted difference recursion",
+     "Moment determinacy",
+     "Weighted polynomial density",
+     "Cylinder recovery",
+     "Coarse limiting gradient bound"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-functional-universality",
+   "exact_statement": "There is a Borel probability law $Q_{\\mathrm{crit}}$ on $C_{\\mathrm{loc}}((0,\\infty))$ such that, for each of the two choices of $D$, $$\\mathop{\\mathrm{Law}}_D(A_{n,J})\\Longrightarrow Q_{\\mathrm{crit}}\n \\qquad(n\\to\\infty).$$ The law $Q_{\\mathrm{crit}}$ is not a point mass. It assigns probability one to nonzero, nonnegative, nonincreasing functions $f$ satisfying $\\lim_{s\\to\\infty}f(s)=0$. The Gaussian and Rademacher models use exactly the normalization in <a href=\"#eq:intro-rescaling\" data-reference-type=\"eqref\" data-reference=\"eq:intro-rescaling\">[eq:intro-rescaling]</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-goe-spectral-control",
+   "exact_statement": "The GOE eigenvalues have the following additional properties.*\n\n1.  *$\\max_a|\\lambda_a|\\le3$ with probability tending to one.*\n\n2.  *There are tight random bounds $K_n\\ge0$ and $C_n>0$ such that $g_{a,n}\\ge C_n^{-1}a^{2/3}$ for every $a>K_n$.*\n\n\n3.  *For every $\\epsilon>0$, $$\\label{eq:edge-trace-double-limit}\n     \\lim_{L\\to\\infty}\\limsup_{n\\to\\infty}\n     \\mathbb P\\!\\left(\n     g_{1,n}+L\\le0\\ \\text{or}\\\n     \\left|n^{1/3}-\\sum_{a=1}^n\\frac1{g_{a,n}+L}-\\sqrt L\\right|\n           >\\epsilon\\right)=0.$$*\n\n*In the event appearing in the last formula, the sum is evaluated only when $g_{1,n}+L>0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-edge-spectral"
+  },
+  {
+   "claim_id": "claim-conditioned-edge-equilibrium",
+   "exact_statement": "Formula <a href=\"#eq:source-1\" data-reference-type=\"eqref\" data-reference=\"eq:source-1\">[eq:source-1]</a> defines a finite random variable, and $$D_n(b_n):=n^{1/3}-\\sum_{a=1}^n l_{a,n}\n       \\ \\Longrightarrow\\ D(b)$$ jointly with the edge coordinates. Almost surely $\\sum_a l_a=\\infty$. The law of $(Z_a)_{a\\ge1}$ conditioned on $S=D(b)$ has a version $\\Pi=\\Pi_g$ characterized by continuous conditional densities. It is independent of the admissible choice of $b$.*\n\n\n*Let $\\mu^{\\rm sp}$ denote normalized surface measure on the sphere of radius $\\sqrt n$, tilted by $\\exp(X^{\\mathsf T}WX/2)$. The fixed-coordinate marginals of $n^{-1/3}U^{\\mathsf T}X$ under $\\mu^{\\rm sp}$ converge jointly in distribution with the eigenvalues to the random marginals of $\\Pi$. On the spectral representations of Remark <a href=\"#rem:edge-tight-convergence\" data-reference-type=\"ref\" data-reference=\"rem:edge-tight-convergence\">3</a>, this is ordinary weak convergence of measures, including convergence of every fixed polynomial moment. On the sets in Remark <a href=\"#rem:edge-tight-convergence\" data-reference-type=\"ref\" data-reference=\"rem:edge-tight-convergence\">3</a>, for every fixed $0\\le j<\\infty$ one has $$\\label{eq:edge-coordinate-moments}\n \\int |x_a|^j\\,d\\Pi\\le C_j l_a^{j/2},\n \\qquad\n \\mu^{\\rm sp}|x_a|^j\\le C_j l_{a,n}^{j/2},$$ uniformly in the retained coordinate $a$.*\n\n\n*For any sufficiently large fixed $m$, the tail $(x_a)_{a>m}$ under $\\Pi$ has a density relative to $\\bigotimes_{a>m}N(0,l_a)$. Conditional on this tail, the first $m$ coordinates lie on the sphere of squared radius $$\\label{eq:edge-polar-radius}\n D(b)+\\sum_{a\\le m}l_a-\\sum_{a>m}(x_a^2-l_a),$$ with the Gaussian angular density on that sphere. In particular, $\\sum_a(x_a^2-l_a)=D(b)$ holds $\\Pi$-almost surely.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-edge-conditioned-law"
+  },
+  {
+   "claim_id": "claim-spherical-bulk-weight",
+   "exact_statement": "For a spherical Gibbs spin, the random probability measure $$\\frac1n\\sum_a Y_a^2\\delta_{\\lambda_a}$$ converges in probability, conditionally on the spectral data as above, to $(2-\\lambda)^{-1}d\\rho_{\\rm sc}(\\lambda)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-edge-bulk-weight"
+  },
+  {
+   "claim_id": "claim-haar-biased-spherical-identity",
+   "exact_statement": "Under $\\mathbf P$, $U^{\\mathsf T}X$ has exactly the spherical Gibbs law in spectral coordinates. After the row sign change sending $X$ to $\\mathbf1$, conditional on $y=U^{\\mathsf T}X$ the eigenframe is Haar subject to $Uy=\\mathbf1$. Moreover, on the eigenvalue events used below, $$\\label{eq:edge-uncapped-comparison}\n E_U(L_\\circ-1)^2=o(1).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-edge-biased-law"
+  },
+  {
+   "claim_id": "claim-gaussian-cap-inputs",
+   "exact_statement": "Fix a finite field radius $R$ and positive fixed error tolerances. There are sufficiently small constants $p_{\\rm top},s_0>0$ such that the following hold with probability tending to one in the range $np^3\\ge c\\sqrt{\\log n}$ and $p\\le p_{\\rm top}$.*\n\n**Spectral and spherical estimates, at every scale.* The spectral dimension satisfies $\\dim\\mathcal H_p\\asymp k_p$, $d_1\\ge-o(p^2)$ uniformly in the cap range, and $\\mathop{\\mathrm{Tr}}R_{p,0}^2=O(n/p)$. On $|\\alpha|\\le s_0p^2$, $\\ell_p(\\alpha)\\asymp p^2M_p$ and $\\ell_p'(\\alpha)\\asymp M_p$. For $\\|h\\|\\le Rp^2M_p$, the saddle precision has gap comparable to $p^2$. At $\\alpha=\\alpha_p(h)$, the density at $n$ of the squared norm of $\\mathsf N(R_{p,\\alpha}h,R_{p,\\alpha})$ is comparable to $\\sqrt{p/n}$. After multiplication by $e^{v^{\\mathsf T}X}$ and renormalization, the Gaussian mean becomes $R_{p,\\alpha}(h+v)$ while its covariance remains $R_{p,\\alpha}$; its squared-norm density at $n$ is at most a fixed multiple of $\\sqrt{p/n}$. For $m$ replicas, where $m$ is fixed, consider rowwise linear or quadratic tilts that preserve Gaussianity. The joint density of their squared norms is at most $C_m(p/n)^{m/2}$ under the following hypotheses. The spectral rows remain independent after the rowwise tilt, the tilted precision is positive definite, and on at least $ck_p$ rows the post-tilt row covariance $C_a$ satisfies $c p^{-2}\\mathop{\\mathrm{Id}}_m\\preceq C_a\\preceq C p^{-2}\\mathop{\\mathrm{Id}}_m$. All comparison constants here are fixed.*\n\n\n**Curvature estimates, at every scale.* On the annulus, for any prescribed fixed $\\epsilon_0>0$, $$\\label{eq:source-6}\n K_p\\preceq(1+\\epsilon_0)p^{-2}\\mathop{\\mathrm{Id}}_{\\mathcal H_p},\\qquad\n p^2(K_p)_{ee}\\le1-\\epsilon_1,\n \\quad e=h/\\|h\\|,\\quad \\epsilon_1=0.1.$$ On the entire field ball one also has $K_p\\preceq C_Rp^{-2}\\mathop{\\mathrm{Id}}_{\\mathcal H_p}$, where $C_R$ may be chosen before $\\epsilon_0$.*\n\n**Static comparisons and cube projection tails, on geometric lists.* For any prescribed fixed geometric list of scales, uniformly over the field ball, $$|\\phi_p(h)-\\phi_p^{\\rm sp}(h)|\\le\\epsilon_v k_p,\n \\qquad\n \\|P_pm_p(h)-R_{p,\\alpha_p(h)}h\\|\\le\\epsilon_gM_p.$$ Any fixed finite family of such lists is allowed. For each $h\\in\\mathcal H_p$ with $\\|h\\|\\le Rp^2M_p$, the cube posterior $\\mu_{p,h}$ satisfies, uniformly for every $v\\ge v_0$ with a sufficiently large fixed threshold $v_0$, $$\\mu_{p,h}\\{\\|P_pX\\|>vM_p\\}\\le C\\exp(-ak_pv^6).$$ For $v>p^{-1/2}$ the event is empty, since $\\|X\\|=\\sqrt n$. Here $a>0$, and the same bound holds under the uncapped zero-field cube measure $\\mu$ at the same list scales.*\n\n*The spherical projection-tail estimate holds at every scale in the stated range, for capped bounded-field and uncapped zero-field measures. Also, at every such cap scale, for independent spherical replicas at a common field in the prescribed ball, $$(\\mu_{p,h}^{\\rm sp})^{\\otimes2}\n \\{|n^{-1}X^{\\mathsf T}X'|>\\rho\\}\n \\le C\\exp(-cn\\rho^3),\\qquad Cp\\le\\rho\\le\\rho_0,$$ for a sufficiently small fixed $\\rho_0>0$. A fixed finite number of replicas obeys the corresponding bound for any pair.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-edge-cap-inputs"
+  },
+  {
+   "claim_id": "claim-cap-scale-interpolation",
+   "exact_statement": "The value, projected-mean, and cube projection-tail conclusions of Proposition <a href=\"#prop:edge-cap-inputs\" data-reference-type=\"ref\" data-reference=\"prop:edge-cap-inputs\">7</a> hold at every scale in the stated range, after prescribing slightly smaller errors on a sufficiently fine fixed geometric list and decreasing the upper cutoff.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-edge-static-interpolation"
+  },
+  {
+   "claim_id": "claim-observation-path-annulus",
+   "exact_statement": "There are $a,\\xi>0$ and a sufficiently small fixed upper scale $p_{\\mathrm{top}}>0$ such that $$\\label{eq:source-7}\n |\\alpha_p(h_p)|\\le C k_p^{-a}p^2\n \\qquad(r\\le p\\le p_{\\mathrm{top}})$$ outside a set of $\\mathbf P$-probability at most $C\\exp(-n^\\xi)$. On disorder events of probability arbitrarily close to one, the same whole-path statement holds under $Q_\\mu$, with a possibly smaller $\\xi$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-observations-annulus"
+  },
+  {
+   "claim_id": "claim-replica-likelihood-comparison",
+   "exact_statement": "Fix a bounded range for $\\|h\\|/(p^2M_p)$ and take the upper scale sufficiently small. Uniformly for fields in this range, $$\\label{eq:source-9}\n E_U L_p(h)^2\\le \\exp(C+Cnp^4).$$ For a sufficiently large fixed $C_1$, the contribution to this normalized second moment of cube pairs satisfying $|n^{-1}X\\cdot X'|>C_1p$ is at most $C\\exp(-a k_p)$. At $p=r$, the stronger estimates $$\\label{eq:source-10}\n \\begin{split}\n E_U(L_r-1)^2&\\le Cn^{-1/4},\\\\\n E_U\\!\\left[L_r^2\\|m_r-m_r^{\\mathrm{sp}}\\|^2\\right]\n &\\le C M_r^2 n^{-1/4}\n \\end{split}$$ hold for the full mean vectors, written in spectral coordinates. The first bound also holds for the uncapped zero-field likelihood $L_\\circ$. The pair-tail assertion at scale $r$ also holds in that uncapped case.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-observations-replicas"
+  },
+  {
+   "claim_id": "claim-cube-edge-marginal-convergence",
+   "exact_statement": "Jointly with the spectral variables, in the sense of Remark <a href=\"#rem:edge-tight-convergence\" data-reference-type=\"ref\" data-reference=\"rem:edge-tight-convergence\">3</a>, the quenched cube integrals of continuous cylinder functions of polynomial growth converge to their integrals under $\\Pi$. In particular, all fixed moments of any fixed finite set of scaled edge coordinates converge.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-observations-static"
+  },
+  {
+   "claim_id": "claim-mean-moments-initial-score",
+   "exact_statement": "For every fixed $j<\\infty$, after reducing the fixed upper scale if needed, $$\\label{eq:source-11}\n \\mathbf E\\bigl(\\|m_p\\|/M_p\\bigr)^j\n +\\mathbf E\\bigl(\\|m_p^{\\mathrm{sp}}\\|/M_p\\bigr)^j\\le C_j.$$ At the smallest scale, $$\\label{eq:source-12}\n \\mathbf E\\frac{\\|m_r-m_r^{\\mathrm{sp}}\\|^2}{M_r^2}\n \\le Cn^{-1/20},\\qquad\n \\mathbf E\\|\\nabla_{u_r}\\log L_r\\|^4=o(1).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-observations-means"
+  },
+  {
+   "claim_id": "claim-integrated-observation-score",
+   "exact_statement": "There is a fixed $\\tau>0$ such that, on each scale interval of a fixed bounded ratio about $q$, $$\\label{eq:source-13}\n \\int\\|a_p^{\\mathrm{err}}\\|^2\\,d(p^2)\n \\le Ck_q(q^\\tau+k_q^{-\\tau})$$ outside a set of $\\mathbf P$-probability at most $C\\exp(-n^\\xi)$. The bound holds simultaneously on a geometric list of intervals, with fixed enlargements, and also holds in expectation.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-observations-score"
+  },
+  {
+   "claim_id": "claim-integrated-covariance-error",
+   "exact_statement": "Put $D_p^K=p^2K_p-\\mathop{\\mathrm{Id}}$ on $\\mathcal H_p$. After decreasing $\\tau>0$ if necessary, $$\\label{eq:source-14}\n \\int_q^{2q}\\frac{\\|D_p^K\\|_{\\mathrm F}^2}{k_p}\\,d\\log p\n \\le C(q^\\tau+k_q^{-\\tau})$$ outside an event whose intersection with $\\mathcal G_n$ has $\\mathbf P$-probability at most $C\\exp(-n^\\xi)$. Fixed enlargements of the interval are allowed, and the assertions hold simultaneously on a geometric list.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-observations-curvature"
+  },
+  {
+   "claim_id": "claim-angular-observation-score",
+   "exact_statement": "For a cap field $h$, write $\\widetilde h=U^{\\mathsf T}h$ and $\\widetilde\\phi_p(\\widetilde h)=\\phi_p(U\\widetilde h)$. Let $A$ be a fixed skew-symmetric matrix supported on finitely many leading spectral coordinates, and set $\\mathcal R=(A\\widetilde h)\\cdot\\nabla_{\\widetilde h}$. There is $\\tau'>0$ such that $$\\label{eq:source-15}\n \\int_q^{2q}\n \\frac{\\mathbf E|\\mathcal R\\widetilde\\phi_p(\\widetilde h_p)|^2}\n      {n^{2/3}p^2}\\,d\\log p\n \\le C_A(q^{\\tau'}+k_q^{-\\tau'}).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-observations-angular"
+  },
+  {
+   "claim_id": "claim-exact-scale-conditional-variance",
+   "exact_statement": "There is a fixed $p_*>0$ with the following property. For every $\\varepsilon>0$ there are finite constants $C$, $\\xi>0$ and disorder events $\\mathcal V_n$ with $\\liminf_n\\mathbb P(\\mathcal V_n)\\ge1-\\varepsilon$ such that, on $\\mathcal V_n$, simultaneously for every real function $f$ on the cube and every $r\\le p\\le p_*$, $$\\label{eq:source-16}\n V_p(f):=Q_\\mu[\\mathop{\\mathrm{Var}}(f\\mid h_p)]\n \\le Cp^{-2}\\mathcal E(f)+Ce^{-n^\\xi}\\|f\\|_\\infty^2.$$ The constants and the disorder event are independent of $f$. The inequality also holds componentwise and may be summed for vector-valued functions.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-variance-main"
+  },
+  {
+   "claim_id": "claim-positive-covariance-error",
+   "exact_statement": "There are fixed $a,\\xi,C>0$ and a sufficiently small fixed $p_*>0$ such that, for each deterministic $p\\in[r,p_*]$ away from the activation scales, $$\\label{eq:source-17}\n p^2K_p\\preceq\\bigl(1+C(p^a+k_p^{-a})\\bigr)\\mathop{\\mathrm{Id}}$$ outside an event $\\mathcal N_{n,p}$ satisfying $\\mathbf P(\\mathcal N_{n,p}\\cap\\mathcal G_n)\\le Ce^{-n^\\xi}$. The exceptional event may depend on $p$; its probability bound has common constants for the entire scale range. By Fubini’s theorem the same bound holds after integration in $d\\log p$, with a possibly smaller $\\xi$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-variance-curvature"
+  },
+  {
+   "claim_id": "claim-annular-potential-extension",
+   "exact_statement": "Choose $\\eta>0$ sufficiently small compared with $\\gamma^2$, then the coarse curvature tolerance $\\varepsilon_0$ sufficiently small compared with $\\eta$. The annulus width $s_0$ and the fixed upper scale may be chosen so that the following holds on $\\mathcal G_n$. For every child field with $|\\alpha_c(h_c)|\\le s_0c^2$, the parent potential has an extension $\\overline\\phi_p$ with upper Hessian bound $(1+\\eta)p^{-2}\\mathop{\\mathrm{Id}}$ that agrees with $\\phi_p$ near $|\\alpha_p|\\le s_0p^2/2$. Under both the true transition and the transition obtained by using $\\overline\\phi_p$, the complement of this agreement region has probability at most $Ce^{-a_1k_p}$. The same bound holds with any fixed polynomial moment of $\\|h_p\\|/(p^2M_p)$ inserted, after decreasing $a_1>0$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-variance-extension"
+  },
+  {
+   "claim_id": "claim-transverse-covariance-domination",
+   "exact_statement": "On the coarse annulus, let $D=p^2K_p-\\mathop{\\mathrm{Id}}$, $e=h_p/\\|h_p\\|$, $z=D_{\\perp e}$, and define, on $e^\\perp$, $$E_p=(D_{\\perp\\perp}+zz^{\\mathsf T}/|D_{ee}|)_+,$$ extended by zero on $e$. Put $s_p^+=\\|D_+\\|$. Then $D\\preceq E_p$ and $$\\label{eq:source-19}\n \\|E_p\\|\\le Cs_p^+,\n \\qquad\n \\frac{\\mathop{\\mathrm{Tr}}E_p}{k_p}\n \\le C\\frac{\\|D\\|_{\\mathrm F}}{\\sqrt{k_p}}+\\frac C{k_p}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-variance-radial"
+  },
+  {
+   "claim_id": "claim-unused-frame-compression",
+   "exact_statement": "For $x=c/p\\in[\\gamma,2\\gamma]$, $$\\label{eq:source-21}\n \\|P_cE_pP_c\\|\n \\le C\\left(\\frac{\\mathop{\\mathrm{Tr}}E_p}{k_p}+x^3\\|E_p\\|\\right)$$ outside a set of $\\mathbf P$-probability at most $C\\exp(-a_\\gamma k_p)$. This is an unconditional assertion with respect to the unused spectral refinement; its exceptional set may afterwards be intersected with $\\mathcal G_n$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-variance-compression"
+  },
+  {
+   "claim_id": "claim-fixed-scale-variance-start",
+   "exact_statement": "On disorder events of probability tending to one, for a sufficiently small fixed $p_{\\mathrm{top}}>0$ and every real function $f$ on the cube, $$V_{p_{\\mathrm{top}}}(f)\n \\le C\\mathcal E(f)+Ce^{-a n}\\|f\\|_\\infty^2.$$ The event and constants are independent of $f$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-variance-start"
+  },
+  {
+   "claim_id": "claim-conditioned-gradient-domain",
+   "exact_statement": "The Euclidean gradient on smooth compact cylinder functions is closable from $L^2(\\Pi)$ to $L^2(\\Pi;\\ell^2)$. Its closed graph consists exactly of the pairs satisfying <a href=\"#eq:source-23\" data-reference-type=\"eqref\" data-reference=\"eq:source-23\">[eq:source-23]</a>. In particular, the vector $G$ in that identity is unique; we denote it by $\\nabla F$.*\n\n*The closed form $$\\mathcal E_\\Pi(F)=\\int|\\nabla F|^2\\,d\\Pi$$ has kernel equal to the constants. Each coordinate $x_a$ belongs to its domain and satisfies $\\nabla x_a=e_a$, so that $\\mathcal E_\\Pi(x_a)=1$.",
+   "kind": "classification",
+   "statement_anchor": "stmt-prop-gradient-domain"
+  },
+  {
+   "claim_id": "claim-compensated-derivative-density",
+   "exact_statement": "Let $\\gamma=\\bigotimes_{i\\ge1}\\mathsf N(0,l_i)$, where $l_i>0$, $\\sum_i l_i=\\infty$ and $\\sum_i l_i^2<\\infty$, and let $S_y=\\sum_i(y_i^2-l_i)$. Suppose that $f,a\\in L^2(\\gamma)$ and $G\\in L^2(\\gamma;\\ell^2)$ satisfy, coordinatewise in the weak sense, $$\\partial_{y_i}f-2y_i a=G_i.$$ Then $(f,a,G)$ is a limit in these three spaces of triples $$\\left(P,\\partial_s P,\n       \\bigl(\\partial_{y_i}P\\bigr)_i\\right)\\Big|_{s=S_y},$$ where $P=P(s,y_1,\\ldots,y_N)$ is a polynomial. The derivatives in this display treat $s$ and the individual $y_i$ as independent variables.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-gradient-compensated"
+  },
+  {
+   "claim_id": "claim-cap-smoothing-slopes",
+   "exact_statement": "For $r\\le p\\le p_*$ in the range of Proposition <a href=\"#prop:variance-main\" data-reference-type=\"ref\" data-reference=\"prop:variance-main\">16</a>, $$Q_\\mu\\|\\nabla_{u_p}F_p\\|^2\n       \\le C T\\mathcal E(f)+o(1),\n \\label{eq:source-26}$$ and $$\\begin{split}\n \\|n^{1/3}(f-S_pf)\\|_{L^2(\\mu)}\n       &\\le Cp^{-1}\\sqrt{T\\mathcal E(f)}+o(1),\\\\\n \\left\\|n^{1/3}(D_iS_pf)_i-J_p^f\\right\\|_{L^2(\\mu;\\mathbb R^n)}\n       &\\le Cp\\sqrt{T\\mathcal E(f)}+o(1).\n \\end{split}\n \\label{eq:source-27}$$ In particular, $J_p^f$ is bounded in $L^2(\\mu;\\mathbb R^n)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-gradient-smoothing"
+  },
+  {
+   "claim_id": "claim-observation-gradient-identification",
+   "exact_statement": "Suppose $f_n$ satisfies the preceding bounds and has weak cylinder limit $F$. Choose a subsequence on which $T\\mathcal E(f_n)$ tends to its liminf. After further extraction in the quenched convention, there is a sequence $q_j\\downarrow0$ such that the spectral components of $\\overline{J^f}_{q_j}$ have weak cylinder limits $G^{(j)}$ as $n\\to\\infty$. Every weak cluster point of $(G^{(j)})$ in $L^2(\\Pi;\\ell^2)$ equals $\\nabla F$. In particular, $F$ belongs to the form domain of Proposition <a href=\"#prop:gradient-domain\" data-reference-type=\"ref\" data-reference=\"prop:gradient-domain\">22</a> and $$\\|\\nabla F\\|_{L^2(\\Pi;\\ell^2)}\n \\le C\\left(\\liminf_{n\\to\\infty}T\\mathcal E(f_n)\\right)^{1/2}.\n \\label{eq:source-28}$$ The constant is the same for all sequences with the stated size bounds.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-gradient-observation"
+  },
+  {
+   "claim_id": "claim-microscopic-moment-measure",
+   "exact_statement": "There is a deterministic finite positive measure $\\omega$ on $[0,\\infty)$ whose moments are given by <a href=\"#eq:source-3\" data-reference-type=\"eqref\" data-reference=\"eq:source-3\">[eq:source-3]</a>. For fixed leading indices $a,a'$, polynomials $Q,Q'$, and a bounded continuous cylinder $\\psi$, $$\\mu\\!\\left[\\psi(x)\\sum_iw_i(A_a^Q)_i(A_{a'}^{Q'})_i\\right]\n \\longrightarrow\n \\mathbf 1_{\\{a=a'\\}}\\Pi[\\psi]\\int QQ'\\,d\\omega.\n \\label{eq:source-32}$$ For every $\\varepsilon>0$ one also has $$\\lim_{q\\downarrow0}\\limsup_{n\\to\\infty}\n \\mathbb P\\!\\left(\n  \\mu\\!\\left[\\left\\|P_q(wA_a^Q)-v_a\\int Q\\,d\\omega\\right\\|^2\\right]\n      >\\varepsilon\\right)=0.\n \\label{eq:source-33}$$ Here $wA$ denotes entrywise multiplication. For some $c>0$, $\\int e^{c\\sqrt\\lambda}\\,d\\omega(\\lambda)<\\infty$. The measure is uniquely determined by its moments, and polynomials are dense in $L^2((1+\\lambda)\\omega+\\delta_0)$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-micro-moment-measure"
+  },
+  {
+   "claim_id": "claim-connected-haar-contractions",
+   "exact_statement": "Suppose the edge matrices have uniformly bounded operator norms and that the traces and paths in <a href=\"#eq:micro-spectral-words\" data-reference-type=\"eqref\" data-reference=\"eq:micro-spectral-words\">[eq:micro-spectral-words]</a> converge for every fixed word. For a fixed connected $G$ and fixed continuous vertex functions of polynomial growth, $S_G$ converges in every fixed $L^p$ under the conditional Haar law to a deterministic limit. The same holds for the sum restricted to injective site labels. Products of finitely many such contractions have the products of their limits.*\n\n*The conclusion applies to the contractions defining $\\sum_iw_i(A_a^Q)_i(A_{a'}^{Q'})_i$ at the sampled spin, and to their quadratic contractions with an additional $P_q$ edge, for $q>0$ fixed. In the latter case the limit tends to zero as $q\\downarrow0$ if that edge is replaced by $P_q-P_{\\rm mark}$, where $P_{\\rm mark}$ projects onto the marked spectral axes.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-micro-contractions"
+  },
+  {
+   "claim_id": "claim-weighted-difference-recursion",
+   "exact_statement": "Fix $K<\\infty$. Suppose that $W$ is symmetric, has zero diagonal, and obeys $$\\|W\\|\\le K,\\qquad \\epsilon_n:=\\max_{i,j}|W_{ij}|\\le n^{-49/100}.$$ There is $C=C(K)\\ge1$ such that, for each fixed integer $m\\ge1$, uniformly in these matrices and in real functions $f$ on $\\{-1,1\\}^n$, $$N_m(Hf)\\le\\sum_{l=1}^{m+2}\n \\bigl(C^{m-l+3}(m+1)^{m-l+2}+o_{n;m}(1)\\bigr)N_l(f).\n \\label{eq:source-35}$$ Here $o_{n;m}(1)$ is deterministic, nonnegative, and tends to zero as $n\\to\\infty$ with $m$ fixed.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-micro-weighted-recursion"
+  },
+  {
+   "claim_id": "claim-moment-determinacy-polynomial-density",
+   "exact_statement": "Let the matrices and normalized linear functions above vary with $n$, and suppose the moments of the finite measures $$\\omega_{n,a}(B)=\\langle Y_a,H\\mathbf1_B(H)Y_a\\rangle_{L^2(\\mu)},\n \\qquad B\\subset[0,\\infty)\\text{ Borel},$$ converge at every fixed nonnegative integer order. They converge weakly to a finite measure $\\omega$ on $[0,\\infty)$ with those moments. This measure is uniquely determined among measures on $[0,\\infty)$ by its moments, and, for some $c>0$, $$\\int e^{c\\sqrt\\lambda}\\,d\\omega(\\lambda)<\\infty.$$ Polynomials are dense in both $L^2(\\omega)$ and $L^2((1+\\lambda)\\omega+\\delta_0)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-micro-moment-density"
+  },
+  {
+   "claim_id": "claim-cylinder-corrector-recovery",
+   "exact_statement": "Let $F$ be a smooth compact cylinder, and let $Q$ be a polynomial with $Q(0)=1$. Define $$f_{n,Q}(X)=F(x)+n^{-1/3}\\sum_aF_{,a}(x)(Q(H)-1)Y_a,\n \\label{eq:source-39}$$ where the sum is over the finitely many coordinates of $F$. Then $f_{n,Q}$ is bounded by a fixed power of $n$, converges weakly against cylinders to $F$, and its squared $L^2$ norm converges to $\\Pi[F^2]$. Moreover, $$\\lim_{n\\to\\infty}T\\mathcal E(f_{n,Q})\n       =\\left(\\int Q^2\\,d\\omega\\right)\\Pi[\\|\\nabla F\\|^2].$$ The exponent in the polynomial bound may depend on $Q$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-micro-recovery"
+  },
+  {
+   "claim_id": "claim-effective-coefficient-positive",
+   "exact_statement": "One has $c_*=\\omega(\\{0\\})>0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-micro-positivity"
+  },
+  {
+   "claim_id": "claim-corrector-multiplied-divergence",
+   "exact_statement": "For a fixed polynomial $Q$, fixed leading index $a$, and smooth compact cylinder $\\psi$, $$D_w^*(\\psi(x)A_a^Q)\n       =\\psi(x)HQ(H)Y_a+o_{L^2(\\mu)}(1),\n \\qquad\n \\|HQ(H)Y_a\\|_2^2\\longrightarrow\\int\\lambda Q^2\\,d\\omega.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-micro-divergence"
+  },
+  {
+   "claim_id": "claim-relaxed-dirichlet-energy",
+   "exact_statement": "The constant $c_*=\\omega(\\{0\\})$ is deterministic and strictly positive. On any quenched represented subsequence, suppose that $\\|f_n\\|_\\infty\\le Cn^D$ for fixed $C,D$, that the $L^2$ norms and $T\\mathcal E(f_n)$ are bounded, and that $f_n$ converges weakly against cylinders to $F$. Then $F$ is in the closed form domain on $L^2(\\Pi)$ and $$\\liminf_{n\\to\\infty}T\\mathcal E(f_n)\n        \\ge c_*\\Pi[\\|\\nabla F\\|_{\\ell^2}^2].\n \\label{eq:source-38}$$ Conversely, for each smooth compact cylinder $F$, the functions $f_{n,Q_j}$ in <a href=\"#eq:source-39\" data-reference-type=\"eqref\" data-reference=\"eq:source-39\">[eq:source-39]</a> converge strongly to $F$ for every fixed $j$, are polynomially bounded at that fixed $j$, and satisfy $$\\lim_{j\\to\\infty}\\lim_{n\\to\\infty}T\\mathcal E(f_{n,Q_j})\n                       =c_*\\Pi[\\|\\nabla F\\|^2].$$ All assertions for countably many chosen sources and tests hold on a common represented event. In particular the lower bound and recovery use the same deterministic coefficient.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-micro-relaxation"
+  },
+  {
+   "claim_id": "claim-gaussian-resolvent-trace",
+   "exact_statement": "For almost every edge configuration $g$, the series defining $B_g(z)$ is finite for every $z>0$. For every finite collection $z_1,\\ldots,z_k>0$, $$(B_n(z_1),\\ldots,B_n(z_k))\n \\ \\Longrightarrow\\ (B_g(z_1),\\ldots,B_g(z_k)).$$ Moreover, for each $z,\\epsilon>0$, $$\\lim_{\\ell\\to\\infty}\\limsup_{n\\to\\infty}\n \\mathbb P\\left\\{\n \\sum_{a>\\ell}\\langle x_a,(z+TH)^{-1}x_a\\rangle_\\mu\n >\\epsilon\\right\\}=0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-trace-goe"
+  },
+  {
+   "claim_id": "claim-fixed-coordinate-resolvents",
+   "exact_statement": "For every fixed $\\ell$ and every finite collection of positive $z$, the corresponding sums over $1\\leq a\\leq\\ell$ converge jointly to the same restrictions of <a href=\"#eq:source-40\" data-reference-type=\"eqref\" data-reference=\"eq:source-40\">[eq:source-40]</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-trace-fixed"
+  },
+  {
+   "claim_id": "claim-vector-observation-replacement",
+   "exact_statement": "Uniformly over vector tests satisfying $\\|f\\|_{z,n}\\leq1$ and a fixed polynomial supremum bound, $$\\sum_{a>\\ell}\\mu[f_ax_a]\n =n^{-1/3}\\sum_{a>\\ell}\n Q_\\mu\\big[(F_r)_a(U^tm_r)_a\\big]+o_{\\mathbb P}(1).\n \\label{eq:source-41}$$ The error is uniform in $\\ell$ and in the number of vector components.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-trace-replacement"
+  },
+  {
+   "claim_id": "claim-gaussian-quadratic-trace-vanishes",
+   "exact_statement": "For Gaussian disorder and every $z>0$, $$B_n^{[2]}(z)\\longrightarrow0\n \\quad\\text{in probability}.\n \\label{eq:source-43}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-trace-second"
+  },
+  {
+   "claim_id": "claim-sign-trace-universality",
+   "exact_statement": "For every $z>0$, $$\\sup_{0\\le t\\le1}\\mathbb E_t B_n^{[2]}(z)\\longrightarrow0.$$ For each finite collection $z_1,\\ldots,z_m>0$, the vector $(B_n(z_1),\\ldots,B_n(z_m))$ under sign disorder converges in law to the Gaussian limiting vector in <a href=\"#eq:source-40\" data-reference-type=\"eqref\" data-reference=\"eq:source-40\">[eq:source-40]</a>. In particular the coefficient $c_*$ in that limit is unchanged.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-comparison-universality"
+  },
+  {
+   "claim_id": "claim-mixture-static-overlap",
+   "exact_statement": "For every $0<\\epsilon\\le1$ there is $a_\\epsilon>0$ such that $$\\label{eq:comparison-overlap-tail}\n \\sup_{0\\le t\\le1}\\mathbb P_t\\left\\{\n   \\mu^{\\otimes2}(|\\rho|\\ge\\epsilon)>e^{-a_\\epsilon n}\n \\right\\}\\longrightarrow0.$$ Consequently, for fixed $C,K<\\infty$, uniformly over nonnegative, possibly disorder-dependent functions $p$ satisfying $\\mu p\\le1$ and $\\|p\\|_\\infty\\le Cn^K$, the quantities $$\\frac1{\\binom n2}\\sum_{i<j}\\big|\\mu[pX_iX_j]\\big|$$ converge to zero in probability, uniformly in $t$. They also converge to zero in expectation, uniformly in $t$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-comparison-overlap"
+  },
+  {
+   "claim_id": "claim-pair-residual-sensitivity",
+   "exact_statement": "Uniformly over the disorder and the pair $e$, $$\\label{eq:source-44}\n R_e^2\\le\\frac{2T}{z}\\Gamma_e.$$ For $S=S^{[2]}$ one also has $R_e^2\\le C_z$, whereas for $S=S^{[1]}$, $$\\label{eq:source-45}\n R_e^2\\le C_z\\bigl(1+n^{1/3}\\sqrt{B_n^{[2]}(z)}\\bigr).$$ Consequently $\\operatorname{avg}_eR_e^2\\le C_z n^{-1/3}$. Its fourth-power analogue is $\\operatorname{avg}_eR_e^4\\le C_z n^{-1/3}$ for $S^{[2]}$, and $$\\label{eq:source-46}\n \\operatorname{avg}_eR_e^4\n \\le C_z\\bigl(n^{-1/3}+\\sqrt{B_n^{[2]}(z)}\\bigr)\n \\qquad\\text{for }S^{[1]}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-comparison-residual"
+  },
+  {
+   "claim_id": "claim-averaged-feature-sensitivities",
+   "exact_statement": "For either feature, $\\operatorname{avg}_e(h_e+h_e^4)\\le C_z$ deterministically. There is a deterministic sequence $\\epsilon_n\\to0$ such that, uniformly $t\\in[0,1]$, $$\\begin{aligned}\n \\mathbb E_t\\operatorname{avg}_e(h_e+h_e^4)&\\le\\epsilon_n\n       &&\\text{for }S^{[2]},\\label{eq:comparison-average-second}\\\\\n \\mathbb E_t\\operatorname{avg}_e(h_e+h_e^4)&\\le\\epsilon_n+\n             C_z\\mathbb E_t\\sqrt{B_n^{[2]}(z)}\n       &&\\text{for }S^{[1]}.\n       \\label{eq:comparison-average-first}\n\\end{aligned}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-comparison-average"
+  },
+  {
+   "claim_id": "claim-compactified-trace-fourth-derivatives",
+   "exact_statement": "Fix finitely many traces $B_a=B_n^{[k_a]}(z_a)$, with $k_a\\in\\{1,2\\}$ and $z_a>0$, and a smooth function $F$ on a neighborhood of $[0,1]^m$. For an arbitrary base disorder and pair $e$, let $B_a(\\theta)$ denote the traces after adding $\\theta$ to the interaction coefficient of $e$, and let $\\mathfrak h_e=\\sum_{a=1}^m h_{e,a}$, with each sensitivity computed at the base disorder. Then for all sufficiently large $n$, $$\\label{eq:comparison-fourth-derivative}\n \\sup_{|\\theta|\\le2\\log n/\\sqrt n}\n \\left|\\frac{d^4}{d\\theta^4}\n F\\left(\\frac1{1+B_1(\\theta)},\\ldots,\n        \\frac1{1+B_m(\\theta)}\\right)\\right|\n \\le C_F(\\mathfrak h_e+\\mathfrak h_e^4).$$ At every real base disorder, derivatives of orders at most four also have a deterministic bound polynomial in $n$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-comparison-derivative"
+  },
+  {
+   "claim_id": "claim-stieltjes-laplace-functional-continuity",
+   "exact_statement": "Let $\\nu_n$ and $\\nu$ be random nonnegative measures on $[0,\\infty)$ such that their integrals against $(1+\\lambda)^{-1}$ are finite almost surely, for every $n$ and for $\\nu$. Suppose the corresponding integrals against $(z+\\lambda)^{-1}$ converge jointly in law for every finite collection of positive $z$, including $z=1$. Then $$\\left(s\\longmapsto\\int e^{-s\\lambda}\\,d\\nu_n(\\lambda)\\right)\n \\ \\Longrightarrow\\\n \\left(s\\longmapsto\\int e^{-s\\lambda}\\,d\\nu(\\lambda)\\right)$$ in $C_{\\rm loc}((0,\\infty))$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-functional-spectral"
+  },
+  {
+   "claim_id": "claim-common-functional-limit-identification",
+   "exact_statement": "The series <a href=\"#eq:source-2\" data-reference-type=\"eqref\" data-reference=\"eq:source-2\">[eq:source-2]</a> has a Borel version $g\\mapsto\\mathcal A_g$ with values in $C_{\\rm loc}((0,\\infty))$. For both Gaussian and symmetric-sign entries, $$\\operatorname{Law}(A_{n,J})\\Longrightarrow\n Q_{\\rm crit}=\\operatorname{Law}(\\mathcal A_g),$$ where the same edge law and the same deterministic coefficient $c_*$ are used in <a href=\"#eq:source-2\" data-reference-type=\"eqref\" data-reference=\"eq:source-2\">[eq:source-2]</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-functional-identification"
+  },
+  {
+   "claim_id": "claim-edge-finite-shift-absolute-continuity",
+   "exact_statement": "For every fixed $m$ and $h\\in\\mathbb R^m$, $$(T_h)_*(\\mathsf P|_{\\mathcal O_h})\\ll\\mathsf P.$$ In particular, lowering $g_1$ by any fixed positive amount gives a law absolutely continuous with respect to $\\mathsf P$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-functional-shift"
+  },
+  {
+   "claim_id": "claim-positive-time-essential-unboundedness",
+   "exact_statement": "For every fixed $s>0$, the finite random variable $\\mathcal A_g(s)$ is essentially unbounded. In particular $Q_{\\rm crit}$ is not a point mass.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-functional-randomness"
+  },
+  {
+   "claim_id": "claim-constant-function-in-closed-support",
+   "exact_statement": "The constant function $s\\mapsto 1$ belongs to the closed topological support of $Q_{\\rm crit}$ in $C_{\\rm loc}((0,\\infty))$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-support-constant"
+  }
+ ],
+ "paper": "papers/EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-M-0445_PM-227.2_Functional_universality_of_critical_SK_autocorrelations.md",
+ "purpose": "Functional universality of critical SK autocorrelations",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "23658936c82adc0b7c2f00f7fc37db34c9b77d827a08c23203fbdbbde1b1ab20",
+   "pm.domains.v2": "b546a6481e1d38903dbf31ade0da3f1e88f3a5d28875fab7e35915c8073e0af4",
+   "pm.edges.v2": "bb2cc522925b72de21369289622615115e1953179f1f788bcdad36f03747fff3",
+   "pm.extraction.v2": "dae61afc3251f24a4ac03480e6cc9ab42b461362c8551b987b56aa71fc057906",
+   "pm.formal.v2": "c2b05eabb4792cde2dab1f92b179a422591c5dd546ea9319dc1d4021fae52fc1",
+   "pm.limits.v2": "298ffdaadfe5ec5a2f22175baf44ce39d1f9e8b99728a8391e9085cbe1a340b7",
+   "pm.node.v2": "d303e32d10d74ec503b85045f60fc8ad1b3882b6ff51811c32605f47959cc67b",
+   "pm.objects.v2": "8338d05dfbc4b2d7ded757ed937790ba669e3a05902d8dc4cc5d15a2df1b50e3",
+   "pm.provenance.v2": "d8ea209bfcd6930ff66c22814030046c22204ad08a838a313e8edacb94d4082b",
+   "pm.quantities.v2": "6bb0d56394a4ab89c30d9d0bb4fa1d934d11d0d8e5059a9fcf34bc80d04f7a87",
+   "pm.reading.v2": "080116f03e59f2ab9acaa0cea2a6ad490854e5f444183c5e152ba6bec00fad37",
+   "pm.roadmap.v2": "117769ff9ae9187d96b8e46e21943bf49575b99f75592934341ed8399b2eb782",
+   "pm.search.v1": "bace9575b5ce8f17500c8ed58451c4f2c78810787b1b67ba9b8a031ada838f32",
+   "pm.triptych.v2": "820ffeac7fc5bff068142111d9151a1acb0fee390d0423c00077e01110d018e6"
+  },
+  "canonical_sha256": "6962ed0b07c341dc55a4f4d64c22ba668b89c80abe4ddcb66c884a431df542d4",
+  "paper_sha256": "79b48ff7eb749b7f630f500f5f3639fbe8804511ce90c0edaa407c5306b988c5",
+  "repaired_body_sha256": "d99e87df2196aae08199419fcbc7aebe0fcd23f2f7a1a4a768f7e4210610cf6e"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "a0b386a09908f903faccddb5e5e31ceee7fd96e25400c13218399dae369b7370",
+   "receipt_sha256": "9c75f3742c1782e4842ce755de757a13c3caa8eac1853895eece3a6c88d16363",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Functional universality of critical SK autocorrelations"
+}

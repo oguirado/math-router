@@ -1,0 +1,823 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 670332,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 189734
+ },
+ "coordinate": "EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-C-TO-H-0070",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Algebraic and arithmetic geometry",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-cm",
+     "quote": "Let $A$ be a complex CM abelian variety.",
+     "quote_sha256": "fb97c28ded8261074e3195513ae42676c12c935e8f8b799933baf357c8827e04"
+    },
+    {
+     "anchor": "stmt-cc-algebraic-specialization",
+     "quote": "It asserts algebraicity on the special fiber, not the Hodge conjecture for arbitrary complex abelian varieties.",
+     "quote_sha256": "92ed12e1368440269566cda71a66859de9ea8a1b09c3d031596b42053574829b"
+    }
+   ],
+   "query": "Hodge conjecture for arbitrary complex abelian varieties",
+   "reason": "The main cycle-class surjectivity assertion assumes CM; the specialization application proves algebraicity only on the special fiber."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-cm",
+     "quote": "For every integer $p\\geq0$, the Betti cycle-class map $$\\operatorname{cl}_B:\\mathop{\\mathrm{CH}}^p(A)_{\\mathbb{Q}}\n \\longrightarrow H^{2p}(A,\\mathbb{Q})\\cap H^{p,p}(A)$$ is surjective, where $\\mathop{\\mathrm{CH}}^p(A)_{\\mathbb{Q}}=\\mathop{\\mathrm{CH}}^p(A)\\otimes_{\\mathbb{Z}}\\mathbb{Q}$ and the intersection is taken in $H^{2p}(A,\\mathbb{C})$.",
+     "quote_sha256": "61bc61fbdeb72b31f7d3cd8d11599ffaf7793e57db5f0be6d70ef68d5c56f916"
+    }
+   ],
+   "query": "Integral Hodge-class algebraicity",
+   "reason": "The theorem uses rational Chow groups and rational cohomology; integral surjectivity is ABSENT."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-prop-switch-reduction",
+     "quote": "It does not assert generation of the Hodge ring on a fixed power by cup products of classes in codimensions one and two.",
+     "quote_sha256": "62d5ddd4c1bc181d239159342a0deabbffb8a824f9503d1967977105ff251286"
+    }
+   ],
+   "query": "Generation of a fixed-power Hodge ring by low-codimension classes",
+   "reason": "The reduction uses auxiliary products and contracts their intermediate factors; it does not assert the proposed fixed-power generation property."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-cc-tate",
+     "quote": "It does not assert that each Tate class lifts to a Hodge class on a single CM lifting, even up to isogeny",
+     "quote_sha256": "5f8f3cecefe53cd20a8398418988cbb20c6185fe2e655dc04d164cabcc2b9963"
+    }
+   ],
+   "query": "A single CM lift for every finite-field Tate class",
+   "reason": "The cited implication compares motives and does not supply individual Hodge-class lifts on a single CM lifting."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-lem-filtered-hecke-summands",
+     "quote": "Suppose that an $L$-linear idempotent $p$ on $D_A\\otimes_{\\mathbb{Q}_q}L$ preserves the filtration and commutes with $\\varphi_A\\otimes1$.",
+     "quote_sha256": "0570d1c028ae7926ff5433d15e593fcab8598fec23791605872fbfe418c32840"
+    }
+   ],
+   "query": "Pure Hodge filtration from a slope projector alone",
+   "reason": "The projector must preserve the Hodge filtration as well as commute with Frobenius; pure slope alone is insufficient."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "subsec:theta-rank-two",
+     "quote": "We do not claim it is holomorphic for such an intermediate parameter.",
+     "quote_sha256": "49ef0605474e7d25d01a23b9e9f4ffc166febbb8e33a050da28522ed93da5def"
+    }
+   ],
+   "query": "Holomorphy of all intermediate rank-two variation forms",
+   "reason": "Holomorphy is established at rational endpoints after double alternation; the intermediate parameter forms are only asserted to be smooth."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-cm",
+     "quote": "For every integer $p\\geq0$, the Betti cycle-class map $$\\operatorname{cl}_B:\\mathop{\\mathrm{CH}}^p(A)_{\\mathbb{Q}}\n \\longrightarrow H^{2p}(A,\\mathbb{Q})\\cap H^{p,p}(A)$$ is surjective, where $\\mathop{\\mathrm{CH}}^p(A)_{\\mathbb{Q}}=\\mathop{\\mathrm{CH}}^p(A)\\otimes_{\\mathbb{Z}}\\mathbb{Q}$ and the intersection is taken in $H^{2p}(A,\\mathbb{C})$.",
+     "quote_sha256": "61bc61fbdeb72b31f7d3cd8d11599ffaf7793e57db5f0be6d70ef68d5c56f916"
+    }
+   ],
+   "query": "Effective runtime for extracting equations of algebraic cycles",
+   "reason": "A cycle-extraction runtime or complexity theorem is ABSENT; cycle-class surjectivity is an existence assertion."
+  }
+ ],
+ "family": "PM-032",
+ "id": "PM-032.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-cm",
+    "claim_id": "claim-cm-hodge-algebraicity",
+    "statement": "Let $A$ be a complex CM abelian variety."
+   },
+   {
+    "anchor": "stmt-lem-trace-descent",
+    "claim_id": "claim-scalar-descent",
+    "statement": "Let $T$ be a finite-dimensional rational vector space and $P\\subset T_{\\mathbb{C}}$ a complex-linear subspace."
+   },
+   {
+    "anchor": "stmt-lem-trace-descent",
+    "claim_id": "claim-scalar-descent",
+    "statement": "If $t\\in T_{\\overline{\\mathbb{Q}}}$ and $\\sigma t\\in P$ for every $\\sigma\\in\\mathop{\\mathrm{Gal}}(\\overline{\\mathbb{Q}}/\\mathbb{Q})$,"
+   },
+   {
+    "anchor": "stmt-lem-weight-one-maps",
+    "claim_id": "claim-degree-one-realization",
+    "statement": "For complex abelian varieties $A$ and $B$,"
+   },
+   {
+    "anchor": "stmt-lem-weight-one-maps",
+    "claim_id": "claim-degree-one-realization",
+    "statement": "If $S$ is a smooth connected projective complex variety and $h:H^1(B,\\mathbb{Q})\\to H^1(S,\\mathbb{Q})$ is a rational Hodge map,"
+   },
+   {
+    "anchor": "stmt-lem-toric-cm",
+    "claim_id": "claim-toric-cm-characterization",
+    "statement": "For a complex abelian variety $A$,"
+   },
+   {
+    "anchor": "stmt-lem-cm-line-transfer",
+    "claim_id": "claim-embedding-line-transfer",
+    "statement": "Let $H$ and $H'$ be direct sums of rank-one weight-one Hodge modules over CM fields contained in $E$."
+   },
+   {
+    "anchor": "stmt-lem-cm-line-transfer",
+    "claim_id": "claim-embedding-line-transfer",
+    "statement": "Choose an embedding line $L\\subset H_{\\overline{\\mathbb{Q}}}$ and an embedding line $M\\subset H'_{\\overline{\\mathbb{Q}}}$ with the same complete type function."
+   },
+   {
+    "anchor": "stmt-lem-cm-line-transfer",
+    "claim_id": "claim-embedding-line-transfer",
+    "statement": "Extend any $\\overline{\\mathbb{Q}}$-linear map $T:L\\to M$ by zero on all other source embedding lines."
+   },
+   {
+    "anchor": "stmt-thm-switch",
+    "claim_id": "claim-four-factor-switch",
+    "statement": "Let $E$ be a Galois CM field and let $v_1,v_2,v_3,v_4:G_E\\to\\{1,-1\\}$ be odd sign functions satisfying $v_1+v_2=v_3+v_4$."
+   },
+   {
+    "anchor": "stmt-prop-switch-reduction",
+    "claim_id": "claim-switch-reduction",
+    "statement": "If Theorem <a href=\"#thm:switch\" data-reference-type=\"ref\" data-reference=\"thm:switch\">6</a> holds for every Galois CM field and every quadruple of odd sign functions satisfying its relation,"
+   },
+   {
+    "anchor": "pm-h-1",
+    "claim_id": "claim-switch-normalization",
+    "statement": "Let $E$ be a Galois CM field and let $v_1,v_2,v_3,v_4:G_E\\to\\{1,-1\\}$ be odd sign functions satisfying $v_1+v_2=v_3+v_4$."
+   },
+   {
+    "anchor": "stmt-prop-surface-switch",
+    "claim_id": "claim-surface-period-criterion",
+    "statement": "Let $E$ be a Galois CM field with conjugation $c$, and let $v_1,v_2,v_3,v_4:G_E\\to\\{1,-1\\}$ be odd sign functions satisfying $v_1+v_2=v_3+v_4$."
+   },
+   {
+    "anchor": "stmt-prop-surface-switch",
+    "claim_id": "claim-surface-period-criterion",
+    "statement": "Put $\\lambda=(1,1,c,c)$."
+   },
+   {
+    "anchor": "stmt-prop-surface-switch",
+    "claim_id": "claim-surface-period-criterion",
+    "statement": "Suppose that $S$ is a smooth connected projective complex surface and that there are rational Hodge maps $$h_i:U(v_i)\\longrightarrow H^1(S,\\mathbb{Q}),\\qquad 1\\leq i\\leq4,$$ and nonzero vectors $\\alpha_i\\in U(v_i)_{\\lambda_i}\\subset U(v_i)_{\\overline{\\mathbb{Q}}}$ such that $$\\label{eq:surface-period}\n \\int_S h_1(\\alpha_1)\\smile h_2(\\alpha_2)\n             \\smile h_3(\\alpha_3)\\smile h_4(\\alpha_4)\\ne0.$$"
+   },
+   {
+    "anchor": "stmt-cor-surface-span",
+    "claim_id": "claim-complex-span-surface-criterion",
+    "statement": "Let $E$, $v_1,\\ldots,v_4$, and $\\lambda=(1,1,c,c)$ be as in Proposition <a href=\"#prop:surface-switch\" data-reference-type=\"ref\" data-reference=\"prop:surface-switch\">9</a>, and let $S$ be a smooth connected projective complex surface."
+   },
+   {
+    "anchor": "stmt-cor-surface-span",
+    "claim_id": "claim-complex-span-surface-criterion",
+    "statement": "Suppose that, for each $1\\leq i\\leq4$, a class $\\eta_i\\in H^1(S,\\mathbb{C})$ belongs to $$\\operatorname{span}_{\\mathbb{C}}\n \\{h(U(v_i)_{\\lambda_i}):\n       h\\in\\mathop{\\mathrm{Hom}}_{\\mathrm{Hdg}}(U(v_i),H^1(S,\\mathbb{Q}))\\}$$ and that $$\\int_S\\eta_1\\smile\\eta_2\\smile\\eta_3\\smile\\eta_4\\ne0.$$"
+   },
+   {
+    "anchor": "eq:theta-sign-inversion",
+    "claim_id": "claim-positive-lagrangian-half-determinant",
+    "statement": "Let $E\\subset\\overline{\\mathbb{Q}}$ be a Galois CM field, put $F=E^+$, and assume $s=[F:\\mathbb{Q}]\\ge2$."
+   },
+   {
+    "anchor": "eq:theta-symplectic-form",
+    "claim_id": "claim-positive-lagrangian-half-determinant",
+    "statement": "For a nondegenerate $E/F$-Hermitian space $P$ of $E$-dimension $n\\in\\{1,2\\}$, let $$\\mathbb V_P=\\mathop{\\mathrm{Res}}_{E/F}(V\\otimes_E P).$$"
+   },
+   {
+    "anchor": "eq:theta-active-lagrangian",
+    "claim_id": "claim-positive-lagrangian-half-determinant",
+    "statement": "For a rational orthogonal sum $P=W_1\\perp W_2$, take the direct sum of these prescriptions and write $\\mathcal F_P=\\mathcal F_1\\oplus\\mathcal F_2$."
+   },
+   {
+    "anchor": "stmt-lem-theta-tensor-law",
+    "claim_id": "claim-completed-theta-covariance",
+    "statement": "Let $g\\in\\mathop{\\mathrm{Sp}}(\\mathbb V_P)(F)$."
+   },
+   {
+    "anchor": "stmt-lem-theta-tensor-law",
+    "claim_id": "claim-completed-theta-covariance",
+    "statement": "At each real place write $$g=\\begin{pmatrix}A&B\\\\C&D_0\\end{pmatrix},\\qquad\n J=CZ+D_0,\\qquad gZ=(AZ+B)J^{-1}.$$"
+   },
+   {
+    "anchor": "stmt-lem-theta-tensor-law",
+    "claim_id": "claim-completed-theta-covariance",
+    "statement": "Choose an infinite metaplectic lift with factor $j(g,Z)$ satisfying $j(g,Z)^2=\\prod_{\\tau\\in\\Sigma}\\det J_\\tau$, and let $\\widetilde g_f$ be its paired finite lift."
+   },
+   {
+    "anchor": "stmt-lem-unitary-splitting",
+    "claim_id": "claim-special-unitary-splitting",
+    "statement": "For the symplectic space $(\\mathbb V_P,\\psi_P)$,"
+   },
+   {
+    "anchor": "stmt-lem-unitary-splitting",
+    "claim_id": "claim-special-unitary-splitting",
+    "statement": "At a split finite place, choose as Schrödinger positions for a multiplicity line one standard three-dimensional embedding summand."
+   },
+   {
+    "anchor": "subsec:theta-one-forms",
+    "claim_id": "claim-theta-cotangent-spanning",
+    "statement": "For a line $W_i$, project $T_{1,\\phi}$ to the $c\\mu$ summand of the positive Lagrangian."
+   },
+   {
+    "anchor": "subsec:theta-one-forms",
+    "claim_id": "claim-theta-cotangent-spanning",
+    "statement": "Using our fixed complex trivialization of the constant line in <a href=\"#eq:theta-one-target\" data-reference-type=\"eqref\" data-reference=\"eq:theta-one-target\">[eq:theta-one-target]</a>, denote the resulting one-form on $D$ by $\\Theta_i(\\phi)$."
+   },
+   {
+    "anchor": "stmt-prop-theta-one",
+    "claim_id": "claim-theta-cotangent-spanning",
+    "statement": "For every finite input $\\phi$"
+   },
+   {
+    "anchor": "stmt-prop-theta-top",
+    "claim_id": "claim-rank-two-wedge-and-continuity",
+    "statement": "At period data induced by a rational orthogonal decomposition $W=W_1\\perp W_2$,"
+   },
+   {
+    "anchor": "stmt-prop-theta-top",
+    "claim_id": "claim-rank-two-wedge-and-continuity",
+    "statement": "Fix $W$, the total finite input $\\phi$, and a torsion-free principal quotient $X$ whose finite level fixes $\\phi$ under $\\omega_{W,f}$."
+   },
+   {
+    "anchor": "stmt-cor-theta-switch-continuity",
+    "claim_id": "claim-fixed-input-switch-continuity",
+    "statement": "Suppose $d_1+d_2=d_3+d_4$, with $d_i(\\mu)=1$ for all $i$."
+   },
+   {
+    "anchor": "stmt-cor-theta-switch-continuity",
+    "claim_id": "claim-fixed-input-switch-continuity",
+    "statement": "Start with $W=W_1\\perp W_2$ as above, let $t_0$ be its compact-place data, and choose a total input $\\phi$ for which $\\xi=\\Xi_W(\\phi;t_0)$ is a nonzero holomorphic top form on a sufficiently deep compact principal quotient $X$."
+   },
+   {
+    "anchor": "stmt-thm-cm-extraction",
+    "claim_id": "claim-degree-one-cm-extraction",
+    "statement": "Let $v:G_E\\to\\{1,-1\\}$ be odd with $v(1)=1$, and use the multiplicity-line theta construction prescribed by $d(\\tau)=v(\\tau^{-1})$."
+   },
+   {
+    "anchor": "stmt-lem-reference-moduli",
+    "claim_id": "claim-projective-reference-moduli",
+    "statement": "For sufficiently divisible $N$,"
+   },
+   {
+    "anchor": "stmt-lem-good-ordinary-primes",
+    "claim_id": "claim-good-models-and-ordinary-density",
+    "statement": "After one finite extension of $K$ and removal of finitely many primes,"
+   },
+   {
+    "anchor": "stmt-lem-good-ordinary-primes",
+    "claim_id": "claim-good-models-and-ordinary-density",
+    "statement": "At every remaining rational prime $q$ completely split in $K$,"
+   },
+   {
+    "anchor": "stmt-lem-hecke-albanese",
+    "claim_id": "claim-algebraic-hecke-albanese-action",
+    "statement": "A basis operator in the positive range <a href=\"#eq:positive-hecke-range\" data-reference-type=\"eqref\" data-reference=\"eq:positive-hecke-range\">[eq:positive-hecke-range]</a> is an integral homomorphism defined over $K$."
+   },
+   {
+    "anchor": "stmt-prop-albanese-congruence",
+    "claim_id": "claim-integral-frobenius-hecke-polynomial",
+    "statement": "In the integral endomorphism ring of $\\widetilde A_S$,"
+   },
+   {
+    "anchor": "stmt-lem-active-hecke-theta",
+    "claim_id": "claim-active-inverse-hecke-action",
+    "statement": "On the original ball component,"
+   },
+   {
+    "anchor": "stmt-lem-scalar-radial-relation",
+    "claim_id": "claim-radial-scalar-covariance",
+    "statement": "Fix the input at all finite places other than $w$."
+   },
+   {
+    "anchor": "stmt-prop-theta-satake",
+    "claim_id": "claim-active-satake-parameter",
+    "statement": "where $e=e_0^{-1}$ for a root $e_0^M=\\omega$ from Lemma "
+   },
+   {
+    "anchor": "eq:radial-minuscule-actions",
+    "claim_id": "claim-central-hecke-finite-order",
+    "statement": "Let $\\mathsf T_i$ be the raw double coset of $\\mathop{\\mathrm{diag}}(q,\\ldots,q,1,\\ldots,1)$, with $i$ entries $q$, and $\\operatorname{vol}(K_3)=1$."
+   },
+   {
+    "anchor": "stmt-lem-filtered-hecke-summands",
+    "claim_id": "claim-filtered-pure-slope-summands",
+    "statement": "Let $\\mathcal A/\\mathbb{Z}_q$ be an abelian scheme with generic fiber $A$, and put $$D_A=H^1_{\\mathrm{dR}}(A/\\mathbb{Q}_q).$$"
+   },
+   {
+    "anchor": "stmt-lem-filtered-hecke-summands",
+    "claim_id": "claim-filtered-pure-slope-summands",
+    "statement": "Equip $D_A$ with its Hodge filtration and its good-reduction crystalline Frobenius $\\varphi_A$."
+   },
+   {
+    "anchor": "stmt-lem-filtered-hecke-summands",
+    "claim_id": "claim-filtered-pure-slope-summands",
+    "statement": "Let $L/\\mathbb{Q}_q$ be finite."
+   },
+   {
+    "anchor": "stmt-lem-filtered-hecke-summands",
+    "claim_id": "claim-filtered-pure-slope-summands",
+    "statement": "Suppose that an $L$-linear idempotent $p$ on $D_A\\otimes_{\\mathbb{Q}_q}L$ preserves the filtration and commutes with $\\varphi_A\\otimes1$."
+   },
+   {
+    "anchor": "stmt-lem-filtered-hecke-summands",
+    "claim_id": "claim-filtered-pure-slope-summands",
+    "statement": "If every Frobenius slope on its image is $t\\in\\{0,1\\}$,"
+   },
+   {
+    "anchor": "stmt-prop-active-hodge-types",
+    "claim_id": "claim-active-pure-hodge-types",
+    "statement": "Let $\\eta$ be an active numerical character with projective parameter $\\{q^{1/2},q^{-1/2},e'\\}$ supplied by Proposition <a href=\"#prop:theta-satake\" data-reference-type=\"ref\" data-reference=\"prop:theta-satake\">25</a> or by scalar conjugation, and put $$t_\\eta=\\frac12-\\frac13\\nu_\\iota(e')\\in\\{0,1\\}.$$"
+   },
+   {
+    "anchor": "stmt-cor-finite-family-extraction",
+    "claim_id": "claim-finite-family-common-cm-cover",
+    "statement": "Fix $E,V,D,\\Lambda$ and the principal lattice levels of Section <a href=\"#sec:arithmetic\" data-reference-type=\"ref\" data-reference=\"sec:arithmetic\">5</a>."
+   },
+   {
+    "anchor": "stmt-cor-finite-family-extraction",
+    "claim_id": "claim-finite-family-common-cm-cover",
+    "statement": "Let $v_1,\\ldots,v_m:G_E\\to\\{1,-1\\}$ be odd with $v_j(1)=1$."
+   },
+   {
+    "anchor": "stmt-cor-finite-family-extraction",
+    "claim_id": "claim-finite-family-common-cm-cover",
+    "statement": "For each $j$, choose a finite family of finite adelic Schwartz inputs in the multiplicity-line construction $d_j(\\tau)=v_j(\\tau^{-1})$."
+   },
+   {
+    "anchor": "stmt-cor-finite-family-extraction",
+    "claim_id": "claim-finite-family-common-cm-cover",
+    "statement": "Let $X_{\\mathrm{base}}$ be a principal quotient at a torsion-free level in this framework."
+   },
+   {
+    "anchor": "stmt-cc-realization",
+    "claim_id": "claim-effective-simple-cm-realization",
+    "statement": "Let $W$ be a nonzero simple polarizable rational Hodge structure of CM type and weight $k$."
+   },
+   {
+    "anchor": "stmt-cc-realization",
+    "claim_id": "claim-effective-simple-cm-realization",
+    "statement": "Put $$r_0=\\min\\{p:W^{p,k-p}\\ne0\\},\\qquad n=k-2r_0.$$"
+   },
+   {
+    "anchor": "stmt-cc-ghc",
+    "claim_id": "claim-generalized-cm-hodge-support",
+    "statement": "Let $A$ be a complex CM abelian variety."
+   },
+   {
+    "anchor": "stmt-cc-ghc",
+    "claim_id": "claim-generalized-cm-hodge-support",
+    "statement": "For integers $k,r\\ge0$ and a rational Hodge substructure $W\\subset H^k(A,\\mathbb{Q})$ such that $W(r)$ is effective,"
+   },
+   {
+    "anchor": "stmt-cc-tate",
+    "claim_id": "claim-finite-field-tate-algebraicity",
+    "statement": "For every abelian variety $A/\\mathbb{F}_q$, every integer $r\\ge0$, and every prime $\\ell\\ne\\operatorname{char}(\\mathbb{F}_q)$,"
+   },
+   {
+    "anchor": "stmt-cc-standard",
+    "claim_id": "claim-abelian-hodge-standard-positivity",
+    "statement": "Let $K$ be an algebraically closed field and $A/K$ an abelian variety of dimension $g$."
+   },
+   {
+    "anchor": "stmt-cc-standard",
+    "claim_id": "claim-abelian-hodge-standard-positivity",
+    "statement": "every prime $\\ell\\ne\\operatorname{char}(K)$,"
+   },
+   {
+    "anchor": "stmt-cc-standard",
+    "claim_id": "claim-abelian-hodge-standard-positivity",
+    "statement": "For every rational ample divisor class $h$ and every integer $0\\le r\\le g/2$,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Algebraicity of balanced CM tensors",
+    "evidence": [
+     {
+      "anchor": "sec:tensors",
+      "quote": "We first record how to work with individual embedding lines and recover rationality after extending coefficients.",
+      "quote_sha256": "9f49d581a36d8e382f6635e4ccdb23c7fa495400627337e28de86e64a7b065bc"
+     },
+     {
+      "anchor": "sec:tensors",
+      "quote": "We then construct the auxiliary CM varieties and assemble arbitrary balanced tensors from four-factor relations by algebraic correspondences.",
+      "quote_sha256": "c9b5ffde027be542c01b0a2436a8248e59bde0bdd87e5732ecb490a7d5378bed"
+     }
+    ],
+    "requires_concepts": [
+     "Rank-one CM decomposition",
+     "Complete type functions",
+     "Scalar descent",
+     "Degree-one realization",
+     "Four-factor switch lines",
+     "Polarization contractions"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Rational CM sources of theta classes",
+    "evidence": [
+     {
+      "anchor": "sec:cm-sources",
+      "quote": "We calculate the active Hecke characters of the theta classes, insert them into that relation, and use degree-one Weil weight to isolate one Frobenius slope on every full character space.",
+      "quote_sha256": "f27311ba16114e3dc00af5f183d1be500071c8e887ab6299169c5d3cdef63123"
+     },
+     {
+      "anchor": "sec:cm-sources",
+      "quote": "The Hecke projectors preserve the Hodge filtration, so these slopes determine the Hodge types of all scalar conjugates.",
+      "quote_sha256": "a54616033abf8a7083142d4940a6b6c842c23ab3acc48c039916d79e89d4bad0"
+     }
+    ],
+    "requires_concepts": [
+     "Completed theta covariance",
+     "Unitary splitting",
+     "Algebraic Hecke action",
+     "Frobenius polynomial",
+     "Active Satake parameter",
+     "Weil weight",
+     "Filtration-preserving idempotents",
+     "Scalar descent"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Generalized Hodge supports for CM varieties",
+    "evidence": [
+     {
+      "anchor": "pm-h-30",
+      "quote": "We will obtain such a support by algebraizing a Hodge map from an auxiliary CM abelian variety.",
+      "quote_sha256": "36ea9643fffc536363c87753a34044678063985a1fcad172340e577e7f246792"
+     }
+    ],
+    "requires_concepts": [
+     "Effective twists",
+     "Simple polarizable CM Hodge structures",
+     "Auxiliary CM realization",
+     "Algebraicity of rational Hodge correspondences",
+     "Proper projection of cycle supports"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-cm-hodge-algebraicity",
+   "exact_statement": "Let $A$ be a complex CM abelian variety. For every integer $p\\geq0$, the Betti cycle-class map $$\\operatorname{cl}_B:\\mathop{\\mathrm{CH}}^p(A)_{\\mathbb{Q}}\n \\longrightarrow H^{2p}(A,\\mathbb{Q})\\cap H^{p,p}(A)$$ is surjective, where $\\mathop{\\mathrm{CH}}^p(A)_{\\mathbb{Q}}=\\mathop{\\mathrm{CH}}^p(A)\\otimes_{\\mathbb{Z}}\\mathbb{Q}$ and the intersection is taken in $H^{2p}(A,\\mathbb{C})$. In particular, the rational Hodge conjecture holds in every codimension on every finite product of complex CM abelian varieties and on every power of such a product.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-cm"
+  },
+  {
+   "claim_id": "claim-scalar-descent",
+   "exact_statement": "Let $T$ be a finite-dimensional rational vector space and $P\\subset T_{\\mathbb{C}}$ a complex-linear subspace. If $t\\in T_{\\overline{\\mathbb{Q}}}$ and $\\sigma t\\in P$ for every $\\sigma\\in\\mathop{\\mathrm{Gal}}(\\overline{\\mathbb{Q}}/\\mathbb{Q})$, then $$t\\in (T\\cap P)\\otimes_{\\mathbb{Q}}\\overline{\\mathbb{Q}}.$$ The same assertion applies to the subspace of maps of any fixed Hodge type in a Hom space.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-trace-descent"
+  },
+  {
+   "claim_id": "claim-degree-one-realization",
+   "exact_statement": "For complex abelian varieties $A$ and $B$, pullback induces an isomorphism $$\\mathop{\\mathrm{Hom}}(A,B)\\otimes_{\\mathbb{Z}}\\mathbb{Q}\n \\ \\simeq\\\n \\mathop{\\mathrm{Hom}}_{\\mathrm{Hdg}}\\bigl(H^1(B,\\mathbb{Q}),H^1(A,\\mathbb{Q})\\bigr).$$ If $S$ is a smooth connected projective complex variety and $h:H^1(B,\\mathbb{Q})\\to H^1(S,\\mathbb{Q})$ is a rational Hodge map, then there are an integer $m\\geq1$ and a morphism $f:S\\to B$ such that $f^*=mh$ on $H^1(B,\\mathbb{Q})$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-weight-one-maps"
+  },
+  {
+   "claim_id": "claim-toric-cm-characterization",
+   "exact_statement": "For a complex abelian variety $A$, the following conditions are equivalent:*\n\n1.  *$J(H^1(A,\\mathbb{Q}))$ is a torus.*\n\n2.  *$H^1(A,\\mathbb{Q})$ is a direct sum of rational Hodge structures, each of rank one over a CM field acting by Hodge endomorphisms.*\n\n3.  *$\\mathop{\\mathrm{End}}(A)\\otimes_{\\mathbb{Z}}\\mathbb{Q}$ contains a commutative semisimple algebra of rational dimension $2\\dim A$.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-toric-cm"
+  },
+  {
+   "claim_id": "claim-embedding-line-transfer",
+   "exact_statement": "Let $H$ and $H'$ be direct sums of rank-one weight-one Hodge modules over CM fields contained in $E$. Choose an embedding line $L\\subset H_{\\overline{\\mathbb{Q}}}$ and an embedding line $M\\subset H'_{\\overline{\\mathbb{Q}}}$ with the same complete type function. Extend any $\\overline{\\mathbb{Q}}$-linear map $T:L\\to M$ by zero on all other source embedding lines. Then $$T\\in\\mathop{\\mathrm{Hom}}_{\\mathrm{Hdg}}(H,H')\\otimes_{\\mathbb{Q}}\\overline{\\mathbb{Q}}.$$ When $H$ and $H'$ are degree-one cohomologies of abelian varieties, this map is therefore an algebraic-coefficient linear combination of pullbacks of abelian morphisms, up to rational denominators.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-cm-line-transfer"
+  },
+  {
+   "claim_id": "claim-four-factor-switch",
+   "exact_statement": "Let $E$ be a Galois CM field and let $v_1,v_2,v_3,v_4:G_E\\to\\{1,-1\\}$ be odd sign functions satisfying $v_1+v_2=v_3+v_4$. Under the Künneth inclusion, the following line is algebraic: $$\\label{eq:switch-line}\n U(v_1)_1\\otimes U(v_2)_1\\otimes U(v_3)_c\\otimes U(v_4)_c\n \\ \\subset\\\n H^4\\!\\left(\\prod_{i=1}^4B(v_i),\\overline{\\mathbb{Q}}\\right)$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-switch"
+  },
+  {
+   "claim_id": "claim-switch-reduction",
+   "exact_statement": "If Theorem <a href=\"#thm:switch\" data-reference-type=\"ref\" data-reference=\"thm:switch\">6</a> holds for every Galois CM field and every quadruple of odd sign functions satisfying its relation, then Theorem <a href=\"#thm:cm\" data-reference-type=\"ref\" data-reference=\"thm:cm\">1</a> holds.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-switch-reduction"
+  },
+  {
+   "claim_id": "claim-switch-normalization",
+   "exact_statement": "It suffices to prove Theorem <a href=\"#thm:switch\" data-reference-type=\"ref\" data-reference=\"thm:switch\">6</a> when $s\\geq2$ and $v_i(1)=1$ for all four functions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-switch-normalization"
+  },
+  {
+   "claim_id": "claim-surface-period-criterion",
+   "exact_statement": "Let $E$ be a Galois CM field with conjugation $c$, and let $v_1,v_2,v_3,v_4:G_E\\to\\{1,-1\\}$ be odd sign functions satisfying $v_1+v_2=v_3+v_4$. Put $\\lambda=(1,1,c,c)$. Suppose that $S$ is a smooth connected projective complex surface and that there are rational Hodge maps $$h_i:U(v_i)\\longrightarrow H^1(S,\\mathbb{Q}),\\qquad 1\\leq i\\leq4,$$ and nonzero vectors $\\alpha_i\\in U(v_i)_{\\lambda_i}\\subset U(v_i)_{\\overline{\\mathbb{Q}}}$ such that $$\\label{eq:surface-period}\n \\int_S h_1(\\alpha_1)\\smile h_2(\\alpha_2)\n             \\smile h_3(\\alpha_3)\\smile h_4(\\alpha_4)\\ne0.$$ Here each $h_i$ is extended to $\\overline{\\mathbb{Q}}$-coefficients. Then the line in Equation <a href=\"#eq:switch-line\" data-reference-type=\"eqref\" data-reference=\"eq:switch-line\">[eq:switch-line]</a> is algebraic.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-surface-switch"
+  },
+  {
+   "claim_id": "claim-complex-span-surface-criterion",
+   "exact_statement": "Let $E$, $v_1,\\ldots,v_4$, and $\\lambda=(1,1,c,c)$ be as in Proposition <a href=\"#prop:surface-switch\" data-reference-type=\"ref\" data-reference=\"prop:surface-switch\">9</a>, and let $S$ be a smooth connected projective complex surface. Suppose that, for each $1\\leq i\\leq4$, a class $\\eta_i\\in H^1(S,\\mathbb{C})$ belongs to $$\\operatorname{span}_{\\mathbb{C}}\n \\{h(U(v_i)_{\\lambda_i}):\n       h\\in\\mathop{\\mathrm{Hom}}_{\\mathrm{Hdg}}(U(v_i),H^1(S,\\mathbb{Q}))\\}$$ and that $$\\int_S\\eta_1\\smile\\eta_2\\smile\\eta_3\\smile\\eta_4\\ne0.$$ Then the line in Equation <a href=\"#eq:switch-line\" data-reference-type=\"eqref\" data-reference=\"eq:switch-line\">[eq:switch-line]</a> is algebraic.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cor-surface-span"
+  },
+  {
+   "claim_id": "claim-positive-lagrangian-half-determinant",
+   "exact_statement": "The Hermitian forms on the lines $W_i$ can be chosen over $E/F$ so that $\\mathcal F_P$ is a holomorphic positive Lagrangian for $\\psi_P$, equivariantly for $G(F\\otimes_\\mathbb{Q}\\mathbb{R})$. Its determinant and an equivariant square root have the form $$\\label{eq:theta-halfdet}\n \\det\\mathcal F_P\\simeq L^{2n}\\otimes C_P,\\qquad\n (\\det\\mathcal F_P)^{1/2}\\simeq L^n\\otimes C_P^{1/2},$$ where $C_P$ is a constant complex line on which $G(F\\otimes_\\mathbb{Q}\\mathbb{R})$ acts trivially.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-theta-positive-lagrangian"
+  },
+  {
+   "claim_id": "claim-completed-theta-covariance",
+   "exact_statement": "Let $g\\in\\mathop{\\mathrm{Sp}}(\\mathbb V_P)(F)$. At each real place write $$g=\\begin{pmatrix}A&B\\\\C&D_0\\end{pmatrix},\\qquad\n J=CZ+D_0,\\qquad gZ=(AZ+B)J^{-1}.$$ Choose an infinite metaplectic lift with factor $j(g,Z)$ satisfying $j(g,Z)^2=\\prod_{\\tau\\in\\Sigma}\\det J_\\tau$, and let $\\widetilde g_f$ be its paired finite lift. Then $$\\label{eq:theta-jacobi-law}\n \\vartheta_{\\omega_f(\\widetilde g_f)\\phi}(gZ,J^{-t}z)\n  =j(g,Z)\\exp\\!\\left(\\pi i\\sum_{\\tau\\in\\Sigma}\n             z_\\tau^tJ_\\tau^{-1}C_\\tau z_\\tau\\right)\n             \\vartheta_\\phi(Z,z).$$ The completed coefficients satisfy $$\\label{eq:theta-taylor-law}\n T_{k,\\omega_f(\\widetilde g_f)\\phi}(gZ)\n   =j(g,Z)\\mathop{\\mathrm{Sym}}^k(J)\\,T_{k,\\phi}(Z).$$ They are thus tensors valued in $$(\\det\\mathcal F_P)^{1/2}\\otimes\\mathop{\\mathrm{Sym}}^k\\mathcal F_P.$$ In particular the positive Lagrangian, not its dual, occurs in the symmetric factor. The tensor $T_{1,\\phi}$ is holomorphic.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-theta-tensor-law"
+  },
+  {
+   "claim_id": "claim-special-unitary-splitting",
+   "exact_statement": "For the symplectic space $(\\mathbb V_P,\\psi_P)$, restriction of the unitary splitting to $G(\\mathbb{A}_F)$ yields an honest finite-adelic Weil action $\\omega_{P,f}$. It is compatible with the rational covariance in Lemma <a href=\"#lem:theta-tensor-law\" data-reference-type=\"ref\" data-reference=\"lem:theta-tensor-law\">12</a> and is independent of the splitting characters. At infinity its half-determinant action is the natural action on $L^n$ in <a href=\"#eq:theta-halfdet\" data-reference-type=\"eqref\" data-reference=\"eq:theta-halfdet\">[eq:theta-halfdet]</a>.*\n\n\n*At a split finite place, choose as Schrödinger positions for a multiplicity line one standard three-dimensional embedding summand. The resulting $\\mathop{\\mathrm{SL}}_3$-action is inverse linear substitution. More generally, the normalized linear action associated with a transformation $h$ of the position space is $$\\label{eq:theta-linear-action}\n (\\rho(h)b)(x)=|\\det h|^{-1/2}b(h^{-1}x).$$ A bare metaplectic lift outside $\\mathop{\\mathrm{SL}}_3$ is the normalized operator $\\rho(h)$ times its lift scalar; that scalar must be retained in any use of such a lift.*\n\n*Every finite list of inputs is fixed under $\\omega_{P,f}$ by all sufficiently deep principal lattice congruence subgroups.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-unitary-splitting"
+  },
+  {
+   "claim_id": "claim-theta-cotangent-spanning",
+   "exact_statement": "For every finite input $\\phi$, the form $\\Theta_i(\\phi)$ is holomorphic on $D$ and descends to every sufficiently deep principal congruence quotient. At any fixed point of $D$, the values $\\Theta_i(\\phi)$, as $\\phi$ varies over finite Schwartz inputs, span the cotangent fiber. Finitely many actual inputs already span that fiber and descend at a common sufficiently deep principal level.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-theta-one"
+  },
+  {
+   "claim_id": "claim-rank-two-wedge-and-continuity",
+   "exact_statement": "The rank-two construction has the following properties.*\n\n1.  *At period data induced by a rational orthogonal decomposition $W=W_1\\perp W_2$, the form $\\Xi_W(\\phi)$ is holomorphic. On a sufficiently deep common principal quotient it is a finite sum, with constant coefficients, of forms $\\Theta_1(\\phi_{1,r})\\wedge\\Theta_2(\\phi_{2,r})$.*\n\n2.  *There is an input which is a product in adapted rational coordinates and for which $\\Xi_W(\\phi)$ is nonzero.*\n\n3.  *Fix $W$, the total finite input $\\phi$, and a torsion-free principal quotient $X$ whose finite level fixes $\\phi$ under $\\omega_{W,f}$. With locally smooth constant-line trivializations, the map $$t\\longmapsto\\Xi_W(\\phi;t)$$ is continuous in the $C^\\infty$ topology of differential forms on this fixed compact quotient. The same finite level works throughout the parameter neighborhood.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-theta-top"
+  },
+  {
+   "claim_id": "claim-fixed-input-switch-continuity",
+   "exact_statement": "Suppose $d_1+d_2=d_3+d_4$, with $d_i(\\mu)=1$ for all $i$. Start with $W=W_1\\perp W_2$ as above, let $t_0$ be its compact-place data, and choose a total input $\\phi$ for which $\\xi=\\Xi_W(\\phi;t_0)$ is a nonzero holomorphic top form on a sufficiently deep compact principal quotient $X$. There are rational orthogonal decompositions $W=W_3\\perp W_4$ with line signs $d_3,d_4$ whose total compact-place positive Lagrangians are arbitrarily close to those at $t_0$. The total active positive Lagrangian is exactly unchanged.*\n\n\n*For a sufficiently close rational choice $t'$, the form $\\xi'=\\Xi_W(\\phi;t')$ is holomorphic on the same quotient $X$, with the same total finite input, and $$\\label{eq:theta-nonzero-pairing}\n \\int_X\\xi\\wedge\\overline{\\xi'}\\ne0.$$ Both endpoints admit the wedge expansions of Proposition <a href=\"#prop:theta-top\" data-reference-type=\"ref\" data-reference=\"prop:theta-top\">16</a> on a further common principal cover, and their pairing remains nonzero there.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cor-theta-switch-continuity"
+  },
+  {
+   "claim_id": "claim-degree-one-cm-extraction",
+   "exact_statement": "Let $v:G_E\\to\\{1,-1\\}$ be odd with $v(1)=1$, and use the multiplicity-line theta construction prescribed by $d(\\tau)=v(\\tau^{-1})$. Given a finite collection of its finite adelic Schwartz inputs, there is a common sufficiently deep principal ball quotient $S_0=\\Gamma\\backslash D$ on which every associated theta one-form class belongs to $$\\label{eq:cm-extraction-span}\n\\operatorname{span}_{\\mathbb{C}}\\left\\{\nf\\bigl(U(v)_1\\bigr):\nf\\in\\mathop{\\mathrm{Hom}}_{\\mathrm{Hdg}}\\bigl(U(v),H^1(S_0,\\mathbb{Q})\\bigr)\n\\right\\}.$$ The maps in this formula are rational Hodge maps, and their images are viewed after extension to $\\mathbb{C}$. The conclusion persists after passage to a deeper principal level.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-cm-extraction"
+  },
+  {
+   "claim_id": "claim-projective-reference-moduli",
+   "exact_statement": "The scheme $S$ is of finite type, smooth, and projective over $K_0$. Its complex connected components are compact ball quotients. For sufficiently divisible $N$, the component arising from $\\Lambda$ is the quotient of $D$ by its principal special-unitary level.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-reference-moduli"
+  },
+  {
+   "claim_id": "claim-good-models-and-ordinary-density",
+   "exact_statement": "After one finite extension of $K$ and removal of finitely many primes, the $S_j$ have smooth proper models with geometrically connected fibers, the $A_j$ extend to abelian schemes, and the $a_j$ extend to the models. The model of $S$ lies in the full tuple parameter scheme, retaining the $\\mathcal O_E$-action and its graph coordinates. Differences of Albanese images generate every geometric fiber of each $A_j$.*\n\n*At every remaining rational prime $q$ completely split in $K$, the ordinary locus of the universal abelian scheme is dense in each geometric component of the special fiber of $S$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-good-ordinary-primes"
+  },
+  {
+   "claim_id": "claim-algebraic-hecke-albanese-action",
+   "exact_statement": "The rational spherical Hecke algebra of $(\\mathscr G_q,\\mathscr K_q)$ acts in $\\mathop{\\mathrm{End}}_K(A_S)\\otimes\\mathbb{Q}$ and, by pullback, on $H^1(S,\\mathbb{Q})$. A basis operator in the positive range <a href=\"#eq:positive-hecke-range\" data-reference-type=\"eqref\" data-reference=\"eq:positive-hecke-range\">[eq:positive-hecke-range]</a> is an integral homomorphism defined over $K$. Its pullback on one-forms is the sum of pullbacks over its target branches.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-hecke-albanese"
+  },
+  {
+   "claim_id": "claim-integral-frobenius-hecke-polynomial",
+   "exact_statement": "In the integral endomorphism ring of $\\widetilde A_S$, $$\\label{eq:albanese-frobenius-polynomial}\n\\Phi^3-D_1\\Phi^2+qD_2\\Phi-q^3D_3=0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-albanese-congruence"
+  },
+  {
+   "claim_id": "claim-active-inverse-hecke-action",
+   "exact_statement": "Every double coset in $\\mathcal H_w^0$ has all its branches within each component of $S$. On the original ball component, its pullback action on theta classes is the inverse spherical action on the active local Weil input: a local double coset acts through its inverse.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-active-hecke-theta"
+  },
+  {
+   "claim_id": "claim-radial-scalar-covariance",
+   "exact_statement": "Fix the input at all finite places other than $w$. There are $M>0$, an element $r\\in E^\\times$, and a nonzero algebraic number $\\omega$ such that $$r\\bar r=1,\\qquad\n\\operatorname{val}_{w}(r)=M,\\qquad\n\\operatorname{val}_{\\bar w}(r)=-M,$$ with zero valuation at every other finite prime, and the map from radial inputs to theta one-form classes factors through $\\mathcal D_q^M=\\omega$. In the covariance convention of Lemma <a href=\"#lem:theta-tensor-law\" data-reference-type=\"ref\" data-reference=\"lem:theta-tensor-law\">12</a>, $$\\label{eq:radial-scalar-weight}\n\\omega^2=\\zeta\\prod_{\\tau\\in\\Sigma}\\tau(r)^{-3d(\\tau)}$$ for a root of unity $\\zeta$. Every root of $X^M-\\omega$ has absolute value one under every complex embedding.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-scalar-radial-relation"
+  },
+  {
+   "claim_id": "claim-active-satake-parameter",
+   "exact_statement": "Every active spherical character occurring in a theta class of the multiplicity line $P$ has half-modulus projective parameter $$\\label{eq:active-satake-triple}\n\\{q^{1/2},q^{-1/2},e\\},$$ where $e=e_0^{-1}$ for a root $e_0^M=\\omega$ from Lemma <a href=\"#lem:scalar-radial-relation\" data-reference-type=\"ref\" data-reference=\"lem:scalar-radial-relation\">24</a>. It is algebraic and all its complex conjugates have modulus one. For every $\\sigma\\in\\mathop{\\mathrm{Gal}}(\\overline{\\mathbb{Q}}/\\mathbb{Q})$, $$\\label{eq:active-conjugate-valuations}\n\\nu_\\iota(\\sigma e)\n =-\\frac32d\\bigl((\\sigma|_E)^{-1}\\bigr)\n =-\\frac32v(\\sigma|_E).$$ A scalar-conjugate active character has a representative of the form <a href=\"#eq:active-satake-triple\" data-reference-type=\"eqref\" data-reference=\"eq:active-satake-triple\">[eq:active-satake-triple]</a> with third entry $e'=\\pm\\sigma e$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-theta-satake"
+  },
+  {
+   "claim_id": "claim-central-hecke-finite-order",
+   "exact_statement": "The central operators $T_3$ and $C_0$ have finite order on the full tuple space $S$ and on $A_S$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-central-finite-order"
+  },
+  {
+   "claim_id": "claim-filtered-pure-slope-summands",
+   "exact_statement": "Let $\\mathcal A/\\mathbb{Z}_q$ be an abelian scheme with generic fiber $A$, and put $$D_A=H^1_{\\mathrm{dR}}(A/\\mathbb{Q}_q).$$ Equip $D_A$ with its Hodge filtration and its good-reduction crystalline Frobenius $\\varphi_A$. Then $D_A$ is weakly admissible, its filtration has only indices $0$ and $1$, and endomorphisms extending over $\\mathbb{Z}_q$ preserve the filtration and commute with $\\varphi_A$.*\n\n*Let $L/\\mathbb{Q}_q$ be finite. Suppose that an $L$-linear idempotent $p$ on $D_A\\otimes_{\\mathbb{Q}_q}L$ preserves the filtration and commutes with $\\varphi_A\\otimes1$. If every Frobenius slope on its image is $t\\in\\{0,1\\}$, then the induced filtration satisfies $$F^1\\bigl(p(D_A\\otimes L)\\bigr)=\n\\begin{cases}\n0,&t=0,\\\\\np(D_A\\otimes L),&t=1.\n\\end{cases}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-filtered-hecke-summands"
+  },
+  {
+   "claim_id": "claim-active-pure-hodge-types",
+   "exact_statement": "Let $\\eta$ be an active numerical character with projective parameter $\\{q^{1/2},q^{-1/2},e'\\}$ supplied by Proposition <a href=\"#prop:theta-satake\" data-reference-type=\"ref\" data-reference=\"prop:theta-satake\">25</a> or by scalar conjugation, and put $$t_\\eta=\\frac12-\\frac13\\nu_\\iota(e')\\in\\{0,1\\}.$$ For every full numerical character $\\chi$ extending $\\eta$, the space $H_\\chi\\otimes_{\\overline{\\mathbb{Q}}}\\mathbb{C}$ is contained in $H^{1,0}(A_S)$ if $t_\\eta=1$, and in $H^{0,1}(A_S)$ if $t_\\eta=0$. Consequently $H^{\\mathrm{act}}_\\eta\\otimes_{\\overline{\\mathbb{Q}}}\\mathbb{C}$ has the same pure Hodge type.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-active-hodge-types"
+  },
+  {
+   "claim_id": "claim-finite-family-common-cm-cover",
+   "exact_statement": "Fix $E,V,D,\\Lambda$ and the principal lattice levels of Section <a href=\"#sec:arithmetic\" data-reference-type=\"ref\" data-reference=\"sec:arithmetic\">5</a>. Let $v_1,\\ldots,v_m:G_E\\to\\{1,-1\\}$ be odd with $v_j(1)=1$. For each $j$, choose a finite family of finite adelic Schwartz inputs in the multiplicity-line construction $d_j(\\tau)=v_j(\\tau^{-1})$. Let $X_{\\mathrm{base}}$ be a principal quotient at a torsion-free level in this framework. There is a common deeper principal cover $Y\\to X_{\\mathrm{base}}$, with $Y$ a smooth connected projective surface, on which every associated theta one-form class from the $j$-th family belongs to $$\\operatorname{span}_{\\mathbb{C}}\\left\\{\nf\\bigl(U(v_j)_1\\bigr):\nf\\in\\mathop{\\mathrm{Hom}}_{\\mathrm{Hdg}}\\bigl(U(v_j),H^1(Y,\\mathbb{Q})\\bigr)\n\\right\\}.$$ The maps are rational Hodge maps, with their images viewed after extension to $\\mathbb{C}$. The conclusion persists after pullback to every deeper principal level. The auxiliary primes used for different $v_j$ may differ.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cor-finite-family-extraction"
+  },
+  {
+   "claim_id": "claim-effective-simple-cm-realization",
+   "exact_statement": "Let $W$ be a nonzero simple polarizable rational Hodge structure of CM type and weight $k$. Put $$r_0=\\min\\{p:W^{p,k-p}\\ne0\\},\\qquad n=k-2r_0.$$ Then $n\\ge0$, and there is a CM abelian variety $B$, possibly a point, and a surjective rational Hodge map $$H^n(B,\\mathbb{Q})(-r_0)\\longrightarrow W.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-cc-realization"
+  },
+  {
+   "claim_id": "claim-generalized-cm-hodge-support",
+   "exact_statement": "Let $A$ be a complex CM abelian variety. For integers $k,r\\ge0$ and a rational Hodge substructure $W\\subset H^k(A,\\mathbb{Q})$ such that $W(r)$ is effective, there is a closed algebraic subset $Z\\subset A$ of codimension at least $r$ such that $$W\\subset\\ker\\bigl(H^k(A,\\mathbb{Q})\\longrightarrow\n                         H^k(A\\setminus Z,\\mathbb{Q})\\bigr).$$ This includes every finite product of CM abelian varieties and every power of such a product.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cc-ghc"
+  },
+  {
+   "claim_id": "claim-finite-field-tate-algebraicity",
+   "exact_statement": "For every abelian variety $A/\\mathbb{F}_q$, every integer $r\\ge0$, and every prime $\\ell\\ne\\operatorname{char}(\\mathbb{F}_q)$, the cycle-class map $$\\mathop{\\mathrm{CH}}^r(A)\\otimes_\\mathbb{Z}\\mathbb{Q}_\\ell\\longrightarrow\n H^{2r}_{\\mathrm{\\acute et}}(\\bar A,\\mathbb{Q}_\\ell(r))^{G_q}$$ is surjective. Numerical equivalence and $\\ell$-adic homological equivalence coincide on rational algebraic cycles on $\\bar A$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cc-tate"
+  },
+  {
+   "claim_id": "claim-abelian-hodge-standard-positivity",
+   "exact_statement": "Let $K$ be an algebraically closed field and $A/K$ an abelian variety of dimension $g$. For every prime $\\ell\\ne\\operatorname{char}(K)$, numerical and $\\ell$-adic homological equivalence coincide on rational algebraic cycles on $A$. For every rational ample divisor class $h$ and every integer $0\\le r\\le g/2$, the rational symmetric form $$P_h^r(A)\\times P_h^r(A)\\longrightarrow\\mathbb{Q},\\qquad\n (x,y)\\longmapsto(-1)^r\\deg(xy\\,h^{g-2r})$$ is positive definite after extension of scalars to $\\mathbb{R}$. Thus the Hodge standard conjecture for $\\ell$-adic étale cohomology holds for abelian varieties in arbitrary characteristic.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cc-standard"
+  }
+ ],
+ "paper": "papers/EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-C-TO-H-0070_PM-032.1_The_rational_Hodge_conjecture_for_CM_abelian_varieties.md",
+ "purpose": "The rational Hodge conjecture for CM abelian varieties",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "cb71adf8d5a62fd390f66cfbb9d1c4a35e639b39c09e44481da96c34e5f57953",
+   "pm.domains.v2": "19eeee2680131836e026437127df900693813e3811ac4821a840a406e582224c",
+   "pm.edges.v2": "9f392e345efaa425e4171b359117c525cb74272608d0d2edf4b43533e85c7c38",
+   "pm.extraction.v2": "57f1f6d510ec9895765f5ef953e99d4a67845d21dbdd52fc6e252f127c30272e",
+   "pm.formal.v2": "5fba8e115b9a780938b2c2e4fb585faf5f4375d1fac3492273bd53a9fe909ca0",
+   "pm.limits.v2": "a0459b40f1de28994ca19692d62a9239b9cbc8d10c0b0bc3d1d650be58c99e6b",
+   "pm.node.v2": "e8aafea89b8ccef46fc9c895b546097e008265e753c701a145068cf9f6e66c3c",
+   "pm.objects.v2": "ba3475121686355b3839acf4d0a177ec61e78cfa0698b12f18e07960f4f418ab",
+   "pm.provenance.v2": "06bb2ef03834f3ce8fa248695467f54eb216c60efcb6f537dfe0acfa4caa95c9",
+   "pm.quantities.v2": "e5959cfbe76afd56dccaab3ed4d482aaf65744ede634819edd72f19dca866323",
+   "pm.reading.v2": "c41d3ef6459effeef72c7d10f52f0d1eec6ae483546257be93d0a489506b208a",
+   "pm.roadmap.v2": "f193a1c0f7a87a05e4df7f03b0e05735b0a06601241e0490d4411f1957e09142",
+   "pm.search.v1": "db26d320da5a8b72807a2e1c8cc0994e0a852990ad4c63221b2f30b442f44e98",
+   "pm.triptych.v2": "eda684e4a05e0f245ae21d813bc8a73966fa981a296a94c8bf19b0d9e18fa4cf"
+  },
+  "canonical_sha256": "5e82794198fd3454e7099a0776b72df56ed902aa114356c0adac807abc87ed4f",
+  "paper_sha256": "c07cf30e74b0907f48cc5232fc0d1280b67f1a12a254dc698221309b99441246",
+  "repaired_body_sha256": "f83398dabf2f375057e489672d8b8d1a70ea1983bcf8b08ddfde8669cc3ea2b1"
+ },
+ "status": "ACTIVE",
+ "subject_id": 3,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "9027dfd4145673163c24cca8f5e19c5444abeaec60969afaaa734f47c918826f",
+   "receipt_sha256": "82fad171174d3511d080d56318d17065b05469d23b1b3a8408738c99a3e5cca6",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The rational Hodge conjecture for CM abelian varieties"
+}

@@ -1,0 +1,513 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 526240,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 184711
+ },
+ "coordinate": "EN-115-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-M-0453",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "Equilibrium continuum statistical mechanics",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "It is an existence result for the constructed infinite-range interaction, with no identification of its phases as conventional fluid phases.",
+     "quote_sha256": "b614b9498c798ba2ab15d321ea3513d901895ec641ec140e23810b3b61c7b778"
+    }
+   ],
+   "query": "Identification of conventional fluid phases",
+   "reason": "The theorem is an existence result and does not identify the phases as conventional fluid phases."
+  }
+ ],
+ "family": "PM-228",
+ "id": "PM-228.2",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C-thm-main",
+    "statement": "There is a bounded continuous function $\\phi:[0,\\infty)\\to\\mathbb R$ and finite constants $B,C>0$ such that $$\\sum_{i<j}\\phi(\\left|x_i-x_j\\right|)\\ge-BN,\n \\qquad\n \\left|\\phi(r)\\right|\\le C r^{-3-1/32}\\quad(r\\ge1).$$ There are an open interval $I\\subset(0,\\infty)$ centered at $5p/3$ and a common inverse temperature $\\beta_c\\in[7/8,9/8]$ such that, for every $\\rho\\in I$, the canonical free energy $$f(\\beta,\\rho)=\n -\\lim_{L\\to\\infty}\\frac1{\\beta L^3}\n       \\log Z^\\phi_{L,\\lfloor\\rho L^3\\rfloor}(\\beta)$$ exists and is finite for every $\\beta>0$. Its finite one-sided derivatives at $\\beta_c$ satisfy $$f'_-(\\beta_c,\\rho)>f'_+(\\beta_c,\\rho).$$ In particular, $f(\\,\\cdot\\,,\\rho)$ is not differentiable at $\\beta_c$."
+   },
+   {
+    "anchor": "stmt-f-packing",
+    "claim_id": "C-f-packing",
+    "statement": "Let $M_L$ be the maximum cardinality of a subset of $[0,L]^3$ whose distinct points have mutual distances at least one. Then $$p=\\lim_{L\\to\\infty}\\frac{M_L}{L^3}$$ exists and belongs to $(0,\\infty)$."
+   },
+   {
+    "anchor": "stmt-f-shell-graph",
+    "claim_id": "C-f-shell-graph",
+    "statement": "For any finite configuration in $\\mathbb R^3$, join two particles when their distance belongs to $I_t$. This graph has no clique of size five. On any $m$ vertices it has at most $3m^2/8$ edges."
+   },
+   {
+    "anchor": "stmt-f-stability",
+    "claim_id": "C-f-stability",
+    "statement": "Set $$\\label{f:stability-constants}\n D_0=t^2/8,\\qquad B_0=t^2/2.$$ For every configuration, including coincident particles, $$\\label{f:cell-stability}\n U^{\\psi_t}\\ge D_0\\sum_i n_i^2-B_0N,\n \\qquad\n U^v\\ge(D_0-M/2)\\sum_i n_i^2-B_0N.$$ Choose $t$ sufficiently large that $$\\label{f:t-requirements}\n D_0\\ge8M,\\qquad ct>4(A+1),\\qquad c=1/3456.$$ Then, in any axis-parallel cube of side $L\\ge1$, with $V=L^3$, $$\\label{f:density-stability}\n U^v\\ge ct^2\\frac{N^2}{V}-\\frac{t^2}{2}N.$$ In particular all members of <a href=\"#f:family\" data-reference-type=\"eqref\" data-reference=\"f:family\">[f:family]</a> are stable with the same constant $B_0$."
+   },
+   {
+    "anchor": "stmt-f-canonical-bounds",
+    "claim_id": "C-f-canonical-bounds",
+    "statement": "There is an absolute constant $C<\\infty$, independent of $t$ and all attraction ranges, such that for every admissible $t$, $L\\ge1$, $n\\ge0$, $\\beta>0$, and $d_L=n/L^3$, $$\\label{f:finite-bounds}\n \\beta t(cd_L^2-d_L/2)+\\frac{d_L\\log d_L-d_L}{t}\n \\le H^\\varphi_{L,n}(\\beta)\n \\le \\beta Ct d_L^2+\\frac{d_L\\log d_L}{t},$$ where $0\\log0=0$."
+   },
+   {
+    "anchor": "stmt-f-grand-tail",
+    "claim_id": "C-f-grand-tail",
+    "statement": "Fix an admissible $t$ and a compact $\\mathcal D\\subset\\Omega$, where $\\Omega=(0,\\infty)\\times\\mathbb R$ has coordinates $(\\beta,h)$. There are constants $D\\ge1$ and $a_0>0$, depending only on $t$ and $\\mathcal D$, such that, for every $\\varphi$ in <a href=\"#f:family\" data-reference-type=\"eqref\" data-reference=\"f:family\">[f:family]</a>, $L\\ge1$, and $0\\le\\zeta\\le2(A+1)$, $$\\label{f:grand-tail-bound}\n \\sum_{n>DL^3}\\mathrm e^{thn}Z^\\varphi_{L,n}(\\beta)\n          \\exp\\left(\\frac{\\beta t\\zeta n^2}{2L^3}\\right)\n \\le\\frac{\\exp[-a_0(\\lfloor DL^3\\rfloor+1)]}{1-\\mathrm e^{-a_0}}\n \\qquad ((\\beta,h)\\in\\mathcal D).$$ In particular the tail tends uniformly to zero, and is at most one for all sufficiently large $L$. These constants require no local occupation estimate."
+   },
+   {
+    "anchor": "stmt-f-thermodynamics",
+    "claim_id": "C-f-thermodynamics",
+    "statement": "For every member $\\varphi$ of <a href=\"#f:family\" data-reference-type=\"eqref\" data-reference=\"f:family\">[f:family]</a>, including countably infinite sums, and every $\\beta>0$, $d\\ge0$, the limit $$\\label{f:canonical-limit}\n H_\\varphi(\\beta,d)\n =\\lim_{\\substack{L\\to\\infty\\\\ n/L^3\\to d}}\n      H^\\varphi_{L,n}(\\beta)$$ exists along every such sequence of real sides and integer counts. It is finite, convex and continuous in $d\\in[0,\\infty)$, and concave in $\\beta>0$ for each fixed $d$. The bounds <a href=\"#f:finite-bounds\" data-reference-type=\"eqref\" data-reference=\"f:finite-bounds\">[f:finite-bounds]</a> hold with $H_\\varphi(\\beta,d)$ and $d$ in place of their finite volume counterparts.*\n\n\n*The grand partition function and pressure satisfy $$\\label{f:pressure-definition}\n \\Xi^\\varphi_L(\\beta,h)\n =\\sum_{n\\ge0}\\mathrm e^{thn}Z^\\varphi_{L,n}(\\beta),\n \\qquad\n Q_\\varphi(\\beta,h)\n =\\lim_{L\\to\\infty}\\frac{\\log\\Xi^\\varphi_L(\\beta,h)}{tL^3}.$$ The pressure is finite, nonnegative, and jointly convex on $\\Omega$. For $\\beta>0$, $$\\label{f:duality}\n \\begin{split}\n Q_\\varphi(\\beta,h)\n   &=\\sup_{d\\ge0}\\{hd-H_\\varphi(\\beta,d)\\},\\\\\n H_\\varphi(\\beta,d)\n   &=\\sup_{h\\in\\mathbb R}\\{hd-Q_\\varphi(\\beta,h)\\},\\qquad d>0.\n \\end{split}$$ For fixed admissible $t$, pressures of the whole family are uniformly bounded on each compact subset of $\\Omega$."
+   },
+   {
+    "anchor": "stmt-f-moments",
+    "claim_id": "C-f-moments",
+    "statement": "Fix $t$ satisfying <a href=\"#f:t-requirements\" data-reference-type=\"eqref\" data-reference=\"f:t-requirements\">[f:t-requirements]</a> and a compact $\\mathcal D\\subset\\Omega$. There are constants $C_{\\exp},C_1<\\infty$, depending only on $t$ and $\\mathcal D$, such that every grand canonical measure for an interaction <a href=\"#f:modified-energy\" data-reference-type=\"eqref\" data-reference=\"f:modified-energy\">[f:modified-energy]</a> satisfies $$\\label{f:moment-estimates}\n \\sup_i\\mathbb E\\exp(\\beta D_0n_i^2/4)\\le C_{\\exp},\n \\qquad \\sup_{i,j}\\mathbb E[n_i n_j]\\le C_1\n \\qquad ((\\beta,h)\\in\\mathcal D).$$ The bounds hold for every bounded region with finitely many cropped cells, and uniformly for all permitted deletions and interpolations."
+   },
+   {
+    "anchor": "stmt-f-perturbation",
+    "claim_id": "C-f-perturbation",
+    "statement": "In a fixed bounded region, let $v_\\theta=(1-\\theta)v_0+\\theta v_1$, $0\\le\\theta\\le1$, be bounded symmetric pair interactions satisfying the hypotheses of [f:moments](#f:moments) with the same $t$ and $M$. Let $J^{\\mathrm{diff}}$ be a symmetric nonnegative matrix such that $$\\left|v_1(x,y)-v_0(x,y)\\right|\\le J^{\\mathrm{diff}}_{ij}\n \\quad (x\\in C_i,\\ y\\in C_j).$$ Then, uniformly for $(\\beta,h)\\in\\mathcal D$, $$\\label{f:interpolation-bound}\n \\left|\\log\\Xi^{v_1}(\\beta,h)-\\log\\Xi^{v_0}(\\beta,h)\\right|\n \\le\\frac{\\beta C_1}{2}\\sum_{i,j}J^{\\mathrm{diff}}_{ij}.$$ Thus signed deletions are controlled by the absolute interaction difference, with no cancellation assumption."
+   },
+   {
+    "anchor": "stmt-f-tail-pressure",
+    "claim_id": "C-f-tail-pressure",
+    "statement": "For a finite or countably infinite member of <a href=\"#f:family\" data-reference-type=\"eqref\" data-reference=\"f:family\">[f:family]</a>, let $$\\varphi_k=\\psi_t-t\\sum_{j\\le k}\\alpha_jw_{R_j},\n \\qquad m_k=\\sum_{j>k}\\alpha_j.$$ For every compact $\\mathcal D\\subset\\Omega$ there is a constant $C_{\\mathcal D,t}<\\infty$, independent of the ranges, their number, and $k$, such that $$\\label{f:tail-pressure-bound}\n 0\\le Q_\\varphi(\\beta,h)-Q_{\\varphi_k}(\\beta,h)\n \\le C_{\\mathcal D,t}m_k\n \\qquad ((\\beta,h)\\in\\mathcal D).$$ The same upper bound holds for the difference of normalized finite volume log grand partition functions in every cube of side $L\\ge1$."
+   },
+   {
+    "anchor": "stmt-k-transform-properties",
+    "claim_id": "C-k-transform-properties",
+    "statement": "Suppose the size conditions on $t$ in [f:stability](#f:stability) hold, including $ct>4(A+1)$. For every $0<a\\le 2(A+1)$, $$T_aQ(\\beta,h)\n =\\max_{d\\ge0}\n \\left\\{hd-H(\\beta,d)+\\frac{\\beta a}{2}d^2\\right\\}.\n \\label{k:density-transform}$$ The active shifts in <a href=\"#k:transform\" data-reference-type=\"eqref\" data-reference=\"k:transform\">[k:transform]</a> are exactly the maximizing densities in <a href=\"#k:density-transform\" data-reference-type=\"eqref\" data-reference=\"k:density-transform\">[k:density-transform]</a>; in particular, they are nonnegative and form a nonempty compact set. On each compact $\\mathcal D\\subset\\Omega$, they lie in a common interval $[0,U]$, independently of $\\varphi$ and $a$. The constant $U$ may also be chosen uniformly for all sufficiently large $t$.*\n\n\n*The function $T_aQ$ is finite and convex on $\\Omega$, and $$0\\le T_aQ-Q\\le C_{\\mathcal D}a\n \\qquad\\hbox{on }\\mathcal D.\n \\label{k:small-mass}$$ Here $C_{\\mathcal D}$ can be chosen uniformly for sufficiently large $t$. For fixed $t$, the pressures $Q$ and transforms $T_aQ$ have common bounds on compact subsets of $\\Omega$, and common local Lipschitz bounds, uniformly over the same family and masses."
+   },
+   {
+    "anchor": "stmt-k-active-parabola",
+    "claim_id": "C-k-active-parabola",
+    "statement": "Let $a>0$ be as in [k:transform-properties](#k:transform-properties), and let $u$ be active at $\\lambda=(\\beta,h)$. Then for every $r\\in\\mathbb R$, $$Q(x_u+(0,r))\\le Q(x_u)+ur+\\frac{r^2}{2\\beta a}.\n \\label{k:parabola}$$ Every member of $\\partial Q(x_u)$ has second coordinate $u$."
+   },
+   {
+    "anchor": "stmt-k-subdifferential",
+    "claim_id": "C-k-subdifferential",
+    "statement": "For each fixed $0<a\\le2(A+1)$ and $\\lambda=(\\beta,h)\\in\\Omega$, $$\\partial(T_aQ)(\\lambda)\n =\\mathop{\\mathrm{conv}}\\!\\bigcup_{u\\text{ active at }\\lambda}\n \\left\\{\\left(e+\\frac a2u^2,u\\right):(e,u)\\in\\partial Q(x_u)\\right\\}.\n \\label{k:support-hull}$$ The union on the right is compact, and every one of its members is an actual supporting slope of $T_aQ$ at $\\lambda$."
+   },
+   {
+    "anchor": "stmt-k-range",
+    "claim_id": "C-k-range",
+    "statement": "Fix an admissible $t$ and a compact set $\\mathcal D\\subset\\Omega$. There are constants $C_{\\mathcal D,t}<\\infty$ and $K_{\\mathcal D,t}<\\infty$ with the following property. Let $R_0\\ge2$, and let $$\\varphi_0=\\psi_t-t\\sum_j\\alpha_jw_{R_j},\n \\qquad 1\\le R_j\\le R_0,\n \\qquad \\alpha_j\\ge0,$$ where the sum may be empty, finite, or countably infinite. If $a>0$, $\\sum_j\\alpha_j+a\\le A+1$, and $R/R_0\\ge K_{\\mathcal D,t}$, then $$\\sup_{\\lambda\\in\\mathcal D}\n \\left|Q_{\\varphi_0-ta w_R}(\\lambda)-T_aQ_{\\varphi_0}(\\lambda)\\right|\n \\le C_{\\mathcal D,t}\\sqrt{\\frac{R_0}{R}}.\n \\label{k:range-estimate}$$ Both constants are independent of $R_0$, the number and values of the reference ranges, the reference masses, and the positive mass $a$."
+   },
+   {
+    "anchor": "stmt-k-box-pressure",
+    "claim_id": "C-k-box-pressure",
+    "statement": "Let $\\varphi_0$ and $R_0$ be as in [k:range](#k:range), allowing $\\sum_j\\alpha_j\\le A+1$. Write $$Q^s_{\\varphi_0}(\\lambda)\n =\\frac1{ts^3}\\log\\Xi_s^{\\varphi_0}(\\lambda).$$ For every compact $\\mathcal K\\subset\\Omega$ and every $s\\ge R_0$ with $s/b\\in\\mathbb N$, $$\\sup_{\\lambda\\in\\mathcal K}\n \\left|Q^s_{\\varphi_0}(\\lambda)-Q_{\\varphi_0}(\\lambda)\\right|\n \\le C_{\\mathcal K,t}\\frac{R_0}{s}.\n \\label{k:box-pressure-bound}$$ More generally, for the same $s$, partition $\\Lambda_{ms}$ into $m^3$ boxes of side $s$, aligned with the small-cell grid. In the potential $\\varphi_0-ta w_R$, where $a\\ge0$, $R\\ge1$, and $\\sum_j\\alpha_j+a\\le A+1$, delete only reference interactions between distinct boxes. If $\\Xi^{\\mathrm{del}}_{ms}$ is the resulting grand partition function, then $$\\sup_{\\lambda\\in\\mathcal K}\n \\frac{\\left|\\log\\Xi_{ms}^{\\varphi_0-ta w_R}(\\lambda)\n                 -\\log\\Xi^{\\mathrm{del}}_{ms}(\\lambda)\\right|}{t(ms)^3}\n \\le C_{\\mathcal K,t}\\frac{R_0}{s}.\n \\label{k:deletion}$$ The constants have the uniformity asserted in [k:range](#k:range) and are also independent of $m,s,R$."
+   },
+   {
+    "anchor": "stmt-k-kernel-rows",
+    "claim_id": "C-k-kernel-rows",
+    "statement": "Let $B_z$ be the box of side $s$ centered at $z$, where $z$ ranges over a translated lattice $s\\mathbb Z^3$, and suppose $0<s\\le R$. Define $$K^+_{zz'}=\\sup_{x\\in B_z,\\,y\\in B_{z'}}w_R(x-y),\n \\qquad\n K^-_{zz'}=\\inf_{x\\in B_z,\\,y\\in B_{z'}}w_R(x-y).$$ There is a constant $C_w$ depending only on $w$ and dimension such that, with $\\eta=C_ws/R$, every finite cubical collection of these boxes satisfies $$s^3\\sum_{z'}K^+_{zz'}\\le1+\\eta.\n \\label{k:upper-row}$$ If $z$ has distance greater than $R+4s$ from the boundary of the finite collection, then $$s^3\\sum_{z'\\ne z}K^-_{zz'}\\ge1-\\eta.\n \\label{k:lower-row}$$ Both matrices are symmetric and nonnegative."
+   },
+   {
+    "anchor": "stmt-i-bare-pressure",
+    "claim_id": "C-i-bare-pressure",
+    "statement": "Let $q^{(t)}=Q_{\\psi_t}$, with the pressure normalization and the core of [f:thermodynamics](#f:thermodynamics), [f:core](#f:core). Then, locally uniformly on $\\Omega=(0,\\infty)\\times\\mathbb R$, $$q^{(t)}(\\beta,h)\\longrightarrow\n q_*(\\beta,h):=\\max\\{0,ph,4ph-9p\\}.\n \\label{i:bare-limit}$$"
+   },
+   {
+    "anchor": "stmt-i-limiting-transform",
+    "claim_id": "C-i-limiting-transform",
+    "statement": "The functions $P_1^t$ converge locally uniformly on $\\Omega$ to $P_*$. For every compact $K\\subset\\Omega$, all their active optimizers lie in one interval $[0,U]$ for all sufficiently large $t$, and $$\\sup_{\\lambda\\in K}\\ \\sup_{u\\ \\mathrm{active\\ for}\\ P_1^t(\\lambda)}\n       \\mathop{\\mathrm{dist}}(u,D_*)\\longrightarrow0.$$ In particular, this holds at parameters where several limiting planes meet. If $\\beta_-=\\min_{(\\beta,h)\\in K}\\beta$, the limiting objective obeys the explicit bound $$F_*(\\lambda,u):=q_*(\\beta,h+\\beta Au)-\\frac{\\beta A u^2}{2}\n \\le P_*(\\lambda)-\\frac{\\beta_-A}{2}\\mathop{\\mathrm{dist}}(u,D_*)^2\n \\quad(\\lambda\\in K,\\ u\\in\\mathbb R).\n \\label{i:objective-gap}$$"
+   },
+   {
+    "anchor": "stmt-i-geometry",
+    "claim_id": "C-i-geometry",
+    "statement": "There are constants $0<\\tau<p/16$ and $\\gamma>0$ with the following properties. Every choice $w_i\\in\\overline B(v_i,\\tau)$, $i=1,2,3$, satisfies $$\\overline B(g,\\gamma)\\subset\\mathop{\\mathrm{conv}}\\{w_1,w_2,w_3\\}.\n \\label{i:robust-triangle}$$ For each distinct pair $i,j$, $$g\\notin\\mathop{\\mathrm{conv}}\\bigl(\\overline B(v_i,\\tau)\\cup\\overline B(v_j,\\tau)\\bigr).\n \\label{i:two-groups}$$ Moreover, for every $\\lambda\\in\\Omega$, $$P_*(\\lambda)-P_*(\\lambda_*)\n       -\\left\\langle g,\\lambda-\\lambda_*\\right\\rangle\n \\ge\\gamma\\left\\lVert\\lambda-\\lambda_*\\right\\rVert.\n \\label{i:linear-growth}$$"
+   },
+   {
+    "anchor": "stmt-i-initial-separation",
+    "claim_id": "C-i-initial-separation",
+    "statement": "For all sufficiently large finite $t$, the size conditions in [f:stability](#f:stability), [k:transform-properties](#k:transform-properties) hold and $$\\sup_{\\lambda\\in W_1}\\left|P_1^t(\\lambda)-P_*(\\lambda)\\right|\n       <\\frac{\\gamma}{64}.\n \\label{i:initial-pressure-error}$$ At every $\\lambda\\in W_1$ one also has the exact identity $$\\partial P_1^t(\\lambda)\n =\\mathop{\\mathrm{conv}}\\left(\n       \\partial P_1^t(\\lambda)\\cap\n       \\bigcup_{i=1}^3\\overline B(v_i,\\tau/2)\\right).\n \\label{i:initial-hull}$$ Fix one such $t$ for the rest of the construction."
+   },
+   {
+    "anchor": "stmt-m-one-step",
+    "claim_id": "C-m-one-step",
+    "statement": "Let $q$ be a pressure from the family <a href=\"#f:family\" data-reference-type=\"eqref\" data-reference=\"f:family\">[f:family]</a>, and let $P$ be a finite convex function on $\\Omega$ that is $C_*$-Lipschitz on $W_1$. Suppose $$\\begin{gathered}\n 0<a\\le A+1,\\qquad 0<r<\\tau,\\qquad S_*a<s\\le\\frac14,\\\\\n \\delta\\ge0,\\qquad \\left\\lVert P-q\\right\\rVert_{W_1}\\le\\delta,\\qquad\n \\frac{2\\delta}{ka}<\\frac p{16}.\n \\end{gathered}$$ Assume that throughout $W(s)$, $$\\label{eq:one-step-hypothesis}\n \\partial P(y)=\\mathop{\\mathrm{conv}}\\left(\\partial P(y)\\cap\n                 \\bigcup_{i=1}^3\\overline B(v_i,r)\\right).$$ Then, with $$r^+=r+\\frac{2\\delta}{la}+\\frac12aU_*^2,$$ one has for every $\\lambda\\in W(s-S_*a)$, $$\\label{eq:one-step-conclusion}\n \\partial(T_aq)(\\lambda)\n =\\mathop{\\mathrm{conv}}\\left(\\partial(T_aq)(\\lambda)\\cap\n                 \\bigcup_{i=1}^3\\overline B(v_i,r^+)\\right).$$"
+   },
+   {
+    "anchor": "stmt-m-propagation",
+    "claim_id": "C-m-propagation",
+    "statement": "For every $n\\ge1$ and $y\\in W_n$, $$\\label{eq:separated-generators}\n \\partial P_n(y)=\n \\mathop{\\mathrm{conv}}\\left(\\partial P_n(y)\\cap\n                 \\bigcup_{i=1}^3\\overline B(v_i,r_n)\\right).$$"
+   },
+   {
+    "anchor": "stmt-m-pressure-ball",
+    "claim_id": "C-m-pressure-ball",
+    "statement": "For every $n\\ge1$, there is $\\lambda_n\\in\\operatorname{int}W(1/8)$ such that $$\\label{eq:common-pressure-ball}\n \\overline B(g,\\gamma)\\subset\\partial P_n(\\lambda_n).$$"
+   },
+   {
+    "anchor": "stmt-m-tail",
+    "claim_id": "C-m-tail",
+    "statement": "The function $\\phi$ is bounded and continuous on $[0,\\infty)$, is stable with $B=t^2/2$, and satisfies $\\left|\\phi(r)\\right|\\le Cr^{-3-1/32}$ for all $r\\ge1$, where $$\\label{eq:tail-constant}\n C=2^{3+1/32}t^2+t\\left\\lVert w\\right\\rVert_{\\infty}\n       \\left(A R_1^{1/32}\n              +\\sum_{n\\ge2}R_1^{-2^{n-1}/32}\\right)<\\infty.$$"
+   },
+   {
+    "anchor": "stmt-m-canonical-corner",
+    "claim_id": "C-m-canonical-corner",
+    "statement": "Suppose that $H(\\beta,d)$ and $Q(\\beta,h)$ have the duality and finiteness properties of [f:thermodynamics](#f:thermodynamics); assume also, as there, that $H(\\,\\cdot\\,,d)$ is concave on $(0,\\infty)$ for every $d>0$. If $$(s_1,\\rho),(s_2,\\rho)\\in\\partial Q(\\beta_c,h_c),\n \\qquad \\rho>0,\\quad s_1<s_2,$$ then $H(\\,\\cdot\\,,\\rho)$ has finite one-sided derivatives at $\\beta_c$ and $$H'_+(\\beta_c,\\rho)\\le-s_2<-s_1\\le H'_-(\\beta_c,\\rho).$$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Canonical temperature derivative jump",
+    "evidence": [
+     {
+      "anchor": "stmt-m-canonical-corner",
+      "quote": "Suppose that $H(\\beta,d)$ and $Q(\\beta,h)$ have the duality and finiteness properties of [f:thermodynamics](#f:thermodynamics); assume also, as there, that $H(\\,\\cdot\\,,d)$ is concave on $(0,\\infty)$ for every $d>0$. If $$(s_1,\\rho),(s_2,\\rho)\\in\\partial Q(\\beta_c,h_c),\n \\qquad \\rho>0,\\quad s_1<s_2,$$ then $H(\\,\\cdot\\,,\\rho)$ has finite one-sided derivatives at $\\beta_c$ and $$H'_+(\\beta_c,\\rho)\\le-s_2<-s_1\\le H'_-(\\beta_c,\\rho).$$",
+      "quote_sha256": "27698852053faac5563f876d0ccd893f9fb34b5413f1acd30e78f3de0d099f07"
+     }
+    ],
+    "requires_concepts": [
+     "Thermodynamic limits",
+     "Density-field duality",
+     "Concavity",
+     "Pressure supports"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C-thm-main",
+   "exact_statement": "There is a bounded continuous function $\\phi:[0,\\infty)\\to\\mathbb R$ and finite constants $B,C>0$ such that $$\\sum_{i<j}\\phi(\\left|x_i-x_j\\right|)\\ge-BN,\n \\qquad\n \\left|\\phi(r)\\right|\\le C r^{-3-1/32}\\quad(r\\ge1).$$ There are an open interval $I\\subset(0,\\infty)$ centered at $5p/3$ and a common inverse temperature $\\beta_c\\in[7/8,9/8]$ such that, for every $\\rho\\in I$, the canonical free energy $$f(\\beta,\\rho)=\n -\\lim_{L\\to\\infty}\\frac1{\\beta L^3}\n       \\log Z^\\phi_{L,\\lfloor\\rho L^3\\rfloor}(\\beta)$$ exists and is finite for every $\\beta>0$. Its finite one-sided derivatives at $\\beta_c$ satisfy $$f'_-(\\beta_c,\\rho)>f'_+(\\beta_c,\\rho).$$ In particular, $f(\\,\\cdot\\,,\\rho)$ is not differentiable at $\\beta_c$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "C-f-packing",
+   "exact_statement": "Let $M_L$ be the maximum cardinality of a subset of $[0,L]^3$ whose distinct points have mutual distances at least one. Then $$p=\\lim_{L\\to\\infty}\\frac{M_L}{L^3}$$ exists and belongs to $(0,\\infty)$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-f-packing"
+  },
+  {
+   "claim_id": "C-f-shell-graph",
+   "exact_statement": "For any finite configuration in $\\mathbb R^3$, join two particles when their distance belongs to $I_t$. This graph has no clique of size five. On any $m$ vertices it has at most $3m^2/8$ edges.",
+   "kind": "bound",
+   "statement_anchor": "stmt-f-shell-graph"
+  },
+  {
+   "claim_id": "C-f-stability",
+   "exact_statement": "Set $$\\label{f:stability-constants}\n D_0=t^2/8,\\qquad B_0=t^2/2.$$ For every configuration, including coincident particles, $$\\label{f:cell-stability}\n U^{\\psi_t}\\ge D_0\\sum_i n_i^2-B_0N,\n \\qquad\n U^v\\ge(D_0-M/2)\\sum_i n_i^2-B_0N.$$ Choose $t$ sufficiently large that $$\\label{f:t-requirements}\n D_0\\ge8M,\\qquad ct>4(A+1),\\qquad c=1/3456.$$ Then, in any axis-parallel cube of side $L\\ge1$, with $V=L^3$, $$\\label{f:density-stability}\n U^v\\ge ct^2\\frac{N^2}{V}-\\frac{t^2}{2}N.$$ In particular all members of <a href=\"#f:family\" data-reference-type=\"eqref\" data-reference=\"f:family\">[f:family]</a> are stable with the same constant $B_0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-f-stability"
+  },
+  {
+   "claim_id": "C-f-canonical-bounds",
+   "exact_statement": "There is an absolute constant $C<\\infty$, independent of $t$ and all attraction ranges, such that for every admissible $t$, $L\\ge1$, $n\\ge0$, $\\beta>0$, and $d_L=n/L^3$, $$\\label{f:finite-bounds}\n \\beta t(cd_L^2-d_L/2)+\\frac{d_L\\log d_L-d_L}{t}\n \\le H^\\varphi_{L,n}(\\beta)\n \\le \\beta Ct d_L^2+\\frac{d_L\\log d_L}{t},$$ where $0\\log0=0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-f-canonical-bounds"
+  },
+  {
+   "claim_id": "C-f-grand-tail",
+   "exact_statement": "Fix an admissible $t$ and a compact $\\mathcal D\\subset\\Omega$, where $\\Omega=(0,\\infty)\\times\\mathbb R$ has coordinates $(\\beta,h)$. There are constants $D\\ge1$ and $a_0>0$, depending only on $t$ and $\\mathcal D$, such that, for every $\\varphi$ in <a href=\"#f:family\" data-reference-type=\"eqref\" data-reference=\"f:family\">[f:family]</a>, $L\\ge1$, and $0\\le\\zeta\\le2(A+1)$, $$\\label{f:grand-tail-bound}\n \\sum_{n>DL^3}\\mathrm e^{thn}Z^\\varphi_{L,n}(\\beta)\n          \\exp\\left(\\frac{\\beta t\\zeta n^2}{2L^3}\\right)\n \\le\\frac{\\exp[-a_0(\\lfloor DL^3\\rfloor+1)]}{1-\\mathrm e^{-a_0}}\n \\qquad ((\\beta,h)\\in\\mathcal D).$$ In particular the tail tends uniformly to zero, and is at most one for all sufficiently large $L$. These constants require no local occupation estimate.",
+   "kind": "bound",
+   "statement_anchor": "stmt-f-grand-tail"
+  },
+  {
+   "claim_id": "C-f-thermodynamics",
+   "exact_statement": "For every member $\\varphi$ of <a href=\"#f:family\" data-reference-type=\"eqref\" data-reference=\"f:family\">[f:family]</a>, including countably infinite sums, and every $\\beta>0$, $d\\ge0$, the limit $$\\label{f:canonical-limit}\n H_\\varphi(\\beta,d)\n =\\lim_{\\substack{L\\to\\infty\\\\ n/L^3\\to d}}\n      H^\\varphi_{L,n}(\\beta)$$ exists along every such sequence of real sides and integer counts. It is finite, convex and continuous in $d\\in[0,\\infty)$, and concave in $\\beta>0$ for each fixed $d$. The bounds <a href=\"#f:finite-bounds\" data-reference-type=\"eqref\" data-reference=\"f:finite-bounds\">[f:finite-bounds]</a> hold with $H_\\varphi(\\beta,d)$ and $d$ in place of their finite volume counterparts.*\n\n\n*The grand partition function and pressure satisfy $$\\label{f:pressure-definition}\n \\Xi^\\varphi_L(\\beta,h)\n =\\sum_{n\\ge0}\\mathrm e^{thn}Z^\\varphi_{L,n}(\\beta),\n \\qquad\n Q_\\varphi(\\beta,h)\n =\\lim_{L\\to\\infty}\\frac{\\log\\Xi^\\varphi_L(\\beta,h)}{tL^3}.$$ The pressure is finite, nonnegative, and jointly convex on $\\Omega$. For $\\beta>0$, $$\\label{f:duality}\n \\begin{split}\n Q_\\varphi(\\beta,h)\n   &=\\sup_{d\\ge0}\\{hd-H_\\varphi(\\beta,d)\\},\\\\\n H_\\varphi(\\beta,d)\n   &=\\sup_{h\\in\\mathbb R}\\{hd-Q_\\varphi(\\beta,h)\\},\\qquad d>0.\n \\end{split}$$ For fixed admissible $t$, pressures of the whole family are uniformly bounded on each compact subset of $\\Omega$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-f-thermodynamics"
+  },
+  {
+   "claim_id": "C-f-moments",
+   "exact_statement": "Fix $t$ satisfying <a href=\"#f:t-requirements\" data-reference-type=\"eqref\" data-reference=\"f:t-requirements\">[f:t-requirements]</a> and a compact $\\mathcal D\\subset\\Omega$. There are constants $C_{\\exp},C_1<\\infty$, depending only on $t$ and $\\mathcal D$, such that every grand canonical measure for an interaction <a href=\"#f:modified-energy\" data-reference-type=\"eqref\" data-reference=\"f:modified-energy\">[f:modified-energy]</a> satisfies $$\\label{f:moment-estimates}\n \\sup_i\\mathbb E\\exp(\\beta D_0n_i^2/4)\\le C_{\\exp},\n \\qquad \\sup_{i,j}\\mathbb E[n_i n_j]\\le C_1\n \\qquad ((\\beta,h)\\in\\mathcal D).$$ The bounds hold for every bounded region with finitely many cropped cells, and uniformly for all permitted deletions and interpolations.",
+   "kind": "bound",
+   "statement_anchor": "stmt-f-moments"
+  },
+  {
+   "claim_id": "C-f-perturbation",
+   "exact_statement": "In a fixed bounded region, let $v_\\theta=(1-\\theta)v_0+\\theta v_1$, $0\\le\\theta\\le1$, be bounded symmetric pair interactions satisfying the hypotheses of [f:moments](#f:moments) with the same $t$ and $M$. Let $J^{\\mathrm{diff}}$ be a symmetric nonnegative matrix such that $$\\left|v_1(x,y)-v_0(x,y)\\right|\\le J^{\\mathrm{diff}}_{ij}\n \\quad (x\\in C_i,\\ y\\in C_j).$$ Then, uniformly for $(\\beta,h)\\in\\mathcal D$, $$\\label{f:interpolation-bound}\n \\left|\\log\\Xi^{v_1}(\\beta,h)-\\log\\Xi^{v_0}(\\beta,h)\\right|\n \\le\\frac{\\beta C_1}{2}\\sum_{i,j}J^{\\mathrm{diff}}_{ij}.$$ Thus signed deletions are controlled by the absolute interaction difference, with no cancellation assumption.",
+   "kind": "bound",
+   "statement_anchor": "stmt-f-perturbation"
+  },
+  {
+   "claim_id": "C-f-tail-pressure",
+   "exact_statement": "For a finite or countably infinite member of <a href=\"#f:family\" data-reference-type=\"eqref\" data-reference=\"f:family\">[f:family]</a>, let $$\\varphi_k=\\psi_t-t\\sum_{j\\le k}\\alpha_jw_{R_j},\n \\qquad m_k=\\sum_{j>k}\\alpha_j.$$ For every compact $\\mathcal D\\subset\\Omega$ there is a constant $C_{\\mathcal D,t}<\\infty$, independent of the ranges, their number, and $k$, such that $$\\label{f:tail-pressure-bound}\n 0\\le Q_\\varphi(\\beta,h)-Q_{\\varphi_k}(\\beta,h)\n \\le C_{\\mathcal D,t}m_k\n \\qquad ((\\beta,h)\\in\\mathcal D).$$ The same upper bound holds for the difference of normalized finite volume log grand partition functions in every cube of side $L\\ge1$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-f-tail-pressure"
+  },
+  {
+   "claim_id": "C-k-transform-properties",
+   "exact_statement": "Suppose the size conditions on $t$ in [f:stability](#f:stability) hold, including $ct>4(A+1)$. For every $0<a\\le 2(A+1)$, $$T_aQ(\\beta,h)\n =\\max_{d\\ge0}\n \\left\\{hd-H(\\beta,d)+\\frac{\\beta a}{2}d^2\\right\\}.\n \\label{k:density-transform}$$ The active shifts in <a href=\"#k:transform\" data-reference-type=\"eqref\" data-reference=\"k:transform\">[k:transform]</a> are exactly the maximizing densities in <a href=\"#k:density-transform\" data-reference-type=\"eqref\" data-reference=\"k:density-transform\">[k:density-transform]</a>; in particular, they are nonnegative and form a nonempty compact set. On each compact $\\mathcal D\\subset\\Omega$, they lie in a common interval $[0,U]$, independently of $\\varphi$ and $a$. The constant $U$ may also be chosen uniformly for all sufficiently large $t$.*\n\n\n*The function $T_aQ$ is finite and convex on $\\Omega$, and $$0\\le T_aQ-Q\\le C_{\\mathcal D}a\n \\qquad\\hbox{on }\\mathcal D.\n \\label{k:small-mass}$$ Here $C_{\\mathcal D}$ can be chosen uniformly for sufficiently large $t$. For fixed $t$, the pressures $Q$ and transforms $T_aQ$ have common bounds on compact subsets of $\\Omega$, and common local Lipschitz bounds, uniformly over the same family and masses.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-k-transform-properties"
+  },
+  {
+   "claim_id": "C-k-active-parabola",
+   "exact_statement": "Let $a>0$ be as in [k:transform-properties](#k:transform-properties), and let $u$ be active at $\\lambda=(\\beta,h)$. Then for every $r\\in\\mathbb R$, $$Q(x_u+(0,r))\\le Q(x_u)+ur+\\frac{r^2}{2\\beta a}.\n \\label{k:parabola}$$ Every member of $\\partial Q(x_u)$ has second coordinate $u$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-k-active-parabola"
+  },
+  {
+   "claim_id": "C-k-subdifferential",
+   "exact_statement": "For each fixed $0<a\\le2(A+1)$ and $\\lambda=(\\beta,h)\\in\\Omega$, $$\\partial(T_aQ)(\\lambda)\n =\\mathop{\\mathrm{conv}}\\!\\bigcup_{u\\text{ active at }\\lambda}\n \\left\\{\\left(e+\\frac a2u^2,u\\right):(e,u)\\in\\partial Q(x_u)\\right\\}.\n \\label{k:support-hull}$$ The union on the right is compact, and every one of its members is an actual supporting slope of $T_aQ$ at $\\lambda$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-k-subdifferential"
+  },
+  {
+   "claim_id": "C-k-range",
+   "exact_statement": "Fix an admissible $t$ and a compact set $\\mathcal D\\subset\\Omega$. There are constants $C_{\\mathcal D,t}<\\infty$ and $K_{\\mathcal D,t}<\\infty$ with the following property. Let $R_0\\ge2$, and let $$\\varphi_0=\\psi_t-t\\sum_j\\alpha_jw_{R_j},\n \\qquad 1\\le R_j\\le R_0,\n \\qquad \\alpha_j\\ge0,$$ where the sum may be empty, finite, or countably infinite. If $a>0$, $\\sum_j\\alpha_j+a\\le A+1$, and $R/R_0\\ge K_{\\mathcal D,t}$, then $$\\sup_{\\lambda\\in\\mathcal D}\n \\left|Q_{\\varphi_0-ta w_R}(\\lambda)-T_aQ_{\\varphi_0}(\\lambda)\\right|\n \\le C_{\\mathcal D,t}\\sqrt{\\frac{R_0}{R}}.\n \\label{k:range-estimate}$$ Both constants are independent of $R_0$, the number and values of the reference ranges, the reference masses, and the positive mass $a$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-k-range"
+  },
+  {
+   "claim_id": "C-k-box-pressure",
+   "exact_statement": "Let $\\varphi_0$ and $R_0$ be as in [k:range](#k:range), allowing $\\sum_j\\alpha_j\\le A+1$. Write $$Q^s_{\\varphi_0}(\\lambda)\n =\\frac1{ts^3}\\log\\Xi_s^{\\varphi_0}(\\lambda).$$ For every compact $\\mathcal K\\subset\\Omega$ and every $s\\ge R_0$ with $s/b\\in\\mathbb N$, $$\\sup_{\\lambda\\in\\mathcal K}\n \\left|Q^s_{\\varphi_0}(\\lambda)-Q_{\\varphi_0}(\\lambda)\\right|\n \\le C_{\\mathcal K,t}\\frac{R_0}{s}.\n \\label{k:box-pressure-bound}$$ More generally, for the same $s$, partition $\\Lambda_{ms}$ into $m^3$ boxes of side $s$, aligned with the small-cell grid. In the potential $\\varphi_0-ta w_R$, where $a\\ge0$, $R\\ge1$, and $\\sum_j\\alpha_j+a\\le A+1$, delete only reference interactions between distinct boxes. If $\\Xi^{\\mathrm{del}}_{ms}$ is the resulting grand partition function, then $$\\sup_{\\lambda\\in\\mathcal K}\n \\frac{\\left|\\log\\Xi_{ms}^{\\varphi_0-ta w_R}(\\lambda)\n                 -\\log\\Xi^{\\mathrm{del}}_{ms}(\\lambda)\\right|}{t(ms)^3}\n \\le C_{\\mathcal K,t}\\frac{R_0}{s}.\n \\label{k:deletion}$$ The constants have the uniformity asserted in [k:range](#k:range) and are also independent of $m,s,R$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-k-box-pressure"
+  },
+  {
+   "claim_id": "C-k-kernel-rows",
+   "exact_statement": "Let $B_z$ be the box of side $s$ centered at $z$, where $z$ ranges over a translated lattice $s\\mathbb Z^3$, and suppose $0<s\\le R$. Define $$K^+_{zz'}=\\sup_{x\\in B_z,\\,y\\in B_{z'}}w_R(x-y),\n \\qquad\n K^-_{zz'}=\\inf_{x\\in B_z,\\,y\\in B_{z'}}w_R(x-y).$$ There is a constant $C_w$ depending only on $w$ and dimension such that, with $\\eta=C_ws/R$, every finite cubical collection of these boxes satisfies $$s^3\\sum_{z'}K^+_{zz'}\\le1+\\eta.\n \\label{k:upper-row}$$ If $z$ has distance greater than $R+4s$ from the boundary of the finite collection, then $$s^3\\sum_{z'\\ne z}K^-_{zz'}\\ge1-\\eta.\n \\label{k:lower-row}$$ Both matrices are symmetric and nonnegative.",
+   "kind": "bound",
+   "statement_anchor": "stmt-k-kernel-rows"
+  },
+  {
+   "claim_id": "C-i-bare-pressure",
+   "exact_statement": "Let $q^{(t)}=Q_{\\psi_t}$, with the pressure normalization and the core of [f:thermodynamics](#f:thermodynamics), [f:core](#f:core). Then, locally uniformly on $\\Omega=(0,\\infty)\\times\\mathbb R$, $$q^{(t)}(\\beta,h)\\longrightarrow\n q_*(\\beta,h):=\\max\\{0,ph,4ph-9p\\}.\n \\label{i:bare-limit}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-i-bare-pressure"
+  },
+  {
+   "claim_id": "C-i-limiting-transform",
+   "exact_statement": "The functions $P_1^t$ converge locally uniformly on $\\Omega$ to $P_*$. For every compact $K\\subset\\Omega$, all their active optimizers lie in one interval $[0,U]$ for all sufficiently large $t$, and $$\\sup_{\\lambda\\in K}\\ \\sup_{u\\ \\mathrm{active\\ for}\\ P_1^t(\\lambda)}\n       \\mathop{\\mathrm{dist}}(u,D_*)\\longrightarrow0.$$ In particular, this holds at parameters where several limiting planes meet. If $\\beta_-=\\min_{(\\beta,h)\\in K}\\beta$, the limiting objective obeys the explicit bound $$F_*(\\lambda,u):=q_*(\\beta,h+\\beta Au)-\\frac{\\beta A u^2}{2}\n \\le P_*(\\lambda)-\\frac{\\beta_-A}{2}\\mathop{\\mathrm{dist}}(u,D_*)^2\n \\quad(\\lambda\\in K,\\ u\\in\\mathbb R).\n \\label{i:objective-gap}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-i-limiting-transform"
+  },
+  {
+   "claim_id": "C-i-geometry",
+   "exact_statement": "There are constants $0<\\tau<p/16$ and $\\gamma>0$ with the following properties. Every choice $w_i\\in\\overline B(v_i,\\tau)$, $i=1,2,3$, satisfies $$\\overline B(g,\\gamma)\\subset\\mathop{\\mathrm{conv}}\\{w_1,w_2,w_3\\}.\n \\label{i:robust-triangle}$$ For each distinct pair $i,j$, $$g\\notin\\mathop{\\mathrm{conv}}\\bigl(\\overline B(v_i,\\tau)\\cup\\overline B(v_j,\\tau)\\bigr).\n \\label{i:two-groups}$$ Moreover, for every $\\lambda\\in\\Omega$, $$P_*(\\lambda)-P_*(\\lambda_*)\n       -\\left\\langle g,\\lambda-\\lambda_*\\right\\rangle\n \\ge\\gamma\\left\\lVert\\lambda-\\lambda_*\\right\\rVert.\n \\label{i:linear-growth}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-i-geometry"
+  },
+  {
+   "claim_id": "C-i-initial-separation",
+   "exact_statement": "For all sufficiently large finite $t$, the size conditions in [f:stability](#f:stability), [k:transform-properties](#k:transform-properties) hold and $$\\sup_{\\lambda\\in W_1}\\left|P_1^t(\\lambda)-P_*(\\lambda)\\right|\n       <\\frac{\\gamma}{64}.\n \\label{i:initial-pressure-error}$$ At every $\\lambda\\in W_1$ one also has the exact identity $$\\partial P_1^t(\\lambda)\n =\\mathop{\\mathrm{conv}}\\left(\n       \\partial P_1^t(\\lambda)\\cap\n       \\bigcup_{i=1}^3\\overline B(v_i,\\tau/2)\\right).\n \\label{i:initial-hull}$$ Fix one such $t$ for the rest of the construction.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-i-initial-separation"
+  },
+  {
+   "claim_id": "C-m-one-step",
+   "exact_statement": "Let $q$ be a pressure from the family <a href=\"#f:family\" data-reference-type=\"eqref\" data-reference=\"f:family\">[f:family]</a>, and let $P$ be a finite convex function on $\\Omega$ that is $C_*$-Lipschitz on $W_1$. Suppose $$\\begin{gathered}\n 0<a\\le A+1,\\qquad 0<r<\\tau,\\qquad S_*a<s\\le\\frac14,\\\\\n \\delta\\ge0,\\qquad \\left\\lVert P-q\\right\\rVert_{W_1}\\le\\delta,\\qquad\n \\frac{2\\delta}{ka}<\\frac p{16}.\n \\end{gathered}$$ Assume that throughout $W(s)$, $$\\label{eq:one-step-hypothesis}\n \\partial P(y)=\\mathop{\\mathrm{conv}}\\left(\\partial P(y)\\cap\n                 \\bigcup_{i=1}^3\\overline B(v_i,r)\\right).$$ Then, with $$r^+=r+\\frac{2\\delta}{la}+\\frac12aU_*^2,$$ one has for every $\\lambda\\in W(s-S_*a)$, $$\\label{eq:one-step-conclusion}\n \\partial(T_aq)(\\lambda)\n =\\mathop{\\mathrm{conv}}\\left(\\partial(T_aq)(\\lambda)\\cap\n                 \\bigcup_{i=1}^3\\overline B(v_i,r^+)\\right).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-m-one-step"
+  },
+  {
+   "claim_id": "C-m-propagation",
+   "exact_statement": "For every $n\\ge1$ and $y\\in W_n$, $$\\label{eq:separated-generators}\n \\partial P_n(y)=\n \\mathop{\\mathrm{conv}}\\left(\\partial P_n(y)\\cap\n                 \\bigcup_{i=1}^3\\overline B(v_i,r_n)\\right).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-m-propagation"
+  },
+  {
+   "claim_id": "C-m-pressure-ball",
+   "exact_statement": "For every $n\\ge1$, there is $\\lambda_n\\in\\operatorname{int}W(1/8)$ such that $$\\label{eq:common-pressure-ball}\n \\overline B(g,\\gamma)\\subset\\partial P_n(\\lambda_n).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-m-pressure-ball"
+  },
+  {
+   "claim_id": "C-m-tail",
+   "exact_statement": "The function $\\phi$ is bounded and continuous on $[0,\\infty)$, is stable with $B=t^2/2$, and satisfies $\\left|\\phi(r)\\right|\\le Cr^{-3-1/32}$ for all $r\\ge1$, where $$\\label{eq:tail-constant}\n C=2^{3+1/32}t^2+t\\left\\lVert w\\right\\rVert_{\\infty}\n       \\left(A R_1^{1/32}\n              +\\sum_{n\\ge2}R_1^{-2^{n-1}/32}\\right)<\\infty.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-m-tail"
+  },
+  {
+   "claim_id": "C-m-canonical-corner",
+   "exact_statement": "Suppose that $H(\\beta,d)$ and $Q(\\beta,h)$ have the duality and finiteness properties of [f:thermodynamics](#f:thermodynamics); assume also, as there, that $H(\\,\\cdot\\,,d)$ is concave on $(0,\\infty)$ for every $d>0$. If $$(s_1,\\rho),(s_2,\\rho)\\in\\partial Q(\\beta_c,h_c),\n \\qquad \\rho>0,\\quad s_1<s_2,$$ then $H(\\,\\cdot\\,,\\rho)$ has finite one-sided derivatives at $\\beta_c$ and $$H'_+(\\beta_c,\\rho)\\le-s_2<-s_1\\le H'_-(\\beta_c,\\rho).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-m-canonical-corner"
+  }
+ ],
+ "paper": "papers/EN-115-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-M-0453_PM-228.2_A_radial_continuum_phase_transition_with_algebraic_decay.md",
+ "purpose": "A radial continuum phase transition with algebraic decay",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "ba8d81b2d81b609a7bf9447ee1b29443fb5eaadcc57b8998932925da1bc3ebe8",
+   "pm.domains.v2": "ff75445a9925f6bbc6c48b8a77d36d053f6d2e6ac10c1177cf17b1a72575441d",
+   "pm.edges.v2": "afeb9ed0eaab0a77973def577a4db34006f190530252ecdc60520a28f34c46db",
+   "pm.extraction.v2": "ab7075a1b24d841466f386f3cb5c335ecf5e7001d1a26a764a8a5acd3d9e1958",
+   "pm.formal.v2": "857e4232594dd8c491cd0915927019147c35ddf6f2465821424619b37f855e9d",
+   "pm.limits.v2": "e8634eb42b987762a60d80915bf6a196c76f46d50b84cd462869680a0bf89147",
+   "pm.node.v2": "762abdcba265df0900e28bd760e67b96b27f187aa5d73893b969e3e4eaaa6d8c",
+   "pm.objects.v2": "0a8456bc06adfa0eecc4a56f4bed0156adff42ffea160c8a298db8808641ad1f",
+   "pm.provenance.v2": "847b2af8481d416ce1fb098d24ee000897b209032b8120f7ad4a8582487fc44d",
+   "pm.quantities.v2": "fed758aad5eb915dc16940fb76baf3331a30b390e5e88b818f58d220a4037298",
+   "pm.reading.v2": "43408b9ac2c9ced2dcf0e46f089c8f34908d573a5432e94549bf8b979963710d",
+   "pm.roadmap.v2": "3cbd4c4d92dd7dea6898ee3c25156dc1e74f11094842057376a137a98295751d",
+   "pm.search.v1": "a902d282fec8d01e5ab8bb362295ab29680802c323b693437503faf0379ba3f8",
+   "pm.triptych.v2": "4685b6beb1c6306cbd354b115ed8ee87386ab372c081f35693bdcdce97e05473"
+  },
+  "canonical_sha256": "0c07dea01fef1eaf819190918647b1bef7576ef49e948981a28ebb537907e71b",
+  "paper_sha256": "8db72c7ea4a096774cd832364f5fcfb3e5e485f319a90f8c24d9e574f062d891",
+  "repaired_body_sha256": "f0afd9ebcd5c3c29e2f1962cedff5b0c1116121cbcc92c327caff9aeec815b8d"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "70721b1edc2f83e1b9ca03129b13b9652e8025536f6c5bfa30d3b8aaff1514a6",
+   "receipt_sha256": "270ca94c3e2be3dbf3c1526577562acee920d025697b3bcb9f1230b81dd561e9",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "All 1099 labelled graphs on zero through five vertices with no clique of size five, uniform weights; three asymmetric or zero-weight cases; three rejected inputs.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I-weight",
+     "oracle_basis": "Independent exact Fraction arithmetic rechecks every compressed witness for normalization, clique support, objective monotonicity, the 3/8 bound, and the edge bound. No geometric realization is certified."
+    },
+    {
+     "checked_domain": "Only the finite graph ingredient is exercised; no continuum integrals, multiscale limits, or derivative jumps are tested.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I-main",
+     "oracle_basis": "Finite rational witness checking cannot certify the thermodynamic existence theorem."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M1",
+     "observed_exit": 7,
+     "receipt_sha256": "b5fe7eed8a97690dac92508f6055cae68679732e27b4e9d57103a83a1ba411ec"
+    },
+    {
+     "id": "M2",
+     "observed_exit": 7,
+     "receipt_sha256": "bd92937e0568c32ab3ea56f09c13a1666709b8042e97a7d7ae098704ddc25ec1"
+    },
+    {
+     "id": "M3",
+     "observed_exit": 7,
+     "receipt_sha256": "b3dcc2004cac3e32f7b1a17861249e84f899d2045ca4a6523d273b859d817933"
+    }
+   ],
+   "receipt_sha256": "bedbc0ae7a7718bcbcfe77e484cd50e283e085f47b6a53a905c97285dc5e8bf2",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "A radial continuum phase transition with algebraic decay"
+}

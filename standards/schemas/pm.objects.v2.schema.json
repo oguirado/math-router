@@ -1,0 +1,92 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "pm.objects.v2"
+    },
+    "pm_id": {
+      "type": "string",
+      "pattern": "^PM-[0-9]{3}\\.[0-9]+$"
+    },
+    "generation_status": {
+      "type": "string",
+      "enum": [
+        "GENERATED-PLACEHOLDER",
+        "COMPLETE"
+      ]
+    },
+    "definitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "definition",
+              "notation",
+              "invariant"
+            ]
+          },
+          "definition_anchor": {
+            "type": "string"
+          },
+          "exact_definition": {
+            "type": "string"
+          },
+          "interpretation": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source_id": {
+                  "type": "string"
+                },
+                "anchor": {
+                  "type": "string"
+                },
+                "exact_quote": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_id",
+                "anchor",
+                "exact_quote"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "name",
+          "kind",
+          "definition_anchor",
+          "exact_definition",
+          "interpretation",
+          "scope",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "pm_id",
+    "generation_status",
+    "definitions"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pm.objects.v2"
+}

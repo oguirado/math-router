@@ -1,0 +1,854 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 764027,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 219027
+ },
+ "coordinate": "EN-114-000-0000-2-2026-PR-T4-UK-EX-M1-B-AL-H-0285",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Probability transport and Gaussian randomization",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "The construction uses approximation orders that can depend on the desired exponent and is aimed at oracle complexity rather than practical running time.",
+     "quote_sha256": "cad901ec248999ce95fce5ae83fb011be3a54eb98b10d5d43a70fddc62f0be1a"
+    },
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "No arithmetic or bit-complexity bound is imposed or deduced.",
+     "quote_sha256": "c806d1589c760aef1194d37a53d03e1c3d445791d7c03965052f49413f88733e"
+    }
+   ],
+   "query": "Practical bounded-time or bounded-bit sampler",
+   "reason": "The result bounds oracle calls while allowing unrestricted real computation; it does not furnish an arithmetic or bit-complexity guarantee."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "In particular, the upper bound does not assert a polylogarithmic query count.",
+     "quote_sha256": "3feff4d75dedc09cf1fbe979ee1aff995340b5e4e28171ac1bd101cc0a9cbcfa"
+    }
+   ],
+   "query": "Polylogarithmic query upper bound for the original target",
+   "reason": "The theorem establishes every fixed positive dimension exponent and leaves finer query growth unresolved."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "eq:original-class",
+     "quote": "An exact first-order query at $x$ returns $(V(x),\\nabla V(x))$.",
+     "quote_sha256": "d19e730f35ee3ac481e81351ebdba9aecaf8d2b5b6b84c622b7c9e40e3084afd"
+    }
+   ],
+   "query": "Stochastic or inexact gradient oracle guarantees",
+   "reason": "The source specifies exact replies and provides no robustness theorem for replacing them by noisy evaluations."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "eq:original-class",
+     "quote": "For $d\\ge2$, let $\\mathcal V_d$ consist of the functions $V\\in C^2(\\mathbb R^d)$ satisfying $$\\label{eq:original-class}\n V(0)=0,\\qquad \\nabla V(0)=0,\\qquad\n I_d\\preceq\\nabla^2V(x)\\preceq2I_d\n                         \\quad\\text{for every }x\\in\\mathbb R^d.$$",
+     "quote_sha256": "c5b8f998caadb12304be52d3b5145da79228e36e077e179b3c0f9a6b72076ab8"
+    }
+   ],
+   "query": "Sampling arbitrary nonconvex or unknown-minimizer targets",
+   "reason": "The original-target guarantee requires the supplied minimizer and global two-sided Hessian conditions; the broader weak perturbation primitive still has a near-quadratic full potential."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-primitive",
+     "quote": "The target here contains a full independent Gaussian convolution.",
+     "quote_sha256": "95d907266134521e16ac03fb297ce3b37d8ebcceec92d66b40a8c1efc576e6fa"
+    },
+    {
+     "anchor": "pm-h-10",
+     "quote": "This final step is necessary because the requested accuracy is for the unnoised target in total variation.",
+     "quote_sha256": "1f3bae458558da3b5a25f3ed84be9b73e6809f1e2684636a04a3c998b4cee545"
+    }
+   ],
+   "query": "Return the primitive output directly as an unnoised target sample",
+   "reason": "The primitive approximates a Gaussian-convolved law; conditional noise removal is a separate necessary stage."
+  }
+ ],
+ "family": "PM-139",
+ "id": "PM-139.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-optimal-dimension-exponent",
+    "statement": "In the oracle model above,"
+   },
+   {
+    "anchor": "stmt-thm-primitive",
+    "claim_id": "claim-noisy-near-quadratic-sampling",
+    "statement": "Fix $0<e<1$, an integer $K_0\\ge2$, and $t>0$ satisfying $$\\label{eq:t-choice}\n                 40(K_0+2)t<\\frac14.$$"
+   },
+   {
+    "anchor": "stmt-lem-convex-preliminaries",
+    "claim_id": "claim-uniform-convexity-comparisons",
+    "statement": "Let $H\\in C^2(\\mathbb R^n)$ satisfy $mI\\preceq\\nabla^2H\\preceq MI$, with $0<m\\le M<\\infty$."
+   },
+   {
+    "anchor": "stmt-lem-convex-preliminaries",
+    "claim_id": "claim-uniform-convexity-comparisons",
+    "statement": "Write $\\mu(dx)\\propto e^{-H(x)}dx$, and let $z_0$ be its unique mode."
+   },
+   {
+    "anchor": "eq:synchronous-comparison",
+    "claim_id": "claim-uniform-convexity-comparisons",
+    "statement": "If $\\bar H$ is another strongly convex $C^2$ potential with bounded Hessian and law $\\eta$, then"
+   },
+   {
+    "anchor": "stmt-lem-coupling-smoothing",
+    "claim_id": "claim-conditional-coupling-and-smoothing",
+    "statement": "Let $(\\mu_z)$ and $(\\eta_z)$ be probability kernels on finite-dimensional Euclidean spaces, and let $Z$ have law $\\zeta$."
+   },
+   {
+    "anchor": "stmt-lem-coupling-smoothing",
+    "claim_id": "claim-conditional-coupling-and-smoothing",
+    "statement": "Whenever the relevant second moments are finite,"
+   },
+   {
+    "anchor": "stmt-lem-coupling-smoothing",
+    "claim_id": "claim-conditional-coupling-and-smoothing",
+    "statement": "For $s>0$,"
+   },
+   {
+    "anchor": "stmt-lem-appell-cumulants",
+    "claim_id": "claim-all-split-cumulant-bound",
+    "statement": "Let $S$ be a random vector in $\\mathbb R^D$ whose moment-generating function is finite in a neighborhood of zero."
+   },
+   {
+    "anchor": "stmt-lem-appell-cumulants",
+    "claim_id": "claim-all-split-cumulant-bound",
+    "statement": "Suppose that, for some $\\beta\\ge0$, $$\\operatorname{Var}(P(S))\\le\\beta\\mathbb E|\\nabla P(S)|^2$$ for every polynomial $P$ on $\\mathbb R^D$."
+   },
+   {
+    "anchor": "stmt-prop-gaussian-jets",
+    "claim_id": "claim-gaussian-conditional-jets",
+    "statement": "Under the assumptions above, in particular $l\\le1/2$,"
+   },
+   {
+    "anchor": "eq:conditional-tilt",
+    "claim_id": "claim-probability-transport",
+    "statement": "Retain the primitive notation from Section <a href=\"#sec:preliminaries\" data-reference-type=\"ref\" data-reference=\"sec:preliminaries\">2</a>, and assume $l\\le 1/2$, as holds for all sufficiently large $d$."
+   },
+   {
+    "anchor": "stmt-lem-material-identities",
+    "claim_id": "claim-material-jet-identities",
+    "statement": "For any smooth tensor field $V$,"
+   },
+   {
+    "anchor": "stmt-lem-split-contraction",
+    "claim_id": "claim-single-slot-contraction",
+    "statement": "Let $A$ and $B$ be tensors, and contract one slot of $A$ with one slot of $B$, leaving at least one free slot in each."
+   },
+   {
+    "anchor": "stmt-thm-tensor-divergence",
+    "claim_id": "claim-tensor-divergence-bound",
+    "statement": "Let $E$ be a tensor expression of weight $k$ in Definition <a href=\"#def:divergence-expressions\" data-reference-type=\"ref\" data-reference=\"def:divergence-expressions\">10</a>. There is a constant $C_E\\ge1$, depending only on that finite formula, such that"
+   },
+   {
+    "anchor": "stmt-lem-divergence-l2",
+    "claim_id": "claim-frobenius-divergence-estimate",
+    "statement": "Let $\\mu(dy)\\propto e^{-H(y)}dy$, where $H\\in C^2(\\mathbb R^d)$ has bounded Hessian and $\\mu$ has Gaussian tails. Let $V$ be a smooth tensor field with a distinguished divergence slot and with $V,\\nabla V\\in L^2(\\mu)$ in Frobenius norm."
+   },
+   {
+    "anchor": "sec:divergence",
+    "claim_id": "claim-transported-path-derivatives",
+    "statement": "Retain the primitive parameters $L=\\lambda r$ and $l=rL\\le1/2$, and the interpolation $\\xi_\\rho=\\mathcal L(\\rho Z+\\sqrt a\\,N)$, where $a=1-\\rho^2$ and $0\\le\\rho<1$."
+   },
+   {
+    "anchor": "sec:centering",
+    "claim_id": "claim-transport-jacobian-derivatives",
+    "statement": "Fix $$0<R<1/2,\\qquad b_*=(1-R^2)^{1/2},$$ and use a star for evaluation at $\\rho=b_*$. The positive smoothing radius $R$ keeps all coefficients smooth, although $F$ itself is only $C^2$. In this section $\\rho$ is the Gaussian-interpolation parameter; the new stationary flow will use a separate time variable $t$."
+   },
+   {
+    "anchor": "eq:stein-kernel",
+    "claim_id": "claim-centering-kernel",
+    "statement": "$$\\label{eq:stein-kernel}\n K(y)^T=\\int_0^{b_*}B_\\rho(y)U_1(\\rho,Y_\\rho(y))\\,d\\rho\n       =\\frac1r\\int_0^{b_*}B_\\rho'(y)\\,\\frac{d\\rho}{\\rho}.$$"
+   },
+   {
+    "anchor": "stmt-prop-centering-law",
+    "claim_id": "claim-stationary-noisy-mean",
+    "statement": "For $s>0$, let $(Y_0,G_0)$ have law $\\xi_*\\otimes N(0,I_d)$ and solve $$\\label{eq:centering-flow}\n \\dot Y_t=-K(Y_t)^TG_t/s,\\qquad\n \\dot G_t=(M_*(Y_t)-u)/s.$$"
+   },
+   {
+    "anchor": "stmt-lem-stationary-derivatives",
+    "claim_id": "claim-stationary-time-derivatives",
+    "statement": "Fix $0<R\\le1$."
+   },
+   {
+    "anchor": "stmt-lem-stationary-derivatives",
+    "claim_id": "claim-stationary-time-derivatives",
+    "statement": "Let a smooth probability density on $\\mathbb R^n$, with $n\\le Cd$, have Gaussian tails and negative logarithm $H$."
+   },
+   {
+    "anchor": "stmt-lem-stationary-derivatives",
+    "claim_id": "claim-stationary-time-derivatives",
+    "statement": "Assume its Hessian is bounded and that every positive-order score derivative $\\nabla^j\\nabla H$ has every one-slot split norm at most $C_jR^{-(j-1)}$, for $j\\ge1$."
+   },
+   {
+    "anchor": "stmt-lem-stationary-derivatives",
+    "claim_id": "claim-stationary-time-derivatives",
+    "statement": "Suppose a stationary autonomous flow has Lie derivative $\\mathcal L=\\nabla^*A\\nabla$, where the adjoint is for this density, $A$ is skew symmetric, and $$|\\nabla^jA|_{\\text{one-slot split}}\\le C_j\\alpha R^{-j}\n \\quad(j\\ge0)$$ for every one-slot split."
+   },
+   {
+    "anchor": "stmt-lem-stationary-derivatives",
+    "claim_id": "claim-stationary-time-derivatives",
+    "statement": "Let $\\phi_0$ be smooth and scalar- or vector-valued, with $$|\\nabla^j\\phi_0|_F\\le C_ja_0\\sqrt d\\,R^{-j}\n \\quad(j\\ge1).$$"
+   },
+   {
+    "anchor": "stmt-lem-stationary-derivatives",
+    "claim_id": "claim-stationary-time-derivatives",
+    "statement": "Assume the fields and all derivatives used have polynomial growth."
+   },
+   {
+    "anchor": "stmt-prop-probability-circuit",
+    "claim_id": "claim-global-probability-picard-circuit",
+    "statement": "If the input position has marginal law $\\xi_{\\rho_{\\mathrm{in}}}$,"
+   },
+   {
+    "anchor": "stmt-lem-kernel-angle-errors",
+    "claim_id": "claim-harmonic-angle-correction-errors",
+    "statement": "Let $y\\sim\\xi_*$ and $G\\sim N(0,I_d)$ independently."
+   },
+   {
+    "anchor": "stmt-lem-kernel-endpoint-quadrature",
+    "claim_id": "claim-zero-endpoint-kernel-quadrature",
+    "statement": "Let $y\\sim\\xi_*$ and $G\\sim N(0,I_d)$ independently."
+   },
+   {
+    "anchor": "stmt-lem-kernel-endpoint-quadrature",
+    "claim_id": "claim-zero-endpoint-kernel-quadrature",
+    "statement": "For exact values of $C_\\rho(y)G$,"
+   },
+   {
+    "anchor": "stmt-prop-kernel-circuit",
+    "claim_id": "claim-kernel-action-circuit",
+    "statement": "On the stationary product input law,"
+   },
+   {
+    "anchor": "stmt-prop-mean-circuit",
+    "claim_id": "claim-mean-flow-circuit",
+    "statement": "For ideal independent anchors $Y_0\\sim\\xi_*$ and $G_0\\sim N(0,I_d)$, and every fixed $J\\ge1$,"
+   },
+   {
+    "anchor": "stmt-prop-exact-mean-circuits",
+    "claim_id": "claim-accuracy-with-fixed-dependency-depth",
+    "statement": "Fix $J\\ge1$."
+   },
+   {
+    "anchor": "stmt-prop-exact-mean-circuits",
+    "claim_id": "claim-accuracy-with-fixed-dependency-depth",
+    "statement": "After any fixed $w\\in(0,t)$ is chosen, a common fixed interpolation order satisfying $$\\label{eq:interpolation-order-choice}\n w(m-3)>J+10,\\qquad t(m-3)>J+10,\\qquad m>4(J+10)$$ suffices for the following conclusions, for all sufficiently large $d$."
+   },
+   {
+    "anchor": "stmt-lem-compiler-circuit",
+    "claim_id": "claim-affine-numerical-circuit-interface",
+    "statement": "Fix $J\\ge1$, the parameters <a href=\"#eq:numerical-parameters\" data-reference-type=\"eqref\" data-reference=\"eq:numerical-parameters\">[eq:numerical-parameters]</a>, and $N=\\lceil10(J+2)\\rceil$."
+   },
+   {
+    "anchor": "stmt-lem-compiler-circuit",
+    "claim_id": "claim-affine-numerical-circuit-interface",
+    "statement": "Choose the fixed interpolation order by <a href=\"#eq:interpolation-order-choice\" data-reference-type=\"eqref\" data-reference=\"eq:interpolation-order-choice\">[eq:interpolation-order-choice]</a>."
+   },
+   {
+    "anchor": "stmt-lem-compiler-absorption",
+    "claim_id": "claim-gaussian-center-absorption",
+    "statement": "Let $D_s>0$, and let $\\mathsf Q$ satisfy <a href=\"#eq:mean-shift-warmup\" data-reference-type=\"eqref\" data-reference=\"eq:mean-shift-warmup\">[eq:mean-shift-warmup]</a>, with $\\|v\\|_2\\le D_s$."
+   },
+   {
+    "anchor": "stmt-lem-compiler-absorption",
+    "claim_id": "claim-gaussian-center-absorption",
+    "statement": "For a deterministic $x\\in\\mathbb R^d$, let $Z,G_1,\\ldots,G_m$ be independent standard Gaussian vectors in $\\mathbb R^d$."
+   },
+   {
+    "anchor": "stmt-lem-compiler-height",
+    "claim_id": "claim-finite-routine-height",
+    "statement": "Starting at $(b,p)=(1,K_0)$,"
+   },
+   {
+    "anchor": "eq:numerical-parameters",
+    "claim_id": "claim-deterministic-query-and-seed-cap",
+    "statement": "Fix an integer $K_0\\ge2$ and $t>0$ such that $$\\label{eq:numerical-parameters}\n 40(K_0+2)t<\\frac14,\\qquad\n R=\\delta^t,\\qquad \\psi=\\delta^{4t},\\qquad h_0=\\delta^w,\\qquad 0<w<t.$$"
+   },
+   {
+    "anchor": "stmt-lem-compiler-terminal",
+    "claim_id": "claim-terminal-routine-accuracy",
+    "statement": "In standalone use, a terminal call satisfying <a href=\"#eq:routine-sizes\" data-reference-type=\"eqref\" data-reference=\"eq:routine-sizes\">[eq:routine-sizes]</a> obeys"
+   },
+   {
+    "anchor": "stmt-lem-compiler-sizes",
+    "claim_id": "claim-descendant-size-propagation",
+    "statement": "Starting with a top call satisfying <a href=\"#eq:routine-sizes\" data-reference-type=\"eqref\" data-reference=\"eq:routine-sizes\">[eq:routine-sizes]</a>,"
+   },
+   {
+    "anchor": "stmt-lem-compiler-lipschitz",
+    "claim_id": "claim-arbitrary-seed-stability",
+    "statement": "If the anchors of a nonterminal $\\mathsf M$ are treated as separate inputs,"
+   },
+   {
+    "anchor": "stmt-prop-compiler-accuracy",
+    "claim_id": "claim-compiled-routine-accuracy",
+    "statement": "the standalone routines"
+   },
+   {
+    "anchor": "eq:routine-sizes",
+    "claim_id": "claim-compiled-routine-accuracy",
+    "statement": "We construct a mean routine $\\mathsf M(x,r,\\sigma;b,p)$ targeting $u_{x,r}+\\sigma G$ and a sampling routine $\\mathsf S(x,r,\\eta;b,p)$ targeting $Z+\\eta G$, for independent $Z\\sim\\nu_{x,r}$ and standard Gaussian $G$."
+   },
+   {
+    "anchor": "stmt-lem-proximal-contraction",
+    "claim_id": "claim-proximal-kernel-contraction",
+    "statement": "for input laws $\\mu,\\eta$ of finite second moment,"
+   },
+   {
+    "anchor": "eq:proximal-conditional",
+    "claim_id": "claim-proximal-kernel-contraction",
+    "statement": "For $y\\in\\mathbb R^d$, denote by $\\kappa_y$ the probability law with density proportional to $$\\label{eq:proximal-conditional}\n              \\exp\\!\\left(-V(x')-\\frac{|x'-y|^2}{2h}\\right).$$"
+   },
+   {
+    "anchor": "stmt-prop-noised-mixing",
+    "claim_id": "claim-approximate-noised-chain-mixing",
+    "statement": "With $K_0>2+1/e$ and $t$ chosen above,"
+   },
+   {
+    "anchor": "stmt-lem-descent-moments",
+    "claim_id": "claim-ideal-descent-gradient-moments",
+    "statement": "If $y\\sim\\widetilde\\pi$ and every conditioning observation preceding level $j$ is ideal, then"
+   },
+   {
+    "anchor": "stmt-lem-mode-gaussian",
+    "claim_id": "claim-mode-centered-gaussian-comparison",
+    "statement": "For any $F\\in C^2(\\mathbb R^d)$ with $\\operatorname{Lip}(\\nabla F)\\le\\lambda$, center $x$, and scale $0<r\\le1$ such that $l=\\lambda r^2\\le1/2$, let $z_0$ be the mode of $\\nu_{x,r}$."
+   },
+   {
+    "anchor": "eq:original-class",
+    "claim_id": "claim-subpolynomial-sampling-upper-bound",
+    "statement": "For $d\\ge2$, let $\\mathcal V_d$ consist of the functions $V\\in C^2(\\mathbb R^d)$ satisfying $$\\label{eq:original-class}\n V(0)=0,\\qquad \\nabla V(0)=0,\\qquad\n I_d\\preceq\\nabla^2V(x)\\preceq2I_d\n                         \\quad\\text{for every }x\\in\\mathbb R^d.$$"
+   },
+   {
+    "anchor": "stmt-thm-lower",
+    "claim_id": "claim-logarithmic-adaptive-lower-bound",
+    "statement": "The query cap is imposed on every execution, and the algorithm may use arbitrary private randomness independent of its input."
+   },
+   {
+    "anchor": "stmt-lem-deferred-haar",
+    "claim_id": "claim-deferred-haar-output-representation",
+    "statement": "Let $\\Lambda$ be a fixed real diagonal $d\\times d$ matrix, let $O$ be Haar distributed on the orthogonal group, and set $A=O\\Lambda O^T$."
+   },
+   {
+    "anchor": "stmt-lem-deferred-haar",
+    "claim_id": "claim-deferred-haar-output-representation",
+    "statement": "Consider any measurable randomized algorithm, with private randomness independent of $O$, making at most $q$ adaptive queries to the map $x\\mapsto Ax$, where $2q+1<d$, and producing an output $X\\in\\mathbb R^d$."
+   },
+   {
+    "anchor": "stmt-lem-lower-span-statistic",
+    "claim_id": "claim-uniform-block-span-statistic",
+    "statement": "Suppose $4q+1<2d$, and let $g_1,\\ldots,g_{q+1}$ be independent standard Gaussian vectors."
+   },
+   {
+    "anchor": "stmt-lem-lower-span-statistic",
+    "claim_id": "claim-uniform-block-span-statistic",
+    "statement": "If $\\tau_d\\le1/2$,"
+   },
+   {
+    "anchor": "stmt-lem-lower-target-statistic",
+    "claim_id": "claim-target-cosine-statistic",
+    "statement": "Let $U\\sim N(0,\\Lambda^{-1})$, with $\\Lambda$ from <a href=\"#eq:lower-spectrum\" data-reference-type=\"eqref\" data-reference=\"eq:lower-spectrum\">[eq:lower-spectrum]</a>, and suppose $n=2q+1<d$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "All-split Gaussian conditional jet bounds",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-prop-gaussian-jets",
+      "quote": "This use of repeated Poincaré does not differentiate $f$ repeatedly.",
+      "quote_sha256": "906d4ec76760dc2c128ed9099d3df9bbebb8b1c9965beb49c949b02ab35cfde2"
+     },
+     {
+      "anchor": "proof-stmt-prop-gaussian-jets",
+      "quote": "Each application pulls back a new ambient polynomial and uses only $Df$.",
+      "quote_sha256": "ba9341fe44f5216302692bf64e6ab550c690ff9e37c841df581264f6806096a2"
+     }
+    ],
+    "requires_concepts": [
+     "Polynomial Poincaré inequality",
+     "Appell tensors",
+     "Cumulant tensors",
+     "Gaussian conditional linear tilt",
+     "Tensor matrix unfoldings"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Finite noisy-center conditional-mean evaluation",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-prop-compiler-accuracy",
+      "quote": "Notice the order of this argument: inaccurate supplied centers use only pathwise stability, and standalone accuracy is invoked only after Gaussian absorption.",
+      "quote_sha256": "680a38aadaffac412154d5483b0aacbead411683b42c8a3cd893f1d132e55c38"
+     }
+    ],
+    "requires_concepts": [
+     "Deterministic scalar affine circuits",
+     "Bounded routine height",
+     "Query-preserving translations",
+     "Gaussian seed covariance reduction",
+     "Fixed-seed Lipschitz stability",
+     "Conditional product couplings"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Adaptive Gaussian sampling lower bound",
+    "evidence": [
+     {
+      "anchor": "sec:lower",
+      "quote": "These steps use no result from the sampling upper bound.",
+      "quote_sha256": "61d1b9c6004561589260c0c531e1fa5dfc58fe22c8e4144e5ef2a9834f8612ce"
+     }
+    ],
+    "requires_concepts": [
+     "Deferred Haar revelation",
+     "Gaussian block-Krylov spans",
+     "Discrete cosine orthogonality",
+     "Target Gaussian quadratic-form moments",
+     "Joint total variation separation"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-optimal-dimension-exponent",
+   "exact_statement": "In the oracle model above, for every $\\varepsilon>0$ there is $C_\\varepsilon<\\infty$ such that $$Q(d)\\le C_\\varepsilon d^\\varepsilon\n                  \\qquad(d\\ge2).$$ There are also absolute constants $c>0$ and $d_0$ such that $$Q(d)\\ge c\\log d\\qquad(d\\ge d_0).$$ The lower bound applies to arbitrary randomized adaptive first-order algorithms. In particular, $\\gamma_*=0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-noisy-near-quadratic-sampling",
+   "exact_statement": "Fix $0<e<1$, an integer $K_0\\ge2$, and $t>0$ satisfying $$\\label{eq:t-choice}\n                 40(K_0+2)t<\\frac14.$$ There are constants and a dimension threshold depending only on $e,K_0,t$ with the following property. For every integer $d$ above that threshold, put $\\delta=d^{-e}$. One measurable randomized oracle procedure works for every $F\\in C^2(\\mathbb R^d)$ with $\\operatorname{Lip}(\\nabla F)\\le\\delta$, every $x\\in\\mathbb R^d$, and every $0<r\\le1$. Given evaluation access to $g=\\nabla F$, it uses at most $\\operatorname{polylog}(d)\\delta^{-t}$ evaluations of $g$ on every execution and returns $$X=X_{\\mathrm{pre}}+\\tfrac12G,$$ where $G\\sim N(0,I_d)$ is independent of $X_{\\mathrm{pre}}$ and of all queries, and $$\\label{eq:primitive-pre-noise}\n W_2\\!\\left(\\mathcal L(X_{\\mathrm{pre}}),\n       \\nu_{x,r}*N(0,\\tfrac34I_d)\\right)\n       \\le \\operatorname{polylog}(d)\\delta^{K_0}D(x).$$ Consequently both $$W_2\\!\\left(\\mathcal L(X),\\nu_{x,r}*N(0,I_d)\\right)\n \\quad\\hbox{and}\\quad\n \\lVert\\mathcal L(X)-\\nu_{x,r}*N(0,I_d)\\rVert_{\\mathrm{TV}}$$ are at most $\\operatorname{polylog}(d)\\delta^{K_0}D(x)$. All constants in these bounds are uniform in $F,x,r$. The procedure’s scalar parameters, shapes of its computations, and query cap are independent of $x$ and of the primitive. It uses no evaluations of $F$ itself.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-thm-primitive"
+  },
+  {
+   "claim_id": "claim-uniform-convexity-comparisons",
+   "exact_statement": "Let $H\\in C^2(\\mathbb R^n)$ satisfy $mI\\preceq\\nabla^2H\\preceq MI$, with $0<m\\le M<\\infty$. Write $\\mu(dx)\\propto e^{-H(x)}dx$, and let $z_0$ be its unique mode. Then $$\\mathbb E_\\mu|X-z_0|^2\\le n/m,\\qquad\n \\operatorname{Var}_\\mu h\\le m^{-1}\\mathbb E_\\mu|\\nabla h|^2.$$ The latter applies, in particular, to $C^1$ functions whose value and gradient have polynomial growth. The diffusion $$dX_t=-\\nabla H(X_t)\\,dt+\\sqrt2\\,dB_t$$ has invariant law $\\mu$, and synchronous solutions contract in distance by $e^{-mt}$.*\n\n\n*If $\\bar H$ is another strongly convex $C^2$ potential with bounded Hessian and law $\\eta$, then $$\\label{eq:synchronous-comparison}\n W_2(\\mu,\\eta)\n \\le \\frac1m\n       \\left(\\mathbb E_\\eta|\\nabla H-\\nabla\\bar H|^2\\right)^{1/2}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-convex-preliminaries"
+  },
+  {
+   "claim_id": "claim-conditional-coupling-and-smoothing",
+   "exact_statement": "Let $(\\mu_z)$ and $(\\eta_z)$ be probability kernels on finite-dimensional Euclidean spaces, and let $Z$ have law $\\zeta$. Whenever the relevant second moments are finite, $$W_2^2\\!\\left(\\int\\mu_z\\,d\\zeta(z),\\int\\eta_z\\,d\\zeta(z)\\right)\n       \\le\\int W_2^2(\\mu_z,\\eta_z)\\,d\\zeta(z).$$ For finite families, independent sums satisfy $$W_2\\!\\left(\\mathcal L\\Bigl(\\sum_i a_iX_i\\Bigr),\n             \\mathcal L\\Bigl(\\sum_i a_iY_i\\Bigr)\\right)\n \\le\\sum_i|a_i|W_2(\\mathcal L(X_i),\\mathcal L(Y_i)),$$ where independence is required within each of the two families, not between them. For $s>0$, $$\\label{eq:gaussian-smoothing}\n \\lVert\\mu*N(0,s^2I)-\\eta*N(0,s^2I)\\rVert_{\\mathrm{TV}}\n                       \\le s^{-1}W_2(\\mu,\\eta).$$ Moreover, applying a common probability kernel cannot increase total variation, and $$\\left\\|\\int\\mu_z\\,d\\zeta(z)-\\int\\eta_z\\,d\\zeta(z)\\right\\|_{\\mathrm{TV}}\n       \\le\\int\\lVert\\mu_z-\\eta_z\\rVert_{\\mathrm{TV}}\\,d\\zeta(z).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-coupling-smoothing"
+  },
+  {
+   "claim_id": "claim-all-split-cumulant-bound",
+   "exact_statement": "Let $S$ be a random vector in $\\mathbb R^D$ whose moment-generating function is finite in a neighborhood of zero. Suppose that, for some $\\beta\\ge0$, $$\\operatorname{Var}(P(S))\\le\\beta\\mathbb E|\\nabla P(S)|^2$$ for every polynomial $P$ on $\\mathbb R^D$. For each integer $n\\ge2$, define its cumulant tensor by $\\kappa_n(S)=\\left.\\nabla_\\theta^n\\log\\mathbb Ee^{\\theta\\cdot S}\\right|_{\\theta=0}$. Then, for an absolute constant $C$, $$|\\kappa_n(S)|_{\\mathrm{split}}\n \\le C^n n^{Cn}\\beta^{n/2}$$ for every nontrivial split. The constant is independent of $D$ and of the mean of $S$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-appell-cumulants"
+  },
+  {
+   "claim_id": "claim-gaussian-conditional-jets",
+   "exact_statement": "Under the assumptions above, in particular $l\\le1/2$, define for each integer $q\\ge1$ $$U_q(\\rho,y)=\\rho^{-q}\\nabla^q M_\\rho(y)\\qquad(\\rho>0).$$ These tensors extend smoothly to $\\rho=0$. There is an absolute constant $C$ such that, for every $0\\le\\rho<1$, $y\\in\\mathbb R^d$ and every split, $$|U_q(\\rho,y)|_{\\mathrm{split}}\n \\le C^q q^{Cq}L(\\sqrt a)^{-(q-1)}.\n \\label{eq:jets}$$ Here and below the vector-output slot is included among the tensor slots. The constant is uniform in the dimension, the primitive, its center and scale, and the derivative order $q$. Moreover, $DM_\\rho$ and $U_1$ are symmetric, and $$\\nabla H_\\rho(y)=y+r\\rho M_\\rho(y),\\qquad\n \\|\\nabla^2H_\\rho\\|_{\\mathrm{op}}\\le C.\n \\label{eq:interpolation-score}$$ For $j\\ge1$, every split of $\\nabla^j\\nabla^2 H_\\rho$ is bounded by $$C^{j+1}(j+1)^{C(j+1)}(\\sqrt a)^{-j}.\n \\label{eq:score-derivatives}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-gaussian-jets"
+  },
+  {
+   "claim_id": "claim-probability-transport",
+   "exact_statement": "The ordinary differential equation $$\\frac{dY_\\rho}{d\\rho}=-rM_\\rho(Y_\\rho)\n \\label{eq:transport}$$ transports $\\xi_0=N(0,I_d)$ to $\\xi_\\rho$ for every $\\rho<1$. Its velocity is globally $Cl$-Lipschitz in space. On every compact probability-time interval it has a smooth flow in both directions.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-transport"
+  },
+  {
+   "claim_id": "claim-material-jet-identities",
+   "exact_statement": "The mean and its jets satisfy $$\\begin{aligned}\n \\mathcal D M&=\\nabla^*U_1,\n \\label{eq:material-mean-identity}\\\\\n (\\mathcal D U_q)_{i,I}\n &= (\\nabla^*U_{q+1})_{i,I}\n   +2r\\rho\\sum_{\\varnothing\\ne S\\subseteq I}\n       (U_{|S|})_{k,S}\n       (U_{q-|S|+1})_{i,k,I\\setminus S},\\qquad q\\ge1.\n \\label{eq:material-jet-identity}\n\\end{aligned}$$ In the second identity $I$ is a labeled list of $q$ derivative slots; subsets refer to positions in that list and the index $k$ is summed. For any smooth tensor field $V$, $$\\mathcal D(\\nabla^*V)\n =\\nabla^*(\\mathcal DV)\n   +r\\nabla^*((DM_\\rho)V),\n \\label{eq:material-adjoint-identity}$$ where the matrix acts on the slot removed by the divergence. These identities hold also at $\\rho=0$ by continuous extension.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-material-identities"
+  },
+  {
+   "claim_id": "claim-single-slot-contraction",
+   "exact_statement": "Let $A$ and $B$ be tensors, and contract one slot of $A$ with one slot of $B$, leaving at least one free slot in each. For any nontrivial split of the resulting free slots there are nontrivial splits of $A$ and $B$ such that $$|A*B|_{\\mathrm{split}}\n \\le |A|_{\\mathrm{split}}|B|_{\\mathrm{split}}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-split-contraction"
+  },
+  {
+   "claim_id": "claim-tensor-divergence-bound",
+   "exact_statement": "Let $E$ be a tensor expression of weight $k$ in Definition <a href=\"#def:divergence-expressions\" data-reference-type=\"ref\" data-reference=\"def:divergence-expressions\">10</a>. There is a constant $C_E\\ge1$, depending only on that finite formula, such that for every integer $j\\ge0$, every real $2\\le p<\\infty$, every $0\\le\\rho<1$, and every nontrivial split, $$\\bigl\\|\\,|\\nabla^jE|_{\\mathrm{split}}\\,\\bigr\\|_{L^p(\\xi_\\rho)}\n \\le C_E^{j+1}\n       \\bigl(p+j+\\log(d+1)\\bigr)^{C_E(j+1)}\n       (\\sqrt a)^{-(k+j)}.\n \\label{eq:network}$$ The same $C_E$ works for all $j,p,d,\\rho,x,r$. In particular it is not restricted to fixed derivative or moment orders.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-tensor-divergence"
+  },
+  {
+   "claim_id": "claim-frobenius-divergence-estimate",
+   "exact_statement": "Let $\\mu(dy)\\propto e^{-H(y)}dy$, where $H\\in C^2(\\mathbb R^d)$ has bounded Hessian and $\\mu$ has Gaussian tails. Let $V$ be a smooth tensor field with a distinguished divergence slot and with $V,\\nabla V\\in L^2(\\mu)$ in Frobenius norm. Then $$\\|\\nabla^*V\\|_{F,2}\n \\le C\\bigl(\\|V\\|_{F,2}+\\|\\nabla V\\|_{F,2}\\bigr),\n \\label{eq:divergence-l2}$$ where $C$ depends only on $\\|\\nabla^2H\\|_{\\mathrm{op},\\infty}$, and is independent of $d$ and the number of remaining tensor slots. For $H=H_\\rho$ it is an absolute constant.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-divergence-l2"
+  },
+  {
+   "claim_id": "claim-transported-path-derivatives",
+   "exact_statement": "For each fixed integer $m\\ge1$, $$\\|\\mathcal D^mM_\\rho\\|_{L^2(\\xi_\\rho)}\n \\le\\operatorname{polylog}(d)L\\sqrt d\\,a^{-m}.\n \\label{eq:path-mean}$$ For fixed integers $q\\ge1$, $m\\ge0$, and fixed real $2\\le p<\\infty$, every nontrivial split satisfies $$\\bigl\\|\\,|\\mathcal D^mU_q|_{\\mathrm{split}}\\,\\bigr\\|_{L^p(\\xi_\\rho)}\n \\le\\operatorname{polylog}(d)L(\\sqrt a)^{-(q-1+2m)}.\n \\label{eq:path-jet}$$ The constants hidden in $\\operatorname{polylog}(d)$ may depend on $m,q,p$ when these parameters occur, but are uniform in $\\rho$, the primitive center, scale, and oracle.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-path-derivatives"
+  },
+  {
+   "claim_id": "claim-transport-jacobian-derivatives",
+   "exact_statement": "For each fixed $k\\ge1$, the order-$k$ spatial derivatives of any transport between two times in $[0,b_*]$, after subtracting the identity map, have all nontrivial split norms at most $$C_k lR^{-(k-1)}.$$ For each fixed $m\\ge1$ and fixed finite $p\\ge1$, uniformly in $0\\le\\rho\\le b_*$, $$\\big\\|\\|B_\\rho^{(m)}(y)\\|_{\\mathrm{op}}\\big\\|_{L^p(y\\sim\\xi_*)}\n \\le \\operatorname{polylog}(d)\\,l(1-\\rho^2)^{-m}.$$ The constants and the polylogarithmic factor may depend on the fixed orders and on $p$, but not on the primitive center or scale.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-transport-derivatives"
+  },
+  {
+   "claim_id": "claim-centering-kernel",
+   "exact_statement": "The field $K$ is smooth and satisfies $$\\nabla_{\\xi_*}^*K=M_*-u,\\qquad \\|K(y)\\|_{\\mathrm{op}}\\le CL.$$ For each fixed $j\\ge1$, every nontrivial split norm of $\\nabla^jK$ is bounded pointwise by $C_jLR^{-j}$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-centering-kernel"
+  },
+  {
+   "claim_id": "claim-stationary-noisy-mean",
+   "exact_statement": "For $s>0$, let $(Y_0,G_0)$ have law $\\xi_*\\otimes N(0,I_d)$ and solve $$\\label{eq:centering-flow}\n \\dot Y_t=-K(Y_t)^TG_t/s,\\qquad\n \\dot G_t=(M_*(Y_t)-u)/s.$$ The solution exists for every finite time, and its law remains $\\xi_*\\otimes N(0,I_d)$. In particular, $$\\label{eq:centering-output}\n sG_0+\\int_0^1M_*(Y_t)\\,dt\\ \\stackrel{\\mathrm{law}}=\n u+sG,\\qquad G\\sim N(0,I_d).$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-centering-law"
+  },
+  {
+   "claim_id": "claim-stationary-time-derivatives",
+   "exact_statement": "Fix $0<R\\le1$. Let a smooth probability density on $\\mathbb R^n$, with $n\\le Cd$, have Gaussian tails and negative logarithm $H$. Assume its Hessian is bounded and that every positive-order score derivative $\\nabla^j\\nabla H$ has every one-slot split norm at most $C_jR^{-(j-1)}$, for $j\\ge1$. Here a one-slot split isolates one tensor slot as the matrix input and groups all remaining slots as its output. Suppose a stationary autonomous flow has Lie derivative $\\mathcal L=\\nabla^*A\\nabla$, where the adjoint is for this density, $A$ is skew symmetric, and $$|\\nabla^jA|_{\\text{one-slot split}}\\le C_j\\alpha R^{-j}\n \\quad(j\\ge0)$$ for every one-slot split. Let $\\phi_0$ be smooth and scalar- or vector-valued, with $$|\\nabla^j\\phi_0|_F\\le C_ja_0\\sqrt d\\,R^{-j}\n \\quad(j\\ge1).$$ Assume the fields and all derivatives used have polynomial growth. Then, for each fixed $k\\ge1$, the order-$k$ time derivative of $\\phi_0$ on the stationary flow has RMS norm at most $$\\label{eq:stationary-derivatives}\n C_k a_0\\sqrt d\\,(\\alpha R^{-2})^k.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-stationary-derivatives"
+  },
+  {
+   "claim_id": "claim-global-probability-picard-circuit",
+   "exact_statement": "If the input position has marginal law $\\xi_{\\rho_{\\mathrm{in}}}$, then after $N_p$ iterations the maximum, over all state nodes, of the RMS error relative to the exact transport is at most $$\\label{eq:probability-picard}\n C_m\\operatorname{polylog}(d)\\,l\\sqrt d\\,h_0^m\n       +(C_ml)^{N_p}CrD.$$ Every computed state is globally Lipschitz in its initial position with constant $C_m$. After subtracting the initial position, its Lipschitz constant is at most $C_ml$.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-prop-probability-circuit"
+  },
+  {
+   "claim_id": "claim-harmonic-angle-correction-errors",
+   "exact_statement": "Let $y\\sim\\xi_*$ and $G\\sim N(0,I_d)$ independently. The exact-input angle differentiation in <a href=\"#eq:kernel-action-derivative\" data-reference-type=\"eqref\" data-reference=\"eq:kernel-action-derivative\">[eq:kernel-action-derivative]</a> has RMS truncation error at most $$\\label{eq:angle-stencil-error}\n C_m l\\sqrt d\\,\\psi^{m-1}R^{-2m}\n       =C_ml\\sqrt d\\,\\delta^{2tm-4t}.$$ Before applying the angle differentiation weights, the RMS errors of the computed forward correction values are at most $$\\label{eq:kernel-value-error}\n C_m\\operatorname{polylog}(d)\\,l\\sqrt d\\,(h_0^m+\\delta^{2tm})\n       +(C_ml)^{N_p}CrD.$$ Every such approximate correction is globally Lipschitz in $(y,G)$ with constant at most $C_ml$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-kernel-angle-errors"
+  },
+  {
+   "claim_id": "claim-zero-endpoint-kernel-quadrature",
+   "exact_statement": "Let $y\\sim\\xi_*$ and $G\\sim N(0,I_d)$ independently. For exact values of $C_\\rho(y)G$, the RMS error of this quadrature for $\\int_0^{b_*}B'_\\rho(y)G\\,d\\rho/\\rho$ is at most $$C_m\\operatorname{polylog}(d)\\,l\\sqrt d\\,h_0^{m-2}.$$ The value weights satisfy $$\\label{eq:kernel-weight-sum}\n \\sum_i|q_i|\n \\le C_mh_0^{-1}(1+|\\log R|+|\\log h_0|).$$ These weights are well defined even if the supplied values are approximate: the derivative condition at zero remains exact.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-kernel-endpoint-quadrature"
+  },
+  {
+   "claim_id": "claim-kernel-action-circuit",
+   "exact_statement": "On the stationary product input law, the RMS error of $\\widehat v=(\\widehat v_Y,\\widehat v_G)$ relative to <a href=\"#eq:centering-flow\" data-reference-type=\"eqref\" data-reference=\"eq:centering-flow\">[eq:centering-flow]</a> is bounded by $\\operatorname{polylog}(d)$ times $$\\label{eq:kernel-velocity-error}\n \\begin{split}\n &\\frac L\\sigma\\sqrt d\n \\left[h_0^{m-2}+h_0^{-1}\\delta^{-4t}\n                      (h_0^m+\\delta^{2tm})\\right]\\\\\n &\\hspace{12mm}+\\delta^{-4t-w}(C_ml)^{N_p-1}\n                           r\\frac L\\sigma D.\n \\end{split}$$ It is globally Lipschitz, with constant at most $$\\label{eq:velocity-lipschitz}\n C_m\\operatorname{polylog}(d)\\,(L/\\sigma)\\psi^{-1}h_0^{-1}.$$ For every fixed $J\\ge1$, its RMS error can be made at most $\\operatorname{polylog}(d)\\delta^J D$ with $N_p=O(J+1)$, independently of $w$ and the interpolation orders.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-prop-kernel-circuit"
+  },
+  {
+   "claim_id": "claim-mean-flow-circuit",
+   "exact_statement": "For ideal independent anchors $Y_0\\sim\\xi_*$ and $G_0\\sim N(0,I_d)$, and every fixed $J\\ge1$, the circuit <a href=\"#eq:mean-output\" data-reference-type=\"eqref\" data-reference=\"eq:mean-output\">[eq:mean-output]</a> can be chosen to differ in RMS by at most $\\operatorname{polylog}(d)\\sigma\\delta^J D$ from the exact path integral <a href=\"#eq:centering-output\" data-reference-type=\"eqref\" data-reference=\"eq:centering-output\">[eq:centering-output]</a>. The approximate joint states have RMS errors at most $\\operatorname{polylog}(d)\\delta^JD$. Every integration uses $O(J+1)$ Picard layers, with a bound independent of $w$ and all interpolation orders.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-prop-mean-circuit"
+  },
+  {
+   "claim_id": "claim-accuracy-with-fixed-dependency-depth",
+   "exact_statement": "Fix $J\\ge1$. In all the probability, harmonic, and centering integrations above, one may take at most $$N=\\lceil10(J+2)\\rceil$$ Picard layers. After any fixed $w\\in(0,t)$ is chosen, a common fixed interpolation order satisfying $$\\label{eq:interpolation-order-choice}\n w(m-3)>J+10,\\qquad t(m-3)>J+10,\\qquad m>4(J+10)$$ suffices for the following conclusions, for all sufficiently large $d$. Probability transport from its exact starting marginal has endpoint RMS error at most $\\operatorname{polylog}(d)\\delta^JD$; the same holds after division by an endpoint parameter bounded away from zero. The mean circuit with ideal anchors has RMS error at most $\\operatorname{polylog}(d)\\sigma\\delta^JD$ relative to <a href=\"#eq:centering-output\" data-reference-type=\"eqref\" data-reference=\"eq:centering-output\">[eq:centering-output]</a>.*\n\n*The number of layers of exact mean dependencies within either circuit is $O((N+1)^2)$, independently of $m$, $w$, and the number of mesh cells. All mesh nodes, interpolation weights, scalar parameters, and iteration counts are deterministic functions of the prescribed parameters and dimension.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-exact-mean-circuits"
+  },
+  {
+   "claim_id": "claim-affine-numerical-circuit-interface",
+   "exact_statement": "<span id=\"thm:numerical-interface\" label=\"thm:numerical-interface\"></span>Fix $J\\ge1$, the parameters <a href=\"#eq:numerical-parameters\" data-reference-type=\"eqref\" data-reference=\"eq:numerical-parameters\">[eq:numerical-parameters]</a>, and $N=\\lceil10(J+2)\\rceil$. Choose the fixed interpolation order by <a href=\"#eq:interpolation-order-choice\" data-reference-type=\"eqref\" data-reference=\"eq:interpolation-order-choice\">[eq:interpolation-order-choice]</a>. For all sufficiently large $d$, the maps <a href=\"#eq:exact-mean-circuit\" data-reference-type=\"eqref\" data-reference=\"eq:exact-mean-circuit\">[eq:exact-mean-circuit]</a>–<a href=\"#eq:exact-sample-circuit\" data-reference-type=\"eqref\" data-reference=\"eq:exact-sample-circuit\">[eq:exact-sample-circuit]</a> have the following properties.*\n\n\n1.  **Deterministic scalar formulas.* Their exact mean nodes can be ordered as $M_1,\\ldots,M_Q$, where $$\\label{eq:exact-affine-centers}\n     M_i=u_{E_i,r_i},\\qquad\n     E_i=b_i+\\sum_{j<i}a_{ij}M_j,\\qquad\n     E_f=b_f+\\sum_ja_{fj}M_j.$$ All $a_{ij}$ and $a_{fj}$ are deterministic scalars. The whole node list, its scales, and these coefficients can be formed without knowing a mean value or making an oracle query.*\n\n2.  **Direct terms and scales.* Each node has $r_i=r\\tau_i$ and $$\\tau_i=\\sqrt{1-\\rho_i^2}\\ge R/\\sqrt5,\\qquad\n     b_i=x+r(\\ell_i y+m_iG).$$ For $\\mathcal C_S$, the $G$ term is absent, $\\rho_i\\le\\rho_e$, and $(\\ell_i,m_i)=(\\rho_i,0)$. For $\\mathcal C_M$, $\\rho_i\\le b_*$ and the pair is either $(\\rho_i,0)$ or $(\\rho_i\\cos z,\\rho_i\\sin z)$, with $|z|\\le C_m\\psi$. In particular both coefficients have absolute value at most one. A node for $M_0=u$ has center $x$ and scale $r$. Every mean occurring directly in the final expression for $\\mathcal C_M$ is $M_*$ at a computed position and has scale exactly $rR$. The final direct terms are $b_f=\\sigma G/2$ and $b_f=y/\\rho_e$, respectively.*\n\n\n3.  **Coefficient sums and direct expression size.* There are positive declared bounds $A,A_f$ such that $\\sum_{j<i}|a_{ij}|\\le A$ and $\\sum_j|a_{fj}|\\le A_f$, namely $$\\label{eq:coefficient-bounds}\n     \\begin{aligned}\n     A_M&=C_1(1+\\log d)^{C_1}\n           \\bigl[(r/\\sigma)\\delta^{-4t-c_1w}+r^2\\bigr],\n     & A_S&=C_1r^2,\\\\\n     A_{f,M}&=C_1,\n     & A_{f,S}&=C_1r,\n     &c_1&=10.\n     \\end{aligned}$$ Here $C_1\\ge1$ depends only on the fixed parameters and orders. Every direct expression has at most $B_d\\delta^{-c_1w}$ terms. Every mean dependency path has length at most $D_0=3N^2+1$; using a larger absolute multiple of $(N+1)^2$ is harmless. This depth bound is independent of $w$, $m$, and the number of mesh cells.*\n\n\n\n4.  **Errors on the ideal anchor laws.* Under <a href=\"#eq:numerical-size\" data-reference-type=\"eqref\" data-reference=\"eq:numerical-size\">[eq:numerical-size]</a>, for independent $Y\\sim\\xi_*$ and $G\\sim N(0,I_d)$, $$\\label{eq:ideal-mean-circuit-error}\n     W_2\\bigl(\\mathcal L(\\mathcal C_M(x,r,\\sigma;Y,G)),\n                      N(u,\\sigma^2I_d/4)\\bigr)\n           \\le B_d\\sigma\\delta^JD(x).$$ For $\\mathcal C_S$ only $l\\le B_d\\delta^b$, $b\\ge1/2$, is needed. With $Y\\sim N(0,I_d)$, $$\\label{eq:ideal-sample-circuit-error}\n     W_2\\bigl(\\mathcal L(\\mathcal C_S(x,r,\\eta;Y)),\n                        \\nu_{x,r}*N(0,\\eta^2I_d/4)\\bigr)\n           \\le B_d\\delta^JD(x).$$ The coefficient and dependency assertions are deterministic, for every choice of anchors. The distributional estimates require the specified ideal anchor laws.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-compiler-circuit"
+  },
+  {
+   "claim_id": "claim-gaussian-center-absorption",
+   "exact_statement": "Let $D_s>0$, and let $\\mathsf Q$ satisfy <a href=\"#eq:mean-shift-warmup\" data-reference-type=\"eqref\" data-reference=\"eq:mean-shift-warmup\">[eq:mean-shift-warmup]</a>, with $\\|v\\|_2\\le D_s$. Put $$n=\\frac r{2D_s},\\qquad\n P=\\left(I_m-\\frac{vv^T}{4D_s^2}\\right)^{1/2}.$$ For a deterministic $x\\in\\mathbb R^d$, let $Z,G_1,\\ldots,G_m$ be independent standard Gaussian vectors in $\\mathbb R^d$. Then the output of $\\mathsf Q(x+nZ;(P\\otimes I_d)G)$ has exactly the law of $\\mathsf Q(x;G)$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-compiler-absorption"
+  },
+  {
+   "claim_id": "claim-finite-routine-height",
+   "exact_statement": "Starting at $(b,p)=(1,K_0)$, the rules <a href=\"#eq:compiler-labels\" data-reference-type=\"eqref\" data-reference=\"eq:compiler-labels\">[eq:compiler-labels]</a> give a finite routine tree of height at most a constant $H=H(K_0,t)$. Every reachable label satisfies $b>1/2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-compiler-height"
+  },
+  {
+   "claim_id": "claim-deterministic-query-and-seed-cap",
+   "exact_statement": "One can choose $w>0$, depending only on $K_0,t$ and the fixed Picard counts, and then choose the interpolation orders, so that the entire construction is well defined for all sufficiently large $d$. Every routine reached from a top call satisfies <a href=\"#eq:shift-budget\" data-reference-type=\"eqref\" data-reference=\"eq:shift-budget\">[eq:shift-budget]</a>. Its total number of seed slots and oracle queries is at most $\\operatorname{polylog}(d)\\delta^{-t}$ on every execution.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-compiler-count"
+  },
+  {
+   "claim_id": "claim-terminal-routine-accuracy",
+   "exact_statement": "In standalone use, a terminal call satisfying <a href=\"#eq:routine-sizes\" data-reference-type=\"eqref\" data-reference=\"eq:routine-sizes\">[eq:routine-sizes]</a> obeys $$\\begin{aligned}\n W_2\\bigl(\\mathcal L(\\mathsf M),N(u,\\sigma^2I_d)\\bigr)\n &\\le\\operatorname{polylog}(d)\\sigma\\delta^pD(x),\\\\\n W_2\\bigl(\\mathcal L(\\mathsf S_{\\rm pre}),\n          \\nu_{x,r}*N(0,3\\eta^2I_d/4)\\bigr)\n &\\le\\operatorname{polylog}(d)\\delta^pD(x),\n\\end{aligned}$$ where $\\mathsf S_{\\rm pre}$ is the output before adding its reserved noise $\\eta G_2/2$. The sampling bound also holds after adding that same independent reserve to both laws. The fixed-seed center Lipschitz constant is at most $\\lambda$ for $\\mathsf M$ and $r\\lambda$ for $\\mathsf S$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-compiler-terminal"
+  },
+  {
+   "claim_id": "claim-descendant-size-propagation",
+   "exact_statement": "Starting with a top call satisfying <a href=\"#eq:routine-sizes\" data-reference-type=\"eqref\" data-reference=\"eq:routine-sizes\">[eq:routine-sizes]</a>, every descendant satisfies that condition with its assigned labels, up to a uniform polylogarithmic factor. At each nonterminal circuit, $$\\lambda A\\le\\operatorname{polylog}(d)\\delta^{1/3}.\n \\label{eq:small-coefficients}$$ For nonfinal expression terms within an $\\mathsf M$ parent, $\\sigma_i\\le C\\sigma$; within an $\\mathsf S$ parent, $r\\sigma_i\\le C$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-compiler-sizes"
+  },
+  {
+   "claim_id": "claim-arbitrary-seed-stability",
+   "exact_statement": "For every seed array, including correlated or transformed arrays, the compiled $\\mathsf M$ output is a function of $x$ with Lipschitz constant at most $\\operatorname{polylog}(d)\\lambda$; the normalized $\\mathsf S$ output has constant at most $\\operatorname{polylog}(d)r\\lambda$. If the anchors of a nonterminal $\\mathsf M$ are treated as separate inputs, its Lipschitz constant in the position anchor is at most $\\operatorname{polylog}(d)L$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-compiler-lipschitz"
+  },
+  {
+   "claim_id": "claim-compiled-routine-accuracy",
+   "exact_statement": "For every call reached from the top labels, the standalone routines satisfy $$\\begin{aligned}\n W_2(\\mathcal L(\\mathsf M),N(u,\\sigma^2I_d))\n &\\le\\operatorname{polylog}(d)\\sigma\\delta^pD(x),\\\\\n W_2\\bigl(\\mathcal L(\\mathsf S_{\\rm pre}),\n       \\nu_{x,r}*N(0,3\\eta^2I_d/4)\\bigr)\n &\\le\\operatorname{polylog}(d)\\delta^pD(x),\n\\end{aligned}$$ where $\\mathsf S_{\\rm pre}$ denotes the output before its reserved noise. The latter bound also holds after adding the reserved noise to both laws, and $$\\|\\mathcal L(\\mathsf S)-\\nu_{x,r}*N(0,\\eta^2I_d)\\|_{\\mathrm{TV}}\n \\le\\operatorname{polylog}(d)\\frac{\\delta^pD(x)}{\\eta}.$$",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-prop-compiler-accuracy"
+  },
+  {
+   "claim_id": "claim-proximal-kernel-contraction",
+   "exact_statement": "The law $\\widetilde\\pi$ is invariant for $P_h$, and $$W_2(\\kappa_{y_1},\\kappa_{y_2})\n       \\le\\frac{|y_1-y_2|}{1+h}.$$ Consequently, for input laws $\\mu,\\eta$ of finite second moment, $$W_2(\\mu P_h,\\eta P_h)\n       \\le\\frac{W_2(\\mu,\\eta)}{1+h}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-proximal-contraction"
+  },
+  {
+   "claim_id": "claim-approximate-noised-chain-mixing",
+   "exact_statement": "With $K_0>2+1/e$ and $t$ chosen above, start the $\\widehat P_h$-chain at zero and run $\\lceil Ch^{-1}\\log d\\rceil+1$ steps. For a sufficiently large fixed $C$, its output has total-variation distance $o(1)$ from $\\widetilde\\pi$, uniformly over all admissible $V$.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-prop-noised-mixing"
+  },
+  {
+   "claim_id": "claim-ideal-descent-gradient-moments",
+   "exact_statement": "If $y\\sim\\widetilde\\pi$ and every conditioning observation preceding level $j$ is ideal, then $$b_j:=\\left(\\mathbb E|g_y(x_j)|^2\\right)^{1/2}\\le C\\sqrt d\n             \\qquad(0\\le j\\le J),$$ with an absolute $C$ for all sufficiently large $d$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-descent-moments"
+  },
+  {
+   "claim_id": "claim-mode-centered-gaussian-comparison",
+   "exact_statement": "For any $F\\in C^2(\\mathbb R^d)$ with $\\operatorname{Lip}(\\nabla F)\\le\\lambda$, center $x$, and scale $0<r\\le1$ such that $l=\\lambda r^2\\le1/2$, let $z_0$ be the mode of $\\nu_{x,r}$. Then $$\\lVert\\nu_{x,r}-N(z_0,I_d)\\rVert_{\\mathrm{TV}}\\le Cl\\sqrt d.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-mode-gaussian"
+  },
+  {
+   "claim_id": "claim-subpolynomial-sampling-upper-bound",
+   "exact_statement": "For every fixed $\\varepsilon>0$, there is $C_\\varepsilon<\\infty$ such that, for every integer $d\\ge2$, a measurable algorithm using the exact value-and-gradient oracle makes at most $C_\\varepsilon d^\\varepsilon$ queries on every execution and returns a sample within TV distance $1/10$ of $\\pi_V$ for every $V$ satisfying <a href=\"#eq:original-class\" data-reference-type=\"eqref\" data-reference=\"eq:original-class\">[eq:original-class]</a>. Thus $$Q(d)\\le C_\\varepsilon d^\\varepsilon\n                       \\qquad(d\\ge2).$$",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-thm-upper"
+  },
+  {
+   "claim_id": "claim-logarithmic-adaptive-lower-bound",
+   "exact_statement": "There are absolute constants $c>0$ and $d_0$ such that $Q(d)\\ge c\\log d$ for every $d\\ge d_0$. This bound holds even when the inputs are restricted to potentials $V(x)=x^TAx/2$ with $I\\preceq A\\preceq2I$. The query cap is imposed on every execution, and the algorithm may use arbitrary private randomness independent of its input.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-lower"
+  },
+  {
+   "claim_id": "claim-deferred-haar-output-representation",
+   "exact_statement": "Let $\\Lambda$ be a fixed real diagonal $d\\times d$ matrix, let $O$ be Haar distributed on the orthogonal group, and set $A=O\\Lambda O^T$. Consider any measurable randomized algorithm, with private randomness independent of $O$, making at most $q$ adaptive queries to the map $x\\mapsto Ax$, where $2q+1<d$, and producing an output $X\\in\\mathbb R^d$. There is an extension of this experiment carrying independent standard Gaussian vectors $g_1,\\ldots,g_{q+1}\\in\\mathbb R^d$ such that $$\\label{eq:krylov-span}\n O^TX\\in\\operatorname{span}\n \\{\\Lambda^j g_i:1\\le i\\le q+1,\\ 0\\le j\\le q\\}\n \\qquad\\text{almost surely}.$$ The joint law of the original variables, including the algorithm’s randomness and $O$, is unchanged. The vectors $g_i$ need not be independent of $O$ or of $A$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-deferred-haar"
+  },
+  {
+   "claim_id": "claim-uniform-block-span-statistic",
+   "exact_statement": "Suppose $4q+1<2d$, and let $g_1,\\ldots,g_{q+1}$ be independent standard Gaussian vectors. Set $$\\mathcal K_q=\\operatorname{span}\n \\{\\Lambda^j g_i:1\\le i\\le q+1,\\ 0\\le j\\le q\\},\\qquad\n \\tau_d=\\frac{40(q+1)^2}{\\sqrt d}.$$ If $\\tau_d\\le1/2$, then, with probability at least $0.99$, $$\\label{eq:lower-uniform-statistic}\n |u^TD_pu|\\le2\\tau_d|u|^2\n \\qquad\\text{for every }u\\in\\mathcal K_q.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-lower-span-statistic"
+  },
+  {
+   "claim_id": "claim-target-cosine-statistic",
+   "exact_statement": "Let $U\\sim N(0,\\Lambda^{-1})$, with $\\Lambda$ from <a href=\"#eq:lower-spectrum\" data-reference-type=\"eqref\" data-reference=\"eq:lower-spectrum\">[eq:lower-spectrum]</a>, and suppose $n=2q+1<d$. Then $$\\begin{aligned}\n \\mu_{d,q}:=\\mathbb E[U^TD_pU]\n &=\\frac d{\\sqrt2}(-\\varrho)^n+R_{d,q},\n & |R_{d,q}|&\\le\n   \\frac{\\sqrt2\\,d\\,\\varrho^{2d-n}}{1-\\varrho},\n \\label{eq:lower-target-mean}\\\\\n \\operatorname{Var}(U^TD_pU)&\\le2d,\n & \\mathbb E|U|^2&\\le d,\\qquad \\operatorname{Var}(|U|^2)\\le2d.\n \\label{eq:lower-target-variance}\n\\end{aligned}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-lower-target-statistic"
+  }
+ ],
+ "paper": "papers/EN-114-000-0000-2-2026-PR-T4-UK-EX-M1-B-AL-H-0285_PM-139.1_Subpolynomial_query_complexity_for_well_conditioned_log_concave_sampling.md",
+ "purpose": "Subpolynomial query complexity for well-conditioned log-concave sampling",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "7ef71ec0b85c50218af6db891c8936667a9ec84572bb9272132284046e607440",
+   "pm.domains.v2": "854b10b94a1e94c5f2c89d666a458b092ce2aa85d301c0d8adec910c94f81661",
+   "pm.edges.v2": "00de9ca6584778673f3ee4cad6fff5e693fd9d4026cd54a8daa240d64fc8c6ed",
+   "pm.extraction.v2": "a439f5f8dbed69d43c260646f131dc03f32d7dff3e67f1c6a3c0ba869047bf95",
+   "pm.formal.v2": "171c9310979f094bd316dcefaa281a5e30de61245ca98b2b86f04c1f5042a258",
+   "pm.limits.v2": "20fbf0a9f4c109c7142bd64f9275f3c81ef74a963789ee98281041a55c06e2a0",
+   "pm.node.v2": "8c7bf8ca14b1ebac1d9a0fe39ab6b78c90ed8e665fc2167b9fef565d8f21cac7",
+   "pm.objects.v2": "cc4f95007c36a14dc5a71abd9f1b3be7601948677fe85603f512bf1deb06764f",
+   "pm.provenance.v2": "00a80f1a45b322701e3c3b7b3723e64187222e45d4ecb9fc4696da9b35992ea8",
+   "pm.quantities.v2": "c346678f575292bbaa1d6e89427c4ae61c8ecb8e7963c4bae1f63898c9f44db6",
+   "pm.reading.v2": "b5b1c50d5e71e8653690f33fe15b13253ff6fd09079fe2099fc7b0a6bf0093d5",
+   "pm.roadmap.v2": "20f9c922c423987020fd665de771e51266780a3c00748b197049cb046bd9f6f2",
+   "pm.search.v1": "299175bfd3ac38a5c28907227d1f6406e74b62afdb6697fe490edcdc4abd4125",
+   "pm.triptych.v2": "9a21b5adb1c752ad430f75aa40692fddd6dda27a994ec9411cf3da8356384a38"
+  },
+  "canonical_sha256": "62a2cff3cf0572ea4c98e2a52488b93f5e8193b4aed0abc457bb788a41230fe1",
+  "paper_sha256": "e649b46a9713fbbe751836e8471b0eb46f3460baac30ff586cd8ec89164a9e1b",
+  "repaired_body_sha256": "a96352256fd37881c6b6f49c681598d8c4be4160d5f08c4b295b21bfe7717538"
+ },
+ "status": "ACTIVE",
+ "subject_id": 14,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "f3d59b339dd38a98ef8effa7d9256c9abec63594ec2fbc36510c742f32f7a931",
+   "receipt_sha256": "627597d9068053b2fc4323a59b18bb547900e656a29d517ee49268cf37d5f44b",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exact rational inputs with zero, interior, and norm-boundary translation vectors in the listed finite slot dimensions; positive rational scale and translation bound.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-seed-covariance",
+     "oracle_basis": "Exact matrix identities and exhaustive principal-minor checks certify each tested covariance transformation. The test suite does not quantify over all dimensions or all rational inputs."
+    },
+    {
+     "checked_domain": "The finite covariance transformation underlying Gaussian absorption; no oracle routine or random output distribution is executed.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-absorbed-output-law",
+     "oracle_basis": "The checked covariance identity supplies the finite algebraic premise. Gaussianity, independence, and the routine's pathwise translation property remain analytical assumptions."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-omit-covariance-reduction",
+     "observed_exit": 1,
+     "receipt_sha256": "59eb41cecf811f10776475f9551c6c7133ea559db9031f2e3314b6b28ed6e409"
+    },
+    {
+     "id": "mutant-wrong-center-noise",
+     "observed_exit": 1,
+     "receipt_sha256": "a30f209d95e3423272cdf2703f5f566763502221f9cf3901968f4e204ec3a9e5"
+    },
+    {
+     "id": "mutant-negative-square-root",
+     "observed_exit": 1,
+     "receipt_sha256": "85a106d9af92e583efacba2b38f997b71fa3a83a1e7162dfc08726d6e0c7bddb"
+    }
+   ],
+   "receipt_sha256": "677652ab76b0446fec67e56ac0264b4eef47f71bf02563682ebef8810c7d8a13",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Subpolynomial query complexity for well-conditioned log-concave sampling"
+}

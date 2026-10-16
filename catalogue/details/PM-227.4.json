@@ -1,0 +1,1460 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1597456,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 452989
+ },
+ "coordinate": "EN-115-000-0000-2-2026-PR-T4-UK-EX-M2-B-ML-M-0447",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "For every fixed $0\\leq\\beta<1$,",
+     "quote_sha256": "c1ff9e1083ce52355a1e379701399a7802b1ddcec8c10ef5fc594b78987384f7"
+    },
+    {
+     "anchor": "pm-h-3",
+     "quote": "We do not address a temperature approaching $1$ with $n$, external fields, or a cutoff window.",
+     "quote_sha256": "83400dad7284c50ab22ee02ec4b45236d674e76450571322fc66f26e97c1dc2e"
+    }
+   ],
+   "query": "Cutoff at a temperature approaching criticality with dimension, or cutoff under external fields",
+   "reason": "The main theorem fixes the inverse temperature before dimension grows and explicitly leaves these regimes untreated."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-2",
+     "quote": "The resulting rate is implicit.",
+     "quote_sha256": "9f6d8509e2afa6c8d19ed87a338bffdb953051d172d67c8904d44136ea8a5b07"
+    },
+    {
+     "anchor": "pm-h-4",
+     "quote": "The formula does not identify $\\lambda$ with the upper bound $(1-\\beta)^2$.",
+     "quote_sha256": "3cd6df05a895a47101e36b1d7c85d63496a9da9380dc57dd78d18cfb78f13a79"
+    }
+   ],
+   "query": "A closed numerical cutoff schedule derived solely from the spin-edge upper bound",
+   "reason": "The rate is implicit and the upper bound is not asserted to equal it."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-lem-path-sparse",
+     "quote": "The conclusion is comparison with the representation of the changed labels, retaining their base actions; it does not declare the change small in operator norm.",
+     "quote_sha256": "3e500f1e325f399321da4a2f9463bd81da0be03cf899d5201480e42b998c2ca3"
+    }
+   ],
+   "query": "Operator-smallness of every diagonal supported on a rare coordinate type",
+   "reason": "Rare-type base actions remain in the operator representation even when their trace proportion vanishes."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-row-projected-moments",
+     "quote": "It does not assert a simultaneous bound for a mask selected to maximize an error after seeing the disorder.",
+     "quote_sha256": "0e5650fac5430ff4c22105850a0410f369b7f985a25a7d672875605ca7f27496"
+    }
+   ],
+   "query": "A simultaneous projected moment guarantee for an adversarially selected mask",
+   "reason": "The moment theorem permits deterministic masks and integrated deterministic families, not a disorder-selected worst mask."
+  }
+ ],
+ "family": "PM-227",
+ "id": "PM-227.4",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-high-temperature-cutoff",
+    "statement": "For every fixed $0\\leq\\beta<1$,"
+   },
+   {
+    "anchor": "stmt-thm-input-gap",
+    "claim_id": "claim-imported-equilibrium-gap",
+    "statement": "For every fixed $0<\\beta<1$,"
+   },
+   {
+    "anchor": "stmt-lem-input-mgf",
+    "claim_id": "claim-jump-exponential-moments",
+    "statement": "Fix $d\\geq0$ and $f:\\Omega_n\\to\\mathbb R$."
+   },
+   {
+    "anchor": "stmt-lem-input-mgf",
+    "claim_id": "claim-jump-exponential-moments",
+    "statement": "Suppose a bounded measurable function $b:[0,d]\\to[0,\\infty)$ satisfies $$\\sup_x\\left\\lVert dS_r f(x)\\right\\rVert^2\\leq b(r)\\quad(0\\leq r\\leq d).$$"
+   },
+   {
+    "anchor": "stmt-lem-input-clock",
+    "claim_id": "claim-poisson-binomial-transfer",
+    "statement": "Fix $q\\in(0,1)$, let $M_n\\in\\mathbb N$ tend to infinity, and let $(a_{n,j})_{j\\ge0}$ be real arrays satisfying $\\sup_{n,j}|a_{n,j}|\\le B<\\infty$."
+   },
+   {
+    "anchor": "stmt-lem-input-clock",
+    "claim_id": "claim-poisson-binomial-transfer",
+    "statement": "Suppose that for every fixed $y\\in\\mathbb R$, $$\\mathbb E\\bigl[a_{n,N_{n,y}}\\bigr]\\longrightarrow0,\n \\qquad\n N_{n,y}\\sim\\operatorname{Poisson}\n                   (q M_n+y\\sqrt{M_n}).\n \\label{eq:inputclock-poisson-hypothesis}$$"
+   },
+   {
+    "anchor": "stmt-prop-model-independent",
+    "claim_id": "claim-independent-spin-cutoff",
+    "statement": "At $\\beta=0$,"
+   },
+   {
+    "anchor": "stmt-lem-stat-mean",
+    "claim_id": "claim-arbitrary-law-mean",
+    "statement": "Suppose $P(x)$ is proportional to $\\exp(x^{\\mathsf T}Mx/2+h^{\\mathsf T}x)$ and satisfies the deterministic diagnostics and [eq:stat-stability](#eq:stat-stability)."
+   },
+   {
+    "anchor": "stmt-prop-stat-density",
+    "claim_id": "claim-fixed-time-density",
+    "statement": "for each fixed $d\\ge d_*$,"
+   },
+   {
+    "anchor": "stmt-prop-path-gradient",
+    "claim_id": "claim-exact-vector-extension",
+    "statement": "Under [eq:path-disorder](#eq:path-disorder),"
+   },
+   {
+    "anchor": "stmt-lem-path-tensor-product",
+    "claim_id": "claim-tensor-product-norms",
+    "statement": "Let $B_l$ have $n$ rows and columns indexed by $j_{S_l}$, where the nonempty sets $S_l$ cover $I$, and suppose $\\left\\lVert B_l\\right\\rVert_{\\mathrm{op}}\\le b_l$."
+   },
+   {
+    "anchor": "stmt-lem-path-tensor-product",
+    "claim_id": "claim-tensor-product-norms",
+    "statement": "If a rectangular matrix $R$ satisfies $$|R_{i,j_I}|\n \\le C|B_0(i,j_{S_0})|^2\n                     \\prod_{l\\ge1}|B_l(i,j_{S_l})|,\n \\label{eq:path-square-domination}$$"
+   },
+   {
+    "anchor": "stmt-lem-path-mixed-tensors",
+    "claim_id": "claim-mixed-slot-bounds",
+    "statement": "Consider a fixed finite calculation whose inputs are finitely many state slots and fixed site labels. Its operations are bounded-operator linear maps on the site index, finite linear combinations, and smooth componentwise functions with globally bounded derivatives of every positive order. Bounded coordinate products may be used through a fixed smooth extension outside their bounded ranges."
+   },
+   {
+    "anchor": "stmt-lem-path-conditional-derivative",
+    "claim_id": "claim-conditional-derivative-truncation",
+    "statement": "Let $F$ be a finite multitime site-vector calculation satisfying the mixed-slot bounds of [lem:path-mixed-tensors](#lem:path-mixed-tensors)."
+   },
+   {
+    "anchor": "stmt-lem-path-conditional-derivative",
+    "claim_id": "claim-conditional-derivative-truncation",
+    "statement": "Evaluate it on a fixed finite ordinary path tree, condition at one joining state $x$, and hold the realized past fixed."
+   },
+   {
+    "anchor": "stmt-lem-path-tree-transfer",
+    "claim_id": "claim-actual-tree-transfer",
+    "statement": "A stationary tree event of probability $e^{-cn}$ has negligible weighted probability in [def:path-tree](#def:path-tree)."
+   },
+   {
+    "anchor": "stmt-lem-path-two-mesh",
+    "claim_id": "claim-frozen-path-comparisons",
+    "statement": "Fix a time horizon and a finite tree."
+   },
+   {
+    "anchor": "stmt-lem-path-two-mesh",
+    "claim_id": "claim-frozen-path-comparisons",
+    "statement": "For sufficiently small fixed mesh size $h$,"
+   },
+   {
+    "anchor": "stmt-lem-path-product",
+    "claim_id": "claim-rare-update-product-concentration",
+    "statement": "Let $\\pi$ be a product measure on $\\{-1,1\\}^n$ such that each coordinate has minority probability at most $h<1/4$."
+   },
+   {
+    "anchor": "stmt-lem-path-product",
+    "claim_id": "claim-rare-update-product-concentration",
+    "statement": "If $\\sup_x\\left\\lVert dF(x)\\right\\rVert\\le B/\\sqrt n$, then $$\\log\\mathbb E_\\pi e^{\\theta(F-\\mathbb E_\\pi F)}\n \\le\\frac{CB^2\\theta^2}{n\\log(1/h)}.\n \\label{eq:path-product-mgf}$$"
+   },
+   {
+    "anchor": "stmt-prop-path-simulation",
+    "claim_id": "claim-smooth-path-simulation",
+    "statement": "Every bounded smooth empirical test of finitely many states on an admissible tree has the same limiting value as successively finer, finite smooth simulations from the corresponding endpoint states. For a single observation interval and a test with difference norm $B/\\sqrt n$, the error is at most $$\\frac{C_TB}{\\sqrt{\\log(1/h)}}+o_n(1).\n \\label{eq:path-simulation-error}$$ The statement holds for replicated conditional tests, using the same predictor approximation on each copy. A linear query of bounded smooth outputs may be included after clipping; its spatial square tails are uniformly negligible in the successive approximation limits."
+   },
+   {
+    "anchor": "stmt-thm-path-calculus",
+    "claim_id": "claim-finite-tree-gaussian-calculus",
+    "statement": "Fix $0<\\beta<1$, a finite tree, a finite collection of words and recipes, and fixed caps on its diagonal labels."
+   },
+   {
+    "anchor": "stmt-thm-path-calculus",
+    "claim_id": "claim-finite-tree-gaussian-calculus",
+    "statement": "Dimension is taken to infinity before any recipe accuracy, mesh, cap, or time limit."
+   },
+   {
+    "anchor": "stmt-lem-path-regression",
+    "claim_id": "claim-finite-adaptive-regression",
+    "statement": "A fixed finite frozen simulation and a fixed finite list of subsequent recipe queries have deterministic empirical limits with exponentially small deviations at every fixed positive accuracy."
+   },
+   {
+    "anchor": "stmt-lem-path-prediction",
+    "claim_id": "claim-endpoint-prediction",
+    "statement": "Assertions <span class=\"upright\">(i)</span> and <span class=\"upright\">(ii)</span> of [thm:path-calculus](#thm:path-calculus) hold. They remain valid after adjoining a fixed finite list of bounded path-matrix operations."
+   },
+   {
+    "anchor": "stmt-lem-path-likelihood-approximation",
+    "claim_id": "claim-likelihood-tracial-approximation",
+    "statement": "Assertion <span class=\"upright\">(v)</span> of [thm:path-calculus](#thm:path-calculus) holds, on each edge in its original forward direction, and therefore for the joint tests used in that theorem."
+   },
+   {
+    "anchor": "stmt-lem-path-fock-norm",
+    "claim_id": "claim-fock-word-norm",
+    "statement": "Let $G_n$ be GOE, independent of a fixed finite family of deterministic bounded diagonals with convergent joint type proportions."
+   },
+   {
+    "anchor": "stmt-lem-path-sparse",
+    "claim_id": "claim-sparse-label-comparison",
+    "statement": "The norm comparison in [lem:path-fock-norm](#lem:path-fock-norm) is valid simultaneously for arbitrary bounded changes to a sufficiently small fraction of the entries of finitely many binned labels, even when the changed entries and their supports are chosen after seeing the Gaussian matrix. The conclusion is comparison with the representation of the changed labels, retaining their base actions; it does not declare the change small in operator norm."
+   },
+   {
+    "anchor": "stmt-lem-path-compressed",
+    "claim_id": "claim-conditional-gaussian-word-comparison",
+    "statement": "For fixed tracial label approximations and fixed path words,"
+   },
+   {
+    "anchor": "stmt-lem-path-hadamard",
+    "claim_id": "claim-hadamard-reduction",
+    "statement": "Assertion <span class=\"upright\">(iv)</span> of [thm:path-calculus](#thm:path-calculus) holds."
+   },
+   {
+    "anchor": "stmt-lem-path-difference-closure",
+    "claim_id": "claim-smooth-difference-closure",
+    "statement": "Assertion <span class=\"upright\">(vi)</span> of [thm:path-calculus](#thm:path-calculus) holds. In particular, for every fixed smooth site recipe $z$, the matrix $E(z)_{ij}=d_jz_i$ has bounded operator norm and vanishing off-diagonal maximum, and belongs to the path-matrix closure. On scaled vector recipes its operator bound has the additional factor $n^{-1/2}$."
+   },
+   {
+    "anchor": "stmt-lem-path-increment-approximation",
+    "claim_id": "claim-increment-polynomial-approximation",
+    "statement": "For each fixed smooth calculation of [lem:path-mixed-tensors](#lem:path-mixed-tensors),"
+   },
+   {
+    "anchor": "stmt-lem-path-directed-network",
+    "claim_id": "claim-directed-equality-network-reduction",
+    "statement": "Let $\\mathcal A$ be a class of uniformly bounded finite matrix expressions, closed under products, transposes, Hadamard products, and multiplication by its bounded diagonal labels."
+   },
+   {
+    "anchor": "stmt-lem-path-directed-network",
+    "claim_id": "claim-directed-equality-network-reduction",
+    "statement": "Suppose every such expression $Q$, including expressions newly formed by these operations, has $$\\max_{i\\ne j}|Q_{ij}|=o(1),\\qquad\n \\max_i|Q_{ii}-\\delta_Q(i)|=o(1),$$ where $\\delta_Q$ is an admitted bounded diagonal label."
+   },
+   {
+    "anchor": "stmt-lem-path-directed-network",
+    "claim_id": "claim-directed-equality-network-reduction",
+    "statement": "If it has an acyclic orientation with unique source and sink at its external input and output,"
+   },
+   {
+    "anchor": "stmt-prop-path-opened-derivative",
+    "claim_id": "claim-opened-derivative-closure",
+    "statement": "Fix a smooth multitime calculation as in [lem:path-mixed-tensors](#lem:path-mixed-tensors), a finite causal tree, common Duhamel and likelihood truncations from [lem:path-conditional-derivative](#lem:path-conditional-derivative), and the tensor approximations of [lem:path-increment-approximation](#lem:path-increment-approximation)."
+   },
+   {
+    "anchor": "stmt-prop-path-opened-derivative",
+    "claim_id": "claim-opened-derivative-closure",
+    "statement": "Require every linear-query edge of the calculation and every opened $K$ edge to belong to the admitted path-matrix algebra, with its entry predictions, and require all bounded coefficient labels to be admitted path labels."
+   },
+   {
+    "anchor": "stmt-lem-path-two-root",
+    "claim_id": "claim-independent-root-site-histories",
+    "statement": "For two independent equilibrium samples in the same disorder, and independent heat-bath site randomness on their trees,"
+   },
+   {
+    "anchor": "stmt-thm-row-projected-moments",
+    "claim_id": "claim-projected-row-moments",
+    "statement": "for every fixed $d\\ge d_0$"
+   },
+   {
+    "anchor": "stmt-thm-row-projected-moments",
+    "claim_id": "claim-projected-row-moments",
+    "statement": "and every deterministic mask $M$,"
+   },
+   {
+    "anchor": "stmt-lem-row-uniform-integrability",
+    "claim_id": "claim-fixed-time-likelihood-integrability",
+    "statement": "Fix $d$, a schedule, a mask, and $q<\\infty$."
+   },
+   {
+    "anchor": "stmt-lem-row-hilbert-representation",
+    "claim_id": "claim-shared-private-gaussian-representation",
+    "statement": "After subsequence extraction,"
+   },
+   {
+    "anchor": "stmt-lem-row-overlap-norm",
+    "claim_id": "claim-almost-sure-overlap-norm",
+    "statement": "If $r,r'$ are independent with the same law in a separable Hilbert space and $|\\left\\langle r,r'\\right\\rangle|\\le\\delta$ almost surely,"
+   },
+   {
+    "anchor": "stmt-lem-row-adapted-gaussian",
+    "claim_id": "claim-chronological-gaussian-moments",
+    "statement": "Fix self-Gram and bracket data satisfying the corrected identities."
+   },
+   {
+    "anchor": "stmt-lem-row-adapted-gaussian",
+    "claim_id": "claim-chronological-gaussian-moments",
+    "statement": "Let $\\widetilde Z_h$ be the corrected prefix scores, of variances $b_h$, with $\\sum_h b_h\\le Cd$."
+   },
+   {
+    "anchor": "stmt-lem-row-adapted-gaussian",
+    "claim_id": "claim-chronological-gaussian-moments",
+    "statement": "Let $a_h\\in\\{-1,1\\}$ be the spin chosen using the fields and coins available before score $h$, including a prescribed forced coin when present."
+   },
+   {
+    "anchor": "stmt-cor-row-stationary-predictors",
+    "claim_id": "claim-stationary-row-predictor-moments",
+    "statement": "Let $a_i$ be a nonnegative row label on a span of length $d$, bounded above by a masked likelihood $\\ell_i^M$; factors $v_i\\le1$ and cutoff indicators are allowed."
+   },
+   {
+    "anchor": "stmt-prop-spin-spectrum",
+    "claim_id": "claim-spin-edge-renewal",
+    "statement": "For $0<\\beta<1$,"
+   },
+   {
+    "anchor": "stmt-thm-hidden-propagation",
+    "claim_id": "claim-hidden-gradient-propagation",
+    "statement": "Fix $t\\geq1$, and let $u=u(X_0)$ and $p=p(X_t)$ be polynomially bounded endpoint vectors with bounded second moments."
+   },
+   {
+    "anchor": "stmt-thm-hidden-propagation",
+    "claim_id": "claim-hidden-gradient-propagation",
+    "statement": "Suppose that $u$ is hidden, $p=df$ is an exact gradient, and $$\\label{eq:hidden-energy-hypothesis}\n \\mathbb E\\sum_j w_j(X_t)\\left\\lVert d_jp(X_t)\\right\\rVert^2\\leq C_t<\\infty$$ uniformly along the dimension sequence."
+   },
+   {
+    "anchor": "stmt-lem-hidden-averaging",
+    "claim_id": "claim-two-ended-wick-averaging",
+    "statement": "Let $a_0,\\ldots,a_k$ be bounded path labels of the preceding kind."
+   },
+   {
+    "anchor": "stmt-lem-hidden-averaging",
+    "claim_id": "claim-two-ended-wick-averaging",
+    "statement": "Under the endpoint hypotheses of [thm:hidden-propagation](#thm:hidden-propagation),"
+   },
+   {
+    "anchor": "stmt-lem-hidden-small-trace",
+    "claim_id": "claim-centered-small-trace-replacement",
+    "statement": "Consider a summand of [eq:hidden-double-centered-error](#eq:hidden-double-centered-error)."
+   },
+   {
+    "anchor": "stmt-lem-hidden-marked-spine",
+    "claim_id": "claim-marked-continuing-derivative",
+    "statement": "Fix an opened, capped derivative history of one smooth multitime label. Suppose it has an entering derivative index, at least one branch differentiating that label, and one derivative index continuing to a later factor."
+   },
+   {
+    "anchor": "stmt-lem-exact-smoothing",
+    "claim_id": "claim-visible-semigroup-smoothing",
+    "statement": "The stationary limits define strongly continuous semigroups $K_t$ on $\\mathcal H$ and on $\\mathcal H_v$, and $\\iota K_t=K_t\\iota$. For each fixed $T$ their operator norms on both spaces are bounded uniformly for $0\\le t\\le T$. On $\\mathcal H$ the semigroup is analytic and, for $t>0$, $$\\label{eq:exact-graph}\n \\left\\lVert L K_t\\right\\rVert_{\\mathcal H\\to\\mathcal H}\n +\\left\\lVert (-L)^{1/2}K_t\\right\\rVert_{\\mathcal H\\to\\mathcal H}\n \\le C_t.$$ The corresponding finite-dimensional bounds are uniform in $n$ on the retained disorder events. Here $L$ is the generator of componentwise stationary heat flow, rather than the generator of $K$."
+   },
+   {
+    "anchor": "stmt-thm-exact-sector",
+    "claim_id": "claim-deterministic-exact-visible-operator",
+    "statement": "The spaces in [def:exact-spaces](#def:exact-spaces) and their semigroups are deterministic. The embedding $\\iota:\\mathcal X\\to\\mathcal X_v$ is continuous, injective, and dense. On $\\mathcal X_v$, $K_t$ is a positive self-adjoint semigroup. If $\\mathcal A_v$ is minus its generator, then $\\mathop{\\mathrm{spec}}(\\mathcal A_v)\\subset[\\gamma,\\infty)$ for the fixed gap constant $\\gamma>0$ in [thm:input-gap](#thm:input-gap). In particular the number $$\\label{eq:exact-lambda}\n \\lambda\n =\\min\\left\\{\\lambda_{\\rm sp},\\inf\\mathop{\\mathrm{spec}}(\\mathcal A_v)\\right\\}\n \\quad\\text{satisfies}\\quad\n 0<\\lambda\\le\\lambda_{\\rm sp}\\le(1-\\beta)^2.$$ All dimension limits in this definition precede the spectral infimum."
+   },
+   {
+    "anchor": "stmt-lem-exact-saturation",
+    "claim_id": "claim-stationary-exact-saturation",
+    "statement": "If a weighted-visible vector is a weighted mean-square limit of stationary exact gradients,"
+   },
+   {
+    "anchor": "stmt-prop-exact-transport",
+    "claim_id": "claim-random-coefficient-transport",
+    "statement": "For prescribed comparison times $a\\le s<t\\le b$ retained in the preceding construction,"
+   },
+   {
+    "anchor": "stmt-lem-exact-good-times",
+    "claim_id": "claim-selected-comparison-times",
+    "statement": "Let $h_s$ be the marginal density relative to $\\mu$, and set $r_{s,j}(x)=h_s(x^j)/h_s(x)$."
+   },
+   {
+    "anchor": "stmt-lem-exact-adjoints",
+    "claim_id": "claim-stationary-adjoint-annihilation",
+    "statement": "At a comparison time from [lem:exact-good-times](#lem:exact-good-times),"
+   },
+   {
+    "anchor": "stmt-lem-exact-form-closure",
+    "claim_id": "claim-strong-weighted-derivative-closure",
+    "statement": "Let $q$ be a deterministic vector component of an interior $q_s$, obtained by contraction with any fixed scalar Hilbert direction."
+   },
+   {
+    "anchor": "stmt-lem-exact-own-spin",
+    "claim_id": "claim-own-spin-projection",
+    "statement": "Let $\\overline Q_i=P_iQ_i=\\mathbb E_\\mu[Q_i\\mid x_{-i}]$, and put $$O(Q)=\\mathbb E_\\mu\\sum_i v_i|d_iQ_i|^2,\\qquad\n C(Q)=\\mathbb E_\\mu\\sum_{i,j}v_iv_j|d_jQ_i-d_iQ_j|^2.$$"
+   },
+   {
+    "anchor": "stmt-lem-exact-no-defect",
+    "claim_id": "claim-no-harmonic-defect",
+    "statement": "Let $Q=Q^{(n)}$ be a polynomially bounded vector field with $Q_i$ independent of $x_i$."
+   },
+   {
+    "anchor": "stmt-lem-exact-no-defect",
+    "claim_id": "claim-no-harmonic-defect",
+    "statement": "On the disorder events of [prop:stat-posterior-gap](#prop:stat-posterior-gap),"
+   },
+   {
+    "anchor": "stmt-prop-exact-closedness",
+    "claim_id": "claim-random-visible-exact-closedness",
+    "statement": "At the comparison times of [lem:exact-good-times](#lem:exact-good-times),"
+   },
+   {
+    "anchor": "stmt-lem-exact-upgrade",
+    "claim_id": "claim-weighted-to-unweighted-decay",
+    "statement": "Let a $K$-invariant subspace of $\\mathcal X_v$ have weighted decay $\\left\\lVert K_tq\\right\\rVert_v\\le C e^{-at}\\left\\lVert q\\right\\rVert_v$."
+   },
+   {
+    "anchor": "stmt-prop-exact-isolation",
+    "claim_id": "claim-slow-spectrum-isolation",
+    "statement": "If $\\lambda<\\lambda_{\\rm sp}$,"
+   },
+   {
+    "anchor": "stmt-prop-cutoff-block",
+    "claim_id": "claim-uniform-fixed-block-contraction",
+    "statement": "Fix $0<\\xi<\\lambda$, a polynomial envelope $M$, a horizon constant $A<\\infty$, and $H<\\infty$."
+   },
+   {
+    "anchor": "stmt-prop-cutoff-gradient",
+    "claim_id": "claim-logarithmic-gradient-propagation",
+    "statement": "For $0<\\xi<\\lambda$ and fixed $A,M,H$,"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-oscillation",
+    "claim_id": "claim-euclidean-cube-oscillation",
+    "statement": "For every real function $g$ on the cube"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-upper",
+    "claim_id": "claim-upper-cutoff",
+    "statement": "For every $\\epsilon>0$"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-spin-lower",
+    "claim_id": "claim-spin-edge-lower-cutoff",
+    "statement": "If $\\lambda=\\lambda_{\\rm sp}$,"
+   },
+   {
+    "anchor": "stmt-prop-cutoff-coefficients",
+    "claim_id": "claim-slow-coefficient-alignment",
+    "statement": "Fix a logarithmic horizon, a polynomial envelope, and a common constant $C_P$ in the defective trajectory Poincaré bound [eq:cutoff-trajectory-poincare](#eq:cutoff-trajectory-poincare), with arbitrarily prescribed inverse-power accuracy. Consider uniformly typically initialized families of ordinary trajectories satisfying this bound."
+   },
+   {
+    "anchor": "stmt-prop-cutoff-coefficients",
+    "claim_id": "claim-slow-coefficient-alignment",
+    "statement": "For $a=b-D$, suppose $N_b\\ge n^{-Q}$, where $Q$ is any exponent fixed in advance."
+   },
+   {
+    "anchor": "stmt-prop-cutoff-coefficients",
+    "claim_id": "claim-slow-coefficient-alignment",
+    "statement": "Suppose also that either $p_b$ is a fixed nondegenerate finite linear combination of concentrating visible exact test gradients, or there is a subsequent block with $N_{b+D}\\le R N_b$ for a fixed finite $R$."
+   },
+   {
+    "anchor": "stmt-lem-cutoff-preparation",
+    "claim_id": "claim-prepared-law-bounds",
+    "statement": "For each fixed recipe matrix and all sufficiently large $n$, uniformly for $|z|<R_n$ and $0<h\\le1$,"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-cone",
+    "claim_id": "claim-slow-cone-iteration",
+    "statement": "for $t$ an integer multiple of $D$,"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-jacobian",
+    "claim_id": "claim-preparation-mean-ball",
+    "statement": "For sufficiently small fixed $h>0$ chosen after the fine recipes,"
+   },
+   {
+    "anchor": "stmt-lem-cutoff-visible-lower",
+    "claim_id": "claim-visible-mode-lower-cutoff",
+    "statement": "If $\\lambda<\\lambda_{\\rm sp}$,"
+   },
+   {
+    "anchor": "stmt-thm-cutoff-continuous",
+    "claim_id": "claim-continuous-cutoff",
+    "statement": "For every fixed $0<\\beta<1$ and $\\epsilon\\in(0,1)$, put $t_n=\\log n/(2\\lambda)$."
+   },
+   {
+    "anchor": "stmt-prop-cutoff-clock",
+    "claim_id": "claim-attempt-clock-cutoff",
+    "statement": "Let $P=I+L/n$, so one step selects a uniform site and refreshes its spin, including attempts that leave the state unchanged."
+   },
+   {
+    "anchor": "stmt-rcut-thm-main",
+    "claim_id": "claim-independent-restricted-cutoff-ratio",
+    "statement": "For every fixed $\\beta\\in[0,1/2)$,"
+   },
+   {
+    "anchor": "stmt-rcut-lem-gaussian-facts",
+    "claim_id": "claim-gaussian-concentration-comparison",
+    "statement": "Let $Z$ be a vector of independent standard real Gaussian variables."
+   },
+   {
+    "anchor": "stmt-rcut-lem-gaussian-facts",
+    "claim_id": "claim-gaussian-concentration-comparison",
+    "statement": "If $F$ is $D$-Lipschitz in Euclidean distance,"
+   },
+   {
+    "anchor": "stmt-rcut-lem-two-spin",
+    "claim_id": "claim-uniform-two-spin-inequality",
+    "statement": "For any finite-field Ising law $\\nu$, any distinct $i,j$ with $t=\\tanh A_{ij}$ satisfying $|t|\\le t_0$,"
+   },
+   {
+    "anchor": "stmt-rcut-prop-uniform-gap",
+    "claim_id": "claim-scaled-field-uniform-gap",
+    "statement": "For all sufficiently large $n$, uniformly over $J\\in\\mathcal E_n$, $s\\in[0,1]$, and $\\theta\\in\\mathbb R^n$,"
+   },
+   {
+    "anchor": "stmt-rcut-prop-entropy",
+    "claim_id": "claim-restricted-entropy-decay",
+    "statement": "depending only on the fixed $\\beta<1/2$,"
+   },
+   {
+    "anchor": "stmt-rcut-prop-entropy",
+    "claim_id": "claim-restricted-entropy-decay",
+    "statement": "for all sufficiently large $n$ and $J\\in\\mathcal E_n$,"
+   },
+   {
+    "anchor": "stmt-rcut-lem-gradient-algebra",
+    "claim_id": "claim-pointwise-gradient-algebra",
+    "statement": "Let $f_t=S_tf_0$ for the heat-bath generator with a symmetric zero-diagonal interaction matrix $J$."
+   },
+   {
+    "anchor": "stmt-rcut-lem-gradient-algebra",
+    "claim_id": "claim-pointwise-gradient-algebra",
+    "statement": "If $\\max_{i,j}|J_{ij}|\\le1/10$,"
+   },
+   {
+    "anchor": "stmt-rcut-prop-typical-gradient",
+    "claim_id": "claim-typical-state-gradient-dissipation",
+    "statement": "Fix $0\\le\\beta<1/2$."
+   },
+   {
+    "anchor": "stmt-rcut-prop-planted-comparison",
+    "claim_id": "claim-planted-variational-comparison",
+    "statement": "Fix $0<\\beta\\le1/2$."
+   },
+   {
+    "anchor": "stmt-rcut-prop-planted-comparison",
+    "claim_id": "claim-planted-variational-comparison",
+    "statement": "Suppose that, for some $\\delta>0$, $$\\sup_{\\langle b^2+r^2\\rangle=1,\\ r\\ge0}\n       \\mathcal V_\\beta(b,r)\\le1-\\delta.$$"
+   },
+   {
+    "anchor": "stmt-rcut-lem-comp-square-replacement",
+    "claim_id": "claim-weighted-coupling-square-replacement",
+    "statement": "On the enlarged planted space, put $w_i=w(H_i)$ and $E_{ij}=J_{ij}^2-\\beta^2/n$, including $E_{ii}=-\\beta^2/n$."
+   },
+   {
+    "anchor": "stmt-rcut-lem-comp-bin-gaussian",
+    "claim_id": "claim-binwise-gaussian-comparison",
+    "statement": "With this conditioning and these fixed parameters,"
+   },
+   {
+    "anchor": "stmt-rcut-lem-annealed-transfer",
+    "claim_id": "claim-annealed-to-gibbs-transfer",
+    "statement": "Fix $0<\\beta<1$."
+   },
+   {
+    "anchor": "stmt-rcut-lem-annealed-transfer",
+    "claim_id": "claim-annealed-to-gibbs-transfer",
+    "statement": "Let $\\mathcal A_n$ be a measurable event for symmetric zero-diagonal interaction matrices, and suppose that $\\widehat\\mathbb P_n(\\mathcal A_n)\\le e^{-\\kappa n}$ for all large $n$, with a fixed $\\kappa>0$."
+   },
+   {
+    "anchor": "stmt-rcut-prop-scalar-gap",
+    "claim_id": "claim-uniform-scalar-variational-gap",
+    "statement": "satisfying $\\langle b^2+r^2\\rangle=1$,"
+   },
+   {
+    "anchor": "stmt-rcut-lem-scalar-kernel",
+    "claim_id": "claim-positive-kernel-remainder",
+    "statement": "The quantity $R$ is nonnegative. For every real $b\\in L^2$, $$\\langle b(h)K_0(h,h_*)b(h_*)\\rangle_{h,h_*}\n \\leq \\frac32\\langle bg\\rangle^2+R\\langle b^2\\rangle.\n \\label{rcut:eq:scalar-kernel-bound}$$"
+   },
+   {
+    "anchor": "stmt-rcut-tab-scalar-moments",
+    "claim_id": "claim-certified-scalar-moments",
+    "statement": "At $\\beta=1/2$,"
+   },
+   {
+    "anchor": "stmt-rcut-lem-scalar-envelope",
+    "claim_id": "claim-scalar-diagonal-envelope",
+    "statement": "For $0.35\\leq\\beta\\leq0.5$"
+   },
+   {
+    "anchor": "stmt-rcut-lem-scalar-coherent",
+    "claim_id": "claim-scalar-coherent-form",
+    "statement": "For every $0.35\\leq\\beta\\leq0.5$ and every real $b\\in L^2$, $$\\mathcal C_\\beta(b)\\leq\\langle(\\Lambda{}+.018)b^2\\rangle.\n \\label{rcut:eq:scalar-coherent-bound}$$"
+   },
+   {
+    "anchor": "stmt-rcut-lem-feynman-kac",
+    "claim_id": "claim-gradient-feynman-kac",
+    "statement": "Put $V=-\\kappa+A\\mathbf 1_{\\mathcal B}$."
+   },
+   {
+    "anchor": "stmt-rcut-lem-dyn-occupation-propagation",
+    "claim_id": "claim-occupation-gradient-propagation",
+    "statement": "Fix $D_*>0$"
+   },
+   {
+    "anchor": "stmt-rcut-prop-linear-concentration",
+    "claim_id": "claim-uniform-linear-concentration",
+    "statement": "Fix $D_*>0$ and $L\\ge0$."
+   },
+   {
+    "anchor": "stmt-rcut-lem-common-mass",
+    "claim_id": "claim-common-mass-mean-comparison",
+    "statement": "Let $\\nu$ and $\\pi$ be probability measures on a finite set, and suppose $\\|\\nu-\\pi\\|_{\\mathrm{TV}}\\le1-\\varepsilon$, where $\\varepsilon>0$."
+   },
+   {
+    "anchor": "stmt-rcut-lem-cutoff-field-tails",
+    "claim_id": "claim-post-overlap-field-tails",
+    "statement": "Fix $\\varepsilon\\in(0,1)$, $\\delta>0$, and $D_*>0$."
+   },
+   {
+    "anchor": "stmt-rcut-lem-cutoff-field-tails",
+    "claim_id": "claim-post-overlap-field-tails",
+    "statement": "Suppose $d_c(t)\\le1-\\varepsilon$."
+   },
+   {
+    "anchor": "stmt-rcut-prop-positive-lag",
+    "claim_id": "claim-positive-logarithmic-lag",
+    "statement": "Fix $\\varepsilon\\in(0,1)$, $\\alpha>0$, and $D_*>0$, and put $s=\\alpha\\log n$."
+   },
+   {
+    "anchor": "stmt-rcut-prop-positive-lag",
+    "claim_id": "claim-positive-logarithmic-lag",
+    "statement": "Uniformly over all times $t\\ge0$ satisfying $$d_c(t)\\le1-\\varepsilon,\n \\qquad t+s\\le D_*\\log n,$$"
+   },
+   {
+    "anchor": "stmt-rcut-thm-continuous-cutoff",
+    "claim_id": "claim-median-centered-continuous-cutoff",
+    "statement": "Let $t_n^{\\rm med}=\\inf\\{t\\ge0:d_c(t)\\le1/2\\}$ be the continuous-time median mixing time."
+   },
+   {
+    "anchor": "stmt-rcut-prop-discrete-cutoff",
+    "claim_id": "claim-median-centered-discrete-cutoff",
+    "statement": "For every fixed $b\\in(0,1)$, uniformly over $\\mathcal G_n$, $$d_d\\bigl(\\lfloor(1-b)nt_n^{\\rm med}\\rfloor\\bigr)\\longrightarrow1,\n \\qquad\n d_d\\bigl(\\lceil(1+b)nt_n^{\\rm med}\\rceil\\bigr)\\longrightarrow0.\n \\label{rcut:eq:discrete-cutoff-sides}$$ Here each discrete step is one uniformly selected heat-bath update attempt, including attempts that leave the configuration unchanged."
+   },
+   {
+    "anchor": "stmt-rcut-lem-scalar-trapezoid",
+    "claim_id": "claim-whole-line-trapezoidal-error",
+    "statement": "Let $t>0$."
+   },
+   {
+    "anchor": "stmt-rcut-lem-scalar-trapezoid",
+    "claim_id": "claim-whole-line-trapezoidal-error",
+    "statement": "Suppose $f$ is continuous on $\\{z:|\\Im z|\\leq t\\}$, holomorphic in its interior, and satisfies a bound $$|f(x+iy)|\\leq C(1+|x|)^p e^{-c x^2},\\qquad |y|\\leq t,$$ for some $C,c>0$ and $p\\geq0$."
+   },
+   {
+    "anchor": "stmt-rcut-lem-scalar-trapezoid",
+    "claim_id": "claim-whole-line-trapezoidal-error",
+    "statement": "If both horizontal-edge integrals of $|f|$ are at most $M$,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Worst-start cutoff from equilibrium decay",
+    "evidence": [
+     {
+      "anchor": "pm-h-2",
+      "quote": "The companion article (OpenAI 2026) [[SKGap](#ref-SKGap)] proves a positive unscaled heat-bath gap for every fixed $\\beta<1$ in the zero-field Gaussian model.",
+      "quote_sha256": "7ad1f01c8e2a9aa4f502ae7bed2c4f111a3521286507372ee7b0f8892c079b77"
+     },
+     {
+      "anchor": "pm-h-9",
+      "quote": "The hidden and visible estimates give contraction on one long fixed block.",
+      "quote_sha256": "484647ed03fd7a9a806ec6945c0b1cd483f10b588749d2a2f6857c0f7f9c96ef"
+     }
+    ],
+    "requires_concepts": [
+     "Gaussian SK Gibbs law",
+     "Heat-bath Dirichlet form",
+     "Equilibrium Poincaré inequality",
+     "Conditional path prediction",
+     "Hidden propagation",
+     "Weighted exact-visible operator",
+     "Uniform fixed-block contraction"
+    ],
+    "supporting_pm_ids": [
+     "PM-227.3"
+    ]
+   },
+   {
+    "concept": "Certified scalar variational gap",
+    "evidence": [
+     {
+      "anchor": "rcut:sec:scalar-certificate",
+      "quote": "The estimates below keep these steps separate.",
+      "quote_sha256": "a929ddd490ed23009d9567ee3ff69568b6728a446ed3cbc3fe9bf31778c7ca02"
+     },
+     {
+      "anchor": "pm-h-90",
+      "quote": "The loop bounds and remainder estimates therefore reduce the finite verification to integer arithmetic alone.",
+      "quote_sha256": "c54f39a8874cde097b0573fb1d9db67fbfb3b6687cdee8912d1540da5c18e842"
+     }
+    ],
+    "requires_concepts": [
+     "Gaussian field law",
+     "Positive kernel remainder",
+     "Field-dependent Young multiplier",
+     "Strip quadrature error",
+     "Outward integer intervals",
+     "Normalized moment transfer"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-high-temperature-cutoff",
+   "exact_statement": "For every fixed $0\\leq\\beta<1$, there is a deterministic $\\lambda(\\beta)>0$ such that, with $$t_n=\\frac{\\log n}{2\\lambda(\\beta)},$$ for every $\\epsilon\\in(0,1)$, $$\\begin{aligned}\n d_n((1-\\epsilon)t_n)&\\longrightarrow1,\n &\n d_n((1+\\epsilon)t_n)&\\longrightarrow0,\\\\\n d_n^{\\rm disc}(\\lfloor(1-\\epsilon)nt_n\\rfloor)&\\longrightarrow1,\n &\n d_n^{\\rm disc}(\\lceil(1+\\epsilon)nt_n\\rceil)&\\longrightarrow0.\n\\end{aligned}$$ All convergences are in probability over the disorder. For $\\beta=0$, $\\lambda(0)=1$. For $0<\\beta<1$, $\\lambda(\\beta)$ is the equilibrium-operator constant defined in <a href=\"#eq:exact-lambda\" data-reference-type=\"eqref\" data-reference=\"eq:exact-lambda\">[eq:exact-lambda]</a>; it satisfies $$0<\\lambda(\\beta)\\leq(1-\\beta)^2.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-imported-equilibrium-gap",
+   "exact_statement": "For every fixed $0<\\beta<1$, there is $\\gamma_\\beta>0$ such that, with probability tending to one over $J$, $$\\mathop{\\mathrm{Var}}_\\mu(f)\\leq\\gamma_\\beta^{-1}\\mathcal E_\\mu(f)\n \\quad\\text{for every real function }f\\text{ on }\\Omega_n.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-input-gap"
+  },
+  {
+   "claim_id": "claim-jump-exponential-moments",
+   "exact_statement": "Fix $d\\geq0$ and $f:\\Omega_n\\to\\mathbb R$. Suppose a bounded measurable function $b:[0,d]\\to[0,\\infty)$ satisfies $$\\sup_x\\left\\lVert dS_r f(x)\\right\\rVert^2\\leq b(r)\\quad(0\\leq r\\leq d).$$ Put $B=\\sup b$ and $I=\\int_0^d b(r)\\,\\mathrm dr$. Then, for every $\\theta\\in\\mathbb R$ and every starting state $x$, $$\\mathbb E_x\\exp\\!\\left(\\theta(f(X_d)-S_df(x))\\right)\n \\leq \\exp\\!\\left(2\\theta^2 e^{2\\left\\lvert \\theta\\right\\rvert\\sqrt B}I\\right).\n \\label{eq:model-jump-mgf}$$ In particular, $\\mathop{\\mathrm{Var}}_x(f(X_d))\\leq4I$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-input-mgf"
+  },
+  {
+   "claim_id": "claim-poisson-binomial-transfer",
+   "exact_statement": "Fix $q\\in(0,1)$, let $M_n\\in\\mathbb N$ tend to infinity, and let $(a_{n,j})_{j\\ge0}$ be real arrays satisfying $\\sup_{n,j}|a_{n,j}|\\le B<\\infty$. Suppose that for every fixed $y\\in\\mathbb R$, $$\\mathbb E\\bigl[a_{n,N_{n,y}}\\bigr]\\longrightarrow0,\n \\qquad\n N_{n,y}\\sim\\operatorname{Poisson}\n                   (q M_n+y\\sqrt{M_n}).\n \\label{eq:inputclock-poisson-hypothesis}$$ The mean in this display is positive for all sufficiently large $n$. If $B_n\\sim\\operatorname{Binomial}(M_n,q)$, then $\\mathbb E[a_{n,B_n}]\\to0$. The conclusion is uniform over an additional family of arrays and values of $M_n$ when their bounds and the convergences in Equation <a href=\"#eq:inputclock-poisson-hypothesis\" data-reference-type=\"eqref\" data-reference=\"eq:inputclock-poisson-hypothesis\">[eq:inputclock-poisson-hypothesis]</a> are uniform and $M_n$ tends uniformly to infinity.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-input-clock"
+  },
+  {
+   "claim_id": "claim-independent-spin-cutoff",
+   "exact_statement": "At $\\beta=0$, the continuous-time dynamics has cutoff at $\\tfrac12\\log n$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-model-independent"
+  },
+  {
+   "claim_id": "claim-arbitrary-law-mean",
+   "exact_statement": "Suppose $P(x)$ is proportional to $\\exp(x^{\\mathsf T}Mx/2+h^{\\mathsf T}x)$ and satisfies the deterministic diagnostics and [eq:stat-stability](#eq:stat-stability). There is a constant $C$, uniform over these fields, matrices, and dimensions, such that every probability $Q$ on the cube satisfies $$\\label{eq:stat-mean}\n \\left\\lVert \\mathbb E_Qx-\\mathbb E_Px\\right\\rVert\\le C\\bigl(1+\\sqrt{D_P(Q)}\\bigr).$$ The required diagnostic length is finite and depends only on the fixed stability margins and the bounds in the construction.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-stat-mean"
+  },
+  {
+   "claim_id": "claim-observation-posterior-cavity-gaps",
+   "exact_statement": "There are fixed $b,k,C,c,\\gamma>0$ and events of disorder probability tending to one on which the following assertions hold, for the full model and for every model obtained by deleting one site. Along the observation experiment just defined, all posterior heat-bath gaps are at least $\\gamma$, except on an ordinary observation event of probability at most $Ce^{-cn}$. On the same good paths all posteriors satisfy [lem:stat-mean](#lem:stat-mean) with the same constant. The exceptional event and a stopping time before loss of these properties can be chosen independently of any test function. The constants are common to all cavities.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-stat-posterior-gap"
+  },
+  {
+   "claim_id": "claim-terminal-field-subset-tails",
+   "exact_statement": "There is $C<\\infty$, independent of $\\delta>0$, such that, on events of disorder probability tending to one for each fixed $\\delta$, the ordinary two-stage experiment satisfies $$\\label{eq:stat-field-tails}\n \\mathbb P\\left\\{\\exists I\\subset[n]:\n  \\sum_{i\\in I}h_i^2>C\\left[|I|\\log\\frac{en}{|I|}+s\\right]\\right\\}\n       \\le e^{-s}\\qquad(s\\ge\\delta n).$$ The empty subset contributes zero. The same event and constants can be taken for all single-site cavities, with their own dimension in the formula.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-stat-field-tails"
+  },
+  {
+   "claim_id": "claim-entropy-energy",
+   "exact_statement": "There is a constant $C$ such that for each fixed $\\delta>0$, on events of disorder probability tending to one, every probability $\\nu$ satisfies $$\\label{eq:stat-entropy}\n H_\\mu(\\nu)\\le C\\left\\{\\delta n+1+\n D_\\mu(\\nu)\\left(1+\\sqrt{\\log\\frac{en}{D_\\mu(\\nu)}}\\right)\\right\\}.$$ The product containing $D_\\mu(\\nu)$ is zero when this energy is zero. The constant $C$ is independent of $\\delta$ and $\\nu$. The assertion holds on one common event for all single-site cavities as well.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-stat-entropy"
+  },
+  {
+   "claim_id": "claim-fixed-time-density",
+   "exact_statement": "There are constants $C,c,d_*>0$ such that, for each fixed $d\\ge d_*$, on events of disorder probability tending to one, $$\\label{eq:stat-density}\n \\sup_{x,y}\\log\\frac{S_d(x,y)}{\\mu(y)}\n       \\le Cn e^{-c d^{2/3}}.$$ The assertion holds on one common event for the full system and all single-site cavities. The order of the quantifiers is fixed $d$, followed by $n\\to\\infty$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-stat-density"
+  },
+  {
+   "claim_id": "claim-exact-vector-extension",
+   "exact_statement": "On all vector-valued functions on the cube define $$(\\mathscr Gp)_i=(L-I)p_i\n       -2x_i\\sum_j a_{ij}d_jp_i+\\sum_j a_{ij}p_j,\n \\qquad a_{ij}=d_i m_j,\n \\label{eq:path-generator}$$ and let $K_t=e^{t\\mathscr G}$. Then $dS_tf=K_tdf$. Under [eq:path-disorder](#eq:path-disorder), uniformly in $x$, $$\\begin{aligned}\n a&=JD_v+\\frac{2\\beta^2}{n}x(mv)^t+o_{\\mathrm{op}}(1),\n \\label{eq:path-a-expansion}\\\\\n \\left\\lVert aD_v^{-1}\\right\\rVert_{\\mathrm{op}}&\\le C,\n &\\max_i\\sum_j\\frac{a_{ij}^2}{w_j}&\\le C.\n \\label{eq:path-a-bounds}\n\\end{aligned}$$ The variance factors in the second line are retained even at saturated fields; no lower bound on $v_j$ or $w_j$ is required.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-path-gradient"
+  },
+  {
+   "claim_id": "claim-rough-vector-propagation",
+   "exact_statement": "There are constants $C,c>0$ such that, for every vector function $p$, $$(\\partial_t-L)\\left\\lVert K_tp\\right\\rVert^2\n \\le C\\left\\lVert K_tp\\right\\rVert^2-c\\sum_jw_j\\left\\lVert d_jK_tp\\right\\rVert^2.\n \\label{eq:path-square}$$ In particular, for every starting law $\\nu$ and $t\\ge0$, $$\\mathbb E_\\nu\\left\\lVert K_tp\\right\\rVert^2\\le e^{Ct}\\mathbb E_{\\nu S_t}\\left\\lVert p\\right\\rVert^2.\n \\label{eq:path-rough-L2}$$ The same assertions hold with the multiplication term $ap$ in [eq:path-generator](#eq:path-generator) replaced by $z ap$, for each fixed real $z$.*\n\n*Expand in that multiplication term. Given $H>0$, there are $A_H,B_H<\\infty$ such that, for $t\\ge1$, deleting terms with more than $A_Ht$ insertions, and then clipping elementary likelihoods at $\\exp(B_Ht)$, changes the resulting map by at most $C_He^{-Ht}$ as a map from $L^2(\\nu S_t;\\mathbb R^n)$ to $L^2(\\nu;\\mathbb R^n)$. The constants are uniform in $\\nu$, including point masses. Columnwise the same statement holds for Hilbert–Schmidt norms. For every fixed $t>0$, sending the insertion cutoff and then the likelihood cap to infinity likewise gives convergence in this same all-vector-field operator bound. At $t=0$ the map is the identity.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-path-rough"
+  },
+  {
+   "claim_id": "claim-tensor-product-norms",
+   "exact_statement": "Let $B_l$ have $n$ rows and columns indexed by $j_{S_l}$, where the nonempty sets $S_l$ cover $I$, and suppose $\\left\\lVert B_l\\right\\rVert_{\\mathrm{op}}\\le b_l$.Then $$\\left\\lVert \\left(\\prod_l B_l(i,j_{S_l})\\right)_{i,j_I}\\right\\rVert_{\\mathrm{op}}\n \\le\\prod_l b_l.\n \\label{eq:path-tensor-product}$$ If a rectangular matrix $R$ satisfies $$|R_{i,j_I}|\n \\le C|B_0(i,j_{S_0})|^2\n                     \\prod_{l\\ge1}|B_l(i,j_{S_l})|,\n \\label{eq:path-square-domination}$$ with the same covering condition, then $\\left\\lVert R\\right\\rVert_{\\mathrm{op}}\\le Cb_0^2\\prod_{l\\ge1}b_l$. The coefficient implicit in the domination may depend arbitrarily on all indices.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-path-tensor-product"
+  },
+  {
+   "claim_id": "claim-mixed-slot-bounds",
+   "exact_statement": "Consider a fixed finite calculation whose inputs are finitely many state slots and fixed site labels. Its operations are bounded-operator linear maps on the site index, finite linear combinations, and smooth componentwise functions with globally bounded derivatives of every positive order. Bounded coordinate products may be used through a fixed smooth extension outside their bounded ranges. Then every nonempty tensor in [eq:path-mixed-norm](#eq:path-mixed-norm) has a dimension-independent bound. The constants depend on the calculation, the linear operator bounds, and finitely many scalar derivative bounds. They are uniform in fixed past labels whenever those displayed bounds are uniform. Linear-query values themselves need not be uniformly bounded.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-path-mixed-tensors"
+  },
+  {
+   "claim_id": "claim-conditional-derivative-truncation",
+   "exact_statement": "Let $F$ be a finite multitime site-vector calculation satisfying the mixed-slot bounds of [lem:path-mixed-tensors](#lem:path-mixed-tensors). Evaluate it on a fixed finite ordinary path tree, condition at one joining state $x$, and hold the realized past fixed. Write $A(x)=d_x\\mathbb E_xF$, with output as row and derivative index as column. There are common finite Duhamel and likelihood truncations $A_M$ such that $$\\sup_x\\left\\lVert A(x)-A_M(x)\\right\\rVert_{\\mathrm{op}}\\longrightarrow0.\n \\label{eq:path-conditional-op}$$ The assertion is uniform over stored parameters with uniform mixed-slot bounds. In particular, for any vector $u$, possibly depending on the joining state and stored past, $$\\left\\lVert D_u(A-A_M)\\right\\rVert_{\\mathrm{HS}}\n \\le\\left\\lVert A-A_M\\right\\rVert_{\\mathrm{op}}\\left\\lVert u\\right\\rVert.\n \\label{eq:path-row-weighted-error}$$ The same statement holds on an added stationary reverse branch. Actual and predictor contributions may use identical subdivisions and common truncations, and are recombined before a centering test.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-path-conditional-derivative"
+  },
+  {
+   "claim_id": "claim-actual-tree-transfer",
+   "exact_statement": "A stationary tree event of probability $e^{-cn}$ has negligible weighted probability in [def:path-tree](#def:path-tree). The same holds for a finite family of such events and for exponentially small integrated bad mass in a fixed finite-measure parameter space.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-path-tree-transfer"
+  },
+  {
+   "claim_id": "claim-frozen-path-comparisons",
+   "exact_statement": "Fix a time horizon and a finite tree. For sufficiently small fixed mesh size $h$, the following comparisons hold.*\n\n*First, after events of probability smaller than every fixed inverse power of $n$ have been discarded on each actual forward marginal, the log density between actual and frozen paths, read in the tree-rooted direction, is at most $\\kappa(h)n+o(n)$ in absolute value, where $\\kappa(h)\\downarrow0$.*\n\n*Second, for spatial empirical tests one has the stronger entropy estimate $$H(Q\\mid P_h)\\le C_T hn+o(n),\n \\label{eq:path-mesh-entropy}$$ after the prescribed count and field truncations. Here $P_h$ is the frozen tree law. The law $Q$ is an admissible actual tree law, with the polynomial weights of [def:path-tree](#def:path-tree), possibly conditioned on an event of probability at least $n^{-M}$ for fixed $M$. The superpolynomial discards are made first on its original forward marginals. On the retained set its additional entropy relative to the stationary comparison is $o(n)$. Truncation errors vanish for this class in the successive order $n\\to\\infty$, cutoff $\\to\\infty$ at fixed $h$, then $h\\downarrow0$. For use at a fixed $h$ the cutoff is chosen so that its entropy error is at most $hn$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-path-two-mesh"
+  },
+  {
+   "claim_id": "claim-rare-update-product-concentration",
+   "exact_statement": "Let $\\pi$ be a product measure on $\\{-1,1\\}^n$ such that each coordinate has minority probability at most $h<1/4$. If $\\sup_x\\left\\lVert dF(x)\\right\\rVert\\le B/\\sqrt n$, then $$\\log\\mathbb E_\\pi e^{\\theta(F-\\mathbb E_\\pi F)}\n \\le\\frac{CB^2\\theta^2}{n\\log(1/h)}.\n \\label{eq:path-product-mgf}$$ Consequently, for every $Q\\ll\\pi$, $$|\\mathbb E_QF-\\mathbb E_\\pi F|\n \\le\\frac{CB}{\\sqrt{n\\log(1/h)}}\\sqrt{H(Q\\mid\\pi)}.\n \\label{eq:path-product-entropy}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-path-product"
+  },
+  {
+   "claim_id": "claim-smooth-path-simulation",
+   "exact_statement": "Every bounded smooth empirical test of finitely many states on an admissible tree has the same limiting value as successively finer, finite smooth simulations from the corresponding endpoint states. For a single observation interval and a test with difference norm $B/\\sqrt n$, the error is at most $$\\frac{C_TB}{\\sqrt{\\log(1/h)}}+o_n(1).\n \\label{eq:path-simulation-error}$$ The statement holds for replicated conditional tests, using the same predictor approximation on each copy. A linear query of bounded smooth outputs may be included after clipping; its spatial square tails are uniformly negligible in the successive approximation limits.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-path-simulation"
+  },
+  {
+   "claim_id": "claim-finite-tree-gaussian-calculus",
+   "exact_statement": "Fix $0<\\beta<1$, a finite tree, a finite collection of words and recipes, and fixed caps on its diagonal labels. Dimension is taken to infinity before any recipe accuracy, mesh, cap, or time limit. The following assertions hold in the typicality convention of [def:path-tree](#def:path-tree).*\n\n1.  *Stationary recipe overlaps, normalized traces, and joint empirical averages have deterministic limits. The completion of one-state recipes for the limiting inner product is a separable real Hilbert space $\\mathcal H$. Conditional means of path recipes at a chosen endpoint have approximations in $\\mathcal H$. The same stationary predictors work on actual conditional trees: centered copies sharing that endpoint have vanishing spatial pair overlaps.*\n\n2.  *If $u_n$ is measurable at that endpoint, $\\mathbb E\\left\\lVert u_n\\right\\rVert^2\\le C$, $\\left\\lVert u_n\\right\\rVert\\le n^M$, and $$\\mathbb E|u_n^tb_n|^2\\longrightarrow0\n     \\quad\\text{for every endpoint recipe }b_n,\n     \\label{eq:path-hidden}$$ then $u_n$ is orthogonal in this same squared sense to all bounded path recipe vectors. Multiplication by bounded path words preserves this assertion, with the transpose placed on the other vector as necessary. Such vectors will be called *hidden*.*\n\n3.  *On the complement of visible dyads, joint limiting word inner products of hidden vectors are represented on a Hilbert space with $J/\\beta=s=\\ell+\\ell^*$ and $$\\ell^*D\\ell=\\tau(D)I.\n     \\label{eq:path-creation}$$ Here $\\tau$ is the limiting spatial state on the diagonal algebra. The representation retains an arbitrary bounded base action of every diagonal, including types of zero limiting proportion. A single representation suffices for all the finitely many vectors and words on the fixed tree. No compatible choice between different trees is asserted.*\n\n4.  *Normalized traces are given by complete noncrossing contractions. For a word $Q$, let $\\Delta(Q)$ be its complete contraction with the outer diagonal unaveraged. Then $$\\max_i|Q_{ii}-\\Delta(Q)_i|\\longrightarrow0,\n     \\qquad \\max_{i\\ne j}|Q_{ij}|\\longrightarrow0.\n     \\label{eq:path-entry-prediction}$$ For two bounded path matrices, $$Q\\circ R=D_{\\Delta(Q)\\Delta(R)}+V+o_{\\mathrm{op}}(1),\n     \\label{eq:path-hadamard}$$ where $V$ is in the operator-norm closure of bounded visible dyads.*\n\n5.  *Bounded clipped likelihood labels admit tracial $L^2$ approximations by fixed finite smooth multitime calculations satisfying the mixed-slot bounds of [lem:path-mixed-tensors](#lem:path-mixed-tensors), with observation times inside their path span. One-sided endpoint approximations are allowed. When only spin observations are used, the likelihood is the flip-rate likelihood. Predictors of these labels mean predictors of these tracial approximants in successive limits, with the same cap.*\n\n6.  *Smooth site-recipe difference matrices, their bounded products, and matrices with column $j$ evaluated at $x^j$ belong to the same operator closure. Their off-diagonal difference entries vanish uniformly. Conditional expected derivative matrices have the stronger pointwise truncation property in [lem:path-conditional-derivative](#lem:path-conditional-derivative) for those fixed smooth calculations. Their opened derivative terms reduce to path matrices by [prop:path-opened-derivative](#prop:path-opened-derivative).*\n\n*For two independent stationary roots in the same disorder, the limiting spin, field, and bounded likelihood histories at a uniformly sampled site are independent copies. This last assertion is restricted to these spin-generated histories. It is not asserted for arbitrary noncentered recipes or recipes sharing site seeds.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-path-calculus"
+  },
+  {
+   "claim_id": "claim-finite-adaptive-regression",
+   "exact_statement": "A fixed finite frozen simulation and a fixed finite list of subsequent recipe queries have deterministic empirical limits with exponentially small deviations at every fixed positive accuracy. Conditional on all the queried columns, the unrevealed Gaussian matrix is an independent Gaussian orthogonal ensemble (GOE) matrix compressed to their orthogonal complement. The revealed part is a bounded sum of dyads of calculation vectors.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-path-regression"
+  },
+  {
+   "claim_id": "claim-endpoint-prediction",
+   "exact_statement": "Assertions <span class=\"upright\">(i)</span> and <span class=\"upright\">(ii)</span> of [thm:path-calculus](#thm:path-calculus) hold. They remain valid after adjoining a fixed finite list of bounded path-matrix operations.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-path-prediction"
+  },
+  {
+   "claim_id": "claim-likelihood-tracial-approximation",
+   "exact_statement": "Assertion <span class=\"upright\">(v)</span> of [thm:path-calculus](#thm:path-calculus) holds, on each edge in its original forward direction, and therefore for the joint tests used in that theorem.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-path-likelihood-approximation"
+  },
+  {
+   "claim_id": "claim-fock-word-norm",
+   "exact_statement": "Let $G_n$ be GOE, independent of a fixed finite family of deterministic bounded diagonals with convergent joint type proportions. For every fixed matrix polynomial $P$ in these diagonals and $G_n$, $$\\limsup_{n\\to\\infty}\\left\\lVert P(G_n,D)\\right\\rVert_{\\mathrm{op}}\n \\le\\left\\lVert P(s,D)\\right\\rVert_{\\mathcal F_{\\tau,\\mathcal B}}\n \\quad\\text{in probability}.\n \\label{eq:path-fock-domination}$$ The assertion includes zero limiting type proportions with their base actions retained. At every fixed tolerance $0<a\\le1$, its failure probability is at most $2\\exp(-cna^2/L^2)$ for sufficiently large $n$, where $L\\ge1$ depends only on the fixed word, coefficient caps, and spectral cutoff, and not on the smallest positive type proportion.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-path-fock-norm"
+  },
+  {
+   "claim_id": "claim-sparse-label-comparison",
+   "exact_statement": "The norm comparison in [lem:path-fock-norm](#lem:path-fock-norm) is valid simultaneously for arbitrary bounded changes to a sufficiently small fraction of the entries of finitely many binned labels, even when the changed entries and their supports are chosen after seeing the Gaussian matrix. The conclusion is comparison with the representation of the changed labels, retaining their base actions; it does not declare the change small in operator norm.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-path-sparse"
+  },
+  {
+   "claim_id": "claim-conditional-gaussian-word-comparison",
+   "exact_statement": "For fixed tracial label approximations and fixed path words, the regression in [lem:path-regression](#lem:path-regression), followed by an independently chosen finer density mesh, gives the norm and joint-vector comparison in Assertion <span class=\"upright\">(iii)</span> of [thm:path-calculus](#thm:path-calculus).",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-path-compressed"
+  },
+  {
+   "claim_id": "claim-hadamard-reduction",
+   "exact_statement": "Assertion <span class=\"upright\">(iv)</span> of [thm:path-calculus](#thm:path-calculus) holds.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-path-hadamard"
+  },
+  {
+   "claim_id": "claim-smooth-difference-closure",
+   "exact_statement": "Assertion <span class=\"upright\">(vi)</span> of [thm:path-calculus](#thm:path-calculus) holds. In particular, for every fixed smooth site recipe $z$, the matrix $E(z)_{ij}=d_jz_i$ has bounded operator norm and vanishing off-diagonal maximum, and belongs to the path-matrix closure. On scaled vector recipes its operator bound has the additional factor $n^{-1/2}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-path-difference-closure"
+  },
+  {
+   "claim_id": "claim-increment-polynomial-approximation",
+   "exact_statement": "For each fixed smooth calculation of [lem:path-mixed-tensors](#lem:path-mixed-tensors), every nonempty mixed tensor $T_IF$ is uniformly approximable in the norm of [eq:path-mixed-norm](#eq:path-mixed-norm) by finite tensor polynomials. Their factors are matrix-query edges and equality tensors, their vertex labels are bounded smooth functions of the calculation values, and every derivative slot occurs in every nonzero term. Approximation constants are dimension independent. No bounded range of the undifferentiated linear-query values is required.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-path-increment-approximation"
+  },
+  {
+   "claim_id": "claim-directed-equality-network-reduction",
+   "exact_statement": "Let $\\mathcal A$ be a class of uniformly bounded finite matrix expressions, closed under products, transposes, Hadamard products, and multiplication by its bounded diagonal labels. Suppose every such expression $Q$, including expressions newly formed by these operations, has $$\\max_{i\\ne j}|Q_{ij}|=o(1),\\qquad\n \\max_i|Q_{ii}-\\delta_Q(i)|=o(1),$$ where $\\delta_Q$ is an admitted bounded diagonal label. Consider a fixed finite equality network with matrix edges from $\\mathcal A$ and admitted bounded vertex labels. If it has an acyclic orientation with unique source and sink at its external input and output, then its matrix contraction is, up to $o_{\\mathrm{op}}(1)$, in $\\mathcal A$. It in particular has vanishing off-diagonal maximum.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-path-directed-network"
+  },
+  {
+   "claim_id": "claim-opened-derivative-closure",
+   "exact_statement": "Fix a smooth multitime calculation as in [lem:path-mixed-tensors](#lem:path-mixed-tensors), a finite causal tree, common Duhamel and likelihood truncations from [lem:path-conditional-derivative](#lem:path-conditional-derivative), and the tensor approximations of [lem:path-increment-approximation](#lem:path-increment-approximation). Require every linear-query edge of the calculation and every opened $K$ edge to belong to the admitted path-matrix algebra, with its entry predictions, and require all bounded coefficient labels to be admitted path labels. In particular, the calculation values are admitted path recipes; the likelihood calculations above use $J$ and $J\\circ J$ as their query matrices. The broader class of arbitrary bounded-operator query maps in [lem:path-mixed-tensors](#lem:path-mixed-tensors) is not asserted to have this closure. After ordinary conditional expectations are opened on their specified causal branches, every remaining derivative contraction is a bounded path matrix up to successive operator-norm errors. It has vanishing off-diagonal maximum and the Hadamard and diagonal predictions of [lem:path-hadamard](#lem:path-hadamard). The network errors have the typical, weighted and integrated-parameter meaning of [def:path-tree](#def:path-tree). The earlier tensor and conditional truncation errors are uniform in the joining state and stored parameters.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-path-opened-derivative"
+  },
+  {
+   "claim_id": "claim-independent-root-site-histories",
+   "exact_statement": "For two independent equilibrium samples in the same disorder, and independent heat-bath site randomness on their trees, the limiting joint site law of spin, field, and bounded likelihood histories is the product of their one-root laws. Consequently stationary site means of any such bounded history label self-average in spatial square mean.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-path-two-root"
+  },
+  {
+   "claim_id": "claim-projected-row-moments",
+   "exact_statement": "For each fixed real $r$ and each $\\varepsilon>0$, there is $d_0=d_0(r,\\varepsilon)$ such that, for every fixed $d\\ge d_0$ and every deterministic mask $M$, outside a disorder event of probability tending to zero there is a set $B_{n,d,M}$ satisfying $$\\mu(B_{n,d,M})\\le e^{-c n},\\qquad\n \\max_i\\mathbb E_x\\bigl[(A_{i,x}^M(X_d))^r\\bigr]\n       \\le e^{\\varepsilon d}+o_n(1)\n \\quad(x\\notin B_{n,d,M}).\n \\label{eq:row-moment-quantified}$$ Here $c>0$ can depend on the fixed $d,r,\\varepsilon$, but the estimates in the proof are uniform in the deterministic mask. Thus the notation $e^{o_r(d)}$ for these moments always means dimension first and then $d\\to\\infty$. For $0\\le r\\le1$ the upper bound $1$ follows directly from Jensen’s inequality. Negative $r$ in [eq:row-moment-quantified](#eq:row-moment-quantified) refers to the unrestricted positive likelihood, not to a likelihood multiplied by a cutoff indicator.*\n\n*The theorem also holds in its integrated form: if $M=M_\\alpha$ ranges over a deterministic measurable family with a finite measure on its parameter space, the good disorder event can be chosen so that the *integrated* Gibbs mass of the exceptional starts is exponentially small. This includes masks determined by simplex times in a fixed finite path expansion and the independent Poisson schedules used below. It does not assert a simultaneous bound for a mask selected to maximize an error after seeing the disorder.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-row-projected-moments"
+  },
+  {
+   "claim_id": "claim-fixed-time-likelihood-integrability",
+   "exact_statement": "Fix $d$, a schedule, a mask, and $q<\\infty$. On the disorder events of [prop:path-rough](#prop:path-rough), the positive and negative moments of $L_\\theta$ are bounded by $e^{C_qd}$, uniformly in the schedule and mask. The variables $L_\\theta F_\\sigma$ have finite moments of every fixed positive and negative order, with constants uniform in dimension at this fixed $d$. The same is true of their conditional averages given $Z$. Bounded replicated-bridge tests, followed by these bounds, determine both the positive and negative moments of the conditional averages in the dimension limit.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-row-uniform-integrability"
+  },
+  {
+   "claim_id": "claim-shared-private-gaussian-representation",
+   "exact_statement": "After subsequence extraction, a replicated array of the lists in [eq:row-bridge-list](#eq:row-bridge-list) has the following representation. Conditional on a directing variable $\\mathcal D$, each branch draws independently its self-Gram matrix $Q$, its bracket data, and a list of vectors $r_\\alpha$ in one separable real Hilbert space. Cross-Grams between distinct branches are $\\left\\langle r_\\alpha,r'_\\gamma\\right\\rangle$, and $Q-(\\left\\langle r_\\alpha,r_\\gamma\\right\\rangle)_{\\alpha,\\gamma}$ is positive semidefinite. Include the factor $\\beta$ in the vectors. Conditional on these data, the row projections have the form $$g(r_\\alpha)+\\xi_\\alpha,\n \\label{eq:row-shared-private}$$ where $g$ is one common isonormal process and, independently on each branch, $\\xi$ is centered Gaussian with covariance $Q-(\\left\\langle r_\\alpha,r_\\gamma\\right\\rangle)$. Conditional averages in this representation integrate one branch and its coins with $\\mathcal D,g$ held fixed.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-row-hilbert-representation"
+  },
+  {
+   "claim_id": "claim-almost-sure-overlap-norm",
+   "exact_statement": "If $r,r'$ are independent with the same law in a separable Hilbert space and $|\\left\\langle r,r'\\right\\rangle|\\le\\delta$ almost surely, then $\\left\\lVert r\\right\\rVert^2\\le\\delta$ almost surely. The same assertion holds conditionally on a directing variable.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-row-overlap-norm"
+  },
+  {
+   "claim_id": "claim-chronological-gaussian-moments",
+   "exact_statement": "Fix self-Gram and bracket data satisfying the corrected identities. Treat all deterministic mean fields and all common field shifts as arbitrary forcing. Let $\\widetilde Z_h$ be the corrected prefix scores, of variances $b_h$, with $\\sum_h b_h\\le Cd$. Let $a_h\\in\\{-1,1\\}$ be the spin chosen using the fields and coins available before score $h$, including a prescribed forced coin when present. For $$W=\\exp\\left\\{\\sum_h a_h\\widetilde Z_h\n                         -\\tfrac12\\sum_h b_h\\right\\},$$ one has, for every real $r$, $$\\begin{aligned}\n \\exp\\left(-\\tfrac12|r(r-1)|Cd\\right)\n &\\le\\mathbb E[W^r\\mid\\text{self-Gram data and forcing}]\\\\\n &\\le\\exp\\left(\\tfrac12|r(r-1)|Cd\\right).\n \\end{aligned}\n \\label{eq:row-near-one}$$ In particular, powers within $\\eta$ of one cost $e^{O(\\eta d)}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-row-adapted-gaussian"
+  },
+  {
+   "claim_id": "claim-stationary-row-predictor-moments",
+   "exact_statement": "Let $a_i$ be a nonnegative row label on a span of length $d$, bounded above by a masked likelihood $\\ell_i^M$; factors $v_i\\le1$ and cutoff indicators are allowed. Its stationary predictor at the right endpoint has every fixed positive spatial moment bounded by $e^{o(d)}$. The same bound holds after conditioning at a later endpoint. Its predictor at the left endpoint is bounded by one. Raw fixed-order moments cost at most $e^{C_pd}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-row-stationary-predictors"
+  },
+  {
+   "claim_id": "claim-spin-edge-renewal",
+   "exact_statement": "For $0<\\beta<1$, $$0<\\lambda_{\\rm sp}\\le(1-\\beta)^2,\n \\qquad \\beta\\widehat R(z)<1,\n \\qquad \\beta^2\\widehat R(z)<1-z\n \\quad(z<\\lambda_{\\rm sp}).\n \\label{eq:spin-conditions}$$ Let $P_0(u)=1$, $P_1(u)=u$, and $P_{k+1}(u)=uP_k(u)-P_{k-1}(u)$ be the monic second-kind Chebyshev polynomials. If $$R_k(t)=\\lim_{n\\to\\infty}\\frac1n\\mathop{\\mathrm{Tr}}\\left[\n P_k(J/\\beta)\\int u e^{-tu}\\mathsf M_n(\\,\\mathrm du)\\right],$$ then $$\\widehat R_k(z)=\\beta^k\\widehat R(z)^{k+1},\n \\qquad z<\\lambda_{\\rm sp}.\n \\label{eq:spin-trunk-transform}$$ The limiting covariance trace density with respect to the semicircle law $\\rho_{\\rm sc}$ on $[-2,2]$ is $$\\lim_{n\\to\\infty}\\frac1n\n     \\mathop{\\mathrm{Tr}}\\bigl[q(J/\\beta)\\mathbb E_\\mu(xx^{\\mathsf T})\\bigr]\n  =\\int_{-2}^2\\frac{q(u)}{1-\\beta u+\\beta^2}\\rho_{\\rm sc}(\\,\\mathrm du)\n \\label{eq:spin-covariance-density}$$ for every polynomial $q$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-spin-spectrum"
+  },
+  {
+   "claim_id": "claim-hidden-gradient-propagation",
+   "exact_statement": "Let $\\lambda_{\\rm sp}$ be the spin spectral edge in [prop:spin-spectrum](#prop:spin-spectrum). For every $z<\\lambda_{\\rm sp}$ there is a finite constant $C_z$ with the following property. Fix $t\\geq1$, and let $u=u(X_0)$ and $p=p(X_t)$ be polynomially bounded endpoint vectors with bounded second moments. Suppose that $u$ is hidden, $p=df$ is an exact gradient, and $$\\label{eq:hidden-energy-hypothesis}\n \\mathbb E\\sum_j w_j(X_t)\\left\\lVert d_jp(X_t)\\right\\rVert^2\\leq C_t<\\infty$$ uniformly along the dimension sequence. Then $$\\label{eq:hidden-propagation}\n \\limsup_{n\\to\\infty}\\left\\lvert \\mathbb Eu^tK_t p\\right\\rvert\n \\leq C_z e^{-zt}\n       \\limsup_{n\\to\\infty}\\bigl(\\left\\lVert u\\right\\rVert_2\\left\\lVert p\\right\\rVert_2\\bigr).$$ The constant does not depend on the bound in [eq:hidden-energy-hypothesis](#eq:hidden-energy-hypothesis); that bound is allowed to depend on the fixed time $t$. Equivalently, the rate on the right is $\\exp[-(\\lambda_{\\rm sp}-o(1))t]$, with the dimension limit taken first. The assertion also holds in the integrated deterministic-time and mask comparisons of [thm:path-calculus](#thm:path-calculus), [thm:row-projected-moments](#thm:row-projected-moments).",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-hidden-propagation"
+  },
+  {
+   "claim_id": "claim-two-ended-wick-averaging",
+   "exact_statement": "Let $a_0,\\ldots,a_k$ be bounded path labels of the preceding kind. Under the endpoint hypotheses of [thm:hidden-propagation](#thm:hidden-propagation), $$\\begin{aligned}\n B_k(a_0,\\ldots,a_k)\\ \\sim\\ \n &\\sum_{r=0}^k\n B_k(a^0_0,\\ldots,a^0_{r-1},a_r,a^1_{r+1},\\ldots,a^1_k)\\notag\\\\\n &-\\sum_{r=0}^{k-1}\n B_k(a^0_0,\\ldots,a^0_r,a^1_{r+1},\\ldots,a^1_k).\n \\label{eq:hidden-averaging}\n\\end{aligned}$$ Here $T\\sim T'$ means that $\\mathbb Eu(X_0)^t(T-T')p(X_t)$ tends to zero after the prescribed successive approximations. The identity is an identity in these bilinear tests, not an operator-norm replacement of every path label by its predictor. The error will contain two distinguished factors: one centered from the initial endpoint and one from the terminal endpoint.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-hidden-averaging"
+  },
+  {
+   "claim_id": "claim-centered-small-trace-replacement",
+   "exact_statement": "Consider a summand of [eq:hidden-double-centered-error](#eq:hidden-double-centered-error). Its bounded labels may be approximated in tracial $L^2$ while keeping the two distinguished factors centered at their respective endpoints. The error in the hidden bilinear test tends to zero with the tracial errors. A bounded diagonal of vanishing trace support can also be inserted at the terminal endpoint at zero cost in this test.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-hidden-small-trace"
+  },
+  {
+   "claim_id": "claim-marked-continuing-derivative",
+   "exact_statement": "Fix an opened, capped derivative history of one smooth multitime label. Suppose it has an entering derivative index, at least one branch differentiating that label, and one derivative index continuing to a later factor. Its temporal derivative tree has a unique path between the entering and continuing indices. Absorb the part before its first label attachment into the incoming propagation matrix, and retain the part after its last attachment as a subsequent bounded propagation. Let $M$ be the matrix arriving at the first attachment, with label site as row and derivative index as column.*\n\n*If $\\Phi(M)$ is the matrix after the intervening history, then, in the finite-tree comparison, $$\\label{eq:hidden-marked-spine-bound}\n \\left\\lVert \\Phi(M)\\right\\rVert_{\\mathrm{HS}}\n \\leq C\\left\\lVert \\mathop{\\mathrm{diag}}(M)\\right\\rVert+o(1)\\left\\lVert M\\right\\rVert_{\\mathrm{HS}}.$$ Here $C$ depends on the fixed circuit and capped history. All memory copies and all mixed differences of the label are included in this history. The estimate does not replace a mixed label tensor by an ordinary first Jacobian.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-hidden-marked-spine"
+  },
+  {
+   "claim_id": "claim-visible-semigroup-smoothing",
+   "exact_statement": "The stationary limits define strongly continuous semigroups $K_t$ on $\\mathcal H$ and on $\\mathcal H_v$, and $\\iota K_t=K_t\\iota$. For each fixed $T$ their operator norms on both spaces are bounded uniformly for $0\\le t\\le T$. On $\\mathcal H$ the semigroup is analytic and, for $t>0$, $$\\label{eq:exact-graph}\n \\left\\lVert L K_t\\right\\rVert_{\\mathcal H\\to\\mathcal H}\n +\\left\\lVert (-L)^{1/2}K_t\\right\\rVert_{\\mathcal H\\to\\mathcal H}\n \\le C_t.$$ The corresponding finite-dimensional bounds are uniform in $n$ on the retained disorder events. Here $L$ is the generator of componentwise stationary heat flow, rather than the generator of $K$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-exact-smoothing"
+  },
+  {
+   "claim_id": "claim-deterministic-exact-visible-operator",
+   "exact_statement": "The spaces in [def:exact-spaces](#def:exact-spaces) and their semigroups are deterministic. The embedding $\\iota:\\mathcal X\\to\\mathcal X_v$ is continuous, injective, and dense. On $\\mathcal X_v$, $K_t$ is a positive self-adjoint semigroup. If $\\mathcal A_v$ is minus its generator, then $\\mathop{\\mathrm{spec}}(\\mathcal A_v)\\subset[\\gamma,\\infty)$ for the fixed gap constant $\\gamma>0$ in [thm:input-gap](#thm:input-gap). In particular the number $$\\label{eq:exact-lambda}\n \\lambda\n =\\min\\left\\{\\lambda_{\\rm sp},\\inf\\mathop{\\mathrm{spec}}(\\mathcal A_v)\\right\\}\n \\quad\\text{satisfies}\\quad\n 0<\\lambda\\le\\lambda_{\\rm sp}\\le(1-\\beta)^2.$$ All dimension limits in this definition precede the spectral infimum.",
+   "kind": "construction",
+   "statement_anchor": "stmt-thm-exact-sector"
+  },
+  {
+   "claim_id": "claim-stationary-exact-saturation",
+   "exact_statement": "If a weighted-visible vector is a weighted mean-square limit of stationary exact gradients, then it belongs to $\\mathcal X_v$. In particular this holds for any such vector initially given in $\\mathcal H$.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-exact-saturation"
+  },
+  {
+   "claim_id": "claim-random-coefficient-transport",
+   "exact_statement": "For prescribed comparison times $a\\le s<t\\le b$ retained in the preceding construction, $$\\label{eq:exact-transport}\n q_s=(K_{t-s}\\mathbin{\\widehat\\otimes}C_{s,t})q_t.$$ The identity also holds for the retained selected-time sequences with positive limiting separation: $K_{t-s}$ uses that limiting separation, while $C_{s,t}$ is induced by their actual conditional expectations. For an interior time $s$ with a fixed positive amount of future evolution, $q_s$ belongs to the graph domain of componentwise $L$ in the vector factor, with graph norm bounded by $C_{t-s}\\left\\lVert q_t\\right\\rVert$. No derivative is taken on the scalar factor.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-exact-transport"
+  },
+  {
+   "claim_id": "claim-selected-comparison-times",
+   "exact_statement": "Let $h_s$ be the marginal density relative to $\\mu$, and set $r_{s,j}(x)=h_s(x^j)/h_s(x)$. In every fixed open subinterval $I\\Subset(a,b)$ one can choose comparison times $s=s_n\\in I$, after extraction, for which $$\\begin{aligned}\n &\\mathbb E\\left\\lVert p_s\\right\\rVert^2+\n   \\mathbb E\\sum_jw_j\\left\\lVert d_jp_s\\right\\rVert^2\\le C_I,\n \\label{eq:exact-hessian-budget}\\\\\n &\\mathbb E\\left\\lVert p_s\\right\\rVert^2\\sum_jw_j(1-\\sqrt{r_{s,j}})^2=o(n).\n \\label{eq:exact-reverse-budget}\n\\end{aligned}$$ All fixed typicality tests and their bounded auxiliary-time integrals can be retained at these times.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-exact-good-times"
+  },
+  {
+   "claim_id": "claim-stationary-adjoint-annihilation",
+   "exact_statement": "At a comparison time from [lem:exact-good-times](#lem:exact-good-times), every scalar component of $q_s$ annihilates $B_A$. It also annihilates the stationary adjoints of $\\mathbb E_\\mu\\sum_i v_i b_i d_iq_i/\\sqrt n$, for bounded smooth diagonal labels $b$. These are scalar-square-mean assertions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-exact-adjoints"
+  },
+  {
+   "claim_id": "claim-strong-weighted-derivative-closure",
+   "exact_statement": "Let $q$ be a deterministic vector component of an interior $q_s$, obtained by contraction with any fixed scalar Hilbert direction. Then the pair $$\\left((\\sqrt{v_iv_j}\\,d_jq_i)_{ij},\n       (\\sqrt{v_i}\\,d_iq_i)_i\\right)$$ is a strong mean-square limit of normalized smooth word matrices and their diagonal parts. Consequently the adjoint annihilation in [lem:exact-adjoints](#lem:exact-adjoints) implies that representatives $Q^{(n)}$ of $q$ can be chosen with bounded $\\mathfrak d(Q^{(n)})$ and $$\\label{eq:exact-vanishing-curl}\n \\mathbb E_\\mu\\sum_{i,j}v_iv_j|d_jQ_i^{(n)}-d_iQ_j^{(n)}|^2\n +\\mathbb E_\\mu\\sum_i v_i|d_iQ_i^{(n)}|^2\\longrightarrow0.$$ Each successive finite approximant may be chosen polynomially bounded.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-exact-form-closure"
+  },
+  {
+   "claim_id": "claim-own-spin-projection",
+   "exact_statement": "Let $\\overline Q_i=P_iQ_i=\\mathbb E_\\mu[Q_i\\mid x_{-i}]$, and put $$O(Q)=\\mathbb E_\\mu\\sum_i v_i|d_iQ_i|^2,\\qquad\n C(Q)=\\mathbb E_\\mu\\sum_{i,j}v_iv_j|d_jQ_i-d_iQ_j|^2.$$ Writing $\\delta_J=\\max_{i,j}|J_{ij}|$ and $R_J=\\max_i\\sum_jJ_{ij}^2$, one has $$\\begin{aligned}\n\\label{eq:exact-own-spin-bound}\n \\left\\lVert Q-\\overline Q\\right\\rVert_v^2&\\le O(Q),\\notag\\\\\n C(\\overline Q)&\\le3e^{12\\delta_J}C(Q)\n                    +12e^{14\\delta_J}R_JO(Q).\n\\end{aligned}$$ Thus the representatives in [lem:exact-form-closure](#lem:exact-form-closure) may be made own-spin independent without changing their weighted limit or the vanishing-curl conclusion.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-exact-own-spin"
+  },
+  {
+   "claim_id": "claim-no-harmonic-defect",
+   "exact_statement": "Let $Q=Q^{(n)}$ be a polynomially bounded vector field with $Q_i$ independent of $x_i$. On the disorder events of [prop:stat-posterior-gap](#prop:stat-posterior-gap), $$\\label{eq:exact-hodge-bound}\n \\inf_g\\mathbb E_\\mu\\sum_i v_i(Q_i-d_ig)^2\n \\le C\\mathbb E_\\mu\\sum_{i,j}v_iv_j|d_jQ_i-d_iQ_j|^2+o(1).$$ Here $C$ depends only on the fixed observation horizon, precision bound, and posterior gap. The $o(1)$ is bounded by a polynomial in $n$ times the exponential stopping probability. It is taken separately for each fixed approximant.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-exact-no-defect"
+  },
+  {
+   "claim_id": "claim-random-visible-exact-closedness",
+   "exact_statement": "At the comparison times of [lem:exact-good-times](#lem:exact-good-times), $$\\label{eq:exact-closedness}\n q_s\\in\\mathcal X_v\\mathbin{\\widehat\\otimes}\\mathcal S_s.$$ The statement concerns the vector factor of the random-coefficient projection and requires no regularity of its scalar coefficients.",
+   "kind": "classification",
+   "statement_anchor": "stmt-prop-exact-closedness"
+  },
+  {
+   "claim_id": "claim-weighted-to-unweighted-decay",
+   "exact_statement": "Let a $K$-invariant subspace of $\\mathcal X_v$ have weighted decay $\\left\\lVert K_tq\\right\\rVert_v\\le C e^{-at}\\left\\lVert q\\right\\rVert_v$. For every $\\rho<\\min\\{a,1-\\beta^2\\}$ and every $q\\in\\mathcal H$ whose weighted image lies in this subspace, $$\\label{eq:exact-unweighted-decay}\n \\left\\lVert K_tq\\right\\rVert_0\\le C_\\rho e^{-\\rho t}\\left\\lVert q\\right\\rVert_0.$$ The same bound holds with a Hilbert scalar tensor factor and conditional expectation contractions. In particular, the full exact space has unweighted decay at every rate below $\\lambda$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-exact-upgrade"
+  },
+  {
+   "claim_id": "claim-slow-spectrum-isolation",
+   "exact_statement": "The unweighted semigroup satisfies $$\\label{eq:exact-essential-rate}\n \\limsup_{t\\to\\infty}\\frac1t\n       \\log\\left\\lVert K_t|_{\\mathcal X}\\right\\rVert_{\\rm ess}\n \\le-\\lambda_{\\rm sp}.$$ Every weighted spectral point of $\\mathcal A_v$ strictly below $\\lambda_{\\rm sp}$ is an isolated eigenvalue of finite multiplicity, and its eigenspace lifts into $\\mathcal X$. If $\\lambda<\\lambda_{\\rm sp}$, let $E_v$ be the bottom eigenspace and $E$ its unweighted lift. The weighted orthogonal projection $\\Pi_v$ and the unweighted spectral projection $P$ agree through the embedding: $$\\label{eq:exact-projection-agreement}\n \\Pi_v\\iota=\\iota P.$$ The slow projection also defines a bounded map on every $q\\in\\mathcal H$ with $\\iota q\\in\\mathcal X_v$: project $\\iota q$ onto $E_v$ and lift through the finite-dimensional inverse $E_v\\to E$. On the weighted complement there is decay with some rate strictly larger than $\\lambda$, and hence unweighted decay at every rate below the minimum of that rate and $1-\\beta^2$, for all such $q$.",
+   "kind": "classification",
+   "statement_anchor": "stmt-prop-exact-isolation"
+  },
+  {
+   "claim_id": "claim-uniform-fixed-block-contraction",
+   "exact_statement": "Fix $0<\\xi<\\lambda$, a polynomial envelope $M$, a horizon constant $A<\\infty$, and $H<\\infty$. There are deterministic constants $D,b_0<\\infty$ and disorder events of probability tending to one on which the following assertion holds simultaneously for all starting configurations, all such terminal functions, and all $b_0\\le a<a+D\\le T\\le A\\log n$: $$N_a^2\\le e^{-2(\\lambda-\\xi)D}N_{a+D}^2+n^{-H}.\n \\label{eq:cutoff-block}$$ The same assertion, with no burn-in, holds in the deterministic typicality convention of [thm:path-calculus](#thm:path-calculus) for families of initial laws satisfying $\\log\\left\\lVert \\,\\mathrm d\\nu/\\,\\mathrm d\\mu\\right\\rVert_\\infty=o(n)$ uniformly. The constants may be chosen after $H$ and $M$; no quantitative rate for a fixed-time $o(1)$ is asserted or required.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-cutoff-block"
+  },
+  {
+   "claim_id": "claim-logarithmic-gradient-propagation",
+   "exact_statement": "For $0<\\xi<\\lambda$ and fixed $A,M,H$, on disorder events of probability tending to one, $$\\mathbb E\\left\\lVert p_a(X_a)\\right\\rVert^2\n \\le C_\\xi e^{-2(\\lambda-\\xi)(b-a)}\n             \\mathbb E\\left\\lVert p_b(X_b)\\right\\rVert^2+C_\\xi n^{-H},\n \\qquad 0\\le a\\le b\\le T\\le A\\log n.\n \\label{eq:cutoff-propagation}$$ The estimate is uniform over arbitrary initial laws and all polynomial tests in the specified envelope. For every deterministic $u\\in\\mathbb R^n$ with $\\left\\lVert u\\right\\rVert=1$, it implies the pointwise envelope $$\\sup_x\\left\\lVert dS_t(u^tx)(x)\\right\\rVert^2\n \\le C_\\xi e^{-2(\\lambda-\\xi)t}+C_\\xi n^{-H},\n \\qquad 0\\le t\\le A\\log n.\n \\label{eq:cutoff-linear-envelope}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-cutoff-gradient"
+  },
+  {
+   "claim_id": "claim-euclidean-cube-oscillation",
+   "exact_statement": "For every real function $g$ on the cube, $$\\max g-\\min g\\le2\\sqrt n\\sup_x\\left\\lVert dg(x)\\right\\rVert.\n \\label{eq:cutoff-oscillation}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cutoff-oscillation"
+  },
+  {
+   "claim_id": "claim-upper-cutoff",
+   "exact_statement": "For every $\\epsilon>0$, $$\\sup_x\\left\\lVert S_{(1+\\epsilon)t_n}(x,\\cdot)-\\mu\\right\\rVert_{\\mathop{\\mathrm{TV}}}\n \\longrightarrow0$$ in disorder probability.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-cutoff-upper"
+  },
+  {
+   "claim_id": "claim-spin-edge-lower-cutoff",
+   "exact_statement": "If $\\lambda=\\lambda_{\\rm sp}$, then for every $0<\\epsilon<1$, $$\\sup_x\\left\\lVert S_{(1-\\epsilon)t_n}(x,\\cdot)-\\mu\\right\\rVert_{\\mathop{\\mathrm{TV}}}\n \\longrightarrow1$$ in disorder probability.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-cutoff-spin-lower"
+  },
+  {
+   "claim_id": "claim-slow-coefficient-alignment",
+   "exact_statement": "Fix a logarithmic horizon, a polynomial envelope, and a common constant $C_P$ in the defective trajectory Poincaré bound [eq:cutoff-trajectory-poincare](#eq:cutoff-trajectory-poincare), with arbitrarily prescribed inverse-power accuracy. Consider uniformly typically initialized families of ordinary trajectories satisfying this bound. For every $\\eta>0$, one can choose a fixed block length $D$ and fixed smooth recipes $\\widetilde E$ such that, on disorder events of probability tending to one, the following holds uniformly. Put $$A_r=\\mathbb E\\bigl[\\widetilde E(X_r)^tD_{v(X_r)}p_r(X_r)\\bigr].$$ For $a=b-D$, suppose $N_b\\ge n^{-Q}$, where $Q$ is any exponent fixed in advance. Suppose also that either $p_b$ is a fixed nondegenerate finite linear combination of concentrating visible exact test gradients, or there is a subsequent block with $N_{b+D}\\le R N_b$ for a fixed finite $R$. Then $$|A_a-e^{-\\lambda D}A_b|\n +\\bigl(\\mathbb E\\left\\lVert p_a-\\widetilde E A_a\\right\\rVert^2\\bigr)^{1/2}\n \\le\\eta e^{-\\lambda D}N_b.\n \\label{eq:cutoff-alignment}$$ The ratio $R$ is used only to establish exactness at $b$; it does not enter the choice of $D$ or the fluctuation estimate.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-cutoff-coefficients"
+  },
+  {
+   "claim_id": "claim-prepared-law-bounds",
+   "exact_statement": "For each fixed recipe matrix and all sufficiently large $n$, uniformly for $|z|<R_n$ and $0<h\\le1$, the law $\\nu_z=\\mu T_h^z$ satisfies $$\\begin{aligned}\n \\log\\left\\lVert \\,\\mathrm d\\nu_z/\\,\\mathrm d\\mu\\right\\rVert_\\infty\n   &\\le nh(e^{2\\varepsilon_n}-1)=O(n^{1-\\alpha}),\n   &\\varepsilon_n&=\\sup_{z,x,i}|g_i^z(x)|=O(n^{-\\alpha}),\n   \\label{eq:cutoff-preparation-density}\\\\\n \\mathop{\\mathrm{Var}}_{\\nu_z}f\n   &\\le\\left[C_\\mu e^{C_*h}\n         +4\\frac{e^{C_*h}-1}{C_*}\\right]\\nu_z\\left\\lVert df\\right\\rVert^2.\n   \\label{eq:cutoff-preparation-poincare}\n\\end{aligned}$$ Here $C_\\mu$ can be the inverse equilibrium gap, and $C_*$ is a common constant depending on the original interaction bounds, not on the fixed recipe. A finer recipe changes the sufficiently large dimension threshold, but not this common constant.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-cutoff-preparation"
+  },
+  {
+   "claim_id": "claim-slow-cone-iteration",
+   "exact_statement": "Given $\\xi_1>0$ and $\\epsilon_0>0$, the preceding choices can be made so that, for $t$ an integer multiple of $D$, the gradient $p_0=dS_t(\\sum_j u_jF_j)$ under any prepared law satisfies $$|A_0|\\ge c e^{-(\\lambda+\\xi_1)t},\\qquad\n \\bigl(\\mathbb E_{\\nu_z}\\left\\lVert p_0-\\widetilde E A_0\\right\\rVert^2\\bigr)^{1/2}\n       \\le\\epsilon_0|A_0|,\n \\label{eq:cutoff-cone-output}$$ uniformly for $|u|=1$, $|z|<R_n$, and positive times $D\\le t\\le A\\log n$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cutoff-cone"
+  },
+  {
+   "claim_id": "claim-preparation-mean-ball",
+   "exact_statement": "For sufficiently small fixed $h>0$ chosen after the fine recipes, the smooth map $$\\mathcal M_t(z)=\\bigl(\\mu T_h^z S_tF_j\\bigr)_{j=1}^m,\n \\qquad |z|<R_n,$$ has Jacobian with smallest singular value at least $$\\sigma_{\\min}(D\\mathcal M_t(z))\n       \\ge c h e^{-(\\lambda+\\xi_1)t}=:a_t.\n \\label{eq:cutoff-jacobian}$$ Its image therefore contains the open Euclidean ball of radius $a_tR_n$ centered at $(\\mu F_j)_{j=1}^m$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-cutoff-jacobian"
+  },
+  {
+   "claim_id": "claim-visible-mode-lower-cutoff",
+   "exact_statement": "If $\\lambda<\\lambda_{\\rm sp}$, the lower conclusion of [lem:cutoff-spin-lower](#lem:cutoff-spin-lower) still holds.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-cutoff-visible-lower"
+  },
+  {
+   "claim_id": "claim-continuous-cutoff",
+   "exact_statement": "For every fixed $0<\\beta<1$ and $\\epsilon\\in(0,1)$, put $t_n=\\log n/(2\\lambda)$. Then $$\\begin{aligned}\n \\sup_x\\left\\lVert S_{(1-\\epsilon)t_n}(x,\\cdot)-\\mu\\right\\rVert_{\\mathop{\\mathrm{TV}}}\n       &\\longrightarrow1,\\\\\n \\sup_x\\left\\lVert S_{(1+\\epsilon)t_n}(x,\\cdot)-\\mu\\right\\rVert_{\\mathop{\\mathrm{TV}}}\n       &\\longrightarrow0,\n \\end{aligned}\n \\label{eq:cutoff-continuous}$$ in probability over the disorder. The number $\\lambda>0$ is given entirely by the dimension-first equilibrium construction in [eq:exact-lambda](#eq:exact-lambda).",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-cutoff-continuous"
+  },
+  {
+   "claim_id": "claim-attempt-clock-cutoff",
+   "exact_statement": "Let $P=I+L/n$, so one step selects a uniform site and refreshes its spin, including attempts that leave the state unchanged. For every fixed $0\\le\\beta<1$, its worst-case total-variation cutoff is at $$\\frac{n\\log n}{2\\lambda(\\beta)},$$ in probability over the disorder.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-cutoff-clock"
+  },
+  {
+   "claim_id": "claim-independent-restricted-cutoff-ratio",
+   "exact_statement": "For every fixed $\\beta\\in[0,1/2)$, $\\varepsilon\\in(0,1/2)$, and $\\eta>0$, let $$t_{n,\\beta,J}(\\varepsilon)=\\min\\{k\\ge0:d_d(k)\\le\\varepsilon\\}.$$ Then $$\\mathbb P_J\\left\\{\n \\frac{t_{n,\\beta,J}(\\varepsilon)}\n {t_{n,\\beta,J}(1-\\varepsilon)}>1+\\eta\\right\\}\\longrightarrow0.$$ The denominator is positive for sufficiently large $n$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rcut-thm-main"
+  },
+  {
+   "claim_id": "claim-gaussian-concentration-comparison",
+   "exact_statement": "Let $Z$ be a vector of independent standard real Gaussian variables. If $F$ is $D$-Lipschitz in Euclidean distance, then $$\\mathbb E\\exp\\bigl(s(F(Z)-\\mathbb EF(Z))\\bigr)\n \\le \\exp\\left(\\frac{\\pi^2D^2s^2}{8}\\right),\n \\qquad s\\in\\mathbb R.\n \\label{rcut:eq:gaussian-mgf}$$ In particular, for $D>0$ and $r>0$, $$\\mathbb P\\bigl(|F(Z)-\\mathbb EF(Z)|\\ge r\\bigr)\n \\le 2\\exp\\left(-\\frac{2r^2}{\\pi^2D^2}\\right).$$ If $(X_a)_{a\\in I}$ and $(Y_a)_{a\\in I}$ are centered Gaussian processes on the same finite index set and $$\\mathbb E(X_a-X_b)^2\\le \\mathbb E(Y_a-Y_b)^2\n \\quad\\text{for all }a,b\\in I,$$ then $\\mathbb E\\max_a X_a\\le\\mathbb E\\max_a Y_a$. The comparison also holds for continuous processes on a compact metric index set when their suprema are integrable.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-lem-gaussian-facts"
+  },
+  {
+   "claim_id": "claim-good-disorder-controls",
+   "exact_statement": "There are deterministic numbers $\\delta_n\\downarrow0$ and events $\\mathcal E_n=\\mathcal E_n(\\beta)$ with $\\mathbb P(\\mathcal E_n)\\to1$ such that on $\\mathcal E_n$, $$\\|J\\|\\le2\\beta+\\delta_n,\n \\qquad \\max_i\\sum_jJ_{ij}^2\\le\\beta^2+\\delta_n,\n \\qquad \\max_{i,j}|J_{ij}|\\le\\delta_n.\n \\label{rcut:eq:good-disorder}$$ Consequently, on the same events, $$\\max_i\\sum_j|J_{ij}|^3\\longrightarrow0.$$ One may take $\\delta_n=n^{-1/4}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-prop-good-disorder"
+  },
+  {
+   "claim_id": "claim-uniform-two-spin-inequality",
+   "exact_statement": "There are absolute constants $t_0>0$ and $C_0<\\infty$ with the following property. For any finite-field Ising law $\\nu$, any distinct $i,j$ with $t=\\tanh A_{ij}$ satisfying $|t|\\le t_0$, and any real function $f$, $$\\begin{aligned}\n \\nu[\\mathsf D_i f\\mathsf D_j f]\n &\\ge-\\nu\\bigl[(t+2t^2m_i m_j)v_i v_jd_i f d_j f\\bigr]\\notag\\\\\n &\\hspace{1cm}-C_0|t|^3\\nu\\bigl[(\\mathsf D_i f)^2+(\\mathsf D_j f)^2\\bigr].\n \\label{rcut:eq:two-spin}\n\\end{aligned}$$ The constants are independent of all external fields and of the dimension. For example, $t_0=1/100$ and $C_0=22000$ are valid.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-lem-two-spin"
+  },
+  {
+   "claim_id": "claim-scaled-field-uniform-gap",
+   "exact_statement": "For all sufficiently large $n$, uniformly over $J\\in\\mathcal E_n$, $s\\in[0,1]$, and $\\theta\\in\\mathbb R^n$, let $$\\nu_{s,\\theta}(x)\\propto\n \\exp\\left(\\frac s2x^{\\mathsf T}Jx+\\theta\\cdot x\\right).$$ Its rate-one-per-site heat-bath generator has spectral gap at least $$\\kappa_\\beta=\\frac{1-2\\beta}{2}>0.$$ Moreover, $$\\mathop{\\mathrm{Var}}_{\\nu_{s,\\theta}}(f)\n \\le\\kappa_\\beta^{-1}\\sum_i\n       \\nu_{s,\\theta}[v_i(d_i f)^2],\n \\qquad\n \\|\\mathop{\\mathrm{Cov}}_{\\nu_{s,\\theta}}(X)\\|\\le\\kappa_\\beta^{-1}.\n \\label{rcut:eq:uniform-gap-covariance}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-prop-uniform-gap"
+  },
+  {
+   "claim_id": "claim-restricted-entropy-decay",
+   "exact_statement": "There are constants $C_1,C_2<\\infty$, depending only on the fixed $\\beta<1/2$, such that for all sufficiently large $n$ and $J\\in\\mathcal E_n$, the zero-field Gibbs measure satisfies $$\\mathop{\\mathrm{Ent}}_\\mu(f)\\le C_1\\mu\\bigl[f(-L)\\log f\\bigr],\n \\qquad f>0.\n \\label{rcut:eq:entropy-inequality}$$ For every initial point $x$ and every $t\\ge0$, if $\\rho_{t,x}=S_t(x,\\cdot)$, then $$\\mathop{\\mathrm{Ent}}_\\mu\\left(\\frac{d\\rho_{t,x}}{d\\mu}\\right)\n \\le C_2n e^{-t/C_1}.\n \\label{rcut:eq:entropy-decay}$$ In particular, the continuous-time worst-start mixing time at every fixed positive accuracy is $O_\\beta(\\log n)$, uniformly on these events.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-prop-entropy"
+  },
+  {
+   "claim_id": "claim-pointwise-gradient-algebra",
+   "exact_statement": "Let $f_t=S_tf_0$ for the heat-bath generator with a symmetric zero-diagonal interaction matrix $J$. At $\\mathbf 1$, write $p_i=d_if_t$, $r_{ij}=d_id_jf_t$, and $a_{ij}=d_im_j$. Then $$\\frac12(\\partial_t-L)U(f_t)\n =-\\|p\\|^2\n   +\\sum_{i\\ne j}p_i a_{ij}(p_j-2r_{ij})\n   -\\sum_{i\\ne j}w_jr_{ij}^2.\n\\label{rcut:eq:gradient-identity}$$ If $\\max_{i,j}|J_{ij}|\\le1/10$, then, at every configuration $x$, $$\\frac12(\\partial_t-L)U(f_t)(x)\n \\le -U(f_t)(x)+M_{J^x}(p^x)\n             +16R_3(J)U(f_t)(x).\n\\label{rcut:eq:gradient-local-bound}$$ The constants do not depend on the local fields, on $f_0$, or on $t$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-lem-gradient-algebra"
+  },
+  {
+   "claim_id": "claim-typical-state-gradient-dissipation",
+   "exact_statement": "Fix $0\\le\\beta<1/2$. There are constants $c>0$ and $C<\\infty$, and events of disorder probability tending to one, on which a set $\\mathcal B_J\\subseteq\\{-1,1\\}^n$ satisfies $$\\mu_J(\\mathcal B_J)\\le e^{-cn}$$ and, for every $f_0$, every $t\\ge0$, and every configuration $x$, $$(\\partial_t-L)U(S_tf_0)(x)\n \\le[-c+C\\mathbf 1_{\\mathcal B_J}(x)]\\,U(S_tf_0)(x).\n\\label{rcut:eq:gradient-potential}$$ The constants depend only on the fixed $\\beta$. If $0\\le\\beta\\le7/20$, the exceptional set can be empty.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-prop-typical-gradient"
+  },
+  {
+   "claim_id": "claim-planted-variational-comparison",
+   "exact_statement": "Fix $0<\\beta\\le1/2$. Suppose that, for some $\\delta>0$, $$\\sup_{\\langle b^2+r^2\\rangle=1,\\ r\\ge0}\n       \\mathcal V_\\beta(b,r)\\le1-\\delta.$$ There are $\\kappa>0$ and $n_0<\\infty$ such that for $n\\ge n_0$, $$\\widehat\\mathbb P_n\\left(\n    \\sup_{\\|p\\|_2=1}M_J(p)>1-\\frac\\delta2\\right)\n       \\le e^{-\\kappa n}.\n  \\label{rcut:eq:comp-exponential-conclusion}$$ The constants may depend on the fixed $\\beta$ and $\\delta$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-rcut-prop-planted-comparison"
+  },
+  {
+   "claim_id": "claim-weighted-coupling-square-replacement",
+   "exact_statement": "On the enlarged planted space, put $w_i=w(H_i)$ and $E_{ij}=J_{ij}^2-\\beta^2/n$, including $E_{ii}=-\\beta^2/n$. Here $\\circ$ denotes entrywise product, and $F$ is defined in Equation <a href=\"#rcut:eq:comp-compact-kernels\" data-reference-type=\"eqref\" data-reference=\"rcut:eq:comp-compact-kernels\">[rcut:eq:comp-compact-kernels]</a>. For any fixed continuous function $G$ on $[0,2]^2$ and any $u>0$, there are $c>0$ and $n_0$ such that, for $n\\ge n_0$, each of the following failures has probability at most $e^{-cn}$: $$\\begin{aligned}\n  &\\left\\|J\\circ J-\\beta^2ee^{\\mathsf T}\\right\\|>u,\n    \\label{rcut:eq:comp-square-operator}\\\\\n  &\\sup_{\\|p\\|_2=1}\n     \\left|\\sum_{i,j}E_{ij}G(w_i,w_j)p_ip_j\\right|>u,\n    \\label{rcut:eq:comp-weighted-operator}\\\\\n  &\\max_i\\left|\\sum_{j\\ne i}\n       E_{ij}F(w_i,w_j)\\right|>u.\n    \\label{rcut:eq:comp-weighted-diagonal}\n \n\\end{aligned}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-lem-comp-square-replacement"
+  },
+  {
+   "claim_id": "claim-binwise-gaussian-comparison",
+   "exact_statement": "With this conditioning and these fixed parameters, $$\\begin{aligned}\n &\\mathbb E\\left[\\sup_u\n       p^{\\mathsf T}QWQ\\overline A p\\,\\middle|\\,H\\right]\n \\notag\\\\[-2pt]\n &\\qquad\\le\\beta\\sum_a\\widehat\\pi_a r_a\n    \\sqrt{\\sum_d\\widehat\\pi_d(v_a+v_d)^2r_d^2\n           +\\mathop{\\mathrm{Var}}_{d\\sim\\widehat\\pi}((v_a+v_d)b_d)}.\n \\label{rcut:eq:comp-bin-gaussian-bound}\n \n\\end{aligned}$$ The full supremum on the left has Gaussian Lipschitz constant at most $\\sqrt2\\beta/\\sqrt n$, uniformly in the normalized parameters.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-lem-comp-bin-gaussian"
+  },
+  {
+   "claim_id": "claim-annealed-to-gibbs-transfer",
+   "exact_statement": "Fix $0<\\beta<1$. Let $\\mathcal A_n$ be a measurable event for symmetric zero-diagonal interaction matrices, and suppose that $\\widehat\\mathbb P_n(\\mathcal A_n)\\le e^{-\\kappa n}$ for all large $n$, with a fixed $\\kappa>0$. For $x\\in\\{-1,1\\}^n$, write $J^x=\\mathop{\\mathrm{diag}}(x)J\\mathop{\\mathrm{diag}}(x)$ and define $$\\mathcal B_J=\\{x:J^x\\in\\mathcal A_n\\}.$$ There are events whose original disorder probabilities tend to one on which $$\\mu_J(\\mathcal B_J)\\le e^{-\\kappa n/2}.\n  \\label{rcut:eq:comp-gibbs-small}$$ In fact the complementary probabilities can be bounded by $e^{-c n}$ for a fixed $c>0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-lem-annealed-transfer"
+  },
+  {
+   "claim_id": "claim-uniform-scalar-variational-gap",
+   "exact_statement": "For every $\\beta\\in[0.35,0.5]$, every real measurable $b\\in L^2$, and every measurable $r\\geq0$ in $L^2$ satisfying $\\langle b^2+r^2\\rangle=1$, the expression in Equation <a href=\"#rcut:eq:variational\" data-reference-type=\"eqref\" data-reference=\"rcut:eq:variational\">[rcut:eq:variational]</a> satisfies $$\\mathcal V_\\beta(b,r)\\leq 0.9969.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-prop-scalar-gap"
+  },
+  {
+   "claim_id": "claim-positive-kernel-remainder",
+   "exact_statement": "The quantity $R$ is nonnegative. For every real $b\\in L^2$, $$\\langle b(h)K_0(h,h_*)b(h_*)\\rangle_{h,h_*}\n \\leq \\frac32\\langle bg\\rangle^2+R\\langle b^2\\rangle.\n \\label{rcut:eq:scalar-kernel-bound}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-lem-scalar-kernel"
+  },
+  {
+   "claim_id": "claim-certified-scalar-moments",
+   "exact_statement": "<span id=\"rcut:lem:scalar-data\" label=\"rcut:lem:scalar-data\"></span> At $\\beta=1/2$, define $$d(y)=\\frac14\\left\\langle\\frac{v^2}{2-y-m}\\right\\rangle,\n \\qquad -1\\leq y\\leq1,$$ where at $y=1$ the integrand is interpreted as $v(1+m)$. Then $$\\begin{array}{c|ccccc}\n \\text{quantity}& k(0)&k(1)&d(0)&d'(0)&d(1)\\\\ \\hline\n \\text{lower bound}&.4276&.0898&.0925&.0522&.2288\\\\\n \\text{upper bound}&.4278&.0900&.0927&.0524&.2290\n \\end{array}\n \\label{rcut:eq:scalar-five-enclosures}$$ All bounds in this display are strict. For every $\\beta\\in[7/20,1/2]$, define $$F=(v+a)h+2\\beta^2mv+\n       \\left(0.50-\\frac{\\beta^2a}{l}\\right)v\n       +0.12m+3\\beta^2Gg.\n \\label{rcut:eq:scalar-F}$$ At the five exact values of $\\beta$ displayed in Table <a href=\"#rcut:tab:scalar-moments\" data-reference-type=\"ref\" data-reference=\"rcut:tab:scalar-moments\">86</a>, each of the eight entries after the first column differs from its corresponding expectation or standard deviation under $N(\\beta^2,\\beta^2)$ by less than $0.001$.*\n\n<div id=\"rcut:tab:scalar-moments-2\">\n\n| *$\\beta$* |  *$a$* |  *$G$* | *$s_v$* | *$s_g$* | *$\\langle mv\\rangle$* |  *$R$* | *$s_F$* | *$s_{mv}$* |\n|:---------:|-------:|-------:|--------:|--------:|----------------------:|-------:|--------:|-----------:|\n|  *.350*   | *.890* | *.554* |  *.128* |  *.084* |                *.081* | *.015* |  *.659* |     *.238* |\n|  *.400*   | *.861* | *.546* |  *.156* |  *.093* |                *.096* | *.018* |  *.730* |     *.248* |\n|  *.445*   | *.832* | *.537* |  *.179* |  *.101* |                *.107* | *.022* |  *.786* |     *.253* |\n|  *.475*   | *.813* | *.530* |  *.195* |  *.107* |                *.114* | *.025* |  *.821* |     *.255* |\n|  *.500*   | *.796* | *.524* |  *.207* |  *.113* |                *.120* | *.027* |  *.847* |     *.255* |\n\n*Certified centers for the moment quantities, with radius $0.001$; the values of $\\beta$ are exact.*\n\n</div>",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-tab-scalar-moments"
+  },
+  {
+   "claim_id": "claim-scalar-diagonal-envelope",
+   "exact_statement": "For $0.35\\leq\\beta\\leq0.5$ and every real field $h$, $$\\Lambda{}(h)+D(h)+k(m(h))\\leq0.9789.\n \\label{rcut:eq:scalar-envelope}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-lem-scalar-envelope"
+  },
+  {
+   "claim_id": "claim-scalar-coherent-form",
+   "exact_statement": "For every $0.35\\leq\\beta\\leq0.5$ and every real $b\\in L^2$, $$\\mathcal C_\\beta(b)\\leq\\langle(\\Lambda{}+.018)b^2\\rangle.\n \\label{rcut:eq:scalar-coherent-bound}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-lem-scalar-coherent"
+  },
+  {
+   "claim_id": "claim-gradient-feynman-kac",
+   "exact_statement": "Put $V=-\\kappa+A\\mathbf 1_{\\mathcal B}$. For every real $f$, every $0\\le s\\le d$, and every initial configuration $x$, $$U(S_d f)(x)\n \\le \\mathbb E_x\\!\\left[\n    \\exp\\!\\left(\\int_0^s V(X_u)\\,du\\right)\n    U(S_{d-s}f)(X_s)\n \\right].\n \\label{rcut:eq:dyn-feynman-kac}$$ Consequently, $$\\|U(S_r f)\\|_\\infty\n \\le e^{Ar}\\|U(f)\\|_\\infty\n \\qquad(r\\ge0).\n \\label{rcut:eq:dyn-rough-envelope}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-lem-feynman-kac"
+  },
+  {
+   "claim_id": "claim-bad-state-avoidance",
+   "exact_statement": "There are constants $d_0,c_{\\mathrm a}>0$, independent of $n$ and the realization in $\\mathcal G_n$, such that, for all sufficiently large $n$, $$\\sup_{x\\in\\Omega_n}\\mathbb P_x(X_u\\in\\mathcal B)\n \\le q_n:=e^{-c_{\\mathrm a}\\sqrt n}\n \\qquad(u\\ge d_0).\n \\label{rcut:eq:dyn-bad-avoidance}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-prop-bad-avoidance"
+  },
+  {
+   "claim_id": "claim-occupation-gradient-propagation",
+   "exact_statement": "Fix $D_*>0$ and set $$T_n=D_*\\log n,\\qquad\n C_{\\mathrm{dyn}}=e^{A(d_0+1)},\\qquad\n r_n=T_ne^{AT_n}q_n\n     =D_*\\log n\\,n^{AD_*}e^{-c_{\\mathrm a}\\sqrt n}.\n \\label{rcut:eq:dyn-occupation-error}$$ For every $0\\le s\\le d\\le T_n$, every real $f$, and every $x$, $$\\begin{split}\n U(S_d f)(x)\n &\\le C_{\\mathrm{dyn}}e^{-\\kappa s}\n      S_s\\!\\left[U(S_{d-s}f)\\right](x)\\\\\n &\\quad+r_n\\|U(S_{d-s}f)\\|_\\infty.\n \\end{split}\n \\label{rcut:eq:gradient-propagation}$$ For every fixed $p>0$, $r_n=o(n^{-p})$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-lem-dyn-occupation-propagation"
+  },
+  {
+   "claim_id": "claim-uniform-linear-concentration",
+   "exact_statement": "Fix $D_*>0$ and $L\\ge0$. For $a\\in\\mathbb R^n$ write $\\ell_a(x)=a^{\\mathsf T}x$, and define $$B_L=L^2(C_{\\mathrm{dyn}}+1),\\qquad\n I_L=L^2\\left(\\frac{C_{\\mathrm{dyn}}}{\\kappa}+1\\right).$$ For all sufficiently large $n$, every $\\|a\\|\\le L$, every $x$, every $0\\le d\\le D_*\\log n$, and every $\\theta\\in\\mathbb R$, $$\\mathbb E_x\\exp\\!\\left(\\theta\\bigl(\\ell_a(X_d)-S_d\\ell_a(x)\\bigr)\\right)\n \\le M_{\\theta,L}\n :=\\exp\\!\\left(2\\theta^2e^{2|\\theta|\\sqrt{B_L}}I_L\\right),\n \\label{rcut:eq:dyn-linear-mgf}$$ and $$\\mathop{\\mathrm{Var}}_x(\\ell_a(X_d))\\le4I_L,\\qquad\n \\mathop{\\mathrm{Var}}_\\mu(\\ell_a)\\le\\gamma^{-1}L^2,\\qquad\n \\mu(\\ell_a)=0.\n \\label{rcut:eq:dyn-linear-variance}$$ These bounds hold simultaneously over all the indicated vectors and starting points, and uniformly over $\\mathcal G_n$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-prop-linear-concentration"
+  },
+  {
+   "claim_id": "claim-logarithmic-median-scale",
+   "exact_statement": "There is a constant $C<\\infty$ such that, uniformly over $\\mathcal G_n$ and all sufficiently large $n$, $$d_c\\!\\left(\\frac14\\log n\\right)\n \\ge1-Cn^{-1/2}.\n \\label{rcut:eq:dyn-strong-lower}$$ The continuous median mixing time $$t_n^{\\rm med}=\\inf\\{t\\ge0:d_c(t)\\le1/2\\}$$ satisfies $d_c(t_n^{\\rm med})=1/2$ and, for some constants $0<c<C<\\infty$, $$c\\log n\\le t_n^{\\rm med}\\le C\\log n.\n \\label{rcut:eq:dyn-median-scale}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-prop-mixing-scale"
+  },
+  {
+   "claim_id": "claim-common-mass-mean-comparison",
+   "exact_statement": "Let $\\nu$ and $\\pi$ be probability measures on a finite set, and suppose $\\|\\nu-\\pi\\|_{\\mathrm{TV}}\\le1-\\varepsilon$, where $\\varepsilon>0$. For every real function $H$ on that set, $$|\\nu H-\\pi H|\n \\le \\frac{\\sqrt{\\mathop{\\mathrm{Var}}_\\nu H}+\\sqrt{\\mathop{\\mathrm{Var}}_\\pi H}}\n              {\\sqrt{\\varepsilon}}.\n \\label{rcut:eq:common-mass-means}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-lem-common-mass"
+  },
+  {
+   "claim_id": "claim-post-overlap-field-tails",
+   "exact_statement": "Fix $\\varepsilon\\in(0,1)$, $\\delta>0$, and $D_*>0$. Suppose $d_c(t)\\le1-\\varepsilon$. There is a deterministic sequence $\\tau_n=\\tau_n(\\varepsilon,\\delta,D_*)$ such that $$\\sup_x\\mathbb P_x\\left[\\max_{1\\le i\\le n}|h_i(X_z)|>\\delta\\log n\\right]\n \\le\\tau_n,\n \\qquad t\\le z\\le D_*\\log n,\n \\label{rcut:eq:cutoff-field-tails}$$ and $n^p\\tau_n\\to0$ for every fixed $p>0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-lem-cutoff-field-tails"
+  },
+  {
+   "claim_id": "claim-positive-logarithmic-lag",
+   "exact_statement": "Fix $\\varepsilon\\in(0,1)$, $\\alpha>0$, and $D_*>0$, and put $s=\\alpha\\log n$. Uniformly over all times $t\\ge0$ satisfying $$d_c(t)\\le1-\\varepsilon,\n \\qquad t+s\\le D_*\\log n,$$ one has $d_c(t+s)\\to0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rcut-prop-positive-lag"
+  },
+  {
+   "claim_id": "claim-median-centered-continuous-cutoff",
+   "exact_statement": "Let $t_n^{\\rm med}=\\inf\\{t\\ge0:d_c(t)\\le1/2\\}$ be the continuous-time median mixing time. For every fixed $b\\in(0,1)$, $$d_c((1-b)t_n^{\\rm med})\\longrightarrow1,\n \\qquad d_c((1+b)t_n^{\\rm med})\\longrightarrow0,\n \\label{rcut:eq:continuous-cutoff-sides}$$ uniformly over $\\mathcal G_n$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rcut-thm-continuous-cutoff"
+  },
+  {
+   "claim_id": "claim-median-centered-discrete-cutoff",
+   "exact_statement": "For every fixed $b\\in(0,1)$, uniformly over $\\mathcal G_n$, $$d_d\\bigl(\\lfloor(1-b)nt_n^{\\rm med}\\rfloor\\bigr)\\longrightarrow1,\n \\qquad\n d_d\\bigl(\\lceil(1+b)nt_n^{\\rm med}\\rceil\\bigr)\\longrightarrow0.\n \\label{rcut:eq:discrete-cutoff-sides}$$ Here each discrete step is one uniformly selected heat-bath update attempt, including attempts that leave the configuration unchanged.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rcut-prop-discrete-cutoff"
+  },
+  {
+   "claim_id": "claim-whole-line-trapezoidal-error",
+   "exact_statement": "Let $t>0$. Suppose $f$ is continuous on $\\{z:|\\Im z|\\leq t\\}$, holomorphic in its interior, and satisfies a bound $$|f(x+iy)|\\leq C(1+|x|)^p e^{-c x^2},\\qquad |y|\\leq t,$$ for some $C,c>0$ and $p\\geq0$. If both horizontal-edge integrals of $|f|$ are at most $M$, then, for any mesh $\\Delta>0$, $$\\left|\\Delta\\sum_{k\\in\\mathbb Z}f(k\\Delta)\n                  -\\int_{\\mathbb R}f(x)\\,dx\\right|\n \\leq\\frac{2M}{e^{2\\pi t/\\Delta}-1}.\n \\label{rcut:eq:scalar-trapezoid-error}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rcut-lem-scalar-trapezoid"
+  }
+ ],
+ "paper": "papers/EN-115-000-0000-2-2026-PR-T4-UK-EX-M2-B-ML-M-0447_PM-227.4_Cutoff_throughout_the_high_temperature_SherringtonKirkpatrick_phase.md",
+ "purpose": "Cutoff throughout the high-temperature Sherrington–Kirkpatrick phase",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "140697cef97f850bf45bf513d4f46341e571e90a478ea17f28081586561d2cf2",
+   "pm.domains.v2": "16706a71d7ada18f6358e85a8e98ac498c8c42539e50aa3037ee2d523c1d1400",
+   "pm.edges.v2": "bbac58bc911637a650d6483487a72775c44e920cc6d0cffcfd1ffcc5dc34885e",
+   "pm.extraction.v2": "39482173b77011cfab9cf3baa57d48c8a1e4b385e79e0904472bfbe285509008",
+   "pm.formal.v2": "306eb697985f3f1e44668040f601fd89d97a9b4e0a63b8b3c1fbd1d3cab8724b",
+   "pm.limits.v2": "0ba94289121ea6ea22d1689b7ba536d8aa11678b3001a2ea761a58319f412046",
+   "pm.node.v2": "16c5196beb3fd60b65c335dd03260b2d769b3969a2a6e87aae5d2f8140c4b9a2",
+   "pm.objects.v2": "d5b5e562adc6cd6039bfbc00ad92581ea60d43a3ada83e0275d1ed5ca39d67e2",
+   "pm.provenance.v2": "0f0aa2f7113d77eae782a8a833d52dbea4efd197e607885b478c781fbde07abe",
+   "pm.quantities.v2": "3946480d5cb098045285562c8bd3388c8f42d1930ed9404ca75ef9f4a59b5e9a",
+   "pm.reading.v2": "f1006629796764fea98538573657d0d5fc97f3b25813ad69f0624bc88a621688",
+   "pm.roadmap.v2": "c83669ef4718bcc921a5d43904502f6bf1bb8f01d782480d62a8f33e3536b314",
+   "pm.search.v1": "8e6517b2c7f8df67e6c0940a6aabf0affd273a578288b0054783192097001971",
+   "pm.triptych.v2": "7d670199e95f846a1addb6e59a37c7c9bea112c27d68802f35e9ee79126cea70"
+  },
+  "canonical_sha256": "8d68aac14744df6d6f2e96c32ff61acab60a3100d8945c8d70ca7b19d4c1853f",
+  "paper_sha256": "78547a639178a494087fe815d3732b0bd63c30d0a9a350918efc4e10c724445d",
+  "repaired_body_sha256": "a45fe603e972671713233921cf11a61974cc6d1b232c93e2365c1f151704a400"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "9c5b9988a45047ee689637a0e957004d0a2df1b495391d9849741e7e5e815c94",
+   "receipt_sha256": "5c39b894c3b77f831467fec1fbb9cf1f3dc13a0052e6112e0b64bfc8e836fcdc",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "The listed rational observable tables on cubes of dimensions 1, 2, and 3, including constant functions, affine equality cases, a function supported on the last coordinate, a mixed-spin character, and fractional values.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-euclidean-oscillation",
+     "oracle_basis": "Exact comparison of squared oscillation with 4*n times the maximum squared derivative norm. The derivative norms come from independent Walsh polynomial differentiation. These tests do not decide the universally quantified real-observable statement."
+    },
+    {
+     "checked_domain": "All coordinates and all vertices of every supplied table in the declared test suite.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-half-difference-convention",
+     "oracle_basis": "Agreement between direct pinned-spin differences and derivatives of the independently reconstructed multilinear polynomial checks the normalization and coordinate indexing on the tested tables."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-diameter-factor",
+     "observed_exit": 1,
+     "receipt_sha256": "95d6f8ad44e38da49148746d3ee45eddf459306dd5459650d7402a187777f2ba"
+    },
+    {
+     "id": "mutant-drop-last-coordinate",
+     "observed_exit": 1,
+     "receipt_sha256": "9dc977cc5022844afeb0b7cb27d68e0293a96c23c9e1c75b2a20b29b8463df4a"
+    },
+    {
+     "id": "mutant-range-sign",
+     "observed_exit": 1,
+     "receipt_sha256": "04bec25ed111069c6e530fd29f8f7f3c8bc94a7f319d35dc776d7207dfdf56bb"
+    }
+   ],
+   "receipt_sha256": "b32221c0e265f47446c7c4755d0805eac167aa1754c52eca6e0a283ee5a7286a",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Cutoff throughout the high-temperature Sherrington–Kirkpatrick phase"
+}

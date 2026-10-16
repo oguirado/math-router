@@ -1,0 +1,910 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 725416,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 208280
+ },
+ "coordinate": "EN-102-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-H-0377",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "The conclusion is an equality of cardinalities; a canonical or equivariant correspondence is not required for this numerical statement.",
+     "quote_sha256": "97bd7d9c40f79c08110bbdf41ca84a14516a0f58cbc29cf7723f73b7711592d2"
+    }
+   ],
+   "query": "canonical or equivariant correspondence between Brauer characters and weights",
+   "reason": "Only an equality of cardinalities is proved."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "every finite group $G$",
+     "quote_sha256": "fcaece10dec0e31cf7ad385f35c5fc40dad4a5c07b488bd3a0f4f8050c487d5f"
+    }
+   ],
+   "query": "infinite or non-finite groups",
+   "reason": "The theorem is stated for finite groups only."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-tuple-divisibility",
+     "quote": "there is an integer $s_0=s_0(p,J,h)$",
+     "quote_sha256": "87d70928b6e6a631e0971d900cc56eea405500034ff7d15d7146e4f7ae688055"
+    }
+   ],
+   "query": "effective explicit threshold exponent for tuple divisibility in general",
+   "reason": "The statement only asserts existence of the threshold depending on the prime, group and exponent."
+  }
+ ],
+ "family": "PM-202",
+ "id": "PM-202.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-weight-equality",
+    "statement": "every finite group $G$"
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-weight-equality",
+    "statement": "every $p$-block $B$ of $G$"
+   },
+   {
+    "anchor": "stmt-cor-block-consequences",
+    "claim_id": "claim-block-consequences",
+    "statement": "Let $p$ be a prime, $G$ a finite group, $B$ a $p$-block with defect group $D$, and $b$ its Brauer correspondent in $N_G(D)$."
+   },
+   {
+    "anchor": "stmt-thm-tuple-divisibility",
+    "claim_id": "claim-tuple-divisibility",
+    "statement": "Let $J$ be a finite group with $O_p(J)=1$."
+   },
+   {
+    "anchor": "stmt-lem-normalizer-projection",
+    "claim_id": "claim-normalizer-projection",
+    "statement": "Suppose that $$Q\\leq H\\leq N_X(Q),\\qquad C_X(Q)\\leq H.$$"
+   },
+   {
+    "anchor": "stmt-lem-chain-transform",
+    "claim_id": "claim-chain-inversion",
+    "statement": "The identity $l=(1+T)z$ for all pairs $(X,E)$"
+   },
+   {
+    "anchor": "stmt-lem-cocenter-ranks",
+    "claim_id": "claim-cocenter-ranks",
+    "statement": "For a finite-dimensional $k$-algebra $A$"
+   },
+   {
+    "anchor": "stmt-lem-subsections",
+    "claim_id": "claim-subsections",
+    "statement": "For every central idempotent $E\\in kX$"
+   },
+   {
+    "anchor": "stmt-lem-nonnormal-cancellation",
+    "claim_id": "claim-nonnormal-cancellation",
+    "statement": "In an alternating sum over chain orbits"
+   },
+   {
+    "anchor": "sec:group",
+    "claim_id": "claim-alternating-subsections",
+    "statement": "Fix a prime $p$."
+   },
+   {
+    "anchor": "sec:group",
+    "claim_id": "claim-defect-zero-detection",
+    "statement": "Fix a prime $p$."
+   },
+   {
+    "anchor": "stmt-lem-detecting-element",
+    "claim_id": "claim-detecting-element",
+    "statement": "Let $v=E(1-c_X)$."
+   },
+   {
+    "anchor": "stmt-lem-trace-limit",
+    "claim_id": "claim-trace-limit",
+    "statement": "In the valuation topology of $K$"
+   },
+   {
+    "anchor": "stmt-lem-tuple-trace",
+    "claim_id": "claim-tuple-trace",
+    "statement": "For $H\\leq X$ and $w=s_H(\\widehat v)$"
+   },
+   {
+    "anchor": "stmt-lem-pcore-cancellation",
+    "claim_id": "claim-pcore-cancellation",
+    "statement": "If $O_p(J)\\ne1$"
+   },
+   {
+    "anchor": "stmt-prop-group-reduction",
+    "claim_id": "claim-group-reduction",
+    "statement": "holds for every finite group with trivial $p$-core"
+   },
+   {
+    "anchor": "sec:twist",
+    "claim_id": "claim-ordinary-elliptic",
+    "statement": "Fix a prime $p$ and put $\\kappa=\\overline{\\mathbb F}_p$."
+   },
+   {
+    "anchor": "stmt-lem-cycle-sum-rationality",
+    "claim_id": "claim-cycle-sum-rationality",
+    "statement": "Let $A/\\kappa$ be an elliptic curve and $U/\\kappa$ a field extension."
+   },
+   {
+    "anchor": "stmt-lem-constant-product-maps",
+    "claim_id": "claim-constant-product-maps",
+    "statement": "Let $A/\\kappa$ be an elliptic curve.*\n\n1."
+   },
+   {
+    "anchor": "stmt-prop-twist-index",
+    "claim_id": "claim-twist-index",
+    "statement": "Fix $s\\geq1$, put $n=p^s$"
+   },
+   {
+    "anchor": "stmt-cor-index-base-change",
+    "claim_id": "claim-index-base-change",
+    "statement": "Let $h\\geq1$ and $s\\geq h$"
+   },
+   {
+    "anchor": "stmt-cor-index-base-change",
+    "claim_id": "claim-index-base-change",
+    "statement": "a finite extension with $[F:F_0]_p\\leq p^h$"
+   },
+   {
+    "anchor": "stmt-lem-label-rank",
+    "claim_id": "claim-label-rank",
+    "statement": "Let $F/F_0$ be a finite extension with $[F:F_0]_p\\leq p^h$, and choose a compositum $S=FF'$."
+   },
+   {
+    "anchor": "stmt-thm-inseparable-genus",
+    "claim_id": "claim-inseparable-genus",
+    "statement": "Fix $h\\ge1$ and take $s\\ge h$"
+   },
+   {
+    "anchor": "stmt-thm-inseparable-genus",
+    "claim_id": "claim-inseparable-genus",
+    "statement": "Let $F/F_0$ be finite with $[F:F_0]_p\\le p^h$"
+   },
+   {
+    "anchor": "stmt-lem-curve-degrees",
+    "claim_id": "claim-curve-degrees",
+    "statement": "For an invertible sheaf $\\mathcal L$ on $C$"
+   },
+   {
+    "anchor": "pm-h-21",
+    "claim_id": "claim-curve-degrees",
+    "statement": "let $\\kappa$ be any perfect field of characteristic $p$, let $S/\\kappa$ be finitely generated, and put $\\rho=\\operatorname{trdeg}_\\kappa S$."
+   },
+   {
+    "anchor": "pm-h-21",
+    "claim_id": "claim-absolute-genus",
+    "statement": "let $\\kappa$ be any perfect field of characteristic $p$, let $S/\\kappa$ be finitely generated, and put $\\rho=\\operatorname{trdeg}_\\kappa S$."
+   },
+   {
+    "anchor": "stmt-lem-separable-different",
+    "claim_id": "claim-separable-different",
+    "statement": "Let $f:C\\to C'$ be a finite dominant, generically separable morphism of regular integral projective curves over $S$, of degree $\\delta$."
+   },
+   {
+    "anchor": "stmt-lem-height-one",
+    "claim_id": "claim-height-one",
+    "statement": "Let $\\pi:C\\to C'$ be a finite dominant morphism of regular integral projective curves over $S$ such that $\\kappa(C)^p\\subseteq\\kappa(C')$."
+   },
+   {
+    "anchor": "sec:valuations",
+    "claim_id": "claim-mixed-lift",
+    "statement": "Fix the group $J$, the integer $h\\geq 1$, and $n=p^s$"
+   },
+   {
+    "anchor": "sec:valuations",
+    "claim_id": "claim-spherical-base",
+    "statement": "Fix the group $J$, the integer $h\\geq 1$, and $n=p^s$"
+   },
+   {
+    "anchor": "stmt-lem-orthogonal-bases",
+    "claim_id": "claim-orthogonal-bases",
+    "statement": "Let $K_*$ be a spherically complete field with value group $\\mathbb Q$, valuation ring $R_*$, maximal ideal $\\mathfrak m_*$, and residue field $k_*$."
+   },
+   {
+    "anchor": "stmt-lem-simultaneous-residues",
+    "claim_id": "claim-simultaneous-residues",
+    "statement": "Let $T$ be a nontrivially valued field with value group $\\mathbb Q$ and infinite residue field $k_T$."
+   },
+   {
+    "anchor": "stmt-lem-marked-cover-classification",
+    "claim_id": "claim-marked-cover-classification",
+    "statement": "After choosing oriented handle and puncture generators on the complex punctured curve,"
+   },
+   {
+    "anchor": "stmt-lem-marked-cover-classification",
+    "claim_id": "claim-marked-cover-classification",
+    "statement": "For a prescribed multiset $\\mathcal C$ of $n$ $J$-conjugacy classes of $p$-singular elements,"
+   },
+   {
+    "anchor": "stmt-prop-small-orbit-descent",
+    "claim_id": "claim-small-orbit-descent",
+    "statement": "Assume $O_p(J)=1$ and fix a multiset $\\mathcal C$ as in [lem:marked-cover-classification](#lem:marked-cover-classification)."
+   },
+   {
+    "anchor": "stmt-prop-small-orbit-descent",
+    "claim_id": "claim-small-orbit-descent",
+    "statement": "If a $P_\\Gamma$-orbit has size less than $p^h$"
+   },
+   {
+    "anchor": "stmt-lem-residue-permutations",
+    "claim_id": "claim-residue-permutations",
+    "statement": "Let $L/K_s$ be finite, with residue $F$, and set $L'=LK_b'$."
+   },
+   {
+    "anchor": "stmt-prop-no-small-cover",
+    "claim_id": "claim-no-small-cover",
+    "statement": "Suppose $O_p(J)=1$ and <a href=\"#eq:specialization-threshold\" data-reference-type=\"eqref\" data-reference=\"eq:specialization-threshold\">[eq:specialization-threshold]</a> holds."
+   },
+   {
+    "anchor": "sec:specialization",
+    "claim_id": "claim-gauss-section-rule",
+    "statement": "In this section $m=|J|$, $h\\geq1$, and $n=p^s$."
+   },
+   {
+    "anchor": "sec:specialization",
+    "claim_id": "claim-section-specialization",
+    "statement": "In this section $m=|J|$, $h\\geq1$, and $n=p^s$."
+   },
+   {
+    "anchor": "sec:specialization",
+    "claim_id": "claim-inseparable-residue-quotient",
+    "statement": "In this section $m=|J|$, $h\\geq1$, and $n=p^s$."
+   },
+   {
+    "anchor": "sec:specialization",
+    "claim_id": "claim-specialization-model",
+    "statement": "In this section $m=|J|$, $h\\geq1$, and $n=p^s$."
+   },
+   {
+    "anchor": "stmt-lem-valuation-model-connectedness",
+    "claim_id": "claim-valuation-model-connectedness",
+    "statement": "Let $R$ be a valuation ring of a characteristic-zero field $L$."
+   },
+   {
+    "anchor": "stmt-cor-character-data",
+    "claim_id": "claim-character-data",
+    "statement": "Let $B$ be a $p$-block of a finite group with defect group $D$ of order $p^d$, and write $k(B)=|\\mathop{\\mathrm{Irr}}(B)|$."
+   },
+   {
+    "anchor": "stmt-cor-character-data",
+    "claim_id": "claim-character-data",
+    "statement": "If $k(B)-l(B)=1$"
+   },
+   {
+    "anchor": "stmt-cor-functorial-awc",
+    "claim_id": "claim-functorial-awc",
+    "statement": "Let $b$ be a block idempotent of $kG$, where $G$ is finite."
+   },
+   {
+    "anchor": "stmt-foundation-groups",
+    "claim_id": "claim-foundation-groups",
+    "statement": "For a finite group $X$"
+   },
+   {
+    "anchor": "stmt-foundation-algebra",
+    "claim_id": "claim-foundation-algebra",
+    "statement": "Over an algebraically closed field"
+   },
+   {
+    "anchor": "stmt-foundation-commalg",
+    "claim_id": "claim-foundation-commalg",
+    "statement": "A finite-type algebra over a Noetherian ring"
+   },
+   {
+    "anchor": "stmt-foundation-fields",
+    "claim_id": "claim-foundation-fields",
+    "statement": "If a finite group $D$ acts faithfully by automorphisms on a field $M$"
+   },
+   {
+    "anchor": "stmt-foundation-valuation",
+    "claim_id": "claim-foundation-valuation",
+    "statement": "The fields to which we apply the latter assertion initially have characteristic zero."
+   },
+   {
+    "anchor": "stmt-foundation-descent",
+    "claim_id": "claim-foundation-descent",
+    "statement": "A projective scheme with a semilinear descent datum under a finite Galois field extension"
+   },
+   {
+    "anchor": "stmt-foundation-normalization",
+    "claim_id": "claim-foundation-normalization",
+    "statement": "an integral variety over a field"
+   },
+   {
+    "anchor": "stmt-foundation-regularity",
+    "claim_id": "claim-foundation-regularity",
+    "statement": "A regular local ring essentially of finite type over a perfect field $\\kappa$"
+   },
+   {
+    "anchor": "stmt-foundation-cohomology",
+    "claim_id": "claim-foundation-cohomology",
+    "statement": "Over a Noetherian base"
+   },
+   {
+    "anchor": "stmt-foundation-duality",
+    "claim_id": "claim-foundation-duality",
+    "statement": "Let $S$ be a field."
+   },
+   {
+    "anchor": "stmt-foundation-elliptic",
+    "claim_id": "claim-foundation-elliptic",
+    "statement": "A generalized Weierstrass equation over a discrete valuation ring with unit discriminant"
+   },
+   {
+    "anchor": "stmt-foundation-complex",
+    "claim_id": "claim-foundation-complex",
+    "statement": "For a finite map of smooth proper curves over an algebraically closed field of characteristic zero"
+   },
+   {
+    "anchor": "stmt-foundation-connectedness",
+    "claim_id": "claim-foundation-connectedness",
+    "statement": "A proper morphism over a locally Noetherian base"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "uniform tuple divisibility",
+    "evidence": [
+     {
+      "anchor": "pm-h-5",
+      "quote": "Every Sylow orbit thus has size at least $p^h$.",
+      "quote_sha256": "6e1d8874978839f0eb1d5feffc76145326ea9f72c3beb9fa497a3060ac5f6c00"
+     }
+    ],
+    "requires_concepts": [
+     "marked genus-one curve with large index",
+     "sharp inseparable genus estimate",
+     "valued lift and marked-cover descent",
+     "connectedness of the special fiber"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "blockwise weight equality",
+    "evidence": [
+     {
+      "anchor": "stmt-prop-group-reduction",
+      "quote": "If [thm:tuple-divisibility](#thm:tuple-divisibility) holds for every finite group with trivial $p$-core, then for every finite group $X$ and central idempotent $E\\in kX$ one has $l(X,E)=((1+T)z)(X,E)$.",
+      "quote_sha256": "e7322660a3b032cdbcc63ef215fd38b807ca78a5c53adb1474057b14468be9ab"
+     }
+    ],
+    "requires_concepts": [
+     "chain inversion",
+     "central trace limits",
+     "uniform tuple divisibility"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-weight-equality",
+   "exact_statement": "For every prime $p$, every finite group $G$, and every $p$-block $B$ of $G$, $$l(B)=|W_p(B)|.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-block-consequences",
+   "exact_statement": "Let $p$ be a prime, $G$ a finite group, $B$ a $p$-block with defect group $D$, and $b$ its Brauer correspondent in $N_G(D)$. Then $$l(B)\\geq l(b),\\qquad\n D\\text{ abelian}\\Longrightarrow l(B)=l(b).$$ For $P\\in\\operatorname{Syl}_p(G)$, one also has $$|\\mathop{\\mathrm{IBr}}_p(G)|\\geq|\\mathop{\\mathrm{IBr}}_p(N_G(P))|.$$ Let $B_0$ be the principal $p$-block of $G$, and let $k_p(G)$ count the conjugacy classes of $p$-power-order elements, including the identity. Then $$\\begin{aligned}\n k_p(G)=3&\\Longrightarrow l(B_0)\\geq (p-1)/2,\\\\\n p\\mid |G|&\\Longrightarrow l(B_0)\\geq 2\\sqrt{p-1}+1-k_p(G).\n \\end{aligned}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-block-consequences"
+  },
+  {
+   "claim_id": "claim-tuple-divisibility",
+   "exact_statement": "Let $J$ be a finite group with $O_p(J)=1$. For $s\\geq0$, $n=p^s$, and a multiset $\\mathcal M$ of $n$ conjugacy classes of $p$-singular elements of $J$, let $N_{J,s}(\\mathcal M)$ be the number, modulo simultaneous $J$-conjugation, of ordered tuples $$(x,y,u_1,\\ldots,u_n)\\in J^{n+2}$$ satisfying $$\\label{eq:tuple-relation}\n [x,y]u_1\\cdots u_n=1,\\qquad\n \\langle x,y,u_1,\\ldots,u_n\\rangle=J,\n \\qquad \\{[u_1],\\ldots,[u_n]\\}=\\mathcal M.$$ For every integer $h\\geq1$, there is an integer $s_0=s_0(p,J,h)$ such that $$p^h\\mid N_{J,s}(\\mathcal M)\n \\qquad(s\\geq s_0)$$ for every such multiset $\\mathcal M$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-tuple-divisibility"
+  },
+  {
+   "claim_id": "claim-normalizer-projection",
+   "exact_statement": "The map $\\operatorname{Br}_Q:(kX)^Q\\longrightarrow kC_X(Q)$ is a unital algebra homomorphism. Suppose that $$Q\\leq H\\leq N_X(Q),\\qquad C_X(Q)\\leq H.$$ Writing $\\pi_Q:kH\\longrightarrow k[H/Q]$ for the quotient map, one has, for $v\\in Z(kX)$, $$\\label{eq:normalizer-projection}\n \\pi_Q(s_H(v))=\\pi_Q(\\operatorname{Br}_Q(v)),\n \\qquad\n \\lambda_b(s_H(v))=\\lambda_b(\\operatorname{Br}_Q(v))$$ for every block $b$ of $H$. In particular $\\lambda_b\\circ s_H$ is the central character of a unique block of $X$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-normalizer-projection"
+  },
+  {
+   "claim_id": "claim-chain-inversion",
+   "exact_statement": "The identity $l=(1+T)z$ for all pairs $(X,E)$ is equivalent to $$\\label{eq:chain-inversion}\n z(X,E)=\n \\sum_{\\substack{\\mathcal C/X\\\\\\mathcal C\\ \\mathrm{normal}}}\n (-1)^{|\\mathcal C|}l(H_{\\mathcal C},E_{\\mathcal C}),$$ where $\\mathcal C/X$ denotes one representative of each $X$-conjugacy orbit.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-chain-transform"
+  },
+  {
+   "claim_id": "claim-cocenter-ranks",
+   "exact_statement": "For a finite-dimensional $k$-algebra $A$, the map $$F_A:V(A)\\longrightarrow V(A),\\qquad\n \\overline a\\longmapsto\\overline{a^p}$$ is well-defined and Frobenius semilinear. Its stable image has dimension equal to the number of simple $A$-modules, and its summand selected by a central idempotent has dimension equal to the corresponding simple-module count. For $A=kX$, this stable image is the span of the $p'$-classes. The ranks of multiplication by $E$ on that span and on all of $V(kX)$ are, respectively, $l(X,E)$ and $k_{\\mathrm{ord}}(X,E)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-cocenter-ranks"
+  },
+  {
+   "claim_id": "claim-subsections",
+   "exact_statement": "For every central idempotent $E\\in kX$, $$\\label{eq:subsections}\n k_{\\mathrm{ord}}(X,E)=\n \\sum_{\\substack{[u]\\text{ an }X\\text{-class}\\\\u\\text{ a }p\\text{-element}}}\n l\\bigl(C_X(u),\\operatorname{Br}_{\\langle u\\rangle}(E)\\bigr).$$ Multiplication by $E$ preserves the section decomposition of the cocenter and the section decomposition of the center into spans of class sums.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-subsections"
+  },
+  {
+   "claim_id": "claim-nonnormal-cancellation",
+   "exact_statement": "In an alternating sum over chain orbits, every contribution that depends only on $H_{\\mathcal C}$ and $Q_r$ cancels on the nonnormal chains. Thus such a sum may be taken over all chains or only normal chains.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-nonnormal-cancellation"
+  },
+  {
+   "claim_id": "claim-alternating-subsections",
+   "exact_statement": "One has $$\\label{eq:alternating-subsections}\n \\sum_{\\substack{\\mathcal C/X\\\\\\mathcal C\\ \\mathrm{normal}}}\n (-1)^{|\\mathcal C|}l(H_{\\mathcal C},E_{\\mathcal C})\n =\n \\sum_{\\substack{\\mathcal C/X\\\\\\mathcal C\\ \\mathrm{normal}}}\n (-1)^{|\\mathcal C|}k_{\\mathrm{ord}}(H_{\\mathcal C},E_{\\mathcal C}).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-alternating-subsections"
+  },
+  {
+   "claim_id": "claim-defect-zero-detection",
+   "exact_statement": "The image of $I_X$, and also $d_X$, annihilates the Jacobson radical of $kX$. On a semisimple block, $d_X$ has nonzero central scalar; on every other block its central character is zero. Each semisimple block contains exactly one ordinary irreducible, which has defect zero, and every ordinary defect-zero irreducible occurs in this way. Moreover:*\n\n1.  *$\\operatorname{im}I_X$ is the span of class sums of elements whose centralizers have order prime to $p$;*\n\n2.  *each semisimple block idempotent belongs to $\\operatorname{im}I_X$ and has zero Brauer image at every nontrivial $p$-subgroup;*\n\n3.  *$\\lambda_b(c_X)=0$ on every nonsemisimple block $b$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-defect-zero-detection"
+  },
+  {
+   "claim_id": "claim-detecting-element",
+   "exact_statement": "Let $v=E(1-c_X)$. It is central and supported on $p$-singular elements. For a normal chain $\\mathcal C$ of positive length, its restriction to $H_{\\mathcal C}$ satisfies $$\\lambda_b(s_{H_{\\mathcal C}}(v))=\\lambda_b(E_{\\mathcal C})\n \\in\\{0,1\\}$$ for every block $b$ of $H_{\\mathcal C}$. For the length-zero chain, the scalar is one on the nonsemisimple blocks selected by $E$ and zero on every other block.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-detecting-element"
+  },
+  {
+   "claim_id": "claim-trace-limit",
+   "exact_statement": "In the valuation topology of $K$, $$\\label{eq:trace-limit}\n \\lim_{s\\to\\infty}\\Phi_{p^s}\n =\n \\sum_{\\substack{\\mathcal C/X\\\\\\mathcal C\\ \\mathrm{normal}}}\n (-1)^{|\\mathcal C|}k_{\\mathrm{ord}}(H_{\\mathcal C},E_{\\mathcal C})\n -z(X,E).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-trace-limit"
+  },
+  {
+   "claim_id": "claim-tuple-trace",
+   "exact_statement": "For $H\\leq X$ and $w=s_H(\\widehat v)$, $$\\label{eq:tuple-trace}\n \\operatorname{Tr}(w^n\\mid V(KH))\n =\\frac1{|H|}\n   \\sum_{\\substack{x,y,u_1,\\ldots,u_n\\in H\\\\\n                   [x,y]u_1\\cdots u_n=1}}\n       \\prod_{i=1}^n\\alpha_{u_i}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-tuple-trace"
+  },
+  {
+   "claim_id": "claim-pcore-cancellation",
+   "exact_statement": "If $O_p(J)\\ne1$, then $a_X(J)=0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-pcore-cancellation"
+  },
+  {
+   "claim_id": "claim-group-reduction",
+   "exact_statement": "If [thm:tuple-divisibility](#thm:tuple-divisibility) holds for every finite group with trivial $p$-core, then for every finite group $X$ and central idempotent $E\\in kX$ one has $l(X,E)=((1+T)z)(X,E)$. In particular the block equality in [thm:main](#thm:main) follows, with the stated block assignment and with $Q=1$ included.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-group-reduction"
+  },
+  {
+   "claim_id": "claim-ordinary-elliptic",
+   "exact_statement": "For every prime $p$ there is an elliptic curve $A_0/\\kappa$ with a point of order $p$. On this same curve, for every $s\\geq 1$ there is a point $P\\in A_0(\\kappa)$ of exact order $p^s$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-ordinary-elliptic"
+  },
+  {
+   "claim_id": "claim-cycle-sum-rationality",
+   "exact_statement": "Let $A/\\kappa$ be an elliptic curve and $U/\\kappa$ a field extension. For every zero-cycle $z$ on $A_U$, its group-law sum over an algebraic closure of $U$, using the full geometric multiplicities, belongs to $A(U)$. This sum is additive for signed cycles. Translation of a cycle of degree $b$ by a point $Q\\in A(U)$ adds $[b]Q$ to its sum.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-cycle-sum-rationality"
+  },
+  {
+   "claim_id": "claim-constant-product-maps",
+   "exact_statement": "Let $A/\\kappa$ be an elliptic curve.*\n\n1.  *For every field extension $V/\\kappa$, an origin-preserving morphism $A_V\\longrightarrow A_V$ is a group endomorphism defined over $\\kappa$.*\n\n\n2.  *Every rational map $A^n\\dashrightarrow A$ has a unique expression $$\\label{eq:constant-product-map}\n     (x_1,\\ldots,x_n)\\longmapsto\n                      c+\\sum_{i=1}^n\\beta_i(x_i),\n     \\qquad c\\in A(\\kappa),\\quad\n            \\beta_i\\in\\operatorname{End}_\\kappa(A).$$ In particular, it extends to a morphism on the whole product.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-constant-product-maps"
+  },
+  {
+   "claim_id": "claim-twist-index",
+   "exact_statement": "Fix $s\\geq1$, put $n=p^s$, and choose $A_0/\\kappa$ and $P\\in A_0(\\kappa)$ of exact order $n$ as in [lem:ordinary-elliptic](#lem:ordinary-elliptic). There are finitely generated fields $F_0\\subset F'$ over $\\kappa$, each of transcendence degree $n$, and a smooth projective geometrically integral genus-one curve $E/F_0$ with the following properties:*\n\n\n1.  *$F'=\\kappa(A_0^n)$, and $F'/F_0$ is cyclic Galois of degree $n$. With $t_i\\in A_0(F')$ the generic projection points, a generator satisfies $$\\label{eq:shifted-cyclic-action}\n                     \\sigma(t_i)=t_{i+1}-P\n                     \\qquad(i\\text{ modulo }n).$$*\n\n2.  *Under an identification $E_{F'}\\simeq A_{0,F'}$, the descent action on points is $x\\mapsto\\sigma(x)+P$. The two disjoint divisors $$\\label{eq:twist-divisors}\n           \\mathcal B_{F'}=\\sum_{i=1}^n[t_i],\\qquad\n           D_{F'}=\\sum_{j=0}^{n-1}[jP]$$ descend to finite étale effective divisors $\\mathcal B,D$ of degree $n$ on $E$, and $D$ is ample.*\n\n3.  *The index of $E/F_0$ is exactly $n$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-twist-index"
+  },
+  {
+   "claim_id": "claim-index-base-change",
+   "exact_statement": "Let $h\\geq1$ and $s\\geq h$, and let $F/F_0$ be a finite extension with $[F:F_0]_p\\leq p^h$. Every divisor on $E_F$ has degree over $F$ divisible by $p^{s-h}$. More generally, if $C/F$ is a regular projective integral curve with a finite dominant morphism $C\\to E_F$, then every divisor and every invertible sheaf on $C$ has degree over $F$ divisible by $p^{s-h}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-index-base-change"
+  },
+  {
+   "claim_id": "claim-label-rank",
+   "exact_statement": "Let $F/F_0$ be a finite extension with $[F:F_0]_p\\leq p^h$, and choose a compositum $S=FF'$. Then $S/F$ is finite Galois of degree dividing $n$, and $$\\label{eq:compositum-small-p-part}\n                            [S:F']_p\\leq p^h.$$ Fix a nonzero invariant differential $\\eta$ on $A_0$. For every subset $I\\subseteq\\{1,\\ldots,n\\}$, the forms $t_i^*\\eta$, $i\\in I$, have rank at least $|I|-h$ in $\\Omega_{S/\\kappa}$. The covectors $$\\label{eq:label-covectors}\n                    (1,-t_i^*\\eta)\\in S\\oplus\\Omega_{S/\\kappa},\n                    \\qquad i\\in I,$$ also have rank at least $|I|-h$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-label-rank"
+  },
+  {
+   "claim_id": "claim-inseparable-genus",
+   "exact_statement": "Fix $h\\ge1$ and take $s\\ge h$ such that $$p^{s-h}>m\\bigl(h+\\log_p m\\bigr).\n \\label{eq:genus-rounding-threshold}$$ Let $F/F_0$ be finite with $[F:F_0]_p\\le p^h$, and let $Z$ be the normalization of $E_F$ in a finite purely inseparable extension of its function field of degree $d\\le m$. Choose a compositum $S=FF'$. The curve $Z_S$ is integral and regular. Let $r_i$ be the ramification index of $Z_S\\to E_S$ at the unique point over $t_i$. With $\\nu(Z)$ computed over $F$, one has $$\\frac{\\nu(Z)}d\\ge\\sum_{i=1}^n\\left(1-\\frac1{r_i}\\right).\n \\label{eq:inseparable-genus-bound}$$ The bound is uniform in $F$, $Z$, and the tuple-class multiset used later in the counting argument.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-inseparable-genus"
+  },
+  {
+   "claim_id": "claim-curve-degrees",
+   "exact_statement": "For an invertible sheaf $\\mathcal L$ on $C$, $$\\chi(C,\\mathcal L)=\\deg_S\\mathcal L+\\chi(C).\n \\label{eq:curve-euler-degree}$$ A finite dominant morphism $f:C\\to C'$ of such curves is finite flat. If its function-field degree is $\\delta$, then $$\\deg_S f^*D=\\delta\\deg_S D\n \\quad\\text{and}\\quad\n \\deg_S f_*D'=\\deg_S D'$$ for divisors $D$ on $C'$ and $D'$ on $C$. These assertions, and Euler characteristics, add over disjoint unions of regular integral curves. After a finite separable extension $S_1/S$, divisor and line-bundle degrees and coherent Euler characteristics have the same numerical values over $S_1$ as before extension over $S$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-curve-degrees"
+  },
+  {
+   "claim_id": "claim-absolute-genus",
+   "exact_statement": "The absolute cotangent sheaf $\\Omega_{C/\\kappa}$ is locally free of rank $\\rho+1$, and $$\\deg_S\\det\\Omega_{C/\\kappa}=\\nu(C).\n \\label{eq:absolute-determinant-genus}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-absolute-genus"
+  },
+  {
+   "claim_id": "claim-separable-different",
+   "exact_statement": "Let $f:C\\to C'$ be a finite dominant, generically separable morphism of regular integral projective curves over $S$, of degree $\\delta$. There is an effective divisor $R_f$ on $C$ such that $$\\nu(C)=\\delta\\nu(C')+\\deg_S R_f.$$ If $y\\in C$ has ramification index $a_y$ over $f(y)$, then $$\\operatorname{ord}_y R_f\\ge a_y-1+\\mathbf 1_{p\\mid a_y}.\n \\label{eq:separable-different-bound}$$ No separability of $\\kappa(y)/\\kappa(f(y))$ is required. The formula and the inequalities can be added componentwise after a finite separable extension of $S$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-separable-different"
+  },
+  {
+   "claim_id": "claim-height-one",
+   "exact_statement": "Let $\\pi:C\\to C'$ be a finite dominant morphism of regular integral projective curves over $S$ such that $\\kappa(C)^p\\subseteq\\kappa(C')$. Put $q=[\\kappa(C):\\kappa(C')]=p^a$ and $$\\mathcal F=\\ker(T_C\\longrightarrow\\pi^*T_{C'}),\n \\qquad\n \\mathcal Q=\\operatorname{coker}(T_C\\longrightarrow\\pi^*T_{C'}).$$ Both $\\mathcal F$ and $\\mathcal Q$ are locally free of rank $a$, and $$\\det\\mathcal Q\\simeq(\\det\\mathcal F)^{\\otimes p}.\n \\label{eq:height-one-cokernel}$$ Consequently $$\\nu(C)=q\\nu(C')+(p-1)\\deg_S\\mathcal F.\n \\label{eq:height-one-genus}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-height-one"
+  },
+  {
+   "claim_id": "claim-mixed-lift",
+   "exact_statement": "There are complete discretely valued fields $K_b\\subset K_b'$ of characteristic zero, with valuation rings $R_b\\subset R_b'$, and a smooth projective genus-one curve $\\mathcal X/R_b$ with the following properties.*\n\n1.  *The extension $K_b'/K_b$ is cyclic Galois of degree $n$; the extension $R_b'/R_b$ is finite *étale* Galois, its residue extension is $F'/F_0$, and the two fields have the same value group. Moreover, $K_b$ contains $\\mathbb Q_p$ and all $m$th roots of unity, where $m=|J|$.*\n\n2.  *The special fiber of $\\mathcal X$ is $E/F_0$. There is a relatively ample effective divisor $D$ on $\\mathcal X$ of fiber degree $n$.*\n\n3.  *Over $R_b'$ there are pairwise disjoint sections $\\xi_1,\\ldots,\\xi_n$ reducing respectively to $t_1,\\ldots,t_n$. They avoid $D$, and their union descends to a finite *étale* effective divisor on $\\mathcal X$. Under the cyclic descent action the sections are permuted by $\\xi_i\\mapsto\\xi_{i+1}$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-mixed-lift"
+  },
+  {
+   "claim_id": "claim-spherical-base",
+   "exact_statement": "There is an extension $K_s/K_b$ with value group $\\mathbb Q$ and residue field $F_0$ which is spherically complete. Every finite extension $L/K_s$, equipped with an extension of its valuation, has value group $\\mathbb Q$, is spherically complete, and satisfies $$\\label{eq:full-residue-degree}\n                   [\\operatorname{res}(L):F_0]=[L:K_s].$$ The valuation on $K_s$, and on each such $L$, has a unique extension to every algebraic extension. Moreover $\\overline{K_s}\\simeq\\mathbb C$ as abstract fields.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-spherical-base"
+  },
+  {
+   "claim_id": "claim-orthogonal-bases",
+   "exact_statement": "Let $K_*$ be a spherically complete field with value group $\\mathbb Q$, valuation ring $R_*$, maximal ideal $\\mathfrak m_*$, and residue field $k_*$. Let $V$ be a finite-dimensional $K_*$-vector space with a valuation norm $\\lambda:V\\to\\mathbb Q\\cup\\{+\\infty\\}$: it is finite away from zero, has $\\lambda(0)=+\\infty$, satisfies the strong triangle inequality, and obeys $\\lambda(ax)=v(a)+\\lambda(x)$ for $a\\ne0$. There is a basis $e_1,\\ldots,e_d$ of norm zero such that $$\\label{eq:orthogonal-basis}\n             \\lambda\\left(\\sum_i a_i e_i\\right)=\\min_i v(a_i).$$ In particular its integral and positive balls are $$\\label{eq:orthogonal-lattice}\n V_{\\geq0}=\\bigoplus_i R_*e_i,\\qquad\n V_{>0}=\\bigoplus_i\\mathfrak m_*e_i\n             =\\mathfrak m_*V_{\\geq0},\n \\qquad \\dim_{k_*}(V_{\\geq0}/V_{>0})=d.$$ The normed space $V$ is spherically complete.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-orthogonal-bases"
+  },
+  {
+   "claim_id": "claim-simultaneous-residues",
+   "exact_statement": "Let $T$ be a nontrivially valued field with value group $\\mathbb Q$ and infinite residue field $k_T$. Let $U/T$ be finite and let $w_1,\\ldots,w_r$ be distinct prolongations of its valuation, with residue fields $k_1,\\ldots,k_r$. Then $$\\bigcap_{i=1}^r\\mathcal O_{w_i}\\longrightarrow\n                         \\prod_{i=1}^r k_i$$ is surjective, and $$\\label{eq:residue-degree-bound}\n                         \\sum_{i=1}^r[k_i:k_T]\\leq[U:T].$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-simultaneous-residues"
+  },
+  {
+   "claim_id": "claim-marked-cover-classification",
+   "exact_statement": "After choosing oriented handle and puncture generators on the complex punctured curve, isomorphism classes of marked $J$-covers branched only at $\\xi_1,\\ldots,\\xi_n$ correspond bijectively to $$\\left\\{(x,y,u_1,\\ldots,u_n)\\in J^{n+2}:\n \\begin{array}{l}\n [x,y]u_1\\cdots u_n=1,\\\\\n \\langle x,y,u_1,\\ldots,u_n\\rangle=J\n \\end{array}\\right\\}/J,$$ where $J$ acts by simultaneous inner conjugation. The inertia order at $\\xi_i$ is $|u_i|$. For a prescribed multiset $\\mathcal C$ of $n$ $J$-conjugacy classes of $p$-singular elements, let $\\mathcal T_{\\mathcal C}$ be the finite set of these marked-cover classes having that multiset of local classes. Then $\\mathcal T_{\\mathcal C}$ is preserved by $\\operatorname{Gal}(\\overline{K_s}/K_s)$.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-marked-cover-classification"
+  },
+  {
+   "claim_id": "claim-small-orbit-descent",
+   "exact_statement": "Assume $O_p(J)=1$ and fix a multiset $\\mathcal C$ as in [lem:marked-cover-classification](#lem:marked-cover-classification). There is a finite Galois extension $M/K_s$ through which the action on $\\mathcal T_{\\mathcal C}$ factors. Let $P_\\Gamma$ be a Sylow $p$-subgroup of $\\Gamma=\\operatorname{Gal}(M/K_s)$. If a $P_\\Gamma$-orbit has size less than $p^h$, one of its marked covers descends to a finite extension $L/K_s$ satisfying $$\\label{eq:small-orbit-degree}\n                [L:K_s]_p<p^h,\n                \\qquad [F:F_0]_p=[L:K_s]_p,\n                \\qquad F=\\operatorname{res}(L).$$ The descended map $Y\\to X=\\mathcal X_L$ has geometrically connected smooth projective source, degree $m$, the specified $J$-action, and all branch indices at the $\\xi_i$ divisible by $p$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-small-orbit-descent"
+  },
+  {
+   "claim_id": "claim-residue-permutations",
+   "exact_statement": "Let $L/K_s$ be finite, with residue $F$, and set $L'=LK_b'$. In the residue field of $L'$, form $S=FF'$ using the residues of its two subfields. Then $L'/L$ and $S/F$ are finite Galois extensions, the residue field of $L'$ is exactly $S$, and reduction induces an isomorphism $$\\operatorname{Gal}(L'/L)\\simeq\\operatorname{Gal}(S/F).$$ Under this isomorphism the permutation actions on $\\xi_1,\\ldots,\\xi_n$ and on $t_1,\\ldots,t_n$ agree. In particular, every subset of indices invariant under these identified permutation groups defines a branch subset over $L$ and over $F$, respectively.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-residue-permutations"
+  },
+  {
+   "claim_id": "claim-no-small-cover",
+   "exact_statement": "Suppose $O_p(J)=1$ and <a href=\"#eq:specialization-threshold\" data-reference-type=\"eqref\" data-reference=\"eq:specialization-threshold\">[eq:specialization-threshold]</a> holds. There is no finite extension $L/K_s$ with $[L:K_s]_p<p^h$ over which the marked curve $X=\\mathcal X_L$ admits a geometrically connected smooth projective $J$-Galois cover $f:Y\\to X$, with its $J$-action defined over $L$, branched only at the marked points and with ramification index divisible by $p$ at every marked point.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-no-small-cover"
+  },
+  {
+   "claim_id": "claim-gauss-section-rule",
+   "exact_statement": "There is a valuation $v_X$ on $L(X)$ extending that on $L$, with value group $\\mathbb Q$ and residue field $F(E_F)$, having the following properties. For every sufficiently large $j$, the integral ball in $H^0(X,\\mathcal O_X(jD_X))$ reduces onto $H^0(E_F,\\mathcal O_{E_F}(jD_F))$. Reduction is compatible with inclusions as $j$ increases and with multiplication. Moreover, for an integral section $b$ in such a space, $$\\label{eq:gauss-evaluation}\n \\overline{b(\\xi_i)}=\\bar b(t_i)\n \\qquad\\text{in }S.$$ In particular, vanishing at $\\xi_i$ implies vanishing of its reduction at $t_i$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-gauss-section-rule"
+  },
+  {
+   "claim_id": "claim-section-specialization",
+   "exact_statement": "For all sufficiently large $j$, simultaneous residue gives an injection $$\\label{eq:section-reduction}\n A_j/\\mathfrak m_R A_j\n \\lhook\\joinrel\\longrightarrow\n \\bigoplus_{w\\in\\mathcal V}\n H^0(C_w,\\mathcal O_{C_w}(jD_w)).$$ These maps respect products. If a section vanishes on the reduced inverse images of a selected set of marked points, its reductions vanish on the corresponding reduced inverse images on the $C_w$, provided the selections are defined over the respective ground fields. The vanishing assertion may be checked after splitting the marked points over $L'$ and $S$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-section-specialization"
+  },
+  {
+   "claim_id": "claim-inseparable-residue-quotient",
+   "exact_statement": "The invariant field $M_w=K(w)^{\\Delta_w}$ is purely inseparable over $F(E_F)$, of degree $$\\label{eq:inertia-inseparable-degree}\n d=[M_w:F(E_F)]=|I_w|.$$ In particular $d$ is a power of $p$ and $d\\leq m$. If $Z_w$ denotes the normalization of $E_F$ in $M_w$, the map $C_w\\to Z_w$ is generically separable Galois of degree $m_w/d$, with group $\\Delta_w/I_w$. All these towers are isomorphic over $E_F$ as $w$ varies in $\\mathcal V$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-inseparable-residue-quotient"
+  },
+  {
+   "claim_id": "claim-specialization-model",
+   "exact_statement": "The degree equality <a href=\"#eq:residue-degree-equality\" data-reference-type=\"eqref\" data-reference=\"eq:residue-degree-equality\">[eq:residue-degree-equality]</a> and the Euler-characteristic equality in <a href=\"#eq:sharp-specialization\" data-reference-type=\"eqref\" data-reference=\"eq:sharp-specialization\">[eq:sharp-specialization]</a> produce a flat projective scheme $\\mathcal Y$ of finite presentation over $R$, with $$\\mathcal Y_L\\simeq Y,\\qquad\n \\mathcal Y_F\\simeq\\coprod_{w\\in\\mathcal V}C_w.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-specialization-model"
+  },
+  {
+   "claim_id": "claim-valuation-model-connectedness",
+   "exact_statement": "Let $R$ be a valuation ring of a characteristic-zero field $L$. If a flat projective $R$-scheme $\\mathcal U$ of finite presentation has geometrically integral generic fiber, then its special fiber is geometrically connected.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-valuation-model-connectedness"
+  },
+  {
+   "claim_id": "claim-character-data",
+   "exact_statement": "Let $B$ be a $p$-block of a finite group with defect group $D$ of order $p^d$, and write $k(B)=|\\mathop{\\mathrm{Irr}}(B)|$. If $k(B)-l(B)=1$, then the possible numerical data $(p^d,l(B))$ are exactly the following:*\n\n1.  *There are positive integers $n,m$ such that $d=nm$, every prime divisor of $n$ divides $p^m-1$, and $4\\mid n$ implies $4\\mid p^m-1$, with $$l(B)=\\sum_{e\\mid n}\\frac{p^{em}-1}{ne}J_2(n/e),\\qquad\n           J_2(t)=t^2\\prod_{\\substack{q\\mid t\\\\q\\text{ prime}}}(1-q^{-2}).$$*\n\n2.  *The exceptional pairs are $$\\begin{aligned}\n           (p^d,l(B))\\in\\{&(5^2,7),(7^2,8),(11^2,9),(11^2,35),\\\\\n                           &(23^2,88),(29^2,63),(59^2,261)\\}.\n           \\end{aligned}$$*\n\n*All listed data occur, and in every case $k(B)=l(B)+1$.",
+   "kind": "classification",
+   "statement_anchor": "stmt-cor-character-data"
+  },
+  {
+   "claim_id": "claim-functorial-awc",
+   "exact_statement": "Let $b$ be a block idempotent of $kG$, where $G$ is finite. Let $\\mathcal S_p(G)$ consist of all strict chains $\\sigma=(1=P_0<P_1<\\cdots<P_n)$ of $p$-subgroups, including $(1)$. Put $$|\\sigma|=n,\\qquad\n G_\\sigma=\\bigcap_{i=0}^nN_G(P_i),\\qquad\n b_\\sigma=\\operatorname{Br}_{P_n}(b).$$ Since $C_G(P_n)\\leq G_\\sigma$ and the Brauer image is invariant under $G_\\sigma$, the element $b_\\sigma$ is a central idempotent of $kG_\\sigma$, possibly zero or a sum of blocks. Thus the pair $(G_\\sigma,b_\\sigma)$ is an object of the category just described. Then, summing over representatives of the $G$-conjugacy classes of chains, $$\\sum_{\\sigma\\in[G\\backslash\\mathcal S_p(G)]}\n (-1)^{|\\sigma|}[[G_\\sigma,b_\\sigma]]_F\n =\\begin{cases}\n [S_{1,1,F}],&\\text{if $b$ has defect zero},\\\\\n 0,&\\text{if $b$ has positive defect}\n \\end{cases}\n \\quad\\text{in }K_0(\\mathcal F\\mathcal B\\ell_{F,k}).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-functorial-awc"
+  },
+  {
+   "claim_id": "claim-foundation-groups",
+   "exact_statement": "For a finite group $X$, its $p$-subgroups lie in Sylow subgroups of order $|X|_p$. A nontrivial finite $p$-group has nontrivial center and an element of order $p$, and each of its maximal proper subgroups is normal. We use the orbit–stabilizer formula and the usual fixed-point and conjugation actions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-foundation-groups"
+  },
+  {
+   "claim_id": "claim-foundation-algebra",
+   "exact_statement": "The Jacobson radical of a finite-dimensional algebra is nilpotent. Over an algebraically closed field, its semisimple quotient is a product of full matrix algebras, one for each simple module up to isomorphism. A finite-dimensional commutative algebra over an algebraically closed field is a product of local algebras with that field as residue, indexed by its primitive idempotents. Finite group algebras in characteristic zero are semisimple. Over a splitting field the simple endomorphism algebras are the scalar field, and an ordinary irreducible character satisfies $$\\sum_{x\\in X}\\chi(x)\\chi(x^{-1})=|X|.$$ Idempotents lift uniquely from the residue algebra of a finite commutative algebra over a complete discrete valuation ring. Nakayama’s lemma applies to finite modules over any local ring.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-foundation-algebra"
+  },
+  {
+   "claim_id": "claim-foundation-commalg",
+   "exact_statement": "A finite-type algebra over a Noetherian ring is Noetherian. Integral extensions satisfy lying over. Closed points of a variety over a field are dense and have finite residue fields over the ground field. For an integral variety, the local dimension at a point plus the transcendence degree of its residue field is the transcendence degree of the function field. A regular local ring is a normal domain; a part of a minimal system of generators of its maximal ideal is a regular sequence and its quotient is regular of the correspondingly smaller dimension. A one-dimensional Noetherian normal local domain is a discrete valuation ring, as is a Noetherian local domain with nonzero principal maximal ideal. Finite torsion-free modules over discrete valuation rings are free. Completion of a discrete valuation ring retains its residue field and uniformizer.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-foundation-commalg"
+  },
+  {
+   "claim_id": "claim-foundation-fields",
+   "exact_statement": "If a finite group $D$ acts faithfully by automorphisms on a field $M$, then $M/M^D$ is Galois of degree $|D|$. Finite separable field extensions are simple. A finite field extension has a maximal separable subextension, and the remaining extension is purely inseparable; the number of embeddings in an algebraic closure is the separable degree. Multiplicative groups of finite fields are cyclic. Algebraically closed fields are classified by their characteristic and transcendence degree. If $S$ is a finitely generated field of transcendence degree $\\rho$ over a perfect field $\\kappa$, then $$\\dim_S\\Omega_{S/\\kappa}=\\rho;\n \\qquad [S:S^p]=p^\\rho\\quad\\text{in characteristic }p.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-foundation-fields"
+  },
+  {
+   "claim_id": "claim-foundation-valuation",
+   "exact_statement": "A valuation extends to an algebraic field extension. A complete discrete valuation on a field extends uniquely to any finite field extension; its valuation ring is the integral closure of the original ring, is finite over it, and is again a complete discrete valuation ring. The fields to which we apply the latter assertion initially have characteristic zero. No corresponding finiteness assertion for an arbitrary nondiscrete valuation ring is assumed. See (The Stacks Project Authors 2026, Tag 00IA) [[Stacks](#ref-Stacks)] for prolongation and (The Stacks Project Authors 2026, Tags 032W, 09EM and 0325) [[Stacks](#ref-Stacks)] for the complete discrete-base finiteness assertions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-foundation-valuation"
+  },
+  {
+   "claim_id": "claim-foundation-descent",
+   "exact_statement": "A projective scheme with a semilinear descent datum under a finite Galois field extension descends if equipped with a compatible linearized ample line bundle. The same statement holds for a finite *étale* faithfully flat Galois extension of rings and a relatively ample line bundle. Equivariant morphisms and invariant closed subschemes descend along with the scheme. Flatness, smoothness, finiteness, *étaleness*, and relative ampleness in these settings are checked after the faithfully flat extension. Geometric integrality of a finite-type scheme over a field can be checked after an extension of that field. A finite diagram of projective schemes and morphisms of finite presentation over a directed union of fields is defined over a finite stage, including its maps to a base scheme already defined there and the identities among those maps. One may realize projective descent by descent of semilinear modules and graded algebras followed by $\\mathop{\\mathrm{Proj}}$. For the projective and module descent assertions, see (The Stacks Project Authors 2026, Tags 0CCJ, 0CDR and 0D1V) [[Stacks](#ref-Stacks)]. The five locality assertions are respectively (The Stacks Project Authors 2026, Tags 02L2, 02VL, 02LA, 02VN and 0D3C) [[Stacks](#ref-Stacks)]; geometric integrality is covered by (The Stacks Project Authors 2026, Tags 038K, 0384 and 054P) [[Stacks](#ref-Stacks)]. The finite-stage assertion follows from (The Stacks Project Authors 2026, Tags 01ZM and 01ZP) [[Stacks](#ref-Stacks)], including chosen projective embeddings among the finite data.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-foundation-descent"
+  },
+  {
+   "claim_id": "claim-foundation-normalization",
+   "exact_statement": "The normalization of an integral variety over a field in a finite extension of its function field is finite. The normalization of a finite-type $\\mathbb Z$-domain in its fraction field is finite. In the integral closure of a normal domain in a finite Galois extension of its fraction field, the Galois group acts transitively on the primes above any fixed prime of the base. The normalization finiteness assertions follow from the Nagata property in (The Stacks Project Authors 2026, Tag 0335) [[Stacks](#ref-Stacks)].",
+   "kind": "theorem",
+   "statement_anchor": "stmt-foundation-normalization"
+  },
+  {
+   "claim_id": "claim-foundation-regularity",
+   "exact_statement": "Finite separable scalar extension preserves regularity and reducedness. Smooth varieties over a field are regular. A regular local ring essentially of finite type over a perfect field $\\kappa$ is smooth at the corresponding point of a finite-type $\\kappa$-model; its module of absolute differentials is free of rank the transcendence degree of the function field over $\\kappa$. We use the valuative criterion for properness, including the unique extension of maps from fraction fields of valuation rings, and that proper maps are closed. For regularity and smoothness over a perfect field, see (The Stacks Project Authors 2026, Tags 00TV and 0B8X) [[Stacks](#ref-Stacks)].",
+   "kind": "theorem",
+   "statement_anchor": "stmt-foundation-regularity"
+  },
+  {
+   "claim_id": "claim-foundation-cohomology",
+   "exact_statement": "Over a Noetherian base, the higher direct images of coherent sheaves under a proper morphism are coherent. Over an affine base their cohomology commutes with flat affine base change. For a projective scheme over an affine Noetherian base and a relatively ample line bundle, sufficiently high powers give projective embeddings, and sufficiently high twists annihilate higher coherent cohomology. The ample section ring is finitely generated and its $\\mathop{\\mathrm{Proj}}$ recovers the scheme. Finite pullback preserves ampleness; tensor products of relatively ample line bundles are relatively ample, and a line bundle is relatively ample if a positive power is. Formation of $\\mathop{\\mathrm{Proj}}$ commutes with base change. On a projective curve over a field, coherent cohomology vanishes in degrees greater than one, and for sheaves of finite support in degrees greater than zero. Global functions on a geometrically integral projective variety over a field equal the ground field. For proper coherence, flat cohomology base change, and ample twists, respectively, see (The Stacks Project Authors 2026, Tags 02O5, 02KH and 0B5T) [[Stacks](#ref-Stacks)]. For Proj recovery and the ampleness rules, see (The Stacks Project Authors 2026, Tags 0EKI, 0892, 0890 and 02NN) [[Stacks](#ref-Stacks)].",
+   "kind": "theorem",
+   "statement_anchor": "stmt-foundation-cohomology"
+  },
+  {
+   "claim_id": "claim-foundation-duality",
+   "exact_statement": "We use the transitivity sequence $$\\Omega_{V/U}\\otimes_VW\\longrightarrow\\Omega_{W/U}\n \\longrightarrow\\Omega_{W/V}\\longrightarrow0$$ and the conormal sequence for a closed immersion. Let $S$ be a field. On $\\mathbb P^b_S$, $\\det\\Omega_{\\mathbb P^b_S/S}=\\mathcal O(-b-1)$. For a coherent sheaf $\\mathcal G$ there, Serre duality identifies $$H^i(\\mathcal G)^\\vee\n \\simeq\\operatorname{Ext}^{b-i}\n       (\\mathcal G,\\mathcal O(-b-1)).$$ We use the local-to-global Ext spectral sequence and the Koszul resolution of a quotient by a regular sequence. These inputs will yield the required absolute determinant-degree formula even when the curve is not smooth over $S$. For the projective-space dualizing complex and the adjunction formalism, see (The Stacks Project Authors 2026, Tag 0A9W and Section 48.15) [[Stacks](#ref-Stacks)]. The local-to-global Ext sequence is (The Stacks Project Authors 2026, Tag 0BQP) [[Stacks](#ref-Stacks)].",
+   "kind": "theorem",
+   "statement_anchor": "stmt-foundation-duality"
+  },
+  {
+   "claim_id": "claim-foundation-elliptic",
+   "exact_statement": "A smooth Weierstrass cubic with its point at infinity is an elliptic curve. A generalized Weierstrass equation over a discrete valuation ring with unit discriminant gives a smooth elliptic scheme, polarized by three times its origin. Its relative cotangent line is trivial with invariant differential $\\eta$, and multiplication by an integer $a$ pulls $\\eta$ back to $a\\eta$. For a positive integer $a$, multiplication by $a$ on an elliptic curve or elliptic scheme is finite locally free of degree $a^2$. For the relative group law, see (Deligne and Rapoport 1973, II, Proposition 2.7) [[DeligneRapoport1973](#ref-DeligneRapoport1973)]; the unit-discriminant Weierstrass family and the invariant cotangent description are given in (The Stacks Project Authors 2026, Tags 072S and 047I) [[Stacks](#ref-Stacks)]. See also (Silverman 2009, vol. 106, chap. III) [[Silverman2009](#ref-Silverman2009)] for the Weierstrass formulation. Multiplication is finite flat and surjective by (Milne 2022, Proposition 20.7) [[MilneAV2022](#ref-MilneAV2022)]; over the Noetherian bases here it is finite locally free by (The Stacks Project Authors 2026, Tag 02KB) [[Stacks](#ref-Stacks)].",
+   "kind": "theorem",
+   "statement_anchor": "stmt-foundation-elliptic"
+  },
+  {
+   "claim_id": "claim-foundation-complex",
+   "exact_statement": "Finite étale algebraic covers of a smooth complex algebraic curve correspond to finite unramified topological covers of its analytification, including morphisms. For a punctured projective curve, normalization of the original projective curve in the resulting algebraic function field gives the finite compact cover. Normal complex curves are smooth, and the local punctured covering completes by a power map, so monodromy cycle lengths give ramification indices. Topological covers are classified by fundamental-group actions on finite fibers. The fundamental group of a genus-one surface punctured at $n$ points has generators $x,y,u_1,\\ldots,u_n$ with the single relation $$[x,y]u_1\\cdots u_n=1.$$ For a finite map of smooth proper curves over an algebraically closed field of characteristic zero, Riemann–Hurwitz states $$2g(C)-2=\\deg(f)\\bigl(2g(C')-2\\bigr)\n              +\\sum_{P\\in C}(e_P-1).$$ For the algebraic/topological cover correspondence, see (Milne 2008, Theorem 3.4) [[MilneLEC2008](#ref-MilneLEC2008)]; for Riemann–Hurwitz, see (The Stacks Project Authors 2026, sec. 53.12, Tag 0C1B) [[Stacks](#ref-Stacks)].",
+   "kind": "theorem",
+   "statement_anchor": "stmt-foundation-complex"
+  },
+  {
+   "claim_id": "claim-foundation-connectedness",
+   "exact_statement": "A proper morphism over a locally Noetherian base whose structure-sheaf direct image is canonically the structure sheaf of the base has geometrically connected fibers. This is the connected-fiber assertion of Stein factorization. We apply it only after constructing a Noetherian normal model, not directly over the nondiscrete valuation ring. See (The Stacks Project Authors 2026, Tag 03H0) [[Stacks](#ref-Stacks)].",
+   "kind": "theorem",
+   "statement_anchor": "stmt-foundation-connectedness"
+  }
+ ],
+ "paper": "papers/EN-102-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-H-0377_PM-202.1_The_Blockwise_Alperin_Weight_Conjecture.md",
+ "purpose": "The Blockwise Alperin Weight Conjecture",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "b24934f1eef82f8b71af323c2f417c451735326d4d5636c77955a35aa5a3d3f3",
+   "pm.domains.v2": "62aed42d69a16c43cad3c7a374cd1c0f56ff81eaa9e58ef2f77cc31aa8872365",
+   "pm.edges.v2": "e84632bc0eacfc6da7f84d3f5576805689f7e730ef8bebb4c91f82256ee2d3ed",
+   "pm.extraction.v2": "6da7ba8c6c1042133b75e3ca6558a3fa6add8a61428d488a199f2d21b2dec2f6",
+   "pm.formal.v2": "b481f07db655c67cf6e216a60764d921197e9c10e49e0f0065beac8e539820c8",
+   "pm.limits.v2": "efa891b717406be6297c2cad7b0ea6e19acd2e107a64fe71815496a67219330d",
+   "pm.node.v2": "ffecdd3fd9c1ee8dedd35e10bc6cffa67ccc8eaf95128c1d24b50357ef01016a",
+   "pm.objects.v2": "6c3fd8da065fec47a0fccd5226c1bac4420861d1abdc833e989cd923dc6f4cc0",
+   "pm.provenance.v2": "7927aef6a89b45c8552ff333a75b4a1f570f16463c2b4d52c74bb12a152fe9ef",
+   "pm.quantities.v2": "9c5a9557008f9267cb2b830035f272b8d55adb7823e5cb0d5842518d84ebac0e",
+   "pm.reading.v2": "060514e3d9fbdce6dd8e8f0b0b955702b1c7e88dacdd0874d788ac70f53a87a3",
+   "pm.roadmap.v2": "4fb5f1c74ca6ab5c294085e27f7edd00b76495873a54eeb8cfaa6cd78282b661",
+   "pm.search.v1": "538aaf4b8da98e038fec860710a9e712ce7492439dc0ce9b462ddc05faf6796d",
+   "pm.triptych.v2": "b99916efc63257f45a1bdbf101a9a22d128aaa0a52a6057c6f44cd58a698135e"
+  },
+  "canonical_sha256": "3902cb17f6dac5a5d1ee0a025395df120a54cdb5b533450e8ba00c1ea23f6898",
+  "paper_sha256": "6dfaf62647d2eba41e2a7f1dc7993dd381021940229c9cd327bd6c1c1f9d4c4e",
+  "repaired_body_sha256": "303e7eeedb1b7f3ca71b6b9cac6e2e1f77e611eb0d2638c793e5213ad03ab4b2"
+ },
+ "status": "ACTIVE",
+ "subject_id": 2,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "4bc0e4f979cdb9f5acbbb058c685392d8561530e5ad31d2c8a8b21e2ca00c4f7",
+   "receipt_sha256": "abbd3217c6d2f12b398e14b6ea94b2c691298e1a21e251d17fa715a97e5aa668",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Trivial group, C2, C3 and S3 with n in {1,2,3}; exhaustive enumeration compared with explicit canonical-orbit counting.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-orbit-count-from-tuples",
+     "oracle_basis": "Independent exhaustive orbit enumeration via canonical conjugate minimisation and a separate closure routine."
+    },
+    {
+     "checked_domain": "Same small groups; checks the definition of the count (relation, generation, p-singular entries, per-multiset split) but not the divisibility threshold.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-tuple-count-regime",
+     "oracle_basis": "Independent recomputation of relation, generation and class multisets, plus equality with the expected line."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-nonsingular-entries",
+     "observed_exit": 1,
+     "receipt_sha256": "edae4242c539b7cef277914070c989d6cf1a9eb7d45246e8cf673b1dce83012f"
+    },
+    {
+     "id": "mut-no-generation-check",
+     "observed_exit": 1,
+     "receipt_sha256": "d1f5e91cb98c1cbcb10fa2db28aceee0e4b3a79ab55e886166c9683c1fb242a0"
+    },
+    {
+     "id": "mut-orbit-size-ignores-centre",
+     "observed_exit": 1,
+     "receipt_sha256": "c69d93d143736b9ed5c60f7b5a6e78150ece752d6807ca8f60379d23ae2115c5"
+    },
+    {
+     "id": "mut-merge-multisets",
+     "observed_exit": 1,
+     "receipt_sha256": "f3f0aca4dd7e34843f6a33560b5ff4d7ce52428ed8a50d62d21bfdfca904429e"
+    }
+   ],
+   "receipt_sha256": "a115e4301d4b99c29f27359d71741f29920dbef553840974fbcb98c77cbfe8a8",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The Blockwise Alperin Weight Conjecture"
+}

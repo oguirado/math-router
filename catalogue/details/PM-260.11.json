@@ -1,0 +1,541 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1240811,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 359053
+ },
+ "coordinate": "EN-117-000-0022-2-2026-PR-T4-UK-EX-M2-B-ML-M-0541",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "mathematical_relativity",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-rigidity",
+     "quote": "Suppose an exterior in Definition <a href=\"#def:setting:rigidity\" data-reference-type=\"ref\" data-reference=\"def:setting:rigidity\">4</a> attains equality in <a href=\"#eq:setting:main\" data-reference-type=\"eqref\" data-reference=\"eq:setting:main\">[eq:setting:main]</a>. There is a global smooth spacelike embedding of the entire $\\Omega$, including $S$, into the regular extension of one exterior of $\\mathbf G_m$, inducing exactly the original $g$ and $K$ with convention <a href=\"#eq:setting:Ksign\" data-reference-type=\"eqref\" data-reference=\"eq:setting:Ksign\">[eq:setting:Ksign]</a>.*\n\n*The image lies in the domain $r>r_m$ together with its corresponding future horizon and bifurcation sphere. The boundary maps to a full smooth section of that future horizon or to its bifurcation sphere. The embedding and future unit normal extend smoothly to $S$ in horizon-regular coordinates, and the chosen end approaches spatial infinity. There is no conclusion about a region behind $S$.",
+     "quote_sha256": "6ff8e23a5c5741ed20518aaa685e5b9f57406427047d2b363b59437bd87fb2dc"
+    }
+   ],
+   "query": "Classify geometry behind the horizon",
+   "reason": "The exterior embedding supplies no conclusion behind the original boundary."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-def-setting-rigidity",
+     "quote": "An exterior in Definition <a href=\"#def:data\" data-reference-type=\"ref\" data-reference=\"def:data\">1</a> belongs to the rigidity class if $S$ is connected, $\\theta_+(S)=0$, every full cut has area at least $A=\\mathop{\\mathrm{Area}}_g(S)>0$, and no compact smooth embedded two-sided enclosing hypersurface entirely in $\\operatorname{int}\\Omega$, possibly disconnected, has $\\theta_+\\le0$ everywhere with normal toward the end.",
+     "quote_sha256": "35c767da13c695f9c2fb901fcff59fbf7828703d7b7d0f0a38ba79b3a18e993e"
+    }
+   ],
+   "query": "Use weakly trapped numerical comparison as an unconditional rigidity theorem",
+   "reason": "Equality rigidity imposes additional outermostness and area-minimizing hypotheses."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-q3-rigidity-finite-strictness",
+     "quote": "Under the hypotheses of Theorem <a href=\"#q3:intro:rigidity\" data-reference-type=\"ref\" data-reference=\"q3:intro:rigidity\">53</a>, retain $E>|P|_\\delta$ but do not assume its equality in mass and area. If $\\ell\\geq2$, then $$\\sqrt{E^2-|P|_\\delta^2}>\\sqrt{\\frac{A}{16\\pi}}.$$",
+     "quote_sha256": "9424eae034ec1a28b534eedca2f53d7e2134ccaf3a21d680d96ca899349432a9"
+    }
+   ],
+   "query": "Obtain an explicit quantitative deficit for disconnected horizons",
+   "reason": "The strictness assertion is qualitative under its finite-component hypotheses."
+  }
+ ],
+ "family": "PM-260",
+ "id": "PM-260.11",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-numerical-input",
+    "claim_id": "C1",
+    "statement": "The numerical spacetime Penrose theorem (OpenAI 2026b, Theorem 1.3) [[CompanionNumerical](#ref-CompanionNumerical)] states that every initial-data exterior in Definition <a href=\"#def:data\" data-reference-type=\"ref\" data-reference=\"def:data\">1</a>, with the positive full-cut infimum in Definition <a href=\"#def:fullcuts\" data-reference-type=\"ref\" data-reference=\"def:fullcuts\">2</a>, satisfies $$\\boxed{\\quad\n m\\ge\\frac12\n \\left(\\frac{A_{\\min}(S)}{\\omega}\\right)^{\\frac{n-2}{n-1}} .\n \\quad}\n \\label{eq:setting:main}$$ This input is used for nearby weakly trapped data as well as for the original pair. It imposes none of the additional equality hypotheses introduced below."
+   },
+   {
+    "anchor": "stmt-thm-rigidity",
+    "claim_id": "C2",
+    "statement": "Suppose an exterior in Definition <a href=\"#def:setting:rigidity\" data-reference-type=\"ref\" data-reference=\"def:setting:rigidity\">4</a> attains equality in <a href=\"#eq:setting:main\" data-reference-type=\"eqref\" data-reference=\"eq:setting:main\">[eq:setting:main]</a>. There is a global smooth spacelike embedding of the entire $\\Omega$, including $S$, into the regular extension of one exterior of $\\mathbf G_m$, inducing exactly the original $g$ and $K$ with convention <a href=\"#eq:setting:Ksign\" data-reference-type=\"eqref\" data-reference=\"eq:setting:Ksign\">[eq:setting:Ksign]</a>.*\n\n*The image lies in the domain $r>r_m$ together with its corresponding future horizon and bifurcation sphere. The boundary maps to a full smooth section of that future horizon or to its bifurcation sphere. The embedding and future unit normal extend smoothly to $S$ in horizon-regular coordinates, and the chosen end approaches spatial infinity. There is no conclusion about a region behind $S$."
+   },
+   {
+    "anchor": "stmt-thm-converse",
+    "claim_id": "C3",
+    "statement": "Let $M>0$. Every smooth spacelike exterior hypersurface in the regular extension of $\\mathbf G_M$, with its interior in $r>r_M$, whose induced data satisfy Definitions <a href=\"#def:data\" data-reference-type=\"ref\" data-reference=\"def:data\">1</a>, <a href=\"#def:fullcuts\" data-reference-type=\"ref\" data-reference=\"def:fullcuts\">2</a>, and <a href=\"#def:setting:rigidity\" data-reference-type=\"ref\" data-reference=\"def:setting:rigidity\">4</a>, whose boundary is a full smooth section of the corresponding future horizon or its bifurcation sphere, and whose end approaches spatial infinity, has $$(E^2-|P|_\\delta^2)^{1/2}=M,\\qquad\n A=\\omega(2M)^{\\frac{n-1}{n-2}}.\n \\label{eq:setting:converse}$$ It therefore attains equality in <a href=\"#eq:setting:main\" data-reference-type=\"eqref\" data-reference=\"eq:setting:main\">[eq:setting:main]</a>. In every dimension there are admissible static examples and admissible examples with $K\\not\\equiv0$."
+   },
+   {
+    "anchor": "stmt-q-geometry-enclosure",
+    "claim_id": "C4",
+    "statement": "The minimum in Equation <a href=\"#q:geometry:full-perimeter\" data-reference-type=\"eqref\" data-reference=\"q:geometry:full-perimeter\">[q:geometry:full-perimeter]</a> exists, equals $a(g)>0$, and is independent of the filling. All its minimizing sets are contained in one compact region. Their multiplicity-one frontiers are smooth minimal hypersurfaces away from $B$ and a singular set of Hausdorff dimension at most $n-8$; the singular set is empty when $n\\le7$. Every contact point with $B$ is regular, with a $C^{1,\\alpha}\\cap W^{2,p}$ graph for every finite $p$ and $0<\\alpha<1$. For $n=3,4$ the whole frontier is $C^{1,1}$, including contact, and its graph functions are $W^{2,\\infty}$.*\n\n*In dimensions $3$ and $4$, each frontier bounds a connected exterior and is the $C^1$ and area limit of smooth full cuts contained in $\\operatorname{int}X$. If $H_B<0$ for the normal into $X$, every minimizer contains one fixed exterior collar of $B$. In dimensions $3$ and $4$ its frontier is then a smooth minimal full cut; its closed exterior is connected, one-ended, complete with its boundary included, and outer area-minimizing with all boundary components counted. In every dimension, whenever a minimizing frontier is smooth, its closed exterior has these same connectedness, completeness, one-end and outer area-minimization properties."
+   },
+   {
+    "anchor": "stmt-q-geometry-envelope",
+    "claim_id": "C5",
+    "statement": "The space $\\mathcal T(g)$ is compact and metrizable. For every smooth symmetric two-tensor $h$ the function $$E\\longmapsto a'_E(h):=\n \\frac12\\int_{\\partial^*E}\\operatorname{tr}_{T\\partial^*E}h\\,dA_g$$ is continuous on it. Let $g_t$, $|t|<t_0$, be a smooth path of smooth metrics with $g_0=g$, extended smoothly through the fixed boundary. Assume uniform comparison with $g$, and bounded first and second parameter derivatives relative to $g$. One sufficient end hypothesis is $$\\label{q:geometry:uniform-AF}\n g_t-\\delta=O_2(r^{-q_*})\\quad\\hbox{uniformly for }|t|<t_0,\n \\qquad q_*>0.$$ More generally, it suffices that the coordinate spheres have positive outward mean curvature beyond one common radius. The result also holds if the end metrics are uniformly comparable to the Euclidean metric with uniform scaled $C^1$ bounds; they need not have a common mean-convex tail in this last alternative. Put $h=\\partial_tg_t|_0$. Then $$\\label{q:geometry:envelope-derivative}\n \\left.\\frac{d}{dt}\\right|_{0+}a(g_t)\n       =\\min_{E\\in\\mathcal T(g)}a'_E(h).$$ For any $t_j\\to0$ and any $E_j\\in\\mathcal T(g_{t_j})$, a subsequence converges in $L^1$ to $E\\in\\mathcal T(g)$, with convergence of perimeters and of the plane measures computed in the fixed metric $g$."
+   },
+   {
+    "anchor": "stmt-prop-variation-multiplier",
+    "claim_id": "C6",
+    "statement": "There are a probability measure $\\pi$ on $\\mathfrak T$, a locally finite nonnegative measure $\\Lambda$ on $\\mathfrak A$, and a finite nonnegative measure $\\zeta$ on $S$, such that $$\\label{eq:variation:multiplier}\n 2k\\omega\\mathcal E'(h,p)-c\\int_{\\mathfrak T}a'_C(h)\\,d\\pi(C)\n =\\int_{\\mathfrak A}\\mathfrak C'(h,p;v)\\,d\\Lambda(x,v)\n       -\\int_S\\theta'_+(h,p)\\,d\\zeta.$$ This identity holds for all smooth compactly supported variations, including arbitrary jets at $S$, and for the energy and momentum prototypes specified below. The scalar and vector moments of $\\Lambda$ obey, initially as measures, $$\\label{eq:variation:causality}\n u\\ge |X|_g,\\qquad u\\mu+J(X)=0.$$ Here a field and its density relative to the fixed original volume form are identified when that density exists."
+   },
+   {
+    "anchor": "stmt-lem-variation-common-jacobi",
+    "claim_id": "C7",
+    "statement": "Let $C\\in\\mathop{\\mathrm{supp}}\\pi$ belong to the full-measure family in Lemma <a href=\"#lem:variation:contact-dichotomy\" data-reference-type=\"ref\" data-reference=\"lem:variation:contact-dichotomy\">16</a>, with wholly interior frontier, and let $\\Sigma$ be a connected component of its regular part. If its local graph parameter at some patch is not an atom, there is a smooth positive function $\\varphi$ on all of $\\Sigma$ with $$\\label{eq:variation:common-jacobi}\n L_0\\varphi=L_+\\varphi=L_-\\varphi=0.$$"
+   },
+   {
+    "anchor": "stmt-lem-variation-jacobi-singular-ends",
+    "claim_id": "C8",
+    "statement": "Let $\\Sigma$ be a connected regular component of the compact locally perimeter-minimizing boundary $\\Gamma$. Every smooth positive solution of $$\\Delta_\\Sigma\\varphi+\n (|A_\\Sigma|^2+\\operatorname{Ric}_g(\\nu,\\nu))\\varphi=0$$ satisfies $\\inf_\\Sigma\\varphi>0$. Moreover, $\\varphi(x_j)\\to+\\infty$ for every sequence $x_j\\in\\Sigma$ with $\\operatorname{dist}(x_j,\\mathcal S)\\to0$."
+   },
+   {
+    "anchor": "stmt-lem-variation-diffuse-bv-minima",
+    "claim_id": "C9",
+    "statement": "Let $f\\geq0$ be locally Lipschitz on an interval $I$, and assume its almost-everywhere derivative $v=f'$ belongs to $BV_{\\mathrm{loc}}(I)$. If $D^dv$ denotes the nonatomic part of $Dv$, then $$|D^dv|(\\{f=0\\})=0.$$"
+   },
+   {
+    "anchor": "stmt-thm-variation-boundary-support",
+    "claim_id": "C10",
+    "statement": "Under the rigidity hypotheses and equality, the probability measure in Proposition <a href=\"#prop:variation:multiplier\" data-reference-type=\"ref\" data-reference=\"prop:variation:multiplier\">12</a> satisfies $$\\pi\\{C:\\Gamma_C=S\\}=1.$$ Consequently, on every compact variation and end prototype, $$\\label{eq:variation:boundary-multiplier}\n 2k\\omega\\mathcal E'(h,p)-c a'_S(h)\n =\\int_{\\mathfrak A}\\mathfrak C'(h,p;v)\\,d\\Lambda\n       -\\int_S\\theta'_+(h,p)\\,d\\zeta,\n \\qquad\n a'_S(h)=\\frac12\\int_S\\mathop{\\mathrm{tr}}_Sh\\,dA.$$ In particular the area source in Equation <a href=\"#eq:variation:hessian\" data-reference-type=\"eqref\" data-reference=\"eq:variation:hessian\">[eq:variation:hessian]</a> vanishes in the open exterior. Boundary mass of the constraint measure $\\Lambda$ is not included in this conclusion."
+   },
+   {
+    "anchor": "stmt-thm-static-classification",
+    "claim_id": "C11",
+    "statement": "Under the equality and rigidity hypotheses of Theorem <a href=\"#thm:rigidity\" data-reference-type=\"ref\" data-reference=\"thm:rigidity\">5</a>, the original exterior, with its boundary included, admits a smooth spacelike embedding into the regular Schwarzschild–Tangherlini exterior of mass $m$. Its induced metric and future-normal second fundamental form are $g$ and $K$. The boundary is a full section of the future horizon, or the bifurcation sphere, and the end approaches spatial infinity."
+   },
+   {
+    "anchor": "stmt-prop-static-positive",
+    "claim_id": "C12",
+    "statement": "One has $W>0$ throughout $\\operatorname{int}\\Omega$. The static base metric $h=g+W^{-1}X^\\flat\\otimes X^\\flat$ has a smooth one-sided attachment at $S$, with induced metric $g|_{TS}$, and $$\\label{eq:static:static-equations}\n \\mathop{\\mathrm{Hess}}_h\\lambda=\\lambda\\mathop{\\mathrm{Ric}}_h,\\qquad\n \\Delta_h\\lambda=0,\\qquad R_h=0,\\qquad\n 0<\\lambda<1,\\quad \\lambda=\\sqrt W.$$ At the attached boundary $S$, $|d\\lambda|_h=\\kappa$ and the boundary is totally geodesic. The even reflection of $h$ and odd reflection of $\\lambda$ are at least $C^{2,\\alpha}$ for $0<\\alpha<1$."
+   },
+   {
+    "anchor": "stmt-prop-static-euclidean-double",
+    "claim_id": "C13",
+    "statement": "The filled metric $(N,\\gamma_*)$ of Lemma <a href=\"#lem:static:filled-double\" data-reference-type=\"ref\" data-reference=\"lem:static:filled-double\">39</a> is isometric to Euclidean $\\R^n$."
+   },
+   {
+    "anchor": "stmt-q-converse-lem-boost",
+    "claim_id": "C14",
+    "statement": "In the Schwarzschild–Tangherlini spacetime of geometric mass $M>0$, let $b,y$ be static time and isotropic spatial coordinates. Make the Lorentz change $$\\label{q:converse:eq:boost-coordinates}\n b=\\gamma(T+vx^1),\\qquad y^1=\\gamma(x^1+vT),\\qquad\n y^a=x^a\\ (2\\le a\\le n),\\qquad \\gamma=(1-v^2)^{-1/2},$$ where $0\\le v<1$. The induced data on $T=0$, oriented by the future normal, have $$\\label{q:converse:eq:boost-charges}\n E=\\gamma M,\\qquad P_1=\\gamma Mv,\\qquad P_a=0\\ (a>1).$$ The metric and second fundamental form have the homogeneous leading terms computed below, with remainders $O_d(r^{-2p})$ and $O_d(r^{-2p-1})$, respectively, for every fixed derivative order $d$."
+   },
+   {
+    "anchor": "stmt-q-converse-prop-adm",
+    "claim_id": "C15",
+    "statement": "Under the hypotheses of Lemma <a href=\"#q:converse:lem:plane\" data-reference-type=\"ref\" data-reference=\"q:converse:lem:plane\">45</a>, the ADM limits of the original induced data exist and satisfy $$E=M u_\\infty,\\qquad P_i=-M\\delta_{ij}X_\\infty^j,\n \\qquad E>0,\\qquad E^2-|P|^2=M^2.\n \\label{q:converse:eq:charges}$$ In particular the invariant mass is $M$. No parity assumption is needed."
+   },
+   {
+    "anchor": "stmt-q-converse-prop-examples",
+    "claim_id": "C16",
+    "statement": "For every $n\\ge3$ and every $M>0$, the static exterior slice satisfies all hypotheses of the rigidity subclass and realizes equality. There are also smooth examples with $K\\not\\equiv0$, obtained by nonconstant radial static-time graphs supported in any prescribed annulus strictly outside the horizon. These examples are vacuum, complete with their boundary included, have the same horizon and asymptotic end as the static slice, and satisfy $$\\mathop{\\mathrm{Area}}_g(\\Gamma)\\ge\\mathop{\\mathrm{Area}}_g(S)\n \\quad\\hbox{for every full enclosing cut }\\Gamma.$$ They have no smooth compact weakly future-trapped enclosing hypersurface lying wholly in the interior."
+   },
+   {
+    "anchor": "stmt-q3-intro-rigidity",
+    "claim_id": "C17",
+    "statement": "Let $(M,g,K)$ be a smooth connected orientable complete initial data set without boundary, consisting of a compact core and finitely many asymptotically flat ends. On each end assume $g-\\delta=O_2(r^{-q})$, $K=O_1(r^{-1-q})$, with $q>1/2$, and existing finite ADM flux limits. Assume that $\\mu$ and $|J|_g$ are integrable and that $\\mu\\geq|J|_g$ everywhere.*\n\n*Choose an end and a finite nonempty disjoint union $$S=\\bigsqcup_{i=1}^{\\ell}S_i,\\qquad 1\\leq\\ell<\\infty,$$ of compact connected smooth embedded two-sided surfaces without boundary, separating that end from a complementary region. Let $M_{\\mathrm{ext}}$ be the closure of the connected side toward the chosen end. Suppose that $\\partial M_{\\mathrm{ext}}=S$, that $M_{\\mathrm{ext}}$ has exactly this one end, and that, for the normal pointing into $M_{\\mathrm{ext}}$:*\n\n1.  *every $S_i$ is a future MOTS, so $H_{S_i}+\\mathop{\\mathrm{tr}}_{S_i}K=0$;*\n\n2.  *$S$ is outermost in the partial-coincidence sense of Definition <a href=\"#q3:rigidity:partial-outermostness\" data-reference-type=\"ref\" data-reference=\"q3:rigidity:partial-outermostness\">52</a>;*\n\n3.  *every enclosing cut in the closed exterior has area at least $A=|S|_g=\\sum_{i=1}^{\\ell}|S_i|_g>0$.*\n\n\n*Let $(E,P)$ be the ADM vector of the chosen end. If $$\\label{q3:intro:equality}\nE>|P|_\\delta,\\qquad\nm=\\sqrt{E^2-|P|_\\delta^2}=\\sqrt{\\frac{A}{16\\pi}},$$ then $\\ell=1$ and $S$ is diffeomorphic to a sphere. There is a proper smooth spacelike embedding of the entire original $M_{\\mathrm{ext}}$ into the maximally extended Schwarzschild spacetime of mass $m$, inducing $g$ and the given $K$ for a consistent future unit normal. The chosen end approaches the corresponding spatial infinity. The image of $S$ is a smooth cross-section of the corresponding future horizon or the bifurcation sphere. The embedding and its future normal are smooth up to $S$, and the image extends as a smooth spacelike hypersurface through that boundary."
+   },
+   {
+    "anchor": "stmt-q3-intro-connected-rigidity",
+    "claim_id": "C18",
+    "statement": "Under the ambient, asymptotic, and exterior hypotheses of Theorem <a href=\"#q3:intro:rigidity\" data-reference-type=\"ref\" data-reference=\"q3:intro:rigidity\">53</a>, suppose that $S$ is connected. Retain conditions <span class=\"upright\">(i)</span> and <span class=\"upright\">(iii)</span>, and replace condition <span class=\"upright\">(ii)</span> by the following weaker outermostness condition: there is no compact smooth embedded surface wholly contained in $\\operatorname{Int}M_{\\mathrm{ext}}$, possibly disconnected, separating $S$ from the distant end and having $\\theta_+\\le0$ everywhere for the normal toward that end. If <a href=\"#q3:intro:equality\" data-reference-type=\"eqref\" data-reference=\"q3:intro:equality\">[q3:intro:equality]</a> holds with $A=|S|_g$, then $S$ is diffeomorphic to a sphere and all the original-data Schwarzschild embedding conclusions of Theorem <a href=\"#q3:intro:rigidity\" data-reference-type=\"ref\" data-reference=\"q3:intro:rigidity\">53</a> hold."
+   },
+   {
+    "anchor": "stmt-q3-rigidity-finite-strictness",
+    "claim_id": "C19",
+    "statement": "Under the hypotheses of Theorem <a href=\"#q3:intro:rigidity\" data-reference-type=\"ref\" data-reference=\"q3:intro:rigidity\">53</a>, retain $E>|P|_\\delta$ but do not assume its equality in mass and area. If $\\ell\\geq2$, then $$\\sqrt{E^2-|P|_\\delta^2}>\\sqrt{\\frac{A}{16\\pi}}.$$"
+   },
+   {
+    "anchor": "stmt-q3-local-spinor-strictness",
+    "claim_id": "C20",
+    "statement": "Let $(M,g,K)$ be smooth connected orientable three-dimensional initial data without boundary, with $g$ complete and with finitely many asymptotically flat ends outside a compact set. Assume on every end $$g-\\delta=O_2(r^{-q}),\\qquad K=O_1(r^{-1-q}),\\qquad q>\\tfrac12,$$ integrable constraint densities $\\mu,|J|_g$, finite ADM charges, and $\\mu\\geq |J|_g$ everywhere. Here $16\\pi\\mu=R_g+(\\operatorname{tr}_gK)^2-|K|_g^2$ and $8\\pi J=\\operatorname{div}_g(K-(\\operatorname{tr}_gK)g)$. Let $S_1,S_2$ be disjoint smooth embedded two-sided spheres, and suppose that the closure $\\Omega$ of the connected exterior toward a designated end has boundary $S=S_1\\sqcup S_2$ and exactly that one end.*\n\n*Orient $S$ into $\\Omega$. Assume $\\theta_+=H+\\operatorname{tr}_S K=0$ on $S$, and assume every full enclosing cut has area at least $A=|S_1|_g+|S_2|_g$. A full cut is the entire compact smooth frontier of a connected end-containing outer domain, with all components and coincident portions of $S$ counted and bounded complementary pockets filled. Finally assume there is no such cut $\\Gamma\\ne S$ whose components either equal an $S_i$ or lie wholly in the open exterior, with at least one component in the open exterior and $\\theta_+(\\Gamma)\\leq0$ toward the designated end. If that end has $E>|P|_\\delta$, then $$\\sqrt{E^2-|P|_\\delta^2}\n    >\\sqrt{\\frac{|S_1|_g+|S_2|_g}{16\\pi}}.$$"
+   },
+   {
+    "anchor": "stmt-q4-thm-numerical-provider",
+    "claim_id": "C21",
+    "statement": "Suppose $(\\Omega,g,K)$ satisfies the smoothness, orientability, completeness, end, integrability, decay, and finite-charge assumptions above, as well as $\\mu\\ge|J|_g$ and $\\theta_+\\le0$ on every component of its nonempty compact boundary. Then $A_*(g)>0$ and $$\\label{q4:eq:numerical}\n E\\ge\\sqrt{|P|_\\delta^2+\\frac14\n                    \\left(\\frac{A_*(g)}\\omega\\right)^{4/3}}.$$ In particular $E>|P|_\\delta$ and $\\sqrt{E^2-|P|_\\delta^2}\\ge\\frac12(A_*(g)/\\omega)^{2/3}$."
+   },
+   {
+    "anchor": "stmt-q4-thm-rigidity",
+    "claim_id": "C22",
+    "statement": "Let $(\\Omega,g,K)$ belong to Definition <a href=\"#q4:def:horizon\" data-reference-type=\"ref\" data-reference=\"q4:def:horizon\">81</a>, and set $m=\\sqrt{E^2-|P|_\\delta^2}$. Then $$\\label{q4:eq:intro-equality}\n m=\\frac12\\left(\\frac A\\omega\\right)^{2/3}$$ if and only if the original initial data admit a global smooth spacelike embedding, including $S$, into the regular maximal extension of $\\overline g_m$. The image lies in the closure of the corresponding exterior, its end approaches that spatial infinity, and $S$ maps to a smooth section of its future horizon or to its bifurcation sphere. The induced metric is the original $g$, and its second fundamental form for a consistent future unit normal is the original $K$ with convention <a href=\"#q4:eq:intro-second-fundamental-form\" data-reference-type=\"eqref\" data-reference=\"q4:eq:intro-second-fundamental-form\">[q4:eq:intro-second-fundamental-form]</a>. The embedding and normal are smooth up to $S$ in regular horizon coordinates.*\n\n*Equivalently, every such hypersurface in $\\overline g_{M_0}$ satisfying Definition <a href=\"#q4:def:horizon\" data-reference-type=\"ref\" data-reference=\"q4:def:horizon\">81</a> and the prescribed asymptotic assumptions has invariant ADM mass $M_0$, horizon area $\\omega(2M_0)^{3/2}$, and equality in <a href=\"#q4:eq:numerical\" data-reference-type=\"eqref\" data-reference=\"q4:eq:numerical\">[q4:eq:numerical]</a>."
+   },
+   {
+    "anchor": "stmt-q4-var-area-localization",
+    "claim_id": "C23",
+    "statement": "For $\\varpi$-almost every element of $\\mathcal T$, its frontier equals $S$, where $\\varpi$ is the measure in Proposition <a href=\"#q4:var:multiplier\" data-reference-type=\"ref\" data-reference=\"q4:var:multiplier\">91</a>. Consequently, for every variation $H=(h,p)$ in $\\mathcal V$, $$\\int_{\\mathcal T}a'_T(h)\\,\\,\\mathrm d\\varpi(T)\n       =a'_S(h)=\\tfrac12\\int_S\\mathop{\\mathrm{tr}}_S h\\,\\,\\mathrm dA_g.\n\\label{q4:var:localized-area}$$ In particular the multiplier identity becomes $$6\\omega\\mathcal E'(H)-c\\,a'_S(h)\n  =\\langle C'_H,\\Lambda\\rangle\n       -\\int_S\\theta'_H\\,\\,\\mathrm d\\eta+za.\n\\label{q4:var:localized-identity}$$"
+   },
+   {
+    "anchor": "stmt-q4-adj-causal-field",
+    "claim_id": "C24",
+    "statement": "There are a smooth function $u$ and a smooth vector field $X$ on $\\Omega$, smooth up to its one-sided boundary, with the following properties.*\n\n\n\n\n\n1.  *They satisfy $u\\ge |X|_g$, $u>0$ in $\\operatorname{int}\\Omega$, and $$u\\mu+J(X)=0.\n     \\label{q4:adj:complementarity}$$ With symmetric indices denoting averaging, their equations are $$\\begin{aligned}\n     \\nabla_{(i}X_{j)}&=-uK_{ij},\n     \\label{q4:adj:kid-first}\\\\\n     \\Delta u&=-\\operatorname{div}_g\\bigl(K(X,\\cdot)^\\sharp\\bigr),\n     \\label{q4:adj:conformal-adjoint}\\\\\n     \\nabla^2u\n     &=u(\\mathop{\\mathrm{Ric}}_g+\\tau K-2K^2)-\\mathcal L_XK+X_{(i}J_{j)}.\n     \\label{q4:adj:kid-second}\n    \\end{aligned}$$ Here $X_i=g_{ij}X^j$ and $(K^2)_{ij}=K_{ik}K^k{}_j$.*\n\n\n2.  *On the chosen asymptotically flat end, $$(u,X)=(b^0,b)+O_2(r^{-q_0}).\n     \\label{q4:adj:decay}$$*\n\n\n3.  *At the boundary, for the unit normal $\\nu$ pointing into $\\Omega$, $$X=u\\nu,\\qquad\n     \\partial_\\nu u+K(X,\\nu)=\\kappa.\n     \\label{q4:adj:horizon-data}$$ Either $u>0$ everywhere on $S$ or $u=0$ everywhere on $S$.*\n\n\n\n4.  *On $\\mathbb R\\times\\operatorname{int}\\Omega$, set $$\\mathbf g=-u^2\\,\\mathrm dt^2\n       +g_{ij}(\\mathrm dx^i+X^i\\,\\mathrm dt)\n              (\\mathrm dx^j+X^j\\,\\mathrm dt),\n     \\qquad \\xi=\\partial_t,\\qquad N=u^2-|X|_g^2.\n     \\label{q4:adj:stationary-metric}$$ For the future normal $n=u^{-1}(\\xi-X)$, the slice $t=0$ has exactly the original induced metric $g$ and second fundamental form $K$, with the convention of Theorem <a href=\"#q4:thm:rigidity\" data-reference-type=\"ref\" data-reference=\"q4:thm:rigidity\">82</a>. Moreover, $$\\mathop{\\mathrm{Ric}}_{\\mathbf g}(\\xi,\\cdot)=0,\n     \\qquad \\mathop{\\mathrm{Ric}}_{\\mathbf g}=0\\quad\\hbox{on }\\{N>0\\}.\n     \\label{q4:adj:ricci}$$*\n\n\n\n5.  *We have $N\\ge0$, $N\\to1$ at infinity, and $N>0$ in a full collar just outside $S$. More precisely, in the positive boundary-lapse case, $$N|_S=0,\\qquad\n     \\mathrm dN|_S=2u\\kappa\\,\\nu^\\flat=2\\kappa X^\\flat.\n     \\label{q4:adj:positive-collar}$$ In the zero boundary-lapse case, if $s\\ge0$ is the original $g$-normal distance from $S$, there are smooth one-sided fields $d,Y_2$ such that $$u=sd,\\qquad X=s^2Y_2,\\qquad d|_S=\\kappa,\\qquad\n     N=s^2\\bigl(d^2-s^2|Y_2|_g^2\\bigr).\n     \\label{q4:adj:zero-collar}$$ Consequently all zeros of $N$ in $\\operatorname{int}\\Omega$ lie in a compact subset of that interior."
+   },
+   {
+    "anchor": "stmt-q4-cla-static-classification",
+    "claim_id": "C25",
+    "statement": "The positive component is the whole original open exterior: $\\mathcal U=\\operatorname{int}\\Omega$ and $N>0$ there. Its attached boundary is $S$. There is a global isometry of the static base onto the Schwarzschild–Tangherlini spatial exterior of mass $m$, under which $$\\label{q4:cla:ST-base}\n h_b=\\left(1+\\frac{m}{2\\rho^2}\\right)^2\n          (\\,\\mathrm d\\rho^2+\\rho^2 g_{\\mathbb S^3}),\\qquad\n \\lambda=\\frac{1-m/(2\\rho^2)}{1+m/(2\\rho^2)},\n \\qquad \\rho\\ge\\sqrt{m/2}.$$ The isometry is smooth on the open base and in its one-sided regular boundary structure. The attachment is homeomorphic to the original attachment of $S$ in $\\Omega$ and restricts smoothly on $S$. In particular the open base is simply connected and $S$ is a round three-sphere in its induced metric. The base reflection is smooth in signed $\\lambda$ in the positive boundary-lapse case; its angular coordinates can be taken constant along base normal geodesics."
+   },
+   {
+    "anchor": "stmt-q4-rec-embedding",
+    "claim_id": "C26",
+    "statement": "Equality under the horizon hypotheses gives a global smooth spacelike embedding of the original $\\Omega$, including $S$, in the regular maximal Tangherlini extension of mass $m$. The embedding pulls back the spacetime metric and the future second fundamental form to the original $g$ and $K$. Its image lies in the closure of the corresponding exterior, its boundary has the form stated in Lemma <a href=\"#q4:rec:horizon-extension\" data-reference-type=\"ref\" data-reference=\"q4:rec:horizon-extension\">109</a>, and its end approaches the corresponding spatial infinity."
+   },
+   {
+    "anchor": "stmt-q4-rec-converse-mass",
+    "claim_id": "C27",
+    "statement": "Every hypersurface in the converse class of Theorem <a href=\"#q4:thm:rigidity\" data-reference-type=\"ref\" data-reference=\"q4:thm:rigidity\">82</a>, in Tangherlini spacetime of geometric mass $M_0>0$, has invariant ADM mass $M_0$. More precisely, in coordinates adapted to its asymptotic boost, its charges are $E=M_0\\Gamma$ and $P=M_0\\Gamma v\\,e_1$, where $0\\leq v<1$ and $\\Gamma=(1-v^2)^{-1/2}$."
+   },
+   {
+    "anchor": "stmt-q4-rec-horizon-area",
+    "claim_id": "C28",
+    "statement": "A smooth spacelike section of a future Tangherlini horizon of geometric mass $M_0>0$, including its bifurcation sphere, has induced metric $(2M_0)g_{\\mathbb S^3}$ and three-volume $\\omega(2M_0)^{3/2}$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Original-data equality rigidity",
+    "evidence": [
+     {
+      "anchor": "stmt-thm-numerical-input",
+      "quote": "The numerical spacetime Penrose theorem (OpenAI 2026b, Theorem 1.3) [[CompanionNumerical](#ref-CompanionNumerical)] states that every initial-data exterior in Definition <a href=\"#def:data\" data-reference-type=\"ref\" data-reference=\"def:data\">1</a>, with the positive full-cut infimum in Definition <a href=\"#def:fullcuts\" data-reference-type=\"ref\" data-reference=\"def:fullcuts\">2</a>, satisfies $$\\boxed{\\quad\n m\\ge\\frac12\n \\left(\\frac{A_{\\min}(S)}{\\omega}\\right)^{\\frac{n-2}{n-1}} .\n \\quad}\n \\label{eq:setting:main}$$ This input is used for nearby weakly trapped data as well as for the original pair. It imposes none of the additional equality hypotheses introduced below.",
+      "quote_sha256": "5af2dda3d28c32e2cee79d694f56373e51ac4c9d52e7072b5aabcec0ccd649e4"
+     }
+    ],
+    "requires_concepts": [
+     "Numerical spacetime comparison",
+     "Minimizing-area envelope",
+     "Causal constraint adjoints",
+     "Static-base classification"
+    ],
+    "supporting_pm_ids": [
+     "PM-260.9"
+    ]
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C1",
+   "exact_statement": "The numerical spacetime Penrose theorem (OpenAI 2026b, Theorem 1.3) [[CompanionNumerical](#ref-CompanionNumerical)] states that every initial-data exterior in Definition <a href=\"#def:data\" data-reference-type=\"ref\" data-reference=\"def:data\">1</a>, with the positive full-cut infimum in Definition <a href=\"#def:fullcuts\" data-reference-type=\"ref\" data-reference=\"def:fullcuts\">2</a>, satisfies $$\\boxed{\\quad\n m\\ge\\frac12\n \\left(\\frac{A_{\\min}(S)}{\\omega}\\right)^{\\frac{n-2}{n-1}} .\n \\quad}\n \\label{eq:setting:main}$$ This input is used for nearby weakly trapped data as well as for the original pair. It imposes none of the additional equality hypotheses introduced below.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-numerical-input"
+  },
+  {
+   "claim_id": "C2",
+   "exact_statement": "Suppose an exterior in Definition <a href=\"#def:setting:rigidity\" data-reference-type=\"ref\" data-reference=\"def:setting:rigidity\">4</a> attains equality in <a href=\"#eq:setting:main\" data-reference-type=\"eqref\" data-reference=\"eq:setting:main\">[eq:setting:main]</a>. There is a global smooth spacelike embedding of the entire $\\Omega$, including $S$, into the regular extension of one exterior of $\\mathbf G_m$, inducing exactly the original $g$ and $K$ with convention <a href=\"#eq:setting:Ksign\" data-reference-type=\"eqref\" data-reference=\"eq:setting:Ksign\">[eq:setting:Ksign]</a>.*\n\n*The image lies in the domain $r>r_m$ together with its corresponding future horizon and bifurcation sphere. The boundary maps to a full smooth section of that future horizon or to its bifurcation sphere. The embedding and future unit normal extend smoothly to $S$ in horizon-regular coordinates, and the chosen end approaches spatial infinity. There is no conclusion about a region behind $S$.",
+   "kind": "classification",
+   "statement_anchor": "stmt-thm-rigidity"
+  },
+  {
+   "claim_id": "C3",
+   "exact_statement": "Let $M>0$. Every smooth spacelike exterior hypersurface in the regular extension of $\\mathbf G_M$, with its interior in $r>r_M$, whose induced data satisfy Definitions <a href=\"#def:data\" data-reference-type=\"ref\" data-reference=\"def:data\">1</a>, <a href=\"#def:fullcuts\" data-reference-type=\"ref\" data-reference=\"def:fullcuts\">2</a>, and <a href=\"#def:setting:rigidity\" data-reference-type=\"ref\" data-reference=\"def:setting:rigidity\">4</a>, whose boundary is a full smooth section of the corresponding future horizon or its bifurcation sphere, and whose end approaches spatial infinity, has $$(E^2-|P|_\\delta^2)^{1/2}=M,\\qquad\n A=\\omega(2M)^{\\frac{n-1}{n-2}}.\n \\label{eq:setting:converse}$$ It therefore attains equality in <a href=\"#eq:setting:main\" data-reference-type=\"eqref\" data-reference=\"eq:setting:main\">[eq:setting:main]</a>. In every dimension there are admissible static examples and admissible examples with $K\\not\\equiv0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-converse"
+  },
+  {
+   "claim_id": "C4",
+   "exact_statement": "The minimum in Equation <a href=\"#q:geometry:full-perimeter\" data-reference-type=\"eqref\" data-reference=\"q:geometry:full-perimeter\">[q:geometry:full-perimeter]</a> exists, equals $a(g)>0$, and is independent of the filling. All its minimizing sets are contained in one compact region. Their multiplicity-one frontiers are smooth minimal hypersurfaces away from $B$ and a singular set of Hausdorff dimension at most $n-8$; the singular set is empty when $n\\le7$. Every contact point with $B$ is regular, with a $C^{1,\\alpha}\\cap W^{2,p}$ graph for every finite $p$ and $0<\\alpha<1$. For $n=3,4$ the whole frontier is $C^{1,1}$, including contact, and its graph functions are $W^{2,\\infty}$.*\n\n*In dimensions $3$ and $4$, each frontier bounds a connected exterior and is the $C^1$ and area limit of smooth full cuts contained in $\\operatorname{int}X$. If $H_B<0$ for the normal into $X$, every minimizer contains one fixed exterior collar of $B$. In dimensions $3$ and $4$ its frontier is then a smooth minimal full cut; its closed exterior is connected, one-ended, complete with its boundary included, and outer area-minimizing with all boundary components counted. In every dimension, whenever a minimizing frontier is smooth, its closed exterior has these same connectedness, completeness, one-end and outer area-minimization properties.",
+   "kind": "construction",
+   "statement_anchor": "stmt-q-geometry-enclosure"
+  },
+  {
+   "claim_id": "C5",
+   "exact_statement": "The space $\\mathcal T(g)$ is compact and metrizable. For every smooth symmetric two-tensor $h$ the function $$E\\longmapsto a'_E(h):=\n \\frac12\\int_{\\partial^*E}\\operatorname{tr}_{T\\partial^*E}h\\,dA_g$$ is continuous on it. Let $g_t$, $|t|<t_0$, be a smooth path of smooth metrics with $g_0=g$, extended smoothly through the fixed boundary. Assume uniform comparison with $g$, and bounded first and second parameter derivatives relative to $g$. One sufficient end hypothesis is $$\\label{q:geometry:uniform-AF}\n g_t-\\delta=O_2(r^{-q_*})\\quad\\hbox{uniformly for }|t|<t_0,\n \\qquad q_*>0.$$ More generally, it suffices that the coordinate spheres have positive outward mean curvature beyond one common radius. The result also holds if the end metrics are uniformly comparable to the Euclidean metric with uniform scaled $C^1$ bounds; they need not have a common mean-convex tail in this last alternative. Put $h=\\partial_tg_t|_0$. Then $$\\label{q:geometry:envelope-derivative}\n \\left.\\frac{d}{dt}\\right|_{0+}a(g_t)\n       =\\min_{E\\in\\mathcal T(g)}a'_E(h).$$ For any $t_j\\to0$ and any $E_j\\in\\mathcal T(g_{t_j})$, a subsequence converges in $L^1$ to $E\\in\\mathcal T(g)$, with convergence of perimeters and of the plane measures computed in the fixed metric $g$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-q-geometry-envelope"
+  },
+  {
+   "claim_id": "C6",
+   "exact_statement": "There are a probability measure $\\pi$ on $\\mathfrak T$, a locally finite nonnegative measure $\\Lambda$ on $\\mathfrak A$, and a finite nonnegative measure $\\zeta$ on $S$, such that $$\\label{eq:variation:multiplier}\n 2k\\omega\\mathcal E'(h,p)-c\\int_{\\mathfrak T}a'_C(h)\\,d\\pi(C)\n =\\int_{\\mathfrak A}\\mathfrak C'(h,p;v)\\,d\\Lambda(x,v)\n       -\\int_S\\theta'_+(h,p)\\,d\\zeta.$$ This identity holds for all smooth compactly supported variations, including arbitrary jets at $S$, and for the energy and momentum prototypes specified below. The scalar and vector moments of $\\Lambda$ obey, initially as measures, $$\\label{eq:variation:causality}\n u\\ge |X|_g,\\qquad u\\mu+J(X)=0.$$ Here a field and its density relative to the fixed original volume form are identified when that density exists.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-variation-multiplier"
+  },
+  {
+   "claim_id": "C7",
+   "exact_statement": "Let $C\\in\\mathop{\\mathrm{supp}}\\pi$ belong to the full-measure family in Lemma <a href=\"#lem:variation:contact-dichotomy\" data-reference-type=\"ref\" data-reference=\"lem:variation:contact-dichotomy\">16</a>, with wholly interior frontier, and let $\\Sigma$ be a connected component of its regular part. If its local graph parameter at some patch is not an atom, there is a smooth positive function $\\varphi$ on all of $\\Sigma$ with $$\\label{eq:variation:common-jacobi}\n L_0\\varphi=L_+\\varphi=L_-\\varphi=0.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-variation-common-jacobi"
+  },
+  {
+   "claim_id": "C8",
+   "exact_statement": "Let $\\Sigma$ be a connected regular component of the compact locally perimeter-minimizing boundary $\\Gamma$. Every smooth positive solution of $$\\Delta_\\Sigma\\varphi+\n (|A_\\Sigma|^2+\\operatorname{Ric}_g(\\nu,\\nu))\\varphi=0$$ satisfies $\\inf_\\Sigma\\varphi>0$. Moreover, $\\varphi(x_j)\\to+\\infty$ for every sequence $x_j\\in\\Sigma$ with $\\operatorname{dist}(x_j,\\mathcal S)\\to0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-variation-jacobi-singular-ends"
+  },
+  {
+   "claim_id": "C9",
+   "exact_statement": "Let $f\\geq0$ be locally Lipschitz on an interval $I$, and assume its almost-everywhere derivative $v=f'$ belongs to $BV_{\\mathrm{loc}}(I)$. If $D^dv$ denotes the nonatomic part of $Dv$, then $$|D^dv|(\\{f=0\\})=0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-variation-diffuse-bv-minima"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "Under the rigidity hypotheses and equality, the probability measure in Proposition <a href=\"#prop:variation:multiplier\" data-reference-type=\"ref\" data-reference=\"prop:variation:multiplier\">12</a> satisfies $$\\pi\\{C:\\Gamma_C=S\\}=1.$$ Consequently, on every compact variation and end prototype, $$\\label{eq:variation:boundary-multiplier}\n 2k\\omega\\mathcal E'(h,p)-c a'_S(h)\n =\\int_{\\mathfrak A}\\mathfrak C'(h,p;v)\\,d\\Lambda\n       -\\int_S\\theta'_+(h,p)\\,d\\zeta,\n \\qquad\n a'_S(h)=\\frac12\\int_S\\mathop{\\mathrm{tr}}_Sh\\,dA.$$ In particular the area source in Equation <a href=\"#eq:variation:hessian\" data-reference-type=\"eqref\" data-reference=\"eq:variation:hessian\">[eq:variation:hessian]</a> vanishes in the open exterior. Boundary mass of the constraint measure $\\Lambda$ is not included in this conclusion.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-variation-boundary-support"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "Under the equality and rigidity hypotheses of Theorem <a href=\"#thm:rigidity\" data-reference-type=\"ref\" data-reference=\"thm:rigidity\">5</a>, the original exterior, with its boundary included, admits a smooth spacelike embedding into the regular Schwarzschild–Tangherlini exterior of mass $m$. Its induced metric and future-normal second fundamental form are $g$ and $K$. The boundary is a full section of the future horizon, or the bifurcation sphere, and the end approaches spatial infinity.",
+   "kind": "classification",
+   "statement_anchor": "stmt-thm-static-classification"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "One has $W>0$ throughout $\\operatorname{int}\\Omega$. The static base metric $h=g+W^{-1}X^\\flat\\otimes X^\\flat$ has a smooth one-sided attachment at $S$, with induced metric $g|_{TS}$, and $$\\label{eq:static:static-equations}\n \\mathop{\\mathrm{Hess}}_h\\lambda=\\lambda\\mathop{\\mathrm{Ric}}_h,\\qquad\n \\Delta_h\\lambda=0,\\qquad R_h=0,\\qquad\n 0<\\lambda<1,\\quad \\lambda=\\sqrt W.$$ At the attached boundary $S$, $|d\\lambda|_h=\\kappa$ and the boundary is totally geodesic. The even reflection of $h$ and odd reflection of $\\lambda$ are at least $C^{2,\\alpha}$ for $0<\\alpha<1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-static-positive"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "The filled metric $(N,\\gamma_*)$ of Lemma <a href=\"#lem:static:filled-double\" data-reference-type=\"ref\" data-reference=\"lem:static:filled-double\">39</a> is isometric to Euclidean $\\R^n$.",
+   "kind": "classification",
+   "statement_anchor": "stmt-prop-static-euclidean-double"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "In the Schwarzschild–Tangherlini spacetime of geometric mass $M>0$, let $b,y$ be static time and isotropic spatial coordinates. Make the Lorentz change $$\\label{q:converse:eq:boost-coordinates}\n b=\\gamma(T+vx^1),\\qquad y^1=\\gamma(x^1+vT),\\qquad\n y^a=x^a\\ (2\\le a\\le n),\\qquad \\gamma=(1-v^2)^{-1/2},$$ where $0\\le v<1$. The induced data on $T=0$, oriented by the future normal, have $$\\label{q:converse:eq:boost-charges}\n E=\\gamma M,\\qquad P_1=\\gamma Mv,\\qquad P_a=0\\ (a>1).$$ The metric and second fundamental form have the homogeneous leading terms computed below, with remainders $O_d(r^{-2p})$ and $O_d(r^{-2p-1})$, respectively, for every fixed derivative order $d$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-q-converse-lem-boost"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "Under the hypotheses of Lemma <a href=\"#q:converse:lem:plane\" data-reference-type=\"ref\" data-reference=\"q:converse:lem:plane\">45</a>, the ADM limits of the original induced data exist and satisfy $$E=M u_\\infty,\\qquad P_i=-M\\delta_{ij}X_\\infty^j,\n \\qquad E>0,\\qquad E^2-|P|^2=M^2.\n \\label{q:converse:eq:charges}$$ In particular the invariant mass is $M$. No parity assumption is needed.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-q-converse-prop-adm"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "For every $n\\ge3$ and every $M>0$, the static exterior slice satisfies all hypotheses of the rigidity subclass and realizes equality. There are also smooth examples with $K\\not\\equiv0$, obtained by nonconstant radial static-time graphs supported in any prescribed annulus strictly outside the horizon. These examples are vacuum, complete with their boundary included, have the same horizon and asymptotic end as the static slice, and satisfy $$\\mathop{\\mathrm{Area}}_g(\\Gamma)\\ge\\mathop{\\mathrm{Area}}_g(S)\n \\quad\\hbox{for every full enclosing cut }\\Gamma.$$ They have no smooth compact weakly future-trapped enclosing hypersurface lying wholly in the interior.",
+   "kind": "construction",
+   "statement_anchor": "stmt-q-converse-prop-examples"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "Let $(M,g,K)$ be a smooth connected orientable complete initial data set without boundary, consisting of a compact core and finitely many asymptotically flat ends. On each end assume $g-\\delta=O_2(r^{-q})$, $K=O_1(r^{-1-q})$, with $q>1/2$, and existing finite ADM flux limits. Assume that $\\mu$ and $|J|_g$ are integrable and that $\\mu\\geq|J|_g$ everywhere.*\n\n*Choose an end and a finite nonempty disjoint union $$S=\\bigsqcup_{i=1}^{\\ell}S_i,\\qquad 1\\leq\\ell<\\infty,$$ of compact connected smooth embedded two-sided surfaces without boundary, separating that end from a complementary region. Let $M_{\\mathrm{ext}}$ be the closure of the connected side toward the chosen end. Suppose that $\\partial M_{\\mathrm{ext}}=S$, that $M_{\\mathrm{ext}}$ has exactly this one end, and that, for the normal pointing into $M_{\\mathrm{ext}}$:*\n\n1.  *every $S_i$ is a future MOTS, so $H_{S_i}+\\mathop{\\mathrm{tr}}_{S_i}K=0$;*\n\n2.  *$S$ is outermost in the partial-coincidence sense of Definition <a href=\"#q3:rigidity:partial-outermostness\" data-reference-type=\"ref\" data-reference=\"q3:rigidity:partial-outermostness\">52</a>;*\n\n3.  *every enclosing cut in the closed exterior has area at least $A=|S|_g=\\sum_{i=1}^{\\ell}|S_i|_g>0$.*\n\n\n*Let $(E,P)$ be the ADM vector of the chosen end. If $$\\label{q3:intro:equality}\nE>|P|_\\delta,\\qquad\nm=\\sqrt{E^2-|P|_\\delta^2}=\\sqrt{\\frac{A}{16\\pi}},$$ then $\\ell=1$ and $S$ is diffeomorphic to a sphere. There is a proper smooth spacelike embedding of the entire original $M_{\\mathrm{ext}}$ into the maximally extended Schwarzschild spacetime of mass $m$, inducing $g$ and the given $K$ for a consistent future unit normal. The chosen end approaches the corresponding spatial infinity. The image of $S$ is a smooth cross-section of the corresponding future horizon or the bifurcation sphere. The embedding and its future normal are smooth up to $S$, and the image extends as a smooth spacelike hypersurface through that boundary.",
+   "kind": "classification",
+   "statement_anchor": "stmt-q3-intro-rigidity"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "Under the ambient, asymptotic, and exterior hypotheses of Theorem <a href=\"#q3:intro:rigidity\" data-reference-type=\"ref\" data-reference=\"q3:intro:rigidity\">53</a>, suppose that $S$ is connected. Retain conditions <span class=\"upright\">(i)</span> and <span class=\"upright\">(iii)</span>, and replace condition <span class=\"upright\">(ii)</span> by the following weaker outermostness condition: there is no compact smooth embedded surface wholly contained in $\\operatorname{Int}M_{\\mathrm{ext}}$, possibly disconnected, separating $S$ from the distant end and having $\\theta_+\\le0$ everywhere for the normal toward that end. If <a href=\"#q3:intro:equality\" data-reference-type=\"eqref\" data-reference=\"q3:intro:equality\">[q3:intro:equality]</a> holds with $A=|S|_g$, then $S$ is diffeomorphic to a sphere and all the original-data Schwarzschild embedding conclusions of Theorem <a href=\"#q3:intro:rigidity\" data-reference-type=\"ref\" data-reference=\"q3:intro:rigidity\">53</a> hold.",
+   "kind": "classification",
+   "statement_anchor": "stmt-q3-intro-connected-rigidity"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "Under the hypotheses of Theorem <a href=\"#q3:intro:rigidity\" data-reference-type=\"ref\" data-reference=\"q3:intro:rigidity\">53</a>, retain $E>|P|_\\delta$ but do not assume its equality in mass and area. If $\\ell\\geq2$, then $$\\sqrt{E^2-|P|_\\delta^2}>\\sqrt{\\frac{A}{16\\pi}}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-q3-rigidity-finite-strictness"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "Let $(M,g,K)$ be smooth connected orientable three-dimensional initial data without boundary, with $g$ complete and with finitely many asymptotically flat ends outside a compact set. Assume on every end $$g-\\delta=O_2(r^{-q}),\\qquad K=O_1(r^{-1-q}),\\qquad q>\\tfrac12,$$ integrable constraint densities $\\mu,|J|_g$, finite ADM charges, and $\\mu\\geq |J|_g$ everywhere. Here $16\\pi\\mu=R_g+(\\operatorname{tr}_gK)^2-|K|_g^2$ and $8\\pi J=\\operatorname{div}_g(K-(\\operatorname{tr}_gK)g)$. Let $S_1,S_2$ be disjoint smooth embedded two-sided spheres, and suppose that the closure $\\Omega$ of the connected exterior toward a designated end has boundary $S=S_1\\sqcup S_2$ and exactly that one end.*\n\n*Orient $S$ into $\\Omega$. Assume $\\theta_+=H+\\operatorname{tr}_S K=0$ on $S$, and assume every full enclosing cut has area at least $A=|S_1|_g+|S_2|_g$. A full cut is the entire compact smooth frontier of a connected end-containing outer domain, with all components and coincident portions of $S$ counted and bounded complementary pockets filled. Finally assume there is no such cut $\\Gamma\\ne S$ whose components either equal an $S_i$ or lie wholly in the open exterior, with at least one component in the open exterior and $\\theta_+(\\Gamma)\\leq0$ toward the designated end. If that end has $E>|P|_\\delta$, then $$\\sqrt{E^2-|P|_\\delta^2}\n    >\\sqrt{\\frac{|S_1|_g+|S_2|_g}{16\\pi}}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-q3-local-spinor-strictness"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "Suppose $(\\Omega,g,K)$ satisfies the smoothness, orientability, completeness, end, integrability, decay, and finite-charge assumptions above, as well as $\\mu\\ge|J|_g$ and $\\theta_+\\le0$ on every component of its nonempty compact boundary. Then $A_*(g)>0$ and $$\\label{q4:eq:numerical}\n E\\ge\\sqrt{|P|_\\delta^2+\\frac14\n                    \\left(\\frac{A_*(g)}\\omega\\right)^{4/3}}.$$ In particular $E>|P|_\\delta$ and $\\sqrt{E^2-|P|_\\delta^2}\\ge\\frac12(A_*(g)/\\omega)^{2/3}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-q4-thm-numerical-provider"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "Let $(\\Omega,g,K)$ belong to Definition <a href=\"#q4:def:horizon\" data-reference-type=\"ref\" data-reference=\"q4:def:horizon\">81</a>, and set $m=\\sqrt{E^2-|P|_\\delta^2}$. Then $$\\label{q4:eq:intro-equality}\n m=\\frac12\\left(\\frac A\\omega\\right)^{2/3}$$ if and only if the original initial data admit a global smooth spacelike embedding, including $S$, into the regular maximal extension of $\\overline g_m$. The image lies in the closure of the corresponding exterior, its end approaches that spatial infinity, and $S$ maps to a smooth section of its future horizon or to its bifurcation sphere. The induced metric is the original $g$, and its second fundamental form for a consistent future unit normal is the original $K$ with convention <a href=\"#q4:eq:intro-second-fundamental-form\" data-reference-type=\"eqref\" data-reference=\"q4:eq:intro-second-fundamental-form\">[q4:eq:intro-second-fundamental-form]</a>. The embedding and normal are smooth up to $S$ in regular horizon coordinates.*\n\n*Equivalently, every such hypersurface in $\\overline g_{M_0}$ satisfying Definition <a href=\"#q4:def:horizon\" data-reference-type=\"ref\" data-reference=\"q4:def:horizon\">81</a> and the prescribed asymptotic assumptions has invariant ADM mass $M_0$, horizon area $\\omega(2M_0)^{3/2}$, and equality in <a href=\"#q4:eq:numerical\" data-reference-type=\"eqref\" data-reference=\"q4:eq:numerical\">[q4:eq:numerical]</a>.",
+   "kind": "classification",
+   "statement_anchor": "stmt-q4-thm-rigidity"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "For $\\varpi$-almost every element of $\\mathcal T$, its frontier equals $S$, where $\\varpi$ is the measure in Proposition <a href=\"#q4:var:multiplier\" data-reference-type=\"ref\" data-reference=\"q4:var:multiplier\">91</a>. Consequently, for every variation $H=(h,p)$ in $\\mathcal V$, $$\\int_{\\mathcal T}a'_T(h)\\,\\,\\mathrm d\\varpi(T)\n       =a'_S(h)=\\tfrac12\\int_S\\mathop{\\mathrm{tr}}_S h\\,\\,\\mathrm dA_g.\n\\label{q4:var:localized-area}$$ In particular the multiplier identity becomes $$6\\omega\\mathcal E'(H)-c\\,a'_S(h)\n  =\\langle C'_H,\\Lambda\\rangle\n       -\\int_S\\theta'_H\\,\\,\\mathrm d\\eta+za.\n\\label{q4:var:localized-identity}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-q4-var-area-localization"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "There are a smooth function $u$ and a smooth vector field $X$ on $\\Omega$, smooth up to its one-sided boundary, with the following properties.*\n\n\n\n\n\n1.  *They satisfy $u\\ge |X|_g$, $u>0$ in $\\operatorname{int}\\Omega$, and $$u\\mu+J(X)=0.\n     \\label{q4:adj:complementarity}$$ With symmetric indices denoting averaging, their equations are $$\\begin{aligned}\n     \\nabla_{(i}X_{j)}&=-uK_{ij},\n     \\label{q4:adj:kid-first}\\\\\n     \\Delta u&=-\\operatorname{div}_g\\bigl(K(X,\\cdot)^\\sharp\\bigr),\n     \\label{q4:adj:conformal-adjoint}\\\\\n     \\nabla^2u\n     &=u(\\mathop{\\mathrm{Ric}}_g+\\tau K-2K^2)-\\mathcal L_XK+X_{(i}J_{j)}.\n     \\label{q4:adj:kid-second}\n    \\end{aligned}$$ Here $X_i=g_{ij}X^j$ and $(K^2)_{ij}=K_{ik}K^k{}_j$.*\n\n\n2.  *On the chosen asymptotically flat end, $$(u,X)=(b^0,b)+O_2(r^{-q_0}).\n     \\label{q4:adj:decay}$$*\n\n\n3.  *At the boundary, for the unit normal $\\nu$ pointing into $\\Omega$, $$X=u\\nu,\\qquad\n     \\partial_\\nu u+K(X,\\nu)=\\kappa.\n     \\label{q4:adj:horizon-data}$$ Either $u>0$ everywhere on $S$ or $u=0$ everywhere on $S$.*\n\n\n\n4.  *On $\\mathbb R\\times\\operatorname{int}\\Omega$, set $$\\mathbf g=-u^2\\,\\mathrm dt^2\n       +g_{ij}(\\mathrm dx^i+X^i\\,\\mathrm dt)\n              (\\mathrm dx^j+X^j\\,\\mathrm dt),\n     \\qquad \\xi=\\partial_t,\\qquad N=u^2-|X|_g^2.\n     \\label{q4:adj:stationary-metric}$$ For the future normal $n=u^{-1}(\\xi-X)$, the slice $t=0$ has exactly the original induced metric $g$ and second fundamental form $K$, with the convention of Theorem <a href=\"#q4:thm:rigidity\" data-reference-type=\"ref\" data-reference=\"q4:thm:rigidity\">82</a>. Moreover, $$\\mathop{\\mathrm{Ric}}_{\\mathbf g}(\\xi,\\cdot)=0,\n     \\qquad \\mathop{\\mathrm{Ric}}_{\\mathbf g}=0\\quad\\hbox{on }\\{N>0\\}.\n     \\label{q4:adj:ricci}$$*\n\n\n\n5.  *We have $N\\ge0$, $N\\to1$ at infinity, and $N>0$ in a full collar just outside $S$. More precisely, in the positive boundary-lapse case, $$N|_S=0,\\qquad\n     \\mathrm dN|_S=2u\\kappa\\,\\nu^\\flat=2\\kappa X^\\flat.\n     \\label{q4:adj:positive-collar}$$ In the zero boundary-lapse case, if $s\\ge0$ is the original $g$-normal distance from $S$, there are smooth one-sided fields $d,Y_2$ such that $$u=sd,\\qquad X=s^2Y_2,\\qquad d|_S=\\kappa,\\qquad\n     N=s^2\\bigl(d^2-s^2|Y_2|_g^2\\bigr).\n     \\label{q4:adj:zero-collar}$$ Consequently all zeros of $N$ in $\\operatorname{int}\\Omega$ lie in a compact subset of that interior.",
+   "kind": "construction",
+   "statement_anchor": "stmt-q4-adj-causal-field"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "The positive component is the whole original open exterior: $\\mathcal U=\\operatorname{int}\\Omega$ and $N>0$ there. Its attached boundary is $S$. There is a global isometry of the static base onto the Schwarzschild–Tangherlini spatial exterior of mass $m$, under which $$\\label{q4:cla:ST-base}\n h_b=\\left(1+\\frac{m}{2\\rho^2}\\right)^2\n          (\\,\\mathrm d\\rho^2+\\rho^2 g_{\\mathbb S^3}),\\qquad\n \\lambda=\\frac{1-m/(2\\rho^2)}{1+m/(2\\rho^2)},\n \\qquad \\rho\\ge\\sqrt{m/2}.$$ The isometry is smooth on the open base and in its one-sided regular boundary structure. The attachment is homeomorphic to the original attachment of $S$ in $\\Omega$ and restricts smoothly on $S$. In particular the open base is simply connected and $S$ is a round three-sphere in its induced metric. The base reflection is smooth in signed $\\lambda$ in the positive boundary-lapse case; its angular coordinates can be taken constant along base normal geodesics.",
+   "kind": "classification",
+   "statement_anchor": "stmt-q4-cla-static-classification"
+  },
+  {
+   "claim_id": "C26",
+   "exact_statement": "Equality under the horizon hypotheses gives a global smooth spacelike embedding of the original $\\Omega$, including $S$, in the regular maximal Tangherlini extension of mass $m$. The embedding pulls back the spacetime metric and the future second fundamental form to the original $g$ and $K$. Its image lies in the closure of the corresponding exterior, its boundary has the form stated in Lemma <a href=\"#q4:rec:horizon-extension\" data-reference-type=\"ref\" data-reference=\"q4:rec:horizon-extension\">109</a>, and its end approaches the corresponding spatial infinity.",
+   "kind": "classification",
+   "statement_anchor": "stmt-q4-rec-embedding"
+  },
+  {
+   "claim_id": "C27",
+   "exact_statement": "Every hypersurface in the converse class of Theorem <a href=\"#q4:thm:rigidity\" data-reference-type=\"ref\" data-reference=\"q4:thm:rigidity\">82</a>, in Tangherlini spacetime of geometric mass $M_0>0$, has invariant ADM mass $M_0$. More precisely, in coordinates adapted to its asymptotic boost, its charges are $E=M_0\\Gamma$ and $P=M_0\\Gamma v\\,e_1$, where $0\\leq v<1$ and $\\Gamma=(1-v^2)^{-1/2}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-q4-rec-converse-mass"
+  },
+  {
+   "claim_id": "C28",
+   "exact_statement": "A smooth spacelike section of a future Tangherlini horizon of geometric mass $M_0>0$, including its bifurcation sphere, has induced metric $(2M_0)g_{\\mathbb S^3}$ and three-volume $\\omega(2M_0)^{3/2}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-q4-rec-horizon-area"
+  }
+ ],
+ "paper": "papers/EN-117-000-0022-2-2026-PR-T4-UK-EX-M2-B-ML-M-0541_PM-260.11_Equality_and_rigidity_in_the_spacetime_Penrose_inequality.md",
+ "purpose": "Equality and rigidity in the spacetime Penrose inequality",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "1a079a783c6beaaa1f503689324db3c1c740f8e5f022d9a8fe42f60b9807ab0f",
+   "pm.domains.v2": "d2cc135c8de38f876172a3400a160544c4c280eca4b597896f35fd25b686e3fb",
+   "pm.edges.v2": "0de78735827d2f1e646424e4b275c63aec6050b2ee48ba713dba6f42a6c97ef2",
+   "pm.extraction.v2": "0b1d836067f85089624cec8c4434d1078c52559facbc6bd358b46b64282d92d8",
+   "pm.formal.v2": "399794c77b544f45ef2d6e7f16512ca066ea59cbeea471f98513c30ad8e0befb",
+   "pm.limits.v2": "fcb6786059d55e393820b57e2340be5b33eaa30b3d6630565df0362c58438d71",
+   "pm.node.v2": "8dec2a63cdfd8c101b8eba40df256c5eb8205308117e4fbb614a10ec8b3be83c",
+   "pm.objects.v2": "cc314ef09e19b4852e9ef8f3fae87bb8adb99a53babed28c6cebbf679179b686",
+   "pm.provenance.v2": "6914daa19dde6e4642320cc32b6a2955167de6ff53b03ac86f502bc83cb0e3c1",
+   "pm.quantities.v2": "d01617a9d5eefb0b5a4931d874631dd888e21784befa939ae208f88acd8aa218",
+   "pm.reading.v2": "89037fbb0ad10fdf8cd0fb992cb11a9a3f1db4a9be03f5af876e21c65525fac4",
+   "pm.roadmap.v2": "e8f6fe5f0b70417b029357bb7140f62620cbd75ee821bde2fafff828c2ba2fe4",
+   "pm.search.v1": "f2dafd4f4308fdfe27ea1205c2caa5dcf8741672088894292b345f9b86db3527",
+   "pm.triptych.v2": "c6be04358632a3998fea8d046cd2e0abb94e4afe1de3578583bd3c08e700012f"
+  },
+  "canonical_sha256": "0d45e9253b95697e79c25a03f0a73f5e59d4a9e577501c09bc605b253ebbad41",
+  "paper_sha256": "36f4db40abcf8b63236e24d9f1f29d2fde2f7f37791ee41a5deb4a6ee1502bab",
+  "repaired_body_sha256": "3ea356812861c1eab11627968f5918aba7e44032560a539fb4c361be57d82514"
+ },
+ "status": "ACTIVE",
+ "subject_id": 17,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "82eb878ca90ae6efe544af3ea0d4b4cc15734b4c870f9bd3652b3710e8ff85ff",
+   "receipt_sha256": "6ff4f56da2800641d716ec49533bc83a4b564f46a2a4889027202738661dfcc2",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Equality and rigidity in the spacetime Penrose inequality"
+}

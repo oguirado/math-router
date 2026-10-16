@@ -1,0 +1,856 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 820285,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 236267
+ },
+ "coordinate": "EN-113-000-0004-2-2026-PR-T4-UK-EX-M1-C-CO-H-0344",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "spectral graph construction and conditional spectral repair",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "On input an even integer $n\\ge n_0(d)$, the algorithm outputs the adjacency list of a simple $d$-regular graph $G$ on $n$ vertices in $O_d(n^{k_d})$ bit operations, and $$-2\\sqrt{d-1}<\\lambda<2\\sqrt{d-1}\n \\quad\\text{for every eigenvalue $\\lambda$ of }A_G|_{\\mathbf1^\\perp}.$$",
+     "quote_sha256": "dd10d2e3de19846a4d0089c5fd6d9d95622e68ea8703e7c40b24bdb6498feb4a"
+    },
+    {
+     "anchor": "sec:introduction",
+     "quote": "The statement concerns all sufficiently large even sizes; it does not assert a running-time bound polynomial jointly in $n$ and $d$, or a local adjacency-query algorithm.",
+     "quote_sha256": "8f471532b7a0091cc3a1ce569a9449d6a5c3b54d29f8e1829516852ed92eb3fe"
+    }
+   ],
+   "query": "Local adjacency queries or a jointly polynomial degree-and-order construction",
+   "reason": "The stated algorithm produces the full adjacency list for fixed degree and does not provide either stronger complexity contract."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "On input an even integer $n\\ge n_0(d)$, the algorithm outputs the adjacency list of a simple $d$-regular graph $G$ on $n$ vertices in $O_d(n^{k_d})$ bit operations, and $$-2\\sqrt{d-1}<\\lambda<2\\sqrt{d-1}\n \\quad\\text{for every eigenvalue $\\lambda$ of }A_G|_{\\mathbf1^\\perp}.$$",
+     "quote_sha256": "dd10d2e3de19846a4d0089c5fd6d9d95622e68ea8703e7c40b24bdb6498feb4a"
+    },
+    {
+     "anchor": "stmt-cor-target-size",
+     "quote": "For every fixed $d\\ge3$, a deterministic polynomial-time algorithm, on every sufficiently large integer input $N$, produces a simple connected nonbipartite $d$-regular Ramanujan graph $G$ with $N\\le |V(G)|\\le N+1\\le2N$.",
+     "quote_sha256": "b082fb5f0c997567ed43b6f96fbbfe47d4951defdb23847b508e25e21f851133"
+    }
+   ],
+   "query": "An exact prescribed odd order from the main construction",
+   "reason": "The main input order is even. The target-size corollary permits upward rounding and does not assert exact odd-order output."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "In particular, $G$ is connected and nonbipartite.",
+     "quote_sha256": "3e76b0976e7e1af7213b43e69516775e55b2d6bd438cc670cfbdeb613f7ae38b"
+    }
+   ],
+   "query": "Bipartite Ramanujan graph fixtures",
+   "reason": "The construction controls the negative edge on the nonconstant subspace and expressly outputs a nonbipartite graph."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "Our prescribed-order construction uses partial pairings and edge switches, and does not resolve that signing problem.",
+     "quote_sha256": "c33c2f842f3170edb6eb008b1e802fbf04a51fb3e11aff95371c69f630e4f584"
+    }
+   ],
+   "query": "Resolution of the Bilu–Linial signing conjecture",
+   "reason": "The prescribed-order construction uses partial pairings and switches and explicitly leaves that signing problem unresolved."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-4",
+     "quote": "A norm bound alone does not determine how a switch affects an eigenvector concentrated near one of its endpoints.",
+     "quote_sha256": "fb1bfb9606bb4124e417ba757dfb1dfb42bd3510f4b06fde5b868bb717d032f3"
+    },
+    {
+     "anchor": "stmt-auto-remark-1",
+     "quote": "The theorem uses only the three stated properties of $G$.",
+     "quote_sha256": "53c9f1663390331e1c99c9d86b6256195c83606db106d16125511151f97456ab"
+    }
+   ],
+   "query": "Switch repair based only on an adjacency norm bound",
+   "reason": "The repair contract also needs local spectral mass and typical bulk endpoint-block estimates; a norm bound alone does not control endpoint-concentrated eigenvectors."
+  }
+ ],
+ "family": "PM-178",
+ "id": "PM-178.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-prescribed-even-order",
+    "statement": "On input an even integer $n\\ge n_0(d)$,"
+   },
+   {
+    "anchor": "stmt-cor-target-size",
+    "claim_id": "claim-target-size-rounding",
+    "statement": "on every sufficiently large integer input $N$,"
+   },
+   {
+    "anchor": "stmt-lem-discounted-accounts",
+    "claim_id": "claim-discounted-selection",
+    "statement": "At a state $x$, let $\\Omega(x)$ be a nonempty finite set of candidate transitions with a specified probability distribution."
+   },
+   {
+    "anchor": "stmt-lem-discounted-accounts",
+    "claim_id": "claim-discounted-selection",
+    "statement": "For each index $i$ in a finite set let $Z_i(x)\\ge1$ be a nonnegative account and let $D_i>0$ be its current discount."
+   },
+   {
+    "anchor": "stmt-lem-discounted-accounts",
+    "claim_id": "claim-discounted-selection",
+    "statement": "Fix nonnegative weights $a_i$."
+   },
+   {
+    "anchor": "stmt-lem-scalar-excess",
+    "claim_id": "claim-scalar-upper-excess",
+    "statement": "Let an alive scalar quantity have current value $X$ and upper threshold $T$."
+   },
+   {
+    "anchor": "stmt-lem-scalar-excess",
+    "claim_id": "claim-scalar-upper-excess",
+    "statement": "On its ordinary next transitions suppose the threshold is unchanged and, for a fixed scale $b>0$, its increment $\\Delta$ satisfies $$|\\Delta|\\le b,\\qquad \\mathbb E\\Delta\\le\\mu,\n \\qquad\\mathbb E\\Delta^2\\le\\nu,\n \\qquad\\mu,\\nu\\ge0.$$"
+   },
+   {
+    "anchor": "stmt-lem-positive-excess-account",
+    "claim_id": "claim-prescribed-scale-excess",
+    "statement": "Let $B_s>0$ and $\\lambda>0$."
+   },
+   {
+    "anchor": "stmt-lem-positive-excess-account",
+    "claim_id": "claim-prescribed-scale-excess",
+    "statement": "Suppose an alive scalar quantity has an ordinary increment $\\Delta$ with $|\\mathbb E\\Delta|\\le\\mu$, $\\mathbb E\\Delta^2\\le\\nu$, and $|\\Delta|\\le\\lambda B_s$."
+   },
+   {
+    "anchor": "stmt-lemma-configuration-algebra",
+    "claim_id": "claim-configuration-exposure-identities",
+    "statement": "Let $C$ be the incidence matrix of all $dn$ stubs."
+   },
+   {
+    "anchor": "stmt-lemma-configuration-algebra",
+    "claim_id": "claim-configuration-exposure-identities",
+    "statement": "On resolved stubs let $P_*$ exchange partners, and on $S$ let it be the averaging projection."
+   },
+   {
+    "anchor": "stmt-lemma-configuration-algebra",
+    "claim_id": "claim-configuration-exposure-identities",
+    "statement": "For distinct $u,v\\in S$, $l>2$,"
+   },
+   {
+    "anchor": "stmt-lemma-configuration-algebra",
+    "claim_id": "claim-configuration-exposure-identities",
+    "statement": "whenever its inverses exist,"
+   },
+   {
+    "anchor": "stmt-lemma-configuration-algebra",
+    "claim_id": "claim-configuration-exposure-identities",
+    "statement": "if $\\|D_p\\|=o(1)$,"
+   },
+   {
+    "anchor": "stmt-lemma-structure",
+    "claim_id": "claim-structural-accounts-and-separation",
+    "statement": "Fix $J=\\lfloor .9\\log_qn\\rfloor$ and a sufficiently large fixed integer $r_*$."
+   },
+   {
+    "anchor": "stmt-lemma-path-majorants",
+    "claim_id": "claim-absolute-path-majorants",
+    "statement": "In the partial-configuration setting above, let an output label denote either a vertex coordinate projected onto $\\mathbf1^\\perp$, or a current centered stub $\\xi_x$."
+   },
+   {
+    "anchor": "stmt-lemma-path-majorants",
+    "claim_id": "claim-absolute-path-majorants",
+    "statement": "For the following bounds, assume that the current early or cleanup state has $l\\ge l_0$, satisfies <a href=\"#eq:original-3\" data-reference-type=\"eqref\" data-reference=\"eq:original-3\">[eq:original-3]</a>, and has actual girth at least $g_0$."
+   },
+   {
+    "anchor": "stmt-lemma-pencil-coefficients",
+    "claim_id": "claim-pencil-coefficient-bounds",
+    "statement": "If the precision is positive for both signs at $h$,"
+   },
+   {
+    "anchor": "stmt-lemma-pencil-coefficients",
+    "claim_id": "claim-pencil-coefficient-bounds",
+    "statement": "For the following absolute column and entry bounds, also assume that the current early or cleanup state has $l\\ge l_0$, satisfies the core bound <a href=\"#eq:original-3\" data-reference-type=\"eqref\" data-reference=\"eq:original-3\">[eq:original-3]</a>, and has actual girth at least $g_0$."
+   },
+   {
+    "anchor": "stmt-lemma-local-laws-implications",
+    "claim_id": "claim-resolvent-bootstrap-consequences",
+    "statement": "At a current early or cleanup state, assume $l\\ge l_0$, the core bound <a href=\"#eq:original-3\" data-reference-type=\"eqref\" data-reference=\"eq:original-3\">[eq:original-3]</a>, and actual girth at least $g_0$."
+   },
+   {
+    "anchor": "stmt-lemma-local-laws-implications",
+    "claim_id": "claim-resolvent-bootstrap-consequences",
+    "statement": "Assume positivity and <a href=\"#eq:original-8\" data-reference-type=\"eqref\" data-reference=\"eq:original-8\">[eq:original-8]</a> at every tracked primary and auxiliary parameter, for both signs."
+   },
+   {
+    "anchor": "stmt-prop-early-phase",
+    "claim_id": "claim-early-pairing",
+    "statement": "For the fixed parameters of the construction and all sufficiently large $n$,"
+   },
+   {
+    "anchor": "stmt-lem-early-pair-contractions",
+    "claim_id": "claim-uniform-pair-contractions",
+    "statement": "Let $A,C$ be centered $l$-by-$l$ matrices, with $A$ symmetric, and let a subscript $p$ denote their $\\{u,v\\}$ blocks."
+   },
+   {
+    "anchor": "stmt-lem-early-pair-contractions",
+    "claim_id": "claim-uniform-pair-contractions",
+    "statement": "For a full uniform ordered distinct pair,"
+   },
+   {
+    "anchor": "stmt-lem-early-trace-transitions",
+    "claim_id": "claim-early-trace-transitions",
+    "statement": "Under the current bootstrap bounds,"
+   },
+   {
+    "anchor": "stmt-lem-early-trace-accounts",
+    "claim_id": "claim-early-trace-accounts",
+    "statement": "under the bootstrap bounds"
+   },
+   {
+    "anchor": "stmt-lem-early-index-words",
+    "claim_id": "claim-early-index-word-classification",
+    "statement": "Expand every occurrence of $H_0$ as $-\\sigma h F-\\sigma hJ_2/(l-2)$, every intermediate factor as $T+D_E$, and each outer factor as $P+E$."
+   },
+   {
+    "anchor": "stmt-lem-early-entry-mean",
+    "claim_id": "claim-early-signed-entry-mean",
+    "statement": "conditionally on its survival,"
+   },
+   {
+    "anchor": "stmt-lem-early-near-reference",
+    "claim_id": "claim-short-path-residual",
+    "statement": "Fix an integer $k$."
+   },
+   {
+    "anchor": "stmt-lem-early-near-reference",
+    "claim_id": "claim-short-path-residual",
+    "statement": "For $i\\in X$, $u\\in S$ at actual vertex distance at most $k$,"
+   },
+   {
+    "anchor": "stmt-lem-early-low-squares",
+    "claim_id": "claim-early-low-square-control",
+    "statement": "For any fixed radius $R_c$,"
+   },
+   {
+    "anchor": "stmt-lem-early-interpolation",
+    "claim_id": "claim-interpolation-and-kernel-control",
+    "statement": "Let a measure of bounded mass satisfy $\\int|z|^2\\le n^{-\\beta}$ and $\\int|z|^p\\le M$."
+   },
+   {
+    "anchor": "stmt-lem-early-interpolation",
+    "claim_id": "claim-interpolation-and-kernel-control",
+    "statement": "If a nonnegative kernel $K$ on two probability spaces has both marginal densities at most $b$,"
+   },
+   {
+    "anchor": "stmt-lem-early-linearization",
+    "claim_id": "claim-early-entry-linearization",
+    "statement": "For every surviving output pair, decompose its actual increment as $\\Delta E_{ij}=B_e\\mathcal L_{ij}+\\mathcal N_{ij}$, where $\\mathcal L$ is linear in $z$ and evaluated on the old output vectors."
+   },
+   {
+    "anchor": "stmt-lem-early-high-moments",
+    "claim_id": "claim-order-independent-high-moment-growth",
+    "statement": "After $p$ is fixed,"
+   },
+   {
+    "anchor": "stmt-lem-early-high-moments",
+    "claim_id": "claim-order-independent-high-moment-growth",
+    "statement": "under the bootstrap assumptions."
+   },
+   {
+    "anchor": "stmt-prop-cleanup",
+    "claim_id": "claim-cleanup-estimates",
+    "statement": "Assume the early-phase estimates at $l_1$, and maintain the structural estimators during cleanup."
+   },
+   {
+    "anchor": "stmt-lem-cleanup-pathwise",
+    "claim_id": "claim-cleanup-pathwise-sums",
+    "statement": "Fix any chosen cleanup history up to its current state, and fix a label $i$ while it is alive."
+   },
+   {
+    "anchor": "stmt-lem-cleanup-traces",
+    "claim_id": "claim-cleanup-scalar-persistence",
+    "statement": "At a current cleanup state, assume positive definiteness and <a href=\"#eq:original-8\" data-reference-type=\"eqref\" data-reference=\"eq:original-8\">[eq:original-8]</a> at every tracked point for both signs, together with the level-dependent entry and $T_S$ bootstrap bounds."
+   },
+   {
+    "anchor": "stmt-lem-cleanup-words",
+    "claim_id": "claim-cleanup-endpoint-word-classes",
+    "statement": "After expansion of a numerical update difference and of its formal truncation tail,"
+   },
+   {
+    "anchor": "stmt-lem-cleanup-diagonal",
+    "claim_id": "claim-cleanup-diagonal-budgets",
+    "statement": "Under the cleanup bootstrap,"
+   },
+   {
+    "anchor": "stmt-lem-cleanup-jumps",
+    "claim_id": "claim-cleanup-level-sensitive-jumps",
+    "statement": "For a surviving entry $E_{ij}$ of total level $k$,"
+   },
+   {
+    "anchor": "stmt-lem-cleanup-entry-budgets",
+    "claim_id": "claim-cleanup-predictable-entry-budgets",
+    "statement": "while its labels are alive,"
+   },
+   {
+    "anchor": "stmt-prop-boundary-completion",
+    "claim_id": "claim-separated-boundary-completion",
+    "statement": "Under these inputs,"
+   },
+   {
+    "anchor": "sec:boundary-completion",
+    "claim_id": "claim-separated-boundary-completion",
+    "statement": "The $l_0$ unresolved stubs lie at distinct vertices. No nonempty actual nonbacktracking path of length at most $R_0$ joins two of these vertices, including a return to the same vertex."
+   },
+   {
+    "anchor": "subsec:boundary-reference",
+    "claim_id": "claim-smooth-reference-sparse-rows",
+    "statement": "Let $S_0$ be the unresolved set at the stop and let $\\mathcal H_0=\\mathbf 1_{S_0}^{\\perp}$."
+   },
+   {
+    "anchor": "stmt-lem-boundary-pair-averages",
+    "claim_id": "claim-boundary-pair-averages",
+    "statement": "Suppose that $D\\mathbf1=0$, $\\max_x(D^2)_{xx}\\le C_0$ and $\\max_{x,y}|D_{xy}|\\le\\epsilon=o(1)$."
+   },
+   {
+    "anchor": "stmt-lem-boundary-pair-averages",
+    "claim_id": "claim-boundary-pair-averages",
+    "statement": "If $x,y$ are arbitrary scalar arrays"
+   },
+   {
+    "anchor": "stmt-lem-repair-projector",
+    "claim_id": "claim-local-projector-from-frozen-reference",
+    "statement": "Assume $x_i^\\sigma>-e/20$ for all nonconstant indices $i$ and both signs."
+   },
+   {
+    "anchor": "stmt-lem-repair-projector",
+    "claim_id": "claim-local-projector-from-frozen-reference",
+    "statement": "Suppose the final resolvents $R_\\sigma(z)=(z-\\sigma A_G)^{-1}|_{\\mathbf 1^\\perp}$ at the primary points $z=z(h)$ satisfy the entry comparison $$\\max_p\\left|\n R_\\sigma(z(h))_{pp}-m_h\\widehat P_{\\mathrm{fin},pp}^\\sigma(h)\n \\right|\\le C B_B,\n \\qquad B_B=o(\\sqrt e).$$"
+   },
+   {
+    "anchor": "stmt-lem-repair-projector",
+    "claim_id": "claim-local-projector-from-frozen-reference",
+    "statement": "Suppose also that the same frozen reference is defined throughout the primary range and obeys $$\\sup_{h,p}\\left|\n \\frac{d}{dh}\\bigl(m_h\\widehat P_{\\mathrm{fin},pp}^\\sigma(h)\\bigr)\n \\right|\\le C.$$"
+   },
+   {
+    "anchor": "stmt-lem-repair-projector",
+    "claim_id": "claim-local-projector-from-frozen-reference",
+    "statement": "Assume the primary grid has bounded geometric spacing, as in the construction."
+   },
+   {
+    "anchor": "stmt-lem-repair-bulk",
+    "claim_id": "claim-bulk-resolvent-and-typical-edges",
+    "statement": "The projector estimate"
+   },
+   {
+    "anchor": "stmt-lem-repair-bulk",
+    "claim_id": "claim-bulk-resolvent-and-typical-edges",
+    "statement": "For the typical-edge assertion below, the additional inputs are the following specific conclusions at the separation stop:"
+   },
+   {
+    "anchor": "stmt-thm-exact-repair",
+    "claim_id": "claim-exact-simultaneous-switch-repair",
+    "statement": "Fix an integer $d\\ge3$ and a constant $C_0\\ge1$."
+   },
+   {
+    "anchor": "stmt-thm-exact-repair",
+    "claim_id": "claim-exact-simultaneous-switch-repair",
+    "statement": "Let $G$ be a simple $d$-regular graph on $n$ vertices."
+   },
+   {
+    "anchor": "stmt-thm-exact-repair",
+    "claim_id": "claim-exact-simultaneous-switch-repair",
+    "statement": "Assume the following three properties."
+   },
+   {
+    "anchor": "stmt-thm-exact-repair",
+    "claim_id": "claim-exact-simultaneous-switch-repair",
+    "statement": "For every $i=2,\\ldots,n$ and both signs, $x_i^\\sigma>-e/20$."
+   },
+   {
+    "anchor": "stmt-thm-exact-repair",
+    "claim_id": "claim-exact-simultaneous-switch-repair",
+    "statement": "For every vertex $p$, both signs, and every $w\\in[2e,2d]$, $$\\sum_{\\substack{2\\le i\\le n\\\\x_i^\\sigma\\le w}}|v_i(p)|^2\n     \\le C_0w^{3/2}.$$"
+   },
+   {
+    "anchor": "stmt-thm-exact-repair",
+    "claim_id": "claim-exact-simultaneous-switch-repair",
+    "statement": "All but a fraction $C_0n^{-.1}$ of the $dn$ oriented edges $(p,p')$ satisfy the following bound for both signs: $$\\left\\|\n     \\begin{pmatrix}(R_B^\\sigma)_{pp}&(R_B^\\sigma)_{pp'}\\\\\n                     (R_B^\\sigma)_{p'p}&(R_B^\\sigma)_{p'p'}\\end{pmatrix}\n     -\\frac1{d-2}\\begin{pmatrix}\\sqrt q&\\sigma\\\\\\sigma&\\sqrt q\\end{pmatrix}\n     \\right\\|_{\\max}\\le n^{-.024}.$$"
+   },
+   {
+    "anchor": "stmt-prop-bit-complexity",
+    "claim_id": "claim-polynomial-bit-implementation",
+    "statement": "For each fixed $d$"
+   },
+   {
+    "anchor": "subsec:hierarchy",
+    "claim_id": "claim-polynomial-bit-implementation",
+    "statement": "There is no dependence of a polynomial horizon-growth coefficient on a later scalar extraction order."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Strict spectral verification of a regular candidate",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-prop-bit-complexity",
+      "quote": "Its columns are linearly independent and span $\\mathbf1^\\perp$.",
+      "quote_sha256": "a09403ddb04846df644a63e2025c44701927b2d8a072a612a37ca8442ed7c9ff"
+     },
+     {
+      "anchor": "proof-stmt-prop-bit-complexity",
+      "quote": "Regularity makes that subspace invariant under $A_G$, so the form is positive exactly when every eigenvalue there has square less than $4q$.",
+      "quote_sha256": "2ea70b07a4566af893b6461af641ead85c7bdb73bf9c721c6987d28bba4791a6"
+     }
+    ],
+    "requires_concepts": [
+     "Regular adjacency matrices",
+     "The nonconstant invariant subspace",
+     "Rational contrast bases",
+     "Exact symmetric inertia"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Exact simultaneous-switch repair",
+    "evidence": [
+     {
+      "anchor": "stmt-auto-remark-1",
+      "quote": "The theorem uses only the three stated properties of $G$.",
+      "quote_sha256": "53c9f1663390331e1c99c9d86b6256195c83606db106d16125511151f97456ab"
+     },
+     {
+      "anchor": "proof-stmt-thm-exact-repair",
+      "quote": "We will bias the distribution of an edge pair so that its expected switch improves the near spectrum at both edges. Second moments control the error from using only $M$ switches and from eliminating the bulk. Finally, we realize the draws in a polynomial finite sample space and test every candidate exactly.",
+      "quote_sha256": "a619274854658939b783e7bcf789fba7f2c5da92a048721a655eba96416b5aa4"
+     }
+    ],
+    "requires_concepts": [
+     "Spectral confinement",
+     "Local spectral mass",
+     "Truncated bulk reciprocals",
+     "Schur-complement inertia",
+     "Pairwise-independent finite sampling"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-prescribed-even-order",
+   "exact_statement": "For every integer $d\\ge3$ there are constants $n_0(d)$ and $k_d$ and a deterministic algorithm with the following property. On input an even integer $n\\ge n_0(d)$, the algorithm outputs the adjacency list of a simple $d$-regular graph $G$ on $n$ vertices in $O_d(n^{k_d})$ bit operations, and $$-2\\sqrt{d-1}<\\lambda<2\\sqrt{d-1}\n \\quad\\text{for every eigenvalue $\\lambda$ of }A_G|_{\\mathbf1^\\perp}.$$ In particular, $G$ is connected and nonbipartite.",
+   "kind": "construction",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-target-size-rounding",
+   "exact_statement": "For every fixed $d\\ge3$, a deterministic polynomial-time algorithm, on every sufficiently large integer input $N$, produces a simple connected nonbipartite $d$-regular Ramanujan graph $G$ with $N\\le |V(G)|\\le N+1\\le2N$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cor-target-size"
+  },
+  {
+   "claim_id": "claim-discounted-selection",
+   "exact_statement": "At a state $x$, let $\\Omega(x)$ be a nonempty finite set of candidate transitions with a specified probability distribution. For each index $i$ in a finite set let $Z_i(x)\\ge1$ be a nonnegative account and let $D_i>0$ be its current discount. Fix nonnegative weights $a_i$. Set $$r_i=\\max\\left\\{1,\\frac{\\mathbb E[Z_i(x')\\mid x]}{Z_i(x)}\\right\\},\n \\qquad D_i'=D_i/r_i.$$ There is a candidate $x'$ such that $$\\sum_i a_iD_i'Z_i(x')\\le\\sum_i a_iD_iZ_i(x).$$ In particular, selecting a minimizer of the left side has this property. If along the selected history $\\mathbb E[Z_i(x')\\mid x]\\le(1+c_{i,t})Z_i(x)$ with $c_{i,t}\\ge0$, then $$D_{i,t}^{-1}\\le\\prod_{j<t}(1+c_{i,j})\n \\le\\exp\\left(\\sum_{j<t}c_{i,j}\\right)$$ when the initial discount is one.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-discounted-accounts"
+  },
+  {
+   "claim_id": "claim-scalar-upper-excess",
+   "exact_statement": "Let an alive scalar quantity have current value $X$ and upper threshold $T$. On its ordinary next transitions suppose the threshold is unchanged and, for a fixed scale $b>0$, its increment $\\Delta$ satisfies $$|\\Delta|\\le b,\\qquad \\mathbb E\\Delta\\le\\mu,\n \\qquad\\mathbb E\\Delta^2\\le\\nu,\n \\qquad\\mu,\\nu\\ge0.$$ For each fixed even integer $p\\ge2$ there is $C_p$ such that the account $Z=1+((X-T)_+/b)^p$ obeys $$\\mathbb EZ'\\le\n \\left[1+C_p\\left(\\frac\\mu b+\\frac\\nu{b^2}\\right)\\right]Z.$$ The same upper bound holds if the ordinary estimates are conditional on an event, provided that on each other surviving transition the threshold is changed so that the account does not increase. A death transition may set the account to zero. For two-sided control apply the assertion to $X$ and $-X$ separately.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-scalar-excess"
+  },
+  {
+   "claim_id": "claim-prescribed-scale-excess",
+   "exact_statement": "Let $B_s>0$ and $\\lambda>0$. Suppose an alive scalar quantity has an ordinary increment $\\Delta$ with $|\\mathbb E\\Delta|\\le\\mu$, $\\mathbb E\\Delta^2\\le\\nu$, and $|\\Delta|\\le\\lambda B_s$. For each fixed even $p\\ge2$, the upper-excess account for either sign, measured in units $\\lambda B_s$, has expectation factor at most $$1+C_p\\left(\\frac{\\mu}{\\lambda B_s}\n             +\\frac{\\nu}{\\lambda^2B_s^2}\\right).\n \\label{eq:original-34}$$ The threshold, exceptional-transition, and death conventions are those of Lemma <a href=\"#lem:scalar-excess\" data-reference-type=\"ref\" data-reference=\"lem:scalar-excess\">4</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-positive-excess-account"
+  },
+  {
+   "claim_id": "claim-configuration-exposure-identities",
+   "exact_statement": "Let $C$ be the incidence matrix of all $dn$ stubs. On resolved stubs let $P_*$ exchange partners, and on $S$ let it be the averaging projection. Set $D_e=CP_*^2C^T=dI-\\mathcal D$ and $$Q_0=I,\\qquad\n Q_j=CP_*[(C^TC-I)P_*]^{j-1}C^T\\quad(j\\ge1).$$ Then, as a formal power series on $\\mathbf 1^\\perp$, $$W=\\sum_{j\\ge0}(\\sigma h)^jQ_j.$$ For distinct $u,v\\in S$, $l>2$, define $$U=[\\xi_u,\\xi_v],\\quad\n G_0=I-J_2/l,\\quad B=G_0^{-1}=I+J_2/(l-2),\\quad\n H_0=-\\sigma h FB,$$ where $J_2$ is the all-ones matrix and $F$ exchanges the two coordinates. If this pair is resolved, then $$\\mathcal D'=\\mathcal D-UBU^T,\\qquad\n A_e'=A_e+UFBU^T,\\qquad\n M'=M+U(hI-\\sigma F)BU^T.$$ With $G=U^TWU$, $D_p=G-G_0$, and $H=(H_0^{-1}+D_p)^{-1}$, the inverse update, whenever its inverses exist, is $$W'=W-WUHU^TW.$$ Uniformly for the prescribed compact range of $h$, if $\\|D_p\\|=o(1)$, then $M'>0$ whenever $M>0$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lemma-configuration-algebra"
+  },
+  {
+   "claim_id": "claim-structural-accounts-and-separation",
+   "exact_statement": "Fix $J=\\lfloor .9\\log_qn\\rfloor$ and a sufficiently large fixed integer $r_*$. The joint discounted-account rule can maintain, through the early and cleanup phases, the following bound for every connected multigraph core $H$ of minimum degree at least two, excess $r=e_H-v_H+1\\in\\{1,\\ldots,r_*\\}$, and $s_H=e_H\\le r_*J$: $$\\#\\{\\text{stub embeddings of }H\\}\n       \\le n^{1-r+o(1)}q^{s_H}.\n \\label{eq:original-3}$$ An embedding is injective on vertices and uses distinct proper stubs for all incidences at a vertex. The accounts and their next-step averages are computable in polynomial time.*\n\n*At $l=l_1$, fewer than $b$ unresolved stubs are bad, where a stub is bad if its vertex has a nonempty actual nonbacktracking return of length at most $R_0$, or lies within distance $R_0$ of another unresolved stub (including distance zero). Cleanup can resolve all these bad stubs and stop at $l_0$ with one unresolved stub per unresolved vertex, and no nonempty actual nonbacktracking path of length at most $R_0$ joining two unresolved vertices, including a return to one vertex.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lemma-structure"
+  },
+  {
+   "claim_id": "claim-absolute-path-majorants",
+   "exact_statement": "In the partial-configuration setting above, let an output label denote either a vertex coordinate projected onto $\\mathbf1^\\perp$, or a current centered stub $\\xi_x$. For a label $i$ write $$p_i(x)=P_{i,\\xi_x},\\quad e_i(x)=E_{i,\\xi_x},\\quad\n w_i(x)=W_{i,\\xi_x}.$$ We distinguish polynomial coefficient majorants from their numerical evaluations. Let $N_k(u,v)$ count actual nonbacktracking stub walks of length $k$ from $u$ to $v$, with $N_0(u,v)=\\mathbf1_{u=v}$, and define the following polynomials with nonnegative coefficients: $$\\begin{aligned}\n \\mathsf U_l(z)&=\\frac{C}{l}\n       \\left(1+\\sum_{k=1}^{L-1}kq^kz^k\\right),\\\\\n \\mathsf A_{i,x}(z)&=\\sum_{k=0}^{L-1}N_k(v(i),v(x))z^k\n                         +\\mathsf U_l(z),\\\\\n \\mathsf J_x(z)&=\\sum_{k=1}^{L-1}N_k(v(x),v(x))z^k\n                         +\\mathsf U_l(z),\\qquad\n \\mathsf B_{x,y}(z)=\\mathsf A_{x,y}(z)+C/l.\n \\end{aligned}$$ Here $v(i)$ is the underlying vertex of the output label. The constant $C$ is large enough to include the virtual, centering, and degree-zero Gram corrections. Coefficientwise absolute values of $p_i(x)$ are bounded by $\\mathsf A_{i,x}$; diagonal and cross errors of $U^TPU-G_0$ are bounded by $\\mathsf J_x$ and $\\mathsf B_{x,y}$, respectively. The actual-walk counts are symmetric, as are these majorants whenever the input and output are stub labels. Write $$A_i(x)=\\mathsf A_{i,x}(h),\\qquad\n j_x=\\mathsf J_x(h),\\qquad b_{xy}=\\mathsf B_{x,y}(h).$$ In particular $\\mathsf U_l(h)\\le C(1+L)^2q^{L/2}/l$, and $$\\sum_{x\\in S}A_i(x)\\le C(1+L)^2q^{L/2}.\n \\label{eq:path-row-sum}$$*\n\n\n\n*For the following bounds, assume that the current early or cleanup state has $l\\ge l_0$, satisfies <a href=\"#eq:original-3\" data-reference-type=\"eqref\" data-reference=\"eq:original-3\">[eq:original-3]</a>, and has actual girth at least $g_0$. Uniformly through $l_0$, $$\\begin{split}\n &\\sum_{x\\in S}A_i(x)^2\\le C,\\\\\n &\\sum_{x\\in S}j_x^2\\le n^\\eta,\\qquad\n   \\sum_{x\\in S}j_x\\le n^\\eta q^{L/2}.\n \\end{split}\n \\label{eq:original-4}$$ For an admissible pair in either phase there is a fixed $c_0'>0$ with $$j_u+j_v+b_{uv}\\le n^{-c_0'}.\n \\label{eq:original-5}$$ The same decay holds after multiplying nonconstant diagonal coefficients by any fixed power of their length, including for global diagonal entries with their degree-zero norm as baseline.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lemma-path-majorants"
+  },
+  {
+   "claim_id": "claim-pencil-coefficient-bounds",
+   "exact_statement": "If the precision is positive for both signs at $h$, then $$\\|h^jQ_j|_{\\mathbf1^\\perp}\\|\\le C(1+j)^2,\n \\qquad \\|P\\|\\le C(1+L)^3.\n \\label{eq:original-7}$$ For a fixed stub endpoint, the signed column of $P$ over global vertices has polylogarithmic squared norm. For the following absolute column and entry bounds, also assume that the current early or cleanup state has $l\\ge l_0$, satisfies the core bound <a href=\"#eq:original-3\" data-reference-type=\"eqref\" data-reference=\"eq:original-3\">[eq:original-3]</a>, and has actual girth at least $g_0$. For every fixed integer $p\\ge3$, the absolute $p$-power sum of that column is bounded by a constant; for sufficiently large $n$ that constant can depend only on $d$ and $p$. Stub columns have bounded absolute squared sums, and every outer entry of $P$ in the formal exposure expansion <a href=\"#eq:original-1\" data-reference-type=\"eqref\" data-reference=\"eq:original-1\">[eq:original-1]</a> has absolute value at most $1+o(1)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lemma-pencil-coefficients"
+  },
+  {
+   "claim_id": "claim-resolvent-bootstrap-consequences",
+   "exact_statement": "At a current early or cleanup state, assume $l\\ge l_0$, the core bound <a href=\"#eq:original-3\" data-reference-type=\"eqref\" data-reference=\"eq:original-3\">[eq:original-3]</a>, and actual girth at least $g_0$. Assume positivity and <a href=\"#eq:original-8\" data-reference-type=\"eqref\" data-reference=\"eq:original-8\">[eq:original-8]</a> at every tracked primary and auxiliary parameter, for both signs. For $B_h^+=\\mathcal D+h^{-2}\\alpha I$, the positive operator $S_h=(B_h^+)^{1/2}W(B_h^+)^{1/2}$ has norm at most $n^{v_*}/\\alpha$. For a sufficiently large fixed $C$, the sum of its eigenvalues above $Cn^c/\\alpha$ is at most $n^{v_*}/\\alpha$. These bounds hold at the primaries and their auxiliaries. At all these points, every global coordinate or centered stub $f$ satisfies $$f^TW(\\mathcal D+h^{-2}\\alpha I)Wf\n   \\le(1+h^{-2})\\|f_\\perp\\|^2+n^{-c_1}.\n \\label{eq:original-10}$$ At the primaries, the averaged trace identity is $$\\frac{\\operatorname{Tr}K_{\\rm all}}l+\n       h^{-2}\\alpha\\frac{\\mathcal T}{l}\n       =1+h^{-2}+O(n^{-c_2}).\n \\label{eq:original-11}$$ The following moment bounds hold at both primaries and auxiliaries: $$\\begin{split}\n \\operatorname{Tr}K_{\\rm all}^2+\n       \\alpha^2\\operatorname{Tr}Q_{\\rm all}^2\n   &\\le C\\left(n^{2c}l/\\alpha^2+n^{4v_*}/\\alpha^4\\right),\\\\\n \\operatorname{Tr}(\\Gamma K_{\\rm all})+\n       \\alpha\\operatorname{Tr}(\\Gamma Q_{\\rm all})\n   &\\le C\\left(n^cl/\\alpha+n^{3v_*}/\\alpha^3\\right),\\\\\n \\|Q_{\\rm all}\\|&\\le Cn^{2v_*}/\\alpha^3.\n \\end{split}\n \\label{eq:original-12}$$ The decay exponents $c_1,c_2>0$ are fixed independently of $n$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lemma-local-laws-implications"
+  },
+  {
+   "claim_id": "claim-early-pairing",
+   "exact_statement": "For the fixed parameters of the construction and all sufficiently large $n$, the simultaneous discounted-account rule can be run from the empty pairing down to $l_1$ unresolved stubs. It retains the structural estimates <a href=\"#eq:original-3\" data-reference-type=\"eqref\" data-reference=\"eq:original-3\">[eq:original-3]</a>–<a href=\"#eq:original-7\" data-reference-type=\"eqref\" data-reference=\"eq:original-7\">[eq:original-7]</a>, positivity of every tracked precision, and, at every tracked point, $$|L_1|\\le n^{.075a}/\\alpha_*,\\qquad\n |L_0|\\le n^{.105a}/\\alpha_*^2,\\qquad\n \\max_{i,j}|E_{ij}|\\le n^{.33a}/\\sqrt{l_0}.$$ The low-square estimates <a href=\"#eq:original-23\" data-reference-type=\"eqref\" data-reference=\"eq:original-23\">[eq:original-23]</a> hold with any prescribed sufficiently small fixed loss exponent, for any fixed near radius needed in the proof. At every primary point, $$\\mathcal T \\ \\ge\\ n^{-\\theta/2}(n^{-1}+\\alpha/l)^{-1}\n\\label{eq:original-13}$$ after a fixed constant is allowed in the right-hand side.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-early-phase"
+  },
+  {
+   "claim_id": "claim-uniform-pair-contractions",
+   "exact_statement": "Let $A,C$ be centered $l$-by-$l$ matrices, with $A$ symmetric, and let a subscript $p$ denote their $\\{u,v\\}$ blocks. For a full uniform ordered distinct pair, $$\\begin{split}\n \\mathbb E\\operatorname{Tr}(H_0A_p)&=0,\\\\\n \\mathbb E\\operatorname{Tr}(BA_p)&=\\frac{2\\operatorname{Tr}A}{l-1},\\\\\n \\mathbb E\\operatorname{Tr}(FA_pFC_p)\n &=\\frac{2}{l(l-1)}\\left(\n       \\operatorname{Tr}A\\operatorname{Tr}C+\n       \\operatorname{Tr}(AC)-2\\sum_x A_{xx}C_{xx}\\right).\n\\end{split}$$ The last identity remains valid when $C$ is not symmetric. For a nonnegative summand, restriction to valid pairs or to survival costs a factor $1+O((D_g+1)/l)$. For a signed summand one must also subtract the omitted pairs before applying this factor.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-early-pair-contractions"
+  },
+  {
+   "claim_id": "claim-early-trace-transitions",
+   "exact_statement": "Under the current bootstrap bounds, the conditional means and second moments of the trace errors satisfy <a href=\"#eq:original-16\" data-reference-type=\"eqref\" data-reference=\"eq:original-16\">[eq:original-16]</a>–<a href=\"#eq:original-18\" data-reference-type=\"eqref\" data-reference=\"eq:original-18\">[eq:original-18]</a> at all tracked points. At primary points, $\\mathcal T$ has the lower relative drift <a href=\"#eq:original-20\" data-reference-type=\"eqref\" data-reference=\"eq:original-20\">[eq:original-20]</a>, the second-moment bound <a href=\"#eq:early-T-variance\" data-reference-type=\"eqref\" data-reference=\"eq:early-T-variance\">[eq:early-T-variance]</a>, and relative step size $\\lvert\\Delta\\mathcal T\\rvert/\\mathcal T=o(1)$. All error constants are uniform in the current state.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-early-trace-transitions"
+  },
+  {
+   "claim_id": "claim-early-trace-accounts",
+   "exact_statement": "The trace-square accounts and the inverse-$\\mathcal T$ account have bounded discount loss under the bootstrap bounds and imply the trace conclusions of Proposition <a href=\"#prop:early-phase\" data-reference-type=\"ref\" data-reference=\"prop:early-phase\">11</a> with a positive power of slack.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-early-trace-accounts"
+  },
+  {
+   "claim_id": "claim-early-index-word-classification",
+   "exact_statement": "Expand every occurrence of $H_0$ as $-\\sigma h F-\\sigma hJ_2/(l-2)$, every intermediate factor as $T+D_E$, and each outer factor as $P+E$. A resulting scalar word has two outer endpoint indices $s,t\\in\\{u,v\\}$, alternating swap and intermediate factors, and one of the following descriptions.*\n\n1.  *It contains a non-pure swap $-\\sigma hJ_2/(l-2)$.*\n\n2.  *All swaps are pure and it contains an off-diagonal $T$ factor, bounded by $b_{uv}$.*\n\n3.  *All swaps are pure, all $T$ factors are diagonal, and at least two intermediate factors are $D_E$.*\n\n4.  *All swaps are pure, all $T$ factors are diagonal, there is at least one intermediate factor, and there is at most one $D_E$ factor. If $s=t$, either there is a diagonal $T$ factor at $\\bar s$, or the word has exactly one intermediate factor, namely $(D_E)_{\\bar s\\bar s}$. If $s\\ne t$ and there is a $T$ factor, there is at least one local factor $j_u$ or $j_v$. If there is no $D_E$ factor, both local factors occur.*\n\n5.  *There are no intermediate factors. Its pure-swap portion has $s\\ne t$.*\n\n*Here $\\bar u=v$ and $\\bar v=u$. The list is exhaustive; the cases are made disjoint by testing them in the displayed order. With only one intermediate $D_E$ and no $T$, the exceptional same-end word in item 4 is precisely $h^2 x_i(s)x_j(s)e_{\\bar s}(\\bar s)$, where $x_i,x_j$ are the chosen outer arrays, each a $p$ or $e$ row. All estimates obtained by retaining at most a fixed number of marked factors in these cases can be summed over the remaining words with a constant independent of $n$.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-early-index-words"
+  },
+  {
+   "claim_id": "claim-early-signed-entry-mean",
+   "exact_statement": "For every existing output pair, conditionally on its survival, $$\\big|\\mathbb E\\Delta E_{ij}\\big|\\le \\mu_l,\n \\qquad\n \\mu_l=C\\left[\n \\frac{n^{v_*}/\\alpha_*+n^\\eta q^{L/2}+D_g}{l^2}\n +\\frac{n^\\eta}{l^{3/2}}+\\frac{d_m^2}{l}\\right].\n\\label{eq:original-22}$$ This includes recentered stub outputs.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-early-entry-mean"
+  },
+  {
+   "claim_id": "claim-short-path-residual",
+   "exact_statement": "Fix an integer $k$. For $i\\in X$, $u\\in S$ at actual vertex distance at most $k$, remove from the actual part of $p_i(u)$ the monomial of the unique short path. The squared sum of the remaining coefficientwise absolute majorants over all these pairs is at most $$n^\\eta+C(1+L)^4q^L/l.$$ Here $X=V$ or $S$, and $\\eta$ can be any prescribed positive constant after the structural losses are reduced.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-early-near-reference"
+  },
+  {
+   "claim_id": "claim-early-low-square-control",
+   "exact_statement": "For any fixed radius $R_c$, the simultaneous accounts retain $$\\begin{split}\n &T_S=\\sum_{x\\in S}e_x(x)^2\\le n^\\eta,\n \\qquad T_V=\\sum_{i\\in V}E_{ii}^2\\le n^\\eta n/l_0,\\\\\n &T_{XS,k}=\\sum_{\\substack{i\\in X,\\ x\\in S\\\\\n    \\operatorname{dist}(\\operatorname{vtx}i,\\operatorname{vtx}x)\\le k}}\n           e_i(x)^2\\le n^\\eta,\n \\qquad X\\in\\{V,S\\},\\quad 0\\le k\\le R_c .\n\\end{split}\n\\label{eq:original-23}$$ The final exponent $\\eta>0$ may be prescribed in advance and made arbitrarily small.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-early-low-squares"
+  },
+  {
+   "claim_id": "claim-interpolation-and-kernel-control",
+   "exact_statement": "Let a measure of bounded mass satisfy $\\int|z|^2\\le n^{-\\beta}$ and $\\int|z|^p\\le M$. For every fixed $0<t<p$, $$\\int|z|^t\\le n^{-\\beta_t}(1+M)^{t/p},\n \\qquad \\beta_t>0,\n\\label{eq:original-28}$$ for sufficiently large $n$. If a nonnegative kernel $K$ on two probability spaces has both marginal densities at most $b$, then for nonnegative $f,g$ and $r,s\\ge0$, $r+s\\le1$, $$\\iint K(x,y)f(x)^rg(y)^s\\,dx\\,dy\n \\le b\\left(\\int f\\right)^r\\left(\\int g\\right)^s.$$ For $K(i,u)=|p_i(u)|^k$, $2\\le k\\le p$, with uniform $i\\in X,u\\in S$, one may use $b=n^{\\eta_0}/l$ for any fixed $\\eta_0>0$, once $n$ is sufficiently large. The row marginal alone is at most $C_p/l$. For $k=p$ or $2p$, the constants in the row and column sums can be bounded by a constant depending only on $d$, for each fixed $p$ and large $n$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-early-interpolation"
+  },
+  {
+   "claim_id": "claim-early-entry-linearization",
+   "exact_statement": "For every surviving output pair, decompose its actual increment as $\\Delta E_{ij}=B_e\\mathcal L_{ij}+\\mathcal N_{ij}$, where $\\mathcal L$ is linear in $z$ and evaluated on the old output vectors. The residual contains the nonlinear terms, the formal tail, and the recentering of surviving stub outputs. It has sup $$|\\mathcal N_{ij}|\\le C(d_m^2+B_{\\rm tail}+d_m/l)$$ and conditional second moment $$\\mathbb E|\\mathcal N_{ij}|^2\n \\le C(n^\\eta/l^2+d_m^4/l).\n\\label{eq:original-29}$$ The leading terms of $\\mathcal L_{ij}$, up to their signs, are $$h p_i(u)z_{vj},\\quad h p_i(v)z_{uj},\\quad\n h p_j(u)z_{iv},\\quad h p_j(v)z_{iu},\n\\label{eq:original-30}$$ and $$h^2p_i(s)p_j(t)z_{\\bar s\\bar t},\n \\qquad s,t\\in\\{u,v\\}.\n\\label{eq:original-31}$$ All other coefficients have sup bounded by a fixed negative power of $n$. A diagonal coefficient of $H_P$ satisfies, with its first endpoint $s$ fixed, $$\\mathbb E_{\\bar s}\\bigl[|(H_P)_{ss}|^k\n                  \\mathbf 1_{\\rm valid}\\bigr]\n \\le C_p n^\\eta n^{-c'_0(k-2)}/l,\n \\qquad 2\\le k\\le p,\n\\label{eq:original-32}$$ where the expectation may also omit boundedly many output labels.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-early-linearization"
+  },
+  {
+   "claim_id": "claim-order-independent-high-moment-growth",
+   "exact_statement": "There is a constant $C_*$, independent of every sufficiently large even order $p$, with the following property. After $p$ is fixed, one may choose a fixed $\\kappa_p>0$, a fixed near radius $R_c$, and sufficiently small structural and low-square losses such that $$Z_p=1+F_p+\\kappa_pD_p^{\\rm mom},\\qquad\n \\mathbb E Z_p'\\le(1+C_*/l+u_l)Z_p,\n \\qquad \\sum_lu_l=o(1),\n\\label{eq:original-33}$$ with nonnegative deterministic upper budgets $u_l$ under the bootstrap assumptions.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-early-high-moments"
+  },
+  {
+   "claim_id": "claim-cleanup-estimates",
+   "exact_statement": "Assume the early-phase estimates at $l_1$, and maintain the structural estimators during cleanup. With the simultaneous discounted-account choice rule, the cleanup interval can be completed so that, at every chosen state, the precision matrices remain positive definite, <a href=\"#eq:original-8\" data-reference-type=\"eqref\" data-reference=\"eq:original-8\">[eq:original-8]</a> holds, and $$T_S=\\sum_{x\\in S}e_x(x)^2\\leq n^\\eta,\\qquad\n |E_{ij}|\\leq2B_k.$$ The second inequality holds for every surviving pair $(i,j)$ of total level $k=\\nu(i)+\\nu(j)$. At primary points the lower estimate for $\\mathcal T$ persists in the form $$\\mathcal T\\geq n^{-\\theta}(n^{-1}+\\alpha/l)^{-1}.$$ In particular the consequences <a href=\"#eq:original-10\" data-reference-type=\"eqref\" data-reference=\"eq:original-10\">[eq:original-10]</a> and <a href=\"#eq:original-11\" data-reference-type=\"eqref\" data-reference=\"eq:original-11\">[eq:original-11]</a>, and a polynomial-loss form of <a href=\"#eq:original-13\" data-reference-type=\"eqref\" data-reference=\"eq:original-13\">[eq:original-13]</a>, hold at $l_0$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-cleanup"
+  },
+  {
+   "claim_id": "claim-cleanup-pathwise-sums",
+   "exact_statement": "Fix any chosen cleanup history up to its current state, and fix a label $i$ while it is alive. With $u_t$ the prescribed first endpoint of step $t$, one has $$\\sum_t A_i^t(u_t)^2\\leq n^\\eta,\\qquad\n \\sum_t (j_{u_t}^t)^2\\leq n^\\eta.\n\\label{eq:original-36}$$ The first estimate also holds with $A_i^t(u_t)$ replaced by $r_i^t(u_t)$. For every fixed initial stub $v$, whether or not it has already been resolved, the actual-path part of $b_{u_t v}^t$ satisfies the same squared-sum estimate over $t$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cleanup-pathwise"
+  },
+  {
+   "claim_id": "claim-cleanup-scalar-persistence",
+   "exact_statement": "At a current cleanup state, assume positive definiteness and <a href=\"#eq:original-8\" data-reference-type=\"eqref\" data-reference=\"eq:original-8\">[eq:original-8]</a> at every tracked point for both signs, together with the level-dependent entry and $T_S$ bootstrap bounds. The trace-square accounts at all tracked points and the $\\mathcal T$-deviation accounts at the primaries have bounded discount loss at scales strictly inside the corresponding bounds of Proposition <a href=\"#prop:cleanup\" data-reference-type=\"ref\" data-reference=\"prop:cleanup\">22</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cleanup-traces"
+  },
+  {
+   "claim_id": "claim-cleanup-endpoint-word-classes",
+   "exact_statement": "After expansion of a numerical update difference and of its formal truncation tail, every term is covered by the following classes:*\n\n1.  *a term containing a non-pure swap $R$, and hence a factor $C/l$;*\n\n2.  *a pure-swap term with no intermediate endpoint factor;*\n\n3.  *a pure-swap term with exactly one endpoint $E$ factor and no topology factor;*\n\n4.  *a term with a cross topology factor $b_{uv}$;*\n\n5.  *a pure-swap term with local topology factors only, and at most one endpoint $E$ factor;*\n\n6.  *a term with at least two endpoint $E$ factors.*\n\n*In class 3 the single endpoint $E$ factor may be grouped with $W$ outers. For class 5, if both outers are at $u$, an opposite local factor $j_v$ is necessary; the symmetric statement holds for two outers at $v$. If class 5 has no endpoint $E$ factor and has distinct outers, local factors at both endpoints are necessary. All remaining factors and choices of their positions can be summed with a bounded geometric multiplier.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-cleanup-words"
+  },
+  {
+   "claim_id": "claim-cleanup-diagonal-budgets",
+   "exact_statement": "Under the cleanup bootstrap, through every chosen history segment, $$\\sum_t\\|m\\|_2\\leq n^\\eta,\\qquad\n \\sum_tV_t\\leq n^\\eta+Cf_bT_{\\mathrm{cap}},$$ where $T_{\\mathrm{cap}}$ is the chosen bootstrap cap for $T_S$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cleanup-diagonal"
+  },
+  {
+   "claim_id": "claim-cleanup-level-sensitive-jumps",
+   "exact_statement": "For a surviving entry $E_{ij}$ of total level $k$, every allowed cleanup step satisfies $$|\\Delta E_{ij}|/B_k\\leq n^{-2\\rho}$$ for all sufficiently large $n$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cleanup-jumps"
+  },
+  {
+   "claim_id": "claim-cleanup-predictable-entry-budgets",
+   "exact_statement": "For every fixed entry while its labels are alive, and through every chosen history segment, there is a fixed $c_5>0$ such that $$\\begin{split}\n &\\sum_{\\substack{t:\\text{nonspecial survival}\\\\\n                         \\text{has positive probability}}}\n \\frac{\\bigl|\\mathbb E(\\Delta E_{ij}\\mid\n                           \\text{nonspecial survival})\\bigr|}{B_k}\n       \\leq n^{-c_5},\\\\\n &\\sum_{\\substack{t:\\text{nonspecial survival}\\\\\n                         \\text{has positive probability}}}\n \\frac{\\mathbb E((\\Delta E_{ij})^2\\mid\n                           \\text{nonspecial survival})}{B_k^2}\n       \\leq n^{-c_5}.\n\\end{split}\n\\label{eq:original-39}$$ Here $k=\\nu(i)+\\nu(j)$ is the pair’s total level. Each sum stops when one of its labels dies.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cleanup-entry-budgets"
+  },
+  {
+   "claim_id": "claim-separated-boundary-completion",
+   "exact_statement": "Under these inputs, the account rule can deterministically complete the pairing. Every added edge is simple and preserves the girth exclusion. At the end the precision is positive at every primary point for both signs. There is a reference matrix $\\widehat P_{\\rm fin}$, defined below by exact numerical updates from a smooth coefficient truncation at the stop, such that at every retained primary parameter and both signs, $$\\max_{i,j}|(W_{\\rm fin}-\\widehat P_{\\rm fin})_{ij}|\n \\le C B_B,\n \\qquad B_B=\\frac{n^{.40a}}{\\sqrt{l_2}}.$$ The construction retains the stop configuration and the matching added after it. These define the same family $\\widehat P_{\\rm fin}(h)$ throughout the primary interval. All the accounts, candidate values and transitions in this section can be evaluated in a number of bit operations polynomial in $n$, with an exponent depending only on the fixed parameters.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-boundary-completion"
+  },
+  {
+   "claim_id": "claim-smooth-reference-sparse-rows",
+   "exact_statement": "There are constants $r_P'>0$ and $C$ such that $$\\widehat\\Gamma_0:=V_0^T\\widehat P_0V_0\n   =I+\\widehat D_0\\quad\\hbox{on }\\mathcal H_0,\n \\qquad \\|\\widehat D_0\\|\\le \\frac{C}{R_0}.\n \\label{eq:original-40}$$ For every global vertex coordinate $i$, the vector $p_{i,0}=V_0^T\\widehat P_0e_i$ satisfies $$p_{i,0}=c_i\\Pi_{l_0}e_{s(i)}+\\tau_i,\n \\qquad |c_i|\\le1,\\qquad \\|\\tau_i\\|_2\\le n^{-r_P'}.\n \\label{eq:original-41}$$ The first summand is omitted if there is no actual path from $i$ to a boundary vertex of length less than $\\lfloor R_0/4\\rfloor$. Otherwise that vertex and that path are unique, and $c_i=(\\sigma h)^{\\operatorname{dist}(i,s(i))}$. For a boundary vertex, $s(i)$ is its own stub and $c_i=1$. The estimate for $\\tau_i$ holds also for $\\partial_h\\tau_i$, after decreasing $r_P'$ if necessary. All these statements hold uniformly throughout the closed convex hull of the retained primary parameters.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-boundary-smooth-reference"
+  },
+  {
+   "claim_id": "claim-boundary-pair-averages",
+   "exact_statement": "Suppose that $D\\mathbf1=0$, $\\max_x(D^2)_{xx}\\le C_0$ and $\\max_{x,y}|D_{xy}|\\le\\epsilon=o(1)$. Then $\\|H\\|\\le C$, and $$|H_{uu}|\\le C(l^{-1}+|D_{vv}|+|D_{uv}|).$$ The conditional absolute mean of $(H-H_0)_{uu}$ with $u$ fixed is at most $C(1+\\sqrt T)/\\sqrt l$, and the conditional second moment of $H_{uu}$ is at most $C(1+T)/l$. The kernel $|(H-H_0)_{uv}|$ has every row and column sum at most $C(1+\\sqrt T)\\sqrt l$. After subtracting the single-$A$ term $-H_0AH_0$, these absolute bounds gain a factor $C\\epsilon$. All these statements remain valid if the possible partner set omits a fixed number of coordinates.*\n\n*If $x,y$ are arbitrary scalar arrays and $\\mathcal I$ is the allowed endpoint set, $m=|\\mathcal I|$, then the pure-swap single-$A$ contraction has the exact formula $$\\mathbb E_{\\mathcal I}\n     [(I^Tx)^TF A F(I^Ty)]\n =\\frac{2}{m(m-1)}\\left[\n   Y_{\\mathcal I}\\langle x_{\\mathcal I},y_{\\mathcal I}\\rangle\n  +x_{\\mathcal I}^TD_{\\mathcal I\\mathcal I}y_{\\mathcal I}\n  -2\\sum_{u\\in\\mathcal I}D_{uu}x_uy_u\\right],$$ where $Y_{\\mathcal I}=\\sum_{u\\in\\mathcal I}D_{uu}$. For full pairs the following additional identities hold: $$\\begin{aligned}\n \\mathbb E\\operatorname{Tr}(F A F K)\n &=\\frac{2}{l(l-1)}\n    \\left[YX+\\operatorname{Tr}D^3\n                 -2\\sum_uD_{uu}(D^2)_{uu}\\right],\\\\\n \\mathbb E\\operatorname{Tr}(F K F K)\n &=\\frac{2}{l(l-1)}\n    \\left[X^2+\\operatorname{Tr}D^4\n                 -2\\sum_u(D^2)_{uu}^2\\right],\\\\\n \\mathbb E[(I^Tr)^TF K F(I^Tr)]\n &=\\frac{2}{l(l-1)}\n    \\left[gX+r^TD^2r-2\\sum_ur_u^2(D^2)_{uu}\\right],\n \\qquad g=\\|r\\|^2.\n\\end{aligned}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-boundary-pair-averages"
+  },
+  {
+   "claim_id": "claim-local-projector-from-frozen-reference",
+   "exact_statement": "Assume $x_i^\\sigma>-e/20$ for all nonconstant indices $i$ and both signs. Suppose the final resolvents $R_\\sigma(z)=(z-\\sigma A_G)^{-1}|_{\\mathbf 1^\\perp}$ at the primary points $z=z(h)$ satisfy the entry comparison $$\\max_p\\left|\n R_\\sigma(z(h))_{pp}-m_h\\widehat P_{\\mathrm{fin},pp}^\\sigma(h)\n \\right|\\le C B_B,\n \\qquad B_B=o(\\sqrt e).$$ Suppose also that the same frozen reference is defined throughout the primary range and obeys $$\\sup_{h,p}\\left|\n \\frac{d}{dh}\\bigl(m_h\\widehat P_{\\mathrm{fin},pp}^\\sigma(h)\\bigr)\n \\right|\\le C.$$ Assume the primary grid has bounded geometric spacing, as in the construction. Then, uniformly in $p$ and $\\sigma$, $$\\sum_{i:\\,x_i^\\sigma\\le w}|v_i(p)|^2\\le Cw^{3/2}\n \\qquad (2e\\le w\\le c_d).\n \\label{eq:original-61}$$ The constant can be enlarged to make the same assertion valid for all larger $w$ in the bounded spectral range.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-repair-projector"
+  },
+  {
+   "claim_id": "claim-bulk-resolvent-and-typical-edges",
+   "exact_statement": "The projector estimate <a href=\"#eq:original-61\" data-reference-type=\"eqref\" data-reference=\"eq:original-61\">[eq:original-61]</a> implies $$\\sup_p\\bigl[(R_B^\\sigma)^2\\bigr]_{pp}\n \\le \\frac{C}{\\sqrt{W_b}}.\n \\label{eq:original-63}$$ If $w_p\\asymp W_b$ is a primary gap, every entry of $R_B^\\sigma-R_\\sigma(s+w_p)$ is $O(\\sqrt{W_b})$.*\n\n*For the typical-edge assertion below, the additional inputs are the following specific conclusions at the separation stop:*\n\n1.  *Only $O(l_0)$ edges of $G$ were added after the stop, with $l_0\\asymp n^{2/3+.15a}$. At most $n^{.08+o(1)}$ stop vertices have a nonempty actual nonbacktracking return of length at most $r_n=\\lfloor .08\\log_q n\\rfloor+2$.*\n\n2.  *The number of actual nonbacktracking paths of any length $k<L$ between fixed endpoints is bounded by a constant. The stop reference is the weighted sum of these paths with coefficient $\\varphi(k/L)(\\sigma h)^k$, up to a matrix whose entries are $o(n^{-.04})$. The taper is bounded and equals one for $k\\le r_n$, and $h\\le h_c$.*\n\n3.  *The final reference has the form $\\widehat P_{\\mathrm{fin}}=\\widehat P_0-\n     \\widehat P_0V_0H_fV_0^T\\widehat P_0$, where $V_0$ is an isometry from an $(l_0-1)$-dimensional space, $\\|H_f\\|\\le C$, and $\\|\\widehat P_0\\|\\le C(1+L)^3$. At the comparison primary points the final resolvent has entry error $O(B_B)=o(n^{-.04})$ relative to $m_h\\widehat P_{\\mathrm{fin}}$.*\n\n*The return count, multiplicity and virtual-path assertions are consequences of Lemmas <a href=\"#lemma:structure\" data-reference-type=\"ref\" data-reference=\"lemma:structure\">7</a> and <a href=\"#lemma:path-majorants\" data-reference-type=\"ref\" data-reference=\"lemma:path-majorants\">8</a>; the norm bound is Lemma <a href=\"#lemma:pencil-coefficients\" data-reference-type=\"ref\" data-reference=\"lemma:pencil-coefficients\">9</a>; the reference representation and final error are furnished by Section <a href=\"#sec:boundary-completion\" data-reference-type=\"ref\" data-reference=\"sec:boundary-completion\">7</a> and Proposition <a href=\"#prop:boundary-completion\" data-reference-type=\"ref\" data-reference=\"prop:boundary-completion\">29</a>. All inputs are uniform in the primary points used below. For each pair of cutoffs as above, all but a fraction $O(n^{-.1})$ of the oriented edges $(p,p')$ have, for both signs, their endpoint block of $R_B^\\sigma$ within $n^{-.024}$ of $P_{\\mathrm{tree}}^\\sigma$. The estimates are uniform in the cutoffs; their exceptional sets may depend on the cutoffs.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-repair-bulk"
+  },
+  {
+   "claim_id": "claim-exact-simultaneous-switch-repair",
+   "exact_statement": "Fix an integer $d\\ge3$ and a constant $C_0\\ge1$. Put $$\\begin{gathered}\n q=d-1,\\qquad s=2\\sqrt q,\\qquad a=10^{-4},\\\\\n e=n^{-2/3+a},\\qquad W_b=n^{-2/3+100a},\\qquad\n M=\\lceil n^{1/3+10a}\\rceil.\n \\end{gathered}$$ There are constants $n_0,k$, depending only on $d,C_0$, and a deterministic algorithm with the following property for $n\\ge n_0$.*\n\n*Let $G$ be a simple $d$-regular graph on $n$ vertices. Let $v_2,\\ldots,v_n$ be an orthonormal eigenbasis of $A_G$ on $\\mathbf1^\\perp$, with eigenvalues $\\lambda_i$, and put $x_i^\\sigma=s-\\sigma\\lambda_i$ for $\\sigma\\in\\{+1,-1\\}$. Assume the following three properties.*\n\n1.  **Spectral confinement.* For every $i=2,\\ldots,n$ and both signs, $x_i^\\sigma>-e/20$.*\n\n2.  **Local spectral mass.* For every vertex $p$, both signs, and every $w\\in[2e,2d]$, $$\\sum_{\\substack{2\\le i\\le n\\\\x_i^\\sigma\\le w}}|v_i(p)|^2\n     \\le C_0w^{3/2}.$$*\n\n3.  **Typical edge blocks.* For every pair $w_B^\\sigma\\in[W_b,2W_b]\\setminus\\{x_i^\\sigma:2\\le i\\le n\\}$, define $$R_B^\\sigma=\\sum_{\\substack{2\\le i\\le n\\\\x_i^\\sigma\\ge w_B^\\sigma}}\n                     \\frac{v_iv_i^T}{x_i^\\sigma}.$$ All but a fraction $C_0n^{-.1}$ of the $dn$ oriented edges $(p,p')$ satisfy the following bound for both signs: $$\\left\\|\n     \\begin{pmatrix}(R_B^\\sigma)_{pp}&(R_B^\\sigma)_{pp'}\\\\\n                     (R_B^\\sigma)_{p'p}&(R_B^\\sigma)_{p'p'}\\end{pmatrix}\n     -\\frac1{d-2}\\begin{pmatrix}\\sqrt q&\\sigma\\\\\\sigma&\\sqrt q\\end{pmatrix}\n     \\right\\|_{\\max}\\le n^{-.024}.$$ Here $\\|\\cdot\\|_{\\max}$ is the largest absolute entry. The exceptional edge set may depend on the chosen pair of cutoffs.*\n\n*Given the adjacency list of $G$, the algorithm finds $M$ vertex-disjoint switches, each deleting two edges and inserting two edges. In $O_{d,C_0}(n^k)$ bit operations it outputs the adjacency list of a simple $d$-regular graph $G'$ on the same vertices such that $$-2\\sqrt{d-1}<\\lambda_i(G')<2\\sqrt{d-1}\n \\qquad (2\\le i\\le n).$$ In particular, $G'$ is connected and nonbipartite.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-thm-exact-repair"
+  },
+  {
+   "claim_id": "claim-polynomial-bit-implementation",
+   "exact_statement": "For each fixed $d$ and the fixed choices in Section <a href=\"#subsec:hierarchy\" data-reference-type=\"ref\" data-reference=\"subsec:hierarchy\">2.3</a>, every stage of the preceding construction is implementable with polynomially many bit operations in $n$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-bit-complexity"
+  }
+ ],
+ "paper": "papers/EN-113-000-0004-2-2026-PR-T4-UK-EX-M1-C-CO-H-0344_PM-178.1_Deterministic_nonbipartite_Ramanujan_graphs_in_every_fixed_degree.md",
+ "purpose": "Deterministic nonbipartite Ramanujan graphs in every fixed degree",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "ed8d9866ce05044a4daaa7a64ff68774493a3cbe79e0ee9ea073f16a1ca082ec",
+   "pm.domains.v2": "436097f5bc281d68110bf1caf5e9b3a4c2a4c927acc3be836a9ce4cce27f08d1",
+   "pm.edges.v2": "0a9888b42fb0e89f02c21e403eb614763ea5ae569cf5a175d70d179adc7606d2",
+   "pm.extraction.v2": "394195011fc1925efb8c4db072faf2c119fbe06a3af953bb08d73e7190aecb9d",
+   "pm.formal.v2": "44d5b4837f5b500d0e2590ba18a847f63a298dea7d1cb59001f6394fa5a3de20",
+   "pm.limits.v2": "ef3700ea61ee86491f79c3c0e1a8638fd571b6036f8f91a02110a3274a35fd3a",
+   "pm.node.v2": "32de6450f42399e4be3cf944309ca48655c064e96f8a965335d11c77dda7acdf",
+   "pm.objects.v2": "b0f3729bb573bb33a5fea69ec5448b3056010de9394f4a3c8ffba7e1bb41d99e",
+   "pm.provenance.v2": "221a372ab8f36d952c8a00a0b28dbefc604fa62e8e8769ad931c35125f96bb00",
+   "pm.quantities.v2": "5fcaa907377f1ba70bc03b618ec51f9ec19dfcaf0b27d94bd60abb6cfb6efd7c",
+   "pm.reading.v2": "1450a78672c1541970a1a517356d3f03da827935dd3408c3b01d81fe2e472385",
+   "pm.roadmap.v2": "51fd81cd37a6a481fddd0929572f3acfc677ae75d12e45044c96aa2e76cc2158",
+   "pm.search.v1": "62eb1e2dec39c7c3cdaa0a59f37e3734e6bb871dc8dff3b0b61afeeca04efd0b",
+   "pm.triptych.v2": "bbebaf5301c6fa83270e573e5f5258ab326c4371dfed47562d85ab72c7f85b1e"
+  },
+  "canonical_sha256": "4ce00b441363e900a0002cd60f819163a8bca56ad63e290be3c322f4821496fd",
+  "paper_sha256": "5cd6c6e062bcca5fd0525f67ad7c3140fa6d02c1834bccc957a3c2a643b786de",
+  "repaired_body_sha256": "832a9ea9dd6c6bed9c4bb7e5bc55557e5d97c85c75838a1776f75cd051789cb5"
+ },
+ "status": "ACTIVE",
+ "subject_id": 13,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "0aed5a9ef45f89c082ac4036f67b9e73571850d31849d431027cabf03b2d3252",
+   "receipt_sha256": "e1f44f372b6d65d7f71be0f38867e60ae058ecc50bcbc9e71ccde2e90b0255c2",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Complete graph, Petersen graph, bipartite regular graph, looped regular matrix, asymmetric regular matrix, incorrectly declared degree, degree below restriction, empty matrix and malformed dimensions.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-simple-regular-input",
+     "oracle_basis": "Independent edge-set checks enforce the same graph contract. Planted graph-validation mutants are rejected on named deterministic vectors."
+    },
+    {
+     "checked_domain": "Finite exact certificates for the complete graph and Petersen graph, with rejection of the complete bipartite graph. This checks candidate acceptance only, not generation at every sufficiently large order.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-exact-contrast-certificate",
+     "oracle_basis": "Exact rational elimination is compared with independent leading-principal determinant positivity. The wrong-threshold mutant is killed by the complete bipartite graph."
+    },
+    {
+     "checked_domain": "Accepted complete and Petersen graphs; rejection of the complete bipartite graph.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-connected-nonbipartite-output",
+     "oracle_basis": "The oracle verifies the full squared-adjacency contrast certificate. The graph-theoretic implication remains grounded in the source proof; these vectors are finite checks."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-wrong-tree-threshold",
+     "observed_exit": 1,
+     "receipt_sha256": "5bc8ad646c6e8f5bcb0988f2c2adf9f52920ba27f7aa9bb92821cc64455928c5"
+    },
+    {
+     "id": "mutant-omit-degree-validation",
+     "observed_exit": 1,
+     "receipt_sha256": "d4eb4fe0d4940099ebd1232c9afc4f9d229fb4764a34339dce78531c5f68052c"
+    },
+    {
+     "id": "mutant-omit-loop-validation",
+     "observed_exit": 1,
+     "receipt_sha256": "ea2f1403f095cc719ff86ed281aa908d223e8ed5771d957be1cfebab24e0b7f6"
+    },
+    {
+     "id": "mutant-omit-symmetry-validation",
+     "observed_exit": 1,
+     "receipt_sha256": "302bea3d0aab7c83ee694f841c9c5e9ef098a0bd73ee4e8e8778cfe04b9fc9ff"
+    }
+   ],
+   "receipt_sha256": "be4eb5e676537402f15cbcac553926a6cf1a0fba4ad482642bc066e31c51b4dc",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Deterministic nonbipartite Ramanujan graphs in every fixed degree"
+}

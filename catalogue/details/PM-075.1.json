@@ -1,0 +1,572 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 628293,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 184243
+ },
+ "coordinate": "EN-110-000-0003-2-2026-PR-T4-UK-EX-M2-B-TO-H-0172",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "Kolmogorov’s integrable counterexample shows that the conclusion cannot hold throughout $L^1$",
+     "quote_sha256": "46bd7649b5581a595b513bf9735e31de92a5117e50c6bbe167eea5c9d6ceb97e"
+    }
+   ],
+   "query": "Convergence for general integrable functions",
+   "reason": "The integrable counterexample shows convergence cannot hold throughout that class."
+  }
+ ],
+ "family": "PM-075",
+ "id": "PM-075.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-convergence",
+    "statement": "For every complex-valued $f\\in L\\log L(\\mathbb T)$"
+   },
+   {
+    "anchor": "stmt-lemma-compression",
+    "claim_id": "claim-entropy-compression",
+    "statement": "Fix $D_0,P_0\\ge1$."
+   },
+   {
+    "anchor": "stmt-lemma-compression",
+    "claim_id": "claim-entropy-compression",
+    "statement": "Let $q$ be a strictly positive probability mass function on $\\mathbb Z$."
+   },
+   {
+    "anchor": "stmt-entropy-foundations-variational",
+    "claim_id": "claim-noisy-sum-marginals",
+    "statement": "Under the hypotheses of [lemma:compression](#lemma:compression), there is a law of $X^T=(X_1,\\ldots,X_T)$ and $\\Gamma\\in TS-TS$ such that every $X_i$ has law $U_S$, the joint law is invariant under permutations of the letters, and, with $Z=\\sum_{i=1}^T X_i+\\Gamma$, $$\\label{eq:source-1}\n D(X^T\\|U_S^{\\otimes T})+\\mathrm I(X^T;Z)\n       +\\mathbb E c(\\Gamma)\\le E.$$"
+   },
+   {
+    "anchor": "stmt-entropy-foundations-cost-rules",
+    "claim_id": "claim-cost-rules",
+    "statement": "Let the letters and error in [entropy-foundations:cost-definition](#entropy-foundations:cost-definition) be finite-valued, with $p$ positive on every coordinate support."
+   },
+   {
+    "anchor": "stmt-entropy-foundations-exchangeable",
+    "claim_id": "claim-conditional-marginal",
+    "statement": "Under the hypotheses of [lemma:compression](#lemma:compression), there is a probability law $\\nu$ on $S$ and a joint law $\\Psi$ of an exchangeable $T_0$-tuple with common marginal $\\nu$ and an error $\\Gamma\\in TS-TS$ such that, writing $Z=\\sum_{i=1}^{T_0}X_i+\\Gamma$, $$\\label{eq:source-2}\n\\begin{split}\n &\\log|S|-\\mathrm H(\\nu)\\le CE/T,\\\\\n &D(X^{T_0}\\|\\nu^{\\otimes T_0})\n       +\\mathrm I(X^{T_0};Z)+\\mathbb E c(\\Gamma)\\le CE,\\\\\n &\\|\\mathcal L_\\Psi(X^m)-\\nu^{\\otimes m}\\|_{\\mathrm{TV}}\n       \\le C m_*\\sqrt E/T\\qquad(1\\le m\\le m_*).\n\\end{split}$$ All constants here are numerical."
+   },
+   {
+    "anchor": "stmt-entropy-foundations-context-bounds",
+    "claim_id": "claim-context-bounds",
+    "statement": "Let $\\nu,\\Psi$ be as in [entropy-foundations:exchangeable](#entropy-foundations:exchangeable), and define $G_s,I_r$ by [entropy-foundations:G-definition](#entropy-foundations:G-definition), [entropy-foundations:I-definition](#entropy-foundations:I-definition)."
+   },
+   {
+    "anchor": "stmt-entropy-foundations-block-cost",
+    "claim_id": "claim-block-cost-lifting",
+    "statement": "Let $m,r$ be positive integers and $W$ a finite context of $X\\sim\\nu$."
+   },
+   {
+    "anchor": "stmt-entropy-foundations-thinning",
+    "claim_id": "claim-thinning-low-end",
+    "statement": "Under the hypotheses of [lemma:compression](#lemma:compression), fix the law $\\nu$ from [entropy-foundations:exchangeable](#entropy-foundations:exchangeable)."
+   },
+   {
+    "anchor": "stmt-entropy-refinement-gluing",
+    "claim_id": "claim-block-observation-gluing",
+    "statement": "Fix a current finite-valued context $W$, integers $m\\ge2$ and $r\\ge1$, and an independent block of $m$ current pairs $(X_i,W_i)$."
+   },
+   {
+    "anchor": "stmt-entropy-refinement-search",
+    "claim_id": "claim-refinement-search",
+    "statement": "Under the hypotheses of [lemma:compression](#lemma:compression), there is a finite sequence of context refinements from empty context to $W$, and an index $j$, such that $$\\begin{split}\n G_1(\\varnothing)-G_1(W)&\\le\\frac{CD_*^2}{Eh^2},\\\\\n K_{m_{j,1}}(W;r_j)&\\le K_{m_{j,0}}(W;r_j)+E.\n \\end{split}\n \\label{entropy-refinement:search-conclusion}$$ The constant $C$ is numerical, and every context produced is finite-valued."
+   },
+   {
+    "anchor": "stmt-lemma-thermal-monotonicity",
+    "claim_id": "claim-thermal-monotonicity",
+    "statement": "For every thermal form, $q_A$ is a nonnegative, even probability mass function on $\\mathbb Z$."
+   },
+   {
+    "anchor": "stmt-lemma-spectral-update",
+    "claim_id": "claim-spectral-update",
+    "statement": "Fix $C_0,C_*\\ge1$."
+   },
+   {
+    "anchor": "stmt-prop-thermal-evidence",
+    "claim_id": "claim-regular-evidence",
+    "statement": "Consider any finite procedure starting with the type-zero label, making at most $\\lfloor C_0h\\rfloor$ successful main additions and using the updates of [lemma:spectral-update](#lemma:spectral-update) with its hypotheses at every attempt."
+   },
+   {
+    "anchor": "stmt-prop-dyadic",
+    "claim_id": "claim-dyadic-estimate",
+    "statement": "There are absolute constants $C$ and $d_0$ with the following property."
+   },
+   {
+    "anchor": "stmt-prop-live-budgets",
+    "claim_id": "claim-live-budgets",
+    "statement": "There are fixed absolute choices of the constants in the procedure and in [lemma:spectral-update](#lemma:spectral-update) such that, for all sufficiently large $d$, the procedure is finite in every finite spatial tree and preserves the exact splitting identity above."
+   },
+   {
+    "anchor": "stmt-lemma-07-local-budget",
+    "claim_id": "claim-local-budget",
+    "statement": "On the plateau just described, the expected sum of spatial bit relative entropies to a fair bit is $O(d_1)$, with or without the fixed side label."
+   },
+   {
+    "anchor": "stmt-prop-capture",
+    "claim_id": "claim-capture",
+    "statement": "In the finite procedure, for every plateau, allowed level, and criterion above, there is a cumulative finite list $D$ of integers, initially empty, whose appends are prescribed at jumping post states, such that, after the appends at $p$, $$\\label{eq:source-14}\n \\begin{gathered}\n u\\text{ high and the jump not bad}\\quad\\Longrightarrow\\quad\n |u-v||p|\\le\\mathop{\\mathrm{poly}}(1+|D|,d_1,1/b)\n       \\quad\\text{for some }v\\in[D],\\\\\n [D]=\\left\\{\\sum_{n\\in D}\\eta_n n:\\eta_n\\in\\{0,1,-1\\}\\right\\},\n \\qquad \\mathbb E_{\\mathbf U_e}|D|_{\\rm final}\\le C d_1 b^{-C}.\n \\end{gathered}$$ The construction is independent of the caps used below.*\n\n*The bad-edge charge at $p$ and level $b$ is $e_{p,b}\\mathbf1_{\\{p\\text{ bad at level }b\\}}$."
+   },
+   {
+    "anchor": "stmt-lemma-07-edge-charges",
+    "claim_id": "claim-edge-charges",
+    "statement": "With the bad-jump convention [eq:07-edge-definition](#eq:07-edge-definition), the following bounds hold.*\n\n1."
+   },
+   {
+    "anchor": "stmt-lemma-07-snapshots",
+    "claim_id": "claim-snapshots",
+    "statement": "The main and scalar snapshot lists have respectively the cardinality bounds in [prop:capture](#prop:capture)."
+   },
+   {
+    "anchor": "stmt-lemma-07-activation",
+    "claim_id": "claim-activation",
+    "statement": "On a capped scheme, declare a high $u$ activated at a jump $p$ if there is $v\\in[D]$ such that $|u-v||p|\\le\\sigma$ in the main case, or $|u-v||p|\\le c_8b^4$ in the scalar case."
+   },
+   {
+    "anchor": "stmt-lemma-paths-sign",
+    "claim_id": "claim-predictable-signs",
+    "statement": "Let $(r_{i+1})$ be fair signs in a filtration $(\\mathcal F_i)$, and let $c_i$ be real $\\mathcal F_i$-measurable coefficients."
+   },
+   {
+    "anchor": "stmt-prop-scalar-path",
+    "claim_id": "claim-scalar-path",
+    "statement": "Let $0<b\\le1$ be a scalar level"
+   },
+   {
+    "anchor": "pm-h-54",
+    "claim_id": "claim-energy-innovation",
+    "statement": "Fix a main representative $s$ on a live plateau, so its main channel $A$ is fixed."
+   },
+   {
+    "anchor": "stmt-lemma-paths-run-drift",
+    "claim_id": "claim-run-drift",
+    "statement": "Start predictably at an outer-valid jump, and stop before the first outer-invalid jump or at plateau end."
+   },
+   {
+    "anchor": "stmt-lemma-paths-run-norm",
+    "claim_id": "claim-run-norm",
+    "statement": "Under the hypotheses of [lemma:paths-run-drift](#lemma:paths-run-drift), set $\\lambda=b^{1/2}$ and $W_P(z)=\\sum_{p\\in P}\\mathfrak a_p(z)\\epsilon_{j(p)}r_{j(p)+2}$."
+   },
+   {
+    "anchor": "stmt-prop-vector-path",
+    "claim_id": "claim-vector-path",
+    "statement": "Fix a live plateau, a main level $b\\in[b_0,1]$, and a representative $s$ at its snapshot birth."
+   },
+   {
+    "anchor": "sec:paths",
+    "claim_id": "claim-simultaneous-parameters",
+    "statement": "Fix a plateau $e$, with normalization $\\alpha=\\alpha_e$"
+   },
+   {
+    "anchor": "stmt-thm-good-set",
+    "claim_id": "claim-good-set-integral",
+    "statement": "There are absolute constants $C$ and $d_*$ such that, whenever $d\\ge d_*$ and $\\rho$ is a nonnegative periodic function with $\\int_0^1\\rho=1$ and $\\rho\\le e^d$ almost everywhere, $$\\label{eq:source-18}\n       \\int_{G_\\rho}\\sup_{N\\ge0}|S_N\\rho(x)|\\,dx\\le Cd.$$"
+   },
+   {
+    "anchor": "stmt-prop-fourier-bounded",
+    "claim_id": "claim-bounded-convergence",
+    "statement": "Every bounded complex-valued periodic function"
+   },
+   {
+    "anchor": "stmt-cor-fourier-weak-l1",
+    "claim_id": "claim-weak-l1-maximal",
+    "statement": "On $\\mathbb T=\\mathbb R/(2\\pi\\mathbb Z)$ with $d\\mu=dx/(2\\pi)$, set $\\Phi(t)=t\\log(2+t)$ and define the Luxemburg norm by $$\\|f\\|_\\Phi\n =\\inf\\left\\{b>0:\\int_{\\mathbb T}\\Phi(|f|/b)\\,d\\mu\\le1\\right\\}.$$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "almost-everywhere convergence in the Orlicz class",
+    "evidence": [
+     {
+      "anchor": "pm-h-5",
+      "quote": "#### Organization\n\nprove the entropy compression lemma.",
+      "quote_sha256": "da485e13d783992662a6ad5a223c0c971fa062947e15ec3ef7e70cfe95afe6cd"
+     }
+    ],
+    "requires_concepts": [
+     "entropy compression",
+     "thermal forms",
+     "dyadic delayed Haar estimate",
+     "Hilbert transform"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-convergence",
+   "exact_statement": "For every complex-valued $f\\in L\\log L(\\mathbb T)$, there is a measurable set $N_f$ of measure zero such that $$\\lim_{N\\to\\infty}S_Nf(x)=f(x)\n \\qquad (x\\in\\mathbb T\\setminus N_f).$$ The limit is along the full sequence $N=0,1,2,\\ldots$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-entropy-compression",
+   "exact_statement": "Fix $D_0,P_0\\ge1$. Let $q$ be a strictly positive probability mass function on $\\mathbb Z$. Suppose that, for a positive integer $g$ and a probability measure $\\omega$ on $\\mathbb R/\\mathbb Z$, $$\\label{entropy-foundations:characteristic}\n H_q(x):=\\frac{q(x)}{q(0)}\n   =\\int\\chi_{gx}(\\theta)\\,d\\omega(\\theta),\\qquad\n \\chi_v(\\theta)=e^{2\\pi i v\\theta},\\qquad\n F_0:=-\\log q(0)\\le D_0d.$$ Let $S\\subset\\mathbb Z$ be finite and nonempty and assume $$\\label{entropy-foundations:sumset-hypothesis}\n \\log|nS|\\le D_0d h^{P_0}\\log d\n \\qquad\\text{for every integer }1\\le n\\le d^2.$$ Suppose $d/h^2\\le E\\le D_0d$ and, for every probability measure $\\lambda$ on $S$, $$\\label{entropy-foundations:moment-hypothesis}\n -\\log\\mathbb E_\\lambda\n H_q(X_1+\\cdots+X_T-X'_1-\\cdots-X'_T)\\le E,$$ where the $2T$ letters in this expectation are independent with common law $\\lambda$. Then there exist $x_0\\in S$ and a nonempty subset $S'\\subset S$ such that $$\\label{entropy-foundations:size-conclusion}\n \\log|S|-\\log|S'|\\le C(D_0)\\frac{d^2}{Eh^2}$$ and, for every probability measure $v$ on $S'$, $$\\label{entropy-foundations:volume-conclusion}\n \\int\\exp\\!\\left(\n   -L\\sum_{x\\in S'}v(x)\n          (1-\\operatorname{Re}\\chi_{g(x-x_0)}(\\theta))\n              \\right)\\,d\\omega(\\theta)\\ge e^{-CE}.$$ The constant $C$ in [entropy-foundations:volume-conclusion](#entropy-foundations:volume-conclusion) is numerical. The constant in [entropy-foundations:size-conclusion](#entropy-foundations:size-conclusion) depends only on $D_0$; the lower threshold for $d$ may also depend on $P_0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-compression"
+  },
+  {
+   "claim_id": "claim-noisy-sum-marginals",
+   "exact_statement": "Under the hypotheses of [lemma:compression](#lemma:compression), there is a law of $X^T=(X_1,\\ldots,X_T)$ and $\\Gamma\\in TS-TS$ such that every $X_i$ has law $U_S$, the joint law is invariant under permutations of the letters, and, with $Z=\\sum_{i=1}^T X_i+\\Gamma$, $$\\label{eq:source-1}\n D(X^T\\|U_S^{\\otimes T})+\\mathrm I(X^T;Z)\n       +\\mathbb E c(\\Gamma)\\le E.$$ The construction may be made with $Z\\in TS$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-entropy-foundations-variational"
+  },
+  {
+   "claim_id": "claim-cost-rules",
+   "exact_statement": "Let the letters and error in [entropy-foundations:cost-definition](#entropy-foundations:cost-definition) be finite-valued, with $p$ positive on every coordinate support. The following operations apply to that cost.*\n\n1.  *Keeping any fixed subset of the letters, in any fixed order, and adding the same error $\\Gamma$ to their sum does not increase $\\mathcal C_p$.*\n\n2.  *If $J$ is any finite-valued variable, then the average cost of the laws conditional on $J$ is at most the original cost plus $\\mathrm H(J)$. After this conditioning, the projection and reordering in <span class=\"upright\">(i)</span> may depend on $J$.*\n\n3.  *Conditioning on a fixed prefix of the letters and keeping the remaining $k$ letters, with the same error, has no additional average cost. If those letters have a common conditional marginal $\\nu$ at a given prefix value, their comparison product may be changed from $p^{\\otimes k}$ to $\\nu^{\\otimes k}$ without increasing the conditional cost.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-entropy-foundations-cost-rules"
+  },
+  {
+   "claim_id": "claim-conditional-marginal",
+   "exact_statement": "Under the hypotheses of [lemma:compression](#lemma:compression), there is a probability law $\\nu$ on $S$ and a joint law $\\Psi$ of an exchangeable $T_0$-tuple with common marginal $\\nu$ and an error $\\Gamma\\in TS-TS$ such that, writing $Z=\\sum_{i=1}^{T_0}X_i+\\Gamma$, $$\\label{eq:source-2}\n\\begin{split}\n &\\log|S|-\\mathrm H(\\nu)\\le CE/T,\\\\\n &D(X^{T_0}\\|\\nu^{\\otimes T_0})\n       +\\mathrm I(X^{T_0};Z)+\\mathbb E c(\\Gamma)\\le CE,\\\\\n &\\|\\mathcal L_\\Psi(X^m)-\\nu^{\\otimes m}\\|_{\\mathrm{TV}}\n       \\le C m_*\\sqrt E/T\\qquad(1\\le m\\le m_*).\n\\end{split}$$ All constants here are numerical.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-entropy-foundations-exchangeable"
+  },
+  {
+   "claim_id": "claim-context-bounds",
+   "exact_statement": "Let $\\nu,\\Psi$ be as in [entropy-foundations:exchangeable](#entropy-foundations:exchangeable), and define $G_s,I_r$ by [entropy-foundations:G-definition](#entropy-foundations:G-definition), [entropy-foundations:I-definition](#entropy-foundations:I-definition). There is a constant $C'_0(D_0)$ such that, with $$\\label{entropy-foundations:D-star}\n D_*=C'_0(D_0)d,$$ every finite refinement of the initial constant context satisfies:*\n\n1.  *$G_s(W)$ is nondecreasing in $s$, nonincreasing under refinement of $W$, and $0\\le G_s(W)\\le D_*$ for $0\\le s\\le m_*$.*\n\n2.  *$I_r(W)$ is nonnegative, nondecreasing in $r$, and nonincreasing under refinement of $W$. Moreover $I_r(W)\\le D_*$ for $1\\le r\\le T_0$.*\n\n*The same $D_*$ works for all the contexts in any finite sequence of refinements.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-entropy-foundations-context-bounds"
+  },
+  {
+   "claim_id": "claim-block-cost-lifting",
+   "exact_statement": "Let $m,r$ be positive integers and $W$ a finite context of $X\\sim\\nu$. The value of [entropy-foundations:K-definition](#entropy-foundations:K-definition) is unchanged if each row sum $Y_{m,a}$ is replaced in both entropy terms by its entire $m$-letter vector, with that row constrained to have the law of $m$ iid current pairs. The output remains the sum of all $mr$ letters plus $\\Gamma$, and independence is required within each prescribed row marginal, but not between rows. Moreover $K_m(W;r)$ is nonincreasing under finite context refinement.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-entropy-foundations-block-cost"
+  },
+  {
+   "claim_id": "claim-thinning-low-end",
+   "exact_statement": "Under the hypotheses of [lemma:compression](#lemma:compression), fix the law $\\nu$ from [entropy-foundations:exchangeable](#entropy-foundations:exchangeable). Let $m,r$ be positive integers satisfying $$m\\le m_*,\\qquad 2mr\\le T_0,\\qquad\n r\\le \\tfrac12 T e^{-w^2}.$$ For the constant context and for every finite refinement of it, $$\\label{eq:source-3}\n K_m(W;r)\\le CE,$$ where $C$ is numerical, with the threshold for $d$ allowed to depend on $D_0,P_0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-entropy-foundations-thinning"
+  },
+  {
+   "claim_id": "claim-block-observation-gluing",
+   "exact_statement": "Fix a current finite-valued context $W$, integers $m\\ge2$ and $r\\ge1$, and an independent block of $m$ current pairs $(X_i,W_i)$. Refine the context of $X_1$ by observing $\\bigl(\\sum_{i=1}^mX_i,W_2,\\ldots,W_m\\bigr)$, retaining $W_1$. For the resulting context $W'$, $$G_1(W)-G_1(W')=G_m(W)-G_{m-1}(W),\n \\label{entropy-refinement:one-letter-loss}$$ and $$I_r(W)-I_r(W')\\ge K_m(W;r)-K_{m-1}(W;r).\n \\label{eq:source-4}$$ If the observation is made only on an independent Bernoulli mark of probability $\\zeta\\in[0,1]$, retaining the mark in the new context, its one-letter entropy loss is multiplied by $\\zeta$, and its decrease of $I_r$ is at least $\\zeta\\bigl(I_r(W)-I_r(W')\\bigr)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-entropy-refinement-gluing"
+  },
+  {
+   "claim_id": "claim-refinement-search",
+   "exact_statement": "Under the hypotheses of [lemma:compression](#lemma:compression), there is a finite sequence of context refinements from empty context to $W$, and an index $j$, such that $$\\begin{split}\n G_1(\\varnothing)-G_1(W)&\\le\\frac{CD_*^2}{Eh^2},\\\\\n K_{m_{j,1}}(W;r_j)&\\le K_{m_{j,0}}(W;r_j)+E.\n \\end{split}\n \\label{entropy-refinement:search-conclusion}$$ The constant $C$ is numerical, and every context produced is finite-valued.",
+   "kind": "construction",
+   "statement_anchor": "stmt-entropy-refinement-search"
+  },
+  {
+   "claim_id": "claim-thermal-monotonicity",
+   "exact_statement": "For every thermal form, $q_A$ is a nonnegative, even probability mass function on $\\mathbb Z$. The coefficients $\\int\\chi_uK_A=q_A(u)/q_A(0)$ are real and nonnegative. For all integers $u,v$, $$\\operatorname{Cov}_{K_A}(\\operatorname{Re}\\chi_u,\n                          \\operatorname{Re}\\chi_v)\\ge0.$$ Consequently these characteristic coefficients increase in form order, $\\Delta_A(u)$ decreases in form order, and $\\Delta_A(u+v)\\le\\Delta_A(u)+\\Delta_A(v)$. The function $F$ increases in form order. For every thermal form $D$, the increment $F(A+D)-F(A)$ decreases when $A$ increases in form order.*\n\n*If $P=\\sum_jP_j$ is a finite sum of thermal forms and $P_{\\rm lo}\\preceq P\\preceq P_{\\rm hi}$, then, for arbitrary shifts $z_j$ and every integer $u$, $$\\label{eq:thermal-envelope}\n \\left|\\int\\chi_u(y)\\prod_j e^{-P_j(z_j-y)}\\,dy\\right|\n \\le q_P(u)\n \\le e^{-F(P_{\\rm lo})}\\int\\chi_u K_{P_{\\rm hi}}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-thermal-monotonicity"
+  },
+  {
+   "claim_id": "claim-spectral-update",
+   "exact_statement": "Fix $C_0,C_*\\ge1$. Let the current form $A$ arise from the initial form zero by fewer than $C_0h$ additions of spatial and metric forms, each metric satisfying [eq:source-5](#eq:source-5). Let $p\\subset p_*$, where $p_*$ is the latest addition interval, or the top interval of length in $[1/2,1]$ if there has been no addition, and assume $F(A)\\le\\log R_{p_*}+C_*d$. On $p$ suppose $0\\le a\\le e^d$ and $e^{-d}\\le m=\\mathbb E_pa\\le2\\alpha$, with $\\alpha>0$. Suppose there is a request at a computation level $b$ in the sense of [eq:thermal-separation](#eq:thermal-separation), using the prospective child moments in [eq:thermal-child-moments](#eq:thermal-child-moments) and the type-$A$ channel. There are numerical constants $C_1,C_2$ and a sufficiently small numerical $\\varepsilon>0$ with the following property. After the caps are fixed, choose fixed sufficiently large $D_0,P_0$, then $A_0$, and finally take $d$ sufficiently large. A finite deterministic construction supplies a parameter $$d/h^2\\le t\\le D_0d,\\qquad t\\ge\\varepsilon k_b,$$ a thermal metric form $D_i=\\lambda B$, and an input-only success set. On success set $A^+=A+S_p+D_i$. The new metric satisfies [eq:source-5](#eq:source-5) and $$\\label{eq:source-9}\n \\begin{gathered}\n A^+=A+S_p+D_i,\\qquad \\int B K_{A^+}\\le C_1t/\\lambda,\\\\\n \\lambda\\ge dh^{200},\\qquad h^{140}\\lambda\\le L,\n \\end{gathered}$$ and $F(A^+)-F(A+S_p)\\le C_1t$. There are two alternatives:*\n\n1.  *A regular test has success probability $\\delta\\ge\\beta/2$ under the current input law, where $\\beta=b^2/100$. It also supplies a probability $\\nu$ on a set $S'$ and a center $x_0\\in S$ for which $E_T(\\nu)\\ge t/4$.*\n\n2.  *A cheap update succeeds deterministically, has $t=\\varepsilon k_b$, and uses the uniform probability on $S'$.*\n\n*In both alternatives $\\log|S'|\\ge0.8k_b$ and $B=\\sum_x\\nu(x)(1-\\operatorname{Re}\\chi_{g(x-x_0)})$. Track a radius starting at $r_{\\rm sep}/4$ and increasing by $\\eta=r_{\\rm sep}/(10C_0h)$ at every main addition. As long as the count cap applies, the gap $F(A)-\\log|B_A(r)|$ starts at zero, stays bounded below by a numerical negative constant, increases by at most $C_2t$ at a regular success, and decreases by at least $k_b/2$ at a cheap success. On failure there is no main addition and no label draw. All these conclusions are independent of spatial depth and frequency cutoff.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-spectral-update"
+  },
+  {
+   "claim_id": "claim-regular-evidence",
+   "exact_statement": "Consider any finite procedure starting with the type-zero label, making at most $\\lfloor C_0h\\rfloor$ successful main additions and using the updates of [lemma:spectral-update](#lemma:spectral-update) with its hypotheses at every attempt. Require all discrete choices to depend only on spatial prefixes and input memberships, with independent label errors given $Y$ and its parameter path, and include all the success draws specified above. Then an admissible regular attempt has the following conditional reference bound, given its past and its success coin. The observable event $$\\label{eq:source-10}\n \\begin{gathered}\n \\text{for some fresh clone }Z',\\qquad A(Z'-Z)\\le4s_d,\\\\\n \\left|\\sum_x\\nu(x)v_x(Z')\\chi_{gx}(V)\\right|\\ge\\beta/4.\n \\end{gathered}$$ has probability at most $e^{-t/8}$, where $Z$ is the old main label. Under the true input law, all attempted pasts are admissible and [eq:source-10](#eq:source-10) occurs at every regular success simultaneously, except on a set of probability $o(h^{-20})$. This includes the label draws at a final success breaching a cap. The bounds are uniform in depth, cutoff, and the deterministic choices made at the states.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-thermal-evidence"
+  },
+  {
+   "claim_id": "claim-dyadic-estimate",
+   "exact_statement": "There are absolute constants $C$ and $d_0$ with the following property. Let $d\\ge d_0$, put $h=\\log\\log d$, and let $I\\subset\\mathbb R$ be a half-open interval with $1/2\\le |I|\\le1$. Let $\\rho:I\\to[0,\\infty)$ be measurable, with $\\rho\\le e^d$ almost everywhere and $$m_{\\rm top}=\\frac1{|I|}\\int_I\\rho\\le2.$$ Give $I$ its normalized uniform probability $\\mathbf U$. Write $\\mathcal F_j$ for its depth-$j$ dyadic sigma field, $p_j(x)$ for the depth-$j$ interval containing $x$, and $r_{j+1}$ for the sign that is $+1$ on the left child and $-1$ on the right child of each such interval. Let $J\\ge1$ and $Q\\ge0$ be integers. For $0\\le j<J$, let $\\epsilon_j:I\\to\\mathbb C$ be $\\mathcal F_{j+1}$-measurable with $|\\epsilon_j|\\le1$, and use the same $\\epsilon_j$ for all modulations. The bits through depth $J+1$ are retained, so the last output sign is $r_{J+1}$.*\n\n*Set $$\\tau(x)=\\min\\bigl(\\{0\\le j<J:\\ \\mathbb E_{p_j(x)}\\rho>e^{4h}\\}\\cup\\{J\\}\\bigr),\n \\qquad \\mathbb E_p v=\\frac1{|p|}\\int_p v(y)\\,dy,$$ and, with $\\chi_u(y)=e^{2\\pi iuy}$, define $$\\mathcal H_{I,J}^{u}\\rho(x)\n =\\sum_{0\\le j<\\tau(x)}\n       \\mathbb E_{p_j(x)}[\\rho(Y)\\chi_u(Y)r_{j+1}(Y)]\\,\n       \\epsilon_j(x)r_{j+2}(x).$$ Then $$\\label{eq:dyadic-estimate}\n \\int_I\\max_{\\substack{u\\in\\mathbb Z\\\\|u|\\le Q}}\n           |\\mathcal H_{I,J}^{u}\\rho(x)|\\,\\frac{dx}{|I|}\n \\le Cd.$$ The constants are independent of $I,\\rho,J,Q$, and the multipliers. Consequently the same estimate holds with $\\sup_{u\\in\\mathbb Z}$ in place of the finite maximum.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-dyadic"
+  },
+  {
+   "claim_id": "claim-live-budgets",
+   "exact_statement": "There are fixed absolute choices of the constants in the procedure and in [lemma:spectral-update](#lemma:spectral-update) such that, for all sufficiently large $d$, the procedure is finite in every finite spatial tree and preserves the exact splitting identity above. When $1/h\\le m_{\\rm top}\\le2$, it has the following bounds, with constants independent of $J$, $I$, the input, and any frequency cutoff.*\n\n1.  *Before every requested live update the count and form hypotheses of [lemma:spectral-update](#lemma:spectral-update) hold. On every input branch, including its final success if a cap is crossed, $$\\sum_{\\rm successes}k_b+\\sum_{\\rm successes}t\n           +\\sum_{\\rm successes}\\bigl(F(A^+)-F(A+S_p)\\bigr)\\le Cd,\n     \\qquad n\\le C h.$$ The count flag cannot cause transfer unless the charge flag has already been crossed at that success.*\n\n2.  *Let $B_{\\rm mem}$ be the sum of the negative logarithms of the conditional probabilities of all observed membership outcomes along the true path through live termination. Let $X_* =\\max\\log^-m$ over its processing states, including the state at transfer or at the common stop, but excluding later static descendants. Then $$\\|B_{\\rm mem}\\|_{L^2(\\mathbf P)}\n           +\\|X_*\\|_{L^2(\\mathbf P)}\\le C h,\n     \\label{eq:source-12}$$ and $\\mathbf P(\\mathrm{transfer})\\le C h^{-10}$.*\n\n3.  *The live plateau weights satisfy $$\\sum_{e\\text{ live}}\\mathbf U(p_e)\\alpha_e\\le C h.$$ If $\\xi_p$ is the local average of mass removed from the survivor of one plateau at $p$, divided by its $\\alpha_e$, then $\\mathbb E_{\\mathbf U_e}\\sum_p\\xi_p\\le1$. Full removal at an exit may be included. Starting from a final jumping post state $p_0$, the corresponding future bound under uniform probability on $p_0$ is at most $m_{p_0}/\\alpha_e\\le2$.*\n\n4.  *The global label Fisher sum obeys $$\\sum_{\\text{all live jumping pieces }p}\n            \\mathbf U(p)\\alpha_e J_p\\le C d.\n     \\label{eq:source-13}$$*\n\n5.  *Ignore the labels and use the filtration of spatial bits and memberships. After live termination one may keep the final piece fixed and reveal any finite number of additional spatial bits, making no further membership observations. The expected sum of the spatial bit relative entropies to a fair bit is $O(d)$. If this spatial extension is stopped at the common density cutoff, the bound is $O(h)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-live-budgets"
+  },
+  {
+   "claim_id": "claim-local-budget",
+   "exact_statement": "On the plateau just described, the expected sum of spatial bit relative entropies to a fair bit is $O(d_1)$, with or without the fixed side label. This includes every finite extension after exit. If finite-valued observations are made at predictable states and their total conditional entropy cost has expectation at most $B$, the bound becomes $C d_1+B$.*\n\n*Let $M$ be the normalized joint post mass measure of the side information and the finite observations so far, and let $D_{\\rm jump}$ be the half-difference of its prospective child measures. Then $$\\label{eq:07-local-fisher}\n \\mathbb E_{\\mathbf U_e}\\sum_p\n       \\int\\frac{|D_{\\rm jump}|^2}{M}\\le C(d_1+B).$$ For a forward estimate from a live jumping post state $p_0$, restart the input experiment with its post density, retaining the fixed main label when present but discarding all earlier auxiliary observations. The same bounds then hold with $d_1=d$, with $B$ charging the auxiliary observations made in this restarted experiment, and with an extra factor $m_{p_0}/\\alpha\\le2$ in the mass conversion. Already completed removals are excluded. In particular the future main-label Fisher sum has conditional expectation at most $Cd$. If earlier auxiliary information $W$ is retained instead, its conditional information $\\mathrm I(Y;W\\mid Z)$ under the restarted input law must also be added to the initial budget; omit $Z$ when there is no side label. All quotients are zero at zero mass; for measures, densities to a common dominating measure are understood.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-07-local-budget"
+  },
+  {
+   "claim_id": "claim-capture",
+   "exact_statement": "In the finite procedure, for every plateau, allowed level, and criterion above, there is a cumulative finite list $D$ of integers, initially empty, whose appends are prescribed at jumping post states, such that, after the appends at $p$, $$\\label{eq:source-14}\n \\begin{gathered}\n u\\text{ high and the jump not bad}\\quad\\Longrightarrow\\quad\n |u-v||p|\\le\\mathop{\\mathrm{poly}}(1+|D|,d_1,1/b)\n       \\quad\\text{for some }v\\in[D],\\\\\n [D]=\\left\\{\\sum_{n\\in D}\\eta_n n:\\eta_n\\in\\{0,1,-1\\}\\right\\},\n \\qquad \\mathbb E_{\\mathbf U_e}|D|_{\\rm final}\\le C d_1 b^{-C}.\n \\end{gathered}$$ The construction is independent of the caps used below.*\n\n*The bad-edge charge at $p$ and level $b$ is $e_{p,b}\\mathbf1_{\\{p\\text{ bad at level }b\\}}$. Its global live sum, with weights $\\mathbf U(p)\\alpha_e$, is $O(d)$ when one scalar level is selected predictably at each piece, and $O(\\mathop{\\mathrm{poly}}(h)(h+\\log d))$ when all main levels are summed. The local one-scalar-level charge is $O(d_1)$ under $\\mathbf U_e$. Forward from a live post state the conditional expected number of bad jumps at a fixed main level is at most $d\\mathop{\\mathrm{poly}}(h)$.*\n\n*For each deterministic dyadic $D_{\\max}\\ge1$, the scheme stopped when $|D|>D_{\\max}$ admits snapshots with expected number $\\mathop{\\mathrm{poly}}(D_{\\max},d_1,1/b)$. A snapshot at level $b$ stores at most $\\lceil e^{k_{b/2}}\\rceil$ main representatives, or $\\exp(C(d_1+\\log(1/b)))$ scalar representatives. Each birth and its list are determined by the spatial prefix before its birth jump.*\n\n*At a jump $p$, call a high integer $u$ activated when some $v\\in[D]$ satisfies $|u-v||p|\\le\\sigma$ in the main case, or $|u-v||p|\\le c_8b^4$ in the scalar case, for a sufficiently small fixed $c_8>0$. At activation its chosen representative $s$ has, for the remainder of that plateau, a fixed decomposition $$\\begin{array}{ll}\n u=s+n+a',\\quad \\Delta_A(n)\\le r_{\\rm sep},\\quad\n          |a'||p_{\\rm act}|\\le C\\sigma,&\\text{main},\\\\\n u=s+a',\\quad |a'||p_{\\rm act}|\\le c_1b^4,&\\text{scalar},\n \\end{array}$$ where $p_{\\rm act}$ is the activation node and $c_1$ can be made a sufficiently small absolute constant. Before first activation, all non-bad high jumps for this $u$ lie in a single block of at most $$H_b=C\\log(CD_{\\max}d_1/b)+C\\log(1/\\sigma)$$ consecutive depths, as long as the cap is not breached. The construction does not use sampled side or auxiliary values on an output path.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-capture"
+  },
+  {
+   "claim_id": "claim-edge-charges",
+   "exact_statement": "With the bad-jump convention [eq:07-edge-definition](#eq:07-edge-definition), the following bounds hold.*\n\n1.  *Across all live jumping pieces, the sum of $\\mathbf U(p)\\alpha_e e_{p,b}\\mathbf1_{\\rm bad}$ is at most $Cd$ if a single scalar level $b$ is selected at each piece before its next output bit, without using noisy label values.*\n\n2.  *The corresponding sum over all main levels and live pieces is at most $C\\mathop{\\mathrm{poly}}(h)(h+\\log d)$.*\n\n3.  *Within one plateau, the expected one-scalar-level sum under $\\mathbf U_e$ is at most $Cd_1$.*\n\n4.  *From any live jumping post state, under spatial uniform conditional on that prefix, the expected number of future bad jumps of the same plateau at main level $b$ is at most $Cd b^{-2}$, and hence $d\\mathop{\\mathrm{poly}}(h)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-07-edge-charges"
+  },
+  {
+   "claim_id": "claim-snapshots",
+   "exact_statement": "The main and scalar snapshot lists have respectively the cardinality bounds in [prop:capture](#prop:capture). While a snapshot is current, it covers every $v\\in[D]$ that is high at threshold $0.9b$ at a jumping node, with its stored separation neighborhoods measured at the snapshot’s birth interval. Moreover, if $N_{\\rm snap}$ is the number of snapshots on the capped uniform output path, then $$\\label{eq:07-snapshot-count}\n \\mathbb E_{\\mathbf U_e}N_{\\rm snap}\n \\le 1+D_{\\max}+C b^{-6}\n       +C b^{-12}\\bigl(d_1+D_{\\max}\\log(CD_{\\max}/b)\\bigr).$$ Every snapshot is born before its node’s next fair bit. Its stored representatives may subsequently be used on the same plateau even after replacement of that snapshot.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-07-snapshots"
+  },
+  {
+   "claim_id": "claim-activation",
+   "exact_statement": "On a capped scheme, declare a high $u$ activated at a jump $p$ if there is $v\\in[D]$ such that $|u-v||p|\\le\\sigma$ in the main case, or $|u-v||p|\\le c_8b^4$ in the scalar case. A representative from the current snapshot then gives the fixed decompositions and bounds in [prop:capture](#prop:capture). All non-bad high jumps before first activation lie in one block of at most $H_b$ depths as stated there.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-07-activation"
+  },
+  {
+   "claim_id": "claim-predictable-signs",
+   "exact_statement": "Let $(r_{i+1})$ be fair signs in a filtration $(\\mathcal F_i)$, and let $c_i$ be real $\\mathcal F_i$-measurable coefficients. For every $\\theta>0$ and $t\\ge0$, outside an event of probability at most $e^{-t}$, $$\\sum_{i<n}c_i r_{i+1}\n \\le \\frac{\\theta}{2}\\sum_{i<n}c_i^2+\\frac{t}{\\theta}\n \\qquad\\text{for every prefix }n.$$ The same statement holds conditionally at a stopping-time origin and with predictable stopping or masking of the coefficients. For complex sums one may apply the assertion to both signs of each real component, at a total failure probability at most $4e^{-t}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-paths-sign"
+  },
+  {
+   "claim_id": "claim-scalar-path",
+   "exact_statement": "Let $0<b\\le1$ be a scalar level, and let $s$ be a representative selected at a predictable snapshot birth on a live or static plateau. At a jumping post state put $$f_p=\\frac{\\mathbb E_p[a\\chi_s]}{\\alpha},\\qquad\n u_p=\\frac{f_{p,+}-f_{p,-}}2,\\qquad\n \\eta_p=\\mathbf1_{\\{\\max(|f_{p,+}|,|f_{p,-}|)\\le C_3b\\}},$$ where $C_3$ is a fixed constant and $f_{p,\\pm}=f_p\\pm u_p$ are prospective pre-child moments. For every $t\\ge0$, with conditional failure probability at most $Ce^{-t}$ at the birth, every contiguous interval $I$ of subsequent plateau jumps satisfies $$\\left|\\sum_{p\\in I}\\eta_p u_p\\epsilon_{j(p)}r_{j(p)+2}\\right|\n \\le C b^{1/4}(1+K_e+t).\n \\label{eq:source-15}$$ Constants are independent of depth, $s$, and $b$; they may depend on the fixed mask constant $C_3$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-scalar-path"
+  },
+  {
+   "claim_id": "claim-energy-innovation",
+   "exact_statement": "Put $$g_z=\\frac12\\big(M_+|v_+-v|^2+M_-|v_--v|^2\\big),\\qquad\n g=\\int g_z\\,dz,\\qquad U_p=\\frac{G_+-G_-}2.$$ Then $$\\begin{aligned}\n &g_z=\\frac{M_+|v_+|^2+M_-|v_-|^2}{2}-M|v|^2\\ge0,\n       &|\\mathfrak a-vD|^2&\\le M g_z,\\label{eq:paths-innovation-pointwise}\\\\\n &G_{\\mathrm{actual\\ pre}}=G+g+r_{j+1}U_p,\n       &|U_p|^2&\\le C\\max(G_+,G_-)(J+g),\\label{eq:paths-energy-noise}\\\\\n &&\\left(\\int|\\mathfrak a|\\,dz\\right)^2&\\le C(GJ+g).\n       \\label{eq:paths-moment-variation}\n\\end{aligned}$$ A removal of normalized mass $\\xi$ changes $G$ in absolute value by at most $3\\xi$. From any live jumping post state, $$\\mathbb E\\sum_{\\mathrm{future}}g\\le C,\n \\qquad \\mathbb E\\sum_{\\mathrm{future}}J\\le Cd,\n \\qquad \\mathbb E\\sum_{\\mathrm{future}}\\xi\\le2,\n \\label{eq:paths-forward-budgets}$$ where the conditional law is spatially uniform on that state.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-paths-innovation"
+  },
+  {
+   "claim_id": "claim-run-drift",
+   "exact_statement": "Start predictably at an outer-valid jump, and stop before the first outer-invalid jump or at plateau end. For $t\\ge0$, outside conditional probability $e^{-t}$, every prefix $P$ of this run satisfies $$\\sum_{p\\in P}g_p\n \\le C\\left(1+\\sum_{p\\in P}\\xi_p+\\sum_{p\\in P}e'_p\\right)\n       +Cb\\sum_{p\\in P}J_p+Cb t.\n \\label{eq:source-16}$$ Removals here include those between consecutive jumps and may also be enlarged to the whole plateau sum.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-paths-run-drift"
+  },
+  {
+   "claim_id": "claim-run-norm",
+   "exact_statement": "Under the hypotheses of [lemma:paths-run-drift](#lemma:paths-run-drift), set $\\lambda=b^{1/2}$ and $W_P(z)=\\sum_{p\\in P}\\mathfrak a_p(z)\\epsilon_{j(p)}r_{j(p)+2}$. With conditional failure probability at most $Ce^{-t}$, simultaneously for every run prefix, $$\\int|W_P(z)|\\,dz\n \\le C\\sum_{p\\in P}J_p\n      +C\\lambda^{-1}\\left(1+\\sum_{p\\in P}\\xi_p+\\sum_{p\\in P}e'_p\\right)\n      +C\\lambda t.\n \\label{eq:source-17}$$ In particular, the coefficient of the Fisher sum is absolute, independent of $b$ and of the number of representatives.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-paths-run-norm"
+  },
+  {
+   "claim_id": "claim-vector-path",
+   "exact_statement": "Fix a live plateau, a main level $b\\in[b_0,1]$, and a representative $s$ at its snapshot birth. There is a family of predictable estimate origins, containing run starts and the checkpoints described below, whose conditional expected size at the birth is at most $P(d,b_0^{-1})$ for an absolute fixed polynomial $P$. For every $t\\ge0$, outside a conditional event of probability at most $C P(d,b_0^{-1})e^{-t}$, every contiguous interval $I$ of inner-valid jumps after this birth satisfies $$\\int\\left|\\sum_{p\\in I}\\mathfrak a_p(z)\\epsilon_{j(p)}r_{j(p)+2}\\right|\\,dz\n \\le C\\sum_{p\\in I}J_p\n       +Cb^{-1/2}(1+K_e+E_{e,b})+Cb^{1/2}t.\n \\label{eq:paths-inner-interval}$$ The Fisher sum is taken only over $I$. The representative remains eligible for these estimates until the plateau ends, even if another snapshot has meanwhile replaced the one at which it was born.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-vector-path"
+  },
+  {
+   "claim_id": "claim-simultaneous-parameters",
+   "exact_statement": "On each plateau and at each permitted level there are nonnegative random parameters $t_b,H_b$, independent of the actual frequency later being estimated, with the following properties. Almost surely the scalar bound of [prop:scalar-path](#prop:scalar-path), or the vector interval bound of [prop:vector-path](#prop:vector-path), holds with $t=t_b$ for every representative in the snapshot construction used on the path. The activation conclusion of [lemma:07-activation](#lemma:07-activation) holds with miss-block length $H_b$. Moreover $$\\begin{aligned}\n \\mathbb E_{\\mathbf U_e}t_b\n   &\\le Ck_{b/4}+C\\log(Cd/b) &&\\text{for main levels},\n       \\label{eq:paths-main-parameter}\\\\\n \\mathbb E_{\\mathbf U_e}t_b\n   &\\le C\\big(d_1+\\log(1/b)\\big) &&\\text{for scalar levels},\n       \\label{eq:paths-scalar-parameter}\\\\\n \\mathbb E_{\\mathbf U_e}H_b\n   &\\le C\\log(Cd_1/b)+C\\log(1/\\sigma)\n       &&\\text{for either criterion}.\n       \\label{eq:paths-miss-parameter}\n\\end{aligned}$$ These assertions hold simultaneously over the countably many levels.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-paths-simultaneous"
+  },
+  {
+   "claim_id": "claim-good-set-integral",
+   "exact_statement": "There are absolute constants $C$ and $d_*$ such that, whenever $d\\ge d_*$ and $\\rho$ is a nonnegative periodic function with $\\int_0^1\\rho=1$ and $\\rho\\le e^d$ almost everywhere, $$\\label{eq:source-18}\n       \\int_{G_\\rho}\\sup_{N\\ge0}|S_N\\rho(x)|\\,dx\\le Cd.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-good-set"
+  },
+  {
+   "claim_id": "claim-bounded-convergence",
+   "exact_statement": "Every bounded complex-valued periodic function has almost-everywhere convergence of its symmetric Fourier partial sums along the full sequence.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-fourier-bounded"
+  },
+  {
+   "claim_id": "claim-weak-l1-maximal",
+   "exact_statement": "On $\\mathbb T=\\mathbb R/(2\\pi\\mathbb Z)$ with $d\\mu=dx/(2\\pi)$, set $\\Phi(t)=t\\log(2+t)$ and define the Luxemburg norm by $$\\|f\\|_\\Phi\n =\\inf\\left\\{b>0:\\int_{\\mathbb T}\\Phi(|f|/b)\\,d\\mu\\le1\\right\\}.$$ For the ordinary symmetric partial sums of [thm:main](#thm:main), put $S^*f=\\sup_{N\\ge0}|S_Nf|$. There is an absolute constant $C$ such that $$\\label{eq:fourier-weak-l1}\n \\sup_{\\lambda>0}\\lambda\\,\\mu\\{S^*f>\\lambda\\}\n \\le C\\|f\\|_\\Phi\n \\qquad(f\\in L\\log L(\\mathbb T;\\mathbb C)).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-fourier-weak-l1"
+  }
+ ],
+ "paper": "papers/EN-110-000-0003-2-2026-PR-T4-UK-EX-M2-B-TO-H-0172_PM-075.1_Almost_everywhere_Fourier_convergence_in_L_log_L.md",
+ "purpose": "Almost-everywhere Fourier convergence in L log L",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "5cf97c79045335c4ea6c38b1cb9289f795a97e54a44ab4637cd40e6c95b55b6d",
+   "pm.domains.v2": "32710e826ada22a25f98d48f72879d683718566e0f2d554278780d86dfd53994",
+   "pm.edges.v2": "2f2d616782db06af423c853759e42c4dda929c0d80e34a1ad40304d1666a3abc",
+   "pm.extraction.v2": "fbb5177567a2f665bcb3451b19fe7a8dfe974b6d55135808d285f752a3219eea",
+   "pm.formal.v2": "da0ac4378e02c107d298b2ad2e3ebcdc64c0730cd5803680499fda980b5bdc48",
+   "pm.limits.v2": "1e30988d14b89db322b817d196efdbcffc6724ed32ffa9d4e439ca8dd4a7e988",
+   "pm.node.v2": "118a069c7907a690052435df0faa14d5176b4267fa865598dfc16f7a88564033",
+   "pm.objects.v2": "237a9bbfce8ca2d9e44f21258bb6a1b50233c6791d7d580f8ec2145606e07447",
+   "pm.provenance.v2": "fa8aee6987b54237efd2b148b07bf1274a53c8feeceba1d3bf84b81433b543a8",
+   "pm.quantities.v2": "e509a05e078446ecb068770a0d50924bd56de3194c6c3a54ae1e4164b485e230",
+   "pm.reading.v2": "624013bd74542c998ab5d8bd59fd729bb0537f348c0fb241ff83215da3cf1c8b",
+   "pm.roadmap.v2": "0e204f179cd8c6128019e131d71361d440ded0f061282c610bffacfabed0ede9",
+   "pm.search.v1": "e62ef1c0781d371a7eb56756434c691fd664345304c032b31a71a175e3c61ef7",
+   "pm.triptych.v2": "db56d985e7c1685d3aa0e642854727516cb9a9179b8cfa9e72310a59e6373e4f"
+  },
+  "canonical_sha256": "aec17d7de19534527080030326587faf3e42c745f5fe721caa1e44f795ad3cd1",
+  "paper_sha256": "8fd62378ac98712457ba4234be0c0da30d7f25f846d4667304ac38d613d5e8fb",
+  "repaired_body_sha256": "3b03a39fca780c714da5b81fa129a17215847847a96113bd1983398e5e7bfc37"
+ },
+ "status": "ACTIVE",
+ "subject_id": 10,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "c841260a279294c5dd1ee10ad3de797283bc47d3f7a095c9474bb025d0e4f089",
+   "receipt_sha256": "f7660b8a106b4b732f5d59b881737117de97f1b8450fe7249b7d4b91c8925a3e",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "integer profile values in [-2,7] on four quarters, including the paper's profile 1 -1 -1 1 giving -1/8, zero and unit vectors",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-kernel-constant",
+     "oracle_basis": "fine-grid exact trapezoid integration plus closed-form linear identity"
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-no-half",
+     "observed_exit": 1,
+     "receipt_sha256": "7291c6f3d8f2b3ac345a284bf32a6bf197cdfb1db4d3aa8ab1263c804009c448"
+    },
+    {
+     "id": "mut-primitive-table",
+     "observed_exit": 1,
+     "receipt_sha256": "03497b8581f712e70912e46de21eda9b9b2090f055e3cdfbea1926054059d920"
+    },
+    {
+     "id": "mut-width",
+     "observed_exit": 1,
+     "receipt_sha256": "e580525fee5f6a51ff80d527c6805cce62444152d7ca685fe91b7f821a2ac8d1"
+    },
+    {
+     "id": "mut-swap",
+     "observed_exit": 1,
+     "receipt_sha256": "af71d5723ef5affcf57a81097b4e89c7439015295841563dd9948881408150e9"
+    }
+   ],
+   "receipt_sha256": "9d3a3fa3226a6fefa2a6a81559a214345aed3db31f4180b648c35192a5fd5a08",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Almost-everywhere Fourier convergence in L log L"
+}

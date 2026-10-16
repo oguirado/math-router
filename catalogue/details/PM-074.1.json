@@ -1,0 +1,829 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 885563,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 253732
+ },
+ "coordinate": "EN-110-000-0000-2-2026-PR-T4-UK-EX-M2-C-ML-H-0170",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-def-critical",
+     "quote": "the least $A\\in[0,d-1]$",
+     "quote_sha256": "bc27133a573dcd32db46beb6ea7862a9270dabe6af4b5d5f99d05095c0a8d131"
+    }
+   ],
+   "query": "Kakeya maximal bound in dimension four or higher",
+   "reason": "Exponents and geometry are specific to three dimensions."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "For every $\\varepsilon>0$",
+     "quote_sha256": "32fdae4e398b8ac5da7106b791d6d7c601d0b8c4f04bab2f948d2365a5cb6214"
+    }
+   ],
+   "query": "Explicit constant or algorithm",
+   "reason": "The constant is not specified."
+  }
+ ],
+ "family": "PM-074",
+ "id": "PM-074.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-maximal",
+    "statement": "$f\\in L^3(\\mathbb R^3)$"
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-maximal",
+    "statement": "$0<\\delta<1$"
+   },
+   {
+    "anchor": "stmt-lem-critical-existence",
+    "claim_id": "claim-critical-existence",
+    "statement": "$0\\le A_1\\le A_2\\le d-1$"
+   },
+   {
+    "anchor": "stmt-lem-finite-cleaning",
+    "claim_id": "claim-finite-cleaning",
+    "statement": "$0<\\vartheta_0<\\rho/L$"
+   },
+   {
+    "anchor": "pm-h-10",
+    "claim_id": "claim-regularization",
+    "statement": "Let $N=2^j$ tend to infinity."
+   },
+   {
+    "anchor": "stmt-cor-active-weight-cleaning",
+    "claim_id": "claim-active-weight-cleaning",
+    "statement": "$0<\\vartheta_0,\\sigma_N\\le1$"
+   },
+   {
+    "anchor": "stmt-lem-profile-cost",
+    "claim_id": "claim-profile-cost",
+    "statement": "If $F_j\\to F$ uniformly"
+   },
+   {
+    "anchor": "stmt-lem-critical-point",
+    "claim_id": "claim-critical-point",
+    "statement": "If $I$ is an open interval of $p>2$ on which $h(p,0)>0$"
+   },
+   {
+    "anchor": "stmt-lem-hybrid-equality",
+    "claim_id": "claim-hybrid-equality",
+    "statement": "Fix $p,z,\\eta$ with $h=h(p,z)>0$"
+   },
+   {
+    "anchor": "stmt-lem-hybrid-equality",
+    "claim_id": "claim-hybrid-equality",
+    "statement": "let $0\\le h_0<h$"
+   },
+   {
+    "anchor": "stmt-thm-set-input",
+    "claim_id": "claim-set-input",
+    "statement": "if $0<\\delta<\\delta_0$"
+   },
+   {
+    "anchor": "stmt-lem-weighted-convex-set",
+    "claim_id": "claim-weighted-convex-set",
+    "statement": "Fix $R\\ge1$."
+   },
+   {
+    "anchor": "stmt-lem-weighted-set",
+    "claim_id": "claim-weighted-set",
+    "statement": "Fix a bounded line chart"
+   },
+   {
+    "anchor": "stmt-thm-furstenberg-input",
+    "claim_id": "claim-furstenberg-input",
+    "statement": "Fix $0<s\\le1$, $0<t\\le2$"
+   },
+   {
+    "anchor": "stmt-cor-weighted-furstenberg",
+    "claim_id": "claim-weighted-furstenberg",
+    "statement": "Fix $0<s\\le1$, $0<t\\le2$"
+   },
+   {
+    "anchor": "stmt-cor-weighted-furstenberg",
+    "claim_id": "claim-weighted-furstenberg",
+    "statement": "Let $0<\\delta<\\delta_0$"
+   },
+   {
+    "anchor": "stmt-thm-multilinear-input",
+    "claim_id": "claim-multilinear-input",
+    "statement": "(Endpoint multilinear Kakeya). *For $j=1,2,3$, let $T_{j,a}$ be finitely many infinite cylinders of radius one in $\\mathbb R^3$, with unit axial directions $v_{j,a}$. Suppose $$|\\det(v_{1,a_1},v_{2,a_2},v_{3,a_3})|\\ge\\theta>0 \\quad\\hbox{for every }(a_1,a_2,a_3).$$ For nonnegative weights $\\omega_{j,a}$ put $\\mu_j=\\sum_a\\omega_{j,a}\\mathbf 1_{T_{j,a}}$ and $M_j=\\sum_a\\omega_{j,a}$. Then $$\\label{eq:weighted-multilinear} \\int_{\\mathbb R^3}(\\mu_1\\mu_2\\mu_3)^{1/2} \\le C\\theta^{-1/2}(M_1M_2M_3)^{1/2}.$$ In particular this holds for finite length-$D$ tubes with no additional dependence on $D$.*"
+   },
+   {
+    "anchor": "stmt-cor-multilinear-cubes",
+    "claim_id": "claim-multilinear-cubes",
+    "statement": "For unit mesh cubes $Q$"
+   },
+   {
+    "anchor": "stmt-prop-local-bound",
+    "claim_id": "claim-local-bound",
+    "statement": "After an extensive regular restriction"
+   },
+   {
+    "anchor": "stmt-loc-slack-caps",
+    "claim_id": "claim-slack-caps",
+    "statement": "Every equality under consideration"
+   },
+   {
+    "anchor": "stmt-loc-short-block-plane",
+    "claim_id": "claim-short-block-plane",
+    "statement": "For each fixed $0<\\kappa<\\kappa_{\\mathrm{ml}}$"
+   },
+   {
+    "anchor": "stmt-lem-plate-nikodym",
+    "claim_id": "claim-plate-nikodym",
+    "statement": "For $K\\geq2$"
+   },
+   {
+    "anchor": "stmt-lem-prefix-extension",
+    "claim_id": "claim-prefix-extension",
+    "statement": "$s\\in(0,1]$ and $\\gamma\\geq0$"
+   },
+   {
+    "anchor": "stmt-lem-flat-delay",
+    "claim_id": "claim-flat-delay",
+    "statement": "Every hybrid or exact equality with $H>0$"
+   },
+   {
+    "anchor": "stmt-loc-flat-saturation",
+    "claim_id": "claim-flat-saturation",
+    "statement": "$F|_{[0,\\kappa]}=0$"
+   },
+   {
+    "anchor": "stmt-lem-anisotropic",
+    "claim_id": "claim-anisotropic",
+    "statement": "saturated plates on a flat scale $K=N^\\kappa\\leq K_1$"
+   },
+   {
+    "anchor": "stmt-lem-positive-deficit",
+    "claim_id": "claim-positive-deficit",
+    "statement": "For $h_0\\uparrow h>0$"
+   },
+   {
+    "anchor": "stmt-lem-derivative-capture",
+    "claim_id": "claim-derivative-capture",
+    "statement": "Fix an equality, a prefix $\\kappa>0$"
+   },
+   {
+    "anchor": "stmt-lem-nested-cuts",
+    "claim_id": "claim-nested-cuts",
+    "statement": "Fix a nontrivial equality"
+   },
+   {
+    "anchor": "stmt-lem-angle-packing",
+    "claim_id": "claim-angle-packing",
+    "statement": "For a nontrivial equality with delay $\\tau$"
+   },
+   {
+    "anchor": "stmt-lem-stationary-shape",
+    "claim_id": "claim-stationary-shape",
+    "statement": "For the canonical profile"
+   },
+   {
+    "anchor": "stmt-prop-stationary-data",
+    "claim_id": "claim-stationary-data",
+    "statement": "original index weights are retained"
+   },
+   {
+    "anchor": "stmt-lem-estimate-cleaning",
+    "claim_id": "claim-estimate-cleaning",
+    "statement": "Let a finite weighted event graph have total weight $W$"
+   },
+   {
+    "anchor": "stmt-lem-angular-frostman",
+    "claim_id": "claim-angular-frostman",
+    "statement": "For every fixed $0<c<b\\le1$"
+   },
+   {
+    "anchor": "stmt-lem-conditional-x",
+    "claim_id": "claim-conditional-x",
+    "statement": "Fix $0<c<1$, $0<a<w(1-c)$"
+   },
+   {
+    "anchor": "stmt-lem-conditional-x",
+    "claim_id": "claim-conditional-x",
+    "statement": "$\\sigma>0$ with $c+\\sigma\\le1$"
+   },
+   {
+    "anchor": "stmt-lem-gap-density",
+    "claim_id": "claim-gap-density",
+    "statement": "(Uniform differentiation of a superadditive gap kernel). *Let $K(s,t)$, $s<t$ in an interval, be a nonnegative kernel satisfying $$K(s,u)\\ge K(s,t)+K(t,u),\\qquad 0\\le K(s,t)\\le C(t-s).$$ There is a measurable $\\phi$, $0\\le\\phi\\le C$, such that for almost every $a$, and for every fixed $C_0<\\infty$, $$\\sup_{[s,t]\\subset[a-C_0b,a+C_0b]} \\bigl|K(s,t)-\\phi(a)(t-s)\\bigr|=o(b) \\quad(b\\downarrow0). \\label{eq:gap-uniform-density}$$*"
+   },
+   {
+    "anchor": "stmt-lem-remove-label",
+    "claim_id": "claim-remove-label",
+    "statement": "Let $\\sigma\\downarrow0$ through a fixed countable"
+   },
+   {
+    "anchor": "stmt-cor-normal-position-rate",
+    "claim_id": "claim-normal-position-rate",
+    "statement": "$0<c<1$ and $0<a<w(1-c)$"
+   },
+   {
+    "anchor": "stmt-prop-entropy-demand",
+    "claim_id": "claim-entropy-demand",
+    "statement": "At almost every point of $\\mathcal U$"
+   },
+   {
+    "anchor": "stmt-lem-velocity-trace",
+    "claim_id": "claim-velocity-trace",
+    "statement": "If $w<1$"
+   },
+   {
+    "anchor": "stmt-lem-stripe-demand",
+    "claim_id": "claim-stripe-demand",
+    "statement": "Fix $J\\Subset(0,1)$."
+   },
+   {
+    "anchor": "stmt-prop-projection-rates",
+    "claim_id": "claim-projection-rates",
+    "statement": "where the full-cell thresholds lie in the permitted range"
+   },
+   {
+    "anchor": "stmt-lem-pr-relative-frame",
+    "claim_id": "claim-pr-relative-frame",
+    "statement": "If two frame labels in $E_0$ have differences"
+   },
+   {
+    "anchor": "stmt-lem-blowup-counts",
+    "claim_id": "claim-blowup-counts",
+    "statement": "chosen independently of the queried offset"
+   },
+   {
+    "anchor": "stmt-lem-pinning",
+    "claim_id": "claim-pinning",
+    "statement": "Let $0<s\\le1$, $\\gamma'>0$"
+   },
+   {
+    "anchor": "stmt-lem-pair-information",
+    "claim_id": "claim-pair-information",
+    "statement": "Let $K=1+\\zeta_{\\max}$"
+   },
+   {
+    "anchor": "stmt-lem-robust-projection",
+    "claim_id": "claim-robust-projection",
+    "statement": "(Robust planar projections). *Fix $$0<s\\le1,\\qquad 0<t\\le2,\\qquad 0\\le u<h_{\\mathrm{pr}}:=\\min\\{t,(s+t)/2,1\\}.$$ There is $\\kappa_0=\\kappa_0(s,t,u)>0$ with the following property. For every $R,C_0\\ge1$ and $0<\\kappa\\le\\kappa_0$, there is $\\delta_0>0$ such that the following holds for $0<\\delta<\\delta_0$. Let $\\mu$ be a Borel subprobability measure on $[-R,R]^2$, let $\\nu$ be a subprobability measure on an arbitrary finite label set $\\Lambda$, and let $\\vartheta:\\Lambda\\to[-R,R]$. Suppose $$\\label{eq:robust-projection-frostman} \\mu(B(p,r))\\le\\delta^{-\\kappa}r^t, \\qquad (\\vartheta_*\\nu)(B(a,r))\\le\\delta^{-\\kappa}r^s \\quad(\\delta\\le r\\le1).$$ For each $\\lambda\\in\\Lambda$, let $A_\\lambda$ be a union of at most $C_0\\delta^{-u}$ intervals of length at most $C_0\\delta$. Then $$\\label{eq:robust-projection-product} \\sum_{\\lambda\\in\\Lambda}\\nu(\\{\\lambda\\}) \\mu\\{(x,y):x+\\vartheta(\\lambda)y\\in A_\\lambda\\} <\\delta^{2\\kappa}.$$ Consequently there cannot be a set $B\\subset\\Lambda$ with $\\nu(B)\\ge\\delta^\\kappa$ such that for every $\\lambda\\in B$ there is a $\\mu$-measurable set $E_\\lambda$ with $$\\label{eq:robust-projection-subset} \\mu(E_\\lambda)\\ge\\delta^\\kappa, \\qquad \\{x+\\vartheta(\\lambda)y:(x,y)\\in E_\\lambda\\} \\subset A_\\lambda.$$*"
+   },
+   {
+    "anchor": "stmt-lem-pr-projection-transfer",
+    "claim_id": "claim-projection-transfer",
+    "statement": "Fix the original single-event law $\\mu$"
+   },
+   {
+    "anchor": "stmt-lem-pr-ray-improvement",
+    "claim_id": "claim-ray-improvement",
+    "statement": "Let $0<s\\le1$ and $\\delta\\to0$."
+   },
+   {
+    "anchor": "stmt-prop-maximal-reduction",
+    "claim_id": "claim-maximal-reduction",
+    "statement": "suppose that $h(p,0)=0$"
+   },
+   {
+    "anchor": "stmt-cor-nikodym-space-forms",
+    "claim_id": "claim-nikodym-space-forms",
+    "statement": "For every $1\\le p\\le3$ and $\\varepsilon>0$"
+   },
+   {
+    "anchor": "stmt-cor-curved-kakeya-local",
+    "claim_id": "claim-curved-kakeya-local",
+    "statement": "For the phase and chart fixed above"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "critical exponent",
+    "evidence": [
+     {
+      "anchor": "stmt-def-critical",
+      "quote": "For fixed $p,z,\\eta$, let $h(p,z)$ be the least $A\\in[0,d-1]$ such that for every sequence with a uniform profile $F$, $$\\label{eq:critical-bound}\n m\\mathrel{\\leq_{\\mathrm{exp}}}N^{A+\\Pi_F(1)}\\Delta_A.$$",
+      "quote_sha256": "e8c2f61ee539cbd9f96a5cb90d7995859736ac8c5920579be1e630edcbebc391"
+     }
+    ],
+    "requires_concepts": [
+     "weighted indexed configuration",
+     "uniform temporal profile",
+     "plank parameter"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-maximal",
+   "exact_statement": "For every $\\varepsilon>0$ there exists a finite constant $C_\\varepsilon$ such that, for every $0<\\delta<1$ and every $f\\in L^3(\\mathbb R^3)$, $$\\|K_\\delta f\\|_{L^3(S^2)}\n\\le C_\\varepsilon\\delta^{-\\varepsilon}\n     \\|f\\|_{L^3(\\mathbb R^3)}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-critical-existence",
+   "exact_statement": "Definition <a href=\"#def:critical\" data-reference-type=\"ref\" data-reference=\"def:critical\">4</a> is well-defined. Its admissible candidates form a closed upper interval in $[0,d-1]$, and $h(p,-1)=0$. For every $0\\le A_1\\le A_2\\le d-1$, $$\\label{eq:plank-exponent-Lipschitz}\n N^{-(A_2-A_1)}\\Delta_{A_1}\n \\le\\Delta_{A_2}\\le\\Delta_{A_1},\n \\qquad\n N^{A_1}\\Delta_{A_1}\\le N^{A_2}\\Delta_{A_2}\n \\le N^{A_2-A_1}N^{A_1}\\Delta_{A_1}.$$ All fixed geometric constants may be absorbed in exponent notation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-critical-existence"
+  },
+  {
+   "claim_id": "claim-finite-cleaning",
+   "exact_statement": "Let $\\Omega$ be a finite set with positive measure $\\mu$, let $A\\subseteq\\Omega$ satisfy $\\mu(A)\\ge\\rho\\mu(\\Omega)$, and let $\\mathcal P_1,\\ldots,\\mathcal P_L$ be partitions of $\\Omega$. If $0<\\vartheta_0<\\rho/L$, there is $A'\\subseteq A$ with $$\\mu(A')\\ge(\\rho-L\\vartheta_0)\\mu(\\Omega)$$ such that every cell $C$ of a tested partition meeting $A'$ satisfies $$\\mu(A'\\cap C)\\ge\\vartheta_0\\mu(C).$$ In particular one can take $\\vartheta_0=\\rho/(2L)$ and retain at least $\\rho\\mu(\\Omega)/2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-finite-cleaning"
+  },
+  {
+   "claim_id": "claim-regularization",
+   "exact_statement": "The following assertions hold.*\n\n1.  *Every sequence of indexed configurations has, after passage to a subsequence, an extensive refinement with a uniform temporal profile. A prescribed finite list of the preceding probability and conditional-count tests can be regularized at the same time. Countably many prescribed tests can be imposed by the finite-test diagonal described below.*\n\n\n\n2.  *Suppose an original sequence has profile $F$, and a restriction followed by extensive regularization has profile $G$. Then $$\\label{eq:branching-domination}\n     G(t)-G(s)\\ge F(t)-F(s),\\qquad 0\\le s\\le t\\le1.$$ If the restriction retains at least $N^{-e+o(1)}$ of the original event mass, then $$\\label{eq:total-deficit-loss}\n     0\\le G(1)-F(1)\\le e.$$ In particular an extensive refinement preserves $F$.*\n\n3.  *The same branching comparison holds within a fixed interval of logarithmic scales when events are routed through charts, provided each derived temporal fiber is a subset of one original index and starting block, its weight is inherited, and each original index and starting block produces at most $N^{o(1)}$ chart fibers. Total event mass and total available starting-block weight are counted over that ensemble. If the routed ensemble retains at least $N^{-e+o(1)}$ of the original ensemble’s event mass and is extensively regularized to a common profile, its total deficit increase on the interval is at most $e$ in original logarithmic units. Without that retained-mass hypothesis only the increment comparison is asserted.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-regularization"
+  },
+  {
+   "claim_id": "claim-active-weight-cleaning",
+   "exact_statement": "Let $\\mathcal A$ be a finite collection of pairs $(i,I)$, where $I$ is a dyadic temporal block and the blocks assigned to each index $i$ are disjoint. Let $\\mathcal C$ be a partition of $\\mathcal A$. For a pair $(i,I)$, its events are $(i,J)$ with $J\\in S_i\\cap I$ and have inherited weight $\\omega_i$. Fix $a\\in\\mathbb R$, $\\varepsilon\\ge0$, and $0<\\vartheta_0,\\sigma_N\\le1$. Suppose each pair has between $N^{a-\\varepsilon}$ and $N^{a+\\varepsilon}$ events. For $C\\in\\mathcal C$ put $$M_C=\\sum_{(i,I)\\in C}\\omega_i.$$ If a refinement retains at least a fraction $\\vartheta_0$ of the event mass assigned to $C$, then its active weight in that cell satisfies $$\\sum_{\\substack{(i,I)\\in C\\\\S_i'\\cap I\\ne\\varnothing}}\\omega_i\n \\ge\\vartheta_0N^{-2\\varepsilon}M_C.$$ Suppose further that each cell’s assigned events are partitioned into at most $L_N$ pieces, where $L_N\\ge1$ is an integer. Discard the pieces of mass less than $\\sigma_N/L_N$ times their original cell’s event mass. This discards at most a fraction $\\sigma_N$ of the total event mass. If subsequent cleaning retains at least a fraction $\\vartheta_0$ of each surviving piece’s original event mass, then the active weight on every occupied piece is at least $$\\frac{\\vartheta_0\\sigma_N}{L_N}N^{-2\\varepsilon}M_C.$$ Here active weight counts each pair $(i,I)$ meeting the piece once.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-active-weight-cleaning"
+  },
+  {
+   "claim_id": "claim-profile-cost",
+   "exact_statement": "The cost $\\Pi_F$ is additive across logarithmic scale intervals and is zero on flat intervals. In addition to <a href=\"#eq:cost-elementary-bounds\" data-reference-type=\"eqref\" data-reference=\"eq:cost-elementary-bounds\">[eq:cost-elementary-bounds]</a>, it has the following properties.*\n\n1.  *If $F_j\\to F$ uniformly, then $\\Pi_F(t)\\le\\liminf_j\\Pi_{F_j}(t)$ for each fixed $t$.*\n\n2.  *If $G$ is obtained as in Lemma <a href=\"#lem:regularization\" data-reference-type=\"ref\" data-reference=\"lem:regularization\">7</a> with loss exponent at most $e$, then $$0\\le\\Pi_G(1)-\\Pi_F(1)\\le pe.$$ The same estimate applies on scale subintervals with their corresponding loss accounting.*\n\n3.  *If a profile on a scale interval $[a,a+L]$ is normalized by $G(s)=[F(a+Ls)-F(a)]/L$, then $$\\Pi_G(1)=\\frac1L\\int_a^{a+L}P_{p,q}(F'(u))\\,du.$$ Grafting fully occupied time below a cut grafts a flat interval and adds no cost there.*\n\n\n*Moreover $\\partial_p\\Pi_F(1)=F(1)$. For $q>0$, $$\\label{eq:cost-z-derivative}\n \\partial_z\\Pi_F(t)=\\int_0^t\\mathcal D_q(q,F'(u))\\,du,\n \\qquad\n \\mathcal D_q(q,e)=\\frac1\\eta\\int_{1/2-\\eta}^{1/2}\n                  \\mathbf 1_{\\{q<re\\}}\\,dr.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-profile-cost"
+  },
+  {
+   "claim_id": "claim-critical-point",
+   "exact_statement": "The function $h(p,z)-z$ is separately nonincreasing in $p$ and $z$. It is totally differentiable almost everywhere in the interior of its parameter domain. If $I$ is an open interval of $p>2$ on which $h(p,0)>0$, there is a point $(p,z)\\in I\\times(-1,0)$ at which $h$ is totally differentiable and $$h(p,z)>0,\\qquad h_z(p,z)>0.$$ At such a point $h_p\\le0$ and $h_z\\le1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-critical-point"
+  },
+  {
+   "claim_id": "claim-hybrid-equality",
+   "exact_statement": "Fix $p,z,\\eta$ with $h=h(p,z)>0$, and let $0\\le h_0<h$. There is a sharp number $H$ with $$h_0<H\\le h$$ such that every sequence with uniform profile $F$ satisfies $$\\label{eq:hybrid-upper}\n m\\mathrel{\\leq_{\\mathrm{exp}}}\\Delta_{h_0}N^{H+\\Pi_F(1)}.$$ There is a sequence with a uniform profile attaining equality in <a href=\"#eq:hybrid-upper\" data-reference-type=\"eqref\" data-reference=\"eq:hybrid-upper\">[eq:hybrid-upper]</a>.*\n\n\n*On any extensive refinement of such an equality sequence, followed by regularization, the profile is unchanged and $$\\label{eq:equality-refinement}\n m'\\mathrel{=_{\\mathrm{exp}}}m,\\qquad \\Delta'_{h_0}\\mathrel{=_{\\mathrm{exp}}}\\Delta_{h_0}.$$ These comparisons refer to refinements of the indexed graph before any separate geometric change of coordinates.*\n\n\n*Finally, suppose $h_{0,j}\\uparrow h$ and, for each $j$, a hybrid equality has profile $F_j$. After taking a subsequence and sufficiently accurate realizations, one obtains a sequence with uniform profile $F$ satisfying $$\\label{eq:exact-critical-equality}\n m\\mathrel{=_{\\mathrm{exp}}}\\Delta_hN^{h+\\Pi_F(1)}.$$ If $F_j(1)\\ge\\alpha_*>0$, then $F(1)\\ge\\alpha_*$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-hybrid-equality"
+  },
+  {
+   "claim_id": "claim-set-input",
+   "exact_statement": "For every $\\varepsilon>0$ there are $\\eta_{\\mathrm{in}}>0$ and $\\delta_0>0$ such that, if $0<\\delta<\\delta_0$, $$\\Delta_{\\max}(\\mathbb T)\\le\\delta^{-\\eta_{\\mathrm{in}}},\n \\qquad \\lambda(\\mathbb T,Y)\\ge\\delta^{\\eta_{\\mathrm{in}}},$$ then $$\\label{eq:set-input}\n \\left|\\bigcup_{T\\in\\mathbb T}Y(T)\\right|\n \\ge\\delta^\\varepsilon\\sum_{T\\in\\mathbb T}|T|.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-set-input"
+  },
+  {
+   "claim_id": "claim-weighted-convex-set",
+   "exact_statement": "Fix $R\\ge1$. For every $\\varepsilon>0$ there are $\\eta_{\\mathrm{in}}>0$ and $C<\\infty$ with the following property. Let $(T_i)_i$ be finitely many $\\delta$-tubes in $B(0,R)$, where $0<\\delta<1$, with repetitions allowed. Let $\\omega_i>0$ and let $Y_i\\subset T_i$ be measurable shadings. Suppose $$\\label{eq:weighted-convex-hyp}\n \\sum_{i:T_i\\subset K}\\omega_i|T_i|\\le A|K|\n \\quad\\hbox{for every convex body }K,\n \\qquad |Y_i|\\ge\\delta^{\\eta_{\\mathrm{in}}}|T_i|.$$ Then $$\\label{eq:weighted-convex-conclusion}\n \\sum_i\\omega_i|Y_i|\n \\le C A\\delta^{-\\varepsilon}\\left|\\bigcup_iY_i\\right|.$$ The constants are independent of the number of indices and of their weights.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-weighted-convex-set"
+  },
+  {
+   "claim_id": "claim-weighted-set",
+   "exact_statement": "Fix a bounded line chart and a fixed bound for the permitted enlargement of mesh cells. For every $\\varepsilon>0$ there are $\\eta_{\\mathrm{in}}>0$ and $C<\\infty$ as follows. Suppose the indices have weights $\\omega_i>0$, and every full-time plank satisfies $$\\label{eq:input-plank-bound}\n \\sum_{i:M_i\\subset P}\\omega_i\\le Aab\n \\qquad(1\\le a\\le b\\le D).$$ Mark a set $J_i$ of time bins of length $D^{-1}$ on each index, with $\\#J_i\\ge D^{1-\\eta_{\\mathrm{in}}}$. Let $E$ be the union of the mesh cells visited at those bin centers, or their fixed enlargements. Then $$\\label{eq:weighted-chart-conclusion}\n \\sum_i\\omega_i\\#J_i\\le C A D^\\varepsilon\\#E.$$ In particular, when every index has $k$ marked bins and $n=\\sum_i\\omega_i$, its raw average multiplicity satisfies $nk/\\#E\\le C A D^\\varepsilon$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-weighted-set"
+  },
+  {
+   "claim_id": "claim-furstenberg-input",
+   "exact_statement": "Fix $0<s\\le1$, $0<t\\le2$, and a bounded line chart. For every $\\varepsilon>0$ there are $\\eta_{\\mathrm{in}}>0$, $c>0$, and $\\delta_0>0$ with the following property. Let $\\mathcal L$ be a finite $\\delta$-separated family of lines whose uniform parameter distribution is $(t,\\delta^{-\\eta_{\\mathrm{in}}})$-Frostman down to $\\delta$. For every $\\lambda\\in\\mathcal L$, let $Y(\\lambda)$ be a $\\delta$-separated subset of a fixed bounded part of $\\lambda$, with $$k\\le\\#Y(\\lambda)\\le2k,$$ whose uniform distribution is $(s,\\delta^{-\\eta_{\\mathrm{in}}})$-Frostman down to $\\delta$. Then, for $0<\\delta<\\delta_0$, $$\\label{eq:furstenberg-input}\n \\mathcal N_\\delta\\left(\\bigcup_{\\lambda\\in\\mathcal L}Y(\\lambda)\\right)\n \\ge c k\\delta^{-\\min\\{t,(s+t)/2,1\\}+\\varepsilon}.$$ The same assertion holds for mesh-cell shadings within a fixed multiple of $\\delta$ of the lines, with fixed changes of constants.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-furstenberg-input"
+  },
+  {
+   "claim_id": "claim-weighted-furstenberg",
+   "exact_statement": "Fix $0<s\\le1$, $0<t\\le2$, and a bounded line chart. For every $\\varepsilon>0$ there are $\\eta_{\\mathrm{in}}>0$, $c>0$, and $\\delta_0>0$ as follows. Let $0<\\delta<\\delta_0$ and let finitely many, possibly repeated, line indices $i$ carry positive weights $\\omega_i$. Suppose their normalized line-parameter measure is $(t,\\delta^{-\\eta_{\\mathrm{in}}})$-Frostman down to $\\delta$. For each index $i$, let $Y_i$ be a $\\delta$-separated shading of its line in a fixed bounded chart, with $k\\le\\#Y_i\\le2k$ and with its uniform distribution $(s,\\delta^{-\\eta_{\\mathrm{in}}})$-Frostman down to $\\delta$. Then $$\\mathcal N_\\delta\\left(\\bigcup_iY_i\\right)\n \\ge c k\\delta^{-\\min\\{t,(s+t)/2,1\\}+\\varepsilon}.$$ The constants are independent of the number of indices, their repetitions, and their weights.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-weighted-furstenberg"
+  },
+  {
+   "claim_id": "claim-multilinear-input",
+   "exact_statement": "For $j=1,2,3$, let $T_{j,a}$ be finitely many infinite cylinders of radius one in $\\mathbb R^3$, with unit axial directions $v_{j,a}$. Suppose $$|\\det(v_{1,a_1},v_{2,a_2},v_{3,a_3})|\\ge\\theta>0\n \\quad\\hbox{for every }(a_1,a_2,a_3).$$ For nonnegative weights $\\omega_{j,a}$ put $\\mu_j=\\sum_a\\omega_{j,a}\\mathbf 1_{T_{j,a}}$ and $M_j=\\sum_a\\omega_{j,a}$. Then $$\\label{eq:weighted-multilinear}\n \\int_{\\mathbb R^3}(\\mu_1\\mu_2\\mu_3)^{1/2}\n \\le C\\theta^{-1/2}(M_1M_2M_3)^{1/2}.$$ In particular this holds for finite length-$D$ tubes with no additional dependence on $D$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-multilinear-input"
+  },
+  {
+   "claim_id": "claim-multilinear-cubes",
+   "exact_statement": "For unit mesh cubes $Q$, let $m_j(Q)=\\sum_{a:T_{j,a}\\cap Q\\ne\\varnothing}\\omega_{j,a}$. Under the hypotheses of Theorem <a href=\"#thm:multilinear-input\" data-reference-type=\"ref\" data-reference=\"thm:multilinear-input\">19</a>, $$\\label{eq:multilinear-cubes}\n \\sum_Q(m_1(Q)m_2(Q)m_3(Q))^{1/2}\n \\le C\\theta^{-1/2}(M_1M_2M_3)^{1/2}.$$ If the directions lie in caps of radius at most $c\\theta$ about centers whose determinant is at least $\\theta$, the same conclusion holds with another absolute constant, for sufficiently small $c$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-multilinear-cubes"
+  },
+  {
+   "claim_id": "claim-local-bound",
+   "exact_statement": "After an extensive regular restriction, the mass of active original indices contained in any plank of widths $1\\leq a\\leq b\\leq K$ over a dyadic temporal block of $K=N^\\kappa$ bins satisfies $$n_{I,W}\\mathrel{\\leq_{\\mathrm{exp}}}T(\\kappa,a,b),\\qquad\n T(\\kappa,a,b)=\n mN^{-\\Pi(\\kappa)}K^{-H}a^{d-1-H}b^{1+H}.\n \\label{loc:mass-bound}$$ The bounds hold simultaneously at every fixed limiting scale and shape, under the finite-test and slow-diagonal convention of Section <a href=\"#sec:critical\" data-reference-type=\"ref\" data-reference=\"sec:critical\">2</a>, and are inherited by further restrictions.*\n\n\n*Suppose conversely that, on an extensive graph, disjoint indexed-block assignments to planks of common widths $a,b$ have masses at least $T(\\kappa,a,b)$ in exponent. Set $$\\mathfrak a=\\log_N a,\n \\qquad \\mathfrak u=\\log_N(K/b),\n \\qquad \\chi=\\mathfrak a+\\mathfrak u.\n \\label{loc:cut-loss}$$ If $\\chi<1$, the isotropic scale cut described below gives an ensemble at resolution $N'=Nb/(Ka)=N^{1-\\chi}$ with matching sharp upper and lower bounds. At $H=h_0=h$ this is an ensemble of exact critical equalities, from which a realizing representative sequence can be selected. Its temporal profile is $$G(v)=\n \\begin{cases}\n  0,&0\\leq v\\leq(\\kappa-\\chi)/(1-\\chi),\\\\[2pt]\n  \\displaystyle\n  \\frac{F(\\chi+(1-\\chi)v)-F(\\kappa)}{1-\\chi},\n     &(\\kappa-\\chi)/(1-\\chi)\\leq v\\leq1.\n \\end{cases}\n \\label{loc:cut-profile}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-local-bound"
+  },
+  {
+   "claim_id": "claim-slack-caps",
+   "exact_statement": "Every equality under consideration satisfies $$N^{H+(p-2)\\alpha}\\mathrel{\\leq_{\\mathrm{exp}}}\\frac{k^2m}{n}.\n \\label{loc:multilinear-slack}$$ At a fine incidence, the raw mass of active lines whose directions lie in any cap of radius $C/L$, $1\\leq L\\leq N$, is at most $$N^{o(1)}mL^{-H}N^{-\\Pi(\\log_N L)}.\n \\label{loc:cap-bound}$$ The constant $C$ is fixed; the exponent error is uniform under the finite-test convention.",
+   "kind": "bound",
+   "statement_anchor": "stmt-loc-slack-caps"
+  },
+  {
+   "claim_id": "claim-short-block-plane",
+   "exact_statement": "There is $\\kappa_{\\mathrm{ml}}>0$, depending only on the positive slack in <a href=\"#loc:multilinear-slack\" data-reference-type=\"eqref\" data-reference=\"loc:multilinear-slack\">[loc:multilinear-slack]</a> and the multilinear input, with the following property. For each fixed $0<\\kappa<\\kappa_{\\mathrm{ml}}$, put $K=N^\\kappa$. On an extensive regular central incidence graph, each active reference index-block can be assigned one direction plane such that:*\n\n1.  *the same plane is used at all of its retained times;*\n\n2.  *at each such time there is original neighboring incidence mass at least $mN^{-o(1)}$, in directions within $O(K^{-1})$ of that plane;*\n\n3.  *after discarding a negligible part of this neighboring mass, the neighbor direction is separated from the reference direction by at least $N^{-o(1)}$.*\n\n*All reference and neighbor segments over the block lie in a common plate of dimensions $C\\times CK\\times CK$ in fine units. The neighboring indices retain their original marked-time shadings and their inherited raw cap bounds.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-loc-short-block-plane"
+  },
+  {
+   "claim_id": "claim-plate-nikodym",
+   "exact_statement": "For $K\\geq2$, let $\\mathcal N_K$ be the maximal averaging operator over rectangular plates of dimensions $1\\times K\\times K$, with arbitrary orientations and translations, whose averaging plate contains the query point. Fixed changes in these dimensions are allowed. Then $$\\|\\mathcal N_K f\\|_{L^2(\\mathbb R^3)}^2\n       \\lesssim(1+\\log K)\\|f\\|_{L^2(\\mathbb R^3)}^2.\n \\label{loc:nikodym-l2}$$ Consequently, if every point of a measurable set $E^+$ belongs to one such plate in which $E$ has density at least $\\rho>0$, then $$|E^+|\\lesssim \\rho^{-2}(1+\\log K)|E|.\n \\label{loc:nikodym-density}$$ The same statement holds for fine-cell counts after bounded thickening.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-plate-nikodym"
+  },
+  {
+   "claim_id": "claim-prefix-extension",
+   "exact_statement": "Let $0<\\kappa<\\kappa_{\\mathrm{ml}}$ be fixed as in Lemma <a href=\"#loc:short-block-plane\" data-reference-type=\"ref\" data-reference=\"loc:short-block-plane\">23</a>, and put $K=N^\\kappa$. Suppose there are constants $s\\in(0,1]$ and $\\gamma\\geq0$ such that $$F(\\kappa)-F(u)\\leq(1-s)(\\kappa-u),\n \\qquad F(u)\\geq\\gamma u\n \\quad(0\\leq u\\leq\\kappa).\n \\label{loc:prefix-assumptions}$$ Set $$a_{\\mathrm{ang}}=H+p_*\\gamma,\n \\qquad t=s+a_{\\mathrm{ang}},\n \\qquad \\mu=\\min\\{1,(s+t)/2,t\\}.\n \\label{loc:prefix-exponents}$$ Then $a_{\\mathrm{ang}}\\leq1$, so $0<t\\leq2$. Every equality configuration under consideration must satisfy $$\\Pi(\\kappa)\\leq F(\\kappa)+2\\kappa(1-\\mu).\n \\label{loc:prefix-necessary}$$ In particular, a strict reverse inequality yields a contradiction. There is no requirement that $\\gamma$ or $F(\\kappa)/\\kappa$ have a positive lower bound. The small-scale range is uniform over equalities with $H$ bounded below by a fixed positive constant.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-prefix-extension"
+  },
+  {
+   "claim_id": "claim-flat-delay",
+   "exact_statement": "Every hybrid or exact equality with $H>0$ has a profile that is identically zero on an interval $[0,\\tau]$ with $\\tau>0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-flat-delay"
+  },
+  {
+   "claim_id": "claim-flat-saturation",
+   "exact_statement": "At every fixed positive scale exponent $\\kappa$ with $F|_{[0,\\kappa]}=0$, an extensive regular restriction admits disjoint indexed-block assignments to plates with widths $1,K$, up to subpowers, where $K=N^\\kappa$. Each active plate packet has raw index mass at least $mK$ in exponent.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-loc-flat-saturation"
+  },
+  {
+   "claim_id": "claim-anisotropic",
+   "exact_statement": "Suppose that on an extensive regular graph, over larger blocks of $K_1=N^{\\kappa_1}$ bins, there are disjoint indexed-block assignments to saturated plates on a flat scale $K=N^\\kappa\\leq K_1$. Their widths are $1,K$ up to subpowers and their raw active index masses are at least $mK$ in exponent. Suppose the thin spatial axes of the assigned plates along each original index and larger block are within $\\theta$ of one fixed axis for that index and block, up to subpower factors, where $$K^{-1}\\leq\\theta\\leq1\n \\quad\\text{in exponent},\\qquad\n \\lambda=\\log_N(1/\\theta)\\leq\\kappa.$$ There is an ensemble of bounded-chart configurations at resolution $$N'=K_1\\theta\n \\label{loc:anisotropic-resolution}$$ whose aggregate raw multiplicity is at least $m/\\theta$ in exponent. Each derived index retains its original weight, and each original index and larger block contributes to only subpower many charts.*\n\n\n\n*Suppose also that all original active lines on a larger block obey the local clustering bound $n_W\\mathrel{\\leq_{\\mathrm{exp}}}C a^{x'}b^{y'}$ for $1\\leq a\\leq b\\leq K_1$, where $0\\leq x'\\leq y'$. Then every derived chart has full-time clustering parameter at most $$C\\theta^{-y'}\n \\label{loc:anisotropic-parameter}$$ for those same shape exponents. If $\\kappa_1-\\lambda>0$, its temporal profile, uniformly over the ensemble, is $$G(v)=\\frac{F(\\lambda+(\\kappa_1-\\lambda)v)}\n              {\\kappa_1-\\lambda},\\qquad0\\leq v\\leq1.\n \\label{loc:anisotropic-profile}$$ Its cost in original $\\log N$ units is $\\Pi(\\kappa_1)$; only the initial flat interval $[0,\\lambda]$ has been deleted.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-anisotropic"
+  },
+  {
+   "claim_id": "claim-positive-deficit",
+   "exact_statement": "For $h_0\\uparrow h>0$, the total deficits $\\alpha=F(1)$ of hybrid equalities are bounded below by a positive constant, uniformly once $h_0$ is sufficiently close to $h$. Consequently there is an exact equality at $H=h_0=h$ whose limiting profile satisfies $F(1)>0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-positive-deficit"
+  },
+  {
+   "claim_id": "claim-derivative-capture",
+   "exact_statement": "Every equality profile has deficit $\\alpha\\le v=-h_p$. In particular, $v>0$. Fix an equality, a prefix $\\kappa>0$, and a perturbation direction $(\\dot p,\\dot z)$. On an extensive refinement there are saturated assignments with limiting shape parameters $$\\mathfrak a=\\log_N a,\\qquad\n \\mathfrak u=\\log_N(K/b),\\qquad\n \\chi=\\mathfrak a+\\mathfrak u,$$ satisfying $$\\bigl(F(\\kappa)-v\\chi\\bigr)\\dot p\n +\\left(h_z\\chi+\n   \\int_0^\\kappa\\mathcal D_q(q,F'(s))\\,ds\n   -\\mathfrak a\\right)\\dot z\\ge0.\n \\label{eq:derivative-capture}$$ Consequently there are selections with $\\chi\\le F(\\kappa)/v$ and selections with $\\chi\\ge F(\\kappa)/v$. These assertions remain valid after any previously imposed extensive regular refinement.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-derivative-capture"
+  },
+  {
+   "claim_id": "claim-nested-cuts",
+   "exact_statement": "Fix a nontrivial equality and a finite increasing mesh $\\tau=\\kappa_0<\\kappa_1<\\cdots<\\kappa_J<1$. There is an extensive refinement with simultaneous saturated assignments at these physical prefixes. Their cumulative shape parameters have nonnegative increments in $\\mathfrak a$ and $\\mathfrak u$, and can be selected so that $$\\Delta\\chi_i\\le\n \\frac{F(\\kappa_i)-F(\\kappa_{i-1})}{v},\n \\qquad\n \\chi_i\\le F(\\kappa_i)/v.\n \\label{eq:chain-shape-bound}$$ At each prefix the assignments have disjoint index ownership on each physical block. Every retained event carries all its assignments. Their used packet masses have the saturation exponents even after pulling the finite chain back to the original event graph. Any fixed finite list of additional partition tests can be imposed at the same time.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-nested-cuts"
+  },
+  {
+   "claim_id": "claim-angle-packing",
+   "exact_statement": "For a nontrivial equality with delay $\\tau$, fix $\\tau<\\kappa<1$ and set $$D_*(\\kappa)=\\min_{\\tau\\le s\\le\\kappa}\n                   \\bigl(s-F(s)/v\\bigr).\n \\label{eq:running-orientation-exponent}$$ Then $0\\le D_*(\\kappa)\\le\\tau$. On an extensive refinement, the normals of the assigned initial plates used by one index in a $\\kappa$-block lie within $N^{-D_*(\\kappa)+o(1)}$ of one normal for that index and block. If $\\kappa-D_*(\\kappa)>0$, there is an inner equality of effective length exponent $\\kappa-D_*(\\kappa)$, initial delay $$\\frac{\\tau-D_*(\\kappa)}{\\kappa-D_*(\\kappa)},\n \\qquad\\text{and deficit}\\qquad\n \\frac{F(\\kappa)}{\\kappa-D_*(\\kappa)}.\n \\label{eq:inner-delay-deficit}$$ The corresponding conclusions hold at endpoint prefixes by limits from within the required positive lengths.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-angle-packing"
+  },
+  {
+   "claim_id": "claim-canonical-profile",
+   "exact_statement": "There is an exact equality whose profile is $$F(\\kappa)=\\beta(\\kappa-\\tau)_+,\n \\qquad 0<\\tau<1,\\qquad\n \\ell=1-\\tau,\\qquad \\beta=v/\\ell\\le1.\n \\label{eq:canonical-profile}$$ Its deficit is $v$, and $\\tau$ is the least initial delay among all equalities with deficit $v$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-canonical"
+  },
+  {
+   "claim_id": "claim-stationary-shape",
+   "exact_statement": "For the canonical profile there are compatible finite chains, and slow mesh limits of them, with cumulative shape parameters $$\\kappa=\\tau+\\ell b',\\qquad\n \\chi=b',\\qquad \\mathfrak a=wb',\\qquad\n w=h_z+\\ell\\mathcal D_q(q,\\beta)\\in(0,1],\n \\quad 0\\le b'<1.\n \\label{eq:stationary-shape}$$ The equalities in the parameters allow errors tending to zero with the mesh. Packet mass, ownership, and orientation conclusions of Lemmas <a href=\"#lem:nested-cuts\" data-reference-type=\"ref\" data-reference=\"lem:nested-cuts\">31</a> and <a href=\"#lem:angle-packing\" data-reference-type=\"ref\" data-reference=\"lem:angle-packing\">32</a> remain valid.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-stationary-shape"
+  },
+  {
+   "claim_id": "claim-stationary-data",
+   "exact_statement": "There is a realizing sequence of canonical equalities and compatible packet assignments for which the preceding collapsed law, event labels, and matrix forms have the following properties. All local upper bounds and original index weights are retained.*\n\n\n1.  *Along an index, occupied time blocks have regular branching exponent $s_0=1-\\beta\\ge0$. More precisely, for fixed $c<b\\le1$, an occupied $I_c$ contains $$N^{\\ell(1-\\beta)(b-c)+o(1)}\n     \\label{eq:stationary-time-branching}$$ occupied $I_b$ blocks. The event normals on that index in $I_c$ lie in a range of size $\\Theta_cN^{o(1)}$.*\n\n\n2.  *For $0<c\\le1$ there are assigned packets $B_c$ on the occupied $I_c$ blocks, with raw active index mass at least $$n_c=\\Delta_h\n     N^{(B_*+\\tau)c+dw(1-c)}\n     \\label{eq:stationary-packet-mass}$$ in exponent. On each fixed time block the assigned index sets are disjoint, and each retained index has one packet owner there. The used normals of a packet differ from its spatial normal by at most $\\Theta_cN^{o(1)}$.*\n\n3.  *In every used event frame, the widths of $B_c$ in the four forms <a href=\"#eq:stationary-matrix-forms\" data-reference-type=\"eqref\" data-reference=\"eq:stationary-matrix-forms\">[eq:stationary-matrix-forms]</a> are bounded by $L_X(c),L_Y(c),L_U(c),L_V(c)$ up to subpower expansion. Equivalently, their negative log exponents are $$\\rho+wc,\\qquad \\rho+(w-\\tau)c,\n     \\qquad\\rho+(w-\\ell)c,\\qquad\\rho+(w-1)c,\n     \\label{eq:stationary-matrix-widths}$$*\n\n4.  *The data and packet lower bounds coexist on any prescribed finite list of scales and tests, and hence on countable lists by slow diagonals. They persist, in exponent, on typical nondeficient parts after extensive regular refinements. All packet memberships are memberships of original active indices on their physical intervals. In a chart registered at $I_c$, the packet at a finer $I_b$ is determined by the index, chart, and $I_b$; a matrix cell in that chart is determined by the index and chart.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-stationary-data"
+  },
+  {
+   "claim_id": "claim-estimate-cleaning",
+   "exact_statement": "Let a finite weighted event graph have total weight $W$, and let a restriction retain weight at least $N^{-E+o(1)}W$. Fix finitely many partitions of the graph. The cells may include packet assignments, index–time blocks, and joint labels. After a further restriction of subpower cost, every surviving cell of each partition retains at least $N^{-E-o(1)}$ of its original weight. The same assertion holds after splitting each original cell among subpower many registered charts, with that number absorbed in the error.*\n\n\n\n*Suppose, in addition, that the original time trees have a common profile $F$ on a log interval $[0,\\Lambda]$ in $\\log N$ units, and each original index and starting interval is routed through only subpower many charts. If the restricted trees are made uniform, with profile $G$, then $$G(t)-G(s)\\ge F(t)-F(s),\\qquad\n 0\\le G(\\Lambda)-F(\\Lambda)\\le E,\n \\quad 0\\le s<t\\le\\Lambda.\n\\label{eq:estimate-branch-loss}$$ In particular an extensive restriction preserves the profile, and $$0\\le \\int_0^\\Lambda P(G')-\\int_0^\\Lambda P(F')\\le pE.\n\\label{eq:estimate-cost-loss}$$ These assertions concern inherited index weights.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-estimate-cleaning"
+  },
+  {
+   "claim_id": "claim-angular-frostman",
+   "exact_statement": "There is $\\gamma>0$, depending only on the fixed stationary parameters, with the following property. For every fixed $0<c<b\\le1$, outside a set of index–$I_c$ fibers of event probability tending to zero, every angular interval $J$ of length $\\Theta_b$ satisfies $$\\frac{\\#\\{e\\text{ on }i:t(e)\\in I_c,\n                         \\ \\vartheta(e)\\in J\\}}\n      {\\#\\{e\\text{ on }i:t(e)\\in I_c\\}}\n \\le N^{-\\gamma\\tau(b-c)+o(1)}.\n\\label{eq:angular-frostman}$$ It is enough to test a fixed grid with bounded enlargements. The bound also holds conditional on typical nondeficient $e_c$ bins in the fiber, and after extensive regular refinements. In particular $$0<\\beta<1,\\qquad s_0=1-\\beta>0.\n\\label{eq:positive-time-dimension}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-angular-frostman"
+  },
+  {
+   "claim_id": "claim-conditional-x",
+   "exact_statement": "Fix $0<c<1$, $0<a<w(1-c)$, and $\\sigma>0$ with $c+\\sigma\\le1$. For all sufficiently small fixed $\\Delta>0$, $$\\limsup_{N\\to\\infty}\n \\mathrm H_N\\bigl([X_{e_{c+\\sigma}}]_{c,a+\\Delta}\n                  \\mid Q(c,a),e_{c+\\sigma}\\bigr)\n \\le x\\Delta.\n\\label{eq:conditional-X-bound}$$ For example it suffices to take $$0<\\Delta<\\frac14\\min\\left\\{\n a,\\ w(1-c)-a,\\ \\frac{\\tau a}{w},\\\n \\min(\\tau,\\ell)\\sigma\n \\right\\}.\n\\label{eq:conditional-X-admissible}$$ The assertion holds for the event law on any extensive regular refinement, with the original active-index masses still available as reference masses. The limit in $N$ precedes limits in $\\Delta$ or $\\sigma$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-conditional-x"
+  },
+  {
+   "claim_id": "claim-gap-density",
+   "exact_statement": "Let $K(s,t)$, $s<t$ in an interval, be a nonnegative kernel satisfying $$K(s,u)\\ge K(s,t)+K(t,u),\\qquad\n 0\\le K(s,t)\\le C(t-s).$$ There is a measurable $\\phi$, $0\\le\\phi\\le C$, such that for almost every $a$, and for every fixed $C_0<\\infty$, $$\\sup_{[s,t]\\subset[a-C_0b,a+C_0b]}\n \\bigl|K(s,t)-\\phi(a)(t-s)\\bigr|=o(b)\n       \\quad(b\\downarrow0).\n \\label{eq:gap-uniform-density}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-gap-density"
+  },
+  {
+   "claim_id": "claim-remove-label",
+   "exact_statement": "Let $\\sigma\\downarrow0$ through a fixed countable sequence of extra label depths. For almost every $(c,a)$, all the rates $\\phi_S^\\sigma(c,a)$ converge to rates $\\phi_S(c,a)$. The rectangular layering rule holds with these limiting rates, with the order of limits stated above. Moreover $$\\phi_\\varnothing=0,\\qquad\n \\phi_{\\{X,Y,U,V\\}}=g.\n \\label{eq:entropy-full-rate}$$ For two nested extra labels, changes in conditional increments are controlled by the incremental mutual information of a full observation over a containing gap. Its density tends to zero almost everywhere as the total extra label depth tends to zero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-remove-label"
+  },
+  {
+   "claim_id": "claim-normal-position-rate",
+   "exact_statement": "For almost every $(c,a)$ with $0<c<1$ and $0<a<w(1-c)$, $$a_1(c,a)\\le x=d-1-h<1.\n \\label{eq:entropy-normal-position-rate}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-normal-position-rate"
+  },
+  {
+   "claim_id": "claim-entropy-demand",
+   "exact_statement": "At almost every point of $\\mathcal U$, $$\\partial_c\\mathscr H(c,a)\\ge s_0\\ell+wg-\\mathcal M.\n \\label{eq:entropy-demand}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-entropy-demand"
+  },
+  {
+   "claim_id": "claim-velocity-trace",
+   "exact_statement": "The function $v_1(c,a)$ has an essentially nonincreasing version as $c$ increases on lines where $$\\lambda=\\rho+(w-1)c+a$$ is fixed. If $w<1$, it has strong one-sided traces in $L^1_{\\mathrm{loc}}(dc)$ at $a=0$, through a full-measure set of offsets. Its one-sided stripe averages have the same strong limits. If $w=1$, every sequence of such generic positive offsets tending to zero has a subsequence on which $v_1(\\cdot,a)$ converges strongly in $L^1_{\\mathrm{loc}}(dc)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-velocity-trace"
+  },
+  {
+   "claim_id": "claim-stripe-demand",
+   "exact_statement": "Fix $J\\Subset(0,1)$. For sufficiently small $\\epsilon>0$, the right stripe averages of $g$ are at least $d$ almost everywhere on $J$: $$\\frac1\\epsilon\\int_0^\\epsilon g(c,a)\\,da\\ge d.\n \\label{eq:entropy-right-stripe}$$ If $w<1$, the left stripe averages satisfy $$\\frac1\\epsilon\\int_{-\\epsilon}^0g(c,a)\\,da\\le d.\n \\label{eq:entropy-left-stripe}$$ Along any sequence of generic admissible offsets tending to zero, $$\\partial_c\\mathscr H(\\cdot,a)\n    \\overset{*}{\\rightharpoonup}dw-B_*-\\tau+s_0\\ell\n           \\quad\\hbox{in }L^\\infty(J).\n \\label{eq:entropy-boundary-derivative}$$ Consequently every weak-star subsequential limit of $$\\mathcal M-w(g-d)\n \\label{eq:entropy-adjusted-demand}$$ is at least $\\tau+B_*$ almost everywhere on $J$. This conclusion holds both for generic offset slices and for one-sided stripe averages. All these limit inequalities may be tested against arbitrary nonnegative $L^1(J)$ functions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-stripe-demand"
+  },
+  {
+   "claim_id": "claim-projection-rates",
+   "exact_statement": "At almost every interior point $(c,a)$ where the full-cell thresholds lie in the permitted range, the following assertions hold. In every case write $a_1=j_X$ and $v_1=j_V$. If $\\tau\\ne\\ell$, write $y_1=j_Y$ and $u_1=j_U$, where the conditional rates are ordered by increasing speed $k_i$. Each belongs to $[0,1]$, and $$\\begin{split}\n a_1&\\ge y_1,\\qquad u_1\\ge v_1,\\\\\n v_1>0&\\ \\Longrightarrow\\ y_1\\ge\\min\\{1,s_0+v_1\\},\\\\\n a_1<1&\\ \\Longrightarrow\\ u_1\\le(a_1-s_0)_+.\n\\end{split}\n\\label{pr:distinct-constraints}$$ If $\\tau=\\ell$, put $m_1=j_{\\{Y,U\\}}$. Then $a_1,v_1\\in[0,1]$, $m_1\\in[0,2]$, and $$a_1<1\\quad\\Longrightarrow\\quad\n m_1\\le1+(a_1-s_0)_+,\n \\qquad v_1\\le(a_1-s_0)_+.\n\\label{pr:tied-constraints}$$ These conclusions apply on both signs of the offset whenever those offsets are in the permitted range.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-projection-rates"
+  },
+  {
+   "claim_id": "claim-pr-relative-frame",
+   "exact_statement": "If two frame labels in $E_0$ have differences $\\Delta t$ and $\\Delta\\vartheta$, measured respectively in units $R_{c+b}$ and $\\Theta_{c+b}$, their centered relative coordinates are related by $$(X,Y,U,V)\\longmapsto\n \\bigl(X+\\Delta t\\,U+\\Delta\\vartheta\\,Y\n                 +\\Delta t\\Delta\\vartheta\\,V,\n       Y+\\Delta t\\,V,\n       U+\\Delta\\vartheta\\,V,V\\bigr).\n\\label{pr:relative-frame}$$ All coefficients are bounded. Reading the frame with the label $L$ introduces relative errors $O(D^{-\\min(\\ell,\\tau)(C_0-1)})$ on bounded coordinates. Thus $C_0$ can be fixed so that these errors are smaller than $D^{-\\zeta_{\\max}}$ by a fixed positive power.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-pr-relative-frame"
+  },
+  {
+   "claim_id": "claim-blowup-counts",
+   "exact_statement": "There is a triangular choice $b_n\\downarrow0$, $N_n\\to\\infty$, with $D_n=N_n^{b_n}\\to\\infty$, and uniform refinements of the single-event graphs, chosen independently of the queried offset, with the following properties at almost every admissible offset $a$. At stage $n$, evaluate the finite experiment at a prescribed grid offset $a_n$ with $|a_n-a|=o(b_n)$; all rates below are evaluated at the limiting point $(c,a)$. Conditional on $$\\mathcal B=(E_0,J_0,L),$$ the entropy of $\\mathcal O_{\\mathbf u}$, divided by $\\log D$, is $$\\mathcal R(\\mathbf u)+o(1).\n\\label{pr:local-entropy-formula}$$ For distinct speeds, $$\\mathcal R(\\mathbf u)=\\sum_i j_i u_i.$$ For tied middle speeds, put $$r_Y=\\phi_{\\{X,Y\\}}-\\phi_{\\{X\\}},\\qquad\n r_U=\\phi_{\\{X,U\\}}-\\phi_{\\{X\\}}.$$ Then $$\\mathcal R(\\mathbf u)\n   =a_1u_X+v_1u_V+\n \\begin{cases}\n    r_Y(u_Y-u_U)+m_1u_U,&u_Y\\ge u_U,\\\\\n    r_U(u_U-u_Y)+m_1u_Y,&u_U\\ge u_Y.\n \\end{cases}\n\\label{pr:tied-rectangle}$$ These formulas hold for joint and unequal-depth observations. Their occupied conditional cells have probabilities $$\\mathbb P(\\mathcal O_{\\mathbf u}=o\\mid\\mathcal B)\n      =D^{-\\mathcal R(\\mathbf u)+o(1)}\n\\label{pr:local-cell-masses}$$ uniformly on the regularized graph at every tested depth. Ratios of joint and conditioning cell probabilities give the corresponding conditional formulas.*\n\n*In particular, fix nuisance axes at relative depth $\\zeta$ and observe a selected pair to any depth $0\\le u\\le\\zeta$. For distinct speeds its conditional point law is Frostman of exponent equal to the sum of the two selected rates, with subpower constant, through resolution $D^{-\\zeta}$. For tied middle speeds, the additional $U$-rate after observing $Y$ to depth $\\zeta$ is $m_1-r_Y$; the pair $(X,V)$ after fixing $Y,U$ has exponent $a_1+v_1$.*\n\n*The same triangular choice supplies, conditionally on the original index and $E_0$, the time and normal-parameter Frostman bounds of exponents $s_0$ and $\\gamma$ in relative units. When $\\tau=\\ell$, the joint parameter square cells have masses $D^{-s_0u+o(1)}$ for $0\\le u\\le\\zeta_{\\max}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-blowup-counts"
+  },
+  {
+   "claim_id": "claim-pinning",
+   "exact_statement": "Let $0<s\\le1$, $\\gamma'>0$, and $0<\\zeta_{\\max}\\le1$ be fixed. For each $D$, let $I$ have a finite probability distribution $\\pi_D$, and let $\\mu_i$ be finitely supported probabilities on a fixed bounded square with coordinates $(t,\\vartheta)$. Suppose uniformly in $i$ that <a href=\"#pr:square-regularity\" data-reference-type=\"eqref\" data-reference=\"pr:square-regularity\">[pr:square-regularity]</a> holds and that the two coordinate marginals satisfy $$\\mu_i\\{t\\in J_r\\}\\le D^{o(1)}r^s,\n \\qquad\n \\mu_i\\{\\vartheta\\in J_r\\}\\le D^{o(1)}r^{\\gamma'}\n \\quad(D^{-\\zeta_{\\max}}\\le r\\le1)\n\\label{pr:coordinate-frostman}$$ for all intervals $J_r$ of radius $r$. For every $\\epsilon>0$, there are a subsequence, a fixed rational $\\zeta\\in(0,\\zeta_{\\max}]$, and a probability $\\nu_D$ on triples $(i,\\xi,\\upsilon)$, with $\\xi,\\upsilon\\in\\mathop{\\mathrm{supp}}\\mu_i$, such that:*\n\n1.  *each marginal $(i,\\xi)$ and $(i,\\upsilon)$ is dominated by $D^{\\epsilon\\zeta}\\pi_D(di)\\mu_i$;*\n\n\n2.  *for $\\nu_D$-almost every $(i,\\xi)$, the conditional law of $$\\mathfrak p_\\xi(\\upsilon)\n       =(t_\\upsilon-t_\\xi)(\\vartheta_\\upsilon-\\vartheta_\\xi)$$ satisfies $$\\nu_D\\{\\mathfrak p_\\xi(\\upsilon)\\in J_r\\mid i,\\xi\\}\n     \\le C D^{\\epsilon\\zeta}r^{s-\\epsilon},\n     \\qquad D^{-\\zeta}\\le r\\le1.\n    \\label{pr:pinned-frostman}$$*\n\n*The pair law can be chosen using only the initial index and its parameter measure. In particular it need not depend on any later matrix-cell or offset test.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-pinning"
+  },
+  {
+   "claim_id": "claim-pair-information",
+   "exact_statement": "Let $K=1+\\zeta_{\\max}$, and let $J_f$ be the full observation in the $E_0$-frame obtained by increasing every threshold of $J_0$ by $Kb$. Along a triangular subsequence as in Lemma <a href=\"#lem:blowup-counts\" data-reference-type=\"ref\" data-reference=\"lem:blowup-counts\">47</a>, for almost every admissible offset, $$\\mathrm I(J_f;L_0,L_1\\mid E_0,J_0)=o(\\log D).\n\\label{pr:pair-information}$$ Here $J_0,J_f$ are evaluated at the nearest prescribed offset-grid point. The assertion holds for every one of the countably many pair experiments just described, with ordinary Shannon units.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-pair-information"
+  },
+  {
+   "claim_id": "claim-robust-projection",
+   "exact_statement": "Fix $$0<s\\le1,\\qquad 0<t\\le2,\\qquad\n 0\\le u<h_{\\mathrm{pr}}:=\\min\\{t,(s+t)/2,1\\}.$$ There is $\\kappa_0=\\kappa_0(s,t,u)>0$ with the following property. For every $R,C_0\\ge1$ and $0<\\kappa\\le\\kappa_0$, there is $\\delta_0>0$ such that the following holds for $0<\\delta<\\delta_0$. Let $\\mu$ be a Borel subprobability measure on $[-R,R]^2$, let $\\nu$ be a subprobability measure on an arbitrary finite label set $\\Lambda$, and let $\\vartheta:\\Lambda\\to[-R,R]$. Suppose $$\\label{eq:robust-projection-frostman}\n \\mu(B(p,r))\\le\\delta^{-\\kappa}r^t,\n \\qquad\n (\\vartheta_*\\nu)(B(a,r))\\le\\delta^{-\\kappa}r^s\n \\quad(\\delta\\le r\\le1).$$ For each $\\lambda\\in\\Lambda$, let $A_\\lambda$ be a union of at most $C_0\\delta^{-u}$ intervals of length at most $C_0\\delta$. Then $$\\label{eq:robust-projection-product}\n \\sum_{\\lambda\\in\\Lambda}\\nu(\\{\\lambda\\})\n \\mu\\{(x,y):x+\\vartheta(\\lambda)y\\in A_\\lambda\\}\n <\\delta^{2\\kappa}.$$ Consequently there cannot be a set $B\\subset\\Lambda$ with $\\nu(B)\\ge\\delta^\\kappa$ such that for every $\\lambda\\in B$ there is a $\\mu$-measurable set $E_\\lambda$ with $$\\label{eq:robust-projection-subset}\n \\mu(E_\\lambda)\\ge\\delta^\\kappa,\n \\qquad\n \\{x+\\vartheta(\\lambda)y:(x,y)\\in E_\\lambda\\}\n \\subset A_\\lambda.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-robust-projection"
+  },
+  {
+   "claim_id": "claim-projection-transfer",
+   "exact_statement": "Fix the original single-event law $\\mu$ and one of the same-index pair laws above, with the conditional marginal domination already established. Suppose that after freezing the nuisance axes at relative depth $\\zeta$, the original conditional law of two source coordinates is Frostman with exponent $t>0$ and subpower constant through resolution $\\delta=D^{-\\zeta}$, uniformly in its occupied nuisance fibers. Suppose that, in the pair law conditional on $B$, the changing projection slope has an available positive Frostman exponent $s\\le1$. In a pinned experiment, “available” means exponents tending to $s$ with arbitrarily small fixed marginal and Frostman losses. Suppose further that the target coordinate in the $L_1$-frame has, conditional on $(E_0,J_0,L_1)$, at most $D^{a_*\\zeta+o(1)}$ occupied bins of width comparable to $D^{-\\zeta}$. Then $$a_*\\ge \\min\\{t,(t+s)/2,1\\}.\n\\label{pr:projection-transfer}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-pr-projection-transfer"
+  },
+  {
+   "claim_id": "claim-ray-improvement",
+   "exact_statement": "Let $0<s\\le1$ and $\\delta\\to0$. For each $\\delta$, let $\\mu$ be a finitely supported probability on a bounded square such that every occupied square in a fixed nested dyadic grid of side comparable to $\\delta^u$ has mass $\\delta^{su+o(1)}$, uniformly for $0\\le u\\le1$. Suppose $G\\subset\\mathop{\\mathrm{supp}}\\mu\\times\\mathop{\\mathrm{supp}}\\mu$ is symmetric, $\\mu^2(G)=1-o(1)$, and, for some $0<\\sigma<s$, $$\\mu\\{\\upsilon:(\\xi,\\upsilon)\\in G,\n             R_\\xi(\\upsilon)\\in B_r\\}\n \\le\\delta^{-o(1)}r^\\sigma\n \\qquad(\\delta\\le r\\le1)\n\\label{pr:old-ray-bound}$$ for every anchor $\\xi$ and every direction ball $B_r$. For every $$0<\\sigma_*<\\min\\{s,(s+\\sigma)/2\\},$$ one can restrict to a symmetric relation $G_*\\subset G$ of probability $1-o(1)$ on which <a href=\"#pr:old-ray-bound\" data-reference-type=\"eqref\" data-reference=\"pr:old-ray-bound\">[pr:old-ray-bound]</a> holds with $\\sigma_*$ in place of $\\sigma$. One can instead obtain the same absolute section bound for $\\mathfrak p_\\xi(\\upsilon)$, with intervals in place of direction balls. All assertions are uniform for ensembles satisfying the hypotheses uniformly.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-pr-ray-improvement"
+  },
+  {
+   "claim_id": "claim-critical-vanishing",
+   "exact_statement": "There are values $p>2$ arbitrarily close to $2$ for which $h(p,0)=0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-critical-vanishing"
+  },
+  {
+   "claim_id": "claim-maximal-reduction",
+   "exact_statement": "Let $p>2$ be in the parameter range of Definition <a href=\"#def:critical\" data-reference-type=\"ref\" data-reference=\"def:critical\">4</a>, and suppose that $h(p,0)=0$. For every $\\kappa>0$ there is a finite constant $C_{p,\\kappa}$ such that, for all $0<\\delta<1$ and all complex-valued $f\\in L^3(\\mathbb R^3)$, $$\\|K_\\delta f\\|_{L^3(S^2,\\sigma)}\n    \\le C_{p,\\kappa}\\,\n       \\delta^{-(p-2)/3-\\kappa}\\|f\\|_{L^3(\\mathbb R^3)}.\n  \\label{eq:closure-quantitative-maximal}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-maximal-reduction"
+  },
+  {
+   "claim_id": "claim-nikodym-space-forms",
+   "exact_statement": "For every $1\\le p\\le3$ and $\\varepsilon>0$, set $q=2p'$, with $q=\\infty$ at $p=1$. Then, for $0<\\delta<1$, $$\\|N_\\delta^{\\mathrm{Euc}}f\\|_{L^q(\\mathbb R^3)}\n\\le C_{p,\\varepsilon}\\delta^{1-3/p-\\varepsilon}\n   \\|f\\|_{L^p(\\mathbb R^3)}.$$ For each fixed local geometry above and $0<\\delta<\\delta_0$, $$\\|N_{\\delta,U}^{g}f\\|_{L^q(U,dV_g)}\n\\le C_{p,\\varepsilon,U,V,g}\\delta^{1-3/p-\\varepsilon}\n   \\|f\\|_{L^p(V,dV_g)}.$$ In particular, at $p=q=3$ the operator norms are bounded by $C_\\varepsilon\\delta^{-\\varepsilon}$ in Euclidean space and $C_{\\varepsilon,U,V,g}\\delta^{-\\varepsilon}$ in the fixed local geometry.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-nikodym-space-forms"
+  },
+  {
+   "claim_id": "claim-curved-kakeya-local",
+   "exact_statement": "For the phase and chart fixed above, there is $0<\\delta_{\\mathrm{curv}}\\le\\rho$ such that, for every $1\\le p\\le3$ and $\\varepsilon>0$, there is a finite constant $C_{p,\\varepsilon,\\phi,\\Omega,Y}$ for which $$\\|\\mathcal K^\\phi_\\delta f\\|_{L^q(Y)}\n\\le C_{p,\\varepsilon,\\phi,\\Omega,Y}\n   \\delta^{1-3/p-\\varepsilon}\\|f\\|_{L^p(\\Omega)}$$ for every $0<\\delta<\\delta_{\\mathrm{curv}}$ and $f\\in L^p(\\Omega)$, where $q=2p'$, with $q=\\infty$ at $p=1$. In particular, at $p=q=3$, $$\\|\\mathcal K^\\phi_\\delta f\\|_{L^3(Y)}\n\\le C_{\\varepsilon,\\phi,\\Omega,Y}\\delta^{-\\varepsilon}\n   \\|f\\|_{L^3(\\Omega)}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-curved-kakeya-local"
+  }
+ ],
+ "paper": "papers/EN-110-000-0000-2-2026-PR-T4-UK-EX-M2-C-ML-H-0170_PM-074.1_The_Kakeya_maximal_conjecture_in_three_dimensions.md",
+ "purpose": "The Kakeya maximal conjecture in three dimensions",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "bd5313f51e626d0a1f75900e6249c4fd83e7a73aa559e715d18b1ca47f0122f5",
+   "pm.domains.v2": "6736478400e1711847189aa4981e03a8f5a50e8e21730cd12417c34a1051586d",
+   "pm.edges.v2": "f6982f33ebd1028758e9c1924437877357c2d5da63451331df39c146653eb442",
+   "pm.extraction.v2": "282d055511fe56fabee6931066d701348fec4397690aa88eb0695b473acc18f5",
+   "pm.formal.v2": "3cbe864428c57b7e52ce66c3fda064611eca249f93741a758b21b0ef9c542adb",
+   "pm.limits.v2": "c8eb15adddc4cf5f982340eee4b7e370175de014b94a3d52ea8325d035d8a924",
+   "pm.node.v2": "8f132dbe610eb8541053b455a1d540b1e80c3452b868d0755d940b0df4ad216a",
+   "pm.objects.v2": "ab05d0a8f71775833e3f97d2c868aed4360a5ba93a475dd1afb1174d2985fc78",
+   "pm.provenance.v2": "10b9f5d1fae09910a16ad73df63c9a3e27d85595fec08cb47db5a390a610f32d",
+   "pm.quantities.v2": "26d383e29f16f1b49364da3b65e83dfe45923887ee5720d50e4166194b88fee9",
+   "pm.reading.v2": "ef10593543b72f806b48cb3bf0c84c24df5c0d0169cf48fb75cb3d7426c33305",
+   "pm.roadmap.v2": "f3e13adf75510c48652c0f1970bdda42f3011ca36d76c2532ee1a1cda67ee74a",
+   "pm.search.v1": "9c17abea485c556ce0b8667f0a65db8b9af0ee2c2dcd7695ce98ca65a0f4232f",
+   "pm.triptych.v2": "4b6c6b438c207adfb22899f5522cfd0a590106d4146196eecc806d6c3b6e625b"
+  },
+  "canonical_sha256": "085060c03a367580c9b81356e6987b5d3458917cc08107660a648c1d88df9210",
+  "paper_sha256": "ff4a6d346fc71821417aea76424aaf5bbfe9050f78e4efe90f120e2d5133546e",
+  "repaired_body_sha256": "b685324ccf32b855951e385b404054750bc3c1e75f9974a01364e95b381a34d9"
+ },
+ "status": "ACTIVE",
+ "subject_id": 10,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "8e89fb68d8a319984f45dc79e25e4b0ca49a60a968f56a7dd30e967011c395a6",
+   "receipt_sha256": "147c4cb0f1e9882ef2c72e982c23611d379953e7f2ef6cbf43973f00efeaa7d1",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "integer-weight instances with n at most 8, one or two partitions, exact rational thresholds including a tie at the threshold and a cascade across partitions",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-cleaning-threshold",
+     "oracle_basis": "exhaustive subset enumeration of the dense set and union of all valid subsets"
+    },
+    {
+     "checked_domain": "same finite instances; retained mass compared with the density minus partition count times threshold by integer arithmetic",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-retained-mass",
+     "oracle_basis": "direct integer inequality on the candidate output and total weight"
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-tie-deleted",
+     "observed_exit": 1,
+     "receipt_sha256": "3ce4bad79b6492f7249f07b500813357bd9d1bdfebf81dc3a1535478d58a2ae4"
+    },
+    {
+     "id": "mut-single-pass",
+     "observed_exit": 1,
+     "receipt_sha256": "fd8dc1c6930e0267d145c518472d45d6c5b7b68cb08aa2154b70d5296f9f9dfa"
+    },
+    {
+     "id": "mut-count-not-mass",
+     "observed_exit": 1,
+     "receipt_sha256": "74ddf47e0696b14dbbaaedaba8a9eeaa48759839b3d4eadac6d0385af0392fbe"
+    },
+    {
+     "id": "mut-self-denominator",
+     "observed_exit": 1,
+     "receipt_sha256": "6d6edc302595a135d6d992ad6dcecbff6cd74b13b3dc959e1df37d6373beb3c0"
+    },
+    {
+     "id": "mut-first-partition-only",
+     "observed_exit": 1,
+     "receipt_sha256": "361cca1316ea04a5470116646e6e12282b413cc22bc57e1733a735e3a2a8f992"
+    }
+   ],
+   "receipt_sha256": "e032d3c47f9aff7f664b2a8958a170055e40ca7e627b3e49e229803505d3c391",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The Kakeya maximal conjecture in three dimensions"
+}

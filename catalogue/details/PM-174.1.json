@@ -1,0 +1,863 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 681370,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 201170
+ },
+ "coordinate": "EN-113-000-0022-2-2026-PR-T4-UK-EX-M1-B-ML-H-0337",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:preliminaries",
+     "quote": "All graphs in the proof are finite undirected loopless multigraphs.",
+     "quote_sha256": "a11ac82a533c4037aedfb6d9dbc476201f4866987b970638ec7d92b570d6cbd7"
+    }
+   ],
+   "query": "Directed dependency graph thinning with preserved task reachability",
+   "reason": "The main theorem concerns undirected multigraph cuts; it does not establish preservation of directed dependencies."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-4",
+     "quote": "For example, $q$ parallel edges between two vertices have the same Laplacian as one edge of weight $q$, but the former graph packs $q$ edge-disjoint spanning trees and the latter has only one.",
+     "quote_sha256": "29ad9a525eb88be5761405c426d12937864d5198fa423bb40622018f414c8250"
+    }
+   ],
+   "query": "Replace parallel edges by a weighted edge while preserving packing count",
+   "reason": "A weighted Laplacian can agree while the supply of distinct edges for disjoint trees changes."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-7",
+     "quote": "It need not be a semidefinite inequality.",
+     "quote_sha256": "67d0a39456c236373a093b323624bb24c493f97df8f184cc1cf87c3c2e4806e6"
+    }
+   ],
+   "query": "Use cut upper bounds as a full semidefinite upper bound",
+   "reason": "The source distinguishes indicator-vector inequalities from semidefinite inequalities."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-rem-uniform-extraction",
+     "quote": "The construction makes no claim about its computational cost.",
+     "quote_sha256": "9faac94effadcd38ed828a35f7da62313369276e05111d71f09f1f1d8df76e22"
+    }
+   ],
+   "query": "Obtain a bounded running time directly from the fixed-point extraction",
+   "reason": "The proof explicitly makes no computational-cost claim for extraction."
+  }
+ ],
+ "family": "PM-174",
+ "id": "PM-174.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-universal-thin-tree",
+    "statement": "every finite $k$-edge-connected undirected multigraph without loops and with at least two vertices"
+   },
+   {
+    "anchor": "stmt-lem-resistance-order",
+    "claim_id": "claim-resistance-order",
+    "statement": "For $X\\succ0$, a column $b$, and $t>0$,"
+   },
+   {
+    "anchor": "stmt-lem-resistance-order",
+    "claim_id": "claim-resistance-order",
+    "statement": "If $X\\succeq Y\\succ0$,"
+   },
+   {
+    "anchor": "stmt-lem-incidence-rank",
+    "claim_id": "claim-incidence-rank",
+    "statement": "If $F$ has $n$ vertices and $c$ connected components,"
+   },
+   {
+    "anchor": "stmt-thm-packing",
+    "claim_id": "claim-partition-packing-criterion",
+    "statement": "For a positive integer $r$,"
+   },
+   {
+    "anchor": "stmt-lem-packing-parts",
+    "claim_id": "claim-maximal-packing-parts",
+    "statement": "Fix a positive integer $q$ and a graph $F$."
+   },
+   {
+    "anchor": "stmt-lem-packing-parts",
+    "claim_id": "claim-maximal-packing-parts",
+    "statement": "If $F[A]$ and $F[B]$ are $q$-tree-packable and $A\\cap B\\ne\\varnothing$,"
+   },
+   {
+    "anchor": "stmt-lem-packing-parts",
+    "claim_id": "claim-maximal-packing-parts",
+    "statement": "If $F\\subseteq F'$,"
+   },
+   {
+    "anchor": "stmt-lem-packing-parts",
+    "claim_id": "claim-maximal-packing-parts",
+    "statement": "If $|\\mathcal P(F)|>1$,"
+   },
+   {
+    "anchor": "stmt-thm-hierarchy-power",
+    "claim_id": "claim-polynomial-hierarchy-shortcut",
+    "statement": "Let $H$ have a locally $q$-connected hierarchy, and let $\\mathcal M$ be any collection of its nonroot nodes satisfying $|O(A)|\\ge |P(A)|/q$."
+   },
+   {
+    "anchor": "sec:extraction",
+    "claim_id": "claim-low-resistance-packing-extraction",
+    "statement": "Throughout this section, $H$ is an $r$-tree-packable graph on $n\\ge2$ vertices."
+   },
+   {
+    "anchor": "stmt-lem-response",
+    "claim_id": "claim-simultaneous-matrix-response",
+    "statement": "for every $X\\in\\mathcal K$"
+   },
+   {
+    "anchor": "stmt-lem-auxiliary-representation",
+    "claim_id": "claim-rank-preserving-isotropic-representation",
+    "statement": "Let $B$ be the union of $q\\geq1$ edge-disjoint spanning trees on an $n$-vertex set, where $n\\geq2$."
+   },
+   {
+    "anchor": "stmt-lem-projected-trace-packing",
+    "claim_id": "claim-projected-trace-certifies-packing",
+    "statement": "With the vectors in Lemma <a href=\"#lem:auxiliary-representation\" data-reference-type=\"ref\" data-reference=\"lem:auxiliary-representation\">11</a>, suppose $A\\subseteq E(B)$ and $c>0$ satisfy $$\\sum_{e\\in A}z_ez_e^{\\mathsf T}\\succeq cI_{n-1}.$$"
+   },
+   {
+    "anchor": "stmt-lemma-two-system-split",
+    "claim_id": "claim-two-sided-vector-splitting",
+    "statement": "Let $w_e\\in\\mathbb R^D$ be finitely many vectors, let $\\Sigma=\\sum_e w_ew_e^{\\mathsf T}\\preceq2I_D$, and suppose that $\\|w_e\\|^2\\leq\\epsilon$ for every $e$, where $\\epsilon>0$."
+   },
+   {
+    "anchor": "stmt-prop-step",
+    "claim_id": "claim-packing-preserving-sparsification",
+    "statement": "If $H$ has at least two vertices and contains $r$ edge-disjoint spanning trees,"
+   },
+   {
+    "anchor": "stmt-thm-mss",
+    "claim_id": "claim-isotropic-independent-vector-outcome",
+    "statement": "Let $\\epsilon>0$, and let $v_1,\\ldots,v_m$ be independent random vectors with finite support in $\\mathbb C^d$."
+   },
+   {
+    "anchor": "stmt-thm-mss",
+    "claim_id": "claim-isotropic-independent-vector-outcome",
+    "statement": "If $$\\sum_{i=1}^m\\mathbb E[v_iv_i^*]=I_d,\n \\qquad \\mathbb E\\|v_i\\|^2\\leq\\epsilon\\quad(1\\leq i\\leq m),\n \\label{eq:mss-hypotheses}$$"
+   },
+   {
+    "anchor": "stmt-lem-mss-polynomial-limits",
+    "claim_id": "claim-polynomial-limit-stability",
+    "statement": "Suppose nonzero univariate polynomials $f_\\nu$ have uniformly bounded degrees and converge coefficientwise to a nonzero polynomial $f$."
+   },
+   {
+    "anchor": "stmt-lem-mss-polynomial-limits",
+    "claim_id": "claim-polynomial-limit-stability",
+    "statement": "If all $f_\\nu$ have no zeros in $\\mathbb H$,"
+   },
+   {
+    "anchor": "stmt-lem-mss-polynomial-limits",
+    "claim_id": "claim-polynomial-limit-stability",
+    "statement": "If all $f_\\nu$ are real-rooted,"
+   },
+   {
+    "anchor": "stmt-lem-mss-polynomial-limits",
+    "claim_id": "claim-polynomial-limit-stability",
+    "statement": "For monic real-rooted polynomials of a fixed degree,"
+   },
+   {
+    "anchor": "stmt-lem-mss-stability",
+    "claim_id": "claim-elementary-stability-operations",
+    "statement": "If $A_1,\\ldots,A_m$ are Hermitian positive-semidefinite matrices and $C$ is Hermitian,"
+   },
+   {
+    "anchor": "stmt-lem-mss-stability",
+    "claim_id": "claim-elementary-stability-operations",
+    "statement": "If $\\sum_iA_i$ is positive definite,"
+   },
+   {
+    "anchor": "stmt-lem-mss-stability",
+    "claim_id": "claim-elementary-stability-operations",
+    "statement": "If $p$ is real stable,"
+   },
+   {
+    "anchor": "stmt-lem-mss-expectation",
+    "claim_id": "claim-mixed-polynomial-expectation",
+    "statement": "If $v_1,\\ldots,v_m$ are independent finitely supported random vectors and $A_i=\\mathbb E[v_iv_i^*]$,"
+   },
+   {
+    "anchor": "stmt-lem-mss-common-interlacing",
+    "claim_id": "claim-common-interlacing-selection",
+    "statement": "If every convex combination of finitely many monic degree-$d$ polynomials is real-rooted,"
+   },
+   {
+    "anchor": "stmt-lem-mss-selection",
+    "claim_id": "claim-selection-from-independent-supports",
+    "statement": "For independent finitely supported vectors $v_1,\\ldots,v_m$,"
+   },
+   {
+    "anchor": "stmt-lem-mss-partial-fractions",
+    "claim_id": "claim-positive-barrier-partial-fractions",
+    "statement": "Let $p$ be real stable, $z\\in\\operatorname{Ab}_p$, and let $i,j$ be coordinate indices."
+   },
+   {
+    "anchor": "stmt-lem-mss-barrier-shift",
+    "claim_id": "claim-barrier-shift",
+    "statement": "Let $p$ be real stable, let $z\\in\\operatorname{Ab}_p$, and suppose $\\delta>0$ satisfies $$\\Phi_p^j(z)+\\frac1\\delta\\leq1.\n \\label{eq:mss-shift-hypothesis}$$"
+   },
+   {
+    "anchor": "stmt-lem-mss-root-bound",
+    "claim_id": "claim-mixed-polynomial-largest-root",
+    "statement": "If $A_i\\succeq0$, $\\sum_iA_i=I_d$, and $\\operatorname{tr}A_i\\leq\\epsilon$ for every $i$, where $\\epsilon>0$,"
+   },
+   {
+    "anchor": "stmt-lem-hierarchy-dual",
+    "claim_id": "claim-shortcut-dual-reduction",
+    "statement": "With the preceding notation,"
+   },
+   {
+    "anchor": "stmt-lem-hierarchy-dual",
+    "claim_id": "claim-shortcut-dual-reduction",
+    "statement": "Consequently, if every ratio in <a href=\"#hd:ratio\" data-reference-type=\"eqref\" data-reference=\"hd:ratio\">[hd:ratio]</a> is at most $K$,"
+   },
+   {
+    "anchor": "stmt-hb-spectral-packing",
+    "claim_id": "claim-spectral-packing-of-endpoint-images",
+    "statement": "Let $F$ be a nonempty set of oriented edges of a finite multigraph with edge set $E$, and put $m=|F|$."
+   },
+   {
+    "anchor": "stmt-hb-spectral-packing",
+    "claim_id": "claim-spectral-packing-of-endpoint-images",
+    "statement": "Suppose that $a>0$ and $$\\label{hb:spectral-assumption}\n \\Upsilon:=\\left(\\frac1m\\sum_{e\\in F}Y_{e,e}\\right)^2>0,\n \\qquad\n \\Upsilon\\ge\\frac a m\\sum_{e\\in F}\\|Y_e\\|_2^2.$$"
+   },
+   {
+    "anchor": "stmt-hb-bucketing",
+    "claim_id": "claim-homogeneous-dominating-truncation",
+    "statement": "Every $\\alpha$-bad node with a positive boundary sum"
+   },
+   {
+    "anchor": "stmt-hb-homogeneous-bags",
+    "claim_id": "claim-homogeneous-bag-family",
+    "statement": "Let $T$ be a nonempty set of $\\alpha$-bad nodes with positive boundary sums, and let $0<\\gamma\\le1$."
+   },
+   {
+    "anchor": "stmt-hb-homogeneous-bags",
+    "claim_id": "claim-homogeneous-bag-family",
+    "statement": "Suppose that $O'(t)$ is $\\gamma$-dominating for each $t\\in T$ and that $F=\\bigcup_{t\\in T}O'(t)$ is $4$-homogeneous."
+   },
+   {
+    "anchor": "stmt-hb-homogeneous-bags",
+    "claim_id": "claim-homogeneous-bag-family",
+    "statement": "If $$\\label{hb:smallness}\n s^\\epsilon\\le\\frac1{48\\beta C},$$"
+   },
+   {
+    "anchor": "stmt-prop-hierarchy-bags",
+    "claim_id": "claim-geometric-bag-extraction",
+    "statement": "Let $T$ be a nonempty finite set of $\\alpha$-bad nodes with positive boundary sums, where $0<\\alpha\\le1$."
+   },
+   {
+    "anchor": "stmt-prop-hierarchy-bags",
+    "claim_id": "claim-geometric-bag-extraction",
+    "statement": "Suppose $\\beta>1$, $0<\\epsilon<1/3$, $0<\\lambda<1$, and $s^\\epsilon\\le(48\\beta C_1(\\epsilon))^{-1}$."
+   },
+   {
+    "anchor": "stmt-prop-hierarchy-compact",
+    "claim_id": "claim-compact-bag-charging",
+    "statement": "Let $G=(V,E)$ be a finite $k$-edge-connected multigraph, and let $X_v\\in Q=[0,1]^h$ for $v\\in V$."
+   },
+   {
+    "anchor": "stmt-prop-hierarchy-compact",
+    "claim_id": "claim-compact-bag-charging",
+    "statement": "Suppose $(\\mathcal F_i)$ is a finite or countable $\\lambda$-geometric sequence of nonempty families of $\\beta$-compact bags, of respective types $(\\delta_i,\\Delta_i)$, where $0<\\lambda\\le 1/12$ and $\\beta\\ge36$."
+   },
+   {
+    "anchor": "stmt-hc-length",
+    "claim_id": "claim-disjoint-shell-length-bound",
+    "statement": "Let $G=(V,E)$ be a finite $k$-edge-connected multigraph, where $k>0$, and let $X_v\\in Q=[0,1]^h$ for $v\\in V$."
+   },
+   {
+    "anchor": "stmt-hc-length",
+    "claim_id": "claim-disjoint-shell-length-bound",
+    "statement": "Let $\\mathcal Z$ be a finite collection of pairwise disjoint ordinary or hollowed balls in $Q$."
+   },
+   {
+    "anchor": "stmt-hc-length",
+    "claim_id": "claim-disjoint-shell-length-bound",
+    "statement": "Suppose there are vertices $u_H,v_H\\in V$ such that $$\\label{hc:witness}\n \\|X_{u_H}-x_H\\|_1\\le a_H,\n \\qquad \\|X_{v_H}-x_H\\|_1\\ge b_H.$$"
+   },
+   {
+    "anchor": "stmt-prop-hierarchy-assigned",
+    "claim_id": "claim-assigned-bag-charging",
+    "statement": "Let $X:V\\to\\{0,1\\}^{d}$, and let $\\mathcal T$ be a locally $k$-connected hierarchy of $G$, with selected nonroot nodes $T$ satisfying $|O(t)|\\ge k\\lambda|P(t)|$ for $t\\in T$."
+   },
+   {
+    "anchor": "stmt-prop-hierarchy-assigned",
+    "claim_id": "claim-assigned-bag-charging",
+    "statement": "Suppose $\\mathcal F_1,\\ldots,\\mathcal F_m$ is a $\\lambda$-geometric sequence of families of $(24C_3/k)$-assigned bags, of types $(\\delta_i,T_i)$, with $T_i\\subseteq T$."
+   },
+   {
+    "anchor": "stmt-prop-hierarchy-assigned",
+    "claim_id": "claim-assigned-bag-charging",
+    "statement": "If $$C_4\\ge3,\\qquad \\lambda\\le\\frac1{6C_4},\\qquad\n C_3\\ge2\\bigl((C_4+1)+4(C_4+2)^2\\bigr),$$"
+   },
+   {
+    "anchor": "stmt-ha-edge-paths",
+    "claim_id": "claim-edge-disjoint-paths",
+    "statement": "If every cut separating distinct vertices $u,v$ of an undirected multigraph has at least $q$ edges, where $q$ is a positive integer,"
+   },
+   {
+    "anchor": "stmt-ha-pruning",
+    "claim_id": "claim-predecessor-pruning-cost",
+    "statement": "Suppose $\\delta_{i+1}\\le\\lambda\\delta_i$ with $\\lambda\\le1/2$, $|O(t)|\\ge k\\lambda|P(t)|$ for the selected hierarchy nodes, and each bag is at least $C_3/k$-assigned."
+   },
+   {
+    "anchor": "stmt-ha-labeled-energy",
+    "claim_id": "claim-valid-labeling-energy",
+    "statement": "Every finite collection $Z$ with a valid labeling"
+   },
+   {
+    "anchor": "stmt-ha-insertable-arrangement",
+    "claim_id": "claim-insertable-bag-arrangement",
+    "statement": "Let $\\mathcal T$ be a locally $k$-connected hierarchy, with selected nonroot nodes $T$ satisfying $|O(t)|\\ge k\\lambda|P(t)|$ for $t\\in T$."
+   },
+   {
+    "anchor": "stmt-ha-insertable-arrangement",
+    "claim_id": "claim-insertable-bag-arrangement",
+    "statement": "Let $\\mathcal F_i$ be a $\\lambda$-geometric sequence of families of $12C_3/k$-assigned bags of type $(\\delta_i,T_i)$, where the $T_i\\subseteq T$ are pairwise disjoint."
+   },
+   {
+    "anchor": "stmt-ha-insertable-arrangement",
+    "claim_id": "claim-insertable-bag-arrangement",
+    "statement": "Suppose all input balls are insertable and $$C_4\\ge3,\\qquad \\lambda\\le\\frac{1}{6C_4},\\qquad\n C_3\\ge2\\bigl((C_4+1)+4(C_4+2)^2\\bigr).$$"
+   },
+   {
+    "anchor": "stmt-ha-input-valid",
+    "claim_id": "claim-insertable-input-validity",
+    "statement": "An insertable ball $B=B(X_u,\\delta_i)\\in\\operatorname{Bag}_t$ with the input labels above"
+   },
+   {
+    "anchor": "stmt-ha-ancestor",
+    "claim_id": "claim-conflict-domain-ancestor",
+    "statement": "While $\\operatorname{Bag}_t\\in\\mathcal F_\\ell$ is being processed, if a candidate $A\\in\\operatorname{Bag}_t$ and a current record $B$ have intersecting conflict domains,"
+   },
+   {
+    "anchor": "stmt-ha-unique-interior",
+    "claim_id": "claim-unique-interior-record",
+    "statement": "Under the preceding hypotheses,"
+   },
+   {
+    "anchor": "stmt-ha-unique-interior",
+    "claim_id": "claim-unique-interior-record",
+    "statement": "suppose $C(A)\\cap C(B)\\ne\\varnothing$."
+   },
+   {
+    "anchor": "stmt-ha-unique-interior",
+    "claim_id": "claim-unique-interior-record",
+    "statement": "If another current record $D\\ne B$ intersects $B$,"
+   },
+   {
+    "anchor": "stmt-ha-heredity",
+    "claim_id": "claim-separation-heredity",
+    "statement": "Suppose $B,D$ satisfy condition 35."
+   },
+   {
+    "anchor": "stmt-ha-heredity",
+    "claim_id": "claim-separation-heredity",
+    "statement": "If a new record $B'$ has support contained in $B$ and $C(B')\\subseteq C(B)$,"
+   },
+   {
+    "anchor": "stmt-ha-heredity",
+    "claim_id": "claim-separation-heredity",
+    "statement": "if it has positive width."
+   },
+   {
+    "anchor": "stmt-ha-border-monotone",
+    "claim_id": "claim-border-classification-monotonicity",
+    "statement": "During the processing of this phase,"
+   },
+   {
+    "anchor": "stmt-ha-border-monotone",
+    "claim_id": "claim-border-classification-monotonicity",
+    "statement": "a candidate which is a border ball"
+   },
+   {
+    "anchor": "stmt-ha-construction",
+    "claim_id": "claim-interior-processing-potential",
+    "statement": "Suppose phase $\\ell$ starts with a valid arrangement whose potentials can pay each earlier node $v\\in T_i$, $i<\\ell$, at least $(\\theta/2)|\\operatorname{Bag}_v|\\delta_i$."
+   },
+   {
+    "anchor": "ha:small-excess",
+    "claim_id": "claim-phase-shrink-deficit",
+    "statement": "$$\\label{ha:small-excess}\n e<\\frac{C_4}{6C_3}b\\delta_\\ell.$$"
+   },
+   {
+    "anchor": "stmt-thm-fixedpoint",
+    "claim_id": "claim-compact-convex-fixed-point",
+    "statement": "Let $K$ be a nonempty compact convex subset of a finite-dimensional real vector space."
+   },
+   {
+    "anchor": "stmt-lemma-sperner",
+    "claim_id": "claim-sperner-parity",
+    "statement": "Label every vertex $v$ of a finite triangulation of $\\Delta_d$ by an integer $\\ell(v)\\in\\{0,\\ldots,d\\}$, with $v_{\\ell(v)}>0$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Packing-preserving sparsification",
+    "evidence": [
+     {
+      "anchor": "pm-h-4",
+      "quote": "We use two vector representations of the incidence columns.",
+      "quote_sha256": "1c2d50aa8c9d44ef184397c6181dd6216d170e22fc69590e81ac9bec5c292180"
+     },
+     {
+      "anchor": "pm-h-4",
+      "quote": "A separate isotropic representation—whose vector outer products sum to the identity— controls the partition inequalities for tree packing.",
+      "quote_sha256": "9bca03bc5f46a88a09025c1f58686073f793b204b1ee72f7778eaccbfd617e32"
+     }
+    ],
+    "requires_concepts": [
+     "Incidence columns and graph Laplacians",
+     "Positive definite resistance",
+     "Edge-disjoint spanning-tree packings",
+     "Rank-preserving isotropic representation",
+     "Independent-vector splitting"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Low-resistance packing extraction",
+    "evidence": [
+     {
+      "anchor": "pm-h-4",
+      "quote": "We interpolate finitely many such responses and take a fixed-point limit.",
+      "quote_sha256": "cc14abfa71352b28fb3e63dcf93959611a8456f769cefc783caa2688fb25348c"
+     }
+    ],
+    "requires_concepts": [
+     "Maximal packing partitions",
+     "Locally connected hierarchies",
+     "Shortcut matrices",
+     "Compact convex matrix domains",
+     "Finite-dimensional fixed points"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-universal-thin-tree",
+   "exact_statement": "There is a universal constant $C>0$ such that, for every integer $k\\ge1$, every finite $k$-edge-connected undirected multigraph without loops and with at least two vertices has a spanning tree $T$ satisfying $$|\\delta_T(S)|\\le\\frac Ck\\,|\\delta_G(S)|\n \\qquad\\text{for every }\\varnothing\\ne S\\subsetneq V.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-resistance-order",
+   "exact_statement": "For $X\\succ0$, a column $b$, and $t>0$, $$b^{\\mathsf T}X^{-1}b\\le t\n \\quad\\Longleftrightarrow\\quad\n bb^{\\mathsf T}\\preceq tX.$$ If $X\\succeq Y\\succ0$, then $b^{\\mathsf T}X^{-1}b\\le b^{\\mathsf T}Y^{-1}b$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-resistance-order"
+  },
+  {
+   "claim_id": "claim-incidence-rank",
+   "exact_statement": "If $F$ has $n$ vertices and $c$ connected components, its incidence columns span a space of dimension $n-c$. In particular the columns of a spanning tree form a basis of $\\mathbf1^\\perp$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-incidence-rank"
+  },
+  {
+   "claim_id": "claim-partition-packing-criterion",
+   "exact_statement": "For a positive integer $r$, a graph $H$ contains $r$ edge-disjoint spanning trees if and only if $$|E_H(\\mathcal P)|\\ge r(|\\mathcal P|-1)\n \\qquad\\text{for every partition }\\mathcal P\\text{ of }V(H).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-packing"
+  },
+  {
+   "claim_id": "claim-maximal-packing-parts",
+   "exact_statement": "Fix a positive integer $q$ and a graph $F$.*\n\n1.  *If $F[A]$ and $F[B]$ are $q$-tree-packable and $A\\cap B\\ne\\varnothing$, then $F[A\\cup B]$ is $q$-tree-packable.*\n\n2.  *The inclusion-maximal $q$-tree-packable vertex sets form a partition $\\mathcal P(F)$. If $F\\subseteq F'$, then $\\mathcal P(F')$ coarsens $\\mathcal P(F)$.*\n\n3.  *If $|\\mathcal P(F)|>1$, then $$|E_F(\\mathcal P(F))|<q(|\\mathcal P(F)|-1).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-packing-parts"
+  },
+  {
+   "claim_id": "claim-polynomial-hierarchy-shortcut",
+   "exact_statement": "There is an absolute integer $q_H\\ge2$ such that the following holds for each integer $q\\ge q_H$. Let $H$ have a locally $q$-connected hierarchy, and let $\\mathcal M$ be any collection of its nonroot nodes satisfying $|O(A)|\\ge |P(A)|/q$. Then $H$ has a shortcut matrix $D$ such that $$\\label{eq:hierarchy-power}\n \\frac{1}{|O(A)|}\\sum_{e\\in O(A)}R_D(e)\\le q^{-31/40}\n \\qquad(A\\in\\mathcal M).$$ The cutoff is independent of the graph, the hierarchy depth and the marked collection $\\mathcal M$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-hierarchy-power"
+  },
+  {
+   "claim_id": "claim-low-resistance-packing-extraction",
+   "exact_statement": "For all sufficiently large integers $r$, every $r$-tree-packable graph $H$ admits $X\\succ0$ such that $$\\label{eq:shortcut-X}\n L_H\\preceq X,\\qquad\n \\mathbf1_S^{\\mathsf T}X\\mathbf1_S\\le3|\\delta_H(S)|\n \\quad(\\varnothing\\ne S\\subsetneq V),$$ and the edges with $R_X(e)\\le4r^{-1/2}$ contain $q$ edge-disjoint spanning trees. The lower threshold on $r$ is independent of $H$ and $n$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-extraction"
+  },
+  {
+   "claim_id": "claim-simultaneous-matrix-response",
+   "exact_statement": "There is an absolute constant $C_0$, which may be taken to be $40$, such that for every $X\\in\\mathcal K$ there exists $Y\\in\\mathcal K$ with $$\\label{eq:simultaneous-response}\n \\bigl|\\{e\\in B_s(X):R_Y(e)>r^{-1/2}\\}\\bigr|\n \\le C_0r^{-1/4}M_s(X)\n \\qquad\\text{for every }s>0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-response"
+  },
+  {
+   "claim_id": "claim-rank-preserving-isotropic-representation",
+   "exact_statement": "Let $B$ be the union of $q\\geq1$ edge-disjoint spanning trees on an $n$-vertex set, where $n\\geq2$. For every $\\rho>0$ there are vectors $z_e\\in\\mathbb R^{n-1}$, indexed by the individual edges of $B$, such that $$\\sum_{e\\in B}z_ez_e^{\\mathsf T}=I_{n-1},\n \\qquad \\|z_e\\|^2\\leq\\frac{1+\\rho}{q}.\n \\label{eq:auxiliary-isotropy}$$ Moreover, there are an invertible linear map $M:\\mathbf1^\\perp\\to\n\\mathbb R^{n-1}$ and positive numbers $s_e$ such that $z_e=s_eMb_e$. Consequently the incidence vectors and the $z_e$ have the same rank on every subset of edges.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-auxiliary-representation"
+  },
+  {
+   "claim_id": "claim-projected-trace-certifies-packing",
+   "exact_statement": "With the vectors in Lemma <a href=\"#lem:auxiliary-representation\" data-reference-type=\"ref\" data-reference=\"lem:auxiliary-representation\">11</a>, suppose $A\\subseteq E(B)$ and $c>0$ satisfy $$\\sum_{e\\in A}z_ez_e^{\\mathsf T}\\succeq cI_{n-1}.$$ Then $(V,A)$ contains at least $\\lfloor cq/(1+\\rho)\\rfloor$ edge-disjoint spanning trees.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-projected-trace-packing"
+  },
+  {
+   "claim_id": "claim-two-sided-vector-splitting",
+   "exact_statement": "Let $w_e\\in\\mathbb R^D$ be finitely many vectors, let $\\Sigma=\\sum_e w_ew_e^{\\mathsf T}\\preceq2I_D$, and suppose that $\\|w_e\\|^2\\leq\\epsilon$ for every $e$, where $\\epsilon>0$. There is a subset $A$ of the indices for which $$\\frac12\\Sigma-\\tau I_D\n \\preceq\\sum_{e\\in A}w_ew_e^{\\mathsf T}\n \\preceq\\frac12\\Sigma+\\tau I_D,\n \\qquad \\tau=2\\sqrt\\epsilon+\\epsilon.\n \\label{eq:two-sided-split}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-two-system-split"
+  },
+  {
+   "claim_id": "claim-packing-preserving-sparsification",
+   "exact_statement": "There is an absolute integer $r_{\\mathrm{step}}$ such that the following holds for every integer $r\\geq r_{\\mathrm{step}}$. If $H$ has at least two vertices and contains $r$ edge-disjoint spanning trees, set $$u=r^{-1/16},\\qquad q=\\lfloor(1-u)r\\rfloor,\n \\qquad \\epsilon=6r^{-1/2},\\qquad\n \\tau=2\\sqrt\\epsilon+\\epsilon.$$ Then $H$ has a spanning subgraph $H'$ containing at least $$r'=\\left\\lfloor\\frac{(1-4u)r}{2}\\right\\rfloor\n \\label{eq:step-packing-count}$$ edge-disjoint spanning trees, such that every nonempty proper $S\\subset V(H)$ satisfies $$|\\delta_{H'}(S)|\\leq\n \\left(\\frac12+3\\tau\\right)|\\delta_H(S)|.\n \\label{eq:step-cut-bound}$$ The cutoff may be chosen so that, in addition, $$\\frac5{16}\\leq\\frac{r'}r\\leq\\frac12,\n \\qquad\n \\frac{\\frac12+3\\tau}{r'/r}\\leq1+15u.\n \\label{eq:step-ratio-bound}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-step"
+  },
+  {
+   "claim_id": "claim-isotropic-independent-vector-outcome",
+   "exact_statement": "Let $\\epsilon>0$, and let $v_1,\\ldots,v_m$ be independent random vectors with finite support in $\\mathbb C^d$. If $$\\sum_{i=1}^m\\mathbb E[v_iv_i^*]=I_d,\n \\qquad \\mathbb E\\|v_i\\|^2\\leq\\epsilon\\quad(1\\leq i\\leq m),\n \\label{eq:mss-hypotheses}$$ then $$\\mathbb P\\left\\{\n \\left\\|\\sum_{i=1}^m v_iv_i^*\\right\\|\n       \\leq(1+\\sqrt\\epsilon)^2\\right\\}>0.\n \\label{eq:mss-conclusion}$$ Here $*$ denotes conjugate transpose and the norm is the operator norm. In particular, some outcome satisfies the corresponding positive-semidefinite upper bound. Real vectors are a special case.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-mss"
+  },
+  {
+   "claim_id": "claim-polynomial-limit-stability",
+   "exact_statement": "Suppose nonzero univariate polynomials $f_\\nu$ have uniformly bounded degrees and converge coefficientwise to a nonzero polynomial $f$. If all $f_\\nu$ have no zeros in $\\mathbb H$, neither does $f$. If all $f_\\nu$ are real-rooted, so is $f$. For monic real-rooted polynomials of a fixed degree, their ordered roots depend continuously on their coefficients.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-mss-polynomial-limits"
+  },
+  {
+   "claim_id": "claim-elementary-stability-operations",
+   "exact_statement": "The following assertions hold.*\n\n1.  *If $A_1,\\ldots,A_m$ are Hermitian positive-semidefinite matrices and $C$ is Hermitian, then $$\\det\\left(xI+C+\\sum_{i=1}^m z_iA_i\\right)$$ is real stable in $x,z_1,\\ldots,z_m$. If $\\sum_iA_i$ is positive definite, then $\\det(\\sum_i z_iA_i)$ is also real stable.*\n\n2.  *If $p$ is real stable, then $(1-\\partial_i)p$ is real stable.*\n\n3.  *A nonzero univariate polynomial obtained by setting all but one variable of a real stable polynomial to real constants is real-rooted.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-mss-stability"
+  },
+  {
+   "claim_id": "claim-mixed-polynomial-expectation",
+   "exact_statement": "The polynomial in <a href=\"#eq:mss-mixed-polynomial\" data-reference-type=\"eqref\" data-reference=\"eq:mss-mixed-polynomial\">[eq:mss-mixed-polynomial]</a> is monic of degree $d$ and real-rooted. If $v_1,\\ldots,v_m$ are independent finitely supported random vectors and $A_i=\\mathbb E[v_iv_i^*]$, then $$\\mathbb E\\det\\left(xI_d-\\sum_{i=1}^m v_iv_i^*\\right)\n =\\mu[A_1,\\ldots,A_m](x).\n \\label{eq:mss-expectation-identity}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-mss-expectation"
+  },
+  {
+   "claim_id": "claim-common-interlacing-selection",
+   "exact_statement": "If every convex combination of finitely many monic degree-$d$ polynomials is real-rooted, they have a common interlacing. Consequently, for any probability weights on this collection, some polynomial of positive weight has largest root at most the largest root of the weighted average.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-mss-common-interlacing"
+  },
+  {
+   "claim_id": "claim-selection-from-independent-supports",
+   "exact_statement": "For independent finitely supported vectors $v_1,\\ldots,v_m$, some outcome of positive probability has largest eigenvalue of $\\sum_i v_iv_i^*$ at most the largest root of $\\mu[\\mathbb E v_1v_1^*,\\ldots,\\mathbb E v_mv_m^*]$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-mss-selection"
+  },
+  {
+   "claim_id": "claim-positive-barrier-partial-fractions",
+   "exact_statement": "Let $p$ be real stable, $z\\in\\operatorname{Ab}_p$, and let $i,j$ be coordinate indices. As a rational function of $t$, $$\\Phi_p^i(z+te_j)\n =c+\\sum_{\\ell=1}^s\\frac{c_\\ell}{t-\\lambda_\\ell},\n \\qquad c\\geq0,\\quad c_\\ell>0,\\quad\\lambda_\\ell<0,\n \\label{eq:mss-positive-partial-fractions}$$ where the sum may be empty. In particular, for $t\\geq0$ this function is nonnegative, nonincreasing, and convex.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-mss-partial-fractions"
+  },
+  {
+   "claim_id": "claim-barrier-shift",
+   "exact_statement": "Let $p$ be real stable, let $z\\in\\operatorname{Ab}_p$, and suppose $\\delta>0$ satisfies $$\\Phi_p^j(z)+\\frac1\\delta\\leq1.\n \\label{eq:mss-shift-hypothesis}$$ For $q=(1-\\partial_j)p$ and $w=z+\\delta e_j$, one has $w\\in\\operatorname{Ab}_q$ and $$\\Phi_q^i(w)\\leq\\Phi_p^i(z)\\qquad\\text{for every }i.\n \\label{eq:mss-shift-conclusion}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-mss-barrier-shift"
+  },
+  {
+   "claim_id": "claim-mixed-polynomial-largest-root",
+   "exact_statement": "If $A_i\\succeq0$, $\\sum_iA_i=I_d$, and $\\operatorname{tr}A_i\\leq\\epsilon$ for every $i$, where $\\epsilon>0$, then the largest root of $\\mu[A_1,\\ldots,A_m]$ is at most $(1+\\sqrt\\epsilon)^2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-mss-root-bound"
+  },
+  {
+   "claim_id": "claim-shortcut-dual-reduction",
+   "exact_statement": "With the preceding notation, set $$\\label{hd:ratio}\n Q_*=\n \\sup_{\\substack{h\\geq m,\\ X\\in\\{0,1\\}^{h\\times V},\\ \\mathcal E(X)>0\\\\\n                  U\\in\\mathbb R^{E\\times h},\\ UU^{\\mathsf T}=I_m}}\n \\frac{\\displaystyle\n       \\sum_{t\\in\\mathcal M}\\frac1{|O(t)|}\n       \\left(\\sum_{e\\in O(t)}\\langle u_e,Xb_e\\rangle\\right)^2}\n      {\\mathcal E(X)}.$$ Then $$\\label{hd:comparison}\n p_*\\leq Q_*\\leq2p_*.$$ Consequently, if every ratio in <a href=\"#hd:ratio\" data-reference-type=\"eqref\" data-reference=\"hd:ratio\">[hd:ratio]</a> is at most $K$, then for every $\\eta>0$ there is a full positive definite matrix $D$ satisfying all the cut constraints in <a href=\"#hd:primal\" data-reference-type=\"eqref\" data-reference=\"hd:primal\">[hd:primal]</a> and all the marked-node average-resistance bounds with right side $K+\\eta$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-hierarchy-dual"
+  },
+  {
+   "claim_id": "claim-spectral-packing-of-endpoint-images",
+   "exact_statement": "Let $F$ be a nonempty set of oriented edges of a finite multigraph with edge set $E$, and put $m=|F|$. For points $Y_v\\in\\mathbb R^E$, write $Y_e=Y_u-Y_v$ when $e=(u,v)$, and denote the $e$-coordinate of $Y_e$ by $Y_{e,e}$. Suppose that $a>0$ and $$\\label{hb:spectral-assumption}\n \\Upsilon:=\\left(\\frac1m\\sum_{e\\in F}Y_{e,e}\\right)^2>0,\n \\qquad\n \\Upsilon\\ge\\frac a m\\sum_{e\\in F}\\|Y_e\\|_2^2.$$ Then $a\\le1$, and there are $b\\ge2$ pairwise disjoint Euclidean balls of one positive squared radius $r$, centered at images of endpoints of edges in $F$, such that $$\\label{hb:spectral-logarithmic}\n b\\ge\\frac{am}{16},\n \\qquad\n br\\ge\\frac{9m\\Upsilon}\n {512\\bigl(5+\\log_2(1/a)\\bigr)^2}.$$ Consequently, for every $0<\\varepsilon<1/3$, the choice $$\\label{hb:spectral-constant}\n C_1(\\varepsilon)=\\frac{1024}{\\varepsilon^2}$$ gives $$\\label{hb:spectral-conclusion}\n b\\ge\\frac{a|F|}{C_1(\\varepsilon)},\n \\qquad\n br\\ge\\frac{a^\\varepsilon\\Upsilon|F|}{C_1(\\varepsilon)}.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-hb-spectral-packing"
+  },
+  {
+   "claim_id": "claim-homogeneous-dominating-truncation",
+   "exact_statement": "Define $$J=1+\\left\\lceil\\log_2(256/\\alpha^2)\\right\\rceil,\n \\qquad \\gamma=\\frac1{4J^4}.$$ Every $\\alpha$-bad node with a positive boundary sum admits a $2$-homogeneous, $\\gamma$-dominating subset $O'(t)$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-hb-bucketing"
+  },
+  {
+   "claim_id": "claim-homogeneous-bag-family",
+   "exact_statement": "Let $T$ be a nonempty set of $\\alpha$-bad nodes with positive boundary sums, and let $0<\\gamma\\le1$. Suppose that $O'(t)$ is $\\gamma$-dominating for each $t\\in T$ and that $F=\\bigcup_{t\\in T}O'(t)$ is $4$-homogeneous. Write $$s=\\frac{\\alpha\\gamma}{32},\\qquad\n c_1=\\min_{e\\in F}a_e^2,\n \\qquad\n S'=\\sum_{t\\in T}\\frac1{|O(t)|}\n                     \\left(\\sum_{e\\in O'(t)}a_e\\right)^2.$$ For $\\beta>1$ and $0<\\epsilon<1/3$, put $C=C_1(\\epsilon)=1024\\epsilon^{-2}$. If $$\\label{hb:smallness}\n s^\\epsilon\\le\\frac1{48\\beta C},$$ there is either a family of $\\beta$-compact bags or a family of $s^{1+2\\epsilon}$-assigned bags, assigned to a subset of $T$, whose mass is at least $$\\label{hb:one-mass}\n \\frac{s^\\epsilon}{192\\beta C}\\,S'.$$ Its radius, and also its diameter parameter in the compact case, belong to $[sc_1,12c_1/s]$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-hb-homogeneous-bags"
+  },
+  {
+   "claim_id": "claim-geometric-bag-extraction",
+   "exact_statement": "Let $T$ be a nonempty finite set of $\\alpha$-bad nodes with positive boundary sums, where $0<\\alpha\\le1$. Define $$\\begin{aligned}\n J&=1+\\lceil\\log_2(256/\\alpha^2)\\rceil,\n &C_2(\\alpha)&=128J^4,\n &s&=\\alpha/C_2(\\alpha),\\\\\n L&=2+\\lceil\\log_2(1/s)\\rceil,\n &H&=1+\\lceil\\log_2(24/(\\lambda s^2))\\rceil,\n &C_1(\\epsilon)&=1024\\epsilon^{-2}.\n \\end{aligned}$$ Suppose $\\beta>1$, $0<\\epsilon<1/3$, $0<\\lambda<1$, and $s^\\epsilon\\le(48\\beta C_1(\\epsilon))^{-1}$. There is a $\\lambda$-geometric sequence of families, consisting either entirely of $\\beta$-compact bags or entirely of $s^{1+2\\epsilon}$-assigned bags assigned to distinct nodes of $T$, whose mass satisfies $$\\label{hb:extraction-bound}\n \\mathsf M\\ge\n \\frac{s^\\epsilon}{384\\beta C_1(\\epsilon)C_2(\\alpha)LH}\n \\sum_{t\\in T}\\frac1{|O(t)|}\n                  \\left(\\sum_{e\\in O(t)}a_e\\right)^2.$$ In particular, all losses are functions of $\\alpha,\\epsilon,\\beta$ and $\\lambda$, independent of the number of vertices and hierarchy depth.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-hierarchy-bags"
+  },
+  {
+   "claim_id": "claim-compact-bag-charging",
+   "exact_statement": "Let $G=(V,E)$ be a finite $k$-edge-connected multigraph, and let $X_v\\in Q=[0,1]^h$ for $v\\in V$. Suppose $(\\mathcal F_i)$ is a finite or countable $\\lambda$-geometric sequence of nonempty families of $\\beta$-compact bags, of respective types $(\\delta_i,\\Delta_i)$, where $0<\\lambda\\le 1/12$ and $\\beta\\ge36$. Thus all balls in $\\mathcal F_i$ are mutually disjoint ordinary balls $B_Q(X_v,\\delta_i)$, every bag $D\\in\\mathcal F_i$ has at least two balls and center diameter at most $\\Delta_i$, and $$\\beta\\Delta_i\\le |D|\\delta_i,\n \\qquad\n \\Delta_{i+1}\\le\\lambda\\delta_i.$$ Then $$\\label{hc:conclusion}\n \\frac{k}{4}\\sum_i\\delta_i\\sum_{D\\in\\mathcal F_i}|D|\n \\le \\sum_{e\\in E}\\|X_e\\|_1,\n \\qquad X_{\\{u,v\\}}=X_u-X_v.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-hierarchy-compact"
+  },
+  {
+   "claim_id": "claim-disjoint-shell-length-bound",
+   "exact_statement": "Let $G=(V,E)$ be a finite $k$-edge-connected multigraph, where $k>0$, and let $X_v\\in Q=[0,1]^h$ for $v\\in V$. Let $\\mathcal Z$ be a finite collection of pairwise disjoint ordinary or hollowed balls in $Q$. For each $H\\in\\mathcal Z$, write $x_H,a_H,b_H$ for its center and numerical inner and outer radii. Suppose there are vertices $u_H,v_H\\in V$ such that $$\\label{hc:witness}\n \\|X_{u_H}-x_H\\|_1\\le a_H,\n \\qquad \\|X_{v_H}-x_H\\|_1\\ge b_H.$$ Then $$\\label{hc:length-bound}\n k\\sum_{H\\in\\mathcal Z}(b_H-a_H)\n \\le \\sum_{\\{u,v\\}\\in E}\\|X_u-X_v\\|_1.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-hc-length"
+  },
+  {
+   "claim_id": "claim-assigned-bag-charging",
+   "exact_statement": "Let $X:V\\to\\{0,1\\}^{d}$, and let $\\mathcal T$ be a locally $k$-connected hierarchy of $G$, with selected nonroot nodes $T$ satisfying $|O(t)|\\ge k\\lambda|P(t)|$ for $t\\in T$. Suppose $\\mathcal F_1,\\ldots,\\mathcal F_m$ is a $\\lambda$-geometric sequence of families of $(24C_3/k)$-assigned bags, of types $(\\delta_i,T_i)$, with $T_i\\subseteq T$. If $$C_4\\ge3,\\qquad \\lambda\\le\\frac1{6C_4},\\qquad\n C_3\\ge2\\bigl((C_4+1)+4(C_4+2)^2\\bigr),$$ then $$\\label{ha:assigned-bound}\n \\sum_{\\{u,v\\}\\in E}\\|X_u-X_v\\|_1\n \\ \\ge\\ \\frac{k}{8}\\frac{C_4}{12C_3}\n \\sum_{i=1}^m\\delta_i\\sum_{t\\in T_i}|\\operatorname{Bag}_t|.$$ In particular, one may take $C_4=3$, $C_3=10^4$ and $\\lambda\\le1/18$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-hierarchy-assigned"
+  },
+  {
+   "claim_id": "claim-edge-disjoint-paths",
+   "exact_statement": "If every cut separating distinct vertices $u,v$ of an undirected multigraph has at least $q$ edges, where $q$ is a positive integer, then the graph has $q$ pairwise edge-disjoint $u$–$v$ paths.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ha-edge-paths"
+  },
+  {
+   "claim_id": "claim-predecessor-pruning-cost",
+   "exact_statement": "Suppose $\\delta_{i+1}\\le\\lambda\\delta_i$ with $\\lambda\\le1/2$, $|O(t)|\\ge k\\lambda|P(t)|$ for the selected hierarchy nodes, and each bag is at least $C_3/k$-assigned. For $s\\in T_\\ell$, $$\\sum_i\\delta_i\n   |\\{B\\in\\mathcal B_i:B\\text{ is noninsertable by }s\\}|\n \\le \\frac{4}{C_3}\\delta_\\ell|\\operatorname{Bag}_s|.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-ha-pruning"
+  },
+  {
+   "claim_id": "claim-valid-labeling-energy",
+   "exact_statement": "Every finite collection $Z$ with a valid labeling satisfies $$\\frac{k}{4}\\sum_{B\\in Z}\\operatorname{width}(B)\n       \\le \\sum_{\\{v,w\\}\\in E}\\|X_v-X_w\\|_1.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-ha-labeled-energy"
+  },
+  {
+   "claim_id": "claim-insertable-bag-arrangement",
+   "exact_statement": "Let $\\mathcal T$ be a locally $k$-connected hierarchy, with selected nonroot nodes $T$ satisfying $|O(t)|\\ge k\\lambda|P(t)|$ for $t\\in T$. Let $\\mathcal F_i$ be a $\\lambda$-geometric sequence of families of $12C_3/k$-assigned bags of type $(\\delta_i,T_i)$, where the $T_i\\subseteq T$ are pairwise disjoint. Suppose all input balls are insertable and $$C_4\\ge3,\\qquad \\lambda\\le\\frac{1}{6C_4},\\qquad\n C_3\\ge2\\bigl((C_4+1)+4(C_4+2)^2\\bigr).$$ Then there is a finite valid collection $Z$ of labeled ordinary and hollow balls, with centers inherited from the input balls, such that $$\\label{ha:arrangement-width}\n \\sum_{B\\in Z}\\operatorname{width}(B)\n \\ge \\frac{C_4}{12C_3}\n       \\sum_i\\delta_i\\sum_{t\\in T_i}|\\operatorname{Bag}_t|.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-ha-insertable-arrangement"
+  },
+  {
+   "claim_id": "claim-insertable-input-validity",
+   "exact_statement": "An insertable ball $B=B(X_u,\\delta_i)\\in\\operatorname{Bag}_t$ with the input labels above satisfies <a href=\"#ha:L1\" data-reference-type=\"ref\" data-reference=\"ha:L1\">[ha:L1]</a>–<a href=\"#ha:L3\" data-reference-type=\"ref\" data-reference=\"ha:L3\">[ha:L3]</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ha-input-valid"
+  },
+  {
+   "claim_id": "claim-conflict-domain-ancestor",
+   "exact_statement": "While $\\operatorname{Bag}_t\\in\\mathcal F_\\ell$ is being processed, if a candidate $A\\in\\operatorname{Bag}_t$ and a current record $B$ have intersecting conflict domains, then $t(B)$ is a weak ancestor of $t$, and $t\\in C(B)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ha-ancestor"
+  },
+  {
+   "claim_id": "claim-unique-interior-record",
+   "exact_statement": "Under the preceding hypotheses, suppose $C(A)\\cap C(B)\\ne\\varnothing$. If another current record $D\\ne B$ intersects $B$, then $C(A)\\cap C(D)=\\varnothing$. Consequently a candidate is interior to at most one current record.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ha-unique-interior"
+  },
+  {
+   "claim_id": "claim-separation-heredity",
+   "exact_statement": "Suppose $B,D$ satisfy condition <a href=\"#ha:L4\" data-reference-type=\"ref\" data-reference=\"ha:L4\">35</a>. If a new record $B'$ has support contained in $B$ and $C(B')\\subseteq C(B)$, then $B',D$ also satisfy that condition. A concentric radial restriction of $B$ retaining all its labels also retains conditions <a href=\"#ha:L1\" data-reference-type=\"ref\" data-reference=\"ha:L1\">[ha:L1]</a>–<a href=\"#ha:L3\" data-reference-type=\"ref\" data-reference=\"ha:L3\">[ha:L3]</a>, if it has positive width.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ha-heredity"
+  },
+  {
+   "claim_id": "claim-border-classification-monotonicity",
+   "exact_statement": "During the processing of this phase, a candidate which is a border ball never becomes interior. In particular every border ball retained for the end of a bag’s processing remains a border ball at the end of the phase.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ha-border-monotone"
+  },
+  {
+   "claim_id": "claim-interior-processing-potential",
+   "exact_statement": "Suppose phase $\\ell$ starts with a valid arrangement whose potentials can pay each earlier node $v\\in T_i$, $i<\\ell$, at least $(\\theta/2)|\\operatorname{Bag}_v|\\delta_i$. Interior processing preserves validity and these allocations. At every intermediate state it also pays each completed node $v\\in T_\\ell$ at least $\\theta n_{v,\\infty}\\delta_\\ell$, and the node currently being processed at least $\\theta n_{t,s}\\delta_\\ell$. Each bag finishes with $|\\operatorname{Int}_{t,\\infty}|<|\\operatorname{Bag}_t|/2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ha-construction"
+  },
+  {
+   "claim_id": "claim-phase-shrink-deficit",
+   "exact_statement": "Under <a href=\"#ha:small-excess\" data-reference-type=\"eqref\" data-reference=\"ha:small-excess\">[ha:small-excess]</a>, the total token deficit created by the restrictions satisfies $$\\mathsf D:=\\sum_{B\\in Z}\\bigl(p(B)-q(S(B))\\bigr)\n \\le\\frac12 b\\delta_\\ell.$$ Every summand defining $\\mathsf D$ is nonnegative.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ha-shrink-cost"
+  },
+  {
+   "claim_id": "claim-compact-convex-fixed-point",
+   "exact_statement": "Let $K$ be a nonempty compact convex subset of a finite-dimensional real vector space. Every continuous map $F:K\\to K$ has a fixed point.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-fixedpoint"
+  },
+  {
+   "claim_id": "claim-sperner-parity",
+   "exact_statement": "Label every vertex $v$ of a finite triangulation of $\\Delta_d$ by an integer $\\ell(v)\\in\\{0,\\ldots,d\\}$, with $v_{\\ell(v)}>0$. The number of $d$-simplices whose vertex labels are $0,\\ldots,d$, each occurring once, is odd.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lemma-sperner"
+  }
+ ],
+ "paper": "papers/EN-113-000-0022-2-2026-PR-T4-UK-EX-M1-B-ML-H-0337_PM-174.1_The_strong_thin_tree_conjecture.md",
+ "purpose": "The strong thin tree conjecture",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "28afe2497021356a65fdbc3582af1ddf1d443bbff89738753008757b7fe7c59f",
+   "pm.domains.v2": "53adb1d597b366ad53d0c14dd54323015c5a927bdfe8808fbc7daa1db1d5971f",
+   "pm.edges.v2": "88af85e529aca3865e89bf42b954862df667874c408d44853de7bb06878f8e12",
+   "pm.extraction.v2": "74b250e7eff4cfdece50ab4c9f30ebafc494245726ebc7a8af9a6ef741112258",
+   "pm.formal.v2": "e5981264c3f474e6ac7dbf4e76f308775d18ac2233b7dcda8b61e7a501fb2b84",
+   "pm.limits.v2": "1596f78a64f2f2eb741dfe74980a7c7ade956a49871f69dd870dd1b6497ffd1c",
+   "pm.node.v2": "2532e04ee07b6e0047332de258412f3087affe276c0f4a40cc165828c4385e70",
+   "pm.objects.v2": "0345aa22b3189e7cafe9d1429cb413e43dbc372608cf191f0adab7fbceb72250",
+   "pm.provenance.v2": "95497e7d78f4577630646637b147bc9e9f88b0bcebfcd6eb1d6f259ab9522006",
+   "pm.quantities.v2": "b05d7526dc345fb66c1a366f4f4dbacefe09e1230bd26a3dacc0b00959e56cf8",
+   "pm.reading.v2": "709421a63c61b0da9e0dd549dec91d8431dde77ac283552702decd508ab72129",
+   "pm.roadmap.v2": "16622ffb1178475a9e80a661e09dd523ac846ed062733f3aaf614d50adabcea5",
+   "pm.search.v1": "d0c317c663ea57a6ed1d99ea78d7480126f462e1c7ca6050b270127c43ff2e2c",
+   "pm.triptych.v2": "3273f05846a84dab5e6370096552f523dfbc473314b260292a932ee1fa426ce0"
+  },
+  "canonical_sha256": "b5d5d46fe1793ad2b3103ad7d430b1a29ecdd9a5c5a941a5214fc6fc58e20885",
+  "paper_sha256": "2caf53d0a5f8318e32acfe124774f4f43f6fa0d7e7e9d87efbc418c1e9074e4c",
+  "repaired_body_sha256": "2baef87c5cb95ba403302e05366315b13cffe4686107966a5f7f9b4604f27c71"
+ },
+ "status": "ACTIVE",
+ "subject_id": 13,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "90a165288e4ec39e39512d262192612c6640b8e60c6b8fe63da8fc06e3823130",
+   "receipt_sha256": "4be639b1fb535c008003b5cbe60a431e1469234f7b08ec5fb9fe17e6e17a4af3",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The strong thin tree conjecture"
+}

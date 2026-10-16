@@ -1,0 +1,822 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 751479,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 205673
+ },
+ "coordinate": "EN-101-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-M-0028",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "mathematical_certification_reference",
+   "strength": "weak",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "is *odd* if $\\det r(c)=-1$ for a complex conjugation $c$.",
+     "quote_sha256": "c68cdf641747773d1e4efe944a7b68e304ae637de6c9847d70f7b718ea330f10"
+    }
+   ],
+   "query": "even Galois representations",
+   "reason": "Oddness is a hypothesis."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-lem-solvable-reduction",
+     "quote": "Its two Hodge–Tate weights are equal, which is excluded.",
+     "quote_sha256": "e37e02819c5dfb9db849650056f064a714a6c73781cabaf19718d4215b1b5e08"
+    }
+   ],
+   "query": "equal Hodge–Tate weights",
+   "reason": "The scalar case is excluded by regularity."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "Then $r$ is isomorphic to a Tate twist of the $2$-adic Galois representation associated with a classical cuspidal eigenform.",
+     "quote_sha256": "94d5c962c36be805ef9566ba138b45b8c300929e342614a599fe290adde6bd88"
+    }
+   ],
+   "query": "effective computation of eigenform coefficients",
+   "reason": "The result is existential; no constructive recipe is stated (ABSENT)."
+  }
+ ],
+ "family": "PM-010",
+ "id": "PM-010.3",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-tate-twist-modularity",
+    "statement": "Let $$r:G_{\\mathbb Q}\\longrightarrow\\mathop{\\mathrm{GL}}_2(\\overline{\\mathbb Q}_2)$$ be continuous and irreducible."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-tate-twist-modularity",
+    "statement": "Suppose that $r$ is odd, is unramified outside finitely many primes, and is de Rham at $2$ with distinct Hodge–Tate weights."
+   },
+   {
+    "anchor": "stmt-lem-finite-coefficients",
+    "claim_id": "claim-finite-coefficients",
+    "statement": "A continuous finite-dimensional representation of a profinite group on $\\overline{\\mathbb Q}_2^n$"
+   },
+   {
+    "anchor": "pm-h-12",
+    "claim_id": "claim-solvable-reduction",
+    "statement": "call it *virtually solvable* if the identity component of the reduced Zariski closure of its image is solvable."
+   },
+   {
+    "anchor": "stmt-prop-rep-space",
+    "claim_id": "claim-representation-spaces",
+    "statement": "Let $G$ satisfy $\\Phi_2$, let $\\overline D$ be a continuous two-dimensional determinant over the finite field $k$, and fix a continuous lift $\\chi$ of its determinant character."
+   },
+   {
+    "anchor": "stmt-lem-dimension-comparison",
+    "claim_id": "claim-formal-dimension-comparison",
+    "statement": "Let $X$ be one of the finite-type representation spaces of Proposition <a href=\"#prop:rep-space\" data-reference-type=\"ref\" data-reference=\"prop:rep-space\">4</a>, including any recorded local lines, over an excellent complete local trace-and-character base $R$."
+   },
+   {
+    "anchor": "stmt-lem-dimension-comparison",
+    "claim_id": "claim-formal-dimension-comparison",
+    "statement": "Suppose its generic global representation is absolutely irreducible."
+   },
+   {
+    "anchor": "stmt-lem-formal-point-density",
+    "claim_id": "claim-curves-and-coefficient-points",
+    "statement": "Let $A$ be a complete Noetherian local domain with finite residue field."
+   },
+   {
+    "anchor": "stmt-lem-curve-completion",
+    "claim_id": "claim-curve-completion",
+    "statement": "Let $R$ be the framed deformation ring of $\\overline\\rho$, with the specified determinant and any of the incidence data above."
+   },
+   {
+    "anchor": "stmt-lem-curve-completion",
+    "claim_id": "claim-curve-completion",
+    "statement": "Let $\\mathfrak p$ be the kernel of the enhanced curve map $R[[z]]\\to k[[t]]$."
+   },
+   {
+    "anchor": "stmt-lem-curve-cohomology",
+    "claim_id": "claim-curve-cohomology",
+    "statement": "Let $V$ be a finite-dimensional continuous $K$-representation of a local Galois group or of $G_{F,S}$."
+   },
+   {
+    "anchor": "stmt-prop-relative-presentation",
+    "claim_id": "claim-relative-relation-bounds",
+    "statement": "Let $F$ be totally real of degree $d$, let $S$ contain the real and dyadic places, and let $\\rho$ be a representation over a finite residue field, a curve field as above, or a finite $2$-adic field."
+   },
+   {
+    "anchor": "stmt-prop-relative-presentation",
+    "claim_id": "claim-relative-relation-bounds",
+    "statement": "Use one global frame and a fixed determinant."
+   },
+   {
+    "anchor": "stmt-cor-charzero-line-dimension",
+    "claim_id": "claim-charzero-line-dimension",
+    "statement": "For a two-dimensional representation of $G_{\\mathbb Q_2}$ over a finite $2$-adic field with a chosen invariant line and fixed determinant,"
+   },
+   {
+    "anchor": "stmt-lem-pseudo-bad-loci",
+    "claim_id": "claim-virtually-solvable-loci",
+    "statement": "Let $F$ be totally real of degree $d$, let $S$ contain its dyadic and infinite places, and fix the determinant."
+   },
+   {
+    "anchor": "stmt-lem-pseudo-bad-loci",
+    "claim_id": "claim-virtually-solvable-loci",
+    "statement": "If $F/\\mathbb Q$ is abelian"
+   },
+   {
+    "anchor": "stmt-lem-inertia-basechange",
+    "claim_id": "claim-inertia-basechange",
+    "statement": "Consider finitely many complete deformation or pseudodeformation families over finite-residue coefficient rings, and a finite set of places not above two."
+   },
+   {
+    "anchor": "pm-h-19",
+    "claim_id": "claim-local-component-geometry",
+    "statement": "Fix $d$ real factors and $d$ dyadic factors, the latter all over $\\mathbb Q_2$."
+   },
+   {
+    "anchor": "pm-h-19",
+    "claim_id": "claim-local-component-geometry",
+    "statement": "Choose $u$ odd residue cardinalities $q_j\\equiv1\\pmod4$, and $g\\ge0$."
+   },
+   {
+    "anchor": "stmt-lem-marked-local-base",
+    "claim_id": "claim-simultaneous-marked-factors",
+    "statement": "Over a finite characteristic-two field, take $d$ fixed-determinant real framed factors and $m$ dyadic framed factors whose residual matrices are scalar, with one invariant line recorded at each dyadic factor."
+   },
+   {
+    "anchor": "stmt-prop-completed-forms",
+    "claim_id": "claim-completed-forms-properties",
+    "statement": "For the tame level $U^2$, central character $\\psi=\\chi\\varepsilon$, and full compact forms module $M$ just defined, the following properties hold."
+   },
+   {
+    "anchor": "pm-h-23",
+    "claim_id": "claim-block-comparison",
+    "statement": "Fix a residual factor $\\mathbb T$."
+   },
+   {
+    "anchor": "stmt-lem-simple-growth",
+    "claim_id": "claim-simple-growth",
+    "statement": "Let $k$ be the characteristic-two residue coefficient field of Section"
+   },
+   {
+    "anchor": "pm-h-23",
+    "claim_id": "claim-hecke-component-dimension",
+    "statement": "Fix a residual factor $\\mathbb T$."
+   },
+   {
+    "anchor": "stmt-lem-auxiliary-level",
+    "claim_id": "claim-auxiliary-level",
+    "statement": "Assume that $\\chi$ is unramified at the auxiliary primes."
+   },
+   {
+    "anchor": "stmt-lem-auxiliary-level",
+    "claim_id": "claim-auxiliary-level",
+    "statement": "Localize at a characteristic-two point of the completed Hecke spectrum at which their Frobenii have distinct eigenvalues."
+   },
+   {
+    "anchor": "stmt-lem-forward-basechange",
+    "claim_id": "claim-forward-basechange",
+    "statement": "Let $F'/F$ be a solvable totally real Galois extension split completely at $2$."
+   },
+   {
+    "anchor": "stmt-thm-localized-propagation",
+    "claim_id": "claim-localized-propagation",
+    "statement": "Let $F$ be a totally real solvable field of even degree, completely split at $2$, and let $S$ contain its real and dyadic places and the allowed finite ramification."
+   },
+   {
+    "anchor": "pm-h-27",
+    "claim_id": "claim-auxiliary-prime-bound",
+    "statement": "For a set $Q_n$ of auxiliary primes, let $R_{\\eta,n}$ be the $S$-framed global ring with these local conditions and unrestricted additional ramification at $Q_n$."
+   },
+   {
+    "anchor": "stmt-lem-twist-rank",
+    "claim_id": "claim-twist-rank",
+    "statement": "Increase $h$ so that $b=h-2d+2>0$."
+   },
+   {
+    "anchor": "pm-h-29",
+    "claim_id": "claim-jet-exactness",
+    "statement": "Fix a nonprincipal ultrafilter $\\mathfrak U$ on the positive integers."
+   },
+   {
+    "anchor": "pm-h-29",
+    "claim_id": "claim-patched-regular-sequence",
+    "statement": "Apply the construction to the surjections $B_\\eta\\twoheadrightarrow R_{\\eta,n}$ and their fixed-determinant quotients."
+   },
+   {
+    "anchor": "pm-h-29",
+    "claim_id": "claim-patched-full-support",
+    "statement": "Apply the construction to the surjections $B_\\eta\\twoheadrightarrow R_{\\eta,n}$ and their fixed-determinant quotients."
+   },
+   {
+    "anchor": "sec:fields",
+    "claim_id": "claim-field-preparation",
+    "statement": "Let $\\Sigma$ be a finite set of odd rational primes, and let $\\bar r$ be a semisimple representation of $G_{\\mathbb Q}$ over a sufficiently large finite field $k$ of characteristic two, unramified outside $\\Sigma\\cup\\{2\\}$."
+   },
+   {
+    "anchor": "stmt-lem-one-prime-genus",
+    "claim_id": "claim-one-prime-genus",
+    "statement": "Suppose that $K/E$ is a quadratic extension of totally real fields and that exactly one finite prime of $E$ ramifies."
+   },
+   {
+    "anchor": "stmt-lem-selmer-switch",
+    "claim_id": "claim-selmer-switch",
+    "statement": "Let $X$ be a Selmer group over a number field $E$ with one-dimensional coefficient $k_0(\\beta)$, and let $Y$ be the Selmer group with coefficient $k_0(\\beta^{-1})$ and orthogonal local conditions."
+   },
+   {
+    "anchor": "stmt-lem-selmer-switch",
+    "claim_id": "claim-selmer-switch",
+    "statement": "Let $T$ be a finite set of odd places of $E$ where the coefficient character is trivial and the residue cardinality is one modulo four."
+   },
+   {
+    "anchor": "stmt-lem-field-evaluations",
+    "claim_id": "claim-field-evaluations",
+    "statement": "Fix finitely many cohomology classes over $B$ with coefficients $k_0(\\beta)$, where $\\beta=\\alpha$ or $\\alpha^{-1}$, and impose the preceding splitting conditions in $K_\\alpha E_2$."
+   },
+   {
+    "anchor": "stmt-lem-disjoint-conjugate-selmer",
+    "claim_id": "claim-disjoint-conjugate-selmer",
+    "statement": "As long as all conductors used so far split in $B$ and both $X_0^\\beta$ are zero,"
+   },
+   {
+    "anchor": "stmt-thm-potential-promodularity",
+    "claim_id": "claim-potential-promodularity",
+    "statement": "Let $r$ satisfy the hypotheses of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> and be not virtually solvable."
+   },
+   {
+    "anchor": "stmt-lem-modular-seed",
+    "claim_id": "claim-modular-seed",
+    "statement": "Every semisimple two-dimensional residual representation arising from the target"
+   },
+   {
+    "anchor": "stmt-lem-good-connectedness",
+    "claim_id": "claim-good-connectedness",
+    "statement": "Let $F$, the marked set, and the fixed-determinant representation scheme $Y$ be as above, with the degree inequalities <a href=\"#eq:degree-choices\" data-reference-type=\"eqref\" data-reference=\"eq:degree-choices\">[eq:degree-choices]</a>."
+   },
+   {
+    "anchor": "stmt-lem-good-connectedness",
+    "claim_id": "claim-good-connectedness",
+    "statement": "Let $y$ be a transverse closed residual point of $Y$, with finite residue field, and let $R'_y$ be the completion of $Y$ at $y$."
+   },
+   {
+    "anchor": "pm-h-40",
+    "claim_id": "claim-chart-propagation",
+    "statement": "Over the characteristic-two fixed-determinant pseudo-base, take the finite-type framed representation scheme and adjoin a local invariant projective line at every mark."
+   },
+   {
+    "anchor": "pm-h-40",
+    "claim_id": "claim-transverse-fiber",
+    "statement": "Call the resulting scheme $Y$."
+   },
+   {
+    "anchor": "stmt-lem-higher-line",
+    "claim_id": "claim-higher-line",
+    "statement": "is reducible and has distinct cyclotomic exponents"
+   },
+   {
+    "anchor": "stmt-lem-ordinary-character-family",
+    "claim_id": "claim-ordinary-character-family",
+    "statement": "Fix $\\chi=\\det r$."
+   },
+   {
+    "anchor": "pm-h-44",
+    "claim_id": "claim-ordinary-weight-finiteness",
+    "statement": "Fix the Hecke summand of the completed forms over $F$ carrying the restricted family, and write $\\mathcal H$ for its torsion function space with coefficients $E/\\mathcal O$."
+   },
+   {
+    "anchor": "stmt-lem-joint-image",
+    "claim_id": "claim-joint-image",
+    "statement": "Let $\\mathscr D$ be the domain of Lemma <a href=\"#lem:ordinary-character-family\" data-reference-type=\"ref\" data-reference=\"lem:ordinary-character-family\">39</a>, let $M=W^\\vee$ be the ordinary module above, and use the weight map $\\Lambda\\to\\mathscr D$ defined by $[5]\\mapsto\\eta_1(5)$."
+   },
+   {
+    "anchor": "stmt-lem-joint-image",
+    "claim_id": "claim-joint-image",
+    "statement": "Suppose a dense set of finite-coefficient characteristic-zero points of $\\mathscr D$ occurs in the joint trace-and-weight support of $M$, with one of the finitely many assignments $s$ in <a href=\"#eq:two-ordinary-orders\" data-reference-type=\"eqref\" data-reference=\"eq:two-ordinary-orders\">[eq:two-ordinary-orders]</a> at each point."
+   },
+   {
+    "anchor": "pm-h-46",
+    "claim_id": "claim-dense-thorne-points",
+    "statement": "Let $w=\\operatorname{exp}(\\chi)$."
+   },
+   {
+    "anchor": "stmt-lem-eigenvector-specialization",
+    "claim_id": "claim-eigenvector-specialization",
+    "statement": "Let $S$ be the joint trace-and-weight image algebra acting on $M=W^\\vee$ at the fixed tame level above, and let $\\mathcal A$ be its finite faithful action algebra containing $U^{\\pm1}$, as in Proposition <a href=\"#prop:ordinary-weight-finiteness\" data-reference-type=\"ref\" data-reference=\"prop:ordinary-weight-finiteness\">40</a>."
+   },
+   {
+    "anchor": "stmt-lem-eigenvector-specialization",
+    "claim_id": "claim-eigenvector-specialization",
+    "statement": "Let a finite-coefficient characteristic-zero point of $\\mathop{\\mathrm{Spec}}S$ belong to the support of $M$."
+   },
+   {
+    "anchor": "stmt-lem-polynomial-orbit",
+    "claim_id": "claim-polynomial-orbit",
+    "statement": "Let $V$ be a continuous unitary Banach representation of $G_2$ over a finite extension $E'/\\mathbb Q_2$."
+   },
+   {
+    "anchor": "stmt-lem-polynomial-orbit",
+    "claim_id": "claim-polynomial-orbit",
+    "statement": "Suppose $0\\ne f\\in V$ is fixed by $N_0^-$, has torus character with integral exponents $e_{1,v},e_{2,v}$ on a sufficiently small open subgroup, and satisfies $Uf=\\alpha f$ with $\\alpha\\in\\mathcal O'^\\times$."
+   },
+   {
+    "anchor": "stmt-lem-polynomial-orbit",
+    "claim_id": "claim-polynomial-orbit",
+    "statement": "$\\delta_v=e_{2,v}-e_{1,v}\\ge0$ for all $v$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "classical modularity up to Tate twist",
+    "evidence": [
+     {
+      "anchor": "pm-h-4",
+      "quote": "The central problem is to pass from this occurrence statement to a classical cuspidal form with the prescribed Galois representation.",
+      "quote_sha256": "b422de71667f91f4229597655e5982ce6fd1f9c519fed2dcd4bb54de9e8b091c"
+     }
+    ],
+    "requires_concepts": [
+     "potential pro-modularity",
+     "locally algebraic vector",
+     "solvable descent"
+    ],
+    "supporting_pm_ids": [
+     "PM-010.3"
+    ]
+   },
+   {
+    "concept": "localized propagation",
+    "evidence": [
+     {
+      "anchor": "sec:propagation",
+      "quote": "The argument follows the auxiliary-level framework of Taylor–Wiles",
+      "quote_sha256": "efc9aa6cf6aa799ab4770bec19bd27ea0c3c645feba2f47405975269e8fe71aa"
+     }
+    ],
+    "requires_concepts": [
+     "curve completion",
+     "auxiliary-level modules",
+     "finite jet patching"
+    ],
+    "supporting_pm_ids": [
+     "PM-010.3"
+    ]
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-tate-twist-modularity",
+   "exact_statement": "Let $$r:G_{\\mathbb Q}\\longrightarrow\\mathop{\\mathrm{GL}}_2(\\overline{\\mathbb Q}_2)$$ be continuous and irreducible. Suppose that $r$ is odd, is unramified outside finitely many primes, and is de Rham at $2$ with distinct Hodge–Tate weights. Then $r$ is isomorphic to a Tate twist of the $2$-adic Galois representation associated with a classical cuspidal eigenform.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-finite-coefficients",
+   "exact_statement": "A continuous finite-dimensional representation of a profinite group on $\\overline{\\mathbb Q}_2^n$ is defined over a finite extension of $\\mathbb Q_2$ and admits a stable lattice there.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-finite-coefficients"
+  },
+  {
+   "claim_id": "claim-solvable-reduction",
+   "exact_statement": "Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> holds for virtually solvable representations. A representation satisfying its hypotheses and not virtually solvable remains absolutely irreducible and not virtually solvable over every finite extension of $\\mathbb Q$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-solvable-reduction"
+  },
+  {
+   "claim_id": "claim-representation-spaces",
+   "exact_statement": "Let $G$ satisfy $\\Phi_2$, let $\\overline D$ be a continuous two-dimensional determinant over the finite field $k$, and fix a continuous lift $\\chi$ of its determinant character. The following statements hold.*\n\n1.  *The determinant deformation functor is represented by a complete Noetherian local $\\mathcal O$-algebra $R^{\\mathrm{ps}}$. There is a finite $R^{\\mathrm{ps}}$-algebra $\\mathscr E$ carrying its universal Cayley–Hamilton representation. Matrix representations of $\\mathscr E$ compatible with the universal determinant form an affine scheme of finite type over $R^{\\mathrm{ps}}$. Its completion at a closed residual matrix representation is that representation’s framed deformation space.*\n\n2.  *Invariant lines at finitely many closed subgroups can be imposed by closed incidence conditions in products of projective lines. On the absolutely irreducible global locus, existence of such a line with a specified character is closed in the trace and character parameters.*\n\n3.  *Suppose the subgroups’ abelianizations have finitely generated maximal pro-$2$ quotients. Adjoining the characters on the specified lines gives a finite extension of the completed trace-and-determinant image.*\n\n4.  *At an absolutely irreducible representation over a coefficient field, determinants classify unframed deformations. After a splitting extension, the framed fiber is a conjugacy orbit of dimension three.*\n\n*These assertions do not require the residual determinant to be multiplicity-free.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-rep-space"
+  },
+  {
+   "claim_id": "claim-formal-dimension-comparison",
+   "exact_statement": "Let $X$ be one of the finite-type representation spaces of Proposition <a href=\"#prop:rep-space\" data-reference-type=\"ref\" data-reference=\"prop:rep-space\">4</a>, including any recorded local lines, over an excellent complete local trace-and-character base $R$. Let $x$ be a closed point above the closed point of $R$, and let $P$ be a prime of $\\widehat{\\mathcal O}_{X,x}$. Suppose its generic global representation is absolutely irreducible. If $p=P\\cap R$, then $$\\dim\\bigl(\\widehat{\\mathcal O}_{X,x}/P\\bigr)\n \\leq \\dim(R/p)+3+\\ell,$$ where $\\ell$ is the number of recorded lines not known to have distinct characters generically. A line with distinct characters contributes zero to this bound. The analogous statement holds with any established bound for the relevant generic representation fiber.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-dimension-comparison"
+  },
+  {
+   "claim_id": "claim-curves-and-coefficient-points",
+   "exact_statement": "Let $A$ be a complete Noetherian local domain with finite residue field.*\n\n1.  *If $A$ has characteristic two and positive dimension, then its dimension-one domain quotients have generic points dense in $\\mathop{\\mathrm{Spec}}A$. Their normalizations are $k'[[t]]$ for finite extensions $k'/k$.*\n\n2.  *If $A$ is a flat $\\mathcal O$-algebra, continuous maps from $A$ to rings of integers in finite extensions of $E$ are dense on $\\mathop{\\mathrm{Spec}}A$.*\n\n*In either assertion the points can be chosen outside any prescribed proper closed subset.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-formal-point-density"
+  },
+  {
+   "claim_id": "claim-curve-completion",
+   "exact_statement": "Let $R$ be the framed deformation ring of $\\overline\\rho$, with the specified determinant and any of the incidence data above. Let $\\mathfrak p$ be the kernel of the enhanced curve map $R[[z]]\\to k[[t]]$. Then $$R_*:=\\widehat{(R[[z]])_{\\mathfrak p}}$$ classifies continuous deformations of $\\rho_*$ to finite-length local Artinian $\\mathcal L$-algebras with residue $K$. This identification commutes with restriction to local groups, with frames and invariant lines, and with fixing the determinant. The analogous assertion holds for determinants; on the absolutely irreducible locus it agrees with unframed matrix deformation theory.*\n\n*If a component of the original complete local ring has dimension $e$ and contains the curve, its enhanced completed localization has dimension $e$. At a characteristic-zero coefficient point the corresponding assertion uses the usual completion over its finite $2$-adic coefficient field, without adjoining $z$; a horizontal integral component of dimension $e$ then gives a completed local component of dimension $e-1$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-curve-completion"
+  },
+  {
+   "claim_id": "claim-curve-cohomology",
+   "exact_statement": "Let $V$ be a finite-dimensional continuous $K$-representation of a local Galois group or of $G_{F,S}$. Continuous cohomology is finite dimensional and satisfies local duality, local and global Euler characteristics, and Poitou–Tate duality with arbitrary linear local conditions. The twist in characteristic two is the residual Tate twist. At real places local duality uses Tate cohomology; the $h^0_v$ appearing in the Euler and Selmer formulas below still denotes the dimension of ordinary invariants. In particular, if $F$ is totally real of degree $d$ and $\\dim_KV=r$, then $$\\begin{aligned}\nh^0_v(V)-h^1_v(V)+h^2_v(V)&=-r[F_v:\\mathbb Q_2]\n                       &&(v\\mid2),\\\\\nh^0(V)-h^1(V)+h^2(V)&=-rd+\\sum_{v\\mid\\infty}h^0_v(V).\n\\label{eq:global-euler-curve}\n\\end{aligned}$$ At a real place the local contribution to a Selmer dimension difference is $\\dim L_v-h^0_v(V)$, where $L_v\\subset H^1(F_v,V)$. The same formulas, with the usual real-place interpretation, hold for finite $2$-adic coefficient fields.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-curve-cohomology"
+  },
+  {
+   "claim_id": "claim-relative-relation-bounds",
+   "exact_statement": "Let $F$ be totally real of degree $d$, let $S$ contain the real and dyadic places, and let $\\rho$ be a representation over a finite residue field, a curve field as above, or a finite $2$-adic field. Use one global frame and a fixed determinant. Let $T\\subset S$ consist of all real places and $m$ dyadic places, each isomorphic to $\\mathbb Q_2$. Over the completed product of the unrestricted local framed deformation rings at $T$, the global framed ring has a power-series presentation with $g$ relative variables and $r$ relations satisfying $$\\label{eq:relative-one-frame}\ng-r\\ge 3-6m-h^0\\bigl(D^\\vee(1)\\bigr).$$ Local quotient conditions and local line charts may then be imposed by base change without changing this bound. This includes replacing the local base by its reduction.*\n\n\n*For the variable-determinant problem with independent frames at the places of $S$, the relative tangent dimension over the local framed base is $$\\label{eq:relative-independent-frames}\nh^1_{\\mathrm{Sel}}(\\mathop{\\mathrm{ad}}\\rho)\n +\\sum_{v\\in S}h^0_v(\\mathop{\\mathrm{ad}}\\rho)-h^0(\\mathop{\\mathrm{ad}}\\rho),$$ where the Selmer condition is zero at $S$ and any other prescribed conditions are included in the Selmer group. On the absolutely irreducible locus, forgetting these independent frames has smooth fiber dimension $4|S|-1$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-relative-presentation"
+  },
+  {
+   "claim_id": "claim-charzero-line-dimension",
+   "exact_statement": "For a two-dimensional representation of $G_{\\mathbb Q_2}$ over a finite $2$-adic field with a chosen invariant line and fixed determinant, every component of its framed line-deformation chart has dimension at least five. The odd fixed-determinant real chart has dimension two. In particular, over $\\mathbb Q$, the relative bound for these two local charts is $-3$ whenever $h^0(D^\\vee(1))=0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-charzero-line-dimension"
+  },
+  {
+   "claim_id": "claim-virtually-solvable-loci",
+   "exact_statement": "Let $F$ be totally real of degree $d$, let $S$ contain its dyadic and infinite places, and fix the determinant. In the characteristic-two pseudodeformation space, the irreducible dihedral curve points lie in a closed subset of dimension at most $d$. Finite-projective-image curve points give only the residual pseudorepresentation. If $F/\\mathbb Q$ is abelian, the reducible locus is closed and has dimension at most one.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-pseudo-bad-loci"
+  },
+  {
+   "claim_id": "claim-inertia-basechange",
+   "exact_statement": "Consider finitely many complete deformation or pseudodeformation families over finite-residue coefficient rings, and a finite set of places not above two. After a fixed finite local extension at each place, all their field-valued representations have unipotent inertia. For a characteristic-two curve in such a family whose determinant has finite image, imposing the residual value of a Frobenius trace makes the local image finite.*\n\n*Any further finite local extensions needed to kill these finite images, to kill the finitely many inertial types, to make the fixed determinant unramified, or to arrange residue cardinalities congruent to $1$ modulo $4$, can be realized inside a totally real solvable base change which splits completely at the dyadic places. One may take its Galois closure over $\\mathbb Q$. New ramification of the base field away from the original allowed set creates no new ramification of the restricted representations.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-inertia-basechange"
+  },
+  {
+   "claim_id": "claim-local-component-geometry",
+   "exact_statement": "The ring $A^{\\mathrm{rd}}$ is a flat complete-intersection normal domain over $\\mathcal L$, of dimension $1+8d$, and its special fiber is a normal domain of dimension $8d$. Set $$e=1+8d+4u+g.$$ Then the following statements hold for the model <a href=\"#eq:tame-model\" data-reference-type=\"eqref\" data-reference=\"eq:tame-model\">[eq:tame-model]</a>.*\n\n1.  *$\\mathop{\\mathrm{Spec}}B_i$ is irreducible of dimension $e$, and its unique irreducible component is horizontal.*\n\n2.  *The two rings have a canonical common special fiber, compatible with their universal matrices and the variables $X_1,\\ldots,X_g$. Its irreducible components have dimension $e-1$ and are indexed by a choice, at each tame place, of the unramified component or the closure of the nontrivial-unipotent component.*\n\n3.  *The irreducible components of $\\mathop{\\mathrm{Spec}}B_1$ are horizontal and have dimension $e$. They are indexed by the same choices. The specialization of each has precisely its corresponding special-fiber component as underlying support. In particular the generic point of a special-fiber component lies on exactly one component of $\\mathop{\\mathrm{Spec}}B_1$.*\n\n*The assertions remain valid after finite extension of the constants and curve field and the resulting enhanced completion. No condition on the dyadic curve representations is required.",
+   "kind": "classification",
+   "statement_anchor": "stmt-prop-local-geometry"
+  },
+  {
+   "claim_id": "claim-simultaneous-marked-factors",
+   "exact_statement": "Over a finite characteristic-two field, take $d$ fixed-determinant real framed factors and $m$ dyadic framed factors whose residual matrices are scalar, with one invariant line recorded at each dyadic factor. The determinant is fixed, and after the residual scalar twist its dyadic reduction is one. The reduction of their completed local product is an integral complete-intersection base of dimension $$2d+5m.$$ It remains integral after a finite extension of the residue field. Equivalently, one may first kill the nilpotent torsion parameters in the diagonal character rings; the resulting completed product is already reduced and integral and has the same spectrum as the original product.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-marked-local-base"
+  },
+  {
+   "claim_id": "claim-completed-forms-properties",
+   "exact_statement": "For the tame level $U^2$, central character $\\psi=\\chi\\varepsilon$, and full compact forms module $M$ just defined, the following properties hold. In the second assertion weights and local parameters use the normalization of Section <a href=\"#sec:preliminaries\" data-reference-type=\"ref\" data-reference=\"sec:preliminaries\">2</a>.*\n\n1.  *For a sufficiently small product $K$ of uniform open subgroups of $\\mathop{\\mathrm{SL}}_2(F_v)$, the full compact module $M$ is finite free over $\\mathcal O[[K]]$. The integral and torsion function spaces are admissible and commute with reduction of coefficients.*\n\n2.  *Locally algebraic vectors are classical definite quaternionic forms of the corresponding algebraic weight. Their regular noncharacter eigenpackets transfer to Hilbert cuspidal eigenforms. They have Galois representations of determinant $\\chi$, with the local compatibility described below.*\n\n3.  *The regular classical vectors are dense in the Banach space. They remain dense if, at each $v\\mid2$, one fixes a smooth principal-series type with two distinct inertial characters and varies the algebraic factor with the prescribed central degree.*\n\n4.  *Every residual local factor $\\mathbb T$ of the completed Hecke algebra away from $S$ is a complete quotient of $R_F^{\\mathrm{ps},\\chi}$. It is reduced and $\\mathcal O$-torsion-free, and its spectrum is the closure of its classical coefficient points.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-completed-forms"
+  },
+  {
+   "claim_id": "claim-block-comparison",
+   "exact_statement": "The residual Hecke summand belongs to the product block just specified. The exact projective-generator functor gives $$L=\\mathop{\\mathrm{Hom}}_{\\mathrm{cts},G_2}(P,M),$$ taken in the compact dual category of the specified product block, with the right $E_{\\mathrm{loc}}$-action by precomposition. It is faithful over $\\mathbb T$, finite over $R_{\\mathrm{loc}}^{\\mathrm{ps}}$, and finite over $\\mathbb T$. The local pseudodeformation action on $L$ is the restriction of the global Galois action, with the stated cyclotomic twist. In particular, $\\mathbb T$ is finite over $R_{\\mathrm{loc}}^{\\mathrm{ps}}$.*\n\n*At a coefficient point $x:\\mathbb T\\to E'$, after finite extension of $E'$, its Banach Hecke eigenspace contains $$\\widehat\\bigotimes_{v\\mid2}\\Pi_v,$$ where $\\Pi_v$ is an irreducible unitary Banach representation with local parameter $(r_x|_{G_{F_v}}\\otimes\\varepsilon)^{\\mathrm{ss}}$, of determinant $\\chi_v\\varepsilon^2$, in the block normalization of Section <a href=\"#sec:preliminaries\" data-reference-type=\"ref\" data-reference=\"sec:preliminaries\">2</a>. If every local parameter is absolutely irreducible, de Rham, and regular, the eigenspace has a nonzero locally algebraic vector. If the untwisted parameter at $v$ is $\\gamma_{1,v}\\oplus\\gamma_{2,v}$, with ratio outside $\\{1,\\varepsilon,\\varepsilon^{-1}\\}$, the possibilities are the continuous unnormalized upper-Borel inductions $$\\mathop{\\mathrm{Ind}}_B^{\\mathop{\\mathrm{GL}}_2(\\mathbb Q_2)}\n       (\\gamma_{i,v}\\varepsilon\\otimes\\gamma_{j,v}),\n \\qquad \\{i,j\\}=\\{1,2\\}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-block-comparison"
+  },
+  {
+   "claim_id": "claim-simple-growth",
+   "exact_statement": "Let $k$ be the characteristic-two residue coefficient field of Section <a href=\"#sec:preliminaries\" data-reference-type=\"ref\" data-reference=\"sec:preliminaries\">2</a>. The compact dual of an absolutely irreducible admissible smooth $k$-representation of $\\mathop{\\mathrm{GL}}_2(\\mathbb Q_2)$ with central character has growth degree at most one on a sufficiently deep determinant-one compact subgroup. Finite-length objects for $d$ factors have growth degree at most $d$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-simple-growth"
+  },
+  {
+   "claim_id": "claim-hecke-component-dimension",
+   "exact_statement": "For every irreducible component $C$ of $\\mathop{\\mathrm{Spec}}\\mathbb T$, $$\\dim C\\ge1+2d.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-hecke-dimension"
+  },
+  {
+   "claim_id": "claim-auxiliary-level",
+   "exact_statement": "Assume that $\\chi$ is unramified at the auxiliary primes. Localize at a characteristic-two point of the completed Hecke spectrum at which their Frobenii have distinct eigenvalues. The point may be the generic point of an enhanced curve, rather than the original finite-field residual point. The following assertions hold for the localized completed-forms block modules, and continue to hold after the coefficient extensions, completions, and smooth framings used in Section <a href=\"#sec:propagation\" data-reference-type=\"ref\" data-reference=\"sec:propagation\">5</a>.*\n\n1.  *The auxiliary-level module is flat over $\\mathcal O[\\Delta]$. Diamond augmentation is the Iwahori module; after localization at the indicated point it is the direct sum of $2^h$ copies of the old hyperspecial module, with its Galois-ring action factoring through the old unramified quotient.*\n\n2.  *If $U_j$ is a diamond generator and $\\tau_j$ is the corresponding tame inertia element, then $$U_j^2-T(\\tau_j)U_j+1=0.$$ Congruent tame transformation characters give isomorphic residue modules with the same deformation actions.*\n\n3.  *A quadratic character trivial above $2$ and at infinity, unramified away from the auxiliary primes, and factoring through the auxiliary character quotient, acts by twisting forms. It gives an actual semilinear isomorphism of the block module with its Galois twist, preserving the central character, the level, and the characteristic-two completion point.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-auxiliary-level"
+  },
+  {
+   "claim_id": "claim-forward-basechange",
+   "exact_statement": "Let $F'/F$ be a solvable totally real Galois extension split completely at $2$. The restriction to $F'$ of a pro-modular trace locus over $F$ is pro-modular over $F'$, at one common tame level for the whole restricted locus. If all its bad inertial types are killed, this level can be taken Iwahori at the bad non-dyadic primes and hyperspecial elsewhere away from $2$. For a general solvable totally real extension split completely at $2$, the restricted locus is potentially pro-modular.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-forward-basechange"
+  },
+  {
+   "claim_id": "claim-localized-propagation",
+   "exact_statement": "Let $F$ be a totally real solvable field of even degree, completely split at $2$, and let $S$ contain its real and dyadic places and the allowed finite ramification. Fix the determinant $\\chi=\\det r=\\chi_{\\mathrm{fin}}\\varepsilon^w$ of a target $r$ as in Section <a href=\"#sec:preliminaries\" data-reference-type=\"ref\" data-reference=\"sec:preliminaries\">2</a>, a semisimple residual representation with determinant $\\bar\\chi$, and let $R_F^{\\mathrm{ps},\\chi}$ be the corresponding complete local global pseudodeformation ring. Let $C$ be a characteristic-two curve in $\\mathop{\\mathrm{Spec}}R_F^{\\mathrm{ps},\\chi}$. Suppose that $C$ is potentially pro-modular, that its generic representation is not virtually solvable, and that its local images at the non-dyadic finite places in $S$ are finite. Every irreducible closed locus of $\\mathop{\\mathrm{Spec}}R_F^{\\mathrm{ps},\\chi}$ containing $C$ is potentially pro-modular, with ramification allowed only at the specified set $S$ before base change.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-thm-localized-propagation"
+  },
+  {
+   "claim_id": "claim-auxiliary-prime-bound",
+   "exact_statement": "There is a sufficiently large integer $h$, independent of $n$, and sets $Q_n$ of $h$ primes outside $S$ such that:*\n\n1.  *every prime in $Q_n$ splits in $F(\\zeta_{2^n},2^{1/2^n})$ and has residue cardinality $1$ modulo $2^n$;*\n\n2.  *its $\\rho_*$-Frobenius is regular semisimple, with both eigenvalues in one fixed finite extension of $K$;*\n\n\n3.  *there are surjections $$\\label{eq:patching-presentation}\n     B_\\eta:=R_{\\mathrm{loc},\\eta}[[X_1,\\ldots,X_g]]\n     \\twoheadrightarrow R_{\\eta,n},\\qquad g=2h+1.$$*\n\n*The two sets of maps in <a href=\"#eq:patching-presentation\" data-reference-type=\"eqref\" data-reference=\"eq:patching-presentation\">[eq:patching-presentation]</a>, for $\\eta=1,i$, can be chosen to agree modulo $\\varpi$. For each $\\eta$, their composites with $R_{\\eta,n}\\twoheadrightarrow R_\\eta$ can also be chosen independently of $n$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-auxiliary-primes"
+  },
+  {
+   "claim_id": "claim-twist-rank",
+   "exact_statement": "Increase $h$ so that $b=h-2d+2>0$. There are quotients $$A_n=(\\mathbb Z/2^{a_n}\\mathbb Z)^b,\\qquad a_n\\longrightarrow\\infty,$$ of the ray class groups defining characters trivial at every dyadic and real place and unramified outside $Q_n$. At $Q_n$ they use only the residue-unit quotients of order $2^n$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-twist-rank"
+  },
+  {
+   "claim_id": "claim-jet-exactness",
+   "exact_statement": "The following assertions hold.*\n\n1.  *The ring $B^*$ is complete noetherian local, and $B\\to B^*$ is faithfully flat. For fixed finite modules the construction is exact and equals extension of scalars. It preserves their support dimensions. If $B$ is a domain, so is $B^*$.*\n\n2.  *For varying quotients of $B$ and modules generated by a bounded number of elements, the patched objects are finite over $B^*$. Surjections and cokernels of a fixed finite number of compatible operators commute with patching.*\n\n\n3.  *Let $(D,\\mathfrak a)$ be a fixed noetherian local ring and $C$ a fixed finite $D$-module. For arbitrary finite-module extensions $$0\\longrightarrow P_n\\longrightarrow H_n\\longrightarrow C\n     \\longrightarrow0$$ there is a constant $c$, independent of the extension, such that $$\\label{eq:uniform-artin-rees}\n     P_n\\cap\\mathfrak a^jH_n\\subseteq\\mathfrak a^{j-c}P_n\n     \\quad(j\\geq c).$$ Thus a filtration of fixed length with fixed successive quotients patches exactly whenever its ambient jet filtration is uniformly cofinal with the $\\mathfrak a$-adic filtrations on its pieces.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-jet-exactness"
+  },
+  {
+   "claim_id": "claim-patched-regular-sequence",
+   "exact_statement": "On $N_{\\eta,\\infty}$ the sequence $\\varpi,V_1,\\ldots,V_h$ is regular. Moreover $$\\begin{aligned}\n \\dim\\mathop{\\mathrm{Supp}}_{R_{\\eta,\\infty}}N_{\\eta,\\infty}\n       &\\geq2d+4s+h,                                  \\label{eq:patched-dimension}\\\\\n N_{\\eta,\\infty}/(V_1,\\ldots,V_h)N_{\\eta,\\infty}\n       &\\simeq (N_\\eta^{\\oplus2^h})^*.                \\label{eq:patched-augmentation}\n\\end{aligned}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-patched-regular-sequence"
+  },
+  {
+   "claim_id": "claim-patched-full-support",
+   "exact_statement": "The untwisted patched module satisfies $$\\mathop{\\mathrm{Supp}}_{R_{1,\\infty}}N_{1,\\infty}\n       \\supseteq\\mathop{\\mathrm{Spec}}R_{1,\\infty}^f.$$ Consequently the old module has full support: $\\mathop{\\mathrm{Supp}}_{R_1^f}N_1=\\mathop{\\mathrm{Spec}}R_1^f$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-patched-support"
+  },
+  {
+   "claim_id": "claim-field-preparation",
+   "exact_statement": "There is a constant $U$, depending only on the fixed residual data and $\\Sigma$, with the following property. One can construct abelian, totally real $2$-extensions $$\\mathbb Q\\subset A\\subset F$$ in which $2$ splits completely, together with allowed sets $S_A,S_F$, such that the following assertions hold.*\n\n1.  *The allowed sets contain the real and dyadic places and all places above $\\Sigma$. Their numbers $u_A,u_F$ of non-dyadic finite places are at most $U$. The degrees $d_A=[A:\\mathbb Q]$ and $[F:A]$ can be made arbitrarily large, with $d=[F:\\mathbb Q]=[F:A]d_A$.*\n\n2.  *If $\\bar r$ is absolutely irreducible, its restriction to $G_F$ is absolutely irreducible. In this case there are no marked places.*\n\n3.  *In the reducible case, the characters remain distinct on $G_F$ if they were distinct on $G_{\\mathbb Q}$. If $\\alpha_2\\ne1$, there are again no marked places. If $\\alpha_2=1$, there is a dyadic place $v_0$ of $A$ and the marked set $M$ consists of all its extensions to $F$. Set $m=|M|$; thus $m=[F:A]$ and $m/d=1/d_A$ in the marked case, whereas $m=0$ otherwise.*\n\n\n4.  *In the reducible case, for $\\beta=\\alpha,\\alpha^{-1}$ the following group is zero: $$\\label{eq:dual-vanishing}\n     \\left\\{c\\in H^1(G_{F,S_F},k(\\beta)):\n           \\operatorname{loc}_v(c)=0\\text{ for every }v\\in S_F\\setminus M\n     \\right\\}=0.$$ Here the zero conditions include all real places. The condition at a marked place is unrestricted.*\n\n5.  *In the reducible case, restriction preserves residual extension classes: for either ratio $\\beta$, the map $$H^1(G_{A,S_A},k(\\beta))\\longrightarrow H^1(G_{F,S_F},k(\\beta))$$ is injective.*\n\n\n*In the reducible case let $H^1_{\\mathrm{str}}(F,k(\\beta))$ denote the Selmer group with zero condition at $M$, full condition at $S_F\\setminus M$ (including the real places), and unramified condition elsewhere. Then $$\\label{eq:strict-selmer}\n \\dim_k H^1_{\\mathrm{str}}(F,k(\\beta))\\le\n \\begin{cases}\n d+u_F,&\\alpha_2\\ne1,\\\\\n 2d-3m+u_F,&\\alpha_2=1.\n \\end{cases}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-field-preparation"
+  },
+  {
+   "claim_id": "claim-one-prime-genus",
+   "exact_statement": "Suppose that $K/E$ is a quadratic extension of totally real fields and that exactly one finite prime of $E$ ramifies. If the narrow class number of $E$ is odd, the narrow class number of $K$ is odd. For every totally real field with odd narrow class number, each totally positive unit is a square.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-one-prime-genus"
+  },
+  {
+   "claim_id": "claim-selmer-switch",
+   "exact_statement": "Let $X$ be a Selmer group over a number field $E$ with one-dimensional coefficient $k_0(\\beta)$, and let $Y$ be the Selmer group with coefficient $k_0(\\beta^{-1})$ and orthogonal local conditions. Let $T$ be a finite set of odd places of $E$ where the coefficient character is trivial and the residue cardinality is one modulo four. Suppose that $X$ has the unramified local condition at every place in $T$, and that evaluation of $Y$ on unramified Frobenius gives a surjection $$Y\\longrightarrow k_0^T.$$ Replacing the unramified lines at $T$ by arbitrary transverse ramified lines changes $X$ to $$\\ker\\bigl(X\\longrightarrow k_0^T\\bigr).$$ In particular the switch introduces no new classes, and it strictly decreases $X$ if its own evaluation is nonzero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-selmer-switch"
+  },
+  {
+   "claim_id": "claim-field-evaluations",
+   "exact_statement": "Fix finitely many cohomology classes over $B$ with coefficients $k_0(\\beta)$, where $\\beta=\\alpha$ or $\\alpha^{-1}$, and impose the preceding splitting conditions in $K_\\alpha E_2$. Evaluations use chosen places above the rational prime and chosen Frobenius representatives in a common finite quotient through which the coefficient actions and the finitely many cocycles factor. Numerical prescriptions refer to these choices.*\n\n1.  *At primes split also in $B$, a Frobenius evaluation on any $k_0$-linearly independent collection of classes can be prescribed arbitrarily. If $B$ is quadratic, the pair of evaluations on a space $W$ at the two places above such a prime is given by one functional restricted to $W$ and $\\sigma W$. It is uniformly distributed as two independent functionals on $W$ whenever $W\\cap\\sigma W=0$.*\n\n2.  *In the quadratic case, for primes inert in $B$ the evaluations on $W$ are uniformly distributed in $W^\\vee$ whenever $1+\\sigma$ is injective on $W$. The evaluations on $c$ and $\\sigma c$ at the single place above such a prime are equal.*\n\n3.  *Collections for different Frobenius orbits of coefficient characters can be prescribed independently. If $\\alpha^{-1}=\\alpha^{2^j}$, coefficient Frobenius identifies the two collections semilinearly, and preserves all zero and rank conditions used here.*\n\n*Every compatible prescription is realized, for suitable choices of these places and representatives, at infinitely many rational primes. Uniform distribution refers to the finite evaluation quotients used for this choice; no analytic density estimate is required. Chebotarev determines simultaneous conjugacy classes. The applications below use only rank and nonvanishing conditions, unchanged by the resulting coefficient scalings and interchange of the two split places.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-field-evaluations"
+  },
+  {
+   "claim_id": "claim-disjoint-conjugate-selmer",
+   "exact_statement": "As long as all conductors used so far split in $B$ and both $X_0^\\beta$ are zero, one has $$W\\cap\\sigma W=0\n        \\quad\\text{for }W=X_B^\\beta\\text{ and }W=Y_B^\\beta.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-disjoint-conjugate-selmer"
+  },
+  {
+   "claim_id": "claim-potential-promodularity",
+   "exact_statement": "Let $r$ satisfy the hypotheses of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> and be not virtually solvable. Then $r$ is pro-modular over some solvable totally real Galois extension of $\\mathbb Q$, of even degree and split completely at $2$.*\n\n*More generally, fix a complete integral framed deformation family over $\\mathbb Q$, with determinant $\\chi=\\det r$, containing the coefficient point defined by $r$, and with ramification confined to a finite set. The closed trace image of this family is pro-modular after restriction to one common extension of the stated kind, at one fixed tame level.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-potential-promodularity"
+  },
+  {
+   "claim_id": "claim-modular-seed",
+   "exact_statement": "Every semisimple two-dimensional residual representation arising from the target has a classical cuspidal lift over $\\mathbb Q$, after finite coefficient extension and allowing a finite enlargement of the tame level.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-modular-seed"
+  },
+  {
+   "claim_id": "claim-good-connectedness",
+   "exact_statement": "Let $F$, the marked set, and the fixed-determinant representation scheme $Y$ be as above, with the degree inequalities <a href=\"#eq:degree-choices\" data-reference-type=\"eqref\" data-reference=\"eq:degree-choices\">[eq:degree-choices]</a>. Let $y$ be a transverse closed residual point of $Y$, with finite residue field, and let $R'_y$ be the completion of $Y$ at $y$. Every component of $\\mathop{\\mathrm{Spec}}R'_y$ has dimension at least $2d-m$. Its components can be joined by a chain whose successive intersections have dimension at least $2d-m-1$. The globally reducible locus has dimension strictly less than $2d-m-1$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-good-connectedness"
+  },
+  {
+   "claim_id": "claim-chart-propagation",
+   "exact_statement": "At a transverse closed residual point, either every component of $Y$ through that point has potentially pro-modular pseudo-image, or none does. It suffices to begin with one component whose pseudo-image contains a potentially pro-modular, non-virtually-solvable curve having finite local images at the allowed non-dyadic places.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-chart-propagation"
+  },
+  {
+   "claim_id": "claim-transverse-fiber",
+   "exact_statement": "If nonempty, the transverse closed residual fiber of $Y$ is geometrically connected. Consequently, if one transverse chart has potentially pro-modular component images, every transverse chart does.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-transverse-fiber"
+  },
+  {
+   "claim_id": "claim-higher-line",
+   "exact_statement": "If $r|_{G_{\\mathbb Q_2}}$ is reducible and has distinct cyclotomic exponents, it has an invariant line whose exponent is greater than that of the quotient.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-higher-line"
+  },
+  {
+   "claim_id": "claim-ordinary-character-family",
+   "exact_statement": "Suppose $r|_{G_{\\mathbb Q_2}}$ is reducible, and record the line of Lemma <a href=\"#lem:higher-line\" data-reference-type=\"ref\" data-reference=\"lem:higher-line\">38</a>. Fix $\\chi=\\det r$. After enlarging coefficients, there is a complete local integral $\\mathcal O$-algebra $\\mathscr D$, together with its fixed global determinant $\\chi$, its global trace, and a recorded local subcharacter $\\eta_1$, with the following properties.*\n\n1.  *$\\mathscr D$ is horizontal, contains the target point, and $\\dim\\mathscr D\\ge2$. Put $\\eta_2=\\chi\\eta_1^{-1}$. On its globally absolutely irreducible locus the local representation has subcharacter $\\eta_1$ and quotient $\\eta_2$.*\n\n2.  *For one field $F$ as above, the restricted trace lies in the Hecke support of completed forms at a fixed tame level.*\n\n3.  *$\\mathscr D$ is finite over the closed image of the global pseudodeformation ring for $F$. It is also finite over the image of the product of the dyadic pseudodeformation rings.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-ordinary-character-family"
+  },
+  {
+   "claim_id": "claim-ordinary-weight-finiteness",
+   "exact_statement": "The space $W$ is an $\\mathcal O$-submodule stable under $T_1$, the tame Hecke operators, and $U^{\\pm1}$, and these actions commute. Its dual $M$ is finite over $\\Omega$. The closed commutative algebra generated by these actions on $M$ is finite over $\\Omega$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-ordinary-weight-finiteness"
+  },
+  {
+   "claim_id": "claim-joint-image",
+   "exact_statement": "Let $\\mathscr D$ be the domain of Lemma <a href=\"#lem:ordinary-character-family\" data-reference-type=\"ref\" data-reference=\"lem:ordinary-character-family\">39</a>, let $M=W^\\vee$ be the ordinary module above, and use the weight map $\\Lambda\\to\\mathscr D$ defined by $[5]\\mapsto\\eta_1(5)$. Suppose a dense set of finite-coefficient characteristic-zero points of $\\mathscr D$ occurs in the joint trace-and-weight support of $M$, with one of the finitely many assignments $s$ in <a href=\"#eq:two-ordinary-orders\" data-reference-type=\"eqref\" data-reference=\"eq:two-ordinary-orders\">[eq:two-ordinary-orders]</a> at each point. Then $\\mathscr D$ is finite and dominant over $\\Lambda$; in particular, $\\dim\\mathscr D=2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-joint-image"
+  },
+  {
+   "claim_id": "claim-dense-thorne-points",
+   "exact_statement": "Every representation $r'$ just constructed is odd, absolutely irreducible, finitely ramified, ordinary, and potentially crystalline with cyclotomic exponents $\\{1,0\\}$. It is modular.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-dense-thorne-points"
+  },
+  {
+   "claim_id": "claim-eigenvector-specialization",
+   "exact_statement": "Let $S$ be the joint trace-and-weight image algebra acting on $M=W^\\vee$ at the fixed tame level above, and let $\\mathcal A$ be its finite faithful action algebra containing $U^{\\pm1}$, as in Proposition <a href=\"#prop:ordinary-weight-finiteness\" data-reference-type=\"ref\" data-reference=\"prop:ordinary-weight-finiteness\">40</a>. Let a finite-coefficient characteristic-zero point of $\\mathop{\\mathrm{Spec}}S$ belong to the support of $M$. After a finite coefficient extension it gives a nonzero vector in completed forms with the specified trace and torus eigencharacters, invariant under $N_0^-$, and with a unit $U$-eigenvalue.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-eigenvector-specialization"
+  },
+  {
+   "claim_id": "claim-polynomial-orbit",
+   "exact_statement": "Let $V$ be a continuous unitary Banach representation of $G_2$ over a finite extension $E'/\\mathbb Q_2$. Suppose $0\\ne f\\in V$ is fixed by $N_0^-$, has torus character with integral exponents $e_{1,v},e_{2,v}$ on a sufficiently small open subgroup, and satisfies $Uf=\\alpha f$ with $\\alpha\\in\\mathcal O'^\\times$. If $\\delta_v=e_{2,v}-e_{1,v}\\ge0$ for all $v$, then $f$ is locally algebraic, of algebraic type $$A=\\bigotimes_{v\\mid2}\n                \\det^{e_{1,v}}\\operatorname{Sym}^{\\delta_v}(E'^2).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-polynomial-orbit"
+  }
+ ],
+ "paper": "papers/EN-101-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-M-0028_PM-010.3_FontaineMazur_modularity_at_the_prime_2.md",
+ "purpose": "Fontaine–Mazur modularity at the prime 2",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "4ba507becf8d4cdb46481196458ca92fd718c124e5a5734d80e824655ad32050",
+   "pm.domains.v2": "e41cc5bc2da6cbdb47ca12399081d5d8fac06d3c391b354df000ad54e2905714",
+   "pm.edges.v2": "1cc34cb51d9bbfe7251cc77708f2b45293e7648a629168c97ccd6a1d17197d34",
+   "pm.extraction.v2": "a3ebf9f58c5aaad51159eec98ce182a68135b444c3d41015c6d5b0a6931fbb62",
+   "pm.formal.v2": "307b392aab4cdfe2bf575ed05735cca1b2d70a1267e99ad0c1e74b930c9ac072",
+   "pm.limits.v2": "a577446b23a016f4a15eaa74aa27693fa32e6b6a4f861443da66d3131a0f104f",
+   "pm.node.v2": "10067e321ccdf46d29f1f2469236939fef9f8dc25b4afddadffa6054da4556b9",
+   "pm.objects.v2": "513c797645880b090552d208076139c8a31fa096cf322958ed7e0b1fd6283cb3",
+   "pm.provenance.v2": "201b3cc277fe789c80046b3bb31aba02b8305bc158c3d3af8f59e51e96caaa3f",
+   "pm.quantities.v2": "66a564958865ab5c7a3431cf38af1e4cc5394f3f57954c7302b358eb01eb6645",
+   "pm.reading.v2": "298e4667a69e573c1f7fe2799f37f3fb4913ee7953e1b6b8583a1e068efd7e72",
+   "pm.roadmap.v2": "4fc6d0cb7bdc716a7ed8d8d35b273401c468eacd1d28faada1015562126eff30",
+   "pm.search.v1": "b09a2c57a14499992cbf0e159483a84fe1dab6f0b590a14a8fe0c8db4af23418",
+   "pm.triptych.v2": "0b6c2b1bd2cdbc739251c439125c2ada49fdff44c8ca62e7a1d2fadaefbd16c3"
+  },
+  "canonical_sha256": "3db1e7c8be972cc296d372a560028255454e5b611b7aa2b94c43bdb8b490d6a8",
+  "paper_sha256": "e5e30eb008488b3a77e3f4cbffacf3a591e2add455d9e2af9c4ff16ad89ca3de",
+  "repaired_body_sha256": "3653398368d907946d631c412c45a1f26d23d47d1069901c0438e5574c7b749a"
+ },
+ "status": "ACTIVE",
+ "subject_id": 1,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "67883de93fca1b428ed82377bde6728937a326526fc0c8e71b520b8a7fbe4d2d",
+   "receipt_sha256": "fa131587174d4f52fb6df8726bfc785606a5ba5d3942ed29e61eb1f4d72761cd",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "n in {1,2,3}, odd primes r up to 257, auxiliary primes l up to 13",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-conductor-power-condition",
+     "oracle_basis": "brute-force enumeration of 2^n-th powers modulo r"
+    },
+    {
+     "checked_domain": "odd primes r up to 257 and l up to 13",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-frobenius-generator-nonsquare",
+     "oracle_basis": "parity of the discrete logarithm with respect to a primitive root found by order search"
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-weaken-congruence",
+     "observed_exit": 1,
+     "receipt_sha256": "16e4cc9808101e448268e72cdda45c2c1d119fa09cf2806d21e02730bd8b1475"
+    },
+    {
+     "id": "mut-invert-nonsquare",
+     "observed_exit": 1,
+     "receipt_sha256": "98466a374a660216b5107a385eb4cb734cd5299cc458a5c3cfa3fb6ba49da101"
+    },
+    {
+     "id": "mut-wrong-power-exponent",
+     "observed_exit": 1,
+     "receipt_sha256": "ec9f9053cdbc02b4eabddcb704c496d78b91b449bcc94907e67329be8cf2e0c7"
+    },
+    {
+     "id": "mut-quarter-exponent",
+     "observed_exit": 1,
+     "receipt_sha256": "2bf536cf59ebbe98e30282fd52a440f5f2bbb06d10a6ccf799ef58c2703d492d"
+    }
+   ],
+   "receipt_sha256": "ebcfda823d8b90d0910937786f4384a4825b18558ce23a8a22ec7cb205fd1344",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Fontaine–Mazur modularity at the prime 2"
+}

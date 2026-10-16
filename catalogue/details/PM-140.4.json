@@ -1,0 +1,483 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 464367,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 140132
+ },
+ "coordinate": "EN-114-000-0003-2-2026-PR-T4-UK-EX-M1-B-ML-M-0289",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "geometric_measure_and_potential_theory",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-7",
+     "quote": "The learner neither chooses a feature nor revisits an earlier one.",
+     "quote_sha256": "d029f5b0e008810c8b907660caccbdd23783fb730d726f920bc19a5413bb30c4"
+    }
+   ],
+   "query": "Noisy or adaptive-feature regression",
+   "reason": "The experiment supplies fresh independent standard Gaussian features and exact labels; the learner neither chooses a feature nor revisits an earlier one."
+  }
+ ],
+ "family": "PM-140",
+ "id": "PM-140.4",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-p-coordinate-density",
+    "claim_id": "claim-1",
+    "statement": "Let $D\\ge2$ and $1\\le k<D$ be integers. If $U$ is uniform on $S^{D-1}$ and $P$ is any $k$-by-$D$ matrix satisfying $PP^{\\mathsf T}=I_k$, then $PU$ has Lebesgue density $$\\label{p:coordinate-formula}\n c(D,k)(1-\\left\\lVert u\\right\\rVert^2)^{(D-k-2)/2}\\mathbf 1_{\\{\\left\\lVert u\\right\\rVert<1\\}},\n \\qquad\n c(D,k)=\\frac{\\Gamma(D/2)}\n {\\pi^{k/2}\\Gamma((D-k)/2)}.$$ The direction of the component of $U$ in $\\ker P$ is uniform on its unit sphere and is independent of the pair consisting of $PU$ and the length of that complementary component. In particular, its conditional law given $PU$ is uniform."
+   },
+   {
+    "anchor": "stmt-p-unit-ball-volume-lemma",
+    "claim_id": "claim-2",
+    "statement": "For every integer $k\\ge1$, $$\\label{p:unit-ball-volume}\n v_k\\le(2\\pi e/k)^{k/2}.$$"
+   },
+   {
+    "anchor": "stmt-p-cap-mass",
+    "claim_id": "claim-3",
+    "statement": "Put $n=d-1$ for $d\\ge2$. There is an absolute $a>0$ such that, for every $c\\in S^{d-1}$ and $0<r\\le2$, $$\\label{p:cap-mass-two-sided}\n (ar)^n\\le \\sigma\\bigl(B(c,r)\\bigr)\\le\\min\\{1,r^n\\}.$$ For every ambient center $z\\in\\mathbb R^d$ and radius $r>0$, $$\\label{p:ambient-cap-mass}\n \\sigma\\bigl(B(z,r)\\bigr)\\le\\min\\{1,(2r)^n\\}.$$ An output direction independent of the signal has probability at most $\\epsilon^n$ of angular error at most $\\epsilon$, averaged over $\\sigma$."
+   },
+   {
+    "anchor": "stmt-p-regression",
+    "claim_id": "claim-4",
+    "statement": "Let $M(d)=o(d^2)$ be a sequence of nonnegative integers and let $0<\\epsilon(d)\\le1/10$. There is an absolute $c>0$ such that, for all sufficiently large $d$, every learner in the experiment above whose uniform-sphere average success satisfies $$\\mathbb P\\{\\arccos\\langle \\widehat S,S\\rangle\\le\\epsilon(d)\\}\\ge\\frac23$$ must use $$T(d)\\ge c\\,d\\log\\frac1{\\epsilon(d)}.$$ The dimension threshold may depend on the memory sequence. In particular, the conclusion holds when the same success probability is required separately for every $s\\in S^{d-1}$."
+   },
+   {
+    "anchor": "stmt-p-finite-memory-tradeoff",
+    "claim_id": "claim-5",
+    "statement": "There are absolute constants $c>0$ and $d_0$ such that, for every integer $d\\ge d_0$, every nonnegative integer $M$, and every $0<\\epsilon\\le1/10$, a learner in the experiment above with uniform-sphere average success at least $2/3$ and deterministic finite horizon $T$ satisfies $$T\\ge \\frac{c\\,d\\log(1/\\epsilon)}{1+M/d^2}.$$"
+   },
+   {
+    "anchor": "stmt-p-borel-kernels",
+    "claim_id": "claim-6",
+    "statement": "Fix $d\\ge2$, finite $T$, and finite state sets. Suppose each transition and stopping probability, for each fixed state and index, is measurable in the completion of the Borel sigma field of $\\mathbb R^d\\times\\mathbb R$ under $\\lambda(dx,dy)=\\gamma_d(dx)\\,dy$, where $\\gamma_d$ is standard Gaussian probability on $\\mathbb R^d$. The terminal output law depends only on the terminal state and index. There are everywhere Borel probability kernels with the same state sets and output laws that induce the same uniform-prior joint law of signal, state path, stopping index, and output. For the Borel learner, starting from any state and index and supplying fresh future features defines a measurable continuation success function, whether or not that state is reachable in the original execution. The same conclusion holds when a rule is given before seed integration by a finite probability vector measurable in the completion of $\\lambda\\otimes\\kappa$, where $\\kappa$ is the law of an independent fresh seed."
+   },
+   {
+    "anchor": "stmt-p-haar-linear",
+    "claim_id": "claim-7",
+    "statement": "In the experiment above, if $\\epsilon\\le1/10$ and $T\\le d/8$, even an estimator given all $T$ features and labels has uniform-prior success probability at most $5/8$."
+   },
+   {
+    "anchor": "stmt-p-frame-density",
+    "claim_id": "claim-8",
+    "statement": "Let $k,m\\ge1$ and $k+m+1\\le d$. Fix a $d$-by-$m$ matrix $E$ with orthonormal columns, and draw $P\\sim\\vartheta_{d,k}$. The $k$-by-$m$ matrix $PE$ has Lebesgue density $$\\label{p:frame-density-exact}\n \\left(\\prod_{j=0}^{m-1}\n \\frac{\\Gamma((d-j)/2)}\n {\\pi^{k/2}\\Gamma((d-j-k)/2)}\\right)\n \\det(I_k-ZZ^{\\mathsf T})^{(d-k-m-1)/2}\n \\mathbf 1_{\\{I_k-ZZ^{\\mathsf T}>0\\}}.$$ Here $>0$ means positive definite. In particular, this density is bounded by $(C\\sqrt d)^{km}$.*\n\n\n*If $x_1,\\ldots,x_{m+1}\\in\\mathbb R^d$ are affinely independent and $$\\delta_i=\\operatorname{dist}\\bigl(x_i,\\operatorname{aff}(x_1,\\ldots,x_{i-1})\\bigr),\n \\qquad 2\\le i\\le m+1,$$ then the joint Lebesgue density of the columns $P(x_i-x_1)$, $2\\le i\\le m+1$, is bounded by $$\\label{p:frame-difference-density}\n (C\\sqrt d)^{km}\\prod_{i=2}^{m+1}\\delta_i^{-k}.$$"
+   },
+   {
+    "anchor": "stmt-p-affine-inverse",
+    "claim_id": "claim-9",
+    "statement": "Let $0<\\beta\\le d$, $K\\ge0$, and $R>0$. Let $\\nu$ be a finite positive Borel measure supported in $B(z,R)\\subset\\mathbb R^d$ such that $$\\label{p:all-ball-mass}\n \\nu(B(b,t))\\le Kt^\\beta\n \\qquad(b\\in\\mathbb R^d,\\ t>0).$$ If $F$ is an affine $j$-plane, $k\\ge1$ is an integer, and $\\beta-j-k\\ge1$, then $\\nu(F)=0$ and $$\\label{p:affine-inverse-bound}\n \\int\\operatorname{dist}(x,F)^{-k}\\,d\\nu(x)\\le C^d K R^{\\beta-k},$$ provided $j,k\\le d$."
+   },
+   {
+    "anchor": "stmt-p-frame-moment",
+    "claim_id": "claim-10",
+    "statement": "Let $d,k,q$ be integers and $\\beta$ a real number with $k\\ge1$, $q\\ge2$, and $$\\label{p:frame-margins}\n k+q\\le d,\\qquad 0<\\beta\\le d,\\qquad\n \\beta-k-(q-2)\\ge1.$$ Let $\\nu$ be a finite positive Borel measure supported in $B(z,R)$, $R>0$, satisfying <a href=\"#p:all-ball-mass\" data-reference-type=\"eqref\" data-reference=\"p:all-ball-mass\">[p:all-ball-mass]</a> for some $K\\ge0$. Assume that $P_\\#\\nu$ is absolutely continuous with respect to Lebesgue measure for $\\vartheta_{d,k}$-almost every $P$. There is a jointly measurable version $g(P,u)$ of its density such that $$\\label{p:frame-moment-bound}\n \\left(\\int_{\\mathcal V_{d,k}}\\int_{\\mathbb R^k}g(P,u)^q\\,du\\,\n d\\vartheta_{d,k}(P)\\right)^{1/q}\n \\le C^d(C\\sqrt d)^{k(1-1/q)}\n K R^{\\beta-k(1-1/q)}.$$ For every $P$, this version vanishes when $\\left\\lVert u-Pz\\right\\rVert>R$."
+   },
+   {
+    "anchor": "stmt-p-frame-n30",
+    "claim_id": "claim-11",
+    "statement": "For sufficiently large $d$, put $$n=d-1,\\qquad k=q=\\lfloor d/4\\rfloor,\\qquad \\beta=n-q.$$ Let $0\\le f\\le1$ be Borel on $S^{d-1}$, and suppose for $K\\ge0$ that $$\\int_{B(b,t)}f\\,d\\sigma\\le Kt^\\beta\n \\qquad(b\\in\\mathbb R^d,\\ t>0).$$ For $z\\in\\mathbb R^d$, $R>0$, and $E=B(z,R)$, the projection of $\\mathbf 1_E f\\sigma$ by $P\\sim\\vartheta_{d,k}$ has a jointly measurable Lebesgue density $g(P,u)$ satisfying $$\\label{p:frame-n30-bound}\n \\left\\lVert g\\right\\rVert_{L^q(\\vartheta_{d,k}\\,du)}\n \\le C^d(C\\sqrt d)^{k(1-1/q)}\n K R^{\\beta-k(1-1/q)}.$$"
+   },
+   {
+    "anchor": "stmt-p-frame-positive",
+    "claim_id": "claim-12",
+    "statement": "For sufficiently large $d$, put $$k=p=\\lfloor d/16\\rfloor,\\qquad \\lambda=(d-1)/2.$$ Let $X$ be a $k$-by-$d$ standard Gaussian matrix and define $$H=(XX^{\\mathsf T})^{1/2},\\qquad P=H^{-1}X$$ on its probability-one full-row-rank event, and set $P$ to a fixed frame on the null complement. Let $m_k$ be uniform probability on the unit ball of $\\mathbb R^k$. Suppose $\\nu$ is a finite positive Borel measure fixed independently of $X$, of mass at most one, supported in the unit ball of $\\mathbb R^d$, such that for a fixed $D>0$, $$\\nu(B(b,t))\\le D^d t^\\lambda\n \\qquad(b\\in\\mathbb R^d,\\ t>0).$$ Assume $P_\\#\\nu$ is absolutely continuous for almost every $X$. There is a jointly measurable nonnegative $g_X(z)$ such that, for almost every $X$, $P_\\#\\nu(dz)=g_X(z)\\,dz/v_k$. This version vanishes when $\\left\\lVert z\\right\\rVert>1$ and satisfies $$\\label{p:frame-positive-bound}\n \\mathbb E_X\\int g_X(z)^p\\,dm_k(z)\\le \\exp(C_Ddp).$$"
+   },
+   {
+    "anchor": "stmt-p-radial-factor",
+    "claim_id": "claim-13",
+    "statement": "Let $X$ be a $k$-by-$d$ standard Gaussian matrix with $k<d$. Almost surely, $$X=HP,\\qquad H=(XX^{\\mathsf T})^{1/2},\\qquad P=H^{-1}X.$$ The frame $P$ has law $\\vartheta_{d,k}$ and is independent of $H$."
+   },
+   {
+    "anchor": "stmt-p-haar-block",
+    "claim_id": "claim-14",
+    "statement": "For sufficiently large $d$, use $k=q=\\lfloor d/4\\rfloor$ and $\\beta=d-1-q$. Let $f_1,\\ldots,f_N:S^{d-1}\\to[0,1]$ be Borel functions satisfying $$\\int_{B(b,t)}f_w\\,d\\sigma\\le Kt^\\beta\n \\qquad(b\\in\\mathbb R^d,\\ t>0,\\ 1\\le w\\le N).$$ Let $Q_w(X,y)$ be nonnegative Borel functions on $\\mathbb R^{k\\times d}\\times\\mathbb R^k$ with $\\sum_wQ_w\\le1$, and define $$f_{\\mathrm{in}}(s)=\\mathbb E_X\\sum_{w=1}^N Q_w(X,Xs)f_w(s).$$ Then $$\\label{p:haar-block-bound}\n \\int_{B(z,R)}f_{\\mathrm{in}}\\,d\\sigma\n \\le C^dN^{1/q}K R^\\beta\n \\qquad(z\\in\\mathbb R^d,\\ R>0).$$"
+   },
+   {
+    "anchor": "stmt-p-haar-success-proposition",
+    "claim_id": "claim-15",
+    "statement": "There are absolute constants $C\\ge1$ and $d_0$ such that the following holds for every integer $d\\ge d_0$, every nonnegative integer $M$, every $0<\\epsilon\\le1/10$, and every learner of deterministic finite horizon $T$ in Section <a href=\"#p:geometry-model\" data-reference-type=\"ref\" data-reference=\"p:geometry-model\">2</a>. Put $$k=q=\\lfloor d/4\\rfloor,\\qquad\n b=\\lceil T/k\\rceil,\\qquad N_*=(k+2)2^M.$$ Then $$\\label{p:haar-success}\n \\mathbb P\\{\\text{success}\\}\\le\n C^d\\epsilon^q\\bigl[C^dN_*^{1/q}\\bigr]^b.$$ The constant and dimension threshold are independent of $M,\\epsilon,T$ and the learner’s rules."
+   },
+   {
+    "anchor": "stmt-p-cap-domination",
+    "claim_id": "claim-16",
+    "statement": "For each $w\\in\\mathcal W$, there are countably many caps $B(c_i,\\rho_i)$ with $0<\\rho_i\\le r$ and coefficients $a_i\\ge0$ such that $$\\label{p:cap-domination-bound}\n f_w\\mu_{c,r}\\le\\sum_i a_i\\mu_{c_i,\\rho_i},\n \\qquad\n \\sum_i a_i(r/\\rho_i)^\\alpha\\le\\exp(Cd)q_w^\\theta.$$ The first inequality is an inequality of finite positive measures on $S^{d-1}$: it holds after evaluating both sides on every measurable set. The constant $C$ is independent of the parent cap and of the kernels."
+   },
+   {
+    "anchor": "stmt-p-cap-forward-step",
+    "claim_id": "claim-17",
+    "statement": "Let $\\mathcal V$ and $\\mathcal W$ be finite state sets with $\\left\\lvert \\mathcal W\\right\\rvert\\le2^M$. For each $v\\in\\mathcal V$, let $K_{v,w}$ be block kernels of the type in <a href=\"#p:cap-reference-probabilities\" data-reference-type=\"eqref\" data-reference=\"p:cap-reference-probabilities\">[p:cap-reference-probabilities]</a>, with likelihoods $f_{v,w}$. Let $\\eta_v$ be finite positive measures on the sphere and suppose $$\\eta_v\\le\\sum_i a_{v,i}\\mu_{c_{v,i},r_{v,i}},\\qquad\n \\mathcal P=\\sum_{v,i}a_{v,i}(2/r_{v,i})^\\alpha<\\infty,$$ where each sum is countable, $a_{v,i}\\ge0$, and $0<r_{v,i}\\le2$. Define the outgoing measures by $$\\eta'_w(E)=\\sum_v\\int_E f_{v,w}(s)\\,\\eta_v(ds).$$ Then the $\\eta'_w$ admit countable positive cap dominations whose total cost $\\mathcal P'$ satisfies $$\\label{p:cap-cost-multiplier}\n \\mathcal P'\\le\\mathcal P\\exp(Cd)2^{M/p}.$$"
+   },
+   {
+    "anchor": "stmt-p-cap-terminal",
+    "claim_id": "claim-18",
+    "statement": "Let $Q$ be any probability law on unit-vector outputs, independent of the signal, and put $h_Q(s)=Q\\{z:\\arccos\\langle z,s\\rangle\\le\\epsilon\\}$ for $0<\\epsilon\\le1/10$. For every cap $B(c,r)$, $$\\label{p:cap-terminal-bound}\n \\int h_Q\\,d\\mu_{c,r}\\le\\exp(Cd)(\\epsilon/r)^\\alpha.$$"
+   },
+   {
+    "anchor": "stmt-p-cap-fixed-stop",
+    "claim_id": "claim-19",
+    "statement": "For all sufficiently large $d$, let a learner obey the observation and information restrictions in Section <a href=\"#p:geometry-model\" data-reference-type=\"ref\" data-reference=\"p:geometry-model\">2</a>, with $0<\\epsilon\\le1/10$, any nonnegative integer $M$ bits of state, and horizon $T$, and let $\\mathsf T$ be its stopping index. For every fixed integer $0\\le t\\le T$, $$\\label{p:cap-fixed-stop-explicit}\n \\mathbb P\\{\\mathsf T=t\\text{ and }\\arccos\\langle \\widehat S,S\\rangle\\le\\epsilon\\}\n \\le\\exp(Cd)(\\epsilon/2)^\\alpha\n       \\left[\\exp(Cd)2^{M/p}\\right]^{\\lceil t/k\\rceil}.$$ In particular, for a sequence $M(d)=o(d^2)$ the right side is eventually at most $$\\label{p:cap-fixed-stop-asymptotic}\n \\exp\\bigl(Cd(1+\\lceil t/k\\rceil)\\bigr)(\\epsilon/2)^\\alpha,$$ with an absolute $C$ and a dimension threshold that may depend on the memory sequence."
+   },
+   {
+    "anchor": "stmt-p-riesz-potential-finite",
+    "claim_id": "claim-20",
+    "statement": "For every $z\\in\\mathbb R^d$ and $0<r\\le1/10$, $$\\label{p:riesz-cap}\n \\sigma(B_r(z))\\le C^d r^{d-1}.$$ Every measurable $h:S^{d-1}\\to[0,1]$ has finite potential. Moreover, for $0<\\epsilon\\le1/10$, $$\\label{p:riesz-inner}\n \\sup_{z\\in\\mathbb R^d}\n \\int_{\\left\\lVert s-z\\right\\rVert\\le\\epsilon}\\left\\lVert s-z\\right\\rVert^{-\\alpha}\\,d\\sigma(s)\n \\le C^d\\epsilon^{d-1-\\alpha}.$$"
+   },
+   {
+    "anchor": "stmt-p-riesz-distance",
+    "claim_id": "claim-21",
+    "statement": "Let $h:S^{d-1}\\to[0,1]$ be measurable, $z\\in\\mathbb R^d$, $\\rho>0$, and let $F$ be an affine subspace through $z$ of dimension $\\ell\\le q-1$. Then $F\\cap B_\\rho(z)$ has zero $h\\,d\\sigma$ mass, and $$\\label{p:riesz-distance-bound}\n \\int_{B_\\rho(z)}\n       \\operatorname{dist}(s,F)^{-k}h(s)\\,d\\sigma(s)\n \\le C^d V(h)\\rho^{\\alpha-k}.$$"
+   },
+   {
+    "anchor": "stmt-p-riesz-density",
+    "claim_id": "claim-22",
+    "statement": "Let $z\\in\\mathbb R^d$, $\\rho>0$, let $H\\subset S^{d-1}\\cap B_\\rho(z)$ be measurable, and let $h:S^{d-1}\\to[0,1]$ be measurable. Fix these objects before drawing a $k$ by $d$ standard Gaussian matrix $X$. The pushforward of $h\\mathbf 1_H\\,d\\sigma$ by $s\\mapsto Xs$ admits a single jointly Borel function $$R:\\mathbb R^{k\\times d}\\times\\mathbb R^k\\longrightarrow[0,\\infty]$$ such that $R(X,\\cdot)$ is its Lebesgue density for every full-row-rank $X$, and, for every fixed $b\\in\\mathbb R^k$, $$\\label{p:riesz-density-bound}\n \\left(\\mathbb E_X R(X,Xz+b)^q\\right)^{1/q}\n \\le C^d V(h)\\rho^{\\alpha-k}.$$ The same function $R$ is used for all $b$. Moreover, $$\\label{p:riesz-density-support}\n R(X,y)=0\n \\quad\\hbox{if}\\quad\n \\left\\lVert y-Xz\\right\\rVert>\\left\\lVert X\\right\\rVert_{\\mathrm{op}}\\rho .$$"
+   },
+   {
+    "anchor": "stmt-p-riesz-success",
+    "claim_id": "claim-23",
+    "statement": "There is an absolute constant $C_0\\ge1$ such that every learner just specified satisfies $$\\label{p:riesz-success-bound}\n p_{\\mathrm{succ}}\\le B J^N,\\qquad\n B=C_0^d\\epsilon^{\\,d/2-1},\\qquad\n J=1+C_0^d(1+L)W^{1/q}.$$ This includes $T=0$. No asymptotic assumption on $M$ is needed for this estimate."
+   },
+   {
+    "anchor": "stmt-p-riesz-terminal-lemma",
+    "claim_id": "claim-24",
+    "statement": "Let $Q$ be a signal-independent probability law on unit-vector outputs, and let $h(s)=Q\\{u:\\arccos\\langle u,s\\rangle\\le\\epsilon\\}$. Then $$\\label{p:riesz-terminal}\n V(h)\\le C^d\\epsilon^{d-1-\\alpha}.$$"
+   },
+   {
+    "anchor": "stmt-p-riesz-shell",
+    "claim_id": "claim-25",
+    "statement": "For $1\\le i\\le N$, $v\\in\\mathcal V_{i-1}$, $z\\in\\mathbb R^d$, and $\\rho>0$, let $H_\\rho(z)=\\{s\\in S^{d-1}:\\rho/2<\\left\\lVert s-z\\right\\rVert\\le\\rho\\}$. Then $$\\label{p:riesz-shell-bound}\n \\int_{H_\\rho(z)}\n   \\frac{h_{i-1}(v,s)}{\\left\\lVert s-z\\right\\rVert^{\\alpha}}\\,d\\sigma(s)\n \\le C^d W^{1/q}V_i.$$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Integrated projection moment",
+    "evidence": [
+     {
+      "anchor": "stmt-p-frame-moment",
+      "quote": "Let $d,k,q$ be integers and $\\beta$ a real number with $k\\ge1$, $q\\ge2$, and $$\\label{p:frame-margins}\n k+q\\le d,\\qquad 0<\\beta\\le d,\\qquad\n \\beta-k-(q-2)\\ge1.$$ Let $\\nu$ be a finite positive Borel measure supported in $B(z,R)$, $R>0$, satisfying <a href=\"#p:all-ball-mass\" data-reference-type=\"eqref\" data-reference=\"p:all-ball-mass\">[p:all-ball-mass]</a> for some $K\\ge0$. Assume that $P_\\#\\nu$ is absolutely continuous with respect to Lebesgue measure for $\\vartheta_{d,k}$-almost every $P$. There is a jointly measurable version $g(P,u)$ of its density such that $$\\label{p:frame-moment-bound}\n \\left(\\int_{\\mathcal V_{d,k}}\\int_{\\mathbb R^k}g(P,u)^q\\,du\\,\n d\\vartheta_{d,k}(P)\\right)^{1/q}\n \\le C^d(C\\sqrt d)^{k(1-1/q)}\n K R^{\\beta-k(1-1/q)}.$$ For every $P$, this version vanishes when $\\left\\lVert u-Pz\\right\\rVert>R$.",
+      "quote_sha256": "99cac2142d9089e9ac180c63a2dea1f62807258fe70a4ba72f38fdf52d8c1c91"
+     }
+    ],
+    "requires_concepts": [
+     "Uniform direction coordinates",
+     "Affine inverse distances",
+     "Projected frame density"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-1",
+   "exact_statement": "Let $D\\ge2$ and $1\\le k<D$ be integers. If $U$ is uniform on $S^{D-1}$ and $P$ is any $k$-by-$D$ matrix satisfying $PP^{\\mathsf T}=I_k$, then $PU$ has Lebesgue density $$\\label{p:coordinate-formula}\n c(D,k)(1-\\left\\lVert u\\right\\rVert^2)^{(D-k-2)/2}\\mathbf 1_{\\{\\left\\lVert u\\right\\rVert<1\\}},\n \\qquad\n c(D,k)=\\frac{\\Gamma(D/2)}\n {\\pi^{k/2}\\Gamma((D-k)/2)}.$$ The direction of the component of $U$ in $\\ker P$ is uniform on its unit sphere and is independent of the pair consisting of $PU$ and the length of that complementary component. In particular, its conditional law given $PU$ is uniform.",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-coordinate-density"
+  },
+  {
+   "claim_id": "claim-2",
+   "exact_statement": "For every integer $k\\ge1$, $$\\label{p:unit-ball-volume}\n v_k\\le(2\\pi e/k)^{k/2}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-unit-ball-volume-lemma"
+  },
+  {
+   "claim_id": "claim-3",
+   "exact_statement": "Put $n=d-1$ for $d\\ge2$. There is an absolute $a>0$ such that, for every $c\\in S^{d-1}$ and $0<r\\le2$, $$\\label{p:cap-mass-two-sided}\n (ar)^n\\le \\sigma\\bigl(B(c,r)\\bigr)\\le\\min\\{1,r^n\\}.$$ For every ambient center $z\\in\\mathbb R^d$ and radius $r>0$, $$\\label{p:ambient-cap-mass}\n \\sigma\\bigl(B(z,r)\\bigr)\\le\\min\\{1,(2r)^n\\}.$$ An output direction independent of the signal has probability at most $\\epsilon^n$ of angular error at most $\\epsilon$, averaged over $\\sigma$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-cap-mass"
+  },
+  {
+   "claim_id": "claim-4",
+   "exact_statement": "Let $M(d)=o(d^2)$ be a sequence of nonnegative integers and let $0<\\epsilon(d)\\le1/10$. There is an absolute $c>0$ such that, for all sufficiently large $d$, every learner in the experiment above whose uniform-sphere average success satisfies $$\\mathbb P\\{\\arccos\\langle \\widehat S,S\\rangle\\le\\epsilon(d)\\}\\ge\\frac23$$ must use $$T(d)\\ge c\\,d\\log\\frac1{\\epsilon(d)}.$$ The dimension threshold may depend on the memory sequence. In particular, the conclusion holds when the same success probability is required separately for every $s\\in S^{d-1}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-p-regression"
+  },
+  {
+   "claim_id": "claim-5",
+   "exact_statement": "There are absolute constants $c>0$ and $d_0$ such that, for every integer $d\\ge d_0$, every nonnegative integer $M$, and every $0<\\epsilon\\le1/10$, a learner in the experiment above with uniform-sphere average success at least $2/3$ and deterministic finite horizon $T$ satisfies $$T\\ge \\frac{c\\,d\\log(1/\\epsilon)}{1+M/d^2}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-finite-memory-tradeoff"
+  },
+  {
+   "claim_id": "claim-6",
+   "exact_statement": "Fix $d\\ge2$, finite $T$, and finite state sets. Suppose each transition and stopping probability, for each fixed state and index, is measurable in the completion of the Borel sigma field of $\\mathbb R^d\\times\\mathbb R$ under $\\lambda(dx,dy)=\\gamma_d(dx)\\,dy$, where $\\gamma_d$ is standard Gaussian probability on $\\mathbb R^d$. The terminal output law depends only on the terminal state and index. There are everywhere Borel probability kernels with the same state sets and output laws that induce the same uniform-prior joint law of signal, state path, stopping index, and output. For the Borel learner, starting from any state and index and supplying fresh future features defines a measurable continuation success function, whether or not that state is reachable in the original execution. The same conclusion holds when a rule is given before seed integration by a finite probability vector measurable in the completion of $\\lambda\\otimes\\kappa$, where $\\kappa$ is the law of an independent fresh seed.",
+   "kind": "construction",
+   "statement_anchor": "stmt-p-borel-kernels"
+  },
+  {
+   "claim_id": "claim-7",
+   "exact_statement": "In the experiment above, if $\\epsilon\\le1/10$ and $T\\le d/8$, even an estimator given all $T$ features and labels has uniform-prior success probability at most $5/8$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-haar-linear"
+  },
+  {
+   "claim_id": "claim-8",
+   "exact_statement": "Let $k,m\\ge1$ and $k+m+1\\le d$. Fix a $d$-by-$m$ matrix $E$ with orthonormal columns, and draw $P\\sim\\vartheta_{d,k}$. The $k$-by-$m$ matrix $PE$ has Lebesgue density $$\\label{p:frame-density-exact}\n \\left(\\prod_{j=0}^{m-1}\n \\frac{\\Gamma((d-j)/2)}\n {\\pi^{k/2}\\Gamma((d-j-k)/2)}\\right)\n \\det(I_k-ZZ^{\\mathsf T})^{(d-k-m-1)/2}\n \\mathbf 1_{\\{I_k-ZZ^{\\mathsf T}>0\\}}.$$ Here $>0$ means positive definite. In particular, this density is bounded by $(C\\sqrt d)^{km}$.*\n\n\n*If $x_1,\\ldots,x_{m+1}\\in\\mathbb R^d$ are affinely independent and $$\\delta_i=\\operatorname{dist}\\bigl(x_i,\\operatorname{aff}(x_1,\\ldots,x_{i-1})\\bigr),\n \\qquad 2\\le i\\le m+1,$$ then the joint Lebesgue density of the columns $P(x_i-x_1)$, $2\\le i\\le m+1$, is bounded by $$\\label{p:frame-difference-density}\n (C\\sqrt d)^{km}\\prod_{i=2}^{m+1}\\delta_i^{-k}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-frame-density"
+  },
+  {
+   "claim_id": "claim-9",
+   "exact_statement": "Let $0<\\beta\\le d$, $K\\ge0$, and $R>0$. Let $\\nu$ be a finite positive Borel measure supported in $B(z,R)\\subset\\mathbb R^d$ such that $$\\label{p:all-ball-mass}\n \\nu(B(b,t))\\le Kt^\\beta\n \\qquad(b\\in\\mathbb R^d,\\ t>0).$$ If $F$ is an affine $j$-plane, $k\\ge1$ is an integer, and $\\beta-j-k\\ge1$, then $\\nu(F)=0$ and $$\\label{p:affine-inverse-bound}\n \\int\\operatorname{dist}(x,F)^{-k}\\,d\\nu(x)\\le C^d K R^{\\beta-k},$$ provided $j,k\\le d$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-affine-inverse"
+  },
+  {
+   "claim_id": "claim-10",
+   "exact_statement": "Let $d,k,q$ be integers and $\\beta$ a real number with $k\\ge1$, $q\\ge2$, and $$\\label{p:frame-margins}\n k+q\\le d,\\qquad 0<\\beta\\le d,\\qquad\n \\beta-k-(q-2)\\ge1.$$ Let $\\nu$ be a finite positive Borel measure supported in $B(z,R)$, $R>0$, satisfying <a href=\"#p:all-ball-mass\" data-reference-type=\"eqref\" data-reference=\"p:all-ball-mass\">[p:all-ball-mass]</a> for some $K\\ge0$. Assume that $P_\\#\\nu$ is absolutely continuous with respect to Lebesgue measure for $\\vartheta_{d,k}$-almost every $P$. There is a jointly measurable version $g(P,u)$ of its density such that $$\\label{p:frame-moment-bound}\n \\left(\\int_{\\mathcal V_{d,k}}\\int_{\\mathbb R^k}g(P,u)^q\\,du\\,\n d\\vartheta_{d,k}(P)\\right)^{1/q}\n \\le C^d(C\\sqrt d)^{k(1-1/q)}\n K R^{\\beta-k(1-1/q)}.$$ For every $P$, this version vanishes when $\\left\\lVert u-Pz\\right\\rVert>R$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-p-frame-moment"
+  },
+  {
+   "claim_id": "claim-11",
+   "exact_statement": "For sufficiently large $d$, put $$n=d-1,\\qquad k=q=\\lfloor d/4\\rfloor,\\qquad \\beta=n-q.$$ Let $0\\le f\\le1$ be Borel on $S^{d-1}$, and suppose for $K\\ge0$ that $$\\int_{B(b,t)}f\\,d\\sigma\\le Kt^\\beta\n \\qquad(b\\in\\mathbb R^d,\\ t>0).$$ For $z\\in\\mathbb R^d$, $R>0$, and $E=B(z,R)$, the projection of $\\mathbf 1_E f\\sigma$ by $P\\sim\\vartheta_{d,k}$ has a jointly measurable Lebesgue density $g(P,u)$ satisfying $$\\label{p:frame-n30-bound}\n \\left\\lVert g\\right\\rVert_{L^q(\\vartheta_{d,k}\\,du)}\n \\le C^d(C\\sqrt d)^{k(1-1/q)}\n K R^{\\beta-k(1-1/q)}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-frame-n30"
+  },
+  {
+   "claim_id": "claim-12",
+   "exact_statement": "For sufficiently large $d$, put $$k=p=\\lfloor d/16\\rfloor,\\qquad \\lambda=(d-1)/2.$$ Let $X$ be a $k$-by-$d$ standard Gaussian matrix and define $$H=(XX^{\\mathsf T})^{1/2},\\qquad P=H^{-1}X$$ on its probability-one full-row-rank event, and set $P$ to a fixed frame on the null complement. Let $m_k$ be uniform probability on the unit ball of $\\mathbb R^k$. Suppose $\\nu$ is a finite positive Borel measure fixed independently of $X$, of mass at most one, supported in the unit ball of $\\mathbb R^d$, such that for a fixed $D>0$, $$\\nu(B(b,t))\\le D^d t^\\lambda\n \\qquad(b\\in\\mathbb R^d,\\ t>0).$$ Assume $P_\\#\\nu$ is absolutely continuous for almost every $X$. There is a jointly measurable nonnegative $g_X(z)$ such that, for almost every $X$, $P_\\#\\nu(dz)=g_X(z)\\,dz/v_k$. This version vanishes when $\\left\\lVert z\\right\\rVert>1$ and satisfies $$\\label{p:frame-positive-bound}\n \\mathbb E_X\\int g_X(z)^p\\,dm_k(z)\\le \\exp(C_Ddp).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-p-frame-positive"
+  },
+  {
+   "claim_id": "claim-13",
+   "exact_statement": "Let $X$ be a $k$-by-$d$ standard Gaussian matrix with $k<d$. Almost surely, $$X=HP,\\qquad H=(XX^{\\mathsf T})^{1/2},\\qquad P=H^{-1}X.$$ The frame $P$ has law $\\vartheta_{d,k}$ and is independent of $H$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-p-radial-factor"
+  },
+  {
+   "claim_id": "claim-14",
+   "exact_statement": "For sufficiently large $d$, use $k=q=\\lfloor d/4\\rfloor$ and $\\beta=d-1-q$. Let $f_1,\\ldots,f_N:S^{d-1}\\to[0,1]$ be Borel functions satisfying $$\\int_{B(b,t)}f_w\\,d\\sigma\\le Kt^\\beta\n \\qquad(b\\in\\mathbb R^d,\\ t>0,\\ 1\\le w\\le N).$$ Let $Q_w(X,y)$ be nonnegative Borel functions on $\\mathbb R^{k\\times d}\\times\\mathbb R^k$ with $\\sum_wQ_w\\le1$, and define $$f_{\\mathrm{in}}(s)=\\mathbb E_X\\sum_{w=1}^N Q_w(X,Xs)f_w(s).$$ Then $$\\label{p:haar-block-bound}\n \\int_{B(z,R)}f_{\\mathrm{in}}\\,d\\sigma\n \\le C^dN^{1/q}K R^\\beta\n \\qquad(z\\in\\mathbb R^d,\\ R>0).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-haar-block"
+  },
+  {
+   "claim_id": "claim-15",
+   "exact_statement": "There are absolute constants $C\\ge1$ and $d_0$ such that the following holds for every integer $d\\ge d_0$, every nonnegative integer $M$, every $0<\\epsilon\\le1/10$, and every learner of deterministic finite horizon $T$ in Section <a href=\"#p:geometry-model\" data-reference-type=\"ref\" data-reference=\"p:geometry-model\">2</a>. Put $$k=q=\\lfloor d/4\\rfloor,\\qquad\n b=\\lceil T/k\\rceil,\\qquad N_*=(k+2)2^M.$$ Then $$\\label{p:haar-success}\n \\mathbb P\\{\\text{success}\\}\\le\n C^d\\epsilon^q\\bigl[C^dN_*^{1/q}\\bigr]^b.$$ The constant and dimension threshold are independent of $M,\\epsilon,T$ and the learner’s rules.",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-haar-success-proposition"
+  },
+  {
+   "claim_id": "claim-16",
+   "exact_statement": "For each $w\\in\\mathcal W$, there are countably many caps $B(c_i,\\rho_i)$ with $0<\\rho_i\\le r$ and coefficients $a_i\\ge0$ such that $$\\label{p:cap-domination-bound}\n f_w\\mu_{c,r}\\le\\sum_i a_i\\mu_{c_i,\\rho_i},\n \\qquad\n \\sum_i a_i(r/\\rho_i)^\\alpha\\le\\exp(Cd)q_w^\\theta.$$ The first inequality is an inequality of finite positive measures on $S^{d-1}$: it holds after evaluating both sides on every measurable set. The constant $C$ is independent of the parent cap and of the kernels.",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-cap-domination"
+  },
+  {
+   "claim_id": "claim-17",
+   "exact_statement": "Let $\\mathcal V$ and $\\mathcal W$ be finite state sets with $\\left\\lvert \\mathcal W\\right\\rvert\\le2^M$. For each $v\\in\\mathcal V$, let $K_{v,w}$ be block kernels of the type in <a href=\"#p:cap-reference-probabilities\" data-reference-type=\"eqref\" data-reference=\"p:cap-reference-probabilities\">[p:cap-reference-probabilities]</a>, with likelihoods $f_{v,w}$. Let $\\eta_v$ be finite positive measures on the sphere and suppose $$\\eta_v\\le\\sum_i a_{v,i}\\mu_{c_{v,i},r_{v,i}},\\qquad\n \\mathcal P=\\sum_{v,i}a_{v,i}(2/r_{v,i})^\\alpha<\\infty,$$ where each sum is countable, $a_{v,i}\\ge0$, and $0<r_{v,i}\\le2$. Define the outgoing measures by $$\\eta'_w(E)=\\sum_v\\int_E f_{v,w}(s)\\,\\eta_v(ds).$$ Then the $\\eta'_w$ admit countable positive cap dominations whose total cost $\\mathcal P'$ satisfies $$\\label{p:cap-cost-multiplier}\n \\mathcal P'\\le\\mathcal P\\exp(Cd)2^{M/p}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-cap-forward-step"
+  },
+  {
+   "claim_id": "claim-18",
+   "exact_statement": "Let $Q$ be any probability law on unit-vector outputs, independent of the signal, and put $h_Q(s)=Q\\{z:\\arccos\\langle z,s\\rangle\\le\\epsilon\\}$ for $0<\\epsilon\\le1/10$. For every cap $B(c,r)$, $$\\label{p:cap-terminal-bound}\n \\int h_Q\\,d\\mu_{c,r}\\le\\exp(Cd)(\\epsilon/r)^\\alpha.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-cap-terminal"
+  },
+  {
+   "claim_id": "claim-19",
+   "exact_statement": "For all sufficiently large $d$, let a learner obey the observation and information restrictions in Section <a href=\"#p:geometry-model\" data-reference-type=\"ref\" data-reference=\"p:geometry-model\">2</a>, with $0<\\epsilon\\le1/10$, any nonnegative integer $M$ bits of state, and horizon $T$, and let $\\mathsf T$ be its stopping index. For every fixed integer $0\\le t\\le T$, $$\\label{p:cap-fixed-stop-explicit}\n \\mathbb P\\{\\mathsf T=t\\text{ and }\\arccos\\langle \\widehat S,S\\rangle\\le\\epsilon\\}\n \\le\\exp(Cd)(\\epsilon/2)^\\alpha\n       \\left[\\exp(Cd)2^{M/p}\\right]^{\\lceil t/k\\rceil}.$$ In particular, for a sequence $M(d)=o(d^2)$ the right side is eventually at most $$\\label{p:cap-fixed-stop-asymptotic}\n \\exp\\bigl(Cd(1+\\lceil t/k\\rceil)\\bigr)(\\epsilon/2)^\\alpha,$$ with an absolute $C$ and a dimension threshold that may depend on the memory sequence.",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-cap-fixed-stop"
+  },
+  {
+   "claim_id": "claim-20",
+   "exact_statement": "For every $z\\in\\mathbb R^d$ and $0<r\\le1/10$, $$\\label{p:riesz-cap}\n \\sigma(B_r(z))\\le C^d r^{d-1}.$$ Every measurable $h:S^{d-1}\\to[0,1]$ has finite potential. Moreover, for $0<\\epsilon\\le1/10$, $$\\label{p:riesz-inner}\n \\sup_{z\\in\\mathbb R^d}\n \\int_{\\left\\lVert s-z\\right\\rVert\\le\\epsilon}\\left\\lVert s-z\\right\\rVert^{-\\alpha}\\,d\\sigma(s)\n \\le C^d\\epsilon^{d-1-\\alpha}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-riesz-potential-finite"
+  },
+  {
+   "claim_id": "claim-21",
+   "exact_statement": "Let $h:S^{d-1}\\to[0,1]$ be measurable, $z\\in\\mathbb R^d$, $\\rho>0$, and let $F$ be an affine subspace through $z$ of dimension $\\ell\\le q-1$. Then $F\\cap B_\\rho(z)$ has zero $h\\,d\\sigma$ mass, and $$\\label{p:riesz-distance-bound}\n \\int_{B_\\rho(z)}\n       \\operatorname{dist}(s,F)^{-k}h(s)\\,d\\sigma(s)\n \\le C^d V(h)\\rho^{\\alpha-k}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-riesz-distance"
+  },
+  {
+   "claim_id": "claim-22",
+   "exact_statement": "Let $z\\in\\mathbb R^d$, $\\rho>0$, let $H\\subset S^{d-1}\\cap B_\\rho(z)$ be measurable, and let $h:S^{d-1}\\to[0,1]$ be measurable. Fix these objects before drawing a $k$ by $d$ standard Gaussian matrix $X$. The pushforward of $h\\mathbf 1_H\\,d\\sigma$ by $s\\mapsto Xs$ admits a single jointly Borel function $$R:\\mathbb R^{k\\times d}\\times\\mathbb R^k\\longrightarrow[0,\\infty]$$ such that $R(X,\\cdot)$ is its Lebesgue density for every full-row-rank $X$, and, for every fixed $b\\in\\mathbb R^k$, $$\\label{p:riesz-density-bound}\n \\left(\\mathbb E_X R(X,Xz+b)^q\\right)^{1/q}\n \\le C^d V(h)\\rho^{\\alpha-k}.$$ The same function $R$ is used for all $b$. Moreover, $$\\label{p:riesz-density-support}\n R(X,y)=0\n \\quad\\hbox{if}\\quad\n \\left\\lVert y-Xz\\right\\rVert>\\left\\lVert X\\right\\rVert_{\\mathrm{op}}\\rho .$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-riesz-density"
+  },
+  {
+   "claim_id": "claim-23",
+   "exact_statement": "There is an absolute constant $C_0\\ge1$ such that every learner just specified satisfies $$\\label{p:riesz-success-bound}\n p_{\\mathrm{succ}}\\le B J^N,\\qquad\n B=C_0^d\\epsilon^{\\,d/2-1},\\qquad\n J=1+C_0^d(1+L)W^{1/q}.$$ This includes $T=0$. No asymptotic assumption on $M$ is needed for this estimate.",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-riesz-success"
+  },
+  {
+   "claim_id": "claim-24",
+   "exact_statement": "Let $Q$ be a signal-independent probability law on unit-vector outputs, and let $h(s)=Q\\{u:\\arccos\\langle u,s\\rangle\\le\\epsilon\\}$. Then $$\\label{p:riesz-terminal}\n V(h)\\le C^d\\epsilon^{d-1-\\alpha}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-riesz-terminal-lemma"
+  },
+  {
+   "claim_id": "claim-25",
+   "exact_statement": "For $1\\le i\\le N$, $v\\in\\mathcal V_{i-1}$, $z\\in\\mathbb R^d$, and $\\rho>0$, let $H_\\rho(z)=\\{s\\in S^{d-1}:\\rho/2<\\left\\lVert s-z\\right\\rVert\\le\\rho\\}$. Then $$\\label{p:riesz-shell-bound}\n \\int_{H_\\rho(z)}\n   \\frac{h_{i-1}(v,s)}{\\left\\lVert s-z\\right\\rVert^{\\alpha}}\\,d\\sigma(s)\n \\le C^d W^{1/q}V_i.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-p-riesz-shell"
+  }
+ ],
+ "paper": "papers/EN-114-000-0003-2-2026-PR-T4-UK-EX-M1-B-ML-M-0289_PM-140.4_Projection_moments_positive_cap_domination_and_Riesz_estimates_on_the_sphere.md",
+ "purpose": "Projection moments, positive cap domination, and Riesz estimates on the sphere",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "3069ee8f59e75fd1229e184385b44f97b05ce0bb36b32b95bf129c95190322f6",
+   "pm.domains.v2": "d3347aa31129950ff25611d27ab7e96bb6ea64831e776c24c95cfa69b33918d5",
+   "pm.edges.v2": "b00f1d62445869912deda18b65f16323c69c1598db425d1e5ad69ba064dd05dc",
+   "pm.extraction.v2": "7cf63da0551ba8a37e5130bad7322b4268a4ad6134539e9036f4e48caf8318e7",
+   "pm.formal.v2": "1d3ff4fb111e1fa64aa6ab9da9d5d35f1ce33c202dab29797b54c7a15bf3aa9f",
+   "pm.limits.v2": "526eebe49005e12cb9ec083c346c601d35a10224101c6786dba07b94c85becc7",
+   "pm.node.v2": "bbef903d9609d13bcc39118a88567d977261b8d87308facfa87e194e698f6ab1",
+   "pm.objects.v2": "f9a1baac348d1d8ab7ec7cdbb6a5ea6a272c7e65af48521cc5d76f45a4ddda31",
+   "pm.provenance.v2": "0ead1fb2cb5556148f819cca8ee925701f71a176b21fecaeae392d0ef9ccc4e3",
+   "pm.quantities.v2": "4538c2d689af2004f214d7aff9621f32a005d3cc5d81170b212ef21279a794a2",
+   "pm.reading.v2": "6cadfb933e3b5aff568f1fa129be8bb6aaf732d1508007adc03138446914e972",
+   "pm.roadmap.v2": "8e23ca4a2badaa1f638c6b3c75475c9c52d517962da0dc24b8cecb625dedd9d4",
+   "pm.search.v1": "692aeaeb0f7bc22e0fe551c5e70d657d5e9a6694d6c392e5ab0f6cbeeec7b776",
+   "pm.triptych.v2": "42dd4260beeb88adc73a739454036d7103faf19a0bdb56ec5553d4c90b5fc37f"
+  },
+  "canonical_sha256": "4eb9746a6fa1192a7e0418a1f7f145d659bf0cd758031ff19342de08a0b2ad4a",
+  "paper_sha256": "e8d4de86410d7d79718a0f0f67bf718a7fb8e41bca7da1bcdc98cad65086e72b",
+  "repaired_body_sha256": "18bdf5b44141b473347167c2bed27921d09cda6649707cb518f5c6b7df1c65b1"
+ },
+ "status": "ACTIVE",
+ "subject_id": 14,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "b4d11a5d6ffc56ab38555f1209a95348f3448a3a7565eb1cde9923de176d0a8a",
+   "receipt_sha256": "3cd2ea7460dd0bb6f2589d5bf2842abfe0f00edfa8b5cbc62af5b09076dacdcf",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Projection moments, positive cap domination, and Riesz estimates on the sphere"
+}

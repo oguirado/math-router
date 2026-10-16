@@ -1,0 +1,1073 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 920926,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 246016
+ },
+ "coordinate": "EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-B-TO-H-0144",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Complex algebraic and analytic geometry",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "No algebraicity of the deck transformations is assumed.",
+     "quote_sha256": "b64731207fa399efa1da9824e65c33a3335d7e450eae24966324ce977bec96b5"
+    }
+   ],
+   "query": "infer algebraic or semialgebraic deck transformations from the cover presentation",
+   "reason": "The presentation constrains the biholomorphism type of the complex space and does not impose algebraicity on deck transformations."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "A different recent result shows that finite-CW homotopy type alone does not suffice for the bundle conclusion: Corrêa, Kollár, Schreieder and Wang construct examples with finite-CW-type universal covers whose Albanese maps are not differentiable fibre bundles",
+     "quote_sha256": "8a3bf5eb3c24fdfd527ab1b4928f0e83c6a6995534bab2797d950ae470cc3722"
+    }
+   ],
+   "query": "derive a holomorphic fibre bundle from finite CW homotopy type alone",
+   "reason": "The source explicitly distinguishes finite CW homotopy type from the entire semialgebraic pullback required by the bundle theorem."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-prep-kernel",
+     "quote": "Their open kernel is $$\\mathcal K(U_t)=\\{z\\in M: \\text{some neighborhood }W\\ni z\n       \\text{ satisfies }W\\subset U_t\n       \\text{ for every sufficiently small }t\\}.$$",
+     "quote_sha256": "b8757016ddd210bc7ca4d030ee82ae6e4531595fb00925b017fa8fc60bbc2300"
+    }
+   ],
+   "query": "replace neighborhood kernel membership by eventual membership of a point",
+   "reason": "The open kernel requires eventual inclusion of a whole neighborhood."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-cor-quasiprojective",
+     "quote": "There are a finite étale Galois cover $X'\\to X$, an abelian variety $A$, and a morphism $\\alpha:X'\\to A$ that is a locally trivial holomorphic fibre bundle with simply connected projective fibre.",
+     "quote_sha256": "dd1159a4311cff79b8f4d654da47a12b3a2b6bb44f6e23919729d0140afe0cb9"
+    }
+   ],
+   "query": "infer a product bundle on a finite cover of the projective quotient from the quasi-projective-cover corollary",
+   "reason": "The refinement asserts a locally trivial holomorphic bundle over an abelian variety; product triviality downstairs is not asserted."
+  }
+ ],
+ "family": "PM-058",
+ "id": "PM-058.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-cover-classification",
+    "statement": "Let $X$ be a connected normal projective variety over $\\mathbb C$, and let $\\widetilde X$ be its universal cover."
+   },
+   {
+    "anchor": "stmt-prep-puiseux",
+    "claim_id": "claim-power-bounds-preparation",
+    "statement": "Let $A$ be globally subanalytic and let $f(v,t)$ be globally subanalytic for $v\\in A$ and $0<t<\\epsilon(v)$, where $\\epsilon$ is positive."
+   },
+   {
+    "anchor": "stmt-prep-puiseux",
+    "claim_id": "claim-power-bounds-preparation",
+    "statement": "If $f(v,t)>0$,"
+   },
+   {
+    "anchor": "stmt-prep-puiseux",
+    "claim_id": "claim-power-bounds-preparation",
+    "statement": "If $A$ is an open real box,"
+   },
+   {
+    "anchor": "stmt-prep-projective-models",
+    "claim_id": "claim-projective-models",
+    "statement": "Suppose an algebraic family in projective coordinates is pulled back by a local analytic parameter map."
+   },
+   {
+    "anchor": "stmt-prep-projective-models",
+    "claim_id": "claim-projective-models",
+    "statement": "Suppose an irreducible member is specified by a marked irreducible germ."
+   },
+   {
+    "anchor": "stmt-prep-kernel-pseudoconvexity",
+    "claim_id": "claim-kernel-pseudoconvexity",
+    "statement": "An open kernel of locally pseudoconvex open sets is locally pseudoconvex. The assertion also holds in varying manifolds equipped with smoothly converging holomorphic coordinate charts."
+   },
+   {
+    "anchor": "stmt-prep-finite-jet-specialization",
+    "claim_id": "claim-finite-jet-specialization",
+    "statement": "In bounded projective charts let a family of sets be described by finitely many Boolean combinations of equations and inequalities polynomial in the real fibre coordinates $y$, with coefficients real analytic in real parameter coordinates $b$."
+   },
+   {
+    "anchor": "stmt-prep-finite-jet-specialization",
+    "claim_id": "claim-finite-jet-specialization",
+    "statement": "Fix $x$ and substitute $$b=x+R_t h,$$ where the entries of $R_t$ have convergent Puiseux expansions, $R_t\\to0$, and both $R_t$ and $R_t^{-1}$ have power bounds."
+   },
+   {
+    "anchor": "stmt-prep-generic-distance-convergence",
+    "claim_id": "claim-generic-distance-convergence",
+    "statement": "Let $x$ range over an open real box $U$, let $K$ be compact and globally subanalytic, and let $d_t(x,z)$ be a bounded globally subanalytic family of functions on $K$, for $0<t<t_0$, uniformly Lipschitz in $z$."
+   },
+   {
+    "anchor": "stmt-prep-generic-freezing",
+    "claim_id": "claim-freezing-real-center",
+    "statement": "Let a definable family be written using $\\operatorname{Re}b$ and $\\operatorname{Im}b$, and let $R_t\\to0$ be a fixed real power matrix, independent of the real center $x$."
+   },
+   {
+    "anchor": "stmt-prep-power-diagonalization",
+    "claim_id": "claim-power-diagonalization",
+    "statement": "Let $f(e,t,v)$ be a bounded globally subanalytic function with iterated limit $f_{00}(v)=\\lim_{t\\downarrow0}\\lim_{e\\downarrow0}\nf(e,t,v)$."
+   },
+   {
+    "anchor": "stmt-holes-polynomial-maximum",
+    "claim_id": "claim-polynomial-hole-maximum",
+    "statement": "Let $B$ be a complex manifold and let $J\\subset B\\times\\mathbb C$ be closed."
+   },
+   {
+    "anchor": "stmt-holes-polynomial-maximum",
+    "claim_id": "claim-polynomial-hole-maximum",
+    "statement": "Assume that $J\\to B$ is proper, its fibres are locally bounded in the line coordinate, and $(B\\times\\mathbb C)\\setminus J$ is locally pseudoconvex."
+   },
+   {
+    "anchor": "stmt-holes-polynomial-maximum",
+    "claim_id": "claim-polynomial-hole-maximum",
+    "statement": "If $g(b,t)$ is monic of positive degree in $t$ with holomorphic coefficients in $b$,"
+   },
+   {
+    "anchor": "stmt-holes-boundary-trapping",
+    "claim_id": "claim-boundary-hole-trapping",
+    "statement": "Let a proper holomorphic submersion be given near a relatively compact parameter interval $I$ on the boundary of a one-sided complex disc."
+   },
+   {
+    "anchor": "stmt-holes-boundary-trapping",
+    "claim_id": "claim-boundary-hole-trapping",
+    "statement": "Let $G$ be locally pseudoconvex on that side, and suppose every limit of its fibre holes as the transverse parameter tends to $I$ belongs to a relative divisor $D$ that extends holomorphically across $I$ and is proper in each fibre."
+   },
+   {
+    "anchor": "stmt-holes-interior-trapping",
+    "claim_id": "claim-interior-hole-trapping",
+    "statement": "Let $G$ be open and locally pseudoconvex over a whole connected base box, with the preceding local confinement hypotheses."
+   },
+   {
+    "anchor": "stmt-holes-interior-trapping",
+    "claim_id": "claim-interior-hole-trapping",
+    "statement": "Suppose a relative divisor $D$ is holomorphic in a whole base box and contains the holes on a nonpluripolar parameter slice inside the box."
+   },
+   {
+    "anchor": "stmt-holes-tangency-propagation",
+    "claim_id": "claim-tangency-propagation",
+    "statement": "Let $q:Q\\to\\Delta$ be a holomorphic submersion, let $G\\subset Q$ be open and locally pseudoconvex, and let $A$ be a divisor in $Q_0$."
+   },
+   {
+    "anchor": "stmt-holes-tangency-propagation",
+    "claim_id": "claim-tangency-propagation",
+    "statement": "Suppose $Q_0\\setminus A$ is connected."
+   },
+   {
+    "anchor": "stmt-holes-tangency-propagation",
+    "claim_id": "claim-tangency-propagation",
+    "statement": "Assume that on one side of a regular embedded real analytic arc through $0$, every limit of holes belongs to $A$."
+   },
+   {
+    "anchor": "stmt-holes-tangency-propagation",
+    "claim_id": "claim-tangency-propagation",
+    "statement": "If $G_0$ is nonempty,"
+   },
+   {
+    "anchor": "stmt-holes-thin-analyticity",
+    "claim_id": "claim-thin-hole-analyticity",
+    "statement": "Let $M$ be a complex manifold of dimension $n$, and let $A\\subset M$ be closed and subanalytic, with real dimension at most $2n-2$."
+   },
+   {
+    "anchor": "stmt-holes-thin-analyticity",
+    "claim_id": "claim-thin-hole-analyticity",
+    "statement": "If $M\\setminus A$ is locally pseudoconvex,"
+   },
+   {
+    "anchor": "stmt-holes-relative-divisor-container",
+    "claim_id": "claim-relative-divisor-container",
+    "statement": "Let $q:Q\\to B$ be a smooth projective family with connected fibres, and let $A\\subset Q$ be a relative algebraic subset with analytic coefficient data, proper in every fibre."
+   },
+   {
+    "anchor": "stmt-holes-bounded-containers",
+    "claim_id": "claim-bounded-containers",
+    "statement": "Consider a smooth proper projective family with connected fibres, and a bounded-data semialgebraic family of subsets of those fibres."
+   },
+   {
+    "anchor": "stmt-holes-projective-propagation",
+    "claim_id": "claim-projective-hole-propagation",
+    "statement": "Let $q:Q\\to B$ be smooth, proper, and projective, with connected smooth fibres."
+   },
+   {
+    "anchor": "stmt-holes-projective-propagation",
+    "claim_id": "claim-projective-hole-propagation",
+    "statement": "Let $G\\subset Q$ be open, subanalytic, locally pseudoconvex, and fibrewise semialgebraic with bounded data."
+   },
+   {
+    "anchor": "stmt-holes-projective-propagation",
+    "claim_id": "claim-projective-hole-propagation",
+    "statement": "Put $S=q(G)$, and let $S_0$ be a connected component of $S$."
+   },
+   {
+    "anchor": "stmt-holes-projective-propagation",
+    "claim_id": "claim-projective-hole-propagation",
+    "statement": "If $G_b$ contains a Zariski open dense subset of $Q_b$ for every $b$ in some nonempty open subset of $S_0$,"
+   },
+   {
+    "anchor": "stmt-holes-container-propagation",
+    "claim_id": "claim-fixed-container-propagation",
+    "statement": "In Proposition <a href=\"#holes:projective-propagation\" data-reference-type=\"ref\" data-reference=\"holes:projective-propagation\">19</a>, let $D$ be a relative analytic divisor defined on the full parameter box and proper in every fibre."
+   },
+   {
+    "anchor": "stmt-holes-container-propagation",
+    "claim_id": "claim-fixed-container-propagation",
+    "statement": "If $J\\subset D$ over a nonempty open subregion of $S_0$,"
+   },
+   {
+    "anchor": "stmt-holes-section-test",
+    "claim_id": "claim-section-projection-test",
+    "statement": "Suppose a full-box container $D$ as in Corollary <a href=\"#holes:container-propagation\" data-reference-type=\"ref\" data-reference=\"holes:container-propagation\">20</a> is available."
+   },
+   {
+    "anchor": "stmt-loc-theorem",
+    "claim_id": "claim-accessible-upper-containment",
+    "statement": "Under these hypotheses,"
+   },
+   {
+    "anchor": "stmt-loc-puiseux",
+    "claim_id": "claim-analytic-power-parametrization",
+    "statement": "Let $U\\subset\\mathbb R^k$ be open and let $f:U\\times(0,\\epsilon)\\to\\mathbb R^m$ be bounded and globally subanalytic."
+   },
+   {
+    "anchor": "stmt-loc-puiseux",
+    "claim_id": "claim-analytic-power-parametrization",
+    "statement": "If a scalar coordinate of $f$ is positive,"
+   },
+   {
+    "anchor": "stmt-loc-paths",
+    "claim_id": "claim-controlled-replacement-paths",
+    "statement": "Let $U\\subset\\mathbb R^k$ be open, let $D\\subset U\\times(0,\\epsilon)\\times\\mathbb R^n$ be a bounded globally subanalytic family of open sets, and let $v,w$ be bounded subanalytic sections that belong to the same component of $D_{x,t}$."
+   },
+   {
+    "anchor": "stmt-loc-matrix-outer",
+    "claim_id": "claim-accessible-semidefinite-tests",
+    "statement": "Suppose, in addition, that the marked kernel is described recursively by strict positive-definiteness tests for finitely many continuous Hermitian matrix functions $M_j(Z)$, and that every point of $\\overline P$ satisfies $M_j(Z)\\geq0$."
+   },
+   {
+    "anchor": "stmt-win-plaques",
+    "claim_id": "claim-algebraic-null-plaques",
+    "statement": "Let $M$ be a regular patch of a real algebraic hypersurface in a smooth complex algebraic $n$-fold."
+   },
+   {
+    "anchor": "stmt-win-plaques",
+    "claim_id": "claim-algebraic-null-plaques",
+    "statement": "Suppose one side is locally pseudoconvex and the Levi form has constant rank $r$ on $M$."
+   },
+   {
+    "anchor": "stmt-win-period",
+    "claim_id": "claim-period-matrix",
+    "statement": "At a fixed real center $x_1$, let $L$ be the smooth projective model of its plaque."
+   },
+   {
+    "anchor": "stmt-win-seed-bergman",
+    "claim_id": "claim-whole-seed-bergman-fibre",
+    "statement": "At every $z_0$ in a sufficiently small original plaque patch, the component of the kernel fibre containing $(i,0)$ is precisely $$T_A=\\{(s,w)\\in\\mathbb C^{r+1}:\\Im s>(\\Im w)^{\\mathsf T}A\\Im w\\},\n                    \\qquad A=(\\Im H(z_0))^{-1}>0.$$ Its Bergman kernel is strictly positive at every point. This is a statement about the entire fibre component, not a relatively compact part of it."
+   },
+   {
+    "anchor": "stmt-win-finite-taylor",
+    "claim_id": "claim-finite-taylor-extraction",
+    "statement": "Suppose $A_t(x)$ and $A_t(x)^{-1}$ have joint Puiseux expansions on a real parameter neighborhood, with polynomial bounds in $t^{-1}$, and $R_t(x)$ has the same property and tends to zero locally uniformly."
+   },
+   {
+    "anchor": "stmt-win-finite-taylor",
+    "claim_id": "claim-finite-taylor-extraction",
+    "statement": "If $f$ is holomorphic on a fixed complex neighborhood,"
+   },
+   {
+    "anchor": "stmt-win-finite-taylor",
+    "claim_id": "claim-finite-taylor-extraction",
+    "statement": "In addition, if $R_t$ is invertible and $$C_t(x,u)=R_t(x)^{-1}R_t(x+R_t(x)u)$$ is bounded on real bounded $u$-boxes,"
+   },
+   {
+    "anchor": "stmt-win-siegel-normalization",
+    "claim_id": "claim-siegel-polynomial-normalization",
+    "statement": "Let $S_2$ be a fixed parameter domain with normalization $R_t^2(x_2)$, open-kernel component $P_2$, and a fixed interior seed $p_2$."
+   },
+   {
+    "anchor": "stmt-win-siegel-normalization",
+    "claim_id": "claim-siegel-polynomial-normalization",
+    "statement": "Let $H_*$ be symmetric and holomorphic on a full neighborhood of $x_2$, with $\\Im H_*>0$ on $S_2$."
+   },
+   {
+    "anchor": "stmt-win-siegel-normalization",
+    "claim_id": "claim-siegel-polynomial-normalization",
+    "statement": "Assume the normalizations have joint Puiseux expansions and polynomial inverse bounds."
+   },
+   {
+    "anchor": "stmt-win-construction",
+    "claim_id": "claim-projective-windows",
+    "statement": "Let $Y$ be a connected smooth projective variety and let $V\\subset Y$ be a nonempty connected semialgebraic open subset that is locally pseudoconvex at its boundary."
+   },
+   {
+    "anchor": "stmt-win-tower-properties",
+    "claim_id": "claim-tower-geometry",
+    "statement": "The domain $P$ of Theorem <a href=\"#win:construction\" data-reference-type=\"ref\" data-reference=\"win:construction\">32</a> is diffeomorphic to $\\mathbb R^{2d}$, where $d=\\dim_{\\mathbb C}P$. In particular it is contractible. It is Stein and biholomorphic to a bounded domain of the same complex dimension. Complete real holomorphic vector fields from the identity component of its automorphism group span every complex tangent space over $\\mathbb C$."
+   },
+   {
+    "anchor": "stmt-quo-pseudoconvex",
+    "claim_id": "claim-resolved-cover-pseudoconvexity",
+    "statement": "The open set $V$ is locally pseudoconvex in $Y$."
+   },
+   {
+    "anchor": "stmt-quo-tower",
+    "claim_id": "claim-tower-proper-distance",
+    "statement": "The domain $P$ is diffeomorphic to $\\mathbb R^{2d}$, is Stein, and is biholomorphic to a bounded domain in $\\mathbb C^d$. Its Kobayashi distance is a proper distance inducing its usual topology."
+   },
+   {
+    "anchor": "stmt-quo-incidence",
+    "claim_id": "claim-intrinsic-window-fibres",
+    "statement": "The union $U_i=\\bigcup_{b\\in H_i}(Z_b\\cap V)$ is open in $V$. Distinct fibres in this union are disjoint, and there is a holomorphic submersion $$\\pi_i:U_i\\longrightarrow H_i,\n \\qquad \\pi_i^{-1}(b)=Z_b\\cap V.$$ These fibres are connected. Moreover, if $T$ is a smooth connected projective variety, $D\\subset T$ is a proper analytic subset, and $g:T\\setminus D\\to V$ is holomorphic, then any such image meeting a fibre of $\\pi_i$ is contained in that fibre."
+   },
+   {
+    "anchor": "stmt-quo-cutoff-normal",
+    "claim_id": "claim-cutoff-guard-compactness",
+    "statement": "Let $D$ be a complex manifold, let $A_i\\subset D$ be open, and let $h_i\\in\\mathcal O(A_i)$ satisfy $|h_i|\\leq C$."
+   },
+   {
+    "anchor": "stmt-quo-cutoff-normal",
+    "claim_id": "claim-cutoff-guard-compactness",
+    "statement": "Suppose that, for every $x\\in\\partial A_i\\cap D$, $$\\limsup_{A_i\\ni z\\to x}|h_i(z)|\\leq\\epsilon_i,\n \\qquad \\epsilon_i\\longrightarrow0.$$"
+   },
+   {
+    "anchor": "stmt-quo-cutoff-normal",
+    "claim_id": "claim-cutoff-guard-compactness",
+    "statement": "Suppose in addition that their nonzero values lie in $|\\arg\\zeta|\\leq\\theta<\\pi/2$, that $D$ is connected, and that $x_i\\to x$, $h_i(x_i)\\to a\\ne0$."
+   },
+   {
+    "anchor": "stmt-quo-trapping",
+    "claim_id": "claim-projection-chart-trapping",
+    "statement": "Let $D_i$ exhaust a connected complex manifold $D$, and let $g_i:D_i\\to V$ be holomorphic."
+   },
+   {
+    "anchor": "stmt-quo-trapping",
+    "claim_id": "claim-projection-chart-trapping",
+    "statement": "Suppose that at points $x_i\\to x$ the images belong to $U_i$, and their normalized parameters $\\pi_i(g_i(x_i))$ converge to the seed $p\\in P$."
+   },
+   {
+    "anchor": "stmt-quo-inverse-tightness",
+    "claim_id": "claim-inverse-chart-tightness",
+    "statement": "For every compact $K\\subset P$"
+   },
+   {
+    "anchor": "stmt-quo-descent",
+    "claim_id": "claim-normal-source-descent",
+    "statement": "The map $f$ descends uniquely to an equivariant holomorphic map $f_X:\\widetilde X\\to M$. Its fibres are connected and, locally on $M$, have simultaneous projective compactifications with analytic holes. Each fibre is biholomorphic to a semialgebraic open subset of a projective variety."
+   },
+   {
+    "anchor": "stmt-quo-projection",
+    "claim_id": "claim-intrinsic-projection",
+    "statement": "Under the hypotheses of condition <span class=\"upright\">(i)</span> of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> and the boundary construction of Theorem"
+   },
+   {
+    "anchor": "stmt-quo-projection",
+    "claim_id": "claim-intrinsic-projection",
+    "statement": "Suppose additionally that the image $\\Lambda$ of the deck action on $M$ is discrete and acts freely."
+   },
+   {
+    "anchor": "stmt-grp-liouville",
+    "claim_id": "claim-abelian-cover-liouville",
+    "statement": "Let $a:W\\to Z$ be a connected regular covering of a compact connected Kähler manifold."
+   },
+   {
+    "anchor": "stmt-grp-liouville",
+    "claim_id": "claim-abelian-cover-liouville",
+    "statement": "If its deck group is virtually abelian,"
+   },
+   {
+    "anchor": "stmt-grp-finite-level-projection",
+    "claim_id": "claim-countable-level-local-finiteness",
+    "statement": "Let $q:Q\\to B$ be a proper holomorphic map from a complex manifold, let $h:Q\\dashrightarrow C$ be a meromorphic map to a projective variety, and let $G_0\\subset Q$ be open with $h|_{G_0}$ holomorphic."
+   },
+   {
+    "anchor": "stmt-grp-finite-level-projection",
+    "claim_id": "claim-countable-level-local-finiteness",
+    "statement": "Fix $s\\in C$."
+   },
+   {
+    "anchor": "stmt-grp-finite-level-projection",
+    "claim_id": "claim-countable-level-local-finiteness",
+    "statement": "If $$q\\bigl(G_0\\cap h^{-1}(s)\\bigr)$$ is countable,"
+   },
+   {
+    "anchor": "stmt-grp-countable-core-level",
+    "claim_id": "claim-core-level-sets",
+    "statement": "For every such $s$"
+   },
+   {
+    "anchor": "stmt-grp-discrete",
+    "claim_id": "claim-transverse-discreteness",
+    "statement": "The image $\\Lambda$ is discrete in $\\operatorname{Aut}(M)$ and acts cocompactly on $M$."
+   },
+   {
+    "anchor": "stmt-grp-discrete-symmetric",
+    "claim_id": "claim-transverse-symmetry",
+    "statement": "Under the intrinsic-projection hypotheses recalled above,"
+   },
+   {
+    "anchor": "stmt-grp-compactifiable-cover",
+    "claim_id": "claim-compactifiable-cover-abelianity",
+    "statement": "Let $a:U\\to N$ be a connected regular covering of a smooth connected projective manifold, with deck group $K$."
+   },
+   {
+    "anchor": "stmt-grp-compactifiable-cover",
+    "claim_id": "claim-compactifiable-cover-abelianity",
+    "statement": "Suppose $U$ is a Zariski open subset, in the analytic sense, of a smooth projective manifold $\\overline U$."
+   },
+   {
+    "anchor": "stmt-grp-kernel-abelian",
+    "claim_id": "claim-fibre-kernel-abelianity",
+    "statement": "After the finite-cover replacement of Lemma <a href=\"#grp:free-finite-index\" data-reference-type=\"ref\" data-reference=\"grp:free-finite-index\">47</a>, let $K=\\ker(\\Gamma\\to\\Lambda)$."
+   },
+   {
+    "anchor": "stmt-cmp-closed-rigidity",
+    "claim_id": "claim-invariant-closed-set-rigidity",
+    "statement": "Let a countable discrete group act properly and cocompactly by diffeomorphisms on a contractible smooth manifold $T$ homeomorphic to $\\mathbb R^b$."
+   },
+   {
+    "anchor": "stmt-cmp-closed-rigidity",
+    "claim_id": "claim-invariant-closed-set-rigidity",
+    "statement": "If a nonempty closed invariant subset $A\\subset T$ has the homotopy type of a finite CW complex,"
+   },
+   {
+    "anchor": "stmt-cmp-chow-base",
+    "claim_id": "claim-semialgebraic-chow-base",
+    "statement": "Fix a semialgebraic realization $U\\subset Z$, where $Z$ is projective, and a projective embedding of $Z$."
+   },
+   {
+    "anchor": "stmt-cmp-chow-base",
+    "claim_id": "claim-semialgebraic-chow-base",
+    "statement": "Let $n$ be the fibre dimension of $j$ and $d$ the degree of one fibre."
+   },
+   {
+    "anchor": "stmt-cmp-polarized-locus",
+    "claim_id": "claim-polarized-isomorphism-loci",
+    "statement": "For every fixed polarized fibre $(F,L_F)$ of $j$, the locus of fibres polarized-isomorphic to it is semialgebraic in $C$."
+   },
+   {
+    "anchor": "stmt-cmp-converse",
+    "claim_id": "claim-product-presentation-converse",
+    "statement": "If $\\widetilde X\\simeq D\\times\\mathbb C^m\\times F$, with $D$ a bounded symmetric domain and $F$ projective,"
+   },
+   {
+    "anchor": "stmt-cor-remmert-semialgebraic",
+    "claim_id": "claim-remmert-reduction",
+    "statement": "Let $X$ be a connected normal projective complex variety whose ordinary universal cover $U$ has a semialgebraic projective-open presentation."
+   },
+   {
+    "anchor": "stmt-cor-remmert-semialgebraic",
+    "claim_id": "claim-remmert-reduction",
+    "statement": "Write $U\\simeq B\\times F$, where $B=D\\times\\mathbb C^m$, as in Theorem"
+   },
+   {
+    "anchor": "stmt-cor-singer-semialgebraic",
+    "claim_id": "claim-singer-vanishing",
+    "statement": "Let $X$ be a smooth connected closed aspherical projective complex $n$-fold whose ordinary universal cover has a semialgebraic projective-open presentation."
+   },
+   {
+    "anchor": "stmt-cor-quasiprojective",
+    "claim_id": "claim-quasiprojective-cover-classification",
+    "statement": "Let $X$ be a connected normal projective variety over $\\mathbb C$, with ordinary universal cover $U$."
+   },
+   {
+    "anchor": "stmt-cor-quasiprojective",
+    "claim_id": "claim-quasiprojective-cover-classification",
+    "statement": "More generally, let $V\\to X$ be a connected infinite étale Galois covering of complex spaces, with $V$ biholomorphic to a quasi-projective variety."
+   },
+   {
+    "anchor": "stmt-cor-affine-uniformization",
+    "claim_id": "claim-affine-uniformization",
+    "statement": "Let $X$ be a connected smooth projective complex $n$-fold, where $n\\geq0$."
+   },
+   {
+    "anchor": "stmt-cor-affine-uniformization",
+    "claim_id": "claim-affine-uniformization",
+    "statement": "If its ordinary universal cover is biholomorphic to $\\mathbb C^n$,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "transverse discreteness from compact core fibres",
+    "evidence": [
+     {
+      "anchor": "stmt-grp-liouville",
+      "quote": "If its deck group is virtually abelian, every bounded holomorphic function on $W$ is constant.",
+      "quote_sha256": "218c1b6adcabb08f1fa494f71fd72f36922c4474df25a52fe843c7222ca98ec5"
+     },
+     {
+      "anchor": "stmt-grp-countable-core-level",
+      "quote": "For every such $s$, the set $D_s$ is countable and locally finite in $M$.",
+      "quote_sha256": "2675d9200eb0e0fc8235f58d5f4835a30eec721e543268d02a70ad748b749b77"
+     },
+     {
+      "anchor": "stmt-grp-discrete",
+      "quote": "The image $\\Lambda$ is discrete in $\\operatorname{Aut}(M)$ and acts cocompactly on $M$.",
+      "quote_sha256": "eb0ac0900dc7ca97ab93d98fed4a8836e0fb0fb7d801b761b61d7ad0e62e1cbf"
+     }
+    ],
+    "requires_concepts": [
+     "Campana core",
+     "compact special abelianity",
+     "Liouville property for virtually abelian covers",
+     "proper full incidence families",
+     "local finiteness of countable level projections"
+    ],
+    "supporting_pm_ids": [
+     "PM-057.1"
+    ]
+   },
+   {
+    "concept": "global compact-factor product",
+    "evidence": [
+     {
+      "anchor": "stmt-cmp-affine-base",
+      "quote": "There is a $\\Gamma$-equivariant proper flat surjection $$j:U\\longrightarrow T,\n          \\qquad T\\simeq M\\times\\mathbb C^a,$$ whose fibres are connected, simply connected, normal projective varieties.",
+      "quote_sha256": "b80914737e9d40bb17b226a5e6f67800a21597b7c9bef68ba5c6b7b12cd765c4"
+     },
+     {
+      "anchor": "stmt-cmp-polarized-locus",
+      "quote": "For every fixed polarized fibre $(F,L_F)$ of $j$, the locus of fibres polarized-isomorphic to it is semialgebraic in $C$.",
+      "quote_sha256": "1f84e39d56b4b4afe71c8df90cb4ff72b0a123b9f9466a33ce6644cba1fd9f57"
+     },
+     {
+      "anchor": "stmt-cmp-product",
+      "quote": "There is a simply connected normal projective variety $F$ such that $$\\widetilde X\\simeq M\\times\\mathbb C^a\\times F.$$",
+      "quote_sha256": "87e3d81d360dbfc14fa57a1bcb7a1635326bc4788ea765571cdc185db391532e"
+     }
+    ],
+    "requires_concepts": [
+     "relative Albanese descent",
+     "entire semialgebraic pullback",
+     "proper affine base",
+     "semialgebraic polarized fibre classes",
+     "invariant closed-subset rigidity",
+     "Oka principle"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-cover-classification",
+   "exact_statement": "Let $X$ be a connected normal projective variety over $\\mathbb C$, and let $\\widetilde X$ be its universal cover. The following conditions are equivalent:*\n\n1.  *$\\widetilde X$ is biholomorphic to a semialgebraic open subset of a projective variety.*\n\n2.  *There are an integer $m\\geq0$, a bounded symmetric domain $D$, and a simply connected normal projective variety $F$ such that $$\\widetilde X\\simeq D\\times\\mathbb C^m\\times F.$$*\n\n*A point is allowed as either $D$ or $F$. No algebraicity of the deck transformations is assumed.",
+   "kind": "classification",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-power-bounds-preparation",
+   "exact_statement": "Let $A$ be globally subanalytic and let $f(v,t)$ be globally subanalytic for $v\\in A$ and $0<t<\\epsilon(v)$, where $\\epsilon$ is positive. If $f(v,t)>0$, there is an integer $N$ such that, for every fixed $v$, $$t^N<f(v,t)<t^{-N}\n \\quad\\hbox{for all sufficiently small }t>0.$$ The threshold may depend on $v$. For finitely many such functions one may use a common $N$.*\n\n*If $A$ is an open real box, then near a generic $v_0$ a given finite collection of functions admits convergent expansions $$f(v,t)=\\sum_{j\\geq j_0}a_j(v)t^{j/q}.$$ with a common positive integer $q$ and coefficients real analytic in $v$. After multiplication by a sufficiently high power of $t$, these are jointly real analytic functions of $(v,t^{1/q})$ through $t=0$. Convergence and every fixed number of $v$-derivatives are uniform on smaller compact parameter boxes.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prep-puiseux"
+  },
+  {
+   "claim_id": "claim-projective-models",
+   "exact_statement": "Suppose an algebraic family in projective coordinates is pulled back by a local analytic parameter map. Suppose an irreducible member is specified by a marked irreducible germ. Near a generic point of a maximally totally real open parameter box, one may track that component on a local branch and replace the family and its evaluation maps by a smooth proper projective family of connected smooth models. The evaluation maps are holomorphic, and their restrictions to the projective fibres are algebraic of bounded data. Real analytic parameter dependence can first be complexified.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prep-projective-models"
+  },
+  {
+   "claim_id": "claim-kernel-pseudoconvexity",
+   "exact_statement": "An open kernel of locally pseudoconvex open sets is locally pseudoconvex. The assertion also holds in varying manifolds equipped with smoothly converging holomorphic coordinate charts.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prep-kernel-pseudoconvexity"
+  },
+  {
+   "claim_id": "claim-finite-jet-specialization",
+   "exact_statement": "In bounded projective charts let a family of sets be described by finitely many Boolean combinations of equations and inequalities polynomial in the real fibre coordinates $y$, with coefficients real analytic in real parameter coordinates $b$. Fix $x$ and substitute $$b=x+R_t h,$$ where the entries of $R_t$ have convergent Puiseux expansions, $R_t\\to0$, and both $R_t$ and $R_t^{-1}$ have power bounds. The upper limits of these sets, and hence the open kernels of their complements, are semialgebraic in $(h,y)$ on the central fibre. Here $h$ ranges over its whole affine space, while the substitution is tested only where $b$ belongs to the original parameter box. When external parameters are present, assume that all data, including $R_t$, are jointly globally subanalytic and that the displayed analytic coefficients are jointly analytic. Then the resulting descriptions have analytic coefficients after generic restriction. If all the original data are merely globally subanalytic, the corresponding conclusions are subanalytic.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prep-finite-jet-specialization"
+  },
+  {
+   "claim_id": "claim-generic-distance-convergence",
+   "exact_statement": "Let $x$ range over an open real box $U$, let $K$ be compact and globally subanalytic, and let $d_t(x,z)$ be a bounded globally subanalytic family of functions on $K$, for $0<t<t_0$, uniformly Lipschitz in $z$. There is a relatively closed subanalytic subset $E\\subset U$ of dimension smaller than $\\dim U$ such that the extension $$\\widehat d(x,z,t)=\n \\begin{cases}\n d_t(x,z),&t>0,\\\\\n d_0(x,z),&t=0,\n \\end{cases}\n \\qquad d_0(x,z)=\\lim_{t\\downarrow0}d_t(x,z)$$ is jointly continuous at every $(x,z,0)$ with $x\\in U\\setminus E$ and $z\\in K$. In particular, for such $x$, if $x_t\\to x$ and $z_t\\to z$, then $$d_t(x_t,z_t)\\longrightarrow d_0(x,z).$$ For every compact $L\\subset U\\setminus E$, the convergence $d_t\\to d_0$ is uniform on $L\\times K$. One common exceptional set and one smaller open center box may be used for finitely many such tests. For countably many tests one may exclude the union of their exceptional sets, but no common open center box is asserted. These conclusions apply in particular to bounded, capped distance functions of definable closed sets.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prep-generic-distance-convergence"
+  },
+  {
+   "claim_id": "claim-freezing-real-center",
+   "exact_statement": "Let a definable family be written using $\\operatorname{Re}b$ and $\\operatorname{Im}b$, and let $R_t\\to0$ be a fixed real power matrix, independent of the real center $x$. For the substitution $$b=x+R_t(u+iv)$$ its upper-limit and open-kernel tests at generic $x$ are independent of $u$. Thus the kernels are invariant under real translations in the scaled coordinates. The tests may include remaining bounded fibre variables jointly. More generally, when a normalization $R_t(x)$ depends definably on $x$, Lemma <a href=\"#prep:generic-distance-convergence\" data-reference-type=\"ref\" data-reference=\"prep:generic-distance-convergence\">9</a> applies to the normalized closed-set tests themselves.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prep-generic-freezing"
+  },
+  {
+   "claim_id": "claim-power-diagonalization",
+   "exact_statement": "Let $f(e,t,v)$ be a bounded globally subanalytic function with iterated limit $f_{00}(v)=\\lim_{t\\downarrow0}\\lim_{e\\downarrow0}\nf(e,t,v)$. There is an integer $N_0$ such that for every integer $N>N_0$, $$\\lim_{t\\downarrow0}f(t^N,t,v)=f_{00}(v)$$ for each fixed $v$. The same choice works for finitely many tests; the parameter $v$ may include fixed box sizes and positive accuracies. For bounded closed-set tests, apply this to the distance functions on slightly larger boxes, retaining a smaller box to avoid artificial edge effects.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prep-power-diagonalization"
+  },
+  {
+   "claim_id": "claim-polynomial-hole-maximum",
+   "exact_statement": "Let $B$ be a complex manifold and let $J\\subset B\\times\\mathbb C$ be closed. Assume that $J\\to B$ is proper, its fibres are locally bounded in the line coordinate, and $(B\\times\\mathbb C)\\setminus J$ is locally pseudoconvex. If $g(b,t)$ is monic of positive degree in $t$ with holomorphic coefficients in $b$, then $$\\psi_g(b)=\\log\\max_{t\\in J_b}|g(b,t)|$$ is plurisubharmonic, with value $-\\infty$ for an empty fibre or a zero maximum. The assertion also holds for polynomials with nowhere-zero holomorphic leading coefficient, and for the constant test $1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-holes-polynomial-maximum"
+  },
+  {
+   "claim_id": "claim-boundary-hole-trapping",
+   "exact_statement": "Let a proper holomorphic submersion be given near a relatively compact parameter interval $I$ on the boundary of a one-sided complex disc. Let $G$ be locally pseudoconvex on that side, and suppose every limit of its fibre holes as the transverse parameter tends to $I$ belongs to a relative divisor $D$ that extends holomorphically across $I$ and is proper in each fibre. Then, after restriction near an interior point of $I$, the holes on that side belong to $D$. The conclusion holds with additional fixed parameters whenever these hypotheses hold locally uniformly in those parameters.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-holes-boundary-trapping"
+  },
+  {
+   "claim_id": "claim-interior-hole-trapping",
+   "exact_statement": "Let $G$ be open and locally pseudoconvex over a whole connected base box, with the preceding local confinement hypotheses. Suppose a relative divisor $D$ is holomorphic in a whole base box and contains the holes on a nonpluripolar parameter slice inside the box. Then it contains the holes nearby. In particular this applies to an open piece of a real analytic maximally totally real slice.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-holes-interior-trapping"
+  },
+  {
+   "claim_id": "claim-tangency-propagation",
+   "exact_statement": "Let $q:Q\\to\\Delta$ be a holomorphic submersion, let $G\\subset Q$ be open and locally pseudoconvex, and let $A$ be a divisor in $Q_0$. Suppose $Q_0\\setminus A$ is connected. Assume that on one side of a regular embedded real analytic arc through $0$, every limit of holes belongs to $A$. If $G_0$ is nonempty, then $$Q_0\\setminus A\\subset G_0.$$ It suffices to have these hypotheses on neighborhoods of compact paths in $Q_0\\setminus A$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-holes-tangency-propagation"
+  },
+  {
+   "claim_id": "claim-thin-hole-analyticity",
+   "exact_statement": "Let $M$ be a complex manifold of dimension $n$, and let $A\\subset M$ be closed and subanalytic, with real dimension at most $2n-2$. If $M\\setminus A$ is locally pseudoconvex, then $A$ is either empty or an analytic set of pure complex codimension one.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-holes-thin-analyticity"
+  },
+  {
+   "claim_id": "claim-relative-divisor-container",
+   "exact_statement": "Let $q:Q\\to B$ be a smooth projective family with connected fibres, and let $A\\subset Q$ be a relative algebraic subset with analytic coefficient data, proper in every fibre. Near a generic parameter there is a relative effective divisor $D$ containing $A$, defined over the full smaller parameter box and proper in every fibre.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-holes-relative-divisor-container"
+  },
+  {
+   "claim_id": "claim-bounded-containers",
+   "exact_statement": "Consider a smooth proper projective family with connected fibres, and a bounded-data semialgebraic family of subsets of those fibres. There is a degree bound, depending only on the family description, such that every member contained in a proper complex algebraic subset is contained in an effective divisor of that degree or smaller. The parameters admitting such a container form a subanalytic set, and containers can be selected subanalytically. For a one-sided family approaching a generic real analytic parameter wall, its limiting containers can be chosen as proper effective divisors varying real analytically on that wall.",
+   "kind": "bound",
+   "statement_anchor": "stmt-holes-bounded-containers"
+  },
+  {
+   "claim_id": "claim-projective-hole-propagation",
+   "exact_statement": "Let $q:Q\\to B$ be smooth, proper, and projective, with connected smooth fibres. Let $G\\subset Q$ be open, subanalytic, locally pseudoconvex, and fibrewise semialgebraic with bounded data. Put $S=q(G)$, and let $S_0$ be a connected component of $S$. If $G_b$ contains a Zariski open dense subset of $Q_b$ for every $b$ in some nonempty open subset of $S_0$, then $$J=q^{-1}(S_0)\\setminus G$$ is an analytic divisor, possibly empty. Its intersection with each fibre is proper, so every $G_b$, $b\\in S_0$, contains a Zariski open dense subset of $Q_b$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-holes-projective-propagation"
+  },
+  {
+   "claim_id": "claim-fixed-container-propagation",
+   "exact_statement": "In Proposition <a href=\"#holes:projective-propagation\" data-reference-type=\"ref\" data-reference=\"holes:projective-propagation\">19</a>, let $D$ be a relative analytic divisor defined on the full parameter box and proper in every fibre. If $J\\subset D$ over a nonempty open subregion of $S_0$, then $J\\subset D$ over all of $S_0$. The same conclusion holds for any relative proper analytic subset in place of $D$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-holes-container-propagation"
+  },
+  {
+   "claim_id": "claim-section-projection-test",
+   "exact_statement": "Suppose a full-box container $D$ as in Corollary <a href=\"#holes:container-propagation\" data-reference-type=\"ref\" data-reference=\"holes:container-propagation\">20</a> is available. A local holomorphic section $\\sigma$ of $q$ avoiding $D$ lies in $G$ at every parameter of $S_0$. Near a boundary point of $S_0$ that lies in the parameter box, $S_0$ is locally pseudoconvex wherever such a section exists.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-holes-section-test"
+  },
+  {
+   "claim_id": "claim-accessible-upper-containment",
+   "exact_statement": "Under these hypotheses, at generic $x$, for every finite $L>|p|$ and every $\\eta>0$ there is $t_0=t_0(x,L,\\eta)>0$ such that $$\\label{loc:upper}\n 0<t<t_0\\quad\\Longrightarrow\\quad\n A_t^x(L)\\subset\\{Z:\\operatorname{dist}(Z,\\overline{P_x})<\\eta\\}.$$ Consequently, if $t_n\\downarrow0$ and paths in $D_{t_n}^x$ start at $p$, stay in one fixed bounded box, and have endpoints tending to $z$, then $z\\in\\overline{P_x}$. The same holds for starting points tending to $p$ inside a uniform initial ball. Fixed auxiliary parameters are permitted; generic restrictions are made in the real centers used for the recenterings.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-loc-theorem"
+  },
+  {
+   "claim_id": "claim-analytic-power-parametrization",
+   "exact_statement": "Let $U\\subset\\mathbb R^k$ be open and let $f:U\\times(0,\\epsilon)\\to\\mathbb R^m$ be bounded and globally subanalytic. Outside a closed subanalytic subset of $U$ of dimension less than $k$, locally in $x$, there are an integer $q\\geq1$ and a real-analytic map $a(x,s)$, defined near $U'\\times\\{0\\}$, such that $$f(x,t)=a(x,t^{1/q})\\qquad(0<t<\\epsilon').$$ Here $U'$ and $\\epsilon'$ may be reduced. If a scalar coordinate of $f$ is positive, it either has a nonzero limit or, after a further generic restriction, has the form $$t^{\\nu/q}a_0(x,t^{1/q}),\\qquad a_0(x,0)>0,\n                 \\quad \\nu\\in\\mathbb N.$$ On smaller parameter boxes the analytic maps have a common complex neighborhood and all their derivatives are bounded.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-loc-puiseux"
+  },
+  {
+   "claim_id": "claim-controlled-replacement-paths",
+   "exact_statement": "Let $U\\subset\\mathbb R^k$ be open, let $D\\subset U\\times(0,\\epsilon)\\times\\mathbb R^n$ be a bounded globally subanalytic family of open sets, and let $v,w$ be bounded subanalytic sections that belong to the same component of $D_{x,t}$. Locally at generic $x_0\\in U$, there are a neighborhood $U'$ of $x_0$, $\\epsilon'>0$, and paths $$F_t:U'\\times[0,1]\\longrightarrow\\mathbb R^n$$ with endpoints $v(x,t),w(x,t)$ and image in $D_{x,t}$, with the following uniform properties. For each $t$, $F_t(\\cdot,a)$ extends holomorphically to one fixed complex neighborhood $U'_{\\mathbb C}$, independently of $t$ and $a$. On a smaller such neighborhood there is $C<\\infty$ such that $$\\label{loc:path-estimate}\n \\sup_{0<t<\\epsilon'}\\sup_{x\\in U'_{\\mathbb C}}\n \\bigl(|F_t(x,a)|+|F_t(x,a)-F_t(x,b)|/|a-b|\\bigr)\\leq C\n \\quad(a\\ne b).$$ In particular, every fixed order of $x$-derivatives satisfies the same estimate, with its own constant. The replacement paths and their timing need not be subanalytic.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-loc-paths"
+  },
+  {
+   "claim_id": "claim-accessible-semidefinite-tests",
+   "exact_statement": "Suppose, in addition, that the marked kernel is described recursively by strict positive-definiteness tests for finitely many continuous Hermitian matrix functions $M_j(Z)$, and that every point of $\\overline P$ satisfies $M_j(Z)\\geq0$. Then for each finite $L$, at a generic fixed center, $$\\inf_{Z\\in A_t(L)}\\lambda_{\\min}(M_j(Z))\\geq-o(1)\n                \\qquad(t\\downarrow0)$$ simultaneously for all $j$. The assertion is uniform over the accessible component in that fixed box.",
+   "kind": "bound",
+   "statement_anchor": "stmt-loc-matrix-outer"
+  },
+  {
+   "claim_id": "claim-algebraic-null-plaques",
+   "exact_statement": "Let $M$ be a regular patch of a real algebraic hypersurface in a smooth complex algebraic $n$-fold. Suppose one side is locally pseudoconvex and the Levi form has constant rank $r$ on $M$. Put $\\ell=n-r-1$. The Levi-null distribution integrates into complex $\\ell$-dimensional plaques. Each sufficiently small plaque is open in an irreducible complex algebraic variety of dimension $\\ell$. Locally at generic transverse parameters these varieties form a real analytic family of bounded degree. After complexifying the parameters, taking the relevant components, and resolving, they have smooth projective models in a smooth proper family.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-win-plaques"
+  },
+  {
+   "claim_id": "claim-period-matrix",
+   "exact_statement": "In the situation of Lemma <a href=\"#win:plaques\" data-reference-type=\"ref\" data-reference=\"win:plaques\">26</a>, there is a real analytic $(r+1)$-parameter family of plaques, with coordinates $(s,w)\\in\n\\mathbb R\\times\\mathbb R^r$, whose complexification evaluates with full complex rank near the original plaque. The remaining $r$ real transverse coordinates can be retained as external parameters. At a fixed real center $x_1$, let $L$ be the smooth projective model of its plaque. There is a symmetric meromorphic $r\\times r$ matrix $H$ on $L$, holomorphic near the original plaque, such that $\\Im H>0$ there and the weighted tangent inequality is $$\\label{win:quadratic-test}\n       q_z(s,w)=\\Im s-(\\Im w)^{\\mathsf T}\n                          (\\Im H(z))^{-1}\\Im w>0.$$ The meromorphic data depend analytically on the generic external parameters.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-win-period"
+  },
+  {
+   "claim_id": "claim-whole-seed-bergman-fibre",
+   "exact_statement": "At every $z_0$ in a sufficiently small original plaque patch, the component of the kernel fibre containing $(i,0)$ is precisely $$T_A=\\{(s,w)\\in\\mathbb C^{r+1}:\\Im s>(\\Im w)^{\\mathsf T}A\\Im w\\},\n                    \\qquad A=(\\Im H(z_0))^{-1}>0.$$ Its Bergman kernel is strictly positive at every point. This is a statement about the entire fibre component, not a relatively compact part of it.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-win-seed-bergman"
+  },
+  {
+   "claim_id": "claim-exact-first-epigraph",
+   "exact_statement": "There is a connected semialgebraic locally pseudoconvex domain $V_2\\subset L$ such that $H$ is holomorphic on $V_2$, $\\Im H>0$ there, and $$\\label{win:epigraph}\n E=\\{(s,w,z):z\\in V_2,\\quad\n              \\Im s>(\\Im w)^{\\mathsf T}(\\Im H(z))^{-1}\\Im w\\}.$$ In particular $V_2=\\{z:((i,0),z)\\in E\\}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-win-first-epigraph"
+  },
+  {
+   "claim_id": "claim-finite-taylor-extraction",
+   "exact_statement": "Suppose $A_t(x)$ and $A_t(x)^{-1}$ have joint Puiseux expansions on a real parameter neighborhood, with polynomial bounds in $t^{-1}$, and $R_t(x)$ has the same property and tends to zero locally uniformly. If $f$ is holomorphic on a fixed complex neighborhood, then any expression obtained by multiplying $f(x+R_tz)$ on either side by such Puiseux matrices, and subtracting a similarly bounded constant term, has a polynomial holomorphic limit on every bounded $z$-box whenever it is locally bounded on one nonempty complex open $z$-set. The limit and convergence are analytic in a generic real center and smooth to all orders in $z$ on bounded boxes.*\n\n*In addition, if $R_t$ is invertible and $$C_t(x,u)=R_t(x)^{-1}R_t(x+R_t(x)u)$$ is bounded on real bounded $u$-boxes, it converges smoothly on those boxes to a polynomial $G_x(u)$. After generic restriction, $\\det G_x(u)=1$, and the limiting matrices have polynomial inverses.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-win-finite-taylor"
+  },
+  {
+   "claim_id": "claim-siegel-polynomial-normalization",
+   "exact_statement": "Let $S_2$ be a fixed parameter domain with normalization $R_t^2(x_2)$, open-kernel component $P_2$, and a fixed interior seed $p_2$. Let $H_*$ be symmetric and holomorphic on a full neighborhood of $x_2$, with $\\Im H_*>0$ on $S_2$. Assume the normalizations have joint Puiseux expansions and polynomial inverse bounds. Define $$\\begin{aligned}\n T_t&=\\bigl(\\Im H_*(x_2+R_t^2p_2)\\bigr)^{1/2},\\label{win:T}\\\\\n H_t(z)&=T_t^{-1}\\bigl(H_*(x_2+R_t^2z)\n             -\\Re H_*(x_2+R_t^2p_2)\\bigr)T_t^{-1}.\\label{win:Ht}\n\\end{aligned}$$ Then $H_t$ converges on all bounded complex boxes to a symmetric holomorphic polynomial matrix $\\tau$, with $\\tau(p_2)=iI$ and $\\Im\\tau>0$ on $P_2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-win-siegel-normalization"
+  },
+  {
+   "claim_id": "claim-projective-windows",
+   "exact_statement": "Let $Y$ be a connected smooth projective variety and let $V\\subset Y$ be a nonempty connected semialgebraic open subset that is locally pseudoconvex at its boundary. The following data exist, locally at generic centers in totally real parameter boxes. The same assertion holds in smooth projective families with additional real parameters, analytic coefficients, and bounded algebraic fibre data, when the hypotheses hold fibrewise. The constructed data depend analytically on those parameters after generic restriction and may be complexified locally.*\n\n\n*There is a complex box $B\\subset\\mathbb C^d$, a smooth proper projective family $q:Q\\to B$ with connected fibres of dimension $\\dim Y-d$, and a holomorphic evaluation $\\mathrm{ev}:Q\\to Y$, algebraic with bounded data in the projective variables and of full rank on a coordinate patch meeting every fibre. Its fibre images $Z_b=\\mathrm{ev}(Q_b)$ are irreducible projective varieties of dimension $\\dim Y-d$, and $Q_b\\to Z_b$ is proper and surjective. If $G=\\mathrm{ev}^{-1}(V)$, a component $S$ of $q(G)$ and a relative proper algebraic subset $D\\subset Q$ satisfy $$\\label{win:container}\n               Q_b\\setminus D_b\\subset G_b\\qquad(b\\in S).$$ The container $D$ is analytic on the full box and proper in every fibre, after shrinking the box. The actual holes $Q|_S\\setminus G$ are analytic; their images give precisely $Z_b\\setminus V$ and are algebraic in each fibre. The domain $S$ is locally pseudoconvex at its parameter boundary. Its boundary inside $B$ is disjoint from $q(G)$. All stated shrinkings of $B$ may be made before the choice of scales and sequences.*\n\n\n*There are a fixed interior seed $p$, real block diagonal matrices $R_t(x)$ tending to zero with polynomial inverse bounds, and a component $P$ of the open kernel of $$S_{t,x}=R_t(x)^{-1}(S-x)$$ at $p$. A fixed neighborhood of $p$ is eventually in $S_{t,x}$. The domain $P$ is a finite recursive tower, beginning at a point and adding a block $(s,w)\\in\\mathbb C\\times\\mathbb C^r$ over a previously constructed domain $P_2$ by the condition $$\\label{win:tower}\n      z\\in P_2,\\qquad\n      \\Im M(s,w,z)>0,\\qquad\n      M(s,w,z)=\\begin{pmatrix}s&w^{\\mathsf T}\\\\w&\\tau(z)\\end{pmatrix},$$ where $\\tau$ is symmetric and polynomial holomorphic and $\\Im\\tau>0$ on $P_2$.*\n\n\n\n*For each bounded real $u$-box the ratios $$\\label{win:ratio}\n           R_t(x)^{-1}R_t(x+R_t(x)u)\\longrightarrow G_x(u)$$ converge with every derivative. The matrix $G_x$ is polynomial and block diagonal, each block depends only on later block coordinates, $G_x(0)=I$, and every block has determinant one. Its inverse is polynomial. For all sufficiently small real $u$, $$\\label{win:orbit}\n                           Z\\longmapsto u+G_x(u)Z$$ is an automorphism of $P$.*\n\n*Finally the bounded-path localization conclusion holds: any limit of endpoints of paths in $S_{t,x}$ starting at the seed and staying in a fixed bounded box belongs to $\\overline P$. Equivalently, on each fixed bounded box the accessible components have outer distance to $\\overline P$ tending to zero.",
+   "kind": "construction",
+   "statement_anchor": "stmt-win-construction"
+  },
+  {
+   "claim_id": "claim-tower-geometry",
+   "exact_statement": "The domain $P$ of Theorem <a href=\"#win:construction\" data-reference-type=\"ref\" data-reference=\"win:construction\">32</a> is diffeomorphic to $\\mathbb R^{2d}$, where $d=\\dim_{\\mathbb C}P$. In particular it is contractible. It is Stein and biholomorphic to a bounded domain of the same complex dimension. Complete real holomorphic vector fields from the identity component of its automorphism group span every complex tangent space over $\\mathbb C$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-win-tower-properties"
+  },
+  {
+   "claim_id": "claim-resolved-cover-pseudoconvexity",
+   "exact_statement": "The open set $V$ is locally pseudoconvex in $Y$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-quo-pseudoconvex"
+  },
+  {
+   "claim_id": "claim-tower-proper-distance",
+   "exact_statement": "The domain $P$ is diffeomorphic to $\\mathbb R^{2d}$, is Stein, and is biholomorphic to a bounded domain in $\\mathbb C^d$. Its Kobayashi distance is a proper distance inducing its usual topology.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-quo-tower"
+  },
+  {
+   "claim_id": "claim-decaying-guards",
+   "exact_statement": "There are normalized accessible parameter regions $A_i\\subset\\{|Z|<R_i\\}$, where $R_i\\to\\infty$, and holomorphic functions $h$ on their neighbourhoods, given by the same formula $$\\label{quo:guard-formula}\n h(Z)=\\exp\\left(-\\alpha\\sum_j\\operatorname{tr}\n                      \\log(I-iM_j(Z))\\right),$$ with the following properties. Their values lie in a fixed sector $\\{\\zeta:|\\arg\\zeta|<\\theta\\}$, $\\theta<\\pi/2$, and are uniformly bounded. On $A_i$, $|h(Z)|\\leq C(1+|Z|)^{-\\alpha}$. Every compact subset of $P$ is eventually contained in $A_i$. There are connected open subsets $H_i\\subset A_i$, containing the seed and eventually every compact subset of $P$, such that $$u_i=\\log|h|+a_i|Z|^2>m_i\\quad\\hbox{on }H_i,\n \\qquad a_i>0,$$ where $a_iR_i^2\\leq1$, $m_i\\to-\\infty$, and every boundary of $H_i$ admitting an incidence with a point of $V$ has $|h|\\leq\\delta_i$, with $\\delta_i\\to0$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-quo-guard"
+  },
+  {
+   "claim_id": "claim-intrinsic-window-fibres",
+   "exact_statement": "The union $U_i=\\bigcup_{b\\in H_i}(Z_b\\cap V)$ is open in $V$. Distinct fibres in this union are disjoint, and there is a holomorphic submersion $$\\pi_i:U_i\\longrightarrow H_i,\n \\qquad \\pi_i^{-1}(b)=Z_b\\cap V.$$ These fibres are connected. Moreover, if $T$ is a smooth connected projective variety, $D\\subset T$ is a proper analytic subset, and $g:T\\setminus D\\to V$ is holomorphic, then any such image meeting a fibre of $\\pi_i$ is contained in that fibre.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-quo-incidence"
+  },
+  {
+   "claim_id": "claim-cutoff-guard-compactness",
+   "exact_statement": "Let $D$ be a complex manifold, let $A_i\\subset D$ be open, and let $h_i\\in\\mathcal O(A_i)$ satisfy $|h_i|\\leq C$. Suppose that, for every $x\\in\\partial A_i\\cap D$, $$\\limsup_{A_i\\ni z\\to x}|h_i(z)|\\leq\\epsilon_i,\n \\qquad \\epsilon_i\\longrightarrow0.$$ Extend $h_i$ by zero outside $A_i$. These extended functions have a subsequence converging uniformly on compact subsets of $D$ to a holomorphic function. Suppose in addition that their nonzero values lie in $|\\arg\\zeta|\\leq\\theta<\\pi/2$, that $D$ is connected, and that $x_i\\to x$, $h_i(x_i)\\to a\\ne0$. Then every resulting limit is nowhere zero, and every compact subset of $D$ lies in $A_i$ eventually.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-quo-cutoff-normal"
+  },
+  {
+   "claim_id": "claim-projection-chart-trapping",
+   "exact_statement": "Let $D_i$ exhaust a connected complex manifold $D$, and let $g_i:D_i\\to V$ be holomorphic. Suppose that at points $x_i\\to x$ the images belong to $U_i$, and their normalized parameters $\\pi_i(g_i(x_i))$ converge to the seed $p\\in P$. Then every compact subset of $D$ is eventually mapped into $U_i$; after taking a subsequence, $\\pi_i\\circ g_i$ converges normally on $D$ to a holomorphic map into $P$. The same assertion holds for maps into a manifold equipped with these projection charts and their guards.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-quo-trapping"
+  },
+  {
+   "claim_id": "claim-inverse-chart-tightness",
+   "exact_statement": "For every compact $K\\subset P$, the images $\\psi_i(K)$ eventually lie in a compact subset of one fixed chart $M_j$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-quo-inverse-tightness"
+  },
+  {
+   "claim_id": "claim-normal-source-descent",
+   "exact_statement": "The map $f$ descends uniquely to an equivariant holomorphic map $f_X:\\widetilde X\\to M$. Its fibres are connected and, locally on $M$, have simultaneous projective compactifications with analytic holes. Each fibre is biholomorphic to a semialgebraic open subset of a projective variety.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-quo-descent"
+  },
+  {
+   "claim_id": "claim-intrinsic-projection",
+   "exact_statement": "Under the hypotheses of condition <span class=\"upright\">(i)</span> of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> and the boundary construction of Theorem <a href=\"#win:construction\" data-reference-type=\"ref\" data-reference=\"win:construction\">32</a>, there are a contractible Stein manifold $M$, biholomorphic to the boundedly realizable tower $P$, an equivariant surjective submersion $f:V\\to M$, and an equivariant holomorphic map $f_X:\\widetilde X\\to M$ with $f=f_X\\mu$. Both maps have connected fibres. Their fibres have simultaneous projective compactifications with analytic holes locally on $M$, after a deck translation. The normal-source fibres are normal and semialgebraically compactifiable up to biholomorphism, and $f_X$ is flat.*\n\n*Suppose additionally that the image $\\Lambda$ of the deck action on $M$ is discrete and acts freely. Then the descended proper map $X\\to M/\\Lambda$, its pullback to $M$, and every connected finite covering family of that pullback are flat and topologically locally trivial, with connected normal projective fibres. Their induced resolution families are smooth proper projective families; the resolution maps are proper, have connected point fibres, and are bimeromorphic on every fibre. The induced maps on integral degree-one cohomology are morphisms of local systems.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-quo-projection"
+  },
+  {
+   "claim_id": "claim-abelian-cover-liouville",
+   "exact_statement": "Let $a:W\\to Z$ be a connected regular covering of a compact connected Kähler manifold. If its deck group is virtually abelian, every bounded holomorphic function on $W$ is constant.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-grp-liouville"
+  },
+  {
+   "claim_id": "claim-countable-level-local-finiteness",
+   "exact_statement": "Let $q:Q\\to B$ be a proper holomorphic map from a complex manifold, let $h:Q\\dashrightarrow C$ be a meromorphic map to a projective variety, and let $G_0\\subset Q$ be open with $h|_{G_0}$ holomorphic. Fix $s\\in C$. If $$q\\bigl(G_0\\cap h^{-1}(s)\\bigr)$$ is countable, it is locally finite in $B$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-grp-finite-level-projection"
+  },
+  {
+   "claim_id": "claim-core-level-sets",
+   "exact_statement": "For every such $s$, the set $D_s$ is countable and locally finite in $M$. The union of these sets, as $s$ runs through very general values, is dense in $M$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-grp-countable-core-level"
+  },
+  {
+   "claim_id": "claim-transverse-discreteness",
+   "exact_statement": "The image $\\Lambda$ is discrete in $\\operatorname{Aut}(M)$ and acts cocompactly on $M$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-grp-discrete"
+  },
+  {
+   "claim_id": "claim-free-transverse-finite-cover",
+   "exact_statement": "There is a torsion-free finite-index subgroup $\\Lambda_1\\subset\\Lambda$ acting freely on $M$. Its inverse image in $\\Gamma$ corresponds to a connected finite cover of the original normal projective variety $X$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-grp-free-finite-index"
+  },
+  {
+   "claim_id": "claim-transverse-symmetry",
+   "exact_statement": "Under the intrinsic-projection hypotheses recalled above, the transverse image is discrete and cocompact. After a finite cover it acts freely, and $M$ is biholomorphic to a bounded symmetric domain, with a point allowed.",
+   "kind": "classification",
+   "statement_anchor": "stmt-grp-discrete-symmetric"
+  },
+  {
+   "claim_id": "claim-compactifiable-cover-abelianity",
+   "exact_statement": "Let $a:U\\to N$ be a connected regular covering of a smooth connected projective manifold, with deck group $K$. Suppose $U$ is a Zariski open subset, in the analytic sense, of a smooth projective manifold $\\overline U$. Then, using <a href=\"#grp:abelianity-input\" data-reference-type=\"eqref\" data-reference=\"grp:abelianity-input\">[grp:abelianity-input]</a>, the group $K$ is virtually abelian.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-grp-compactifiable-cover"
+  },
+  {
+   "claim_id": "claim-fibre-kernel-abelianity",
+   "exact_statement": "After the finite-cover replacement of Lemma <a href=\"#grp:free-finite-index\" data-reference-type=\"ref\" data-reference=\"grp:free-finite-index\">47</a>, let $K=\\ker(\\Gamma\\to\\Lambda)$. The group $K$ is finitely generated and virtually abelian. For each $m\\in M$, it acts on $f^{-1}(m)$ as the deck group of a connected regular covering of a smooth projective fibre.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-grp-kernel-abelian"
+  },
+  {
+   "claim_id": "claim-characteristic-fibre-cover",
+   "exact_statement": "There is a characteristic finite-index subgroup $K'\\subset K$ which is free abelian. The quotient $\\mathcal X=U/K'$ is normal and its map $p:\\mathcal X\\to M$ is proper and flat. It is topologically locally trivial with connected normal projective fibres $N_m$, and $$\\pi_1(N_m)\\xrightarrow{\\ \\sim\\ }\\pi_1(\\mathcal X)=K'.$$ The restriction of $U\\to\\mathcal X$ to $N_m$ is its connected universal cover.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cmp-characteristic"
+  },
+  {
+   "claim_id": "claim-relative-albanese-descent",
+   "exact_statement": "There is an integer $a\\geq0$ with $K'\\simeq\\mathbb Z^{2a}$ and a smooth proper family of Albanese torsors $q:\\mathcal A\\to M$ and a proper morphism $$\\alpha:\\mathcal X\\longrightarrow\\mathcal A$$ over $M$ whose restriction to $N_m$ is its Albanese morphism. Both constructions are equivariant for $\\Gamma/K'$. The morphisms $\\alpha|_{N_m}$ and $\\alpha$ induce isomorphisms on fundamental groups.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cmp-albanese"
+  },
+  {
+   "claim_id": "claim-proper-affine-base",
+   "exact_statement": "There is a $\\Gamma$-equivariant proper flat surjection $$j:U\\longrightarrow T,\n          \\qquad T\\simeq M\\times\\mathbb C^a,$$ whose fibres are connected, simply connected, normal projective varieties. The action of $\\Gamma$ on $T$ is proper and cocompact and has finite stabilizers. A polarization of the finite cover of $X$ pulls back to a $\\Gamma$-invariant line bundle $L$ on $U$, ample on each fibre of $j$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cmp-affine-base"
+  },
+  {
+   "claim_id": "claim-invariant-closed-set-rigidity",
+   "exact_statement": "Let a countable discrete group act properly and cocompactly by diffeomorphisms on a contractible smooth manifold $T$ homeomorphic to $\\mathbb R^b$. If a nonempty closed invariant subset $A\\subset T$ has the homotopy type of a finite CW complex, then $A=T$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cmp-closed-rigidity"
+  },
+  {
+   "claim_id": "claim-semialgebraic-chow-base",
+   "exact_statement": "Fix a semialgebraic realization $U\\subset Z$, where $Z$ is projective, and a projective embedding of $Z$. Let $n$ be the fibre dimension of $j$ and $d$ the degree of one fibre. In the projective Chow space $\\operatorname{Chow}_{n,d}(Z)$, the locus $$C=\\{c:\\ c\\text{ is an integral cycle and }|c|\\subset U\\}$$ is semialgebraic, and the map $t\\mapsto[j^{-1}(t)]$ is a homeomorphism from $T$ onto $C$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cmp-chow-base"
+  },
+  {
+   "claim_id": "claim-polarized-isomorphism-loci",
+   "exact_statement": "For every fixed polarized fibre $(F,L_F)$ of $j$, the locus of fibres polarized-isomorphic to it is semialgebraic in $C$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cmp-polarized-locus"
+  },
+  {
+   "claim_id": "claim-global-compact-product",
+   "exact_statement": "There is a simply connected normal projective variety $F$ such that $$\\widetilde X\\simeq M\\times\\mathbb C^a\\times F.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cmp-product"
+  },
+  {
+   "claim_id": "claim-product-presentation-converse",
+   "exact_statement": "If $\\widetilde X\\simeq D\\times\\mathbb C^m\\times F$, with $D$ a bounded symmetric domain and $F$ projective, then $\\widetilde X$ is biholomorphic to a semialgebraic open subset of a projective variety.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cmp-converse"
+  },
+  {
+   "claim_id": "claim-remmert-reduction",
+   "exact_statement": "Let $X$ be a connected normal projective complex variety whose ordinary universal cover $U$ has a semialgebraic projective-open presentation. Write $U\\simeq B\\times F$, where $B=D\\times\\mathbb C^m$, as in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>. Then $U$ is holomorphically convex and the projection $p:U\\to B$ is its Remmert reduction: $B$ is Stein, $p$ is proper with connected compact normal projective fibres, and the canonical map $\\mathcal O_B\\to p_*\\mathcal O_U$ is an isomorphism. Moreover, $U$ is Stein if and only if $F$ is a point.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-remmert-semialgebraic"
+  },
+  {
+   "claim_id": "claim-singer-vanishing",
+   "exact_statement": "Let $X$ be a smooth connected closed aspherical projective complex $n$-fold whose ordinary universal cover has a semialgebraic projective-open presentation. Its $L^2$-Betti numbers, computed from the reduced $L^2$-cohomology of the universal cover, satisfy $$b_j^{(2)}(X)=0\\qquad(j\\geq0,\\ j\\ne n).$$ If $m>0$ for the affine factor in the product constructed in the proof of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, then $b_j^{(2)}(X)=0$ for every $j\\geq0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-singer-semialgebraic"
+  },
+  {
+   "claim_id": "claim-quasiprojective-cover-classification",
+   "exact_statement": "Let $X$ be a connected normal projective variety over $\\mathbb C$, with ordinary universal cover $U$. The following are equivalent:*\n\n1.  *$U$ is biholomorphic to a quasi-projective variety.*\n\n2.  *There are a finite étale Galois cover $X'\\to X$, an abelian variety $A$, and a morphism $\\alpha:X'\\to A$ that is a locally trivial holomorphic fibre bundle with simply connected projective fibre.*\n\n3.  *For some integer $m\\geq0$ and some simply connected projective variety $F$, there is a biholomorphism $$U\\simeq\\mathbb C^m\\times F.$$*\n\n*A point is allowed as the abelian variety or the fibre.*\n\n*More generally, let $V\\to X$ be a connected infinite étale Galois covering of complex spaces, with $V$ biholomorphic to a quasi-projective variety. There are an intermediate finite étale Galois cover $X'\\to X$, a morphism $\\alpha:X'\\to A$ to an abelian variety that is a locally trivial holomorphic fibre bundle, and an étale cover $\\widetilde A\\to A$, where $\\widetilde A$ has no positive-dimensional compact analytic subvariety, such that $V\\to X'$ is biholomorphic as a covering to $$X'\\times_A\\widetilde A\\longrightarrow X'.$$ No algebraicity of the deck transformations is assumed.",
+   "kind": "classification",
+   "statement_anchor": "stmt-cor-quasiprojective"
+  },
+  {
+   "claim_id": "claim-affine-uniformization",
+   "exact_statement": "Let $X$ be a connected smooth projective complex $n$-fold, where $n\\geq0$. If its ordinary universal cover is biholomorphic to $\\mathbb C^n$, then there is a finite étale Galois cover $A\\to X$ with $A$ an abelian variety.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-affine-uniformization"
+  }
+ ],
+ "paper": "papers/EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-B-TO-H-0144_PM-058.1_Semialgebraic_universal_covers_of_normal_projective_varieties.md",
+ "purpose": "Semialgebraic universal covers of normal projective varieties",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "2e18f1e19c8109a8a4e96855b7f1a7235b46ded1ded60c9f267c4428c4bd1c08",
+   "pm.domains.v2": "f70b7b87db781bb5269ce9c5306ca2cfeb25bd867bf976d0449eda5176e25140",
+   "pm.edges.v2": "c1fcc621f9b0bd8d7b62b0e3e97d17aa375213d88061f7c3667994ef4ddf7076",
+   "pm.extraction.v2": "31403cf3b79244d9d0ba3c5c30a628b7a5f0d5c2cae5054e517dc06726c216d0",
+   "pm.formal.v2": "f3e79a88d0722a48526c22ed2fb86f479f171636763977e98748582a9166a140",
+   "pm.limits.v2": "7dae3e663403365405515b03130947814c70cbd82db246d48e6aa3c7c85ec073",
+   "pm.node.v2": "ba0006829fb0bc730a920d23ef4509eb77a5093edf47facab2d56043e866131c",
+   "pm.objects.v2": "a3e4337cd5a8286d3923b02419cdac117c6fa51ab544adff78e6d34240e7be46",
+   "pm.provenance.v2": "c799e31a0c758bde13503916f36ab18fd17e76aa3cdbc456ad3391d71857f984",
+   "pm.quantities.v2": "9bd69878abd4f43b3e2380bc1d5f988a7ba9b90309ff6f1e77ba02b0c454ba34",
+   "pm.reading.v2": "2438ad5fd76aa16890742a47f70e9a21de10852eb4521473c1e0462931e4378a",
+   "pm.roadmap.v2": "b89b7d0d8c176ce866f83124b935891dc59952450f1244acc766d022bbeb0845",
+   "pm.search.v1": "57386e2deac0ef830449b95c4686c4ea26448fdc48d4a6d1b48d25755e593390",
+   "pm.triptych.v2": "c6ae9d784f0b8f6e068347e6c68873cde65d62c9de2c17388ef815a9ddea92ef"
+  },
+  "canonical_sha256": "59b7a7c44c51841e200c31079d0e1880ecc7a620d99377b2407343398ffa9efa",
+  "paper_sha256": "0ab6c3ec536ec8ebeffad11c0411ad8282331c01c167c266d32812c8ee61b776",
+  "repaired_body_sha256": "437323878fb136b74b3c681beaa58f51e46662976df1120f1201db959ec6ed0a"
+ },
+ "status": "ACTIVE",
+ "subject_id": 3,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "5a88be71fa8aa331c77d6e04acdf6a021aac54fb642ba60648d028a3e6405666",
+   "receipt_sha256": "3ac2dba57bf074af10f110e1f5f5bb706cea3a1745f48aca10c51a4d0d5158e3",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Semialgebraic universal covers of normal projective varieties"
+}

@@ -1,0 +1,869 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 866295,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 246474
+ },
+ "coordinate": "EN-110-000-0022-2-2026-PR-T4-UK-EX-M2-C-ML-H-0176",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Wave-packet frame analysis for oscillatory signals",
+   "strength": "weak",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "The radial integral of $|E1|^p$ diverges for $0<p\\le3$. Thus Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> proves exactly the conjectured open range; it makes no endpoint assertion.",
+     "quote_sha256": "bf805cc8ca43b5b46d4ce985d827a87063d3dec332d2ffe24718f873771a2575"
+    }
+   ],
+   "query": "Does the estimate hold at p equal to 3 or below?",
+   "reason": "The radial integral diverges for exponents up to 3, and the theorem makes no endpoint assertion."
+  }
+ ],
+ "family": "PM-077",
+ "id": "PM-077.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-sphere-bounded-data-restriction",
+    "statement": "For every real $p>3$, there is a finite constant $C_p$, depending only on $p$, such that $$\\|Eg\\|_{L^p(\\mathbb R^3)}\n  \\le C_p\\|g\\|_{L^\\infty(S^2,\\sigma)}$$ for every bounded measurable complex-valued function $g$ on $S^2$."
+   },
+   {
+    "anchor": "stmt-thm-intro-packets",
+    "claim_id": "claim-uniform-packet-propagation",
+    "statement": "Fix $0<\\kappa<1/10$, a smooth elliptic continuation $\\phi$ of a spherical graph patch allowed in Section <a href=\"#sec:packets\" data-reference-type=\"ref\" data-reference=\"sec:packets\">6</a>, a bounded frequency-label region $\\Omega\\subset\\mathbb R^2$, and the fixed window system used in <a href=\"#pkt:analysis\" data-reference-type=\"eqref\" data-reference=\"pkt:analysis\">[pkt:analysis]</a>–<a href=\"#pkt:synthesis\" data-reference-type=\"eqref\" data-reference=\"pkt:synthesis\">[pkt:synthesis]</a>."
+   },
+   {
+    "anchor": "stmt-cor-sphere-kakeya-maximal",
+    "claim_id": "claim-sphere-kakeya-maximal",
+    "statement": "For every $\\varepsilon>0$ there is a finite $C_\\varepsilon$ such that, for every $0<\\delta<1$ and $f\\in L^3(\\mathbb R^3)$, $$\\|K_\\delta f\\|_{L^3(S^2,\\sigma)}\n \\le C_\\varepsilon\\delta^{-\\varepsilon}\\|f\\|_{L^3(\\mathbb R^3)}.$$"
+   },
+   {
+    "anchor": "stmt-geo-main",
+    "claim_id": "claim-geometric-propagation",
+    "statement": "For $0<s\\le1$ and $0<\\kappa<1/10$, $$\\label{eq:source-4}\nq_*\\ge1+2s-10\\kappa.$$"
+   },
+   {
+    "anchor": "stmt-geo-time-conditioning",
+    "claim_id": "claim-time-profile-reuse",
+    "statement": "Suppose a reference law satisfies <a href=\"#eq:source-1\" data-reference-type=\"eqref\" data-reference=\"eq:source-1\">[eq:source-1]</a> with error $\\epsilon>0$."
+   },
+   {
+    "anchor": "stmt-geo-fixed-widths",
+    "claim_id": "claim-terminal-width-isolation",
+    "statement": "The failing families may be chosen so that the terminal widths $L,w$ are fixed in logarithmic units along each sequence, up to arbitrarily small prescribed rounding errors."
+   },
+   {
+    "anchor": "stmt-geo-hairbrush",
+    "claim_id": "claim-hairbrush-estimate",
+    "statement": "Let $\\mu$ be a subprobability law on the particles."
+   },
+   {
+    "anchor": "stmt-geo-heavy-count",
+    "claim_id": "claim-heavy-box-count",
+    "statement": "Suppose the hypotheses of Lemma <a href=\"#geo:hairbrush\" data-reference-type=\"ref\" data-reference=\"geo:hairbrush\">8</a> hold in every time bin with the same $H$."
+   },
+   {
+    "anchor": "stmt-geo-angular-exclusion",
+    "claim_id": "claim-pointwise-angular-exclusion",
+    "statement": "Let $\\mathcal H$ be the family in Corollary <a href=\"#geo:heavy-count\" data-reference-type=\"ref\" data-reference=\"geo:heavy-count\">9</a>."
+   },
+   {
+    "anchor": "stmt-geo-bounded-complexity",
+    "claim_id": "claim-bounded-complexity",
+    "statement": "In the contradiction families for Theorem <a href=\"#geo:main\" data-reference-type=\"ref\" data-reference=\"geo:main\">5</a>, the complexities $D_i$ may be bounded by a constant depending only on $\\kappa$."
+   },
+   {
+    "anchor": "stmt-geo-range-extension",
+    "claim_id": "claim-width-range-extension",
+    "statement": "After Lemma <a href=\"#geo:bounded-complexity\" data-reference-type=\"ref\" data-reference=\"geo:bounded-complexity\">11</a>, one may extend the input cap to any prescribed larger bounded power range of widths, preserve failure at the selected terminal widths, and place those widths a fixed power below the upper boundary of the permitted range."
+   },
+   {
+    "anchor": "stmt-geo-width-band",
+    "claim_id": "claim-backward-width-band",
+    "statement": "Suppose that at a mesh epoch $y$ the current large sublaw has assigned boxes of widths $L,w$ and the preceding hereditary obstruction."
+   },
+   {
+    "anchor": "stmt-geo-axis-stability",
+    "claim_id": "claim-neighbor-axis-stability",
+    "statement": "The large sublaws may be chosen so that neighboring mesh epochs satisfy $$\\label{eq:source-8}\n\\begin{split}\n\\angle\\bigl(\\operatorname{axis}_{y}(z),\n            \\operatorname{axis}_{y'}(z)\\bigr)\n&\\le M^{-d(y)+C_\\kappa\\Delta+o(1)},\\\\\n\\Delta&=|y'-y|+|x(y')-x(y)|\\\\\n&\\hspace{1.5cm}\n+|(x+d)(y')-(x+d)(y)|.\n\\end{split}$$ They also satisfy the pointwise single-epoch exclusions of Corollary <a href=\"#geo:angular-exclusion\" data-reference-type=\"ref\" data-reference=\"geo:angular-exclusion\">10</a>, including the allowed dilations."
+   },
+   {
+    "anchor": "stmt-geo-calibration",
+    "claim_id": "claim-calibrated-widths",
+    "statement": "Let $y_0\\in(0,1)$ be a point of ordinary differentiability of both limiting width depths, and put $$x_0=x(y_0),\\qquad d_0=d(y_0),\\qquad\na=-x'(y_0),\\qquad b=-(x+d)'(y_0),\\qquad\n\\lambda=a-b.$$"
+   },
+   {
+    "anchor": "stmt-geo-axis-prediction",
+    "claim_id": "claim-axis-prediction",
+    "statement": "In the families of Lemma <a href=\"#geo:calibration\" data-reference-type=\"ref\" data-reference=\"geo:calibration\">15</a>, two retained particles with the same $P=(U,V)$ and the same time prefix at a local epoch have reference axes agreeing to that epoch’s aspect precision, up to a factor $M^{o(\\delta)}$."
+   },
+   {
+    "anchor": "stmt-ent-finite-states",
+    "claim_id": "claim-finite-state-comparison",
+    "statement": "On any fixed bounded subset of $\\Omega$, comparable states are nested up to bounded ambiguity."
+   },
+   {
+    "anchor": "stmt-ent-regularization",
+    "claim_id": "claim-hereditary-regularization",
+    "statement": "For any fixed finite family of states, their joint labels, and conditional parameter labels given $\\mathcal B$, one may restrict to a subpower-density law with the following properties."
+   },
+   {
+    "anchor": "stmt-ent-states",
+    "claim_id": "claim-calibrated-entropy-profile",
+    "statement": "After the regularization of Lemma <a href=\"#ent:regularization\" data-reference-type=\"ref\" data-reference=\"ent:regularization\">18</a> and passage to a subsequence, the functions $$\\frac{\\mathop{\\mathrm{H}}(Z(z))-\\mathop{\\mathrm{H}}(Z(0))}{L_{\\log}}$$ converge locally uniformly on $\\Omega$ to a continuous Lipschitz function $F$."
+   },
+   {
+    "anchor": "stmt-ent-predictability",
+    "claim_id": "claim-conditional-axis-prediction",
+    "statement": "For $\\lambda>0$, $\\Psi(Y,R)=sY$ on $R\\leq\\lambda Y$."
+   },
+   {
+    "anchor": "stmt-ent-stationary-profile",
+    "claim_id": "claim-stationary-aspect-profile",
+    "statement": "There is a hereditary Lipschitz submodular profile $F(u,z,Y)$ on $z\\leq u+Y$, with scalar-group Lipschitz bounds $2,2,1$, satisfying at alignment $$\\label{eq:source-13}\n\\begin{gathered}\nF(u,u+Y,Y)\\geq2u+q_*Y,\\\\\nF(-aY,(1-a)Y,Y)=-2aY+q_*Y,\\qquad \\partial_YF\\geq s.\n\\end{gathered}$$ At alignment, arbitrary ellipse tests in the normalized frame are also available."
+   },
+   {
+    "anchor": "stmt-ent-tangent-realization",
+    "claim_id": "claim-tangent-realization",
+    "statement": "Every tangent used below, and every finite succession of such tangents at finitely many sites, has a realizing sequence of the same sheared states, with hereditary support and weight estimates in its final log unit."
+   },
+   {
+    "anchor": "stmt-ent-peeling",
+    "claim_id": "claim-peeling",
+    "statement": "Let a Lipschitz, coordinatewise nondecreasing, submodular profile be defined on a convex domain given locally by linear inequalities, and let $\\Sigma$ be an affine sheet in one of its faces."
+   },
+   {
+    "anchor": "stmt-ent-signed-envelope",
+    "claim_id": "claim-signed-envelope",
+    "statement": "Let $F_0$ be a Lipschitz, coordinatewise nondecreasing, submodular profile on a convex polyhedral cutoff domain $\\mathcal D$."
+   },
+   {
+    "anchor": "stmt-ent-control",
+    "claim_id": "claim-local-gain-path-control",
+    "statement": "Fix a starting state and a duration $T>0$, and consider paths from that state with velocities in a compact convex box."
+   },
+   {
+    "anchor": "stmt-proj-furstenberg",
+    "claim_id": "claim-discretized-furstenberg",
+    "statement": "Let $0<k\\le2$ and $0<\\sigma\\le1$."
+   },
+   {
+    "anchor": "stmt-proj-projection",
+    "claim_id": "claim-weighted-projection-test",
+    "statement": "Let $\\mu$ be a planar Frostman $k$ probability law and let $\\zeta$ be a Frostman $\\sigma$ law of directions, where $0<k\\le2$ and $0<\\sigma\\le1$."
+   },
+   {
+    "anchor": "stmt-proj-radial",
+    "claim_id": "claim-radial-nonconcentration",
+    "statement": "Let $0<s_0\\le1$ and let $\\nu$ be a planar Frostman $s_0$ law at resolution $m^{-1}$."
+   },
+   {
+    "anchor": "stmt-proj-scalar",
+    "claim_id": "claim-scalar-projection-inequalities",
+    "statement": "At almost every point of the full alignment there is a tangent with constant full partials, representing the derivatives along the alignment, for which $$e\\ge f_t(p),\\qquad g\\ge f_t(n_1),\\qquad\n n_1\\ge f_r(p),\\qquad g\\ge f_r(e),\n \\label{eq:source-16}$$ whenever the corresponding subscript is positive."
+   },
+   {
+    "anchor": "stmt-proj-parameter-profile",
+    "claim_id": "claim-parameter-profile-tie",
+    "statement": "Suppose $\\lambda>0$."
+   },
+   {
+    "anchor": "stmt-proj-product",
+    "claim_id": "claim-product-coefficients",
+    "statement": "Let $\\nu$ be a law of pairs $d=(r_d,t_d)$ in a bounded planar set."
+   },
+   {
+    "anchor": "stmt-proj-tied",
+    "claim_id": "claim-equal-slope-tie",
+    "statement": "Suppose $\\lambda=1$ and $\\theta>0$ in <a href=\"#eq:source-17\" data-reference-type=\"eqref\" data-reference=\"eq:source-17\">[eq:source-17]</a>."
+   },
+   {
+    "anchor": "stmt-asp-stationary",
+    "claim_id": "claim-stationary-aspect-excluded",
+    "statement": "There is no calibrated profile satisfying <a href=\"#asp:contradiction\" data-reference-type=\"eqref\" data-reference=\"asp:contradiction\">[asp:contradiction]</a> with $\\lambda=0$."
+   },
+   {
+    "anchor": "stmt-asp-scalar",
+    "claim_id": "claim-scalar-comparison",
+    "statement": "Suppose a local restriction of an inherited profile has grouped coordinates $X,y,Z$, with domain $Z\\le X+y$, and no other local constraints."
+   },
+   {
+    "anchor": "stmt-asp-longitudinal",
+    "claim_id": "claim-longitudinal-comparisons",
+    "statement": "The following two comparisons are available locally, and in inherited path tangents, under the stated derivative and conditional-time bounds.*\n\n1."
+   },
+   {
+    "anchor": "stmt-asp-increasing-positive",
+    "claim_id": "claim-increasing-positive-excluded",
+    "statement": "There is no calibrated profile satisfying <a href=\"#asp:contradiction\" data-reference-type=\"eqref\" data-reference=\"asp:contradiction\">[asp:contradiction]</a> with $\\lambda>0$ and $a>0$."
+   },
+   {
+    "anchor": "stmt-asp-constrained",
+    "claim_id": "claim-local-constrained-comparison",
+    "statement": "Let an inherited full profile be based on the parameter tie, with $0<\\lambda<1$, $\\theta>0$, the conditional profile <a href=\"#eq:source-17\" data-reference-type=\"eqref\" data-reference=\"eq:source-17\">[eq:source-17]</a>, and the inherited tie projection inequalities."
+   },
+   {
+    "anchor": "stmt-asp-increasing-zero",
+    "claim_id": "claim-increasing-zero-excluded",
+    "statement": "There is no calibrated profile satisfying <a href=\"#asp:contradiction\" data-reference-type=\"eqref\" data-reference=\"asp:contradiction\">[asp:contradiction]</a> with $\\lambda>0$ and $a=0$."
+   },
+   {
+    "anchor": "stmt-asp-decreasing",
+    "claim_id": "claim-decreasing-aspect-excluded",
+    "statement": "There is no calibrated profile satisfying <a href=\"#asp:contradiction\" data-reference-type=\"eqref\" data-reference=\"asp:contradiction\">[asp:contradiction]</a> with $\\lambda<0$."
+   },
+   {
+    "anchor": "stmt-pkt-frame",
+    "claim_id": "claim-frame-identity",
+    "statement": "For each $I$, $$\\mathsf S_{m,I}\\mathsf P_{m,I}f=f,\n \\qquad\n \\|\\mathsf P_{m,I}f\\|_{\\ell^2}^2\n   =(L_{\\mathrm f}\\theta)^2\\|f\\|_2^2,\n \\qquad\n \\|\\mathsf S_{m,I}\\|_{\\ell^2\\to L^2}\n   =(L_{\\mathrm f}\\theta)^{-1}.$$"
+   },
+   {
+    "anchor": "stmt-pkt-atomic",
+    "claim_id": "claim-atomic-norm-properties",
+    "statement": "On each finite index set, $A$ is a norm, is monotone under absolute coordinatewise domination, and is contracted by coordinate masks."
+   },
+   {
+    "anchor": "stmt-pkt-main",
+    "claim_id": "claim-uniform-packet-theorem",
+    "statement": "Fix $0<\\kappa<1/10$, the continued phase, a bounded frequency region, and the window system above."
+   },
+   {
+    "anchor": "stmt-pkt-composition",
+    "claim_id": "claim-composition",
+    "statement": "Fix rational numbers $0=a_0<\\cdots<a_J=1$ and dyadic factors $m_0=1$, $m_J=m$, with $m_j=m^{a_j+o(1)}$."
+   },
+   {
+    "anchor": "stmt-pkt-locality",
+    "claim_id": "claim-interaction-locality",
+    "statement": "Let $v$ be a parent index and $b$ a child index, with $I_b\\subset I_v$."
+   },
+   {
+    "anchor": "stmt-pkt-crude",
+    "claim_id": "claim-preliminary-bounds",
+    "statement": "For a single-step map and each terminal bin, $$\\label{pkt:mass-capacity}\n w^2\\sum_{v\\in I}|c_v|^2\\le\\delta^2\\sum_v|d_v|^2,\n \\qquad K(c_I)\\le m^{4+o(1)}K(d).$$"
+   },
+   {
+    "anchor": "stmt-pkt-refined-decoupling",
+    "claim_id": "claim-refined-decoupling",
+    "statement": "Fix a nonzero, nonnegative $a\\in C_c^\\infty(\\mathbb R^2)$, and a smooth elliptic phase $\\Phi$ on a fixed compact frequency region."
+   },
+   {
+    "anchor": "stmt-pkt-quartic",
+    "claim_id": "claim-discrete-fourth-power",
+    "statement": "Consider one consecutive transition in an admissible family, with scale ratio $\\ell=m_+/m_-=m^{\\alpha+o(1)}$, where $\\alpha>0$ is fixed."
+   },
+   {
+    "anchor": "stmt-ext-time-dimension",
+    "claim_id": "claim-minimal-time-dimension",
+    "statement": "One has $$\\label{eq:source-34}\n \\gamma_\\sigma\\leq 2\\sigma,\n \\qquad\n s:=\\inf\\{\\sigma\\in[0,1]:\\gamma_\\sigma=\\gamma\\}>0 .$$"
+   },
+   {
+    "anchor": "stmt-ext-endpoints",
+    "claim_id": "claim-endpoint-localization",
+    "statement": "Along a path from level $a$ to level $b>a$, the endpoint angle difference is $O_J(m^\\eta\\theta_b)$, and $$|z_b-z_a-(t_{I_b}-t_{I_a})U_{\\nu_a}|\n       \\leq O_J(m^\\eta w_a).$$"
+   },
+   {
+    "anchor": "stmt-ext-path-minimum",
+    "claim_id": "claim-minimal-path-count",
+    "statement": "Admissible families exist at arbitrarily small accuracies."
+   },
+   {
+    "anchor": "stmt-ext-branching",
+    "claim_id": "claim-time-branching",
+    "statement": "One can retain amplification $m^{\\gamma-o_i(1)}$ by vertex masks such that $$D_j(v)\\asymp d_j,\\qquad\n                         S_j(b)\\asymp s_j'$$ on the selected coordinates, for $0\\leq j\\leq J$ in the first comparison and $0\\leq j<J$ in the second, with $$\\label{eq:source-38}\n                         \\frac{d_j}{s_j'}\n                    \\geq \\ell_j^{2s}m^{-o_i(1)}.$$"
+   },
+   {
+    "anchor": "stmt-ext-leaves",
+    "claim_id": "claim-terminal-leaf-selection",
+    "statement": "Further vertex masks can be chosen retaining amplification $m^{\\gamma-o_i(1)}$ so that the following hold."
+   },
+   {
+    "anchor": "stmt-ext-time-law",
+    "claim_id": "claim-conditional-time-law",
+    "statement": "There is a subset $\\Omega$ of the final low paths occupying a fraction $m^{-o_i(1)}$ of them such that uniform counting on $\\Omega$ has these properties:*\n\n1."
+   },
+   {
+    "anchor": "stmt-ext-represented",
+    "claim_id": "claim-represented-roots",
+    "statement": "Fix any polynomial upper bound on the radii within each family."
+   },
+   {
+    "anchor": "stmt-ext-capacity",
+    "claim_id": "claim-terminal-capacity",
+    "statement": "For the kept coefficients of Lemma <a href=\"#ext:represented\" data-reference-type=\"ref\" data-reference=\"ext:represented\">59</a>, in every terminal time bin one has $$\\label{ext:capacity-bound}\n K(c_I|_{\\mathrm{kept}})\n \\leq h_1K(d)\\,\n          m^{2(1-s)+20\\kappa+2\\zeta+o_i(1)}.$$"
+   },
+   {
+    "anchor": "stmt-ext-mass",
+    "claim_id": "claim-terminal-mass",
+    "statement": "The same kept output satisfies $$\\label{ext:mass-bound}\n r w^2\\sum_{b\\ {\\rm kept}}|c_b|^2\n \\leq m^{o_i(1)}\n       \\min\\bigl(m^{-2(1-s)},h_1^{-1}\\bigr)\n       \\delta^2\\#\\mathcal R .$$"
+   },
+   {
+    "anchor": "stmt-glob-sparse-cubic",
+    "claim_id": "claim-sparse-cubic-estimate",
+    "statement": "There are constants $C_0>1$ and $\\mu_0>0$ such that the following holds."
+   },
+   {
+    "anchor": "stmt-glob-fourth-power",
+    "claim_id": "claim-elementary-fourth-power",
+    "statement": "For every bounded measurable $h:S^2\\to\\mathbb C$, $$\\label{glob:l4-bound}\n       \\|Eh\\|_{L^4(\\mathbb R^3)}^4\\le32\\pi^3\\|h\\|_\\infty^4.$$"
+   },
+   {
+    "anchor": "stmt-glob-initial-peaks",
+    "claim_id": "claim-initial-peak-count",
+    "statement": "For $0<\\mu\\le1$, the number of unit lattice cubes $Q'$ satisfying $\\sup_{Q'}|F_0|\\ge\\mu$ is at most $C\\mu^{-7}$."
+   },
+   {
+    "anchor": "stmt-glob-sparse-covering",
+    "claim_id": "claim-sparse-covering",
+    "statement": "Fix $C_0>1$ and $A>0$."
+   },
+   {
+    "anchor": "stmt-glob-distribution",
+    "claim_id": "claim-distributional-bound",
+    "statement": "For every $0<\\alpha<1$ and all sufficiently small $\\mu>0$, $$\\label{glob:distribution-bound}\n       |\\{y\\in\\mathbb R^3:|F_0(y)|>\\mu\\}|\n                            \\le C_\\alpha\\mu^{-3-\\alpha}.$$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "uniform packet propagation",
+    "evidence": [
+     {
+      "anchor": "stmt-pkt-main",
+      "quote": "Fix $0<\\kappa<1/10$, the continued phase, a bounded frequency region, and the window system above.",
+      "quote_sha256": "8b0e3b55f113b9b28e473cf48089328ab7d9b85889e78176eb2dce0bd7790bc5"
+     }
+    ],
+    "requires_concepts": [
+     "wave packet frame",
+     "atomic norm",
+     "elliptic capacity weight",
+     "refined decoupling"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-sphere-bounded-data-restriction",
+   "exact_statement": "For every real $p>3$, there is a finite constant $C_p$, depending only on $p$, such that $$\\|Eg\\|_{L^p(\\mathbb R^3)}\n  \\le C_p\\|g\\|_{L^\\infty(S^2,\\sigma)}$$ for every bounded measurable complex-valued function $g$ on $S^2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-uniform-packet-propagation",
+   "exact_statement": "Fix $0<\\kappa<1/10$, a smooth elliptic continuation $\\phi$ of a spherical graph patch allowed in Section <a href=\"#sec:packets\" data-reference-type=\"ref\" data-reference=\"sec:packets\">6</a>, a bounded frequency-label region $\\Omega\\subset\\mathbb R^2$, and the fixed window system used in <a href=\"#pkt:analysis\" data-reference-type=\"eqref\" data-reference=\"pkt:analysis\">[pkt:analysis]</a>–<a href=\"#pkt:synthesis\" data-reference-type=\"eqref\" data-reference=\"pkt:synthesis\">[pkt:synthesis]</a>. The continuation is defined on $\\mathbb R^2$, has uniformly definite bounded Hessian, and has bounded derivatives of every order at least two.*\n\n*For every finite $B\\ge1$ and every $\\varepsilon>0$, there is a finite constant $C$ with the following property. Let $m,N$ be dyadic with $1\\le m\\le N\\le m^B$, and let $d$ be any finite complex array on the initial packet grid, at factor $1$. For each interval $I$ in the partition of $[0,1)$ into intervals of length $m^{-2}$, let $M_I$ be any coordinate projection retaining finitely many entries of the factor-$m$ packet grid. Assume that every initial index in $\\operatorname{supp}d$ and every retained terminal index has frequency label $\\nu\\in\\Omega$ and position label $|z|\\le m^B$. Set $$(T_md)_I=M_I\\,\\mathsf P_{m,I}\\mathsf S_{1,[0,1)}d.$$ Write $A_1,G_1$ for the atomic norm and capacity gauge at the initial scale $$(\\theta,r,w)=(N^{-1},1,N^{-1}),$$ and $A_{m,I}$ for the same atomic norm in the terminal bin $I$, at scale $$(\\theta,r,w)=(m/N,m^{-2},(mN)^{-1}).$$ Then $$m^{-2}\\sum_{\\substack{I\\subset[0,1)\\\\ |I|=m^{-2}}}\n       A_{m,I}\\bigl((T_md)_I\\bigr)^3\n \\le C m^{10\\kappa+\\varepsilon}A_1(d)^3\n \\le C m^{10\\kappa+\\varepsilon}G_1(d)^3,$$ where the sum is over the specified partition. The constant is uniform in $m,N,d$ and the coordinate projections. It may depend on $B,\\kappa,\\varepsilon,\\phi,\\Omega$, and the fixed windows.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-intro-packets"
+  },
+  {
+   "claim_id": "claim-sphere-kakeya-maximal",
+   "exact_statement": "For every $\\varepsilon>0$ there is a finite $C_\\varepsilon$ such that, for every $0<\\delta<1$ and $f\\in L^3(\\mathbb R^3)$, $$\\|K_\\delta f\\|_{L^3(S^2,\\sigma)}\n \\le C_\\varepsilon\\delta^{-\\varepsilon}\\|f\\|_{L^3(\\mathbb R^3)}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-sphere-kakeya-maximal"
+  },
+  {
+   "claim_id": "claim-geometric-propagation",
+   "exact_statement": "For $0<s\\le1$ and $0<\\kappa<1/10$, $$\\label{eq:source-4}\nq_*\\ge1+2s-10\\kappa.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geo-main"
+  },
+  {
+   "claim_id": "claim-time-profile-reuse",
+   "exact_statement": "Suppose a reference law satisfies <a href=\"#eq:source-1\" data-reference-type=\"eqref\" data-reference=\"eq:source-1\">[eq:source-1]</a> with error $\\epsilon>0$. Fix a finite collection of prefix depths. After any fixed finite succession of restrictions retaining $M^{-o_n(1)}$ mass, one may remove a negligible part of the retained measure so that the following statements hold.*\n\n*Conditionally on each surviving base label, the retained time law satisfies <a href=\"#eq:source-1\" data-reference-type=\"eqref\" data-reference=\"eq:source-1\">[eq:source-1]</a> with error $O(\\epsilon)$. Conditionally on a surviving base label and a prefix at depth $j_0$, the descendant law has maximum weights and support counts of exponent $s$, with error $O(\\epsilon)$ in the original $\\log M$ units. Further conditioning on parent cells determined by the base label and prefix does not change this conclusion.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geo-time-conditioning"
+  },
+  {
+   "claim_id": "claim-terminal-width-isolation",
+   "exact_statement": "The failing families may be chosen so that the terminal widths $L,w$ are fixed in logarithmic units along each sequence, up to arbitrarily small prescribed rounding errors. The orientation and the two centers remain unrestricted. The input constant is still the original $K$, up to subpower factors, and the time profile retains error $O(\\epsilon_i)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geo-fixed-widths"
+  },
+  {
+   "claim_id": "claim-hairbrush-estimate",
+   "exact_statement": "Let $\\mu$ be a subprobability law on the particles. Fix a lag and suppose that every box in a chosen time bin, with independently translated spatial tests of the same ellipse $F$, satisfies $\\mu(C)\\le H W(F)$. Fix radii $L\\ge w>0$, and put $A=HW(E)$, where $E$ has radii $L,w$. Assume the cap is available at all radii between $w$ and $L$, including bounded dilations.*\n\n\n*Let $C_0$ be a box of radii $L,w$. Suppose each particle $z$ in a measurable set $S\\subset C_0$ belongs to an assigned box $C_z$ in the same bin, of the same radii, such that $$\\mu(C_z)\\ge A M^{-e},\n\\qquad\n\\theta\\le\\angle(C_z,C_0)\\le2\\theta,\n\\qquad\n\\theta\\gtrsim w/L.$$ Angles are distances between unoriented long axes. At fixed polynomial scale complexity, $m=\\mu(S)$ satisfies $$\\label{eq:source-5}\nm\\le M^{2e+o(1)}H W(E)\n       \\left(\\frac{w}{L\\theta}\\right)^{2\\kappa}.$$ The same assertion holds for source boxes, with time omitted.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geo-hairbrush"
+  },
+  {
+   "claim_id": "claim-heavy-box-count",
+   "exact_statement": "Suppose the hypotheses of Lemma <a href=\"#geo:hairbrush\" data-reference-type=\"ref\" data-reference=\"geo:hairbrush\">8</a> hold in every time bin with the same $H$. Fix radii $L,w$, and use an orientation grid of spacing comparable to $\\rho=w/L$, with translated grids having bounded overlap at each orientation. Let $\\mathcal H$ be the family of boxes of mass at least $HW(E)M^{-e}$. Then, over all time bins, $$\\label{eq:source-6}\n\\#\\mathcal H\n\\le \\bigl(HW(E)\\bigr)^{-1}M^{O_\\kappa(e)+o(1)}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geo-heavy-count"
+  },
+  {
+   "claim_id": "claim-pointwise-angular-exclusion",
+   "exact_statement": "Let $\\mathcal H$ be the family in Corollary <a href=\"#geo:heavy-count\" data-reference-type=\"ref\" data-reference=\"geo:heavy-count\">9</a>. Suppose a large sublaw $\\nu\\le\\mu$ carries assigned boxes $C(z)\\in\\mathcal H$, with $z\\in C(z)$. Assume the cap is also available at all enlarged widths used below. After removing $o(\\nu(\\text{whole space}))$ mass, the following implication holds pointwise: $$z\\in M^d D,\\quad D\\in\\mathcal H\n\\quad\\Longrightarrow\\quad\n\\angle(C(z),D)\n\\le\\frac{w}{L}M^{C_\\kappa(e+d)+o(1)}.$$ Here $D$ is in the particle’s time bin, and dilation acts on each spatial rectangle about its own center. One retained set works simultaneously for the dyadic dilations in any fixed power range $d\\ge0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geo-angular-exclusion"
+  },
+  {
+   "claim_id": "claim-bounded-complexity",
+   "exact_statement": "In the contradiction families for Theorem <a href=\"#geo:main\" data-reference-type=\"ref\" data-reference=\"geo:main\">5</a>, the complexities $D_i$ may be bounded by a constant depending only on $\\kappa$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geo-bounded-complexity"
+  },
+  {
+   "claim_id": "claim-width-range-extension",
+   "exact_statement": "After Lemma <a href=\"#geo:bounded-complexity\" data-reference-type=\"ref\" data-reference=\"geo:bounded-complexity\">11</a>, one may extend the input cap to any prescribed larger bounded power range of widths, preserve failure at the selected terminal widths, and place those widths a fixed power below the upper boundary of the permitted range.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geo-range-extension"
+  },
+  {
+   "claim_id": "claim-backward-width-band",
+   "exact_statement": "Suppose that at a mesh epoch $y$ the current large sublaw has assigned boxes of widths $L,w$ and the preceding hereditary obstruction. Let $y'<y$ be the previous mesh epoch. After a further large restriction, the particles have assigned high prelaw boxes at $y'$, with a common pair of dyadic widths both belonging to $$\\label{eq:source-7}\n\\bigl[wM^{-(y-y')},L\\bigr],$$ up to bounded endpoint roundings. The tolerance $e_{y'}$ may be chosen to tend to zero sufficiently slowly relative to $e_y$ and the propagation errors.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geo-width-band"
+  },
+  {
+   "claim_id": "claim-neighbor-axis-stability",
+   "exact_statement": "The large sublaws may be chosen so that neighboring mesh epochs satisfy $$\\label{eq:source-8}\n\\begin{split}\n\\angle\\bigl(\\operatorname{axis}_{y}(z),\n            \\operatorname{axis}_{y'}(z)\\bigr)\n&\\le M^{-d(y)+C_\\kappa\\Delta+o(1)},\\\\\n\\Delta&=|y'-y|+|x(y')-x(y)|\\\\\n&\\hspace{1.5cm}\n+|(x+d)(y')-(x+d)(y)|.\n\\end{split}$$ They also satisfy the pointwise single-epoch exclusions of Corollary <a href=\"#geo:angular-exclusion\" data-reference-type=\"ref\" data-reference=\"geo:angular-exclusion\">10</a>, including the allowed dilations. These assertions are needed only when $\\Delta$ is small.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geo-axis-stability"
+  },
+  {
+   "claim_id": "claim-calibrated-widths",
+   "exact_statement": "Let $y_0\\in(0,1)$ be a point of ordinary differentiability of both limiting width depths, and put $$x_0=x(y_0),\\qquad d_0=d(y_0),\\qquad\na=-x'(y_0),\\qquad b=-(x+d)'(y_0),\\qquad\n\\lambda=a-b.$$ Then $a\\ge0$, $b\\le1$, and $\\lambda\\ne0$ implies $d_0>0$.*\n\n\n*There are thicknesses $\\delta\\downarrow0$, stretches $H_\\delta\\uparrow\\infty$, and finite-stage families whose local mesh epochs $y=y_0+\\delta v$, $|v|\\le H_\\delta$, satisfy uniformly $$\\label{geo:affine-widths}\n\\begin{split}\nx(y)&=x_0-a\\delta v+o(\\delta),\\\\\nx(y)+d(y)&=x_0+d_0-b\\delta v+o(\\delta).\n\\end{split}$$ Their neighboring increments in <a href=\"#eq:source-8\" data-reference-type=\"eqref\" data-reference=\"eq:source-8\">[eq:source-8]</a> have $\\Delta=o(\\delta)$. All cap and list errors are $o(\\delta)$, the mesh spacing is $o(\\delta)$, and $\\log n/n=o(\\delta)$, while $\\delta\\log M\\to\\infty$.*\n\n\n*For each particle, choose as reference the assigned axis at the end of the stretched interval having the deeper affine aspect. Then $$\\label{geo:reference-axis}\n\\angle\\bigl(\\operatorname{axis}_{\\rm ref}(z),\n            \\operatorname{axis}_{y_0+\\delta v}(z)\\bigr)\n\\le M^{-d_0-\\delta\\lambda v+o(\\delta)}$$ uniformly on the local mesh. If $\\lambda=0$, any one local epoch may be used as reference. When $d_0>0$, a further constant-mass restriction permits the reference directions to be represented by $(1,R^\\circ)$, with $R^\\circ$ uniformly bounded.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geo-calibration"
+  },
+  {
+   "claim_id": "claim-axis-prediction",
+   "exact_statement": "In the families of Lemma <a href=\"#geo:calibration\" data-reference-type=\"ref\" data-reference=\"geo:calibration\">15</a>, two retained particles with the same $P=(U,V)$ and the same time prefix at a local epoch have reference axes agreeing to that epoch’s aspect precision, up to a factor $M^{o(\\delta)}$. In a bounded-slope sector, the number of possible reference-slope bins at depth $d_0+\\delta\\lambda v$, given the base label and the time prefix at $y_0+\\delta v$, is at most $M^{o(\\delta)}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geo-axis-prediction"
+  },
+  {
+   "claim_id": "claim-finite-state-comparison",
+   "exact_statement": "On any fixed bounded subset of $\\Omega$, comparable states are nested up to bounded ambiguity. A refinement costs at most the logarithm of the product of its scalar resolution ratios, up to an additive constant. For a coordinate rectangle whose four corners belong to $\\Omega$, the two side states together determine the upper state up to bounded ambiguity, and each determines the bottom state up to bounded ambiguity. Consequently their entropies satisfy monotonicity, the scalar-coordinate Lipschitz bounds, and submodularity, with additive bounded errors.*\n\n*If only the parameter cutoffs increase, the entropy increment is at least the corresponding parameter entropy increment conditional on $\\mathcal B$, again up to a bounded error.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ent-finite-states"
+  },
+  {
+   "claim_id": "claim-hereditary-regularization",
+   "exact_statement": "For any fixed finite family of states, their joint labels, and conditional parameter labels given $\\mathcal B$, one may restrict to a subpower-density law with the following properties. At every unconditional state of absolute entropy $h$, $$\\label{ent:absolute-flatness}\n\\#\\mathop{\\mathrm{supp}}Z\\leq\\exp\\bigl(h+o(L_{\\log})\\bigr),\\qquad\n\\max_z\\Pr(Z=z)\\leq\\exp\\bigl(-h+o(L_{\\log})\\bigr).$$ Analogous conditional bounds hold on the retained base-label fibers. For comparable states of absolute entropies $h_0,h_1$, typical coarse bins have fine support at most $\\exp(h_1-h_0+o(L_{\\log}))$ and maximal conditional fine weight at most $\\exp(-(h_1-h_0)+o(L_{\\log}))$.*\n\n*These assertions can hold simultaneously on any prescribed countable family of successively finer finite grids, interpreted diagonally. Subsequent subpower restrictions preserve the referenced entropy profiles and these estimates, after discarding exceptional parent or base-label fibers. If lower weights are required in a finite collection of tests, bins of smaller weight than the corresponding reciprocal-support exponent can be discarded with subpower slack; their retained lower weights refer, in particular, to the law before that last discard.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ent-regularization"
+  },
+  {
+   "claim_id": "claim-calibrated-entropy-profile",
+   "exact_statement": "After the regularization of Lemma <a href=\"#ent:regularization\" data-reference-type=\"ref\" data-reference=\"ent:regularization\">18</a> and passage to a subsequence, the functions $$\\frac{\\mathop{\\mathrm{H}}(Z(z))-\\mathop{\\mathrm{H}}(Z(0))}{L_{\\log}}$$ converge locally uniformly on $\\Omega$ to a continuous Lipschitz function $F$. Each scalar partial lies in $[0,1]$ where defined. The function is coordinatewise nondecreasing, and its off-diagonal distributional second partials are nonpositive in the interior. The same assertions hold for disjoint groups of coordinates advanced together with nonnegative speeds, on every valid comparison rectangle. At full alignment, $$\\label{eq:source-11}\n F(C,B,D,A,Y,R)\\geq k_C C+k_B B+q_*Y,\n \\qquad k_C=1+\\kappa,\\quad k_B=1-\\kappa,$$ with equality on $$\\gamma(Y)=(-aY,-bY,(1-a)Y,(1-b)Y,Y,\\lambda Y).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ent-states"
+  },
+  {
+   "claim_id": "claim-conditional-axis-prediction",
+   "exact_statement": "For $\\lambda>0$, $\\Psi(Y,R)=sY$ on $R\\leq\\lambda Y$. For $\\lambda<0$, this equality holds for every finite $(Y,R)$. Parameter-coordinate increments of $F$ dominate those of $\\Psi$. In particular, if $\\lambda<0$, then $\\partial_YF\\geq s$.*\n\n\n*In the latter case set $c=b-a=-\\lambda>0$. In the region $$\\label{eq:source-12}\n\\begin{gathered}\nC>aR/c,\\qquad B>bR/c,\\qquad Y>-R/c,\\\\\nD>(a-1)R/c,\\qquad A>(b-1)R/c\n\\end{gathered}$$ inside $\\Omega$, $F$ is locally independent of $R$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ent-predictability"
+  },
+  {
+   "claim_id": "claim-stationary-aspect-profile",
+   "exact_statement": "There is a hereditary Lipschitz submodular profile $F(u,z,Y)$ on $z\\leq u+Y$, with scalar-group Lipschitz bounds $2,2,1$, satisfying at alignment $$\\label{eq:source-13}\n\\begin{gathered}\nF(u,u+Y,Y)\\geq2u+q_*Y,\\\\\nF(-aY,(1-a)Y,Y)=-2aY+q_*Y,\\qquad \\partial_YF\\geq s.\n\\end{gathered}$$ At alignment, arbitrary ellipse tests in the normalized frame are also available. For their two width depths $l_1,l_2$, the width term $2u$ is replaced by $$(1+\\kappa)\\min(l_1,l_2)+(1-\\kappa)\\max(l_1,l_2).$$ Any additional axis label required for such a lower-bound test may be included on the measured side.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ent-stationary-profile"
+  },
+  {
+   "claim_id": "claim-tangent-realization",
+   "exact_statement": "Every tangent used below, and every finite succession of such tangents at finitely many sites, has a realizing sequence of the same sheared states, with hereditary support and weight estimates in its final log unit. Required common physical cutoffs at different sites can be kept identical. Exact alignment identities are preserved, before bounded dyadic rounding, whenever the center and the tested cutoffs lie on the corresponding alignment.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ent-tangent-realization"
+  },
+  {
+   "claim_id": "claim-peeling",
+   "exact_statement": "Let a Lipschitz, coordinatewise nondecreasing, submodular profile be defined on a convex domain given locally by linear inequalities, and let $\\Sigma$ be an affine sheet in one of its faces. Suppose a group of coordinates is held fixed by a tangent direction to $\\Sigma$ that strictly increases all the coordinates still attached outside that group. Coordinates separated at earlier steps may vary arbitrarily in this direction. At almost every point of $\\Sigma$, a first tangent splits that group as an independent additive summand. A finite succession of such separations can be made in the same first tangent.*\n\n*Suppose that, after these separations, each group varies on $\\Sigma$ by one proportional family of linear forms, and that the nonzero forms of different groups are pairwise nonproportional. Then each group’s restriction to its sheet diagonal is affine. In particular, a separated singleton with nonconstant form has a constant full partial derivative throughout the tangent.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ent-peeling"
+  },
+  {
+   "claim_id": "claim-signed-envelope",
+   "exact_statement": "Let $F_0$ be a Lipschitz, coordinatewise nondecreasing, submodular profile on a convex polyhedral cutoff domain $\\mathcal D$. All increment comparisons below are required to have valid corners. Let $$\\gamma(y)=(N(y),Q(y)),\\qquad y\\in J,$$ be a Lipschitz path in a boundary sheet of $\\mathcal D$. Suppose each coordinate of $N$ is strictly decreasing, with its speed bounded above and below in magnitude, and each coordinate of $Q$ is nondecreasing. Constant coordinates may belong to $Q$. Assume $$(N(\\alpha),Q(\\beta))\\in\\mathcal D\\qquad(\\alpha\\leq\\beta).$$ Assume also the following exterior-slack property. On compact subintervals of $J$, one can choose a vector $e$ with strictly positive $Q$-coordinates such that replacing $Q(\\beta)$ by $Q(\\beta)+\\varepsilon e$ preserves admissibility and opens every constraint involving $Q$ by a positive constant times $\\varepsilon$. At a path point, fix a strictly exterior value of $Q$ supplied by this property. Define the pure tangent domain $\\mathcal P$ to be the tangent domain of that fixed slice at the path’s $N$-coordinates. The inequalities involving $Q$ are strict, so $\\mathcal P$ is given by the active inequalities involving only $N$ and is independent of the chosen exterior value. Assume that $\\mathcal P$ is either full space or the three-dimensional half-space $\\{(C,B,R)\\in\\mathbb R^3:B\\leq C+R\\}$; in the latter case the pure group consists exactly of $N=(C,B,R)$.*\n\n*At almost every $y_0\\in J$, put $$v=-N'(y_0),\\qquad w=Q'(y_0),\\qquad\nn(t)=-tv,\\qquad q(t)=tw.$$ Thus $v_i>0$ and $w_j\\geq0$. There are a first tangent $F$ of $F_0$ at $\\gamma(y_0)$ and a Lipschitz, nondecreasing, submodular function $G$ on the pure tangent domain $\\mathcal P$, both referenced to vanish at the origin, with the following properties.*\n\n1.  *The function $F-G$ is nondecreasing under valid ordered increases of $N$ at fixed $Q$. Moreover, $$F(n(\\alpha),q(\\beta))-G(n(\\alpha))$$ is independent of $\\alpha$ whenever $\\alpha\\leq\\beta$.*\n\n\n2.  *On any compact test region, if $H$ is sufficiently large that $n(-H)\\geq N$ and the comparison tuples are valid, then $$\\label{eq:source-14}\n    F(N,Q)\\leq\n    G(N)+F(n(-H),Q)-G(n(-H))\n    =G(N)+F^+(Q).$$ Equality holds at the origin. There is also equality for pure increments in the overlap region: if $Q\\geq q(\\beta)$ and $N\\leq N'$ satisfy $N_i>n_i(\\beta)$ for every $i$, and all four tuples obtained from $N,N'$ and $Q,q(\\beta)$ are valid, then $$F(N',Q)-F(N,Q)=G(N')-G(N).$$*\n\n3.  *If $\\mathcal P=\\mathbb R^d$, then $G$ is linear on every strict ordering region of the normalized depths $x_i=N_i/v_i$. There is a number $m$ such that $G(n(t))=-mt$, and in every ordering region $$\\sum_i v_i\\partial_iG=m.$$ When $x_i$ is strictly largest, $\\partial_iG$ is a constant marginal rate; this rate is a global upper bound for that partial.*\n\n    *If instead $\\mathcal P$ has the constraint $B\\leq C+R$, the same affine rate holds on the tied line. Write the corresponding speeds as $a,b,c>0$, so $b=a+c$. The $C$-partial is constant on $$\\frac Ca>\\max\\left\\{\\frac Bb,\\frac Rc\\right\\},$$ and the $R$-partial is constant on $$\\frac Rc>\\max\\left\\{\\frac Ca,\\frac Bb\\right\\}.$$ Each constant is a global upper bound for its partial, interpreted distributionally in the interior.*\n\n*The tangent and all genericity requirements can be imposed simultaneously for countably many ancillary profiles and exterior slices.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ent-signed-envelope"
+  },
+  {
+   "claim_id": "claim-local-gain-path-control",
+   "exact_statement": "Fix a starting state and a duration $T>0$, and consider paths from that state with velocities in a compact convex box. The states may be restricted to a closed linear half-space; assume there is an available velocity following its boundary. Let the potential be continuous and Lipschitz on the compact region reachable by these paths. If the potential depends on time, include time as a state coordinate with its prescribed unit velocity. Suppose that along *every* admissible Lipschitz path, at almost every interior time, arbitrarily short admissible straight steps increase the potential at a rate exceeding $g_0+\\varepsilon$, where $\\varepsilon>0$ is fixed. Then a reachable terminal state has potential at least $g_0T$ greater than its value at the prescribed start.*\n\n*The local hypothesis is satisfied at a point if a tangent there has a strict admissible finite-step comparison from the tangent origin with the stated margin. A sufficiently small admissible perturbation of its velocity or endpoint is harmless within a strict margin.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ent-control"
+  },
+  {
+   "claim_id": "claim-discretized-furstenberg",
+   "exact_statement": "Let $0<k\\le2$ and $0<\\sigma\\le1$. For every $\\varepsilon>0$ there is $\\eta=\\eta(\\varepsilon,k,\\sigma)>0$ such that the following holds for sufficiently small dyadic $\\delta$. Suppose $P$ is a $(\\delta,k,\\delta^{-\\eta})$-set of pins in a fixed bounded planar region, normalized to $[0,1]^2$. For every $p\\in P$, let $\\mathcal T(p)$ be a family of $\\delta$-tubes meeting $p$, with $|\\mathcal T(p)|\\asymp M$, whose directions form a $(\\delta,\\sigma,\\delta^{-\\eta})$-set. Then $$\\left|\\bigcup_{p\\in P}\\mathcal T(p)\\right|\n \\gtrsim_{\\varepsilon}\n \\delta^{-\\min\\{k,(k+\\sigma)/2,1\\}+\\varepsilon}M.$$ Consequently the union has lower exponent at least $\\min\\{k+\\sigma,(k+3\\sigma)/2,1+\\sigma\\}$ as the nonconcentration losses tend to zero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-proj-furstenberg"
+  },
+  {
+   "claim_id": "claim-weighted-projection-test",
+   "exact_statement": "Let $\\mu$ be a planar Frostman $k$ probability law and let $\\zeta$ be a Frostman $\\sigma$ law of directions, where $0<k\\le2$ and $0<\\sigma\\le1$. Let $E$ be a set of point–direction pairs of dense $\\mu\\times\\zeta$ measure. For a direction $\\omega$, write $E_\\omega$ for the corresponding point fiber. If the projections of these fibers have at most $m^{u+o(1)}$ mesh bins for every retained direction, then $$u\\ge \\min\\{k,(k+\\sigma)/2,1\\}.\n \\label{eq:source-15}$$ The same conclusion applies to dense point restrictions chosen separately for each direction. It is enough to have the stated ball bounds with losses that can be made arbitrarily small.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-proj-projection"
+  },
+  {
+   "claim_id": "claim-radial-nonconcentration",
+   "exact_statement": "Let $0<s_0\\le1$ and let $\\nu$ be a planar Frostman $s_0$ law at resolution $m^{-1}$. Suppose that, for every fixed $\\chi>0$, every strip of width $m^{-\\chi}$ has power-small $\\nu$ mass, uniformly over the strip. For every $\\sigma<s_0$ and every fixed $h\\in(0,1]$, with $\\beta=m^{-h}$, the set of pairs for which $$A_\\beta(x,y)>\\beta^\\sigma$$ has power-small $\\nu\\times\\nu$ measure. Near-diagonal pairs may be included in the exceptional set. The assertion holds simultaneously on any fixed finite grid of scale powers.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-proj-radial"
+  },
+  {
+   "claim_id": "claim-scalar-projection-inequalities",
+   "exact_statement": "At almost every point of the full alignment there is a tangent with constant full partials, representing the derivatives along the alignment, for which $$e\\ge f_t(p),\\qquad g\\ge f_t(n_1),\\qquad\n n_1\\ge f_r(p),\\qquad g\\ge f_r(e),\n \\label{eq:source-16}$$ whenever the corresponding subscript is positive.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-proj-scalar"
+  },
+  {
+   "claim_id": "claim-parameter-profile-tie",
+   "exact_statement": "Suppose $\\lambda>0$. At a generic point of the calibrated line one may take a further joint tangent in which the conditional parameter profile, referenced to zero at the center, is $$K(Y,R)=sY+\\theta(R-\\lambda Y)_+,\n \\qquad 0\\le\\theta\\le s/\\lambda.\n \\label{eq:source-17}$$ Consequently $t\\ge s$ below the tie, while $r\\ge\\theta$ and $t\\ge s-\\lambda\\theta$ above it. The simultaneous parameter advance $(Y,R)=(u,\\lambda u)$ has rate at least $s$.*\n\n*Let $\\Gamma$ be the plane $R=\\lambda Y$ inside full alignment. If $\\lambda\\ne1$, the spatial partials can simultaneously be made singleton constants at generic points of $\\Gamma$. There <a href=\"#eq:source-16\" data-reference-type=\"eqref\" data-reference=\"eq:source-16\">[eq:source-16]</a> holds with time subscript $s$, and also with tilt subscript $\\theta$ when $\\theta>0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-proj-parameter-profile"
+  },
+  {
+   "claim_id": "claim-product-coefficients",
+   "exact_statement": "Let $\\nu$ be a law of pairs $d=(r_d,t_d)$ in a bounded planar set. Assume its time marginal is Frostman $s$, its tilt marginal is Frostman $\\theta$ for some $\\theta>0$, and $0<s\\le1$. Assume also that its simultaneous two-coordinate refinements have an affine hereditary profile of dimension at least $s$: in typical intermediate cells the normalized unrestricted increments satisfy the Frostman $s$ bounds at all subsequent fixed block subresolutions. For a pin $f=(r_f,t_f)$ define $$Q_f(d)=(r_d-r_f)(t_d-t_f).$$ The following alternatives suffice at every fixed finite grid of resolutions.*\n\n1.  *If some strip of width $m^{-\\chi}$, with fixed $\\chi>0$, has dense $\\nu$ mass, restrict $\\nu$ to that strip. At any fixed resolution $m^{-h}$ with $0<h<\\chi$ sufficiently small, the coefficients $Q_f(d)$ have Frostman exponent $s$, up to subpower loss, on dense pairs away from the time diagonal.*\n\n2.  *If every strip of each fixed power width has power-small mass, then for every $\\sigma<s$ and every fixed $h\\in(0,1]$, pairs lying in coefficient bins of conditional mass greater than $m^{-h\\sigma}$ have power-small total mass. After removal of these exceptions on a sufficiently fine finite grid, the pinned coefficient laws satisfy Frostman bounds with exponent arbitrarily close to $s$ and arbitrarily small power loss.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-proj-product"
+  },
+  {
+   "claim_id": "claim-equal-slope-tie",
+   "exact_statement": "Suppose $\\lambda=1$ and $\\theta>0$ in <a href=\"#eq:source-17\" data-reference-type=\"eqref\" data-reference=\"eq:source-17\">[eq:source-17]</a>. At a generic point of $\\Gamma$ there is a tangent with singleton spatial rates $p,g$, an affine diagonal rate $H$ for the pair $(B,D)$, and an affine diagonal parameter rate. These rates satisfy $$g\\ge f_s(p),\\qquad H\\ge f_s(p).\n \\label{eq:source-18}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-proj-tied"
+  },
+  {
+   "claim_id": "claim-stationary-aspect-excluded",
+   "exact_statement": "There is no calibrated profile satisfying <a href=\"#asp:contradiction\" data-reference-type=\"eqref\" data-reference=\"asp:contradiction\">[asp:contradiction]</a> with $\\lambda=0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-asp-stationary"
+  },
+  {
+   "claim_id": "claim-scalar-comparison",
+   "exact_statement": "Suppose a local restriction of an inherited profile has grouped coordinates $X,y,Z$, with domain $Z\\le X+y$, and no other local constraints. The groups consist of disjoint nonnegative coordinate increments of the underlying profile; additional fixed coordinates are allowed. At generic aligned points write their rates as $d_X,d_y,d_Z$. Suppose, also in the tangent tests at the path points under consideration, that $$\\label{eq:source-20}\nd_y\\ge t_0,\n\\qquad d_X>u_*/2\\ \\Longrightarrow\\ d_Z\\ge h.$$ For $k\\in\\{k_C,k_B\\}$, the gain of this scalar profile minus $kX$ can reach rate $t_0+h-\\kappa$, with arbitrarily small further loss. More precisely, along every path on $Z=X+y$, parametrized by $y$ and with $-X'(y)\\in[\\rho,1-\\rho]$, almost every point admits arbitrarily short straight backward comparisons with this rate, up to a loss tending to zero with $\\rho$, and with velocity in the same interval.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-asp-scalar"
+  },
+  {
+   "claim_id": "claim-longitudinal-comparisons",
+   "exact_statement": "The following two comparisons are available locally, and in inherited path tangents, under the stated derivative and conditional-time bounds.*\n\n1.  **Low longitudinal rate.* Fix $v_1=1$, so $D=d_0'$ is constant. Suppose the backward cost of the varying $C$-term has been bounded by $P\\le u_*/2$ and removed. This may be done in the pure upper envelope when $B$ is not negative, or where $\\partial_CF=P$ exactly. If $t\\ge s$ in the local region, the total gain can reach $1+2s-\\kappa$, with arbitrarily small further loss.*\n\n2.  **High longitudinal rate.* Fix $v_1=0$, so $C=c_0'$ is constant. Suppose $p\\ge P>u_*/2$ in neighborhoods of the aligned states being visited, up to the domain constraints, and $t\\ge s$. The same gain $1+2s-\\kappa$ is available.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-asp-longitudinal"
+  },
+  {
+   "claim_id": "claim-increasing-positive-excluded",
+   "exact_statement": "There is no calibrated profile satisfying <a href=\"#asp:contradiction\" data-reference-type=\"eqref\" data-reference=\"asp:contradiction\">[asp:contradiction]</a> with $\\lambda>0$ and $a>0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-asp-increasing-positive"
+  },
+  {
+   "claim_id": "claim-local-constrained-comparison",
+   "exact_statement": "Let an inherited full profile be based on the parameter tie, with $0<\\lambda<1$, $\\theta>0$, the conditional profile <a href=\"#eq:source-17\" data-reference-type=\"eqref\" data-reference=\"eq:source-17\">[eq:source-17]</a>, and the inherited tie projection inequalities. Suppose its full $C$-partial is a constant $P\\in(0,u_*/2]$. Without requiring calibration of this profile, there is a backward endpoint comparison from its origin, respecting $R\\le\\lambda Y$, whose gain per unit time is at least $1+2s-4\\kappa$. Its velocity is in a box with $v_1=1$ and $v_2\\in[\\rho,1-\\rho]$, for sufficiently small $\\rho>0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-asp-constrained"
+  },
+  {
+   "claim_id": "claim-increasing-zero-excluded",
+   "exact_statement": "There is no calibrated profile satisfying <a href=\"#asp:contradiction\" data-reference-type=\"eqref\" data-reference=\"asp:contradiction\">[asp:contradiction]</a> with $\\lambda>0$ and $a=0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-asp-increasing-zero"
+  },
+  {
+   "claim_id": "claim-decreasing-aspect-excluded",
+   "exact_statement": "There is no calibrated profile satisfying <a href=\"#asp:contradiction\" data-reference-type=\"eqref\" data-reference=\"asp:contradiction\">[asp:contradiction]</a> with $\\lambda<0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-asp-decreasing"
+  },
+  {
+   "claim_id": "claim-frame-identity",
+   "exact_statement": "For each $I$, $$\\mathsf S_{m,I}\\mathsf P_{m,I}f=f,\n \\qquad\n \\|\\mathsf P_{m,I}f\\|_{\\ell^2}^2\n   =(L_{\\mathrm f}\\theta)^2\\|f\\|_2^2,\n \\qquad\n \\|\\mathsf S_{m,I}\\|_{\\ell^2\\to L^2}\n   =(L_{\\mathrm f}\\theta)^{-1}.$$ Consequently, if $I_+\\subset I_-$ and $\\ell=m_+/m_-$, the transition $\\mathsf P_{m_+,I_+}\\mathsf S_{m_-,I_-}$ has $\\ell^2\\to\\ell^2$ norm at most $\\ell$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pkt-frame"
+  },
+  {
+   "claim_id": "claim-atomic-norm-properties",
+   "exact_statement": "On each finite index set, $A$ is a norm, is monotone under absolute coordinatewise domination, and is contracted by coordinate masks. The same assertions hold for $\\mathcal A$. Moreover, $$\\label{eq:source-30}\n r w^2\\sum_v|c_v|^3\\le\\mathcal A(c)^3.$$ An operator estimate with input $G(d)$ and output a norm remains true with input $A(d)$ and the same constant, provided the estimate holds for every input on the specified support.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pkt-atomic"
+  },
+  {
+   "claim_id": "claim-uniform-packet-theorem",
+   "exact_statement": "Fix $0<\\kappa<1/10$, the continued phase, a bounded frequency region, and the window system above. For every fixed admissible complexity range and every $\\varepsilon>0$, there is a finite constant $C$ such that $$\\label{pkt:uniform-main}\n \\mathcal A(T_m d)^3\n   \\le C m^{10\\kappa+\\varepsilon}G(d)^3$$ for every finite complex initial array $d$ and every terminal coordinate mask in that range. The same estimate holds with $A(d)^3$ on the right. The constant is uniform in $m,N,d$, and the masks; it may depend on $\\kappa,\\varepsilon$, the complexity range, the fixed phase and frequency region, and the windows. Equivalently, $$\\label{eq:source-32}\n \\gamma\\le10\\kappa.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pkt-main"
+  },
+  {
+   "claim_id": "claim-composition",
+   "exact_statement": "Fix rational numbers $0=a_0<\\cdots<a_J=1$ and dyadic factors $m_0=1$, $m_J=m$, with $m_j=m^{a_j+o(1)}$. Put $\\ell_j=m_{j+1}/m_j$. If normalized transition $j$ has cubed norm bound $C_j\\ell_j^{\\beta_j+\\varepsilon}$, with $C_j$ independent of $m$ and $\\varepsilon>0$ arbitrary, the composed cubed norm bound is $$\\prod_{j=0}^{J-1}C_j\\ell_j^{\\beta_j+\\varepsilon}\n   =m^{\\sum_{j=0}^{J-1}(a_{j+1}-a_j)\\beta_j\n          +\\varepsilon+o(1)}.$$ This remains true with arbitrary intermediate coordinate masks. A better single-step bound restricted to particular input and output supports can be used at any transition whose supports satisfy that restriction, provided it is hereditary under restriction of the input support.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pkt-composition"
+  },
+  {
+   "claim_id": "claim-interaction-locality",
+   "exact_statement": "Let $v$ be a parent index and $b$ a child index, with $I_b\\subset I_v$. The transition matrix vanishes unless $|\\nu_b-\\nu_v|\\le C\\theta_+$, and for every integer $L\\ge0$ it obeys $$\\label{pkt:matrix-decay}\n |T_{bv}|\\le C_L\n \\left(1+\n  \\frac{|z_b-z_v-(t_{I_b}-t_{I_v})U_{\\nu_v}|}{w_-}\n \\right)^{-L}.$$ Consequently, for every fixed $\\eta>0$, interactions outside the enlarged parent beam of radius $m^\\eta w_-$ give an error smaller than any prescribed negative power of $m$, times the largest input coordinate, on an admissible family. One may also insert intermediate frame identities and truncate all intermediate position grids to sufficiently large polynomial ranges, with the same type of error.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pkt-locality"
+  },
+  {
+   "claim_id": "claim-preliminary-bounds",
+   "exact_statement": "For a single-step map and each terminal bin, $$\\label{pkt:mass-capacity}\n w^2\\sum_{v\\in I}|c_v|^2\\le\\delta^2\\sum_v|d_v|^2,\n \\qquad K(c_I)\\le m^{4+o(1)}K(d).$$ In particular, $\\gamma\\le2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pkt-crude"
+  },
+  {
+   "claim_id": "claim-refined-decoupling",
+   "exact_statement": "Fix a nonzero, nonnegative $a\\in C_c^\\infty(\\mathbb R^2)$, and a smooth elliptic phase $\\Phi$ on a fixed compact frequency region. Its ellipticity and derivative bounds are fixed. A canonical packet at scale $R\\ge2$ is $$F_T(X,t)=d_T R\\int\n     a\\bigl(\\sqrt R(\\xi-\\xi_T)\\bigr)\n     e^{2\\pi i((X-z_T)\\cdot\\xi+t\\Phi(\\xi))}\\,d\\xi .$$ The frequency centers range over a fixed bounded set and lie on a grid of spacing comparable to $R^{-1/2}$. The compact phase region is chosen to contain these centers and all their packet supports $\\xi_T+R^{-1/2}\\mathop{\\mathrm{supp}}a$. For each frequency center, the position centers lie on a grid of spacing comparable to $\\sqrt R$. Assume the position centers lie in a translate of a box of side $C R$, where $C$ is fixed. Subsets of these grids are allowed. The coefficients $d_T$ are arbitrary complex numbers.*\n\n\n*Fix $0<\\delta_0<1/8$. The counted tube associated to the packet is $$T=\\bigl\\{(X,t): |t|\\le3R,\\quad\n |X-z_T+t\\nabla\\Phi(\\xi_T)|\\le R^{1/2+\\delta_0}\\bigr\\}.$$ The packet has transverse core width $\\sqrt R$, but need not vanish outside this tube. On the time slab below, the coefficient-relative Schwartz bound proved below controls its decay away from the centerline. The enlarged tube is the region used for counting; at each induction scale we use the same definition with that scale’s core width. Let $Y$ be a finite union of cubes from a fixed grid of side $\\sqrt R$, contained in $\\{|t|\\le2R\\}$. Suppose each such cube meets at most $k\\ge1$ counted tubes. For every $\\varepsilon>0$, $$\\label{pkt:external-decoupling}\n \\Bigl\\|\\sum_TF_T\\Bigr\\|_{L^4(Y)}^4\n \\le C_{\\varepsilon,\\delta_0}R^\\varepsilon\n                         k R^2\\sum_T|d_T|^4 .$$ All constants may depend on the fixed profile, grid bounds, position box constant, and phase bounds. The estimate is uniform over finite subsets and the coefficients. If the weighted packet norms on a box $B$ satisfy $\\|F_T\\|_{L^4(w_B)}^4\\asymp |d_T|^4R^2$, the right-hand side may equivalently be written as $C_{\\varepsilon,\\delta_0}R^\\varepsilon k\n\\sum_T\\|F_T\\|_{L^4(w_B)}^4$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pkt-refined-decoupling"
+  },
+  {
+   "claim_id": "claim-discrete-fourth-power",
+   "exact_statement": "Consider one consecutive transition in an admissible family, with scale ratio $\\ell=m_+/m_-=m^{\\alpha+o(1)}$, where $\\alpha>0$ is fixed. Fix finite retained parent and child coordinate sets and an adjacency power $\\eta>0$. Let $d$ be any complex array on the parent sets, and let $M_{I_+}$ project onto the retained set in child bin $I_+$. The output in that bin is $$c_{I_+}=M_{I_+}\\mathsf P_{m_+,I_+}\n                    \\mathsf S_{m_-,I_-}d_{I_-},\n \\qquad I_+\\subset I_-.$$ Suppose each active child index has at most $k\\ge1$ active parents in its parent time bin satisfying $$|\\nu_b-\\nu_v|\\le m^\\eta\\theta_+,\n \\qquad\n |z_b-z_v-(t_{I_b}-t_{I_v})U_{\\nu_v}|\n       \\le m^\\eta w_-.$$ Thus $k$ counts nearby pairs of retained coordinates, independently of whether their coefficients vanish. The displayed operator still uses every matrix entry between the retained sets. Then $$\\label{eq:source-33}\n r_+w_+^2\\sum_b|c_b|^4\n       \\le m^{o(1)} k\\,r_-w_-^2\\sum_v|d_v|^4.$$ For each fixed complexity range, $\\alpha$, and $\\eta$, and every $\\varepsilon>0$, the factor $m^{o(1)}$ may be replaced by $C_\\varepsilon m^\\varepsilon$ for all sufficiently large $m$ in the window $$m^{\\alpha/2}\\le\\ell\\le m^{3\\alpha/2}.$$ The constant and the lower threshold within this window are uniform. A family’s entry into the window may depend on the rate at which $\\log_m\\ell$ tends to $\\alpha$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pkt-quartic"
+  },
+  {
+   "claim_id": "claim-minimal-time-dimension",
+   "exact_statement": "One has $$\\label{eq:source-34}\n \\gamma_\\sigma\\leq 2\\sigma,\n \\qquad\n s:=\\inf\\{\\sigma\\in[0,1]:\\gamma_\\sigma=\\gamma\\}>0 .$$ For every fixed $\\sigma<s$, the difference $\\gamma-\\gamma_\\sigma$ is positive. For every $\\sigma>s$ in $[0,1]$, one has $\\gamma_\\sigma=\\gamma$. Near-extremal families defining any of these exponents may be chosen with all nonzero initial coordinate amplitudes between $1$ and $2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ext-time-dimension"
+  },
+  {
+   "claim_id": "claim-endpoint-localization",
+   "exact_statement": "Along a path from level $a$ to level $b>a$, the endpoint angle difference is $O_J(m^\\eta\\theta_b)$, and $$|z_b-z_a-(t_{I_b}-t_{I_a})U_{\\nu_a}|\n       \\leq O_J(m^\\eta w_a).$$ For a fixed root and a fixed terminal leaf, the number of paths is at most $m^{O(J\\eta)+o(1)}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ext-endpoints"
+  },
+  {
+   "claim_id": "claim-minimal-path-count",
+   "exact_statement": "Admissible families exist at arbitrarily small accuracies. The infima of the limiting lower exponents in <a href=\"#eq:source-36\" data-reference-type=\"eqref\" data-reference=\"eq:source-36\">[eq:source-36]</a> have a finite limit as $\\epsilon\\downarrow0$. There are families approaching this limit, with accuracies tending to zero, for which the following holds. Call their graphs the high graphs. Choose a smaller fixed positive radius power in each family, tending to zero with its accuracy, and call the corresponding graphs low graphs. After any fixed number of further vertex maskings that retain amplification $m^{\\gamma-o_i(1)}$, one has $$\\label{eq:source-37}\n \\#\\{\\text{remaining low paths}\\}\n       \\geq m^{-o_i(1)}\\#\\{\\text{original high paths}\\}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ext-path-minimum"
+  },
+  {
+   "claim_id": "claim-time-branching",
+   "exact_statement": "One can retain amplification $m^{\\gamma-o_i(1)}$ by vertex masks such that $$D_j(v)\\asymp d_j,\\qquad\n                         S_j(b)\\asymp s_j'$$ on the selected coordinates, for $0\\leq j\\leq J$ in the first comparison and $0\\leq j<J$ in the second, with $$\\label{eq:source-38}\n                         \\frac{d_j}{s_j'}\n                    \\geq \\ell_j^{2s}m^{-o_i(1)}.$$ One can then prune backwards, retaining this amplification, so that every surviving vertex at level $j$ has at least $$(m/m_j)^{2s}m^{-o_i(1)}$$ terminal descendant time bins by low paths. In the pruned graph, and after any subsequent masks, each root reaches at most $$\\label{eq:source-39}\n                           m_j^{2s}m^{o_i(1)}$$ distinct time bins at level $j$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ext-branching"
+  },
+  {
+   "claim_id": "claim-terminal-leaf-selection",
+   "exact_statement": "Further vertex masks can be chosen retaining amplification $m^{\\gamma-o_i(1)}$ so that the following hold. At each transition, every remaining child has between $k_j$ and $2k_j$ low parents in the current parent mask, for a positive integer $k_j$. Put $k=\\prod_{j=0}^{J-1}k_j$. Each terminal leaf has between $k$ and $2^Jk$ incoming low paths, whereas any fixed root–leaf pair has at most $m^{o_i(1)}$ such paths. There is $h_1>0$ such that $$|c_b|^2\\asymp h_1k$$ on all remaining leaves. Moreover, restricting the output to any subset occupying a fraction $m^{-o_i(1)}$ of these leaves still retains amplification $m^{\\gamma-o_i(1)}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ext-leaves"
+  },
+  {
+   "claim_id": "claim-conditional-time-law",
+   "exact_statement": "There is a subset $\\Omega$ of the final low paths occupying a fraction $m^{-o_i(1)}$ of them such that uniform counting on $\\Omega$ has these properties:*\n\n1.  *Its root marginal is comparable to the uniform law on a set of $N_0$ roots.*\n\n2.  *Given each root, the terminal time satisfies <a href=\"#eq:source-1\" data-reference-type=\"eqref\" data-reference=\"eq:source-1\">[eq:source-1]</a>, with base $M=m^2$, target exponent $s$, and error $O(1/J)+o_i(1)$.*\n\n*The subset is used only to define this law; it does not change any internal summand of the terminal coefficients.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ext-time-law"
+  },
+  {
+   "claim_id": "claim-represented-roots",
+   "exact_statement": "Fix any polynomial upper bound on the radii within each family. There is a subset $\\mathcal P$, which may depend on this bound, occupying a fraction $m^{-o_i(1)}$ of all final low paths with the following property. In every terminal bin $I$, the number of represented roots satisfying $$U_{\\nu_v}\\in u+F,\\qquad z_v+t_IU_{\\nu_v}\\in x+rF$$ is at most $$\\label{eq:source-41}\n K(d)\\delta^{-2}W(F)\\,\n          m^{-2(1+s-10\\kappa-\\zeta)+o_i(1)},\n \\qquad \\text{radii}(F)\\geq m^2\\delta,$$ uniformly over all independent centers $u,x\\in\\mathbb R^2$ and all radii up to the chosen upper bound. One can keep a fraction $m^{-o_i(1)}$ of the final leaves such that every kept leaf has at least $k m^{-o_i(1)}$ represented incoming paths.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ext-represented"
+  },
+  {
+   "claim_id": "claim-terminal-capacity",
+   "exact_statement": "For the kept coefficients of Lemma <a href=\"#ext:represented\" data-reference-type=\"ref\" data-reference=\"ext:represented\">59</a>, in every terminal time bin one has $$\\label{ext:capacity-bound}\n K(c_I|_{\\mathrm{kept}})\n \\leq h_1K(d)\\,\n          m^{2(1-s)+20\\kappa+2\\zeta+o_i(1)}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ext-capacity"
+  },
+  {
+   "claim_id": "claim-terminal-mass",
+   "exact_statement": "The same kept output satisfies $$\\label{ext:mass-bound}\n r w^2\\sum_{b\\ {\\rm kept}}|c_b|^2\n \\leq m^{o_i(1)}\n       \\min\\bigl(m^{-2(1-s)},h_1^{-1}\\bigr)\n       \\delta^2\\#\\mathcal R .$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ext-mass"
+  },
+  {
+   "claim_id": "claim-sparse-cubic-estimate",
+   "exact_statement": "There are constants $C_0>1$ and $\\mu_0>0$ such that the following holds. Let $0<\\mu\\le\\mu_0$, let $R\\ge\\mu^{-1}$, and let $\\mathcal B$ be a collection of at most $\\mu^{-8}$ balls of radius $R$ whose distinct centers have distance at least $(R/\\mu)^{C_0}$. Then, for every $\\epsilon>0$, $$\\label{eq:source-42}\n             \\sum_{B\\in\\mathcal B}\\int_B |F_0(y)|^3\\,dy\n                    \\le C_\\epsilon R^\\epsilon.$$ The constants are uniform over the data in <a href=\"#glob:patch-extension\" data-reference-type=\"eqref\" data-reference=\"glob:patch-extension\">[glob:patch-extension]</a> and all translations of the balls.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-glob-sparse-cubic"
+  },
+  {
+   "claim_id": "claim-elementary-fourth-power",
+   "exact_statement": "For every bounded measurable $h:S^2\\to\\mathbb C$, $$\\label{glob:l4-bound}\n       \\|Eh\\|_{L^4(\\mathbb R^3)}^4\\le32\\pi^3\\|h\\|_\\infty^4.$$ Moreover $Eh$ and its first derivatives are uniformly bounded by constants times $\\|h\\|_\\infty$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-glob-fourth-power"
+  },
+  {
+   "claim_id": "claim-initial-peak-count",
+   "exact_statement": "For $0<\\mu\\le1$, the number of unit lattice cubes $Q'$ satisfying $\\sup_{Q'}|F_0|\\ge\\mu$ is at most $C\\mu^{-7}$. One may select a point $x_{Q'}\\in Q'$ in each such cube with $|F_0(x_{Q'})|\\ge\\mu/2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-glob-initial-peaks"
+  },
+  {
+   "claim_id": "claim-sparse-covering",
+   "exact_statement": "Fix $C_0>1$ and $A>0$. For every $0<\\alpha<1$ there is a constant $C_\\alpha$ with the following property. If $\\mu>0$ is sufficiently small and $X$ is a finite indexed list of at most $A\\mu^{-7}$ points in $\\mathbb R^3$, then $X$ is covered by at most $C_\\alpha\\mu^{-\\alpha/2}$ families of balls. Each family has a common radius $\\rho$ with $$\\label{glob:covering-radii}\n           \\mu^{-1}\\le\\rho,\\qquad 2\\rho\\le\\mu^{-C_\\alpha},$$ and its distinct centers are separated by at least $(2\\rho/\\mu)^{C_0}$. Each family has at most $\\#X$ balls.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-glob-sparse-covering"
+  },
+  {
+   "claim_id": "claim-distributional-bound",
+   "exact_statement": "For every $0<\\alpha<1$ and all sufficiently small $\\mu>0$, $$\\label{glob:distribution-bound}\n       |\\{y\\in\\mathbb R^3:|F_0(y)|>\\mu\\}|\n                            \\le C_\\alpha\\mu^{-3-\\alpha}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-glob-distribution"
+  }
+ ],
+ "paper": "papers/EN-110-000-0022-2-2026-PR-T4-UK-EX-M2-C-ML-H-0176_PM-077.1_Elliptic_capacity_propagation_and_Fourier_restriction_to_the_sphere.md",
+ "purpose": "Elliptic capacity propagation and Fourier restriction to the sphere",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "d5181ed879fe223c58d53f16e5eb9edf91320bde9e805bd4ac606503b4681bad",
+   "pm.domains.v2": "cec9fa2ee23a616d837b4b1c601fac7d365ca3b0e0a1fe8ed6816630f3dd78b3",
+   "pm.edges.v2": "b8a617df8566e09b0fd2c11d892bdbf488bef37d1323889e936a7c98c7c0f2da",
+   "pm.extraction.v2": "f9413e14e250a3ba995a538e41ab7555f063a46ad683d36b0243feb9a10be7db",
+   "pm.formal.v2": "89d1d2afdd561f92a528e0fbbad1180809be3fb0d163f5438dc197434c363b04",
+   "pm.limits.v2": "ab579d3368361f6ac53920a098954341f2d213ea0b733137c749c516228e0ebe",
+   "pm.node.v2": "46eea132b325c48efec0ed363c3a57cb91632c859405af367c560669502958c4",
+   "pm.objects.v2": "91198ff428d71c85c1adec236d8824117b2da0aa7364b91dd64510d21a327ece",
+   "pm.provenance.v2": "d351b8811675b62d35bc8c5b86304496e470ed026bd2ff84107026844dcc91d3",
+   "pm.quantities.v2": "c307e406a65079f44e569033602a224ec2bbb14edd2ea5e639efcd31b5ed5415",
+   "pm.reading.v2": "a1b25b38bb8d5410061a2f2cff7332c828098f864188203e49ed63386c7a2877",
+   "pm.roadmap.v2": "715a08d76b2dc535eb9e342d24fa37eaa5e502ad8f503b3b07db82568d291809",
+   "pm.search.v1": "91c9a7cdf8e9cd67c253aaac20fc87fd5289969e72caae945a7233ee0145b9e2",
+   "pm.triptych.v2": "c1ebb67aa8303009d5ed6d0c711db3d893fbcd0967834b49974106cbc3e34160"
+  },
+  "canonical_sha256": "a7d6c4186f62df4d54ccfc193ca65940b9a89b6d1fbe73ae9347e94fa48fd310",
+  "paper_sha256": "1e5cc1ca6dcea48fe9e51ca4d29dd372459ab301cad4cdd088be9fe7a8f68ca4",
+  "repaired_body_sha256": "8a710c1a19dc777fba938b6106fd3d5a61107b9976fe0d2ed8cdff6854ef0671"
+ },
+ "status": "ACTIVE",
+ "subject_id": 10,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "cdf7692cd9342ea67676b369d51182ee68639804c1b5845e5ef34b5b0797dfdf",
+   "receipt_sha256": "a1a56fea6528a90b839f19d9e8fbc92eff664f096b0f942f817b8c463c6c5749",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Elliptic capacity propagation and Fourier restriction to the sphere"
+}

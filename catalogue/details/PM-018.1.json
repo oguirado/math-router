@@ -1,0 +1,964 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 844108,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 238820
+ },
+ "coordinate": "EN-101-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-H-0052",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "Let $k$ be a global function field: a finite extension of $\\mathbb F_q(t)$.",
+     "quote_sha256": "286d3af30ff8779347a9373118d4d9bd9546532202b4ec1a7618ebeccdb8e3aa"
+    }
+   ],
+   "query": "Apply the main normal-subgroup theorem over an arbitrary field.",
+   "reason": "The base field is required to be a global function field; the result does not establish the same assertion for a general local field or a higher-dimensional function field."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "If $N\\triangleleft G(k)$ and $N\\not\\subseteq Z(G(k))$, then $$N=\\delta_A^{-1}(W)$$ for an open normal subgroup $W\\triangleleft H_A$.",
+     "quote_sha256": "45393a0a5c442e5fbc4bec6761c61d2f95598b7f688565f1abfc373961ba4122"
+    }
+   ],
+   "query": "Classify central normal subgroups by the open-local-preimage conclusion.",
+   "reason": "The conclusion is asserted for noncentral normal subgroups and supplies no such classification for central subgroups."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "The substantive issue is this particular local description: finite index alone does not identify which local topology detects a normal subgroup.",
+     "quote_sha256": "b6ece9e948345c6f77cab04d0e52c4d52bb6795f656e565f76c6157efd68a573"
+    }
+   ],
+   "query": "Use finite index alone to identify the required local topology.",
+   "reason": "The paper distinguishes the finite-index reduction from proving that the quotient is detected by the specified anisotropic local groups."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-4",
+     "quote": "When the exponent is divisible by the characteristic, the power map need not be locally invertible.",
+     "quote_sha256": "5f084cf8beb222c79552373a2ce97bcc477688a560902bfde9b9e7eb864e2a3e"
+    }
+   ],
+   "query": "Treat power maps as locally invertible when the exponent is divisible by the characteristic.",
+   "reason": "The approximation argument separates the inseparable part and works with products of powers."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-char-trivial",
+     "quote": "The latter is an equality of abstract additive groups.",
+     "quote_sha256": "411c4cbbd0a62438c7f68d8a65533a683853a3b7ade57b179e53ee2dd7e97ec8"
+    },
+    {
+     "anchor": "stmt-char-trivial",
+     "quote": "Local density alone would not suffice for the exact transformations used here.",
+     "quote_sha256": "5c58f45056c73de4be806220ebd8ace128c2cc494f8ef72a6def175ad373a55e"
+    }
+   ],
+   "query": "Replace exact additive spanning by local density in the character argument.",
+   "reason": "The exact transformations use equality of abstract additive groups, which local density alone does not provide."
+  }
+ ],
+ "family": "PM-018",
+ "id": "PM-018.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-normal-subgroups-from-anisotropic-factors",
+    "statement": "Let $k$ be a global function field and let $G$ be an absolutely almost simple simply connected $k$-group."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-normal-subgroups-from-anisotropic-factors",
+    "statement": "$N\\triangleleft G(k)$"
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-normal-subgroups-from-anisotropic-factors",
+    "statement": "$N\\not\\subseteq Z(G(k))$"
+   },
+   {
+    "anchor": "stmt-arith-unitary-reduction",
+    "claim_id": "claim-unitary-arithmetic-reduction",
+    "statement": "For the groups in [arith:unitary-notation],"
+   },
+   {
+    "anchor": "stmt-arith-finite-index",
+    "claim_id": "claim-noncentral-normal-finite-index",
+    "statement": "noncentral abstract normal subgroup of $S(k)$"
+   },
+   {
+    "anchor": "arith:power-notation",
+    "claim_id": "claim-finite-power-defect-reduction",
+    "statement": "For an integer $e\\geq1$,"
+   },
+   {
+    "anchor": "stmt-arith-closure",
+    "claim_id": "claim-exact-coset-adelic-closure",
+    "statement": "Let $v_0\\notin A$,"
+   },
+   {
+    "anchor": "stmt-arith-finite-quotients",
+    "claim_id": "claim-finite-quotients-extend-continuously",
+    "statement": "Let $F$ be a global function field and $H$ a simply connected absolutely almost simple $F$-group for which the Margulis–Platonov assertion holds."
+   },
+   {
+    "anchor": "stmt-approx-line-sieve",
+    "claim_id": "claim-line-avoidance",
+    "statement": "Let $E$ be a finite-dimensional $k$-vector space and let $Z\\subset E$ be a closed subset of geometric codimension at least two."
+   },
+   {
+    "anchor": "stmt-approx-line-sieve",
+    "claim_id": "claim-line-avoidance",
+    "statement": "Choose $d\\in E(k)\\setminus\\{0\\}$ such that its point $[d]$ at infinity does not belong to the closure of $Z$ in $\\mathbb P(E\\oplus k)$."
+   },
+   {
+    "anchor": "stmt-approx-line-sieve",
+    "claim_id": "claim-line-avoidance",
+    "statement": "Fix a place $v_0$."
+   },
+   {
+    "anchor": "stmt-approx-two-lists",
+    "claim_id": "claim-independent-power-parameter-lists",
+    "statement": "Write $e=p^a e_0$ with $(e_0,p)=1$."
+   },
+   {
+    "anchor": "stmt-approx-two-lists",
+    "claim_id": "claim-independent-power-parameter-lists",
+    "statement": "Choose two disjoint consecutive lists of factors with this property."
+   },
+   {
+    "anchor": "stmt-approx-two-lists",
+    "claim_id": "claim-independent-power-parameter-lists",
+    "statement": "$Y\\subset X$ is closed of geometric codimension at least two,"
+   },
+   {
+    "anchor": "stmt-approx-residue-list",
+    "claim_id": "claim-uniform-residue-parameters",
+    "statement": "Fix a basic list and a proper closed subset $Y\\subset X$."
+   },
+   {
+    "anchor": "stmt-approx-power-factor",
+    "claim_id": "claim-prescribed-power-coset-approximation",
+    "statement": "Let $k$ be a global function field, let $S=\\mathop{\\mathrm{SU}}(D,*)$ be $k$-anisotropic of degree $n\\geq3$, and put $R=S(k)^e$ for $e\\geq1$."
+   },
+   {
+    "anchor": "stmt-approx-power-factor",
+    "claim_id": "claim-prescribed-power-coset-approximation",
+    "statement": "Let $Y\\subset X$ be closed of geometric codimension at least two."
+   },
+   {
+    "anchor": "stmt-approx-power-factor",
+    "claim_id": "claim-prescribed-power-coset-approximation",
+    "statement": "(Approximation by power factors). *Let $k$ be a global function field, let $S=\\mathop{\\mathrm{SU}}(D,*)$ be $k$-anisotropic of degree $n\\geq3$, and put $R=S(k)^e$ for $e\\geq1$. Let $X=x_*S$ with $x_*\\in U(k)$, fix $\\gamma\\in S(k)$, and set $$\\mathcal C=x_*\\gamma R\\subset X(k).$$ Let $Y\\subset X$ be closed of geometric codimension at least two. Fix the torus, Galois splitting field, cocharacter and map $\\eta$ of <a href=\"#approx:eta\" data-reference-type=\"eqref\" data-reference=\"approx:eta\">[approx:eta]</a>. Let $B$ be a finite set containing $A$, the exceptions for the fixed models, and a place $v_0$ at which $S$ is isotropic.* *At $B$, prescribe nonempty local open subsets of $X(k_v)$ whose product meets the closure of $\\mathcal C$ given by Proposition <a href=\"#arith:closure\" data-reference-type=\"ref\" data-reference=\"arith:closure\">5</a>. Let $(\\mathcal U_v)_{v\\notin B}$ be a family of subsets $\\mathcal U_v\\subset X(k_v)$ satisfying the following conditions:* 1. *For every $v\\notin B$, each integral point whose reduction avoids $Y$ belongs to $\\mathcal U_v$.* 2. *For every $v\\notin B$, the set $\\mathcal U_v$ contains a nonempty local open subset.* 3. *There are two disjoint consecutive basic lists and, for each number of appended factors, a fixed finite family of algebraic pole tests, independent of $v$. After the initial point and conjugators have been fixed, these tests imply membership in $\\mathcal U_v$ at every single-pole reduction outside one finite set of model exceptions. The tests admit choices in the following order. The conjugator tuple of the two basic lists may be chosen in a nonempty Zariski open subset. For each such tuple, the initial point $x$ may be chosen in a nonempty Zariski open subset of $X$. For every such $x$ and every prescribed finite number of appended factors, their conjugators may be chosen in a nonempty Zariski open subset of the corresponding power of $S$. For each tuple so chosen, the tests define a nonempty open subset of every absolute boundary hyperplane away from the other hyperplanes. Setting appended parameters to $1$ preserves all previously available pole tests.* *Then there is $x'\\in\\mathcal C$ satisfying the prescribed open conditions at $B$ and belonging to $\\mathcal U_v$ for every $v\\notin B$.* *Finitely many additional nonempty Zariski open conditions may be imposed at the three stages in <span class=\"upright\">(iii)</span>, as long as they remain compatible with the stipulated choices.*"
+   },
+   {
+    "anchor": "stmt-approx-power-factor",
+    "claim_id": "claim-prescribed-power-coset-approximation",
+    "statement": "For every $v\\notin B$, each integral point whose reduction avoids $Y$ belongs to $\\mathcal U_v$."
+   },
+   {
+    "anchor": "stmt-approx-power-factor",
+    "claim_id": "claim-prescribed-power-coset-approximation",
+    "statement": "For every $v\\notin B$, the set $\\mathcal U_v$ contains a nonempty local open subset."
+   },
+   {
+    "anchor": "stmt-approx-power-factor",
+    "claim_id": "claim-prescribed-power-coset-approximation",
+    "statement": "There are two disjoint consecutive basic lists and, for each number of appended factors, a fixed finite family of algebraic pole tests, independent of $v$. After the initial point and conjugators have been fixed, these tests imply membership in $\\mathcal U_v$ at every single-pole reduction outside one finite set of model exceptions. The tests admit choices in the following order. The conjugator tuple of the two basic lists may be chosen in a nonempty Zariski open subset. For each such tuple, the initial point $x$ may be chosen in a nonempty Zariski open subset of $X$. For every such $x$ and every prescribed finite number of appended factors, their conjugators may be chosen in a nonempty Zariski open subset of the corresponding power of $S$. For each tuple so chosen, the tests define a nonempty open subset of every absolute boundary hyperplane away from the other hyperplanes. Setting appended parameters to $1$ preserves all previously available pole tests."
+   },
+   {
+    "anchor": "stmt-tor-norm-approximation",
+    "claim_id": "claim-simultaneous-norm-hasse-approximation",
+    "statement": "Let $k$ be a global function field, let $J/k$ be a separable quadratic extension, and let $F/k$ be separable of degree $m\\geq3$."
+   },
+   {
+    "anchor": "stmt-tor-norm-approximation",
+    "claim_id": "claim-simultaneous-norm-hasse-approximation",
+    "statement": "Suppose that the Galois group of the joint normal closure of $F$ and $J$ is $S_m\\times C_2$ under its natural action on the $m$ embeddings of $F$ and its restriction to $J$."
+   },
+   {
+    "anchor": "stmt-tor-norm-approximation",
+    "claim_id": "claim-simultaneous-norm-hasse-approximation",
+    "statement": "$N_{F/k}(h)=N_{J/k}(d)$"
+   },
+   {
+    "anchor": "stmt-tor-cyclic-detection",
+    "claim_id": "claim-cyclic-cohomology-detection",
+    "statement": "Suppose that a finite Galois extension $P/k$ splits the $k$-lattice $M$, and put $\\Gamma=\\mathop{\\mathrm{Gal}}(P/k)$."
+   },
+   {
+    "anchor": "stmt-tor-sign-element",
+    "claim_id": "claim-central-sign-extension-class",
+    "statement": "Let $\\Gamma$ be a finite group acting on a lattice $M$, and suppose that $c\\in Z(\\Gamma)$ has order two and acts as $-1$ on $M$."
+   },
+   {
+    "anchor": "stmt-tor-symmetric-lattice",
+    "claim_id": "claim-symmetric-lattice-cyclic-splitting",
+    "statement": "Let $m\\geq3$, let $\\Gamma=S_m\\times\\langle c\\rangle$ with $c^2=1$, and let $$M=(\\mathbb Z^m/\\mathbb Z\\mathbf1)\\otimes\\mathrm{sign}_{C_2},\n \\qquad \\mathbf1=(1,\\ldots,1).$$"
+   },
+   {
+    "anchor": "stmt-tor-symmetric-lattice",
+    "claim_id": "claim-symmetric-lattice-cyclic-splitting",
+    "statement": "splits over every cyclic subgroup"
+   },
+   {
+    "anchor": "stmt-quo-dichotomy",
+    "claim_id": "claim-finite-defect-quotient-dichotomy",
+    "statement": "$V\\ne1$"
+   },
+   {
+    "anchor": "stmt-quo-commuting",
+    "claim_id": "claim-commuting-rational-approximation",
+    "statement": "Let $a,b\\in L^1$."
+   },
+   {
+    "anchor": "stmt-quo-commuting",
+    "claim_id": "claim-commuting-rational-approximation",
+    "statement": "For each $v\\in A$, let $x_v,t_v\\in U(k_v)$ belong to one common separable field torus and satisfy $\\det x_v=a_v$ and $\\det t_v=b_v$."
+   },
+   {
+    "anchor": "stmt-quo-local-abelianization",
+    "claim_id": "claim-local-norm-one-abelianization",
+    "statement": "Let $K$ be a nonarchimedean local field of positive characteristic, with residue field $\\mathbb F_q$, and let $\\mathcal D$ be a central division algebra of odd degree $n\\geq3$ over $K$."
+   },
+   {
+    "anchor": "stmt-quo-commuting-lifts",
+    "claim_id": "claim-common-torus-lifts-commute",
+    "statement": "Suppose $q_1,q_2\\in Q$ have local components in one common separable field torus at each $v\\in A$."
+   },
+   {
+    "anchor": "stmt-fin-obstruction",
+    "claim_id": "claim-finite-simple-obstruction-subset",
+    "statement": "Let $F$ be a finite nonabelian simple group."
+   },
+   {
+    "anchor": "sec:palettes",
+    "claim_id": "claim-translation-invariant-uniform-palette-law",
+    "statement": "Suppose that the second alternative of Proposition <a href=\"#quo:dichotomy\" data-reference-type=\"ref\" data-reference=\"quo:dichotomy\">16</a> occurs: there is a homomorphism $$\\phi:U(k)\\longrightarrow\\mathcal F,\n \\qquad \\phi(V_0)=\\mathcal F,\\qquad R\\subseteq\\ker\\phi,$$ where $\\mathcal F$ is finite, nonabelian, and simple."
+   },
+   {
+    "anchor": "stmt-pal-weight-sum",
+    "claim_id": "claim-rational-weight-summability",
+    "statement": "real $t>1$"
+   },
+   {
+    "anchor": "stmt-pal-translation-obstruction",
+    "claim_id": "claim-membership-change-zero-return",
+    "statement": "$\\phi(w)\\in\\mathcal S$"
+   },
+   {
+    "anchor": "stmt-pal-translation-obstruction",
+    "claim_id": "claim-membership-change-zero-return",
+    "statement": "$\\phi(z)\\notin\\mathcal S$"
+   },
+   {
+    "anchor": "stmt-rec-spectral-concentration",
+    "claim_id": "claim-spectral-concentration-density",
+    "statement": "Let $G$ be a countable abelian group,"
+   },
+   {
+    "anchor": "stmt-rec-spectral-concentration",
+    "claim_id": "claim-spectral-concentration-density",
+    "statement": "let $v:\\Omega\\to G$,"
+   },
+   {
+    "anchor": "rec:orthogonality",
+    "claim_id": "claim-spectral-concentration-density",
+    "statement": "\\mathbb E_j\\chi(v(y))\\longrightarrow\n \\begin{cases}1,&\\chi=1,\\\\0,&\\chi\\ne1\\end{cases}\n \\qquad(\\chi\\in\\widehat G).$$"
+   },
+   {
+    "anchor": "stmt-rec-spectral-concentration",
+    "claim_id": "claim-spectral-concentration-density",
+    "statement": "For each $x\\notin E$, suppose that there are $a_x\\in G$ and a positive measure $\\nu_x$ on $\\widehat G$, of mass $\\delta$ and with $\\nu_x(\\{1\\})\\geq\\delta^2$, such that $$F_x(y)=\\int\\chi(v(y)-a_x)\\,d\\nu_x(\\chi)=0\n \\qquad(y\\in E).$$"
+   },
+   {
+    "anchor": "stmt-rec-polynomial-density",
+    "claim_id": "claim-polynomial-loci-zero-density",
+    "statement": "Let $k$ be an infinite field of positive characteristic."
+   },
+   {
+    "anchor": "pm-h-32",
+    "claim_id": "claim-quadric-character-orthogonality",
+    "statement": "Assume first that $\\operatorname{char}k\\ne2$."
+   },
+   {
+    "anchor": "stmt-rec-odd",
+    "claim_id": "claim-odd-palette-affine-invariance",
+    "statement": "In odd characteristic,"
+   },
+   {
+    "anchor": "stmt-rec-two-density",
+    "claim_id": "claim-characteristic-two-polynomial-density-dichotomy",
+    "statement": "Let $F\\subset D$ be as above,"
+   },
+   {
+    "anchor": "stmt-rec-two-density",
+    "claim_id": "claim-characteristic-two-polynomial-density-dichotomy",
+    "statement": "let $Y\\in F$,"
+   },
+   {
+    "anchor": "stmt-rec-two-density",
+    "claim_id": "claim-characteristic-two-polynomial-density-dichotomy",
+    "statement": "let $H_0\\in k[X]$ be a nonconstant additive polynomial."
+   },
+   {
+    "anchor": "stmt-rec-two",
+    "claim_id": "claim-characteristic-two-exact-translation-invariance",
+    "statement": "In characteristic two,"
+   },
+   {
+    "anchor": "stmt-rec-field-rotations",
+    "claim_id": "claim-separable-field-square-rotations",
+    "statement": "Let $E=LF\\subset D$ be a field stable under $*$, with $F=E^{\\langle *\\rangle}$ and $E/L$ separable."
+   },
+   {
+    "anchor": "sec:recurrence",
+    "claim_id": "claim-no-simple-defect-colors",
+    "statement": "### Additive recurrence and the exclusion of simple colors We retain the odd division degree hypothesis and the hypothetical quotient $\\phi:U(k)\\to\\mathcal F$ from Section <a href=\"#sec:palettes\" data-reference-type=\"ref\" data-reference=\"sec:palettes\">6</a>. Our objective is to show that membership in $\\mathcal S$ is unchanged by scalar translations on the additive chart. Once this is known, fractional transformations generate left rotations whose colors generate $\\mathcal F$, contradicting the fact that $\\mathcal S$ is nonempty and proper. This follows the organization of (OpenAI 2026, secs. 5.5–5.6) [[MPNF](#ref-MPNF)]. The recurrence proofs below are specific to positive characteristic: odd characteristic permits a quadratic Fourier argument, whereas characteristic two requires additive polynomials and the subgroup-complement property of Theorem <a href=\"#fin:obstruction\" data-reference-type=\"ref\" data-reference=\"fin:obstruction\">20</a>. Write $\\tau_s$ for the scalar translation $x\\mapsto x+s$, with $s\\in k$. For a palette $c\\in\\mathcal C$, put $$I_c(h)=\\boldsymbol 1_{\\mathcal S}(c_h),\\qquad h\\in\\mathcal H.$$ We shall produce a palette satisfying $$\\label{rec:translation-invariance} I_c(\\tau_s h)=I_c(h)\\qquad(s\\in k,\\ h\\in\\mathcal H).$$ Recall that the nonnegative function $K$ constructed in Section <a href=\"#sec:palettes\" data-reference-type=\"ref\" data-reference=\"sec:palettes\">6</a> has a spectral representation $$K(b)=\\int_{\\widehat J}\\chi(b)\\,d\\sigma(\\chi),\\qquad \\sigma(\\widehat J)=\\delta,\\qquad \\sigma(\\{1\\})\\geq\\delta^2, \\qquad \\delta=|\\mathcal F|^{-|\\mathcal F|}.$$ Here additive groups have the discrete topology, and their duals are compact groups of characters with values in the complex unit circle."
+   },
+   {
+    "anchor": "sec:characters",
+    "claim_id": "claim-finite-characters-trivial-on-special-unitary",
+    "statement": "Throughout this section, $D$ is a central division algebra of odd degree $n\\geq3$ over the quadratic extension $L/k$, with unitary involution $*$."
+   },
+   {
+    "anchor": "stmt-char-normalization",
+    "claim_id": "claim-hermitian-normalization-cyclic-field",
+    "statement": "$h=h^*\\ne0$"
+   },
+   {
+    "anchor": "stmt-char-normalization",
+    "claim_id": "claim-hermitian-normalization-cyclic-field",
+    "statement": "$s=\\mathop{\\mathrm{Nrd}}(h)\\in k^\\times$"
+   },
+   {
+    "anchor": "char:sylvester",
+    "claim_id": "claim-difference-pair-invariance",
+    "statement": "Fix $d$ satisfying Equation <a href=\"#char:parameter-conditions\" data-reference-type=\"ref\" data-reference=\"char:parameter-conditions\">[char:parameter-conditions]</a>."
+   },
+   {
+    "anchor": "sec:characters",
+    "claim_id": "claim-unitary-additive-span",
+    "statement": "Throughout this section, $D$ is a central division algebra of odd degree $n\\geq3$ over the quadratic extension $L/k$, with unitary involution $*$."
+   },
+   {
+    "anchor": "pm-h-38",
+    "claim_id": "claim-block-supported-elementary-shears",
+    "statement": "Let $H$ be the subgroup of the invariance group of $F_d$ generated by $\\mathop{\\mathrm{diag}}(\\lambda,\\mu)$, with $\\lambda,\\mu\\in E^1$, acting simultaneously on every block, and by the simultaneous matrices $$\\label{char:boosts}\n B_h(t_j)=\\begin{pmatrix}1&t_j\\bar h\\\\h&1\\end{pmatrix}\n \\qquad(h\\in E^1).$$"
+   },
+   {
+    "anchor": "stmt-char-transitivity",
+    "claim_id": "claim-pair-transitivity-difference-identity",
+    "statement": "For $d\\in E^\\times$ satisfying Equation [char:parameter-conditions],"
+   },
+   {
+    "anchor": "stmt-char-transitivity",
+    "claim_id": "claim-pair-transitivity-difference-identity",
+    "statement": "$b,bd\\in\\mathcal D$"
+   },
+   {
+    "anchor": "stmt-ind-main",
+    "claim_id": "claim-power-defect-vanishes",
+    "statement": "Let $k$ be a global function field, let $L/k$ be a separable quadratic extension, and let $(D,*)$ be a central simple $L$-algebra of degree $n\\geq 3$ with unitary involution."
+   },
+   {
+    "anchor": "stmt-ind-main",
+    "claim_id": "claim-power-defect-vanishes",
+    "statement": "Suppose that $S=\\mathop{\\mathrm{SU}}(D,*)$ is $k$-anisotropic."
+   },
+   {
+    "anchor": "stmt-ind-binary-smallness",
+    "claim_id": "claim-uniform-binary-power-neighborhood",
+    "statement": "Let $K$ be a local field of positive characteristic, and fix positive integers $e$ and $r$."
+   },
+   {
+    "anchor": "stmt-ind-binary-smallness",
+    "claim_id": "claim-uniform-binary-power-neighborhood",
+    "statement": "Let $K'/K$ be a finite extension of degree at most $r$, let $B$ be a quaternion division algebra over $K'$, and let $g\\in\\mathop{\\mathrm{SL}}_1(B)$."
+   },
+   {
+    "anchor": "stmt-ind-binary-smallness",
+    "claim_id": "claim-uniform-binary-power-neighborhood",
+    "statement": "If both reduced eigenvalues $\\lambda$ of $g$ satisfy $$\\mathop{\\mathrm{ord}}_K(\\lambda-1)>c,$$"
+   },
+   {
+    "anchor": "pm-h-43",
+    "claim_id": "claim-fixed-hermitian-quadratic-field",
+    "statement": "Let $n=2m$ with $m\\geq2$."
+   },
+   {
+    "anchor": "stmt-ind-even-factorization",
+    "claim_id": "claim-even-quaternion-centralizer-factorization",
+    "statement": "For $u\\in\\Omega$,"
+   },
+   {
+    "anchor": "stmt-ind-even-factorization",
+    "claim_id": "claim-even-quaternion-centralizer-factorization",
+    "statement": "Suppose that $a\\in(J_0F)^\\times$ satisfies $$\\label{ind:a-norms}\n N_{J_0F/F}(a)=h,\\qquad N_{J_0F/J_0}(a)=d_0.$$"
+   },
+   {
+    "anchor": "ind:auxiliary-fields",
+    "claim_id": "claim-auxiliary-hermitian-quadratic-fields",
+    "statement": "Suppose in this subsection that $D$ has degree four over $L$."
+   },
+   {
+    "anchor": "stmt-ind-degree-four-correction",
+    "claim_id": "claim-degree-four-determinant-correction",
+    "statement": "Assume the Margulis–Platonov assertion for binary special groups over every finite separable extension of $k$."
+   },
+   {
+    "anchor": "stmt-ind-degree-four-correction",
+    "claim_id": "claim-degree-four-determinant-correction",
+    "statement": "Fix the finite quotient $S(k)/R$, of exponent dividing $e$, and retain the degree-four data $(D,*,S_0)$ above."
+   },
+   {
+    "anchor": "stmt-ind-degree-four-correction",
+    "claim_id": "claim-degree-four-determinant-correction",
+    "statement": "Let $B$ be a nonempty finite set of places of $k$ containing $B_s$ and all places below the rank-zero places of the group $\\mathop{\\mathrm{SU}}(C_s,*)$ over $S_0$."
+   },
+   {
+    "anchor": "stmt-ind-local-near-one",
+    "claim_id": "claim-local-small-norm-factorizations",
+    "statement": "Let $K=k_v$."
+   },
+   {
+    "anchor": "stmt-fg-abelian-test",
+    "claim_id": "claim-self-centralizing-abelian-obstruction",
+    "statement": "Suppose that $C\\subset\\mathcal F$ is an abelian subgroup of odd order $c>1$ such that $C_{\\mathcal F}(t)=C$ for every $1\\ne t\\in C$."
+   },
+   {
+    "anchor": "fg:class-bound",
+    "claim_id": "claim-self-centralizing-abelian-obstruction",
+    "statement": "|\\mathcal F|>k(\\mathcal F)c^4,$$"
+   },
+   {
+    "anchor": "stmt-fg-unitary-count",
+    "claim_id": "claim-unitary-torus-double-coset-obstruction",
+    "statement": "Let $p\\ge3$ be an odd prime, let $H=\\mathop{\\mathrm{U}}_p(q)$ be the full isometry group of a nondegenerate Hermitian form over $\\mathbb F_{q^2}$, and let $T\\subset H$ be an irreducible torus of order $q^p+1$."
+   },
+   {
+    "anchor": "stmt-fg-unitary-count",
+    "claim_id": "claim-unitary-torus-double-coset-obstruction",
+    "statement": "If $w\\in T$ has field degree $p$ over $\\mathbb F_{q^2}$,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Classification of noncentral normal subgroups",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-ind-local-near-one-3",
+      "quote": "Let $N\\triangleleft S(k)$ be noncentral. By <a href=\"#arith:finite-index\" data-reference-type=\"ref\" data-reference=\"arith:finite-index\">3</a>, the group $S(k)/N$ is finite. Choose an integer $e\\geq1$ divisible by its exponent.",
+      "quote_sha256": "491ced995e1f23177f1cb29d6d7fc6957c74885dda9ba5489855d9e8acf46e60"
+     },
+     {
+      "anchor": "stmt-ind-main",
+      "quote": "Then $V_0=R$.",
+      "quote_sha256": "1fd1ed849359f63d0aa0b28c91b18485aab1320c8c90c4b1de2995f9854ff977"
+     }
+    ],
+    "requires_concepts": [
+     "Finite index of noncentral normal subgroups",
+     "Generated power subgroups",
+     "Anisotropic local closure",
+     "Vanishing of the power defect"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Simultaneous norm approximation",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-tor-symmetric-lattice-2",
+      "quote": "<summary>Proof of stmt-tor-symmetric-lattice</summary>\n\n*Proof of Proposition <a href=\"#tor:norm-approximation\" data-reference-type=\"ref\" data-reference=\"tor:norm-approximation\">12</a>.* We computed the character lattice of $T$ in Equation <a href=\"#tor:lattice\" data-reference-type=\"eqref\" data-reference=\"tor:lattice\">[tor:lattice]</a>.",
+      "quote_sha256": "db116923bc5f710f726db8506765ee706cabcd2bfb1ab2c97dba2f536b7c5c64"
+     },
+     {
+      "anchor": "proof-stmt-tor-symmetric-lattice-2",
+      "quote": "<summary>Proof of stmt-tor-symmetric-lattice</summary>\n\n*Proof of Proposition <a href=\"#tor:norm-approximation\" data-reference-type=\"ref\" data-reference=\"tor:norm-approximation\">12</a>.* We computed the character lattice of $T$ in Equation <a href=\"#tor:lattice\" data-reference-type=\"eqref\" data-reference=\"tor:lattice\">[tor:lattice]</a>.",
+      "quote_sha256": "db116923bc5f710f726db8506765ee706cabcd2bfb1ab2c97dba2f536b7c5c64"
+     }
+    ],
+    "requires_concepts": [
+     "Character lattices of tori",
+     "Cyclic restriction in group cohomology",
+     "Central sign involutions",
+     "Global torus duality"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-normal-subgroups-from-anisotropic-factors",
+   "exact_statement": "Let $k$ be a global function field and let $G$ be an absolutely almost simple simply connected $k$-group. If $N\\triangleleft G(k)$ and $N\\not\\subseteq Z(G(k))$, then $$N=\\delta_A^{-1}(W)$$ for an open normal subgroup $W\\triangleleft H_A$. This holds in every positive characteristic, including when $G$ is anisotropic over $k$.",
+   "kind": "classification",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-unitary-arithmetic-reduction",
+   "exact_statement": "For the groups in <a href=\"#arith:unitary-notation\" data-reference-type=\"eqref\" data-reference=\"arith:unitary-notation\">[arith:unitary-notation]</a>, the following statements hold in every positive characteristic.*\n\n1.  *The determinant maps $U(k)\\to L^1$ and their local analogues are surjective.*\n\n2.  *The groups $S$ and $U$ satisfy weak approximation.*\n\n3.  *Every place in $A$ splits in $L/k$. At such a place there is a central division algebra $\\mathcal D_v$ of degree $n$ over $k_v$ for which $$U(k_v)\\simeq\\mathcal D_v^\\times,\n     \\qquad S(k_v)\\simeq\\mathop{\\mathrm{SL}}_1(\\mathcal D_v).$$ Under this identification the determinant is $\\mathop{\\mathrm{Nrd}}_{\\mathcal D_v/k_v}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-arith-unitary-reduction"
+  },
+  {
+   "claim_id": "claim-noncentral-normal-finite-index",
+   "exact_statement": "Every noncentral abstract normal subgroup of $S(k)$ has finite index.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-arith-finite-index"
+  },
+  {
+   "claim_id": "claim-finite-power-defect-reduction",
+   "exact_statement": "The subgroup $R$ has finite index in $S(k)$; $P_0$ is open and normal in $H_A$; and $V$ is finite. Conjugation by $U(k)$ preserves $R$ and $V_0$, and hence acts on $V$. If $V=1$ for every integer $e\\geq1$, then the Margulis–Platonov assertion holds for $S(k)$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arith-power-defect"
+  },
+  {
+   "claim_id": "claim-exact-coset-adelic-closure",
+   "exact_statement": "Let $v_0\\notin A$, and write $S(\\mathbb A^{v_0})$ for the restricted product of $S(k_v)$ over $v\\ne v_0$. Then $$\\label{arith:adelic-closure}\n \\overline{R}^{\\,S(\\mathbb A^{v_0})}\n =\\{g\\in S(\\mathbb A^{v_0}):g_A\\in P_0\\}.$$ For any $\\gamma\\in S(k)$, the closure of $\\gamma R$ is obtained by replacing $P_0$ on the right by $\\delta_A(\\gamma)P_0$. In particular, all cosets $\\gamma R$ with $\\gamma\\in V_0$ have the same closure.*\n\n*Consequently one may approximate in an actual prescribed coset $\\gamma R$, meeting prescribed nonempty local open sets at finitely many isotropic places and a prescribed nonempty open subset of $\\delta_A(\\gamma)P_0$ at $A$. If $x_*\\in U(k)$, the same assertion holds after left translation to the determinant slice $x_*S$ and to the coset $x_*\\gamma R$. In each assertion one may also require that the resulting point lie in finitely many nonempty $k$-Zariski open subsets of $S$ or $x_*S$, respectively.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-arith-closure"
+  },
+  {
+   "claim_id": "claim-finite-quotients-extend-continuously",
+   "exact_statement": "Let $F$ be a global function field and $H$ a simply connected absolutely almost simple $F$-group for which the Margulis–Platonov assertion holds. Put $A_H=\\{w:\\mathop{\\mathrm{rank}}_{F_w}H=0\\}$. Every homomorphism $\\psi:H(F)\\to Q$ to a finite group extends uniquely to a continuous homomorphism $$\\widehat\\psi:\\prod_{w\\in A_H}H(F_w)\\longrightarrow Q$$ with the same image. In particular, $\\psi$ kills every rational point whose coordinates at $A_H$ are sufficiently close to the identity. If $A_H=\\varnothing$, every such $\\psi$ is trivial. The same conclusions hold factor by factor for finite products of restriction-of-scalars groups.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arith-finite-quotients"
+  },
+  {
+   "claim_id": "claim-line-avoidance",
+   "exact_statement": "Let $E$ be a finite-dimensional $k$-vector space and let $Z\\subset E$ be a closed subset of geometric codimension at least two. Choose $d\\in E(k)\\setminus\\{0\\}$ such that its point $[d]$ at infinity does not belong to the closure of $Z$ in $\\mathbb P(E\\oplus k)$. Let $$\\pi:E\\longrightarrow E/kd$$ be the quotient map, and fix a rational linear section $s$ of $\\pi$. Fix a place $v_0$.*\n\n*There are a finite set of places $\\Sigma_0$ containing $v_0$ and an integer $D\\geq1$ with the following property. Let $\\Sigma\\supseteq\n\\Sigma_0$ be finite, and prescribe nonempty open subsets $\\mathcal W_v\\subset E(k_v)$ for $v\\in\\Sigma\\setminus\\{v_0\\}$. There exist $y\\in E(k)$ and elements $l\\in k$ of arbitrarily large $v_0$-absolute value such that*\n\n1.  *$y+ld\\in\\mathcal W_v$ for every $v\\in\\Sigma\\setminus\\{v_0\\}$;*\n\n2.  *$y+ld$ is integral outside $\\Sigma$ and its reduction avoids $Z$ at every place outside $\\Sigma$.*\n\n*One may take $\\Sigma_0$ to consist of model exceptions, $v_0$, and the places with $q_v\\leq D$, where $D$ bounds the cardinalities of the geometric fibers of the reductions of $\\pi|_Z$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-approx-line-sieve"
+  },
+  {
+   "claim_id": "claim-independent-power-parameter-lists",
+   "exact_statement": "Write $e=p^a e_0$ with $(e_0,p)=1$. For a sufficiently long list of rational conjugators $k_j$, the product map formed with $\\eta^{e_0}$ is smooth at the identity parameter tuple. The conjugator tuples having this property form a nonempty Zariski open subset of the corresponding power of $S$.*\n\n*Choose two disjoint consecutive lists of factors with this property. In the full product map <a href=\"#approx:product\" data-reference-type=\"eqref\" data-reference=\"approx:product\">[approx:product]</a>, allow any further factors before or after these lists. If $Y\\subset X$ is closed of geometric codimension at least two, then $\\Phi^{-1}(Y)\\subset\\mathcal T_r$ and its closure in $E_r$ have geometric codimension at least two.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-approx-two-lists"
+  },
+  {
+   "claim_id": "claim-uniform-residue-parameters",
+   "exact_statement": "Fix a basic list and a proper closed subset $Y\\subset X$. Outside finitely many places, depending on this list and these fixed models but not on $x$, the following holds: for every integral $x\\in X(k_v)$, there are unit parameters on that list for which the reduction of its product with $x$ avoids $Y$. All other factors may be given parameter $1$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-approx-residue-list"
+  },
+  {
+   "claim_id": "claim-prescribed-power-coset-approximation",
+   "exact_statement": "Let $k$ be a global function field, let $S=\\mathop{\\mathrm{SU}}(D,*)$ be $k$-anisotropic of degree $n\\geq3$, and put $R=S(k)^e$ for $e\\geq1$. Let $X=x_*S$ with $x_*\\in U(k)$, fix $\\gamma\\in S(k)$, and set $$\\mathcal C=x_*\\gamma R\\subset X(k).$$ Let $Y\\subset X$ be closed of geometric codimension at least two. Fix the torus, Galois splitting field, cocharacter and map $\\eta$ of <a href=\"#approx:eta\" data-reference-type=\"eqref\" data-reference=\"approx:eta\">[approx:eta]</a>. Let $B$ be a finite set containing $A$, the exceptions for the fixed models, and a place $v_0$ at which $S$ is isotropic.*\n\n*At $B$, prescribe nonempty local open subsets of $X(k_v)$ whose product meets the closure of $\\mathcal C$ given by Proposition <a href=\"#arith:closure\" data-reference-type=\"ref\" data-reference=\"arith:closure\">5</a>. Let $(\\mathcal U_v)_{v\\notin B}$ be a family of subsets $\\mathcal U_v\\subset X(k_v)$ satisfying the following conditions:*\n\n1.  *For every $v\\notin B$, each integral point whose reduction avoids $Y$ belongs to $\\mathcal U_v$.*\n\n2.  *For every $v\\notin B$, the set $\\mathcal U_v$ contains a nonempty local open subset.*\n\n3.  *There are two disjoint consecutive basic lists and, for each number of appended factors, a fixed finite family of algebraic pole tests, independent of $v$. After the initial point and conjugators have been fixed, these tests imply membership in $\\mathcal U_v$ at every single-pole reduction outside one finite set of model exceptions. The tests admit choices in the following order. The conjugator tuple of the two basic lists may be chosen in a nonempty Zariski open subset. For each such tuple, the initial point $x$ may be chosen in a nonempty Zariski open subset of $X$. For every such $x$ and every prescribed finite number of appended factors, their conjugators may be chosen in a nonempty Zariski open subset of the corresponding power of $S$. For each tuple so chosen, the tests define a nonempty open subset of every absolute boundary hyperplane away from the other hyperplanes. Setting appended parameters to $1$ preserves all previously available pole tests.*\n\n*Then there is $x'\\in\\mathcal C$ satisfying the prescribed open conditions at $B$ and belonging to $\\mathcal U_v$ for every $v\\notin B$.*\n\n*Finitely many additional nonempty Zariski open conditions may be imposed at the three stages in <span class=\"upright\">(iii)</span>, as long as they remain compatible with the stipulated choices.",
+   "kind": "construction",
+   "statement_anchor": "stmt-approx-power-factor"
+  },
+  {
+   "claim_id": "claim-simultaneous-norm-hasse-approximation",
+   "exact_statement": "Let $k$ be a global function field, let $J/k$ be a separable quadratic extension, and let $F/k$ be separable of degree $m\\geq3$. Suppose that the Galois group of the joint normal closure of $F$ and $J$ is $S_m\\times C_2$ under its natural action on the $m$ embeddings of $F$ and its restriction to $J$. Put $E=FJ$. Then $$\\label{tor:norm-kernel}\n T=\\ker\\left[\n \\mathop{\\mathrm{Res}}_{F/k}\\bigl(\\mathop{\\mathrm{Res}}^1_{E/F}\\mathbb G_m\\bigr)\n \\xrightarrow{\\,N_{E/J}\\,}\\mathop{\\mathrm{Res}}^1_{J/k}\\mathbb G_m\n \\right]$$ is a torus. Every torsor under $T$ that has a point over every completion of $k$ has a $k$-point, and its $k$-points are dense in the product of its points over any finite set of completions.*\n\n\n*In particular, let $h\\in F^\\times$ and $d\\in J^\\times$ satisfy $N_{F/k}(h)=N_{J/k}(d)$. If the equations $$\\label{tor:two-norms}\n                 N_{E/F}(a)=h,\\qquad N_{E/J}(a)=d$$ have a solution in $(E\\otimes_k k_v)^\\times$ for every place $v$, they have a solution in $E^\\times$ approximating any prescribed local solutions at finitely many places.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tor-norm-approximation"
+  },
+  {
+   "claim_id": "claim-cyclic-cohomology-detection",
+   "exact_statement": "Suppose that a finite Galois extension $P/k$ splits the $k$-lattice $M$, and put $\\Gamma=\\mathop{\\mathrm{Gal}}(P/k)$. Inflation identifies $\\mathop{\\mathrm{Sha}}^2_\\omega(k,M)$ with $$\\label{tor:cyclic-kernel}\n \\ker\\left[H^2(\\Gamma,M)\\longrightarrow\n                    \\prod_{C\\subseteq\\Gamma\\ \\mathrm{cyclic}}H^2(C,M)\n       \\right].$$ If this group vanishes and $T$ is the torus with character lattice $M$, every everywhere locally soluble $T$-torsor has a rational point and satisfies weak approximation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tor-cyclic-detection"
+  },
+  {
+   "claim_id": "claim-central-sign-extension-class",
+   "exact_statement": "Let $\\Gamma$ be a finite group acting on a lattice $M$, and suppose that $c\\in Z(\\Gamma)$ has order two and acts as $-1$ on $M$. Every extension $$1\\longrightarrow M\\longrightarrow\\mathcal E\n                       \\longrightarrow\\Gamma\\longrightarrow1$$ defines a class $\\beta\\in H^1(\\Gamma/\\langle c\\rangle,M/2M)$ that is zero if and only if the extension splits. If the extension splits over an involution $r\\in\\Gamma$, then the value at the image of $r$ of every cocycle representing $\\beta$ lifts to an element $d_r\\in M$ satisfying $(1+r)d_r=0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tor-sign-element"
+  },
+  {
+   "claim_id": "claim-symmetric-lattice-cyclic-splitting",
+   "exact_statement": "Let $m\\geq3$, let $\\Gamma=S_m\\times\\langle c\\rangle$ with $c^2=1$, and let $$M=(\\mathbb Z^m/\\mathbb Z\\mathbf1)\\otimes\\mathrm{sign}_{C_2},\n \\qquad \\mathbf1=(1,\\ldots,1).$$ Thus $S_m$ permutes coordinates and $c$ acts by $-1$. An extension of $\\Gamma$ by $M$ that splits over every cyclic subgroup splits over $\\Gamma$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tor-symmetric-lattice"
+  },
+  {
+   "claim_id": "claim-finite-defect-quotient-dichotomy",
+   "exact_statement": "If $V\\ne1$, at least one of the following homomorphisms exists:*\n\n1.  *a homomorphism $\\chi:U(k)\\to B$ to a finite abelian group such that $\\chi(S(k))\\ne1$;*\n\n2.  *a homomorphism $\\phi:U(k)\\to\\mathcal F$ to a finite nonabelian simple group such that $$\\phi(V_0)=\\mathcal F,\\qquad R\\subseteq\\ker\\phi.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-quo-dichotomy"
+  },
+  {
+   "claim_id": "claim-commuting-rational-approximation",
+   "exact_statement": "The following assertions hold.*\n\n1.  *Let $a,b\\in L^1$. For each $v\\in A$, let $x_v,t_v\\in U(k_v)$ belong to one common separable field torus and satisfy $\\det x_v=a_v$ and $\\det t_v=b_v$. There exist commuting elements $x,t\\in U(k)$ with $$\\det x=a,\\qquad \\det t=b,$$ whose components at $A$ approximate the prescribed pairs arbitrarily closely.*\n\n2.  *Given $\\gamma\\in V_0$ and $h\\in U(k)$, there exist commuting elements $x,t\\in U(k)$ such that $$x\\in\\gamma R,\\qquad \\det t=\\det h,$$ and $t_A$ is arbitrarily close to $h_A$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-quo-commuting"
+  },
+  {
+   "claim_id": "claim-local-norm-one-abelianization",
+   "exact_statement": "Let $K$ be a nonarchimedean local field of positive characteristic, with residue field $\\mathbb F_q$, and let $\\mathcal D$ be a central division algebra of odd degree $n\\geq3$ over $K$. Set $S_K=\\mathop{\\mathrm{SL}}_1(\\mathcal D)$ and $$T_K=\\ker\\bigl(N_{\\mathbb F_{q^n}/\\mathbb F_q}:\n                    \\mathbb F_{q^n}^{\\times}\\to\\mathbb F_q^{\\times}\\bigr).$$ Then reduction induces $$S_K/\\overline{[S_K,S_K]}\\simeq T_K,\n \\qquad\n \\overline{[\\mathcal D^\\times,\\mathcal D^\\times]}=S_K.$$ There is a generator $\\sigma$ of $\\mathop{\\mathrm{Gal}}(\\mathbb F_{q^n}/\\mathbb F_q)$ such that conjugation by an element of reduced-norm valuation $r$ acts on $T_K$ as $\\sigma^r$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-quo-local-abelianization"
+  },
+  {
+   "claim_id": "claim-common-torus-lifts-commute",
+   "exact_statement": "Suppose $q_1,q_2\\in Q$ have local components in one common separable field torus at each $v\\in A$. Any lifts of $q_1$ and $q_2$ to $\\widetilde Q$ commute.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-quo-commuting-lifts"
+  },
+  {
+   "claim_id": "claim-finite-simple-obstruction-subset",
+   "exact_statement": "Let $F$ be a finite nonabelian simple group. There is a nonempty proper conjugacy-invariant subset $\\mathcal S\\subset F$, with $1\\notin\\mathcal S$, having the following properties.*\n\n1.  *If $W\\in\\mathcal S$ and $Z\\notin\\mathcal S$ commute, then there exists $B\\in F$ such that $$ZW\\notin C_F(B)(ZW^{-1})C_F(BZ^2).$$*\n\n2.  *For every abelian subgroup $A\\subset F$ with $A\\cap\\mathcal S\\ne\\varnothing$, the complement $A\\setminus\\mathcal S$ is a subgroup of $A$.*\n\n*In particular, $\\mathcal S$ is invariant under inversion.",
+   "kind": "construction",
+   "statement_anchor": "stmt-fin-obstruction"
+  },
+  {
+   "claim_id": "claim-translation-invariant-uniform-palette-law",
+   "exact_statement": "There is a probability measure $\\mu$ on $\\mathcal C$ such that $$(T_b)_*\\mu=\\mu\\quad(b\\in J),\\qquad\n \\mu\\{c:c_h=a\\}=|\\mathcal F|^{-1}\n \\quad(h\\in\\mathcal H, a\\in\\mathcal F).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pal-uniform-law"
+  },
+  {
+   "claim_id": "claim-rational-weight-summability",
+   "exact_statement": "For every real $t>1$, $$\\sum_{p\\in X(k)}w(p)^t<\\infty.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-pal-weight-sum"
+  },
+  {
+   "claim_id": "claim-membership-change-zero-return",
+   "exact_statement": "If the colors of $w$ and its scalar affine image satisfy $\\phi(w)\\in\\mathcal S$ and $\\phi(z)\\notin\\mathcal S$, then $$K(b_w(l,s))=0.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-pal-translation-obstruction"
+  },
+  {
+   "claim_id": "claim-spectral-concentration-density",
+   "exact_statement": "Let $G$ be a countable abelian group, let $v:\\Omega\\to G$, and suppose that $$\\label{rec:orthogonality}\n \\mathbb E_j\\chi(v(y))\\longrightarrow\n \\begin{cases}1,&\\chi=1,\\\\0,&\\chi\\ne1\\end{cases}\n \\qquad(\\chi\\in\\widehat G).$$ Let $E\\subseteq\\Omega$. For each $x\\notin E$, suppose that there are $a_x\\in G$ and a positive measure $\\nu_x$ on $\\widehat G$, of mass $\\delta$ and with $\\nu_x(\\{1\\})\\geq\\delta^2$, such that $$F_x(y)=\\int\\chi(v(y)-a_x)\\,d\\nu_x(\\chi)=0\n \\qquad(y\\in E).$$ If $\\Omega\\setminus E$ is nonempty, its lower density is at least $\\delta$. If, along a subsequence, $E$ has density tending to $d>0$, then along a further subsequence there is a finite set $\\Lambda\\subset\\widehat G\\setminus\\{1\\}$ such that $$\\label{rec:finite-spectral-list}\n \\nu_x(\\Lambda)\\geq d\\delta^2/2\\qquad(x\\notin E).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rec-spectral-concentration"
+  },
+  {
+   "claim_id": "claim-polynomial-loci-zero-density",
+   "exact_statement": "Let $k$ be an infinite field of positive characteristic. A proper algebraic subset of $k^r$ has density zero on every increasing sequence of finite additive subgroups exhausting $k^r$. It also has density zero on products of finite subsets whose smallest cardinality tends to infinity.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rec-polynomial-density"
+  },
+  {
+   "claim_id": "claim-quadric-character-orthogonality",
+   "exact_statement": "For every nontrivial additive character $\\chi$ of $k^3$, $\\mathbb E_j\\chi(v(l,s))\\to0$. Every proper polynomial locus in $(l,s)$ also has density zero for these averages.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rec-quadric-orthogonality"
+  },
+  {
+   "claim_id": "claim-odd-palette-affine-invariance",
+   "exact_statement": "In odd characteristic, $\\mu$-almost every palette satisfies <a href=\"#rec:translation-invariance\" data-reference-type=\"eqref\" data-reference=\"rec:translation-invariance\">[rec:translation-invariance]</a>. In fact, for each $h\\in\\mathcal H$, membership in $\\mathcal S$ is constant on all positions $xh$, $x\\in\\mathcal A$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rec-odd"
+  },
+  {
+   "claim_id": "claim-characteristic-two-polynomial-density-dichotomy",
+   "exact_statement": "Let $F\\subset D$ be as above, let $Y\\in F$, and let $H_0\\in k[X]$ be a nonconstant additive polynomial. For $$w_x=q(Y+H_0(x)),\\qquad x\\in k,$$ either $\\phi(w_x)\\notin\\mathcal S$ for every $x$, or the set of such $x$ has density zero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rec-two-density"
+  },
+  {
+   "claim_id": "claim-characteristic-two-exact-translation-invariance",
+   "exact_statement": "In characteristic two, membership in $\\mathcal S$ is unchanged by every scalar translation on $X(k)$. Consequently every palette satisfies <a href=\"#rec:translation-invariance\" data-reference-type=\"eqref\" data-reference=\"rec:translation-invariance\">[rec:translation-invariance]</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rec-two"
+  },
+  {
+   "claim_id": "claim-separable-field-square-rotations",
+   "exact_statement": "Let $E=LF\\subset D$ be a field stable under $*$, with $F=E^{\\langle *\\rangle}$ and $E/L$ separable. Then $L_{\\xi^2}\\in\\mathcal G_c$ for every $\\xi\\in(E/F)^1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rec-field-rotations"
+  },
+  {
+   "claim_id": "claim-no-simple-defect-colors",
+   "exact_statement": "There is no homomorphism $\\phi:U(k)\\to\\mathcal F$ to a finite nonabelian simple group that kills $R$ and satisfies $\\phi(V_0)=\\mathcal F$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rec-no-simple-colors"
+  },
+  {
+   "claim_id": "claim-finite-characters-trivial-on-special-unitary",
+   "exact_statement": "Every homomorphism from $U(k)$ to a finite abelian group is trivial on $S(k)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-char-trivial"
+  },
+  {
+   "claim_id": "claim-hermitian-normalization-cyclic-field",
+   "exact_statement": "If $h=h^*\\ne0$ and $s=\\mathop{\\mathrm{Nrd}}(h)\\in k^\\times$, there exists $a\\in D^\\times$ such that $$\\label{char:normalized-norm}\n a^*a=sh,\\qquad \\mathop{\\mathrm{Nrd}}(a)=s^{(n+1)/2}.$$ There is also a $*$-stable maximal subfield $E\\subset D$ of the form $E=LF$, where $F/k$ is cyclic of degree $n$ and $*$ restricts to the nonidentity automorphism of $E/F$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-char-normalization"
+  },
+  {
+   "claim_id": "claim-difference-pair-invariance",
+   "exact_statement": "The function $F_d$ is invariant under independent left multiplications of its two arguments by elements of $U(k)$ and under the transformation $$\\label{char:pair-move}\n (a,c)\\longmapsto(a-cd,a-c).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-char-pair-invariance"
+  },
+  {
+   "claim_id": "claim-unitary-additive-span",
+   "exact_statement": "The additive subgroup generated by $U(k)$ equals $D$: $$\\mathbb ZU(k)=D.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-char-additive-span"
+  },
+  {
+   "claim_id": "claim-block-supported-elementary-shears",
+   "exact_statement": "For every block $i$, $H$ contains a nonidentity upper elementary unipotent supported only on block $i$, and a nonidentity lower elementary unipotent supported only on block $i$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-char-supported-shears"
+  },
+  {
+   "claim_id": "claim-pair-transitivity-difference-identity",
+   "exact_statement": "For $d\\in E^\\times$ satisfying Equation <a href=\"#char:parameter-conditions\" data-reference-type=\"ref\" data-reference=\"char:parameter-conditions\">[char:parameter-conditions]</a>, the invariance group of $F_d$ is transitive on $D^2\\setminus\\{(0,0)\\}$. Consequently, whenever $b,bd\\in\\mathcal D$, $$\\label{char:difference}\n f(bd)-f(b)=\\chi(\\bar d/d).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-char-transitivity"
+  },
+  {
+   "claim_id": "claim-power-defect-vanishes",
+   "exact_statement": "Let $k$ be a global function field, let $L/k$ be a separable quadratic extension, and let $(D,*)$ be a central simple $L$-algebra of degree $n\\geq 3$ with unitary involution. Suppose that $S=\\mathop{\\mathrm{SU}}(D,*)$ is $k$-anisotropic. For every integer $e\\geq 1$, put $$R=S(k)^e,\\qquad P_0=\\overline{\\delta_A(R)},\\qquad\n V_0=\\delta_A^{-1}(P_0).$$ Here $S(k)^e$ denotes the subgroup generated by the $e$-th powers, and $A$ is the set of places where $S$ is anisotropic. Then $V_0=R$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ind-main"
+  },
+  {
+   "claim_id": "claim-uniform-binary-power-neighborhood",
+   "exact_statement": "Let $K$ be a local field of positive characteristic, and fix positive integers $e$ and $r$. There is a constant $c=c(K,e,r)$ with the following property. Let $K'/K$ be a finite extension of degree at most $r$, let $B$ be a quaternion division algebra over $K'$, and let $g\\in\\mathop{\\mathrm{SL}}_1(B)$. If both reduced eigenvalues $\\lambda$ of $g$ satisfy $$\\mathop{\\mathrm{ord}}_K(\\lambda-1)>c,$$ then $g$ belongs to the subgroup of $\\mathop{\\mathrm{SL}}_1(B)$ generated by its $e$-th powers. The valuation in this inequality is extended from $K$ to an algebraic closure.*\n\n*In particular, suppose that such binary groups are embedded in a fixed unitary group so that their reduced eigenvalues occur among the ambient reduced eigenvalues. A sufficiently small ambient neighborhood of $1$ works for every one of these groups and every continuous finite quotient of exponent dividing $e$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ind-binary-smallness"
+  },
+  {
+   "claim_id": "claim-fixed-hermitian-quadratic-field",
+   "exact_statement": "There is a separable quadratic field $S_0\\subset D$, disjoint from $L$, which is fixed pointwise by $*$. Its two geometric eigenspaces in the standard representation of $D$ both have dimension $m$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ind-fixed-field"
+  },
+  {
+   "claim_id": "claim-even-quaternion-centralizer-factorization",
+   "exact_statement": "For $u\\in\\Omega$, there is a quaternion algebra $Q$ over $F$ with an embedding $Q\\subset C_D(F)$ such that $$J_0F\\subset Q\\cap C_s,\\qquad z\\in Q,\\qquad\\mathop{\\mathrm{Nrd}}_Q(z)=h.$$ The involution $*$ on $Q$ is its canonical quaternion conjugation. The algebra $Q$ is split at any field factor at which $-h(1-h)$ is a norm from $J_0F$.*\n\n\n\n*Suppose that $a\\in(J_0F)^\\times$ satisfies $$\\label{ind:a-norms}\n N_{J_0F/F}(a)=h,\\qquad N_{J_0F/J_0}(a)=d_0.$$ Then $$\\label{ind:two-factors}\n u=wq,\\qquad w=za^{-1}\\in\\mathop{\\mathrm{SL}}_1(Q),\\qquad\n q=a(p^*)^{-1}\\in\\mathop{\\mathrm{SU}}(C_s).$$ If only the first equation in <a href=\"#ind:a-norms\" data-reference-type=\"eqref\" data-reference=\"ind:a-norms\">[ind:a-norms]</a> holds, the same factorization has $q\\in\\mathop{\\mathrm{U}}(C_s)\\cap S$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ind-even-factorization"
+  },
+  {
+   "claim_id": "claim-auxiliary-hermitian-quadratic-fields",
+   "exact_statement": "There is a finite set $B_s$ of places of $k$, depending only on $(D,*,S_0)$, with the following property. For every finite set $T$ of places disjoint from $B_s$, there is a separable quadratic field $F'=k(f)\\subset C_s$ such that $f^*=f$, $F'$ is linearly disjoint from $E$, and, for every $v\\in T$, $$F'\\otimes_k k_v\\simeq k_v\\times k_v,\n \\qquad\n \\mathop{\\mathrm{SU}}(C_D(F'),*)\\otimes_{F'} F'_w\\simeq\\mathop{\\mathrm{SL}}_2\n \\quad\\text{for both }w\\mid v.$$ Here $\\mathop{\\mathrm{SU}}(C_D(F'),*)$ is a group over $F'$: its central simple algebra has center $LF'$ and degree two. The embeddings can be chosen so that $f$ has reduced trace zero in $C_s$ in odd characteristic, and reduced trace one in characteristic two.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ind-auxiliary-fields-lemma"
+  },
+  {
+   "claim_id": "claim-degree-four-determinant-correction",
+   "exact_statement": "Assume the Margulis–Platonov assertion for binary special groups over every finite separable extension of $k$. Fix the finite quotient $S(k)/R$, of exponent dividing $e$, and retain the degree-four data $(D,*,S_0)$ above. Let $B$ be a nonempty finite set of places of $k$ containing $B_s$ and all places below the rank-zero places of the group $\\mathop{\\mathrm{SU}}(C_s,*)$ over $S_0$. There are identity neighborhoods $W_v$ in $(\\mathop{\\mathrm{U}}(C_s,*)\\cap S)(k_v)$, for $v\\in B$, such that every $$q\\in(\\mathop{\\mathrm{U}}(C_s,*)\\cap S)(k),\\qquad q_v\\in W_v\\quad(v\\in B),$$ has trivial image in $S(k)/R$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-ind-degree-four-correction"
+  },
+  {
+   "claim_id": "claim-local-small-norm-factorizations",
+   "exact_statement": "Let $K=k_v$. Arbitrarily close to $1$ in $S(K)$ there are nonempty open sets of elements $u\\in\\Omega(K)$ for which both equations in <a href=\"#ind:a-norms\" data-reference-type=\"eqref\" data-reference=\"ind:a-norms\">[ind:a-norms]</a> have a solution $a$. The elements $a,w,q$ may all be required to lie in any prescribed ambient identity neighborhoods. The same assertion holds when the second norm equation is omitted.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ind-local-near-one"
+  },
+  {
+   "claim_id": "claim-self-centralizing-abelian-obstruction",
+   "exact_statement": "Suppose that $C\\subset\\mathcal F$ is an abelian subgroup of odd order $c>1$ such that $C_{\\mathcal F}(t)=C$ for every $1\\ne t\\in C$. If $$\\label{fg:class-bound}\n |\\mathcal F|>k(\\mathcal F)c^4,$$ then the union $\\mathcal S$ of the conjugates of $C\\setminus\\{1\\}$ satisfies both assertions of Theorem <a href=\"#fin:obstruction\" data-reference-type=\"ref\" data-reference=\"fin:obstruction\">20</a>.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-fg-abelian-test"
+  },
+  {
+   "claim_id": "claim-unitary-torus-double-coset-obstruction",
+   "exact_statement": "Let $p\\ge3$ be an odd prime, let $H=\\mathop{\\mathrm{U}}_p(q)$ be the full isometry group of a nondegenerate Hermitian form over $\\mathbb F_{q^2}$, and let $T\\subset H$ be an irreducible torus of order $q^p+1$. If $w\\in T$ has field degree $p$ over $\\mathbb F_{q^2}$, then $$w\\in T^h w^{-1}T^h\\quad\\text{for every }h\\in H$$ is impossible.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-fg-unitary-count"
+  }
+ ],
+ "paper": "papers/EN-101-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-H-0052_PM-018.1_The_MargulisPlatonov_conjecture_over_global_function_fields.md",
+ "purpose": "The Margulis–Platonov conjecture over global function fields",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "c094c1e5889cade53280dd4693ceb08daa01fd3aebb269f1f45a1375b57f971b",
+   "pm.domains.v2": "2cf1acf0cd0dac86a2aedda295acc93d0d09a228a6bcb817123567ef756cd63e",
+   "pm.edges.v2": "f702e6901ad20f7c0e9f5d4161d255f11c712af24f602edfd50ce8d3049bfae3",
+   "pm.extraction.v2": "c7bdfcfc52e6a48c99bcf9ebbc232fdd8802edd9cbb6754741945103971bfe2f",
+   "pm.formal.v2": "0abf42f72feb7c4b89f94c6244a93522041ff07c83dbffb7f0fc4768386dca40",
+   "pm.limits.v2": "c82e4811aeff7139c0cef5f9fb4120b7392474b71288fa8d73083b0ff422028a",
+   "pm.node.v2": "f1f8215566620f3c12f757e5e8d82cdea8c9d5a358e752e381a7391d877fc223",
+   "pm.objects.v2": "3be8561d0955dc36d84ac99d1fd8bf4e8b7fd9a05e571823bcaba6a46909f4e6",
+   "pm.provenance.v2": "819c20ea52169e02b442a8a8d232d243ad42b6a885e6df147ca13b0cb5feeb76",
+   "pm.quantities.v2": "bac21b5143e89dfb3a9c31e7a854d96262d2cef524c04769fbc2f65e7a0f10e8",
+   "pm.reading.v2": "4b13070b20528bedb199e3c32f6c2153134cd11d5b8d215c22782114d1362e42",
+   "pm.roadmap.v2": "491a69478df9897c5cf814778dcd340050a3c348830eae5bf1566205a63ed2a3",
+   "pm.search.v1": "1628c80d13d52d839889cafc98230fa1e0f31db63ac4a210f89cac7870170c46",
+   "pm.triptych.v2": "53149278cf3dda19ac0fdef580a0605131b9dc9a22a1192383098e3ec08660cc"
+  },
+  "canonical_sha256": "7398cedc232c1da9189817ffcc8f19d6748143c16ca1e81903c4c21555da5075",
+  "paper_sha256": "5141cefcb360fc6997539ec6eac89fd7706fc2aa3c03f771c1665009d26810ef",
+  "repaired_body_sha256": "2a2a91f7b092e2e6c6b3c38ff50fa3213ca933b64a461270975f6861549cf5fd"
+ },
+ "status": "ACTIVE",
+ "subject_id": 1,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "2f91f168da0aff4c05ed1ac898680d4f67b12d323d5194332ab9179732e6898c",
+   "receipt_sha256": "7e5a0dada07d59355c6df3f4d37b749914342dbb250e0200a3509ecb45a4f466",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive mode checks all 44 even permutations of five points whose square is nonidentity. Each output witness is checked against all 60 elements of the alternating group.",
+     "coverage": "DECIDED",
+     "invariant_id": "inv-point-pair-witness",
+     "oracle_basis": "Exact permutation composition, complete centralizer enumeration, and explicit inverse double-coset membership decide the finite point-pair contract."
+    },
+    {
+     "checked_domain": "Only the point-pair mechanism for the alternating group of degree five is executed. Other finite simple groups and the full subset construction are outside this executable contract.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-finite-simple-obstruction",
+     "oracle_basis": "The checked mechanism is a source-stated ingredient of the alternating-family proof. The executable does not claim to certify the universal finite simple-group theorem or its abelian-subgroup complement assertion."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-identity-witness",
+     "observed_exit": 1,
+     "receipt_sha256": "53a275993b1d70d7fc4e1c8c00edf659c489b4891a8f75051aaf3724c4678e5c"
+    },
+    {
+     "id": "mutant-collapsed-point-pair",
+     "observed_exit": 1,
+     "receipt_sha256": "d9cd626b7e1ae66049d1e77a157ca6c9ce71bc5c9d06f252f1cb02ed79885408"
+    },
+    {
+     "id": "mutant-odd-input-admission",
+     "observed_exit": 1,
+     "receipt_sha256": "105a18ea13ea16c1ab7e7104ec6bd0b39a41fff3f4e7ad344e1a8c83a3537a29"
+    }
+   ],
+   "receipt_sha256": "37bddc718c968b2c786220c3d149b3b070674c74062b0ba617de816bc48bea96",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The Margulis–Platonov conjecture over global function fields"
+}

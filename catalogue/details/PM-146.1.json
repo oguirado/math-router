@@ -1,0 +1,506 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 489141,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 151360
+ },
+ "coordinate": "EN-112-000-0000-2-2026-PR-T4-UK-EX-M2-B-PH-H-0298",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "smooth conservative dynamics",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "It makes no claim of ergodicity, almost-everywhere positive exponents, or a uniform positive lower bound on entropy.",
+     "quote_sha256": "9f88e68131f2d6d9d85bacc7d33f2b6f8863d98f1d8774c1912f1817c90e8f3b"
+    }
+   ],
+   "query": "Full-area chaos, ergodicity, or a uniform entropy lower bound for the entire torus",
+   "reason": "The conclusion provides positive-area exponent positivity and leaves stronger global properties unasserted."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "setup:norm-bounds",
+     "quote": "This does not assert independence of coordinates observed at different times.",
+     "quote_sha256": "dacde0f54771ec8325341849392db4e88f8c3f2fbf41e7a1698543f818a789cb"
+    }
+   ],
+   "query": "Independent orbit coordinates at different times",
+   "reason": "Stationarity of the area law does not supply independence across orbit times."
+  }
+ ],
+ "family": "PM-146",
+ "id": "PM-146.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-main-entropy",
+    "claim_id": "C01",
+    "statement": "There exists $k_0>0$ such that $$h_m(f_k)>0\\qquad\\text{for every }k\\ge k_0.$$ Equivalently, for every such $k$ the largest Lyapunov exponent of $f_k$ is positive on a set of positive $m$-measure."
+   },
+   {
+    "anchor": "stmt-main-components",
+    "claim_id": "C02",
+    "statement": "For each $k\\ge k_0$ there is a measurable $f_k$-invariant set $E=E(k)$ with $m(E)>0$ such that $(E,m(E)^{-1}m|_E,f_k)$ is ergodic and $f_k$ has one positive and one negative Lyapunov exponent almost everywhere on $E$. For some integer $N=N(k,E)\\ge1$, there is a measurable partition $E=E_0\\sqcup\\cdots\\sqcup E_{N-1}$ such that $f_k(E_j)=E_{j+1\\bmod N}$ and $(E_j,m(E_j)^{-1}m|_{E_j},f_k^N)$ is Bernoulli for every $j$. All invariance and partition statements are modulo $m$-null sets; each $E_j$ has area $m(E)/N>0$."
+   },
+   {
+    "anchor": "stmt-setup-shortfall-count",
+    "claim_id": "C03",
+    "statement": "Let $z_0,\\ldots,z_N$ be real numbers with $z_j-z_{j-1}\\le1$, and set $$\\mathcal D=N-(z_N-z_0)\n =\\sum_{j=1}^N\\bigl(1-z_j+z_{j-1}\\bigr).$$ For $c<1$, the number of indices $j$ for which some $0\\le l<j$ satisfies $z_j-z_l<c(j-l)$ is at most $C\\mathcal D/(1-c)$, with an absolute constant $C$. The same conclusion holds for the number of indices $j$ with some $j<l\\le N$ satisfying $z_l-z_j<c(l-j)$."
+   },
+   {
+    "anchor": "stmt-can-theorem",
+    "claim_id": "C04",
+    "statement": "There are constants $\\delta>0$, $C<\\infty$, $\\gamma>0$, and $M_0<\\infty$ such that, for every $M\\ge M_0$, every $i\\in\\mathbb{Z}$, and every $n\\in\\mathbb{N}$, $$\\label{can:event-bound}\n\\mathbb{P}\\left\\{\n\\begin{array}{l}\n\\min\\bigl(\\log_M\\left\\lVert T_{i,i-n}\\right\\rVert,\n          \\log_M\\left\\lVert T_{i,i+n}\\right\\rVert\\bigr)\\ge(1-\\delta)n,\\\\[2pt]\n\\log_M\\left\\lVert T_{i-n,i+n}\\right\\rVert\\le\\delta n\n\\end{array}\n\\right\\}\n\\le C\\exp(-\\gamma n).$$ All four constants are independent of the center, the length, and the parameter $M$ in the indicated range."
+   },
+   {
+    "anchor": "stmt-can-many-good",
+    "claim_id": "C06",
+    "statement": "There is a constant $A$ such that, on each outward path associated to <a href=\"#can:small-solution\" data-reference-type=\"ref\" data-reference=\"can:small-solution\">[can:small-solution]</a>, the number of indices in $\\{2,\\ldots,N-2\\}$ which are not good is at most $$\\label{can:bad-count}\n\\frac{A(\\delta n+1)}{1-c}.$$ The estimate holds uniformly for $M\\ge e$."
+   },
+   {
+    "anchor": "stmt-can-matching",
+    "claim_id": "C07",
+    "statement": "There are fixed constants $\\delta_0>0$, $c_1>0$, $C_1<\\infty$, and $n_*<\\infty$ with the following property. If $0<\\delta\\le\\delta_0$ is fixed, increasing $n_*$ if necessary, every configuration in <a href=\"#can:small-solution\" data-reference-type=\"ref\" data-reference=\"can:small-solution\">[can:small-solution]</a> with $n\\ge n_*$ has at least $c_1n$ pairs $(j_m^+,j_m^-)$ of good indices such that both index sequences increase strictly and $$\\label{can:matching-condition}\n\\left\\lvert\\tau_{j_m^+}^+-\\tau_{j_m^-}^-\\right\\rvert\\le\\frac35.$$ The collection of all possible increasing index-pair patterns for a given $n$ has cardinality at most $\\exp(C_1n)$."
+   },
+   {
+    "anchor": "stmt-can-local-scarcity",
+    "claim_id": "C08",
+    "statement": "For every $\\eta>0$ there are $\\eta'>0$ and $M_\\eta<\\infty$ such that the following holds for $M\\ge M_\\eta$. Fix $q_e$, a base coordinate $\\theta_*$, and indices $j_+,j_-\\ge2$ on the two outward paths. Suppose both indices are good at $\\theta_*$ for a common normalized solution, and their logarithms satisfy <a href=\"#can:matching-condition\" data-reference-type=\"ref\" data-reference=\"can:matching-condition\">[can:matching-condition]</a>. Let $$L_+=\\left\\lvert t_{j_+}^+(\\theta_*)\\right\\rvert,\\qquad\nL_-=\\left\\lvert t_{j_-}^-(\\theta_*)\\right\\rvert,\\qquad L=\\max(L_+,L_-).$$ Let $\\mathcal S\\subset[-1,1]$ consist of the $h$ for which, at $\\theta=\\theta_*+h/L$, the same two indices are good for some common solution with $u_e=1$. The solution is allowed to depend on $h$, and neither endpoint smallness nor a new matching condition is required at these other points. Then $$\\label{can:scarcity-bound}\n\\left\\lvert\\{x\\in\\mathbb{R}:\\mathop{\\mathrm{dist}}(x,\\mathcal S)<\\eta'\\}\\right\\rvert\\le\\eta.$$ Here and below the size of a subset of the line or circle denotes its Lebesgue measure. The constants are uniform over the central position, the base coordinate, and the selected indices."
+   },
+   {
+    "anchor": "stmt-bridge-theorem",
+    "claim_id": "C09",
+    "statement": "There are absolute constants $c_b\\in(0,1)$, $\\kappa>0$, and $\\sigma>0$ with the following property. Fix observation bounds $(R,L,B)$ and a threshold $h>0$. For sufficiently large $M$ and sufficiently large $n=b-a$, let $W,H$ be observations with these bounds, with $W\\geq0$. All indices occurring in one observation are within $\\kappa n$ of $a$, and all indices occurring in the other are within $\\kappa n$ of $b$. Either assignment of $W,H$ to the two ends is allowed. Then $$\\mathbb{E}\\!\\left[\n   \\mathbf{1}_{\\{\\log_M\\left\\lVert T_{a,b}\\right\\rVert\\geq c_b n\\}}\n   W\\mathbf{1}_{\\{H>h\\}}\n \\right]\n \\leq\n C\\bigl(\\mathbb{E}W+M^{-\\sigma n}\\bigr)\\mathbb{P}(H>h/2).\n \\label{bridge:product}$$ The constants $c_b,\\kappa,\\sigma$ are independent of the observation bounds and threshold. The constant $C$ and the lower size requirements for $M,n$ may depend on $(R,L,B)$ and $h$, but not on the indices, the defining functions, or the bridge location."
+   },
+   {
+    "anchor": "stmt-bridge-graphs",
+    "claim_id": "C10",
+    "statement": "For sufficiently large $M$, suppose $B_+\\geq2$ and, at a fixed state with central coordinates $(x,y)=(q_0,q_{-1})$, $$D_l:=\\left\\lVert T_{0,l}\\right\\rVert\\geq M^{cl}\n \\qquad(1\\leq l\\leq B_+).\n \\label{bridge:prefix-growth}$$ For at least one choice $j\\in\\{B_+-1,B_+\\}$ there is a smooth graph through this state, parametrized by $q_{-1}=y+r$, $\\left\\lvert r\\right\\rvert\\leq1/4$, on which the lifted coordinate $q_j$ is fixed. On this graph, $$\\left\\lvert q_p(r)-q_p(0)\\right\\rvert+\n \\left\\lvert\\frac{\\,\\mathrm{d}q_p(r)}{\\,\\mathrm{d}r}\\right\\rvert\n \\leq C M^{-0.8(p+1)}\n \\qquad(0\\leq p<j).\n \\label{bridge:graph-contraction}$$ The corresponding endpoint pair at time $B_+$ changes by at most $C M^{-0.8(B_+-1)}$. The partial derivative $\\partial q_j/\\partial q_0$, with $q_{-1}$ held independent, is nonzero throughout the graph, and the absolute values of this partial derivative at any two points of the graph have a ratio between two absolute positive constants.*\n\n\n*For a fixed choice of $j$, one may require the closed eligibility condition $$\\left\\lvert\\partial q_j/\\partial q_0\\right\\rvert\\geq D_{B_+}/3\n \\quad\\text{at the initial point}.\n \\label{bridge:row-choice}$$ The graphs depend continuously on eligible initial points. There is an identical backward statement, with almost horizontal graphs in $(x,y)$, obtained by using $(q_{-1},q_0)$ as the ordered initial pair."
+   },
+   {
+    "anchor": "stmt-scale-fourpoint",
+    "claim_id": "C11",
+    "statement": "Fix a base index $i$ and write $$D_j=\\left\\lVert T_{i,j}\\right\\rVert,\\qquad\n R_{jp}=M^{g(j,p)-g(i,j)-g(i,p)}.$$ There is an absolute constant $C_0\\ge1$ such that, for every orbit, every sufficiently large parameter, and every choice of integer indices, $$\\label{scale:R-fourpoint}\n R_{jp}\\le C_0\\max\\{R_{jl},R_{lp}\\}.$$"
+   },
+   {
+    "anchor": "stmt-scale-truncation",
+    "claim_id": "C12",
+    "statement": "Fix integers $i$, $n\\ge1$, and $1\\le s\\le n$, and put $$L=i-n,\\quad R=i+n,\\quad L'=i-s,\\quad R'=i+s,$$ $$D=n-\\min\\{g(i,L),g(i,R)\\},\\qquad\n \\ell=g(i,L)+g(i,R)-g(L,R).$$ Use the quantities $R_{uv}$ of <a href=\"#scale:fourpoint\" data-reference-type=\"ref\" data-reference=\"scale:fourpoint\">11</a> with base $i$. Then $$\\begin{aligned}\n g(i,L'),g(i,R')&\\ge s-D,\n \\label{scale:cut-wings}\\\\\n R_{L'R'}&\\le C_0^2\\max\\{R_{LR},M^{-2s+2D}\\}.\n \\label{scale:cut-R}\n\\end{aligned}$$ There is a constant $A$ independent of the parameter and indices such that the cut cancellation loss satisfies $$\\label{scale:cut-loss}\n g(i,L')+g(i,R')-g(L',R')\n \\ge\\min\\{\\ell,2s-2D\\}-A,$$ and consequently $$\\label{scale:cut-full}\n g(L',R')\\le2s-\\min\\{\\ell,2s-2D\\}+A.$$"
+   },
+   {
+    "anchor": "stmt-scale-doubling",
+    "claim_id": "C13",
+    "statement": "For all sufficiently large parameters and every integer $n\\ge1$, $$\\label{scale:doubling-equation}\n e_n\\le e_{2n}\\le C e_n+\\frac{C}{n},$$ with a constant independent of $n$ and the parameter."
+   },
+   {
+    "anchor": "stmt-scale-selection",
+    "claim_id": "C14",
+    "statement": "Along the assumed zero-exponent parameter sequence, there are powers of two $n_0=n_0(K)$ and $N=N(K)>n_0$, and numbers $\\epsilon=e_N$, such that $$\\label{scale:selected-limits}\n n_0\\to\\infty,\\qquad \\epsilon\\to0,\\qquad\n \\epsilon n_0\\to\\infty,$$ and, for every fixed integer $m\\in\\mathbb{Z}$ (once the lengths below are positive integers), $$\\label{scale:selected-boundaries}\n e_{2^m n_0}=o(\\epsilon),\\qquad\n e_{2^m N}=O_m(\\epsilon).$$ All scale sums below run over powers of two."
+   },
+   {
+    "anchor": "stmt-scale-local-mass",
+    "claim_id": "C15",
+    "statement": "Let $I$ have dyadic endpoints and length $p=2^m$, where $m\\in\\mathbb{Z}$ is fixed. Then $$\\label{scale:sum-test-bound}\n \\int\\bigl(J(I)+V(I)\\bigr)\\,\\,\\mathrm{d}\\mu_K=O_I(1).$$ Uniformly over the individual dyadic scales $n_0\\le n\\le N$, $$\\label{scale:individual-test-bound}\n \\epsilon^{-1}\\mathbb{E}\\bigl[h(I)(g_n)+J(I)(g_n)+V(I)(g_n)\\bigr]\n =O_I(1).$$ At the initial scale the stronger bound holds: $$\\label{scale:initial-test-bound}\n \\epsilon^{-1}\\mathbb{E}\\bigl[h(I)(g_{n_0})+J(I)(g_{n_0})\n                         +V(I)(g_{n_0})\\bigr]=o(1).$$ All three statements concern sufficiently large $K$, so that the indicated endpoints and half-endpoints align."
+   },
+   {
+    "anchor": "stmt-scale-affinity-tests",
+    "claim_id": "C16",
+    "statement": "As $I$ ranges over intervals with dyadic endpoints and power-of-two length, the common zero set of $J(I)+V(I)$ is exactly $\\mathcal A$. Consequently, every compact subset $F\\subset\\mathcal U$ admits finitely many such intervals $I_1,\\ldots,I_b$ and a number $c_F>0$ such that $$\\label{scale:finite-test-cover}\n \\sum_{a=1}^{b}\\bigl(J(I_a)+V(I_a)\\bigr)\\ge c_F\n \\quad\\hbox{on }F.$$"
+   },
+   {
+    "anchor": "stmt-scale-limits",
+    "claim_id": "C17",
+    "statement": "After passing to a subsequence, the restrictions of $\\mu_K$ and $\\nu_K$ to $\\mathcal U$ converge vaguely to locally finite nonnegative Borel measures $\\mu$ and $\\nu$, respectively. Moreover, $$\\label{scale:initial-negligible}\n \\xi_K\\longrightarrow0\\quad\\hbox{vaguely on }\\mathcal U.$$ The measures $\\mu$ and $\\nu$ are supported on the closed class $X_0\\subset X$ consisting of arrays satisfying $d(s,t)\\le|s-t|$ and the inequalities $$\\label{scale:tree-inequality}\n B_v(s,t)\\ge\\min\\{B_v(s,p),B_v(p,t)\\},\\qquad\n B_v(s,t)=d(v,s)+d(v,t)-d(s,t)$$ for every $v,s,t,p\\in\\mathcal D$. Every member of $X_0$ extends uniquely to a continuous semimetric on $\\mathbb{R}$, obeying the same inequalities at all real arguments. Both limiting measures are invariant under $$(\\tau_r d)(s,t)=d(s+r,t+r)\\qquad(r\\in\\mathcal D).$$ For every interval $I$ as in <a href=\"#scale:local-mass\" data-reference-type=\"ref\" data-reference=\"scale:local-mass\">15</a>, $$\\label{scale:limiting-test-bound}\n \\int(J(I)+V(I))\\,\\,\\mathrm{d}\\mu<\\infty,\n \\qquad\n \\int(h(I)+J(I)+V(I))\\,\\,\\mathrm{d}\\nu<\\infty.$$ In particular, $$\\label{scale:terminal-shortfall}\n \\int h([0,1])\\,\\,\\mathrm{d}\\nu\\le1.$$"
+   },
+   {
+    "anchor": "stmt-scale-decomposition",
+    "claim_id": "C18",
+    "statement": "On $\\mathcal U$, with the measures supported on $X_0$ as above, $$\\label{scale:measure-balance}\n S_*\\mu=\\mu+\\nu.$$ There is a locally finite nonnegative measure $\\mu_\\infty$, invariant under $S$ and every dyadic translation, such that $$\\label{scale:measure-decomposition}\n \\mu=\\mu_\\infty+\\sum_{j=1}^{\\infty}(S^{-j})_*\\nu,\n \\qquad S_*\\mu_\\infty=\\mu_\\infty.$$ The series is a series of positive measures dominated by $\\mu$."
+   },
+   {
+    "anchor": "stmt-shape-exclusions",
+    "claim_id": "C19",
+    "statement": "There is a measurable set of full measure for $\\mu$, $\\nu$, and $\\mu_\\infty$ on which the following statements hold for every real choice of their arguments.*\n\n\n1.  *There do not exist $r\\in\\mathbb{R}$ and $t>0$ such that $$\\label{shape:forbidden-triple}\n     d(r-t,r)>(1-\\delta)t,\\qquad\n     d(r,r+t)>(1-\\delta)t,\\qquad\n     d(r-t,r+t)<\\delta t.$$*\n\n\n2.  *If $s\\in P_d$ and $t\\in Q_d$, then $$\\label{shape:slow-pair}\n     d(s,t)\\le c_b|t-s|.$$*\n\n*The same statements hold almost everywhere for every positive measure appearing in the decomposition of <a href=\"#scale:decomposition\" data-reference-type=\"ref\" data-reference=\"scale:decomposition\">18</a>."
+   },
+   {
+    "anchor": "stmt-shape-classification",
+    "claim_id": "C20",
+    "statement": "Every nonaffine array in $X_0$ satisfying <a href=\"#shape:exclusions\" data-reference-type=\"ref\" data-reference=\"shape:exclusions\">19</a> has one of the following forms:*\n\n1.  *every secant has speed at most $c_b$;*\n\n2.  *there is one exterior ray of exact unit speed, and the complementary closed half-line has all secant speeds at most $c_b$;*\n\n3.  *there are two exterior rays of exact unit speed, separated by a closed interval $[a,b]$ of positive length, and every secant contained in $[a,b]$ has speed at most $c_b$.*\n\n*The second possibility includes either orientation. These descriptions do not assert additivity of distances across the slow part. The three temporal configurations are illustrated in <a href=\"#shape:figure\" data-reference-type=\"ref\" data-reference=\"shape:figure\">3</a>."
+   },
+   {
+    "anchor": "stmt-shape-crossloss",
+    "claim_id": "C21",
+    "statement": "Suppose there are two exterior unit rays with slow interval $[a,b]$, and put $L=b-a$. Then $L>0$, and, with the fixed constant $$\\label{shape:cross-constant}\n C_*=2+\\frac6\\delta,$$ every $z\\in\\mathbb{R}$ and $t>0$ satisfy $$\\label{shape:cross-bound}\n 0\\le 1-\\frac{d(z,z+t)}t\\le\\frac{C_*L}{t}.$$ The shortfall is zero whenever the interval is wholly in either closed unit ray."
+   },
+   {
+    "anchor": "stmt-end-balance",
+    "claim_id": "C22",
+    "statement": "With the preceding choices, $$\\label{end:balance-equation}\n \\int G\\,\\,\\mathrm{d}\\mu=H_\\Phi>0.$$"
+   },
+   {
+    "anchor": "stmt-end-terminal",
+    "claim_id": "C23",
+    "statement": "The series in <a href=\"#end:integrated-decomposition\" data-reference-type=\"ref\" data-reference=\"end:integrated-decomposition\">[end:integrated-decomposition]</a> satisfies $$\\label{end:terminal-strict}\n \\sum_{j=1}^{\\infty}\\int G(S^{-j}d)\\,\\,\\mathrm{d}\\nu(d)<H_\\Phi.$$"
+   },
+   {
+    "anchor": "stmt-end-remainder",
+    "claim_id": "C24",
+    "statement": "The invariant remainder satisfies $$\\label{end:remainder-bound}\n \\int G\\,\\,\\mathrm{d}\\mu_\\infty\\le0.$$"
+   },
+   {
+    "anchor": "stmt-end-contradiction",
+    "claim_id": "C25",
+    "statement": "There is no sequence $k\\to+\\infty$ along which the largest Lyapunov exponent of $f_k$ is zero almost everywhere. Consequently <a href=\"#main:entropy\" data-reference-type=\"ref\" data-reference=\"main:entropy\">1</a> holds."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Positive area entropy",
+    "evidence": [
+     {
+      "anchor": "main:pesin",
+      "quote": "Consequently the task is to prove positivity of $\\lambda_+$ on positive area.",
+      "quote_sha256": "986c69a9c1cb75b1422407a8dd1a007407f9ddcf496614cf946e99eb6112b1d2"
+     }
+    ],
+    "requires_concepts": [
+     "Lyapunov exponents",
+     "Absolutely continuous invariant measure",
+     "Entropy formula"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C01",
+   "exact_statement": "There exists $k_0>0$ such that $$h_m(f_k)>0\\qquad\\text{for every }k\\ge k_0.$$ Equivalently, for every such $k$ the largest Lyapunov exponent of $f_k$ is positive on a set of positive $m$-measure.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-main-entropy"
+  },
+  {
+   "claim_id": "C02",
+   "exact_statement": "For each $k\\ge k_0$ there is a measurable $f_k$-invariant set $E=E(k)$ with $m(E)>0$ such that $(E,m(E)^{-1}m|_E,f_k)$ is ergodic and $f_k$ has one positive and one negative Lyapunov exponent almost everywhere on $E$. For some integer $N=N(k,E)\\ge1$, there is a measurable partition $E=E_0\\sqcup\\cdots\\sqcup E_{N-1}$ such that $f_k(E_j)=E_{j+1\\bmod N}$ and $(E_j,m(E_j)^{-1}m|_{E_j},f_k^N)$ is Bernoulli for every $j$. All invariance and partition statements are modulo $m$-null sets; each $E_j$ has area $m(E)/N>0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-main-components"
+  },
+  {
+   "claim_id": "C03",
+   "exact_statement": "Let $z_0,\\ldots,z_N$ be real numbers with $z_j-z_{j-1}\\le1$, and set $$\\mathcal D=N-(z_N-z_0)\n =\\sum_{j=1}^N\\bigl(1-z_j+z_{j-1}\\bigr).$$ For $c<1$, the number of indices $j$ for which some $0\\le l<j$ satisfies $z_j-z_l<c(j-l)$ is at most $C\\mathcal D/(1-c)$, with an absolute constant $C$. The same conclusion holds for the number of indices $j$ with some $j<l\\le N$ satisfying $z_l-z_j<c(l-j)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-setup-shortfall-count"
+  },
+  {
+   "claim_id": "C04",
+   "exact_statement": "There are constants $\\delta>0$, $C<\\infty$, $\\gamma>0$, and $M_0<\\infty$ such that, for every $M\\ge M_0$, every $i\\in\\mathbb{Z}$, and every $n\\in\\mathbb{N}$, $$\\label{can:event-bound}\n\\mathbb{P}\\left\\{\n\\begin{array}{l}\n\\min\\bigl(\\log_M\\left\\lVert T_{i,i-n}\\right\\rVert,\n          \\log_M\\left\\lVert T_{i,i+n}\\right\\rVert\\bigr)\\ge(1-\\delta)n,\\\\[2pt]\n\\log_M\\left\\lVert T_{i-n,i+n}\\right\\rVert\\le\\delta n\n\\end{array}\n\\right\\}\n\\le C\\exp(-\\gamma n).$$ All four constants are independent of the center, the length, and the parameter $M$ in the indicated range.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-can-theorem"
+  },
+  {
+   "claim_id": "C06",
+   "exact_statement": "There is a constant $A$ such that, on each outward path associated to <a href=\"#can:small-solution\" data-reference-type=\"ref\" data-reference=\"can:small-solution\">[can:small-solution]</a>, the number of indices in $\\{2,\\ldots,N-2\\}$ which are not good is at most $$\\label{can:bad-count}\n\\frac{A(\\delta n+1)}{1-c}.$$ The estimate holds uniformly for $M\\ge e$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-can-many-good"
+  },
+  {
+   "claim_id": "C07",
+   "exact_statement": "There are fixed constants $\\delta_0>0$, $c_1>0$, $C_1<\\infty$, and $n_*<\\infty$ with the following property. If $0<\\delta\\le\\delta_0$ is fixed, increasing $n_*$ if necessary, every configuration in <a href=\"#can:small-solution\" data-reference-type=\"ref\" data-reference=\"can:small-solution\">[can:small-solution]</a> with $n\\ge n_*$ has at least $c_1n$ pairs $(j_m^+,j_m^-)$ of good indices such that both index sequences increase strictly and $$\\label{can:matching-condition}\n\\left\\lvert\\tau_{j_m^+}^+-\\tau_{j_m^-}^-\\right\\rvert\\le\\frac35.$$ The collection of all possible increasing index-pair patterns for a given $n$ has cardinality at most $\\exp(C_1n)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-can-matching"
+  },
+  {
+   "claim_id": "C08",
+   "exact_statement": "For every $\\eta>0$ there are $\\eta'>0$ and $M_\\eta<\\infty$ such that the following holds for $M\\ge M_\\eta$. Fix $q_e$, a base coordinate $\\theta_*$, and indices $j_+,j_-\\ge2$ on the two outward paths. Suppose both indices are good at $\\theta_*$ for a common normalized solution, and their logarithms satisfy <a href=\"#can:matching-condition\" data-reference-type=\"ref\" data-reference=\"can:matching-condition\">[can:matching-condition]</a>. Let $$L_+=\\left\\lvert t_{j_+}^+(\\theta_*)\\right\\rvert,\\qquad\nL_-=\\left\\lvert t_{j_-}^-(\\theta_*)\\right\\rvert,\\qquad L=\\max(L_+,L_-).$$ Let $\\mathcal S\\subset[-1,1]$ consist of the $h$ for which, at $\\theta=\\theta_*+h/L$, the same two indices are good for some common solution with $u_e=1$. The solution is allowed to depend on $h$, and neither endpoint smallness nor a new matching condition is required at these other points. Then $$\\label{can:scarcity-bound}\n\\left\\lvert\\{x\\in\\mathbb{R}:\\mathop{\\mathrm{dist}}(x,\\mathcal S)<\\eta'\\}\\right\\rvert\\le\\eta.$$ Here and below the size of a subset of the line or circle denotes its Lebesgue measure. The constants are uniform over the central position, the base coordinate, and the selected indices.",
+   "kind": "bound",
+   "statement_anchor": "stmt-can-local-scarcity"
+  },
+  {
+   "claim_id": "C09",
+   "exact_statement": "There are absolute constants $c_b\\in(0,1)$, $\\kappa>0$, and $\\sigma>0$ with the following property. Fix observation bounds $(R,L,B)$ and a threshold $h>0$. For sufficiently large $M$ and sufficiently large $n=b-a$, let $W,H$ be observations with these bounds, with $W\\geq0$. All indices occurring in one observation are within $\\kappa n$ of $a$, and all indices occurring in the other are within $\\kappa n$ of $b$. Either assignment of $W,H$ to the two ends is allowed. Then $$\\mathbb{E}\\!\\left[\n   \\mathbf{1}_{\\{\\log_M\\left\\lVert T_{a,b}\\right\\rVert\\geq c_b n\\}}\n   W\\mathbf{1}_{\\{H>h\\}}\n \\right]\n \\leq\n C\\bigl(\\mathbb{E}W+M^{-\\sigma n}\\bigr)\\mathbb{P}(H>h/2).\n \\label{bridge:product}$$ The constants $c_b,\\kappa,\\sigma$ are independent of the observation bounds and threshold. The constant $C$ and the lower size requirements for $M,n$ may depend on $(R,L,B)$ and $h$, but not on the indices, the defining functions, or the bridge location.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bridge-theorem"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "For sufficiently large $M$, suppose $B_+\\geq2$ and, at a fixed state with central coordinates $(x,y)=(q_0,q_{-1})$, $$D_l:=\\left\\lVert T_{0,l}\\right\\rVert\\geq M^{cl}\n \\qquad(1\\leq l\\leq B_+).\n \\label{bridge:prefix-growth}$$ For at least one choice $j\\in\\{B_+-1,B_+\\}$ there is a smooth graph through this state, parametrized by $q_{-1}=y+r$, $\\left\\lvert r\\right\\rvert\\leq1/4$, on which the lifted coordinate $q_j$ is fixed. On this graph, $$\\left\\lvert q_p(r)-q_p(0)\\right\\rvert+\n \\left\\lvert\\frac{\\,\\mathrm{d}q_p(r)}{\\,\\mathrm{d}r}\\right\\rvert\n \\leq C M^{-0.8(p+1)}\n \\qquad(0\\leq p<j).\n \\label{bridge:graph-contraction}$$ The corresponding endpoint pair at time $B_+$ changes by at most $C M^{-0.8(B_+-1)}$. The partial derivative $\\partial q_j/\\partial q_0$, with $q_{-1}$ held independent, is nonzero throughout the graph, and the absolute values of this partial derivative at any two points of the graph have a ratio between two absolute positive constants.*\n\n\n*For a fixed choice of $j$, one may require the closed eligibility condition $$\\left\\lvert\\partial q_j/\\partial q_0\\right\\rvert\\geq D_{B_+}/3\n \\quad\\text{at the initial point}.\n \\label{bridge:row-choice}$$ The graphs depend continuously on eligible initial points. There is an identical backward statement, with almost horizontal graphs in $(x,y)$, obtained by using $(q_{-1},q_0)$ as the ordered initial pair.",
+   "kind": "bound",
+   "statement_anchor": "stmt-bridge-graphs"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "Fix a base index $i$ and write $$D_j=\\left\\lVert T_{i,j}\\right\\rVert,\\qquad\n R_{jp}=M^{g(j,p)-g(i,j)-g(i,p)}.$$ There is an absolute constant $C_0\\ge1$ such that, for every orbit, every sufficiently large parameter, and every choice of integer indices, $$\\label{scale:R-fourpoint}\n R_{jp}\\le C_0\\max\\{R_{jl},R_{lp}\\}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-scale-fourpoint"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Fix integers $i$, $n\\ge1$, and $1\\le s\\le n$, and put $$L=i-n,\\quad R=i+n,\\quad L'=i-s,\\quad R'=i+s,$$ $$D=n-\\min\\{g(i,L),g(i,R)\\},\\qquad\n \\ell=g(i,L)+g(i,R)-g(L,R).$$ Use the quantities $R_{uv}$ of <a href=\"#scale:fourpoint\" data-reference-type=\"ref\" data-reference=\"scale:fourpoint\">11</a> with base $i$. Then $$\\begin{aligned}\n g(i,L'),g(i,R')&\\ge s-D,\n \\label{scale:cut-wings}\\\\\n R_{L'R'}&\\le C_0^2\\max\\{R_{LR},M^{-2s+2D}\\}.\n \\label{scale:cut-R}\n\\end{aligned}$$ There is a constant $A$ independent of the parameter and indices such that the cut cancellation loss satisfies $$\\label{scale:cut-loss}\n g(i,L')+g(i,R')-g(L',R')\n \\ge\\min\\{\\ell,2s-2D\\}-A,$$ and consequently $$\\label{scale:cut-full}\n g(L',R')\\le2s-\\min\\{\\ell,2s-2D\\}+A.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-scale-truncation"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "For all sufficiently large parameters and every integer $n\\ge1$, $$\\label{scale:doubling-equation}\n e_n\\le e_{2n}\\le C e_n+\\frac{C}{n},$$ with a constant independent of $n$ and the parameter.",
+   "kind": "bound",
+   "statement_anchor": "stmt-scale-doubling"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "Along the assumed zero-exponent parameter sequence, there are powers of two $n_0=n_0(K)$ and $N=N(K)>n_0$, and numbers $\\epsilon=e_N$, such that $$\\label{scale:selected-limits}\n n_0\\to\\infty,\\qquad \\epsilon\\to0,\\qquad\n \\epsilon n_0\\to\\infty,$$ and, for every fixed integer $m\\in\\mathbb{Z}$ (once the lengths below are positive integers), $$\\label{scale:selected-boundaries}\n e_{2^m n_0}=o(\\epsilon),\\qquad\n e_{2^m N}=O_m(\\epsilon).$$ All scale sums below run over powers of two.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-scale-selection"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "Let $I$ have dyadic endpoints and length $p=2^m$, where $m\\in\\mathbb{Z}$ is fixed. Then $$\\label{scale:sum-test-bound}\n \\int\\bigl(J(I)+V(I)\\bigr)\\,\\,\\mathrm{d}\\mu_K=O_I(1).$$ Uniformly over the individual dyadic scales $n_0\\le n\\le N$, $$\\label{scale:individual-test-bound}\n \\epsilon^{-1}\\mathbb{E}\\bigl[h(I)(g_n)+J(I)(g_n)+V(I)(g_n)\\bigr]\n =O_I(1).$$ At the initial scale the stronger bound holds: $$\\label{scale:initial-test-bound}\n \\epsilon^{-1}\\mathbb{E}\\bigl[h(I)(g_{n_0})+J(I)(g_{n_0})\n                         +V(I)(g_{n_0})\\bigr]=o(1).$$ All three statements concern sufficiently large $K$, so that the indicated endpoints and half-endpoints align.",
+   "kind": "bound",
+   "statement_anchor": "stmt-scale-local-mass"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "As $I$ ranges over intervals with dyadic endpoints and power-of-two length, the common zero set of $J(I)+V(I)$ is exactly $\\mathcal A$. Consequently, every compact subset $F\\subset\\mathcal U$ admits finitely many such intervals $I_1,\\ldots,I_b$ and a number $c_F>0$ such that $$\\label{scale:finite-test-cover}\n \\sum_{a=1}^{b}\\bigl(J(I_a)+V(I_a)\\bigr)\\ge c_F\n \\quad\\hbox{on }F.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-scale-affinity-tests"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "After passing to a subsequence, the restrictions of $\\mu_K$ and $\\nu_K$ to $\\mathcal U$ converge vaguely to locally finite nonnegative Borel measures $\\mu$ and $\\nu$, respectively. Moreover, $$\\label{scale:initial-negligible}\n \\xi_K\\longrightarrow0\\quad\\hbox{vaguely on }\\mathcal U.$$ The measures $\\mu$ and $\\nu$ are supported on the closed class $X_0\\subset X$ consisting of arrays satisfying $d(s,t)\\le|s-t|$ and the inequalities $$\\label{scale:tree-inequality}\n B_v(s,t)\\ge\\min\\{B_v(s,p),B_v(p,t)\\},\\qquad\n B_v(s,t)=d(v,s)+d(v,t)-d(s,t)$$ for every $v,s,t,p\\in\\mathcal D$. Every member of $X_0$ extends uniquely to a continuous semimetric on $\\mathbb{R}$, obeying the same inequalities at all real arguments. Both limiting measures are invariant under $$(\\tau_r d)(s,t)=d(s+r,t+r)\\qquad(r\\in\\mathcal D).$$ For every interval $I$ as in <a href=\"#scale:local-mass\" data-reference-type=\"ref\" data-reference=\"scale:local-mass\">15</a>, $$\\label{scale:limiting-test-bound}\n \\int(J(I)+V(I))\\,\\,\\mathrm{d}\\mu<\\infty,\n \\qquad\n \\int(h(I)+J(I)+V(I))\\,\\,\\mathrm{d}\\nu<\\infty.$$ In particular, $$\\label{scale:terminal-shortfall}\n \\int h([0,1])\\,\\,\\mathrm{d}\\nu\\le1.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-scale-limits"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "On $\\mathcal U$, with the measures supported on $X_0$ as above, $$\\label{scale:measure-balance}\n S_*\\mu=\\mu+\\nu.$$ There is a locally finite nonnegative measure $\\mu_\\infty$, invariant under $S$ and every dyadic translation, such that $$\\label{scale:measure-decomposition}\n \\mu=\\mu_\\infty+\\sum_{j=1}^{\\infty}(S^{-j})_*\\nu,\n \\qquad S_*\\mu_\\infty=\\mu_\\infty.$$ The series is a series of positive measures dominated by $\\mu$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-scale-decomposition"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "There is a measurable set of full measure for $\\mu$, $\\nu$, and $\\mu_\\infty$ on which the following statements hold for every real choice of their arguments.*\n\n\n1.  *There do not exist $r\\in\\mathbb{R}$ and $t>0$ such that $$\\label{shape:forbidden-triple}\n     d(r-t,r)>(1-\\delta)t,\\qquad\n     d(r,r+t)>(1-\\delta)t,\\qquad\n     d(r-t,r+t)<\\delta t.$$*\n\n\n2.  *If $s\\in P_d$ and $t\\in Q_d$, then $$\\label{shape:slow-pair}\n     d(s,t)\\le c_b|t-s|.$$*\n\n*The same statements hold almost everywhere for every positive measure appearing in the decomposition of <a href=\"#scale:decomposition\" data-reference-type=\"ref\" data-reference=\"scale:decomposition\">18</a>.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-shape-exclusions"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "Every nonaffine array in $X_0$ satisfying <a href=\"#shape:exclusions\" data-reference-type=\"ref\" data-reference=\"shape:exclusions\">19</a> has one of the following forms:*\n\n1.  *every secant has speed at most $c_b$;*\n\n2.  *there is one exterior ray of exact unit speed, and the complementary closed half-line has all secant speeds at most $c_b$;*\n\n3.  *there are two exterior rays of exact unit speed, separated by a closed interval $[a,b]$ of positive length, and every secant contained in $[a,b]$ has speed at most $c_b$.*\n\n*The second possibility includes either orientation. These descriptions do not assert additivity of distances across the slow part. The three temporal configurations are illustrated in <a href=\"#shape:figure\" data-reference-type=\"ref\" data-reference=\"shape:figure\">3</a>.",
+   "kind": "classification",
+   "statement_anchor": "stmt-shape-classification"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "Suppose there are two exterior unit rays with slow interval $[a,b]$, and put $L=b-a$. Then $L>0$, and, with the fixed constant $$\\label{shape:cross-constant}\n C_*=2+\\frac6\\delta,$$ every $z\\in\\mathbb{R}$ and $t>0$ satisfy $$\\label{shape:cross-bound}\n 0\\le 1-\\frac{d(z,z+t)}t\\le\\frac{C_*L}{t}.$$ The shortfall is zero whenever the interval is wholly in either closed unit ray.",
+   "kind": "bound",
+   "statement_anchor": "stmt-shape-crossloss"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "With the preceding choices, $$\\label{end:balance-equation}\n \\int G\\,\\,\\mathrm{d}\\mu=H_\\Phi>0.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-end-balance"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "The series in <a href=\"#end:integrated-decomposition\" data-reference-type=\"ref\" data-reference=\"end:integrated-decomposition\">[end:integrated-decomposition]</a> satisfies $$\\label{end:terminal-strict}\n \\sum_{j=1}^{\\infty}\\int G(S^{-j}d)\\,\\,\\mathrm{d}\\nu(d)<H_\\Phi.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-end-terminal"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "The invariant remainder satisfies $$\\label{end:remainder-bound}\n \\int G\\,\\,\\mathrm{d}\\mu_\\infty\\le0.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-end-remainder"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "There is no sequence $k\\to+\\infty$ along which the largest Lyapunov exponent of $f_k$ is zero almost everywhere. Consequently <a href=\"#main:entropy\" data-reference-type=\"ref\" data-reference=\"main:entropy\">1</a> holds.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-end-contradiction"
+  }
+ ],
+ "paper": "papers/EN-112-000-0000-2-2026-PR-T4-UK-EX-M2-B-PH-H-0298_PM-146.1_Positive_Metric_Entropy_for_the_Standard_Map_at_Large_Parameters.md",
+ "purpose": "Positive Metric Entropy for the Standard Map at Large Parameters",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "d619261484724fc1711ee13941c4d4e596c36210472948e0df6bf62b290de609",
+   "pm.domains.v2": "443f2118d278cc2c056a8cb3721979228e05de3b30942b118d96f89b916fee60",
+   "pm.edges.v2": "293722a35acc0b5eac15d7d575f2ec0471fbe73393a3a40aa1e7f2ae5ce25c7f",
+   "pm.extraction.v2": "e57a48afb38a108fa3dd58afcafcc501210f2443de5d911c5ae067d19aa1af1a",
+   "pm.formal.v2": "437d69f331f4dad6c6b8e38e455bcd601e5d5c5051cebf2a39ebaef612351c27",
+   "pm.limits.v2": "1fe3ef8aeb1e1cd185db2f4dfe508a151ec7bf883e314224cd06a877d341b194",
+   "pm.node.v2": "2d104ae8d9e98d36c90f7c631f218e203139d194427c3a42b86a157c2ca5d4b3",
+   "pm.objects.v2": "1e26a07140cdf2595e48d485b10015838e678dc856575f16beb1774bf77bdce1",
+   "pm.provenance.v2": "0e05074d963c4d04fe2dabe6fcaf73d6d9e837b351777d3ac1849f6e7d6f750f",
+   "pm.quantities.v2": "b67271e8b38e2c6850991cdbada97155af0fefa992d7656157c9c2ba8e088ff2",
+   "pm.reading.v2": "ec7678fa07d5a2ea20a80495c734b540bc25200c5fb0e8d64a2725b062939cd9",
+   "pm.roadmap.v2": "1f125afebb0cd78f7ab7e73bc6de8db47385d1640b6502cae794c246c95236cc",
+   "pm.search.v1": "4faf2487e579b9fa36a337a4a130ea28f3f458eb6b4eb8972a62c55a7a88dcfb",
+   "pm.triptych.v2": "ba9c587eabea33f4cc9ab458bb81c2605847b76b620a313eca154f45035eb990"
+  },
+  "canonical_sha256": "5fbf77a844c1eea6515cb369a7c9514d0f5b2537c2f3aee20fc9efe7ca1f3339",
+  "paper_sha256": "1cb8c0f3ce0daff74ee993befaf0297cda99af11fc91c701792bfc9f371f2397",
+  "repaired_body_sha256": "60b750bf44ffd7ae83b1363f02360b0d158335789866fde46e4cc8086573e5d4"
+ },
+ "status": "ACTIVE",
+ "subject_id": 12,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "90591fac8dd1c60c943746a2ad7181bd3943451c89e9580d40ddb16084a09206",
+   "receipt_sha256": "fea51338d19ae055196f701ea6b5c222aa7e5f450352b29dc25c4687ec060a6b",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "All sequences of 0 through 4 increments in {-1,0,1}, starting at 0, at thresholds -1, 0, 1/2, 99/100; additional rational and equality boundary vectors.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I_SHORTFALL",
+     "oracle_basis": "Independent exhaustive interval enumeration with exact Fraction arithmetic checks both counts, telescoping deficit and the covering bound C=4. It does not prove the universal real-sequence lemma."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M_STRICT",
+     "observed_exit": 6,
+     "receipt_sha256": "2c16362128beb145c0d4ac56c4338ffc0f13ad8b1fe61e38b3585678b762e62d"
+    },
+    {
+     "id": "M_PREFIX",
+     "observed_exit": 6,
+     "receipt_sha256": "f2747c8c2c96b904506b2bf9150d6016af88a75e40fe5c5d6674810beff9756c"
+    },
+    {
+     "id": "M_DEFICIT",
+     "observed_exit": 6,
+     "receipt_sha256": "93c8ffe26b7e4e8201b03d0155cab7722daa32441b53e81d4f92732fd345776a"
+    }
+   ],
+   "receipt_sha256": "ca5710619947bff5e22ea84739e716f79356d38faa9b7853b703ccdebf444d88",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Positive Metric Entropy for the Standard Map at Large Parameters"
+}

@@ -1,0 +1,919 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 478572,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 134604
+ },
+ "coordinate": "EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-C-TO-H-0148",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$.",
+     "quote_sha256": "b960ff944bb847f1b794f8c66822e40764c041ba7c238ddffb5e1f1549344d17"
+    }
+   ],
+   "query": "Software dependency graph shell certification",
+   "reason": "A dependency graph has no established realization satisfying the compact complex surface, minimality, and analytic hypotheses."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$. Then there are an open neighborhood $U$ of $$S^3=\\{z\\in\\mathbb C^2:|z|=1\\}\n \\quad\\text{in }\\mathbb C^2\\setminus\\{0\\},$$ an open subset $\\Sigma\\subset X$, and a biholomorphism $\\phi:U\\longrightarrow\\Sigma$ such that $X\\setminus\\Sigma$ is connected.",
+     "quote_sha256": "8280e90bbdc8903de2ee00c497cbd65656d3ce13262fa9e4d4169dec5832abf2"
+    }
+   ],
+   "query": "Finite algorithm constructing the holomorphic shell",
+   "reason": "The source asserts geometric existence; finite encodings and executable construction contracts are absent."
+  }
+ ],
+ "family": "PM-060",
+ "id": "PM-060.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C1",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "stmt-cor-topology",
+    "claim_id": "C2",
+    "statement": "Let $X$ satisfy the hypotheses of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, and put $b=b_2(X)$."
+   },
+   {
+    "anchor": "stmt-cor-aspherical-geography",
+    "claim_id": "C3",
+    "statement": "Let $S$ be a connected closed smooth complex surface whose topological universal cover is contractible."
+   },
+   {
+    "anchor": "stmt-surface-reduction",
+    "claim_id": "C4",
+    "statement": "Let $V$ be a minimal compact complex surface with $b_1(V)=1$, $\\kappa(V)=-\\infty$, and $b_2(V)>0$.*\n\n1."
+   },
+   {
+    "anchor": "stmt-surface-degree",
+    "claim_id": "C5",
+    "statement": "Put $b=b_2(X)$."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C5",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C5",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-surface-characters",
+    "claim_id": "C6",
+    "statement": "For $\\lambda\\neq1$ and every $q=0,1,2$, $$\\label{surface:acyclic}\n H^q(X,P_\\lambda)=0,\n \\qquad H^q(X,K_X\\otimes P_\\lambda)=0.$$ For every $\\lambda\\in\\mathbb C^*$, including $\\lambda=1$, $$\\label{surface:canonical-vanishing}\n H^0(X,K_X\\otimes P_\\lambda)=0.$$ At the trivial character, $H^0(X,\\mathcal O_X)=\\mathbb C$, $H^1(X,\\mathcal O_X)=\\mathbb C$, and $H^2(X,\\mathcal O_X)=0$."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C6",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C6",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-surface-height",
+    "claim_id": "C7",
+    "statement": "There are a Gauduchon metric on $X$, a choice of $T$, and a smooth proper height $h:Y\\to\\mathbb R$ such that $$\\label{surface:positive-height}\n h(Ty)=h(y)+1,\\qquad Lh=c>0.$$ Here $L$ is the complex Laplacian with the subharmonic sign."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C7",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C7",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-surface-covers",
+    "claim_id": "C8",
+    "statement": "For every $n\\geq1$, put $S=T^n$ and $X_n=Y/\\langle S\\rangle$, and let $p_n:X_n\\to X$ be the degree-$n$ covering."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C8",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C8",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-compact-classes",
+    "claim_id": "C9",
+    "statement": "There is a constant $C_0\\geq0$, independent of $n$, such that for each $n$ one can choose smooth line-bundle data $E_1,\\ldots,E_d$ on $Y$, supported in the interior of $W_n$, with $$\\label{compact:rank-bound}\n d\\geq n b_2(X)-C_0.$$ They are obtained by cutting line bundles on $X_n$ that are trivialized near $Z$."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C9",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C9",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-weighted-fredholm",
+    "claim_id": "C10",
+    "statement": "For $p=0$ or $p=2$, every admissible pair $(a,b)$ and every $s\\in\\mathbb Z$, the complex <a href=\"#weighted:stepped\" data-reference-type=\"eqref\" data-reference=\"weighted:stepped\">[weighted:stepped]</a> has closed ranges and finite-dimensional cohomology."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C10",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C10",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-weighted-duality",
+    "claim_id": "C11",
+    "statement": "For $p\\in\\{0,2\\}$ and $0\\leq q\\leq2$, the integration pairing gives a perfect pairing $$\\label{weighted:serre}\n H^{p,q}_{a,b}(Y,E)\\ \\times\\\n H^{2-p,2-q}_{-a,-b}(Y,E^{-1})\\longrightarrow\\mathbb C.$$ Here both pairs of rates are admissible."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C11",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C11",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-weighted-nondecay",
+    "claim_id": "C12",
+    "statement": "Let $V$ be a holomorphic line bundle on $\\{h>H_0\\}$, with a smooth Hermitian metric of bounded Chern curvature."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C12",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C12",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-weighted-continuation",
+    "claim_id": "C13",
+    "statement": "Let $V_0$ be either $\\mathcal O_Y$ or $K_Y$ with its periodic holomorphic operator $d$."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C13",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C13",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-weighted-tail",
+    "claim_id": "C14",
+    "statement": "Let $E$ satisfy <a href=\"#weighted:end-error\" data-reference-type=\"eqref\" data-reference=\"weighted:end-error\">[weighted:end-error]</a>."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C14",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C14",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-weighted-scalar-top",
+    "claim_id": "C15",
+    "statement": "For the scalar periodic Dolbeault complex and every admissible pair, $$H^{0,2}_{a,b}(Y,\\mathcal O)=0.$$ In particular, if $f$ is a smooth compactly supported $(0,2)$-form and $R>0$, there is a smooth $(0,1)$-form $\\alpha$ with $\\bar\\partial\\alpha=f$ and $\\alpha\\in W^k_{-R,-R}$ for every $k\\in\\mathbb Z$."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C15",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C15",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-weighted-holomorphic",
+    "claim_id": "C16",
+    "statement": "Every compact line-bundle datum admits an integrable $(0,1)$-connection satisfying <a href=\"#weighted:end-error\" data-reference-type=\"eqref\" data-reference=\"weighted:end-error\">[weighted:end-error]</a> with any prescribed finite $\\gamma>0$."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C16",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C16",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-weighted-base-index",
+    "claim_id": "C17",
+    "statement": "For the trivial datum and $a,b>0$, $$H^{0,0}_{a,b}(Y,\\mathcal O)=\\mathbb C,\n \\qquad H^{0,1}_{a,b}(Y,\\mathcal O)=H^{0,2}_{a,b}(Y,\\mathcal O)=0.$$ In particular its weighted Dolbeault index is one."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C17",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C17",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-weighted-index",
+    "claim_id": "C18",
+    "statement": "Let $E$ be a compact datum supported in a cut-open period of a finite cyclic quotient $X_n=Y/T^n$, with its trivializations fixed in collars of the cut."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C18",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C18",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-compact-section",
+    "claim_id": "C19",
+    "statement": "Let $E$ be one of the data in Lemma <a href=\"#compact:classes\" data-reference-type=\"ref\" data-reference=\"compact:classes\">9</a>, and write $e^2=K_Y\\cdot e=-m$ with $m>0$."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C19",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C19",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-curve-area",
+    "claim_id": "C20",
+    "statement": "There is a number $A>0$, depending only on a fixed finite coordinate atlas of $X$, its lifted metric, and the covering height, with the following property."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C20",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C20",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-weighted-currents",
+    "claim_id": "C21",
+    "statement": "Fix $\\varepsilon>0$ and $b>\\varepsilon$."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C21",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C21",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-curve-residue",
+    "claim_id": "C22",
+    "statement": "Fix $F\\in\\{\\mathcal O,E\\}$ and rates $(-\\varepsilon,b)$ as in Theorem <a href=\"#weighted:currents\" data-reference-type=\"ref\" data-reference=\"weighted:currents\">22</a>."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C22",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C22",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-curve-genus",
+    "claim_id": "C23",
+    "statement": "The normalization $R$ of any component of $D$ has no nonzero square-integrable scalar holomorphic differential and has genus zero."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C23",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C23",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-cylinder-small-energy",
+    "claim_id": "C24",
+    "statement": "There are an integer $P\\geq2$ and positive constants $Q,\\delta,\\varepsilon_0,D_0$, depending only on the lifted geometry, with the following property."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C24",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C24",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-cylinder-flat-chains",
+    "claim_id": "C25",
+    "statement": "Let $J\\subset\\mathbb Z$ be a maximal interval of flat indices for a map as in Lemma <a href=\"#cylinder:small-energy\" data-reference-type=\"ref\" data-reference=\"cylinder:small-energy\">25</a>."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C25",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C25",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-cylinder-estimate",
+    "claim_id": "C26",
+    "statement": "There are constants $R_0,C_0>0$ depending only on the lifted geometry with the following property."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C26",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C26",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-cylinder-plane",
+    "claim_id": "C27",
+    "statement": "If a component of $D$ is noncompact, its normalization is biholomorphic to $\\mathbb C$."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C27",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C27",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-cylinder-gauge",
+    "claim_id": "C28",
+    "statement": "If $a\\in L^1(\\mathcal C)\\cap L^2(\\mathcal C)$, there is a periodic distribution $g$ satisfying $$\\tfrac12(\\partial_t+i\\partial_\\theta)g=a,\n \\qquad\n \\sup_{j\\in\\mathbb Z}\\|g\\|_{W^{1,2}(S_j)}\n       \\leq C\\bigl(\\|a\\|_{L^1}+\\|a\\|_{L^2}\\bigr).$$ For every $p<\\infty$ this solution satisfies $$\\label{cylinder:gauge-exp}\n \\sup_j\\int_{S_j}\\exp\\bigl(p|\\operatorname{Re}g|\\bigr)dA_v<\\infty.$$ If $a$ is smooth in an open set, $g$ is smooth there."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C28",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C28",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-cylinder-compactness",
+    "claim_id": "C29",
+    "statement": "Every irreducible component of $D$ is compact and has rational normalization."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C29",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C29",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-conclusion-lifts",
+    "claim_id": "C30",
+    "statement": "Every compact rational curve in $Y$ projects to a rational curve in $X$."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C30",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C30",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-conclusion-pairing-rank",
+    "claim_id": "C31",
+    "statement": "For the classes $e_1,\\ldots,e_d$ of Lemma <a href=\"#compact:classes\" data-reference-type=\"ref\" data-reference=\"compact:classes\">9</a>, the matrix $P(t)=(P(e_i,e_j))_{i,j=1}^d$ has nonzero determinant in $\\Lambda$."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C31",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C31",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-conclusion-curves",
+    "claim_id": "C32",
+    "statement": "The surface $X$ contains at least $b_2(X)$ rational curves."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C32",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C32",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   },
+   {
+    "anchor": "stmt-conclusion-upper-bound",
+    "claim_id": "C33",
+    "statement": "Under <a href=\"#surface:no-square-zero\" data-reference-type=\"eqref\" data-reference=\"surface:no-square-zero\">[surface:no-square-zero]</a>, the real cohomology classes of any finite collection of distinct curves on $X$ are linearly independent."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C33",
+    "statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$."
+   },
+   {
+    "anchor": "surface:no-square-zero",
+    "claim_id": "C33",
+    "statement": "C^2<0\\quad\\text{for every nonzero effective divisor }C\\text{ on }X."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Global spherical shell criterion",
+    "evidence": [
+     {
+      "anchor": "stmt-surface-reduction",
+      "quote": "Let $V$ be a minimal compact complex surface with $b_1(V)=1$, $\\kappa(V)=-\\infty$, and $b_2(V)>0$.*\n\n1.  *If $V$ has a nonzero effective divisor $C$ with $C^2=0$, then $V$ has a global spherical shell.*\n\n2.  *If $V$ has exactly $b_2(V)$ rational curves, then $V$ has a global spherical shell.*\n\n*Here the conclusion supplies an embedded open neighborhood of $S^3\\subset\\mathbb C^2\\setminus\\{0\\}$ with connected complement in $V$.",
+      "quote_sha256": "0d572e1f69d70f1226c9b258b7d6d0ce58ad1776a9dde4604f4216cd37ea7094"
+     }
+    ],
+    "requires_concepts": [
+     "Minimal class VII surface",
+     "Effective divisor",
+     "Rational curve",
+     "Intersection pairing"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Compactness of divisor components",
+    "evidence": [
+     {
+      "anchor": "stmt-cylinder-compactness",
+      "quote": "Every irreducible component of $D$ is compact and has rational normalization.",
+      "quote_sha256": "d5e620b71851a9eee63ac1535302ab4d5399efdc1c995d1fe55569299d19ddc3"
+     }
+    ],
+    "requires_concepts": [
+     "Weighted Dolbeault cohomology",
+     "Residue currents",
+     "Cylinder estimate",
+     "Periodic gauge"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C1",
+   "exact_statement": "Let $X$ be a connected compact complex surface with $$b_1(X)=1,\\qquad b_2(X)>0,\\qquad \\kappa(X)=-\\infty.$$ Assume that $X$ is minimal: it contains no smooth rational curve of self-intersection $-1$. Then there are an open neighborhood $U$ of $$S^3=\\{z\\in\\mathbb C^2:|z|=1\\}\n \\quad\\text{in }\\mathbb C^2\\setminus\\{0\\},$$ an open subset $\\Sigma\\subset X$, and a biholomorphism $\\phi:U\\longrightarrow\\Sigma$ such that $X\\setminus\\Sigma$ is connected.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "C2",
+   "exact_statement": "Let $X$ satisfy the hypotheses of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, and put $b=b_2(X)$. There is a small one-parameter deformation $\\mathcal X\\to\\Delta$ over a disk about $0$, with $\\mathcal X_0\\simeq X$, such that every nonzero fiber is obtained from a primary Hopf surface by exactly $b$ successive point blowups. The centers may be infinitely near. Moreover, $$\\pi_1(X)\\cong\\mathbb Z,\\qquad\n X\\cong_{\\mathrm{or}}(S^1\\times S^3)\\#\\,b\\,\\overline{\\mathbb{CP}}^{\\,2},$$ where the second is an orientation-preserving diffeomorphism for the complex orientation of $X$.",
+   "kind": "classification",
+   "statement_anchor": "stmt-cor-topology"
+  },
+  {
+   "claim_id": "C3",
+   "exact_statement": "Let $S$ be a connected closed smooth complex surface whose topological universal cover is contractible. Write $\\chi_{\\mathrm{top}}(S)$ for its Euler characteristic and $\\sigma(S)$ for its signature in the complex orientation. Then $$\\chi_{\\mathrm{top}}(S)\\geq\\frac95|\\sigma(S)|.$$ If $\\chi_{\\mathrm{top}}(S)>0$, then $S$ is of general type; otherwise $\\chi_{\\mathrm{top}}(S)=\\sigma(S)=0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-aspherical-geography"
+  },
+  {
+   "claim_id": "C4",
+   "exact_statement": "Let $V$ be a minimal compact complex surface with $b_1(V)=1$, $\\kappa(V)=-\\infty$, and $b_2(V)>0$.*\n\n1.  *If $V$ has a nonzero effective divisor $C$ with $C^2=0$, then $V$ has a global spherical shell.*\n\n2.  *If $V$ has exactly $b_2(V)$ rational curves, then $V$ has a global spherical shell.*\n\n*Here the conclusion supplies an embedded open neighborhood of $S^3\\subset\\mathbb C^2\\setminus\\{0\\}$ with connected complement in $V$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-surface-reduction"
+  },
+  {
+   "claim_id": "C5",
+   "exact_statement": "Put $b=b_2(X)$. There is a basis $u_1,\\ldots,u_b$ of $H^2(X;\\mathbb Z)/\\operatorname{Tors}$ with $$\\label{surface:canonical-basis}\n u_i\\cdot u_j=-\\delta_{ij},\\qquad\n K_X=u_1+\\cdots+u_b\\pmod{\\operatorname{Tors}}.$$ For every curve $B\\subset X$, $$\\label{surface:curve-degrees}\n B^2<0,\\qquad (K_X+B)\\cdot B\\leq0,\\qquad K_X\\cdot B\\geq0.$$ Consequently every effective divisor has nonnegative canonical degree.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-surface-degree"
+  },
+  {
+   "claim_id": "C6",
+   "exact_statement": "For $\\lambda\\neq1$ and every $q=0,1,2$, $$\\label{surface:acyclic}\n H^q(X,P_\\lambda)=0,\n \\qquad H^q(X,K_X\\otimes P_\\lambda)=0.$$ For every $\\lambda\\in\\mathbb C^*$, including $\\lambda=1$, $$\\label{surface:canonical-vanishing}\n H^0(X,K_X\\otimes P_\\lambda)=0.$$ At the trivial character, $H^0(X,\\mathcal O_X)=\\mathbb C$, $H^1(X,\\mathcal O_X)=\\mathbb C$, and $H^2(X,\\mathcal O_X)=0$. If a holomorphic function $f$ on $Y$ satisfies $f\\circ T-f=c$ for a constant $c$, then $f$ is constant and $c=0$. More generally, a holomorphic function annihilated by a positive power of $T^*-1$ is constant.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-surface-characters"
+  },
+  {
+   "claim_id": "C7",
+   "exact_statement": "There are a Gauduchon metric on $X$, a choice of $T$, and a smooth proper height $h:Y\\to\\mathbb R$ such that $$\\label{surface:positive-height}\n h(Ty)=h(y)+1,\\qquad Lh=c>0.$$ Here $L$ is the complex Laplacian with the subharmonic sign. All positive order derivatives of $h$ are uniformly bounded in the lifted metric.",
+   "kind": "construction",
+   "statement_anchor": "stmt-surface-height"
+  },
+  {
+   "claim_id": "C8",
+   "exact_statement": "For every $n\\geq1$, put $S=T^n$ and $X_n=Y/\\langle S\\rangle$, and let $p_n:X_n\\to X$ be the degree-$n$ covering. Then $X_n$ is a minimal class VII surface and $$\\chi(\\mathcal O_{X_n})=0,\\qquad b_1(X_n)=1,\\qquad\n b_2(X_n)=n b_2(X),\\qquad K_{X_n}=p_n^*K_X.$$ In particular its integral intersection lattice modulo torsion has a negative orthonormal basis whose sum is $K_{X_n}$ modulo torsion.",
+   "kind": "classification",
+   "statement_anchor": "stmt-surface-covers"
+  },
+  {
+   "claim_id": "C9",
+   "exact_statement": "There is a constant $C_0\\geq0$, independent of $n$, such that for each $n$ one can choose smooth line-bundle data $E_1,\\ldots,E_d$ on $Y$, supported in the interior of $W_n$, with $$\\label{compact:rank-bound}\n d\\geq n b_2(X)-C_0.$$ They are obtained by cutting line bundles on $X_n$ that are trivialized near $Z$. Their transferred Chern classes $w_1,\\ldots,w_d\\in H^2(X_n;\\mathbb Z)$ are linearly independent over $\\mathbb Q$ modulo torsion. Their compact Chern classes $e_i$ satisfy $$\\label{compact:numerical-data}\n e_i^2=K_Y\\cdot e_i=-m_i<0$$ for positive integers $m_i$. Pairings of these compact classes equal the corresponding pairings of the transferred classes on $X_n$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-compact-classes"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "For $p=0$ or $p=2$, every admissible pair $(a,b)$ and every $s\\in\\mathbb Z$, the complex <a href=\"#weighted:stepped\" data-reference-type=\"eqref\" data-reference=\"weighted:stepped\">[weighted:stepped]</a> has closed ranges and finite-dimensional cohomology. Its cohomology agrees with that of the maximal weighted $L^2$ complex and is represented by forms which belong to $W^k_{a,b}$ for every $k$. There are bounded homotopies of degree $-1$ which gain one derivative, modulo projections onto these harmonic spaces. For the periodic trivial datum the single-linear-weight complex with $\\rho\\ne0$ is acyclic, in every Sobolev realization. The operator bounds may depend on the fixed rates and the datum.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-weighted-fredholm"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "For $p\\in\\{0,2\\}$ and $0\\leq q\\leq2$, the integration pairing gives a perfect pairing $$\\label{weighted:serre}\n H^{p,q}_{a,b}(Y,E)\\ \\times\\\n H^{2-p,2-q}_{-a,-b}(Y,E^{-1})\\longrightarrow\\mathbb C.$$ Here both pairs of rates are admissible. The statement concerns the cohomology classes in any of the stepped realizations above; the pairing is evaluated on their smooth weighted harmonic representatives.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-weighted-duality"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Let $V$ be a holomorphic line bundle on $\\{h>H_0\\}$, with a smooth Hermitian metric of bounded Chern curvature. If a holomorphic section $s$ satisfies, for every $N>0$, $$|s(x)|\\le C_Ne^{-Nh(x)}\\quad(h(x)\\text{ sufficiently large}),$$ then $s$ vanishes on a positive tail. On every connected region on which it is holomorphic and which meets that tail it consequently vanishes identically.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-weighted-nondecay"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "Let $V_0$ be either $\\mathcal O_Y$ or $K_Y$ with its periodic holomorphic operator $d$. Suppose on one tail that $$(d+B\\wedge)s=0,\\qquad\n |\\nabla^jB|\\le C_j e^{-\\gamma|h|},\\quad j\\ge0,$$ where the perturbed operator is integrable and $\\gamma>0$. If $s$ has finite exponential growth, its allowed rate can be improved by any amount strictly less than $\\gamma$, except that a contour passing the unit multiplier can contribute a constant when $V_0=\\mathcal O_Y$. There is no degree-zero contribution for $V_0=K_Y$.*\n\n*In the scalar case, after finitely many such improvements there is a constant $c_\\pm$ on the relevant end and an exponentially decaying remainder, with decay in all derivatives. If that constant is zero, the section has every finite exponential decay rate on that end. In the canonical case it always has every finite exponential decay rate.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-weighted-continuation"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "Let $E$ satisfy <a href=\"#weighted:end-error\" data-reference-type=\"eqref\" data-reference=\"weighted:end-error\">[weighted:end-error]</a>. A finite-growth holomorphic section of $K_Y\\otimes E$ or $K_Y\\otimes E^{-1}$ on a positive tail vanishes on a shorter positive tail. A finite-growth holomorphic section of $E$ has, in the prescribed trivialization at either end on which it is defined, the expansion $$s=c_\\pm+O(e^{-\\delta |h|})$$ for some $\\delta>0$, with the same conclusion for every derivative of the error. On the positive end $c_+=0$ implies $s=0$. Consequently the positive-end coefficient is injective on global weighted holomorphic sections of $E$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-weighted-tail"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "For the scalar periodic Dolbeault complex and every admissible pair, $$H^{0,2}_{a,b}(Y,\\mathcal O)=0.$$ In particular, if $f$ is a smooth compactly supported $(0,2)$-form and $R>0$, there is a smooth $(0,1)$-form $\\alpha$ with $\\bar\\partial\\alpha=f$ and $\\alpha\\in W^k_{-R,-R}$ for every $k\\in\\mathbb Z$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-weighted-scalar-top"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "Every compact line-bundle datum admits an integrable $(0,1)$-connection satisfying <a href=\"#weighted:end-error\" data-reference-type=\"eqref\" data-reference=\"weighted:end-error\">[weighted:end-error]</a> with any prescribed finite $\\gamma>0$. For every such structure and every admissible pair, $$\\label{weighted:E-top}\n H^{0,2}_{a,b}(Y,E)=0.$$ For every $a,b>0$, global weighted holomorphic sections have the two constant end coefficients and the exponentially decaying errors described in Proposition <a href=\"#weighted:tail\" data-reference-type=\"ref\" data-reference=\"weighted:tail\">15</a>; the map $s\\mapsto c_+$ is injective.",
+   "kind": "construction",
+   "statement_anchor": "stmt-weighted-holomorphic"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "For the trivial datum and $a,b>0$, $$H^{0,0}_{a,b}(Y,\\mathcal O)=\\mathbb C,\n \\qquad H^{0,1}_{a,b}(Y,\\mathcal O)=H^{0,2}_{a,b}(Y,\\mathcal O)=0.$$ In particular its weighted Dolbeault index is one.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-weighted-base-index"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "Let $E$ be a compact datum supported in a cut-open period of a finite cyclic quotient $X_n=Y/T^n$, with its trivializations fixed in collars of the cut. Equip $E$ with an integrable operator $d_E$ satisfying <a href=\"#weighted:end-error\" data-reference-type=\"eqref\" data-reference=\"weighted:end-error\">[weighted:end-error]</a>, and let $e$ be its compact support Chern class. For $a,b>0$ its weighted Dolbeault index is $$\\label{weighted:index-formula}\n \\sum_{q=0}^2(-1)^q\\dim H^{0,q}_{a,b}(Y,E)\n =1+\\frac12\\bigl(e^2-K_Y\\cdot e\\bigr).$$ The products on the right are compact support intersection pairings. In particular, if $e^2=K_Y\\cdot e$, the section space is one-dimensional, its positive-end coefficient is nonzero on every nonzero section, and $H^{0,1}_{a,b}(Y,E)=0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-weighted-index"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "Let $E$ be one of the data in Lemma <a href=\"#compact:classes\" data-reference-type=\"ref\" data-reference=\"compact:classes\">9</a>, and write $e^2=K_Y\\cdot e=-m$ with $m>0$. Given any finite $\\gamma>0$, $E$ admits a holomorphic structure whose Dolbeault operator, in its fixed end frames, differs from the trivial operator by $O(e^{-\\gamma|h|})$ in every derivative. For this structure there is a holomorphic section $s$ such that, in those frames, $$\\label{compact:end-limits}\n s\\longrightarrow1\\quad(h\\to+\\infty),\\qquad\n s\\longrightarrow0\\quad(h\\to-\\infty),$$ with exponentially decaying errors. Its effective divisor $D=(s=0)$ is contained in $\\{h\\leq H\\}$ for some $H$, is locally finite, and represents the ordinary Chern class $j(e)$, or equivalently its dual locally finite homology class.",
+   "kind": "construction",
+   "statement_anchor": "stmt-compact-section"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "There is a number $A>0$, depending only on a fixed finite coordinate atlas of $X$, its lifted metric, and the covering height, with the following property. Let $E$ be any compact datum whose holomorphic operator tends smoothly to the trivial operator at the negative end, and let $s$ be a nonzero holomorphic section which is bounded in the prescribed smooth trivialization there. If $D=(s=0)$, then $$\\label{curve:area-bound}\n \\mathop{\\mathrm{Area}}(D\\cap Y_l)\\le C_{E,s}\\exp(Al),\\qquad l\\ge0.$$ The constant $C_{E,s}$ may depend on the datum, operator, and section. The exponent $A$ is independent of their decay rate. The same exponent applies to every reduced component of $D$ and each of its fixed deck translates. Replacing $I_l$ by any fixed-width enlargement also preserves the exponent.",
+   "kind": "bound",
+   "statement_anchor": "stmt-curve-area"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "Fix $\\varepsilon>0$ and $b>\\varepsilon$. Let $F$ be either $\\mathcal O_Y$ or an end-framed compact datum $E$ with an integrable operator satisfying <a href=\"#weighted:end-error\" data-reference-type=\"eqref\" data-reference=\"weighted:end-error\">[weighted:end-error]</a>. Consider the current complex $$\\label{weighted:current-complex}\n \\mathcal C^{2,q}_{-\\varepsilon,b,-3}(F)\n =W^{-3-q}_{-\\varepsilon,b}(\\Lambda^{2,q}\\otimes F),\n \\qquad q=0,1,2.$$ Its cohomology is finite-dimensional. For $F=\\mathcal O_Y$ its degree-one cohomology is zero. In particular every closed scalar $(2,1)$-current in this space which is zero on a positive tail is exact.*\n\n*If a degree-zero current $\\beta\\in W^{-3}_{-\\varepsilon,b}(\\Lambda^{2,0}\\otimes F)$ satisfies $\\bar\\partial_F\\beta=J$ for a degree-one current $J$ supported in $\\{h\\le C\\}$, then $\\beta$ vanishes on a positive tail. Finally, an order-zero $(2,1)$-current supported in $\\{h\\le C\\}$ whose masses on negative unit height slabs are at most $C_0e^{\\mu l}$ belongs to this complex whenever $b>\\mu$. The same Sobolev order and pair of rates can be used for any family with that common exponent $\\mu$, regardless of its individual constants and upper support bounds.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-weighted-currents"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "Fix $F\\in\\{\\mathcal O,E\\}$ and rates $(-\\varepsilon,b)$ as in Theorem <a href=\"#weighted:currents\" data-reference-type=\"ref\" data-reference=\"weighted:currents\">22</a>. For distinct closed irreducible curves $B_i\\subset Y$ bounded above in height, let $\\eta_i$ be nonzero holomorphic differentials on their normalizations with coefficients in $f_i^*F$. Suppose their pushforward currents have negative-end mass exponents strictly smaller than $b$. Then the classes $$[C_{\\eta_i}]\\in H^{2,1}_{-\\varepsilon,b}(Y,F)$$ are linearly independent: every finite subfamily is independent. For $F=\\mathcal O$, even one such differential is impossible.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-curve-residue"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "The normalization $R$ of any component of $D$ has no nonzero square-integrable scalar holomorphic differential and has genus zero. If $R$ is compact, it is biholomorphic to $\\mathbb P^1$. If it is noncompact, it is biholomorphic to a domain in $\\mathbb P^1$, without a restriction on the connectivity of that domain.",
+   "kind": "classification",
+   "statement_anchor": "stmt-curve-genus"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "There are an integer $P\\geq2$ and positive constants $Q,\\delta,\\varepsilon_0,D_0$, depending only on the lifted geometry, with the following property. Suppose that $\\Omega\\subset\\mathcal C$ is a domain and $f:\\Omega\\to Y$ is a nonconstant proper holomorphic map. A strip $S_j$ is called *flat* if $\\overline{C_j^{2P+2}}\\subset\\Omega$ and the image of this entire thickened cylinder under $f$ is contained in $U_p(r)$ for one of the fixed coordinate charts. Every flat strip satisfies $\\sup_{S_j}u\\leq D_0$.*\n\n\n*For every interval $I\\subset\\mathbb R$, if $S_j$ contains a point $v_j$ with $h(f(v_j))\\in I$ and $S_j$ is not flat, then $$\\label{cylinder:energy-cost}\n \\int_{\\Omega\\cap C_j^Q\\cap(h\\circ f)^{-1}(I+[-\\delta,\\delta])}\n              u^2\\,dA_v\\geq\\varepsilon_0.$$ The same assertion holds on a source half-cylinder whenever $\\overline{C_j^Q}$ lies in its interior.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cylinder-small-energy"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "Let $J\\subset\\mathbb Z$ be a maximal interval of flat indices for a map as in Lemma <a href=\"#cylinder:small-energy\" data-reference-type=\"ref\" data-reference=\"cylinder:small-energy\">25</a>. Put $m_j=\\sup_{S_j}u$. There is a constant $L_0$, depending only on the fixed geometry, such that $$\\label{cylinder:chain-sum}\n \\sum_{j\\in J}m_j\\leq L_0.$$ A doubly infinite chain is impossible for a nonconstant map. If a chain contains a point with height in an interval $I$, every finite endpoint of the chain has a neighboring nonflat strip containing a point with height in $I+[-\\Lambda,\\Lambda]$, where $\\Lambda=\\|dh\\|_\\infty L_0$ is fixed.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cylinder-flat-chains"
+  },
+  {
+   "claim_id": "C26",
+   "exact_statement": "There are constants $R_0,C_0>0$ depending only on the lifted geometry with the following property. Let $f:\\Omega\\to Y$ be a nonconstant proper holomorphic map from a domain in $\\mathcal C$. Let $w\\geq0$ be measurable and suppose $$M_w:=\\sup_{j\\in\\mathbb Z}\\|w\\|_{L^2(\\Omega\\cap S_j)}<\\infty.$$ For every interval $I$ of length one, set $$E_I=\\int_{\\Omega\\cap(h\\circ f)^{-1}(I+[-R_0,R_0])}\n                          u^2\\,dA_v.$$ If $E_I<\\infty$, then $$\\label{cylinder:estimate-formula}\n \\int_{\\Omega\\cap(h\\circ f)^{-1}(I)}u\\,w\\,dA_v\n            \\leq C_0M_w(1+E_I).$$ The same estimate holds on a full source half-cylinder cut from a proper normalization map; properness is used only on thickened strips away from the artificial initial boundary, and a fixed finite initial block of strips is included in the constant. The integral on the left is always restricted to the inverse image of the target interval $I$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cylinder-estimate"
+  },
+  {
+   "claim_id": "C27",
+   "exact_statement": "If a component of $D$ is noncompact, its normalization is biholomorphic to $\\mathbb C$.",
+   "kind": "classification",
+   "statement_anchor": "stmt-cylinder-plane"
+  },
+  {
+   "claim_id": "C28",
+   "exact_statement": "If $a\\in L^1(\\mathcal C)\\cap L^2(\\mathcal C)$, there is a periodic distribution $g$ satisfying $$\\tfrac12(\\partial_t+i\\partial_\\theta)g=a,\n \\qquad\n \\sup_{j\\in\\mathbb Z}\\|g\\|_{W^{1,2}(S_j)}\n       \\leq C\\bigl(\\|a\\|_{L^1}+\\|a\\|_{L^2}\\bigr).$$ For every $p<\\infty$ this solution satisfies $$\\label{cylinder:gauge-exp}\n \\sup_j\\int_{S_j}\\exp\\bigl(p|\\operatorname{Re}g|\\bigr)dA_v<\\infty.$$ If $a$ is smooth in an open set, $g$ is smooth there.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cylinder-gauge"
+  },
+  {
+   "claim_id": "C29",
+   "exact_statement": "Every irreducible component of $D$ is compact and has rational normalization.",
+   "kind": "classification",
+   "statement_anchor": "stmt-cylinder-compactness"
+  },
+  {
+   "claim_id": "C30",
+   "exact_statement": "Every compact rational curve in $Y$ projects to a rational curve in $X$. For each rational curve $B\\subset X$, the compact irreducible curves in $Y$ projecting onto $B$ form one orbit under $T$. In particular, a collection of $r$ rational curves in $X$ gives at most $nr$ orbits of compact lifts under $S=T^n$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-conclusion-lifts"
+  },
+  {
+   "claim_id": "C31",
+   "exact_statement": "For the classes $e_1,\\ldots,e_d$ of Lemma <a href=\"#compact:classes\" data-reference-type=\"ref\" data-reference=\"compact:classes\">9</a>, the matrix $P(t)=(P(e_i,e_j))_{i,j=1}^d$ has nonzero determinant in $\\Lambda$. Their $\\Lambda$-span is free of rank $d$, and $P$ is nonsingular on its extension of scalars to $\\mathbb F$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-conclusion-pairing-rank"
+  },
+  {
+   "claim_id": "C32",
+   "exact_statement": "The surface $X$ contains at least $b_2(X)$ rational curves.",
+   "kind": "bound",
+   "statement_anchor": "stmt-conclusion-curves"
+  },
+  {
+   "claim_id": "C33",
+   "exact_statement": "Under <a href=\"#surface:no-square-zero\" data-reference-type=\"eqref\" data-reference=\"surface:no-square-zero\">[surface:no-square-zero]</a>, the real cohomology classes of any finite collection of distinct curves on $X$ are linearly independent. Consequently $X$ has at most $b_2(X)$ curves in total.",
+   "kind": "bound",
+   "statement_anchor": "stmt-conclusion-upper-bound"
+  }
+ ],
+ "paper": "papers/EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-C-TO-H-0148_PM-060.1_Global_Spherical_Shells_on_Minimal_Surfaces_of_Class_VII.md",
+ "purpose": "Global Spherical Shells on Minimal Surfaces of Class VII",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "82e615a31e7813fff2878a78047bbec2d776ad85890d783b0f0c8c3d682995f1",
+   "pm.domains.v2": "9c62213d663948a4074053b4bc14cc5fcd88b336410ab62f40bbbf3f38431dd0",
+   "pm.edges.v2": "3179b1a19edf4e897081c780936f2852b3c86efb2b9d6906f6c71c25bf27600c",
+   "pm.extraction.v2": "904794f1532f78e5e700ec812e9021ae4e3b70a52bd5d8ad03f69625fc806108",
+   "pm.formal.v2": "9a13c356092e5fa83e264f6ecdea2878ba0ed18bca114aad95fd1cdf0f65b6ae",
+   "pm.limits.v2": "5993723ad511fefdad34a3dc922990c3a981b609d79885198b31447630340a1e",
+   "pm.node.v2": "1c3f933be50d6076ee12149947ace6937b4a0efa2e660214552121c9437a4559",
+   "pm.objects.v2": "24b20841f8d1596112d9dbb3e1248f6924b2f30df4b1a26ccb26e678da559c76",
+   "pm.provenance.v2": "d05f86081f11d38e9af503ab5fe3d42c060ddd213ecbfad01a863761ccc787c1",
+   "pm.quantities.v2": "5f53be270effa99f6648f4c007a43a1a56704fa10130ea14891bc1674e2c2d23",
+   "pm.reading.v2": "92778d78a91184faa1fed39ee794f8fe876b6edad8e5327fc107814802097164",
+   "pm.roadmap.v2": "1fec264f365414bf0eec50c023eaed1af253ff2a94b67b48c0074639590b5483",
+   "pm.search.v1": "3a3f4c592e4aeb37ef1ebc024f1b071929f5665ab0555c03b102745fa9912fcd",
+   "pm.triptych.v2": "10a81170b21ced6382f4c84588b323b0253a3ec32ddc4617ffeed5e28d12cf0d"
+  },
+  "canonical_sha256": "5e774b66e491161ceaa84af967ae5f66e2d8a85150b8ed339ad7cde0af573264",
+  "paper_sha256": "81af3fd5b4daedf4161c45e1e8876a1e9b718b585b4b4883c4b18e377e58b060",
+  "repaired_body_sha256": "a186c8c99e971939801012a3764d52d6cd7dd47c2c6883ac19f8a3514a63c3a8"
+ },
+ "status": "ACTIVE",
+ "subject_id": 3,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "2b520e3db4b03f346ee289a4ff3f6b43db0320d43cbe3b0142a91a8a1ca3474c",
+   "receipt_sha256": "fe9c14294cf8efa3a6387b0e65c418de44b6a6205368acb6c70abc4345338b82",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive integer pairs 0 <= N <= 6, 1 <= k <= 7, represented by standard coordinate vectors over Q.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I-subset-rank",
+     "oracle_basis": "Independent bitmask enumeration and SymPy exact rational rank, checked against the source three-regime rank formula."
+    },
+    {
+     "checked_domain": "Exhaustive integer pairs 0 <= N <= 6, 1 <= k <= 7, represented by standard coordinate vectors over Q.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I-boundary-rank",
+     "oracle_basis": "Independent bitmask enumeration and SymPy exact rational rank, checked against the source three-regime rank formula."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M1",
+     "observed_exit": 1,
+     "receipt_sha256": "15cbe4c7e4c079f4942a2055f7bdb95e7e0a3c97c7ced68d1fc2255482bef823"
+    },
+    {
+     "id": "M2",
+     "observed_exit": 1,
+     "receipt_sha256": "d290b086b6224c04a1ce19334c61cf50f6c75d96e056ba6c1eb941803641eaf0"
+    },
+    {
+     "id": "M3",
+     "observed_exit": 1,
+     "receipt_sha256": "92bd702e1bb98f6ffcfe178574527d84edad9bee6a25fe842605281ae49f1423"
+    }
+   ],
+   "receipt_sha256": "96e5b799e6d2c612c8989086ec08d533a5eea67fac62bde14fd465f54b557608",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Global Spherical Shells on Minimal Surfaces of Class VII"
+}

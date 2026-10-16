@@ -1,0 +1,789 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 618786,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 168574
+ },
+ "coordinate": "EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-C-TO-M-0135",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-14",
+     "quote": "The constants $d_h$ may depend on the chosen infinite tail; a bound uniform over different programs is neither asserted nor needed.",
+     "quote_sha256": "21fce37dd53251d99088d0ab1a35ab76d752e98b1f5affad62e101ef42db8ea4"
+    }
+   ],
+   "query": "A computable uniform upper bound on the length of every program",
+   "reason": "The difficulty constants may depend on the chosen infinite tail; the paper explicitly does not assert a bound uniform over different programs."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-def-program",
+     "quote": "Flops, extra blowups, and inserted isomorphisms are not steps.",
+     "quote_sha256": "f7806c0a43b67b67d44f617e3cf164f89417c6408454a4888dba65796ad98ee0"
+    }
+   ],
+   "query": "Termination allowing arbitrary inserted blowups or flops",
+   "reason": "Those operations are outside the permitted-step convention."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-7",
+     "quote": "This is a rank of divisor cycle classes; we do not identify it with a Picard number on a singular variety.",
+     "quote_sha256": "1c802dd4e0a0e67ce223cedce4a24964825c75eb12c7fe039b15a6b690cca4aa"
+    }
+   ],
+   "query": "Replace normalization divisor cycle ranks by singular Picard numbers",
+   "reason": "The cycle rank is explicitly distinguished from a Picard number on a singular variety."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:branch-topology",
+     "quote": "In particular, an irreducible divisor mapping to $V$ with degree greater than one counts as one branch; its degree will occur in the pushforward map.",
+     "quote_sha256": "2162d226d5b391ac11406d20366ee73f33c930e87ec5c48a6b6519c76d197554"
+    }
+   ],
+   "query": "Count geometric sheets as distinct normalization branches",
+   "reason": "The branch estimate counts algebraic prime divisors; residue degrees enter pushforward rather than the branch count."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:endpoints",
+     "quote": "The following consequences use log abundance and bounded complements to describe its endpoint more precisely.",
+     "quote_sha256": "19b6bcc9dba20427062666cd5692638429d7f8ae3997351f7a48c965e4a0c2fa"
+    }
+   ],
+   "query": "Derive semiampleness solely from termination",
+   "reason": "Endpoint semiampleness uses the additional abundance input."
+  }
+ ],
+ "family": "PM-056",
+ "id": "PM-056.3",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-arbitrary-lc-program-termination",
+    "statement": "Let $k$ be an algebraically closed field of characteristic zero, and let $(X,B)$ be a projective lc pair of dimension four with rational boundary."
+   },
+   {
+    "anchor": "stmt-lem-graph",
+    "claim_id": "claim-full-graph-discrepancy-comparison",
+    "statement": "Let $G$ be the normalization of the graph of the birational map in <a href=\"#eq:step-diagram\" data-reference-type=\"eqref\" data-reference=\"eq:step-diagram\">[eq:step-diagram]</a>, with projections $u:G\\to X^-$ and $v:G\\to X^+$."
+   },
+   {
+    "anchor": "eq:step-diagram",
+    "claim_id": "claim-full-graph-discrepancy-comparison",
+    "statement": "Consider a birational diagram $$\\label{eq:step-diagram}\n X^-\\xrightarrow{\\,f^-\\,} Z\n \\xleftarrow{\\,f^+\\,}X^+,$$ where the varieties are normal fourfolds, the morphisms have connected fibres, $f^+$ is small, and the divisors $D^\\pm=K_{X^\\pm}+B^\\pm$ are $\\mathbb Q$-Cartier. The boundary on $X^+$ is the strict transform of $f^-_*B^-$, and $-D^-$ and $D^+$ are ample over $Z$."
+   },
+   {
+    "anchor": "stmt-cor-singularities-preserved",
+    "claim_id": "claim-singularity-preservation",
+    "statement": "Under the hypotheses of Lemma"
+   },
+   {
+    "anchor": "stmt-cor-singularities-preserved",
+    "claim_id": "claim-singularity-preservation",
+    "statement": "For a small step,"
+   },
+   {
+    "anchor": "stmt-cor-singularities-preserved",
+    "claim_id": "claim-singularity-preservation",
+    "statement": "At a divisor-losing step"
+   },
+   {
+    "anchor": "stmt-lem-cycle-rank",
+    "claim_id": "claim-cycle-rank-localization",
+    "statement": "Let $V$ be projective and $A\\subset V$ closed of dimension at most $r$."
+   },
+   {
+    "anchor": "stmt-lem-cycle-rank",
+    "claim_id": "claim-cycle-rank-localization",
+    "statement": "On a small tail with no positive-side bad surfaces,"
+   },
+   {
+    "anchor": "stmt-cor-surfaces-suffice",
+    "claim_id": "claim-positive-surfaces-suffice",
+    "statement": "To prove termination of a fourfold program it suffices to show that, on its small tail, positive-side bad surfaces occur only finitely often."
+   },
+   {
+    "anchor": "stmt-lem-two-ends",
+    "claim_id": "claim-nef-ends-identify-ample-model",
+    "statement": "Let $V_1$ and $V_2$ be normal projective birational models over a normal base $Z$, with relatively nef $\\mathbb Q$-Cartier divisors $D_1,D_2$."
+   },
+   {
+    "anchor": "stmt-lem-two-ends",
+    "claim_id": "claim-nef-ends-identify-ample-model",
+    "statement": "On a smooth common model $W$, with projections $q_j:W\\to V_j$, suppose $$A=q_1^*D_1+F_1=q_2^*D_2+F_2,$$ where $F_j\\geq0$ is exceptional over $V_j$."
+   },
+   {
+    "anchor": "stmt-lem-snc-valuations",
+    "claim_id": "claim-snc-discrepancy-calculation",
+    "statement": "Let $\\pi:W\\to X$ be a log resolution of a klt pair, and include the exceptional locus and the crepant boundary support in a simple normal crossings (SNC) divisor $\\sum_jT_j$."
+   },
+   {
+    "anchor": "stmt-lem-snc-valuations",
+    "claim_id": "claim-snc-discrepancy-calculation",
+    "statement": "Write $a_j=a(T_j;X,B)>0$, assigning $a_j=1$ to any auxiliary component of coefficient zero."
+   },
+   {
+    "anchor": "stmt-lem-small-discrepancies",
+    "claim_id": "claim-finite-small-discrepancies",
+    "statement": "For a fixed klt pair $(X,B)$"
+   },
+   {
+    "anchor": "stmt-lem-echoes",
+    "claim_id": "claim-echo-classification",
+    "statement": "Let $(Y,\\Theta)$ be an effective terminal pair on a projective $\\mathbb Q$-factorial fourfold. Label finitely many prime divisors $S_h$ containing $\\operatorname{Supp}\\Theta$, and write $\\Theta=\\sum_hb_hS_h$, allowing $b_h=0$."
+   },
+   {
+    "anchor": "pm-h-11",
+    "claim_id": "claim-crepant-terminal-bridges",
+    "statement": "Suppose now that $(X_i,B_i)\\dashrightarrow(X_{i+1},B_{i+1})$ is a small klt tail, with step bases $Z_i$."
+   },
+   {
+    "anchor": "pm-h-11",
+    "claim_id": "claim-crepant-terminal-bridges",
+    "statement": "After truncation they equal one fixed set $I_0$."
+   },
+   {
+    "anchor": "stmt-lem-transverse-mld",
+    "claim_id": "claim-transverse-surface-mld",
+    "statement": "The numbers $\\operatorname{mld}_{\\eta_V}(X_i,B_i)$, as $i$ and $V$ vary, belong to the set of surface mld values with the same finite set of boundary coefficients. Each minimum is attained."
+   },
+   {
+    "anchor": "stmt-prop-codim-two",
+    "claim_id": "claim-varying-labels-have-small-image",
+    "statement": "After truncating the small downstairs tail,"
+   },
+   {
+    "anchor": "stmt-difficulty-preparation",
+    "claim_id": "claim-default-weights-stabilize",
+    "statement": "Each $d_h$ is a finite nonnegative integer and is nonincreasing along the terminal chain. After discarding finitely many junctions, all $d_h$ are constant, including throughout every intervening finite bridge."
+   },
+   {
+    "anchor": "stmt-lem-ceiling-error",
+    "claim_id": "claim-local-ceiling-deficit",
+    "statement": "Let $V\\subset Y$ be an irreducible surface on a terminal model in the prepared chain,"
+   },
+   {
+    "anchor": "stmt-thm-branch",
+    "claim_id": "claim-global-branch-inequality",
+    "statement": "Let $p\\colon Y\\to X$ be a projective birational morphism of normal projective fourfolds over $\\mathbb C$."
+   },
+   {
+    "anchor": "stmt-thm-branch",
+    "claim_id": "claim-global-branch-inequality",
+    "statement": "Suppose that $Y$ is $\\mathbb Q$-factorial and terminal and that $(Y,\\Theta)$ is an effective terminal pair with rational boundary."
+   },
+   {
+    "anchor": "stmt-thm-branch",
+    "claim_id": "claim-global-branch-inequality",
+    "statement": "Let $$Q=\\bigcup_{j=1}^{m}Q_j$$ be a reduced union of distinct positive-coefficient components of $\\Theta$, and assume $\\dim p(Q)\\leq 1$."
+   },
+   {
+    "anchor": "stmt-lem-conductor",
+    "claim_id": "claim-conductor-cohomology-bound",
+    "statement": "With the notation above,"
+   },
+   {
+    "anchor": "stmt-thm-branch",
+    "claim_id": "claim-conductor-cohomology-bound",
+    "statement": "Let $p\\colon Y\\to X$ be a projective birational morphism of normal projective fourfolds over $\\mathbb C$. Suppose that $Y$ is $\\mathbb Q$-factorial and terminal and that $(Y,\\Theta)$ is an effective terminal pair with rational boundary."
+   },
+   {
+    "anchor": "eq:branch-loci",
+    "claim_id": "claim-conductor-cohomology-bound",
+    "statement": "Set $$\\label{eq:branch-loci}\n C=p(Q)_{\\mathrm{red}},\\qquad\n P=(p^{-1}C)_{\\mathrm{red}}.$$"
+   },
+   {
+    "anchor": "stmt-lem-restriction-purity",
+    "claim_id": "claim-restricted-intersection-complex-purity",
+    "statement": "Let $p\\colon Y\\to X$ be a projective birational morphism of normal projective fourfolds over $\\mathbb C$, and let $C\\subset X$ be a closed reduced subset of dimension at most one."
+   },
+   {
+    "anchor": "stmt-lem-restriction-purity",
+    "claim_id": "claim-restricted-intersection-complex-purity",
+    "statement": "Put $P=(p^{-1}C)_{\\mathrm{red}}$."
+   },
+   {
+    "anchor": "stmt-thm-branch",
+    "claim_id": "claim-singular-curve-local-system-bound",
+    "statement": "Let $p\\colon Y\\to X$ be a projective birational morphism of normal projective fourfolds over $\\mathbb C$. Suppose that $Y$ is $\\mathbb Q$-factorial and terminal and that $(Y,\\Theta)$ is an effective terminal pair with rational boundary."
+   },
+   {
+    "anchor": "eq:branch-loci",
+    "claim_id": "claim-singular-curve-local-system-bound",
+    "statement": "Set $$\\label{eq:branch-loci}\n C=p(Q)_{\\mathrm{red}},\\qquad\n P=(p^{-1}C)_{\\mathrm{red}}.$$"
+   },
+   {
+    "anchor": "stmt-prop-local-valuations",
+    "claim_id": "claim-local-cohomology-produces-valuations",
+    "statement": "Let $Y$ be a normal projective $\\mathbb Q$-factorial fourfold, and let $(Y,\\Theta)$ be an effective terminal pair with rational boundary. Let $T$ be an irreducible curve in $\\operatorname{Sing}Y$ contained in a positive-coefficient component of $\\Theta$."
+   },
+   {
+    "anchor": "stmt-local-split-punctured",
+    "claim_id": "claim-local-system-split-surjection",
+    "statement": "Restriction to the smooth open defines a split surjection of rational local systems $$r:\\mathcal W\\longrightarrow\\mathcal V_T.$$ The splitting is available on $T^\\circ$ itself, before passing to any cover."
+   },
+   {
+    "anchor": "stmt-local-scheme-fibre-vanishing",
+    "claim_id": "claim-scheme-fibre-coherent-vanishing",
+    "statement": "Let $y\\in Y$ be a point for which the scheme fibre $F_y=\\widetilde Y\\times_Y\\operatorname{Spec}\\kappa(y)$ has dimension at most two."
+   },
+   {
+    "anchor": "stmt-local-scheme-fibre-vanishing",
+    "claim_id": "claim-scheme-fibre-coherent-vanishing",
+    "statement": "If $y$ is a closed complex point,"
+   },
+   {
+    "anchor": "stmt-local-generic-lines",
+    "claim_id": "claim-finite-monodromy-generic-line-bundles",
+    "statement": "The local systems $\\mathcal W$ and $\\mathcal V_T$ have finite monodromy. Put $K_T=\\kappa(\\eta_T)$ and $F_{\\eta_T}=\\widetilde Y\\times_Y\\operatorname{Spec}K_T$. There are $b_T$ line bundles $$L_1,\\ldots,L_{b_T}\\in\\operatorname{Pic}(F_{\\eta_T})$$ whose spreads over a sufficiently small $T^\\circ$ have linearly independent images under $r$ in every fibre of $\\mathcal V_T$."
+   },
+   {
+    "anchor": "stmt-local-etale-lines",
+    "claim_id": "claim-etale-extension-preserves-residue-field",
+    "statement": "Let $L_1,\\ldots,L_b$ be finitely many line bundles on $F_{\\eta_T}$."
+   },
+   {
+    "anchor": "pm-h-24",
+    "claim_id": "claim-fibre-degree-vector-independence",
+    "statement": "Let $$C_1,\\ldots,C_s$$ be the distinct irreducible curve components of $g^{-1}(\\eta')$, with their reduced structures, counted over $\\kappa(\\eta')=K_T$."
+   },
+   {
+    "anchor": "stmt-local-restriction-injective",
+    "claim_id": "claim-etale-valuation-restriction-injective",
+    "statement": "Let $q:Y_e\\to Y$ be a dominant étale morphism of normal integral complex varieties, let $\\eta\\in Y$, and fix $\\eta'\\in Y_e$ above $\\eta$ such that $\\kappa(\\eta)\\to\\kappa(\\eta')$ is an isomorphism. Suppose that $Y$ is $\\mathbb Q$-Gorenstein."
+   },
+   {
+    "anchor": "stmt-difficulty-normalization-independence",
+    "claim_id": "claim-contracted-divisor-cycle-independence",
+    "statement": "Let $q:S\\to T$ be a projective birational morphism of normal projective threefolds."
+   },
+   {
+    "anchor": "stmt-prop-difficulty",
+    "claim_id": "claim-corrected-difficulty-descent",
+    "statement": "On the prepared terminal chain,"
+   },
+   {
+    "anchor": "stmt-thm-klt-termination",
+    "claim_id": "claim-complex-klt-program-termination",
+    "statement": "starting with a projective klt fourfold pair over $\\mathbb C$ with rational boundary"
+   },
+   {
+    "anchor": "stmt-lem-dlt-elementary",
+    "claim_id": "claim-elementary-dlt-operations",
+    "statement": "Let $(U,\\Delta)$ be a projective $\\mathbb Q$-factorial dlt pair with rational boundary, and let $R$ be a $(K_U+\\Delta)$-negative extremal ray."
+   },
+   {
+    "anchor": "stmt-lem-dlt-elementary",
+    "claim_id": "claim-elementary-dlt-operations",
+    "statement": "If it is birational and small,"
+   },
+   {
+    "anchor": "stmt-thm-dlt-termination",
+    "claim_id": "claim-elementary-dlt-program-termination",
+    "statement": "starting from a projective $\\mathbb Q$-factorial dlt fourfold pair with rational boundary"
+   },
+   {
+    "anchor": "stmt-lem-vertical-ray",
+    "claim_id": "claim-negative-absolute-vertical-ray",
+    "statement": "Let $(U,\\Delta)$ be a projective lc pair, and let $h:U\\to Z$ be a projective morphism to a projective variety."
+   },
+   {
+    "anchor": "stmt-lem-vertical-ray",
+    "claim_id": "claim-negative-absolute-vertical-ray",
+    "statement": "If $K_U+\\Delta$ is not nef over $Z$,"
+   },
+   {
+    "anchor": "stmt-prop-lc-lift",
+    "claim_id": "claim-prescribed-complex-lc-program-termination",
+    "statement": "starting from a projective lc fourfold pair over $\\mathbb C$ with rational boundary"
+   },
+   {
+    "anchor": "stmt-prop-continuation",
+    "claim_id": "claim-continuation-through-chosen-ray",
+    "statement": "Let $(X,B)$ be a projective lc fourfold pair over $\\mathbb C$ with rational boundary, with $D=K_X+B$ $\\mathbb Q$-Cartier."
+   },
+   {
+    "anchor": "stmt-lem-numerical-extension",
+    "claim_id": "claim-numerical-spaces-under-field-extension",
+    "statement": "Let $k_0\\subset K$ be algebraically closed fields of characteristic zero and let $X_0$ be a projective variety over $k_0$."
+   },
+   {
+    "anchor": "stmt-prop-field-transfer",
+    "claim_id": "claim-entire-countable-program-field-transfer",
+    "statement": "Let $k$ be any algebraically closed field of characteristic zero."
+   },
+   {
+    "anchor": "stmt-lem-finite-existence-transfer",
+    "claim_id": "claim-finite-continuation-field-transfer",
+    "statement": "Proposition <a href=\"#prop:continuation\" data-reference-type=\"ref\" data-reference=\"prop:continuation\">36</a> holds over any algebraically closed characteristic-zero field, with exactly the contraction and mixed-step conventions stated there."
+   },
+   {
+    "anchor": "stmt-cor-semiample-endpoints",
+    "claim_id": "claim-pseudo-effective-semiample-endpoints",
+    "statement": "Let $k$ be an algebraically closed field of characteristic zero, and let $(X,B)$ be a projective lc fourfold pair over $k$ with rational boundary. Suppose that $K_X+B$ is pseudo-effective."
+   },
+   {
+    "anchor": "stmt-cor-uniform-mori-complements",
+    "claim_id": "claim-uniform-local-mori-complements",
+    "statement": "Fix a real number $\\epsilon>0$ and a finite set $I\\subset[0,1]\\cap\\mathbb Q$."
+   },
+   {
+    "anchor": "stmt-cor-uniform-mori-complements",
+    "claim_id": "claim-uniform-local-mori-complements",
+    "statement": "Let $(X,B)$ be a projective $\\epsilon$-lc fourfold pair over $\\mathbb C$ with coefficients in $I$ and with $K_X+B$ not pseudo-effective."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Corrected difficulty descent",
+    "evidence": [
+     {
+      "anchor": "stmt-def-difficulty",
+      "quote": "The correction in parentheses is performed at each individual surface before summing over surfaces.",
+      "quote_sha256": "5097e792d7eaaeb822661b6b580ecbfc85eb827098d1983b97c4136f3b71e04e"
+     },
+     {
+      "anchor": "sec:difficulty",
+      "quote": "The normalization-rank correction was chosen so that its change cancels exactly the change in the subtracted branch defaults.",
+      "quote_sha256": "03633ad2e3b8695bb2e0f2ebf1319bfc7caf90cc73565b9c76047ae632f617d4"
+     }
+    ],
+    "requires_concepts": [
+     "Log discrepancy",
+     "Exceptional divisorial valuation",
+     "Ordinary echo families",
+     "Normalization branch counts",
+     "Divisor cycle ranks",
+     "The branch inequality"
+    ],
+    "supporting_pm_ids": [
+     "PM-056.3"
+    ]
+   },
+   {
+    "concept": "Termination over arbitrary stated ground fields",
+    "evidence": [
+     {
+      "anchor": "sec:field",
+      "quote": "These are different assertions; existence of one terminating complex program would not suffice for the first of them.",
+      "quote_sha256": "c10862fae9f9ca3d3b0167f4463d7e7f3f1285453e976b7aa853fbaa3d125601"
+     },
+     {
+      "anchor": "stmt-prop-field-transfer",
+      "quote": "In particular an infinite birational program over $k$ would give an infinite birational program over $\\mathbb C$.",
+      "quote_sha256": "b079ba071d0fe8948a2f381a13f166bee7050efea0047ed33dda96cb9c8aa762"
+     }
+    ],
+    "requires_concepts": [
+     "Complex lc termination",
+     "Numerical base-extension invariance",
+     "Countable program descent",
+     "Finite continuation transfer"
+    ],
+    "supporting_pm_ids": [
+     "PM-056.3"
+    ]
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-arbitrary-lc-program-termination",
+   "exact_statement": "Let $k$ be an algebraically closed field of characteristic zero, and let $(X,B)$ be a projective lc pair of dimension four with rational boundary. No $\\mathbb Q$-factoriality or pseudo-effectivity is assumed.*\n\n1.  *Every negative extremal ray at every stage has the contraction and, when birational, a positive model required by Definition <a href=\"#def:program\" data-reference-type=\"ref\" data-reference=\"def:program\">1</a>.*\n\n2.  *Every program of Definition <a href=\"#def:program\" data-reference-type=\"ref\" data-reference=\"def:program\">1</a> starting from $(X,B)$ has finitely many birational steps, for every sequence of permitted choices.*\n\n3.  *Every maximal program ends either at a projective lc pair with nef adjoint, or at a Mori fibre space: a projective contraction with connected fibres, relative Picard number one, lower-dimensional normal base, and relatively ample negative adjoint.*\n\n*An already nef input has a zero-step completed program.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-full-graph-discrepancy-comparison",
+   "exact_statement": "Let $G$ be the normalization of the graph of the birational map in <a href=\"#eq:step-diagram\" data-reference-type=\"eqref\" data-reference=\"eq:step-diagram\">[eq:step-diagram]</a>, with projections $u:G\\to X^-$ and $v:G\\to X^+$. Then $$H=u^*D^- -v^*D^+\\geq0,\n \\qquad\n \\operatorname{Supp}H=(G\\to Z)^{-1}\\Sigma.$$ The divisor $H$ is exceptional over $X^+$, and $-H$ is ample over $Z$. For every divisorial valuation $\\xi$ of the common function field, $$\\label{eq:discrepancy-comparison}\n a(\\xi;X^+,B^+)-a(\\xi;X^-,B^-)=\\xi(H)\\geq0.$$ The inequality is strict exactly when $c_{X^-}(\\xi)\\subset W^-$, equivalently when $c_{X^+}(\\xi)\\subset W^+$.*\n\n\n*For a nontrivial step, $$\\label{eq:graph-dimension}\n \\dim W^-+\\dim W^+\\geq3.$$ Always $\\dim W^+\\leq2$. If $f^-$ is also small, then $\\dim W^-\\leq2$ and $\\dim\\Sigma\\leq1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-graph"
+  },
+  {
+   "claim_id": "claim-singularity-preservation",
+   "exact_statement": "Under the hypotheses of Lemma <a href=\"#lem:graph\" data-reference-type=\"ref\" data-reference=\"lem:graph\">3</a>, lc and klt are preserved. For a small step, an effective terminal pair remains terminal. At a divisor-losing step the discrepancy of every lost prime divisor increases strictly.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-singularities-preserved"
+  },
+  {
+   "claim_id": "claim-cycle-rank-localization",
+   "exact_statement": "Let $V$ be projective and $A\\subset V$ closed of dimension at most $r$. Restriction to $V\\setminus A$ maps the span of $r$-cycle classes onto the corresponding Borel–Moore cycle span. Its kernel is exactly the span of the classes of the $r$-dimensional irreducible components of $A$. In particular,*\n\n1.  *removing a set of dimension less than $r$ does not change this rank;*\n\n2.  *removing a set with an $r$-dimensional component strictly lowers the rank.*\n\n*For a sequence of diagrams as in Lemma <a href=\"#lem:graph\" data-reference-type=\"ref\" data-reference=\"lem:graph\">3</a>, only finitely many steps lose a prime divisor. On a small tail with no positive-side bad surfaces, only finitely many steps have a negative-side bad surface.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-cycle-rank"
+  },
+  {
+   "claim_id": "claim-positive-surfaces-suffice",
+   "exact_statement": "To prove termination of a fourfold program it suffices to show that, on its small tail, positive-side bad surfaces occur only finitely often.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-surfaces-suffice"
+  },
+  {
+   "claim_id": "claim-nef-ends-identify-ample-model",
+   "exact_statement": "Let $V_1$ and $V_2$ be normal projective birational models over a normal base $Z$, with relatively nef $\\mathbb Q$-Cartier divisors $D_1,D_2$. On a smooth common model $W$, with projections $q_j:W\\to V_j$, suppose $$A=q_1^*D_1+F_1=q_2^*D_2+F_2,$$ where $F_j\\geq0$ is exceptional over $V_j$. Then $q_1^*D_1=q_2^*D_2$. If $D_2$ is ample over $Z$, the birational map $V_1\\dashrightarrow V_2$ is a morphism $h$, and $D_1=h^*D_2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-two-ends"
+  },
+  {
+   "claim_id": "claim-snc-discrepancy-calculation",
+   "exact_statement": "Let $\\pi:W\\to X$ be a log resolution of a klt pair, and include the exceptional locus and the crepant boundary support in a simple normal crossings (SNC) divisor $\\sum_jT_j$. Write $a_j=a(T_j;X,B)>0$, assigning $a_j=1$ to any auxiliary component of coefficient zero. If $J$ indexes the components through the generic center of a divisorial valuation $\\xi$ on $W$, then $$\\label{eq:snc-formula}\n a(\\xi;X,B)=\\sum_{j\\in J}\\xi(T_j)a_j+e(\\xi).$$ Here $e(\\xi)$ is a nonnegative integer, the log discrepancy for the reduced SNC boundary near that center. If the center has codimension $c$ in $W$, then $$e(\\xi)\\geq c-|J|.$$ If $e(\\xi)=0$, then $\\xi$ is the monomial valuation associated to a primitive positive integral vector over the generic point of an SNC stratum. In particular there are finitely many such valuations when their orders $\\xi(T_j)$ are bounded.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-snc-valuations"
+  },
+  {
+   "claim_id": "claim-finite-small-discrepancies",
+   "exact_statement": "For a fixed klt pair $(X,B)$ there are finitely many exceptional divisorial valuations with $a(\\xi;X,B)\\leq1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-small-discrepancies"
+  },
+  {
+   "claim_id": "claim-echo-classification",
+   "exact_statement": "Let $(Y,\\Theta)$ be an effective terminal pair on a projective $\\mathbb Q$-factorial fourfold. Label finitely many prime divisors $S_h$ containing $\\operatorname{Supp}\\Theta$, and write $\\Theta=\\sum_hb_hS_h$, allowing $b_h=0$. Then:*\n\n1.  *Only finitely many exceptional valuations with $a(\\xi;Y,\\Theta)<2$ have center of codimension at least three.*\n\n2.  *At each fixed surface center there are only finitely many exceptional valuations with log discrepancy less than two.*\n\n\n3.  *Apart from finitely many surface centers, every valuation with surface center and log discrepancy less than two is centered on the one-label smooth open. In regular parameters $x,t$ at its generic point, with $x=0$ defining that label $S_h$, the contributing valuations are exactly the monomial orders $$\\label{eq:echo-values}\n     \\xi(x)=j,\\quad \\xi(t)=1,\\qquad\n     a(\\xi;Y,\\Theta)=1+j(1-b_h)<2,\\qquad j\\geq1.$$*\n\n*More strongly, all exceptional valuations below two which are not of the form <a href=\"#eq:echo-values\" data-reference-type=\"eqref\" data-reference=\"eq:echo-values\">[eq:echo-values]</a> on that one-label smooth open belong to a finite list.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-echoes"
+  },
+  {
+   "claim_id": "claim-crepant-terminal-bridges",
+   "exact_statement": "There are projective birational morphisms $p_i:Y_i\\to X_i$ extracting exactly $I_0$, with $Y_i$ $\\mathbb Q$-factorial and $$\\label{eq:terminal-crepant}\n K_{Y_i}+\\Theta_i=p_i^*(K_{X_i}+B_i),\\qquad\n \\Theta_i=B_i^{\\mathrm{str}}+\n       \\sum_{s\\in I_0}(1-a_i(s))E_{i,s},$$ such that each $(Y_i,\\Theta_i)$ is effective terminal. Consecutive junctions can be joined by:*\n\n1.  *decreasing the coefficient of each $E_{i,s}$ to $1-a_{i+1}(s)$ on $Y_i$;*\n\n2.  *a finite sequence, possibly empty, of small negative terminal flips over $Z_i$.*\n\n*Every labeled prime persists through the chain. All coefficients are nonincreasing, and the discrepancy of every valuation is nondecreasing, including across coefficient changes.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-terminal-chain"
+  },
+  {
+   "claim_id": "claim-transverse-surface-mld",
+   "exact_statement": "The numbers $\\operatorname{mld}_{\\eta_V}(X_i,B_i)$, as $i$ and $V$ vary, belong to the set of surface mld values with the same finite set of boundary coefficients. Each minimum is attained.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-transverse-mld"
+  },
+  {
+   "claim_id": "claim-varying-labels-have-small-image",
+   "exact_statement": "After truncating the small downstairs tail, every surface contained in either bad locus of every remaining step has generic-point mld greater than one and is generically in the smooth locus of its ambient model. At each remaining crepant junction, every varying label has downstairs center of codimension at least three. Consequently the reduced union of varying labels is mapped by $p_i$ to a set of dimension at most one.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-codim-two"
+  },
+  {
+   "claim_id": "claim-default-weights-stabilize",
+   "exact_statement": "Each $d_h$ is a finite nonnegative integer and is nonincreasing along the terminal chain. After discarding finitely many junctions, all $d_h$ are constant, including throughout every intervening finite bridge.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-difficulty-preparation"
+  },
+  {
+   "claim_id": "claim-local-ceiling-deficit",
+   "exact_statement": "Let $V\\subset Y$ be an irreducible surface on a terminal model in the prepared chain, and set $$r_V^{\\mathrm{var}}=\\sum_{h\\text{ varying}}r_{V,h}.$$ Then $$\\label{eq:local-ceiling-bound}\n \\sum_{c_Y(v)=V}w_v-\\sum_h r_{V,h}d_h\n \\ \\geq\\ -\\max\\{r_V^{\\mathrm{var}}-1,0\\}.$$ The assertion does not require the boundary to have simple normal crossings at $\\eta_V$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-ceiling-error"
+  },
+  {
+   "claim_id": "claim-global-branch-inequality",
+   "exact_statement": "Let $p\\colon Y\\to X$ be a projective birational morphism of normal projective fourfolds over $\\mathbb C$. Suppose that $Y$ is $\\mathbb Q$-factorial and terminal and that $(Y,\\Theta)$ is an effective terminal pair with rational boundary. Let $$Q=\\bigcup_{j=1}^{m}Q_j$$ be a reduced union of distinct positive-coefficient components of $\\Theta$, and assume $\\dim p(Q)\\leq 1$. Write $Q_j^\\nu$ for the normalization of $Q_j$. For each irreducible surface $V\\subset Q$, let $r_V$ be the number of prime divisors of $\\coprod_jQ_j^\\nu$ mapping onto $V$. Then $$\\label{eq:branch-inequality}\n \\begin{aligned}\n \\sum_{V\\subset Q}(r_V-1)\n &\\leq\\sum_{j=1}^{m}\\rho_*(Q_j^\\nu)\\\\\n &\\quad+\\#\\bigl\\{v:\\operatorname{codim}_Yc_Y(v)=3,\\;\n          c_Y(v)\\subset Q,\\;a(v;Y,\\Theta)<2\\bigr\\}.\n \\end{aligned}$$ Here the valuations are normalized divisorial orders, and the sum on the left has only finitely many nonzero terms.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-branch"
+  },
+  {
+   "claim_id": "claim-conductor-cohomology-bound",
+   "exact_statement": "With the notation above, $$\\label{eq:conductor-rank}\n \\sum_{V\\subset Q}(r_V-1)-\\sum_j\\rho_*(Q_j^\\nu)\n \\leq\n \\operatorname{rank}\\operatorname{Gr}^{W}_{4}\n       \\bigl[H^5(P)\\longrightarrow H^5(Q)\\bigr].$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-conductor"
+  },
+  {
+   "claim_id": "claim-restricted-intersection-complex-purity",
+   "exact_statement": "Let $p\\colon Y\\to X$ be a projective birational morphism of normal projective fourfolds over $\\mathbb C$, and let $C\\subset X$ be a closed reduced subset of dimension at most one. Put $P=(p^{-1}C)_{\\mathrm{red}}$. Then $$\\mathbb H^1(P,\\mathrm{IC}_Y|_P)$$ is pure of weight five.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-restriction-purity"
+  },
+  {
+   "claim_id": "claim-singular-curve-local-system-bound",
+   "exact_statement": "For $P$ and $Q$ in <a href=\"#eq:branch-loci\" data-reference-type=\"eqref\" data-reference=\"eq:branch-loci\">[eq:branch-loci]</a>, $$\\label{eq:local-system-rank}\n \\operatorname{rank}\\operatorname{Gr}^{W}_{4}\n       \\bigl[H^5(P)\\longrightarrow H^5(Q)\\bigr]\n \\leq\n \\sum_{\\substack{T\\text{ irreducible curve}\\\\\n                  T\\subset\\operatorname{Sing}Y\\cap Q}}b_T.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-local-system-bound"
+  },
+  {
+   "claim_id": "claim-local-cohomology-produces-valuations",
+   "exact_statement": "Let $Y$ be a normal projective $\\mathbb Q$-factorial fourfold, and let $(Y,\\Theta)$ be an effective terminal pair with rational boundary. Let $T$ be an irreducible curve in $\\operatorname{Sing}Y$ contained in a positive-coefficient component of $\\Theta$. Put $$j:Y_{\\mathrm{reg}}\\hookrightarrow Y,\n \\qquad\n \\mathcal V_T=(R^2j_*\\mathbb Q)|_{T^\\circ},\n \\qquad\n b_T=\\dim_{\\mathbb Q}H_c^2(T^\\circ,\\mathcal V_T),$$ where $T^\\circ$ is a sufficiently small smooth dense open on which the indicated sheaf is a local system. There are at least $b_T$ distinct normalized divisorial valuations $v$ of $\\mathbb C(Y)$ such that $$c_Y(v)=T,\\qquad a(v;Y,0)=2,\\qquad a(v;Y,\\Theta)<2.$$ The valuations obtained for different curves $T$ are distinct.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-local-valuations"
+  },
+  {
+   "claim_id": "claim-local-system-split-surjection",
+   "exact_statement": "Restriction to the smooth open defines a split surjection of rational local systems $$r:\\mathcal W\\longrightarrow\\mathcal V_T.$$ The splitting is available on $T^\\circ$ itself, before passing to any cover.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-local-split-punctured"
+  },
+  {
+   "claim_id": "claim-scheme-fibre-coherent-vanishing",
+   "exact_statement": "Let $y\\in Y$ be a point for which the scheme fibre $F_y=\\widetilde Y\\times_Y\\operatorname{Spec}\\kappa(y)$ has dimension at most two. Then $$H^2(F_y,\\mathcal O_{F_y})=0.$$ If $y$ is a closed complex point, first Chern classes of algebraic line bundles span $H^2(F_y,\\mathbb Q)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-local-scheme-fibre-vanishing"
+  },
+  {
+   "claim_id": "claim-finite-monodromy-generic-line-bundles",
+   "exact_statement": "The local systems $\\mathcal W$ and $\\mathcal V_T$ have finite monodromy. Put $K_T=\\kappa(\\eta_T)$ and $F_{\\eta_T}=\\widetilde Y\\times_Y\\operatorname{Spec}K_T$. There are $b_T$ line bundles $$L_1,\\ldots,L_{b_T}\\in\\operatorname{Pic}(F_{\\eta_T})$$ whose spreads over a sufficiently small $T^\\circ$ have linearly independent images under $r$ in every fibre of $\\mathcal V_T$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-local-generic-lines"
+  },
+  {
+   "claim_id": "claim-etale-extension-preserves-residue-field",
+   "exact_statement": "Let $L_1,\\ldots,L_b$ be finitely many line bundles on $F_{\\eta_T}$. There exist a normal integral quasi-projective variety $Y_e$, an étale morphism $q:Y_e\\to Y$, and a point $\\eta'\\in Y_e$ above $\\eta_T$ such that $$K_T=\\kappa(\\eta_T)\\xrightarrow{\\ \\sim\\ }\\kappa(\\eta')$$ is the residue-field map, and every $L_i$ extends to a line bundle $\\widetilde L_i$ on $\\widetilde Y_e=\\widetilde Y\\times_Y Y_e$. The extensions restrict to the specified $L_i$ on the same scheme fibre. The variety $\\widetilde Y_e$ is smooth and integral, and $\\widetilde Y_e\\to Y_e$ is projective and birational.",
+   "kind": "construction",
+   "statement_anchor": "stmt-local-etale-lines"
+  },
+  {
+   "claim_id": "claim-fibre-degree-vector-independence",
+   "exact_statement": "The vectors $$\\bigl(D_i'\\cdot C_1,\\ldots,D_i'\\cdot C_s\\bigr)\n       \\in\\mathbb Q^s,\\qquad 1\\leq i\\leq b,$$ are linearly independent. In particular $s\\geq b$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-local-degree-independence"
+  },
+  {
+   "claim_id": "claim-etale-valuation-restriction-injective",
+   "exact_statement": "Let $q:Y_e\\to Y$ be a dominant étale morphism of normal integral complex varieties, let $\\eta\\in Y$, and fix $\\eta'\\in Y_e$ above $\\eta$ such that $\\kappa(\\eta)\\to\\kappa(\\eta')$ is an isomorphism. Suppose that $Y$ is $\\mathbb Q$-Gorenstein. On normalized divisorial valuations of $\\mathbb C(Y_e)$ with centre the closure of $\\eta'$, restriction to $\\mathbb C(Y)$ is already normalized, remains divisorial, and is injective. Moreover $$a(w;Y_e,0)=a(w|_{\\mathbb C(Y)};Y,0).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-local-restriction-injective"
+  },
+  {
+   "claim_id": "claim-contracted-divisor-cycle-independence",
+   "exact_statement": "Let $q:S\\to T$ be a projective birational morphism of normal projective threefolds. The cycle classes in $H_4(S,\\mathbb Q)$ of the prime divisors contracted by $q$ are linearly independent.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-difficulty-normalization-independence"
+  },
+  {
+   "claim_id": "claim-corrected-difficulty-descent",
+   "exact_statement": "On the prepared terminal chain, the integer $\\mathcal D(Y,\\Theta)$ has the following properties.*\n\n1.  *It is nonnegative at every crepant junction.*\n\n2.  *It is nonincreasing under every coefficient decrease and every small terminal flip.*\n\n3.  *If the weight of one exceptional valuation strictly decreases in one of these moves, then the difficulty strictly decreases.*\n\n*No separate nonnegativity assertion is required for the intermediate models in a bridge.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-difficulty"
+  },
+  {
+   "claim_id": "claim-complex-klt-program-termination",
+   "exact_statement": "Every program in Definition <a href=\"#def:program\" data-reference-type=\"ref\" data-reference=\"def:program\">1</a> starting with a projective klt fourfold pair over $\\mathbb C$ with rational boundary has finitely many birational steps. No pseudo-effectivity hypothesis is needed.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-klt-termination"
+  },
+  {
+   "claim_id": "claim-elementary-dlt-operations",
+   "exact_statement": "Let $(U,\\Delta)$ be a projective $\\mathbb Q$-factorial dlt pair with rational boundary, and let $R$ be a $(K_U+\\Delta)$-negative extremal ray. Its elementary contraction exists. If it is birational and small, its flip exists, is projective, and is a $(K_U+\\Delta)$-flip. Divisorial contractions and flips preserve $\\mathbb Q$-factoriality and the dlt property.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-dlt-elementary"
+  },
+  {
+   "claim_id": "claim-elementary-dlt-program-termination",
+   "exact_statement": "Every program of elementary negative birational steps starting from a projective $\\mathbb Q$-factorial dlt fourfold pair with rational boundary has finitely many steps, independently of its successive ray choices.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-dlt-termination"
+  },
+  {
+   "claim_id": "claim-negative-absolute-vertical-ray",
+   "exact_statement": "Let $(U,\\Delta)$ be a projective lc pair, and let $h:U\\to Z$ be a projective morphism to a projective variety. If $K_U+\\Delta$ is not nef over $Z$, there is a $(K_U+\\Delta)$-negative extremal ray of the absolute cone $\\overline{\\mathrm{NE}}(U)$ which is contracted by $h$. Its contraction factors $h$. If $h$ is birational, that contraction is birational.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-vertical-ray"
+  },
+  {
+   "claim_id": "claim-prescribed-complex-lc-program-termination",
+   "exact_statement": "Every program in Definition <a href=\"#def:program\" data-reference-type=\"ref\" data-reference=\"def:program\">1</a> starting from a projective lc fourfold pair over $\\mathbb C$ with rational boundary has finitely many birational steps.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-lc-lift"
+  },
+  {
+   "claim_id": "claim-continuation-through-chosen-ray",
+   "exact_statement": "Let $(X,B)$ be a projective lc fourfold pair over $\\mathbb C$ with rational boundary, with $D=K_X+B$ $\\mathbb Q$-Cartier. Every $D$-negative extremal ray has a projective contraction with normal projective target, connected fibres, relative Picard number one, and relatively ample $-D$. If this contraction is birational, it has an output in the precise convention of Definition <a href=\"#def:program\" data-reference-type=\"ref\" data-reference=\"def:program\">1</a>: the positive map is small, possibly an isomorphism, and its actual adjoint with the strict boundary is relatively ample and lc. If it is of fibre type, it is a Mori fibre-space endpoint in that convention.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-continuation"
+  },
+  {
+   "claim_id": "claim-numerical-spaces-under-field-extension",
+   "exact_statement": "Let $k_0\\subset K$ be algebraically closed fields of characteristic zero and let $X_0$ be a projective variety over $k_0$. Base extension identifies their real numerical divisor and curve spaces and their closed effective curve cones: $$N^1(X_0)_{\\mathbb R}\\simeq N^1(X_{0,K})_{\\mathbb R},\n \\qquad\n N_1(X_0)_{\\mathbb R}\\simeq N_1(X_{0,K})_{\\mathbb R},\n \\qquad\n \\overline{\\mathrm{NE}}(X_0)\n    =\\overline{\\mathrm{NE}}(X_{0,K}).$$ In fact every numerical class of an integral curve on the extension is represented by an integral curve over $k_0$. For a projective morphism between projective varieties, these identifications commute with pullback of numerical divisor classes and preserve the relative Picard number.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-numerical-extension"
+  },
+  {
+   "claim_id": "claim-entire-countable-program-field-transfer",
+   "exact_statement": "Let $k$ be any algebraically closed field of characteristic zero. A countable program of the kind in Definition <a href=\"#def:program\" data-reference-type=\"ref\" data-reference=\"def:program\">1</a>, including all its prescribed ray choices, descends to a common countable algebraically closed subfield of $k$. After embedding that subfield in $\\mathbb C$, it gives a program with the same step types and relative signs, the same boundary coefficients, and the same singularity properties. In particular an infinite birational program over $k$ would give an infinite birational program over $\\mathbb C$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-field-transfer"
+  },
+  {
+   "claim_id": "claim-finite-continuation-field-transfer",
+   "exact_statement": "Proposition <a href=\"#prop:continuation\" data-reference-type=\"ref\" data-reference=\"prop:continuation\">36</a> holds over any algebraically closed characteristic-zero field, with exactly the contraction and mixed-step conventions stated there.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-finite-existence-transfer"
+  },
+  {
+   "claim_id": "claim-pseudo-effective-semiample-endpoints",
+   "exact_statement": "Let $k$ be an algebraically closed field of characteristic zero, and let $(X,B)$ be a projective lc fourfold pair over $k$ with rational boundary. Suppose that $K_X+B$ is pseudo-effective. Then every maximal program of Definition <a href=\"#def:program\" data-reference-type=\"ref\" data-reference=\"def:program\">1</a> ends at a projective lc pair $(Y,B_Y)$ for which some positive Cartier multiple of $K_Y+B_Y$ is generated by global sections.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cor-semiample-endpoints"
+  },
+  {
+   "claim_id": "claim-uniform-local-mori-complements",
+   "exact_statement": "Fix a real number $\\epsilon>0$ and a finite set $I\\subset[0,1]\\cap\\mathbb Q$. There is a positive integer $M=M(4,\\epsilon,I)$ with the following property. Let $(X,B)$ be a projective $\\epsilon$-lc fourfold pair over $\\mathbb C$ with coefficients in $I$ and with $K_X+B$ not pseudo-effective. Every maximal program of Definition <a href=\"#def:program\" data-reference-type=\"ref\" data-reference=\"def:program\">1</a> ends at a Mori contraction $h:(Y,B_Y)\\to S$. For every closed $s\\in S$, there is an effective $\\mathbb Q$-divisor $B_Y^+\\geq B_Y$ such that, on the inverse image of some neighbourhood of $s$, the pair $(Y,B_Y^+)$ is klt and $M(K_Y+B_Y^+)$ is Cartier and linearly trivial.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cor-uniform-mori-complements"
+  }
+ ],
+ "paper": "papers/EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-C-TO-M-0135_PM-056.3_Termination_for_projective_log_canonical_fourfolds_with_rational_boundary.md",
+ "purpose": "Termination for projective log canonical fourfolds with rational boundary",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "ff96d9a00cbad9a684ef85e301b73907f33470ad344a2f5f16083bf138a38490",
+   "pm.domains.v2": "56831e16b683e7634eadb6512f0a70c3d779720b6b297c2ae77dcc7b5614e87a",
+   "pm.edges.v2": "f5bd927cfd4a18bb0442316f9d49e06b66321591b553c67cecafbfd92a7c0039",
+   "pm.extraction.v2": "2098aa775f17696fb8d324b4724468252cb91debf1a7fe7ca5bd414cb6f45f9f",
+   "pm.formal.v2": "085049389696f1c60eb1550d7e7222b659ed7216253845fc02099bee0ddc1223",
+   "pm.limits.v2": "4d4d672825790a8a749c2f8405016b7d413ae37c305521ec8710c9547ab40b1b",
+   "pm.node.v2": "7ac16197b18ff10c2b3948872033584553813c57dd408ff6b82017ddf6d1988c",
+   "pm.objects.v2": "93d7c7a84b03401d380570fc806ce161f0a704c60fb9ce705064f4540fd65cf4",
+   "pm.provenance.v2": "2996c770433732a481a06f60b623fb5130a9abbe56d6d866ccffdba919fe333e",
+   "pm.quantities.v2": "1ddb0991af4d6a0760ec1c222c89bdc7721b3045b21036378a2589c5fd4840d7",
+   "pm.reading.v2": "96854cfbfa40d11cd6f9a92a64a715ad7b49610574d8ca55bc0ec485f2e2a17f",
+   "pm.roadmap.v2": "79484af1bb6030c6a99cf1a681f63e9ab98f9aae87ba3e9eadcbf8cc7ed99219",
+   "pm.search.v1": "1e589103c71c00eb110cf56b23d6c84f6256c296897f67b535e9bc693e8cc48c",
+   "pm.triptych.v2": "d512b6369d43c99b9a395eae706e98236c04d335292c0f6e800a6bd0abca4f72"
+  },
+  "canonical_sha256": "b2718958c07284b4061cf751001c2d7c1054b4fa616ad98d30e4bc0d366f07d7",
+  "paper_sha256": "2bd3469c06b45b8e359017e48efc4e73bcf98db6877260c6d96677a994e20da1",
+  "repaired_body_sha256": "cb79843504a850797b6034c0c30251cf059322b495470449d9dc7b0c38528ac8"
+ },
+ "status": "ACTIVE",
+ "subject_id": 3,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "62b0cb5bbda19605fd178334837335d33498493b50e09769f46a50a3f3937339",
+   "receipt_sha256": "afa6452b929a979ec95ca805026000bef3c88aa15034bd23447ed4476e955d9d",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Termination for projective log canonical fourfolds with rational boundary"
+}

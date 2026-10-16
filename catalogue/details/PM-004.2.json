@@ -1,0 +1,1034 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 961128,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 266512
+ },
+ "coordinate": "EN-101-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-M-0013",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "Let $E/\\mathbb Q$ be an elliptic curve with $E(\\mathbb Q)[2]\\ne0$ and $s_2(E)\\in\\{0,1\\}$.",
+     "quote_sha256": "5dfbdf64a52c536d577036cc2618fcc2c5accd99eb7b02ad45b541178b9d7fbb"
+    }
+   ],
+   "query": "elliptic curves without rational two-torsion",
+   "reason": "The theorem assumes nonzero rational two-torsion; the broader case is a separate result."
+  }
+ ],
+ "family": "PM-004",
+ "id": "PM-004.2",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-two-converse",
+    "statement": "Let $E/\\mathbb Q$ be an elliptic curve with $E(\\mathbb Q)[2]\\ne0$ and $s_2(E)\\in\\{0,1\\}$."
+   },
+   {
+    "anchor": "stmt-pr-ranks",
+    "claim_id": "claim-three-ranks",
+    "statement": "There is an exact sequence $$0\\longrightarrow A(\\mathbb Q)\\otimes\\mathbb Q_2/\\mathbb Z_2\n\\longrightarrow \\mathop{\\mathrm{Sel}}_{2^\\infty}(A/\\mathbb Q)\n\\longrightarrow \\operatorname{Sha}(A/\\mathbb Q)[2^\\infty]\\longrightarrow0.$$"
+   },
+   {
+    "anchor": "stmt-pr-invariance",
+    "claim_id": "claim-parity-invariance",
+    "statement": "For every elliptic curve $A/\\mathbb Q$, $$(-1)^{s_2(A)}=\\varepsilon(A).$$"
+   },
+   {
+    "anchor": "stmt-cy-lower-bound",
+    "claim_id": "claim-cyclotomic-lower-bound",
+    "statement": "There is a constant $C_E$ such that, for every allowed $h$ with $L(E^{(h)},1)\\ne0$, $$v_2(\\mathcal L(h))\\ \\geq\\ 2w(h)+s(h)-C_E.$$"
+   },
+   {
+    "anchor": "stmt-cy-missing-vertex",
+    "claim_id": "claim-cyclotomic-missing-vertex",
+    "statement": "Let $h_0$ be an allowed discriminant with $s_2(E^{(h_0)})=0$."
+   },
+   {
+    "anchor": "stmt-cy-fourier",
+    "claim_id": "claim-integral-fourier",
+    "statement": "Suppose $u\\in\\mathcal O[1/2][G]$, all $u_x$ belong to $\\Lambda[1/2]$, and $2^C u\\in\\mathcal O[G]$."
+   },
+   {
+    "anchor": "stmt-cy-binary",
+    "claim_id": "claim-binary-congruences",
+    "statement": "Let $z_1,\\ldots,z_r\\in\\mathbb Z _2[G]$."
+   },
+   {
+    "anchor": "stmt-cy-perfect",
+    "claim_id": "claim-perfect-real-class",
+    "statement": "The complex <a href=\"#cy:positive\" data-reference-type=\"eqref\" data-reference=\"cy:positive\">[cy:positive]</a> is perfect over $R$ and computes derived coefficient specializations."
+   },
+   {
+    "anchor": "stmt-cy-residual",
+    "claim_id": "claim-residual-concentration",
+    "statement": "There is an isomorphism in the derived category $$C_S^+(\\mathbb T)\\otimes_R\\mathcal O[G]\n       \\simeq \\mathcal O[G]^2[-1].$$"
+   },
+   {
+    "anchor": "stmt-cy-central",
+    "claim_id": "claim-central-determinant",
+    "statement": "There is a constant $C_{\\mathrm{loc}}$, depending only on the fixed curve and local classes, with the following property."
+   },
+   {
+    "anchor": "stmt-rd-ring-lower",
+    "claim_id": "claim-ring-class-lower-bound",
+    "statement": "Every simple-zero ring instance in the stated data satisfies $$2j_h\\ge 4w(h)+s(h)+s(hk)-C(E,A),\n       \\qquad \\omega(k)\\le A.\n \\label{rd:ring-lower-equation}$$"
+   },
+   {
+    "anchor": "stmt-rd-missing-vertex",
+    "claim_id": "claim-ring-missing-vertex",
+    "statement": "Fix the ring data $E,K$, with $$\\operatorname{corank}_{\\mathbb Z_2}\n       \\operatorname{Sel}_{2^\\infty}(E/K)=1.\n \\label{rd:base-corank}$$ Suppose binary families <a href=\"#rd:binary-data\" data-reference-type=\"eqref\" data-reference=\"rd:binary-data\">[rd:binary-data]</a> exist for arbitrarily large $b$, and for every nonzero $x$ the product $L(E^{(h_x)},s)L(E^{(h_xk)},s)$ has a simple zero and $$2j_{h_x}-4w(h_x)-s(h_x)-s(h_xk)\\le B\n \\label{rd:nonzero-bound}$$ with $B$ independent of the family."
+   },
+   {
+    "anchor": "stmt-rl-finite-model",
+    "claim_id": "claim-finite-artin-models",
+    "statement": "Let $(A,\\mathfrak m,k)$ be an Artin local ring, and let $D$ be a complex of flat $A$-modules."
+   },
+   {
+    "anchor": "stmt-rl-finite-limits",
+    "claim_id": "claim-limits-of-diagrams",
+    "statement": "Suppose diagrams over $A_i$, or over $A_i[G]$, have uniformly bounded cohomological amplitudes and graded free ranks, and include the chain homotopies and inverses for every asserted identity or equivalence."
+   },
+   {
+    "anchor": "stmt-rl-kummer",
+    "claim_id": "claim-integral-kummer-condition",
+    "statement": "Let $F$ be a finite extension of a nonarchimedean local field of characteristic zero, and let $B/F$ be any elliptic curve."
+   },
+   {
+    "anchor": "stmt-rl-characters",
+    "claim_id": "claim-ring-class-characters",
+    "statement": "Fix finitely many split primes of $K$ above odd rational primes, outside $2N$, and orient one prime in each conjugate pair."
+   },
+   {
+    "anchor": "stmt-rl-local-acyclic",
+    "claim_id": "claim-local-height-one-tests",
+    "statement": "For the individual coefficient system $T\\chi_h\\Psi$, use full local conditions at the moving prime $r$ and the active primes dividing $h$, without adding primes from a larger binary family."
+   },
+   {
+    "anchor": "stmt-rl-residual-bound",
+    "claim_id": "claim-uniform-residual-sizes",
+    "statement": "Suppose $\\omega(\\operatorname{disc}K)\\leq A$, the local twisting classes at $2N$ belong to a fixed finite list, and all active conductor primes are split with odd exponent."
+   },
+   {
+    "anchor": "stmt-rl-evaluation",
+    "claim_id": "claim-all-sequence-evaluation",
+    "statement": "Fix $K$ and a sequence of the finite cochain constructions above."
+   },
+   {
+    "anchor": "stmt-rl-kernel",
+    "claim_id": "claim-exact-common-kernel",
+    "statement": "In the notation of Lemma <a href=\"#rl:evaluation\" data-reference-type=\"ref\" data-reference=\"rl:evaluation\">19</a>, let $H$ be the group of sequences each of whose entries acts trivially on the full Tate module, on all ring-class fields of $K$, and on the quadratic characters in use."
+   },
+   {
+    "anchor": "stmt-rl-outer-evaluation",
+    "claim_id": "claim-outer-evaluation",
+    "statement": "Let $C_j$ be any family of the preceding limiting complexes, completed over $\\mathcal O_j=\\widehat{\\Lambda_{(2)}}$, possibly for different quadratic fields $K_j$."
+   },
+   {
+    "anchor": "stmt-rl-irreducibility",
+    "claim_id": "claim-irreducibility-tests",
+    "statement": "On an inner or outer characteristic-zero test where $\\Psi^2\\ne1$, the four-dimensional representation induced from $T\\chi\\Psi$ is absolutely irreducible."
+   },
+   {
+    "anchor": "stmt-rl-chebotarev-evaluation",
+    "claim_id": "claim-chebotarev-evaluation",
+    "statement": "For any element $u$ of an exact kernel in Lemma <a href=\"#rl:kernel\" data-reference-type=\"ref\" data-reference=\"rl:kernel\">20</a>, derivative primes can be chosen, at increasing finite precision, whose rational Frobenius is $\\tau u$ on all retained data."
+   },
+   {
+    "anchor": "stmt-rl-limit-evaluation-package",
+    "claim_id": "claim-limit-evaluation-package",
+    "statement": "For the ring data fixed at the start of this section, retain the finite target-side arithmetic diagrams with their maps to original cochains, homotopies, and dualities as in Lemma <a href=\"#rl:finite-limits\" data-reference-type=\"ref\" data-reference=\"rl:finite-limits\">14</a>."
+   },
+   {
+    "anchor": "stmt-rd-local-model",
+    "claim_id": "claim-split-local-model",
+    "statement": "Let a sequence of inert good primes $\\ell$ have rational Frobenius lifts tending on $T$ to a fixed complex conjugation $J$."
+   },
+   {
+    "anchor": "stmt-rd-derivative",
+    "claim_id": "claim-derivative-switch",
+    "statement": "Perform each finite ring-class construction and its weighted transfer before retaining its target-side data by the construction following Lemma <a href=\"#rl:finite-limits\" data-reference-type=\"ref\" data-reference=\"rl:finite-limits\">14</a>."
+   },
+   {
+    "anchor": "stmt-rd-det-switch",
+    "claim_id": "claim-determinant-switch",
+    "statement": "Let $O$ be a DVR with fraction field $F_O$."
+   },
+   {
+    "anchor": "stmt-rd-rank-two",
+    "claim_id": "claim-rank-two-evaluation",
+    "statement": "Let $\\mathcal G$ be a group, $H$ a normal subgroup acting trivially on an absolutely irreducible representation $W$ over a field $F_O$, and suppose that restriction of the relevant cohomology classes to $H$ is injective."
+   },
+   {
+    "anchor": "stmt-rd-away-two",
+    "claim_id": "claim-valuation-away-from-two",
+    "statement": "Assume the simultaneous diagrams, derivative classes, and exact-kernel evaluation maps of Lemmas <a href=\"#rl:evaluation\" data-reference-type=\"ref\" data-reference=\"rl:evaluation\">19</a>, <a href=\"#rl:kernel\" data-reference-type=\"ref\" data-reference=\"rl:kernel\">20</a>, <a href=\"#rd:local-model\" data-reference-type=\"ref\" data-reference=\"rd:local-model\">25</a>, and <a href=\"#rd:derivative\" data-reference-type=\"ref\" data-reference=\"rd:derivative\">26</a>."
+   },
+   {
+    "anchor": "stmt-rd-minor",
+    "claim_id": "claim-terminal-minor",
+    "statement": "Let $$C_i=[\\,O_i^n\\xrightarrow{D_i}O_i^n\\,]$$ be based complexes over DVRs with uniformizer $2$, with generic rank-one kernel."
+   },
+   {
+    "anchor": "stmt-rd-outer-bound",
+    "claim_id": "claim-outer-residual-bound",
+    "statement": "Assume all of the following properties of a collection of primitive ring instances:*\n\n1."
+   },
+   {
+    "anchor": "stmt-rd-derived-specialization",
+    "claim_id": "claim-derived-specialization",
+    "statement": "Let $C$ be a perfect $\\Lambda$-complex and put $C_0=C\\otimes_\\Lambda^{\\mathbf L}\\mathbb Z_2$, where $t=0$."
+   },
+   {
+    "anchor": "stmt-rd-active-local",
+    "claim_id": "claim-active-local-cohomology",
+    "statement": "Let $F_v/\\mathbb Q_p$ be unramified, $p\\ne2$, and let $T'=T_2(E)\\otimes\\chi$, where $E$ has good reduction and $\\chi$ is ramified quadratic."
+   },
+   {
+    "anchor": "stmt-rd-central-formula",
+    "claim_id": "claim-central-determinant-formula",
+    "statement": "Suppose the product $$L(E^{(h)},s)L(E^{(hk)},s)$$ has a simple zero at $s=1$."
+   },
+   {
+    "anchor": "stmt-rd-unused",
+    "claim_id": "claim-unused-primes",
+    "statement": "Suppose the universal relaxed trace class and its duality diagram have been constructed over $R$."
+   },
+   {
+    "anchor": "stmt-rd-schur",
+    "claim_id": "claim-laurent-elimination",
+    "statement": "There is a natural identification $$\\mathcal O/2^M\\mathcal O\n       =(\\mathbb Z/2^M\\mathbb Z)((t)).\n \\label{rd:laurent}$$ Suppose $A=\\operatorname{diag}(A_1,\\ldots,A_m)$ has entries in $\\Lambda$, each residual determinant is nonzero, and $\\operatorname{ord}_t(\\det\\overline A_j)\\le h$."
+   },
+   {
+    "anchor": "stmt-rd-clearing",
+    "claim_id": "claim-clearing-bounded-complex",
+    "statement": "Let $D$ be a based complex of finite free $\\mathcal O[G]$-modules of total graded rank at most $r_0$, with $D_0$ defined over $\\Lambda$."
+   },
+   {
+    "anchor": "stmt-rd-family-clearing",
+    "claim_id": "claim-family-clearing",
+    "statement": "Assume the compatible universal Selmer and Heegner diagrams and their primitive specializations."
+   },
+   {
+    "anchor": "stmt-rd-assembly",
+    "claim_id": "claim-diagram-assembly",
+    "statement": "For the ring data stated at the start of this section, the actual finite Heegner and Selmer constructions satisfy the simultaneous diagram hypotheses of Propositions <a href=\"#rd:away-two\" data-reference-type=\"ref\" data-reference=\"rd:away-two\">29</a>, <a href=\"#rd:outer-bound\" data-reference-type=\"ref\" data-reference=\"rd:outer-bound\">31</a>, and <a href=\"#rd:central-formula\" data-reference-type=\"ref\" data-reference=\"rd:central-formula\">34</a>."
+   },
+   {
+    "anchor": "stmt-rd-bits",
+    "claim_id": "claim-prescribed-bits",
+    "statement": "Let $A_1(x),\\ldots,A_q(x)$ be specified Laurent coefficients of sign evaluations of elements of $\\mathcal O[G]$."
+   },
+   {
+    "anchor": "stmt-rd-binary-transfer",
+    "claim_id": "claim-binary-transfer",
+    "statement": "Suppose $f,d\\in\\mathcal O[G]$, $u_x\\in\\Lambda[1/2]$, and $f_xu_x=d_x$ for every character."
+   },
+   {
+    "anchor": "stmt-nv-local-witness",
+    "claim_id": "claim-local-witnesses",
+    "statement": "Fix an elliptic curve $A/\\mathbb Q$ and a nonempty filter of fundamental discriminants prime to $2N_A$, with specified real sign and unit squareclasses at finitely many primes."
+   },
+   {
+    "anchor": "stmt-nv-rough",
+    "claim_id": "claim-bounded-factor-completion",
+    "statement": "There is an absolute integer $A_0$ with the following property."
+   },
+   {
+    "anchor": "stmt-nv-moment",
+    "claim_id": "claim-fixed-progression-moment",
+    "statement": "There are absolute constants $\\eta>0$ and $B>0$ such that the following assertions hold."
+   },
+   {
+    "anchor": "stmt-co-even",
+    "claim_id": "claim-even-coefficient-system",
+    "statement": "Fix an even-sign filter and a nonvanishing index $D_0$ in it."
+   },
+   {
+    "anchor": "stmt-co-kummer",
+    "claim_id": "claim-kummer-detection",
+    "statement": "Let $C$ act on $T=T_2E$ as complex conjugation, and choose a nonzero integral row $b:T\\longrightarrow\\mathbb Z_2$ with $bC=b$."
+   },
+   {
+    "anchor": "stmt-co-theta-bridge",
+    "claim_id": "claim-weighted-theta-bridge",
+    "statement": "For $\\ell$ as in Lemma <a href=\"#co:kummer\" data-reference-type=\"ref\" data-reference=\"co:kummer\">47</a>, the reduced modular parametrization followed by $\\lambda_M$ admits an integral weighted ternary theta lift."
+   },
+   {
+    "anchor": "stmt-co-odd",
+    "claim_id": "claim-odd-coefficient-detection",
+    "statement": "The forms in Lemma <a href=\"#co:theta-bridge\" data-reference-type=\"ref\" data-reference=\"co:theta-bridge\">48</a>, after a fixed adjustment of precision, satisfy $$v(a_M(D))\\geq\\min\\{M,j(P_D)-C\\},\\qquad\n v(a_M(D))<M\\ \\Longrightarrow\\ j(P_D)\\leq v(a_M(D))+C.$$"
+   },
+   {
+    "anchor": "stmt-co-minimum",
+    "claim_id": "claim-stabilized-minimum-depth",
+    "statement": "Assume the uniform arithmetic lower bounds just stated."
+   },
+   {
+    "anchor": "stmt-co-operators",
+    "claim_id": "claim-coefficient-operators",
+    "statement": "For the even source let $U$ be arbitrary."
+   },
+   {
+    "anchor": "stmt-co-traces",
+    "claim_id": "claim-integral-traces",
+    "statement": "The module $\\mathcal M$ is an integral Fourier lattice preserved by the trace and determinant operators."
+   },
+   {
+    "anchor": "stmt-co-inertia",
+    "claim_id": "claim-level-prime-inertia",
+    "statement": "For $p\\in U$, choose inertia $\\tau_p$ on which the new ramified quadratic character is $-1$, and an arithmetic Frobenius lift $\\phi_p$ in the same decomposition group."
+   },
+   {
+    "anchor": "stmt-co-symbol-interface",
+    "claim_id": "claim-symbol-interface",
+    "statement": "Under the arithmetic lower bounds in Lemma <a href=\"#co:minimum\" data-reference-type=\"ref\" data-reference=\"co:minimum\">50</a>, the symbols of either coefficient source have the following properties.*\n\n1."
+   },
+   {
+    "anchor": "stmt-gr-realization",
+    "claim_id": "claim-finite-realization",
+    "statement": "Fix finitely many old vertices, with all their mutual data, and individually realizable new types."
+   },
+   {
+    "anchor": "stmt-gr-address",
+    "claim_id": "claim-address-lemma",
+    "statement": "Suppose the binary symbols under consideration depend only on the arithmetic graph data and satisfy the contraction, whole-rational-prime omission, and primary-isolation rules of Proposition <a href=\"#co:symbol-interface\" data-reference-type=\"ref\" data-reference=\"co:symbol-interface\">54</a>, with the realization freedoms of Lemma <a href=\"#gr:realization\" data-reference-type=\"ref\" data-reference=\"gr:realization\">55</a>."
+   },
+   {
+    "anchor": "stmt-gr-forest",
+    "claim_id": "claim-oriented-forests",
+    "statement": "Assume the graph-symbol rules stated in Theorem <a href=\"#gr:address\" data-reference-type=\"ref\" data-reference=\"gr:address\">57</a>."
+   },
+   {
+    "anchor": "stmt-gr-network",
+    "claim_id": "claim-network-expansion",
+    "statement": "A network acts on $P$ by a sum of finite-difference operators."
+   },
+   {
+    "anchor": "stmt-gr-programs",
+    "claim_id": "claim-address-programs",
+    "statement": "With the preceding grounding convention one has the following programs for every $b\\ge1$.*\n\n1."
+   },
+   {
+    "anchor": "stmt-pw-interfaces",
+    "claim_id": "claim-collected-interfaces",
+    "statement": "The following statements hold for the fixed curve and fixed local data.*\n\n1."
+   },
+   {
+    "anchor": "stmt-pw-isogeny-corank",
+    "claim_id": "claim-isogeny-orientation-coranks",
+    "statement": "Recall that a rational isogeny preserves analytic rank, Mordell–Weil rank, and $2^\\infty$-Selmer corank."
+   },
+   {
+    "anchor": "stmt-pw-minimum-seeds",
+    "claim_id": "claim-minimum-seeds",
+    "statement": "1."
+   },
+   {
+    "anchor": "stmt-pw-reserves",
+    "claim_id": "claim-finite-label-reserves",
+    "statement": "Fix a minimum seed and a finite label alphabet.*\n\n1."
+   },
+   {
+    "anchor": "stmt-pw-packets",
+    "claim_id": "claim-neutral-packets",
+    "statement": "For any of the finite reserve problems above with prescribed rational total zero, one can choose a finite packet of terminal labels with rational total zero such that every nonempty union of copies of the packet has the required supplies."
+   },
+   {
+    "anchor": "stmt-pw-partitionable-even",
+    "claim_id": "claim-partitionable-even-estimate",
+    "statement": "Fix an even symbol furnished by Proposition <a href=\"#pw:interfaces\" data-reference-type=\"ref\" data-reference=\"pw:interfaces\">61</a>."
+   },
+   {
+    "anchor": "stmt-pw-even-base",
+    "claim_id": "claim-even-base",
+    "statement": "If $s_2(E)=0$, then $a(E)=0$."
+   },
+   {
+    "anchor": "stmt-pw-rough-companion",
+    "claim_id": "claim-bounded-companion",
+    "statement": "Fix a positive odd-sign filter, including the coefficient and class-group support used below, and a negative genus partner $h_*$ with $L(E^{(h_*)},1)\\ne0$, chosen using Proposition <a href=\"#nv:local-witness\" data-reference-type=\"ref\" data-reference=\"nv:local-witness\">43</a> and then excluded from the variable parameters."
+   },
+   {
+    "anchor": "stmt-pw-height-comparison",
+    "claim_id": "claim-height-comparison",
+    "statement": "Here $j_h(k)$ is the index of the conductor-$|h|$ ring-class sum over $\\mathbb Q(\\sqrt{k})$, whereas $j(P_h)$ is the index of the conductor-one genus sum over $\\mathbb Q(\\sqrt{hh_*})$."
+   },
+   {
+    "anchor": "stmt-pw-odd-lower",
+    "claim_id": "claim-odd-lower-bound",
+    "statement": "Every analytically rank-one $h$ in the prepared positive filter of Lemma <a href=\"#pw:rough-companion\" data-reference-type=\"ref\" data-reference=\"pw:rough-companion\">68</a> satisfies $$\\label{pw:odd-lower-bound}\n 2j(P_h)\\ge 2w(h)+s(h)-C.$$"
+   },
+   {
+    "anchor": "stmt-pw-recurrence",
+    "claim_id": "claim-recurrence-congruences",
+    "statement": "Let $p$ be odd, $a\\equiv p+1\\pmod4$, and let $$b_0=1,\\quad b_1=a-\\kappa,\\quad\n b_{s+1}=ab_s-pb_{s-1}.$$"
+   },
+   {
+    "anchor": "stmt-pw-split-witness",
+    "claim_id": "claim-split-witness",
+    "statement": "Suppose $E[2]$ is rational."
+   },
+   {
+    "anchor": "stmt-pw-coinvariants",
+    "claim_id": "claim-orientation-correction",
+    "statement": "Let $K$ be imaginary quadratic, let $S_0$ contain $2$ and its ramification support, and let $V_0$ be the elementary label space over $K$ unramified off $S_0$."
+   },
+   {
+    "anchor": "stmt-pw-odd-base",
+    "claim_id": "claim-odd-base",
+    "statement": "If $s_2(E)=1$, then $a(E)=1$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "two-converse for rational two-torsion",
+    "evidence": [
+     {
+      "anchor": "stmt-thm-main",
+      "quote": "Let $E/\\mathbb Q$ be an elliptic curve with $E(\\mathbb Q)[2]\\ne0$ and $s_2(E)\\in\\{0,1\\}$.",
+      "quote_sha256": "5dfbdf64a52c536d577036cc2618fcc2c5accd99eb7b02ad45b541178b9d7fbb"
+     }
+    ],
+    "requires_concepts": [
+     "Selmer groups",
+     "Heegner points",
+     "Kato zeta classes",
+     "half-integral weight forms"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-two-converse",
+   "exact_statement": "Let $E/\\mathbb Q$ be an elliptic curve with $E(\\mathbb Q)[2]\\ne0$ and $s_2(E)\\in\\{0,1\\}$. Then $$\\mathop{\\mathrm{ord}}_{s=1}L(E,s)=\\mathop{\\mathrm{rank}}_{\\mathbb Z}E(\\mathbb Q)=s_2(E),\n\\qquad\n\\operatorname{Sha}(E/\\mathbb Q)\\text{ is finite}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-three-ranks",
+   "exact_statement": "There is an exact sequence $$0\\longrightarrow A(\\mathbb Q)\\otimes\\mathbb Q_2/\\mathbb Z_2\n\\longrightarrow \\mathop{\\mathrm{Sel}}_{2^\\infty}(A/\\mathbb Q)\n\\longrightarrow \\operatorname{Sha}(A/\\mathbb Q)[2^\\infty]\\longrightarrow0.$$ Consequently $$s_2(A)=r(A)+\\mathop{\\mathrm{corank}}_{\\mathbb Z_2}\\operatorname{Sha}(A/\\mathbb Q)[2^\\infty].$$ If $a(A)\\in\\{0,1\\}$, then $r(A)=a(A)$ and the whole group $\\operatorname{Sha}(A/\\mathbb Q)$ is finite. In that case $s_2(A)=a(A)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pr-ranks"
+  },
+  {
+   "claim_id": "claim-parity-invariance",
+   "exact_statement": "For every elliptic curve $A/\\mathbb Q$, $$(-1)^{s_2(A)}=\\varepsilon(A).$$ A rational isogeny preserves $a$, $r$, and $s_2$. If $K=\\mathbb Q(\\sqrt{k})$ is quadratic, then $$s_2(A/K)=s_2(A/\\mathbb Q)+s_2(A^{(k)}/\\mathbb Q).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pr-invariance"
+  },
+  {
+   "claim_id": "claim-cyclotomic-lower-bound",
+   "exact_statement": "There is a constant $C_E$ such that, for every allowed $h$ with $L(E^{(h)},1)\\ne0$, $$v_2(\\mathcal L(h))\\ \\geq\\ 2w(h)+s(h)-C_E.$$ The constant is independent of the number and sizes of the primes dividing $h$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cy-lower-bound"
+  },
+  {
+   "claim_id": "claim-cyclotomic-missing-vertex",
+   "exact_statement": "Let $h_0$ be an allowed discriminant with $s_2(E^{(h_0)})=0$. Suppose that for arbitrarily large $b$ there are a finite set $Q$ of distinct primes $q\\nmid 2Nh_0$ and linear forms $\\lambda_q:\\mathbb F _2^b\\longrightarrow\\mathbb F _2$ giving $$h_x=h_0\\prod_{q\\in Q}(q^*)^{\\lambda_q(x)},\\qquad x\\in\\mathbb F _2^b,$$ all in the fixed local and sign classes. Suppose that a number $B$, independent of the family, satisfies $$L(E^{(h_x)},1)\\ne0,\\qquad D(h_x)\\leq B\\qquad(x\\ne0).$$ Then $L(E^{(h_0)},1)\\ne0$ and $D(h_0)\\leq B+C_E$. Here $C_E$ is independent of $h_0$, $Q$, and $b$; the dimension needed in the proof is allowed to depend on the fixed precision being tested.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cy-missing-vertex"
+  },
+  {
+   "claim_id": "claim-integral-fourier",
+   "exact_statement": "Suppose $u\\in\\mathcal O[1/2][G]$, all $u_x$ belong to $\\Lambda[1/2]$, and $2^C u\\in\\mathcal O[G]$. Then $2^C u\\in\\Lambda[G]$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cy-fourier"
+  },
+  {
+   "claim_id": "claim-binary-congruences",
+   "exact_statement": "Let $z_1,\\ldots,z_r\\in\\mathbb Z _2[G]$. Given $M\\geq1$, if $b>r(2^M-1)$, there is an $x\\ne0$ such that $$(z_j)_x\\equiv(z_j)_0\\pmod {2^M}\\qquad(1\\leq j\\leq r).$$ The bound depends on the number of tests and their precision, and not on the group-ring coefficients.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cy-binary"
+  },
+  {
+   "claim_id": "claim-perfect-real-class",
+   "exact_statement": "The complex <a href=\"#cy:positive\" data-reference-type=\"eqref\" data-reference=\"cy:positive\">[cy:positive]</a> is perfect over $R$ and computes derived coefficient specializations. There is a class $a\\in H^1(C_S^+(\\mathbb T))$ whose rational span is the real-place summand. Its integral index in that summand depends only on $E$ and the fixed real sign.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cy-perfect"
+  },
+  {
+   "claim_id": "claim-residual-concentration",
+   "exact_statement": "There is an isomorphism in the derived category $$C_S^+(\\mathbb T)\\otimes_R\\mathcal O[G]\n       \\simeq \\mathcal O[G]^2[-1].$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cy-residual"
+  },
+  {
+   "claim_id": "claim-central-determinant",
+   "exact_statement": "There is a constant $C_{\\mathrm{loc}}$, depending only on the fixed curve and local classes, with the following property. If $s_2(E^{(h_x)})=0$, then $u_x(0)=0$ when $L(E^{(h_x)},1)=0$. Otherwise $$\\label{cy:central-formula}\n \\bigl|v_2(u_x(0))-D(h_x)\\bigr|\\leq C_{\\mathrm{loc}}.$$ The rational positive complex at $t=0$ has cohomology only in degree one, of dimension two, so these are specializations of the same determinant.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cy-central"
+  },
+  {
+   "claim_id": "claim-ring-class-lower-bound",
+   "exact_statement": "Every simple-zero ring instance in the stated data satisfies $$2j_h\\ge 4w(h)+s(h)+s(hk)-C(E,A),\n       \\qquad \\omega(k)\\le A.\n \\label{rd:ring-lower-equation}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rd-ring-lower"
+  },
+  {
+   "claim_id": "claim-ring-missing-vertex",
+   "exact_statement": "Fix the ring data $E,K$, with $$\\operatorname{corank}_{\\mathbb Z_2}\n       \\operatorname{Sel}_{2^\\infty}(E/K)=1.\n \\label{rd:base-corank}$$ Suppose binary families <a href=\"#rd:binary-data\" data-reference-type=\"eqref\" data-reference=\"rd:binary-data\">[rd:binary-data]</a> exist for arbitrarily large $b$, and for every nonzero $x$ the product $L(E^{(h_x)},s)L(E^{(h_xk)},s)$ has a simple zero and $$2j_{h_x}-4w(h_x)-s(h_x)-s(h_xk)\\le B\n \\label{rd:nonzero-bound}$$ with $B$ independent of the family. Then $$\\operatorname{ord}_{s=1}\n      \\bigl(L(E,s)L(E^{(k)},s)\\bigr)=1.\n \\label{rd:missing-conclusion}$$ This implication does not assume Mordell–Weil rank one or finite Shafarevich–Tate group at the base.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-rd-missing-vertex"
+  },
+  {
+   "claim_id": "claim-finite-artin-models",
+   "exact_statement": "Let $(A,\\mathfrak m,k)$ be an Artin local ring, and let $D$ be a complex of flat $A$-modules. Suppose $H^*(D\\otimes_A k)$ is finite dimensional and supported in $[a,b]$. There is a bounded finite free complex $C$, with $$\\operatorname{rank}_A C^j=\\dim_k H^j(D\\otimes_A k),$$ and a strong deformation retraction $$i:C\\longrightarrow D,\\qquad p:D\\longrightarrow C,\\qquad\n pi=1,\\qquad 1-ip=dh+hd.$$ Thus maps to the original complex, as well as maps between finite models, are available. Any fixed finite collection of chain maps, homotopies, triangles, and perfect pairings can be transported to these models.",
+   "kind": "construction",
+   "statement_anchor": "stmt-rl-finite-model"
+  },
+  {
+   "claim_id": "claim-limits-of-diagrams",
+   "exact_statement": "Suppose diagrams over $A_i$, or over $A_i[G]$, have uniformly bounded cohomological amplitudes and graded free ranks, and include the chain homotopies and inverses for every asserted identity or equivalence. After taking a cofinal subsequence, or a nonprincipal ultrafilter limit, their matrices define the same diagram of perfect complexes over $\\Lambda$, or $\\Lambda[G]$.*\n\n*Moreover, the contractions into the original cochains may be retained for the evaluation construction in Lemma <a href=\"#rl:evaluation\" data-reference-type=\"ref\" data-reference=\"rl:evaluation\">19</a>. Adding finitely many new objects or maps does not require changing already chosen models for the old objects.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rl-finite-limits"
+  },
+  {
+   "claim_id": "claim-integral-kummer-condition",
+   "exact_statement": "Let $F$ be a finite extension of a nonarchimedean local field of characteristic zero, and let $B/F$ be any elliptic curve. Put $M_F=B(F)^\\wedge_2=\\varprojlim_n B(F)/2^nB(F)$. There is a perfect local condition $$U_F=M_F[-1]\\longrightarrow R\\Gamma(F,T_2B).$$ For every $n\\geq1$, derived reduction has $$H^0(U_F\\otimes^{\\mathbf L}\\mathbf Z/2^n)=B(F)[2^n],\\qquad\n H^1(U_F\\otimes^{\\mathbf L}\\mathbf Z/2^n)=B(F)/2^nB(F).$$ Its map in degree zero is the isomorphism onto $H^0(F,B[2^n])$, and its map in degree one is the finite Kummer injection. The condition is its own exact orthogonal complement under local Tate duality. These assertions hold at $F\\mid2$, for all reduction types, and without a condition on $B[2]$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rl-kummer"
+  },
+  {
+   "claim_id": "claim-ring-class-characters",
+   "exact_statement": "Fix finitely many split primes of $K$ above odd rational primes, outside $2N$, and orient one prime in each conjugate pair. There are distinct split rational primes $r_i$ avoiding all the fixed data and characters $$\\xi_i:\\operatorname{Gal}(H_{r_i}/K)\\longrightarrow\n                 \\mathbf Z/2^{n_i}\\mathbf Z,\n \\qquad n_i\\longrightarrow\\infty,$$ such that $\\xi_i$ is surjective on the inertia quotient at $r_i$, is zero at the primes above $2N$, and has odd value at each prescribed oriented prime. We can require $r_i\\to1$ in $\\mathbf Z_2$ and $$\\label{rl:trace-bound}\n v_2(2+a_{r_i}(E)),\\quad v_2(2-a_{r_i}(E)),\\quad\n v_2\\det(1\\pm\\operatorname{Fr}_{r_i}\\mid T)\\ \\leq c_E.$$ The constant $c_E$ is independent of the list and of $K$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-rl-characters"
+  },
+  {
+   "claim_id": "claim-local-height-one-tests",
+   "exact_statement": "For the individual coefficient system $T\\chi_h\\Psi$, use full local conditions at the moving prime $r$ and the active primes dividing $h$, without adding primes from a larger binary family. The limiting full local complexes are acyclic over every height-one residue field of $\\Lambda$ of characteristic zero. At $(2)$, with residue field $\\Omega=\\mathbf F_2((t))$, the $r$-complex is acyclic, and so are the complexes at active split primes whose prescribed exponent is odd. These full conditions therefore agree with their orthogonal conditions on the stated tests.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rl-local-acyclic"
+  },
+  {
+   "claim_id": "claim-uniform-residual-sizes",
+   "exact_statement": "Suppose $\\omega(\\operatorname{disc}K)\\leq A$, the local twisting classes at $2N$ belong to a fixed finite list, and all active conductor primes are split with odd exponent. After localization and completion at $(2)$, the minimal free ranks of the Selmer complexes are bounded in terms of $E,A$, and the number of retained derivative primes. They do not depend on the number of active conductor primes.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rl-residual-bound"
+  },
+  {
+   "claim_id": "claim-all-sequence-evaluation",
+   "exact_statement": "Fix $K$ and a sequence of the finite cochain constructions above. Keep the contraction maps into the original global cochains. Let $\\Gamma_K=\\prod_i G_K$ and $\\Gamma=\\Gamma_K\\rtimes\\langle\\tau\\rangle\\subset\\prod_iG_{\\mathbf Q}$, with simultaneous complex conjugation $\\tau$. Thus $\\Gamma_K$ has index two in $\\Gamma$; the larger unrestricted product of rational Galois groups is not used for induction. The matrix limit defines a coefficient action of $\\Gamma_K$ on $\\Lambda^2$. For every field $L$ receiving a map from $\\Lambda$, there is a natural injection $$H^1(C\\otimes_\\Lambda L)\\longrightarrow\n H^1_{\\rm abs}(\\Gamma_K,L^2),$$ where the right side denotes abstract crossed-homomorphism classes. Degree-zero evaluation likewise injects $H^0(C\\otimes_\\Lambda L)$ into $(L^2)^{\\Gamma_K}$. Here $C$ may be the global complex or a Selmer complex whose local condition maps induce isomorphisms on local $H^0$ and injections on local $H^1$. The same statement holds for the induced representation of $\\Gamma$.*\n\n*There are evaluation maps on arbitrary sequences, not just on the finite list used to detect cohomology. Their degree-two identities remain valid after arbitrary coefficient extension.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rl-evaluation"
+  },
+  {
+   "claim_id": "claim-exact-common-kernel",
+   "exact_statement": "In the notation of Lemma <a href=\"#rl:evaluation\" data-reference-type=\"ref\" data-reference=\"rl:evaluation\">19</a>, let $H$ be the group of sequences each of whose entries acts trivially on the full Tate module, on all ring-class fields of $K$, and on the quadratic characters in use. Restriction from the crossed classes in that Lemma to $H$ is injective at every characteristic-zero test. It is also injective at the residual $(2)$ test. The characteristic-zero annihilator needed for this assertion can be chosen with a fixed finite $2$-valuation depending only on $E$, also as $K$ varies.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rl-kernel"
+  },
+  {
+   "claim_id": "claim-outer-evaluation",
+   "exact_statement": "Let $C_j$ be any family of the preceding limiting complexes, completed over $\\mathcal O_j=\\widehat{\\Lambda_{(2)}}$, possibly for different quadratic fields $K_j$. Suppose their minimal ranks are bounded. Keep their actual evaluation matrices, and transport them through the integral contractions to these minimal models. For a nonprincipal ultrafilter $\\mathcal U$, put $$\\mathcal O_\\infty=\n \\left(\\prod_{\\mathcal U}\\mathcal O_j\\right)/\\mathfrak a,\n \\qquad\n \\mathfrak a=\\{(x_j):\n    \\{j:v_2(x_j)\\geq n\\}\\in\\mathcal U\\text{ for every }n\\}.$$ Then $\\mathcal O_\\infty$ is a DVR with uniformizer $2$ and a characteristic-zero fraction field $L_\\infty$. The outer complex has an injection of its $H^1$ over $L_\\infty$ into crossed classes on the product of the inner sequence groups. Its restriction to the product of their exact common kernels is injective. All arbitrary-sequence degree-two evaluation identities survive. These conclusions also hold after retaining any fixed finite collection of additional integral diagrams.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rl-outer-evaluation"
+  },
+  {
+   "claim_id": "claim-irreducibility-tests",
+   "exact_statement": "On an inner or outer characteristic-zero test where $\\Psi^2\\ne1$, the four-dimensional representation induced from $T\\chi\\Psi$ is absolutely irreducible. If $\\Psi^2=1$ on an inner test, it splits as two inequivalent absolutely irreducible quadratic twists. In the outer test $\\Psi$ has infinite order.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rl-irreducibility"
+  },
+  {
+   "claim_id": "claim-chebotarev-evaluation",
+   "exact_statement": "For any element $u$ of an exact kernel in Lemma <a href=\"#rl:kernel\" data-reference-type=\"ref\" data-reference=\"rl:kernel\">20</a>, derivative primes can be chosen, at increasing finite precision, whose rational Frobenius is $\\tau u$ on all retained data. Their finite localization is evaluation on $(\\tau u)^2$. The assertion is compatible with the outer construction of Proposition <a href=\"#rl:outer-evaluation\" data-reference-type=\"ref\" data-reference=\"rl:outer-evaluation\">21</a> and with any fixed finite list of previous derivative operations.",
+   "kind": "construction",
+   "statement_anchor": "stmt-rl-chebotarev-evaluation"
+  },
+  {
+   "claim_id": "claim-limit-evaluation-package",
+   "exact_statement": "For the ring data fixed at the start of this section, retain the finite target-side arithmetic diagrams with their maps to original cochains, homotopies, and dualities as in Lemma <a href=\"#rl:finite-limits\" data-reference-type=\"ref\" data-reference=\"rl:finite-limits\">14</a>. The moving characters, local conditions, and evaluation constructions then have the following simultaneous properties:*\n\n1.  *Every specified finite target-side arithmetic diagram admits a bounded free model together with maps to its original cochains; the specified maps, homotopies and dualities survive the inner limit.*\n\n2.  *At the stated height-one tests the relaxed active local complexes are acyclic, and the Selmer duality pairs degrees one and two. Integral Kummer conditions at $2N$ include their full derived degree-zero invariants.*\n\n3.  *The residual sizes needed for the outer construction are bounded independently of the active conductor support, with dependence only on $E$, the bound on $\\omega(\\operatorname{disc}K)$, and the number of retained derivative primes.*\n\n4.  *Inner and outer $H^1$ are detected by actual crossed cocycles, including on the exact common kernel. The evaluations and their degree-two identities can be realized by finite Chebotarev conditions without disturbing earlier finite data.*\n\n*These assertions do not assert an Euler-system reciprocity law or an integral derivative class that has not first been constructed at finite level. Once those finite arithmetic diagrams are constructed, this Theorem supplies their limit compatibility.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rl-limit-evaluation-package"
+  },
+  {
+   "claim_id": "claim-split-local-model",
+   "exact_statement": "Let a sequence of inert good primes $\\ell$ have rational Frobenius lifts tending on $T$ to a fixed complex conjugation $J$. At the unique prime of $K$ above $\\ell$, the limiting local complex has $$H^0=M,\\qquad H^1=F\\oplus S=M\\oplus M,\\qquad H^2=M,\n \\label{rd:local-cohomology}$$ with zero differentials in a free split model. Here $M=T\\otimes\\Lambda$ with the relevant scalar coefficient structure. The two degree-one coordinates of a cocycle are $$f(c)=c(\\gamma^2),\\qquad s(c)=c(\\sigma),\n \\label{rd:coordinates}$$ where $\\gamma$ is the chosen rational Frobenius lift and $\\sigma$ is an oriented pro-$2$ tame generator. The plane conditions $F=\\{s=0\\}$ and $S=\\{f=0\\}$ include $H^0$ and exclude $H^2$. Each is its own orthogonal complement for conjugate-Weil duality. The strict condition $H^0$ and the relaxed condition $H^0\\oplus H^1[-1]$ are mutually dual. All four inclusions can be equipped with compatible integral duality triangles.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rd-local-model"
+  },
+  {
+   "claim_id": "claim-derivative-switch",
+   "exact_statement": "Perform each finite ring-class construction and its weighted transfer before retaining its target-side data by the construction following Lemma <a href=\"#rl:finite-limits\" data-reference-type=\"ref\" data-reference=\"rl:finite-limits\">14</a>. There is one integer $L\\ne0$, depending on the fixed curve, parametrization and fixed local types, such that the classes obtained from the Heegner derivatives of $L$ times the point satisfy, for every finite switched set $I$, $$P_I\\in H^1(C_I),\\qquad\n f(P_{I\\cup\\{\\ell\\}})=0,\\qquad\n s(P_{I\\cup\\{\\ell\\}})=J f(P_I).\n \\label{rd:switch}$$ The same $L$ works for every number of active and derivative primes. The previously imposed singular conditions are retained.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rd-derivative"
+  },
+  {
+   "claim_id": "claim-determinant-switch",
+   "exact_statement": "Let $O$ be a DVR with fraction field $F_O$. Suppose that integral perfect complexes $C_{\\rm str},C_F,C_S,C_{\\rm rel}$, their localization triangles, and their dualities are the base changes of the diagram in Lemma <a href=\"#rd:local-model\" data-reference-type=\"ref\" data-reference=\"rd:local-model\">25</a>. Suppose the generic cohomology of these four global complexes is concentrated in degrees one and two, that $H^1(C_F\\otimes F_O)=F_OA$, and $$f(A)=v_0\\ne0,\\qquad s(B)=Jv_0,\\qquad f(B)=0$$ for a class $B$ in the switched complex. The determinant tensors are formed from each class and its functional under these same dualities. Then the switched generic cohomology has rank one, is spanned by $B$, and $$v_O(u_F)=v_O(u_S).\n \\label{rd:valuation-switch}$$ Neither localization is required to be primitive.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rd-det-switch"
+  },
+  {
+   "claim_id": "claim-rank-two-evaluation",
+   "exact_statement": "Let $\\mathcal G$ be a group, $H$ a normal subgroup acting trivially on an absolutely irreducible representation $W$ over a field $F_O$, and suppose that restriction of the relevant cohomology classes to $H$ is injective. For two independent classes, their joint evaluations on $H$ span $W\\oplus W$. If the finite localization is the rank-two projection supplied by $1+\\tau$ on the induced representation, some actual evaluation has rank two. One of the two classes may be any prescribed nonzero class.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rd-rank-two"
+  },
+  {
+   "claim_id": "claim-valuation-away-from-two",
+   "exact_statement": "Assume the simultaneous diagrams, derivative classes, and exact-kernel evaluation maps of Lemmas <a href=\"#rl:evaluation\" data-reference-type=\"ref\" data-reference=\"rl:evaluation\">19</a>, <a href=\"#rl:kernel\" data-reference-type=\"ref\" data-reference=\"rl:kernel\">20</a>, <a href=\"#rd:local-model\" data-reference-type=\"ref\" data-reference=\"rd:local-model\">25</a>, and <a href=\"#rd:derivative\" data-reference-type=\"ref\" data-reference=\"rd:derivative\">26</a>. For a primitive constituent whose generic cohomology has rank at most one in degrees one and two and zero elsewhere, its class-dual determinant coordinate belongs to $\\Lambda[1/2]$. This includes a simple-zero constituent and a base with $2^\\infty$-Selmer corank one.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rd-away-two"
+  },
+  {
+   "claim_id": "claim-terminal-minor",
+   "exact_statement": "Let $$C_i=[\\,O_i^n\\xrightarrow{D_i}O_i^n\\,]$$ be based complexes over DVRs with uniformizer $2$, with generic rank-one kernel. Let $z_i\\in\\ker D_i$ be integral, and let $\\lambda_i\\in 2^{-a}(O_i^n)^*$ annihilate $\\operatorname{im}D_i$, where $a$ is fixed. If an $(n-1)$-minor $\\Delta_i$ has $v(\\Delta_i)\\le b$, the determinant coordinate $u_i$ of $z_i\\otimes\\lambda_i$ satisfies $$v(u_i)\\ge-a-b.\n \\label{rd:minor-bound}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-rd-minor"
+  },
+  {
+   "claim_id": "claim-outer-residual-bound",
+   "exact_statement": "Assume all of the following properties of a collection of primitive ring instances:*\n\n1.  *after any fixed number of switches, minimal $\\mathcal O$-models have size bounded independently of $h$ and of $K$ with $\\omega(k)\\le A$;*\n\n2.  *the all-sequence evaluation and exact-kernel restriction of Proposition <a href=\"#rl:outer-evaluation\" data-reference-type=\"ref\" data-reference=\"rl:outer-evaluation\">21</a>, and the finite Chebotarev realization of Lemma <a href=\"#rl:chebotarev-evaluation\" data-reference-type=\"ref\" data-reference=\"rl:chebotarev-evaluation\">23</a>, hold for these models, retaining their degree-two cocycle identities;*\n\n3.  *the integral localization and duality diagrams and the derivative classes of Lemma <a href=\"#rd:derivative\" data-reference-type=\"ref\" data-reference=\"rd:derivative\">26</a> survive this same outer limit; the class and its closed dual functional have a common bounded clearing exponent.*\n\n*Then there is $C(E,A)$ such that $$v_{(2)}(u)\\ge-C(E,A)\n \\label{rd:residual-bound}$$ for every simple-zero ring instance. The hypotheses refer to a single simultaneous construction. In particular, separate abstract models realizing its individual cohomology groups do not establish this proposition’s arithmetic applicability.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rd-outer-bound"
+  },
+  {
+   "claim_id": "claim-derived-specialization",
+   "exact_statement": "Let $C$ be a perfect $\\Lambda$-complex and put $C_0=C\\otimes_\\Lambda^{\\mathbf L}\\mathbb Z_2$, where $t=0$. Suppose its generic rational cohomology and its central rational cohomology both have dimension one in degrees one and two and are zero in other degrees. Put $A=\\Lambda_{(t)}$, with residue field $\\mathbb Q_2$. Let $z$ be a degree-one cycle and $\\lambda$ a closed degree-two functional in a finite free model of $C\\otimes_\\Lambda A$, and let $z_0,\\lambda_0$ be their images under $A\\to\\mathbb Q_2$. Then the generic determinant tensor $[z]\\otimes[\\lambda]$ is regular at $(t)$ and specializes, under the determinant base-change isomorphism, to $[z_0]\\otimes[\\lambda_0]$. Its central valuation is computed from the entire integral complex $C_0$, including its torsion cohomology. It cannot be computed by substituting the naive quotient of $H^1(C)$ by $t$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rd-derived-specialization"
+  },
+  {
+   "claim_id": "claim-active-local-cohomology",
+   "exact_statement": "Let $F_v/\\mathbb Q_p$ be unramified, $p\\ne2$, and let $T'=T_2(E)\\otimes\\chi$, where $E$ has good reduction and $\\chi$ is ramified quadratic. Then $$H^0(F_v,T')=0,\\qquad\n H^1(F_v,T')=E^\\chi(F_v)^{\\wedge}_2,\\qquad\n \\operatorname{length}_{\\mathbb Z_2}H^2(F_v,T')\n =\\dim_{\\mathbb F_2}E[2]^{\\operatorname{Fr}_v}.\n \\label{rd:local-length}$$ The quotient of the full local complex by the integral Kummer condition therefore contributes precisely this last length in degree two.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rd-active-local"
+  },
+  {
+   "claim_id": "claim-central-determinant-formula",
+   "exact_statement": "Suppose the product $$L(E^{(h)},s)L(E^{(hk)},s)$$ has a simple zero at $s=1$. Use the primitive Heegner sum $P_h$ and its free-line index $j_h$ defined at the start of Section <a href=\"#rl:section\" data-reference-type=\"ref\" data-reference=\"rl:section\">4</a>, and put $$s(h)=\\operatorname{length}_{\\mathbb Z_2}\n             \\operatorname{Sha}(E^{(h)}/\\mathbb Q)[2^\\infty].$$ Use the primitive Selmer determinant coordinate $u_h$ with the fixed class multiplier of Lemma <a href=\"#rd:derivative\" data-reference-type=\"ref\" data-reference=\"rd:derivative\">26</a>. For the primitive Selmer diagrams constructed above, we have $$\\begin{split}\n v(u_h(0))\n  &=2j_h-\n    \\operatorname{length}_{\\mathbb Z_2}\n                  \\operatorname{Sha}(E^{(h)}/K)[2^\\infty]\n    -2\\sum_{p\\mid h}t_p+O_E(1)\\\\\n  &=2j_h-s(h)-s(hk)-4w(h)+O_{E,A}(1),\n       \\qquad \\omega(k)\\le A .\n \\end{split}\n \\label{rd:central-value}$$ The first error includes the auxiliary prime and the fixed parametrization multiplier. The second has no dependence on the number of primes dividing $h$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rd-central-formula"
+  },
+  {
+   "claim_id": "claim-unused-primes",
+   "exact_statement": "Suppose the universal relaxed trace class and its duality diagram have been constructed over $R$. There is $\\eta\\in\\mathcal O[G]$ such that $\\eta u_{\\rm rel}$ has each character coordinate equal to the primitive determinant coordinate, up to a $\\Lambda$-unit. The correction has no denominator accumulating with $\\#Q$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-rd-unused"
+  },
+  {
+   "claim_id": "claim-laurent-elimination",
+   "exact_statement": "There is a natural identification $$\\mathcal O/2^M\\mathcal O\n       =(\\mathbb Z/2^M\\mathbb Z)((t)).\n \\label{rd:laurent}$$ Suppose $A=\\operatorname{diag}(A_1,\\ldots,A_m)$ has entries in $\\Lambda$, each residual determinant is nonzero, and $\\operatorname{ord}_t(\\det\\overline A_j)\\le h$. If $B=A+2E$ with $E$ over $\\Lambda$, then every entry of $B^{-1}\\bmod2^M$ has no term below $t^{-Mh}$. The same bound holds for a Schur complement $P-QB^{-1}S$, where $P,Q,S$ have power-series entries. The bound is independent of $m$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-rd-schur"
+  },
+  {
+   "claim_id": "claim-clearing-bounded-complex",
+   "exact_statement": "Let $D$ be a based complex of finite free $\\mathcal O[G]$-modules of total graded rank at most $r_0$, with $D_0$ defined over $\\Lambda$. Suppose $D_0\\otimes_\\Lambda^{\\mathbf L}\\mathbb Z_2$ has rational cohomology of dimension one in degrees one and two, zero elsewhere, and total integral torsion length at most $h_1$. Let $z$ be an integral cycle and let $\\lambda\\in2^{-a_0}(D^2)^*$ be a closed functional. Assume every character constituent is either generically acyclic or has the same generic rank-one pattern; in the generically acyclic case its determinant coordinate is defined to be zero. Multiplication of these coordinates by any $\\eta\\in\\mathcal O[G]$ is permitted. Then there are $f,d\\in\\mathcal O[G]$ such that $$f_xu_x=d_x,\\qquad\n f_0\\in\\Lambda,\\qquad\n v(f_0(0))\\le C(r_0,h_1,a_0)<\\infty.\n \\label{rd:clearing-equations}$$ If all entries of $D_x$ have bounded negative Laurent support at each precision, uniformly in $b$, the same is true of $f_x$. No such bound on $d_x,z,\\lambda,\\eta$ is required.",
+   "kind": "construction",
+   "statement_anchor": "stmt-rd-clearing"
+  },
+  {
+   "claim_id": "claim-family-clearing",
+   "exact_statement": "Assume the compatible universal Selmer and Heegner diagrams and their primitive specializations. Suppose every character constituent of the universal Selmer complex is generically acyclic or has generic cohomology of dimension one in degrees one and two and zero elsewhere. If the fixed base has $2^\\infty$-Selmer corank one over $K$, the corrected coordinates of Lemma <a href=\"#rd:unused\" data-reference-type=\"ref\" data-reference=\"rd:unused\">35</a> admit the factorization <a href=\"#rd:clearing-equations\" data-reference-type=\"eqref\" data-reference=\"rd:clearing-equations\">[rd:clearing-equations]</a>, with central valuation and fixed-precision pole bounds independent of $b$ and $\\#Q$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rd-family-clearing"
+  },
+  {
+   "claim_id": "claim-diagram-assembly",
+   "exact_statement": "For the ring data stated at the start of this section, the actual finite Heegner and Selmer constructions satisfy the simultaneous diagram hypotheses of Propositions <a href=\"#rd:away-two\" data-reference-type=\"ref\" data-reference=\"rd:away-two\">29</a>, <a href=\"#rd:outer-bound\" data-reference-type=\"ref\" data-reference=\"rd:outer-bound\">31</a>, and <a href=\"#rd:central-formula\" data-reference-type=\"ref\" data-reference=\"rd:central-formula\">34</a>. The bounds needed for the lower-bound argument depend only on $E$, the fixed local data, and a bound $A$ on $\\omega(k)$. For the binary data <a href=\"#rd:binary-data\" data-reference-type=\"eqref\" data-reference=\"rd:binary-data\">[rd:binary-data]</a> with fixed $E,K$ and base Selmer corank one, assume in addition that every character constituent of the universal Selmer complex is generically acyclic or has generic cohomology of dimension one in degrees one and two and zero elsewhere. Then the constructions satisfy all the hypotheses of Proposition <a href=\"#rd:family-clearing\" data-reference-type=\"ref\" data-reference=\"rd:family-clearing\">38</a>, with bounds independent of the cube dimension and of its new-prime support.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rd-assembly"
+  },
+  {
+   "claim_id": "claim-prescribed-bits",
+   "exact_statement": "Let $A_1(x),\\ldots,A_q(x)$ be specified Laurent coefficients of sign evaluations of elements of $\\mathcal O[G]$. For $M\\ge1$, if $$b>q(2^M-1),\n \\label{rd:bit-threshold}$$ there is $x\\ne0$ with $A_i(x)\\equiv A_i(0)\\pmod{2^M}$ for every $i$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rd-bits"
+  },
+  {
+   "claim_id": "claim-binary-transfer",
+   "exact_statement": "Suppose $f,d\\in\\mathcal O[G]$, $u_x\\in\\Lambda[1/2]$, and $f_xu_x=d_x$ for every character. Suppose $f_0\\in\\Lambda$ and $c=v(f_0(0))<\\infty$. If every $f_x\\bmod2^M$ has no powers below $-L(M)$, then for $$M>c,\\qquad\n b>(L(M)+2)(2^M-1)$$ there is $x\\ne0$ satisfying $$v\\bigl(u_x(0)-u_0(0)\\bigr)\\ge M-2c.\n \\label{rd:binary-congruence}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rd-binary-transfer"
+  },
+  {
+   "claim_id": "claim-local-witnesses",
+   "exact_statement": "Fix an elliptic curve $A/\\mathbb Q$ and a nonempty filter of fundamental discriminants prime to $2N_A$, with specified real sign and unit squareclasses at finitely many primes. If the root number in the filter is $+1$, it contains $d$ of arbitrarily large absolute value with $L(A^{(d)},1)\\ne0$. If the root number is $-1$, it contains such $d$ with $L'(A^{(d)},1)\\ne0$. Any additional finite set of primes may be excluded.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-nv-local-witness"
+  },
+  {
+   "claim_id": "claim-bounded-factor-completion",
+   "exact_statement": "There is an absolute integer $A_0$ with the following property. In the positive-root-number case of Proposition <a href=\"#nv:local-witness\" data-reference-type=\"ref\" data-reference=\"nv:local-witness\">43</a>, one can require $\\omega(d)\\le A_0$ and require every prime divisor of $d$ to exceed any fixed bound. The size threshold for the resulting $d$ may depend on the curve, the filter, and the excluded primes; $A_0$ does not.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-nv-rough"
+  },
+  {
+   "claim_id": "claim-fixed-progression-moment",
+   "exact_statement": "There are absolute constants $\\eta>0$ and $B>0$ such that the following assertions hold. For squarefree $b$ prime to $H$, put $$S_{j,b}(X)=\n\\sum_{\\substack{n>0\\ {\\rm squarefree}\\\\ n\\equiv a\\ (H)\\\\b\\mid n}}\n L^{(j)}(1/2,f\\otimes\\chi_{\\sigma n})\\Phi(n/X).$$ If the common root number is $+1$, then $$S_{0,b}(X)=cX\\prod_{p\\mid b}\\beta_p+\n O_{f,H,\\Phi}(b^B X^{1-\\eta}),\n\\qquad\nc>0,\\quad 0<\\beta_p<1,\\quad\n\\beta_p=\\frac1p+O(p^{-2}).$$ The last implied constant is absolute. If the common root number is $-1$, then $$S_{1,1}(X)=cX\\log X+c_1X+\n O_{f,H,\\Phi}(X^{1-\\eta}),\\qquad c>0.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-nv-moment"
+  },
+  {
+   "claim_id": "claim-even-coefficient-system",
+   "exact_statement": "Fix an even-sign filter and a nonvanishing index $D_0$ in it. There is a holomorphic cuspidal form $g=\\sum_{n\\geq1}a(n)q^n$ of weight $3/2$, orthogonal to unary theta series, of level supported on a fixed enlargement of $S$, and characters $\\eta,\\psi$ of $2$-power order such that $\\psi/\\eta=\\chi_{-\\sigma}$ and $$\\label{co:recurrence}\n a(p^2n)=\\bigl(\\eta(p)a_p(E)-\\psi(p)(-n/p)\\bigr)a(n)\n              -p\\eta(p)^2a(n/p^2)\\qquad(p\\notin S).$$ Its coefficients are zero off the unit-squareclass filter. After normalization at $D_0$, every squarefree coefficient is rational up to a $2$-power root of unity. For two nonzero squarefree coefficients, $$\\label{co:exact-ratio}\n 2v\\!\\left(\\frac{a(D)}{a(D_0)}\\right)\n   =v\\!\\left(\\frac{L_*(\\sigma D)}{L_*(\\sigma D_0)}\\right).$$ Moreover $a(D)\\neq0$ exactly when $L(E^{(\\sigma D)},1)\\neq0$. Consequently any previously established bound $v(L_*(\\sigma D))\\geq2w(D)+s(\\sigma D)-C$ gives $$\\label{co:even-bound}\n v(a(D))\\geq w(D)+\\tfrac12s(\\sigma D)-C_g$$ with $C_g$ fixed independently of $D$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-co-even"
+  },
+  {
+   "claim_id": "claim-kummer-detection",
+   "exact_statement": "Let $C$ act on $T=T_2E$ as complex conjugation, and choose a nonzero integral row $b:T\\longrightarrow\\mathbb Z_2$ with $bC=b$. For a fixed positive simple-zero witness $D_w$, there are arbitrarily large precisions $M$ and good primes $\\ell$ such that $$\\label{co:ell-conditions}\n \\rho_T(\\operatorname{Fr}_\\ell)\\equiv C\\pmod {2^M},\\qquad\n (h_*/\\ell)=-1,\\qquad(D_w/\\ell)=1.$$ Evaluation at Frobenius squared defines an integral homomorphism $$\\lambda_M:E(\\mathbb F_{\\ell^2})\\longrightarrow\\mathbb Z/2^M\\mathbb Z,\n \\qquad \\lambda_M=b\\kappa_M,$$ of Frobenius sign $+1$. The valuation of $\\lambda_M(\\operatorname{red}_\\ell(LP_{D_w}))$ is bounded independently of $M$, for a fixed nonzero integer $L$ making the twist comparison integral. Extra fixed finite-field restrictions can be retained when they agree with the chosen complex-conjugation coset, or when a compatible lift has been specified.",
+   "kind": "construction",
+   "statement_anchor": "stmt-co-kummer"
+  },
+  {
+   "claim_id": "claim-weighted-theta-bridge",
+   "exact_statement": "For $\\ell$ as in Lemma <a href=\"#co:kummer\" data-reference-type=\"ref\" data-reference=\"co:kummer\">47</a>, the reduced modular parametrization followed by $\\lambda_M$ admits an integral weighted ternary theta lift. After extraction of the coefficients at multiples of $|h_*|$ it gives a classical holomorphic weight-$3/2$ form $g_M=\\sum a_M(n)q^n$, of level supported on $S\\cup\\{\\ell\\}$, with <a href=\"#co:recurrence\" data-reference-type=\"eqref\" data-reference=\"co:recurrence\">[co:recurrence]</a> modulo $2^M$. The associated characters have $2$-power order and quadratic ratio. For squarefree admissible $D$, $$\\label{co:weighted-comparison}\n a_M(D)=c_0\\,2^{\\omega(N)}\\zeta_M(D)\n       \\lambda_M\\bigl(\\operatorname{red}_\\ell(LP_D)\\bigr)\n                     \\pmod {2^M},$$ where $\\zeta_M(D)$ is a $2$-power root of unity and $c_0,L$ are fixed integers independent of $D,M,\\ell$. The extra index restriction at $\\ell$ is $(D/\\ell)=1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-co-theta-bridge"
+  },
+  {
+   "claim_id": "claim-odd-coefficient-detection",
+   "exact_statement": "The forms in Lemma <a href=\"#co:theta-bridge\" data-reference-type=\"ref\" data-reference=\"co:theta-bridge\">48</a>, after a fixed adjustment of precision, satisfy $$v(a_M(D))\\geq\\min\\{M,j(P_D)-C\\},\\qquad\n v(a_M(D))<M\\ \\Longrightarrow\\ j(P_D)\\leq v(a_M(D))+C.$$ A visible coefficient detects $a(E^{(D)})=1$, and a fixed positive witness has bounded coefficient valuation as $M\\to\\infty$. All constants are independent of $M,\\ell,D$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-co-odd"
+  },
+  {
+   "claim_id": "claim-stabilized-minimum-depth",
+   "exact_statement": "Assume the uniform arithmetic lower bounds just stated. Each coefficient source defines a binary symbol $$\\label{co:symbol}\n A(D)=\\begin{cases}\n 1,&v(a(D))=\\delta+w(D),\\\\\n 0,&v(a(D))>\\delta+w(D)\\text{ or }D\\text{ is off the filter},\n \\end{cases}$$ with a fixed minimum normalized depth $\\delta$ and at least one bounded-weight witness. For the odd source $a=a_M$ at an actual stage: the numerical minimum and its divisibility statements stabilize at every fixed finite weight bound. The finite symbol tables on arithmetic labels will be stabilized separately in Section <a href=\"#pw:odd-stages\" data-reference-type=\"ref\" data-reference=\"pw:odd-stages\">9.5</a>. At a unit symbol, $$v(L_*(\\sigma D))\\leq2w(D)+O(1)\n \\quad\\text{or}\\quad j(P_D)\\leq w(D)+O(1),$$ respectively, and the analytic order is respectively zero or one.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-co-minimum"
+  },
+  {
+   "claim_id": "claim-coefficient-operators",
+   "exact_statement": "For the even source let $U$ be arbitrary. For the odd source, fix an integer $R\\ge1$ and a weight bound $W$; all assertions below are made at a sufficiently advanced actual stage, simultaneously for every $U$ with $w(U)\\le W$ and every Fourier index. In these respective settings the coefficients of $B_U$ are integral. Write uniquely $n=Jrm^2$, with $J\\subseteq U$, $r$ squarefree, and $(r,U)=1$. The coefficient vanishes unless $D=(U/J)r$ belongs to the filter, and for the even source otherwise $$\\label{co:BU-bound}\n v(B_U[n])\\geq w(r)+\\tfrac12\\#\\{p\\in J:p\\text{ simple}\\}-e_U.$$ At that stage the odd source satisfies this inequality for every $U$ with $w(U)\\le W$ and every $n$, with its right side replaced by its minimum with $R$. In particular the untruncated bound holds on any prescribed bounded range of squarefree weights, after choosing $R$ and the stage. For a split $p\\in J$ the difference factor, after its unit phase and one factor of $2$ are removed, has residue $$\\label{co:cp}\n c_p(D)=\\frac{a_p(E)-(\\psi/\\eta)(p)(-D/p)-1}{2}\\pmod2$$ at every square shell. For a simple $p$ this formula holds on the first shell $p\\nmid m$.*\n\n\n*Choose $i\\in\\{0,1\\}$ such that $\\eta\\chi_{-4}^i$ is odd, and set $$\\Theta_J=\\sum_{\\substack{m>0\\\\(m,S)=1}}\n              \\eta(m)\\chi_{-4}(m)^i m q^{Jm^2}.$$ For matching $U$ the modular form $$\\label{co:HU}\n H_U=\\frac12\\left(B_U-\n       \\sum_{\\substack{J\\subseteq U\\\\J\\text{ split only}}}\n                 B_U[J]\\Theta_J\\right)$$ has integral coefficients, with the same stage and weight restriction in the odd case. For opposite $U$ put $H_U=B_U$. The new primes in the level of $\\Theta_J$ have exponent one, and its character is $\\eta\\chi_{-4}^i(-J/\\cdot)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-co-operators"
+  },
+  {
+   "claim_id": "claim-integral-traces",
+   "exact_statement": "The module $\\mathcal M$ is an integral Fourier lattice preserved by the trace and determinant operators. On the coefficientwise reduced trace orbit of the indicated vector, $$\\label{co:trace-identities}\n d(u)t(v)=t(v),\\qquad\n t(u)t(v)=t(uv)+t(uv^{-1}),\\qquad t(1)=0.$$ Every coefficient test of a finite product of traces can be performed using distinct fresh primes avoiding the tested index. In particular testing $t(u_1)\\cdots t(u_a)$ at $n$ becomes testing the original reduced coefficient at $nq_1\\cdots q_a$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-co-traces"
+  },
+  {
+   "claim_id": "claim-level-prime-inertia",
+   "exact_statement": "For $p\\in U$, choose inertia $\\tau_p$ on which the new ramified quadratic character is $-1$, and an arithmetic Frobenius lift $\\phi_p$ in the same decomposition group. In characteristic zero, $$\\label{co:inertia-identity}\n U_p^{(2)}\\bigl(t(g\\tau_p\\phi_p)-t(g\\phi_p)\\bigr)\n   =d(\\phi_p)\\bigl(t(g\\tau_p)-t(g)\\bigr).$$ Here $U_p^{(2)}$ extracts $p$-multiples in weight two. The identity commutes with further good traces.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-co-inertia"
+  },
+  {
+   "claim_id": "claim-symbol-interface",
+   "exact_statement": "Under the arithmetic lower bounds in Lemma <a href=\"#co:minimum\" data-reference-type=\"ref\" data-reference=\"co:minimum\">50</a>, the symbols of either coefficient source have the following properties.*\n\n1.  *For matching $U$, the trace on split elements factors through the maximal elementary $2$-extension of $F$ unramified outside $S\\cup U$. For opposite $U$, traces factor through the corresponding rational elementary extension. Adding a split vertex $q$ is read by coefficient $1$ of $t(\\operatorname{Fr}_q)H_U$; adding a simple vertex is read on the opposite $B_U$.*\n\n\n2.  *Let $p\\in U$ and $g=\\operatorname{Fr}_q$. Changing one oriented ramification bit at $p$ changes the symbol by $$\\label{co:contraction}\n     A\\bigl((U\\setminus\\{p\\})\\cup\\{q'\\}\\bigr),\\qquad\n     \\operatorname{Fr}_{q'}\\sim g\\phi_p,$$ unless $p,q$ are both simple, in which case the change is zero. The replacement has the product labels at all retained places. Its coefficient system has support $S\\cup(U\\setminus\\{p\\})$: the entire rational prime $p$, including both places above it when it splits in $F$, is omitted.*\n\n3.  *A split vertex with trivial label in the elementary extension for the other vertices has zero symbol.*\n\n4.  *In matching parity, insertion of two simple primes with equal rational labels on the fixed support and at the existing split vertices preserves the symbol if $\\#E(\\mathbb F_q)/2$ is odd for that label. Their mutual simple bits and their incidences with other simple vertices do not affect this statement.*\n\n*These are coefficient identities. Simultaneous realization of their labels by primes is a separate arithmetic construction.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-co-symbol-interface"
+  },
+  {
+   "claim_id": "claim-finite-realization",
+   "exact_statement": "Fix finitely many old vertices, with all their mutual data, and individually realizable new types. Every prescription of the independent forward bits involving at least one new vertex has a realization by distinct fresh primes, avoiding an arbitrary finite set. The old vertices and their mutual data remain unchanged. The same holds with further fixed local tests included in $S$. A contracted split cluster may be represented by the product of its oriented generators, with conjugations prescribed along its contraction tree; its support types and external residue bits are the corresponding sums. A cluster containing one simple vertex has the corresponding rational product data.*\n\n*For a symbol satisfying the omitted-vertex dependence in Proposition <a href=\"#co:symbol-interface\" data-reference-type=\"ref\" data-reference=\"co:symbol-interface\">54</a>, its value depends only on the graph data. Products in the preceding assertion may therefore be replaced by fresh prime representatives without changing the prescribed contracted symbol.",
+   "kind": "construction",
+   "statement_anchor": "stmt-gr-realization"
+  },
+  {
+   "claim_id": "claim-address-lemma",
+   "exact_statement": "Suppose the binary symbols under consideration depend only on the arithmetic graph data and satisfy the contraction, whole-rational-prime omission, and primary-isolation rules of Proposition <a href=\"#co:symbol-interface\" data-reference-type=\"ref\" data-reference=\"co:symbol-interface\">54</a>, with the realization freedoms of Lemma <a href=\"#gr:realization\" data-reference-type=\"ref\" data-reference=\"gr:realization\">55</a>. Contraction includes the product labels and external incidences, and the zero rule for two simple vertices. These identities are required only on nonempty configurations and for contractions with nonempty output. Fix $b\\ge1$ and either of the following terminal arrangements.*\n\n1.  *One symbol, a nonempty set of always active terminals, and a nonzero polynomial in their independent pair bits.*\n\n2.  *One or two symbols on terminals with nonzero linear activations, including at least one terminal for every nonzero linear form. At each $x\\ne0$ each symbol separately is a nonzero polynomial in the active terminal bits. The symbols may read different compatible projections of a common graph alphabet and may have fixed stationary external data.*\n\n*Suppose also that at each nonzero address the total active terminal data, together with any stationary external data, obey the required filter. Starting from any fixed realization of the terminal and stationary vertices, one can adjoin finitely many fresh primary auxiliary vertices, activated by nonzero linear forms, and choose only incidences involving these new vertices so that every symbol equals $1$ at every $x\\ne0$. All data on the original vertices remain unchanged. No auxiliary is present at $0$. All auxiliaries may satisfy the fixed splitting and neutral external-incidence conditions incorporated into the primary type.*\n\n*It is enough that a terminal polynomial have a nonzero evaluation or a nonzero iterated edge difference. In particular a partitionability certificate suffices for the stationary hypothesis.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-gr-address"
+  },
+  {
+   "claim_id": "claim-oriented-forests",
+   "exact_statement": "Assume the graph-symbol rules stated in Theorem <a href=\"#gr:address\" data-reference-type=\"ref\" data-reference=\"gr:address\">57</a>. Differentiation in a tree of graph bits contracts the tree, adding product labels and external incidences; its value is zero if the tree contains two simple vertices. Differentiation in any collection of edge variables containing a cycle is zero, even when different edges use incompatible relative orientations. Two different oriented variables on the same pair count as a cycle of length two.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-gr-forest"
+  },
+  {
+   "claim_id": "claim-network-expansion",
+   "exact_statement": "A network acts on $P$ by a sum of finite-difference operators. A surviving term is a forest in which every component containing a primary vertex meets a terminal. A component meeting $t$ terminals acts by a contraction of degree $t-1$; a component containing two simple terminals is zero. Networks on disjoint sets of internal vertices, with no edges between those sets, multiply as operators on the same terminal polynomial. Consequently an operator of degree greater than $\\deg P$ annihilates $P$.*\n\n\n*Let $Q$ be the grounded Laplacian on the internal vertices: $Q_{ij}$ for $i\\ne j$ records the internal edge $ij$, while $Q_{ii}$ is the total incidence at $i$, including its terminal edges. Let $(c_a)_i$ record the incidence from internal vertex $i$ to terminal $a$. All entries are in $\\mathbf F_2$. The constant and pair-contraction coefficients of the operator are respectively $$\\label{gr:forest-coefficients}\n \\det Q,\\qquad c_a^{\\mathsf t}\\operatorname{adj}(Q)c_b\\quad(a\\ne b).$$ The second coefficient multiplies the terminal difference in the alignment selected by the network. A prohibited pair multiplies the zero operator.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-gr-network"
+  },
+  {
+   "claim_id": "claim-address-programs",
+   "exact_statement": "With the preceding grounding convention one has the following programs for every $b\\ge1$.*\n\n1.  *A network $\\mathcal S$ with $$\\mathcal S_{x_*}=\\Delta_z+O_{\\ge2},\\qquad\n     \\mathcal S_x=1+O_{\\ge1}\\quad(x\\ne x_*).$$*\n\n2.  *Two networks on the same activated sites, indexed by $\\varepsilon\\in\\mathbf F_2$, with $$\\mathcal N_x^{(\\varepsilon)}=1+O_{\\ge1},\\qquad\n     \\mathcal N_x^{(1)}+\\mathcal N_x^{(0)}\n     =\\begin{cases}\\Delta_z+O_{\\ge2},&x=x_*,\\\\\n     O_{\\ge2},&x\\ne x_*.\n     \\end{cases}$$*\n\n*All nonzero-activation sites are absent at $0$. Unspecified incidences, including those to stationary external vertices, may remain neutral.",
+   "kind": "construction",
+   "statement_anchor": "stmt-gr-programs"
+  },
+  {
+   "claim_id": "claim-collected-interfaces",
+   "exact_statement": "The following statements hold for the fixed curve and fixed local data.*\n\n1.  *The cyclotomic missing-vertex statement of Theorem <a href=\"#cy:missing-vertex\" data-reference-type=\"ref\" data-reference=\"cy:missing-vertex\">5</a> applies to any fixed base $h_0$ of Selmer corank zero. If arbitrarily large binary cubes based at $h_0$, with no old prime removed, have nonzero central values at every other address and satisfy $$v(L_*(h_x))-2w(h_x)-s(h_x)\\le B\\quad(x\\ne0),$$ then the base central value is nonzero and satisfies the same inequality with $B$ replaced by $B+C$. The constant $C$ depends only on the fixed curve and local data, not on $h_0$, its number of prime factors, or the cube dimension. The dimension required for the argument may depend on the base. The cyclotomic lower bound at an analytically nonvanishing parameter is also available.*\n\n\n2.  *Corollary <a href=\"#rd:ring-lower\" data-reference-type=\"ref\" data-reference=\"rd:ring-lower\">11</a> has the following uniform form. If $k<0$ is an odd fundamental discriminant with at most $A$ prime factors, $K=\\mathbb Q(\\sqrt{k})$ is neither an extra-unit field nor the CM field, $k$ is a square at $2Nh$, and the twists $h,hk$ have respective analytic orders one and zero, then their ring-class Heegner sum has free-line index $j_h(k)$ satisfying $$\\label{pw:ring-lower-interface}\n     2j_h(k)\\ge 4w(h)+s(h)+s(hk)-C_{E,A}.$$ For a fixed such $k$, Theorem <a href=\"#rd:missing-vertex\" data-reference-type=\"ref\" data-reference=\"rd:missing-vertex\">12</a> applies to cubes based at $h=1$ whose new primes all split in $K$. If $s_2(E/K)=1$ and the nonzero addresses have product analytic order one and uniformly bounded $2j_h(k)-4w(h)-s(h)-s(hk)$, the base product has analytic order one.*\n\n\n\n3.  *The even coefficient system, exact same-filter square comparison, divided operators, and trace identities of Proposition <a href=\"#co:even\" data-reference-type=\"ref\" data-reference=\"co:even\">46</a> and Lemmas <a href=\"#co:operators\" data-reference-type=\"ref\" data-reference=\"co:operators\">51</a>, <a href=\"#co:traces\" data-reference-type=\"ref\" data-reference=\"co:traces\">52</a>, and <a href=\"#co:inertia\" data-reference-type=\"ref\" data-reference=\"co:inertia\">53</a> are available. After a uniform lower bound for the relevant point indices has been proved, the moving odd coefficient system and its stabilized minimum are available as in Proposition <a href=\"#co:odd\" data-reference-type=\"ref\" data-reference=\"co:odd\">49</a> and Lemma <a href=\"#co:minimum\" data-reference-type=\"ref\" data-reference=\"co:minimum\">50</a>. The resulting unit symbols satisfy the contraction, good-twin, and primary-isolation rules of Proposition <a href=\"#co:symbol-interface\" data-reference-type=\"ref\" data-reference=\"co:symbol-interface\">54</a>. An even unit gives $$\\label{pw:even-unit-interface}\n     L_*(h)\\ne0,\\qquad v(L_*(h))\\le 2w(h)+C;$$ an odd unit gives analytic order one and $$\\label{pw:odd-unit-interface}\n     j(P_h)\\le w(h)+C.$$ The constants are independent of the number and sizes of the variable primes. The fixed genus partner used to define $P_h$ is denoted $h_*$.*\n\n4.  *Arithmetic realization and the forest and address statements of Lemmas <a href=\"#gr:realization\" data-reference-type=\"ref\" data-reference=\"gr:realization\">55</a> and <a href=\"#gr:forest\" data-reference-type=\"ref\" data-reference=\"gr:forest\">58</a> and Theorem <a href=\"#gr:address\" data-reference-type=\"ref\" data-reference=\"gr:address\">57</a> hold. In particular, separate nonzero terminal polynomials may be addressed simultaneously. Primary auxiliaries preserve all fixed local classes, have neutral incidence to specified stationary external vertices, and may be required to split in any compatible fixed fields. They contribute no prime at address zero.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-pw-interfaces"
+  },
+  {
+   "claim_id": "claim-isogeny-orientation-coranks",
+   "exact_statement": "Recall that a rational isogeny preserves analytic rank, Mordell–Weil rank, and $2^\\infty$-Selmer corank. If $k$ is a quadratic discriminant and $K=\\mathbb Q(\\sqrt{k})$, then $$\\label{pw:quadratic-corank}\n s_2(E/K)=s_2(E/\\mathbb Q)+s_2(E^{(k)}/\\mathbb Q).$$ For every $E/\\mathbb Q$ one has, separately, $$\\label{pw:kummer-corank}\n s_2(E)=r(E)+\n \\operatorname{corank}_{\\mathbb Z_2}\\operatorname{Sha}(E/\\mathbb Q)[2^\\infty].$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pw-isogeny-corank"
+  },
+  {
+   "claim_id": "claim-minimum-seeds",
+   "exact_statement": "1.  *In an all-split alphabet, suppose a unit symbol has a nonempty witness. At the least positive vertex count $r$ of such a witness, all mutual edge bits are immaterial. The symbol is determined by the individual fixed-support labels. This remains true if the empty configuration is a unit, provided no contraction to the empty configuration is used.*\n\n2.  *In the quadratic case, suppose the symbol has a nonzero witness, the alphabet is closed under the allowed contractions, and it contains the good twin operations. There are $r\\ge0$ and $s_1\\ge1$ such that for every $s\\ge s_1$ of the permitted simple parity, the minimum split count of a unit with $s$ simple vertices is $r$. At these counts all edge bits are immaterial. A chosen minimum seed may be padded by arbitrarily many good twin pairs.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pw-minimum-seeds"
+  },
+  {
+   "claim_id": "claim-finite-label-reserves",
+   "exact_statement": "Fix a minimum seed and a finite label alphabet.*\n\n1.  *In the all-split rational alphabet, a list with the same total label as the seed and sufficiently many copies of its labels is partitionable.*\n\n\n2.  *In the quadratic alphabet, retain $r$ split anchors with the seed labels, and suppose the list and seed have the same total rational label on the projection used by the symbol. Suppose there are sufficiently many simple vertices of the required parity and sufficiently many split reserves of each realizable rational shift. If $F\\ne F'$, also suppose $$\\label{pw:donor-balance}\n     \\Delta=\\#\\{p:\\ p\\text{ split in }F\\text{ and inert in }F'\\}\n           -\\#\\{p:\\ p\\text{ inert in }F\\text{ and split in }F'\\}>C_0.$$ Here $C_0$ depends only on the anchors and the reserves. Then all other split vertices can be attached to simple vertices so that the result is the minimum seed and good twin pairs. The twins may match a prescribed finite enrichment of the rational labels. The base simple labels may be specified on any projection on which the required total agrees.*\n\n*All reserve requirements depend only on the finite alphabets, seed, and projection. They do not depend on the original list length.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pw-reserves"
+  },
+  {
+   "claim_id": "claim-neutral-packets",
+   "exact_statement": "For any of the finite reserve problems above with prescribed rational total zero, one can choose a finite packet of terminal labels with rational total zero such that every nonempty union of copies of the packet has the required supplies. In the quadratic case with $F\\ne F'$, its donor surplus may be made arbitrarily large. When $F=F'$, every simple label is good and no donor surplus is required. Compatible fixed splitting conditions may be included whenever the needed individual labels and shifts remain realizable.",
+   "kind": "construction",
+   "statement_anchor": "stmt-pw-packets"
+  },
+  {
+   "claim_id": "claim-partitionable-even-estimate",
+   "exact_statement": "Fix an even symbol furnished by Proposition <a href=\"#pw:interfaces\" data-reference-type=\"ref\" data-reference=\"pw:interfaces\">61</a>. For every partitionable parameter $h$ on its filter with $s_2(E^{(h)})=0$, $$\\label{pw:partitionable-bound}\n L_*(h)\\ne0,\\qquad v(L_*(h))-2w(h)-s(h)\\le C.$$ The constant depends only on the symbol and fixed local data.",
+   "kind": "bound",
+   "statement_anchor": "stmt-pw-partitionable-even"
+  },
+  {
+   "claim_id": "claim-even-base",
+   "exact_statement": "If $s_2(E)=0$, then $a(E)=0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pw-even-base"
+  },
+  {
+   "claim_id": "claim-bounded-companion",
+   "exact_statement": "Fix a positive odd-sign filter, including the coefficient and class-group support used below, and a negative genus partner $h_*$ with $L(E^{(h_*)},1)\\ne0$, chosen using Proposition <a href=\"#nv:local-witness\" data-reference-type=\"ref\" data-reference=\"nv:local-witness\">43</a> and then excluded from the variable parameters. There are constants $A,C$ such that every $h$ on this filter of analytic order one admits a negative odd fundamental discriminant $k'$ for which*\n\n1.  *$(k',2Nh)=1$, $k'$ is a square at every place of $2Nh$, and $\\mathbb Q(\\sqrt{k'})$ is nonexceptional;*\n\n2.  *$\\omega(k')\\le A$;*\n\n\n3.  *$L(E^{(hk')},1)\\ne0$ and $$\\label{pw:rough-bound}\n     v(L_*(hk'))\\le 2w(hk')+s(hk')+C.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-pw-rough-companion"
+  },
+  {
+   "claim_id": "claim-height-comparison",
+   "exact_statement": "Here $j_h(k)$ is the index of the conductor-$|h|$ ring-class sum over $\\mathbb Q(\\sqrt{k})$, whereas $j(P_h)$ is the index of the conductor-one genus sum over $\\mathbb Q(\\sqrt{hh_*})$. With the fixed modular parametrization and the fixed genus partner $h_*$, the explicit Gross–Zagier formula gives, whenever the relevant factors have analytic orders one and zero, $$\\label{pw:height-ratio}\n 2j_h(k)-2j(P_h)=v(L_*(hk))+O(1).$$ For $k$ with bounded prime count as in Lemma <a href=\"#pw:rough-companion\" data-reference-type=\"ref\" data-reference=\"pw:rough-companion\">68</a>, the error is uniform in $h,k$; for a fixed $k$ it is uniform in $h$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-pw-height-comparison"
+  },
+  {
+   "claim_id": "claim-odd-lower-bound",
+   "exact_statement": "Every analytically rank-one $h$ in the prepared positive filter of Lemma <a href=\"#pw:rough-companion\" data-reference-type=\"ref\" data-reference=\"pw:rough-companion\">68</a> satisfies $$\\label{pw:odd-lower-bound}\n 2j(P_h)\\ge 2w(h)+s(h)-C.$$ In particular $j(P_h)\\ge w(h)-C$ uniformly in $h$ and its prime count.",
+   "kind": "bound",
+   "statement_anchor": "stmt-pw-odd-lower"
+  },
+  {
+   "claim_id": "claim-recurrence-congruences",
+   "exact_statement": "Let $p$ be odd, $a\\equiv p+1\\pmod4$, and let $$b_0=1,\\quad b_1=a-\\kappa,\\quad\n b_{s+1}=ab_s-pb_{s-1}.$$ If $\\kappa=\\pm1$, then $b_{s+1}-b_s$ is even and $$\\frac{b_{s+1}-b_s}{2}\\equiv\\frac{a-\\kappa-1}{2}\\pmod2\n \\quad(s\\ge0).$$ If $\\kappa=0$, put $b_{-1}=0$; then $b_s-b_{s-1}$ is odd for every $s\\ge0$. Finally, for $\\kappa=1$, if $a\\equiv p+1\\pmod{2^m}$ then $b_s\\equiv p^s\\pmod{2^m}$ for every $s\\ge0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pw-recurrence"
+  },
+  {
+   "claim_id": "claim-split-witness",
+   "exact_statement": "Suppose $E[2]$ is rational. Choose a negative unit $k$ of a fixed even symbol for $E$, prime to all previous fixed support and to the ramification support of $E[8]$. Put $K=\\mathbb Q(\\sqrt{k})$, chosen nonexceptional. Let $S_0$ contain the complete fixed support of the coefficient system, $2N$, the primes of $k$, and primes generating the class group of $K$. On the positive filter of $1$ square at $S_0$, there is an even unit test on nonempty products of primes split in $K$ with these properties:*\n\n1.  *it has a nonempty witness;*\n\n2.  *it satisfies the oriented split contraction and primary-isolation rules over $K$, for contractions with nonempty output;*\n\n\n3.  *a unit at $D$ implies $$\\label{pw:split-unit-bound}\n     L(E^{(kD)},1)\\ne0,\\qquad v(L_*(kD))\\le 2\\omega(D)+C_k.$$*\n\n*This conclusion uses the integral trace and local identities in Proposition <a href=\"#pw:interfaces\" data-reference-type=\"ref\" data-reference=\"pw:interfaces\">61</a>(3).",
+   "kind": "construction",
+   "statement_anchor": "stmt-pw-split-witness"
+  },
+  {
+   "claim_id": "claim-orientation-correction",
+   "exact_statement": "Let $K$ be imaginary quadratic, let $S_0$ contain $2$ and its ramification support, and let $V_0$ be the elementary label space over $K$ unramified off $S_0$. Complex conjugation acts on $V_0$ by $c$. If the rational total of an oriented prime configuration is zero on every rational quadratic character unramified off $S_0$, then its oriented total belongs to $(1+c)V_0$. A reserved supply containing every label allows its orientations to be flipped to realize any prescribed change in $(1+c)V_0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pw-coinvariants"
+  },
+  {
+   "claim_id": "claim-odd-base",
+   "exact_statement": "If $s_2(E)=1$, then $a(E)=1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pw-odd-base"
+  }
+ ],
+ "paper": "papers/EN-101-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-M-0013_PM-004.2_A_pointwise_2_converse_for_elliptic_curves_with_rational_two_torsion.md",
+ "purpose": "A pointwise 2-converse for elliptic curves with rational two-torsion",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "af8f84975ffb1591d79cb852dc72826d28b520b3e570b14c0a14d1fa24154671",
+   "pm.domains.v2": "fa96c82cb1779d4a7301838a704d97cb0ce42eadc3f549689413ec3b7e337daa",
+   "pm.edges.v2": "93703c758d5ab793cd8ebed0cc4037fad09f74e09602ecff4fad4ba4ce30192a",
+   "pm.extraction.v2": "032e915d597b79a6a57c35cc9bacb6451cb1a52d5c86258955838ff70a60a997",
+   "pm.formal.v2": "f46b19eddf2c9ea9bcc5c2e264ca698037c2bcc864fcc3878928dd5f1c585f19",
+   "pm.limits.v2": "c632656f6ef3eb03c09f58bd08d04a48393b78a5174fb91426ed1722f505e3ab",
+   "pm.node.v2": "cfa206893e746d02ee25953a65e641e50de55a46acc49468ea759a069877023e",
+   "pm.objects.v2": "9a609366375b3a7f9a923082d05485c59536e55aae17cb167f2452910ad7a477",
+   "pm.provenance.v2": "274717f990a0b3ca1dd196d4463f30b6b990031e582ccb25c95ef72008080ce3",
+   "pm.quantities.v2": "cdb5c1ed089cadb221894c4af4d8657448826000c6e9aba24ff42c775b9c6c5c",
+   "pm.reading.v2": "48173224e548a903d26e99f5874677c0844e23303004c44ff5d1d83c00805418",
+   "pm.roadmap.v2": "3ac6a9f24cd92759e88091025c94f72adcf460f2d8f44dfe01113aad6f3f4db5",
+   "pm.search.v1": "ee43cf97f651bb9fb710969fdd5b9a0c4a52ebf544de7f960cadba5a86ed9cc0",
+   "pm.triptych.v2": "142269aeee0ea2ac434b47b5db411a61d19b681c72effc2f75135b2f166716a6"
+  },
+  "canonical_sha256": "95f9dfb854674516dd2a21ad61766a8fcbb023691d39d947f4ed0e8d3a2408e1",
+  "paper_sha256": "f24c931a5d5bdb0eb9e7bfc8d02dfe72fb57593ab8af745e1c668c4df10091d9",
+  "repaired_body_sha256": "cad61ca0e5c68655d1110d4f60d0c2ae32e4855a4fb1d971b42593f5ea98b5db"
+ },
+ "status": "ACTIVE",
+ "subject_id": 1,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "98281b2ba3bb81bce0ee92f54b294d7b14a626df762848d8b96a77ab42ea2d4c",
+   "receipt_sha256": "59354223df8fe4d012bf269b62332bf5d2534a761552e3864ebcd9dc5524eadc",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "b in 1..4, M in 1..3, r in 1..2, small integer coefficients, including cases below the threshold that return -1",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-binary-congruence",
+     "oracle_basis": "Independent Walsh-Hadamard recomputation of all character values and exhaustive search over nonzero addresses"
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-include-zero-address",
+     "observed_exit": 1,
+     "receipt_sha256": "afc31f8a0b70d13a07ece729c441c6e4b8d486e5c10322b6ece69b9436b8d0a4"
+    },
+    {
+     "id": "mut-halved-precision",
+     "observed_exit": 1,
+     "receipt_sha256": "37b94fad2a8939e3d04c8d09dd334e1c329034f714d49f1f31b809fc86250d7f"
+    },
+    {
+     "id": "mut-ignore-signs",
+     "observed_exit": 1,
+     "receipt_sha256": "1942af0eb7fa811047b1219c0e4e2a68e8b642bb5358b15c42e9eb4448b227ee"
+    },
+    {
+     "id": "mut-zero-base",
+     "observed_exit": 1,
+     "receipt_sha256": "e558e462c86056a7e83e0f56319675b1a5ab13abcb659fe518650c93205ae8cc"
+    },
+    {
+     "id": "mut-first-test-only",
+     "observed_exit": 1,
+     "receipt_sha256": "111f585f41dfa48d530a36130188d8d4249081de6a4d908c7452a040c0ae7906"
+    }
+   ],
+   "receipt_sha256": "a66e5c8b58bfa0e9a59c03bbaa4cebda2c8ac87a9da6fb61f4ec5f5470d4a284",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "A pointwise 2-converse for elliptic curves with rational two-torsion"
+}

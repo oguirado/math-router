@@ -1,0 +1,796 @@
+{
+  "$id": "urn:pm:connector:v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "claim_status": {
+      "enum": [
+        "CORPUS_CLAIMED",
+        "LEAN_STATED",
+        "LEAN_CHECKED",
+        "ABSENT"
+      ],
+      "type": "string"
+    },
+    "context": {
+      "additionalProperties": false,
+      "properties": {
+        "bytes": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reading_anchor": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "tier": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "tokenizer": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "tokens": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "bytes",
+        "tokens",
+        "tokenizer",
+        "tier",
+        "reading_anchor"
+      ],
+      "type": "object"
+    },
+    "coordinate": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "domains": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "applies": {
+            "type": "boolean"
+          },
+          "basis": {
+            "enum": [
+              "stated",
+              "inferred"
+            ],
+            "type": "string"
+          },
+          "contract_anchor": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "domain": {
+            "enum": [
+              "software",
+              "games_simulation",
+              "tools",
+              "algorithms",
+              "data_structures",
+              "hardware_accelerators",
+              "crypto_security",
+              "machine_learning",
+              "optimisation_operations_research",
+              "distributed_systems",
+              "other"
+            ],
+            "type": "string"
+          },
+          "maturity": {
+            "enum": [
+              "implementable",
+              "adaptable",
+              "inspirational",
+              "not_applicable"
+            ],
+            "type": "string"
+          },
+          "proposed_domain": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "strength": {
+            "enum": [
+              "none",
+              "weak",
+              "moderate",
+              "strong"
+            ],
+            "type": "string"
+          },
+          "verification": {
+            "enum": [
+              "PENDING",
+              "SUPPORTED",
+              "REJECTED"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "domain",
+          "proposed_domain",
+          "applies",
+          "strength",
+          "maturity",
+          "basis",
+          "verification",
+          "contract_anchor"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "exclusions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "evidence": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "anchor": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "quote": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "quote_sha256": {
+                  "pattern": "^[a-f0-9]{64}$",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "anchor",
+                "quote",
+                "quote_sha256"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "query": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "query",
+          "reason",
+          "evidence"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "family": {
+      "pattern": "^PM-\\d{3}$",
+      "type": "string"
+    },
+    "id": {
+      "pattern": "^PM-\\d{3}\\.\\d+$",
+      "type": "string"
+    },
+    "inputs": {
+      "additionalProperties": false,
+      "properties": {
+        "hypotheses": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "anchor": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "claim_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "statement": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "claim_id",
+              "anchor",
+              "statement"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "prerequisites": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "concept": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "evidence": {
+                "items": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "anchor": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "minLength": 1,
+                      "type": "string"
+                    },
+                    "quote_sha256": {
+                      "pattern": "^[a-f0-9]{64}$",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "anchor",
+                    "quote",
+                    "quote_sha256"
+                  ],
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "requires_concepts": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "supporting_pm_ids": {
+                "items": {
+                  "pattern": "^PM-\\d{3}\\.\\d+$",
+                  "type": "string"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "concept",
+              "requires_concepts",
+              "supporting_pm_ids",
+              "evidence"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "hypotheses",
+        "prerequisites"
+      ],
+      "type": "object"
+    },
+    "outputs": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "claim_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "exact_statement": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "kind": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "statement_anchor": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "claim_id",
+          "kind",
+          "statement_anchor",
+          "exact_statement"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "paper": {
+      "pattern": "^papers/[^/]+\\.md$",
+      "type": "string"
+    },
+    "purpose": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema": {
+      "const": "pm.connector.v1"
+    },
+    "source_hashes": {
+      "additionalProperties": false,
+      "properties": {
+        "blocks_sha256": {
+          "additionalProperties": false,
+          "properties": {
+            "pm.claims.v2": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "pm.domains.v2": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "pm.edges.v2": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "pm.formal.v2": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "pm.extraction.v2": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "pm.limits.v2": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "pm.node.v2": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "pm.objects.v2": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "pm.provenance.v2": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "pm.quantities.v2": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "pm.reading.v2": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "pm.roadmap.v2": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "pm.search.v1": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            "pm.triptych.v2": {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "canonical_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "paper_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "repaired_body_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "paper_sha256",
+        "canonical_sha256",
+        "repaired_body_sha256",
+        "blocks_sha256"
+      ],
+      "type": "object"
+    },
+    "status": {
+      "enum": [
+        "ACTIVE",
+        "WITHDRAWN",
+        "SUPERSEDED"
+      ],
+      "type": "string"
+    },
+    "subject_id": {
+      "maximum": 17,
+      "minimum": 1,
+      "type": "integer"
+    },
+    "synergies": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "basis": {
+            "enum": [
+              "stated",
+              "inferred"
+            ],
+            "type": "string"
+          },
+          "direction": {
+            "enum": [
+              "directed",
+              "symmetric"
+            ],
+            "type": "string"
+          },
+          "explanation": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "relation": {
+            "enum": [
+              "prerequisite",
+              "uses",
+              "generalises",
+              "specialises",
+              "shared_technique",
+              "shared_constant",
+              "contradicts",
+              "supersedes"
+            ],
+            "type": "string"
+          },
+          "source_anchor": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "source_pm_id": {
+            "pattern": "^PM-\\d{3}\\.\\d+$",
+            "type": "string"
+          },
+          "source_quote": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "target_anchor": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "target_pm_id": {
+            "pattern": "^PM-\\d{3}\\.\\d+$",
+            "type": "string"
+          },
+          "target_quote": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "verification": {
+            "const": "SUPPORTED"
+          },
+          "verifier_receipt_sha256": {
+            "pattern": "^[a-f0-9]{64}$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "source_pm_id",
+          "target_pm_id",
+          "relation",
+          "direction",
+          "source_anchor",
+          "target_anchor",
+          "source_quote",
+          "target_quote",
+          "explanation",
+          "basis",
+          "verification",
+          "verifier_receipt_sha256"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "telemetry": {
+      "additionalProperties": false,
+      "properties": {
+        "fidelity": {
+          "additionalProperties": false,
+          "properties": {
+            "coverage_manifest_sha256": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-f0-9]{64}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "receipt_sha256": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-f0-9]{64}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "status": {
+              "enum": [
+                "PENDING",
+                "PASS",
+                "FAIL"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "receipt_sha256",
+            "coverage_manifest_sha256"
+          ],
+          "type": "object"
+        },
+        "oracle": {
+          "additionalProperties": false,
+          "properties": {
+            "coverage": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "checked_domain": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "coverage": {
+                    "enum": [
+                      "PARTIAL",
+                      "DECIDED"
+                    ],
+                    "type": "string"
+                  },
+                  "invariant_id": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "oracle_basis": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "invariant_id",
+                  "coverage",
+                  "checked_domain",
+                  "oracle_basis"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "mutant_receipts": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "id": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "observed_exit": {
+                    "type": "integer"
+                  },
+                  "receipt_sha256": {
+                    "pattern": "^[a-f0-9]{64}$",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "observed_exit",
+                  "receipt_sha256"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "receipt_sha256": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-f0-9]{64}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "status": {
+              "enum": [
+                "NOT_APPLICABLE",
+                "PENDING",
+                "PASS",
+                "FAIL"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "status",
+            "receipt_sha256",
+            "coverage",
+            "mutant_receipts"
+          ],
+          "type": "object"
+        },
+        "retrieval": {
+          "additionalProperties": false,
+          "properties": {
+            "metrics": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "cohort": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "const": "MEASURED"
+                  },
+                  "name": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "name",
+                  "value",
+                  "cohort",
+                  "evidence"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "receipt_sha256": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-f0-9]{64}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "snapshot_sha256": {
+              "anyOf": [
+                {
+                  "pattern": "^[a-f0-9]{64}$",
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "snapshot_sha256",
+            "receipt_sha256",
+            "metrics"
+          ],
+          "type": "object"
+        }
+      },
+      "required": [
+        "fidelity",
+        "oracle",
+        "retrieval"
+      ],
+      "type": "object"
+    },
+    "title": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "family",
+    "subject_id",
+    "coordinate",
+    "paper",
+    "title",
+    "purpose",
+    "status",
+    "claim_status",
+    "inputs",
+    "outputs",
+    "synergies",
+    "domains",
+    "exclusions",
+    "telemetry",
+    "context",
+    "source_hashes"
+  ],
+  "title": "Compiled paper connector node",
+  "type": "object"
+}

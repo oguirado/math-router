@@ -1,0 +1,770 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 523726,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 165956
+ },
+ "coordinate": "EN-111-000-0022-2-2026-PR-T4-UK-EX-M3-B-ML-M-0662",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "functional analysis and Banach space renorming theory",
+   "strength": "moderate",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-four",
+     "quote": "For $K\\in\\{K_{\\rm s},K_{\\rm p},K_{\\rm a},K_{\\rm g}\\}$ and $0<t<1$, $$\\label{eq:common-bound}\n \\widehat\\delta_{X_K}(t)\\ge\\sqrt{1+t^2/4}-1.$$",
+     "quote_sha256": "ab72ec715ea2073a1870b2249e1fa26388565965476916763bb08ef6bf91e96d"
+    }
+   ],
+   "query": "AUC renormability of these spaces",
+   "reason": "The paper shows none of the spaces has an equivalent AUC norm."
+  }
+ ],
+ "family": "PM-331",
+ "id": "PM-331.5",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-four",
+    "claim_id": "claim-four-spaces-midpoint-no-auc",
+    "statement": "Each of the four completed spaces $X_K$ is a separable infinite-dimensional real Banach space."
+   },
+   {
+    "anchor": "stmt-thm-constrained-paired",
+    "claim_id": "claim-paired-inward-tests",
+    "statement": "For any of the four norms, any $x$ supported in a finite initial $D$, any $y\\in F_D$, and $t>0$, one has $$\\label{eq:pair-inequality}\n \\frac{\\|x+ty\\|_K+\\|x-ty\\|_K}{2}\n \\ge \\sqrt{1-\\theta^2}\\,\\|x\\|_K\n       +\\frac{t\\theta}{2}\\|y\\|_K\n       \\qquad(0\\le\\theta\\le\\tfrac12).$$"
+   },
+   {
+    "anchor": "stmt-lem-bounded-tree",
+    "claim_id": "claim-bounded-tree-obstruction",
+    "statement": "Let $X$ be a real Banach space."
+   },
+   {
+    "anchor": "stmt-thm-free-root-modulus",
+    "claim_id": "claim-free-root-modulus",
+    "statement": "The real Banach space $X_{\\mathrm e}$ defined by <a href=\"#fr:tests\" data-reference-type=\"eqref\" data-reference=\"fr:tests\">[fr:tests]</a> and <a href=\"#fr:norm\" data-reference-type=\"eqref\" data-reference=\"fr:norm\">[fr:norm]</a> satisfies $$\\widehat\\delta_{\\|\\cdot\\|_{\\mathrm e}}(t)\n \\ge\\frac{\\sqrt{1+t^2/576}-1}{4}\\qquad(0<t<1).\n \\label{fr:modulus}$$ It admits no equivalent AUC norm."
+   },
+   {
+    "anchor": "stmt-prop-linear-duality",
+    "claim_id": "claim-linear-duality",
+    "statement": "The space $X_n=(H_n,L_n)$ is complete and $$\\frac{\\|x\\|_2}{\\sqrt{n+1}}\\le L_n(x)\\le\\|x\\|_2,\n \\qquad\n L_n(x)=\\sup_{p_n(f)\\le1}\\langle f,x\\rangle.$$"
+   },
+   {
+    "anchor": "stmt-prop-linear-geometry",
+    "claim_id": "claim-linear-geometry",
+    "statement": "The space $X$ is reflexive, has separable dual, and its dual is the Hilbert sum of the spaces $(H_n,p_n)$, with pairing $$f(x)=\\sum_n\\langle f_n,x_n\\rangle,\n \\qquad \\|f\\|_*^2=\\sum_np_n(f_n)^2.$$"
+   },
+   {
+    "anchor": "stmt-lem-linear-inward",
+    "claim_id": "claim-linear-inward-decomposition",
+    "statement": "Let $A$ be a finite head."
+   },
+   {
+    "anchor": "stmt-thm-linear-head-tail-clipping",
+    "claim_id": "claim-linear-head-tail-clipping",
+    "statement": "If $x,y\\in X$, $P_Ax=x$ and $P_Ay=0$ for a finite head $A$, then, for every $c>0$, $$\\max\\{\\|x+y\\|,\\|x-y\\|\\}\n \\ge\\frac{\\|x\\|+c\\|y\\|/2}{\\sqrt{1+4c^2}}.\n \\label{eq:linear-clipping-family}$$ In particular the left side is at least $\\sqrt{\\|x\\|^2+\\|y\\|^2/16}$."
+   },
+   {
+    "anchor": "stmt-thm-linear-weak-sequence",
+    "claim_id": "claim-linear-weak-sequence",
+    "statement": "Let $x\\in X$ and let $(y_j)$ be a bounded weakly null sequence in $X$."
+   },
+   {
+    "anchor": "stmt-lem-linear-positive-monotonicity",
+    "claim_id": "claim-linear-positive-monotonicity",
+    "statement": "If $0\\le\\nu\\le\\mu$ in $\\ell_1(U)$, then $L_U(B_U\\nu)\\le L_U(B_U\\mu)$."
+   },
+   {
+    "anchor": "stmt-thm-linear-positive-tail",
+    "claim_id": "claim-linear-positive-tail",
+    "statement": "Let $C=6(\\sqrt2+1)$."
+   },
+   {
+    "anchor": "stmt-lem-linear-subtree-quota",
+    "claim_id": "claim-linear-subtree-quota",
+    "statement": "On a forest of finite height, let $\\mu,\\nu$ be nonnegative finitely supported endpoint masses."
+   },
+   {
+    "anchor": "stmt-thm-linear-bottom-up-tail",
+    "claim_id": "claim-linear-bottom-up-tail",
+    "statement": "Suppose $0\\le\\varepsilon\\le1$, $P_Ax=x$, $P_Ay=0$, $L_n(x\\pm y)\\le1$, and $L_n(x)\\ge1-\\varepsilon$."
+   },
+   {
+    "anchor": "stmt-thm-linear-trimming-242",
+    "claim_id": "claim-linear-trimming",
+    "statement": "For a finite head projection $P$ on $X$, $$\\label{eq:linear-trimming-242}\n \\|y\\|^2\\le242\\bigl(\\|x+y\\|^2+\\|x-y\\|^2-2\\|x\\|^2\\bigr)\n \\qquad(Px=x,\\ Py=0).$$"
+   },
+   {
+    "anchor": "stmt-thm-linear-fresh-layer-400",
+    "claim_id": "claim-linear-fresh-layer",
+    "statement": "Let $A\\subseteq A'$ be finite ancestor-closed subsets of the disjoint union of the $T_n$, and put $E=A'\\setminus A$."
+   },
+   {
+    "anchor": "stmt-thm-linear-predictable-energy",
+    "claim_id": "claim-linear-predictable-energy",
+    "statement": "Let $x_0,\\ldots,x_m$ be an $X$-valued dyadic martingale."
+   },
+   {
+    "anchor": "stmt-lem-linear-mass-removal",
+    "claim_id": "claim-linear-mass-removal",
+    "statement": "Let $S\\subseteq T\\subset T_n$ be finite initial sets, let $z^+,z^-\\in H_n$, and put $z=(z^++z^-)/2$."
+   },
+   {
+    "anchor": "stmt-thm-linear-variation-energy",
+    "claim_id": "claim-linear-variation-energy",
+    "statement": "Under all hypotheses of Theorem <a href=\"#thm:linear-predictable-energy\" data-reference-type=\"ref\" data-reference=\"thm:linear-predictable-energy\">16</a>, $$\\label{eq:linear-energy-252}\n \\sum_{i=1}^m\\mathbb E\\|R_{\\Delta_i}x_i\\|^2\\le252C^2.$$"
+   },
+   {
+    "anchor": "stmt-thm-linear-sign-energy",
+    "claim_id": "claim-linear-sign-energy",
+    "statement": "There is an absolute constant $K$ with the following property."
+   },
+   {
+    "anchor": "stmt-thm-linear-leakage-energy",
+    "claim_id": "claim-linear-leakage-energy",
+    "statement": "Let $W_i=\\mathbb E_iW_m$, $0\\le i\\le m$, be an $X$-valued dyadic martingale."
+   },
+   {
+    "anchor": "stmt-qp-construction",
+    "claim_id": "claim-quadratic-construction",
+    "statement": "The spaces $Z_n$ and $X_{\\mathrm q}$ are Banach and reflexive, and finite node support is dense in $X_{\\mathrm q}$."
+   },
+   {
+    "anchor": "stmt-qp-head",
+    "claim_id": "claim-quadratic-head-fold",
+    "statement": "The operator $R_A$ which sends the mass $\\lambda_t$ to $r(t)$ and discards it when $r(t)=\\perp$ is contractive on $L$."
+   },
+   {
+    "anchor": "stmt-qp-no-auc",
+    "claim_id": "claim-quadratic-no-auc",
+    "statement": "No equivalent norm on $X_{\\mathrm q}$ is asymptotically uniformly convex."
+   },
+   {
+    "anchor": "stmt-qp-energy",
+    "claim_id": "claim-quadratic-energy",
+    "statement": "Let $$C=\\frac12\\sum_{\\epsilon\\in\\{+,-\\}}\n       (\\|h^\\epsilon\\|_H^2+\\|\\lambda^\\epsilon\\|_L^2),\n \\qquad E=C-\\|x\\|_{\\mathrm q}^2.$$"
+   },
+   {
+    "anchor": "stmt-qp-flow",
+    "claim_id": "claim-quadratic-flow",
+    "statement": "Let $O=T_n\\setminus A_n$, let $\\mathcal R$ be the roots of its connected subtrees, and suppose $V:O\\to[0,\\infty)$ satisfies $$V(t)\\ge\\sum_{c\\text{ child of }t}V(c),\\qquad\n B:=\\sum_{c\\in\\mathcal R}V(c)<\\infty.$$"
+   },
+   {
+    "anchor": "stmt-thm-quadratic-tail",
+    "claim_id": "claim-quadratic-tail",
+    "statement": "Let $A$ be a finite ancestral head in $X_{\\mathrm q}$ and let $P_Ax=x$."
+   },
+   {
+    "anchor": "stmt-qp-lens-eight",
+    "claim_id": "claim-quadratic-lens-eight",
+    "statement": "If $x\\in X_{\\mathrm q}$ and an infinite sequence $(y_j)$ satisfies $\\|x\\pm y_j\\|_{\\mathrm q}\\le R$ and $\\|y_i-y_j\\|_{\\mathrm q}\\ge\\varepsilon>0$ for $i\\ne j$, then $$\\|x\\|_{\\mathrm q}^2+\\frac{\\varepsilon^2}{256}\\le R^2.$$"
+   },
+   {
+    "anchor": "stmt-qp-symmetric-twelve",
+    "claim_id": "claim-quadratic-symmetric",
+    "statement": "For a finite ancestral head $A$, $P_Ax=x$, and $P_Ay=0$, $$\\label{qp:symmetric-144}\n \\|x\\|_{\\mathrm q}^2+\\frac{\\|y\\|_{\\mathrm q}^2}{144}\n \\le\\frac{\\|x+y\\|_{\\mathrm q}^2+\\|x-y\\|_{\\mathrm q}^2}{2}.$$"
+   },
+   {
+    "anchor": "stmt-qp-lens-twelve",
+    "claim_id": "claim-quadratic-lens-twelve",
+    "statement": "If $\\|x\\pm y_j\\|_{\\mathrm q}\\le r$ and $\\|y_i-y_j\\|_{\\mathrm q}\\ge2d>0$ for $i\\ne j$ in an infinite sequence, then $$\\|x\\|_{\\mathrm q}^2+d^2/144\\le r^2.$$"
+   },
+   {
+    "anchor": "stmt-qp-tail-seven",
+    "claim_id": "claim-quadratic-tail-seven",
+    "statement": "Under the hypotheses of Theorem <a href=\"#thm:quadratic-tail\" data-reference-type=\"ref\" data-reference=\"thm:quadratic-tail\">26</a>, $$\\|Q_Ay\\|_{\\mathrm q}\\le7\\sqrt{R^2-\\|x\\|_{\\mathrm q}^2}.$$"
+   },
+   {
+    "anchor": "stmt-qp-lens-seven",
+    "claim_id": "claim-quadratic-lens-seven",
+    "statement": "For $0<c\\le1$ put $\\delta=c^2/2000$."
+   },
+   {
+    "anchor": "stmt-qp-tail-nine",
+    "claim_id": "claim-quadratic-tail-nine",
+    "statement": "Under the hypotheses of Theorem <a href=\"#thm:quadratic-tail\" data-reference-type=\"ref\" data-reference=\"thm:quadratic-tail\">26</a>, $$\\|Q_Ay\\|_{\\mathrm q}\\le9\\sqrt{R^2-\\|x\\|_{\\mathrm q}^2}.$$"
+   },
+   {
+    "anchor": "stmt-qp-lens-nine",
+    "claim_id": "claim-quadratic-lens-nine",
+    "statement": "For every $\\rho>0$, choose $0<\\gamma<1/2$ such that $$9\\sqrt{(1+\\gamma)^2-(1-2\\gamma)^2}<\\rho/3.$$"
+   },
+   {
+    "anchor": "stmt-qp-relative-seventytwo",
+    "claim_id": "claim-quadratic-relative",
+    "statement": "For every nonzero $x\\in X_{\\mathrm q}$ and $0<\\delta\\le1$ there is a finite ancestral head $A$, depending only on $x,\\delta$, such that for every $u\\in X_{\\mathrm q}$, $$\\|x+u\\|_{\\mathrm q},\\ \\|x-u\\|_{\\mathrm q}\n       \\le(1+\\delta)\\|x\\|_{\\mathrm q}\n \\quad\\Longrightarrow\\quad\n \\|Q_Au\\|_{\\mathrm q}\\le72\\sqrt\\delta\\,\\|x\\|_{\\mathrm q}.$$"
+   },
+   {
+    "anchor": "stmt-qp-rec-component",
+    "claim_id": "claim-quadratic-component",
+    "statement": "Let $A\\subset T_n$ be a finite nonempty ancestral head, with $P_Ax=x$, $P_Ay=0$, and $|x|_n=1$."
+   },
+   {
+    "anchor": "stmt-qp-rec-finite-center",
+    "claim_id": "claim-quadratic-finite-center",
+    "statement": "Let $x\\in X_{\\mathrm q}$ be a unit vector with finite coordinate support."
+   },
+   {
+    "anchor": "stmt-qp-rec-all-centers",
+    "claim_id": "claim-quadratic-all-centers",
+    "statement": "For every $x\\in X_{\\mathrm q}$ with $\\|x\\|_{\\mathrm q}=1$ and $0<e\\le1/16$, there is a closed finite-codimensional subspace $Y\\subset X_{\\mathrm q}$ such that $$\\label{qp:rec:complete-bound}\n y\\in Y,\\quad\n \\|x+y\\|_{\\mathrm q},\\|x-y\\|_{\\mathrm q}\\le1+e\n \\quad\\Longrightarrow\\quad\n \\|y\\|_{\\mathrm q}\\le17(2e)^{1/6}.$$"
+   },
+   {
+    "anchor": "stmt-sm-s-cost-properties",
+    "claim_id": "claim-segment-cost-properties",
+    "statement": "The costs are monotone, positively homogeneous and subadditive."
+   },
+   {
+    "anchor": "stmt-sm-s-space",
+    "claim_id": "claim-segment-space",
+    "statement": "On $\\ell_2(\\mathcal T_n)$ the formula $$\\|x\\|_{S,n}=\\inf\\{M_n(m(a)):Pa=x\\}$$ defines a complete reflexive norm, with $$\\label{sm:s:norm-comparisons}\n \\frac{\\|x\\|_2}{n+1}\\le\\|x\\|_{S,n}\n \\le\\sqrt{n+1}\\,\\|x\\|_2.$$"
+   },
+   {
+    "anchor": "stmt-sm-s-coordinates",
+    "claim_id": "claim-segment-coordinates",
+    "statement": "For every node $v$ and $x\\in X_S$, $|x_v|\\le\\|x\\|_S$."
+   },
+   {
+    "anchor": "stmt-thm-segment-start-tail",
+    "claim_id": "claim-segment-start-tail",
+    "statement": "Let $C$ be a finite ancestral subset of $\\mathcal T$."
+   },
+   {
+    "anchor": "stmt-sm-s-midpoint-consequence",
+    "claim_id": "claim-segment-midpoint-consequence",
+    "statement": "For every $x\\in X_S$ with $\\|x\\|_S=1$, every $t>0$ and every $\\varepsilon>0$ there is a closed finite-codimensional subspace $F\\subset X_S$ such that $$\\inf_{\\substack{y\\in F\\\\\\|y\\|_S=1}}\n \\max\\{\\|x+ty\\|_S,\\|x-ty\\|_S\\}\n \\ge\\sqrt{1+t^2/64}-\\varepsilon.$$"
+   },
+   {
+    "anchor": "stmt-sm-i-reflexivity",
+    "claim_id": "claim-incomparable-reflexivity",
+    "statement": "Let $Y_{\\mathrm I,h}$ be the completion of the arrays supported on $T_h$ in the norm <a href=\"#sm:i:norm\" data-reference-type=\"eqref\" data-reference=\"sm:i:norm\">[sm:i:norm]</a>."
+   },
+   {
+    "anchor": "stmt-sm-i-atom-hull",
+    "claim_id": "claim-incomparable-atom-hull",
+    "statement": "The unit ball of $X_{\\mathrm I}$ is the norm-closed convex hull of the atoms <a href=\"#sm:i:atoms\" data-reference-type=\"eqref\" data-reference=\"sm:i:atoms\">[sm:i:atoms]</a>."
+   },
+   {
+    "anchor": "stmt-sm-i-auc-obstruction",
+    "claim_id": "claim-incomparable-no-auc",
+    "statement": "The real reflexive space $X_{\\mathrm I}$ admits no equivalent asymptotically uniformly convex norm."
+   },
+   {
+    "anchor": "stmt-sm-i-projections",
+    "claim_id": "claim-incomparable-projections",
+    "statement": "For every finite prefix-closed $E$, both $P_E$ and $Q_E$ act contractively on $Y_{\\mathrm I}$ and, by adjoints, on $X_{\\mathrm I}$."
+   },
+   {
+    "anchor": "stmt-sm-i-tail-estimate",
+    "claim_id": "claim-incomparable-tail-estimate",
+    "statement": "Let $E\\subset\\mathcal T$ be finite and prefix closed."
+   },
+   {
+    "anchor": "stmt-sm-i-separated-midpoints",
+    "claim_id": "claim-incomparable-separated-midpoints",
+    "statement": "Let $0<c\\leq1$ and let $x,u_j\\in X_{\\mathrm I}$, $j\\in\\mathbb N$, satisfy $$\\|x+u_j\\|_{\\mathrm I},\\ \\|x-u_j\\|_{\\mathrm I}\\leq1,\n \\qquad \\|u_j-u_k\\|_{\\mathrm I}\\geq2c\\quad(j\\ne k).$$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "midpoint modulus bound without AUC renorming",
+    "evidence": [
+     {
+      "anchor": "stmt-lem-bounded-tree",
+      "quote": "Let $X$ be a real Banach space.",
+      "quote_sha256": "3b8a3a4cb4597eaf15a56650e94e0a23e420a98e7c2f258c6c4d466e12f6e81c"
+     }
+    ],
+    "requires_concepts": [
+     "asymptotic moduli",
+     "tree potentials",
+     "weakly null trees"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-four-spaces-midpoint-no-auc",
+   "exact_statement": "Each of the four completed spaces $X_K$ is a separable infinite-dimensional real Banach space. For $K\\in\\{K_{\\rm s},K_{\\rm p},K_{\\rm a},K_{\\rm g}\\}$ and $0<t<1$, $$\\label{eq:common-bound}\n \\widehat\\delta_{X_K}(t)\\ge\\sqrt{1+t^2/4}-1.$$ None of these spaces admits an equivalent AUC norm.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-four"
+  },
+  {
+   "claim_id": "claim-paired-inward-tests",
+   "exact_statement": "For any of the four norms, any $x$ supported in a finite initial $D$, any $y\\in F_D$, and $t>0$, one has $$\\label{eq:pair-inequality}\n \\frac{\\|x+ty\\|_K+\\|x-ty\\|_K}{2}\n \\ge \\sqrt{1-\\theta^2}\\,\\|x\\|_K\n       +\\frac{t\\theta}{2}\\|y\\|_K\n       \\qquad(0\\le\\theta\\le\\tfrac12).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-constrained-paired"
+  },
+  {
+   "claim_id": "claim-bounded-tree-obstruction",
+   "exact_statement": "Let $X$ be a real Banach space. Suppose $0<m\\le M<\\infty$ and $c>0$, and, for every integer $h\\ge1$, $X$ contains a tree $(p_s)_{s\\in\\mathbb N^{\\le h}}$ with $m\\le\\|p_s\\|\\le M$. For every nonterminal $s$, suppose the child increments $d_{s,n}=p_{s^\\frown n}-p_s$ are weakly null as $n\\to\\infty$ and $\\|d_{s,n}\\|\\ge c$. If $N$ is an equivalent norm with $\\alpha\\|\\cdot\\|\\le N\\le\\beta\\|\\cdot\\|$ for constants $0<\\alpha\\le\\beta<\\infty$, then $\\overline\\delta_N(\\alpha c/(2\\beta M))=0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-bounded-tree"
+  },
+  {
+   "claim_id": "claim-free-root-modulus",
+   "exact_statement": "The real Banach space $X_{\\mathrm e}$ defined by <a href=\"#fr:tests\" data-reference-type=\"eqref\" data-reference=\"fr:tests\">[fr:tests]</a> and <a href=\"#fr:norm\" data-reference-type=\"eqref\" data-reference=\"fr:norm\">[fr:norm]</a> satisfies $$\\widehat\\delta_{\\|\\cdot\\|_{\\mathrm e}}(t)\n \\ge\\frac{\\sqrt{1+t^2/576}-1}{4}\\qquad(0<t<1).\n \\label{fr:modulus}$$ It admits no equivalent AUC norm. More precisely, if $\\alpha\\|\\cdot\\|_{\\mathrm e}\\le N\\le\\beta\\|\\cdot\\|_{\\mathrm e}$, where $0<\\alpha\\le\\beta<\\infty$, then $\\overline\\delta_N(\\alpha/(4\\beta))=0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-free-root-modulus"
+  },
+  {
+   "claim_id": "claim-linear-duality",
+   "exact_statement": "The space $X_n=(H_n,L_n)$ is complete and $$\\frac{\\|x\\|_2}{\\sqrt{n+1}}\\le L_n(x)\\le\\|x\\|_2,\n \\qquad\n L_n(x)=\\sup_{p_n(f)\\le1}\\langle f,x\\rangle.$$ Every coordinate satisfies $|x_s|\\le L_n(x)$. Its continuous dual is $H_n$, under the Hilbert pairing, with norm $p_n$. In particular $L_n$ is exactly the global test norm on $T_n$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-linear-duality"
+  },
+  {
+   "claim_id": "claim-linear-geometry",
+   "exact_statement": "The space $X$ is reflexive, has separable dual, and its dual is the Hilbert sum of the spaces $(H_n,p_n)$, with pairing $$f(x)=\\sum_n\\langle f_n,x_n\\rangle,\n \\qquad \\|f\\|_*^2=\\sum_np_n(f_n)^2.$$ Every coordinate vector $e_{n,s}$ and every root path $b_{n,s}$ has norm one. For fixed $n$ and $|s|<n$, the children $(e_{n,s^\\frown j})_{j\\ge1}$ are weakly null. If $\\alpha\\|\\cdot\\|\\le N\\le\\beta\\|\\cdot\\|$, with $0<\\alpha\\le\\beta$, then $\\overline\\delta_N(t)=0$ for every $0<t\\le\\alpha/\\beta$. In particular no equivalent norm on $X$ is asymptotically uniformly convex.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-linear-geometry"
+  },
+  {
+   "claim_id": "claim-linear-inward-decomposition",
+   "exact_statement": "Let $A$ be a finite head. Suppose $h,g\\in X^*$ have norms at most one and $P_Ah=h$. There are $r_1,r_2\\in X^*$, vanishing on $A$, such that $$r_1-r_2=(I-P_A)g,\\qquad \\|r_l\\|_*\\le2,\n \\qquad\n \\|\\lambda h+\\mu r_l\\|_*^2\\le\\lambda^2+4\\mu^2$$ for $l=1,2$ and $\\lambda,\\mu\\ge0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-linear-inward"
+  },
+  {
+   "claim_id": "claim-linear-head-tail-clipping",
+   "exact_statement": "If $x,y\\in X$, $P_Ax=x$ and $P_Ay=0$ for a finite head $A$, then, for every $c>0$, $$\\max\\{\\|x+y\\|,\\|x-y\\|\\}\n \\ge\\frac{\\|x\\|+c\\|y\\|/2}{\\sqrt{1+4c^2}}.\n \\label{eq:linear-clipping-family}$$ In particular the left side is at least $\\sqrt{\\|x\\|^2+\\|y\\|^2/16}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-linear-head-tail-clipping"
+  },
+  {
+   "claim_id": "claim-linear-weak-sequence",
+   "exact_statement": "Let $x\\in X$ and let $(y_j)$ be a bounded weakly null sequence in $X$. If $L=\\liminf_j\\|y_j\\|$, then $$\\liminf_j\\max\\{\\|x+y_j\\|,\\|x-y_j\\|\\}\n \\ge\\sqrt{\\|x\\|^2+L^2/16}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-linear-weak-sequence"
+  },
+  {
+   "claim_id": "claim-linear-positive-monotonicity",
+   "exact_statement": "If $0\\le\\nu\\le\\mu$ in $\\ell_1(U)$, then $L_U(B_U\\nu)\\le L_U(B_U\\mu)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-linear-positive-monotonicity"
+  },
+  {
+   "claim_id": "claim-linear-positive-tail",
+   "exact_statement": "Let $C=6(\\sqrt2+1)$. In one component, if $P_Ax=x$, $P_Ay=0$, and $L_n(x\\pm y)\\le1$, then $$\\label{eq:linear-positive-unit}\n L_n(y)\\le C\\sqrt{1-L_n(x)}.$$ For arbitrary $x,y$ satisfying $P_Ax=x$ and $P_Ay=0$, writing $\\beta=\\max\\{L_n(x+y),L_n(x-y)\\}$ and $r=L_n(x)$, one has $$\\label{eq:linear-positive-scaled}\n L_n(y)^2\\le C^2\\beta(\\beta-r)\\le C^2(\\beta^2-r^2).$$ Consequently, for a finite head projection $P$ on $X$, $$\\label{eq:linear-positive-outer}\n \\|y\\|^2\\le C^2\\bigl(\\|x+y\\|^2+\\|x-y\\|^2-2\\|x\\|^2\\bigr)\n \\quad(Px=x,\\ Py=0).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-linear-positive-tail"
+  },
+  {
+   "claim_id": "claim-linear-subtree-quota",
+   "exact_statement": "On a forest of finite height, let $\\mu,\\nu$ be nonnegative finitely supported endpoint masses. For a vertex $v$, let $K_v$ be its descendant set, and put $G(v)=\\mu(K_v)$, $W(v)=\\nu(K_v)$. There is $0\\le\\rho\\le\\mu$ such that $$\\rho(K_v)\\ge\\min\\{G(v),W(v)\\}\\quad\\hbox{for every }v,\n \\qquad \\|\\rho\\|_1\\le\\|\\nu\\|_1.$$ The last inequality also holds separately in each tree of the forest.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-linear-subtree-quota"
+  },
+  {
+   "claim_id": "claim-linear-bottom-up-tail",
+   "exact_statement": "Suppose $0\\le\\varepsilon\\le1$, $P_Ax=x$, $P_Ay=0$, $L_n(x\\pm y)\\le1$, and $L_n(x)\\ge1-\\varepsilon$. Then $$\\label{eq:linear-bottom-up-explicit}\n L_n(y)\\le3\\sqrt{2\\varepsilon}+8\\varepsilon.$$ Moreover the following uniform implication holds on $X$: for any sequence of finite head projections $P_j$ and vectors satisfying $$P_jx_j=x_j,\\quad P_jy_j=0,\\quad\n \\|x_j\\pm y_j\\|\\le1,\\quad\\|x_j\\|\\longrightarrow1,$$ one has $\\|y_j\\|\\longrightarrow0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-linear-bottom-up-tail"
+  },
+  {
+   "claim_id": "claim-linear-trimming",
+   "exact_statement": "For a finite head projection $P$ on $X$, $$\\label{eq:linear-trimming-242}\n \\|y\\|^2\\le242\\bigl(\\|x+y\\|^2+\\|x-y\\|^2-2\\|x\\|^2\\bigr)\n \\qquad(Px=x,\\ Py=0).$$ The same assertion, with $L_n$ in place of $\\|\\cdot\\|$, holds in each component.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-linear-trimming-242"
+  },
+  {
+   "claim_id": "claim-linear-fresh-layer",
+   "exact_statement": "Let $A\\subseteq A'$ be finite ancestor-closed subsets of the disjoint union of the $T_n$, and put $E=A'\\setminus A$. If $P_Ax=x$ and $P_{A'}y=y$, then $$\\label{eq:linear-fresh-layer-400}\n \\|P_Ey\\|^2\\le400\\left(\n       \\frac{\\|x+y\\|^2+\\|x-y\\|^2}{2}-\\|x\\|^2\\right).$$ There is no condition on $P_Ay$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-linear-fresh-layer-400"
+  },
+  {
+   "claim_id": "claim-linear-predictable-energy",
+   "exact_statement": "Let $x_0,\\ldots,x_m$ be an $X$-valued dyadic martingale. Let $P_0$ be a fixed finite initial set, and, for $1\\le i\\le m$, let $P_i$ be a finite initial set measurable with respect to $\\mathcal F_{i-1}$. Suppose, on every history, that $$P_{i-1}\\subseteq P_i\\quad(1\\le i\\le m),\\qquad\n \\operatorname{supp}x_i\\subseteq P_i\\quad(0\\le i\\le m),\\qquad \\|x_m\\|\\le C.$$ Then, for $\\Delta_i=P_i\\setminus P_{i-1}$, $$\\label{eq:linear-energy-495}\n \\sum_{i=1}^m\\mathbb E\\|R_{\\Delta_i}x_i\\|^2\\le495C^2.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-linear-predictable-energy"
+  },
+  {
+   "claim_id": "claim-linear-mass-removal",
+   "exact_statement": "Let $S\\subseteq T\\subset T_n$ be finite initial sets, let $z^+,z^-\\in H_n$, and put $z=(z^++z^-)/2$. Put $U=T\\setminus S$ and $$g=\\tfrac12\\big(V_T(z^+)+V_T(z^-)\\big)-V_S(z).$$ Then $g\\ge0$ and, for either sign, $$\\label{eq:linear-mass-removal}\n L_n(R_Uz^\\pm)\\le2\\|R_Uz\\|_2+4g.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-linear-mass-removal"
+  },
+  {
+   "claim_id": "claim-linear-variation-energy",
+   "exact_statement": "Under all hypotheses of Theorem <a href=\"#thm:linear-predictable-energy\" data-reference-type=\"ref\" data-reference=\"thm:linear-predictable-energy\">16</a>, $$\\label{eq:linear-energy-252}\n \\sum_{i=1}^m\\mathbb E\\|R_{\\Delta_i}x_i\\|^2\\le252C^2.$$ In particular the bound is $1008$ when $\\|x_m\\|\\le2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-linear-variation-energy"
+  },
+  {
+   "claim_id": "claim-linear-sign-energy",
+   "exact_statement": "There is an absolute constant $K$ with the following property. Let $x_t=\\mathbb E_t x_m$, $0\\le t\\le m$, be an $X$-valued dyadic martingale. For $0\\le t<m$, let $A_t\\subseteq D_t$ be finite initial sets measurable with respect to $\\mathcal F_t$, and suppose $D_t\\subseteq A_{t+1}$ whenever $t+1<m$. Put $U_t=D_t\\setminus A_t$. Then $$\\label{eq:linear-sign-energy}\n \\sum_{t=0}^{m-1}\\mathbb E\\|R_{U_t}x_{t+1}\\|^2\n \\le K\\left(\\mathbb E\\|x_m\\|^2+\n                  \\sum_{t=0}^{m-1}\\mathbb E\\|R_{U_t}x_t\\|^2\\right).$$ No support condition on $x_t$ is imposed.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-linear-sign-energy"
+  },
+  {
+   "claim_id": "claim-linear-leakage-energy",
+   "exact_statement": "Let $W_i=\\mathbb E_iW_m$, $0\\le i\\le m$, be an $X$-valued dyadic martingale. Let $A_0\\subseteq\\cdots\\subseteq A_m$ be fixed finite initial sets and put $\\Delta_i=A_i\\setminus A_{i-1}$. Then $$\\label{eq:linear-leakage-1024}\n \\sum_{i=1}^m\\mathbb E\\|R_{\\Delta_i}W_i\\|^2\n \\le1024\\left(\\mathbb E\\|W_m\\|^2+\n              \\sum_{i=1}^m\\mathbb E\\|R_{\\Delta_i}W_{i-1}\\|^2\\right).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-linear-leakage-energy"
+  },
+  {
+   "claim_id": "claim-quadratic-construction",
+   "exact_statement": "The spaces $Z_n$ and $X_{\\mathrm q}$ are Banach and reflexive, and finite node support is dense in $X_{\\mathrm q}$. For $z\\in H_n$, $$\\label{qp:comparison}\n \\frac{\\|z\\|_2}{\\sqrt{n+2}}\\le |z|_n\\le\\|z\\|_2,\n \\qquad |z_t|\\le\\sqrt2\\,|z|_n.$$ In particular $1/\\sqrt2\\le |p_t|_n,|e_t|_n\\le1$, and $|e_o|_n=1/\\sqrt2$. For $f\\in\\ell_2(T_n)$ the dual norm is $$\\label{qp:dual}\n |f|_{n,*}=\n \\left(\\|f\\|_2^2+\n     \\sup_{t\\in T_n}\\left|\\sum_{s\\preceq t}f_s\\right|^2\\right)^{1/2}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-construction"
+  },
+  {
+   "claim_id": "claim-quadratic-head-fold",
+   "exact_statement": "The operator $R_A$ which sends the mass $\\lambda_t$ to $r(t)$ and discards it when $r(t)=\\perp$ is contractive on $L$. Moreover $$P_AJ=JR_A,\\qquad \\|P_A\\|\\le1,\\qquad \\|Q_A\\|\\le2,\n \\qquad |Q_AJ_n\\lambda|_n\\le2\\|\\lambda\\|_1.$$ Here the last formula is in a single component. In particular the path $p_t-p_{r(t)}$ outside the head has norm at most two.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-head"
+  },
+  {
+   "claim_id": "claim-quadratic-no-auc",
+   "exact_statement": "No equivalent norm on $X_{\\mathrm q}$ is asymptotically uniformly convex. More precisely, if $a\\|z\\|_{\\mathrm q}\\le N(z)\\le b\\|z\\|_{\\mathrm q}$, with $0<a\\le b<\\infty$, then $\\overline\\delta_N(t_0)=0$ at $t_0=a/(\\sqrt2 b)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-no-auc"
+  },
+  {
+   "claim_id": "claim-quadratic-energy",
+   "exact_statement": "Let $$C=\\frac12\\sum_{\\epsilon\\in\\{+,-\\}}\n       (\\|h^\\epsilon\\|_H^2+\\|\\lambda^\\epsilon\\|_L^2),\n \\qquad E=C-\\|x\\|_{\\mathrm q}^2.$$ Then $$\\begin{aligned}\n \\|Q\\bar h\\|_H^2+\\|\\widetilde h\\|_H^2+\n       \\sum_n(M_n^2-q_n^2)&\\le E,\\label{qp:energy-mean}\\\\\n \\tfrac12(\\|Qh^+\\|_H^2+\\|Qh^-\\|_H^2)+\n       \\sum_n d_n^2&\\le E.\\label{qp:energy-endpoints}\n\\end{aligned}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-energy"
+  },
+  {
+   "claim_id": "claim-quadratic-flow",
+   "exact_statement": "Let $O=T_n\\setminus A_n$, let $\\mathcal R$ be the roots of its connected subtrees, and suppose $V:O\\to[0,\\infty)$ satisfies $$V(t)\\ge\\sum_{c\\text{ child of }t}V(c),\\qquad\n B:=\\sum_{c\\in\\mathcal R}V(c)<\\infty.$$ For any signs $\\varepsilon_t$ constant on each connected subtree of $O$, the vector $\\varepsilon_tV(t)$ on $O$, extended by zero on $A_n$, has norm at most $2B$ in $Z_n$. The pointwise minimum of two arrays satisfying the child inequality also satisfies it.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-flow"
+  },
+  {
+   "claim_id": "claim-quadratic-tail",
+   "exact_statement": "Let $A$ be a finite ancestral head in $X_{\\mathrm q}$ and let $P_Ax=x$. For every $y\\in X_{\\mathrm q}$ and $R\\ge0$, $$\\label{qp:tail-eight}\n \\|x+y\\|_{\\mathrm q},\\ \\|x-y\\|_{\\mathrm q}\\le R\n \\quad\\Longrightarrow\\quad\n \\|Q_Ay\\|_{\\mathrm q}\\le8\\sqrt{R^2-\\|x\\|_{\\mathrm q}^2}.$$ The displacement $y$ need not vanish on the head.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-quadratic-tail"
+  },
+  {
+   "claim_id": "claim-quadratic-lens-eight",
+   "exact_statement": "If $x\\in X_{\\mathrm q}$ and an infinite sequence $(y_j)$ satisfies $\\|x\\pm y_j\\|_{\\mathrm q}\\le R$ and $\\|y_i-y_j\\|_{\\mathrm q}\\ge\\varepsilon>0$ for $i\\ne j$, then $$\\|x\\|_{\\mathrm q}^2+\\frac{\\varepsilon^2}{256}\\le R^2.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-lens-eight"
+  },
+  {
+   "claim_id": "claim-quadratic-symmetric",
+   "exact_statement": "For a finite ancestral head $A$, $P_Ax=x$, and $P_Ay=0$, $$\\label{qp:symmetric-144}\n \\|x\\|_{\\mathrm q}^2+\\frac{\\|y\\|_{\\mathrm q}^2}{144}\n \\le\\frac{\\|x+y\\|_{\\mathrm q}^2+\\|x-y\\|_{\\mathrm q}^2}{2}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-symmetric-twelve"
+  },
+  {
+   "claim_id": "claim-quadratic-lens-twelve",
+   "exact_statement": "If $\\|x\\pm y_j\\|_{\\mathrm q}\\le r$ and $\\|y_i-y_j\\|_{\\mathrm q}\\ge2d>0$ for $i\\ne j$ in an infinite sequence, then $$\\|x\\|_{\\mathrm q}^2+d^2/144\\le r^2.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-lens-twelve"
+  },
+  {
+   "claim_id": "claim-quadratic-tail-seven",
+   "exact_statement": "Under the hypotheses of Theorem <a href=\"#thm:quadratic-tail\" data-reference-type=\"ref\" data-reference=\"thm:quadratic-tail\">26</a>, $$\\|Q_Ay\\|_{\\mathrm q}\\le7\\sqrt{R^2-\\|x\\|_{\\mathrm q}^2}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-tail-seven"
+  },
+  {
+   "claim_id": "claim-quadratic-lens-seven",
+   "exact_statement": "For $0<c\\le1$ put $\\delta=c^2/2000$. If $\\|x\\pm y_j\\|_{\\mathrm q}\\le1$ and $\\|y_i-y_j\\|_{\\mathrm q}\\ge2c$ for all distinct indices of an infinite sequence, then $\\|x\\|_{\\mathrm q}\\le1-\\delta$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-lens-seven"
+  },
+  {
+   "claim_id": "claim-quadratic-tail-nine",
+   "exact_statement": "Under the hypotheses of Theorem <a href=\"#thm:quadratic-tail\" data-reference-type=\"ref\" data-reference=\"thm:quadratic-tail\">26</a>, $$\\|Q_Ay\\|_{\\mathrm q}\\le9\\sqrt{R^2-\\|x\\|_{\\mathrm q}^2}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-tail-nine"
+  },
+  {
+   "claim_id": "claim-quadratic-lens-nine",
+   "exact_statement": "For every $\\rho>0$, choose $0<\\gamma<1/2$ such that $$9\\sqrt{(1+\\gamma)^2-(1-2\\gamma)^2}<\\rho/3.$$ If $\\|x\\|_{\\mathrm q}\\ge1-\\gamma$, its symmetric lens $\\{y:\\|x\\pm y\\|_{\\mathrm q}\\le1\\}$ has no infinite $\\rho$-separated subset.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-lens-nine"
+  },
+  {
+   "claim_id": "claim-quadratic-relative",
+   "exact_statement": "For every nonzero $x\\in X_{\\mathrm q}$ and $0<\\delta\\le1$ there is a finite ancestral head $A$, depending only on $x,\\delta$, such that for every $u\\in X_{\\mathrm q}$, $$\\|x+u\\|_{\\mathrm q},\\ \\|x-u\\|_{\\mathrm q}\n       \\le(1+\\delta)\\|x\\|_{\\mathrm q}\n \\quad\\Longrightarrow\\quad\n \\|Q_Au\\|_{\\mathrm q}\\le72\\sqrt\\delta\\,\\|x\\|_{\\mathrm q}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-relative-seventytwo"
+  },
+  {
+   "claim_id": "claim-quadratic-component",
+   "exact_statement": "Let $A\\subset T_n$ be a finite nonempty ancestral head, with $P_Ax=x$, $P_Ay=0$, and $|x|_n=1$. If $0\\le e\\le1$ and $|x\\pm y|_n\\le1+e$, then $$\\label{qp:rec:component-bound}\n |y|_n\\le(6+\\sqrt2)\\sqrt{(1+e)^2-1}\\le13\\sqrt e.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-rec-component"
+  },
+  {
+   "claim_id": "claim-quadratic-finite-center",
+   "exact_statement": "Let $x\\in X_{\\mathrm q}$ be a unit vector with finite coordinate support. For each $n$ with $x_n\\ne0$, choose a finite nonempty ancestor-closed $A_n\\subset T_n$ containing its support, and set $$Y_x=\\{y\\in X_{\\mathrm q}:P_{A_n}y_n=0\n                           \\text{ whenever }x_n\\ne0\\}.$$ Then $Y_x$ is a closed finite-codimensional subspace. If $0<e\\le1/8$, $y\\in Y_x$, and $\\|x+y\\|_{\\mathrm q},\\|x-y\\|_{\\mathrm q}\\le1+e$, then $$\\label{qp:rec:outer-bound}\n \\|y\\|_{\\mathrm q}^2\\le\\frac{519}{2}e^{1/3},\n \\qquad \\|y\\|_{\\mathrm q}\\le17e^{1/6}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-rec-finite-center"
+  },
+  {
+   "claim_id": "claim-quadratic-all-centers",
+   "exact_statement": "For every $x\\in X_{\\mathrm q}$ with $\\|x\\|_{\\mathrm q}=1$ and $0<e\\le1/16$, there is a closed finite-codimensional subspace $Y\\subset X_{\\mathrm q}$ such that $$\\label{qp:rec:complete-bound}\n y\\in Y,\\quad\n \\|x+y\\|_{\\mathrm q},\\|x-y\\|_{\\mathrm q}\\le1+e\n \\quad\\Longrightarrow\\quad\n \\|y\\|_{\\mathrm q}\\le17(2e)^{1/6}.$$ In particular, for every $t>0$ there is an $e_t>0$, independent of the unit center $x$, for which some closed finite-codimensional $Y$ satisfies $$\\inf_{u\\in S_Y}\n \\max\\{\\|x+tu\\|_{\\mathrm q},\\|x-tu\\|_{\\mathrm q}\\}\\ge1+e_t.$$ Here $S_Y=\\{u\\in Y:\\|u\\|_{\\mathrm q}=1\\}$. Thus the maximum asymptotic midpoint modulus is positive at every positive radius.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-qp-rec-all-centers"
+  },
+  {
+   "claim_id": "claim-segment-cost-properties",
+   "exact_statement": "The costs are monotone, positively homogeneous and subadditive. On $\\mathcal T_n$ they satisfy $$\\label{sm:s:cost-comparisons}\n \\|m\\|_2\\le M_n(m)\n \\le\\sum_{d=0}^{n}\\|m|_{\\mathbb N^d}\\|_2\n \\le\\sqrt{n+1}\\,\\|m\\|_2,\n \\qquad\n \\sum_{t\\preceq v}m_t\\le M_n(m).$$ For nonnegative forest arrays of finite total cost, $$\\label{sm:s:positive-energy}\n M(m+r)^2\\ge M(m)^2+M(r)^2.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sm-s-cost-properties"
+  },
+  {
+   "claim_id": "claim-segment-space",
+   "exact_statement": "On $\\ell_2(\\mathcal T_n)$ the formula $$\\|x\\|_{S,n}=\\inf\\{M_n(m(a)):Pa=x\\}$$ defines a complete reflexive norm, with $$\\label{sm:s:norm-comparisons}\n \\frac{\\|x\\|_2}{n+1}\\le\\|x\\|_{S,n}\n \\le\\sqrt{n+1}\\,\\|x\\|_2.$$ Consequently $$X_S=\\Bigl(\\bigoplus_{n\\ge1}(\\ell_2(\\mathcal T_n),\\|\\cdot\\|_{S,n})\n       \\Bigr)_{\\ell_2}$$ is a reflexive Banach space. Write $\\|\\cdot\\|_S$ for its norm. Equivalently, $\\|x\\|_S$ is the infimum of $M(m(a))$ over all forest representations of $x$. Finite-support vectors are dense.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sm-s-space"
+  },
+  {
+   "claim_id": "claim-segment-coordinates",
+   "exact_statement": "For every node $v$ and $x\\in X_S$, $|x_v|\\le\\|x\\|_S$. The coordinate vector $e_v$ and every root-to-node path vector have norm one. If $C$ is a finite ancestral subset of $\\mathcal T$, then its coordinate projection $P_C$ is contractive and $\\|I-P_C\\|\\le2$. For a nonterminal node $t$, the sequence of its child coordinate vectors is weakly null.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sm-s-coordinates"
+  },
+  {
+   "claim_id": "claim-segment-start-tail",
+   "exact_statement": "Let $C$ be a finite ancestral subset of $\\mathcal T$. If $p\\in X_S$ is supported in $C$ and $y\\in X_S$ satisfies $y|_C=0$, then $$\\label{sm:s:tail}\n \\max\\{\\|p+y\\|_S,\\|p-y\\|_S\\}^2\n \\ge\\|p\\|_S^2+\\frac{\\|y\\|_S^2}{64}.$$ The conclusion includes $C=\\varnothing$, $p=0$ and $y=0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-segment-start-tail"
+  },
+  {
+   "claim_id": "claim-segment-midpoint-consequence",
+   "exact_statement": "For every $x\\in X_S$ with $\\|x\\|_S=1$, every $t>0$ and every $\\varepsilon>0$ there is a closed finite-codimensional subspace $F\\subset X_S$ such that $$\\inf_{\\substack{y\\in F\\\\\\|y\\|_S=1}}\n \\max\\{\\|x+ty\\|_S,\\|x-ty\\|_S\\}\n \\ge\\sqrt{1+t^2/64}-\\varepsilon.$$ In particular, define the maximum form of the asymptotic midpoint modulus by $$\\delta^{\\max}_{X_S}(t)=\n \\inf_{\\|x\\|_S=1}\\sup_{\\substack{F\\subset X_S\\text{ closed}\\\\\\dim(X_S/F)<\\infty}}\n \\inf_{\\substack{y\\in F\\\\\\|y\\|_S\\ge1}}\n \\bigl(\\max_{\\pm}\\|x\\pm ty\\|_S-1\\bigr).$$ Then $\\delta^{\\max}_{X_S}(t)\\ge\\sqrt{1+t^2/64}-1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sm-s-midpoint-consequence"
+  },
+  {
+   "claim_id": "claim-incomparable-reflexivity",
+   "exact_statement": "Let $Y_{\\mathrm I,h}$ be the completion of the arrays supported on $T_h$ in the norm <a href=\"#sm:i:norm\" data-reference-type=\"eqref\" data-reference=\"sm:i:norm\">[sm:i:norm]</a>. Then $$\\frac{\\|g\\|_2}{\\sqrt{h+1}}\n \\leq\\|g\\|_{Y_{\\mathrm I,h}}\n \\leq\\sqrt{h+1}\\,\\|g\\|_2,\n \\qquad g\\in c_{00}(T_h),\n \\label{sm:i:hilbert}$$ and $$Y_{\\mathrm I}=\\left(\\bigoplus_{h\\geq1}Y_{\\mathrm I,h}\\right)_{\\ell_2}.$$ Both $Y_{\\mathrm I}$ and $X_{\\mathrm I}:=Y_{\\mathrm I}^*$ are reflexive.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sm-i-reflexivity"
+  },
+  {
+   "claim_id": "claim-incomparable-atom-hull",
+   "exact_statement": "The unit ball of $X_{\\mathrm I}$ is the norm-closed convex hull of the atoms <a href=\"#sm:i:atoms\" data-reference-type=\"eqref\" data-reference=\"sm:i:atoms\">[sm:i:atoms]</a>. In particular, finite linear combinations of the coordinate evaluations are dense in $X_{\\mathrm I}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sm-i-atom-hull"
+  },
+  {
+   "claim_id": "claim-incomparable-no-auc",
+   "exact_statement": "The real reflexive space $X_{\\mathrm I}$ admits no equivalent asymptotically uniformly convex norm.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sm-i-auc-obstruction"
+  },
+  {
+   "claim_id": "claim-incomparable-projections",
+   "exact_statement": "For every finite prefix-closed $E$, both $P_E$ and $Q_E$ act contractively on $Y_{\\mathrm I}$ and, by adjoints, on $X_{\\mathrm I}$. On $X_{\\mathrm I}$, $P_E$ has finite rank and retains exactly the coordinates indexed by $E$. For every $x\\in X_{\\mathrm I}$ and every $\\eta>0$, there is such an $E$ with $\\|Q_E x\\|_{\\mathrm I}<\\eta$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sm-i-projections"
+  },
+  {
+   "claim_id": "claim-incomparable-tail-estimate",
+   "exact_statement": "Let $E\\subset\\mathcal T$ be finite and prefix closed. If $x,y\\in X_{\\mathrm I}$ satisfy $$P_E x=x,\\qquad \\|x+y\\|_{\\mathrm I}\\leq1,\n \\qquad \\|x-y\\|_{\\mathrm I}\\leq1,$$ then $$\\|Q_Ey\\|_{\\mathrm I}\n \\leq (\\sqrt2+\\sqrt6)\\sqrt{1-\\|x\\|_{\\mathrm I}}.\n \\label{sm:i:tail-bound}$$ In particular, if $Q_Ey=y$, the same bound holds for $\\|y\\|_{\\mathrm I}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sm-i-tail-estimate"
+  },
+  {
+   "claim_id": "claim-incomparable-separated-midpoints",
+   "exact_statement": "Let $0<c\\leq1$ and let $x,u_j\\in X_{\\mathrm I}$, $j\\in\\mathbb N$, satisfy $$\\|x+u_j\\|_{\\mathrm I},\\ \\|x-u_j\\|_{\\mathrm I}\\leq1,\n \\qquad \\|u_j-u_k\\|_{\\mathrm I}\\geq2c\\quad(j\\ne k).$$ Then, with $K=\\sqrt2+\\sqrt6$, $$\\|x\\|_{\\mathrm I}\\leq1-(c/K)^2<1.\n \\label{sm:i:separation-bound}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sm-i-separated-midpoints"
+  }
+ ],
+ "paper": "papers/EN-111-000-0022-2-2026-PR-T4-UK-EX-M3-B-ML-M-0662_PM-331.5_Midpoint_convexity_from_bounded_tree_potentials_and_path_costs.md",
+ "purpose": "Midpoint convexity from bounded tree potentials and path costs",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "212816b6498c3861c1ebd7f88c143cb15e336516256287f359cdb69d0b4df871",
+   "pm.domains.v2": "23254885c9eb6e6c0a3bd027ba72fe19695112847220867a566a473221f00c82",
+   "pm.edges.v2": "544b45e9343fc974ecdb59118fb0dbd50b05200bdec5d409c4bfff777c005b98",
+   "pm.extraction.v2": "3f040a976d948c793e98162017b8582a3db9c8037cb78b5521aa2d0dc3206ce3",
+   "pm.formal.v2": "d9cb8d7025fba9d29db2f4df6dab803f2fd4e7334f0abf78c7257925a8b27a2b",
+   "pm.limits.v2": "725dbd7c9f98fd6e4280edd76fdaa16058bbd2df375c968d71eb3c317632d462",
+   "pm.node.v2": "5c09fe4b4cf5212d3f02ee91bad735ca5bad8e2cf780cc81360acbf9cf23a07d",
+   "pm.objects.v2": "58bc7b74633feaeaf25e8f80700e260485bb08015744afcba5f87778cffb892c",
+   "pm.provenance.v2": "50a5f1f400db53b97d7cd556ba085016cc5b26a1443cd9906480d417896de9f9",
+   "pm.quantities.v2": "c786684a84ca79a7f934d044ec2b11c27b5b91f8c3e19ef2f1cbde507b75a438",
+   "pm.reading.v2": "b933aab50e365227d2ba891d2fb0b68c5e3c35e8a769cff8e16dd7e8abc67dfb",
+   "pm.roadmap.v2": "6bbbcba301239e577c33d248acbad94765f94632d52961ae722563880a130a78",
+   "pm.search.v1": "29c72ee394eb2f8e236de2f1ab3387bcc0362235ed6ce7335a9466e54811e984",
+   "pm.triptych.v2": "34e6d17bb5219bec5f7d25e47ae6248cb716b05d74452273c09379a1a99f6bec"
+  },
+  "canonical_sha256": "fa4072d08d39947408cf78f2ee0139fa968e6275df5eebbdb56fddec936d98da",
+  "paper_sha256": "6a31c39581a5cac0aac8fad150452ad9ade2f9204121d654afd6ed36e4720129",
+  "repaired_body_sha256": "6e7798b48d6cf701125987ebfe8066a15e9f0b65457fadef2a7b0743732ea2d5"
+ },
+ "status": "ACTIVE",
+ "subject_id": 11,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "d8da74458d3a04fa59f2b75f317826ab69fc6361ae4419a9d25c5be0150c90b6",
+   "receipt_sha256": "ffcc32dde73288249c8dc2cf6fbe7c2259aa017e3de267661c9d7e83d388d65f",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Trees with at most five nodes and small integer masses.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-start-cost-recursion",
+     "oracle_basis": "Independent top-down recursion with exact summation."
+    },
+    {
+     "checked_domain": "Same small trees; Euclidean, level-wise and path bounds tested.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-cost-comparisons",
+     "oracle_basis": "Direct evaluation of the three bounds against the recomputed cost."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-sum-not-squares",
+     "observed_exit": 1,
+     "receipt_sha256": "a3555f141c31b7858f39693ae46ddc29ef475b31a5051bf4e28ca373d18c3522"
+    },
+    {
+     "id": "mut-drop-own-mass",
+     "observed_exit": 1,
+     "receipt_sha256": "ac6109be579351cbf6b2d8ae31465ccab2acb539ba88dd1326886f51749f7dc7"
+    },
+    {
+     "id": "mut-skip-root",
+     "observed_exit": 1,
+     "receipt_sha256": "76c8e62deebcf00db9a01e105b8363d914dbf722a215272ce40a688ff554ec0f"
+    },
+    {
+     "id": "mut-halve-children",
+     "observed_exit": 1,
+     "receipt_sha256": "77a3b3cd325d836b4059e426b3458136a2b5f17f48b69dddf05f3560100649f7"
+    }
+   ],
+   "receipt_sha256": "d00fb2c2676aa5b0233d9a6f64773f147aa1a50e65285407913d8232314ae8a0",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Midpoint convexity from bounded tree potentials and path costs"
+}

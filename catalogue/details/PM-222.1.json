@@ -1,0 +1,577 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 511676,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 145657
+ },
+ "coordinate": "EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-H-0429",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "statistical_physics",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "A hard-constraint limit would require additional control of the order of limits.",
+     "quote_sha256": "cb0b9db8569a7ddd615317e8f65aeebda13c9a843007f5ffdc5f5d4e05a82309"
+    }
+   ],
+   "query": "Hard-constraint storage threshold",
+   "reason": "Hard constraints require an additional order-of-limits argument beyond the finite log-potential results."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-ext-sign-scope",
+     "quote": "The two subsequences give distinct limits.",
+     "quote_sha256": "0d0d51d64eb04ba34181e5b6c60312ebcae4c8da5d08589fe0e1dde837487bf9"
+    }
+   ],
+   "query": "Universality for arbitrary bounded Borel sign potentials",
+   "reason": "The rational-indicator counterexample gives different sign subsequence limits."
+  }
+ ],
+ "family": "PM-222",
+ "id": "PM-222.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C1",
+    "statement": "For every $\\alpha>0$ and every bounded Borel $f:\\mathbb R\\to\\mathbb R$, $$\\label{thm:formula}\n \\lim_{N\\to\\infty}\\mathbb E p_N(f)\n =\\mathcal P_f(\\alpha)\n :=\\inf_{q\\in\\mathcal Q}\\{\\alpha V_f(q)+S_{\\mathrm I}(q)\\}.$$ Moreover, $p_N(f)$ converges to $\\mathcal P_f(\\alpha)$ in probability. The variational value is finite. In particular, the conclusion holds for $f=\\beta\\phi$ at every $\\beta>0$ and every bounded continuous activation $\\phi$, without symmetry, concavity, or a smallness restriction."
+   },
+   {
+    "anchor": "stmt-var-variation",
+    "claim_id": "C2",
+    "statement": "On a fixed partition with $w_i=\\zeta_{i+1}-\\zeta_i$, the first variations along every feasible line segment of step paths are $$\\begin{aligned}\n\\label{var:pattern-variation}\n \\frac{d}{da}V_f(q+a\\dot q)\n &=-\\frac12\\sum_{i=0}^{k-1}w_i\\dot q_i\\,\n   \\mathbb E[U_i'(Z_i)^2],\\\\\n\\label{var:field-variation}\n \\frac{d}{da}\\ell(h+a\\dot h)\n &=-\\frac12\\sum_{i=0}^{k-1}w_i\\dot h_i\\,\n   \\mathbb E[U_i'(Z_i)^2].\n\\end{aligned}$$ The functions and chains on the right are computed at the current path. Endpoint derivatives are understood from within the segment. The squared-derivative expectations on the right are continuous on the closed finite-dimensional parameter cones. In both recursions these expectations are nonnegative and nondecreasing in $i$. In the field recursion, define $$\\label{var:rho}\n \\rho_h(u)=\\rho_i:=\\mathbb E[U_i'(Z_i)^2],\n \\qquad \\zeta_i<u<\\zeta_{i+1}.$$ Then $0\\le\\rho_h\\le1$, and subdivision does not change this path."
+   },
+   {
+    "anchor": "stmt-var-continuity-order",
+    "claim_id": "C3",
+    "statement": "For step paths on arbitrary partitions, $$\\begin{aligned}\n\\label{var:lipschitz}\n |V_f(p)-V_f(q)|&\\le\\tfrac12\\|f'\\|_\\infty^2\\|p-q\\|_{L^1},\\\\\n |\\ell(h')-\\ell(h)|&\\le\\tfrac12\\|h'-h\\|_{L^1}.\n\\end{aligned}$$ Thus $V_f$ extends uniquely and continuously to all nondecreasing $[0,1]$-valued paths, and $\\ell$ extends to all bounded nonnegative nondecreasing paths. Moreover, $$\\label{var:tail-order}\n \\int_s^1p(u)\\,du\\ge\\int_s^1q(u)\\,du\n \\quad\\hbox{for every }s\\in[0,1]\n \\quad\\Longrightarrow\\quad V_f(p)\\le V_f(q).$$"
+   },
+   {
+    "anchor": "stmt-var-step-reduction",
+    "claim_id": "C4",
+    "statement": "The entropy in Definition <a href=\"#def:entropy\" data-reference-type=\"ref\" data-reference=\"def:entropy\">2</a> is nonnegative, nondecreasing in pointwise path order, and satisfies $S_{\\mathrm I}(0)=0$. The variational infimum is finite, and $$\\label{var:step-infimum}\n \\inf_q\\{\\alpha V_f(q)+S_{\\mathrm I}(q)\\}\n =\\inf_{\\substack{q\\text{ step}\\\\q_{k-1}<1}}\n       \\{\\alpha V_f(q)+S_{\\mathrm I}(q)\\}.$$"
+   },
+   {
+    "anchor": "stmt-var-folded-kernel",
+    "claim_id": "C5",
+    "statement": "Suppose $U:\\mathbb R\\to\\mathbb R$ is even and convex. Let $K$ be its tilted Gaussian kernel with variance $s\\ge0$ and coefficient $d\\ge0$, and assume its normalizer $\\mathbb E e^{dU(x+\\sqrt sG)}$ is finite for every $x\\in\\mathbb R$. If $A$ is bounded, even, and nondecreasing in $|x|$, then $KA$ has these properties as well. The same statement with “nonincreasing” holds with both monotonicities reversed."
+   },
+   {
+    "anchor": "stmt-var-concavity",
+    "claim_id": "C6",
+    "statement": "The functional $\\ell$ is concave on nonnegative nondecreasing step paths. For any two such paths, represented on a common partition, $$\\label{var:support}\n \\ell(h')\\le\\ell(h)\n      -\\frac12\\int_0^1(h'(u)-h(u))\\rho_h(u)\\,du.$$ Concavity also holds for its continuous extension to bounded nonnegative nondecreasing paths."
+   },
+   {
+    "anchor": "stmt-arr-ultrametric",
+    "claim_id": "C7",
+    "statement": "Suppose $B$ is a bounded, symmetric, weakly exchangeable Gram array with constant diagonal $D$ and the Ghirlanda–Guerra property. Then, almost surely, for distinct indices, $$B_{\\ell m}\\geq0,\n \\qquad\n B_{12}\\geq\\min\\{B_{13},B_{23}\\}.\n \\label{arr:ultrametric-inequality}$$"
+   },
+   {
+    "anchor": "stmt-arr-cascade",
+    "claim_id": "C8",
+    "statement": "The total $T$ in <a href=\"#arr:cascade-weights\" data-reference-type=\"eqref\" data-reference=\"arr:cascade-weights\">[arr:cascade-weights]</a> is almost surely finite and positive, with $\\mathbb E[(\\log T)^2]<\\infty$. For replicas sampled from $(v_\\gamma)$, the common-level array satisfies the Ghirlanda–Guerra property and $$\\mathbb P(\\gamma^1\\wedge\\gamma^2=i)=w_i,\n \\qquad 0\\leq i\\leq k-1.\n \\label{arr:level-marginal}$$ Conversely, a weakly exchangeable ultrametric scalar array with the Ghirlanda–Guerra property and finitely many off-diagonal values has the same off-diagonal law as this cascade, with the levels replaced by its ordered values and with $w_i$ their marginal probabilities. Values of zero probability are omitted."
+   },
+   {
+    "anchor": "stmt-arr-quantization",
+    "claim_id": "C9",
+    "statement": "Let $B$ be nonnegative and ultrametric off the diagonal, with constant diagonal $D$ and entries at most $D$. Applying any nonnegative nondecreasing finite-valued map to its off-diagonal entries, with image contained in $[0,D]$, and retaining diagonal $D$, produces a Gram array. If $B$ has the Ghirlanda–Guerra property, its quantized off-diagonal law is the finite cascade law in Lemma <a href=\"#arr:cascade\" data-reference-type=\"ref\" data-reference=\"arr:cascade\">11</a>.*\n\n*More generally, suppose finitely many desired off-diagonal covariance entries are bounded nonnegative nondecreasing functions $a_j(r)$ of the scalar entries $r=B_{\\ell m}$, $\\ell\\ne m$, with $a_j(r)\\leq D_j$. One can choose finite ordered bins of $r$ that approximate $r$ and every $a_j(r)$ uniformly on their domain, with errors tending to zero, while keeping each covariance diagonal equal to $D_j$. All the resulting covariance arrays are Gram. The binning can be chosen as a function of $r$ alone, so it never splits an atom of the scalar overlap law."
+   },
+   {
+    "anchor": "stmt-arr-law-continuity",
+    "claim_id": "C10",
+    "statement": "For fixed diagonal $D$, the law of a nonnegative ultrametric Ghirlanda–Guerra array with values in $[0,D]$ is determined by its two-replica marginal. Such a law exists for every probability marginal on $[0,D]$. If the marginal quantiles $q_m,q$ satisfy $\\|q_m-q\\|_{L^1(0,1)}\\to0$, then the laws of every fixed finite replica block converge in bounded-Lipschitz distance."
+   },
+   {
+    "anchor": "stmt-arr-tilt",
+    "claim_id": "C11",
+    "statement": "Let $X_{k-1}$ be a terminal log factor depending on the marked path. For $i\\ge1$, let $\\mathbb E_i$ integrate the original level-$i$ child-mark kernel, conditional on the marked ancestor path through level $i-1$, without averaging the Poisson weights or root data. Define $$X_{i-1}=\\frac1{\\zeta_i}\\log\\mathbb E_i e^{\\zeta_i X_i},\n \\qquad i=k-1,\\ldots,1.\n \\label{arr:mark-recursion}$$ Assume these transforms are finite; the bounded log factors and the Gaussian log factors with at most linear growth used below satisfy this condition. For $Z=\\sum_\\gamma v_\\gamma e^{X_{k-1}(\\gamma)}$, $$\\mathbb E[\\log Z\\mid\\text{root data}]=X_0,\n \\qquad\n \\mathbb E[(\\log Z-X_0)^2\\mid\\text{root data}]\n \\leq4\\mathbb E[(\\log T)^2].\n \\label{arr:log-cascade}$$ Here $T$ is the unmarked total in <a href=\"#arr:cascade-weights\" data-reference-type=\"eqref\" data-reference=\"arr:cascade-weights\">[arr:cascade-weights]</a>.*\n\n\n*After reweighting by $e^{X_{k-1}}$ and relabeling children, the joint law of normalized weights and marks can be generated by first drawing an ordinary unmarked cascade, independently of the root data, and then drawing marks on its vertices with kernels of densities $$e^{\\zeta_i(X_i-X_{i-1})},\\qquad 1\\leq i\\leq k-1,\n \\label{arr:tilted-kernel}$$ relative to the original kernels, with independent draws on distinct children conditional on ancestor marks. Root data retain their original law. In particular, sampling reweighted leaves preserves their shape law; conditioning on that shape leaves exactly these mark kernels along the sampled branches. Independent mark components remain independent under these kernels when their original kernels factor and the terminal log factor is a sum of the separate component log factors."
+   },
+   {
+    "anchor": "stmt-arr-limit",
+    "claim_id": "C12",
+    "statement": "Let a sequence of random base probabilities have jointly convergent arrays of bounded observables and of the conditional covariances of finitely many fresh centered Gaussian fields. The fields are sampled independently of the base probability conditional on its data, with any specified independence between field components. Then the following averages converge, as determined by those limiting arrays:*\n\n1.  *bounded continuous functions of the listed observable and field evaluations on finitely many base replicas;*\n\n2.  *the same tests after reweighting by a fixed continuous function of the listed evaluations at one replica, bounded between two fixed positive constants;*\n\n3.  *the expected logarithm of the normalizing integral of that factor.*\n\n*Independent finite-spin averages may be included. The assertion remains valid at singular limiting covariance matrices. If the limiting off-diagonal covariance entries are ordered functions of a scalar ultrametric Ghirlanda–Guerra array, its evaluations can be obtained by the quantized cascades of Lemma <a href=\"#arr:quantization\" data-reference-type=\"ref\" data-reference=\"arr:quantization\">12</a>, retaining the true diagonal variances and using <a href=\"#arr:residual-average\" data-reference-type=\"eqref\" data-reference=\"arr:residual-average\">[arr:residual-average]</a>, provided the base observables and tests used in the evaluation are also approximated by these bins in probability on every finite replica restriction. This condition includes constants and continuous tests of the scalar overlap and the quantized covariance coordinates."
+   },
+   {
+    "anchor": "stmt-arr-fresh-pattern",
+    "claim_id": "C13",
+    "statement": "Suppose that the limiting spin-overlap array of a sequence of base Gibbs probabilities has diagonal one, is Gram, and satisfies the Ghirlanda–Guerra property. Let $p$ be the quantile of its off-diagonal two-replica law. For a fresh independent Gaussian pattern field $g(x)$ with conditional covariance $R(x,x')$, and bounded continuous $f$, $$\\lim\\mathbb E\\log\\langle e^{f(g(x))}\\rangle=V_f(p),\n \\label{arr:fresh-pattern-value}$$ whenever $V_f$ is understood through its continuous quantile extension. In particular this applies to the smooth potentials used in the proof before the final approximation step."
+   },
+   {
+    "anchor": "stmt-arr-calculus",
+    "claim_id": "C14",
+    "statement": "Let $P$ be a probability reference measure, possibly random but independent of the Gaussian fields under consideration. For independent centered Gaussian energies with covariances $C_0,C_1$, interpolate using $H_t=\\sqrt{1-t}\\,H_0+\\sqrt t\\,H_1$, and put $\\Delta=C_1-C_0$. Then $$\\frac{d}{dt}\\mathbb E\\log P(e^{H_t})\n =\\frac12\\mathbb E\\langle\\Delta_{11}-\\Delta_{12}\\rangle_t.\n \\label{arr:gaussian-log-derivative}$$ For a bounded $r$-replica test $F$ independent of these fields, $$\\begin{aligned}\n \\frac{d}{dt}\\mathbb E\\langle F\\rangle_t\n =\\frac12\\mathbb E\\Bigg\\langle F\\Bigg(\n &\\sum_{a,b=1}^r\\Delta_{ab}\n -2r\\sum_{a=1}^r\\Delta_{a,r+1}\\notag\\\\\n &+r(r+1)\\Delta_{r+1,r+2}-r\\Delta_{r+1,r+1}\n \\Bigg)\\Bigg\\rangle_t,\n \\label{arr:replica-derivative}\n\\end{aligned}$$ so its magnitude is at most $(2r^2+r)\\|F\\|_\\infty\\|\\Delta\\|_\\infty$. If an independent centered Gaussian field $Y$ of covariance $C$ enters the energy with coefficient $s$, Gaussian integration by parts also gives $$\\mathbb E\\langle Y(1)F\\rangle\n =s\\,\\mathbb E\\left\\langle\n  F\\left(\\sum_{a=1}^r C_{1a}-rC_{1,r+1}\\right)\n \\right\\rangle.\n \\label{arr:gaussian-insertion}$$ These formulas hold for finite spin spaces with countably many cascade labels whenever the covariances are bounded at the fixed system size. They can be integrated up to the endpoints of covariance segments."
+   },
+   {
+    "anchor": "stmt-arr-variance",
+    "claim_id": "C15",
+    "statement": "A function of finite standard Gaussian data with Euclidean Lipschitz constant $A$ has variance at most $A^2$. A function of independent inputs whose value changes by at most $c_i$ when input $i$ is replaced has variance at most $\\sum_i c_i^2$. If a function $a$ on the integers has Lipschitz constant $c$ and $K$ is Poisson with mean $\\lambda$, then $\\operatorname{Var}(a(K))\\leq c^2\\lambda$."
+   },
+   {
+    "anchor": "stmt-upper-bound",
+    "claim_id": "C16",
+    "statement": "For every nondecreasing $[0,1]$-valued path $q$, $$\\label{upper:conclusion}\n \\limsup_{N\\to\\infty}\\mathbb E p_N\n \\le \\alpha V_f(q)+S_{\\mathrm I}(q).$$ Consequently the limit superior is bounded above by the variational infimum in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">3</a>."
+   },
+   {
+    "anchor": "stmt-upper-concentration",
+    "claim_id": "C17",
+    "statement": "For each fixed $H<\\infty$ there is a constant $C_H$, also depending on the fixed partition, $\\alpha$, and $f$, such that $$\\label{upper:variance}\n \\operatorname{Var}(P_N(t,h,u))\\le\\frac{C_H}{N}$$ whenever $0\\le t\\le\\alpha$, $0\\le h_0\\le\\cdots\\le\nh_{k-1}\\le H$, and $u\\in[1,2]^N$."
+   },
+   {
+    "anchor": "stmt-upper-derivatives",
+    "claim_id": "C18",
+    "statement": "The function $F_N$ is continuous on the parameter region above. For every nonnegative nondecreasing direction $\\lambda$ on the fixed partition, its right directional derivative in $h$ is $$\\label{upper:field-derivative}\n \\partial_{h,\\lambda}F_N\n =\\frac12\\mathbb E\\langle\n       R_{12}\\lambda_{\\gamma^1\\wedge\\gamma^2}\\rangle.$$ For $t>0$, its time derivative is $$\\label{upper:time-derivative}\n \\partial_tF_N\n =-\\mathbb E\\log\\left\\langle\n    \\exp f(\\widehat g\\cdot x/\\sqrt N)\\right\\rangle,$$ where $\\widehat g$ is an independent standard Gaussian pattern."
+   },
+   {
+    "anchor": "stmt-upper-coercive",
+    "claim_id": "C19",
+    "statement": "For the fixed partition, $$\\label{upper:field-growth}\n \\ell(h)\\le (\\mathbb E|G|)\\sqrt{h_0}+C_{\\zeta}\n                   -\\frac12\\sum_{i=0}^{k-1}w_ih_i.$$ For sufficiently large fixed $H$, every sufficiently large dimension in the violating sequence has a minimizer of <a href=\"#upper:objective\" data-reference-type=\"eqref\" data-reference=\"upper:objective\">[upper:objective]</a> satisfying $t>0$ and $h_{k-1}<H$."
+   },
+   {
+    "anchor": "stmt-upper-gg",
+    "claim_id": "C20",
+    "statement": "Every subsequential limit of the sampled joint arrays $(R,T)$ at these deterministic minimizing triples satisfies the joint Ghirlanda–Guerra identities of Definition <a href=\"#arr:gg\" data-reference-type=\"ref\" data-reference=\"arr:gg\">9</a>."
+   },
+   {
+    "anchor": "stmt-upper-synchronization",
+    "claim_id": "C21",
+    "statement": "In any joint array limit from Lemma <a href=\"#upper:gg\" data-reference-type=\"ref\" data-reference=\"upper:gg\">23</a>, the two-replica law of $(R_{12},T_{12})$ is supported on a set ordered in both coordinates. If $p$ is the quantile of $R_{12}$, the conditional law of $R_{12}$ given $T_{12}=i/k$ is the law of $p(U)$ for $U$ uniform on $(\\zeta_i,\\zeta_{i+1})$."
+   },
+   {
+    "anchor": "stmt-bulk-good-parameters",
+    "claim_id": "C22",
+    "statement": "There are measurable sets $\\mathcal G_N\\subset[1,2]^{\\mathbb N}$ with $\\pi(\\mathcal G_N)\\to1$ such that the following holds. For every deterministic sequence $v(N)\\in\\mathcal G_N$, every subsequential limit of the omitted system’s sampled overlap array satisfies the Ghirlanda–Guerra identities of Definition <a href=\"#arr:gg\" data-reference-type=\"ref\" data-reference=\"arr:gg\">9</a>."
+   },
+   {
+    "anchor": "stmt-bulk-restoration",
+    "claim_id": "C23",
+    "statement": "Start with any deterministic good parameter sequence, on any subsequence of dimensions. Pass to a further subsequence on which the omitted overlap array converges and the full system’s joint sampled arrays $(R_{lm},B_N(x^l,x^m),C_N(x^l))$ converge. Let $\\mu$ be the omitted limit’s two-replica overlap law. The full limiting overlap array has the same law as the omitted one. There are deterministic constants $a_{\\mathrm d},c$ and a deterministic nondecreasing function $a$, defined on a $\\mu$-full ordered subset of $[0,1]$, such that almost surely $$\\label{bulk:deterministic-covariances}\n B_{lm}=a(R_{lm})\\quad(l\\ne m),\\qquad\n B_{ll}=a_{\\mathrm d},\\qquad C_l=c,\n \\qquad 0\\le a\\le a_{\\mathrm d}\\le\\alpha\\|f'\\|_\\infty^2.$$ Moreover, $$\\label{bulk:ibp-balance}\n c+a_{\\mathrm d}=\\int r\\,a(r)\\,\\mu(dr).$$"
+   },
+   {
+    "anchor": "stmt-cav-finite-comparison",
+    "claim_id": "C24",
+    "statement": "Let $$\\label{cav:untilted-base}\n G_0=G_N^v\\otimes\\nu_L$$ be the size-$N$ bulk Gibbs probability times the independent cavity-spin prior, *before* multiplication by $W$. There is a deterministic $\\kappa_L>0$ such that $G_0(W)\\ge\\kappa_L$ for every realization and all sufficiently large $N$. Uniformly over all allowed $v$, $$\\label{cav:finite-increment}\n \\Delta_{N,L}(v)=\\mathbb E\\log G_0(W)+o(1).$$ The size-$(N+L)$ Gibbs expectations of any fixed bounded finite-replica spin test are likewise approximated, after the above coupling, by the measure $W\\,dG_0/G_0(W)$, with disorder-averaged error $o(1)$ times the test’s bound. In particular this applies to bounded continuous functions of $R^+_{12}$ and their products with $z_1^1z_1^2$; inside such continuous tests one may also replace $R^+_{12}$ by $R_{12}$. Finally, $\\Delta_{N,L}(v)\\ge-C_L$ uniformly for large $N$."
+   },
+   {
+    "anchor": "stmt-cav-dual-attainment",
+    "claim_id": "C25",
+    "statement": "For every subsequential pair $(p,h)$ just constructed, $$\\label{cav:entropy-identity}\n S_{\\mathrm I}(p)=\\ell(h)+\\frac12\\int_0^1p(u)h(u)\\,du.$$ The right side uses the continuous extension of $\\ell$ to bounded nondecreasing fields."
+   },
+   {
+    "anchor": "stmt-cav-lower-bound",
+    "claim_id": "C26",
+    "statement": "For $f\\in C_c^\\infty(\\mathbb R)$, $$\\liminf_{N\\to\\infty}\\mathbb E p_N\n \\ge\\inf_q\\{S_{\\mathrm I}(q)+\\alpha V_f(q)\\}.$$"
+   },
+   {
+    "anchor": "stmt-ext-path-approx",
+    "claim_id": "C27",
+    "statement": "If $f,g$ are bounded Borel functions with $|f|,|g|\\le K$, then $$\\begin{aligned}\n \\big|\\mathbb E p_N(f)-\\mathbb E p_N(g)\\big|\n &\\le\\alpha e^{2K}\\|f-g\\|_{L^1(\\gamma)},\\label{ext:pressure-distance}\\\\\n \\sup_{q\\text{ step}}|V_f(q)-V_g(q)|\n &\\le e^{2K}\\|f-g\\|_{L^1(\\gamma)}.\\label{ext:path-distance}\n\\end{aligned}$$ Consequently, for each bounded Borel $f$, the pattern functional $V_f$ extends uniquely and continuously in $L^1$ from step paths to $\\mathcal Q$, and the bound in <a href=\"#ext:path-distance\" data-reference-type=\"eqref\" data-reference=\"ext:path-distance\">[ext:path-distance]</a> holds on all of $\\mathcal Q$."
+   },
+   {
+    "anchor": "stmt-ext-bounded",
+    "claim_id": "C28",
+    "statement": "Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">3</a> holds for every bounded Borel activation."
+   },
+   {
+    "anchor": "stmt-ext-integrable",
+    "claim_id": "C29",
+    "statement": "Suppose $f:\\mathbb R\\to\\mathbb R$ is Borel and $$\\label{ext:moments}\n \\mathbb E|f(G)|+\\mathbb E e^{f(G)}<\\infty.$$ For $J,K>0$, let $f_{J,K}=\\min\\{K,\\max\\{-J,f\\}\\}$. The uniform limit $$\\label{ext:unbounded-V}\n V_f=\\lim_{J\\to\\infty}\\lim_{K\\to\\infty}V_{f_{J,K}}\n \\quad\\text{on }\\mathcal Q$$ exists and is continuous in $L^1$. With this definition, the variational formula <a href=\"#thm:formula\" data-reference-type=\"eqref\" data-reference=\"thm:formula\">[thm:formula]</a> is finite and holds in expectation and in probability."
+   },
+   {
+    "anchor": "stmt-ext-growth",
+    "claim_id": "C30",
+    "statement": "Wholly unrestricted real activations need not have finite limiting pressure. For $f(s)=s^4$, choose $x_i=\\operatorname{sign}(g_i^1)$. The law of large numbers gives $b_1(x)=N^{-1/2}\\sum_i|g_i^1|\\sim\\sqrt{2/\\pi}\\sqrt N$ in probability. All other pattern contributions are nonnegative, and the probability weight of this one state is $2^{-N}$. Thus $p_N(f)\\ge b_1(x)^4/N-\\log2\\to\\infty$ in probability."
+   },
+   {
+    "anchor": "stmt-ext-sign",
+    "claim_id": "C31",
+    "statement": "Replace the Gaussian pattern entries by independent uniform signs in $\\{-1,1\\}$. If $f$ is bounded Borel and its discontinuity set has Gaussian measure zero, then its expected pressure and its pressure in probability converge to the same value $\\mathcal P_f(\\alpha)$ as in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">3</a>. In particular, this holds for every bounded continuous activation."
+   },
+   {
+    "anchor": "stmt-ext-sign-scope",
+    "claim_id": "C32",
+    "statement": "One cannot replace the hypothesis of Theorem <a href=\"#ext:sign\" data-reference-type=\"ref\" data-reference=\"ext:sign\">34</a> by arbitrary bounded Borel measurability. Take $f=\\mathbf1_{\\mathbb Q}$. For Gaussian patterns, every field at every state is irrational almost surely, since there are only finitely many states and rows at each size; hence $p_N=0$. For sign patterns and square $N$, every field is rational, so $p_N=M_N/N$. For odd nonsquare $N$, the numerator of each field is a nonzero odd integer while $\\sqrt N$ is irrational, so $p_N=0$. The two subsequences give distinct limits. This function is discontinuous everywhere and is excluded by Theorem <a href=\"#ext:sign\" data-reference-type=\"ref\" data-reference=\"ext:sign\">34</a>."
+   }
+  ],
+  "prerequisites": []
+ },
+ "outputs": [
+  {
+   "claim_id": "C1",
+   "exact_statement": "For every $\\alpha>0$ and every bounded Borel $f:\\mathbb R\\to\\mathbb R$, $$\\label{thm:formula}\n \\lim_{N\\to\\infty}\\mathbb E p_N(f)\n =\\mathcal P_f(\\alpha)\n :=\\inf_{q\\in\\mathcal Q}\\{\\alpha V_f(q)+S_{\\mathrm I}(q)\\}.$$ Moreover, $p_N(f)$ converges to $\\mathcal P_f(\\alpha)$ in probability. The variational value is finite. In particular, the conclusion holds for $f=\\beta\\phi$ at every $\\beta>0$ and every bounded continuous activation $\\phi$, without symmetry, concavity, or a smallness restriction.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "C2",
+   "exact_statement": "On a fixed partition with $w_i=\\zeta_{i+1}-\\zeta_i$, the first variations along every feasible line segment of step paths are $$\\begin{aligned}\n\\label{var:pattern-variation}\n \\frac{d}{da}V_f(q+a\\dot q)\n &=-\\frac12\\sum_{i=0}^{k-1}w_i\\dot q_i\\,\n   \\mathbb E[U_i'(Z_i)^2],\\\\\n\\label{var:field-variation}\n \\frac{d}{da}\\ell(h+a\\dot h)\n &=-\\frac12\\sum_{i=0}^{k-1}w_i\\dot h_i\\,\n   \\mathbb E[U_i'(Z_i)^2].\n\\end{aligned}$$ The functions and chains on the right are computed at the current path. Endpoint derivatives are understood from within the segment. The squared-derivative expectations on the right are continuous on the closed finite-dimensional parameter cones. In both recursions these expectations are nonnegative and nondecreasing in $i$. In the field recursion, define $$\\label{var:rho}\n \\rho_h(u)=\\rho_i:=\\mathbb E[U_i'(Z_i)^2],\n \\qquad \\zeta_i<u<\\zeta_{i+1}.$$ Then $0\\le\\rho_h\\le1$, and subdivision does not change this path.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-var-variation"
+  },
+  {
+   "claim_id": "C3",
+   "exact_statement": "For step paths on arbitrary partitions, $$\\begin{aligned}\n\\label{var:lipschitz}\n |V_f(p)-V_f(q)|&\\le\\tfrac12\\|f'\\|_\\infty^2\\|p-q\\|_{L^1},\\\\\n |\\ell(h')-\\ell(h)|&\\le\\tfrac12\\|h'-h\\|_{L^1}.\n\\end{aligned}$$ Thus $V_f$ extends uniquely and continuously to all nondecreasing $[0,1]$-valued paths, and $\\ell$ extends to all bounded nonnegative nondecreasing paths. Moreover, $$\\label{var:tail-order}\n \\int_s^1p(u)\\,du\\ge\\int_s^1q(u)\\,du\n \\quad\\hbox{for every }s\\in[0,1]\n \\quad\\Longrightarrow\\quad V_f(p)\\le V_f(q).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-var-continuity-order"
+  },
+  {
+   "claim_id": "C4",
+   "exact_statement": "The entropy in Definition <a href=\"#def:entropy\" data-reference-type=\"ref\" data-reference=\"def:entropy\">2</a> is nonnegative, nondecreasing in pointwise path order, and satisfies $S_{\\mathrm I}(0)=0$. The variational infimum is finite, and $$\\label{var:step-infimum}\n \\inf_q\\{\\alpha V_f(q)+S_{\\mathrm I}(q)\\}\n =\\inf_{\\substack{q\\text{ step}\\\\q_{k-1}<1}}\n       \\{\\alpha V_f(q)+S_{\\mathrm I}(q)\\}.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-var-step-reduction"
+  },
+  {
+   "claim_id": "C5",
+   "exact_statement": "Suppose $U:\\mathbb R\\to\\mathbb R$ is even and convex. Let $K$ be its tilted Gaussian kernel with variance $s\\ge0$ and coefficient $d\\ge0$, and assume its normalizer $\\mathbb E e^{dU(x+\\sqrt sG)}$ is finite for every $x\\in\\mathbb R$. If $A$ is bounded, even, and nondecreasing in $|x|$, then $KA$ has these properties as well. The same statement with “nonincreasing” holds with both monotonicities reversed.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-var-folded-kernel"
+  },
+  {
+   "claim_id": "C6",
+   "exact_statement": "The functional $\\ell$ is concave on nonnegative nondecreasing step paths. For any two such paths, represented on a common partition, $$\\label{var:support}\n \\ell(h')\\le\\ell(h)\n      -\\frac12\\int_0^1(h'(u)-h(u))\\rho_h(u)\\,du.$$ Concavity also holds for its continuous extension to bounded nonnegative nondecreasing paths.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-var-concavity"
+  },
+  {
+   "claim_id": "C7",
+   "exact_statement": "Suppose $B$ is a bounded, symmetric, weakly exchangeable Gram array with constant diagonal $D$ and the Ghirlanda–Guerra property. Then, almost surely, for distinct indices, $$B_{\\ell m}\\geq0,\n \\qquad\n B_{12}\\geq\\min\\{B_{13},B_{23}\\}.\n \\label{arr:ultrametric-inequality}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-arr-ultrametric"
+  },
+  {
+   "claim_id": "C8",
+   "exact_statement": "The total $T$ in <a href=\"#arr:cascade-weights\" data-reference-type=\"eqref\" data-reference=\"arr:cascade-weights\">[arr:cascade-weights]</a> is almost surely finite and positive, with $\\mathbb E[(\\log T)^2]<\\infty$. For replicas sampled from $(v_\\gamma)$, the common-level array satisfies the Ghirlanda–Guerra property and $$\\mathbb P(\\gamma^1\\wedge\\gamma^2=i)=w_i,\n \\qquad 0\\leq i\\leq k-1.\n \\label{arr:level-marginal}$$ Conversely, a weakly exchangeable ultrametric scalar array with the Ghirlanda–Guerra property and finitely many off-diagonal values has the same off-diagonal law as this cascade, with the levels replaced by its ordered values and with $w_i$ their marginal probabilities. Values of zero probability are omitted.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arr-cascade"
+  },
+  {
+   "claim_id": "C9",
+   "exact_statement": "Let $B$ be nonnegative and ultrametric off the diagonal, with constant diagonal $D$ and entries at most $D$. Applying any nonnegative nondecreasing finite-valued map to its off-diagonal entries, with image contained in $[0,D]$, and retaining diagonal $D$, produces a Gram array. If $B$ has the Ghirlanda–Guerra property, its quantized off-diagonal law is the finite cascade law in Lemma <a href=\"#arr:cascade\" data-reference-type=\"ref\" data-reference=\"arr:cascade\">11</a>.*\n\n*More generally, suppose finitely many desired off-diagonal covariance entries are bounded nonnegative nondecreasing functions $a_j(r)$ of the scalar entries $r=B_{\\ell m}$, $\\ell\\ne m$, with $a_j(r)\\leq D_j$. One can choose finite ordered bins of $r$ that approximate $r$ and every $a_j(r)$ uniformly on their domain, with errors tending to zero, while keeping each covariance diagonal equal to $D_j$. All the resulting covariance arrays are Gram. The binning can be chosen as a function of $r$ alone, so it never splits an atom of the scalar overlap law.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arr-quantization"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "For fixed diagonal $D$, the law of a nonnegative ultrametric Ghirlanda–Guerra array with values in $[0,D]$ is determined by its two-replica marginal. Such a law exists for every probability marginal on $[0,D]$. If the marginal quantiles $q_m,q$ satisfy $\\|q_m-q\\|_{L^1(0,1)}\\to0$, then the laws of every fixed finite replica block converge in bounded-Lipschitz distance.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arr-law-continuity"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "Let $X_{k-1}$ be a terminal log factor depending on the marked path. For $i\\ge1$, let $\\mathbb E_i$ integrate the original level-$i$ child-mark kernel, conditional on the marked ancestor path through level $i-1$, without averaging the Poisson weights or root data. Define $$X_{i-1}=\\frac1{\\zeta_i}\\log\\mathbb E_i e^{\\zeta_i X_i},\n \\qquad i=k-1,\\ldots,1.\n \\label{arr:mark-recursion}$$ Assume these transforms are finite; the bounded log factors and the Gaussian log factors with at most linear growth used below satisfy this condition. For $Z=\\sum_\\gamma v_\\gamma e^{X_{k-1}(\\gamma)}$, $$\\mathbb E[\\log Z\\mid\\text{root data}]=X_0,\n \\qquad\n \\mathbb E[(\\log Z-X_0)^2\\mid\\text{root data}]\n \\leq4\\mathbb E[(\\log T)^2].\n \\label{arr:log-cascade}$$ Here $T$ is the unmarked total in <a href=\"#arr:cascade-weights\" data-reference-type=\"eqref\" data-reference=\"arr:cascade-weights\">[arr:cascade-weights]</a>.*\n\n\n*After reweighting by $e^{X_{k-1}}$ and relabeling children, the joint law of normalized weights and marks can be generated by first drawing an ordinary unmarked cascade, independently of the root data, and then drawing marks on its vertices with kernels of densities $$e^{\\zeta_i(X_i-X_{i-1})},\\qquad 1\\leq i\\leq k-1,\n \\label{arr:tilted-kernel}$$ relative to the original kernels, with independent draws on distinct children conditional on ancestor marks. Root data retain their original law. In particular, sampling reweighted leaves preserves their shape law; conditioning on that shape leaves exactly these mark kernels along the sampled branches. Independent mark components remain independent under these kernels when their original kernels factor and the terminal log factor is a sum of the separate component log factors.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arr-tilt"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Let a sequence of random base probabilities have jointly convergent arrays of bounded observables and of the conditional covariances of finitely many fresh centered Gaussian fields. The fields are sampled independently of the base probability conditional on its data, with any specified independence between field components. Then the following averages converge, as determined by those limiting arrays:*\n\n1.  *bounded continuous functions of the listed observable and field evaluations on finitely many base replicas;*\n\n2.  *the same tests after reweighting by a fixed continuous function of the listed evaluations at one replica, bounded between two fixed positive constants;*\n\n3.  *the expected logarithm of the normalizing integral of that factor.*\n\n*Independent finite-spin averages may be included. The assertion remains valid at singular limiting covariance matrices. If the limiting off-diagonal covariance entries are ordered functions of a scalar ultrametric Ghirlanda–Guerra array, its evaluations can be obtained by the quantized cascades of Lemma <a href=\"#arr:quantization\" data-reference-type=\"ref\" data-reference=\"arr:quantization\">12</a>, retaining the true diagonal variances and using <a href=\"#arr:residual-average\" data-reference-type=\"eqref\" data-reference=\"arr:residual-average\">[arr:residual-average]</a>, provided the base observables and tests used in the evaluation are also approximated by these bins in probability on every finite replica restriction. This condition includes constants and continuous tests of the scalar overlap and the quantized covariance coordinates.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arr-limit"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "Suppose that the limiting spin-overlap array of a sequence of base Gibbs probabilities has diagonal one, is Gram, and satisfies the Ghirlanda–Guerra property. Let $p$ be the quantile of its off-diagonal two-replica law. For a fresh independent Gaussian pattern field $g(x)$ with conditional covariance $R(x,x')$, and bounded continuous $f$, $$\\lim\\mathbb E\\log\\langle e^{f(g(x))}\\rangle=V_f(p),\n \\label{arr:fresh-pattern-value}$$ whenever $V_f$ is understood through its continuous quantile extension. In particular this applies to the smooth potentials used in the proof before the final approximation step.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arr-fresh-pattern"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "Let $P$ be a probability reference measure, possibly random but independent of the Gaussian fields under consideration. For independent centered Gaussian energies with covariances $C_0,C_1$, interpolate using $H_t=\\sqrt{1-t}\\,H_0+\\sqrt t\\,H_1$, and put $\\Delta=C_1-C_0$. Then $$\\frac{d}{dt}\\mathbb E\\log P(e^{H_t})\n =\\frac12\\mathbb E\\langle\\Delta_{11}-\\Delta_{12}\\rangle_t.\n \\label{arr:gaussian-log-derivative}$$ For a bounded $r$-replica test $F$ independent of these fields, $$\\begin{aligned}\n \\frac{d}{dt}\\mathbb E\\langle F\\rangle_t\n =\\frac12\\mathbb E\\Bigg\\langle F\\Bigg(\n &\\sum_{a,b=1}^r\\Delta_{ab}\n -2r\\sum_{a=1}^r\\Delta_{a,r+1}\\notag\\\\\n &+r(r+1)\\Delta_{r+1,r+2}-r\\Delta_{r+1,r+1}\n \\Bigg)\\Bigg\\rangle_t,\n \\label{arr:replica-derivative}\n\\end{aligned}$$ so its magnitude is at most $(2r^2+r)\\|F\\|_\\infty\\|\\Delta\\|_\\infty$. If an independent centered Gaussian field $Y$ of covariance $C$ enters the energy with coefficient $s$, Gaussian integration by parts also gives $$\\mathbb E\\langle Y(1)F\\rangle\n =s\\,\\mathbb E\\left\\langle\n  F\\left(\\sum_{a=1}^r C_{1a}-rC_{1,r+1}\\right)\n \\right\\rangle.\n \\label{arr:gaussian-insertion}$$ These formulas hold for finite spin spaces with countably many cascade labels whenever the covariances are bounded at the fixed system size. They can be integrated up to the endpoints of covariance segments.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arr-calculus"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "A function of finite standard Gaussian data with Euclidean Lipschitz constant $A$ has variance at most $A^2$. A function of independent inputs whose value changes by at most $c_i$ when input $i$ is replaced has variance at most $\\sum_i c_i^2$. If a function $a$ on the integers has Lipschitz constant $c$ and $K$ is Poisson with mean $\\lambda$, then $\\operatorname{Var}(a(K))\\leq c^2\\lambda$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-arr-variance"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "For every nondecreasing $[0,1]$-valued path $q$, $$\\label{upper:conclusion}\n \\limsup_{N\\to\\infty}\\mathbb E p_N\n \\le \\alpha V_f(q)+S_{\\mathrm I}(q).$$ Consequently the limit superior is bounded above by the variational infimum in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">3</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-upper-bound"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "For each fixed $H<\\infty$ there is a constant $C_H$, also depending on the fixed partition, $\\alpha$, and $f$, such that $$\\label{upper:variance}\n \\operatorname{Var}(P_N(t,h,u))\\le\\frac{C_H}{N}$$ whenever $0\\le t\\le\\alpha$, $0\\le h_0\\le\\cdots\\le\nh_{k-1}\\le H$, and $u\\in[1,2]^N$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-upper-concentration"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "The function $F_N$ is continuous on the parameter region above. For every nonnegative nondecreasing direction $\\lambda$ on the fixed partition, its right directional derivative in $h$ is $$\\label{upper:field-derivative}\n \\partial_{h,\\lambda}F_N\n =\\frac12\\mathbb E\\langle\n       R_{12}\\lambda_{\\gamma^1\\wedge\\gamma^2}\\rangle.$$ For $t>0$, its time derivative is $$\\label{upper:time-derivative}\n \\partial_tF_N\n =-\\mathbb E\\log\\left\\langle\n    \\exp f(\\widehat g\\cdot x/\\sqrt N)\\right\\rangle,$$ where $\\widehat g$ is an independent standard Gaussian pattern.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-upper-derivatives"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "For the fixed partition, $$\\label{upper:field-growth}\n \\ell(h)\\le (\\mathbb E|G|)\\sqrt{h_0}+C_{\\zeta}\n                   -\\frac12\\sum_{i=0}^{k-1}w_ih_i.$$ For sufficiently large fixed $H$, every sufficiently large dimension in the violating sequence has a minimizer of <a href=\"#upper:objective\" data-reference-type=\"eqref\" data-reference=\"upper:objective\">[upper:objective]</a> satisfying $t>0$ and $h_{k-1}<H$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-upper-coercive"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "Every subsequential limit of the sampled joint arrays $(R,T)$ at these deterministic minimizing triples satisfies the joint Ghirlanda–Guerra identities of Definition <a href=\"#arr:gg\" data-reference-type=\"ref\" data-reference=\"arr:gg\">9</a>.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-upper-gg"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "In any joint array limit from Lemma <a href=\"#upper:gg\" data-reference-type=\"ref\" data-reference=\"upper:gg\">23</a>, the two-replica law of $(R_{12},T_{12})$ is supported on a set ordered in both coordinates. If $p$ is the quantile of $R_{12}$, the conditional law of $R_{12}$ given $T_{12}=i/k$ is the law of $p(U)$ for $U$ uniform on $(\\zeta_i,\\zeta_{i+1})$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-upper-synchronization"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "There are measurable sets $\\mathcal G_N\\subset[1,2]^{\\mathbb N}$ with $\\pi(\\mathcal G_N)\\to1$ such that the following holds. For every deterministic sequence $v(N)\\in\\mathcal G_N$, every subsequential limit of the omitted system’s sampled overlap array satisfies the Ghirlanda–Guerra identities of Definition <a href=\"#arr:gg\" data-reference-type=\"ref\" data-reference=\"arr:gg\">9</a>.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-bulk-good-parameters"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "Start with any deterministic good parameter sequence, on any subsequence of dimensions. Pass to a further subsequence on which the omitted overlap array converges and the full system’s joint sampled arrays $(R_{lm},B_N(x^l,x^m),C_N(x^l))$ converge. Let $\\mu$ be the omitted limit’s two-replica overlap law. The full limiting overlap array has the same law as the omitted one. There are deterministic constants $a_{\\mathrm d},c$ and a deterministic nondecreasing function $a$, defined on a $\\mu$-full ordered subset of $[0,1]$, such that almost surely $$\\label{bulk:deterministic-covariances}\n B_{lm}=a(R_{lm})\\quad(l\\ne m),\\qquad\n B_{ll}=a_{\\mathrm d},\\qquad C_l=c,\n \\qquad 0\\le a\\le a_{\\mathrm d}\\le\\alpha\\|f'\\|_\\infty^2.$$ Moreover, $$\\label{bulk:ibp-balance}\n c+a_{\\mathrm d}=\\int r\\,a(r)\\,\\mu(dr).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-bulk-restoration"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "Let $$\\label{cav:untilted-base}\n G_0=G_N^v\\otimes\\nu_L$$ be the size-$N$ bulk Gibbs probability times the independent cavity-spin prior, *before* multiplication by $W$. There is a deterministic $\\kappa_L>0$ such that $G_0(W)\\ge\\kappa_L$ for every realization and all sufficiently large $N$. Uniformly over all allowed $v$, $$\\label{cav:finite-increment}\n \\Delta_{N,L}(v)=\\mathbb E\\log G_0(W)+o(1).$$ The size-$(N+L)$ Gibbs expectations of any fixed bounded finite-replica spin test are likewise approximated, after the above coupling, by the measure $W\\,dG_0/G_0(W)$, with disorder-averaged error $o(1)$ times the test’s bound. In particular this applies to bounded continuous functions of $R^+_{12}$ and their products with $z_1^1z_1^2$; inside such continuous tests one may also replace $R^+_{12}$ by $R_{12}$. Finally, $\\Delta_{N,L}(v)\\ge-C_L$ uniformly for large $N$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cav-finite-comparison"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "For every subsequential pair $(p,h)$ just constructed, $$\\label{cav:entropy-identity}\n S_{\\mathrm I}(p)=\\ell(h)+\\frac12\\int_0^1p(u)h(u)\\,du.$$ The right side uses the continuous extension of $\\ell$ to bounded nondecreasing fields.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cav-dual-attainment"
+  },
+  {
+   "claim_id": "C26",
+   "exact_statement": "For $f\\in C_c^\\infty(\\mathbb R)$, $$\\liminf_{N\\to\\infty}\\mathbb E p_N\n \\ge\\inf_q\\{S_{\\mathrm I}(q)+\\alpha V_f(q)\\}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cav-lower-bound"
+  },
+  {
+   "claim_id": "C27",
+   "exact_statement": "If $f,g$ are bounded Borel functions with $|f|,|g|\\le K$, then $$\\begin{aligned}\n \\big|\\mathbb E p_N(f)-\\mathbb E p_N(g)\\big|\n &\\le\\alpha e^{2K}\\|f-g\\|_{L^1(\\gamma)},\\label{ext:pressure-distance}\\\\\n \\sup_{q\\text{ step}}|V_f(q)-V_g(q)|\n &\\le e^{2K}\\|f-g\\|_{L^1(\\gamma)}.\\label{ext:path-distance}\n\\end{aligned}$$ Consequently, for each bounded Borel $f$, the pattern functional $V_f$ extends uniquely and continuously in $L^1$ from step paths to $\\mathcal Q$, and the bound in <a href=\"#ext:path-distance\" data-reference-type=\"eqref\" data-reference=\"ext:path-distance\">[ext:path-distance]</a> holds on all of $\\mathcal Q$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-ext-path-approx"
+  },
+  {
+   "claim_id": "C28",
+   "exact_statement": "Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">3</a> holds for every bounded Borel activation.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-ext-bounded"
+  },
+  {
+   "claim_id": "C29",
+   "exact_statement": "Suppose $f:\\mathbb R\\to\\mathbb R$ is Borel and $$\\label{ext:moments}\n \\mathbb E|f(G)|+\\mathbb E e^{f(G)}<\\infty.$$ For $J,K>0$, let $f_{J,K}=\\min\\{K,\\max\\{-J,f\\}\\}$. The uniform limit $$\\label{ext:unbounded-V}\n V_f=\\lim_{J\\to\\infty}\\lim_{K\\to\\infty}V_{f_{J,K}}\n \\quad\\text{on }\\mathcal Q$$ exists and is continuous in $L^1$. With this definition, the variational formula <a href=\"#thm:formula\" data-reference-type=\"eqref\" data-reference=\"thm:formula\">[thm:formula]</a> is finite and holds in expectation and in probability.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ext-integrable"
+  },
+  {
+   "claim_id": "C30",
+   "exact_statement": "Wholly unrestricted real activations need not have finite limiting pressure. For $f(s)=s^4$, choose $x_i=\\operatorname{sign}(g_i^1)$. The law of large numbers gives $b_1(x)=N^{-1/2}\\sum_i|g_i^1|\\sim\\sqrt{2/\\pi}\\sqrt N$ in probability. All other pattern contributions are nonnegative, and the probability weight of this one state is $2^{-N}$. Thus $p_N(f)\\ge b_1(x)^4/N-\\log2\\to\\infty$ in probability.",
+   "kind": "counterexample",
+   "statement_anchor": "stmt-ext-growth"
+  },
+  {
+   "claim_id": "C31",
+   "exact_statement": "Replace the Gaussian pattern entries by independent uniform signs in $\\{-1,1\\}$. If $f$ is bounded Borel and its discontinuity set has Gaussian measure zero, then its expected pressure and its pressure in probability converge to the same value $\\mathcal P_f(\\alpha)$ as in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">3</a>. In particular, this holds for every bounded continuous activation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ext-sign"
+  },
+  {
+   "claim_id": "C32",
+   "exact_statement": "One cannot replace the hypothesis of Theorem <a href=\"#ext:sign\" data-reference-type=\"ref\" data-reference=\"ext:sign\">34</a> by arbitrary bounded Borel measurability. Take $f=\\mathbf1_{\\mathbb Q}$. For Gaussian patterns, every field at every state is irrational almost surely, since there are only finitely many states and rows at each size; hence $p_N=0$. For sign patterns and square $N$, every field is rational, so $p_N=M_N/N$. For odd nonsquare $N$, the numerator of each field is a nonzero odd integer while $\\sqrt N$ is irrational, so $p_N=0$. The two subsequences give distinct limits. This function is discontinuous everywhere and is excluded by Theorem <a href=\"#ext:sign\" data-reference-type=\"ref\" data-reference=\"ext:sign\">34</a>.",
+   "kind": "counterexample",
+   "statement_anchor": "stmt-ext-sign-scope"
+  }
+ ],
+ "paper": "papers/EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-H-0429_PM-222.1_The_free_energy_of_the_Ising_random_perceptron.md",
+ "purpose": "The free energy of the Ising random perceptron",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "9ad47b7242c9b442a3303f3d5486719d7b9ab2f538ee2ce7abf5b8b3990db1c8",
+   "pm.domains.v2": "8e51d870b4d93e8570491633382f98fbc3973b6761f36e8f2afd1481ebc091f3",
+   "pm.edges.v2": "dcaaf6c2bc4ef1407b36c4df8de7bd129dee3305cbab4455b74b576f14d352a1",
+   "pm.extraction.v2": "7df620c7533345934b35eccb34e3418452be875925e6f00aea6a20d0b682976d",
+   "pm.formal.v2": "46b9a8ce86661b8d9106cab9b158d83d90ac6d5fb476de4035cd24308e9cc691",
+   "pm.limits.v2": "61345a68083b30e01767449b6e1a357292852fccb112d0738bd06d15887c0705",
+   "pm.node.v2": "e7d401272655a9f319833ff558f3e5eb803af00cbae50178ebc9ebeee3e9d9ec",
+   "pm.objects.v2": "cb38222eeeb8e27fad8ad3105802b3cce92db40e2db5e164093d17e93c900b07",
+   "pm.provenance.v2": "e626aa711bc63a9ab435642c696e606c04d91170f2566418eba44e16ab9d2bff",
+   "pm.quantities.v2": "3c9c8a7505d8cf643ecd8eca512173ce42d84640c5a07f5ba8cbe7f62f0df15a",
+   "pm.reading.v2": "c1afc3bd42e4dc6e2cf4bac19d9970f66ae4ab1a9c050ca547e9470de540ca0d",
+   "pm.roadmap.v2": "ce2334a842942870a5e4ee045c713e740606d8ab10a7cfe69244b1842ee1373e",
+   "pm.search.v1": "e3d974c1b04580f36eb0f43a44119fce1b5a9f5d172c57c5397bce770ec7af59",
+   "pm.triptych.v2": "f24898f7a5b2f7a2b486713e1d47cd9f78a76e1402c8a6c89c109e395591ebea"
+  },
+  "canonical_sha256": "e4122ad3e282c551965593022659f0ad32e2706e25cc341439295c1f2e510c96",
+  "paper_sha256": "d5eefec4882abccefe775c942d2241c589b092901abc19167ecde4193d6d2d86",
+  "repaired_body_sha256": "7e0b99840cfdea144faeef8ba513ecbdb4a3c36becc2ef1cf01779ae37b731b5"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "794d58155f225225ffbf21d5abafff97c6ff0843a0d6be58240efb2e8b8b3998",
+   "receipt_sha256": "f4c4933302faa7b5d15a79509136ea72fb098cc84931ae84284c61150a82905b",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive 27 symmetric three-state matrices with diagonal 1 and off-diagonal values in {0,1/2,1}; five boundary cases and six invalid-contract cases.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I-quantization",
+     "oracle_basis": "Independent direct rounding with fractions.Fraction and exact python-flint determinants of every principal minor; invalid triples are detected by the repeated-minimum criterion."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M1",
+     "observed_exit": 6,
+     "receipt_sha256": "35fa9aae0033e01cce0b373e0949cf2c26fcb7ddc6ca266f115e6c4b4ac453e0"
+    },
+    {
+     "id": "M2",
+     "observed_exit": 6,
+     "receipt_sha256": "7b271dc642dc532a4e7ae1346ece3c789355910e9f99e68f5eab1f62e4cc2b71"
+    },
+    {
+     "id": "M3",
+     "observed_exit": 6,
+     "receipt_sha256": "878ae73f59df5be7de87714e5920c5329548960fbfe61d3d3ebba4c38128ad35"
+    }
+   ],
+   "receipt_sha256": "cde131bb733773e57592962f8e4397b7ac242d9b03cd6efaa75d0991d2eafe08",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The free energy of the Ising random perceptron"
+}

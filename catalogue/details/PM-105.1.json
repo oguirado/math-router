@@ -1,0 +1,635 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 591284,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 165037
+ },
+ "coordinate": "EN-114-000-0022-2-2026-PR-T4-UK-EX-M1-B-ML-H-0231",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "For every fixed rational $\\delta\\in(0,1)$ there are an integer $q=q(\\delta)\\ge2$ and a deterministic polynomial-time reduction from $3$-SAT to 2-to-1 games with alphabets $[2q]$ and $[q]$ such that:*\n\n1.",
+     "quote_sha256": "7ec844395496af2ae07c32ceffc2a82076f60285e41ce10584b02523927cce22"
+    }
+   ],
+   "query": "Rich 2-to-1 games",
+   "reason": "The theorem makes no uniformity assumption on the partitions induced at a left vertex."
+  }
+ ],
+ "family": "PM-105",
+ "id": "PM-105.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-2to1-hardness",
+    "statement": "For every fixed rational $\\delta\\in(0,1)$ there are an integer $q=q(\\delta)\\ge2$ and a deterministic polynomial-time reduction from $3$-SAT to 2-to-1 games with alphabets $[2q]$ and $[q]$ such that:*\n\n1."
+   },
+   {
+    "anchor": "stmt-cor-max-k-colorable",
+    "claim_id": "claim-max-k-colorable",
+    "statement": "There are absolute constants $C>0$ and an integer $k_0\\ge3$ such that, for every fixed integer $k\\ge k_0$, it is NP-hard to distinguish the following cases for a finite unweighted graph $G=(W,F)$ with $F\\ne\\varnothing$:*\n\n1."
+   },
+   {
+    "anchor": "stmt-cor-not-two-pcp",
+    "claim_id": "claim-not-two-pcp",
+    "statement": "Let $\\operatorname{NTW}(a,b,c)$ be the Boolean predicate accepting exactly zero, one, or three true inputs."
+   },
+   {
+    "anchor": "stmt-thm-pcp",
+    "claim_id": "claim-pcp-gap",
+    "statement": "There is a constant $\\gamma_0>0$ and a deterministic polynomial-time map taking any Boolean $3$-CNF formula $\\varphi$ to a nonempty $3$-CNF formula $\\Psi$ such that every clause of $\\Psi$ uses three distinct variables."
+   },
+   {
+    "anchor": "stmt-thm-repetition",
+    "claim_id": "claim-repetition",
+    "statement": "Let $G$ be any finite projection game with the conventions above."
+   },
+   {
+    "anchor": "stmt-thm-prelim-grassmann",
+    "claim_id": "claim-grassmann-expansion",
+    "statement": "For each $0<\\zeta<1$, there are $\\alpha>0$, an integer $r\\geq1$, and $\\ell_0$ such that, for every $\\ell\\geq\\ell_0$ and then every sufficiently large $N$, the following holds."
+   },
+   {
+    "anchor": "stmt-lem-prelim-matrix-set",
+    "claim_id": "claim-matrix-set-extraction",
+    "statement": "For every $0<\\eta<1$ there are $\\alpha>0$, $r\\geq1$, and $\\ell_0$, depending only on $\\eta$, such that for each $\\ell\\geq\\ell_0$ and all sufficiently large $m$ the following holds."
+   },
+   {
+    "anchor": "stmt-lem-padding",
+    "claim_id": "claim-dummy-columns",
+    "statement": "Let $H,D,K$ be finite binary vector spaces, and write a matrix on $H\\oplus D$ as $(X,Y)$, with $X\\in\\mathop{\\mathrm{Hom}}(H^*,K)$ and $Y\\in\\mathop{\\mathrm{Hom}}(D^*,K)$."
+   },
+   {
+    "anchor": "stmt-thm-inverse",
+    "claim_id": "claim-inverse-theorem",
+    "statement": "For every $0<\\eta<1$, there are $\\alpha>0$, integers $r\\geq1$ and $\\ell_0$, depending only on $\\eta$, with the following property."
+   },
+   {
+    "anchor": "stmt-lem-many-fibers",
+    "claim_id": "claim-many-good-fibers",
+    "statement": "Fix $0<\\eta<1$, and let $\\alpha,r,\\ell_0$ be constants from Theorem <a href=\"#thm:inverse\" data-reference-type=\"ref\" data-reference=\"thm:inverse\">9</a> with threshold $\\eta/2$."
+   },
+   {
+    "anchor": "stmt-lem-construction-space-properties",
+    "claim_id": "claim-space-properties",
+    "statement": "The spaces in Definition <a href=\"#def:spaces\" data-reference-type=\"ref\" data-reference=\"def:spaces\">11</a> contain $1$ and satisfy $H_C(Q)\\subseteq H_C(Q)^2$."
+   },
+   {
+    "anchor": "stmt-lem-canonical-support",
+    "claim_id": "claim-canonical-support",
+    "statement": "If a used clause slot is reducible to a position, that position is unique."
+   },
+   {
+    "anchor": "stmt-lem-canonical-sharing",
+    "claim_id": "claim-canonical-sharing",
+    "statement": "Let $O$ be obtained from $E$ by the specified source projections, let $\\pi:\\Omega(E)\\to\\Omega(O)$ be their product, and let $f:\\Omega(O)\\to Y$ be any function."
+   },
+   {
+    "anchor": "stmt-lem-construction-two-fibers",
+    "claim_id": "claim-two-fibers",
+    "statement": "Every map <a href=\"#eq:legal-edge-map\" data-reference-type=\"eqref\" data-reference=\"eq:legal-edge-map\">[eq:legal-edge-map]</a> is a well-defined surjection between nonempty legal label sets and has at most two preimages per right label."
+   },
+   {
+    "anchor": "stmt-prop-completeness",
+    "claim_id": "claim-perfect-completeness",
+    "statement": "If the source clause instance has a satisfying assignment, every constraint just defined is satisfied by one common legal labeling, for every choice of the positive integer parameters."
+   },
+   {
+    "anchor": "stmt-lem-folding",
+    "claim_id": "claim-joint-folding",
+    "statement": "Fix a full array question on $\\Omega(Q)$ and a nonleaf node $D$."
+   },
+   {
+    "anchor": "stmt-lem-joint-evaluation",
+    "claim_id": "claim-joint-evaluation",
+    "statement": "Fix a legal response to a full array question and a node $D$."
+   },
+   {
+    "anchor": "stmt-lem-stopped-calls",
+    "claim_id": "claim-stopped-calls",
+    "statement": "Fix $E$ and the path from the root through $D_p$, including $D_p$ but no choice of its child."
+   },
+   {
+    "anchor": "stmt-lem-cut-tv",
+    "claim_id": "claim-cut-tv",
+    "statement": "In the original experiment, expose $E$, the path through $D_p$, and the exterior record of Lemma <a href=\"#lem:stopped-calls\" data-reference-type=\"ref\" data-reference=\"lem:stopped-calls\">19</a>."
+   },
+   {
+    "anchor": "stmt-lem-sparse-tv",
+    "claim_id": "claim-sparse-tv",
+    "statement": "Fix $E$, the path through $D_i$ and an exterior record generated without the projections."
+   },
+   {
+    "anchor": "stmt-lem-posterior",
+    "claim_id": "claim-posterior-bound",
+    "statement": "In $\\mathsf M_i$, condition on $E$, the path through $D_i$ and a permissible exterior record."
+   },
+   {
+    "anchor": "stmt-lem-bias",
+    "claim_id": "claim-scalar-bias",
+    "statement": "There is an absolute integer $R_{\\min}$ such that the following holds if $R_p\\ge R_{\\min}$ at every nonleaf level."
+   },
+   {
+    "anchor": "stmt-lem-useful-equality",
+    "claim_id": "claim-useful-equality",
+    "statement": "Under <a href=\"#eq:upper-c\" data-reference-type=\"eqref\" data-reference=\"eq:upper-c\">[eq:upper-c]</a>, resampling the level-$j$ bucket indexed by its omitted direction gives two matrices $M,M'$ such that $$\\mathbb P_i\\bigl(\\widetilde f_P(\\bar M)\n      =\\widetilde f_P(\\bar M')\\ne\\bot\\bigr)\\ge c^2/8.$$"
+   },
+   {
+    "anchor": "stmt-lem-positive-difference",
+    "claim_id": "claim-positive-difference",
+    "statement": "Let $R_j^{(i)}\\in K$ be the restored upper response of the level-$i$ right table in the modified experiment."
+   },
+   {
+    "anchor": "stmt-lem-heavy-list",
+    "claim_id": "claim-heavy-list",
+    "statement": "Let $K=\\mathbb F_2^\\ell$, let $W\\subseteq K$ have codimension at most $r$, and let $H'$ be a finite vector space."
+   },
+   {
+    "anchor": "stmt-prop-upper",
+    "claim_id": "claim-upper-decoding",
+    "statement": "Suppose a legal labeling has acceptance at least $\\varepsilon$, $d\\varepsilon\\ge4$, and the cut comparisons have the errors required in <a href=\"#eq:upper-c\" data-reference-type=\"eqref\" data-reference=\"eq:upper-c\">[eq:upper-c]</a>, Lemma <a href=\"#lem:useful-equality\" data-reference-type=\"ref\" data-reference=\"lem:useful-equality\">24</a>, and Lemma <a href=\"#lem:positive-difference\" data-reference-type=\"ref\" data-reference=\"lem:positive-difference\">25</a>."
+   },
+   {
+    "anchor": "stmt-lem-resampling",
+    "claim_id": "claim-resampling-transfer",
+    "statement": "Fix complete local tapes and the left erasure just described."
+   },
+   {
+    "anchor": "stmt-lem-rank-slice",
+    "claim_id": "claim-rank-slice",
+    "statement": "Let $H$ be a finite-dimensional vector space over $\\mathbb F_2$, let $F$ be a bilinear form on $H$, and let $\\ell,r',m$ be nonnegative integers with $m\\geq1$ and $\\ell\\geq2m+r'$."
+   },
+   {
+    "anchor": "stmt-prop-low-rank",
+    "claim_id": "claim-low-rank-agreement",
+    "statement": "Fix a pair $i<j$ for which Proposition <a href=\"#prop:upper\" data-reference-type=\"ref\" data-reference=\"prop:upper\">27</a> supplies agreement at least $\\gamma=\\gamma_j>0$."
+   },
+   {
+    "anchor": "stmt-lem-parity-game",
+    "claim_id": "claim-odd-list-game",
+    "statement": "Every map in Equation <a href=\"#eq:clean-parity-map\" data-reference-type=\"eqref\" data-reference=\"eq:clean-parity-map\">[eq:clean-parity-map]</a> sends $\\mathcal O_s(\\Lambda)$ into $\\mathcal O_s(\\Gamma)$."
+   },
+   {
+    "anchor": "stmt-lem-clean-law",
+    "claim_id": "claim-clean-law",
+    "statement": "Conditional on any exterior datum $\\Xi=\\xi$ of positive probability, the clean indicators are independent."
+   },
+   {
+    "anchor": "stmt-lem-reconstruction",
+    "claim_id": "claim-reconstruction",
+    "statement": "Fix $\\mathcal D_{\\mathrm{pub}}=d_0$ of positive probability as in Lemma <a href=\"#lem:clean-law\" data-reference-type=\"ref\" data-reference=\"lem:clean-law\">32</a>."
+   },
+   {
+    "anchor": "stmt-prop-clean-bound",
+    "claim_id": "claim-clean-bound",
+    "statement": "Assume $\\mathop{\\mathrm{val}}(G_{\\mathrm{src}})<1/(2s^2)$."
+   },
+   {
+    "anchor": "stmt-auto-remark-1",
+    "claim_id": "claim-exterior-call-families",
+    "statement": "The padded family above gives one constant clean probability."
+   },
+   {
+    "anchor": "stmt-prop-preliminary-soundness",
+    "claim_id": "claim-preliminary-soundness",
+    "statement": "With these fixed parameters, the preliminary legal-answer game has perfect completeness, fibers of size at most two, and value less than $\\varepsilon$ on every unsatisfiable source instance."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "perfect-completeness 2-to-1 hardness",
+    "evidence": [
+     {
+      "anchor": "stmt-thm-pcp",
+      "quote": "There is a constant $\\gamma_0>0$ and a deterministic polynomial-time map taking any Boolean $3$-CNF formula $\\varphi$ to a nonempty $3$-CNF formula $\\Psi$ such that every clause of $\\Psi$ uses three distinct variables.",
+      "quote_sha256": "0ca26d751045039d6577d660e18fbd22637200a9ddfb0a1e0a194010a5023ade"
+     }
+    ],
+    "requires_concepts": [
+     "projection games",
+     "parallel repetition",
+     "PCP gap",
+     "Grassmann expansion",
+     "inverse theorem for partial tables"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-2to1-hardness",
+   "exact_statement": "For every fixed rational $\\delta\\in(0,1)$ there are an integer $q=q(\\delta)\\ge2$ and a deterministic polynomial-time reduction from $3$-SAT to 2-to-1 games with alphabets $[2q]$ and $[q]$ such that:*\n\n1.  *a satisfiable formula produces a game of value $1$;*\n\n2.  *an unsatisfiable formula produces a game of value at most $\\delta$.*\n\n*The output contains a nonempty explicit list of unweighted edge occurrences and an explicit table for every projection map. Every table has exactly two preimages for each right answer. The polynomial running-time bound is in the ordinary binary input length; its degree and constants may depend on the fixed $\\delta$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-max-k-colorable",
+   "exact_statement": "There are absolute constants $C>0$ and an integer $k_0\\ge3$ such that, for every fixed integer $k\\ge k_0$, it is NP-hard to distinguish the following cases for a finite unweighted graph $G=(W,F)$ with $F\\ne\\varnothing$:*\n\n1.  *$G$ is $k$-colorable;*\n\n2.  *every coloring $\\chi:W\\to[k]$ satisfies $$\\frac{|\\{\\{u,v\\}\\in F:\\chi(u)\\ne\\chi(v)\\}|}{|F|}\n     \\le 1-\\frac1k+C\\frac{\\log k}{k^2}.$$*\n\n*The fraction on the left is the proportion of edges properly colored by $\\chi$, or equivalently cut by its partition into $k$ color classes.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-max-k-colorable"
+  },
+  {
+   "claim_id": "claim-not-two-pcp",
+   "exact_statement": "Let $\\operatorname{NTW}(a,b,c)$ be the Boolean predicate accepting exactly zero, one, or three true inputs. For every fixed $0<\\varepsilon<3/8$, it is NP-hard to distinguish a satisfiable instance with constraints $\\operatorname{NTW}(\\ell_1,\\ell_2,\\ell_3)$ from one in which every assignment satisfies at most a $5/8+\\varepsilon$ fraction of the constraints; each literal $\\ell_i$ may be a variable or its negation. Consequently, every language in NP has a polynomial-time verifier using $O(\\log n)$ random bits and three nonadaptive proof-bit queries, with perfect completeness and soundness at most $5/8+\\varepsilon$, where $n$ is the input length.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-not-two-pcp"
+  },
+  {
+   "claim_id": "claim-pcp-gap",
+   "exact_statement": "There is a constant $\\gamma_0>0$ and a deterministic polynomial-time map taking any Boolean $3$-CNF formula $\\varphi$ to a nonempty $3$-CNF formula $\\Psi$ such that every clause of $\\Psi$ uses three distinct variables. If $\\varphi$ is satisfiable, then $\\Psi$ is satisfiable. If $\\varphi$ is unsatisfiable, every assignment violates at least a $\\gamma_0$ fraction of the clauses of $\\Psi$. Clause occurrences are explicitly listed, and the binary encoding length of $\\Psi$ is polynomial in that of $\\varphi$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-pcp"
+  },
+  {
+   "claim_id": "claim-repetition",
+   "exact_statement": "Let $G$ be any finite projection game with the conventions above. For $0<g<1$ and every integer $k\\geq1$, $$\\mathop{\\mathrm{val}}(G)\\leq1-g\n \\quad\\Longrightarrow\\quad\n \\mathop{\\mathrm{val}}(G^{\\otimes k})\\leq(1-g^2/16)^k.\n \\label{eq:prelim-repetition}$$ The bound is uniform in the question sets, answer sets, and probability distribution on edge occurrences.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-repetition"
+  },
+  {
+   "claim_id": "claim-grassmann-expansion",
+   "exact_statement": "For each $0<\\zeta<1$, there are $\\alpha>0$, an integer $r\\geq1$, and $\\ell_0$ such that, for every $\\ell\\geq\\ell_0$ and then every sufficiently large $N$, the following holds. Every nonempty set of vertices with retention at least $\\zeta$ has density at least $\\alpha$ in an interval $$\\{L:A_0\\subseteq L\\subseteq B_0,\\ \\dim L=\\ell\\},\n \\qquad \\dim A_0+\\operatorname{codim}B_0\\leq r.$$ The constants $\\alpha,r,\\ell_0$ depend only on $\\zeta$; the threshold for $N$ may also depend on $\\ell$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-prelim-grassmann"
+  },
+  {
+   "claim_id": "claim-matrix-set-extraction",
+   "exact_statement": "For every $0<\\eta<1$ there are $\\alpha>0$, $r\\geq1$, and $\\ell_0$, depending only on $\\eta$, such that for each $\\ell\\geq\\ell_0$ and all sufficiently large $m$ the following holds. If a nonempty set $S\\subseteq\\mathop{\\mathrm{Mat}}_{\\ell,m}(\\mathbb F_2)$ satisfies $$\\Pr_{M\\text{ uniform in }S,\\ a\\ne0,\\ h}\n       [M+ah^{\\mathsf t}\\in S]\\geq\\eta,$$ where $a\\in\\mathbb F_2^\\ell\\setminus\\{0\\}$ and $h\\in\\mathbb F_2^m$ are independent uniform vectors, then $S$ has density at least $\\alpha$ in a nonempty row and column slice with at most $r$ equations of each kind.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-prelim-matrix-set"
+  },
+  {
+   "claim_id": "claim-dummy-columns",
+   "exact_statement": "Let $H,D,K$ be finite binary vector spaces, and write a matrix on $H\\oplus D$ as $(X,Y)$, with $X\\in\\mathop{\\mathrm{Hom}}(H^*,K)$ and $Y\\in\\mathop{\\mathrm{Hom}}(D^*,K)$. Suppose the nonempty affine slice $$\\widetilde{\\mathcal S}=\n \\{(X,Y):AX=U_H,\\ AY=U_D,\\\n       Xq_b+Yd_b=t_b\\ (1\\leq b\\leq c)\\}\n \\label{eq:prelim-padded-slice}$$ has $A:K\\to\\mathbb F_2^a$, $q_b\\in H^*$, and $d_b\\in D^*$. Its image $\\mathcal S$ under $(X,Y)\\mapsto X$ is a nonempty row and column slice with the same $a$ row combinations and at most $c$ column values. Every $X\\in\\mathcal S$ has equally many lifts in $\\widetilde{\\mathcal S}$. In particular, a uniform point of the padded slice projects to a uniform point of $\\mathcal S$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-padding"
+  },
+  {
+   "claim_id": "claim-inverse-theorem",
+   "exact_statement": "For every $0<\\eta<1$, there are $\\alpha>0$, integers $r\\geq1$ and $\\ell_0$, depending only on $\\eta$, with the following property. For every $\\ell\\geq\\ell_0$, every finite binary vector space $H$, every finite set $\\mathcal Y$, and every partial table $f:K\\otimes H\\to\\mathcal Y\\cup\\{\\bot\\}$, where $K=\\mathbb F_2^\\ell$, if $$\\Pr_{M,a,h}[f(M)=f(M+ah)\\ne\\bot]\\geq\\eta,\n \\label{eq:prelim-defined-equality}$$ for independent uniform $M$, $a\\in K\\setminus\\{0\\}$, and $h\\in H$, then some $y\\in\\mathcal Y$ has density at least $\\alpha$ on a nonempty slice with at most $r$ row combinations and at most $r$ column values. The constants are independent of both $\\dim H$ and $|\\mathcal Y|$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-inverse"
+  },
+  {
+   "claim_id": "claim-many-good-fibers",
+   "exact_statement": "Fix $0<\\eta<1$, and let $\\alpha,r,\\ell_0$ be constants from Theorem <a href=\"#thm:inverse\" data-reference-type=\"ref\" data-reference=\"thm:inverse\">9</a> with threshold $\\eta/2$. Suppose $\\ell\\geq\\ell_0$ and a partial table on $K\\otimes H$ has defined-equality probability at least $\\eta$. For each linear map $A:K\\to\\mathbb F_2^r$, call a nonempty row fiber $\\{M:AM=U\\}$ *good* if there are at most $r$ column specifications and a defined value $y$ such that the resulting slice is nonempty and has $f=y$ on at least an $\\alpha$ fraction of its uniform points. Then $$\\Pr_M[\\text{$M$ lies in a good row fiber for some $A$}]\n \\geq\\eta/4.\n \\label{eq:prelim-good-union}$$ Consequently, for independent uniform $A\\in\\mathop{\\mathrm{Hom}}(K,\\mathbb F_2^r)$ and $M\\in K\\otimes H$, $$\\Pr_{A,M}[\\text{the fiber of $AM$ for $A$ is good}]\n \\geq (\\eta/4)2^{-r\\ell}.\n \\label{eq:prelim-many-fibers}$$ The witnesses can be chosen deterministically from $f,A,U$ alone. For every good row fiber, any chosen nonempty slice defined by at most $r$ column values has conditional uniform probability at least $2^{-r\\ell}$ inside that row fiber.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-many-fibers"
+  },
+  {
+   "claim_id": "claim-space-properties",
+   "exact_statement": "The spaces in Definition <a href=\"#def:spaces\" data-reference-type=\"ref\" data-reference=\"def:spaces\">11</a> contain $1$ and satisfy $H_C(Q)\\subseteq H_C(Q)^2$. For every proper descendant $C$ of $D$, $$\\label{eq:descendant-square-inclusion}\n H_C(Q)^2\\subseteq H_D(Q).$$ Moreover, pullback by $\\pi_D$ injectively identifies $H_D(O)$ with a subspace of $H_D(E)$ and preserves pointwise multiplication.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-construction-space-properties"
+  },
+  {
+   "claim_id": "claim-canonical-support",
+   "exact_statement": "If a used clause slot is reducible to a position, that position is unique. The following reductions can be performed simultaneously: discard unused slots; replace each used reducible clause slot by its selected bit; retain every other used clause slot in full; and retain each used variable slot as its bit. They give a surjection $r_f:\\Omega(Q)\\to\\Omega_f$ and a unique induced function $\\widetilde f:\\Omega_f\\to Y$ such that $f=\\widetilde f\\circ r_f$. The reduced domain and its partition into fibers depend only on the equality relation $$x\\sim_f x'\\quad\\Longleftrightarrow\\quad f(x)=f(x')$$ on the original product domain, not on names of the output values.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-canonical-support"
+  },
+  {
+   "claim_id": "claim-canonical-sharing",
+   "exact_statement": "Let $O$ be obtained from $E$ by the specified source projections, let $\\pi:\\Omega(E)\\to\\Omega(O)$ be their product, and let $f:\\Omega(O)\\to Y$ be any function. For either side tag, the keys of $f$ and $f\\pi$ coincide literally, with the same parts and the same restored outputs.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-canonical-sharing"
+  },
+  {
+   "claim_id": "claim-two-fibers",
+   "exact_statement": "Every map <a href=\"#eq:legal-edge-map\" data-reference-type=\"eqref\" data-reference=\"eq:legal-edge-map\">[eq:legal-edge-map]</a> is a well-defined surjection between nonempty legal label sets and has at most two preimages per right label. For a fixed labeling, acceptance of the edge is exactly equality of its restored outputs through $Q_{D,a}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-construction-two-fibers"
+  },
+  {
+   "claim_id": "claim-perfect-completeness",
+   "exact_statement": "If the source clause instance has a satisfying assignment, every constraint just defined is satisfied by one common legal labeling, for every choice of the positive integer parameters. Consequently every game supported on these constraints has value one.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-completeness"
+  },
+  {
+   "claim_id": "claim-joint-folding",
+   "exact_statement": "Fix a full array question on $\\Omega(Q)$ and a nonleaf node $D$. For each row index $h$ of $M_D$, choose $$\\label{eq:folding-shift}\n b_h=c_h1+\n   \\sum_{C,u,v}\\lambda_{h,C,u,v}\n              (M_C)_u(M_C)_v,\n \\qquad c_h,\\lambda_{h,C,u,v}\\in\\mathbb F_2,$$ where $C$ ranges over any collection of proper nonleaf descendants of $D$ and $u,v$ over their displayed rows. Let $\\widetilde{\\mathbf M}$ replace $(M_D)_h$ by $(M_D)_h+b_h$ and keep every other array fixed. Then $\\widetilde{\\mathbf M}$ is a valid array family and its full question has exactly the same canonical key as that of $\\mathbf M$. For any fixed label at this key, write $y_C$ and $\\widetilde y_C$ for its restored block outputs. They satisfy $$\\label{eq:folding-output}\n \\widetilde y_C=y_C\\quad(C\\neq D),\\qquad\n (\\widetilde y_D)_h=(y_D)_h+c_h+\n   \\sum_{C,u,v}\\lambda_{h,C,u,v}(y_C)_u(y_C)_v.$$ The same statement holds for a question with quotient blocks whenever the shift uses only unchanged scalar rows actually displayed in that question; a shift at a quotient block is interpreted through its quotient map.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-folding"
+  },
+  {
+   "claim_id": "claim-joint-evaluation",
+   "exact_statement": "Fix a legal response to a full array question and a node $D$. For any collection $\\mathcal C$ of proper nonleaf descendants of $D$, let $$B=\\mathop{\\mathrm{span}}\\bigl(\\{1\\}\\cup\n       \\{(M_C)_u(M_C)_v:C\\in\\mathcal C,\\ 1\\leq u,v\\leq\n                                    \\ell_{\\operatorname{level}(C)}\\}\\bigr)\n       \\subseteq H_D(Q).$$ If $y_C$ are the restored outputs, there is a unique linear functional $b_y:B\\to\\mathbb F_2$ such that $b_y(1)=1$ and $b_y((M_C)_u(M_C)_v)=(y_C)_u(y_C)_v$. The functional $b_y$ extends to $H_D(Q)^*$. Every such extension $z$ has value $1$ on the constant function, and its matrix on these products at each $C$ is $y_Cy_C^{\\mathsf t}$, of rank at most one.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-joint-evaluation"
+  },
+  {
+   "claim_id": "claim-stopped-calls",
+   "exact_statement": "Fix $E$ and the path from the root through $D_p$, including $D_p$ but no choice of its child. The original sampling can be generated as follows. First generate an exterior record $\\Xi_p$ consisting of the random choices outside $D_p$’s subtree, with every recursive call reaching $D_p$ left unevaluated. Then generate the pending scalar calls at $D_p$, its own buckets, and the arrays strictly below $D_p$. Every displayed array is a deterministic function of this record and these remaining values.*\n\n\n\n*The pending ancestor calls together with the own buckets number at most $$\\label{eq:stopped-count}\n T_p=\\sum_{k=p}^d b_k\\prod_{h=p+1}^k c_h.$$ An empty product is one. If $e_k$ additional fresh scalar draws are requested at each level $k\\ge p$, a sufficient bound is $$\\label{eq:stopped-extra-count}\n T_p(e)=\\sum_{k=p}^d(b_k+e_k)\\prod_{h=p+1}^k c_h.$$ In particular, replacing one level-$k$ bucket uses one extra draw and adds $\\prod_{h=p+1}^k c_h$ calls at the cut. The count is independent of $n_p$ and of all higher branching numbers.*\n\n*Conditional on the full path, distinct stopped calls have independent randomness. Pending ancestor calls are independent of the tapes of the actual arrays at or below the cut; own buckets are independent of the tapes of actual descendant arrays. Calls for the own buckets and calls pending from ancestors are distinct even when they sample the same function space. The exterior record can be exposed before sampling the continuation of the path. Already assembled ancestor arrays are deterministic outputs of the construction and are not independent exterior information.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-stopped-calls"
+  },
+  {
+   "claim_id": "claim-cut-tv",
+   "exact_statement": "In the original experiment, expose $E$, the path through $D_p$, and the exterior record of Lemma <a href=\"#lem:stopped-calls\" data-reference-type=\"ref\" data-reference=\"lem:stopped-calls\">19</a>. Forget the entire continuation of the path below $D_p$. Retain any fixed family of stopped scalar values, the own buckets at $D_p$, and all actual arrays below $D_p$. Let $\\mathsf U_p$ be the *unrestricted experiment*: replace the retained cut scalar values by independent uniform draws in $H_{D_p}(E)$, and replace all descendant arrays by independent uniform arrays in their respective spaces, retaining the same exterior record and reconstruction expressions. Then $$\\label{eq:cut-tv-bound}\n \\mathop{\\mathrm{TV}}(\\mathsf A_p,\\mathsf U_p)\\le\n \\varepsilon_p^{\\mathrm{cut}}:=\\frac{L_p}{2\\sqrt{n_p}}$$ for the retained values and for every deterministic observation of them. Here $\\mathsf A_p$ denotes the corresponding retained original law, and $L_p$ can be chosen using <a href=\"#eq:block-dimension-bound\" data-reference-type=\"eqref\" data-reference=\"eq:block-dimension-bound\">[eq:block-dimension-bound]</a> with the count in <a href=\"#eq:stopped-extra-count\" data-reference-type=\"eqref\" data-reference=\"eq:stopped-extra-count\">[eq:stopped-extra-count]</a>.*\n\n*One may also append a fixed number of independent uniform cut rows, or a fixed number of fresh bucket replacements, with the appropriate increased count. The bound includes the reconstructed ancestor arrays and candidate edge tests at levels at least $p$, with independent quotient directions. It does not include a tag identifying the next path child, any later path indices, or the internal factor tapes generating a special child block.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-cut-tv"
+  },
+  {
+   "claim_id": "claim-sparse-tv",
+   "exact_statement": "Fix $E$, the path through $D_i$ and an exterior record generated without the projections. Compare $\\mathsf M_i$ and $\\mathsf U_i$ as laws of lifted functions on $E$, forgetting the marks, the projection choices, and the projected-question tuple $O$. All raw child summands and descendant arrays may be retained. For a bound $L_i$ from <a href=\"#eq:block-dimension-bound\" data-reference-type=\"eqref\" data-reference=\"eq:block-dimension-bound\">[eq:block-dimension-bound]</a>, $$\\label{eq:sparse-tv-bound}\n \\mathop{\\mathrm{TV}}(\\mathsf M_i,\\mathsf U_i)\n \\le \\varepsilon_i^{\\mathrm{spr}}\n :=\\frac12\\sqrt{(1+\\beta_i^2L_i^2)^{n_i}-1}.$$ The bound holds for any fixed number of independent extra cut rows and fresh higher-level bucket draws, with their enlarged call count. In particular it holds for observations containing the assembled ancestor arrays and both candidate tests at levels $i<j$.*\n\n\n*Consequently the modified experiment and the original experiment have observation distance at most $\\varepsilon_i^{\\mathrm{spr}}+\\varepsilon_i^{\\mathrm{cut}}$ when the path below $i$ is forgotten. For the further comparison at a level $j>i$, require the observation to be a common deterministic function of the exterior record $\\Xi_j$, the retained scalar values at $D_j$ (including its own buckets and any extra cut draws), all displayed arrays strictly below $D_j$, and independent auxiliary choices. Here $E$ and the path through $D_j$ are fixed. Such an observation may include reconstructed ancestors and descendant arrays with their tree locations, but it cannot use the hidden continuation of the path or the internal decompositions of the retained scalar values. In particular, a selected lower-level test is permitted only if it is determined by these data without using the hidden path. The distance from the corresponding unrestricted-$j$ observation is then at most $$\\label{eq:two-cut-triangle}\n \\varepsilon_i^{\\mathrm{spr}}+\n \\varepsilon_i^{\\mathrm{cut}}+\\varepsilon_j^{\\mathrm{cut}}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-sparse-tv"
+  },
+  {
+   "claim_id": "claim-posterior-bound",
+   "exact_statement": "In $\\mathsf M_i$, condition on $E$, the path through $D_i$ and a permissible exterior record. Let $X=(X_C)_C$ consist of all lifted raw child blocks, including any fixed number of independent uniform cut rows. Let $\\mathcal G$ be the sigma-algebra generated by these data and additional independent random choices, such as a test direction or fixed full strategy tapes. It contains neither projected-question metadata nor projection marks. For every child $C$, almost surely, $$\\label{eq:posterior-bound}\n \\mathbb P(C\\text{ marked}\\mid\\mathcal G)\n  \\le q_i:=\\frac{\\beta_i L_i}{1-\\beta_i}.$$ If a set $\\mathcal C(X)$ of at most $m$ children is selected measurably from these data, then $$\\label{eq:adaptive-child-bound}\n \\mathbb P(\\mathcal C(X)\\text{ contains a marked child})\\le m q_i.$$ Both assertions remain valid for a coarsening of this information.*\n\n\n*In particular, let $F_0,F_1$ be bilinear forms on $H_{D_i}(E)$ determined by these lifted data. Then $$\\label{eq:adaptive-bilinear-error}\n \\mathbb P\\bigl(F_0\\ne F_1,\\ \n   F_0|_{H_{D_i}(O)\\times H_{D_i}(O)}\n       =F_1|_{H_{D_i}(O)\\times H_{D_i}(O)}\\bigr)\n \\le 2q_i,$$ where the restrictions in this display mean restriction of both arguments to $H_{D_i}(O)$. No part of the statement conditions on strategy success, a right output, a slice event, or a witness-matching event.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-posterior"
+  },
+  {
+   "claim_id": "claim-scalar-bias",
+   "exact_statement": "There is an absolute integer $R_{\\min}$ such that the following holds if $R_p\\ge R_{\\min}$ at every nonleaf level. Fix the domains and the full path in the original sampler, or fix $E,O$, all projection choices, and the path through a modified cut in $\\mathsf M_i$. Every scalar law is quarter-balanced. For each nonzero $f\\in H_{D_p}^*$ at an original path node, or $f\\in H_{D_p}(O)^*$ at a node strictly above the modified cut, $$\\label{eq:scalar-bias}\n \\left|\\mathbb E_{h\\sim\\nu_{D_p}}(-1)^{f(h)}\\right|\n       \\le (7/8)^{R_p}.$$ At leaves, and at or below the uniformized cut, uniform scalar draws have zero bias on nonzero functionals.*\n\n*More generally, fix $j>i$, a linear map $A:K_j\\to\\mathbb F_2^r$, and $W=\\ker A$. In the modified experiment let $h_v$, $v\\ne0$, be the separate level-$j$ buckets and set $$X=\\sum_{v\\in W\\setminus\\{0\\}}v h_v\n     \\in W\\otimes H_{D_j}(O).$$ Conditional on the domain and path data just specified, all other actual matrices, and all buckets with $Av\\ne0$, every nonzero character of $X$ has bias at most $(7/8)^{R_j}$. This remains so on revealing original questions and any other independent sampling tapes. Its law is determined by $O$, the path through the cut, $A$, and the fixed sampling parameters; it does not require the original questions or the missing part of a lower matrix. Revealing a full lower matrix here is an analytical exposure; the right decoder still receives only its prescribed quotient. These conclusions are not asserted after conditioning on a column slice, on successful decoding, or on cleanliness.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-bias"
+  },
+  {
+   "claim_id": "claim-useful-equality",
+   "exact_statement": "Under <a href=\"#eq:upper-c\" data-reference-type=\"eqref\" data-reference=\"eq:upper-c\">[eq:upper-c]</a>, resampling the level-$j$ bucket indexed by its omitted direction gives two matrices $M,M'$ such that $$\\mathbb P_i\\bigl(\\widetilde f_P(\\bar M)\n      =\\widetilde f_P(\\bar M')\\ne\\bot\\bigr)\\ge c^2/8.$$ If the cut comparison for this enlarged experiment has total-variation error at most $c^2/16$, then under the unrestricted level-$j$ cut law the same frozen partial tables have average defined equality at least $\\theta=c^2/16$ on the ordinary uniform rank-one walk on $K\\otimes(H/B)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-useful-equality"
+  },
+  {
+   "claim_id": "claim-positive-difference",
+   "exact_statement": "Let $R_j^{(i)}\\in K$ be the restored upper response of the level-$i$ right table in the modified experiment. Suppose the total-variation comparison between $\\mathbb P_i$ and $\\mathbb P_j^0$, for the observations defining $I,J$, is at most $v\\le\\alpha q_0/16$. Then, with $$\\rho=\\kappa\\alpha/4,\\qquad b=\\kappa\\alpha q_0/4,$$ one has $$\\label{eq:upper-difference}\n \\mathbb P_i\\bigl(J,\\ R_j^{(i)}=Mz_0+u\\bigr)-\\rho\\mathbb P_i(J)\\ge b>0.$$ All quantities $g,h_0,q_0,\\rho,b$ depend only on $c,\\alpha,r,\\ell$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-positive-difference"
+  },
+  {
+   "claim_id": "claim-heavy-list",
+   "exact_statement": "Let $K=\\mathbb F_2^\\ell$, let $W\\subseteq K$ have codimension at most $r$, and let $H'$ be a finite vector space. Let $\\mu$ be a probability law on $V=W\\otimes H'$ with $|\\mathbb E_\\mu\\chi_\\Phi|\\le\\lambda$ for every nonzero $\\Phi\\in V^*$. Fix $G:V\\longrightarrow K$, $0<\\rho\\le1$, and set $$h_0=2^{-r\\ell},\\qquad \\tau=\\rho h_0/4.$$ Suppose $$\\label{eq:upper-Fourier-conditions}\n 2^{-(\\ell-r)}<\\rho/8,\n \\qquad 0\\le\\lambda\\le\\min\\{h_0/2,\\tau^2/2\\}.$$ For each $\\sigma\\in K^*$ define the list $$\\label{eq:upper-heavy-definition}\n \\mathcal H_\\sigma\n =\\{\\Phi\\in V^*:|\\mathbb E_\\mu[g_\\sigma\\chi_\\Phi]|\\ge\\tau\\}.$$ Each list has size at most $2/\\tau^2$. Moreover, let $Q\\subseteq(H')^*$ have dimension at most $r$, let $t_Q\\in\\mathop{\\mathrm{Hom}}(Q,W)$ specify the nonempty affine slice $\\mathcal C=\\{X:X|_Q=t_Q\\}$, and let $z'\\in(H')^*$ and $k_0\\in K$. If $$\\label{eq:upper-slice-equality}\n \\mathbb P_\\mu(G(X)=Xz'+k_0\\mid X\\in\\mathcal C)\\ge\\rho,$$ then some $\\sigma$ with $\\sigma|_W\\ne0$ has a list element in $$\\label{eq:upper-heavy-coset}\n (\\sigma|_W)\\otimes z'+W^*\\otimes Q.$$ The lists in <a href=\"#eq:upper-heavy-definition\" data-reference-type=\"eqref\" data-reference=\"eq:upper-heavy-definition\">[eq:upper-heavy-definition]</a> depend on $\\mu,G,W,H'$ and $\\tau$, and not on the witness $Q,t_Q,z',k_0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-heavy-list"
+  },
+  {
+   "claim_id": "claim-upper-decoding",
+   "exact_statement": "Suppose a legal labeling has acceptance at least $\\varepsilon$, $d\\varepsilon\\ge4$, and the cut comparisons have the errors required in <a href=\"#eq:upper-c\" data-reference-type=\"eqref\" data-reference=\"eq:upper-c\">[eq:upper-c]</a>, Lemma <a href=\"#lem:useful-equality\" data-reference-type=\"ref\" data-reference=\"lem:useful-equality\">24</a>, and Lemma <a href=\"#lem:positive-difference\" data-reference-type=\"ref\" data-reference=\"lem:positive-difference\">25</a>. Choose upper inverse constants $\\alpha,r$ and $\\ell=\\ell_j$ as above, and assume <a href=\"#eq:upper-Fourier-conditions\" data-reference-type=\"eqref\" data-reference=\"eq:upper-Fourier-conditions\">[eq:upper-Fourier-conditions]</a> and <a href=\"#eq:upper-R\" data-reference-type=\"eqref\" data-reference=\"eq:upper-R\">[eq:upper-R]</a>, with the absolute balance minimum at every level. For the pair $i<j$ supplied by <a href=\"#eq:upper-pair\" data-reference-type=\"eqref\" data-reference=\"eq:upper-pair\">[eq:upper-pair]</a>, there are randomized strategies, measurable on <a href=\"#eq:upper-left-input\" data-reference-type=\"eqref\" data-reference=\"eq:upper-left-input\">[eq:upper-left-input]</a> and <a href=\"#eq:upper-right-input\" data-reference-type=\"eqref\" data-reference=\"eq:upper-right-input\">[eq:upper-right-input]</a> respectively, returning bilinear forms $F_L$ on $H_i$ and $F_R$ on $H_i'$ such that $$\\label{eq:upper-gamma}\n \\mathbb P_i\\bigl(F_R=F_L|_{H_i'\\times H_i'}\\bigr)\\ge\n \\gamma_j:=b\\,2^{-\\ell}\\frac{\\tau^2}{2}\\,2^{-r}>0.$$ Every left output has the form $$F_L(x,y)=z(xy),\\quad z\\in(H_i^2)^*,\\quad z(1)=1,\n \\qquad \\mathop{\\mathrm{rank}}\\bigl(F_L(S_t,S_u)\\bigr)_{t,u}\\le1.$$ The constant $\\gamma_j$ depends only on $c,\\alpha,r,\\ell_j$; it is independent of the lower row count $\\ell_i$, the branching numbers, the source alphabet and instance size, and the bias accuracies chosen for lower levels. The left strategy never receives $a_i$, and the right strategy uses $S$ only through its quotient by $\\langle a_i\\rangle$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-upper"
+  },
+  {
+   "claim_id": "claim-resampling-transfer",
+   "exact_statement": "Fix complete local tapes and the left erasure just described. Suppose the nonerased left form agrees with the right form on $H_i'\\times H_i'$ with probability $h$ in the modified experiment. Let $L_i$ be a simultaneous child likelihood bound for the lifted raw cut data, including the rows of $S$ and one additional independent row. Let $\\upsilon_i$ bound the total variation between these lifted data and their unrestricted uniform version. There is an unrestricted experiment in which $S\\in K_i\\otimes H_i$ and $l\\in H_i$ are independent uniform variables, $a_i\\in K_i\\setminus\\{0\\}$ is uniform and independent, and $$\\label{eq:lower-full-equality}\n \\Pr_{\\mathrm{unif}}\\bigl[\n f(S)=f(S+a_i l)\\ne\\bot\\bigr]\n \\geq h^2-\\frac{2\\beta_i L_i}{1-\\beta_i}-\\upsilon_i.$$ Here $f$ also depends on background data independent of $(S,a_i,l)$ conditional on the domains. For every fixing of that background it is one partial table on $K_i\\otimes H_i$, with no $a_i$ or $l$ input. Every defined output is admissible at its argument and has full rank greater than $s$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-resampling"
+  },
+  {
+   "claim_id": "claim-rank-slice",
+   "exact_statement": "Let $H$ be a finite-dimensional vector space over $\\mathbb F_2$, let $F$ be a bilinear form on $H$, and let $\\ell,r',m$ be nonnegative integers with $m\\geq1$ and $\\ell\\geq2m+r'$. Let $\\mathcal A\\subseteq H^\\ell$ be a nonempty affine slice defined by at most $r'$ row combinations and at most $r'$ column functionals: for suitable linear maps $A_0$ and $q_1,\\ldots,q_b\\in H^*$, where $b\\leq r'$, $$\\mathcal A=\\{S:A_0S=U,\\ S q_v=w_v\\ (1\\leq v\\leq b)\\},\n \\qquad A_0\\text{ has at most }r'\\text{ rows}.$$ Then, for uniform $S\\in\\mathcal A$ and $t_0=\\mathop{\\mathrm{rank}}F-2r'$, $$\\label{eq:lower-rank-slice-bound}\n \\Pr\\bigl[\\mathop{\\mathrm{rank}}\\operatorname{Gram}_F(S)\\leq1\\bigr]\n \\leq (2^m-1)2^{-t_0}\n       +\\bigl[1+(2^m-1)^2\\bigr]2^{-m^2}.$$ In particular, if $\\mathop{\\mathrm{rank}}F>s$, the first term can be replaced by $2^{m-(s-2r')}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-rank-slice"
+  },
+  {
+   "claim_id": "claim-low-rank-agreement",
+   "exact_statement": "Fix a pair $i<j$ for which Proposition <a href=\"#prop:upper\" data-reference-type=\"ref\" data-reference=\"prop:upper\">27</a> supplies agreement at least $\\gamma=\\gamma_j>0$. Apply Theorem <a href=\"#thm:inverse\" data-reference-type=\"ref\" data-reference=\"thm:inverse\">9</a>, including Lemma <a href=\"#lem:padding\" data-reference-type=\"ref\" data-reference=\"lem:padding\">8</a>, at the equality threshold $$\\eta_{\\mathrm{low}}=\\gamma^2/8,$$ and let $\\alpha'>0$, $r'$ and $\\ell_0'$ be its density, constraint and row-count constants. Choose integers $m\\geq1$, $s\\geq1$ and $\\ell_i$ such that $$\\label{eq:lower-parameter-conditions}\n \\bigl[1+(2^m-1)^2\\bigr]2^{-m^2}<\\alpha'/2,\n \\qquad 2^{m-(s-2r')}<\\alpha'/2,\n \\qquad \\ell_i\\geq\\max\\{\\ell_0',2m+r'\\}.$$ Take $n_i$ sufficiently large that the data in Lemma <a href=\"#lem:resampling\" data-reference-type=\"ref\" data-reference=\"lem:resampling\">28</a> satisfy $$\\label{eq:lower-error-conditions}\n \\frac{2\\beta_iL_i}{1-\\beta_i}\\leq\\gamma^2/64,\n \\qquad \\upsilon_i\\leq\\gamma^2/64,\n \\qquad \\beta_i=n_i^{-2/3}.$$ Then the original randomized decoders satisfy, in the modified experiment, $$\\label{eq:lower-low-rank-mass}\n \\Pr\\bigl[F_L|_{H_i'\\times H_i'}=F_R,\n       \\ F_L\\text{ is admissible at }S,\n       \\ \\mathop{\\mathrm{rank}}F_L\\leq s\\bigr]\\geq\\gamma/2.$$ The rank cutoff and row-count requirements depend only on the upper agreement constant. The likelihood and total-variation requirements can be met after the source alphabet and lower branching numbers have been fixed, without any dependence on higher branching numbers.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-low-rank"
+  },
+  {
+   "claim_id": "claim-odd-list-game",
+   "exact_statement": "Every map in Equation <a href=\"#eq:clean-parity-map\" data-reference-type=\"eqref\" data-reference=\"eq:clean-parity-map\">[eq:clean-parity-map]</a> sends $\\mathcal O_s(\\Lambda)$ into $\\mathcal O_s(\\Gamma)$. In particular, $G_{\\mathrm{odd},s}$ is a total projection game, and $$\\mathop{\\mathrm{val}}(G_{\\mathrm{odd},s})\\le s^2\\mathop{\\mathrm{val}}(G_{\\mathrm{src}}).\n \\label{eq:clean-list-value}$$ Suppose a bilinear form $F$ on $H_i$ has the form $$F(x,y)=z(xy),\\qquad z\\in(H_i^2)^*,\\qquad z(1)=1,\n \\qquad \\mathop{\\mathrm{rank}}F\\le s.$$ For every leaf $\\lambda$ below $D_i$, with local answer set $\\Lambda_\\lambda$, its diagonal on the leaf indicators specifies a member of $\\mathcal O_s(\\Lambda_\\lambda)$. If that leaf is projected by $\\pi_e$ and a form $F'$ on $H_i'$ equals the restriction of $F$, then its corresponding diagonal list is the parity pushforward of the left list.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-parity-game"
+  },
+  {
+   "claim_id": "claim-clean-law",
+   "exact_statement": "Conditional on any exterior datum $\\Xi=\\xi$ of positive probability, the clean indicators are independent. In the padded construction above each has probability $\\beta_i p_{0,i}$, where $$p_{0,i}=\n 2^{-T_i^{\\mathrm{cl}}\\dim(H_C'^2)\n       -\\displaystyle\\sum_{\\substack{D\\preceq C\\\\D\\text{ nonleaf}}}\n           \\ell_{\\operatorname{level}(D)}\\dim H_D'}>0.\n \\label{eq:clean-zero-probability}$$ Here $D\\preceq C$ includes $D=C$, and $H_D'$ is the function space on a fully projected subtree of the indicated shape. The exponent has the same value for every child and every choice of source questions and projection positions. It depends only on the source power, the fixed row and product counts, and branching below level $i$; it is independent of the instance, $n_i$, and all higher branching numbers.*\n\n*After fixing $\\mathcal C$, expose all source questions, projection choices and latent data at nonclean children, and all source edge records at nondesignated leaves of clean children. Denote this additional exposure together with $\\Xi$ and $\\mathcal C$ by $\\mathcal D_{\\mathrm{pub}}$. Conditional on every value of $\\mathcal D_{\\mathrm{pub}}$ of positive probability, the source edge records at the designated clean leaves are independent and each has distribution $\\mu$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-clean-law"
+  },
+  {
+   "claim_id": "claim-reconstruction",
+   "exact_statement": "Fix $\\mathcal D_{\\mathrm{pub}}=d_0$ of positive probability as in Lemma <a href=\"#lem:clean-law\" data-reference-type=\"ref\" data-reference=\"lem:clean-law\">32</a>. From $d_0$ and its own designated source questions in $\\mathcal C$, each player can reconstruct its input to the original decoder of Proposition <a href=\"#prop:upper\" data-reference-type=\"ref\" data-reference=\"prop:upper\">27</a>. Composing these decoders with the total diagonal extraction rule defines local strategies for $G_{\\mathrm{odd},s}^{\\otimes |\\mathcal C|}$. Whenever their original forms agree on $H_i'$ and the left form is normalized, of product form, and of full rank at most $s$, these strategies accept every designated clean edge.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-reconstruction"
+  },
+  {
+   "claim_id": "claim-clean-bound",
+   "exact_statement": "Assume $\\mathop{\\mathrm{val}}(G_{\\mathrm{src}})<1/(2s^2)$. Let $\\mathcal L_{i,j,s}$ be the event in the modified experiment that the two original decoder outputs agree on $H_i'$, while the left output is a normalized product form on $H_i$ of full rank at most $s$. Then, for the clean probability in Equation <a href=\"#eq:clean-zero-probability\" data-reference-type=\"eqref\" data-reference=\"eq:clean-zero-probability\">[eq:clean-zero-probability]</a>, $$\\Pr(\\mathcal L_{i,j,s})\n \\le \\left(1-\\frac{\\beta_i p_{0,i}}{64}\\right)^{n_i}\n \\le \\exp\\!\\left(-\\frac{p_{0,i}}{64}n_i^{1/3}\\right).\n \\label{eq:clean-final-bound}$$ The bound holds for randomized decoders and is uniform over the source instance and over the fixed labeling.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-clean-bound"
+  },
+  {
+   "claim_id": "claim-exterior-call-families",
+   "exact_statement": "The padded family above gives one constant clean probability. The argument also permits independent exterior recipe choices with $T_i^{\\mathrm{cl}}(\\xi)\\le T_i^{\\mathrm{cl}}$ calls. Substituting this count in Equation <a href=\"#eq:clean-zero-probability\" data-reference-type=\"eqref\" data-reference=\"eq:clean-zero-probability\">[eq:clean-zero-probability]</a> gives an exact question-independent probability $p_{0,i}(\\xi)\\ge p_{0,i}$. If the recipe differs between children, denote these probabilities by $p_{0,C}(\\xi)$. Conditional on $\\Xi=\\xi$, the clean indicators remain independent, and every $p_{0,C}(\\xi)$ is at least $p_{0,i}$. The exact factors, rather than this lower bound, cancel in Equation <a href=\"#eq:clean-factorization\" data-reference-type=\"eqref\" data-reference=\"eq:clean-factorization\">[eq:clean-factorization]</a>; hence the conditional source law and the local reconstruction are unchanged.\n\nThe same generating-function calculation then gives $$\\Pr(\\mathcal L_{i,j,s})\n \\le \\mathbb E_\\Xi\\prod_{C\\text{ child of }D_i}\n       \\left(1-\\frac{\\beta_i p_{0,C}(\\Xi)}{64}\\right)\n \\le \\exp\\!\\left(-\\frac{p_{0,i}}{64}n_i^{1/3}\\right).\n \\label{eq:clean-exterior-average}$$ Only the second inequality uses the uniform positive lower bound.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-auto-remark-1"
+  },
+  {
+   "claim_id": "claim-preliminary-soundness",
+   "exact_statement": "With these fixed parameters, the preliminary legal-answer game has perfect completeness, fibers of size at most two, and value less than $\\varepsilon$ on every unsatisfiable source instance.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-preliminary-soundness"
+  }
+ ],
+ "paper": "papers/EN-114-000-0022-2-2026-PR-T4-UK-EX-M1-B-ML-H-0231_PM-105.1_Perfect_completeness_for_2_to_1_games.md",
+ "purpose": "Perfect completeness for 2-to-1 games",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "d5e82ac13938ecf82dcd76279e249ab6887ad30ea0cbd3fa71f2cf7033fb6148",
+   "pm.domains.v2": "7239e47003949b1a275065e91a4af235d85124d8608c3a7d68d1f3e87895c239",
+   "pm.edges.v2": "b96777db3be5a54eb2b639535642ee5c8d2f09a0bedfdc103ec3488a8e8ad08f",
+   "pm.extraction.v2": "90cab02b49dffd258a13a68b36f55b6a8ee99ee109a3f54b07c4a6575bd73474",
+   "pm.formal.v2": "1b501ec4ccd242bb23c4981ba9c169f5b922fa87f7ffe0a6b5eb7589ec9d719d",
+   "pm.limits.v2": "9e0aa0400d14aa6a5b0aa53b9c0223e49a8f0587ee43da03094dbab604b045e0",
+   "pm.node.v2": "93afe23d99855061a800598c6ad81f31499b9432fef60d9f13d8269b645dbe4c",
+   "pm.objects.v2": "9ab99a41090ea204e8230190426cb174c11789bd83acf2330becf1ee4217b17c",
+   "pm.provenance.v2": "d3347d4e487f56c7cb9fbb7aad0b604f415a5f59d5f793a628fb743c2e49c25d",
+   "pm.quantities.v2": "d566aadf7b7d7f4644d4fbc3f552250dc13a2b973050af04d8f2e8f366d9a028",
+   "pm.reading.v2": "ddc94bd58f100b28f4691df5ece16ad111666311c4d51d6947925f3f03d0173f",
+   "pm.roadmap.v2": "7f35aabeb624e9732202584f3eb9430e6f9bcc38ab358e3b72446d4a503a9fe1",
+   "pm.search.v1": "4d114739538699efa97847213588e2cd4a85460bdf9436ae879b035c1e9931e3",
+   "pm.triptych.v2": "b376fc1cbb5182d2abb48a668a11aafbadbf1f24c367b461e55dd8f55e0eef09"
+  },
+  "canonical_sha256": "510ca08f4522686713ca9a99077cc05b0fa7cf987d1979b01feca5aea15068bb",
+  "paper_sha256": "7f21b3eacfb99f36412efe7bf4ddf89d114eb86e390989eca09d9e17eccb18f9",
+  "repaired_body_sha256": "7fdd0884db4663842fcffa47c9bb78a7d0253a3468913746f81d37f27e48c3c9"
+ },
+ "status": "ACTIVE",
+ "subject_id": 14,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "01d02d77281a3e6e5bf527965aad65f371d8d2ca060795aef4796a08c8e69c42",
+   "receipt_sha256": "050d47e0aba645fc6e34eb8b68a2cf76ab77ab29dae8845b779b9dbc9566cee3",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "seven small rational weight lists with delta from one third to ninety-nine hundredths",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-total-copies",
+     "oracle_basis": "exact sum check against the independently searched K"
+    },
+    {
+     "checked_domain": "same seven vectors, including cases with nonzero remainder",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-rounding-window",
+     "oracle_basis": "floor plus leading remainder recomputed with the floor function"
+    },
+    {
+     "checked_domain": "same seven vectors",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-tv-bound",
+     "oracle_basis": "exact Fraction total variation compared with entries over K and delta over three"
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-tail-remainder",
+     "observed_exit": 1,
+     "receipt_sha256": "6feabce3782e89003e17b63ad779a46be079b127acec28d263e7ed6ffcfbf91f"
+    },
+    {
+     "id": "mut-floor-total",
+     "observed_exit": 1,
+     "receipt_sha256": "cd573ef5c22eb3fd33a952efcb2e2e1e68c53c984822017174dd3b576e2f1c32"
+    },
+    {
+     "id": "mut-no-remainder",
+     "observed_exit": 1,
+     "receipt_sha256": "3921b599e27de532daba43f43fd204077dd37f47fa6e6171e16a0c92523cf95b"
+    },
+    {
+     "id": "mut-nearest-rounding",
+     "observed_exit": 1,
+     "receipt_sha256": "13f25b6c601ced849223180a4c0e581f316bb758afed81e5dbd1f52a30d95a99"
+    }
+   ],
+   "receipt_sha256": "1a388d68307043bf79c6292cf3fce3f6304a4b4a2832bcdf2a8198df1a596e32",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Perfect completeness for 2-to-1 games"
+}

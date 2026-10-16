@@ -1,0 +1,903 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 729265,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 208630
+ },
+ "coordinate": "EN-105-000-0000-2-2026-PR-T4-UK-EX-M1-B-AL-H-0521",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-7",
+     "quote": "In particular, fractions in a positive monoid are never assumed for the full system when it is not spherical.",
+     "quote_sha256": "ff825d86bb0c920c24d4f1b7b17d58f3f7467d5e0671d38fcea372b78b310253"
+    }
+   ],
+   "query": "fractions or fundamental elements for non-spherical Artin groups",
+   "reason": "The monoid results are used only for spherical subsets and finite unfoldings."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-auto-remark-1",
+     "quote": "It does not assert that the translation action on $\\mathcal D$ is free",
+     "quote_sha256": "32c53fa5daa1f75a544747b1ba62526c2896ebe399f659e99cf01908a0723dd5"
+    }
+   ],
+   "query": "free action on the coset poset",
+   "reason": "The paper does not assert freeness; stabilizers are conjugates of standard parabolics."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-46",
+     "quote": "It makes no assertion for arbitrary sequences of Coxeter diagrams or for twisted coefficient systems.",
+     "quote_sha256": "74142c172b27b3d787dedda154ad5eb4806e53dbb78bd4c518fa31ec0c4138a4"
+    }
+   ],
+   "query": "stability for arbitrary diagram sequences or twisted coefficients",
+   "reason": "Stability is stated only for the fixed-core construction with constant coefficients."
+  }
+ ],
+ "family": "PM-254",
+ "id": "PM-254.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-aspherical",
+    "statement": "Coxeter matrix on a finite set $S$"
+   },
+   {
+    "anchor": "stmt-thm-topology-parabolic-embedding",
+    "claim_id": "claim-parabolic-embedding",
+    "statement": "$T\\subseteq S$"
+   },
+   {
+    "anchor": "stmt-thm-topology-finite-monoid",
+    "claim_id": "claim-finite-monoid",
+    "statement": "Suppose that $T$ is spherical"
+   },
+   {
+    "anchor": "stmt-thm-topology-spherical-asphericity",
+    "claim_id": "claim-spherical-asphericity",
+    "statement": "If $T$ is spherical"
+   },
+   {
+    "anchor": "sec:introduction",
+    "claim_id": "claim-salvetti-comparison",
+    "statement": "$M=(m_{st})_{s,t\\in S}$ a Coxeter matrix"
+   },
+   {
+    "anchor": "stmt-lem-cartan-positive-null",
+    "claim_id": "claim-cartan-positive-null",
+    "statement": "For a spherical subset $T\\subseteq S$"
+   },
+   {
+    "anchor": "stmt-lem-cartan-positive-null",
+    "claim_id": "claim-cartan-positive-null",
+    "statement": "let $G$ be a nonempty connected vertex set"
+   },
+   {
+    "anchor": "pm-h-12",
+    "claim_id": "claim-fusion-category",
+    "statement": "Adjoin a vertex $o$, called the frame"
+   },
+   {
+    "anchor": "pm-h-14",
+    "claim_id": "claim-frobenius-trace",
+    "statement": "Let $Z$ be the finite-dimensional basic graded algebra"
+   },
+   {
+    "anchor": "stmt-lem-finite-unfolding",
+    "claim_id": "claim-finite-unfolding",
+    "statement": "If $J\\subseteq S$ is spherical"
+   },
+   {
+    "anchor": "eq:category-twists",
+    "claim_id": "claim-twist-inverse",
+    "statement": "Put $M_\\alpha=P_\\alpha\\otimes_\\mathbb CQ_\\alpha$"
+   },
+   {
+    "anchor": "stmt-lem-category-local-braid",
+    "claim_id": "claim-local-braid",
+    "statement": "no arrow between distinct unfolded vertices"
+   },
+   {
+    "anchor": "stmt-lem-category-local-braid",
+    "claim_id": "claim-local-braid",
+    "statement": "If there is exactly one arrow in each direction"
+   },
+   {
+    "anchor": "stmt-prop-twist-action",
+    "claim_id": "claim-twist-action",
+    "statement": "For each original color $i$"
+   },
+   {
+    "anchor": "sec:layers",
+    "claim_id": "claim-layer-t-structure",
+    "statement": "We work in the homotopy category of bounded complexes"
+   },
+   {
+    "anchor": "stmt-lem-layers-amplitude-extension",
+    "claim_id": "claim-adjacent-layers",
+    "statement": "an exact functor $F$ has layer amplitude $[0,1]$"
+   },
+   {
+    "anchor": "stmt-lem-layers-bottom-composition",
+    "claim_id": "claim-bottom-composition",
+    "statement": "Suppose that each of $F_1,\\ldots,F_r$ is exact"
+   },
+   {
+    "anchor": "stmt-lem-layers-extremal-tests",
+    "claim_id": "claim-extremal-tests",
+    "statement": "For a pure layer $M$ at level $d$"
+   },
+   {
+    "anchor": "pm-h-19",
+    "claim_id": "claim-positive-layer",
+    "statement": "Let $F_i=B_{\\sigma_i}(-)$ be the positive color twist"
+   },
+   {
+    "anchor": "stmt-lem-layers-inverse-amplitude",
+    "claim_id": "claim-inverse-amplitude",
+    "statement": "If an exact equivalence $F$ has layer amplitude $[0,1]$"
+   },
+   {
+    "anchor": "stmt-lem-layers-height-change",
+    "claim_id": "claim-height-change",
+    "statement": "For a positive unfolded letter $\\alpha$"
+   },
+   {
+    "anchor": "stmt-lem-layers-height-change",
+    "claim_id": "claim-height-change",
+    "statement": "if $h_J(X)$ is finite"
+   },
+   {
+    "anchor": "stmt-lem-top-divisor",
+    "claim_id": "claim-top-divisor",
+    "statement": "Let $b$ be a positive word in the unfolded"
+   },
+   {
+    "anchor": "stmt-cor-reduced-amplitude",
+    "claim_id": "claim-reduced-amplitude",
+    "statement": "For spherical $J$"
+   },
+   {
+    "anchor": "stmt-lem-height-data-tensor-truncation",
+    "claim_id": "claim-tensor-truncation",
+    "statement": "For $H\\in\\mathscr C$"
+   },
+   {
+    "anchor": "sec:height-data",
+    "claim_id": "claim-family-proportionality",
+    "statement": "For $x\\in A$ and a simple object $L$ of $\\mathscr C$"
+   },
+   {
+    "anchor": "stmt-lem-height-data-capped-layer",
+    "claim_id": "claim-capped-layer",
+    "statement": "Let $E$ be a bounded minimal projective complex"
+   },
+   {
+    "anchor": "stmt-lem-cap-accessibility",
+    "claim_id": "claim-cap-accessibility",
+    "statement": "Let $J\\subseteq S$ be spherical"
+   },
+   {
+    "anchor": "stmt-prop-convex-subobjects",
+    "claim_id": "claim-convex-subobjects",
+    "statement": "Let $J\\subseteq S$ be spherical"
+   },
+   {
+    "anchor": "sec:two-point",
+    "claim_id": "claim-candidate-uniqueness",
+    "statement": "$T\\subseteq S$ is nonempty and spherical"
+   },
+   {
+    "anchor": "sec:two-point",
+    "claim_id": "claim-right-duality",
+    "statement": "$T\\subseteq S$ is nonempty and spherical"
+   },
+   {
+    "anchor": "stmt-lem-two-point-negative-bound",
+    "claim_id": "claim-negative-bound",
+    "statement": "Let $R$ be a minimal complex"
+   },
+   {
+    "anchor": "stmt-lem-two-point-negative-bound",
+    "claim_id": "claim-negative-bound",
+    "statement": "let $r\\ge-1$ bound its normalized levels"
+   },
+   {
+    "anchor": "sec:two-point",
+    "claim_id": "claim-tensor-filtration",
+    "statement": "$T\\subseteq S$ is nonempty and spherical"
+   },
+   {
+    "anchor": "sec:two-point",
+    "claim_id": "claim-remove-tops",
+    "statement": "$T\\subseteq S$ is nonempty and spherical"
+   },
+   {
+    "anchor": "sec:two-point",
+    "claim_id": "claim-subrep-tensor",
+    "statement": "$T\\subseteq S$ is nonempty and spherical"
+   },
+   {
+    "anchor": "stmt-lem-two-point-euler-estimate",
+    "claim_id": "claim-euler-estimate",
+    "statement": "At the representative with no highest right tops on $J$"
+   },
+   {
+    "anchor": "stmt-lem-two-point-greedy",
+    "claim_id": "claim-greedy-factorization",
+    "statement": "For nonidentity simple elements $d_1,\\ldots,d_k$"
+   },
+   {
+    "anchor": "stmt-lem-parabolic-detection",
+    "claim_id": "claim-parabolic-detection",
+    "statement": "Let $h\\in A_T$ and $\\varnothing\\ne V\\subseteq T$"
+   },
+   {
+    "anchor": "stmt-prop-isolated-layer",
+    "claim_id": "claim-isolated-layer",
+    "statement": "Let $I\\subseteq S$ be nonempty and connected"
+   },
+   {
+    "anchor": "stmt-prop-isolated-layer",
+    "claim_id": "claim-isolated-layer",
+    "statement": "let $q>0$ be an integer"
+   },
+   {
+    "anchor": "stmt-lem-rigidity-hom-filtration",
+    "claim_id": "claim-hom-pairing",
+    "statement": "For pure projective layers $P,Y$"
+   },
+   {
+    "anchor": "stmt-lem-rigidity-secondary-injection",
+    "claim_id": "claim-secondary-injection",
+    "statement": "suppose the family $E_L$ is capped at $q$ on $I$"
+   },
+   {
+    "anchor": "stmt-lem-rigidity-separation",
+    "claim_id": "claim-boundary-separation",
+    "statement": "Let $I\\subseteq S$ be nonempty and connected"
+   },
+   {
+    "anchor": "stmt-lem-filtration-principle",
+    "claim_id": "claim-vertex-filtration",
+    "statement": "Let $\\mathcal P$ be a set-sized poset"
+   },
+   {
+    "anchor": "pm-h-37",
+    "claim_id": "claim-residue-sublevels",
+    "statement": "Fix a spherical subset $T\\subseteq S$, an integer $q$"
+   },
+   {
+    "anchor": "sec:global",
+    "claim_id": "claim-global-well-order",
+    "statement": "assume that $S\\ne\\varnothing$"
+   },
+   {
+    "anchor": "pm-h-40",
+    "claim_id": "claim-upper-comparison",
+    "statement": "Fix $P=A_Tx$"
+   },
+   {
+    "anchor": "pm-h-40",
+    "claim_id": "claim-active-spherical",
+    "statement": "Fix $P=A_Tx$"
+   },
+   {
+    "anchor": "pm-h-40",
+    "claim_id": "claim-upper-link",
+    "statement": "Fix $P=A_Tx$"
+   },
+   {
+    "anchor": "sec:global",
+    "claim_id": "claim-lower-comparison",
+    "statement": "assume that $S\\ne\\varnothing$"
+   },
+   {
+    "anchor": "stmt-lem-global-residue-blocks",
+    "claim_id": "claim-residue-blocks",
+    "statement": "lower poset at $P=A_Tx$"
+   },
+   {
+    "anchor": "stmt-lem-global-product-minus-top",
+    "claim_id": "claim-product-minus-top",
+    "statement": "Let $\\mathcal E_1,\\ldots,\\mathcal E_r$ be posets"
+   },
+   {
+    "anchor": "sec:global",
+    "claim_id": "claim-lower-link",
+    "statement": "assume that $S\\ne\\varnothing$"
+   },
+   {
+    "anchor": "stmt-thm-deligne-contractible",
+    "claim_id": "claim-deligne-contractible",
+    "statement": "Coxeter matrix on a finite set $S$"
+   },
+   {
+    "anchor": "stmt-cor-artin-structural",
+    "claim_id": "claim-artin-structural",
+    "statement": "Let $A=A(W,S)$ be an Artin group with $S$ finite"
+   },
+   {
+    "anchor": "stmt-cor-boyd-stability",
+    "claim_id": "claim-boyd-stability",
+    "statement": "Let $A_1$ be the Artin group of a Coxeter matrix"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "contractibility of the spherical-coset poset",
+    "evidence": [
+     {
+      "anchor": "pm-h-4",
+      "quote": "The task is therefore to contract $|\\mathcal D|$.",
+      "quote_sha256": "34c93b4a512cf1b4b57cfc52e8628d4d5b2701b2295cfbe4c6bee102fd4d71a9"
+     }
+    ],
+    "requires_concepts": [
+     "Salvetti complex",
+     "spherical Coxeter groups",
+     "harmonic height",
+     "spherical fusion category"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Artin action by twist bimodules",
+    "evidence": [
+     {
+      "anchor": "stmt-prop-twist-action",
+      "quote": "define an action of the original Artin group by invertible bimodule homotopy classes",
+      "quote_sha256": "db16d6c08fc3f88697f0f14ab97b8d85a3369286eb1664405c0cd6061d839c3d"
+     }
+    ],
+    "requires_concepts": [
+     "zigzag algebra",
+     "fusion category",
+     "spherical twists"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "fractions in positive monoids",
+    "evidence": [
+     {
+      "anchor": "stmt-thm-topology-finite-monoid",
+      "quote": "Every element of $A_T$ can be written both as $ab^{-1}$ and as $c^{-1}d$",
+      "quote_sha256": "50a62e0d8e89004c875adc43573fc0713dcb3db57777804345830b130fe8a08c"
+     }
+    ],
+    "requires_concepts": [
+     "spherical type"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-aspherical",
+   "exact_statement": "For every Coxeter matrix on a finite set $S$, the universal cover of $X(W,S)$ is contractible. Equivalently, $$\\pi_n\\bigl(X(W,S)\\bigr)=0\\qquad(n\\ge2).$$ The conclusion allows arbitrary finite labels, infinite labels, and connected or disconnected diagrams.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-parabolic-embedding",
+   "exact_statement": "For every $T\\subseteq S$, the homomorphism from the Artin group defined by the submatrix on $T$ to $A$, sending its standard generators to the corresponding $\\sigma_t$, is injective. Its image is $A_T$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-topology-parabolic-embedding"
+  },
+  {
+   "claim_id": "claim-finite-monoid",
+   "exact_statement": "Suppose that $T$ is spherical, and let $A_T^+$ be its positive Artin monoid. Then the following statements hold.*\n\n1.  *The natural map $A_T^+\\to A_T$ is injective. In particular, $A_T^+$ is cancellative on both sides.*\n\n2.  *Every element of $A_T$ can be written both as $ab^{-1}$ and as $c^{-1}d$, with $a,b,c,d\\in A_T^+$.*\n\n3.  *Any two elements of $A_T^+$ have a greatest common right divisor, and also a greatest common left divisor.*\n\n4.  *If $w_T$ is the longest element of $W_T$, then $\\Delta_T=\\iota(w_T)$ is the finite-type fundamental element. Its left divisors and its right divisors coincide and are exactly the elements $\\iota(w)$, $w\\in W_T$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-topology-finite-monoid"
+  },
+  {
+   "claim_id": "claim-spherical-asphericity",
+   "exact_statement": "If $T$ is spherical, the universal cover of the CW complex $X(W_T,T)$ with the preceding permutahedral attaching maps is contractible.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-topology-spherical-asphericity"
+  },
+  {
+   "claim_id": "claim-salvetti-comparison",
+   "exact_statement": "There is a homotopy equivalence $$\\widetilde X(W,S)\\simeq|\\mathcal D|.$$ Consequently, contractibility of $|\\mathcal D|$ implies the conclusion of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-salvetti-comparison"
+  },
+  {
+   "claim_id": "claim-cartan-positive-null",
+   "exact_statement": "For a spherical subset $T\\subseteq S$, the inverse $C_T^{-1}$ is entrywise nonnegative, and is strictly positive within each connected diagonal block. Prescribing the coordinates of $p$ outside $T$ therefore determines a unique vector harmonic on $T$, by which we mean $(Cp)|_T=0$. Nonnegative prescribed coordinates give a nonnegative harmonic extension.*\n\n*More generally, let $G$ be a nonempty connected vertex set. If $v_i>0$ for $i\\in G$ and $C_Gv\\geq0$ coordinatewise, then either $C_G$ is positive definite or $C_Gv=0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-cartan-positive-null"
+  },
+  {
+   "claim_id": "claim-fusion-category",
+   "exact_statement": "There is a finite semisimple spherical $\\mathbb C$-linear tensor category $\\mathscr C$ with strictly positive real dimensions, and, for every ordered edge $(s,t)$ of $\\widehat S$, an object $D^1_{st}$ of dimension $b_{st}$, with $D^1_{ts}$ its dual, having the following properties. For every finite edge and simple objects $L,L'$, $$\\dim_\\mathbb C\\mathop{\\mathrm{Hom}}_{\\mathscr C}(L,D^1_{st}\\otimes L')\\leq1.$$ On a label-$3$ edge or a frame edge one may take $D^1_{st}=\\mathbf1$; on an infinite edge one may take $D^1_{st}=\\mathbf1\\oplus\\mathbf1$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-fusion-construction"
+  },
+  {
+   "claim_id": "claim-frobenius-trace",
+   "exact_statement": "The functional $\\tau:Z\\to\\mathbb C$ defined by $$\\tau(t_{s,L})=w_L,\n \\qquad \\tau(Z^0\\oplus Z^1)=0$$ is a symmetric Frobenius trace of degree $-2$. Thus $\\theta_\\alpha=t_\\alpha/w_L$ has trace one. The radical of $Z$ is $Z^{>0}$, and the socle of each indecomposable left or right projective is its token subspace.*\n\n\n\n*For every finite graded bimodule $M$, the adjoint dual has a natural bimodule identification $$M^\\vee:=\\mathop{\\mathrm{Hom}}_{Z\\text{-left}}(M,Z)\n       \\cong D_\\mathbb C(M)\\langle2\\rangle,\n \\label{eq:category-adjoint-duality}$$ where $D_\\mathbb C$ is graded vector-space duality and $\\langle a\\rangle$ raises degrees by $a$. It is an involutive contravariant equivalence, fixes the regular bimodule, and satisfies $$(P_\\alpha\\otimes_\\mathbb CQ_\\beta)^\\vee\n       \\cong(P_\\beta\\otimes_\\mathbb CQ_\\alpha)\\langle-2\\rangle.\n \\label{eq:category-projective-dual}$$ In particular this duality preserves additive radicals.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-category-frobenius"
+  },
+  {
+   "claim_id": "claim-finite-unfolding",
+   "exact_statement": "If $J\\subseteq S$ is spherical, then $\\widetilde C_{\\widetilde J}$ is positive definite and simply laced, and defines a finite Coxeter system. Replacing each original letter $s_i$, $i\\in J$, by the product of the commuting reflections in all vertices of its color gives a lift of words to this system. For every such word representing $w$, its lifted product $\\widetilde w$ has $$D_L(\\widetilde w)=\\widetilde{D_L(w)},\\qquad\n D_R(\\widetilde w)=\\widetilde{D_R(w)}.\n \\label{eq:category-descents}$$ Reduced expressions lift to reduced expressions, and a reduced expression for the longest element of $W_J$ lifts to a reduced expression for the longest element of the unfolded system.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-finite-unfolding"
+  },
+  {
+   "claim_id": "claim-twist-inverse",
+   "exact_statement": "There are bigraded bimodule chain homotopy equivalences $$B_\\alpha\\otimes_ZD_\\alpha\\simeq Z\n       \\simeq D_\\alpha\\otimes_ZB_\\alpha.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-category-twist-inverse"
+  },
+  {
+   "claim_id": "claim-local-braid",
+   "exact_statement": "If there is no arrow between distinct unfolded vertices $\\alpha,\\beta$, then $B_\\alpha B_\\beta\\simeq B_\\beta B_\\alpha$. If there is exactly one arrow in each direction, then $$B_\\alpha B_\\beta B_\\alpha\n       \\simeq B_\\beta B_\\alpha B_\\beta.$$ Products here and below denote tensor products over $Z$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-category-local-braid"
+  },
+  {
+   "claim_id": "claim-twist-action",
+   "exact_statement": "For each original color $i$, let $$B_i=\\prod_{\\alpha\\in\\widetilde{\\{i\\}}}B_\\alpha,\n \\qquad\n D_i=\\prod_{\\alpha\\in\\widetilde{\\{i\\}}}D_\\alpha.$$ These products are independent of their order up to bimodule homotopy. The assignments $\\sigma_i\\mapsto B_i$ and $\\sigma_i^{-1}\\mapsto D_i$ define an action of the original Artin group by invertible bimodule homotopy classes. For $x\\in A$ write $B_x$ for a representing complex, and write $F_i=B_i\\otimes_Z-$ on left complexes.*\n\n*For every $H\\in\\mathscr C$, right tensoring of labels, $$T_H(P_{s,X})=P_{s,X\\otimes H},$$ is an additive functor on projectives that preserves path lengths and extends to their bounded homotopy category. It commutes naturally up to homotopy with the positive and inverse color twists, and hence with each $B_x\\otimes_Z-$. All the action identities above are bimodule chain homotopy equivalences, so they remain valid upon tensoring with finite complexes of modules that are not projective.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-twist-action"
+  },
+  {
+   "claim_id": "claim-layer-t-structure",
+   "exact_statement": "The full subcategories defined by minimal generator levels $d\\leq0$ and $d\\geq0$ form a bounded $t$-structure. Its truncation $\\tau_{\\leq k}E$ is represented by the subcomplex of a minimal model on levels at most $k$; the complementary quotient represents $\\tau_{\\geq k+1}E$.*\n\n*The heart is equivalent to the abelian category of finite graded coefficient arrays just described. In particular, subobjects of a pure layer, after shifting that layer into the heart, are precisely graded subrepresentations of its array. The unshifted cohomology layer at $d$ is $Y^d(E)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-layer-structure"
+  },
+  {
+   "claim_id": "claim-adjacent-layers",
+   "exact_statement": "Suppose that an exact functor $F$ has layer amplitude $[0,1]$. For any $E$ and any $d$, there is a short exact sequence $$\\begin{split}\n0\\longrightarrow Y^d\\bigl(F(Y^{d-1}(E))\\bigr)\n\\longrightarrow Y^d(FE)\n\\longrightarrow Y^d\\bigl(F(Y^d(E))\\bigr)\n\\longrightarrow0,\n\\end{split}\n\\label{eq:layers-adjacent-positive}$$ where all terms are shifted by $[d]$ when regarded as objects of the heart. In particular their generator dimensions are additive.*\n\n\n*For amplitude $[-1,0]$, the corresponding sequence is $$0\\longrightarrow Y^d\\bigl(F(Y^d(E))\\bigr)\n\\longrightarrow Y^d(FE)\n\\longrightarrow Y^d\\bigl(F(Y^{d+1}(E))\\bigr)\n\\longrightarrow0.\n\\label{eq:layers-adjacent-negative}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-layers-amplitude-extension"
+  },
+  {
+   "claim_id": "claim-bottom-composition",
+   "exact_statement": "Suppose that each of $F_1,\\ldots,F_r$ is exact and has no negative change of layer level. Starting from a pure layer at $d$, the level-$d$ part of $F_r\\cdots F_1$ is obtained by retaining only the level-$d$ part after each intermediate operation. In particular, any relation between such composed functors gives the corresponding relation between their operations on the bottom layer.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-layers-bottom-composition"
+  },
+  {
+   "claim_id": "claim-extremal-tests",
+   "exact_statement": "For a pure layer $M$ at level $d$, $$H^d(e_\\alpha M)\\cong\\operatorname{soc}_\\alpha M,\n \\qquad\n H^{d+2}(e_\\alpha M)\\cong\n                  (\\operatorname{top}_\\alpha M)\\langle2\\rangle,\n \\label{eq:layers-extremal-tests}$$ as graded multiplicity spaces, with their corresponding placements. The shift on the top is the internal placement of the token. If a minimal complex $E$ has no generators above $d$ at $\\alpha$ or its neighbors, its test in degree $d+2$ is still $(\\operatorname{top}_\\alpha Y^d(E))\\langle2\\rangle$, and all higher test cohomology there vanishes. If it has no generators below $d$ at those vertices, its test in degree $d$ is the socle of $Y^d(E)$ at $\\alpha$.*\n\n*A nonzero pure layer supported on a vertex set has a nonzero top and a nonzero socle somewhere in that set.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-layers-extremal-tests"
+  },
+  {
+   "claim_id": "claim-positive-layer",
+   "exact_statement": "Each $F_i$ has layer amplitude $[0,1]$. Its upper piece on a pure layer $M$ at $d$ is supported on the fiber of $i$, has no arrows, and has multiplicity $\\dim\\operatorname{top}_\\alpha M$ at a vertex $\\alpha$ of that fiber. Its bottom piece has unchanged multiplicities at all other vertices, and at $\\alpha$ in the fiber it has multiplicity $$\\dim Y^d(F_iM)_\\alpha\n =\\sum_\\beta(2\\mathop{\\mathrm{id}}-\\widetilde C)_{\\alpha\\beta}\n       \\dim M_\\beta\n       -\\dim M_\\alpha+\\dim\\operatorname{top}_\\alpha M.\n \\label{eq:layers-positive-dimension}$$ The bottom piece has zero socle in color $i$. If $M$ has zero socle in every color of a set $J$ containing $i$, its bottom piece after $F_i$ also has zero socle in all of $J$.*\n\n\n*For any bounded left complex $E$, without a projectivity assumption on its terms, there is a natural homotopy equivalence of test complexes $$e_\\alpha F_iE\\simeq(e_\\alpha E)\\langle2\\rangle[1]\n \\qquad(\\alpha\\text{ of color }i).\n \\label{eq:layers-positive-test-shift}$$ There is the identical statement for right complexes tested on the right.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-positive-layer"
+  },
+  {
+   "claim_id": "claim-inverse-amplitude",
+   "exact_statement": "If an exact equivalence $F$ has layer amplitude $[0,1]$, its inverse has amplitude $[-1,0]$. In particular each $F_i^{-1}$ has that amplitude and satisfies $$e_\\alpha F_i^{-1}E\\simeq\n       (e_\\alpha E)\\langle-2\\rangle[-1]\n \\qquad(\\alpha\\text{ of color }i),\n \\label{eq:layers-negative-test-shift}$$ with the analogous formula for right complexes.*\n\n*For either sign, acting in color $i$ leaves the generator multiplicities in every layer unchanged at all other colors.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-layers-inverse-amplitude"
+  },
+  {
+   "claim_id": "claim-height-change",
+   "exact_statement": "For a positive unfolded letter $\\alpha$, if $h_J(X)$ is finite, $$h_J(X)\\leq h_J(B_\\alpha X)\\leq h_J(X)+1.$$ An increase occurs exactly when $\\alpha$ is an old highest-test vertex; in that case it is the only new highest-test vertex. Vanishing of all tests persists. The same assertions hold for right actions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-layers-height-change"
+  },
+  {
+   "claim_id": "claim-top-divisor",
+   "exact_statement": "Let $b$ be a positive word in the unfolded finite-type Artin generators. If $$h_J(B_bX)>h_J(X),$$ then every unfolded vertex attaining the highest test cohomology of $B_bX$ is a left divisor of $b$ in the positive Artin monoid. For a right action, every such vertex is a right divisor of $b$. These assertions hold for arbitrary inputs with bounded test cohomology, including complexes of right simples.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-top-divisor"
+  },
+  {
+   "claim_id": "claim-reduced-amplitude",
+   "exact_statement": "For spherical $J$, a positive lift of any reduced expression in $W_J$ has layer amplitude $[0,1]$. A negative lift of a reduced expression has amplitude $[-1,0]$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-reduced-amplitude"
+  },
+  {
+   "claim_id": "claim-tensor-truncation",
+   "exact_statement": "For $H\\in\\mathscr C$, right tensoring of all projective labels by $H$ defines a $t$-exact functor $T_H$ for the layer $t$-structure. It commutes naturally with its truncations, layers, and all the color twist functors and their inverses.*\n\n*In particular, if a subobject is constructed by applying a word of twists, taking a layer truncation, and applying the inverse word, this construction commutes with $T_H$ as a morphism into the ambient object. No choice of minimal model or Gaussian elimination is required to be natural.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-height-data-tensor-truncation"
+  },
+  {
+   "claim_id": "claim-family-proportionality",
+   "exact_statement": "There are nonnegative vectors $m^d(x)\\in\\mathbb R^{\\widehat S}$ such that the weighted generator dimension vector of the layer family is $$\\sum_L w_L\\dim Y_L^d(x)=\\phi m^d(x).\n \\label{eq:height-data-proportionality}$$ The weighted top and socle dimension vectors of these layers also have the form $\\phi v$. Consequently, if a top or socle occurs anywhere in a color in the family, then at every unfolded vertex of that color it occurs in at least one member of the family.*\n\n\n\n*For each $x$ the vectors $m^d(x)$ have finite support in $d$. Uniformly over $x$, $d$, and the colors, each coordinate has only finitely many possible values in a bounded interval. Operations on the left by $\\sigma_i^{\\pm1}$ change $m^d$ only in coordinate $i$, and $$m_o^d(x)=\n \\begin{cases}1,&d=0,\\\\0,&d\\ne0.\\end{cases}\n \\label{eq:height-data-frame-coordinate}$$ On folded signed counts, either twist in color $i$ acts by the coordinate reflection for $C$: $$\\sum_d(-1)^d m^d(\\sigma_i^{\\pm1}x)\n   =s_i\\left(\\sum_d(-1)^d m^d(x)\\right).\n \\label{eq:height-data-signed-reflection}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-family-proportionality"
+  },
+  {
+   "claim_id": "claim-capped-layer",
+   "exact_statement": "Let $E$ be a bounded minimal projective complex with no generators above $q$ on $J\\cup\\partial J$. If $G$ is a word of negative twists in $J$, then $$Y^q(GE)\\simeq Y^q\\bigl(G(Y^q(E))\\bigr).\n \\label{eq:height-data-capped-layer}$$ Moreover $GE$ still has no generators above $q$ on $J\\cup\\partial J$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-height-data-capped-layer"
+  },
+  {
+   "claim_id": "claim-cap-accessibility",
+   "exact_statement": "Let $J\\subseteq S$ be spherical, let $q\\in\\mathbb Z$, and suppose the data at $x$ are capped at $q$ on $\\partial J$. There exists $z\\in A_Jx$ whose data are capped at $q$ on $J\\cup\\partial J$.*\n\n*Every negative generator in $J$ preserves an existing cap at $q$ on $J\\cup\\partial J$. At a representative with this joint cap, a positive $F_i$, $i\\in J$, also preserves it whenever $$\\operatorname{top}_\\alpha Y_L^q=0\n \\qquad\\text{for every $L$ and every $\\alpha$ of color $i$}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-cap-accessibility"
+  },
+  {
+   "claim_id": "claim-convex-subobjects",
+   "exact_statement": "Let $J\\subseteq S$ be spherical, and suppose that at $x$ the data are capped at $q$ on $J\\cup\\partial J$. Let $p$ agree with $m^q(x)$ outside $J$ and be harmonic on $J$, and put $e=m^q(x)-p$, which is supported on $J$. Assume that for *every* representative $z\\in A_Jx$ whose data are capped at $q$ on $J\\cup\\partial J$, $$m_j^q(z)\\geq p_j\\qquad(j\\in J).\n \\label{eq:height-data-universal-cap-inequality}$$ Then $e_J$ belongs to the convex hull in $\\mathbb R^J$ of vectors $s_J$ with the following property: $s$ is zero outside $J$, and there are graded subrepresentations $$\\mathcal S_L\\subseteq Y_L^q(x),\\qquad\n \\mathop{\\mathrm{supp}}\\mathcal S_L\\subseteq\\widetilde J,\n \\qquad\n \\sum_Lw_L\\dim\\mathcal S_L=\\phi s.\n \\label{eq:height-data-convex-subrepresentations}$$ One may use a finite collection of such vectors, together with the zero vector.*\n\n*If all inequalities in <a href=\"#eq:height-data-universal-cap-inequality\" data-reference-type=\"eqref\" data-reference=\"eq:height-data-universal-cap-inequality\">[eq:height-data-universal-cap-inequality]</a> are strict, $e_J$ is in the ordinary interior in $\\mathbb R^J$ of such a convex hull. For $J=\\varnothing$ the interior convention is that $\\{0\\}$ is open in $\\mathbb R^0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-convex-subobjects"
+  },
+  {
+   "claim_id": "claim-candidate-uniqueness",
+   "exact_statement": "There is at most one candidate in $A_Tx_0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-candidate-uniqueness"
+  },
+  {
+   "claim_id": "claim-right-duality",
+   "exact_statement": "For every $h\\in A_T$, every $\\ell,\\beta\\in\\widetilde T$, and every integer $r$, $$\\label{eq:two-point-duality}\n K^r_{\\ell\\beta}(h)\n   =K^{-2-r}_{\\beta\\ell}(h^{-1}).$$ If $J,J'\\subseteq T$, the rows with indices outside $\\widetilde J'$ are unchanged by left multiplication of $h$ by $A_{J'}$, and the columns with indices outside $\\widetilde J$ are unchanged by right multiplication of $h$ by $A_J$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-right-duality"
+  },
+  {
+   "claim_id": "claim-negative-bound",
+   "exact_statement": "Let $R$ be a minimal complex with a single simple $U_\\ell$ at $(0,0)$ and shifted right projectives, and let $r\\ge-1$ bound its normalized levels. Applying a right inverse twist, and then minimizing, does not increase this bound. The same holds for the product of inverse twists in one color. At the acted vertex $\\alpha$, the test complexes satisfy $$\\label{eq:two-point-inverse-test}\n (R D_\\alpha)e_\\alpha\n       \\simeq (Re_\\alpha)\\langle-2\\rangle[-1].$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-two-point-negative-bound"
+  },
+  {
+   "claim_id": "claim-tensor-filtration",
+   "exact_statement": "With these definitions, $$\\label{eq:two-point-highest-tensor}\n H_2(N,M)=0,\n \\qquad\n H_1(N,M)\\text{ survives in actual total degree }r+q+1.$$ Moreover, at every unfolded projective vertex $\\beta$, the length-two cokernel surjects onto the tensor product of the right and left top quotients at $\\beta$. Consequently, if a right top at level $r$ occurs in a color $j\\in J$, then all the left-family tops at level $q$ in that color vanish.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-two-point-tensor-filtration"
+  },
+  {
+   "claim_id": "claim-remove-tops",
+   "exact_statement": "By replacing $z$ within $A_Jz$, preserving the cap on $T$, one can arrange that the highest normalized right layer has no right top at any vertex of $\\widetilde J$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-two-point-remove-tops"
+  },
+  {
+   "claim_id": "claim-subrep-tensor",
+   "exact_statement": "For every family $\\mathcal S\\subseteq M$ in <a href=\"#eq:two-point-subfamilies\" data-reference-type=\"eqref\" data-reference=\"eq:two-point-subfamilies\">[eq:two-point-subfamilies]</a>, $$\\label{eq:two-point-subrepresentation-homology}\n H_2(N,\\mathcal S)=0,\n \\qquad\n H_0(N,\\mathcal S)\\hookrightarrow H_0(N,M).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-two-point-subrepresentation-tensor"
+  },
+  {
+   "claim_id": "claim-euler-estimate",
+   "exact_statement": "At the representative with no highest right tops on $J$, $$\\label{eq:two-point-estimate}\n \\frac1{D_0}\\dim_{\\mathrm{wt}}H_1(N,M)\n       \\ge n_T^{\\mathsf t}a\n              +\\mathbf1_{\\{r=-1\\}}(a')^{\\mathsf t}p_T.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-two-point-euler-estimate"
+  },
+  {
+   "claim_id": "claim-greedy-factorization",
+   "exact_statement": "For nonidentity simple elements $d_1,\\ldots,d_k$, the factorization $d_1\\cdots d_k$ is obtained by repeatedly extracting the greatest simple suffix if and only if $$\\label{eq:two-point-greedy-condition}\n D_R(d_i)\\subseteq D_L(d_{i+1})\\qquad(1\\le i<k).$$ Here the descent sets are those of the corresponding elements of the Coxeter group. Consequently, if an unfolded vertex right-divides the unfolding of a positive element of $A_T^+$, its original color right-divides that positive element.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-two-point-greedy"
+  },
+  {
+   "claim_id": "claim-parabolic-detection",
+   "exact_statement": "Let $h\\in A_T$ and $\\varnothing\\ne V\\subseteq T$. If $$\\label{eq:two-point-zero-block}\n K^r_{\\ell\\beta}(h)=0\n \\qquad\n (r\\in\\mathbb Z,\\ \\ell,\\beta\\in\\widetilde V),$$ then $h\\in A_{T\\setminus V}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-parabolic-detection"
+  },
+  {
+   "claim_id": "claim-isolated-layer",
+   "exact_statement": "Let $I\\subseteq S$ be nonempty and connected. Let $c_I$ be a strictly positive vector with $C_Ic_I=0$, and extend $c$ by zero on $\\widehat S\\setminus I$. Let $J\\subseteq I$ be spherical, possibly empty, let $q>0$ be an integer, and fix a coset $A_Jx$. Suppose that the fixed data on $(I\\setminus J)\\cup\\partial I$ are capped at $q$ and satisfy $$m^q|_{(I\\setminus J)\\cup\\partial I}\n   =c|_{(I\\setminus J)\\cup\\partial I}.\n \\label{eq:rigidity-exterior-data}$$ It is impossible that every representative $z\\in A_Jx$ capped at $q$ on $I$ satisfies $$m_j^q(z)>c_j\\qquad\\text{for every }j\\in J.\n \\label{eq:rigidity-strict-hypothesis}$$ Equivalently, if $J\\ne\\varnothing$ and <a href=\"#eq:rigidity-exterior-data\" data-reference-type=\"eqref\" data-reference=\"eq:rigidity-exterior-data\">[eq:rigidity-exterior-data]</a> holds, there is a representative capped on $I$ and a color $j\\in J$ with $m_j^q\\le c_j$. If $J=\\varnothing$, the exterior situation <a href=\"#eq:rigidity-exterior-data\" data-reference-type=\"eqref\" data-reference=\"eq:rigidity-exterior-data\">[eq:rigidity-exterior-data]</a> itself is impossible.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-isolated-layer"
+  },
+  {
+   "claim_id": "claim-hom-pairing",
+   "exact_statement": "For pure projective layers $P,Y$, including those formed from graded subrepresentations, there are perfect pairings $$\\mathsf H_i^{n,v}(P,Y)\\ \\times\\\n \\mathsf H_{2-i}^{-n,\\,2-v}(Y,P)\\longrightarrow\\mathbb C.$$ Consequently, $$\\begin{split}\n h_2(P,Y)&=h_0(Y,P),\\\\\n (\\dim P)^{\\mathsf t}\\widetilde C\\,\\dim Y\n   &=h_0(P,Y)+h_0(Y,P)-h_1(P,Y).\n \\end{split}\n \\label{eq:rigidity-euler}$$ Here $\\dim P$ and $\\dim Y$ count projective generators, with all placements included. For any two labels $L,H$ and any levels $l,k$, $$h_1(Y_L^l,Y_H^k)=0.\n \\label{eq:rigidity-middle-vanishing}$$ The same vanishing holds after replacing either layer by a direct summand as a pure layer.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-rigidity-hom-filtration"
+  },
+  {
+   "claim_id": "claim-secondary-injection",
+   "exact_statement": "Let $I\\subseteq S$, and suppose the family $E_L$ is capped at $q$ on $I$. For every $L$, let $M_L$ be a direct summand of the pure layer $Y_L^q$ supported on $\\widetilde I$. If $d<q$, then for every pair of labels $L,H$ there are injections $$\\mathsf H_0^{n,v}(M_L,Y_H^d)\n   \\lhook\\joinrel\\longrightarrow\n \\mathsf H_2^{n+1,v}(M_L,Y_H^{d-1}),\n \\qquad n+v=d-q.\n \\label{eq:rigidity-secondary-injection}$$ In particular, for $\\mathcal M=(M_L)_L$ and $\\mathcal Y^d=(Y_H^d)_H$, $$h_0^{\\mathrm{wt}}(\\mathcal M,\\mathcal Y^d)\n \\le h_0^{\\mathrm{wt}}(\\mathcal Y^{d-1},\\mathcal M).\n \\label{eq:rigidity-secondary-bound}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-rigidity-secondary-injection"
+  },
+  {
+   "claim_id": "claim-boundary-separation",
+   "exact_statement": "Let $I\\subseteq S$ be nonempty and connected, and let $c$ be zero off $I$ and strictly positive on $I$, with $C_Ic_I=0$. Let $J\\subseteq I$. Suppose $\\mathcal M=(M_L)_L$ is a family of direct summands of one pure layer of the family $E_L$, supported on $\\widetilde I$, with weighted generator array $\\phi m$. Assume $m-c$ is supported on $J$ and that $(m-c)_J$ is an interior point in $\\mathbb R^J$ of the convex hull of finitely many vectors $s_J$ with the following properties: $s$ is zero off $J$, and $\\phi s$ is the weighted generator array of a family of graded subrepresentations $\\mathcal S=(S_L)_L\\subseteq\\mathcal M$ supported on $\\widetilde J$.*\n\n*Let $\\mathcal Y=\\mathcal Y^d$ be any layer of the family $E_L$, and write $\\phi y$ for its weighted generator array. If its socle vanishes on $J$, then $$y|_{\\partial I}=0,\\qquad\n (Cy)_J=0,\\qquad\n h_0^{\\mathrm{wt}}(\\mathcal M,\\mathcal Y)\n =h_0^{\\mathrm{wt}}(\\mathcal Y,\\mathcal M)=0.\n \\label{eq:rigidity-separation-conclusions}$$ Here $\\partial I$ is the outside-neighbor set, including the frame. The assertion includes the usual interior convention in $\\mathbb R^0$ when $J=\\varnothing$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-rigidity-separation"
+  },
+  {
+   "claim_id": "claim-vertex-filtration",
+   "exact_statement": "Let $\\mathcal P$ be a set-sized poset, and well-order its elements by $\\prec$. For $v\\in\\mathcal P$, define the earlier lower and upper posets $$\\mathcal L_v=\\{w\\in\\mathcal P:w<v,\\ w\\prec v\\},\\qquad\n \\mathcal U_v=\\{w\\in\\mathcal P:v<w,\\ w\\prec v\\}.$$ The link along which $v$ is added to the induced order complex on its predecessors is the simplicial join of the order complexes of $\\mathcal L_v$ and $\\mathcal U_v$. If one poset is empty, this link is the order complex of the other; if both are empty, the link is empty.*\n\n*Suppose each attaching link is empty or contractible. Then every component of $|\\mathcal P|$ is contractible and contains exactly one *source*, meaning a vertex with empty attaching link. In particular, the conclusion holds if each of $\\mathcal L_v$ and $\\mathcal U_v$ is empty or contractible for every $v$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-filtration-principle"
+  },
+  {
+   "claim_id": "claim-residue-sublevels",
+   "exact_statement": "For every nonempty spherical $T$ and the data just specified:*\n\n1.  *$\\mathcal R_{<}(T,A_Tx;q)$ is empty or contractible;*\n\n2.  *whenever the additional exterior hypotheses hold, $\\mathcal R_{\\le}(T,A_Tx;q,I,c)$ is nonempty and contractible.*\n\n*For $T=\\varnothing$, the strict sublevel is empty, and the exterior hypotheses for the special closed sublevel cannot hold.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-residue-sublevels"
+  },
+  {
+   "claim_id": "claim-global-well-order",
+   "exact_statement": "Definition <a href=\"#def:global-sign-height\" data-reference-type=\"ref\" data-reference=\"def:global-sign-height\">45</a> gives a well-order of the vertices of $\\mathcal D$. Distinct comparable cosets have different block sequences, so the final tie refinement does not affect either of their earlier links.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-global-well-order"
+  },
+  {
+   "claim_id": "claim-upper-comparison",
+   "exact_statement": "Every earlier upper extension of $P$ adds an active color. Every spherical upper extension adding a nonempty set of active colors and no other colors is earlier than $P$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-global-upper-comparison"
+  },
+  {
+   "claim_id": "claim-active-spherical",
+   "exact_statement": "The subset $T\\cup\\operatorname{Act}(P)$ is spherical.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-global-active-spherical"
+  },
+  {
+   "claim_id": "claim-upper-link",
+   "exact_statement": "The earlier strict upper part of $P$ is empty or contractible.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-global-upper-link"
+  },
+  {
+   "claim_id": "claim-lower-comparison",
+   "exact_statement": "Every earlier lower coset has an eligible open color. A lower coset all of whose open colors are eligible is earlier than $P$. The earlier lower part retracts by an order map pointwise above the identity onto the poset of these all-eligible lower cosets.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-global-lower-comparison"
+  },
+  {
+   "claim_id": "claim-residue-blocks",
+   "exact_statement": "The all-eligible lower poset at $P=A_Tx$ is a product of the residue sublevel posets of Proposition <a href=\"#prop:residue-sublevels\" data-reference-type=\"ref\" data-reference=\"prop:residue-sublevels\">44</a>, each with a largest element adjoined, with the all-largest tuple deleted. More precisely, its factors are as follows.*\n\n1.  *Each connected component $B$ of $T$ with negative sign at its highest level $q_B$ contributes the strict sublevel in the coset $A_Bx$ at level $q_B$.*\n\n2.  *For a positive sign, group all components of $T$ belonging to the same positive-support component $I$ at the same level $q$. Their union is $B=T\\cap I$, and it contributes the special closed sublevel in $A_Bx$ with data $I,q,c_I=p_I^q(P)$.*\n\n*Every strict factor is empty or contractible, and every special closed factor is nonempty and contractible.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-global-residue-blocks"
+  },
+  {
+   "claim_id": "claim-product-minus-top",
+   "exact_statement": "Let $\\mathcal E_1,\\ldots,\\mathcal E_r$ be posets whose realizations are each empty or contractible, and let $\\mathcal E_a^+$ denote the result of adjoining a largest element. Then $$\\left(\\prod_{a=1}^r\\mathcal E_a^+\\right)\n          \\setminus\\{(\\top,\\ldots,\\top)\\}$$ is empty if every $\\mathcal E_a$ is empty, and otherwise has contractible realization. The empty product has the same empty conclusion after its largest element is deleted.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-global-product-minus-top"
+  },
+  {
+   "claim_id": "claim-lower-link",
+   "exact_statement": "The earlier strict lower part of every $P\\in\\mathcal D$ is empty or contractible.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-global-lower-link"
+  },
+  {
+   "claim_id": "claim-deligne-contractible",
+   "exact_statement": "For every Coxeter matrix on a finite set $S$, the order complex of the spherical-coset poset $\\mathcal D$ is contractible.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-deligne-contractible"
+  },
+  {
+   "claim_id": "claim-artin-structural",
+   "exact_statement": "Let $A=A(W,S)$ be an Artin group with $S$ finite, let $A^+$ be its positive Artin monoid, and let $k$ be the number of irreducible spherical components of the Coxeter diagram of $(W,S)$. Then:*\n\n1.  *$A$ is torsion-free.*\n\n2.  *The center satisfies $Z(A)\\cong\\mathbb Z^k$.*\n\n3.  *The natural homomorphism $\\eta\\colon A^+\\to A$ induces a homotopy equivalence $$B\\eta\\colon BA^+\\longrightarrow BA.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-artin-structural"
+  },
+  {
+   "claim_id": "claim-boyd-stability",
+   "exact_statement": "Let $A_1$ be the Artin group of a Coxeter matrix $m_1$ on a finite set $\\Sigma_1$, and choose a vertex $\\sigma_1\\in\\Sigma_1$. For each $n\\ge2$, adjoin new vertices $\\sigma_2,\\ldots,\\sigma_n$ and let $A_n$ be the Artin group of the Coxeter matrix $m_n$ on $\\Sigma_n=\\Sigma_1\\sqcup\\{\\sigma_2,\\ldots,\\sigma_n\\}$. Retain $m_1$ on $\\Sigma_1$, put diagonal entries equal to $1$, and set the remaining off-diagonal entries, symmetrically, by $$\\begin{aligned}\n m_n(\\sigma_j,\\sigma_{j+1})&=3\n     &&(1\\le j<n),\\\\\n m_n(\\sigma_j,\\sigma_\\ell)&=2\n     &&(1\\le j<\\ell\\le n,\\ \\ell-j\\ge2),\\\\\n m_n(u,\\sigma_j)&=2\n     &&(u\\in\\Sigma_1\\setminus\\{\\sigma_1\\},\\ 2\\le j\\le n).\n\\end{aligned}$$ Let $s_n\\colon A_{n-1}\\hookrightarrow A_n$ be the natural inclusion for $n\\ge2$. For every $n\\ge2$, every abelian group $C$, used as a constant coefficient group, and every integer $i\\ge0$, the induced map $$(Bs_n)_*\\colon H_i(BA_{n-1};C)\\longrightarrow H_i(BA_n;C)$$ is an isomorphism when $i<n/2$ and a surjection when $i=n/2$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cor-boyd-stability"
+  }
+ ],
+ "paper": "papers/EN-105-000-0000-2-2026-PR-T4-UK-EX-M1-B-AL-H-0521_PM-254.1_Harmonic_heights_and_the_Artin_K_pi_1_conjecture.md",
+ "purpose": "Harmonic heights and the Artin K(pi,1) conjecture",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "f4a0bfb60969c845771b1d4475fed180ea0a3a7275627e02a355e056fe3f2a0c",
+   "pm.domains.v2": "0dd0088cf979c9e6ebcfb861f333dcea45eaa6e95d7bcc4e8dd6d17f1582a1ee",
+   "pm.edges.v2": "8bba5e9b4f3ef1e992f7b2ff1080b565deca98975f5849bdf600724b09c4b4e7",
+   "pm.extraction.v2": "d864078c976476e53290cbe3615f4a9c3f3a5b19638ffcebdb4140b03c7870f1",
+   "pm.formal.v2": "bbb76d35f4968c91acd00ec566bd9f47b6601cca0fe742616985b207e12f6b71",
+   "pm.limits.v2": "2ecd1e805fcb29bf01703a620dffad721fdc8a39969de81f5d28148b99f08557",
+   "pm.node.v2": "97db7380b5aa6eecb50ea182589970630cb8cbc93efc6b7c45cf7157998f7ffc",
+   "pm.objects.v2": "e68851d78e5bc957280438181bf3dc3a412b60c8f0af116aaf307582c871257e",
+   "pm.provenance.v2": "8b02d011d02b05db4d8a181c491ba669139308906c530f8ce1e6925e905d24f2",
+   "pm.quantities.v2": "d2c845a9c9acd97c281ab608b163eade1c8cdf952b1f49e7c8adfc6b9f347d36",
+   "pm.reading.v2": "ea49fb0782dc4024561ce087694f02be7d768c14a3afac0e495df78a9e36b2f2",
+   "pm.roadmap.v2": "49dae385a76baa8b3d456f08aee5ba468426123190a456b4b07c1bd44ec43849",
+   "pm.search.v1": "6e4d4d05b32e7606f7a2bec253094bb2b3d83e6675df3098e2e2e0e778992552",
+   "pm.triptych.v2": "066291426a1443dd09179268735a42b53466d2f5ac4f43ad6fd1096655c84d46"
+  },
+  "canonical_sha256": "4f8163e036e449e616295953b1a206f4be7c0f6ba8ba1a87190807f2c4291979",
+  "paper_sha256": "c4b98cba632c0e86aee80710291613c42b727c600827950eb741f666fe0afa04",
+  "repaired_body_sha256": "b19c9fed2f51214cc5683f6f243cb3c03b510a03182bb8532b1cb7316ec915e3"
+ },
+ "status": "ACTIVE",
+ "subject_id": 5,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "c4e508a7311ed95132325ffe2c8ff7072d23b2bf6ae6534d8673e2444dfd0597",
+   "receipt_sha256": "f19990bb5b9209cf73687fc2942d61773354884f5cbeff9fb61155a4f6f998bf",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "n up to 4, weights in {0,1,2}, T of size 0 to 3, small nonnegative integer exterior values",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-unique-harmonic-extension",
+     "oracle_basis": "residual check that every Cartan row on T vanishes and exterior coordinates are unchanged, plus exact comparison with the expected vector"
+    },
+    {
+     "checked_domain": "same small diagrams with nonnegative integer exterior data",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-nonnegative-extension",
+     "oracle_basis": "oracle rejects any returned coordinate on T that is negative"
+    },
+    {
+     "checked_domain": "singular pairs with infinite-label weight and a unit triangle, versus positive definite chains",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-spherical-iff-positive-definite",
+     "oracle_basis": "independent symmetric elimination decides positive definiteness and the refusal word must match"
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-drop-edge-weight",
+     "observed_exit": 1,
+     "receipt_sha256": "951a09c26c9cd05b33d45c169e735b81aab204d7ddb9424056ec08bfff7b528c"
+    },
+    {
+     "id": "mut-diagonal-one",
+     "observed_exit": 1,
+     "receipt_sha256": "8d9dc371aecc56d32d2669c89792fc91a9f8fdab27926f3e6af3ff3270d86180"
+    },
+    {
+     "id": "mut-sum-over-interior",
+     "observed_exit": 1,
+     "receipt_sha256": "b4b029637b41f1e9f89e11ddadfb68ebc3a71229a0e5904b06baaa7dcfa5fcf5"
+    },
+    {
+     "id": "mut-wrong-refusal",
+     "observed_exit": 1,
+     "receipt_sha256": "49c7e52ba7bb9f76cdc088b8ad93f5ccce1c2fe08d43573a76773607dcccf67e"
+    },
+    {
+     "id": "mut-offset-result",
+     "observed_exit": 1,
+     "receipt_sha256": "5df359b856e6fdb44c4c9c6eba172a9dd23c8501ff26ce5ccdbfdc56d2509208"
+    }
+   ],
+   "receipt_sha256": "50dcd2969f650a68db7aab6e4883efa1dcd6621a955d583a9edbd0584bec5c19",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Harmonic heights and the Artin K(pi,1) conjecture"
+}

@@ -1,0 +1,698 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 519498,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 145352
+ },
+ "coordinate": "EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-C-TO-H-0116",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-dyn-orbits",
+     "quote": "Ratner’s orbit closure theorem (Ratner 1991)",
+     "quote_sha256": "ed8ae18943d5d53acb2a008e2eb144f85da924c3edc62507e8cf108b459fc8fb"
+    }
+   ],
+   "query": "algorithm computing entire approximants",
+   "reason": "The proof is existential and relies on non-effective orbit density."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-cor-global-spray",
+     "quote": "Every projective complex K3 surface and every complex Enriques surface is elliptic in Gromov’s sense.",
+     "quote_sha256": "814bae07cd9b16adb3a6a827b1d1e56152becc9f812a7a646e157ec2399f5e31"
+    }
+   ],
+   "query": "global dominating spray on nonprojective K3 surfaces",
+   "reason": "The source makes no assertion there."
+  }
+ ],
+ "family": "PM-042",
+ "id": "PM-042.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-cap-k3",
+    "statement": "Let $X$ be a complex K3 surface, with any smooth Hermitian distance $d_X$."
+   },
+   {
+    "anchor": "stmt-cor-dense",
+    "claim_id": "claim-dense-entire-immersion",
+    "statement": "Let $S$ be a complex K3 surface."
+   },
+   {
+    "anchor": "stmt-loc-criterion",
+    "claim_id": "claim-two-complete-directions",
+    "statement": "Suppose there are holomorphic maps"
+   },
+   {
+    "anchor": "stmt-loc-pieces",
+    "claim_id": "lemma-planar-pieces",
+    "statement": "Given a special pair $D\\subset D'$ and an open neighborhood $N$ of $D$, there are compact sets $A,B_0,B_1\\subset\\mathbb C$ and bounded open sets $U_A,U_0,U_1$ such that $$\\begin{gathered}\n\\overline{U_A}\\subset\\operatorname{int}A,\\qquad\n\\overline{U_i}\\subset\\operatorname{int}B_i\\quad(i=0,1),\\\\\nD\\subset U_0,\\qquad D'\\subset U_A\\cup U_0\\cup U_1,\\\\\nA\\cap D=\\varnothing,\\qquad B_0\\cap B_1=\\varnothing,\\qquad B_0\\subset N.\n\\end{gathered}$$ The compact sets $D\\cup A$ and $B_0\\cup B_1$ are polynomially convex."
+   },
+   {
+    "anchor": "stmt-loc-splitting",
+    "claim_id": "lemma-planar-splitting",
+    "statement": "Let $U_A,U_B\\subset\\mathbb C$ be bounded open sets with positively separated closed fringes, and put $C=U_A\\cap U_B$."
+   },
+   {
+    "anchor": "stmt-loc-alignment",
+    "claim_id": "remark-alignment",
+    "statement": "Two strip maps locally biholomorphic at chosen meeting preimages, with transverse central curves there, can be put in the form of Proposition <a href=\"#loc:criterion\" data-reference-type=\"ref\" data-reference=\"loc:criterion\">4</a>."
+   },
+   {
+    "anchor": "stmt-loc-spray",
+    "claim_id": "lemma-local-chart-sprays",
+    "statement": "Let $f:S\\to X$ be holomorphic on a Stein manifold, let $K\\Subset S$ be compact, and assume $f^*TX$ is holomorphically trivial on $S$."
+   },
+   {
+    "anchor": "stmt-loc-deformation",
+    "claim_id": "lemma-deformation-stein",
+    "statement": "Let $\\pi:\\mathcal X\\to B$ be a holomorphic family, and let $f:S\\to\\mathcal X_{b_0}$ be holomorphic from a Stein manifold with image in the submersion locus of $\\pi$."
+   },
+   {
+    "anchor": "stmt-loc-gluing",
+    "claim_id": "lemma-planar-spray-gluing",
+    "statement": "Suppose two holomorphic sprays over bounded planar domains $U_A,U_B$ and a parameter polydisc are uniformly close on their overlap, with a positive margin in an auxiliary spray polydisc."
+   },
+   {
+    "anchor": "stmt-loc-planar",
+    "claim_id": "prop-planar-enlargement",
+    "statement": "Let $K$ be a closed circular disc of radius $r$, or a closed circular annulus with outer radius $r$, and let $f$ be holomorphic near $K\\times P$, where $P$ is a closed polydisc."
+   },
+   {
+    "anchor": "stmt-loc-disc",
+    "claim_id": "cor-propagation-small-disc",
+    "statement": "Suppose a coordinate neighborhood contains a closed affine complex-line disc centered at $x$, with its boundary in the open locus where $L$ holds."
+   },
+   {
+    "anchor": "stmt-auto-remark-1",
+    "claim_id": "remark-uniform-discs",
+    "statement": "The proof also records a useful uniform version: finitely many coordinate discs whose boundaries lie in fixed compact subsets of the good locus retain the required boundary containment after sufficiently small deformations of the coordinate charts."
+   },
+   {
+    "anchor": "stmt-ana-cap",
+    "claim_id": "thm-L-implies-cap",
+    "statement": "Let $Y$ be a complex surface with a complete compatible distance."
+   },
+   {
+    "anchor": "stmt-glue-open",
+    "claim_id": "lemma-open-overlap-gluing",
+    "statement": "In the preceding buffered open-overlap geometry, let two holomorphic sprays into a complex manifold be related on their overlap by a fiber coordinate change $$\\gamma(z,v)=v+c(z,v),\\qquad v\\in B_b.$$"
+   },
+   {
+    "anchor": "stmt-ana-concentration",
+    "claim_id": "lemma-concentration-automorphism",
+    "statement": "Fix $m\\geq2$, numbers $$1<r_m<\\cdots<r_2<r_1,\n \\qquad 0<a<1,\\qquad r_j<a r_{j-1}\\quad(2\\leq j\\leq m).$$"
+   },
+   {
+    "anchor": "stmt-ana-polydisc",
+    "claim_id": "prop-polydisc-approximation",
+    "statement": "Under the hypotheses of Theorem <a href=\"#ana:cap\" data-reference-type=\"ref\" data-reference=\"ana:cap\">14</a>, a map holomorphic near a closed polydisc in $\\mathbb C^m$ can be approximated uniformly there by entire maps $\\mathbb C^m\\to Y$."
+   },
+   {
+    "anchor": "stmt-glue-interval",
+    "claim_id": "lemma-complexify-real-parameter",
+    "statement": "Let $I\\subset\\mathbb R$ be a compact interval and let $C\\subset\\mathbb C^k$ be a compact convex set."
+   },
+   {
+    "anchor": "stmt-ana-parameter-disc",
+    "claim_id": "lemma-parameter-disc",
+    "statement": "Assume ${\\cal A}_r$."
+   },
+   {
+    "anchor": "stmt-ana-face",
+    "claim_id": "lemma-convex-real-face",
+    "statement": "Assume ${\\cal A}_{n-1}$, where $n\\geq1$, and Proposition <a href=\"#ana:polydisc\" data-reference-type=\"ref\" data-reference=\"ana:polydisc\">17</a>."
+   },
+   {
+    "anchor": "stmt-glue-linear-trace",
+    "claim_id": "lemma-linear-trace-splitting",
+    "statement": "There are $C>0$ and an integer $p\\geq1$ with the following property."
+   },
+   {
+    "anchor": "stmt-glue-trace",
+    "claim_id": "lemma-trace-gluing",
+    "statement": "The conclusion of Lemma <a href=\"#glue:open\" data-reference-type=\"ref\" data-reference=\"glue:open\">15</a> holds for sprays on $Q_r^-$ and $Q_r^+$ when their transition is given on $M_r\\times B_b$ and is arbitrarily small in $$\\|c\\|_{r,b,\\alpha}\n       =\\sup_{v\\in B_b}\\|c(\\,\\cdot\\,,v)\\|_{C^\\alpha(M_r)}.$$"
+   },
+   {
+    "anchor": "stmt-prj-strips",
+    "claim_id": "prop-projective-strips",
+    "statement": "Let $S$ be a smooth projective complex K3 surface."
+   },
+   {
+    "anchor": "stmt-prj-prepare",
+    "claim_id": "lemma-prepare-genus-one-families",
+    "statement": "Let $S$ be a smooth projective integral surface, let $H$ be an ample divisor, and let $p:Y\\to T$ be a smooth proper family of connected genus-one curves over a smooth irreducible algebraic curve."
+   },
+   {
+    "anchor": "stmt-prj-transverse",
+    "claim_id": "lemma-transverse-lifts",
+    "statement": "There is a nonempty Zariski open $U\\subset V$ such that any two lifts $y_i\\in Y_i^V$ of a point $x\\in U$ have distinct transported vertical tangent lines $$dq_1\\bigl(\\ker(dp_1)_{y_1}\\bigr)\n\\ne dq_2\\bigl(\\ker(dp_2)_{y_2}\\bigr)\n\\quad\\text{in }T_xS.$$"
+   },
+   {
+    "anchor": "stmt-prj-flow",
+    "claim_id": "lemma-complete-vertical-flows",
+    "statement": "Let $p:Y\\to\\Delta$ be a proper holomorphic submersion with connected genus-one fibers."
+   },
+   {
+    "anchor": "stmt-sew-chain",
+    "claim_id": "thm-annular-chain-sewing",
+    "statement": "Let $M$ be a complex surface with a nowhere-zero holomorphic two-form $\\omega$."
+   },
+   {
+    "anchor": "stmt-sew-linearize",
+    "claim_id": "lemma-remove-zero-mode",
+    "statement": "Suppose $E=(w+u,p+v)$ is exact symplectic on a seam and $\\|(u,v)\\|\\leq e$."
+   },
+   {
+    "anchor": "stmt-sew-split",
+    "claim_id": "lemma-chain-splitting",
+    "statement": "Suppose the periodic functions $H_j$ have mean zero, are holomorphic on $S_j(s,\\rho)$, and have norm at most $e$."
+   },
+   {
+    "anchor": "stmt-sew-centers",
+    "claim_id": "lemma-period-adjustment",
+    "statement": "Suppose symplectically normalized charts, together with corresponding model charts, are available for centers varying in larger transverse discs."
+   },
+   {
+    "anchor": "stmt-deg-open",
+    "claim_id": "prop-open-period-region",
+    "statement": "There is a nonempty open subset of the full marked K3 period domain such that every surface with period in this subset has property $L$ at every point."
+   },
+   {
+    "anchor": "stmt-deg-regular-pencils",
+    "claim_id": "lemma-regular-pencils",
+    "statement": "The quadrics and $G$ can be chosen so that:*\n\n1."
+   },
+   {
+    "anchor": "stmt-deg-core-coordinates",
+    "claim_id": "lemma-core-coordinates",
+    "statement": "On a small parameter disc of any compact regular family there are coordinates $(z,p)\\in\\mathbb P^1\\times\\Delta_r$ in which the two ends are $z=0,\\infty$ and $$\\omega_\\pm=\\frac{1}{2\\pi i}\\frac{dz}{z}\\wedge dp.$$"
+   },
+   {
+    "anchor": "stmt-deg-seams",
+    "claim_id": "lemma-buffered-seams",
+    "statement": "There are fixed positive parameter and seam widths and a fixed bound on translation derivatives with the following property."
+   },
+   {
+    "anchor": "stmt-rat-open",
+    "claim_id": "thm-rational-direction-open",
+    "statement": "For every primitive positive integral vector $v\\in\\Lambda$, there is a nonempty relatively open subset $\\mathcal O_v\\subset\\mathcal D_v$ such that every marked K3 surface with period in $\\mathcal O_v$ has property $L$ at every point."
+   },
+   {
+    "anchor": "stmt-rat-center",
+    "claim_id": "lemma-isotrivial-center",
+    "statement": "For every primitive $v\\in\\Lambda$ of square $2d>0$, there is a marked projective K3 surface $X_0$ whose period contains $v$ and which admits a genus-one fibration $$\\pi:X_0\\longrightarrow\\mathbb P^1$$ with all smooth fibers of $j$-invariant zero."
+   },
+   {
+    "anchor": "stmt-rat-safe",
+    "claim_id": "lemma-safe-cycles",
+    "statement": "The forms $\\eta_\\gamma$ and functions $h_\\gamma$ extend to $B$."
+   },
+   {
+    "anchor": "stmt-rat-strips",
+    "claim_id": "lemma-uniform-strips-deformation",
+    "statement": "Fix compact families of regular torus charts on $X_0$, each equipped with a safe primitive cycle, and suppose their actions are separated from the corresponding forbidden values by a positive margin."
+   },
+   {
+    "anchor": "stmt-rat-two-periods",
+    "claim_id": "lemma-two-cycles-distinct-leaves",
+    "statement": "In the setting of Lemma <a href=\"#rat:strips\" data-reference-type=\"ref\" data-reference=\"rat:strips\">38</a>, suppose two initial strips are obtained from independent primitive cycles of one central smooth torus."
+   },
+   {
+    "anchor": "stmt-dyn-orbits",
+    "claim_id": "lemma-orbit-density",
+    "statement": "Let $P\\in\\mathcal D$.*\n\n1."
+   },
+   {
+    "anchor": "stmt-cor-oka1",
+    "claim_id": "cor-oka-one-interpolation",
+    "statement": "Let $S$ be a complex K3 surface, $R$ an open Riemann surface, $K\\subset R$ a compact Runge set, and $A=\\{a_j:j\\geq1\\}\\subset R$ a closed discrete set of distinct points."
+   },
+   {
+    "anchor": "stmt-cor-surface-classification",
+    "claim_id": "cor-surface-classification",
+    "statement": "Every complex Enriques surface is Oka."
+   },
+   {
+    "anchor": "stmt-cor-global-spray",
+    "claim_id": "cor-global-spray",
+    "statement": "Every projective complex K3 surface and every complex Enriques surface is elliptic in Gromov’s sense."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "K3 Oka property",
+    "evidence": [
+     {
+      "anchor": "pm-h-4",
+      "quote": "The analytic and geometric parts meet at a local operation, denoted $L$.",
+      "quote_sha256": "b1792ca2294966e4ba5dcc9b3329eb7663a037c1f8b9583e8911845fab3ce873"
+     }
+    ],
+    "requires_concepts": [
+     "property L",
+     "holomorphic sprays",
+     "exact symplectic sewing",
+     "K3 period domain and Torelli",
+     "unipotent orbit closures"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "convex approximation property",
+    "evidence": [
+     {
+      "anchor": "stmt-ana-cap",
+      "quote": "Let $Y$ be a complex surface with a complete compatible distance.",
+      "quote_sha256": "11fd3ef417954351eed8e4d647cb6c230044882c1fb054b706f32115109f45d0"
+     }
+    ],
+    "requires_concepts": [
+     "polydisc approximation",
+     "real face gluing"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-cap-k3",
+   "exact_statement": "Let $X$ be a complex K3 surface, with any smooth Hermitian distance $d_X$. For every integer $m\\geq1$, every nonempty compact convex set $K\\subset\\mathbb C^m$, every open neighborhood $U$ of $K$, every holomorphic map $f:U\\to X$, and every $\\epsilon>0$, there exists a holomorphic map $F:\\mathbb C^m\\to X$ such that $$\\sup_{z\\in K}d_X(F(z),f(z))<\\epsilon.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-dense-entire-immersion",
+   "exact_statement": "Let $S$ be a complex K3 surface. For every $x\\in S$ and every nonzero vector $v\\in T_xS$, there is a holomorphic immersion $f:\\mathbb C\\to S$ such that $$f(0)=x,\\qquad f'(0)=v,\\qquad \\overline{f(\\mathbb C)}=S,$$ where closure is taken in the ordinary complex topology. If $S$ is projective, then $f(\\mathbb C)$ is Zariski dense.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-dense"
+  },
+  {
+   "claim_id": "claim-two-complete-directions",
+   "exact_statement": "Suppose there are holomorphic maps $$\\sigma_1:\\mathbb C\\times\\Delta_b\\longrightarrow X,\\qquad\n\\sigma_2:\\Delta_b\\times\\mathbb C\\longrightarrow X$$ which are locally biholomorphic at $(0,0)$ and satisfy $\\sigma_1(z,0)=\\sigma_2(z,0)$ for small $z$. If $\\sigma_2$ is locally biholomorphic at $(0,c)$, then $L$ holds at $x=\\sigma_2(0,c)$.*\n\n*The same conclusion holds for a sequence of pairs whose long coordinate domains are discs of radii tending to infinity, whose bounded-coordinate radii are bounded below, and whose maps converge near $(0,0)$ and, for the second map, near $(0,c)$ to the above nondegenerate germs. Exact axis agreement is required for every pair. In this version $x$ is the value of the limiting second germ at $(0,c)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-loc-criterion"
+  },
+  {
+   "claim_id": "lemma-planar-pieces",
+   "exact_statement": "Given a special pair $D\\subset D'$ and an open neighborhood $N$ of $D$, there are compact sets $A,B_0,B_1\\subset\\mathbb C$ and bounded open sets $U_A,U_0,U_1$ such that $$\\begin{gathered}\n\\overline{U_A}\\subset\\operatorname{int}A,\\qquad\n\\overline{U_i}\\subset\\operatorname{int}B_i\\quad(i=0,1),\\\\\nD\\subset U_0,\\qquad D'\\subset U_A\\cup U_0\\cup U_1,\\\\\nA\\cap D=\\varnothing,\\qquad B_0\\cap B_1=\\varnothing,\\qquad B_0\\subset N.\n\\end{gathered}$$ The compact sets $D\\cup A$ and $B_0\\cup B_1$ are polynomially convex. For $U_B=U_0\\cup U_1$, the two closed fringes $\\overline{U_A\\setminus U_B}$ and $\\overline{U_B\\setminus U_A}$ have positive distance.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-loc-pieces"
+  },
+  {
+   "claim_id": "lemma-planar-splitting",
+   "exact_statement": "Let $U_A,U_B\\subset\\mathbb C$ be bounded open sets with positively separated closed fringes, and put $C=U_A\\cap U_B$. For every open parameter polydisc $P$ and every $k$, there are bounded linear operators $$\\begin{aligned}\nR_A&:H^\\infty(C\\times P,\\mathbb C^k)\\longrightarrow\nH^\\infty(U_A\\times P,\\mathbb C^k),\\\\\nR_B&:H^\\infty(C\\times P,\\mathbb C^k)\\longrightarrow\nH^\\infty(U_B\\times P,\\mathbb C^k)\n\\end{aligned}$$ satisfying $R_Au-R_Bu=u$. Their bounds depend only on the planar sets and not on $P$ or its dimension.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-loc-splitting"
+  },
+  {
+   "claim_id": "remark-alignment",
+   "exact_statement": "Two strip maps locally biholomorphic at chosen meeting preimages, with transverse central curves there, can be put in the form of Proposition <a href=\"#loc:criterion\" data-reference-type=\"ref\" data-reference=\"loc:criterion\">4</a>. Locally lift the first central curve through the inverse of the second strip, writing the lift as $(a(z),t(z))$, where its bounded coordinate is $a$. Replace the second strip by $\\widetilde\\sigma_2(z,w)=\\sigma_2(a(z),t(z)+w)$. Transversality says $a'(0)\\ne0$, and time zero gives exact axis agreement. If the original second central curve also passes through $x$ and its strip is regular there, some finite $c$ gives a regular chart $\\widetilde\\sigma_2(0,c)=x$. For finite-length families whose central germs converge to transverse germs through a common point, the implicit function theorem first gives nearby intersection points and meeting preimages. Translate the preimages to the origin and apply the same construction. Convergence and transversality give a uniformly positive bounded-coordinate radius; the translations and the function $t$ lose only a bounded amount of long-coordinate length. Thus this construction also supplies the aligned families in the finite-length part of the proposition.",
+   "kind": "construction",
+   "statement_anchor": "stmt-loc-alignment"
+  },
+  {
+   "claim_id": "lemma-local-chart-sprays",
+   "exact_statement": "Let $f:S\\to X$ be holomorphic on a Stein manifold, let $K\\Subset S$ be compact, and assume $f^*TX$ is holomorphically trivial on $S$. After shrinking the source neighborhood there is a holomorphic map $f^\\sharp(z,v)$ for $z$ near $K$ and $v\\in\\Delta_r^2$, with $f^\\sharp(z,0)=f(z)$, such that $v\\mapsto f^\\sharp(z,v)$ is injective with invertible differential. The hypothesis on $f^*TX$ holds for a contractible Stein source and for a planar domain times a polydisc.",
+   "kind": "construction",
+   "statement_anchor": "stmt-loc-spray"
+  },
+  {
+   "claim_id": "lemma-deformation-stein",
+   "exact_statement": "Let $\\pi:\\mathcal X\\to B$ be a holomorphic family, and let $f:S\\to\\mathcal X_{b_0}$ be holomorphic from a Stein manifold with image in the submersion locus of $\\pi$. On every relatively compact source domain there is a holomorphic family of maps $f_b$ into $\\mathcal X_b$ for $b$ near $b_0$, with $f_{b_0}=f$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-loc-deformation"
+  },
+  {
+   "claim_id": "lemma-planar-spray-gluing",
+   "exact_statement": "Suppose two holomorphic sprays over bounded planar domains $U_A,U_B$ and a parameter polydisc are uniformly close on their overlap, with a positive margin in an auxiliary spray polydisc. Suppose the first spray is a chart spray there with uniform inverse-chart margins, and the closed planar fringes are positively separated. If the closeness is sufficiently small, their central maps can be glued after arbitrarily small holomorphic corrections in the auxiliary variables. The glued map is arbitrarily close to the first central map on any prescribed compact subset of its domain on which that spray is fixed, or has a uniform modulus of continuity in its auxiliary variables.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-loc-gluing"
+  },
+  {
+   "claim_id": "prop-planar-enlargement",
+   "exact_statement": "Let $K$ be a closed circular disc of radius $r$, or a closed circular annulus with outer radius $r$, and let $f$ be holomorphic near $K\\times P$, where $P$ is a closed polydisc. Suppose that for every $\\zeta$ on the outer circle there is a coordinate witness neighborhood $V_\\zeta$ for $L$ containing $f(\\{\\zeta\\}\\times P)$. For every $R>r$ and $P_0\\Subset\\operatorname{int}P$, one can approximate $f$ uniformly on $K\\times P_0$ by a map holomorphic near the enlarged disc, respectively annulus with the same inner radius and outer radius $R$, times $P_0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-loc-planar"
+  },
+  {
+   "claim_id": "cor-propagation-small-disc",
+   "exact_statement": "Suppose a coordinate neighborhood contains a closed affine complex-line disc centered at $x$, with its boundary in the open locus where $L$ holds. Then $L$ holds at $x$. In particular, if the complement of that locus is contained locally in a proper analytic subset, $L$ holds everywhere.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-loc-disc"
+  },
+  {
+   "claim_id": "remark-uniform-discs",
+   "exact_statement": "The proof also records a useful uniform version: finitely many coordinate discs whose boundaries lie in fixed compact subsets of the good locus retain the required boundary containment after sufficiently small deformations of the coordinate charts. All arguments in this section concern one planar variable with passive parameters. No approximation theorem for arbitrary multidimensional source compacta has been used.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-auto-remark-1"
+  },
+  {
+   "claim_id": "thm-L-implies-cap",
+   "exact_statement": "Let $Y$ be a complex surface with a complete compatible distance. If the local operation $L$ holds at every point of $Y$, then $Y$ has the convex approximation property in every source dimension.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-ana-cap"
+  },
+  {
+   "claim_id": "lemma-open-overlap-gluing",
+   "exact_statement": "In the preceding buffered open-overlap geometry, let two holomorphic sprays into a complex manifold be related on their overlap by a fiber coordinate change $$\\gamma(z,v)=v+c(z,v),\\qquad v\\in B_b.$$ Suppose $\\|c\\|_\\infty$ can be made arbitrarily small with $b>0$ fixed. After any prescribed positive loss of base and fiber margins, the two sprays admit fiber reparametrizations close to the identity which make them agree. Evaluating at $v=0$ gives a glued holomorphic map. It is arbitrarily close to the original map on each compactum where the corresponding input spray is fixed, or has a uniform modulus of continuity in the fiber variable. No such uniform target estimate is asserted on a side whose spray varies without this control.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-glue-open"
+  },
+  {
+   "claim_id": "lemma-concentration-automorphism",
+   "exact_statement": "Fix $m\\geq2$, numbers $$1<r_m<\\cdots<r_2<r_1,\n \\qquad 0<a<1,\\qquad r_j<a r_{j-1}\\quad(2\\leq j\\leq m).$$ For an integer $d\\geq2$, set $$P_j(w)=(w/r_j)^d,\\qquad\n H_d(x)=\\bigl(a x_m,P_2(x_2)-a x_1,\\ldots,\n                        P_m(x_m)-a x_{m-1}\\bigr).$$ There are constants $C\\geq1$, $q\\in(0,1)$, and $d_0$, depending only on the displayed fixed data, with the following properties. For $d\\geq d_0$, $N\\geq1$, and $$E_{d,N}=H_d^{-N}(\\overline\\Delta_1^{\\,m}),$$ one has $$\\label{ana:eq:power-bound}\n \\max_{j\\geq2}|P_j(x_j)|\\leq C\\max(1,|x_1|)\n \\qquad(x\\in E_{d,N}).$$ On $E_{d,N}\\cap\\{|x_1|>r_1\\}$, all $x_j$ are nonzero and $$\\label{ana:eq:ratio-bound}\n \\left|\\frac{H_d(x)_j}{a x_{j-1}}\\right|\\leq q\n \\qquad(2\\leq j\\leq m).$$ Consequently the holomorphic functions $$\\xi_j(x)=\\log\\left(\\frac{P_j(x_j)}{a x_{j-1}}\\right),\n \\qquad 2\\leq j\\leq m,$$ using the logarithm on $\\{|\\zeta-1|<1\\}$, satisfy $$|\\xi_j(x)|\\leq B:=-\\log(1-q).$$ Here the assertions about holomorphicity are on any open inverse image of the unit polydisc; all the estimates also hold on its closure. With $$D=d^{m-1},\\qquad\n \\rho_1=1,\\qquad \\rho_j=r_j(a\\rho_{j-1})^{1/d},$$ there is a single-valued holomorphic function $s$ on this end such that $$\\label{ana:eq:parameterization}\n x_j=\\rho_j s^{d^{m-j}}\n       \\exp\\left(\\sum_{k=2}^j\\frac{\\xi_k}{d^{j-k+1}}\\right),\n \\qquad 1\\leq j\\leq m.$$ For $j=1$, the sum is empty and this says $x_1=s^D$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ana-concentration"
+  },
+  {
+   "claim_id": "prop-polydisc-approximation",
+   "exact_statement": "Under the hypotheses of Theorem <a href=\"#ana:cap\" data-reference-type=\"ref\" data-reference=\"ana:cap\">14</a>, a map holomorphic near a closed polydisc in $\\mathbb C^m$ can be approximated uniformly there by entire maps $\\mathbb C^m\\to Y$. More precisely, a map near $\\overline\\Delta_1^{\\,m}$ can be approximated there by maps holomorphic near $\\overline\\Delta_R^{\\,m}$, for every finite $R>1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ana-polydisc"
+  },
+  {
+   "claim_id": "lemma-complexify-real-parameter",
+   "exact_statement": "Let $I\\subset\\mathbb R$ be a compact interval and let $C\\subset\\mathbb C^k$ be a compact convex set. Suppose $H_s(q)$ is a smooth family, for $s$ in a neighborhood of $I$, of holomorphic maps on a common neighborhood of $C$, with values in a complex surface. Smoothness is understood on a common neighborhood with all finite derivatives under consideration. For every finite $j$ and every $\\epsilon>0$, after an arbitrarily small loss of the specified compact margins, $H$ can be approximated in $C^j(I\\times C)$ by a map holomorphic on a neighborhood of $I\\times C$ in $\\mathbb C\\times\\mathbb C^k$. The size of this complex neighborhood may depend on the approximant. Additional closed polydisc factors can be included in $C$, with fixed larger neighborhoods.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-glue-interval"
+  },
+  {
+   "claim_id": "lemma-parameter-disc",
+   "exact_statement": "Assume ${\\cal A}_r$. Let $I\\subset\\mathbb R$ be a compact interval, $C\\subset\\mathbb C^r$ compact and convex, and $P$ a closed polydisc. A map holomorphic near $I\\times C\\times P$ can be approximated there, with any prescribed finite derivative accuracy and smaller positive margins, by entire maps of all the displayed complex variables.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ana-parameter-disc"
+  },
+  {
+   "claim_id": "lemma-convex-real-face",
+   "exact_statement": "Assume ${\\cal A}_{n-1}$, where $n\\geq1$, and Proposition <a href=\"#ana:polydisc\" data-reference-type=\"ref\" data-reference=\"ana:polydisc\">17</a>. Let $F\\subset\\mathbb R\\times\\mathbb C^{n-1}$ be compact and convex, and let $P$ be a closed polydisc. Every holomorphic map near $F\\times P$ can be approximated on $F\\times P$ by entire maps on $\\mathbb C^n\\times\\mathbb C^{\\dim P}$, with any fixed finite derivative accuracy along the real face and smaller positive margins.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ana-face"
+  },
+  {
+   "claim_id": "lemma-linear-trace-splitting",
+   "exact_statement": "There are $C>0$ and an integer $p\\geq1$ with the following property. For $0<h<\\min(r/2,1)$ and a vector-valued function $u$ on $M_r\\times B_b$ with the regularity just specified, there are linear operators producing functions $a^\\pm$, holomorphic on $Q_{r-h}^\\pm\\times B_b$ and continuous up to $M_{r-h}\\times B_b$, such that $$a^+-a^-=u\\quad\\hbox{on }M_{r-h}\\times B_b,\n \\qquad\n \\|a^+\\|_{r-h,b,*}+\\|a^-\\|_{r-h,b,*}\n       \\leq Ch^{-p}\\sup_{v\\in B_b}\\|u(\\,\\cdot\\,,v)\\|_{C^\\alpha(M_r)}.$$ The operators preserve holomorphic dependence on all auxiliary variables.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-glue-linear-trace"
+  },
+  {
+   "claim_id": "lemma-trace-gluing",
+   "exact_statement": "The conclusion of Lemma <a href=\"#glue:open\" data-reference-type=\"ref\" data-reference=\"glue:open\">15</a> holds for sprays on $Q_r^-$ and $Q_r^+$ when their transition is given on $M_r\\times B_b$ and is arbitrarily small in $$\\|c\\|_{r,b,\\alpha}\n       =\\sup_{v\\in B_b}\\|c(\\,\\cdot\\,,v)\\|_{C^\\alpha(M_r)}.$$ Here the sprays are holomorphic on the open sides, continuous up to the interface, and the transition is holomorphic in $(z',v)$ there. The resulting glued map is holomorphic across the interface. No lower bound is assumed for a complex normal thickness on which the input transition is small.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-glue-trace"
+  },
+  {
+   "claim_id": "prop-projective-strips",
+   "exact_statement": "Let $S$ be a smooth projective complex K3 surface. There is a nonempty Zariski open subset $U\\subset S$ such that, for every $x\\in U$, there are $b>0$ and holomorphic maps $$\\sigma_1:\\mathbb C\\times\\Delta_b\\longrightarrow S,\\qquad\n\\sigma_2:\\Delta_b\\times\\mathbb C\\longrightarrow S$$ which are locally biholomorphic at the origin and satisfy $$\\sigma_1(0,0)=\\sigma_2(0,0)=x,\\qquad\n\\sigma_1(z,0)=\\sigma_2(z,0)\\quad (|z|<b).$$ The complement $S\\setminus U$ is algebraic of dimension at most one. Consequently $S$ has property $L$ everywhere.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prj-strips"
+  },
+  {
+   "claim_id": "lemma-prepare-genus-one-families",
+   "exact_statement": "Let $S$ be a smooth projective integral surface, let $H$ be an ample divisor, and let $p:Y\\to T$ be a smooth proper family of connected genus-one curves over a smooth irreducible algebraic curve. Suppose that $q:Y\\to S$ has nonconstant source-curve moduli and that $q_{t_0}$ is the normalization map of an integral curve $C\\subset S$. After removing finitely many points of $T$, every $q_t$ normalizes an integral image curve $C_t$ with $H\\cdot C_t=H\\cdot C$. The evaluation map $q$ is dominant and generically finite, and some nonempty Zariski open $V\\subset S$ has finite etale surjective inverse image map $q^{-1}(V)\\to V$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prj-prepare"
+  },
+  {
+   "claim_id": "lemma-transverse-lifts",
+   "exact_statement": "There is a nonempty Zariski open $U\\subset V$ such that any two lifts $y_i\\in Y_i^V$ of a point $x\\in U$ have distinct transported vertical tangent lines $$dq_1\\bigl(\\ker(dp_1)_{y_1}\\bigr)\n\\ne dq_2\\bigl(\\ker(dp_2)_{y_2}\\bigr)\n\\quad\\text{in }T_xS.$$ The closure in $S$ of the exceptional locus has dimension at most one.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prj-transverse"
+  },
+  {
+   "claim_id": "lemma-complete-vertical-flows",
+   "exact_statement": "Let $p:Y\\to\\Delta$ be a proper holomorphic submersion with connected genus-one fibers. After shrinking the base disc, there is a nowhere-zero holomorphic vertical vector field whose flow is jointly holomorphic for all complex times. Its restriction to the central fiber may be prescribed as any nonzero holomorphic vector field there.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prj-flow"
+  },
+  {
+   "claim_id": "thm-annular-chain-sewing",
+   "exact_statement": "Let $M$ be a complex surface with a nowhere-zero holomorphic two-form $\\omega$. Fix $0<h<1/8$, $r>0$, and $A<\\infty$. For each $j\\in\\mathbb Z$, let $L_j\\geq1$ and let $$\\phi_j:\\{ -2h<Y<L_j+2h\\}\\times\\Delta_r\\longrightarrow M$$ be a holomorphic map with $\\phi_j^*\\omega=\\omega_0$. Suppose there are holomorphic translations $$J_j(w,p)=(w+a_j(p),p),\\qquad\n |\\operatorname{Im}a_j(p)+L_j|<h/8,\\qquad |a_j'(p)|\\leq A,$$ and exact symplectic transitions $F_j$ on $$S_j(h,r)=\\{|Y-L_j|<h\\}\\times\\Delta_r$$ such that $\\phi_j=\\phi_{j+1}\\circ F_j$. Write $$J_j^{-1}F_j=(w+u_j,p+v_j).$$ Assume these lifts exist and $\\sup_j\\|(u_j,v_j)\\|_{S_j(h,r)}\\leq e$.*\n\n*There are $b>0$ and $e_*>0$, depending only on $h,r,A$ and the indicated margins, such that, if $e<e_*$, these charts give a holomorphic symplectic immersion $$\\Phi:\\mathbb C\\times\\Delta_b\\longrightarrow M$$ which is periodic of period one in the first variable. On a smaller domain in every original block, with fixed positive margins at both ends, $\\Phi$ is obtained from $\\phi_j$ by a small periodic symplectic change of variables. The corrected transitions are $$(w,p)\\longmapsto(w+\\widetilde a_j(p),p).$$ The changes of variables and $\\widetilde a_j-a_j$, together with any fixed finite number of derivatives on further smaller domains, tend uniformly to zero as $e\\to0$. None of these assertions requires an upper bound for the $L_j$ or a bound on the number of blocks.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sew-chain"
+  },
+  {
+   "claim_id": "lemma-remove-zero-mode",
+   "exact_statement": "Suppose $E=(w+u,p+v)$ is exact symplectic on a seam and $\\|(u,v)\\|\\leq e$. After a margin loss $\\delta$ there are a holomorphic function $u_0(p)$ and a periodic mean-zero function $H$ such that $$(u,v)=(u_0,0)+X_H+R,\\qquad\n X_H=(H_p,-H_w),\\qquad\n \\|H\\|\\leq Ce,\\quad \\|R\\|\\leq C\\delta^{-2}e^2.$$ Here $u_0$ is the zero Fourier coefficient of $u$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sew-linearize"
+  },
+  {
+   "claim_id": "lemma-chain-splitting",
+   "exact_statement": "Suppose the periodic functions $H_j$ have mean zero, are holomorphic on $S_j(s,\\rho)$, and have norm at most $e$. Assume $$|\\operatorname{Im}a_j+L_j|\\leq\\kappa<1/4.$$ There are periodic holomorphic functions $G_j$ on $D_j(s-\\delta,\\rho)$ satisfying $$\\label{sew:split-equation}\n                  G_j-G_{j+1}\\circ J_j=-H_j.$$ on the smaller seams. Their bounds, on domains with the appropriate additional losses, are $$\\|G_j\\|\\leq C\\delta^{-1}e,\\qquad\n \\|X_{G_j}\\|\\leq C\\delta^{-2}e,\\qquad\n \\|DX_{G_j}\\|\\leq C\\delta^{-3}e.$$ All constants are uniform in the block lengths and the number of blocks.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sew-split"
+  },
+  {
+   "claim_id": "lemma-period-adjustment",
+   "exact_statement": "Suppose symplectically normalized charts, together with corresponding model charts, are available for centers varying in larger transverse discs. Suppose the actual charts are uniformly close to their models, and transitions at matching model positions are uniformly close to degree-one shears. The transition into a newly added block can be made exact by a transverse translation of that block of size bounded by its transition error. Recenter its model by the same translation. The approximation of that block by its own recentered model retains its original bound.*\n\n*Consequently, such adjustments can be repeated indefinitely whenever the updated centers remain in a region with uniform buffered chart choices. No bound on their accumulated displacement relative to the first center is required.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sew-centers"
+  },
+  {
+   "claim_id": "prop-open-period-region",
+   "exact_statement": "There is a nonempty open subset of the full marked K3 period domain such that every surface with period in this subset has property $L$ at every point.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-deg-open"
+  },
+  {
+   "claim_id": "lemma-regular-pencils",
+   "exact_statement": "The quadrics and $G$ can be chosen so that:*\n\n1.  *Through every point of $E$ on each component there is a regular fiber of one of these finitely many pencils.*\n\n2.  *The union of their regular fibers contains the complement of a proper algebraic subset of each component.*\n\n3.  *Every regular fiber has, away from $E$, a transverse intersection with a regular fiber of another pencil.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-deg-regular-pencils"
+  },
+  {
+   "claim_id": "lemma-core-coordinates",
+   "exact_statement": "On a small parameter disc of any compact regular family there are coordinates $(z,p)\\in\\mathbb P^1\\times\\Delta_r$ in which the two ends are $z=0,\\infty$ and $$\\omega_\\pm=\\frac{1}{2\\pi i}\\frac{dz}{z}\\wedge dp.$$ Either end can be designated as the entrance. With entrance at $\\infty$, exit at $0$, and $z=c\\exp(2\\pi i w)$, this reads $\\omega_\\pm=dw\\wedge dp$. The parameter $p$ is a local affine coordinate for either end position on $E$, read using its signed residue differential.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-deg-core-coordinates"
+  },
+  {
+   "claim_id": "lemma-buffered-seams",
+   "exact_statement": "There are fixed positive parameter and seam widths and a fixed bound on translation derivatives with the following property. Choose $d$ sufficiently small, then $\\alpha\\neq0$ sufficiently small depending on $d$. At matching nominal end positions the normalized core and neck charts have degree-one symplectic transitions of the form $$F_j=J_j\\circ(\\operatorname{id}+E_j),\\qquad\n         J_j(w,p)=(w+a_j(p),p),$$ on buffered seams. After choosing long-coordinate origins and cut heights, they satisfy the domain hypotheses of Theorem <a href=\"#sew:chain\" data-reference-type=\"ref\" data-reference=\"sew:chain\">27</a>, apart from exactness, and $$\\sup_j\\|E_j\\|\\leq C d+\\epsilon(d,\\alpha),\n              \\qquad \\epsilon(d,\\alpha)\\longrightarrow0\n                            \\quad(\\alpha\\to0, d\\text{ fixed}).$$ The widths and the bound for $a_j'$ can be chosen before $d$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-deg-seams"
+  },
+  {
+   "claim_id": "thm-rational-direction-open",
+   "exact_statement": "For every primitive positive integral vector $v\\in\\Lambda$, there is a nonempty relatively open subset $\\mathcal O_v\\subset\\mathcal D_v$ such that every marked K3 surface with period in $\\mathcal O_v$ has property $L$ at every point.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rat-open"
+  },
+  {
+   "claim_id": "lemma-isotrivial-center",
+   "exact_statement": "For every primitive $v\\in\\Lambda$ of square $2d>0$, there is a marked projective K3 surface $X_0$ whose period contains $v$ and which admits a genus-one fibration $$\\pi:X_0\\longrightarrow\\mathbb P^1$$ with all smooth fibers of $j$-invariant zero. Its primitive fiber class $e\\in\\Lambda$ satisfies $(e,v)=0$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-rat-center"
+  },
+  {
+   "claim_id": "lemma-safe-cycles",
+   "exact_statement": "The forms $\\eta_\\gamma$ and functions $h_\\gamma$ extend to $B$. The map $$h=(h_{\\gamma_1},h_{\\gamma_2}):B\\longrightarrow(\\mathbb R/\\mathbb Z)^2$$ has finite fibers. For each primitive $\\gamma$, put $$F_\\gamma=h_\\gamma(B\\setminus B^\\circ).$$ Outside a finite subset of $B$, at least two of the three cycles $\\gamma_1,\\gamma_2,\\gamma_1+\\gamma_2$ have action outside their respective finite sets $F_\\gamma$. Any two of these cycles form an integral homology basis.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rat-safe"
+  },
+  {
+   "claim_id": "lemma-uniform-strips-deformation",
+   "exact_statement": "Fix compact families of regular torus charts on $X_0$, each equipped with a safe primitive cycle, and suppose their actions are separated from the corresponding forbidden values by a positive margin. Prescribe any finite number of period cells in these initial data. For all sufficiently small $t\\in\\mathcal D_v$, each datum gives a symplectic immersed strip on $X_t$, periodic in its long coordinate with period $1$, of positive transverse width. On the prescribed initial cells its chart is arbitrarily close in $C^1$ to the original cylinder chart. All widths and closeness requirements can be chosen uniformly over the given compact data.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rat-strips"
+  },
+  {
+   "claim_id": "lemma-two-cycles-distinct-leaves",
+   "exact_statement": "In the setting of Lemma <a href=\"#rat:strips\" data-reference-type=\"ref\" data-reference=\"rat:strips\">38</a>, suppose two initial strips are obtained from independent primitive cycles of one central smooth torus. One can choose a finite required initial block length and a positive $C^1$ error tolerance from the central torus and its two cycles, before restricting the deformation parameter, with the following property. For strips meeting these bounds, if $$\\label{rat:destroy-fiber}\n ([\\sigma_t],e)\\ne0,$$ then $L$ holds at every point of the smaller tube covered by both initial strip charts.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rat-two-periods"
+  },
+  {
+   "claim_id": "lemma-orbit-density",
+   "exact_statement": "Let $P\\in\\mathcal D$.*\n\n1.  *If $P\\cap(\\Lambda\\otimes\\mathbb Q)=\\{0\\}$, its integral-isometry orbit is dense in $\\mathcal D$.*\n\n2.  *If $P\\cap(\\Lambda\\otimes\\mathbb Q)=\\mathbb Qv$ for a primitive integral vector $v$, its orbit under integral isometries fixing $v$ is dense in $\\mathcal D_v$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-dyn-orbits"
+  },
+  {
+   "claim_id": "cor-oka-one-interpolation",
+   "exact_statement": "Let $S$ be a complex K3 surface, $R$ an open Riemann surface, $K\\subset R$ a compact Runge set, and $A=\\{a_j:j\\geq1\\}\\subset R$ a closed discrete set of distinct points. Let $k_j\\geq1$ be integers. For every continuous map $h:R\\to S$ holomorphic near $K\\cup A$ and every $\\epsilon>0$, there is a holomorphic map $f:R\\to S$, homotopic to $h$, satisfying $$\\sup_{z\\in K}d_S(f(z),h(z))<\\epsilon,\n \\qquad j_{a_j}^{k_j}f=j_{a_j}^{k_j}h\\quad(j\\geq1).$$ Finite or empty interpolation sets are also allowed. If each prescribed first derivative is nonzero, $f$ can be chosen to be an immersion.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-oka1"
+  },
+  {
+   "claim_id": "cor-surface-classification",
+   "exact_statement": "Every complex Enriques surface is Oka. More generally, every connected minimal compact complex surface of Kodaira dimension zero is Oka. A connected minimal compact complex surface of class VII is Oka if and only if it is a Hopf surface or an Enoki surface.",
+   "kind": "classification",
+   "statement_anchor": "stmt-cor-surface-classification"
+  },
+  {
+   "claim_id": "cor-global-spray",
+   "exact_statement": "Every projective complex K3 surface and every complex Enriques surface is elliptic in Gromov’s sense.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-global-spray"
+  }
+ ],
+ "paper": "papers/EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-C-TO-H-0116_PM-042.1_Every_complex_K3_surface_is_Oka.md",
+ "purpose": "Every complex K3 surface is Oka",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "a03b6c7e079fd7cc5755813b562b88043d2d600d72adb5e4b5e3e2eb1038e2ca",
+   "pm.domains.v2": "ef34d604320cdfa381915ff792460fa93efdd42ab05b3fb7115552cb774ad50a",
+   "pm.edges.v2": "3dc879a27db25bc2f809c83cdcfe5288979819a7668ac703b58391a3d697382d",
+   "pm.extraction.v2": "bcf049db5c1d82f299207f68931ec2def1a80d83a655e17c7b2df5929f74d852",
+   "pm.formal.v2": "4149989e2235b8ad7ff9fbee7104ea2860fe9651d72e553f8e83c9c44bcaf11d",
+   "pm.limits.v2": "fa22b7fadd9f2674bf26fc72a69f27113573ef4defaf70616f62be82e41933ca",
+   "pm.node.v2": "bcbb2cacaab329ed8e30cd0af5783924d0f289a2758d2eb88ac2630794e281c9",
+   "pm.objects.v2": "da47b9caf58b653eefd1d1b841881ebedf2dcb471c220c4b0bb2bcb35c44ba65",
+   "pm.provenance.v2": "6f862e01cb967562b7b3809886a339651ddefdb4c276ed7d40473dbb35c6a74a",
+   "pm.quantities.v2": "3b6495c47df908acd4b9583c06c9ad27fe7357f2b973d44526af8f4c7da4aaa1",
+   "pm.reading.v2": "e8a27fc5a1a496529488126963a15400cc80162b79a8c5cbab26c04c34276903",
+   "pm.roadmap.v2": "3badb57700766393fd49acae7b6156839d3cf194283981f68d0070d1e72dc3a9",
+   "pm.search.v1": "d93877fdea7946527f0ddc03df1a5d488696d0731c153a5fbc86a4d6b2440bcc",
+   "pm.triptych.v2": "3b695b7fa5ff001501732120a8f72083abeefb7cef654c6a9cccafef0c71653e"
+  },
+  "canonical_sha256": "73daa86821af52bf3130cddcb859b82d1a0bdba5ce1973d312f528642b05ae1d",
+  "paper_sha256": "c27bc2f9850802815a3526940857a133259d56308662a04d9a02bff48cd0ddb5",
+  "repaired_body_sha256": "29e7145ee295474ff022dbe908588e1ebfbae920e607315390c7cd11871a2729"
+ },
+ "status": "ACTIVE",
+ "subject_id": 3,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "64a4b72592f0a369fbc87b017cc1d3bf51abf0dd70f5f204bc44b421167646d8",
+   "receipt_sha256": "8e8e02e3bca082ce161a1be2873a0f1e79d16564a3cf7382ebea645bdd942445",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Every complex K3 surface is Oka"
+}

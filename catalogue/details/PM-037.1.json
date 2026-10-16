@@ -1,0 +1,940 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 759915,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 216986
+ },
+ "coordinate": "EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-C-TO-H-0106",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Algebraic geometry and commutative algebra",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "Let $n\\ge2$, and let $x$ be a singular closed point of a normal complex algebraic $n$-fold $X$.",
+     "quote_sha256": "3e83d50299f78969815b40f46a32bf8809c969b644a1f3c3ff5139ebdd1c838a"
+    },
+    {
+     "anchor": "sec:introduction",
+     "quote": "In dimension $n$, the largest normalized volume is $n^n$, attained exactly at smooth points (Liu and Xu 2019, Theorem 1.6) [[LX19](#ref-LX19)].",
+     "quote_sha256": "d2bbe9cc17d8bb7e9877a73a8600520a521df9bad0db180db3c310239f5380e5"
+    }
+   ],
+   "query": "Apply the singular gap bound at a smooth point.",
+   "reason": "The local theorem explicitly assumes a singular closed point, while the paper separately identifies the smooth-point maximum."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "Suppose that $K_X$ is $\\mathbb Q$-Cartier and that $X$ is klt near $x$, with zero boundary.",
+     "quote_sha256": "c8f36dd64c5c9df576021426f120911e4dbe9ba09b2179a7db9cc3eab62c8810"
+    },
+    {
+     "anchor": "pm-h-7",
+     "quote": "Boundaries are zero unless a boundary is explicitly introduced in a vanishing argument.",
+     "quote_sha256": "80cbd7b3182ce2491d2a40452274af4911dafe888a57b848d2278d3506307a0e"
+    }
+   ],
+   "query": "Use the main theorem for a nonzero-boundary pair or a non-klt germ.",
+   "reason": "The main theorem requires klt near the point and zero boundary. Boundaries introduced for vanishing do not enlarge the main theorem's scope."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-7",
+     "quote": "All varieties and stacks in the proof are over $\\mathbb C$.",
+     "quote_sha256": "9d8f8da3adfebf57222e70e76494b4c0ba47a6a3a3b1d4df7c6956dbe54a916a"
+    },
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "Let $n\\ge2$, and let $x$ be a singular closed point of a normal complex algebraic $n$-fold $X$.",
+     "quote_sha256": "3e83d50299f78969815b40f46a32bf8809c969b644a1f3c3ff5139ebdd1c838a"
+    }
+   ],
+   "query": "Transfer the gap and analytic equality classification to positive or mixed characteristic.",
+   "reason": "The paper's ambient varieties and stacks are over the complex numbers, and the equality assertion is complex analytic."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "The smaller singular bound in Corollary <a href=\"#cor:global\" data-reference-type=\"ref\" data-reference=\"cor:global\">2</a> is not accompanied by an assertion of sharpness or a classification of its equality cases.",
+     "quote_sha256": "210a7da740620c498e10179a4262f6b2a42d31d773fb4689df8e2aa47008c056"
+    }
+   ],
+   "query": "Infer sharpness or equality classification for the smaller singular Fano bound.",
+   "reason": "The paper explicitly withholds both assertions for that bound."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-jet-setup",
+     "quote": "No saturation assumption on $\\Gamma$ is required.",
+     "quote_sha256": "5f8f8c97a966354568f5ee67e9483e529c8de0d509df0201ebecdd4fce1ede40"
+    },
+    {
+     "anchor": "stmt-adj-saturation",
+     "quote": "Suppose $c_0\\in\\mathop{\\mathrm{int}}K$.",
+     "quote_sha256": "e121e1a8d5ee51b0b25cf0ee37ad140fdb48640da025af9eda5f264bc51e0a5b"
+    }
+   ],
+   "query": "Treat asymptotic jet-semigroup counting as proof of exact saturation.",
+   "reason": "The counting result needs no saturation assumption; exact saturation follows only after canonical interiority and adjoint lifting."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "cone:eq-density",
+     "quote": "Our normalization is $$\\label{cone:eq-density}\n \\widehat{\\operatorname{vol}}(x,X)=\\inf_v\\widehat{\\operatorname{vol}}_X(v),\\qquad\n d(x,X)=\\frac{\\widehat{\\operatorname{vol}}(x,X)}{n^n}.$$",
+     "quote_sha256": "4961f2efe53823279d334b5791ac61262c40fdab57e63dfc579e938849c13bd1"
+    }
+   ],
+   "query": "Interpret normalized volume as memory usage, spatial mesh volume, or a software dependency-graph invariant.",
+   "reason": "The invariant is defined through discrepancy and asymptotic colength of valuation ideals in an algebraic germ; those engineering objects do not supply this structure."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-11",
+     "quote": "No uniformity over the class defining $M_n$ is asserted or needed.",
+     "quote_sha256": "b85ee2efb448fa9fb556831c86a7328feec07fa60223108fc1fd66ded9d9cc97"
+    },
+    {
+     "anchor": "proof-stmt-boot-upper",
+     "quote": "All choices of sufficiently fast gradings in this argument are made separately for each fixed cone $C_i$.",
+     "quote_sha256": "ec5cdbc258ad13dd077ab4a049579de437d75376a329216c52d58e3c1a21e572"
+    }
+   ],
+   "query": "Assume uniform grading approximation constants or a uniform stopping index across all singular cones.",
+   "reason": "The argument fixes each cone separately and explicitly disclaims uniformity over the supremum class."
+  }
+ ],
+ "family": "PM-037",
+ "id": "PM-037.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-ordinary-double-point-gap",
+    "statement": "Let $n\\ge2$, and let $x$ be a singular closed point of a normal complex algebraic $n$-fold $X$."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-ordinary-double-point-gap",
+    "statement": "Suppose that $K_X$ is $\\mathbb Q$-Cartier and that $X$ is klt near $x$, with zero boundary."
+   },
+   {
+    "anchor": "stmt-cor-global",
+    "claim_id": "claim-global-fano-volume",
+    "statement": "Let $V$ be an $n$-dimensional K-semistable $\\mathbb Q$-Fano variety, where $n\\ge2$."
+   },
+   {
+    "anchor": "stmt-cor-global",
+    "claim_id": "claim-global-fano-volume",
+    "statement": "If $V$ is singular,"
+   },
+   {
+    "anchor": "stmt-cor-global",
+    "claim_id": "claim-global-fano-volume",
+    "statement": "If $V\\not\\cong\\mathbb P^n$,"
+   },
+   {
+    "anchor": "stmt-cone-product",
+    "claim_id": "claim-smooth-factor-density",
+    "statement": "Let $y\\in Y$ be an $N$-dimensional klt germ, where $N\\ge1$."
+   },
+   {
+    "anchor": "stmt-cone-edim",
+    "claim_id": "claim-associated-graded-embedding-dimension",
+    "statement": "Let $v$ be a finite-discrepancy valuation of a klt germ, with finitely generated positively graded associated graded ring $\\mathop{\\mathrm{gr}}_v R$."
+   },
+   {
+    "anchor": "stmt-end-odp-value",
+    "claim_id": "claim-ordinary-double-point-minimum",
+    "statement": "For $n\\ge2$,"
+   },
+   {
+    "anchor": "stmt-inp-fourfold",
+    "claim_id": "claim-fourfold-base-gap",
+    "statement": "Let $x$ be a singular closed point of a normal complex algebraic fourfold $X$."
+   },
+   {
+    "anchor": "stmt-inp-fourfold",
+    "claim_id": "claim-fourfold-base-gap",
+    "statement": "Suppose that $K_X$ is $\\mathbb Q$-Cartier and $X$ is klt near $x$, with zero boundary."
+   },
+   {
+    "anchor": "cone:eq-induction",
+    "claim_id": "claim-density-preserving-cone-reduction",
+    "statement": "Henceforth, until the induction is closed, assume Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> in dimensions below $n$, and fix $$\\label{cone:eq-induction}\n n=N+1\\ge5,\\qquad\n d(x,X)\\ge p_n,$$ with $x$ singular. The only use of $M_n$ will be its definition as a supremum, not an unproved upper bound in dimension $n$."
+   },
+   {
+    "anchor": "pm-h-11",
+    "claim_id": "claim-fast-primitive-gradings",
+    "statement": "Fix the cone of Proposition <a href=\"#cone:reduction\" data-reference-type=\"ref\" data-reference=\"cone:reduction\">7</a>. Let $\\mathbb T$ be an effective algebraic torus of automorphisms containing its Reeb vector $\\xi$, and normalize $$A(\\xi)=n.$$"
+   },
+   {
+    "anchor": "stmt-cone-orbifold",
+    "claim_id": "claim-faithful-quotient-orbifold",
+    "statement": "For a primitive positive integral grading $\\zeta$, of canonical weight $r$, let $$B=[(C\\setminus\\{o\\})/\\mathbb G_m].$$"
+   },
+   {
+    "anchor": "stmt-small-classification",
+    "claim_id": "claim-small-stabilizer-classification",
+    "statement": "Let $\\zeta_i$ be primitive positive integral gradings satisfying $$\\zeta_i=\\frac{r_i}{n}\\xi+\\epsilon_i,\n \\qquad r_i=A(\\zeta_i),\\qquad \\|\\epsilon_i\\|\\longrightarrow0,\n \\qquad m_{\\max}(\\zeta_i)\\leq\\frac{r_i}{N}.\n \\label{small:fast-sequence}$$ For all sufficiently large $i$, every stabilizer is trivial and $r_i\\in\\{N,N+1\\}$."
+   },
+   {
+    "anchor": "stmt-small-deformation",
+    "claim_id": "claim-fixed-lift-deformation-dimension",
+    "statement": "Let $b_1',\\ldots,b_n'\\in\\{1,\\ldots,m\\}$ represent the characters of $\\mu_m$ on $T_{C,P}$, with the trivial character represented by $m$."
+   },
+   {
+    "anchor": "small:evaluation",
+    "claim_id": "claim-finite-surjective-evaluation",
+    "statement": "Assume that the exception in Lemma <a href=\"#small:deformation\" data-reference-type=\"ref\" data-reference=\"small:deformation\">11</a> does not occur."
+   },
+   {
+    "anchor": "stmt-small-norm-tensor",
+    "claim_id": "claim-negative-weight-symmetric-tensor",
+    "statement": "Let $b$ be the degree of the finite evaluation in Lemma <a href=\"#small:finite-evaluation\" data-reference-type=\"ref\" data-reference=\"small:finite-evaluation\">12</a>."
+   },
+   {
+    "anchor": "stmt-small-tensor-bound",
+    "claim_id": "claim-reeb-tensor-weight-bound",
+    "statement": "Let $b\\geq1$, and let $s$ be a nonzero homogeneous algebraic section of $\\mathop{\\mathrm{Sym}}^bT_{C^\\circ}$, of $\\xi$-weight $\\tau$, with vector fields weighted as derivations."
+   },
+   {
+    "anchor": "stmt-small-character-estimate",
+    "claim_id": "claim-rank-uniform-character-control",
+    "statement": "If a nonzero rank-$b$ tensor on $C^\\circ$ has integral-grading weight $-bm$, with $m>0$,"
+   },
+   {
+    "anchor": "jet:density-hypothesis",
+    "claim_id": "claim-jet-semigroup-and-cone-setup",
+    "statement": "$$\\label{jet:density-hypothesis}\n \\widehat{\\operatorname{vol}}(o,C)\\ge 2N^n.$$ Take the primitive positive gradings of Lemma <a href=\"#cone:approximation\" data-reference-type=\"ref\" data-reference=\"cone:approximation\">8</a>, so that $$\\zeta_\\nu=(r_\\nu/n)\\xi+\\epsilon_\\nu,\n \\qquad r_\\nu=A_C(\\zeta_\\nu),\\qquad \\epsilon_\\nu\\longrightarrow0$$ in absolute cocharacter norm. In the rational case we use the exact constant grading. Consider a subsequence on which the largest stabilizer order satisfies $m_\\nu\\ge r_\\nu/N$, and choose a point attaining that order. We suppress the index $\\nu$ when discussing a single grading. Constants carrying a subscript $C$ may depend on this fixed cone and on $N$; no uniformity over different cones is needed."
+   },
+   {
+    "anchor": "jet:section",
+    "claim_id": "claim-jet-semigroup-and-cone-setup",
+    "statement": "Consider a subsequence on which the largest stabilizer order satisfies $m_\\nu\\ge r_\\nu/N$, and choose a point attaining that order."
+   },
+   {
+    "anchor": "stmt-jet-test",
+    "claim_id": "claim-degree-taylor-test-valuations",
+    "statement": "For $\\delta\\in\\mathbb Q_{\\ge0}$,"
+   },
+   {
+    "anchor": "jet:density-hypothesis",
+    "claim_id": "claim-near-minimal-moment-inequalities",
+    "statement": "$$\\label{jet:density-hypothesis}\n \\widehat{\\operatorname{vol}}(o,C)\\ge 2N^n.$$ Take the primitive positive gradings of Lemma <a href=\"#cone:approximation\" data-reference-type=\"ref\" data-reference=\"cone:approximation\">8</a>, so that $$\\zeta_\\nu=(r_\\nu/n)\\xi+\\epsilon_\\nu,\n \\qquad r_\\nu=A_C(\\zeta_\\nu),\\qquad \\epsilon_\\nu\\longrightarrow0$$ in absolute cocharacter norm. In the rational case we use the exact constant grading. Consider a subsequence on which the largest stabilizer order satisfies $m_\\nu\\ge r_\\nu/N$, and choose a point attaining that order. We suppress the index $\\nu$ when discussing a single grading. Constants carrying a subscript $C$ may depend on this fixed cone and on $N$; no uniformity over different cones is needed."
+   },
+   {
+    "anchor": "stmt-prob-bound",
+    "claim_id": "claim-universal-exponential-supremum",
+    "statement": "For $u=4/3$"
+   },
+   {
+    "anchor": "jet:moment-notation",
+    "claim_id": "claim-universal-exponential-supremum",
+    "statement": "Let $X_1,\\ldots,X_N$ be independent exponential random variables of mean one."
+   },
+   {
+    "anchor": "stmt-prob-logconcavity",
+    "claim_id": "claim-exponential-logconcavity-and-centroid-bound",
+    "statement": "A nonzero mean-zero linear combination of independent mean-one exponentials has a positive continuous log-concave density on the whole real line."
+   },
+   {
+    "anchor": "stmt-prob-logconcavity",
+    "claim_id": "claim-exponential-logconcavity-and-centroid-bound",
+    "statement": "If $Z$ has such a density,"
+   },
+   {
+    "anchor": "stmt-prob-single-crossing",
+    "claim_id": "claim-strict-exponential-single-crossing",
+    "statement": "Let $Z$ have a positive log-concave probability density on $\\mathbb R$, and let $E$ be an independent mean-one exponential."
+   },
+   {
+    "anchor": "stmt-prob-single-crossing",
+    "claim_id": "claim-strict-exponential-single-crossing",
+    "statement": "If $$\\mathbb E k(Z+c_*E)=0,$$"
+   },
+   {
+    "anchor": "stmt-prob-critical-points",
+    "claim_id": "claim-finite-local-maximizer-shape",
+    "statement": "Fix $u>0$ and $N\\ge2$."
+   },
+   {
+    "anchor": "jet:density-hypothesis",
+    "claim_id": "claim-canonical-jet-interiority",
+    "statement": "$$\\label{jet:density-hypothesis}\n \\widehat{\\operatorname{vol}}(o,C)\\ge 2N^n.$$ Take the primitive positive gradings of Lemma <a href=\"#cone:approximation\" data-reference-type=\"ref\" data-reference=\"cone:approximation\">8</a>, so that $$\\zeta_\\nu=(r_\\nu/n)\\xi+\\epsilon_\\nu,\n \\qquad r_\\nu=A_C(\\zeta_\\nu),\\qquad \\epsilon_\\nu\\longrightarrow0$$ in absolute cocharacter norm. In the rational case we use the exact constant grading. Consider a subsequence on which the largest stabilizer order satisfies $m_\\nu\\ge r_\\nu/N$, and choose a point attaining that order. We suppress the index $\\nu$ when discussing a single grading. Constants carrying a subscript $C$ may depend on this fixed cone and on $N$; no uniformity over different cones is needed."
+   },
+   {
+    "anchor": "jet:section",
+    "claim_id": "claim-canonical-jet-interiority",
+    "statement": "Consider a subsequence on which the largest stabilizer order satisfies $m_\\nu\\ge r_\\nu/N$, and choose a point attaining that order."
+   },
+   {
+    "anchor": "stmt-adj-vanishing",
+    "claim_id": "claim-orbifold-adjoint-vanishing",
+    "statement": "Let $\\mathcal X$ be a smooth proper Deligne–Mumford stack over $\\mathbb C$, with trivial generic stabilizer and projective coarse space."
+   },
+   {
+    "anchor": "stmt-adj-vanishing",
+    "claim_id": "claim-orbifold-adjoint-vanishing",
+    "statement": "Let $\\Theta$ be an effective rational divisor with simple normal crossing support and coefficients less than one."
+   },
+   {
+    "anchor": "stmt-adj-vanishing",
+    "claim_id": "claim-orbifold-adjoint-vanishing",
+    "statement": "If $D$ is a Cartier divisor and $D-(K_{\\mathcal X}+\\Theta)$ is nef and big,"
+   },
+   {
+    "anchor": "stmt-adj-implication",
+    "claim_id": "claim-canonically-shifted-adjoint-lifting",
+    "statement": "(Adjoint lattice points). *For the orbifold jet data above, $$\\label{adj:adjoint-implication} (j,\\alpha)\\in\\Lambda,\\qquad (j,\\alpha)+c_0\\in\\mathop{\\mathrm{int}}K \\quad\\Longrightarrow\\quad (j,\\alpha)\\in\\Gamma.$$*"
+   },
+   {
+    "anchor": "stmt-adj-implication",
+    "claim_id": "claim-canonically-shifted-adjoint-lifting",
+    "statement": "(Adjoint lattice points). *For the orbifold jet data above, $$\\label{adj:adjoint-implication} (j,\\alpha)\\in\\Lambda,\\qquad (j,\\alpha)+c_0\\in\\mathop{\\mathrm{int}}K \\quad\\Longrightarrow\\quad (j,\\alpha)\\in\\Gamma.$$*"
+   },
+   {
+    "anchor": "stmt-adj-saturation",
+    "claim_id": "claim-rational-polyhedral-saturated-jet-semigroup",
+    "statement": "Suppose $c_0\\in\\mathop{\\mathrm{int}}K$."
+   },
+   {
+    "anchor": "filt:semigroup-input",
+    "claim_id": "claim-taylor-graded-ring-and-compatible-basis",
+    "statement": "Fix one of the gradings and points furnished by Theorem <a href=\"#adj:saturation\" data-reference-type=\"ref\" data-reference=\"adj:saturation\">26</a>. We retain the original degree $j$ and put $n=N+1$, with $N\\geq4$. Thus $S=\\mathbb C[C]$ is a positively graded normal Gorenstein domain, its vertex $o$ is singular, and its canonical module has a homogeneous generator of original degree $r$. The Taylor semigroup and its lattice satisfy $$\\label{filt:semigroup-input}\n \\Gamma=K\\cap\\Lambda,\\qquad\n \\mathop{\\mathrm{int}}(K)\\cap\\Lambda=c_0+\\Gamma,\\qquad\n c_0=(r,1,\\ldots,1).$$ Here $K$ is rational polyhedral. We also use the finite Taylor-order bound and the eventual realization of compatible jets from Proposition <a href=\"#jet:setup\" data-reference-type=\"ref\" data-reference=\"jet:setup\">16</a>. The only volume hypothesis in this section is $$\\label{filt:volume-hypothesis}\n \\widehat{\\operatorname{vol}}(o,C)\\geq 2N^n.$$ The first filtration separates total Taylor order from original degree. We then assign positive cost to the constant Taylor direction as well. The resulting second graded ring has a nontrivial stabilizer, which will supply the same-dimensional slice in Section <a href=\"#boot:section\" data-reference-type=\"ref\" data-reference=\"boot:section\">7</a>."
+   },
+   {
+    "anchor": "stmt-filt-discrepancy",
+    "claim_id": "claim-rees-canonical-form-and-discrepancy",
+    "statement": "Suppose $F$ respects original degree, has finite length in each original homogeneous piece, and $\\mathop{\\mathrm{gr}}_F S$ is finitely generated."
+   },
+   {
+    "anchor": "stmt-filt-discrepancy",
+    "claim_id": "claim-rees-canonical-form-and-discrepancy",
+    "statement": "Suppose also that $\\mathfrak X=\\mathop{\\mathrm{Spec}}R_F$ is normal and Gorenstein, and that $\\mathop{\\mathrm{gr}}_F S$ is Cohen–Macaulay and Gorenstein with a canonical generator of bidegree $(r,Q)$."
+   },
+   {
+    "anchor": "stmt-filt-discrepancy",
+    "claim_id": "claim-rees-canonical-form-and-discrepancy",
+    "statement": "If $w$ is centered at $o$,"
+   },
+   {
+    "anchor": "filt:volume-hypothesis",
+    "claim_id": "claim-reduced-constant-section-quotient",
+    "statement": "Fix one of the gradings and points furnished by Theorem <a href=\"#adj:saturation\" data-reference-type=\"ref\" data-reference=\"adj:saturation\">26</a>. We retain the original degree $j$ and put $n=N+1$, with $N\\geq4$. Thus $S=\\mathbb C[C]$ is a positively graded normal Gorenstein domain, its vertex $o$ is singular, and its canonical module has a homogeneous generator of original degree $r$. The Taylor semigroup and its lattice satisfy $$\\label{filt:semigroup-input}\n \\Gamma=K\\cap\\Lambda,\\qquad\n \\mathop{\\mathrm{int}}(K)\\cap\\Lambda=c_0+\\Gamma,\\qquad\n c_0=(r,1,\\ldots,1).$$ Here $K$ is rational polyhedral. We also use the finite Taylor-order bound and the eventual realization of compatible jets from Proposition <a href=\"#jet:setup\" data-reference-type=\"ref\" data-reference=\"jet:setup\">16</a>. The only volume hypothesis in this section is $$\\label{filt:volume-hypothesis}\n \\widehat{\\operatorname{vol}}(o,C)\\geq 2N^n.$$ The first filtration separates total Taylor order from original degree. We then assign positive cost to the constant Taylor direction as well. The resulting second graded ring has a nontrivial stabilizer, which will supply the same-dimensional slice in Section <a href=\"#boot:section\" data-reference-type=\"ref\" data-reference=\"boot:section\">7</a>."
+   },
+   {
+    "anchor": "filt:W-definition",
+    "claim_id": "claim-multiplicative-second-filtration",
+    "statement": "$$\\label{filt:W-definition}\n W(v^a e_i)=a+T_i$$ and taking spans of basis vectors of cost at least the indicated level. Unlike $T$, this filtration is positive on every nonconstant original-homogeneous vector."
+   },
+   {
+    "anchor": "stmt-filt-free-grading",
+    "claim_id": "claim-free-grading-polynomial-rigidity",
+    "statement": "Let $E$ be a finitely generated positively graded reduced equidimensional Cohen–Macaulay $\\mathbb C$-algebra of dimension $N\\geq2$, with $E_0=\\mathbb C$ and $\\mathop{\\mathrm{Hilb}}E(z)=(1-z)^{-N}$."
+   },
+   {
+    "anchor": "stmt-filt-free-grading",
+    "claim_id": "claim-free-grading-polynomial-rigidity",
+    "statement": "If the grading action has trivial stabilizer at every nonvertex closed point of $\\mathop{\\mathrm{Spec}}E$,"
+   },
+   {
+    "anchor": "filt:semigroup-input",
+    "claim_id": "claim-nontrivial-second-stabilizer",
+    "statement": "Thus $S=\\mathbb C[C]$ is a positively graded normal Gorenstein domain, its vertex $o$ is singular, and its canonical module has a homogeneous generator of original degree $r$."
+   },
+   {
+    "anchor": "pm-h-41",
+    "claim_id": "claim-uniformizing-slice-and-valuation-tests",
+    "statement": "Set $y=(y_D,0)\\in\\mathop{\\mathrm{Spec}}D[\\mathtt v]$, considered as a point of the central fiber of $\\mathfrak X$."
+   },
+   {
+    "anchor": "stmt-boot-slice-tests",
+    "claim_id": "claim-slice-klt",
+    "statement": "There is a normal Gorenstein algebraic germ $y\\in Y$ of dimension $n$, preserved by $\\mu_h$, with a nonzero function $\\lambda_Y\\in\\mathfrak m_{Y,y}$ of character $-1$, such that $Y$ is klt away from $\\lambda_Y=0$."
+   },
+   {
+    "anchor": "filt:volume-hypothesis",
+    "claim_id": "claim-slice-klt",
+    "statement": "Fix one of the gradings and points furnished by Theorem <a href=\"#adj:saturation\" data-reference-type=\"ref\" data-reference=\"adj:saturation\">26</a>. We retain the original degree $j$ and put $n=N+1$, with $N\\geq4$. Thus $S=\\mathbb C[C]$ is a positively graded normal Gorenstein domain, its vertex $o$ is singular, and its canonical module has a homogeneous generator of original degree $r$. The Taylor semigroup and its lattice satisfy $$\\label{filt:semigroup-input}\n \\Gamma=K\\cap\\Lambda,\\qquad\n \\mathop{\\mathrm{int}}(K)\\cap\\Lambda=c_0+\\Gamma,\\qquad\n c_0=(r,1,\\ldots,1).$$ Here $K$ is rational polyhedral. We also use the finite Taylor-order bound and the eventual realization of compatible jets from Proposition <a href=\"#jet:setup\" data-reference-type=\"ref\" data-reference=\"jet:setup\">16</a>. The only volume hypothesis in this section is $$\\label{filt:volume-hypothesis}\n \\widehat{\\operatorname{vol}}(o,C)\\geq 2N^n.$$ The first filtration separates total Taylor order from original degree. We then assign positive cost to the constant Taylor direction as well. The resulting second graded ring has a nontrivial stabilizer, which will supply the same-dimensional slice in Section <a href=\"#boot:section\" data-reference-type=\"ref\" data-reference=\"boot:section\">7</a>."
+   },
+   {
+    "anchor": "stmt-boot-slice-tests",
+    "claim_id": "claim-slice-singularity",
+    "statement": "There is a normal Gorenstein algebraic germ $y\\in Y$ of dimension $n$, preserved by $\\mu_h$, with a nonzero function $\\lambda_Y\\in\\mathfrak m_{Y,y}$ of character $-1$, such that $Y$ is klt away from $\\lambda_Y=0$."
+   },
+   {
+    "anchor": "stmt-filt-stabilizer",
+    "claim_id": "claim-slice-singularity",
+    "statement": "There is a nonvertex closed point of $\\mathop{\\mathrm{Spec}}D$ whose $T$-grading stabilizer has order $h\\geq2$."
+   },
+   {
+    "anchor": "stmt-boot-character-shares",
+    "claim_id": "claim-equal-leading-character-colengths",
+    "statement": "Let $R=\\mathcal O_{Y,y}$ and let $\\mathfrak a_t=\\{g\\in R:u_*(g)\\geq t\\}$."
+   },
+   {
+    "anchor": "stmt-boot-refined-estimate",
+    "claim_id": "claim-refined-character-slice-volume",
+    "statement": "For the minimizing slice valuation and its restriction,"
+   },
+   {
+    "anchor": "stmt-boot-holder",
+    "claim_id": "claim-holder-supremum-bootstrap",
+    "statement": "For the fixed cone and large-stabilizer construction,"
+   },
+   {
+    "anchor": "stmt-boot-upper",
+    "claim_id": "claim-inductive-singular-density-upper-bound",
+    "statement": "Assume the local ODP volume theorem in all dimensions smaller than $n$."
+   },
+   {
+    "anchor": "pm-h-44",
+    "claim_id": "claim-equality-valuation-identities",
+    "statement": "Suppose now that the fixed cone satisfies $d(o,C)=p_n$."
+   },
+   {
+    "anchor": "stmt-boot-equality-data",
+    "claim_id": "claim-distinguished-section-strict-count",
+    "statement": "One has $h=2$, $d(y,Y)=p_n$, and $A'=N\\ell$. After rescaling $u_*$ so that $\\ell=1$, the resulting restriction $w$ satisfies $$\\label{boot:equality-identities}\n A'=N,\n \\qquad \\sigma=2,\n \\qquad A_C(w)=2N,\n \\qquad \\mathop{\\mathrm{vol}}(w)=2^{-N},\n \\qquad w=\\frac{2N}{n}\\operatorname{wt}_\\xi.$$ The optimal splitting fraction in Equation <a href=\"#boot:refined-volume\" data-reference-type=\"eqref\" data-reference=\"boot:refined-volume\">[boot:refined-volume]</a> is $x=1/2$, and all inequalities producing that estimate are equalities at the level of leading coefficients."
+   },
+   {
+    "anchor": "pm-h-44",
+    "claim_id": "claim-integral-maximal-stabilizer-rounding",
+    "statement": "Suppose now that the fixed cone satisfies $d(o,C)=p_n$."
+   },
+   {
+    "anchor": "stmt-boot-equality-cone",
+    "claim_id": "claim-equality-cone-is-ordinary-double-point",
+    "statement": "If a singular cone obtained in Proposition <a href=\"#cone:reduction\" data-reference-type=\"ref\" data-reference=\"cone:reduction\">7</a> satisfies $d(o,C)=p_n$,"
+   },
+   {
+    "anchor": "stmt-end-hypersurface-test",
+    "claim_id": "claim-positive-weight-hypersurface-test",
+    "statement": "Let $x\\in X$ be a klt hypersurface germ of dimension $n$, with equation $F$ in regular ambient parameters $z_0,\\ldots,z_n$."
+   },
+   {
+    "anchor": "stmt-end-hypersurface-test",
+    "claim_id": "claim-positive-weight-hypersurface-test",
+    "statement": "For positive rational weights $w_0,\\ldots,w_n$,"
+   },
+   {
+    "anchor": "stmt-end-hypersurface",
+    "claim_id": "claim-hypersurface-equality-rigidity",
+    "statement": "If $x\\in X$ is a singular klt hypersurface germ of dimension $n\\ge2$,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "The ordinary-double-point gap induction",
+    "evidence": [
+     {
+      "anchor": "pm-h-10",
+      "quote": "The companion paper *The normalized-volume gap in dimension four* (OpenAI 2026, Theorem 1.1) [[FourfoldCompanion](#ref-FourfoldCompanion)] proves the following base case.",
+      "quote_sha256": "a84b88ec7a39aa762aa92a77bef06fca2ada99ca7e46e30de09479211ef9ceab"
+     },
+     {
+      "anchor": "cone:eq-induction",
+      "quote": "Henceforth, until the induction is closed, assume Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> in dimensions below $n$, and fix $$\\label{cone:eq-induction}\n n=N+1\\ge5,\\qquad\n d(x,X)\\ge p_n,$$ with $x$ singular.",
+      "quote_sha256": "2fd93e71e5408e7a2449c2ceda3c7b1995fe640278fe46a8ce6346b5f933b29f"
+     }
+    ],
+    "requires_concepts": [
+     "Boundary-zero klt germs",
+     "Normalized volume",
+     "Stable degeneration",
+     "The fourfold base theorem",
+     "Lower-dimensional gap theorems"
+    ],
+    "supporting_pm_ids": [
+     "PM-037.2"
+    ]
+   },
+   {
+    "concept": "Exact saturation of the jet semigroup",
+    "evidence": [
+     {
+      "anchor": "adj:section",
+      "quote": "The adjoint lifting statement below uses these data but does *not* assume that $c_0$ itself lies in the interior of $K$.",
+      "quote_sha256": "70c1d0961c88be36adb682c5699777c747b21b562da9a28c6c7af2ef9611d6b8"
+     },
+     {
+      "anchor": "stmt-adj-saturation",
+      "quote": "Suppose $c_0\\in\\mathop{\\mathrm{int}}K$.",
+      "quote_sha256": "e121e1a8d5ee51b0b25cf0ee37ad140fdb48640da025af9eda5f264bc51e0a5b"
+     }
+    ],
+    "requires_concepts": [
+     "Orbifold section rings",
+     "Leading Taylor terms",
+     "The congruence lattice",
+     "Canonical interiority",
+     "Adjoint vanishing",
+     "Multiplier ideals"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "The singular-density supremum bootstrap",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-boot-upper",
+      "quote": "The slice bound used only the definition of $M_n$, so the argument assumes no same-dimensional ODP estimate.",
+      "quote_sha256": "287572a8b1245200d3911576dd36c907055e7a2c4df74269b46da45da38e9d2f"
+     },
+     {
+      "anchor": "stmt-boot-holder",
+      "quote": "For the fixed cone and large-stabilizer construction, $$\\begin{aligned}\n d(o,C)\n &\\leq\n \\frac{\\bigl((N/n)\\ell+A'/n\\bigr)^n}\n {\\bigl(\\ell^{n/N}+(h/\\sigma)^{1/N}\\bigr)^N}\n \\label{boot:optimized}\\\\\n &\\leq (N/n)^n+(A'/n)^n\\sigma/h\n \\leq \\frac{p_n}{2}+\\frac{M_n}{2}.\n \\label{boot:bootstrap-inequality}\n\\end{aligned}$$ Equality in the middle, Hölder, inequality holds precisely when $$\\label{boot:holder-equality}\n (A')^N\\ell\\,\\frac{\\sigma}{h}=N^N.$$",
+      "quote_sha256": "a2ad09ba054f22544c17e0bc1e418faea9bf2292c4f567573e8dc3f66c045ef5"
+     }
+    ],
+    "requires_concepts": [
+     "The second filtration",
+     "A singular klt slice",
+     "Invariant minimizing valuations",
+     "Equal leading character lengths",
+     "Hölder's inequality"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-ordinary-double-point-gap",
+   "exact_statement": "Let $n\\ge2$, and let $x$ be a singular closed point of a normal complex algebraic $n$-fold $X$. Suppose that $K_X$ is $\\mathbb Q$-Cartier and that $X$ is klt near $x$, with zero boundary. Then $$\\widehat{\\operatorname{vol}}(x,X)\\le2(n-1)^n.$$ Equality holds if and only if $$(X,x)_{\\mathrm{an}}\\cong\n \\left(\\{z_0^2+\\cdots+z_n^2=0\\}\\subset\\mathbb C^{n+1},0\\right).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-global-fano-volume",
+   "exact_statement": "Let $V$ be an $n$-dimensional K-semistable $\\mathbb Q$-Fano variety, where $n\\ge2$. If $V$ is singular, then $$(-K_V)^n\\le\n       2\\left(\\frac{n^2-1}{n}\\right)^n<2n^n.$$ If $V\\not\\cong\\mathbb P^n$, then $(-K_V)^n\\le2n^n$, with equality precisely when $V$ is a smooth quadric $Q^n\\subset\\mathbb P^{n+1}$ or $\\mathbb P^1\\times\\mathbb P^{n-1}$. These two descriptions coincide for $n=2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-global"
+  },
+  {
+   "claim_id": "claim-smooth-factor-density",
+   "exact_statement": "Let $y\\in Y$ be an $N$-dimensional klt germ, where $N\\ge1$. Then $$d((y,0),Y\\times\\mathbb A^1)\\le d(y,Y).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cone-product"
+  },
+  {
+   "claim_id": "claim-associated-graded-embedding-dimension",
+   "exact_statement": "Let $v$ be a finite-discrepancy valuation of a klt germ, with finitely generated positively graded associated graded ring $\\mathop{\\mathrm{gr}}_v R$. Then $$\\mathop{\\mathrm{edim}}(R)\\le\\mathop{\\mathrm{edim}}(\\mathop{\\mathrm{gr}}_v R).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cone-edim"
+  },
+  {
+   "claim_id": "claim-ordinary-double-point-minimum",
+   "exact_statement": "For $n\\ge2$, the ordinary double point $Q_n$ has $$\\widehat{\\operatorname{vol}}(0,Q_n)=2(n-1)^n.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-end-odp-value"
+  },
+  {
+   "claim_id": "claim-fourfold-base-gap",
+   "exact_statement": "Let $x$ be a singular closed point of a normal complex algebraic fourfold $X$. Suppose that $K_X$ is $\\mathbb Q$-Cartier and $X$ is klt near $x$, with zero boundary. Then $$\\widehat{\\operatorname{vol}}(x,X)\\le162.$$ Equality holds if and only if the complex analytic germ is $$\\left(\\{z_0^2+z_1^2+z_2^2+z_3^2+z_4^2=0\\},0\\right).$$ No isolatedness, complete-intersection, quotient, or smoothability assumption is made.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-inp-fourfold"
+  },
+  {
+   "claim_id": "claim-density-preserving-cone-reduction",
+   "exact_statement": "Under <a href=\"#cone:eq-induction\" data-reference-type=\"eqref\" data-reference=\"cone:eq-induction\">[cone:eq-induction]</a>, there is a singular K-polystable Fano cone $C=\\mathop{\\mathrm{Spec}}S$, with vertex $o$, such that $$d(o,C)=d(x,X),\\qquad\n \\mathop{\\mathrm{edim}}(X,x)\\le\\mathop{\\mathrm{edim}}(C,o).$$ The puncture $C\\setminus\\{o\\}$ is smooth, $S$ is a normal Gorenstein ring, and its canonical module has a homogeneous generator. The cone has zero boundary.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cone-reduction"
+  },
+  {
+   "claim_id": "claim-fast-primitive-gradings",
+   "exact_statement": "There are primitive positive integral cocharacters $\\zeta_i$, of canonical weights $r_i=A(\\zeta_i)\\in\\mathbb Z_{>0}$, such that $$\\label{cone:eq-fast}\n             \\zeta_i=\\frac{r_i}{n}\\xi+\\epsilon_i,\\qquad\n             \\epsilon_i\\longrightarrow0$$ in the real cocharacter space. If the ray of $\\xi$ is rational, the sequence may be chosen constant and exact. Otherwise $r_i\\to\\infty$.*\n\n*The normalized volumes of the degree valuations $\\operatorname{wt}_{\\zeta_i}$ tend to $\\widehat{\\operatorname{vol}}(o,C)$. For any fixed finite set of homogeneous algebra generators, their $\\zeta_i$-degrees lie between $cr_i$ and $Cr_i$ for positive constants $c,C$. Consequently the largest stabilizer order $m_{\\max,i}$ on the puncture is $O(r_i)$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cone-approximation"
+  },
+  {
+   "claim_id": "claim-faithful-quotient-orbifold",
+   "exact_statement": "For a primitive positive integral grading $\\zeta$, of canonical weight $r$, let $$B=[(C\\setminus\\{o\\})/\\mathbb G_m].$$ Then $B$ is a smooth effective proper orbifold of dimension $N$, with projective coarse space $\\mathop{\\mathrm{Proj}}S$. It has a faithful ample weight-one line bundle $L$ such that $$\\label{cone:eq-section-ring}\n         S_j=H^0(B,jL),\\qquad -K_B=rL.$$ Every stabilizer is a finite cyclic group. At a point of order $m$, a smooth transverse uniformizer carries a faithful $\\mu_m$-action, and $L$ has a faithful fiber character.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cone-orbifold"
+  },
+  {
+   "claim_id": "claim-small-stabilizer-classification",
+   "exact_statement": "Let $\\zeta_i$ be primitive positive integral gradings satisfying $$\\zeta_i=\\frac{r_i}{n}\\xi+\\epsilon_i,\n \\qquad r_i=A(\\zeta_i),\\qquad \\|\\epsilon_i\\|\\longrightarrow0,\n \\qquad m_{\\max}(\\zeta_i)\\leq\\frac{r_i}{N}.\n \\label{small:fast-sequence}$$ For all sufficiently large $i$, every stabilizer is trivial and $r_i\\in\\{N,N+1\\}$. More precisely, the polarized quotient is $$(B_i,L_i)\\cong\n \\begin{cases}\n  (\\mathbb P^N,\\mathcal O_{\\mathbb P^N}(1)),&r_i=N+1,\\\\\n  (Q^N,\\mathcal O_{Q^N}(1)),&r_i=N,\n \\end{cases}$$ where $Q^N\\subset\\mathbb P^{N+1}$ is a smooth quadric. Consequently the cone $C$ is respectively smooth or an ordinary double point. The assertion includes the constant exact primitive grading when the ray of $\\xi$ is rational.",
+   "kind": "classification",
+   "statement_anchor": "stmt-small-classification"
+  },
+  {
+   "claim_id": "claim-fixed-lift-deformation-dimension",
+   "exact_statement": "Let $b_1',\\ldots,b_n'\\in\\{1,\\ldots,m\\}$ represent the characters of $\\mu_m$ on $T_{C,P}$, with the trivial character represented by $m$. Every component through $F$ of the scheme of homogeneous maps $F':\\mathbb A^2(1,m)\\to C$ satisfying $F'(0,1)=P$ has dimension at least $$\\chi=n+\\frac rm-\\sum_{j=1}^n\\frac{b_j'}m.\n \\label{small:chi}$$ In particular this dimension is at least $n$, except possibly when $r/m=N$ and the entire tangent action at $P$ is trivial.",
+   "kind": "bound",
+   "statement_anchor": "stmt-small-deformation"
+  },
+  {
+   "claim_id": "claim-finite-surjective-evaluation",
+   "exact_statement": "The morphism in Equation <a href=\"#small:evaluation\" data-reference-type=\"eqref\" data-reference=\"small:evaluation\">[small:evaluation]</a> is finite and surjective. Its fiber over $o$ is supported at the unique contracted map.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-small-finite-evaluation"
+  },
+  {
+   "claim_id": "claim-negative-weight-symmetric-tensor",
+   "exact_statement": "Let $b$ be the degree of the finite evaluation in Lemma <a href=\"#small:finite-evaluation\" data-reference-type=\"ref\" data-reference=\"small:finite-evaluation\">12</a>. There is a nonzero algebraic section $$s\\in H^0(C^\\circ,\\mathop{\\mathrm{Sym}}^bT_{C^\\circ})$$ of integral-grading weight $-bm$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-small-norm-tensor"
+  },
+  {
+   "claim_id": "claim-reeb-tensor-weight-bound",
+   "exact_statement": "Let $b\\geq1$, and let $s$ be a nonzero homogeneous algebraic section of $\\mathop{\\mathrm{Sym}}^bT_{C^\\circ}$, of $\\xi$-weight $\\tau$, with vector fields weighted as derivations. Then $$\\tau\\geq-b.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-small-tensor-bound"
+  },
+  {
+   "claim_id": "claim-rank-uniform-character-control",
+   "exact_statement": "There is a constant $c>0$ with the following property for all sufficiently close gradings in Equation <a href=\"#small:fast-sequence\" data-reference-type=\"eqref\" data-reference=\"small:fast-sequence\">[small:fast-sequence]</a>. If a nonzero rank-$b$ tensor on $C^\\circ$ has integral-grading weight $-bm$, with $m>0$, then it has a nonzero torus eigencomponent of character $\\chi$ satisfying $$\\|\\chi\\|\\leq cb.$$ Consequently, if the tensor is as in Lemma <a href=\"#small:norm-tensor\" data-reference-type=\"ref\" data-reference=\"small:norm-tensor\">13</a>, then $$m\\leq\\frac rn+c\\|\\epsilon\\|.\n \\label{small:m-bound}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-small-character-estimate"
+  },
+  {
+   "claim_id": "claim-jet-semigroup-and-cone-setup",
+   "exact_statement": "The following assertions hold.*\n\n1.  *$\\Gamma$ is an additive semigroup with one-dimensional leaves, and its generated group is exactly $\\Lambda$. Every finite compatible Taylor jet is realized by sections of all sufficiently large degrees in each admissible progression.*\n\n\n\n2.  *$K$ is a full-dimensional closed convex cone, contains the positive constant ray, projects onto the whole exponent orthant, and satisfies $K=\\overline{\\mathop{\\mathrm{int}}K}$. Its bounded-degree sections are bounded. More precisely, uniformly in the chosen point and nearby grading, $$\\label{jet:bezout-bound}\n     |\\gamma|:=\\sum_i\\gamma_i\\le C_C\\frac jr\n                           \\qquad ((j,\\gamma)\\in K).$$ Its scaled image has the form $$\\label{jet:epigraph}\n     \\widetilde K=\\{(D_0,x):x\\in\\mathbb R_{\\ge0}^N,\\ D_0\\ge f(x)\\},$$ where $f$ is finite, positively homogeneous, convex, and $$\\label{jet:f-coercive}\n     f(x)\\ge c_C|x|\\qquad(x\\in\\mathbb R_{\\ge0}^N)$$ for a constant $c_C>0$ independent of the nearby grading and chosen point.*\n\n\n3.  *In the scaled coordinates the lattice density is $s$. If $\\ell$ is a linear functional strictly positive on $\\widetilde K\\setminus\\{0\\}$, then $$\\label{jet:count}\n     \\begin{aligned}\n     &\\#\\{\\gamma'\\in\\widetilde\\Gamma:\\ell(\\gamma')<q\\}\\\\\n     &\\qquad=s\\,\\operatorname{Leb}\\{(D_0,x)\\in\\widetilde K:\\ell(D_0,x)<1\\}\\,q^n+o(q^n),\n     \\end{aligned}$$ with Lebesgue measure in the scaled coordinates. No saturation assumption on $\\Gamma$ is required.*\n\n\n4.  *The vector $$\\label{jet:canonical-vector}\n     c_0=(r,\\mathbf1)\\qquad\\text{in the original }(j,\\gamma)\n     \\text{ coordinates}$$ belongs to $\\Lambda$. Its scaled coordinates are $(N,\\mathbf1)$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-jet-setup"
+  },
+  {
+   "claim_id": "claim-degree-taylor-test-valuations",
+   "exact_statement": "For $\\delta\\in\\mathbb Q_{\\ge0}$, the rule $$\\label{jet:test-rule}\n v_\\delta\\Bigl(\\sum_j s_j\\Bigr)\n   =\\min_{s_j\\ne0}\\left\\{\\frac{Nj}{r}\n                           +\\delta\\mathop{\\mathrm{ord}}_z(s_j)\\right\\}$$ defines a valuation centered at the vertex. It is divisorial up to positive rescaling, and $$\\begin{aligned}\n A_C(v_\\delta)&=N+N\\delta,\\label{jet:test-discrepancy}\\\\\n A_C(v_\\delta)^n\\mathop{\\mathrm{vol}}(v_\\delta)\n   &=N^n(1+\\delta)^n s\n        \\int_{\\mathbb R_{\\ge0}^N}e^{-f(x)-\\delta|x|}\\,dx.\n                                      \\label{jet:test-volume}\n\\end{aligned}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-jet-test"
+  },
+  {
+   "claim_id": "claim-near-minimal-moment-inequalities",
+   "exact_statement": "Along the fixed-cone sequence of gradings, there are numbers $\\eta_\\nu\\ge0$ tending to zero such that $$\\label{jet:moment-inequalities}\n H\\ge\\frac2s,\\qquad\n \\mathbb E[(1+B_0(X))e^{-B_0(X)}]\\ge-\\eta_\\nu H.$$ For an exact minimizing rational grading one may take $\\eta_\\nu=0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-jet-moments"
+  },
+  {
+   "claim_id": "claim-universal-exponential-supremum",
+   "exact_statement": "For $u=4/3$ one has $$\\label{prob:universal-bound}\n \\sup_{N\\ge1}\\ \\sup_{\\substack{a\\in\\mathbb R^N\\\\\\sum_i a_i=0}}\n \\frac{e^u}{u}\\mathbb E g(u+a\\cdot X)\n =C_*:=\\frac34e^{4/3}-\\frac e3<2.$$ The supremum over dimensions is approached by the vectors $(2,-2/(N-1),\\ldots,-2/(N-1))$ as $N\\to\\infty$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prob-bound"
+  },
+  {
+   "claim_id": "claim-exponential-logconcavity-and-centroid-bound",
+   "exact_statement": "A nonzero mean-zero linear combination of independent mean-one exponentials has a positive continuous log-concave density on the whole real line. Adding further independent scaled exponentials, with either sign of coefficient, preserves these properties. If $Z$ has such a density, then $$\\label{prob:grunbaum}\n \\frac1e\\le\\mathbb P(Z\\le\\mathbb EZ)\\le1-\\frac1e.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prob-logconcavity"
+  },
+  {
+   "claim_id": "claim-strict-exponential-single-crossing",
+   "exact_statement": "Let $Z$ have a positive log-concave probability density on $\\mathbb R$, and let $E$ be an independent mean-one exponential. If $$\\mathbb E k(Z+c_*E)=0,$$ then $\\mathbb E k(Z+cE)>0$ for every $c<c_*$ and $\\mathbb E k(Z+cE)<0$ for every $c>c_*$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prob-single-crossing"
+  },
+  {
+   "claim_id": "claim-finite-local-maximizer-shape",
+   "exact_statement": "Fix $u>0$ and $N\\ge2$. Every nonzero finite local maximum of $$a\\longmapsto\\mathbb E g\\left(u+\\sum_{i=1}^N a_iX_i\\right),\n \\qquad \\sum_i a_i=0,$$ has, after permutation, the form $$\\label{prob:exceptional-vector}\n a=(t,-t/(N-1),\\ldots,-t/(N-1))\\qquad(t>0).$$",
+   "kind": "classification",
+   "statement_anchor": "stmt-prob-critical-points"
+  },
+  {
+   "claim_id": "claim-canonical-jet-interiority",
+   "exact_statement": "For every sufficiently large grading in the subsequence under consideration, $$\\label{jet:interior-conclusion}\n c_0=(r,\\mathbf1)\\in\\mathop{\\mathrm{int}}K\n                 \\qquad\\text{in the original degree coordinates}.$$ Equivalently, $f(\\mathbf1)<N$. For an exact minimizing rational grading with $m\\ge r/N$, the conclusion holds without passage to a limit.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-jet-interior"
+  },
+  {
+   "claim_id": "claim-orbifold-adjoint-vanishing",
+   "exact_statement": "Let $\\mathcal X$ be a smooth proper Deligne–Mumford stack over $\\mathbb C$, with trivial generic stabilizer and projective coarse space. Let $\\Theta$ be an effective rational divisor with simple normal crossing support and coefficients less than one. If $D$ is a Cartier divisor and $D-(K_{\\mathcal X}+\\Theta)$ is nef and big, then $$H^q(\\mathcal X,\\mathcal O_{\\mathcal X}(D))=0\\qquad(q>0).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-adj-vanishing"
+  },
+  {
+   "claim_id": "claim-canonically-shifted-adjoint-lifting",
+   "exact_statement": "For the orbifold jet data above, $$\\label{adj:adjoint-implication}\n (j,\\alpha)\\in\\Lambda,\\qquad\n (j,\\alpha)+c_0\\in\\mathop{\\mathrm{int}}K\n \\quad\\Longrightarrow\\quad (j,\\alpha)\\in\\Gamma.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-adj-implication"
+  },
+  {
+   "claim_id": "claim-rational-polyhedral-saturated-jet-semigroup",
+   "exact_statement": "Suppose $c_0\\in\\mathop{\\mathrm{int}}K$. Then the following statements hold:*\n\n1.  *$K$ is a rational polyhedral cone.*\n\n2.  *Every facet has a primitive nonnegative support form $\\eta\\in\\Lambda^*$ satisfying $\\eta(c_0)=1$.*\n\n\n3.  *The semigroup and its interior lattice points satisfy $$\\label{adj:saturation-identities}\n       \\Gamma=K\\cap\\Lambda,\n       \\qquad \\mathop{\\mathrm{int}}K\\cap\\Lambda=c_0+\\Gamma.$$*\n\n*In particular, $\\Gamma$ is a finitely generated saturated affine semigroup with group $\\Lambda$. These conclusions apply to every sufficiently far grading and chosen point covered by Theorem <a href=\"#jet:interior\" data-reference-type=\"ref\" data-reference=\"jet:interior\">23</a>, including its exact rational case.",
+   "kind": "classification",
+   "statement_anchor": "stmt-adj-saturation"
+  },
+  {
+   "claim_id": "claim-taylor-graded-ring-and-compatible-basis",
+   "exact_statement": "The algebra $\\overline S$ is finitely generated, normal, Cohen–Macaulay, and Gorenstein. Its canonical module has a homogeneous generator of bidegree $(r,N)$. There is a section $v\\in S_m$ whose initial $\\overline v$ is $\\tau^m$. In particular $T(v)=0$, and $$\\label{filt:laurent-product}\n \\overline S[\\overline v^{-1}]\n \\simeq \\mathbb C[\\overline v,\\overline v^{-1},u_1,\\ldots,u_N],\n \\qquad T(u_i)=1,\\quad T(\\overline v)=0.$$ The ring $D=\\overline S/(\\overline v)$ is an equidimensional Cohen–Macaulay Gorenstein ring of dimension $N$, with $$\\label{filt:D-series}\n \\mathop{\\mathrm{Hilb}}_T D(z)=(1-z)^{-N},\n \\qquad \\deg\\omega_D=(r-m,N).$$ Its $T$-degree-zero piece is $\\mathbb C$. A bihomogeneous vector-space basis of $D$ can be lifted to sections $e_i\\in S$ such that, on putting $T_i=T(e_i)$, $$\\label{filt:S-basis}\n \\{v^a e_i:a\\in\\mathbb N\\}$$ is a vector-space basis of $S$, compatible with original degree and $T$-order. The unique vector of this basis with $a+T_i=0$ is $1$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-filt-first-ring"
+  },
+  {
+   "claim_id": "claim-rees-canonical-form-and-discrepancy",
+   "exact_statement": "Suppose $F$ respects original degree, has finite length in each original homogeneous piece, and $\\mathop{\\mathrm{gr}}_F S$ is finitely generated. Suppose also that $\\mathfrak X=\\mathop{\\mathrm{Spec}}R_F$ is normal and Gorenstein, and that $\\mathop{\\mathrm{gr}}_F S$ is Cohen–Macaulay and Gorenstein with a canonical generator of bidegree $(r,Q)$. Then $R_F$ is finite type and its absolute canonical module has a homogeneous generator of bidegree $(r,Q-1)$, which on $\\lambda\\ne0$ is $$\\label{filt:canonical-form}\n \\Omega_{\\mathfrak X}\n   =c\\lambda^{-Q}\\Omega_C\\wedge d\\lambda,\n \\qquad c\\in\\mathbb C^*.$$ For a quasi-monomial valuation $V$ centered on $\\mathfrak X$ over $\\lambda=0$, put $\\ell=V(\\lambda)>0$ and $w=V|_{\\mathbb C(C)}$. If $w$ is centered at $o$, then $$\\label{filt:discrepancy-inequality}\n A_C(w)\\leq A_{\\mathfrak X}(V)+(Q-1)\\ell.$$ The same inequality holds whenever the discrepancies involved are finite and defined by valuation retractions.",
+   "kind": "bound",
+   "statement_anchor": "stmt-filt-discrepancy"
+  },
+  {
+   "claim_id": "claim-reduced-constant-section-quotient",
+   "exact_statement": "Under Equation <a href=\"#filt:volume-hypothesis\" data-reference-type=\"eqref\" data-reference=\"filt:volume-hypothesis\">[filt:volume-hypothesis]</a>, $D$ is reduced.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-filt-reduced"
+  },
+  {
+   "claim_id": "claim-multiplicative-second-filtration",
+   "exact_statement": "The filtration $W$ is multiplicative, with $$\\label{filt:second-graded}\n G=\\mathop{\\mathrm{gr}}_WS\\simeq D[\\mathtt v],\\qquad\n \\deg_W\\mathtt v=1,\\qquad \\deg_W|_D=T.$$ Here $\\mathtt v$ is a regular polynomial variable of original degree $m$. Moreover $$\\label{filt:G-series}\n \\mathop{\\mathrm{Hilb}}_WG(z)=(1-z)^{-n},\\qquad\n \\deg\\omega_G=(r,n).$$ The $W$-Rees space is a finite-type normal Gorenstein variety. Its canonical generator has bidegree $(r,n-1)$ and, on $\\lambda\\ne0$, is $c\\lambda^{-n}\\Omega_C\\wedge d\\lambda$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-filt-structure"
+  },
+  {
+   "claim_id": "claim-free-grading-polynomial-rigidity",
+   "exact_statement": "Let $E$ be a finitely generated positively graded reduced equidimensional Cohen–Macaulay $\\mathbb C$-algebra of dimension $N\\geq2$, with $E_0=\\mathbb C$ and $\\mathop{\\mathrm{Hilb}}E(z)=(1-z)^{-N}$. If the grading action has trivial stabilizer at every nonvertex closed point of $\\mathop{\\mathrm{Spec}}E$, then $E$ is a polynomial ring on $N$ generators of degree one.",
+   "kind": "classification",
+   "statement_anchor": "stmt-filt-free-grading"
+  },
+  {
+   "claim_id": "claim-nontrivial-second-stabilizer",
+   "exact_statement": "There is a nonvertex closed point of $\\mathop{\\mathrm{Spec}}D$ whose $T$-grading stabilizer has order $h\\geq2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-filt-stabilizer"
+  },
+  {
+   "claim_id": "claim-uniformizing-slice-and-valuation-tests",
+   "exact_statement": "There is a normal Gorenstein algebraic germ $y\\in Y$ of dimension $n$, preserved by $\\mu_h$, with a nonzero function $\\lambda_Y\\in\\mathfrak m_{Y,y}$ of character $-1$, such that $Y$ is klt away from $\\lambda_Y=0$. Every quasi-monomial valuation $u$ centered at $y$ gives a quasi-monomial valuation $w$ centered at $o\\in C$. Writing $\\ell=u(\\lambda_Y)>0$, one has $$\\label{boot:basic-test}\n A_C(w)\\leq N\\ell+A_Y(u),\n \\qquad\n \\mathop{\\mathrm{vol}}(w)\\leq \\ell^{-n}.$$ The comparison is valid before klt at $y$ has been established.",
+   "kind": "construction",
+   "statement_anchor": "stmt-boot-slice-tests"
+  },
+  {
+   "claim_id": "claim-slice-klt",
+   "exact_statement": "The germ $y\\in Y$ is klt.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-boot-slice-klt"
+  },
+  {
+   "claim_id": "claim-slice-singularity",
+   "exact_statement": "The germ $y\\in Y$ is singular.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-boot-slice-singular"
+  },
+  {
+   "claim_id": "claim-equal-leading-character-colengths",
+   "exact_statement": "Let $R=\\mathcal O_{Y,y}$ and let $\\mathfrak a_t=\\{g\\in R:u_*(g)\\geq t\\}$. For every character $\\chi\\in\\mathbb Z/h\\mathbb Z$, $$\\dim_\\mathbb C(R/\\mathfrak a_t)_\\chi\n =\\frac{\\sigma}{h\\,n!}t^n+o(t^n)\n \\qquad(t\\longrightarrow\\infty).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-boot-character-shares"
+  },
+  {
+   "claim_id": "claim-refined-character-slice-volume",
+   "exact_statement": "For the minimizing slice valuation and its restriction, $$\\label{boot:refined-volume}\n \\mathop{\\mathrm{vol}}(w)\\leq\n \\min_{0\\leq x\\leq1}\n \\left\\{\\frac{x^n}{\\ell^n}\n                 +(1-x)^n\\frac{\\sigma}{h}\\right\\}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-boot-refined-estimate"
+  },
+  {
+   "claim_id": "claim-holder-supremum-bootstrap",
+   "exact_statement": "For the fixed cone and large-stabilizer construction, $$\\begin{aligned}\n d(o,C)\n &\\leq\n \\frac{\\bigl((N/n)\\ell+A'/n\\bigr)^n}\n {\\bigl(\\ell^{n/N}+(h/\\sigma)^{1/N}\\bigr)^N}\n \\label{boot:optimized}\\\\\n &\\leq (N/n)^n+(A'/n)^n\\sigma/h\n \\leq \\frac{p_n}{2}+\\frac{M_n}{2}.\n \\label{boot:bootstrap-inequality}\n\\end{aligned}$$ Equality in the middle, Hölder, inequality holds precisely when $$\\label{boot:holder-equality}\n (A')^N\\ell\\,\\frac{\\sigma}{h}=N^N.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-boot-holder"
+  },
+  {
+   "claim_id": "claim-inductive-singular-density-upper-bound",
+   "exact_statement": "Assume the local ODP volume theorem in all dimensions smaller than $n$. Then $M_n\\leq p_n$. Equivalently, every singular boundary-zero klt $n$-dimensional germ satisfies $$\\widehat{\\operatorname{vol}}(x,X)\\leq 2(n-1)^n.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-boot-upper"
+  },
+  {
+   "claim_id": "claim-equality-valuation-identities",
+   "exact_statement": "One has $h=2$, $d(y,Y)=p_n$, and $A'=N\\ell$. After rescaling $u_*$ so that $\\ell=1$, the resulting restriction $w$ satisfies $$\\label{boot:equality-identities}\n A'=N,\n \\qquad \\sigma=2,\n \\qquad A_C(w)=2N,\n \\qquad \\mathop{\\mathrm{vol}}(w)=2^{-N},\n \\qquad w=\\frac{2N}{n}\\operatorname{wt}_\\xi.$$ The optimal splitting fraction in Equation <a href=\"#boot:refined-volume\" data-reference-type=\"eqref\" data-reference=\"boot:refined-volume\">[boot:refined-volume]</a> is $x=1/2$, and all inequalities producing that estimate are equalities at the level of leading coefficients.",
+   "kind": "classification",
+   "statement_anchor": "stmt-boot-equality-data"
+  },
+  {
+   "claim_id": "claim-distinguished-section-strict-count",
+   "exact_statement": "In the normalization of Lemma <a href=\"#boot:equality-data\" data-reference-type=\"ref\" data-reference=\"boot:equality-data\">40</a>, the section $v\\in S_m$ used to define the two filtrations satisfies $w(v)\\leq2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-boot-strict-count"
+  },
+  {
+   "claim_id": "claim-integral-maximal-stabilizer-rounding",
+   "exact_statement": "Along the fast gradings of the fixed equality cone, the large-stabilizer construction implies $Nm_{\\max}\\leq r$ for every sufficiently far term.",
+   "kind": "bound",
+   "statement_anchor": "stmt-boot-rounding"
+  },
+  {
+   "claim_id": "claim-equality-cone-is-ordinary-double-point",
+   "exact_statement": "If a singular cone obtained in Proposition <a href=\"#cone:reduction\" data-reference-type=\"ref\" data-reference=\"cone:reduction\">7</a> satisfies $d(o,C)=p_n$, then it is the standard ordinary double point cone.",
+   "kind": "classification",
+   "statement_anchor": "stmt-boot-equality-cone"
+  },
+  {
+   "claim_id": "claim-positive-weight-hypersurface-test",
+   "exact_statement": "Let $x\\in X$ be a klt hypersurface germ of dimension $n$, with equation $F$ in regular ambient parameters $z_0,\\ldots,z_n$. For positive rational weights $w_0,\\ldots,w_n$, write $d_F$ for the weighted order of $F$. Then $$\\label{end:eq-hypersurface-test}\n \\widehat{\\operatorname{vol}}(x,X)\\le\n           \\frac{d_F\\bigl(\\sum_{i=0}^n w_i-d_F\\bigr)^n}\n                {\\prod_{i=0}^n w_i}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-end-hypersurface-test"
+  },
+  {
+   "claim_id": "claim-hypersurface-equality-rigidity",
+   "exact_statement": "If $x\\in X$ is a singular klt hypersurface germ of dimension $n\\ge2$, then $$\\widehat{\\operatorname{vol}}(x,X)\\le2(n-1)^n.$$ If equality holds, the quadratic part of a local equation is nondegenerate, and $(X,x)$ is analytically an ordinary double point.",
+   "kind": "classification",
+   "statement_anchor": "stmt-end-hypersurface"
+  }
+ ],
+ "paper": "papers/EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-C-TO-H-0106_PM-037.1_The_ordinary_double_point_gap_in_every_dimension.md",
+ "purpose": "The ordinary-double-point gap in every dimension",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "7d50d5f45e4e46554cc3dcf123520d599408a2427574b239de28883e9c50c05d",
+   "pm.domains.v2": "9bcacdec836076fbdcecffd9dd571e780cc7e3fe2ebbb7843b4d55c07b9b9d51",
+   "pm.edges.v2": "29e3b8adb517ff06128007a7479b78e55d1cd2b4d6ab8ad8f19378b3f0eb7431",
+   "pm.extraction.v2": "06db332dc2f3657e20cce27d43946fb6d8a09ffe0ae7869699caa09471cee0e8",
+   "pm.formal.v2": "d69ef16a8482a82a8711ee2649effe21b6e0195ecb8219b964c6f9f4b35d4268",
+   "pm.limits.v2": "5ec7fd5aa8dca5f477cb085fa0030b633f467c709911739e3cde7fc50d91e24a",
+   "pm.node.v2": "fba905329b95111b22ee46afb3ac26df0964c686c4fcfdad753506383adbfa8a",
+   "pm.objects.v2": "73144e93004dd1e48c83941d96e600b06b406847f45f4db0e411caf516d9f9ee",
+   "pm.provenance.v2": "b01d36c7a70695152633d79c0f92449ad83c1307db9d887ed562d431f5bfa69c",
+   "pm.quantities.v2": "6d0d7f89aff54c2cdcb314e70fc5bcf7784f5dffe34469b6b98f39cbfbb49ffd",
+   "pm.reading.v2": "3a368387b8607ae78c4c045a232f5162b648044fd6a5f1a24177a3667199c739",
+   "pm.roadmap.v2": "1953642337b261dcbe25a1a0a289d73e49135cba65eced0bcfbdc4c774f133f9",
+   "pm.search.v1": "34e94b18ba6f6b782ebcfebbb38b9db495f2ca5aec38eab6a1e0ad970a683cbe",
+   "pm.triptych.v2": "8bd1f2ee7d2eda5065e39f8fccfa1eebe8053a3bce9879dcd619da3e75fabc3c"
+  },
+  "canonical_sha256": "2b1854ecb7d1d1c89471ce3b4d0324de499d264e6931f9e66b1288c713bb20aa",
+  "paper_sha256": "2fe5e37312ebecbc8316732543b8cb621b54f1c8f395268f06b35b688f742f77",
+  "repaired_body_sha256": "4baa02cf07d516444424174ee50dd9b50fcbee9b38cda93acd8a4b66b119d262"
+ },
+ "status": "ACTIVE",
+ "subject_id": 3,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "8ca8f363b426a8b271c36635a2e349cfdddf41d64be6d05711291d39c81f72f2",
+   "receipt_sha256": "a7741efe47226c9492af3f42b4903cb29f90e873b290114e68490cc031095eca",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The ordinary-double-point gap in every dimension"
+}

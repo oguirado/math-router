@@ -1,0 +1,875 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 687740,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 206428
+ },
+ "coordinate": "EN-115-000-0022-2-2026-PR-T4-UK-EX-M2-C-ML-H-0499",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "implementable",
+   "proposed_domain": "Finite abelian group arithmetic",
+   "strength": "moderate",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "For the symmetric Bernoulli matrix $A_n$, $$\\Pr(\\det A_n=0)=\\left(\\frac12+o(1)\\right)^n\n                =2^{-n+o(n)}\n \\qquad\\text{as }n\\to\\infty.$$",
+     "quote_sha256": "e50f6074ea68f243723cce0f605a1c939f6dc999c8aab140ed04536d2cf6b664"
+    }
+   ],
+   "query": "Exact finite-dimension singularity probability from the sharp rate",
+   "reason": "The main theorem gives an asymptotic exponential rate with an unspecified vanishing error, not an exact finite-dimension probability."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "### Introduction\n\nLet $A_n$ be a symmetric $n\\times n$ random matrix whose entries on and above the diagonal are independent and uniform on $\\{-1,1\\}$.",
+     "quote_sha256": "0dc9e01ae8ef83b778963a9fc4b725160b7957dda47b39f5055e693203133f8b"
+    }
+   ],
+   "query": "Uniform-sign rate for biased or correlated upper-triangular entries",
+   "reason": "The model fixes independent uniform signs on and above the diagonal; distributions outside that ensemble are not covered by the theorem."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-lem-principal-rank",
+     "quote": "Let $M$ be a symmetric matrix over a field, of rank $r$.",
+     "quote_sha256": "4eacc40d013e9b1fde79d0b93a53242ea54657e30dff03a3b93a314e2f022be4"
+    }
+   ],
+   "query": "Nonsingular principal minor of full rank for an arbitrary asymmetric matrix",
+   "reason": "The principal-rank lemma assumes symmetry and supplies no corresponding assertion for asymmetric matrices."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "For the symmetric Bernoulli matrix $A_n$, $$\\Pr(\\det A_n=0)=\\left(\\frac12+o(1)\\right)^n\n                =2^{-n+o(n)}\n \\qquad\\text{as }n\\to\\infty.$$",
+     "quote_sha256": "e50f6074ea68f243723cce0f605a1c939f6dc999c8aab140ed04536d2cf6b664"
+    },
+    {
+     "anchor": "stmt-prop-typical-spectrum",
+     "quote": "Eigenvalues are counted with multiplicity.",
+     "quote_sha256": "fa892776f6c4d98f407c0fa8670fbc5ae25def7b1af0b32e36fb709b394a1661"
+    }
+   ],
+   "query": "Numerical conditioning certificate from exact nonsingularity",
+   "reason": "The singularity theorem concerns the determinant vanishing. A lower bound for the least singular value is a different conclusion, and the small-spectrum proposition only bounds an eigenvalue count."
+  }
+ ],
+ "family": "PM-239",
+ "id": "PM-239.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-sharp-symmetric-singularity",
+    "statement": "For the symmetric Bernoulli matrix $A_n$,"
+   },
+   {
+    "anchor": "stmt-lem-sign-bit",
+    "claim_id": "claim-sign-to-bit-equivalence",
+    "statement": "For $n\\ge2$,"
+   },
+   {
+    "anchor": "stmt-lem-principal-rank",
+    "claim_id": "claim-full-rank-principal-minor",
+    "statement": "Let $M$ be a symmetric matrix over a field, of rank $r$."
+   },
+   {
+    "anchor": "stmt-lem-corank-tail",
+    "claim_id": "claim-field-uniform-corank-tail",
+    "statement": "Let $\\mathbb K$ be any field, and regard the bits of $\\mathbf B_m$ as elements of $\\mathbb K$."
+   },
+   {
+    "anchor": "stmt-lem-corank-tail",
+    "claim_id": "claim-field-uniform-corank-tail",
+    "statement": "For $1\\le k\\le m$,"
+   },
+   {
+    "anchor": "stmt-lem-corank-reduction",
+    "claim_id": "claim-reduction-to-corank-one",
+    "statement": "For the binary model in dimension $N$,"
+   },
+   {
+    "anchor": "stmt-lem-column-reduction",
+    "claim_id": "claim-admissible-column-reduction",
+    "statement": "One has $$\\Pr(\\mathop{\\mathrm{corank}}\\mathbf B_N=1)\n \\le N\\,2^{-N}\\,\\mathbb E|\\mathcal S(\\mathbf B_{N-1})|.$$"
+   },
+   {
+    "anchor": "stmt-prop-admissible-potential",
+    "claim_id": "claim-static-admissible-potential",
+    "statement": "For every fixed $A>0$,"
+   },
+   {
+    "anchor": "stmt-prop-admissible-potential",
+    "claim_id": "claim-static-admissible-potential",
+    "statement": "typically for nonsingular binary matrices $B$ of size $m\\in\\mathcal I_N$,"
+   },
+   {
+    "anchor": "stmt-prop-path-potential",
+    "claim_id": "claim-potential-exponential-moment",
+    "statement": "For a binary matrix of size $N-1$,"
+   },
+   {
+    "anchor": "stmt-lem-lattice-quotient",
+    "claim_id": "claim-orthogonal-lattice-quotient",
+    "statement": "Let $L$ have rank $r$ and span $E$, and let $K\\subset L$ be a primitive sublattice of rank $k$, with $F=\\mathop{\\mathrm{span}}K$."
+   },
+   {
+    "anchor": "stmt-lem-height-submodularity",
+    "claim_id": "claim-rational-height-submodularity",
+    "statement": "For rational subspaces $U,V\\subset\\mathbb R^m$,"
+   },
+   {
+    "anchor": "stmt-lem-normal-height",
+    "claim_id": "claim-normal-lattice-height-ratio",
+    "statement": "Let $V\\subset U\\subset\\mathbb R^m$ be rational subspaces, and put $\\Lambda=\\Lambda_U^*$."
+   },
+   {
+    "anchor": "stmt-thm-reverse-minkowski",
+    "claim_id": "claim-reverse-minkowski-gaussian-mass",
+    "statement": "Let $L$ be a lattice of rank $j\\ge1$, and let $T>0$."
+   },
+   {
+    "anchor": "stmt-thm-reverse-minkowski",
+    "claim_id": "claim-reverse-minkowski-gaussian-mass",
+    "statement": "Suppose that $$\\det M\\ge T^{\\mathop{\\mathrm{rank}}M}\\qquad\\text{for every sublattice }M\\subset L.$$"
+   },
+   {
+    "anchor": "stmt-lem-gaussian-count",
+    "claim_id": "claim-gaussian-lattice-point-count",
+    "statement": "Let $L$ be a rank-$j$ lattice."
+   },
+   {
+    "anchor": "stmt-lem-gaussian-count",
+    "claim_id": "claim-gaussian-lattice-point-count",
+    "statement": "For $R\\ge0$ and $s>0$,"
+   },
+   {
+    "anchor": "stmt-lem-gaussian-count",
+    "claim_id": "claim-gaussian-lattice-point-count",
+    "statement": "For $s'\\ge s>0$,"
+   },
+   {
+    "anchor": "stmt-lem-det-minimizer",
+    "claim_id": "claim-normalized-determinant-minimizer",
+    "statement": "Let $L$ be a lattice and let $T>0$."
+   },
+   {
+    "anchor": "stmt-lem-det-minimizer",
+    "claim_id": "claim-normalized-determinant-minimizer",
+    "statement": "If in addition $T_0>T$, $\\Delta\\ge0$,"
+   },
+   {
+    "anchor": "stmt-lem-robust-extraction",
+    "claim_id": "claim-robust-affine-cube-extraction",
+    "statement": "Let $\\varnothing\\ne\\mathcal A\\subset\\{0,1\\}^m$, let $\\rho>0$, and put $d=\\dim\\mathop{\\mathrm{aff}}\\mathcal A$."
+   },
+   {
+    "anchor": "stmt-lem-robust-height",
+    "claim_id": "claim-robust-image-lattice-height",
+    "statement": "Fix $D>0$ and $C_0>0$."
+   },
+   {
+    "anchor": "stmt-lem-robust-height",
+    "claim_id": "claim-robust-image-lattice-height",
+    "statement": "Let $m\\le N$, let $\\varnothing\\ne\\mathcal A\\subset\\{0,1\\}^m$ be $\\rho$-robust on its affine span $F$ of dimension $r$, and let $\\Phi:F\\longrightarrow\\mathbb R^d$ be an injective rational affine map, meaning that it maps rational points of $F$ to rational points of $\\mathbb R^d$."
+   },
+   {
+    "anchor": "stmt-lem-robust-height",
+    "claim_id": "claim-robust-image-lattice-height",
+    "statement": "Suppose that $$\\|\\Phi(a)-\\Phi(b)\\|\\le C_0\\sqrt N\n       \\qquad(a,b\\in\\mathcal A).$$"
+   },
+   {
+    "anchor": "stmt-thm-low-height-cover",
+    "claim_id": "claim-low-height-rank-distance-cover",
+    "statement": "Fix $D,A>0$."
+   },
+   {
+    "anchor": "stmt-prop-typical-ranks",
+    "claim_id": "claim-simultaneous-low-height-ranks",
+    "statement": "For every pair of fixed constants $D,A>0$,"
+   },
+   {
+    "anchor": "stmt-prop-typical-ranks",
+    "claim_id": "claim-simultaneous-low-height-ranks",
+    "statement": "Simultaneously for every rational subspace $W\\subseteq\\mathbb R^m$ with $H(W)\\le\\exp(N\\ell^D)$, one has"
+   },
+   {
+    "anchor": "stmt-cor-inverse-rank",
+    "claim_id": "claim-low-height-inverse-form-rank",
+    "statement": "For every pair of fixed constants $D,A>0$,"
+   },
+   {
+    "anchor": "stmt-cor-inverse-rank",
+    "claim_id": "claim-low-height-inverse-form-rank",
+    "statement": "typically for nonsingular binary matrices $B$ of size $m\\in\\mathcal I_N$,"
+   },
+   {
+    "anchor": "stmt-cor-inverse-rank",
+    "claim_id": "claim-low-height-inverse-form-rank",
+    "statement": "simultaneously for every rational $W\\subseteq\\mathbb R^m$ with $H(W)\\le\\exp(N\\ell^D)$,"
+   },
+   {
+    "anchor": "stmt-prop-prime-corank",
+    "claim_id": "claim-simultaneous-prime-corank",
+    "statement": "Typically for nonsingular binary matrices $B$ of size $m\\in\\mathcal I_N$,"
+   },
+   {
+    "anchor": "stmt-prop-typical-spectrum",
+    "claim_id": "claim-typical-small-spectrum",
+    "statement": "For every fixed $A>0$,"
+   },
+   {
+    "anchor": "stmt-lem-discriminant-blocks",
+    "claim_id": "claim-perfect-primary-pairing-blocks",
+    "statement": "Let $G$ be a finite abelian $p$-group with a perfect symmetric pairing $\\lambda:G\\times G\\to\\mathbb Q/\\mathbb Z$."
+   },
+   {
+    "anchor": "stmt-lem-primary-coloring",
+    "claim_id": "claim-isotropic-primary-coloring",
+    "statement": "In the setting of Lemma <a href=\"#lem:discriminant-blocks\" data-reference-type=\"ref\" data-reference=\"lem:discriminant-blocks\">22</a>, put $h=b_3$, with zero exponents appended as necessary."
+   },
+   {
+    "anchor": "stmt-lem-primary-coloring",
+    "claim_id": "claim-isotropic-primary-coloring",
+    "statement": "In an orthogonal block decomposition, let $U$ be the sum of the blocks of exponent strictly greater than $h$, and let $T$ be the remaining sum."
+   },
+   {
+    "anchor": "stmt-lem-colored-image-order",
+    "claim_id": "claim-monochromatic-pairing-image-order",
+    "statement": "Let $X$ be a set of isotropic elements of $G_B$ in a single overall color, and let $$H=\\langle x-y:x,y\\in X\\rangle\\subset G_B.$$"
+   },
+   {
+    "anchor": "stmt-lem-pairing-determinant",
+    "claim_id": "claim-pairing-index-determinant-lower-bound",
+    "statement": "Let $L$ be a lattice, let $V=\\mathop{\\mathrm{span}}L$, and let $q$ be a symmetric bilinear form on $V$ such that $q(L,L)\\subset\\mathbb Q$."
+   },
+   {
+    "anchor": "stmt-lem-pairing-determinant",
+    "claim_id": "claim-pairing-index-determinant-lower-bound",
+    "statement": "If $t$ is the order of the image of $$L\\longrightarrow\\mathop{\\mathrm{Hom}}(L,\\mathbb Q/\\mathbb Z),\\qquad\n x\\longmapsto q(x,\\cdot)\\bmod\\mathbb Z,$$ then"
+   },
+   {
+    "anchor": "stmt-lem-gated-deletion",
+    "claim_id": "claim-gated-principal-deletion",
+    "statement": "Let $B$ be a nonsingular symmetric $r\\times r$ matrix with entries in $\\{0,1\\}$, where $r\\ge1$."
+   },
+   {
+    "anchor": "stmt-prop-potential-step",
+    "claim_id": "claim-conditional-potential-step",
+    "statement": "For every fixed $A>0$,"
+   },
+   {
+    "anchor": "stmt-prop-potential-step",
+    "claim_id": "claim-conditional-potential-step",
+    "statement": "the following holds typically for nonsingular binary matrices $C$ of size $m\\in\\mathcal I_N$."
+   },
+   {
+    "anchor": "stmt-lem-layer-quotient",
+    "claim_id": "claim-one-element-layer-interlacing",
+    "statement": "Let $G$ be a finite abelian group, let $v\\in G$, and put $H=G/\\langle v\\rangle$."
+   },
+   {
+    "anchor": "stmt-lem-layer-quotient",
+    "claim_id": "claim-one-element-layer-interlacing",
+    "statement": "Fix a prime $p$,"
+   },
+   {
+    "anchor": "stmt-lem-retention-lattice",
+    "claim_id": "claim-retention-forced-integer-lattice",
+    "statement": "Let $C$ be a nonsingular binary matrix of size $m$, and let $\\pi:\\mathbb Z^m\\twoheadrightarrow H$ be a quotient map to a finite abelian group such that $C\\mathbb Z^m\\subseteq\\ker\\pi$."
+   },
+   {
+    "anchor": "stmt-lem-retention-lattice",
+    "claim_id": "claim-retention-forced-integer-lattice",
+    "statement": "Let $E$ be any set of positive layers of $H$."
+   },
+   {
+    "anchor": "stmt-lem-layer-inequality",
+    "claim_id": "claim-symmetric-prime-power-kernel-inequality",
+    "statement": "For a nonsingular extension $B$ of a nonsingular $C$ of width $h\\in\\{1,2\\}$,"
+   },
+   {
+    "anchor": "stmt-prop-cube-concentration",
+    "claim_id": "claim-simultaneous-cube-coset-concentration",
+    "statement": "For every fixed $A>0$,"
+   },
+   {
+    "anchor": "stmt-prop-cube-concentration",
+    "claim_id": "claim-simultaneous-cube-coset-concentration",
+    "statement": "typically for nonsingular binary matrices $B$ of size $m\\in\\mathcal I_N$,"
+   },
+   {
+    "anchor": "stmt-lem-exact-basis-count",
+    "claim_id": "claim-low-height-exact-basis-count",
+    "statement": "Fix $C,C'>0$."
+   },
+   {
+    "anchor": "stmt-lem-exact-basis-count",
+    "claim_id": "claim-low-height-exact-basis-count",
+    "statement": "for which $y_1-y,\\ldots,y_j-y$ are independent and their span $W$ satisfies $H(W)\\le\\exp(N\\ell^C)$"
+   },
+   {
+    "anchor": "stmt-prop-witness-pricing",
+    "claim_id": "claim-robust-witness-pricing",
+    "statement": "Fix $D_0>0$,"
+   },
+   {
+    "anchor": "stmt-prop-witness-pricing",
+    "claim_id": "claim-robust-witness-pricing",
+    "statement": "Let $S_1,\\ldots,S_h\\subset\\{0,1\\}^m$ be nonempty subsets, each $\\rho$-robust on its affine span, where $h\\le3/\\eta$."
+   },
+   {
+    "anchor": "stmt-prop-witness-pricing",
+    "claim_id": "claim-robust-witness-pricing",
+    "statement": "Suppose $S_i-S_i\\subset K$, and put $W_i=\\mathop{\\mathrm{span}}(S_i-S_i)$."
+   },
+   {
+    "anchor": "stmt-prop-witness-pricing",
+    "claim_id": "claim-robust-witness-pricing",
+    "statement": "Suppose also that $W=\\sum_i W_i$ is a direct sum."
+   },
+   {
+    "anchor": "stmt-prop-witness-pricing",
+    "claim_id": "claim-robust-witness-pricing",
+    "statement": "If $D\\subset[m]$ has $|D|=xN$, $x\\le t$, and $M_K(D)\\le2^{\\eta N}$, then"
+   },
+   {
+    "anchor": "stmt-prop-certificate-pricing",
+    "claim_id": "claim-retained-layer-certificate-pricing",
+    "statement": "Fix $A>0$ and at most two positive constants $w_i$."
+   },
+   {
+    "anchor": "stmt-prop-certificate-pricing",
+    "claim_id": "claim-retained-layer-certificate-pricing",
+    "statement": "Suppose that, conditionally on $\\mathcal F$, a tested column $v$ is uniform on $\\{0,1\\}^m$."
+   },
+   {
+    "anchor": "stmt-prop-certificate-pricing",
+    "claim_id": "claim-retained-layer-certificate-pricing",
+    "statement": "Partition the layers of $G$ into at most two categories, each a union of whole plateaus."
+   },
+   {
+    "anchor": "stmt-prop-certificate-pricing",
+    "claim_id": "claim-retained-layer-certificate-pricing",
+    "statement": "In category $i$, assume that every height is at least $w_i$; only $w_i=1,2$ will be needed."
+   },
+   {
+    "anchor": "stmt-prop-certificate-pricing",
+    "claim_id": "claim-retained-layer-certificate-pricing",
+    "statement": "Require that the marked layers on each plateau form a prefix."
+   },
+   {
+    "anchor": "stmt-prop-retention-cost",
+    "claim_id": "claim-noticeable-retention-probability-cost",
+    "statement": "Typically for nonsingular binary matrices $C$ of size $m\\in\\mathcal I_N$,"
+   },
+   {
+    "anchor": "stmt-prop-retention-cost",
+    "claim_id": "claim-noticeable-retention-probability-cost",
+    "statement": "Let $h\\in\\{1,2\\}$ and let $v_1,\\ldots,v_h$ be independent uniform columns in $\\{0,1\\}^m$, conditionally on $C$."
+   },
+   {
+    "anchor": "stmt-lem-budget-optimization",
+    "claim_id": "claim-scalar-certificate-budget-compensation",
+    "statement": "Let $c$ and $\\mathcal E$ be defined by Equations <a href=\"#eq:cube-profile\" data-reference-type=\"eqref\" data-reference=\"eq:cube-profile\">[eq:cube-profile]</a> and <a href=\"#eq:entropy-cost\" data-reference-type=\"eqref\" data-reference=\"eq:entropy-cost\">[eq:entropy-cost]</a>, and let $\\beta=7/5$."
+   },
+   {
+    "anchor": "stmt-lem-budget-optimization",
+    "claim_id": "claim-scalar-certificate-budget-compensation",
+    "statement": "If $g,v_0,a_0,u\\ge0$ satisfy $$2g+3a_0+u\\le\\frac12,\\qquad\n g+v_0+2a_0+2u\\le\\frac12,$$"
+   },
+   {
+    "anchor": "stmt-lem-tail-recursion",
+    "claim_id": "claim-principal-extension-tail-recursion",
+    "statement": "Let $C\\to B$ be a transition of width $h\\in\\{1,2\\}$ between nonsingular matrices."
+   },
+   {
+    "anchor": "stmt-lem-heavy-retention-cost",
+    "claim_id": "claim-heavy-retained-layer-cost",
+    "statement": "Let $\\mathcal F$ denote exposed information which fixes a nonsingular binary matrix $C$ of size $m\\in\\mathcal I_N$ and a quotient map $\\pi:\\mathbb Z^m\\twoheadrightarrow H$ with $C\\mathbb Z^m\\subseteq\\ker\\pi$."
+   },
+   {
+    "anchor": "stmt-lem-heavy-retention-cost",
+    "claim_id": "claim-heavy-retained-layer-cost",
+    "statement": "Suppose that, conditionally on $\\mathcal F$, a tested column $v$ is uniform on $\\{0,1\\}^m$."
+   },
+   {
+    "anchor": "stmt-lem-heavy-retention-cost",
+    "claim_id": "claim-heavy-retained-layer-cost",
+    "statement": "Fix $0<\\eta<1$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Admissible-column estimate",
+    "evidence": [
+     {
+      "anchor": "sec:discriminant",
+      "quote": "The arithmetic part of the proof colors isotropic elements of the discriminant group so that the pairing on differences within one color has controlled image order.",
+      "quote_sha256": "a35aeb02af1f988eaeb2ea436add3a74c29106e1fc3bd625003b911f364d7276"
+     },
+     {
+      "anchor": "sec:discriminant",
+      "quote": "The geometric part converts this order bound into a dimension bound for a robust subset of admissible columns.",
+      "quote_sha256": "52ccbbacdcc361ad5c5a33f863195094369088cc7f03e3fd0e75b0e3723cf459"
+     }
+    ],
+    "requires_concepts": [
+     "Discriminant pairing",
+     "Primary coloring",
+     "Robust affine extraction",
+     "Rational height",
+     "Restricted inverse-form rank",
+     "Graph-lattice determinant comparison"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Conditional potential estimate",
+    "evidence": [
+     {
+      "anchor": "sec:potential-step",
+      "quote": "For a transition of width one, two bounds on the orders of the endpoint groups restrict the possible layer changes.",
+      "quote_sha256": "d2d83926daebb9e22186679d4a760a7aa0b9d8786de21901b63add5b5e2a3196"
+     },
+     {
+      "anchor": "sec:potential-step",
+      "quote": "A scalar optimization then shows that the certificate cost pays for the increase of potential.",
+      "quote_sha256": "dea7a7396410667ee237e2b0dbb2251072e9e9b5c5132f578d74ec07a999f550"
+     }
+    ],
+    "requires_concepts": [
+     "Common discriminant quotient",
+     "Layer interlacing",
+     "Retention lattice",
+     "Cube-coset concentration",
+     "Certificate entropy cost",
+     "Scalar order budgets"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-sharp-symmetric-singularity",
+   "exact_statement": "For the symmetric Bernoulli matrix $A_n$, $$\\Pr(\\det A_n=0)=\\left(\\frac12+o(1)\\right)^n\n                =2^{-n+o(n)}\n \\qquad\\text{as }n\\to\\infty.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-sign-to-bit-equivalence",
+   "exact_statement": "For $n\\ge2$, $$\\Pr(\\det A_n=0)=\\Pr(\\det\\mathbf B_{n-1}=0).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-sign-bit"
+  },
+  {
+   "claim_id": "claim-full-rank-principal-minor",
+   "exact_statement": "Let $M$ be a symmetric matrix over a field, of rank $r$. Then $M$ has a nonsingular principal submatrix of size $r$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-principal-rank"
+  },
+  {
+   "claim_id": "claim-field-uniform-corank-tail",
+   "exact_statement": "Let $\\mathbb K$ be any field, and regard the bits of $\\mathbf B_m$ as elements of $\\mathbb K$. For $1\\le k\\le m$, $$\\Pr\\bigl(\\mathop{\\mathrm{corank}}_{\\mathbb K}\\mathbf B_m\\ge k\\bigr)\n \\le \\sum_{j=k}^{m}\\binom mj\\,2^{-j(j+1)/2}.$$ Consequently, uniformly for $m\\in\\mathcal I_N$, $$\\Pr\\bigl(\\mathop{\\mathrm{corank}}_{\\mathbb K}\\mathbf B_m>N^{3/5}\\bigr)\n \\le 2^{-\\Omega(N^{6/5})}.$$ The implicit constant in the last bound is independent of the field.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-corank-tail"
+  },
+  {
+   "claim_id": "claim-reduction-to-corank-one",
+   "exact_statement": "For the binary model in dimension $N$, $$\\Pr(\\det\\mathbf B_N=0)\n \\le 2^{o(N)}\\Pr(\\mathop{\\mathrm{corank}}\\mathbf B_N=1)\n       +2^{-\\Omega(N^{6/5})}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-corank-reduction"
+  },
+  {
+   "claim_id": "claim-admissible-column-reduction",
+   "exact_statement": "One has $$\\Pr(\\mathop{\\mathrm{corank}}\\mathbf B_N=1)\n \\le N\\,2^{-N}\\,\\mathbb E|\\mathcal S(\\mathbf B_{N-1})|.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-column-reduction"
+  },
+  {
+   "claim_id": "claim-static-admissible-potential",
+   "exact_statement": "For every fixed $A>0$, typically for nonsingular binary matrices $B$ of size $m\\in\\mathcal I_N$, $$|\\mathcal S(B)|\\le 2^{N(\\Psi(B)+\\ell^{-A})}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-admissible-potential"
+  },
+  {
+   "claim_id": "claim-potential-exponential-moment",
+   "exact_statement": "For a binary matrix of size $N-1$, $$\\mathbb E\\!\\left[\\mathbf 1_{\\{\\det\\mathbf B_{N-1}\\ne0\\}}\\,\n            2^{N\\Psi(\\mathbf B_{N-1})}\\right]\\le 2^{o(N)}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-path-potential"
+  },
+  {
+   "claim_id": "claim-orthogonal-lattice-quotient",
+   "exact_statement": "Let $L$ have rank $r$ and span $E$, and let $K\\subset L$ be a primitive sublattice of rank $k$, with $F=\\mathop{\\mathrm{span}}K$. Write $\\pi_{F^\\perp}$ for orthogonal projection from $E$ onto $E\\cap F^\\perp$. The Euclidean realization $$L/K:=\\pi_{F^\\perp}(L)$$ is a lattice of rank $r-k$, canonically isomorphic to the abstract quotient, and $$\\det L=\\det K\\,\\det(L/K),\\qquad\n \\det L^*=(\\det L)^{-1}.$$ The dual identities are $$(L/K)^*=L^*\\cap F^\\perp,\\qquad\n K^*=\\pi_F(L^*),$$ where $\\pi_F$ is orthogonal projection onto $F$. For any sublattice $M\\subset L/K$, its full preimage $\\widetilde M=\\{x\\in L:\\pi_{F^\\perp}x\\in M\\}$ has rank $k+\\mathop{\\mathrm{rank}}M$ and satisfies $$\\det\\widetilde M=\\det K\\,\\det M.$$ These assertions include $k=0$, $k=r$, and $r=0$, with all rank-zero determinants equal to one.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-lattice-quotient"
+  },
+  {
+   "claim_id": "claim-rational-height-submodularity",
+   "exact_statement": "For rational subspaces $U,V\\subset\\mathbb R^m$, $$H(U+V)H(U\\cap V)\\le H(U)H(V).$$ Consequently $h(U+V)+h(U\\cap V)\\le h(U)+h(V)$. Every rational subspace has height at least one, and, for fixed $m$ and $C<\\infty$, there are only finitely many rational subspaces $W\\subset\\mathbb R^m$ with $H(W)\\le C$. These statements include rank-zero subspaces.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-height-submodularity"
+  },
+  {
+   "claim_id": "claim-normal-lattice-height-ratio",
+   "exact_statement": "Let $V\\subset U\\subset\\mathbb R^m$ be rational subspaces, and put $\\Lambda=\\Lambda_U^*$. The primitive normal lattice $$\\mathcal N_U(V)=\\Lambda\\cap V^\\perp$$ has rank $\\dim U-\\dim V$, and $$\\pi_V(\\Lambda)=\\Lambda_V^*,\\qquad\n \\det\\mathcal N_U(V)=\\frac{H(V)}{H(U)}.$$ More generally, for any sublattice $M\\subset\\Lambda$, set $V_M=U\\cap(\\mathop{\\mathrm{span}}M)^\\perp$. Then $V_M$ is rational and $$\\det M=[\\mathcal N_U(V_M):M]\\frac{H(V_M)}{H(U)}\n \\ge \\frac1{H(U)}.$$ For $V=U$ the normal lattice has rank zero and determinant one; for $V=\\{0\\}$ it is $\\Lambda_U^*$. If $M=\\{0\\}$, the displayed index is one and the determinant formula gives one.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-normal-height"
+  },
+  {
+   "claim_id": "claim-reverse-minkowski-gaussian-mass",
+   "exact_statement": "Let $L$ be a lattice of rank $j\\ge1$, and let $T>0$. Suppose that $$\\det M\\ge T^{\\mathop{\\mathrm{rank}}M}\\qquad\\text{for every sublattice }M\\subset L.$$ With $\\tau_j=10(\\log j+2)$, one has $$\\rho_{T/\\tau_j}(L)\\le\\frac32.$$ For a rank-zero lattice the Gaussian mass is one at every scale, so the corresponding assertion is immediate.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-reverse-minkowski"
+  },
+  {
+   "claim_id": "claim-gaussian-lattice-point-count",
+   "exact_statement": "Let $L$ be a rank-$j$ lattice. For $R\\ge0$ and $s>0$, $$\\#\\{x\\in L:\\|x\\|\\le R\\}\n \\le \\exp(\\pi R^2/s^2)\\rho_s(L).$$ For $s'\\ge s>0$, $$\\rho_{s'}(L)\\le (s'/s)^j\\rho_s(L).$$ In particular, under the hypotheses of Theorem <a href=\"#thm:reverse-minkowski\" data-reference-type=\"ref\" data-reference=\"thm:reverse-minkowski\">12</a>, if $s_0=T/\\tau_j$, then for every $u\\ge s_0$, $$\\#\\{x\\in L:\\|x\\|\\le R\\}\n \\le\\frac32\\left(\\frac{u}{s_0}\\right)^j\n       \\exp(\\pi R^2/u^2).$$ When $j=0$, the point count and every Gaussian mass are one; the first inequality is immediate and the second is equality.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-gaussian-count"
+  },
+  {
+   "claim_id": "claim-normalized-determinant-minimizer",
+   "exact_statement": "Let $L$ be a lattice and let $T>0$. The quantity $$\\frac{\\det M}{T^{\\mathop{\\mathrm{rank}}M}},\\qquad M\\subset L\\text{ a sublattice},$$ has a minimum, attained by a primitive sublattice $L_0$. It satisfies $$\\det L_0\\le T^{\\mathop{\\mathrm{rank}}L_0},\\qquad\n \\det M\\ge T^{\\mathop{\\mathrm{rank}}M}\\quad\\text{for every sublattice }M\\subset L/L_0.$$ If in addition $T_0>T$, $\\Delta\\ge0$, and $$\\det M\\ge e^{-\\Delta}T_0^{\\mathop{\\mathrm{rank}}M}\n       \\quad\\text{for every sublattice }M\\subset L,$$ then $$\\mathop{\\mathrm{rank}}L_0\\le\\frac{\\Delta}{\\log(T_0/T)}.$$ For $L=\\{0\\}$ the unique choice is $L_0=\\{0\\}$, and every assertion holds with rank zero and determinant one.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-det-minimizer"
+  },
+  {
+   "claim_id": "claim-robust-affine-cube-extraction",
+   "exact_statement": "Let $\\varnothing\\ne\\mathcal A\\subset\\{0,1\\}^m$, let $\\rho>0$, and put $d=\\dim\\mathop{\\mathrm{aff}}\\mathcal A$. There is an affine restriction $\\mathcal A_0=\\mathcal A\\cap F$, with $F=\\mathop{\\mathrm{aff}}\\mathcal A_0$ of dimension $r$, such that $\\mathcal A_0$ is $\\rho$-robust and $$\\log_2|\\mathcal A_0|\n \\ge \\log_2|\\mathcal A|-\\rho(d-r)\n \\ge \\log_2|\\mathcal A|-\\rho m,\n \\qquad\n \\log_2|\\mathcal A_0|\\le r.$$ For any fixed $a_0\\in\\mathcal A_0$, the number of ordered $r$-tuples $(a_1,\\ldots,a_r)\\in\\mathcal A_0^r$ for which $a_1-a_0,\\ldots,a_r-a_0$ are independent is at least $$|\\mathcal A_0|^r\\prod_{t=1}^r(1-2^{-\\rho t})\n \\ge \\bigl((1-2^{-\\rho})|\\mathcal A_0|\\bigr)^r.$$ When $r=0$, $\\mathcal A_0$ is a singleton and the number of empty ordered tuples is one.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-robust-extraction"
+  },
+  {
+   "claim_id": "claim-robust-image-lattice-height",
+   "exact_statement": "Fix $D>0$ and $C_0>0$. For all sufficiently large $N$, put $\\rho=\\ell^{-D}$. Let $m\\le N$, let $\\varnothing\\ne\\mathcal A\\subset\\{0,1\\}^m$ be $\\rho$-robust on its affine span $F$ of dimension $r$, and let $\\Phi:F\\longrightarrow\\mathbb R^d$ be an injective rational affine map, meaning that it maps rational points of $F$ to rational points of $\\mathbb R^d$. Suppose that $$\\|\\Phi(a)-\\Phi(b)\\|\\le C_0\\sqrt N\n       \\qquad(a,b\\in\\mathcal A).$$ For any $a_0\\in\\mathcal A$, the group $$L_\\Phi=\\sum_{a\\in\\mathcal A}\\mathbb Z\\bigl(\\Phi(a)-\\Phi(a_0)\\bigr)$$ is a rank-$r$ lattice, independent of the choice of $a_0$, and $$\\det L_\\Phi\\le \\exp\\bigl(O_{D,C_0}(N\\ell)\\bigr).$$ In particular, with $W=\\mathop{\\mathrm{span}}(\\mathcal A-\\mathcal A)$, $$H(W)\\le \\exp\\bigl(O_D(N\\ell)\\bigr).$$ If $r=0$, both lattices in question have rank zero and determinant one.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-robust-height"
+  },
+  {
+   "claim_id": "claim-low-height-rank-distance-cover",
+   "exact_statement": "Fix $D,A>0$. For all sufficiently large $N$, and every integer $0\\le m\\le N$, there is a list $\\mathcal C_{m,N}$ of rational subspaces of $\\mathbb R^m$, depending also on $D,A$, such that $$|\\mathcal C_{m,N}|\\le 2^{N^2\\ell^{-A}}.$$ Every rational subspace $W\\subseteq\\mathbb R^m$ satisfying $H(W)\\le\\exp(N\\ell^D)$ has $$\\min_{U\\in\\mathcal C_{m,N}}d(U,W)\\le N\\ell^{-A}.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-thm-low-height-cover"
+  },
+  {
+   "claim_id": "claim-simultaneous-low-height-ranks",
+   "exact_statement": "For every pair of fixed constants $D,A>0$, there is a function $f_{D,A}(N)\\to\\infty$ such that the following holds for every $m\\in\\mathcal I_N$ and all sufficiently large $N$, with probability at least $1-2^{-Nf_{D,A}(N)}$ for $B=\\mathbf B_m$. Simultaneously for every rational subspace $W\\subseteq\\mathbb R^m$ with $H(W)\\le\\exp(N\\ell^D)$, one has*\n\n1.  *$\\dim W^\\perp-\\mathop{\\mathrm{rank}}(B|_{W^\\perp})\\le N\\ell^{-A}$;*\n\n2.  *for every coordinate set $X\\subseteq[m]$, $$\\mathop{\\mathrm{rank}}\\bigl[\\pi_{W^\\perp}Be_i\\bigr]_{i\\in X}\n      \\ge \\min\\{|X|,m-\\dim W\\}-N\\ell^{-A}.$$*\n\n*The ranks and the orthogonal projections in these conclusions are over $\\mathbb R$; no nonsingularity assumption on $B$ is needed.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-typical-ranks"
+  },
+  {
+   "claim_id": "claim-low-height-inverse-form-rank",
+   "exact_statement": "For every pair of fixed constants $D,A>0$, typically for nonsingular binary matrices $B$ of size $m\\in\\mathcal I_N$, simultaneously for every rational $W\\subseteq\\mathbb R^m$ with $H(W)\\le\\exp(N\\ell^D)$, $$\\mathop{\\mathrm{rank}}(B^{-1}|_W)\\ge\\dim W-N\\ell^{-A}.$$ Here $B^{-1}|_W$ is the restriction of the bilinear form with matrix $B^{-1}$, rather than the restriction of its associated linear map. The exceptional probability is uniform in $m$, as in Proposition <a href=\"#prop:typical-ranks\" data-reference-type=\"ref\" data-reference=\"prop:typical-ranks\">18</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-inverse-rank"
+  },
+  {
+   "claim_id": "claim-simultaneous-prime-corank",
+   "exact_statement": "Typically for nonsingular binary matrices $B$ of size $m\\in\\mathcal I_N$, one has, simultaneously for every prime $p$, $$\\mathop{\\mathrm{corank}}_{\\mathbb F_p}(B\\bmod p)\\le N^{3/5}.$$ More precisely, uniformly for $m\\in\\mathcal I_N$, the probability of nonsingularity together with failure of this assertion is at most $2^{-\\Omega(N^{6/5})}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-prime-corank"
+  },
+  {
+   "claim_id": "claim-typical-small-spectrum",
+   "exact_statement": "For every fixed $A>0$, there is a fixed $C_A>0$ and a function $f_A(N)\\to\\infty$ such that, for every $m\\in\\mathcal I_N$ and all sufficiently large $N$, with probability at least $1-2^{-Nf_A(N)}$, the number of eigenvalues of $B=\\mathbf B_m$ in $$[-\\sqrt N\\,\\ell^{-C_A},\\ \\sqrt N\\,\\ell^{-C_A}]$$ is at most $N\\ell^{-A}$. Eigenvalues are counted with multiplicity. One may take $C_A=A+6$. This assertion does not require $B$ to be nonsingular.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-typical-spectrum"
+  },
+  {
+   "claim_id": "claim-perfect-primary-pairing-blocks",
+   "exact_statement": "Let $G$ be a finite abelian $p$-group with a perfect symmetric pairing $\\lambda:G\\times G\\to\\mathbb Q/\\mathbb Z$. It is an orthogonal direct sum of blocks of the following forms:*\n\n1.  *a cyclic group of order $p^j$ whose generator has self-pairing $a/p^j\\bmod\\mathbb Z$, with $p\\nmid a$;*\n\n2.  *when $p=2$, a group $(\\mathbb Z/2^j\\mathbb Z)^2$ with pairing matrix $$2^{-j}\\begin{pmatrix}2a&c\\\\c&2d\\end{pmatrix}\\bmod\\mathbb Z,\n      \\qquad c\\ \\text{odd}.$$",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-discriminant-blocks"
+  },
+  {
+   "claim_id": "claim-isotropic-primary-coloring",
+   "exact_statement": "In the setting of Lemma <a href=\"#lem:discriminant-blocks\" data-reference-type=\"ref\" data-reference=\"lem:discriminant-blocks\">22</a>, put $h=b_3$, with zero exponents appended as necessary. In an orthogonal block decomposition, let $U$ be the sum of the blocks of exponent strictly greater than $h$, and let $T$ be the remaining sum. There is a coloring of the isotropic elements of $G$ with $C_p$ colors such that elements $x,y$ of one color satisfy $$\\label{eq:primary-color-pairing}\n p^h\\lambda_U(x_U,y_U)=0\\quad\\text{in }\\mathbb Q/\\mathbb Z.$$ Here $x_U,y_U$ denote the projections to $U$. The color counts may be chosen to satisfy $$C_p\\le 1+8b_1,\\qquad\n C_p\\le 2^{b_2-b_3}\\quad\\text{if \\(p\\) is odd}.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-primary-coloring"
+  },
+  {
+   "claim_id": "claim-monochromatic-pairing-image-order",
+   "exact_statement": "Let $X$ be a set of isotropic elements of $G_B$ in a single overall color, and let $$H=\\langle x-y:x,y\\in X\\rangle\\subset G_B.$$ For the restricted pairing map $$\\theta_H:H\\longrightarrow\\mathop{\\mathrm{Hom}}(H,\\mathbb Q/\\mathbb Z),\\qquad\n \\theta_H(u)=\\lambda_B(u,\\cdot)|_H,$$ one has $$|\\mathop{\\mathrm{im}}\\theta_H|\\le N^{NJ_B}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-colored-image-order"
+  },
+  {
+   "claim_id": "claim-pairing-index-determinant-lower-bound",
+   "exact_statement": "Let $L$ be a lattice, let $V=\\mathop{\\mathrm{span}}L$, and let $q$ be a symmetric bilinear form on $V$ such that $q(L,L)\\subset\\mathbb Q$. Write $$K=L\\cap\\operatorname{rad}q,\\qquad\n S=V\\cap(\\operatorname{rad}q)^\\perp,\\qquad\n \\bar L=\\operatorname{proj}_S L.$$ Then $K$ spans the radical and is primitive in $L$, and $\\bar L$ is a lattice in $S$. If $t$ is the order of the image of $$L\\longrightarrow\\mathop{\\mathrm{Hom}}(L,\\mathbb Q/\\mathbb Z),\\qquad\n x\\longmapsto q(x,\\cdot)\\bmod\\mathbb Z,$$ then $$\\label{eq:pairing-determinant}\n \\left|\\det_{\\mathrm{orth}}(q|_S)\\right|\n \\ge \\frac{1}{t(\\det\\bar L)^2}\n =\\frac{(\\det K)^2}{t(\\det L)^2}.$$ Here the determinant on the left is taken in an orthonormal basis of $S$, and all rank-zero determinants are one.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-pairing-determinant"
+  },
+  {
+   "claim_id": "claim-gated-principal-deletion",
+   "exact_statement": "Let $B$ be a nonsingular symmetric $r\\times r$ matrix with entries in $\\{0,1\\}$, where $r\\ge1$. Either a principal submatrix obtained by deleting one coordinate is nonsingular, or there are distinct coordinates $i,j$ such that, with $I=[r]\\setminus\\{i,j\\}$, $$C=B_{I,I}\\quad\\hbox{is nonsingular},\\qquad\n v_1=B_{I,i}\\in\\mathcal S(C),\\quad v_2=B_{I,j}\\in\\mathcal S(C).$$ For the empty minor we use determinant one, and $\\mathcal S$ contains its unique empty column.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-gated-deletion"
+  },
+  {
+   "claim_id": "claim-conditional-potential-step",
+   "exact_statement": "For every fixed $A>0$, the following holds typically for nonsingular binary matrices $C$ of size $m\\in\\mathcal I_N$. For each $h\\in\\{1,2\\}$ with $m+h\\in\\mathcal I_N$, the random extension in Equation <a href=\"#eq:random-extension\" data-reference-type=\"eqref\" data-reference=\"eq:random-extension\">[eq:random-extension]</a> satisfies $$\\label{eq:potential-step}\n \\mathbb E\\!\\left[\n   \\mathbf 1_{\\{\\det B\\ne0\\}}\\mathbf 1_{\\mathcal G_h}\\,2^{N\\Psi(B)}\n   \\,\\middle|\\, C\\right]\n \\le 2^{N(\\Psi(C)+\\ell^{-A})}.$$ The typical condition is imposed only on the starting matrix $C$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-potential-step"
+  },
+  {
+   "claim_id": "claim-one-element-layer-interlacing",
+   "exact_statement": "Let $G$ be a finite abelian group, let $v\\in G$, and put $H=G/\\langle v\\rangle$. Fix a prime $p$, and define $u_t$ by $$p^{u_t}=|\\langle v+p^tG\\rangle|\\quad\\hbox{in }G/p^tG\n \\qquad(t\\ge0).$$ Then $u_0=0$, $u_t-u_{t-1}\\in\\{0,1\\}$ for $t\\ge1$, and $$\\begin{aligned}\n F_H(p,t)&=F_G(p,t)-u_t,\\label{eq:quotient-prefix}\\\\\n k_H(p,e)&=k_G(p,e)-(u_e-u_{e-1})\\in\n           \\{k_G(p,e),k_G(p,e)-1\\}.\\label{eq:layer-interlacing}\n\\end{aligned}$$ Call a positive layer $(p,e)$ of $G$ *retained* if $k_H(p,e)=k_G(p,e)$. On every maximal interval of consecutive layers where $k_G(p,e)$ has a fixed positive value, the retained layers form an initial interval, possibly empty. We call such an interval of constant height a *plateau*.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-layer-quotient"
+  },
+  {
+   "claim_id": "claim-retention-forced-integer-lattice",
+   "exact_statement": "Let $C$ be a nonsingular binary matrix of size $m$, and let $\\pi:\\mathbb Z^m\\twoheadrightarrow H$ be a quotient map to a finite abelian group such that $C\\mathbb Z^m\\subseteq\\ker\\pi$. Let $E$ be any set of positive layers of $H$. There is a lattice $K_E$, depending only on $\\pi,H,E$, with $$\\label{eq:retention-lattice}\n C\\mathbb Z^m\\subseteq K_E\\subseteq\\mathbb Z^m,\\qquad\n [\\mathbb Z^m:K_E]=N^{Nq(E)},\\qquad\n q(E)=\\sum_{(p,e)\\in E} k_H(p,e)\\nu_p,$$ such that the following implication holds for every $v\\in\\mathbb Z^m$: if every layer in $E$ is retained in $H\\longrightarrow H/\\langle\\pi(v)\\rangle$, then $v\\in K_E$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-retention-lattice"
+  },
+  {
+   "claim_id": "claim-symmetric-prime-power-kernel-inequality",
+   "exact_statement": "For a nonsingular extension $B$ of a nonsingular $C$ of width $h\\in\\{1,2\\}$, at every prime $p$ and every integer $t\\ge0$, $$\\label{eq:layer-inequality}\n F_B(p,t)\\le F_C(p,t)+ht-2U_t.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-layer-inequality"
+  },
+  {
+   "claim_id": "claim-simultaneous-cube-coset-concentration",
+   "exact_statement": "For every fixed $A>0$, typically for nonsingular binary matrices $B$ of size $m\\in\\mathcal I_N$, one has simultaneously for every lattice $B\\mathbb Z^m\\subseteq K\\subseteq\\mathbb Z^m$ $$\\label{eq:cube-concentration}\n M_K\\le 2^{N(1-c(q_K)+\\ell^{-A})}.$$ The typical event may depend on $A$, but it does not depend on $K$. Thus the choice of $K$ may depend arbitrarily on $B$ and on any other data.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-cube-concentration"
+  },
+  {
+   "claim_id": "claim-low-height-exact-basis-count",
+   "exact_statement": "Fix $C,C'>0$. Uniformly for $m\\in\\mathcal I_N$ and $0\\le j\\le m$, the number of ordered tuples $$(y,y_1,\\ldots,y_j)\\in(\\{0,1\\}^m)^{j+1}$$ for which $y_1-y,\\ldots,y_j-y$ are independent and their span $W$ satisfies $H(W)\\le\\exp(N\\ell^C)$ is at most $$2^{j^2+o(N^2\\ell^{-C'})}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-exact-basis-count"
+  },
+  {
+   "claim_id": "claim-robust-witness-pricing",
+   "exact_statement": "Fix $D_0>0$, and put $\\eta=\\ell^{-D_0}$ and $\\rho=\\eta^3$. Typically for nonsingular binary matrices $B$ of size $m\\in\\mathcal I_N$, the following assertion holds simultaneously for every $B\\mathbb Z^m\\subseteq K\\subseteq\\mathbb Z^m$.*\n\n\n*Let $S_1,\\ldots,S_h\\subset\\{0,1\\}^m$ be nonempty subsets, each $\\rho$-robust on its affine span, where $h\\le3/\\eta$. Suppose $S_i-S_i\\subset K$, and put $W_i=\\mathop{\\mathrm{span}}(S_i-S_i)$. Suppose also that $W=\\sum_i W_i$ is a direct sum. Write $$\\dim W_i=t_iN,\\qquad t=\\sum_i t_i,\\qquad |S_i|=2^{\\alpha_iN}.$$ If $D\\subset[m]$ has $|D|=xN$, $x\\le t$, and $M_K(D)\\le2^{\\eta N}$, then $$\\label{eq:witness-pricing}\n xt-\\frac{x^2}{2}\n \\le \\sum_i t_i(t_i-\\alpha_i)+\\eta t+\\eta^3.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-witness-pricing"
+  },
+  {
+   "claim_id": "claim-retained-layer-certificate-pricing",
+   "exact_statement": "Fix $A>0$ and at most two positive constants $w_i$. Typically for nonsingular binary matrices $C$ of size $m\\in\\mathcal I_N$, the following assertion holds. The typical set is obtained by imposing Proposition <a href=\"#prop:cube-concentration\" data-reference-type=\"ref\" data-reference=\"prop:cube-concentration\">31</a> at a sufficiently large fixed precision depending on $A$ and these constants.*\n\n*Let $\\mathcal F$ denote exposed information which fixes $C$, a quotient map $G_C\\twoheadrightarrow G$, and the data described next. Suppose that, conditionally on $\\mathcal F$, a tested column $v$ is uniform on $\\{0,1\\}^m$. Partition the layers of $G$ into at most two categories, each a union of whole plateaus. In category $i$, assume that every height is at least $w_i$; only $w_i=1,2$ will be needed. The partition is part of the exposed data. In the quotient of $G$ by the image of $v$, an outcome may mark some of the retained layers. Require that the marked layers on each plateau form a prefix. The marks may also depend on other random bits in the experiment.*\n\n\n*Let $\\mathcal A$ be any subevent of this experiment. There is a partition of $\\mathcal A$ into at most $2^{N\\ell^{-A}}$ classes, constructed before choosing a representative or any target weights, with the following property. Take any nonempty class $\\mathcal A_\\alpha$, any representative outcome in it, and write $s_i$ and $u_i$ for the representative’s sums of the weights $\\nu_p$ of the marked and unmarked layers in category $i$. For any choices $0\\le x_i\\le s_i$, $$\\label{eq:certificate-pricing}\n \\Pr(\\mathcal A_\\alpha\\mid\\mathcal F)\n \\le 2^{-N\\left(\n c\\left(\\sum_i w_i x_i\\right)\n       -\\sum_i\\mathcal E(s_i,u_i,x_i)-\\ell^{-A}\\right)}.$$ Here $\\mathcal A_\\alpha$ already includes the restriction to $\\mathcal A$; the probability is conditioned only on the exposed information. The class count and the estimate are uniform in that information, the quotient, the subevent, and the representative. In particular, the exposed information may include a preceding column that fixes $G$, provided the tested column remains conditionally uniform.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-certificate-pricing"
+  },
+  {
+   "claim_id": "claim-noticeable-retention-probability-cost",
+   "exact_statement": "Typically for nonsingular binary matrices $C$ of size $m\\in\\mathcal I_N$, the following estimate holds. Let $h\\in\\{1,2\\}$ and let $v_1,\\ldots,v_h$ be independent uniform columns in $\\{0,1\\}^m$, conditionally on $C$. Starting with $G^{(0)}=G_C$, let $G^{(j)}$ be the quotient of $G^{(j-1)}$ by the image of $v_j$. For each $1\\le j\\le h$, and conditionally on any values of the preceding columns, $$\\label{eq:retention-cost}\n \\Pr\\!\\left(\n  \\sum_{\\substack{(p,e)\\text{ retained in}\\\\\n                  G^{(j-1)}\\twoheadrightarrow G^{(j)}}}\\nu_p\n       \\ge\\sigma\n       \\,\\middle|\\, C,v_1,\\ldots,v_{j-1}\\right)\n \\le 2^{-N\\sigma/2}.$$ The typical set imposes one fixed precision on $C$, independent of the values of the preceding columns. When these columns occur in a random enlargement of $C$, no nonsingularity assumption on the destination matrix is required.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-retention-cost"
+  },
+  {
+   "claim_id": "claim-scalar-certificate-budget-compensation",
+   "exact_statement": "Let $c$ and $\\mathcal E$ be defined by Equations <a href=\"#eq:cube-profile\" data-reference-type=\"eqref\" data-reference=\"eq:cube-profile\">[eq:cube-profile]</a> and <a href=\"#eq:entropy-cost\" data-reference-type=\"eqref\" data-reference=\"eq:entropy-cost\">[eq:entropy-cost]</a>, and let $\\beta=7/5$. If $g,v_0,a_0,u\\ge0$ satisfy $$2g+3a_0+u\\le\\frac12,\\qquad\n g+v_0+2a_0+2u\\le\\frac12,$$ then there are $x\\in[0,g]$ and $y\\in[0,a_0]$ for which $$\\label{eq:budget-primal}\n c(x+2y)-\\mathcal E(g,v_0,x)-\\mathcal E(a_0,u,y)\n \\ge \\beta g+(6-\\beta)a_0-\\beta u.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-budget-optimization"
+  },
+  {
+   "claim_id": "claim-principal-extension-tail-recursion",
+   "exact_statement": "Let $C\\to B$ be a transition of width $h\\in\\{1,2\\}$ between nonsingular matrices. In the $i$-th successive quotient of $G_C$, write $k_{i-1}(p,e)$ for the height before that quotient and $\\mathcal R_i$ for its retained layers. For every integer $s\\ge h$, $$\\label{eq:path-tail-recursion}\n W_s(B)\\le W_{s+h}(C)\n   +2\\sum_{i=1}^{h}\n       \\sum_{\\substack{(p,e)\\in\\mathcal R_i\\\\\n                       k_{i-1}(p,e)\\ge s+1-h}}\\nu_p.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-tail-recursion"
+  },
+  {
+   "claim_id": "claim-heavy-retained-layer-cost",
+   "exact_statement": "Let $\\mathcal F$ denote exposed information which fixes a nonsingular binary matrix $C$ of size $m\\in\\mathcal I_N$ and a quotient map $\\pi:\\mathbb Z^m\\twoheadrightarrow H$ with $C\\mathbb Z^m\\subseteq\\ker\\pi$. Suppose that, conditionally on $\\mathcal F$, a tested column $v$ is uniform on $\\{0,1\\}^m$. If $\\mathcal R$ is the set of layers retained on quotienting $H$ by $\\pi(v)$, put $$Q=\\sum_{\\substack{(p,e)\\in\\mathcal R\\\\ k_H(p,e)\\ge R-1}}\n           k_H(p,e)\\nu_p.$$ Fix $0<\\eta<1$ and set $q_0=\\eta/(100\\log N)$. Uniformly for $q_0\\le q\\le1/2$, and for all sufficiently large $N$ depending on $\\eta$, $$\\label{eq:path-heavy-retention}\n \\Pr\\{Q\\in[q,2q)\\mid\\mathcal F\\}\\le 2^{-3qN/5}.$$ The exposed information may include the preceding column of a width-two transition, provided the tested column remains conditionally uniform.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-heavy-retention-cost"
+  }
+ ],
+ "paper": "papers/EN-115-000-0022-2-2026-PR-T4-UK-EX-M2-C-ML-H-0499_PM-239.1_The_sharp_exponential_rate_of_singularity_for_symmetric_Bernoulli_matrices.md",
+ "purpose": "The sharp exponential rate of singularity for symmetric Bernoulli matrices",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "0b735cfd3efc46ebd8964d9a6c47354d5a84991379a75aab969e2980fb2510de",
+   "pm.domains.v2": "cf23244394cc8d5466eb73bc8b03c9165b789b82352e6f787c67773f3d37f3c9",
+   "pm.edges.v2": "b95a6782d9c5df13934d19eb685bb0f9bbd86d89ef9ad44d5c9b53fccaa2201e",
+   "pm.extraction.v2": "63137bd9adf91c4631cb9bc21a8ef6148eb963422cb7c0087113f670ac3f1ea6",
+   "pm.formal.v2": "7a074074336096dd3d5d3f1df4ecee8842b01e904ac790eb2a02cedcaee83139",
+   "pm.limits.v2": "76b088d673996634f749c2288e3abab796606a91ec998bd0ee8fb8ca1a0fcf32",
+   "pm.node.v2": "bf52c6070dabba9595aa3b30271c6b3a8b2498d4e3c93574a0fccf65e3157cd9",
+   "pm.objects.v2": "bdad2155ab9c5cbb9dfae6dca8f8c1935d04b6794945349cb2dc90ca5bf31cd4",
+   "pm.provenance.v2": "ec2a33483eb8b65e547e896d8244d519a951e4acad2cfb24d66a307dfc0e32a2",
+   "pm.quantities.v2": "df3f4a476f05d757bd1b5c96ae3529a6c0ea1d7468055f2520cf6f62970eba3d",
+   "pm.reading.v2": "ff947f3e170e9cd559813af3c1bdced0d099d0cfa838ced5ec9c1f9896a97905",
+   "pm.roadmap.v2": "ca0562da22ac882aa110a035273d9abde7b174122d13f194babfea8e997b6e48",
+   "pm.search.v1": "13b3db2dd7b4a52f8083dfbaef47be6ad2968d863ef4a51ccdcaa666f2168499",
+   "pm.triptych.v2": "7eac559d56fd8d6e4bf3400e21e74f37b348d4aa327679ec010ecdb90f9fdc6b"
+  },
+  "canonical_sha256": "f6d7abac7c2d8979a41882633279a2a28922470f94a8e1ac466eca47453a4864",
+  "paper_sha256": "e8c4cd970df8d5de867a7b6f00dfee7ebcae3aba8d7806799653d74221400893",
+  "repaired_body_sha256": "e7e67a9239bf04c92606f7c173c2ac7b4a62a8059b01e5a3ce58b9269482666f"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "e102ef6bdff0f86c5f5c0010371ce22855ff09c16feaaaaee2310a740555e103",
+   "receipt_sha256": "e33987370ebcd92fffc2b25c0b42411b1c8f1ced16a5306031958c05304e4f09",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Every nonsingular symmetric binary matrix in dimensions 1 and 2, plus an explicit nonsingular matrix in dimension 3.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-nonsingular-deletion",
+     "oracle_basis": "Exact permutation determinants decide nonsingularity of each starting and complementary matrix. This checks the finite domain completely and does not certify the universal statement."
+    },
+    {
+     "checked_domain": "Paired-deletion certificates arising in the finite test domain, including the empty complementary minor.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-admissible-pair",
+     "oracle_basis": "Distinctness and valid indices are checked explicitly; exact Cramer's-rule coordinates decide the quadratic and infinity-norm constraints. This does not cover all possible nonempty paired complements."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-empty-single-deletion",
+     "observed_exit": 1,
+     "receipt_sha256": "4e6a38105779e8934bb5b631e02a1ce0697380003ce08bffe733e09a1224050a"
+    },
+    {
+     "id": "mutant-incomplete-pair",
+     "observed_exit": 1,
+     "receipt_sha256": "4dec70fefc5e4bf3f44ed5e5f491308164218007b8c3c44d733efac08c8792b4"
+    },
+    {
+     "id": "mutant-repeated-pair-coordinate",
+     "observed_exit": 1,
+     "receipt_sha256": "4a17e91f75487fb90b43c160f1a3130be78540f35c6e1b8b968e2362376e5171"
+    }
+   ],
+   "receipt_sha256": "73b4c9f6613fd6581cf56aa084e12088b16f133ff58066afb74dfb093e8cab03",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The sharp exponential rate of singularity for symmetric Bernoulli matrices"
+}

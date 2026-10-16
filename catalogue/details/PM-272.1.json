@@ -1,0 +1,785 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 757531,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 216708
+ },
+ "coordinate": "EN-117-000-0004-2-2026-PR-T4-UK-EX-M2-B-AR-H-0574",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "quantum_information",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "Some PPT entangled states nevertheless have positive distillable secret key",
+     "quote_sha256": "c60cde4304fd352c81569ea52d03970f697c0cb9bd99ca64b78cf2fd412a2c7c"
+    }
+   ],
+   "query": "Every PPT state has zero distillable secret key",
+   "reason": "The operational theorem requires a local PPT representation, and the source explicitly notes that some PPT entangled states have positive distillable key."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-2",
+     "quote": "We do not claim that either dimension is minimal.",
+     "quote_sha256": "0d2a91c04f02e8a3e50340fb078658d0e6aaa9f0aa29502c33688bfe9c48080b"
+    }
+   ],
+   "query": "The constructed dimensions are minimal",
+   "reason": "The paper explicitly declines a minimal-dimension conclusion."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:applications",
+     "quote": "The product-free range assertion is used for the compressed matrix $Z$. The full channel Choi matrix has a product contribution from the absorbing flag: since $\\Theta$ annihilates off-diagonal blocks involving $e_\\star$ and $\\Theta(P_\\star)=P_\\star$, the matrix $P_\\star\\otimes P_\\star$ is a direct summand of $J(\\Theta^2)$.",
+     "quote_sha256": "de925e55510259dbb063f32af383d0425308593e553c03eba8373efd73c4d811"
+    }
+   ],
+   "query": "The full completed channel Choi range contains no product vectors",
+   "reason": "The product-free range belongs to the compressed composite; the full channel square has an absorbing-flag product summand."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-6",
+     "quote": "A failure at the second iterate is compatible with such eventual behavior.",
+     "quote_sha256": "de385ef20bc1efb79e708f4fe42d44ad5742d2c54c1b33eca110c69ca7ec8af4"
+    }
+   ],
+   "query": "Failure of entanglement breaking at the square rules out eventual entanglement breaking",
+   "reason": "The source states that failure at the second iterate is compatible with eventual behavior."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-prop-operational-extensions",
+     "quote": "The embeddings must preserve and permit recovery of the full initial purification and complete public records, without coarse-graining those records.",
+     "quote_sha256": "38bceb9c5fa22a6473b8b0120701679d31c1c43e88a41a0a7647ab1c2e11163e"
+    }
+   ],
+   "query": "Zero-key guarantee after discarding Eve's public record",
+   "reason": "The operational conclusions retain the full purification and public information; completed-output embeddings must allow recovery without coarse-graining the records."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:certificate",
+     "quote": "It does not enumerate the twenty complex directions or their ten-point determinants.",
+     "quote_sha256": "178c3976c9f494a4072be6f22dcdce8d062d3d627ab5ced9a55c14cf39c088ed"
+    }
+   ],
+   "query": "A numerical enumeration alone certifies every complex rank-loss direction",
+   "reason": "The finite arithmetic data support quotient and Galois deductions; the source separates them from enumeration of the complex directions and all quadratic determinants."
+  }
+ ],
+ "family": "PM-272",
+ "id": "PM-272.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main-state",
+    "claim_id": "claim-entangled-zero-key-state",
+    "statement": "More precisely, let $n\\geq1$ and let $\\tau_{K_AK_BE'}$ be the normalized output of any admitted completed bit-output protocol of Definition <a href=\"#def:protocol\" data-reference-type=\"ref\" data-reference=\"def:protocol\">[def:protocol]</a> on $\\rho^{\\otimes n}$, where $E'$ retains an initial purification and the complete public transcript."
+   },
+   {
+    "anchor": "stmt-lem-ppt-stability",
+    "claim_id": "claim-ppt-stability",
+    "statement": "Let $F:M_{a}(\\mathbb C)\\to M_{b}(\\mathbb C)$ be CP."
+   },
+   {
+    "anchor": "stmt-lem-ppt-stability",
+    "claim_id": "claim-ppt-stability",
+    "statement": "If $F$ is PPT,"
+   },
+   {
+    "anchor": "stmt-lem-ppt-stability",
+    "claim_id": "claim-ppt-stability",
+    "statement": "If $P$ and $Q$ are compatible CP maps,"
+   },
+   {
+    "anchor": "stmt-lem-choi-separable",
+    "claim_id": "claim-choi-separability-characterisation",
+    "statement": "For a CP map,"
+   },
+   {
+    "anchor": "stmt-lem-product-range",
+    "claim_id": "claim-product-free-range-witness",
+    "statement": "Every nonzero separable positive matrix has a nonzero product vector in its range. Consequently, a nonzero positive matrix whose range contains no nonzero product vector is nonseparable."
+   },
+   {
+    "anchor": "stmt-lem-tensor-closure",
+    "claim_id": "claim-represented-class-tensor-closure",
+    "statement": "The class $\\mathscr C$ is closed under finite tensor products, after grouping all first-party systems and all second-party systems. In particular, $\\omega^{\\otimes n}\\in\\mathscr C$ for every $\\omega\\in\\mathscr C$ and every $n\\geq1$."
+   },
+   {
+    "anchor": "stmt-lem-choi-transfer",
+    "claim_id": "claim-rectangular-choi-transfer",
+    "statement": "Let $F:M_{a}(\\mathbb C)\\to M_{b}(\\mathbb C)$ and $G:M_{b}(\\mathbb C)\\to M_{c}(\\mathbb C)$ be CP maps, and set $F^\\sharp=T_a\\circ F^\\dagger\\circ T_b$."
+   },
+   {
+    "anchor": "stmt-lem-choi-transfer",
+    "claim_id": "claim-rectangular-choi-transfer",
+    "statement": "If $F$ and $G$ are PPT and $Z=J(G\\circ F)\\ne0$,"
+   },
+   {
+    "anchor": "stmt-lem-positive-block",
+    "claim_id": "claim-positive-block-trace-norm-bound",
+    "statement": "Let $H$ and $J$ be square matrices, possibly of different sizes, and let $Z$ have the corresponding rectangular size."
+   },
+   {
+    "anchor": "stmt-lem-positive-block",
+    "claim_id": "claim-positive-block-trace-norm-bound",
+    "statement": "If $$\\begin{pmatrix}H&Z\\\\ Z^*&J\\end{pmatrix}\\succeq0,$$"
+   },
+   {
+    "anchor": "stmt-lem-coherence",
+    "claim_id": "claim-four-effect-coherence-bound",
+    "statement": "Let $\\omega\\in\\mathscr C$ act on $\\mathbb C^p\\otimes\\mathbb C^q$."
+   },
+   {
+    "anchor": "stmt-lem-coherence",
+    "claim_id": "claim-four-effect-coherence-bound",
+    "statement": "For arbitrary $X_0,X_1\\succeq0$ in $M_{p}(\\mathbb C)$ and $Y_0,Y_1\\succeq0$ in $M_{q}(\\mathbb C)$,"
+   },
+   {
+    "anchor": "stmt-lem-transcript",
+    "claim_id": "claim-common-transcript-local-factors",
+    "statement": "Let $R$ be a density operator on finite-dimensional complex spaces $A\\otimes B$, and let an admitted protocol produce bits $i,j\\in\\{0,1\\}$ almost surely on $R$."
+   },
+   {
+    "anchor": "stmt-lem-transcript",
+    "claim_id": "claim-common-transcript-local-factors",
+    "statement": "Give Eve the canonical purification <a href=\"#eq:canonical-purification\" data-reference-type=\"eqref\" data-reference=\"eq:canonical-purification\">[eq:canonical-purification]</a>, and let her retain $E$ and the complete public transcript $T$ with value $t$ in its standard Borel space $\\mathsf T$."
+   },
+   {
+    "anchor": "stmt-lem-purification-recovery",
+    "claim_id": "claim-arbitrary-purification-recovery",
+    "statement": "Let $R$ and $|\\Psi_R\\rangle$ be as in Lemma <a href=\"#lem:transcript\" data-reference-type=\"ref\" data-reference=\"lem:transcript\">13</a>, and let $|\\psi\\rangle\\in A\\otimes B\\otimes\\widetilde E$ be any purification of $R$."
+   },
+   {
+    "anchor": "stmt-lem-purification-recovery",
+    "claim_id": "claim-arbitrary-purification-recovery",
+    "statement": "If Alice and Bob run the same admitted protocol and Eve retains her purification and the full transcript,"
+   },
+   {
+    "anchor": "stmt-lem-fidelity",
+    "claim_id": "claim-root-fidelity-comparisons",
+    "statement": "For arbitrary square complex matrices $A,B$ of the same size,"
+   },
+   {
+    "anchor": "stmt-lem-fidelity",
+    "claim_id": "claim-root-fidelity-comparisons",
+    "statement": "For positive matrices $H,J$ of the same size,"
+   },
+   {
+    "anchor": "stmt-thm-zero-key",
+    "claim_id": "claim-uniform-secret-bit-obstruction",
+    "statement": "Let $\\omega\\in\\mathscr C$."
+   },
+   {
+    "anchor": "stmt-thm-zero-key",
+    "claim_id": "claim-uniform-secret-bit-obstruction",
+    "statement": "For every integer $n\\ge1$, let an admitted completed protocol on $\\omega^{\\otimes n}$ produce normalized bit registers $K_A,K_B$, and let its output $\\tau_{K_AK_BE'}$ retain in $E'$ an initial purification held by Eve and the complete public transcript."
+   },
+   {
+    "anchor": "stmt-prop-operational-extensions",
+    "claim_id": "claim-conditioned-abort-and-limit-obstructions",
+    "statement": "Consider inputs $\\omega^{\\otimes n}$ with $\\omega\\in\\mathscr C$ and $n\\ge1$, and admitted protocols whose normalized completed outputs retain in Eve’s register an arbitrary initial purification and the complete public transcript."
+   },
+   {
+    "anchor": "stmt-prop-operational-extensions",
+    "claim_id": "claim-conditioned-abort-and-limit-obstructions",
+    "statement": "If $A$ is a measurable event of the complete public transcript with probability $r>0$,"
+   },
+   {
+    "anchor": "stmt-prop-operational-extensions",
+    "claim_id": "claim-conditioned-abort-and-limit-obstructions",
+    "statement": "Suppose a sequence of completed protocols has a locally available abort symbol at either party."
+   },
+   {
+    "anchor": "stmt-prop-operational-extensions",
+    "claim_id": "claim-conditioned-abort-and-limit-obstructions",
+    "statement": "The embeddings must preserve and permit recovery of the full initial purification and complete public records, without coarse-graining those records."
+   },
+   {
+    "anchor": "stmt-prop-tensor-criterion",
+    "claim_id": "claim-symmetric-exterior-tensor-criterion",
+    "statement": "Let $L:M_{4}(\\mathbb C)\\to M_{4}(\\mathbb C)$ be PPT."
+   },
+   {
+    "anchor": "stmt-prop-tensor-criterion",
+    "claim_id": "claim-symmetric-exterior-tensor-criterion",
+    "statement": "Suppose that $\\mathcal X=\\{x_1,\\ldots,x_{20}\\}\\subset\\mathbb C^4\\setminus\\{0\\}$ represents twenty distinct projective directions and has the following properties:"
+   },
+   {
+    "anchor": "stmt-prop-tensor-criterion",
+    "claim_id": "claim-symmetric-exterior-tensor-criterion",
+    "statement": "$\\operatorname{rank}L(P_x)<4$ for every $x\\in\\mathcal X$, and every nonzero homogeneous quadratic in $\\mathbb C[x_0,x_1,x_2,x_3]$ vanishes on at most nine members of $\\mathcal X$;"
+   },
+   {
+    "anchor": "stmt-prop-tensor-criterion",
+    "claim_id": "claim-symmetric-exterior-tensor-criterion",
+    "statement": "$L(P_y)$ is positive definite for some $y\\in\\mathbb C^4$."
+   },
+   {
+    "anchor": "stmt-lem-pencil-ppt",
+    "claim_id": "claim-integer-pencil-ppt-and-rank",
+    "statement": "The map $L:M_{4}(\\mathbb C)\\to M_{4}(\\mathbb C)$ in <a href=\"#eq:L\" data-reference-type=\"eqref\" data-reference=\"eq:L\">[eq:L]</a> is PPT. For every $x\\in\\mathbb C^4$, $$L(P_x)=M(x)^{\\mathsf T}\\overline{M(x)}=M(x)^*M(x),\\qquad\n \\operatorname{rank}L(P_x)=\\operatorname{rank}M(x).\n \\label{eq:gram-identity}$$ Moreover, $L(P_{e_0})=36I_4$."
+   },
+   {
+    "anchor": "stmt-prop-twenty-directions",
+    "claim_id": "claim-twenty-directions-quadratic-independence",
+    "statement": "The projective directions $[x]\\in\\mathbb P^3(\\mathbb C)$ for which $\\operatorname{rank}M(x)<4$ consist of exactly twenty distinct points. Each has a unique representative $x=(1,t_1,t_2,t_3)$. Every nonzero homogeneous quadratic in $\\mathbb C[x_0,x_1,x_2,x_3]$ vanishes on at most nine of these representatives."
+   },
+   {
+    "anchor": "stmt-lem-six-bilinear",
+    "claim_id": "claim-six-bilinear-common-zero",
+    "statement": "Any six complex bilinear forms on $\\mathbb C^4\\times\\mathbb C^4$ have a common zero $(x,y)$ with $x\\ne0$ and $y\\ne0$."
+   },
+   {
+    "anchor": "stmt-lem-monic-local-reduction",
+    "claim_id": "claim-monic-local-reduction",
+    "statement": "Let $p$ be a prime, and let the coefficient field and its valuation ring be one of the pairs $$(\\mathbb L,R_p)=(\\mathbb Q,\\mathbb Z_{(p)})\n \\quad\\text{or}\\quad\n (\\mathbb L,R_p)=(\\mathbb Q_p,\\mathbb Z_p).$$"
+   },
+   {
+    "anchor": "stmt-lem-monic-local-reduction",
+    "claim_id": "claim-monic-local-reduction",
+    "statement": "If a monic polynomial $P\\in R_p[z]$ factors as $P=gh$ with monic $g,h\\in\\mathbb L[z]$,"
+   },
+   {
+    "anchor": "stmt-lem-monic-local-reduction",
+    "claim_id": "claim-monic-local-reduction",
+    "statement": "if $P$ has positive degree and irreducible reduction in $\\mathbb F_p[z]$,"
+   },
+   {
+    "anchor": "stmt-lem-local-frobenius",
+    "claim_id": "claim-local-frobenius-cycle-types",
+    "statement": "Let $F\\in\\mathbb Q[z]$ be monic, separable, and of positive degree, with coefficients in $\\mathbb Z_{(p)}$."
+   },
+   {
+    "anchor": "stmt-lem-local-frobenius",
+    "claim_id": "claim-local-frobenius-cycle-types",
+    "statement": "If its reduction in $\\mathbb F_p[z]$ is squarefree with irreducible-factor degrees $s_1,\\ldots,s_h$,"
+   },
+   {
+    "anchor": "stmt-prop-channel-completion",
+    "claim_id": "claim-trace-preserving-flag-completion",
+    "statement": "Let $\\Psi_1,\\Psi_2:M_{m}(\\mathbb C)\\to M_{m}(\\mathbb C)$ be PPT maps."
+   },
+   {
+    "anchor": "stmt-prop-channel-completion",
+    "claim_id": "claim-trace-preserving-flag-completion",
+    "statement": "If $J(\\Psi_2\\circ\\Psi_1)$ is nonseparable,"
+   },
+   {
+    "anchor": "stmt-prop-projection-criterion",
+    "claim_id": "claim-rectangular-projection-criterion",
+    "statement": "Let $Q,K,D$ be positive integers, let $\\mathcal Q$ be a set of $Q$ elements, and let $u_q\\in\\mathbb R^K$, $q\\in\\mathcal Q$, be unit vectors."
+   },
+   {
+    "anchor": "stmt-prop-projection-criterion",
+    "claim_id": "claim-rectangular-projection-criterion",
+    "statement": "For each $q$, let $\\{P_i:i\\in\\mathcal I_q\\}$ be a finite projective measurement on $\\mathbb C^D$: its members are self-adjoint projections, they are mutually orthogonal, and their sum is $I_D$."
+   },
+   {
+    "anchor": "stmt-prop-projection-criterion",
+    "claim_id": "claim-rectangular-projection-criterion",
+    "statement": "Take the label sets $\\mathcal I_q$ disjoint, put $\\mathcal I=\\bigsqcup_{q\\in\\mathcal Q}\\mathcal I_q$, and set $n=|\\mathcal I|$."
+   },
+   {
+    "anchor": "stmt-prop-projection-criterion",
+    "claim_id": "claim-rectangular-projection-criterion",
+    "statement": "$P_iP_j=P_jP_i$ whenever $i\\in\\mathcal I_q$, $j\\in\\mathcal I_r$, and $c_{qr}\\ne0$;"
+   },
+   {
+    "anchor": "stmt-prop-projection-criterion",
+    "claim_id": "claim-rectangular-projection-criterion",
+    "statement": "there is a real number $\\kappa<Q/K$ such that every $J\\subseteq\\mathcal I$ satisfying $\\operatorname{tr}(P_iP_j)>0$ for all distinct $i,j\\in J$ has $|J|\\leq\\kappa$."
+   },
+   {
+    "anchor": "stmt-cor-real-channel",
+    "claim_id": "claim-identical-real-local-channel",
+    "statement": "Under the hypotheses of Proposition <a href=\"#prop:projection-criterion\" data-reference-type=\"ref\" data-reference=\"prop:projection-criterion\">26</a>, suppose that every $P_i$ is real symmetric in the fixed basis of $\\mathbb C^D$, and put $\\Lambda=\\Psi^\\dagger:M_{D}(\\mathbb C)\\to M_{n}(\\mathbb C)$."
+   },
+   {
+    "anchor": "stmt-cor-square-embedding",
+    "claim_id": "claim-square-embedding",
+    "statement": "Under the hypotheses of Proposition <a href=\"#prop:projection-criterion\" data-reference-type=\"ref\" data-reference=\"prop:projection-criterion\">26</a>, suppose in addition that $n\\geq D$, and let $U:\\mathbb C^D\\to\\mathbb C^n$ be the real coordinate isometry onto the first $D$ coordinates."
+   },
+   {
+    "anchor": "stmt-lem-restricted-intersections",
+    "claim_id": "claim-restricted-intersection-bound",
+    "statement": "If $\\mathcal F\\subseteq\\mathcal U$ contains no two distinct sets whose associated vectors are orthogonal,"
+   },
+   {
+    "anchor": "stmt-lem-fiber-amplification",
+    "claim_id": "claim-fiber-orthogonality-amplification",
+    "statement": "For $t=1,2,3$, associate to $(A_1,\\ldots,A_t)\\in\\mathcal U^t$ the unit vector $s_{A_1}\\otimes\\cdots\\otimes s_{A_t}$."
+   },
+   {
+    "anchor": "stmt-lem-fiber-amplification",
+    "claim_id": "claim-fiber-orthogonality-amplification",
+    "statement": "If $\\mathcal R\\subseteq\\mathcal U^t$ contains no collection of $2^t$ distinct tuples whose associated vectors are pairwise orthogonal,"
+   },
+   {
+    "anchor": "eq:combinatorial-context-projections",
+    "claim_id": "claim-parity-positive-overlap-obstruction",
+    "statement": "Let $\\mathcal A=\\{-1,+1\\}^2$."
+   },
+   {
+    "anchor": "eq:combinatorial-context-projections",
+    "claim_id": "claim-parity-positive-overlap-obstruction",
+    "statement": "The four outcomes of context $t$ are the matrices $$\\label{eq:combinatorial-context-projections}\n h_t(\\alpha,\\beta)\n =\\frac14(I_4+\\alpha O_1)(I_4+\\beta O_2),\n \\qquad (\\alpha,\\beta)\\in\\mathcal A.$$"
+   },
+   {
+    "anchor": "stmt-lem-combinatorial-measurements",
+    "claim_id": "claim-global-measurement-hypotheses",
+    "statement": "The vectors <a href=\"#eq:combinatorial-questions\" data-reference-type=\"eqref\" data-reference=\"eq:combinatorial-questions\">[eq:combinatorial-questions]</a> and measurements <a href=\"#eq:combinatorial-global-projections\" data-reference-type=\"eqref\" data-reference=\"eq:combinatorial-global-projections\">[eq:combinatorial-global-projections]</a> satisfy the two hypotheses of Proposition <a href=\"#prop:projection-criterion\" data-reference-type=\"ref\" data-reference=\"prop:projection-criterion\">26</a> with $n=m=QD$ and $\\kappa=3a_0b^2<Q/K$."
+   },
+   {
+    "anchor": "stmt-thm-old-construction",
+    "claim_id": "claim-finite-combinatorial-state-pair-channel",
+    "statement": "Set $$\\label{eq:combinatorial-exact-data}\n \\begin{gathered}\n p=257,\\qquad k=1028,\\qquad\n b=\\binom{1027}{513},\\qquad\n a_0=\\sum_{j=0}^{256}\\binom{1028}{j},\\\\\n Q=b^3,\\qquad K=1086373952,\\qquad\n \\kappa=3a_0b^2<\\frac QK,\\\\\n L=\\binom Q8,\\qquad D=4^L,\\qquad m=QD.\n \\end{gathered}$$"
+   },
+   {
+    "anchor": "stmt-thm-old-construction",
+    "claim_id": "claim-finite-combinatorial-state-pair-channel",
+    "statement": "Use the vectors in <a href=\"#eq:combinatorial-questions\" data-reference-type=\"eqref\" data-reference=\"eq:combinatorial-questions\">[eq:combinatorial-questions]</a>, the $D$ labels per question and projections in <a href=\"#eq:combinatorial-global-projections\" data-reference-type=\"eqref\" data-reference=\"eq:combinatorial-global-projections\">[eq:combinatorial-global-projections]</a>, and the map $\\Psi:M_{m}(\\mathbb C)\\to M_{D}(\\mathbb C)$ in <a href=\"#eq:projection-map\" data-reference-type=\"eqref\" data-reference=\"eq:projection-map\">[eq:projection-map]</a>. Put $\\Lambda=\\Psi^\\dagger$ and $\\Phi_D=\\Omega_D/\\sqrt D$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Entangled represented state with zero distillable key",
+    "evidence": [
+     {
+      "anchor": "sec:applications",
+      "quote": "### The state and a trace-preserving channel\n\nWe now combine the two independent inputs to the main state theorem: the operational obstruction for the represented class and the product-free Choi range of the explicit dimension-ten pair.",
+      "quote_sha256": "5adcc8b14368edf533d5878f7ba74a709aee18d32c384e2cfc4493f59344aef9"
+     }
+    ],
+    "requires_concepts": [
+     "Completely positive maps",
+     "PPT maps",
+     "Input-first Choi matrix",
+     "Product-vector range condition",
+     "Choi transfer",
+     "Represented class",
+     "Complete public transcript",
+     "Root fidelity"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Independent quadratic evaluations at rank-loss directions",
+    "evidence": [
+     {
+      "anchor": "pm-h-27",
+      "quote": "#### Local Frobenius and quadratic evaluations\n\nIt remains to prove that no nonzero quadratic vanishes on ten of the directions. We will show that the Galois group of the splitting field permutes the twenty roots arbitrarily.",
+      "quote_sha256": "fca0f6e1071a39975853ded1b88faa6192c4ab64e216376c390549ff1cfbe85f"
+     },
+     {
+      "anchor": "pm-h-26",
+      "quote": "#### The coordinate field and its twenty points\n\nWe can now prove independence of the twenty spanning monomials.",
+      "quote_sha256": "eb6eae43a1c078fdfa3768bf3df44f9080147142924697a659ade2d207b30127"
+     }
+    ],
+    "requires_concepts": [
+     "Maximal minors",
+     "Affine quotient algebra",
+     "Formal multiplication operator",
+     "Monic local reduction",
+     "Locally integral Frobenius",
+     "Galois permutation action"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Finite projection-overlap counterexample",
+    "evidence": [
+     {
+      "anchor": "sec:combinatorial",
+      "quote": "### A finite combinatorial realization\n\nWe construct data satisfying Proposition <a href=\"#prop:projection-criterion\" data-reference-type=\"ref\" data-reference=\"prop:projection-criterion\">26</a>. A restricted-intersection bound gives real unit vectors such that every sufficiently large subfamily contains an orthogonal pair. The fiber argument for threefold tensor products strengthens this conclusion to eight mutually orthogonal members in every sufficiently large subfamily.",
+      "quote_sha256": "e66d53e505f387ba465d39adae8600590cb84ba04ef60d13b8ecd1089ca49fa1"
+     }
+    ],
+    "requires_concepts": [
+     "Restricted intersections",
+     "Multilinear finite-field polynomials",
+     "Fiber amplification",
+     "Parity measurements",
+     "Tensor-product projections",
+     "Block Gram positivity",
+     "Separable-support bound"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-entangled-zero-key-state",
+   "exact_statement": "There is an explicitly specified entangled density operator $\\rho$ on $\\mathbb C^{10}\\otimes\\mathbb C^{10}$ whose range contains no nonzero product vector and for which $K_D(\\rho)=0$. More precisely, let $n\\geq1$ and let $\\tau_{K_AK_BE'}$ be the normalized output of any admitted completed bit-output protocol of Definition <a href=\"#def:protocol\" data-reference-type=\"ref\" data-reference=\"def:protocol\">[def:protocol]</a> on $\\rho^{\\otimes n}$, where $E'$ retains an initial purification and the complete public transcript. For every state $\\sigma_{E'}$, $$\\label{eq:main-gap}\n \\left\\lVert \\tau_{K_AK_BE'}-\n \\frac12\\sum_{i=0}^1|i,i\\rangle\\langle i,i|\\otimes\\sigma_{E'}\n \\right\\rVert_1\\geq\\frac15.$$ Thus the corresponding trace distance, with its conventional factor $1/2$, is at least $1/10$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-thm-main-state"
+  },
+  {
+   "claim_id": "claim-ppt-composition-counterexample",
+   "exact_statement": "There are explicitly specified PPT maps $\\Phi_1,\\Phi_2:M_{10}(\\mathbb C)\\to M_{10}(\\mathbb C)$ for which $$Z=J(\\Phi_2\\circ\\Phi_1)$$ is nonzero and its range contains no nonzero product vector in $\\mathbb C^{10}\\otimes\\mathbb C^{10}$. In particular, the composition $\\Phi_2\\circ\\Phi_1$ is not entanglement breaking.",
+   "kind": "counterexample",
+   "statement_anchor": "stmt-thm-main-pair"
+  },
+  {
+   "claim_id": "claim-ppt-channel-square-counterexample",
+   "exact_statement": "There is an explicitly specified trace-preserving PPT channel $\\Theta:M_{21}(\\mathbb C)\\to M_{21}(\\mathbb C)$ whose square $\\Theta\\circ\\Theta$ is not entanglement breaking.",
+   "kind": "counterexample",
+   "statement_anchor": "stmt-thm-main-channel"
+  },
+  {
+   "claim_id": "claim-ppt-stability",
+   "exact_statement": "Let $F:M_{a}(\\mathbb C)\\to M_{b}(\\mathbb C)$ be CP. Then $F^\\dagger$ and $T_b\\circ F\\circ T_a$ are CP. Moreover, $$F\\circ T_a\\text{ is CP}\\quad\\Longleftrightarrow\\quad\n T_b\\circ F\\text{ is CP}.$$ If $F$ is PPT, so are $T_b\\circ F$, $F\\circ T_a$, its adjoint, its simultaneous transpose $T_b\\circ F\\circ T_a$, and its transpose-adjoint $F^\\sharp:=T_a\\circ F^\\dagger\\circ T_b$. Tensor products of PPT maps are PPT. If $P$ and $Q$ are compatible CP maps, then $Q\\circ F\\circ P$ is PPT whenever $F$ is PPT.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-ppt-stability"
+  },
+  {
+   "claim_id": "claim-choi-separability-characterisation",
+   "exact_statement": "A linear map $F:M_{a}(\\mathbb C)\\to M_{b}(\\mathbb C)$ is CP if and only if $J(F)\\succeq0$. For a CP map, the following are equivalent:*\n\n1.  *$J(F)$ is separable;*\n\n2.  *for every $k\\geq1$ and every $W\\succeq0$ in $M_{k}(\\mathbb C)\\otimes M_{a}(\\mathbb C)$, $(\\mathrm{id}_k\\otimes F)(W)$ is separable.*\n\n*Also, $$J(T_b\\circ F)=(\\mathrm{id}_a\\otimes T_b)J(F),\\qquad\n J(F\\circ T_a)=(T_a\\otimes\\mathrm{id}_b)J(F).$$",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-choi-separable"
+  },
+  {
+   "claim_id": "claim-product-free-range-witness",
+   "exact_statement": "Every nonzero separable positive matrix has a nonzero product vector in its range. Consequently, a nonzero positive matrix whose range contains no nonzero product vector is nonseparable.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-product-range"
+  },
+  {
+   "claim_id": "claim-represented-class-tensor-closure",
+   "exact_statement": "The class $\\mathscr C$ is closed under finite tensor products, after grouping all first-party systems and all second-party systems. In particular, $\\omega^{\\otimes n}\\in\\mathscr C$ for every $\\omega\\in\\mathscr C$ and every $n\\geq1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-tensor-closure"
+  },
+  {
+   "claim_id": "claim-rectangular-choi-transfer",
+   "exact_statement": "Let $F:M_{a}(\\mathbb C)\\to M_{b}(\\mathbb C)$ and $G:M_{b}(\\mathbb C)\\to M_{c}(\\mathbb C)$ be CP maps, and set $F^\\sharp=T_a\\circ F^\\dagger\\circ T_b$. Then $$\\label{eq:choi-transfer}\n J(G\\circ F)=(F^\\sharp\\otimes G)(\\Omega_b\\Omega_b^*).$$ If $F$ and $G$ are PPT and $Z=J(G\\circ F)\\ne0$, then $\\lambda:=\\operatorname{tr}Z>0$ and $$\\label{eq:choi-transfer-normalized}\n \\frac{Z}{\\lambda}\n =(F^\\sharp\\otimes G)\n \\left(\\frac{\\Omega_b\\Omega_b^*}{\\lambda}\\right)\\in\\mathscr C\n \\quad\\text{on }\\mathbb C^a\\otimes\\mathbb C^c.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-choi-transfer"
+  },
+  {
+   "claim_id": "claim-positive-block-trace-norm-bound",
+   "exact_statement": "Let $H$ and $J$ be square matrices, possibly of different sizes, and let $Z$ have the corresponding rectangular size. If $$\\begin{pmatrix}H&Z\\\\ Z^*&J\\end{pmatrix}\\succeq0,$$ then $$\\left\\lVert Z\\right\\rVert_1\\le\\sqrt{\\operatorname{tr}H\\,\\operatorname{tr}J}.$$ This estimate includes singular $H$ and $J$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-positive-block"
+  },
+  {
+   "claim_id": "claim-four-effect-coherence-bound",
+   "exact_statement": "Let $\\omega\\in\\mathscr C$ act on $\\mathbb C^p\\otimes\\mathbb C^q$. For arbitrary $X_0,X_1\\succeq0$ in $M_{p}(\\mathbb C)$ and $Y_0,Y_1\\succeq0$ in $M_{q}(\\mathbb C)$, put $$D_{ij}=X_i\\otimes Y_j,\n \\qquad p_{ij}=\\operatorname{tr}(D_{ij}\\omega),\n \\qquad i,j\\in\\{0,1\\}.$$ Then $$\\label{eq:coherence}\n \\left\\lVert\\sqrt{D_{00}}\\,\\omega\\sqrt{D_{11}}\\right\\rVert_1\n \\le \\sqrt{p_{00}p_{01}}+\\sqrt{p_{10}p_{11}}\n       +2\\sqrt{p_{01}p_{10}}.$$ There is no normalization assumption on $X_0,X_1,Y_0,Y_1$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-coherence"
+  },
+  {
+   "claim_id": "claim-common-transcript-local-factors",
+   "exact_statement": "Let $R$ be a density operator on finite-dimensional complex spaces $A\\otimes B$, and let an admitted protocol produce bits $i,j\\in\\{0,1\\}$ almost surely on $R$. Give Eve the canonical purification <a href=\"#eq:canonical-purification\" data-reference-type=\"eqref\" data-reference=\"eq:canonical-purification\">[eq:canonical-purification]</a>, and let her retain $E$ and the complete public transcript $T$ with value $t$ in its standard Borel space $\\mathsf T$. There exist a finite positive measure $\\mu$ on $\\mathsf T$ and measurable positive matrices $X_0(t),X_1(t)$ on $A$ and $Y_0(t),Y_1(t)$ on $B$ such that the positive matrix-valued measure of Eve in bit branch $(i,j)$ has the density $$\\label{eq:eve-blocks}\n \\tau_{ij}(t)=\n \\bigl(\\sqrt R\\,[X_i(t)\\otimes Y_j(t)]\\sqrt R\\bigr)^\\mathsf T\n \\quad\\text{with respect to }\\mu.$$ The same $X_i(t)$ and $Y_j(t)$ work for all four branches outside one $\\mu$-null set, and $$\\sum_{i,j=0}^1\\int_{\\mathsf T}\\operatorname{tr}\\tau_{ij}(t)\\,d\\mu(t)=1.$$ The transpose in <a href=\"#eq:eve-blocks\" data-reference-type=\"eqref\" data-reference=\"eq:eve-blocks\">[eq:eve-blocks]</a> is in the product basis identifying $E$ with $A\\otimes B$. No invertibility of $R$ is assumed.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-transcript"
+  },
+  {
+   "claim_id": "claim-arbitrary-purification-recovery",
+   "exact_statement": "Let $R$ and $|\\Psi_R\\rangle$ be as in Lemma <a href=\"#lem:transcript\" data-reference-type=\"ref\" data-reference=\"lem:transcript\">13</a>, and let $|\\psi\\rangle\\in A\\otimes B\\otimes\\widetilde E$ be any purification of $R$. There is a channel $\\mathcal R$ from $\\widetilde E$ to $E$ that recovers the canonical purification. If Alice and Bob run the same admitted protocol and Eve retains her purification and the full transcript, $\\mathcal R$ acting on the purifying register and the identity acting on the transcript recover the canonical output of Lemma <a href=\"#lem:transcript\" data-reference-type=\"ref\" data-reference=\"lem:transcript\">13</a>. Moreover this channel maps every ideal secret-bit law with Eve in $\\widetilde E T$ to an ideal secret-bit law with Eve in $ET$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-purification-recovery"
+  },
+  {
+   "claim_id": "claim-root-fidelity-comparisons",
+   "exact_statement": "For arbitrary square complex matrices $A,B$ of the same size, $$\\label{eq:polar-fidelity}\n f(A^*A,B^*B)=\\left\\lVert AB^*\\right\\rVert_1.$$ For positive matrices $H,J$ of the same size, $$\\label{eq:fidelity-lower}\n f(H,J)\\ge\n \\frac{\\operatorname{tr}H+\\operatorname{tr}J-\\left\\lVert H-J\\right\\rVert_1}{2}.$$ Also $f(H^\\mathsf T,J^\\mathsf T)=f(H,J)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-fidelity"
+  },
+  {
+   "claim_id": "claim-uniform-secret-bit-obstruction",
+   "exact_statement": "Let $\\omega\\in\\mathscr C$. For every integer $n\\ge1$, let an admitted completed protocol on $\\omega^{\\otimes n}$ produce normalized bit registers $K_A,K_B$, and let its output $\\tau_{K_AK_BE'}$ retain in $E'$ an initial purification held by Eve and the complete public transcript. The purification may be arbitrary. For every normalized state or classical-quantum law $\\sigma_{E'}$, $$\\label{eq:uniform-secret-bit-gap}\n \\left\\lVert\\tau_{K_AK_BE'}-\n  \\frac12\\sum_{i=0}^1|i,i\\rangle\\langle i,i|\\otimes\\sigma_{E'}\n \\right\\rVert_1\\ge\\frac15.$$ Thus the conventional trace distance is at least $1/10$, and $K_D(\\omega)=0$ in Definition <a href=\"#def:distillable-key\" data-reference-type=\"ref\" data-reference=\"def:distillable-key\">15</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-zero-key"
+  },
+  {
+   "claim_id": "claim-conditioned-abort-and-limit-obstructions",
+   "exact_statement": "Consider inputs $\\omega^{\\otimes n}$ with $\\omega\\in\\mathscr C$ and $n\\ge1$, and admitted protocols whose normalized completed outputs retain in Eve’s register an arbitrary initial purification and the complete public transcript. The following statements extend the gap in Theorem <a href=\"#thm:zero-key\" data-reference-type=\"ref\" data-reference=\"thm:zero-key\">17</a>; in item 2, the completed local output alphabet may include an abort symbol.*\n\n1.  *If $A$ is a measurable event of the complete public transcript with probability $r>0$, the normalized bit output conditioned on $A$ has distance at least $1/5$ from every ideal bit law for that accepted output. This holds for every $r>0$.*\n\n2.  *Suppose a sequence of completed protocols has a locally available abort symbol at either party. If the probability that at least one party aborts tends to zero, and the normalized non-aborting outputs approach ideal non-aborting bit laws, then replacing each local abort by the fixed bit zero would give completed bit outputs approaching ideal bits. Such a sequence is impossible for inputs in $\\mathscr C$ (including any numbers of copies).*\n\n3.  *Let $\\tau_k$ be completed normalized bit outputs to which the gap applies, possibly on different output spaces. Suppose their bit registers are kept fixed and their Eve registers are embedded in a common output space $F$, giving states $\\widehat\\tau_k$. The embeddings must preserve and permit recovery of the full initial purification and complete public records, without coarse-graining those records. In particular, an Eve-side recovery channel recovers $\\tau_k$ from $\\widehat\\tau_k$ while leaving the bits fixed. If $\\widehat\\tau_k\\to\\tau$ in trace norm, then for every normalized law $\\sigma_F$, $$\\left\\lVert\\tau-\\tfrac 12\\sum_{i=0}^1\n           |i,i\\rangle\\langle i,i|\\otimes\\sigma_F\\right\\rVert_1\\ge\\frac15.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-operational-extensions"
+  },
+  {
+   "claim_id": "claim-symmetric-exterior-tensor-criterion",
+   "exact_statement": "Let $L:M_{4}(\\mathbb C)\\to M_{4}(\\mathbb C)$ be PPT. Suppose that $\\mathcal X=\\{x_1,\\ldots,x_{20}\\}\\subset\\mathbb C^4\\setminus\\{0\\}$ represents twenty distinct projective directions and has the following properties:*\n\n1.  *$\\operatorname{rank}L(P_x)<4$ for every $x\\in\\mathcal X$, and every nonzero homogeneous quadratic in $\\mathbb C[x_0,x_1,x_2,x_3]$ vanishes on at most nine members of $\\mathcal X$;*\n\n2.  *$L(P_y)$ is positive definite for some $y\\in\\mathbb C^4$.*\n\n*Then there are PPT maps $\\Phi_1,\\Phi_2:M_{10}(\\mathbb C)\\to M_{10}(\\mathbb C)$, constructed explicitly from $L$, such that $$Z=J(\\Phi_2\\circ\\Phi_1)\\ne0,\\qquad\n \\operatorname{ran}Z\\cap\\{u\\otimes v:u,v\\in\\mathbb C^{10}\\}=\\{0\\}.$$ In particular, $\\Phi_2\\circ\\Phi_1$ is not entanglement breaking.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-tensor-criterion"
+  },
+  {
+   "claim_id": "claim-integer-pencil-ppt-and-rank",
+   "exact_statement": "The map $L:M_{4}(\\mathbb C)\\to M_{4}(\\mathbb C)$ in <a href=\"#eq:L\" data-reference-type=\"eqref\" data-reference=\"eq:L\">[eq:L]</a> is PPT. For every $x\\in\\mathbb C^4$, $$L(P_x)=M(x)^{\\mathsf T}\\overline{M(x)}=M(x)^*M(x),\\qquad\n \\operatorname{rank}L(P_x)=\\operatorname{rank}M(x).\n \\label{eq:gram-identity}$$ Moreover, $L(P_{e_0})=36I_4$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-pencil-ppt"
+  },
+  {
+   "claim_id": "claim-twenty-directions-quadratic-independence",
+   "exact_statement": "The projective directions $[x]\\in\\mathbb P^3(\\mathbb C)$ for which $\\operatorname{rank}M(x)<4$ consist of exactly twenty distinct points. Each has a unique representative $x=(1,t_1,t_2,t_3)$. Every nonzero homogeneous quadratic in $\\mathbb C[x_0,x_1,x_2,x_3]$ vanishes on at most nine of these representatives.",
+   "kind": "classification",
+   "statement_anchor": "stmt-prop-twenty-directions"
+  },
+  {
+   "claim_id": "claim-six-bilinear-common-zero",
+   "exact_statement": "Any six complex bilinear forms on $\\mathbb C^4\\times\\mathbb C^4$ have a common zero $(x,y)$ with $x\\ne0$ and $y\\ne0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-six-bilinear"
+  },
+  {
+   "claim_id": "claim-monic-local-reduction",
+   "exact_statement": "Let $p$ be a prime, and let the coefficient field and its valuation ring be one of the pairs $$(\\mathbb L,R_p)=(\\mathbb Q,\\mathbb Z_{(p)})\n \\quad\\text{or}\\quad\n (\\mathbb L,R_p)=(\\mathbb Q_p,\\mathbb Z_p).$$ If a monic polynomial $P\\in R_p[z]$ factors as $P=gh$ with monic $g,h\\in\\mathbb L[z]$, then $g,h\\in R_p[z]$, and their reductions modulo $p$ retain their degrees, including degree zero. Consequently, if $P$ has positive degree and irreducible reduction in $\\mathbb F_p[z]$, then $P$ is irreducible over $\\mathbb L$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-monic-local-reduction"
+  },
+  {
+   "claim_id": "claim-local-frobenius-cycle-types",
+   "exact_statement": "Let $F\\in\\mathbb Q[z]$ be monic, separable, and of positive degree, with coefficients in $\\mathbb Z_{(p)}$. If its reduction in $\\mathbb F_p[z]$ is squarefree with irreducible-factor degrees $s_1,\\ldots,s_h$, then the Galois group of its rational splitting field contains an element with cycle lengths $s_1,\\ldots,s_h$ on the roots.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-local-frobenius"
+  },
+  {
+   "claim_id": "claim-trace-preserving-flag-completion",
+   "exact_statement": "Let $\\Psi_1,\\Psi_2:M_{m}(\\mathbb C)\\to M_{m}(\\mathbb C)$ be PPT maps. There are explicitly defined constants $c_1,c_2>0$, a trace-preserving PPT channel $\\Theta:M_{2m+1}(\\mathbb C)\\to M_{2m+1}(\\mathbb C)$, and a real coordinate isometry $W_0:\\mathbb C^m\\to\\mathbb C^{2m+1}$ such that $$\\label{eq:choi-corner}\n (W_0^*\\otimes W_0^*)J(\\Theta\\circ\\Theta)(W_0\\otimes W_0)\n       =c_1c_2J(\\Psi_2\\circ\\Psi_1).$$ If $J(\\Psi_2\\circ\\Psi_1)$ is nonseparable, then $\\Theta\\circ\\Theta$ is not entanglement breaking.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-channel-completion"
+  },
+  {
+   "claim_id": "claim-rectangular-projection-criterion",
+   "exact_statement": "Let $Q,K,D$ be positive integers, let $\\mathcal Q$ be a set of $Q$ elements, and let $u_q\\in\\mathbb R^K$, $q\\in\\mathcal Q$, be unit vectors. Put $c_{qr}=u_q^{\\mathsf T}u_r$. For each $q$, let $\\{P_i:i\\in\\mathcal I_q\\}$ be a finite projective measurement on $\\mathbb C^D$: its members are self-adjoint projections, they are mutually orthogonal, and their sum is $I_D$. Zero projections are allowed. Take the label sets $\\mathcal I_q$ disjoint, put $\\mathcal I=\\bigsqcup_{q\\in\\mathcal Q}\\mathcal I_q$, and set $n=|\\mathcal I|$. Suppose that*\n\n1.  *$P_iP_j=P_jP_i$ whenever $i\\in\\mathcal I_q$, $j\\in\\mathcal I_r$, and $c_{qr}\\ne0$;*\n\n2.  *there is a real number $\\kappa<Q/K$ such that every $J\\subseteq\\mathcal I$ satisfying $\\operatorname{tr}(P_iP_j)>0$ for all distinct $i,j\\in J$ has $|J|\\leq\\kappa$.*\n\n\n*After ordering $\\mathcal I$, define the complex-linear map $\\Psi:M_{n}(\\mathbb C)\\to M_{D}(\\mathbb C)$ on matrix units by $$\\label{eq:projection-map}\n H_{ij}=c_{qr}P_iP_j,\\qquad\n \\Psi(E_{ij})=H_{ij}\n \\quad(i\\in\\mathcal I_q,\\ j\\in\\mathcal I_r).$$ Then $\\Psi$ and its Hilbert–Schmidt adjoint $\\Psi^\\dagger:M_{D}(\\mathbb C)\\to M_{n}(\\mathbb C)$ are PPT. Moreover, $$\\label{eq:projection-composite}\n C:=J(\\Psi^\\dagger\\circ\\Psi)\n \\quad\\text{is nonseparable over }\\mathbb C^n\\otimes\\mathbb C^n,\n \\qquad \\operatorname{tr}C=Q^2D.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-projection-criterion"
+  },
+  {
+   "claim_id": "claim-identical-real-local-channel",
+   "exact_statement": "Under the hypotheses of Proposition <a href=\"#prop:projection-criterion\" data-reference-type=\"ref\" data-reference=\"prop:projection-criterion\">26</a>, suppose that every $P_i$ is real symmetric in the fixed basis of $\\mathbb C^D$, and put $\\Lambda=\\Psi^\\dagger:M_{D}(\\mathbb C)\\to M_{n}(\\mathbb C)$. Then, on all complex inputs, $$\\label{eq:projection-real-invariances}\n \\Lambda\\circ T_D=\\Lambda=T_n\\circ\\Lambda,\n \\qquad \\operatorname{tr}\\Lambda(A)=Q\\,\\operatorname{tr}A.$$ In particular, $\\Lambda/Q$ is a trace-preserving PPT channel. For $\\Phi_D=\\Omega_D/\\sqrt D$, the normalized maximally entangled vector on $\\mathbb C^D\\otimes\\mathbb C^D$, one has $$\\label{eq:projection-real-state}\n \\frac{C}{Q^2D}\n =\n \\left(\\frac{\\Lambda}{Q}\\otimes\\frac{\\Lambda}{Q}\\right)\n       (\\Phi_D\\Phi_D^*).$$ This is an entangled density operator on $\\mathbb C^n\\otimes\\mathbb C^n$ in $\\mathscr C$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cor-real-channel"
+  },
+  {
+   "claim_id": "claim-square-embedding",
+   "exact_statement": "Under the hypotheses of Proposition <a href=\"#prop:projection-criterion\" data-reference-type=\"ref\" data-reference=\"prop:projection-criterion\">26</a>, suppose in addition that $n\\geq D$, and let $U:\\mathbb C^D\\to\\mathbb C^n$ be the real coordinate isometry onto the first $D$ coordinates. Define $$\\label{eq:projection-square-pair}\n \\Xi_1=\\operatorname{Ad}_U\\circ\\Psi,\\qquad\n \\Xi_2=\\Psi^\\dagger\\circ\\operatorname{Ad}_{U^*}\n       =\\Xi_1^\\dagger .$$ Then $\\Xi_1,\\Xi_2:M_{n}(\\mathbb C)\\to M_{n}(\\mathbb C)$ are PPT and $$\\Xi_2\\circ\\Xi_1=\\Psi^\\dagger\\circ\\Psi.$$ Their composition is not entanglement breaking.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cor-square-embedding"
+  },
+  {
+   "claim_id": "claim-restricted-intersection-bound",
+   "exact_statement": "If $\\mathcal F\\subseteq\\mathcal U$ contains no two distinct sets whose associated vectors are orthogonal, then $|\\mathcal F|\\leq a_0=\\delta b$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-restricted-intersections"
+  },
+  {
+   "claim_id": "claim-fiber-orthogonality-amplification",
+   "exact_statement": "For $t=1,2,3$, associate to $(A_1,\\ldots,A_t)\\in\\mathcal U^t$ the unit vector $s_{A_1}\\otimes\\cdots\\otimes s_{A_t}$. If $\\mathcal R\\subseteq\\mathcal U^t$ contains no collection of $2^t$ distinct tuples whose associated vectors are pairwise orthogonal, then $$|\\mathcal R|\\leq t\\delta b^t.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-fiber-amplification"
+  },
+  {
+   "claim_id": "claim-parity-positive-overlap-obstruction",
+   "exact_statement": "There is no choice of one projection from each of the six measurements in <a href=\"#eq:combinatorial-context-projections\" data-reference-type=\"eqref\" data-reference=\"eq:combinatorial-context-projections\">[eq:combinatorial-context-projections]</a> such that the trace overlap of every two chosen projections from distinct contexts is strictly positive.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-parity-obstruction"
+  },
+  {
+   "claim_id": "claim-global-measurement-hypotheses",
+   "exact_statement": "The vectors <a href=\"#eq:combinatorial-questions\" data-reference-type=\"eqref\" data-reference=\"eq:combinatorial-questions\">[eq:combinatorial-questions]</a> and measurements <a href=\"#eq:combinatorial-global-projections\" data-reference-type=\"eqref\" data-reference=\"eq:combinatorial-global-projections\">[eq:combinatorial-global-projections]</a> satisfy the two hypotheses of Proposition <a href=\"#prop:projection-criterion\" data-reference-type=\"ref\" data-reference=\"prop:projection-criterion\">26</a> with $n=m=QD$ and $\\kappa=3a_0b^2<Q/K$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-combinatorial-measurements"
+  },
+  {
+   "claim_id": "claim-finite-combinatorial-state-pair-channel",
+   "exact_statement": "Set $$\\label{eq:combinatorial-exact-data}\n \\begin{gathered}\n p=257,\\qquad k=1028,\\qquad\n b=\\binom{1027}{513},\\qquad\n a_0=\\sum_{j=0}^{256}\\binom{1028}{j},\\\\\n Q=b^3,\\qquad K=1086373952,\\qquad\n \\kappa=3a_0b^2<\\frac QK,\\\\\n L=\\binom Q8,\\qquad D=4^L,\\qquad m=QD.\n \\end{gathered}$$ Use the vectors in <a href=\"#eq:combinatorial-questions\" data-reference-type=\"eqref\" data-reference=\"eq:combinatorial-questions\">[eq:combinatorial-questions]</a>, the $D$ labels per question and projections in <a href=\"#eq:combinatorial-global-projections\" data-reference-type=\"eqref\" data-reference=\"eq:combinatorial-global-projections\">[eq:combinatorial-global-projections]</a>, and the map $\\Psi:M_{m}(\\mathbb C)\\to M_{D}(\\mathbb C)$ in <a href=\"#eq:projection-map\" data-reference-type=\"eqref\" data-reference=\"eq:projection-map\">[eq:projection-map]</a>. Put $\\Lambda=\\Psi^\\dagger$ and $\\Phi_D=\\Omega_D/\\sqrt D$.*\n\n\n1.  *The map $\\Lambda/Q:M_{D}(\\mathbb C)\\to M_{m}(\\mathbb C)$ is a trace-preserving PPT channel, and $$\\label{eq:combinatorial-state}\n            \\rho_{\\mathrm{comb}}\n            =\\left(\\frac{\\Lambda}{Q}\\otimes\\frac{\\Lambda}{Q}\\right)\n              (\\Phi_D\\Phi_D^*)\n            =\\frac{J(\\Psi^\\dagger\\circ\\Psi)}{Q^2D}$$ is an entangled density operator on $\\mathbb C^m\\otimes\\mathbb C^m$ belonging to $\\mathscr C$. It has $K_D(\\rho_{\\mathrm{comb}})=0$ and satisfies the uniform unhalved $1/5$ gap and all operational consequences of Theorem <a href=\"#thm:zero-key\" data-reference-type=\"ref\" data-reference=\"thm:zero-key\">17</a> and Proposition <a href=\"#prop:operational-extensions\" data-reference-type=\"ref\" data-reference=\"prop:operational-extensions\">18</a>, with their stated protocol, purification, and completion hypotheses.*\n\n\n2.  *For the real coordinate isometry $U:\\mathbb C^D\\to\\mathbb C^m$ onto the first $D$ coordinates, the maps $$\\Phi_1^{\\mathrm{comb}}=\\operatorname{Ad}_U\\circ\\Psi,\\qquad\n            \\Phi_2^{\\mathrm{comb}}=\\Lambda\\circ\\operatorname{Ad}_{U^*}\n                     =(\\Phi_1^{\\mathrm{comb}})^\\dagger$$ are PPT maps on $M_{m}(\\mathbb C)$, and $$\\label{eq:combinatorial-pair}\n            J(\\Phi_2^{\\mathrm{comb}}\\circ\\Phi_1^{\\mathrm{comb}})\n              =Q^2D\\,\\rho_{\\mathrm{comb}}$$ is nonseparable over $\\mathbb C^m\\otimes\\mathbb C^m$. In particular their composition is not entanglement breaking.*\n\n\n3.  *Let $\\Theta_{\\mathrm{comb}}$ be the channel obtained by applying Proposition <a href=\"#prop:channel-completion\" data-reference-type=\"ref\" data-reference=\"prop:channel-completion\">25</a> to this square pair. It is a trace-preserving PPT channel on $M_{2m+1}(\\mathbb C)$. With the positive constants $c_1,c_2$ and the first coordinate inclusion $W_0$ from that proposition, the Choi matrix of its square has the corner $$\\label{eq:combinatorial-channel-corner}\n            (W_0^*\\otimes W_0^*)J(\\Theta_{\\mathrm{comb}}^2)\n            (W_0\\otimes W_0)\n            =c_1c_2Q^2D\\,\\rho_{\\mathrm{comb}}.$$ Consequently $\\Theta_{\\mathrm{comb}}^2\n             =\\Theta_{\\mathrm{comb}}\\circ\\Theta_{\\mathrm{comb}}$ is not entanglement breaking.",
+   "kind": "construction",
+   "statement_anchor": "stmt-thm-old-construction"
+  }
+ ],
+ "paper": "papers/EN-117-000-0004-2-2026-PR-T4-UK-EX-M2-B-AR-H-0574_PM-272.1_Entanglement_with_zero_distillable_secret_key_in_local_dimension_ten.md",
+ "purpose": "Entanglement with zero distillable secret key in local dimension ten",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "4b2f745cae5b2de9092ed39807f7b290486ad1cb831e2efb402517a4a2e1945f",
+   "pm.domains.v2": "9b93240b111149e9ddcf94bd5a8c4827b3f431c05c6020f3658739b93b911adb",
+   "pm.edges.v2": "12d7aa4c9644b7f48ce6f490586ca45d134d2ae66113b11d2ff8e485b9e35f85",
+   "pm.extraction.v2": "2028eb058634e5355e1b90ef4142b44e5d644fe8353a0e6d217bdf7d72db3987",
+   "pm.formal.v2": "9d033a0d8fe22fe9b9330d8a385263f5cc7ac274dfac363dc0c32a3120099ac2",
+   "pm.limits.v2": "b516e508d05b2cbe546fc3cbf2deac5ea3e617796d153b0b20aa78ea83304b13",
+   "pm.node.v2": "49ec17d011729aa7676b31947c77ca02c077d8d24b433971b98e54a4512359c3",
+   "pm.objects.v2": "bad851926baa110af7d113bf50cb503392319078553bb0b7f32c3591932713fd",
+   "pm.provenance.v2": "ce5fafec2dc9ad331cd06426e93f79f63f603b45c7f8ac8162392f7fb4b62e1d",
+   "pm.quantities.v2": "ebad87ba89a62ffd00f4f2c6e97cd136601b06f1ba9c91b2573475072cb7f0f1",
+   "pm.reading.v2": "ad55e7269ab14ba2292911b867453e6f6534bda40b8477de7bf74c9eda8524d2",
+   "pm.roadmap.v2": "618922e7262a04486e0211b6b8c202bde0d535b25a3e80cee1d09c052f88731d",
+   "pm.search.v1": "b35a21f4cb37d6d585dadf7d82734ee0027557c41dc88385fc29a39501fb7886",
+   "pm.triptych.v2": "340de4780eee114362fabe107037b357486c24a7bfbfbe4c6ca2521f5a133d39"
+  },
+  "canonical_sha256": "e1fed81a64c7397162eb01e35780b8262293d9c3a2cc8c1781e8aba54dadfa6e",
+  "paper_sha256": "39b17bd5be93ee3c414a51e42155118cbc96f9a17a4a6ccf4b1e4fbb05bf381e",
+  "repaired_body_sha256": "51f0f034e3a08d6892249bcc214bf940706b6b1b7a87b63869da8391b8b5c678"
+ },
+ "status": "ACTIVE",
+ "subject_id": 17,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "9d9464b1e5862e840a1269b2dfcf5065e8cb94f2f29e2cefdc3b60990d8e6584",
+   "receipt_sha256": "a6a056c86caf9a50da3e274950534990c7ba6c6880268dbb3853cfed6b9394a6",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "All 4096 selections of one of the four outcomes from each of the six specified contexts, with all 15 unordered context pairs checked by exact arithmetic.",
+     "coverage": "DECIDED",
+     "invariant_id": "invariant-parity-obstruction",
+     "oracle_basis": "Exhaustive independent integer enumeration reproduces the source histogram and finds no selection with every pairwise trace overlap strictly positive."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-last-context-parity",
+     "observed_exit": 1,
+     "receipt_sha256": "7f96542ba6cc57c28307802886630b3b4da46b663746f77eb584322f04a007e4"
+    },
+    {
+     "id": "mutant-omit-context-pair",
+     "observed_exit": 1,
+     "receipt_sha256": "b679fac955978a0d7582a8809b95cf417ec92319c20f42ab09d03d2f04a208cb"
+    },
+    {
+     "id": "mutant-ignore-zero-overlap",
+     "observed_exit": 1,
+     "receipt_sha256": "425ee589d4d9d9373025f8503c99723fad284a68a7446d9d403700290be5bc02"
+    }
+   ],
+   "receipt_sha256": "67eea0f7a6db5a0f67b4ebc69d656ce4c7e291b2d41f6d2f7564d2abf113fb3f",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Entanglement with zero distillable secret key in local dimension ten"
+}

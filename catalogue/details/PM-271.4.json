@@ -1,0 +1,633 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 603670,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 178425
+ },
+ "coordinate": "EN-117-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-M-0573",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-4",
+     "quote": "The Mermin–Wagner theorem excludes positive-temperature ferromagnetism in one and two dimensions for finite-range isotropic Heisenberg models",
+     "quote_sha256": "53bd146ff73134ada9156727b1ffe1aecb33efa3fa4df4d5eb0f270b9342f824"
+    }
+   ],
+   "query": "ferromagnetic order in one or two dimensions at positive temperature",
+   "reason": "The result requires dimension at least three, and lower dimensions are excluded by an impossibility theorem."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:model",
+     "quote": "This magnetization is a property of the chosen state and need not be retained by a rotation-invariant average.",
+     "quote_sha256": "22df905b19818682db019dc1721f933a3f688d0fb00c93f988a2f834dff3e8df"
+    }
+   ],
+   "query": "magnetization of a rotation-invariant average state",
+   "reason": "Magnetization belongs to the chosen state and need not persist under rotation-invariant averaging."
+  }
+ ],
+ "family": "PM-271",
+ "id": "PM-271.4",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-theorem",
+    "statement": "every $S\\in\\{\\frac12,1,\\frac32,\\ldots\\}$"
+   },
+   {
+    "anchor": "sec:loops",
+    "claim_id": "claim-slot-realization",
+    "statement": "Fix a finite cube $\\Lambda\\subset\\mathbb Z^d$"
+   },
+   {
+    "anchor": "stmt-prop-spin-loops",
+    "claim_id": "claim-spin-loops",
+    "statement": "For every finite cube $\\Lambda$, spin $S$, and $0<\\beta<\\infty$ as above"
+   },
+   {
+    "anchor": "stmt-lem-dense-pins",
+    "claim_id": "claim-dense-pins",
+    "statement": "Fix a finite cube $\\Lambda$, $0<\\beta<\\infty$, and a finite deterministic pin set $F$."
+   },
+   {
+    "anchor": "stmt-lem-factorial",
+    "claim_id": "claim-factorial-domination",
+    "statement": "For every finite pin set $D$, or such a set united with $D_0$"
+   },
+   {
+    "anchor": "stmt-prop-pin-test",
+    "claim_id": "claim-simultaneous-pin-test",
+    "statement": "every nonempty finite single-time set $T$ disjoint from $E$"
+   },
+   {
+    "anchor": "stmt-lem-pin-stability-closure",
+    "claim_id": "claim-stability-closure",
+    "statement": "For polynomials in a fixed finite set of variables"
+   },
+   {
+    "anchor": "stmt-lem-pin-partial-symmetrization",
+    "claim_id": "claim-partial-symmetrization",
+    "statement": "Let $F$ be a stable multiaffine polynomial, let $\\tau$ exchange two of its variables, and let $0\\le u\\le1$."
+   },
+   {
+    "anchor": "stmt-lem-pin-exchange-symbol",
+    "claim_id": "claim-exchange-symbol",
+    "statement": "For a permutation obtained by a finite product of independent Bernoulli transpositions and deterministic permutations on a finite set $V$"
+   },
+   {
+    "anchor": "stmt-lem-pin-splicing",
+    "claim_id": "claim-pin-splicing",
+    "statement": "eliminate each $q\\in V\\setminus P$ by setting $x_q=y_q=t$ and extracting the coefficient of $t$"
+   },
+   {
+    "anchor": "stmt-lem-pin-presence",
+    "claim_id": "claim-presence-probabilities",
+    "statement": "Let $A$ be a random subset of a finite set $I$."
+   },
+   {
+    "anchor": "stmt-lem-pin-presence",
+    "claim_id": "claim-presence-probabilities",
+    "statement": "Suppose its generating polynomial $G(\\boldsymbol y)=\\mathbb E\\prod_{j\\in A}y_j$ is stable."
+   },
+   {
+    "anchor": "stmt-prop-exposure",
+    "claim_id": "claim-exposure-disintegration",
+    "statement": "For $P$ as above"
+   },
+   {
+    "anchor": "stmt-lem-exterior",
+    "claim_id": "claim-exterior-moments",
+    "statement": "Let $\\Pi$ be a random permutation matrix on a finite set $V$."
+   },
+   {
+    "anchor": "stmt-lem-exterior",
+    "claim_id": "claim-exterior-moments",
+    "statement": "Suppose its law is a limit of laws of finite products of independent Bernoulli transpositions and deterministic permutations."
+   },
+   {
+    "anchor": "stmt-prop-first-moment",
+    "claim_id": "claim-conditional-first-moment",
+    "statement": "Let $V=J\\sqcup Q$ be a finite set with $J\\ne\\varnothing$."
+   },
+   {
+    "anchor": "eq:exposure-r",
+    "claim_id": "claim-return-identity",
+    "statement": "Throughout this Section, the volume and period are finite."
+   },
+   {
+    "anchor": "stmt-lem-return-energy",
+    "claim_id": "claim-return-energy",
+    "statement": "For almost every exposure under $\\mathbb P_P$"
+   },
+   {
+    "anchor": "stmt-lem-nongrid",
+    "claim_id": "claim-nongrid-blocking",
+    "statement": "Assume $\\mathsf I_p(P)$, and let $t$ be any deterministic time."
+   },
+   {
+    "anchor": "stmt-lem-component-tail",
+    "claim_id": "claim-component-tail",
+    "statement": "whenever $0<p\\le p_0$ and $\\mathsf I_p(P)$ holds"
+   },
+   {
+    "anchor": "stmt-prop-regularity",
+    "claim_id": "claim-irregularity-probability",
+    "statement": "Fix $M_*$."
+   },
+   {
+    "anchor": "stmt-prop-regularity",
+    "claim_id": "claim-irregularity-probability",
+    "statement": "Under $\\mathsf I_p(P)$"
+   },
+   {
+    "anchor": "stmt-lem-local-connectivity",
+    "claim_id": "claim-local-connectivity",
+    "statement": "Let $d\\ge2$ and $K\\ge1$ be fixed."
+   },
+   {
+    "anchor": "stmt-prop-local-nash",
+    "claim_id": "claim-local-nash",
+    "statement": "suppose $t$ is regular for $x$ at scale $R\\ge M_*+K_{\\mathrm{conn}}+3$"
+   },
+   {
+    "anchor": "stmt-lem-hulls",
+    "claim_id": "claim-hull-topology",
+    "statement": "Let $d\\ge2$ and let $\\mathcal Z\\subset\\mathbb Z^d$ be finite."
+   },
+   {
+    "anchor": "stmt-prop-flow-decay",
+    "claim_id": "claim-flow-decay",
+    "statement": "Let $d\\ge3$, $\\nu=1/(100d)$, and suppose the anchor $x$ is regular"
+   },
+   {
+    "anchor": "stmt-lem-flow-overlap",
+    "claim_id": "claim-flow-overlap",
+    "statement": "Suppose two flows on an available-slot graph obey"
+   },
+   {
+    "anchor": "stmt-lem-flow-overlap",
+    "claim_id": "claim-flow-overlap",
+    "statement": "where $d/2<k<d$"
+   },
+   {
+    "anchor": "stmt-prop-flow-energy",
+    "claim_id": "claim-flow-energy",
+    "statement": "Let $d\\ge3$, $\\alpha=1/100$, and $\\nu=1/(100d)$."
+   },
+   {
+    "anchor": "stmt-lem-two-ends",
+    "claim_id": "claim-two-ends",
+    "statement": "For every fixed exposed environment, $s>0$, and period $\\beta\\ge4s$"
+   },
+   {
+    "anchor": "stmt-lem-localization",
+    "claim_id": "claim-localization",
+    "statement": "Fix $d$ and $\\ell$."
+   },
+   {
+    "anchor": "stmt-lem-regular-time-decay",
+    "claim_id": "claim-regular-time-decay",
+    "statement": "assume $\\mathsf I_p(P)$ for $P=E\\cup T$"
+   },
+   {
+    "anchor": "stmt-prop-leakage",
+    "claim_id": "claim-expected-leakage",
+    "statement": "assume $\\mathsf I_p(P)$ for $P=E\\cup T$"
+   },
+   {
+    "anchor": "stmt-thm-pin-bootstrap",
+    "claim_id": "claim-pin-bootstrap",
+    "statement": "Let $0<p\\le p_*$ and $\\beta\\ge5p^{-11/10}$."
+   },
+   {
+    "anchor": "stmt-lem-surface-cost",
+    "claim_id": "claim-surface-cost",
+    "statement": "let $G_N$ be the event in the zero-field mark-and-color law that every cycle meeting $D_0$ is colored up"
+   },
+   {
+    "anchor": "stmt-prop-magnetized-limit",
+    "claim_id": "claim-magnetized-limit",
+    "statement": "Extend $\\rho_N^{\\mathrm{in}}$ to a state $\\rho_N$ on $\\mathcal A$ by the product normalized trace outside $\\Lambda_N$"
+   },
+   {
+    "anchor": "stmt-lem-deep-dynamics",
+    "claim_id": "claim-deep-dynamics",
+    "statement": "Let $B$ be a local observable, let $L$ be a finite set containing $\\mathop{\\mathrm{supp}}B$ and the origin, and let $0<T<\\infty$."
+   },
+   {
+    "anchor": "stmt-lem-strip-limit",
+    "claim_id": "claim-strip-limit",
+    "statement": "Fix $\\beta>0$"
+   },
+   {
+    "anchor": "stmt-lem-strip-limit",
+    "claim_id": "claim-strip-limit",
+    "statement": "Let $(F_n)_{n\\geq1}$ be functions continuous on $\\mathcal S_\\beta$, analytic in its interior, and individually bounded there."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "spontaneous magnetization of a KMS state",
+    "evidence": [
+     {
+      "anchor": "sec:model",
+      "quote": "The quasi-local algebra $\\mathcal A$ is the norm completion of their union.",
+      "quote_sha256": "37805fbabe4f712f2fcc6e6d61493e3edc8f35064c003e99deeba90713d29358"
+     }
+    ],
+    "requires_concepts": [
+     "quasi-local algebra",
+     "KMS condition",
+     "random loop representation"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "simultaneous pin test",
+    "evidence": [
+     {
+      "anchor": "pm-h-12",
+      "quote": "A nonzero polynomial in finitely many complex variables is *stable* if it has no zero when every variable belongs to $\\mathbb H$.",
+      "quote_sha256": "b77ccbd8d1f124075fbc700a2d9e8a725254b76721b6b61d7f1d1b5ae91f87c7"
+     }
+    ],
+    "requires_concepts": [
+     "stable polynomial",
+     "multiaffine polynomial"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-theorem",
+   "exact_statement": "For every integer $d\\geq3$ and every $S\\in\\{\\frac12,1,\\frac32,\\ldots\\}$, there is a finite $\\beta_0(d,S)>0$ such that, for every finite $\\beta\\geq\\beta_0(d,S)$, the dynamics associated with <a href=\"#eq:hamiltonian\" data-reference-type=\"eqref\" data-reference=\"eq:hamiltonian\">[eq:hamiltonian]</a> has a translation-invariant $\\beta$-KMS state $\\omega$ satisfying $$\\omega(S_0^z)\\ge S/4.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-slot-realization",
+   "exact_statement": "At each site $x$, the operators $\\widehat S_x^a=\\sum_{j=1}^{\\ell}s_{(x,j)}^a$ restrict on $\\operatorname{Sym}^{\\ell}(\\mathbb C^2)$ to the spin-$S$ matrices defined in Section <a href=\"#sec:model\" data-reference-type=\"ref\" data-reference=\"sec:model\">1.1</a>. The orthogonal projection onto this subspace is $$\\mathcal S_x=\\frac1{\\ell!}\n      \\sum_{\\kappa\\in\\mathfrak S_\\ell}\\mathcal U_{\\kappa,x}.$$ With $\\mathcal S_\\Lambda=\\prod_{x\\in\\Lambda}\\mathcal S_x$, define $$\\widehat H_\\Lambda\n =-\\sum_{\\{x,y\\}\\subset\\Lambda:\\,|x-y|_1=1}\n          \\sum_{a=x,y,z}\\widehat S_x^a\\widehat S_y^a,\n \\qquad\n \\widehat M_\\Lambda=\\sum_{i\\in V_\\Lambda}s_i^z.$$ Both operators commute with every within-site permutation and with $\\mathcal S_\\Lambda$. Their restrictions to $\\operatorname{ran}\\mathcal S_\\Lambda$ are unitarily equivalent to $H_\\Lambda$ and $M_\\Lambda=\\sum_{x\\in\\Lambda}S_x^z$, respectively. Moreover, $$\\label{eq:slot-hamiltonian}\n \\widehat H_\\Lambda\n   =-\\frac12\\sum_{\\{i,j\\}\\in\\mathcal E_\\Lambda}\n                   \\mathcal U_{(ij)}\n       +\\frac{q_\\Lambda}{4}I.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-slot-realization"
+  },
+  {
+   "claim_id": "claim-spin-loops",
+   "exact_statement": "For every finite cube $\\Lambda$, spin $S$, and $0<\\beta<\\infty$ as above, the partition function is $$\\label{eq:loop-partition-function}\n Z_\\Lambda(\\beta):=\\mathop{\\mathrm{Tr}}_{\\mathcal H_\\Lambda}e^{-\\beta H_\\Lambda}\n       =e^{\\beta q_\\Lambda/4}\\,\n                     \\mathbb E_{\\mathrm b}2^{c(\\omega)}.$$ More generally, for every function $\\Phi$ on the finite spectrum of $M_\\Lambda$, $$\\label{eq:spectral-loop-law}\n \\frac{\\mathop{\\mathrm{Tr}}_{\\mathcal H_\\Lambda}\n          \\bigl(e^{-\\beta H_\\Lambda}\\Phi(M_\\Lambda)\\bigr)}\n      {Z_\\Lambda(\\beta)}\n =\\frac{\\displaystyle\\mathbb E_{\\mathrm b}\n          \\sum_{\\varepsilon\\in\\{-1,1\\}^{\\{\\text{cycles of }\\omega\\}}}\n          \\Phi\\!\\left(\\frac12\\sum_C\\varepsilon_C a_C\\right)}\n        {\\displaystyle\\mathbb E_{\\mathrm b}2^{c(\\omega)}}.$$ Thus the spectral law of $M_\\Lambda$ is obtained by weighting the base picture by $2^{c(\\omega)}$, then coloring each cycle independently up or down with equal probabilities, and summing the corresponding $+1/2$ or $-1/2$ over its slots at time $0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-spin-loops"
+  },
+  {
+   "claim_id": "claim-dense-pins",
+   "exact_statement": "Fix a finite cube $\\Lambda$, $0<\\beta<\\infty$, and a finite deterministic pin set $F$. Let $(\\mathcal C_n)_{n\\ge1}$ be increasing finite sets of times, each containing $0$, whose union is dense in $\\mathbb R/\\beta\\mathbb Z$, and put $$D_{0,n}=\\partial\\Lambda\\times\\{1,\\ldots,\\ell\\}\\times\\mathcal C_n,\n \\qquad D_n=F\\cup D_{0,n},\\qquad D=F\\cup D_0.$$ For $\\mathbb P_{\\mathrm b}$-almost every picture there is a finite $n_*(\\omega)$ such that, for all $n\\ge n_*(\\omega)$, $$w_{D_n}(\\omega)=w_D(\\omega),\\qquad\n \\mathcal B_{D_n}(\\omega)=\\mathcal B_D(\\omega).$$ The laws $\\mathbb P_{D_n}$ converge to $\\mathbb P_D$ in total variation. More generally, if $\\Phi_n\\to\\Phi$ almost surely under $\\mathbb P_{\\mathrm b}$ and $\\sup_n|\\Phi_n|\\le A<\\infty$, then $$\\label{eq:dense-pin-expectations}\n             \\mathbb E_{D_n}\\Phi_n\\longrightarrow\\mathbb E_D\\Phi.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-dense-pins"
+  },
+  {
+   "claim_id": "claim-factorial-domination",
+   "exact_statement": "For every finite pin set $D$, or such a set united with $D_0$, every integer $n\\ge1$, and every nonnegative measurable function $F:X_\\Lambda^n\\to[0,\\infty]$, $$\\label{eq:factorial-domination}\n \\mathbb E_D\\sum_{(u_1,\\ldots,u_n)\\in(\\omega_{\\mathrm m})^n_{\\ne}}\n                 F(u_1,\\ldots,u_n)\n \\le 2^n\\int_{X_\\Lambda^n}F(u_1,\\ldots,u_n)\n                          \\prod_{j=1}^n\\mu(\\,\\mathrm du_j).$$ In particular, the estimate holds with the marks restricted to any specified time interval and with any specified chronological order.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-factorial"
+  },
+  {
+   "claim_id": "claim-simultaneous-pin-test",
+   "exact_statement": "For every finite volume, every $\\beta>0$, every pin set $E$ that is finite or a finite set together with $D_0$, and every nonempty finite single-time set $T$ disjoint from $E$, the return fraction in <a href=\"#eq:pin-return-fraction\" data-reference-type=\"eqref\" data-reference=\"eq:pin-return-fraction\">[eq:pin-return-fraction]</a> satisfies $$\\label{eq:simultaneous-pin-test}\n       \\mathbb P_E(T\\subseteq\\mathcal B_E)\\le (2r)^{|T|}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-pin-test"
+  },
+  {
+   "claim_id": "claim-stability-closure",
+   "exact_statement": "For polynomials in a fixed finite set of variables the following operations preserve stability, with the possibility of producing the zero polynomial: coefficientwise limits with a common degree bound, specialization of a variable to a real number, and partial differentiation. Identifying two variables preserves stability. In particular, identifying two variables as $t$ and extracting the coefficient of $t$ preserves stability up to zero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-pin-stability-closure"
+  },
+  {
+   "claim_id": "claim-partial-symmetrization",
+   "exact_statement": "Let $F$ be a stable multiaffine polynomial, let $\\tau$ exchange two of its variables, and let $0\\le u\\le1$. Then $(1-u)F+u\\tau F$ is stable and multiaffine.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-pin-partial-symmetrization"
+  },
+  {
+   "claim_id": "claim-exchange-symbol",
+   "exact_statement": "For a permutation obtained by a finite product of independent Bernoulli transpositions and deterministic permutations on a finite set $V$, the polynomial $\\mathbb E F_\\pi$ is stable. Here each Bernoulli transposition uses an arbitrary probability in $[0,1]$. The same conclusion holds for any limit of these permutation laws.*\n\n*Every finite independent product of finite-time Poisson exchange permutations, uniform permutations on specified subsets of $V$, and deterministic permutations has such a limit representation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-pin-exchange-symbol"
+  },
+  {
+   "claim_id": "claim-pin-splicing",
+   "exact_statement": "Starting from <a href=\"#eq:pin-layered-symbol\" data-reference-type=\"eqref\" data-reference=\"eq:pin-layered-symbol\">[eq:pin-layered-symbol]</a>, eliminate each $q\\in V\\setminus P$ by setting $x_q=y_q=t$ and extracting the coefficient of $t$. The resulting nonzero stable polynomial is $$\\label{eq:pin-spliced-symbol}\n F_P(\\boldsymbol x,\\boldsymbol y)\n   =\\mathbb E_{\\mathrm b}\n       \\left[2^{n_P(\\pi)}\\prod_{i\\in P}(x_i+y_{\\sigma(i)})\\right].$$ If $T\\subseteq P$, then the probability generating polynomial of the random subset $\\sigma(T)$ under $\\mathbb P_P$ is stable. More precisely, with $Z_P=\\mathbb E_{\\mathrm b}2^{n_P(\\pi)}>0$, it is $$\\label{eq:pin-all-x-zero}\n G_T(\\boldsymbol y)\n  :=\\mathbb E_P\\prod_{i\\in T}y_{\\sigma(i)}\n   =\\frac1{Z_P}\n     \\left.\n       \\left(\\prod_{i\\in P\\setminus T}\\partial_{x_i}\\right)\n       F_P(\\boldsymbol x,\\boldsymbol y)\n     \\right|_{x_i=0\\ (i\\in P)}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-pin-splicing"
+  },
+  {
+   "claim_id": "claim-presence-probabilities",
+   "exact_statement": "Let $A$ be a random subset of a finite set $I$. Suppose its generating polynomial $G(\\boldsymbol y)=\\mathbb E\\prod_{j\\in A}y_j$ is stable. For every $J\\subseteq I$, $$\\label{eq:pin-presence-product}\n           \\Pr(J\\subseteq A)\\le\\prod_{j\\in J}\\Pr(j\\in A).$$ The same assertion holds after conditioning on $B\\subseteq A$, whenever that event has positive probability, for subsets of $I\\setminus B$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-pin-presence"
+  },
+  {
+   "claim_id": "claim-exposure-disintegration",
+   "exact_statement": "For $P$ as above, the conditional law of the unexposed picture given $\\mathcal H$ under $\\mathbb P_P$ is $\\mathbb Q_{\\mathbf a}(\\,\\cdot\\mid G_P)$, and $g_P(\\mathbf a)>0$ for almost every exposure under this pin law.*\n\n\n\n*More precisely, fix a deterministic initial label set $A\\subseteq V_\\Lambda$, and let $\\mu_A$ be the distribution under $\\mathbb P_{\\mathrm b}$ of the histories and endpoint mappings of these labels. Let $F_A$ mean that their endpoint set is $A$ and their paths avoid $P$. On $F_A$, let $c_A(\\mathbf a)$ be the number of cycles in their endpoint permutation. If $Z_P$ is the normalizer defining $\\mathbb P_P$, then for every bounded measurable function $\\Phi$ of the exposure and remaining picture, $$\\begin{aligned}\n &\\mathbb E_P\\Phi(\\mathbf a,\\omega_{\\mathrm h}) \\notag\\\\\n &\\quad=\\frac1{Z_P}\\sum_{A\\subseteq V_\\Lambda}\n \\int_{F_A}2^{c_A(\\mathbf a)}\\,\n \\mathbb E_{\\mathbb Q_{\\mathbf a}}\n       [\\mathbf 1_{G_P}\\Phi(\\mathbf a,\\omega_{\\mathrm h})]\\,\n                         \\mu_A(\\,\\mathrm d\\mathbf a).\n \\label{eq:exposure-disintegration}\n\\end{aligned}$$ Consequently, the exposure marginal on the $A$-branch is $$\\frac1{Z_P}\\mathbf 1_{F_A}(\\mathbf a)2^{c_A(\\mathbf a)}\n                       g_P(\\mathbf a)\\,\\mu_A(\\,\\mathrm d\\mathbf a).\n \\label{eq:exposure-outer-law}$$ The same conclusions hold with $P$ any finite deterministic pin set.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-exposure"
+  },
+  {
+   "claim_id": "claim-exterior-moments",
+   "exact_statement": "Let $\\Pi$ be a random permutation matrix on a finite set $V$. Suppose its law is a limit of laws of finite products of independent Bernoulli transpositions and deterministic permutations. Here a Bernoulli transposition equals a fixed transposition with an arbitrary probability $u\\in[0,1]$, and equals the identity otherwise. Then, writing $K=\\mathbb E\\Pi$, $$\\mathbb E\\bigl[\\bigwedge\\nolimits^k\\Pi\\bigr]\n              =\\bigwedge\\nolimits^k K\n       \\qquad (0\\le k\\le |V|).\n \\label{eq:exterior-moments}$$*\n\n*In particular, fix an exposure from Proposition <a href=\"#prop:exposure\" data-reference-type=\"ref\" data-reference=\"prop:exposure\">12</a> and finitely many time cuts. Under $\\mathbb Q_{\\mathbf a}$, the permutation on the disjoint union of the hole layers, obtained by following each hole from a cut to the next cyclic cut, satisfies <a href=\"#eq:exterior-moments\" data-reference-type=\"eqref\" data-reference=\"eq:exterior-moments\">[eq:exterior-moments]</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-exterior"
+  },
+  {
+   "claim_id": "claim-conditional-first-moment",
+   "exact_statement": "Let $V=J\\sqcup Q$ be a finite set with $J\\ne\\varnothing$. Let $\\Pi$ be a random permutation matrix satisfying <a href=\"#eq:exterior-moments\" data-reference-type=\"eqref\" data-reference=\"eq:exterior-moments\">[eq:exterior-moments]</a>, and put $K=\\mathbb E\\Pi$. Let $G_J$ be the event that every cycle of $\\Pi$ meets $J$. On $G_J$, let $\\Sigma$ be the column-forward permutation matrix of the next visit to $J$ at positive time along the cycles. Then $$\\mathbb P(G_J)=\\det(I-K_{QQ}).\n \\label{eq:all-hit-determinant}$$ If this probability is positive, $K_{QQ}$ is transient and $$\\mathbb E[\\Sigma\\mid G_J]\n   =H:=K_{JJ}+K_{JQ}(I-K_{QQ})^{-1}K_{QJ}.\n \\label{eq:conditional-first-moment}$$ The matrix $H$ is the first positive $J$-hitting kernel for the Markov chain with transition matrix $K$, using independent transitions on successive steps. More strongly, for every complex $J\\times J$ matrix $W$, $$\\mathbb E[\\det(I-W\\Sigma)\\mid G_J]=\\det(I-WH).\n \\label{eq:arbitrary-W}$$ An empty $Q$ is allowed, with determinant of the empty matrix equal to one and the Schur correction in <a href=\"#eq:conditional-first-moment\" data-reference-type=\"eqref\" data-reference=\"eq:conditional-first-moment\">[eq:conditional-first-moment]</a> equal to zero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-first-moment"
+  },
+  {
+   "claim_id": "claim-return-identity",
+   "exact_statement": "For $\\mathbb P_P$-almost every exposure and every $i\\in T$, $$\\mathbb P_P\\bigl(\\text{next pin after }i\\text{ lies in }T\n                              \\mid\\mathcal H\\bigr)\n   =\\mathbb P_{\\mathbf a}^{\\mathrm{walk}}\n                         (\\tau_T^+<\\tau_E).\n \\label{eq:fresh-return-identity}$$ In particular the first moment in <a href=\"#eq:exposure-r\" data-reference-type=\"eqref\" data-reference=\"eq:exposure-r\">[eq:exposure-r]</a> is the $\\mathbb P_P$-average of the corresponding fresh-turn return probabilities in the exposed environment.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-exposure-dense-return"
+  },
+  {
+   "claim_id": "claim-return-energy",
+   "exact_statement": "For almost every exposure under $\\mathbb P_P$, let $U$ be the boundary-killed one-period matrix just defined. There is a smallest nonnegative function $f$ on its cut holes satisfying $$f=1\\text{ on }T,\\qquad U^*f=f\\text{ off }T.\n \\label{eq:minimal-hitting-harmonicity}$$ It is given off $T$ by the probability of ever reaching $T$ on a future turn before boundary killing. In particular $0\\le f\\le1$, and $f$ is zero on the boundary. With counting inner products, $$\\langle f,(I-U)f\\rangle\n        =\\sum_{i\\in T}\\bigl(1-(U^*f)_i\\bigr),\n \\qquad\n m(1-r)\\ge\n       \\mathbb E_P\\langle f,(I-U)f\\rangle.\n \\label{eq:return-energy}$$ Both $U$ and $f$ in this expectation are functions of the same exposure, with the outer law in <a href=\"#eq:exposure-outer-law\" data-reference-type=\"eqref\" data-reference=\"eq:exposure-outer-law\">[eq:exposure-outer-law]</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-return-energy"
+  },
+  {
+   "claim_id": "claim-nongrid-blocking",
+   "exact_statement": "Assume $\\mathsf I_p(P)$, and let $t$ be any deterministic time. There is a constant $C_0=C_0(d,\\ell)$, uniform in $p\\le1$, the volume, the period, the grid, and $P$, such that, for every prescribed finite set $A\\subset\\mathbb Z^d$ of distinct sites, $$\\begin{aligned}\n \\mathbb P_P(A\\subseteq\\mathcal O_t)&\\le C_0p^{2d}\n &&\\text{if }|A|=2d,                                      \\label{eq:small-blocking}\\\\\n \\mathbb P_P(A\\subseteq\\mathcal O_t)&\\le(C_0\\sqrt p)^{|A|}\n &&\\text{if }A\\text{ is a nonempty sparse set of distinct sites}.\n                                                               \\label{eq:sparse-blocking}\n\\end{aligned}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-nongrid"
+  },
+  {
+   "claim_id": "claim-component-tail",
+   "exact_statement": "There are $p_0>0$ and $c,C,\\gamma>0$, depending only on $d,\\ell$ and the fixed sparse-growth choices, such that whenever $0<p\\le p_0$ and $\\mathsf I_p(P)$ holds, $$\\label{eq:component-tail}\n \\mathbb P_P\\bigl(z\\in\\mathcal O_t,\\\n      \\operatorname{rad}_z\\mathcal C_t(z)\\ge h\\bigr)\n \\le C\\exp(-ch^\\gamma)\n \\qquad(z\\in\\mathbb Z^d,\\ h\\ge1)$$ at every deterministic time $t$. The constants $c,C,\\gamma$ are fixed once $p_0$ is fixed and work simultaneously for all $p\\le p_0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-component-tail"
+  },
+  {
+   "claim_id": "claim-irregularity-probability",
+   "exact_statement": "Fix $M_*$. Under $\\mathsf I_p(P)$, for all $0<p\\le p_0$, all deterministic times $t$, and all spatial anchors $x$, $$\\label{eq:regularity-failure}\n \\mathbb P_P(t\\text{ is not regular for }x)\n \\le \\delta:=C R^d p^{2d}+C\\exp(-cR^\\xi),\n \\qquad \\xi=\\nu\\gamma>0.$$ Here $R\\ge1$, and the constants may depend on $M_*$ but are uniform in $p\\le p_0$, volume, period, grid, pin set and anchor.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-regularity"
+  },
+  {
+   "claim_id": "claim-local-connectivity",
+   "exact_statement": "Let $d\\ge2$ and $K\\ge1$ be fixed. There is an integer $\\rho=\\rho(d,K)\\ge K+1$ such that the following holds. If $u,v\\in\\mathbb Z^d$, $|u-v|_\\infty\\le K$, and $F\\subset\\mathbb Z^d$ satisfies $$u,v\\notin F,\\qquad \\#(F\\cap B_\\rho(u))<2d,$$ then a nearest-neighbor path from $u$ to $v$ avoids $F$, lies in $B_\\rho(u)$, and has length at most $(2\\rho+1)^d$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-local-connectivity"
+  },
+  {
+   "claim_id": "claim-local-nash",
+   "exact_statement": "Fix $d\\ge3$, $\\ell$, and $M_*$ as in <a href=\"#eq:local-radius-choice\" data-reference-type=\"eqref\" data-reference=\"eq:local-radius-choice\">[eq:local-radius-choice]</a>. Let $\\mathcal H_t$ be an available-slot graph with at least one and at most $\\ell$ slots at every unblocked site, and suppose $t$ is regular for $x$ at scale $R\\ge M_*+K_{\\mathrm{conn}}+3$. Every nonnegative function $v$ supported on slots above $B_R(x)$ satisfies $$\\label{eq:local-nash}\n \\|v\\|_2^{2+4/d}\\le C\\mathcal D_t(v)\\|v\\|_1^{4/d},$$ where $C$ depends only on $d,\\ell$ and the fixed local radii.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-local-nash"
+  },
+  {
+   "claim_id": "claim-hull-topology",
+   "exact_statement": "Let $d\\ge2$ and let $\\mathcal Z\\subset\\mathbb Z^d$ be finite. The sets $A_C$ are pairwise disjoint and nearest-neighbor connected. Each $H_C$ is finite, is nearest-neighbor connected, has connected complement, and is contained in the coordinate bounding box of $A_C$. Any two hulls are disjoint or one contains the other.*\n\n*For every edge $\\{u,v\\}$ with $u\\in H_C$, $v\\notin H_C$, $$\\label{eq:hull-clearance}\n \\mathop{\\mathrm{dist}}(u,C)=4,\\qquad \\mathop{\\mathrm{dist}}(v,C)=5.$$ Both endpoints are unblocked. The set $S_C$ is connected by steps of sup norm at most one. Each such step can be replaced by a nearest-neighbor path of unblocked sites, contained in the unit enlargement of the bounding box of $A_C$. Consequently any two points of $S_C$ can be joined by a finite path of unblocked sites in that enlargement.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-hulls"
+  },
+  {
+   "claim_id": "claim-flow-decay",
+   "exact_statement": "Let $d\\ge3$, $\\nu=1/(100d)$, and suppose the anchor $x$ is regular in the sense of Definition <a href=\"#def:regular-anchor\" data-reference-type=\"ref\" data-reference=\"def:regular-anchor\">19</a>. Fix the local constant $M_*$ as in <a href=\"#eq:local-radius-choice\" data-reference-type=\"eqref\" data-reference=\"eq:local-radius-choice\">[eq:local-radius-choice]</a> and take $R$ sufficiently large in terms of those fixed constants. For every available slot $a$ at any site $y\\in B_R(x)$ there is a flow $J_a$ on the available-slot graph such that $$\\label{eq:flow-envelope}\n \\operatorname{div}J_a=\\mathbf 1_{\\{a\\}},\\qquad\n |J_a(e)|\\le C(1+\\mathop{\\mathrm{dist}}(e,y))^{-k},\n \\qquad k=d-1-d\\nu.$$ In particular, $\\sum_e J_a(e)^2<\\infty$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-flow-decay"
+  },
+  {
+   "claim_id": "claim-flow-overlap",
+   "exact_statement": "Suppose two flows on an available-slot graph obey $$|J(e)|\\le C_0(1+\\mathop{\\mathrm{dist}}(e,y))^{-k},\\qquad\n |J'(e)|\\le C_0(1+\\mathop{\\mathrm{dist}}(e,y'))^{-k},$$ where $d/2<k<d$. Then $$\\label{eq:flow-overlap}\n \\sum_e |J(e)J'(e)|\n \\le C(1+|y-y'|_\\infty)^{-(2k-d)},$$ where $C$ depends only on $d,\\ell,k,C_0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-flow-overlap"
+  },
+  {
+   "claim_id": "claim-flow-energy",
+   "exact_statement": "Let $d\\ge3$, $\\alpha=1/100$, and $\\nu=1/(100d)$. Fix $M_*$ as in <a href=\"#eq:local-radius-choice\" data-reference-type=\"eqref\" data-reference=\"eq:local-radius-choice\">[eq:local-radius-choice]</a> and take $R$ sufficiently large as in Proposition <a href=\"#prop:flow-decay\" data-reference-type=\"ref\" data-reference=\"prop:flow-decay\">24</a>. Let $T$ be a finite set of $m$ anchor slots with sites $x_i$, satisfying $$\\#\\{i\\in T:x_i\\in B_h(z)\\}\\le L(1+h)^\\alpha\n \\quad\\text{for all }z\\in\\mathbb Z^d,\\ h\\ge0.$$ Fix an available-slot graph and a subset $I\\subset T$ of anchors regular for this graph. For each $i\\in I$, let $\\mu_i$ be any nonnegative mass on its slots, supported over $B_R(x_i)$ and satisfying $\\sum_a\\mu_i(a)\\le1$. There is a flow $J$ such that $$\\label{eq:injection-flow-energy}\n \\operatorname{div}J=\\sum_{i\\in I}\\mu_i,\n \\qquad \\sum_e J(e)^2\\le C|I|R^\\alpha\\le CmR^\\alpha.$$ Consequently every finitely supported real function $g$ on the graph satisfies $$\\label{eq:injection-pairing}\n \\left|\\left\\langle\\sum_{i\\in I}\\mu_i,g\\right\\rangle\\right|\n \\le \\bigl(CmR^\\alpha\\mathcal D(g)\\bigr)^{1/2},\n \\qquad \\mathcal D(g)=\\frac12\\sum_e(g(e^-)-g(e^+))^2.$$ All constants are uniform over the choices of $I$ and of the masses.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-flow-energy"
+  },
+  {
+   "claim_id": "claim-two-ends",
+   "exact_statement": "For every fixed exposed environment, $s>0$, and period $\\beta\\ge4s$, the preceding killed propagators satisfy, for every real vector $v$ on the holes at the distinguished cut with zero boundary values, $$\\label{eq:two-ends}\n \\langle v,(I-U)v\\rangle\\ge\\frac12\\left(\n   \\|v\\|_2^2-\\|C_{2s}v\\|_2^2\n  +\\|v\\|_2^2-\\|C_{2s}^{\\rm rev}v\\|_2^2\\right).$$ Both $u\\mapsto\\|C_uv\\|_2$ and $u\\mapsto\\|C_u^{\\rm rev}v\\|_2$ are nonincreasing.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-two-ends"
+  },
+  {
+   "claim_id": "claim-localization",
+   "exact_statement": "Fix $d$ and $\\ell$. There is a constant $C_*=C_*(d,\\ell)$ such that for $s\\ge1$, $R=\\lceil C_*s\\rceil$, $\\beta\\ge5s$, every finite cube, every $E\\supseteq D_0$ consisting of $D_0$ and finitely many pins, and every disjoint single-time test $T$, one has $$\\label{eq:localization}\n \\mathbb E_P\\|\\eta_u-\\zeta_u\\|_1\\le C m e^{-cs}\n       \\qquad(0\\le u\\le2s)$$ for either direction of propagation. The constants are independent of the volume, the pin sets, $\\beta$, and $s$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-localization"
+  },
+  {
+   "claim_id": "claim-regular-time-decay",
+   "exact_statement": "Let $T$ satisfy <a href=\"#eq:leakage-growth\" data-reference-type=\"eqref\" data-reference=\"eq:leakage-growth\">[eq:leakage-growth]</a>, and assume $\\mathsf I_p(P)$ for $P=E\\cup T$, with $p$ below the preliminary threshold in Proposition <a href=\"#prop:regularity\" data-reference-type=\"ref\" data-reference=\"prop:regularity\">20</a>. For the localized propagators defined above, in either direction and for $s\\le u\\le2s$, $$\\begin{aligned}\n \\mathbb E_P\\|\\eta_{i,u}\\|_2^2\n       &\\le C(s^{-d/2}+\\delta)\\quad(i\\in T),\n                    \\label{eq:piece-decay}\\\\\n \\mathbb E_P\\|\\eta_u\\|_2^2\n       &\\le C m\\bigl[e^{-cs}+R^\\alpha(s^{-d/2}+\\delta)\\bigr].\n                    \\label{eq:all-pieces-decay}\n\\end{aligned}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-regular-time-decay"
+  },
+  {
+   "claim_id": "claim-expected-leakage",
+   "exact_statement": "Fix the constants in the preceding geometric estimates and choose $C_*$ as in Lemma <a href=\"#lem:localization\" data-reference-type=\"ref\" data-reference=\"lem:localization\">28</a>. For all sufficiently small $p>0$, every finite cube, every circular grid of mesh at most $p^{4d}$, every $E$ consisting of $D_0$ and grid pins, and every disjoint single-time grid test $T$ satisfying <a href=\"#eq:leakage-growth\" data-reference-type=\"eqref\" data-reference=\"eq:leakage-growth\">[eq:leakage-growth]</a>, assume $\\mathsf I_p(P)$ for $P=E\\cup T$. If $\\beta\\ge5s$, then, for each of the forward and reverse propagations, $$\\label{eq:expected-leakage}\n \\mathbb E_P\\bigl[\\|f\\|_2^2-\\|C_{2s}f\\|_2^2\\bigr]\n             \\ge m[1-\\varepsilon(p)],$$ where one may take $$\\label{eq:epsilon-definition}\n \\varepsilon(p)=C\\left[e^{-cs}\n       +R^\\alpha\\left(s^{-d/2}+\\delta+s^{-1}\\right)\\right],\n \\qquad \\delta=C R^d p^{2d}+C e^{-cR^\\xi}.$$ All constants are independent of the volume, period, grid, pin sets, and final $p$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-leakage"
+  },
+  {
+   "claim_id": "claim-pin-bootstrap",
+   "exact_statement": "For every integer $d\\ge3$ and integer slot multiplicity $\\ell\\ge1$, there exist $L\\ge\\max\\{2d,\\ell,4\\}$ and $p_*\\in(0,1/4)$ with the following property. Let $0<p\\le p_*$ and $\\beta\\ge5p^{-11/10}$. In any finite cube $\\Lambda$, choose a finite circular time grid containing zero and of mesh at most $p^{4d}$. Let $E$ consist of $D_0$ and any subset of the slot points on this grid. Then every nonempty test $T$ at a single grid time, disjoint from $E$ and satisfying <a href=\"#eq:leakage-growth\" data-reference-type=\"eqref\" data-reference=\"eq:leakage-growth\">[eq:leakage-growth]</a>, obeys $$\\label{eq:bootstrap-closed}\n                  \\mathbb P_E(T\\subseteq\\mathcal B_E)\\le p^{|T|}.$$ In particular, with $p=p_*$ and $\\beta_0=5p_*^{-11/10}<\\infty$, for every finite $\\beta\\ge\\beta_0$, every cube, and every slot $j$ at time zero, $$\\label{eq:singleton-missing}\n                  \\mathbb P_{D_0}(j\\in\\mathcal B_{D_0})\\le p_*.$$ The constants depend only on $d$ and $\\ell$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-pin-bootstrap"
+  },
+  {
+   "claim_id": "claim-surface-cost",
+   "exact_statement": "For every $N\\geq1$, let $G_N$ be the event in the zero-field mark-and-color law that every cycle meeting $D_0$ is colored up. There is a constant $C_{\\beta,d,S}<\\infty$, independent of $N$, such that $$\\begin{aligned}\n \\Pr(G_N)&\\geq\n       \\exp\\{-C_{\\beta,d,S}|\\partial\\Lambda_N|\\},\n       \\label{eq:boundary-color-cost}\\\\\n \\mu_N([SV_N/2,\\infty))&\\geq\n       \\tfrac12\\exp\\{-C_{\\beta,d,S}|\\partial\\Lambda_N|\\}.\n       \\label{eq:free-spectral-tail}\n\\end{aligned}$$ Conditionally on $G_N$, the uncolored picture has law $\\mathbb P_{D_0}$, and the cycles missing $D_0$ still have independent fair colors.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-surface-cost"
+  },
+  {
+   "claim_id": "claim-magnetized-limit",
+   "exact_statement": "For $N\\geq1$, set $$h_N=N^{-1/2},\\qquad K_N=H_N-h_NM_N,\n \\qquad\n \\rho_N^{\\mathrm{in}}(C)=\n   \\frac{\\mathop{\\mathrm{Tr}}(e^{-\\beta K_N}C)}{\\mathop{\\mathrm{Tr}}(e^{-\\beta K_N})}\n \\quad(C\\in\\mathcal A_{\\Lambda_N}).$$ Extend $\\rho_N^{\\mathrm{in}}$ to a state $\\rho_N$ on $\\mathcal A$ by the product normalized trace outside $\\Lambda_N$, and define $$\\label{eq:translation-average}\n \\omega_N(A)=\\frac1{V_N}\\sum_{x\\in\\Lambda_N}\\rho_N(T_x(A)).$$ There is a subsequence $N_j\\to\\infty$ on which $\\omega_{N_j}$ converges pointwise on $\\mathcal A$ to a translation-invariant state $\\omega$, and every such subsequential limit satisfies $$\\label{eq:positive-limit-magnetization}\n \\omega(S_0^z)\\geq S/4.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-magnetized-limit"
+  },
+  {
+   "claim_id": "claim-deep-dynamics",
+   "exact_statement": "Let $B$ be a local observable, let $L$ be a finite set containing $\\mathop{\\mathrm{supp}}B$ and the origin, and let $0<T<\\infty$. Then $$\\label{eq:deep-box-zero-field}\n \\lim_{r\\to\\infty}\\ \n \\sup_{\\substack{\\Gamma\\text{ a finite cube}\\\\\n                 \\mathop{\\mathrm{dist}}_\\infty(L,\\Gamma^c)\\geq r}}\n \\ \\sup_{|t|\\leq T}\\|\\tau_t^\\Gamma(B)-\\tau_t(B)\\|=0.$$ Here $\\Gamma^c=\\mathbb Z^d\\setminus\\Gamma$. If $$I_N=\\{x\\in\\Lambda_N:\n       \\mathop{\\mathrm{dist}}_\\infty(x,\\Lambda_N^c)\\geq\\lfloor\\sqrt N\\rfloor\\},$$ then $|\\Lambda_N\\setminus I_N|/V_N\\to0$ and $$\\label{eq:deep-box-with-field}\n \\lim_{N\\to\\infty}\\sup_{x\\in I_N}\\sup_{|t|\\leq T}\n \\|\\alpha_t^N(T_x(B))-T_x(\\tau_t(B))\\|=0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-deep-dynamics"
+  },
+  {
+   "claim_id": "claim-strip-limit",
+   "exact_statement": "Fix $\\beta>0$, and put $\\mathcal S_\\beta=\\{z\\in\\mathbb C:0\\leq\\operatorname{Im}z\\leq\\beta\\}$. Let $(F_n)_{n\\geq1}$ be functions continuous on $\\mathcal S_\\beta$, analytic in its interior, and individually bounded there. Suppose a constant $C\\geq0$ satisfies $$|F_n(t)|\\leq C,\\qquad |F_n(t+i\\beta)|\\leq C\n \\quad(n\\geq1,\\ t\\in\\mathbb R).$$ Then $|F_n(z)|\\leq C$ throughout $\\mathcal S_\\beta$. If the two boundary sequences converge locally uniformly on $\\mathbb R$ to $f_0$ and $f_\\beta$, respectively, then the full sequence $F_n$ converges locally uniformly on the closed strip to a bounded function $F$, continuous on the closed strip and analytic in its interior, with $$|F(z)|\\leq C,\\qquad F(t)=f_0(t),\\qquad F(t+i\\beta)=f_\\beta(t).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-strip-limit"
+  }
+ ],
+ "paper": "papers/EN-117-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-M-0573_PM-271.4_Spontaneous_magnetization_in_the_quantum_Heisenberg_ferromagnet.md",
+ "purpose": "Spontaneous magnetization in the quantum Heisenberg ferromagnet",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "b85e07dd29a5339294604b4478b9cd9c117be9682cb26d8e6ff71090985c48b3",
+   "pm.domains.v2": "c8f643132b19c910e73830375bb8bcf4306c6720eee0819ef2ed57b853752e80",
+   "pm.edges.v2": "14a27267f09f514863802225f34e1f915e4406c18e48c71bdb0274a4fc38caf8",
+   "pm.extraction.v2": "07220aa49158bc159dd5fad860f6574d73da8efa11aa377edee0f77e7b8947a4",
+   "pm.formal.v2": "f42c53a10e945e4d6e7d4fa9b38b0c9cf413aa03a843285e583152cc280158d3",
+   "pm.limits.v2": "d13a5d975a98bc6f81af341a0c7ba5f63bcc46bd3bf9267b58a47717c7dd7da8",
+   "pm.node.v2": "d0c20be9896ae3cf7e6e33693bb1a1e4d8976498db58cc1b640535014452ad80",
+   "pm.objects.v2": "eb7a05ef61821e72b99e59e37f02b9c2bcb64413a43a031f9ab112f48fff60fa",
+   "pm.provenance.v2": "03af2bbd82232e7cbdb1da83bb2ebe80d6f628c4a3b157d8b9c3235e5de0e942",
+   "pm.quantities.v2": "3af6689b032b7351d0174227a7475211f75dc25895ada447d10de9e735b44e3e",
+   "pm.reading.v2": "a0c4624932e737994f2294248932c5fb04e7321c2e8fdc75701e05e4d663e8fa",
+   "pm.roadmap.v2": "32111647446ff73034f0f97be8e9f8f9bf7ef98111a7faf4cfe969708a1d5a73",
+   "pm.search.v1": "3ae8788365f95a6d880871561e5d850cc6b332949e3fd7a5a276a6ea386031d7",
+   "pm.triptych.v2": "4de71275d08ad8e1f3f62bf468707c788daa4e312a7961da32d3b2ffdfe53327"
+  },
+  "canonical_sha256": "b1b14a994b438a6b5c569a5f0515940cda5f74904d58a00027d970626e4aaab6",
+  "paper_sha256": "aa4ae29cc9c017719ccbc39e0a9a60907ea46e0c01f082a087bedc0d03be9b97",
+  "repaired_body_sha256": "44deeca1edd04c6614f34b00da04727e16b80f47b7b412d16610e07946e58392"
+ },
+ "status": "ACTIVE",
+ "subject_id": 17,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "bc1b840540e0b66ca928f5743d5e8116351aaae3d7d5e2770cee0e7cc78f47dd",
+   "receipt_sha256": "f780492528e7aa32c6c61bbb3665cc699daa3046aa0ae2bf1c76fb28cb2246fd",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Spontaneous magnetization in the quantum Heisenberg ferromagnet"
+}

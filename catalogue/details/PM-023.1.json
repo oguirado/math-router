@@ -1,0 +1,636 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 624581,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 183717
+ },
+ "coordinate": "EN-101-000-0022-2-2026-PR-T4-UK-EX-M1-B-ML-H-0060",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "analytic number theory",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:angular",
+     "quote": "It makes no claim uniform in a growing angular parameter.",
+     "quote_sha256": "7a17e8a5872c234ed62e79c231d96829314726a0bc6a402a720ae6345b33fc27"
+    }
+   ],
+   "query": "Uniform cancellation for angular modes growing with the prime norm bound",
+   "reason": "The angular theorem fixes the mode before taking the asymptotic limit and explicitly excludes growing-mode uniformity."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "We do not improve the cubic large sieve for arbitrary coefficients.",
+     "quote_sha256": "3ad6ee1dc526ef511cd976d5b1570a709c4f52cf9d3d964a36d3f994a9c890f1"
+    }
+   ],
+   "query": "An improved cubic large sieve for arbitrary coefficients",
+   "reason": "The new saving belongs to structured prime convolutions and does not improve the general cubic sieve."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-39",
+     "quote": "The Hecke prime estimates used here do not bound these prime-angle sums at the stronger scale $X^{5/6}/\\log X$, so those cases remain outside the conclusion.",
+     "quote_sha256": "704df4662aa7269794ed708b7d7d7f2c217b5cd7126e86ef1d138e3d6dec2f42"
+    }
+   ],
+   "query": "All remaining fixed-power cases of the complementary conjecture",
+   "reason": "Nonzero multiples of three reduce to prime-angle sums for which the stated Hecke inputs do not reach the required stronger scale."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "As $X\\longrightarrow\\infty$, $$\\label{eq:main}\n \\sum_{\\substack{N\\pi\\le X\\\\\\pi\\equiv1\\pmod3\\ \\mathrm{prime}}}G(\\pi)\n =\\frac65c_*\\frac{X^{5/6}}{\\log X}\n   +o\\!\\left(\\frac{X^{5/6}}{\\log X}\\right).$$",
+     "quote_sha256": "e2ee690c0f6b9dbf4014ec42df568de3f8110212a43304b984f5be7e1bdfdb71"
+    }
+   ],
+   "query": "A finite runtime guarantee derived from the first-moment theorem",
+   "reason": "The main result is an asymptotic statement, with no explicit finite computational cutoff or runtime contract."
+  }
+ ],
+ "family": "PM-023",
+ "id": "PM-023.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-primary-prime-first-moment",
+    "statement": "As $X\\longrightarrow\\infty$, $$\\label{eq:main}\n \\sum_{\\substack{N\\pi\\le X\\\\\\pi\\equiv1\\pmod3\\ \\mathrm{prime}}}G(\\pi)\n =\\frac65c_*\\frac{X^{5/6}}{\\log X}\n   +o\\!\\left(\\frac{X^{5/6}}{\\log X}\\right).$$ The sum is over all primary primes in $\\mathcal O$."
+   },
+   {
+    "anchor": "stmt-thm-cls",
+    "claim_id": "claim-cubic-large-sieve",
+    "statement": "Let $A,B\\ge1$, and let $(u_b)$ be supported on primary squarefree elements with $Nb\\asymp B$."
+   },
+   {
+    "anchor": "stmt-lem-ordinary-sieve",
+    "claim_id": "claim-ordinary-character-sieve",
+    "statement": "For distinct primitive ray characters of trivial infinite parameter, with conductor norm at most $Q$ and with conductor above $3$ dividing a fixed modulus, and coefficients supported on a norm dyad of length $Z$,"
+   },
+   {
+    "anchor": "stmt-lem-cubic-extensions",
+    "claim_id": "claim-nonsquarefree-sieve-extensions",
+    "statement": "for divisor-bounded coefficients $(v_n)$ of norm length $Z$, without a squarefree restriction,"
+   },
+   {
+    "anchor": "stmt-lem-cubic-extensions",
+    "claim_id": "claim-nonsquarefree-sieve-extensions",
+    "statement": "for coefficients $(u_b)$ on primary squarefree elements of norm length $P$,"
+   },
+   {
+    "anchor": "stmt-thm-voronoi-background",
+    "claim_id": "claim-level-voronoi",
+    "statement": "Let $r$ be primary and squarefree, and let $W$ be smooth and compactly supported in $(0,\\infty)$."
+   },
+   {
+    "anchor": "stmt-thm-voronoi-background",
+    "claim_id": "claim-level-voronoi",
+    "statement": "In particular, if $V,V^{-1},R\\ll X^{C_0}$ for fixed $C_0$, $W$ is supported in a fixed compact subinterval of $(0,\\infty)$, and each fixed derivative bound is at most a fixed logarithmic power, then"
+   },
+   {
+    "anchor": "stmt-thm-hb-height",
+    "claim_id": "claim-metaplectic-height-mean-square",
+    "statement": "For primary squarefree $r$,"
+   },
+   {
+    "anchor": "stmt-prop-typei",
+    "claim_id": "claim-type-i-model-comparison",
+    "statement": "Suppose $RU\\asymp X$ and $1\\le R\\ll X^{.51}$. Let $(a_r)$ be divisor-bounded and supported on $Nr\\asymp R$. Let $W_r$ have support in a fixed compact subinterval of $(0,\\infty)$, with each fixed derivative bounded by a fixed power of $L$, uniformly in $r$."
+   },
+   {
+    "anchor": "stmt-prop-typeiheight",
+    "claim_id": "claim-type-i-height-average",
+    "statement": "Suppose $RU\\asymp X$, and let $(a_r)$ be divisor-bounded on $Nr\\asymp R$. Suppose the smooth compactly supported weights $W_r$ have fixed support ratios and uniformly bounded derivatives, independently of $X$."
+   },
+   {
+    "anchor": "stmt-prop-typeiheight",
+    "claim_id": "claim-type-i-height-average",
+    "statement": "For $T\\ge2$"
+   },
+   {
+    "anchor": "stmt-prop-dual",
+    "claim_id": "claim-structured-exceptional-moments",
+    "statement": "Let $v,e\\in\\mathcal O\\setminus\\{0\\}$ satisfy $N(v),N(e)\\le Y^\\delta$, and let $1+|u|\\le Y^{0.36}$."
+   },
+   {
+    "anchor": "eq:prime-convolution",
+    "claim_id": "claim-structured-exceptional-moments",
+    "statement": "Fix a positive constant $c$, a positive integer $k_0$, and fixed support and smoothness bounds. An admissible prime convolution at length $Y$ is $$\\beta(b)=\\mu^2(b)\n \\sum_{b=\\pi_1\\cdots\\pi_k}\n       \\prod_{j=1}^k w_j\\bigl(N(\\pi_j)/F_j\\bigr),\n \\qquad 1\\le k\\le k_0,\\qquad \\prod_{j=1}^k F_j\\asymp Y,\n \\label{eq:prime-convolution}$$ where the primes are primary, the tuple is ordered, every supported prime has norm at least $Y^c$, and the $w_j$ have compact support in fixed subintervals of $(0,\\infty)$. Each fixed derivative is bounded by a fixed power of $\\log Y$, uniformly over the family under consideration. These bounds imply fixed divisor bounds for all coefficients below."
+   },
+   {
+    "anchor": "stmt-lem-smooth-character-duality",
+    "claim_id": "claim-smooth-character-duality",
+    "statement": "Let $\\chi$ be a primitive nonprincipal Hecke character of trivial infinite parameter and conductor norm $D$. Let $W$ be smooth and supported in a fixed compact subinterval of $(0,\\infty)$, with each fixed derivative bounded by a fixed power of $\\log Y$."
+   },
+   {
+    "anchor": "stmt-lem-character-gram",
+    "claim_id": "claim-off-diagonal-character-gram",
+    "statement": "Let $p$ be primary squarefree with $N(p)\\asymp P$, and let $W$ be a fixed smooth radial norm weight of compact support in $(0,\\infty)$."
+   },
+   {
+    "anchor": "stmt-lem-character-gram",
+    "claim_id": "claim-off-diagonal-character-gram",
+    "statement": "For $Z\\ge1$"
+   },
+   {
+    "anchor": "stmt-prop-dispersion",
+    "claim_id": "claim-corrected-and-averaged-dispersion",
+    "statement": "Under the preceding hypotheses"
+   },
+   {
+    "anchor": "sec:dispersion",
+    "claim_id": "claim-corrected-and-averaged-dispersion",
+    "statement": "When $B>X^{0.40}$, suppose in addition that $\\beta$ is a squarefree-restricted convolution of a fixed number of prime sequences of the kind in Proposition <a href=\"#prop:dual\" data-reference-type=\"ref\" data-reference=\"prop:dual\">10</a>, each prime having norm at least $X^c$ for some fixed $c>0$."
+   },
+   {
+    "anchor": "stmt-prop-dispersion",
+    "claim_id": "claim-corrected-and-averaged-dispersion",
+    "statement": "Suppose $|u|\\le L^{O(1)}$, $H\\gg1$, and $\\beta$ has property *(SW)* and is supported on elements all of whose prime factors have norm greater than $L^{C_r}$."
+   },
+   {
+    "anchor": "sec:decomposition",
+    "claim_id": "claim-exact-prime-decomposition",
+    "statement": "Fix sufficiently small positive constants $\\kappa,\\rho$, with $\\rho$ sufficiently small in terms of $\\kappa$,"
+   },
+   {
+    "anchor": "stmt-lem-prime-detector",
+    "claim_id": "claim-exact-prime-detector",
+    "statement": "For squarefree $n$ on the envelope support and sufficiently large $X$,"
+   },
+   {
+    "anchor": "stmt-lem-prime-grouping",
+    "claim_id": "claim-prime-scale-grouping",
+    "statement": "The prime factors just obtained"
+   },
+   {
+    "anchor": "pm-h-24",
+    "claim_id": "claim-stopping-bin-separation",
+    "statement": "For stopped terms write $m=m_+m_-$ and set $$b=rm_+,\\qquad a=m_-u.$$"
+   },
+   {
+    "anchor": "stmt-lem-decomposition-sw",
+    "claim_id": "claim-ordinary-sequence-condition",
+    "statement": "Every nonsparse ordinary $b$ coefficient"
+   },
+   {
+    "anchor": "stmt-prop-bilinear-low",
+    "claim_id": "claim-low-height-bilinear-comparison",
+    "statement": "Suppose $X^{.32}\\le B\\ll\\sqrt X$, $H\\gg1$, and the coefficient $\\beta_b$ satisfies the structural hypotheses of Proposition <a href=\"#prop:dispersion\" data-reference-type=\"ref\" data-reference=\"prop:dispersion\">13</a>. At low heights assume, in addition, its roughness and Siegel–Walfisz hypotheses."
+   },
+   {
+    "anchor": "stmt-prop-bilinear-low",
+    "claim_id": "claim-low-height-bilinear-comparison",
+    "statement": "Suppose $b$ is one prime, $a$ is a product of two primes, each of the three primes has its own specified smooth dyad of length $X^{1/3}L^{O(1)}$, and their weights are bounded."
+   },
+   {
+    "anchor": "stmt-prop-bilinear-height",
+    "claim_id": "claim-integrated-bilinear-localization",
+    "statement": "Let $X_0\\asymp X$, and let $h_T$ be smooth, supported where $T\\le |t|\\le2T$, with $h_T^{(j)}(t)\\ll_jT^{-j}$."
+   },
+   {
+    "anchor": "stmt-prop-bilinear-height",
+    "claim_id": "claim-integrated-bilinear-localization",
+    "statement": "Assume the structural hypotheses of Proposition <a href=\"#prop:dispersion\" data-reference-type=\"ref\" data-reference=\"prop:dispersion\">13</a>, but impose neither roughness nor Siegel–Walfisz conditions."
+   },
+   {
+    "anchor": "stmt-lem-perron-truncation",
+    "claim_id": "claim-fourier-interval-truncation",
+    "statement": "Let $1\\le T\\le X$, and let $V$ be a fixed smooth function supported in $(1/2,4)$, equal to one on a neighborhood of $[1,2]$."
+   },
+   {
+    "anchor": "stmt-lem-perron-truncation",
+    "claim_id": "claim-fourier-interval-truncation",
+    "statement": "If coefficients collected at each integer norm satisfy $|c_n|\\ll_\\epsilon X^\\epsilon$ for $X/2<n<4X$, then"
+   },
+   {
+    "anchor": "stmt-thm-angular",
+    "claim_id": "claim-fixed-angular-prime-comparison",
+    "statement": "For every fixed integer $\\ell$"
+   },
+   {
+    "anchor": "stmt-lem-angular-hecke",
+    "claim_id": "claim-fixed-infinity-hecke-inputs",
+    "statement": "Put $k=|\\ell|/2$."
+   },
+   {
+    "anchor": "stmt-lem-angular-hecke",
+    "claim_id": "claim-fixed-infinity-hecke-inputs",
+    "statement": "If $\\ell\\ne0$, or if $\\ell=0$ and $\\chi$ is nonprincipal cubic,"
+   },
+   {
+    "anchor": "stmt-lem-angular-completed-height",
+    "claim_id": "claim-completed-angular-height-average",
+    "statement": "Let $r$ be primary and squarefree, put $R=Nr$, and let $W$ have fixed compact support in $(0,\\infty)$ and uniformly bounded derivatives."
+   },
+   {
+    "anchor": "stmt-lem-angular-completed-height",
+    "claim_id": "claim-completed-angular-height-average",
+    "statement": "Suppose $T\\ge2$, $V\\gg1$, and $R,V,T$ are bounded by fixed powers of $X$."
+   },
+   {
+    "anchor": "stmt-prop-angular-typei",
+    "claim_id": "claim-angular-type-i-estimates",
+    "statement": "Suppose $RU\\asymp X$, $1\\le R\\ll X^{.51}$, and $(a_r)$ is divisor-bounded on $Nr\\asymp R$."
+   },
+   {
+    "anchor": "stmt-prop-angular-typei",
+    "claim_id": "claim-angular-type-i-estimates",
+    "statement": "If $W_r$ has common fixed compact support in $(0,\\infty)$ and each fixed derivative is bounded by a fixed logarithmic power uniformly in $r$,"
+   },
+   {
+    "anchor": "stmt-prop-angular-typei",
+    "claim_id": "claim-angular-type-i-estimates",
+    "statement": "For the high-height assertion suppose instead that the derivative bounds are fixed independently of $X$."
+   },
+   {
+    "anchor": "pm-h-36",
+    "claim_id": "claim-angular-exceptional-moments",
+    "statement": "Call $\\beta_\\ell(b)=\\Theta_\\ell(b)\\beta_0(b)$ an angular prime convolution if $\\beta_0$ is exactly an admissible convolution in"
+   },
+   {
+    "anchor": "stmt-lem-angular-sw",
+    "claim_id": "claim-angular-sequence-condition",
+    "statement": "Every nonsparse ordinary coefficient $\\beta_0$"
+   },
+   {
+    "anchor": "stmt-prop-angular-dispersion",
+    "claim_id": "claim-angular-dispersion-and-bilinear-transfer",
+    "statement": "assuming"
+   },
+   {
+    "anchor": "pm-h-36",
+    "claim_id": "claim-angular-dispersion-and-bilinear-transfer",
+    "statement": "Its independent radial prime weights, squarefree restriction, lower prime bound, bounded number of factors and derivative hypotheses are all retained."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Sharp prime first moment",
+    "evidence": [
+     {
+      "anchor": "pm-h-5",
+      "quote": "The formal literature inputs are cubic reciprocity and its supplementary laws; the functional equation, prime ideal theorem, and logarithmic conductor prime estimates for Hecke characters; Heath-Brown’s cubic large sieve and metaplectic height mean square; and the unconditional level Voronoi formula and residue of Dunn and Radziwiłł.",
+      "quote_sha256": "a99680f1deb8a988d7470a8c3e882943b8fe56e210848cddbcbd3cbe4bbeab73"
+     }
+    ],
+    "requires_concepts": [
+     "Primary Eisenstein generators",
+     "Cubic residue symbols",
+     "Normalized cubic Gauss sums",
+     "Cubic large sieve",
+     "Level Voronoi formula",
+     "Structured character moments",
+     "Exact prime decomposition",
+     "Fourier truncation"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Fixed-angular cancellation",
+    "evidence": [
+     {
+      "anchor": "sec:angular",
+      "quote": "We prove the additional analytic interfaces and then verify their use in the prime decomposition and sharp-cutoff argument.",
+      "quote_sha256": "193e837ba7f8cbf36fb9496b62d6ebb0c8b4d49c223a8db5cfdf850997793f5c"
+     }
+    ],
+    "requires_concepts": [
+     "Primary-generator angular Hecke character",
+     "Fixed-infinity functional equation",
+     "Angular Type I estimates",
+     "Twisted sequence condition",
+     "Angular dispersion"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-primary-prime-first-moment",
+   "exact_statement": "As $X\\longrightarrow\\infty$, $$\\label{eq:main}\n \\sum_{\\substack{N\\pi\\le X\\\\\\pi\\equiv1\\pmod3\\ \\mathrm{prime}}}G(\\pi)\n =\\frac65c_*\\frac{X^{5/6}}{\\log X}\n   +o\\!\\left(\\frac{X^{5/6}}{\\log X}\\right).$$ The sum is over all primary primes in $\\mathcal O$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-cubic-large-sieve",
+   "exact_statement": "Let $A,B\\ge1$, and let $(u_b)$ be supported on primary squarefree elements with $Nb\\asymp B$. Then, for every $\\epsilon>0$, $$\\sum_{Na\\asymp A}\\mu^2(a)\n \\left|\\sum_b u_b\\chi_a(b)\\right|^2\n \\ll_\\epsilon (AB)^\\epsilon\n \\bigl(A+B+(AB)^{2/3}\\bigr)\\sum_b|u_b|^2.$$ The same assertion holds with upper cutoffs in place of dyads.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-cls"
+  },
+  {
+   "claim_id": "claim-ordinary-character-sieve",
+   "exact_statement": "For distinct primitive ray characters of trivial infinite parameter, with conductor norm at most $Q$ and with conductor above $3$ dividing a fixed modulus, and coefficients supported on a norm dyad of length $Z$, one has $$\\sum_\\chi\\left|\\sum_n v_n\\chi(n)\\right|^2\n \\ll (Z+Q^2)\\sum_n|v_n|^2.$$ The implied constant is uniform when a fixed additional modulus above $3$ is allowed. In particular, the bound applies to the cubic characters indexed by coprime primary squarefree $p,q$ through $b\\mapsto\\chi_b(pq^2)$, whose conductor away from $3$ is $pq$. There is no $Q^\\epsilon$ loss.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-ordinary-sieve"
+  },
+  {
+   "claim_id": "claim-nonsquarefree-sieve-extensions",
+   "exact_statement": "The following estimates allow an arbitrarily small $X^\\epsilon$ loss. First, for divisor-bounded coefficients $(v_n)$ of norm length $Z$, without a squarefree restriction, $$\\sum_{Na\\asymp P}\\mu^2(a)\n       \\left|\\sum_n v_n\\chi_a(n)\\right|^2\n \\ll_\\epsilon X^\\epsilon Z\n       \\bigl(P+Z+(PZ)^{2/3}\\bigr).\n \\label{eq:inner-extension}$$ Second, for coefficients $(u_b)$ on primary squarefree elements of norm length $P$, $$\\sum_{Na\\asymp J}\\left|\\sum_b u_b\\chi_b(a)\\right|^2\n \\ll_\\epsilon X^\\epsilon\n       \\bigl(J+(JP)^{2/3}+J^{1/3}P\\bigr)\\sum_b|u_b|^2.\n \\label{eq:outer-extension}$$ The latter also holds when $a$ ranges over all nonzero elements of $\\mathcal O$ of norm $\\asymp J$. If $J\\gg P$, its last term is absorbed by $(JP)^{2/3}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cubic-extensions"
+  },
+  {
+   "claim_id": "claim-level-voronoi",
+   "exact_statement": "Let $r$ be primary and squarefree, and let $W$ be smooth and compactly supported in $(0,\\infty)$. Put $R=Nr$ and $A_0=(2\\pi)^{5/3}/(3^{7/2}\\Gamma(2/3))$. The completed sum $$\\mathcal C_r(V;W)=\n \\sum_{\\substack{d,u\\\\(d,r)=1}}|d|G(ur)\n             W\\left(\\frac{N(ud^3)}{V}\\right)$$ has main term $A_0\\mathcal MW(5/6)V^{5/6}\\varphi(r)R^{-7/6}$. Its remaining term is $$\\frac{R^{1/2}}{3^{7/2}(2\\pi)^2}\n \\sum_{\\substack{0\\ne\\nu\\in\\lambda^{-1}\\mathcal O, d\\\\(d,r)=1}}\n \\frac{a_r(\\nu)b_r(\\nu)}{N\\nu\\,(Nd)^{5/2}}\n \\check W\\left(\\frac{(2\\pi)^4N(d^3\\nu)V}{R^2}\\right),$$ where, for sufficiently small $\\sigma>0$, $$\\check W(v)=\\frac{1}{2\\pi i}\\int_{(-\\sigma)}v^z\n \\frac{\\Gamma(5/6-z)\\Gamma(7/6-z)}\n      {\\Gamma(z-1/6)\\Gamma(z+1/6)}\\mathcal MW(z)\\,dz.$$ The coefficients depend only on $r$ and $\\nu$, independently of $V$ and $W$. They vanish outside representations $$\\nu=\\lambda^j\\zeta h w(h')^3,\\quad j\\ge-1,\\quad\n h,h'\\mid r^\\infty,\\quad (w,r)=1,\\quad \\mu^2(hw)=1,$$ where $h,h',w$ are primary and $\\zeta$ is a unit. On this support, they are $$a_r(\\nu)=a^\\star(\\lambda^{-3}\\nu),\\qquad\n b_r(\\nu)=\\mu\\left(\\frac{r}{(\\lambda\\nu,r)}\\right)\n          \\frac{\\varphi(r)}{\\varphi\\left(r/(\\lambda\\nu,r)\\right)},$$ where $a^\\star$ is the theta coefficient in [[DR2024](#ref-DR2024), Equation (5.74)]; the second formula is its Equation (5.68). The index $\\lambda^{-3}\\nu$ is the one supplied by its coefficient identity (5.79). They satisfy $$|a_r(\\nu)|\\ll 3^{\\max(j,0)/3}|h'|,\n \\qquad |b_r(\\nu)|\\le N((\\lambda\\nu,r)).$$ In particular, if $V,V^{-1},R\\ll X^{C_0}$ for fixed $C_0$, $W$ is supported in a fixed compact subinterval of $(0,\\infty)$, and each fixed derivative bound is at most a fixed logarithmic power, then $$\\mathcal C_r(V;W)=\n A_0\\mathcal MW(5/6)V^{5/6}\\frac{\\varphi(r)}{R^{7/6}}\n +O_\\epsilon(X^\\epsilon R^{1/2}).\n \\label{eq:voronoi}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-voronoi-background"
+  },
+  {
+   "claim_id": "claim-metaplectic-height-mean-square",
+   "exact_statement": "For primary squarefree $r$, the Dirichlet series $$f_r(s)=\\sum_u G(ru)(Nu)^{-s},\\qquad \\operatorname{Re}s>1,$$ continues meromorphically to $\\operatorname{Re}s>1/2$, with at most a simple pole at $5/6$. It has polynomial growth in closed strips there, away from its pole. For sufficiently small $\\epsilon>0$ and every $T\\ge1$, $$\\int_{-T}^T|f_r(1/2+\\epsilon+it)|^2dt\n \\ll_\\epsilon (Nr)^{1/2+4\\epsilon}T^2.\n \\label{eq:hb-mean-square}$$ Its residue $\\rho_r$ satisfies $|\\rho_r|\\ll (Nr)^{-1/6}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-hb-height"
+  },
+  {
+   "claim_id": "claim-type-i-model-comparison",
+   "exact_statement": "Suppose $RU\\asymp X$ and $1\\le R\\ll X^{.51}$. Let $(a_r)$ be divisor-bounded and supported on $Nr\\asymp R$. Let $W_r$ have support in a fixed compact subinterval of $(0,\\infty)$, with each fixed derivative bounded by a fixed power of $L$, uniformly in $r$. Then $$\\sum_r a_r\\sum_u\n \\left(G(ru)-c_*\\frac{\\mu^2(ru)}{N(ru)^{1/6}}\\right)W_r(Nu/U)\n \\ll X^{5/6-\\eta}$$ for some fixed $\\eta>0$. One may take $\\eta=1/100$, with constants depending on the stated fixed parameters.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-typei"
+  },
+  {
+   "claim_id": "claim-type-i-height-average",
+   "exact_statement": "Suppose $RU\\asymp X$, and let $(a_r)$ be divisor-bounded on $Nr\\asymp R$. Suppose the smooth compactly supported weights $W_r$ have fixed support ratios and uniformly bounded derivatives, independently of $X$. For $T\\ge2$ and every fixed $D>0$, $$\\begin{aligned}\n &\\int_{|t|\\asymp T}\\sum_{Nr\\asymp R}|a_r|\n       \\left|\\sum_uG(ru)(Nu)^{it}W_r(Nu/U)\\right|\\frac{dt}{T}\n \\notag\\\\\n &\\hspace{12mm}\\ll_\\epsilon\n       X^{1/2+\\epsilon}R^{3/4}T^{1/2}\n       +O_D\\bigl(X^{5/6}L^{C}T^{-D}\\bigr),\n \\label{eq:typeI-height}\n\\end{aligned}$$ where $C$ depends only on the coefficient bounds.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-typeiheight"
+  },
+  {
+   "claim_id": "claim-structured-exceptional-moments",
+   "exact_statement": "There are constants $\\delta,\\eta>0$, depending only on the fixed data in <a href=\"#eq:prime-convolution\" data-reference-type=\"eqref\" data-reference=\"eq:prime-convolution\">[eq:prime-convolution]</a>, with the following property. Let $v,e\\in\\mathcal O\\setminus\\{0\\}$ satisfy $N(v),N(e)\\le Y^\\delta$, and let $1+|u|\\le Y^{0.36}$. Put $$A(p,q)=\\sum_{(b,e)=1}\\beta(b)N(b)^{iu}\\chi_b(vpq^2).$$ If $p,q$ run through coprime primary squarefree elements of respective norm lengths $P,Q\\ge1$, and either $$\\left|\\frac{\\log P}{\\log Y}-1\\right|\\le\\delta,\n \\qquad 0\\le\\frac{\\log Q}{\\log Y}\\le\\delta,$$ or $$\\left|\\frac{\\log P}{\\log Y}-\\frac13\\right|\\le\\delta,\n \\qquad\n \\left|\\frac{\\log Q}{\\log Y}-\\frac13\\right|\\le\\delta,$$ then $$\\sum_{p,q}|A(p,q)|^2\\ll Y^{7/3-\\eta}.\n \\label{eq:exceptional-moment}$$ The implied constant is uniform for the specified support and smoothness bounds.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-dual"
+  },
+  {
+   "claim_id": "claim-smooth-character-duality",
+   "exact_statement": "Let $\\chi$ be a primitive nonprincipal Hecke character of trivial infinite parameter and conductor norm $D$. Let $W$ be smooth and supported in a fixed compact subinterval of $(0,\\infty)$, with each fixed derivative bounded by a fixed power of $\\log Y$. The full sum $\\sum_n W(N(n)/Z)\\chi(n)N(n)^{it}$ admits a decomposition into dual norm dyads $$J\\ll Y^\\epsilon D(1+|t|)^2/Z$$ with amplitude $O(Y^\\epsilon\\sqrt{Z/J})$. The coefficients in a dual dyad are divisor-bounded, and its character is $\\overline\\chi$. All additional norm shifts can be integrated against a common conductor-independent $L^1$ majorant of mass $O(Y^\\epsilon)$. The omitted tail is smaller than any prescribed negative power of $Y$, provided the lengths and heights are bounded by fixed powers of $Y$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-smooth-character-duality"
+  },
+  {
+   "claim_id": "claim-off-diagonal-character-gram",
+   "exact_statement": "Let $p$ be primary squarefree with $N(p)\\asymp P$, and let $W$ be a fixed smooth radial norm weight of compact support in $(0,\\infty)$. For primary squarefree $p'$ of the same norm length put $$T_{p,p'}=\\sum_{n\\equiv1\\, (3)}\n     W(N(n)/Z)\\chi_p(n)\\overline{\\chi_{p'}(n)}.$$ For $Z\\ge1$ and every $\\epsilon>0$, $$\\sum_{p'\\ne p}|T_{p,p'}|^2\n \\ll_\\epsilon (PZ)^\\epsilon\n      Z\\left(P+(P^3/Z)^{2/3}\\right).\n \\label{eq:near-orthogonality}$$ The same bound holds with a subset of the available $p'$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-character-gram"
+  },
+  {
+   "claim_id": "claim-corrected-and-averaged-dispersion",
+   "exact_statement": "Under the preceding hypotheses the following assertions hold.*\n\n1.  *If $H\\gg1$ and $|u|\\le X^{0.17}$, and the derivatives of $W$ are bounded independently of $X$, then $$\\sum_a W_A(a)|F_u(a)|^2\\ll \\mathcal Q L^{O(1)}.$$*\n\n\n\n2.  *Suppose $|u|\\le L^{O(1)}$, $H\\gg1$, and $\\beta$ has property *(SW)* and is supported on elements all of whose prime factors have norm greater than $L^{C_r}$. For every fixed $K>0$, if $C_r,C_g$ are sufficiently large, then for $H\\ge L^{C_g}$, $$\\sum_a\\mu^2(a)W_A(a)\n     \\left|F_u(a)-c_*\\overline{G(a)}(Na)^{-1/6}S(u)\\right|^2\n     \\ll \\mathcal Q L^{-K}.\n     \\label{eq:dispersion-corrected}$$ For $1\\ll H<L^{C_g}$ one has the uncorrected estimate $$\\sum_a W_A(a)|F_u(a)|^2\n     \\ll A\\sum_b|\\beta_b|^2+\n     \\mathcal Q\\left\\{\\left(B^{-1}\\sum_b|\\beta_b|\\right)^2+L^{-K}\\right\\}.\n     \\label{eq:dispersion-short}$$ Here $1\\ll H$ means only that $H$ is bounded below by a positive constant. In these low-height assertions the derivatives of $W$ are bounded independently of $X$.*\n\n\n3.  *Suppose $u=\\pm t+u_0$, $T\\le |t|\\le2T$, $2T+|u_0|\\le X^{0.17}$, and $|\\partial^jW|\\ll_j L^{Cj}$ for fixed $C$. For every fixed $K>0$, if $T\\ge L^{C_t}$ with $C_t$ sufficiently large, then $$\\int_{T\\le|t|\\le2T}\\sum_a W_A(a)|F_{\\pm t+u_0}(a)|^2\\frac{dt}{T}\n     \\le \\int_{T\\le|t|\\le2T}\\mathcal D_W\\frac{dt}{T}\n           +O(\\mathcal Q L^{-K}),\n     \\label{eq:dispersion-height}$$ where the exact diagonal is $$\\mathcal D_W=\\sum_b|\\beta_b|^2\n                      \\sum_{(a,b)=1}W_A(a).$$ No lower bound on $H$ is required here. When $B\\le X^{0.40}$ the restriction on $u_0$ can be omitted.*\n\n\n    *There is also an absolute sufficiently small $\\gamma>0$ such that, when $B\\le X^{0.40}$, $T\\gg X^{0.01}$, and $|\\partial^jW|\\ll_j X^{j\\gamma}$, the corresponding estimate is $$\\int_{T\\le|t|\\le2T}\\sum_a W_A(a)|F_{\\pm t+u_0}(a)|^2\\frac{dt}{T}\n     \\le \\int_{T\\le|t|\\le2T}\\mathcal D_W\\frac{dt}{T}\n           +O(\\mathcal Q X^{-10\\gamma}).\n     \\label{eq:dispersion-power}$$ This $\\gamma$ is independent of the fixed powers in the divisor bounds. In the last two estimates, a radial support of width $O(J^{-1})$ gives $$\\mathcal D_W\\ll \\frac AJ\\sum_b|\\beta_b|^2$$ for $J\\le L^{O(1)}$, or $J\\le X^\\gamma$, respectively. In particular, when $B\\le X^{0.40}$, the coefficients may be restricted sharply to any norm cell without changing these assertions.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-dispersion"
+  },
+  {
+   "claim_id": "claim-exact-prime-decomposition",
+   "exact_statement": "For either kind of height block, the prime sum with envelope $V$ has an exact decomposition into a number of Type I and bilinear terms bounded by a fixed power of $L$. This decomposition is valid with either kernel $$G(n)N(n)^{it}\n \\quad\\hbox{or}\\quad\n c_*\\mu^2(n)N(n)^{-1/6+it},$$ and uses the same coefficients for the two kernels. The coefficients are independent of $t$, divisor-bounded, and have all fixed absolute moments of the usual size $Y L^{O(1)}$ on a norm dyad of length $Y$. The resulting terms have the following properties.*\n\n1.  *Type I terms have an unrestricted inner variable $u$ and an outer variable $r$ with $$N(r)\\asymp R,\\qquad\n     R\\le X^{.40}\\quad\\hbox{on ordinary blocks},\\qquad\n     R\\le X^{1/3-\\kappa/2}\\quad\\hbox{on upper blocks}.$$ Their inner weight is a smooth envelope at length $X/R$, with fixed derivative bounds, depending permissibly on $r$.*\n\n2.  *Bilinear terms have independent coefficients $\\alpha_a,\\beta_b$, may be restricted individually to squarefree $a,b$, and satisfy $$N(a)\\asymp A,\\quad N(b)\\asymp B,\\quad AB\\asymp X,\\quad B\\ll\\sqrt X.$$ On ordinary blocks, $B\\ge cX^{1/3}$ for some fixed $c>0$; on upper blocks, $B\\ge X^{1/3-3\\kappa}$. Whenever $B>X^{.40}$, the $b$ coefficient is a squarefree-restricted convolution of a bounded number of prime sequences on independent smooth norm dyads, each prime having norm at least a fixed positive power of $X$. There is no additional cutoff coupling those prime dyads.*\n\n3.  *On ordinary blocks, apart from the sparse terms in part (5), the $b$ coefficient is supported on numbers all of whose prime factors have norm greater than $L^{C_r}$ and satisfies the property <span class=\"upright\">(SW)</span> required in Proposition <a href=\"#prop:dispersion\" data-reference-type=\"ref\" data-reference=\"prop:dispersion\">13</a>. Here $C_r$ is any fixed constant chosen sufficiently large later.*\n\n\n4.  *For any fixed $C_g$, the ordinary bilinear terms with $$1\\ll H:=B^2/A<L^{C_g}$$ consist of precisely three primes: one prime on the $b$ side and two specified prime dyads on the $a$ side. All three scales are $X^{1/3}L^{O(1)}$, their weights and multiplicities are bounded, and the number of these terms is $O((1+\\log L)^{O(1)})$. In each such term, $$\\label{eq:decomposition-triple-moments}\n     \\sum_a|\\alpha_a|^2\\ll A/L^2,\n     \\qquad\n     \\sum_b|\\beta_b|^2+\\sum_b|\\beta_b|\\ll B/L.$$ All other nonsparse ordinary bilinear terms have $H\\ge L^{C_g}$ for sufficiently large $X$.*\n\n5.  *The remaining ordinary terms have $X^{.35}\\ll B<X^{.40}$ and a sparse $b$ support. Their total contribution, for either kernel and uniformly in $t$, is $O(X^{5/6-\\eta})$ for some $\\eta>0$ depending on the fixed parameters.*\n\n*The exponents in the number of terms and in the divisor bounds can be chosen independently of $C_r$ and $C_g$. All asserted identities hold before estimating either kernel.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-decomposition"
+  },
+  {
+   "claim_id": "claim-exact-prime-detector",
+   "exact_statement": "For squarefree $n$ on the envelope support and sufficiently large $X$, $$\\label{eq:prime-detector}\n \\boldsymbol 1_{\\{n\\ {\\mathrm{prime}}\\}}\n =\\mathcal F_z(n)-\n  \\boldsymbol 1_{\\{\\Omega(n)=2\\}}\\mathcal F_z(n).$$ Moreover, $\\mathcal F_z(n)$ is an exact sum of bounded-length distinguished prime tuples $$\\label{eq:distinguished-tuples}\n \\mathcal F_z(n)=\n \\sum_{i\\ge0}\\frac1{i!}\n \\sum_{n=\\pi_1\\cdots\\pi_i h}\n \\mathcal F_w(h)\\prod_{j=1}^i\n       (\\psi_w(\\pi_j)-\\psi_z(\\pi_j)).$$ Only boundedly many $i$ contribute, and the distinguished primes have norms in $[w,2z]$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-prime-detector"
+  },
+  {
+   "claim_id": "claim-prime-scale-grouping",
+   "exact_statement": "The prime factors just obtained can be grouped into scales $A,B$, with $AB\\asymp X$ and $B\\ll\\sqrt X$, as follows. On ordinary blocks either $B\\ge X^{1/3+\\delta_1}$ for some fixed $\\delta_1>0$, or there are exactly three prime factors with exponents close to $1/3$, and $B$ is the largest of their three scales. On upper blocks one can always arrange $B\\ge X^{1/3-3\\kappa}$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-prime-grouping"
+  },
+  {
+   "claim_id": "claim-stopping-bin-separation",
+   "exact_statement": "The stopped terms are exact sums with independent coefficients on $a$ and $b$. The number of additional outer indices is a fixed power of $L$, and the coefficients have fixed divisor bounds independent of $C_r$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-stopping-separation"
+  },
+  {
+   "claim_id": "claim-ordinary-sequence-condition",
+   "exact_statement": "Every nonsparse ordinary $b$ coefficient satisfies <span class=\"upright\">(SW)</span>: against any nonprincipal cubic Hecke character of the indicated trivial infinite parameter and primitive conductor of fixed polylogarithmic norm, its sum is $O_D(BL^{-D})$ for every fixed $D$. This remains true with the permitted polynomial-norm coprimality exclusions and fixed-polylogarithmic norm twists.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-decomposition-sw"
+  },
+  {
+   "claim_id": "claim-low-height-bilinear-comparison",
+   "exact_statement": "Suppose $X^{.32}\\le B\\ll\\sqrt X$, $H\\gg1$, and the coefficient $\\beta_b$ satisfies the structural hypotheses of Proposition <a href=\"#prop:dispersion\" data-reference-type=\"ref\" data-reference=\"prop:dispersion\">13</a>. At low heights assume, in addition, its roughness and Siegel–Walfisz hypotheses. For every fixed $D,U>0$, the logarithmic parameters in that proposition can be chosen so that, uniformly for $|t|\\le L^U$ and $H\\ge L^{C_g}$, $$\\sum_{a,b}\\alpha_a\\beta_b\\mathcal D(ab)N(ab)^{it}\n                 V\\!\\left(\\frac{N(ab)}X\\right)\n       \\ll X^{5/6}L^{-D}.\n \\label{eq:bilinear-low}$$ There is also the following transition estimate. Suppose $b$ is one prime, $a$ is a product of two primes, each of the three primes has its own specified smooth dyad of length $X^{1/3}L^{O(1)}$, and their weights are bounded. If $1\\ll H<L^{C_g}$, then the left side of <a href=\"#eq:bilinear-low\" data-reference-type=\"eqref\" data-reference=\"eq:bilinear-low\">[eq:bilinear-low]</a> is $$O\\!\\left(X^{5/6}L^{-3/2}\\right).\n \\label{eq:bilinear-transition}$$ The constants are uniform for the families of dyads in Proposition <a href=\"#prop:decomposition\" data-reference-type=\"ref\" data-reference=\"prop:decomposition\">15</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-bilinear-low"
+  },
+  {
+   "claim_id": "claim-integrated-bilinear-localization",
+   "exact_statement": "Let $X_0\\asymp X$, and let $h_T$ be smooth, supported where $T\\le |t|\\le2T$, with $h_T^{(j)}(t)\\ll_jT^{-j}$. Suppose $$L^{C_t}\\le T\\ll X^{1/6+\\rho},\\qquad B\\ll\\sqrt X,$$ and suppose that either $$\\begin{aligned}\n T\\ll X^{.01},&\\qquad cX^{1/3}\\le B,\\quad c>0\\text{ fixed},\\tag{a}\\\\\n T\\gg X^{.01},&\\qquad X^{1/3-3\\kappa}\\le B.\\tag{b}\n\\end{aligned}$$ Assume the structural hypotheses of Proposition <a href=\"#prop:dispersion\" data-reference-type=\"ref\" data-reference=\"prop:dispersion\">13</a>, but impose neither roughness nor Siegel–Walfisz conditions. For every fixed $D>0$, by taking $C_t$ sufficiently large, $$\\sum_{a,b}\\alpha_a\\beta_bG(ab)V\\!\\left(\\frac{N(ab)}X\\right)\n \\int h_T(t)\\left(\\frac{N(ab)}{X_0}\\right)^{it}\\frac{dt}{T}\n       \\ll X^{5/6}L^{-D}.\n \\label{eq:bilinear-integrated}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-bilinear-height"
+  },
+  {
+   "claim_id": "claim-fourier-interval-truncation",
+   "exact_statement": "Let $1\\le T\\le X$, and let $V$ be a fixed smooth function supported in $(1/2,4)$, equal to one on a neighborhood of $[1,2]$. There is a smooth function $I_T$ such that $$I_T(s)=\\frac1{2\\pi}\\int_{\\mathbb R}\n       \\eta(t/T)\\frac{1-2^{-it}}{it}e^{its}\\,dt,\n \\label{eq:interval-fourier}$$ where $\\eta$ is a fixed smooth cutoff supported in $[-1,1]$ and equal to one near zero. For every $m>0$, $$\\left|1_{[1,2]}(v)-V(v)I_T(\\log v)\\right|\n \\ll_m \\sum_{b\\in\\{0,\\log2\\}}\n             (1+T|\\log v-b|)^{-m}\n \\label{eq:interval-boundary-error}$$ on the support of $V$, and the difference is zero outside it. If coefficients collected at each integer norm satisfy $|c_n|\\ll_\\epsilon X^\\epsilon$ for $X/2<n<4X$, then $$\\sum_n |c_n|\\left|1_{[X,2X]}(n)\n            -V(n/X)I_T(\\log(n/X))\\right|\n       \\ll_\\epsilon X^\\epsilon(1+X/T).\n \\label{eq:perron-error}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-perron-truncation"
+  },
+  {
+   "claim_id": "claim-fixed-angular-prime-comparison",
+   "exact_statement": "For every fixed integer $\\ell$, $$\\sum_{\\substack{N\\pi\\le X\\\\\\pi\\equiv1\\pmod3\\ \\mathrm{prime}}}\n \\theta_\\ell(\\pi)\\bigl(G(\\pi)-c_*N(\\pi)^{-1/6}\\bigr)\n =o_\\ell\\!\\left(\\frac{X^{5/6}}{\\log X}\\right).\n \\label{eq:angular-comparison}$$ In particular, for every fixed nonzero integer $\\ell$, $$\\sum_{\\substack{N\\pi\\le X\\\\\\pi\\equiv1\\pmod3\\ \\mathrm{prime}}}\n       \\theta_\\ell(\\pi)G(\\pi)\n =o_\\ell\\!\\left(\\frac{X^{5/6}}{\\log X}\\right).\n \\label{eq:angular-cancellation}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-angular"
+  },
+  {
+   "claim_id": "claim-fixed-infinity-hecke-inputs",
+   "exact_statement": "Put $k=|\\ell|/2$. The complete primitive $L$-function has completion $$\\label{eq:angular-hecke-fe}\n \\Lambda(z,\\Psi)=\\left(\\frac{\\sqrt{3D}}{2\\pi}\\right)^z\n       \\Gamma(z+k)L(z,\\Psi),\\qquad\n \\Lambda(z,\\Psi)=\\epsilon_\\Psi\\Lambda(1-z,\\overline\\Psi),\n \\quad |\\epsilon_\\Psi|=1.$$ If $\\ell\\ne0$, or if $\\ell=0$ and $\\chi$ is nonprincipal cubic, the completed function is entire of order one. In these cases, for every fixed $A,M>0$, $$\\label{eq:angular-prime-sw}\n \\sum_{N\\mathfrak p\\le x}\\Psi(\\mathfrak p)\\log N\\mathfrak p\n       \\ll_{\\ell,A,M}x(\\log x)^{-M},\n \\qquad N\\mathfrak f_\\chi\\le(\\log x)^A.$$ Ramified primes have character value zero. Removing additional Euler factors is permitted with their explicit finite-prime error.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-angular-hecke"
+  },
+  {
+   "claim_id": "claim-completed-angular-height-average",
+   "exact_statement": "Let $r$ be primary and squarefree, put $R=Nr$, and let $W$ have fixed compact support in $(0,\\infty)$ and uniformly bounded derivatives. For fixed $\\ell$, define $$\\mathcal C_{r,\\ell,t}(V;W)=\n \\sum_{\\substack{d,u\\\\(d,r)=1}}|d|G(ru)\n       \\theta_\\ell(rud^3)N(ud^3)^{it}\n       W\\left(\\frac{N(ud^3)}V\\right).$$ Suppose $T\\ge2$, $V\\gg1$, and $R,V,T$ are bounded by fixed powers of $X$. Write $$M_{r,\\ell,t}(V;W)=\n \\boldsymbol1_{\\ell=0}A_0\\mathcal MW(5/6+it)V^{5/6+it}\n                   \\frac{\\varphi(r)}{R^{7/6}}.$$ Then $$\\int_{|t|\\asymp T}\n       |\\mathcal C_{r,\\ell,t}(V;W)-M_{r,\\ell,t}(V;W)|\n           \\frac{dt}T\n \\ll_{\\ell,\\epsilon}X^\\epsilon\\sqrt V\\,R^{1/4}\\sqrt T.\n \\label{eq:angular-completed-height}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-angular-completed-height"
+  },
+  {
+   "claim_id": "claim-angular-type-i-estimates",
+   "exact_statement": "Suppose $RU\\asymp X$, $1\\le R\\ll X^{.51}$, and $(a_r)$ is divisor-bounded on $Nr\\asymp R$. If $W_r$ has common fixed compact support in $(0,\\infty)$ and each fixed derivative is bounded by a fixed logarithmic power uniformly in $r$, then $$\\sum_r a_r\\sum_u\\mathcal D_\\ell(ru)W_r(Nu/U)\n       \\ll_\\ell X^{5/6-1/100}.\n \\label{eq:angular-typeI-low}$$ For the high-height assertion suppose instead that the derivative bounds are fixed independently of $X$. For $2\\le T\\ll X^{1/6+\\rho}$ and every fixed $D>0$, $$\\begin{aligned}\n \\int_{|t|\\asymp T}\\sum_r|a_r|\n \\left|\\sum_u G_\\ell(ru)(Nu)^{it}W_r(Nu/U)\\right|\\frac{dt}T\n \\ll_{\\ell,\\epsilon}{}&\n       X^{1/2+\\epsilon}R^{3/4}T^{1/2}\\notag\\\\\n &+\\boldsymbol1_{\\ell=0}\n       O_D(X^{5/6}L^C T^{-D}),\n \\label{eq:angular-typeI-high}\n\\end{aligned}$$ where $\\rho$ is the fixed parameter of <a href=\"#eq:power-parameters\" data-reference-type=\"eqref\" data-reference=\"eq:power-parameters\">[eq:power-parameters]</a> and $C$ depends only on the coefficient bounds.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-angular-typei"
+  },
+  {
+   "claim_id": "claim-angular-exceptional-moments",
+   "exact_statement": "Proposition <a href=\"#prop:dual\" data-reference-type=\"ref\" data-reference=\"prop:dual\">10</a> holds with $\\beta$ replaced by $\\beta_\\ell$. The constants $\\delta,\\eta$ and the implied constant may additionally depend on the fixed integer $\\ell$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-angular-dual"
+  },
+  {
+   "claim_id": "claim-angular-sequence-condition",
+   "exact_statement": "Every nonsparse ordinary coefficient $\\beta_0$ constructed in Proposition <a href=\"#prop:decomposition\" data-reference-type=\"ref\" data-reference=\"prop:decomposition\">15</a> satisfies <span class=\"upright\">(SW)</span> after replacement by $\\beta_\\ell=\\Theta_\\ell\\beta_0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-angular-sw"
+  },
+  {
+   "claim_id": "claim-angular-dispersion-and-bilinear-transfer",
+   "exact_statement": "The estimates of Proposition <a href=\"#prop:dispersion\" data-reference-type=\"ref\" data-reference=\"prop:dispersion\">13</a> hold for $\\beta_\\ell$, assuming <span class=\"upright\">(SW)</span> for $\\beta_\\ell$ wherever it was required. For $B>X^{.40}$, the stipulated structured class is exactly the angular prime-convolution class above. The conclusions of Propositions <a href=\"#prop:bilinear-low\" data-reference-type=\"ref\" data-reference=\"prop:bilinear-low\">20</a> and <a href=\"#prop:bilinear-height\" data-reference-type=\"ref\" data-reference=\"prop:bilinear-height\">21</a> consequently hold with the kernel multiplied by $\\theta_\\ell(ab)$ and with all their other hypotheses retained. The absolute small-$B$ parameter $\\gamma$ is unchanged; other constants may depend on fixed $\\ell$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-angular-dispersion"
+  }
+ ],
+ "paper": "papers/EN-101-000-0022-2-2026-PR-T4-UK-EX-M1-B-ML-H-0060_PM-023.1_An_unconditional_first_moment_for_cubic_Gauss_sums.md",
+ "purpose": "An unconditional first moment for cubic Gauss sums",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "0d36a5660cc3fddf5a69391481c5fe7d15e312734016c5bbf481d719c40dbe5a",
+   "pm.domains.v2": "054c695b4deb8c1b9a13ec6bd3186ddc0afc42255333b282062a3ac74d268128",
+   "pm.edges.v2": "02c6db6a7c86649a657858b18a19f474ab083611a57938627825ff7b11c309aa",
+   "pm.extraction.v2": "e30242ae8f4ca00affcc788dde5797822dcfa73e4b8c3364b6c1663cd70ea26d",
+   "pm.formal.v2": "a526e01976ee72c28ba4d4b8dbe0bed019b3528fbbc758c7bf8c5c39b4a54093",
+   "pm.limits.v2": "6a6f15e5e4683bba383e58df2da384b689b598bc3b8b8e41585d9446c18cc76c",
+   "pm.node.v2": "8b491f806d47dc60c724089ef3b2b12f76ed94676dc0789d9d7538b32bc8cd1b",
+   "pm.objects.v2": "482362c7d22400abf9fbe1052b4b6b5f9927e197c8d4eafb79ca14423bfb16f4",
+   "pm.provenance.v2": "485e455f55c5f22d0885e6cb227e4332b463b27537a6f0944c3a6c6e34bc6620",
+   "pm.quantities.v2": "c0b1a298510da2f099571ec3c74b2f7f7f7eea1550df284749d4d35e82faa639",
+   "pm.reading.v2": "2140a74cdaa237a871e98e5d4336567bb312372ab4504289442b032731747796",
+   "pm.roadmap.v2": "aa5e620f64712fcf50f3fb27791419e8f1fd7969d9012dbe2fc18bf93d0efea9",
+   "pm.search.v1": "25167cd88cafb560bff77d2c2691a46877ecb7aaa26c64ca8922a7ce9d1fb739",
+   "pm.triptych.v2": "443f6cbc3dfb453ad368d49e1e475c2ee8e0359acd2c4b4240602b835d8afa50"
+  },
+  "canonical_sha256": "4bafa74d04c501079f8de109e373a0c33c958fa124ca2b044698589a0d702f99",
+  "paper_sha256": "32e54eca1eb1c8838f9ad61a970f1bff5ca760e5472eee4c06e967f7bfe5ad5a",
+  "repaired_body_sha256": "a53854a033ff8841bd1d96c881dc3add85e323d2aa2c9c2afd500c8b3a15d336"
+ },
+ "status": "ACTIVE",
+ "subject_id": 1,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "658d7ad814cd8844a4249c6586443e7a1f72a8d7aeb9357e815ba9265ef14e8b",
+   "receipt_sha256": "41655d7efd7cd3535da174b4790e36e2509facc9d98a5b9f18a615b42d77c8a3",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "An unconditional first moment for cubic Gauss sums"
+}

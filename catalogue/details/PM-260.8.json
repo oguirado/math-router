@@ -1,0 +1,475 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 452423,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 132946
+ },
+ "coordinate": "EN-117-000-0022-2-2026-PR-T4-UK-EX-M2-B-ML-M-0538",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "mathematical_relativity_and_geometric_analysis",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "No existence of a solution branch for every seed is asserted.",
+     "quote_sha256": "bb8e28d49ae292defbcc4529b9c2da8e2b86374817628ab05e333759d47c32b8"
+    }
+   ],
+   "query": "Existence of a conformal solution branch for every TT seed",
+   "reason": "The theorem assumes a branch and does not establish branch existence for every seed."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-prop-radial-2",
+     "quote": "The size of the interval is allowed to depend on the fixed seed and branch; no uniform positive lower bound for $c_2$ or $c_4$ is asserted or required.",
+     "quote_sha256": "2351a8092ac2f205466074026ea957e4ccc1f487aacdaea0468d9759375c8349"
+    }
+   ],
+   "query": "A uniform perturbation threshold for all seeds",
+   "reason": "The local interval may depend on the prescribed fixed seed and branch."
+  }
+ ],
+ "family": "PM-260",
+ "id": "PM-260.8",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C1",
+    "statement": "For every background, fixed TT seed, and solution branch satisfying <a href=\"#eq:background\" data-reference-type=\"eqref\" data-reference=\"eq:background\">[eq:background]</a>–<a href=\"#eq:branch\" data-reference-type=\"eqref\" data-reference=\"eq:branch\">[eq:branch]</a> and the mass assumptions above, there is $0<\\epsilon_0\\leq\\epsilon_*$ such that $$m_{\\mathrm{AH}}(\\epsilon)\\geq\n \\sqrt{\\frac{A_\\epsilon}{16\\pi}}\\left(1+\\frac{A_\\epsilon}{4\\pi}\\right)\n \\qquad(0\\leq\\epsilon<\\epsilon_0).$$ For all sufficiently small positive $\\epsilon$, equality holds if the seed is radial, and the inequality is strict otherwise."
+   },
+   {
+    "anchor": "stmt-cor-penrose",
+    "claim_id": "C2",
+    "statement": "In addition to the hypotheses of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, suppose $q_{ss}\\geq0$ on $S$. Assume, for every sufficiently small positive $\\epsilon$, that no compact smooth embedded two-sided surface in the interior enclosing $S$ has $\\theta_+\\leq0$ everywhere, and that every smooth enclosing surface has area at least $A_\\epsilon$. Disconnected enclosing competitors are allowed, and $S$ itself is allowed in the area infimum. Then the exact local Penrose inequality holds with $A_{\\min}(S)=A_\\epsilon$."
+   },
+   {
+    "anchor": "stmt-lem-static",
+    "claim_id": "C3",
+    "statement": "The tensor $B$ and the static lapse satisfy $$\\begin{gathered}\n B=B_s\\,\\mathrm{d}s^2+B_t r^2\\sigma,\\qquad\n B_s=1-\\frac{2m_0}{r^3},\\qquad\n B_t=1+\\frac{m_0}{r^3},\\label{eq:B-components}\\\\\n \\nabla^2N=NB,\\qquad\n \\mathop{\\mathrm{tr}}_{g_0}B=3,\\qquad \\mathop{\\mathrm{div}}_{g_0}B=0,\\qquad\n LN=0.\\label{eq:static-identities}\n\\end{gathered}$$ Moreover $D$ is positive on all spherical harmonics and $$\\label{eq:boundary-constants}\n b_*(4\\pi a^2)=m_0,\\qquad\n b_*'(4\\pi a^2)=\\frac{\\kappa}{8\\pi}.$$"
+   },
+   {
+    "anchor": "stmt-lem-inverse",
+    "claim_id": "C4",
+    "statement": "There are constants $c_\\beta,C_\\beta>0$ with the following properties. Suppose $z=o(e^{-\\beta s})$ uniformly at infinity and $$(L-V)z=F,\\qquad \\|V\\|_{C^0(M)}\\leq c_\\beta.$$ If either $z|_S=b$ or $\\partial_s z|_S=b$, then $$\\|z\\|_\\beta\\leq C_\\beta\n       \\bigl(\\|F\\|_\\beta+\\|b\\|_{C^0(S)}\\bigr).\n  \\label{ana:comparison}$$ The constants do not depend on an angular cutoff. The same estimate holds for $\\partial_s z-a_*z=b$ if $\\|a_*\\|_{C^0(S)}\\leq\\beta/2$.*\n\n\n*If $F$ and $b$ are smooth and of finite angular type, and $F=O(e^{-\\gamma s})$ for some $\\gamma>3$, there is a unique decaying finite angular type solution of $Lu=F$ with either of the above Dirichlet or Neumann data. It satisfies $$u=r^{-3}\\zeta(x)+o(r^{-3}),\\qquad\n  \\partial_s\\bigl(u-r^{-3}\\zeta(x)\\bigr)=o(r^{-3})\n  \\label{ana:inverse-asymptotic}$$ for a smooth finite angular type function $\\zeta$. These statements hold after any fixed number of angular differentiations. If $\\partial_s^jF=O(e^{-\\gamma s})$ for $0\\leq j\\leq k$, the remainder in <a href=\"#ana:inverse-asymptotic\" data-reference-type=\"eqref\" data-reference=\"ana:inverse-asymptotic\">[ana:inverse-asymptotic]</a> can also be differentiated in $s$ through order $k+2$, with each resulting remainder $o(r^{-3})$."
+   },
+   {
+    "anchor": "stmt-ana-coefficients",
+    "claim_id": "C5",
+    "statement": "For every smooth finite angular type seed in $C^{1,\\alpha}_\\tau$, the coefficients through degree two are well defined and $$u_j=r^{-3}\\zeta_j(x)+o(r^{-3}),\\qquad j=1,2.$$ The first coefficient has this asymptotic with arbitrarily many spatial derivatives. The second has it with the first spatial derivatives, in particular with every derivative needed at degree two below.*\n\n\n*For the fourth-order construction, suppose specifically that $$\\begin{gathered}\n q=\\mathop{\\mathrm{Hess}}v-Bv,\\qquad Lv=0,\\qquad v\\longrightarrow0,\\\\\n v|_S\\text{ has only constant and degree-one spherical modes}.\n \\end{gathered}\n \\label{ana:kernel-seed}$$ Corollary <a href=\"#cor:kernel\" data-reference-type=\"ref\" data-reference=\"cor:kernel\">16</a> will show that every seed with zero quadratic deficit has this form, so fourth-order estimates are needed only in this class. Then $q$ and all its derivatives have $O(r^{-3})$ scaled components. The coefficients $u_1,\\ldots,u_4$ exist and have the above asymptotic with arbitrarily many spatial derivatives.*\n\n\n*Let $p=2$ in the first case and $p=4$ in the second. In the coordinate $\\eta=\\operatorname{arsinh}r$, the conformal metric jet $G=(1+\\sum_{j=1}^p\\epsilon^ju_j)^4g_0$, taken through degree $p$, satisfies $$\\begin{gathered}\n G-b=r^{-3}\\bigl(C\\,\\mathrm{d}\\eta^2+E r^2\\sigma\\bigr)+o(r^{-3}),\\\\\n C=2m_0+4\\sum_{j=1}^p\\epsilon^j\\zeta_j,\\qquad\n E=4\\sum_{j=1}^p\\epsilon^j\\zeta_j.\n \\end{gathered}\n \\label{ana:metric-asymptotic}$$ For coefficient $j$, the remainder has this decay after angular and $\\eta$ derivatives through order $p-j+1$, in scaled coframes $\\mathrm{d}\\eta,r\\,\\mathrm{d}x$."
+   },
+   {
+    "anchor": "stmt-lem-green",
+    "claim_id": "C6",
+    "statement": "For every sufficiently small member of the actual branch, $$p_\\mu(\\epsilon)-p_\\mu(0)\n =\\frac1{2\\pi}\\left\\{\n   \\int_S\\bigl(\\psi\\partial_sW_\\mu-W_\\mu\\partial_s\\psi\\bigr)\\,\\mathrm{d}A_{g_0}\n   -\\int_M\\bigl(W_\\mu L\\psi-\\psi LW_\\mu\\bigr)\\,\\mathrm{d}V_{g_0}\n                 \\right\\}.\n \\label{ana:green}$$ In particular the right-hand side is an absolutely convergent integral expression. More generally the linear functional $$\\mathcal G_\\mu(u,F,B)\n =\\frac1{2\\pi}\\left\\{\n \\int_S(u\\partial_sW_\\mu-W_\\mu B)\\,\\mathrm{d}A_{g_0}\n -\\int_M(W_\\mu F-uLW_\\mu)\\,\\mathrm{d}V_{g_0}\\right\\}\n \\label{ana:green-functional}$$ is bounded in the norms $\\|u\\|_\\beta+\\|F\\|_{2\\beta}+\\|B\\|_{C^0(S)}$. For finite angular type coefficient jets, this same functional computes the coefficient of their metric mass."
+   },
+   {
+    "anchor": "stmt-lem-rotation",
+    "claim_id": "C7",
+    "statement": "Every $q\\in\\mathscr T_{\\tau,\\alpha}$ is a limit, in $\\|\\cdot\\|_\\beta$, of finite angular type tensors $q_\\nu\\in\\mathscr T_{\\tau,\\alpha}$. The approximants may be chosen as averages of rotated copies of $q$. Their weighted norms are uniformly bounded, and the construction preserves a nonnegative boundary value $q_{ss}|_S$ when that condition holds.*\n\n*The maps $q\\mapsto u_1[q]$ and $q\\mapsto u_2[q]$ defined for finite angular type seeds extend uniquely by these approximations to continuous, respectively linear and quadratic, maps on $\\mathscr T_{\\tau,\\alpha}$ with values in the weighted uniform norm. The corresponding pairs $(F_j,B_j)$ in <a href=\"#ana:first-two\" data-reference-type=\"eqref\" data-reference=\"ana:first-two\">[ana:first-two]</a> extend continuously in the norms $\\|\\cdot\\|_{2\\beta}$ and $\\|\\cdot\\|_{C^0(S)}$."
+   },
+   {
+    "anchor": "stmt-prop-expansions",
+    "claim_id": "C8",
+    "statement": "For every prescribed seed and branch in the theorem, set $p=2$ and take $u_j,F_j,B_j$ from Lemma <a href=\"#lem:rotation\" data-reference-type=\"ref\" data-reference=\"lem:rotation\">7</a>. If the seed has the form <a href=\"#ana:kernel-seed\" data-reference-type=\"eqref\" data-reference=\"ana:kernel-seed\">[ana:kernel-seed]</a>, we may instead take $p=4$ with the finite coefficient construction. In both cases, $$\\begin{aligned}\n \\left\\|\\psi-\\sum_{j=1}^p\\epsilon^ju_j\\right\\|_\\beta\n     &=O(\\epsilon^{p+1}),\\notag\\\\\n \\left\\|L\\psi-\\sum_{j=1}^p\\epsilon^jF_j\\right\\|_{2\\beta}\n     &=O(\\epsilon^{p+1}),\\notag\\\\\n \\left\\|\\partial_s\\psi|_S-\\sum_{j=1}^p\\epsilon^jB_j\\right\\|_{C^0(S)}\n     &=O(\\epsilon^{p+1}).\n \\label{ana:three-remainders}\n\\end{aligned}$$ The area and all four mass components have actual expansions to the same order. Their mass coefficients are $$a_{\\mu j}[q]=\\mathcal G_\\mu(u_j,F_j,B_j),\\qquad\n p_\\mu(\\epsilon)=p_\\mu(0)+\\sum_{j=1}^p\\epsilon^j a_{\\mu j}[q]\n                      +O(\\epsilon^{p+1}).\n \\label{ana:mass-coefficients}$$*\n\n\n*In particular, the actual deficit satisfies $$\\mathfrak D_q(\\epsilon)=c_2[q]\\epsilon^2+O(\\epsilon^3)\n \\label{ana:deficit-second}$$ for every seed under consideration. The coefficient $c_2$ is a continuous quadratic form on $\\mathscr T_{\\tau,\\alpha}$ in the $\\|\\cdot\\|_\\beta$ topology, invariant under rotations. For seeds of the form <a href=\"#ana:kernel-seed\" data-reference-type=\"eqref\" data-reference=\"ana:kernel-seed\">[ana:kernel-seed]</a> there is additionally the actual expansion $$\\mathfrak D_q(\\epsilon)\n     =c_2[q]\\epsilon^2+c_3[q]\\epsilon^3+c_4[q]\\epsilon^4+O(\\epsilon^5).\n \\label{ana:deficit-fourth}$$ The subsequent geometric arguments determine the signs and the vanishing of these coefficients."
+   },
+   {
+    "anchor": "stmt-ana-order-of-limits",
+    "claim_id": "C9",
+    "statement": "The derivative control used in <a href=\"#ana:flux-errors\" data-reference-type=\"eqref\" data-reference=\"ana:flux-errors\">[ana:flux-errors]</a> comes from each actual member’s assumed $C^{2,\\alpha}_\\tau$ decay. It is not a consequence of the weighted uniform Taylor estimates. The radius limit is taken for each fixed member to obtain the exact identity <a href=\"#ana:green\" data-reference-type=\"eqref\" data-reference=\"ana:green\">[ana:green]</a>; only then are its integrals expanded. Similarly, each finite angular type coefficient is identified with its own flux before passing to an approximant limit in the bounded functional <a href=\"#ana:green-functional\" data-reference-type=\"eqref\" data-reference=\"ana:green-functional\">[ana:green-functional]</a>. No uniform convergence of discarded derivative flux errors in either parameter or angular cutoff is used."
+   },
+   {
+    "anchor": "stmt-prop-cmc-jets",
+    "claim_id": "C10",
+    "statement": "Let $p\\geq1$, and let $G$ be a smooth Riemannian metric jet of order $p$, with base $G_0=g_0$, whose coefficients have finite angular type. Suppose that there are angular scalar jets $C,E$, with $C_0=2m_0$ and $E_0=0$, such that $$\\label{cmc:metric-asymptotics}\n G-b=r^{-3}\\bigl(C\\,\\mathrm{d}\\eta^2+E r^2\\sigma\\bigr)+o(r^{-3}).$$ For the coefficient of degree $j$, $1\\leq j\\leq p$, suppose that the remainder satisfies this estimate after every mixed radial and angular derivative of total order at most $p-j+1$.*\n\n*There is a smooth family of sphere jets $\\Sigma_s$, $0\\leq s<\\infty$, given by graphs over $\\{s\\}\\times S^2$, with the following properties:*\n\n1.  *$\\Sigma_s$ has constant outward mean curvature through order $p$, and $\\Sigma_0$ is minimal through that order.*\n\n2.  *The graph coefficients have finite angular type. The normal lapse $f$ for variation in $s$ has base value $f_0=1$.*\n\n\n\n3.  *If $A(s)$ and $H(s)$ are the area and mean curvature jets, then the CMC Hawking mass $$\\label{cmc:hawking-definition}\n     m_H(\\Sigma_s)=\n     \\sqrt{\\frac{A(s)}{16\\pi}}\n     \\left(1-\\frac{(H(s)^2-4)A(s)}{16\\pi}\\right)$$ satisfies, coefficientwise, $$\\label{cmc:hawking-limit}\n     \\lim_{s\\to\\infty}m_H(\\Sigma_s)\n     =m_{\\mathrm{AH}}(G)\n     :=\\sqrt{p_0(G)^2-\\sum_{i=1}^3p_i(G)^2}.$$ Here $p_\\mu(G)$ is the coefficientwise flux <a href=\"#eq:mass-flux\" data-reference-type=\"eqref\" data-reference=\"eq:mass-flux\">[eq:mass-flux]</a>, and the square root is its formal branch with base value $m_0>0$."
+   },
+   {
+    "anchor": "stmt-cmc-regularity-budget",
+    "claim_id": "C11",
+    "statement": "For the conformal jets used in the quadratic argument, the coefficient of degree one solves a homogeneous finite-mode equation $Lu=0$; Lemma <a href=\"#lem:inverse\" data-reference-type=\"ref\" data-reference=\"lem:inverse\">4</a> gives all its differentiated asymptotics. The degree-two coefficient needs only the first differentiated asymptotic in Proposition <a href=\"#prop:cmc-jets\" data-reference-type=\"ref\" data-reference=\"prop:cmc-jets\">10</a>, which is supplied by the given $C^{1,\\alpha}_\\tau$ decay of a finite-angular-type seed and the same radial equation. The fourth-order construction will be used only after the seed has been reduced to $Q(v)=\\mathop{\\mathrm{Hess}}v-Bv$, with $v$ a homogeneous solution containing only constant and degree-one angular modes. Then all spatially differentiated decay estimates needed above hold. These are distinct uses of the proposition; higher radial decay derivatives of an arbitrary seed are not required."
+   },
+   {
+    "anchor": "stmt-lem-hawking-variation",
+    "claim_id": "C12",
+    "statement": "The following identity holds through the order of the sphere and metric jets: $$\\label{cmc:hawking-variation}\n \\frac{\\mathrm{d}}{\\mathrm{d}s}m_H\n =\\sqrt{\\frac A{16\\pi}}\\frac{HA}{8\\pi}\n \\left[\n \\bar f\\left\\langle\n      \\frac{\\mathop{\\mathrm{Scal}}_G+6+|\\mathrm{II}^\\circ|^2}{2}\n       \\right\\rangle\n +\\frac1{\\bar f}\\langle\\delta f\\,J\\delta f\\rangle\n \\right].$$"
+   },
+   {
+    "anchor": "stmt-prop-leading-energy",
+    "claim_id": "C13",
+    "statement": "Use the construction of Proposition <a href=\"#prop:cmc-jets\" data-reference-type=\"ref\" data-reference=\"prop:cmc-jets\">10</a> through order $2l$, where $l\\ge1$, and let $A_{\\mathrm{leaf}}=A(0)$ be the area jet of its minimal first leaf. Suppose, as ambient and leafwise coefficient identities, respectively, that $$\\label{cmc:leading-assumptions}\n \\mathop{\\mathrm{Scal}}_G+6=\\epsilon^{2l}|k|_{g_0}^2+O(\\epsilon^{2l+1}),\n \\qquad\n \\mathrm{II}^\\circ=\\epsilon^lU+O(\\epsilon^{l+1}),\n \\qquad\n \\delta f=\\epsilon^lF+O(\\epsilon^{l+1}).$$ Here $k$ is a smooth tensor on $M$; the fields $U,F$ on the background spheres are identified with fields on $M$. Then every coefficient below degree $2l$ of $m_{\\mathrm{AH}}(G)-b_*(A_{\\mathrm{leaf}})$ vanishes, and $$\\label{cmc:leading-integral}\n \\begin{split}\n &\\bigl[m_{\\mathrm{AH}}(G)-b_*(A_{\\mathrm{leaf}})\\bigr]_{2l}\\\\\n &\\quad=\\frac1{16\\pi}\\int_0^\\infty N(s)\n   \\int_{\\{s\\}\\times S^2}\n    \\left(|k|^2+|U|^2+2FJ_s^0F\\right)\\mathrm{d}A_{g_0}\\,\\mathrm{d}s\n \\ge0.\n \\end{split}$$ All norms in this formula use the background metrics. The displayed iterated integral is finite. If it vanishes, then $k,U,F$ vanish for $s>0$, and also at the boundary by continuity."
+   },
+   {
+    "anchor": "stmt-lem-tt-square",
+    "claim_id": "C14",
+    "statement": "Let $k$ be a smooth TT tensor of finite angular type, with decay $k=O(r^{-\\gamma})$ for some $\\gamma>3/2$. Let $v$ be the decaying solution of $$Lv=0,\n \\qquad v|_S=D^{-1}(k_{ss}|_S).\n \\label{eq:tt-dirichlet}$$ Then $Q(v)$ is TT, $Q(v)_{ss}|_S=k_{ss}|_S$, and $$\\int_M N|k|^2\\,\\mathrm{d}V_0\n -\\kappa\\int_S vDv\\,\\mathrm{d}A_0\n =\\int_M N|k-Q(v)|^2\\,\\mathrm{d}V_0.\n \\label{eq:tt-square}$$ All integrals in this identity converge. In particular, no sign assumption on $k_{ss}|_S$ is needed."
+   },
+   {
+    "anchor": "stmt-prop-quadratic",
+    "claim_id": "C15",
+    "statement": "On the real linear space of all smooth TT seeds with the prescribed decay, the first deficit coefficient is zero and the second coefficient $c_2[q]$ is a continuous, rotation-invariant, nonnegative quadratic form. For a finite-angular-type seed it is given by $$\\begin{gathered}\n c_2[q]=\\frac1{16\\pi}\\int_M N\\left(\n |q-Q(v)|^2+|U|^2+2FJ_s^0F\\right)\\,\\mathrm{d}V_0,\\\\\n J_s^0=-\\Delta_{r^2\\sigma}-\\frac2{r^2}+\\frac{6m_0}{r^3}.\n \\end{gathered}\n \\label{eq:quadratic-positive-form}$$ The last term is integrated on the spheres before radial integration. For every actual branch in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, $$\\mathfrak D_q(\\epsilon)=c_2[q]\\epsilon^2+o(\\epsilon^2).\n \\label{eq:actual-quadratic-deficit}$$ In particular, $c_2[q]>0$ implies a strictly positive deficit for all sufficiently small positive $\\epsilon$."
+   },
+   {
+    "anchor": "stmt-cor-kernel",
+    "claim_id": "C16",
+    "statement": "The kernel of $c_2$ is exactly $\\mathcal K$, a four-dimensional real vector space. In particular, the nonzero degree-one directions are genuine quadratic null directions."
+   },
+   {
+    "anchor": "stmt-rem-kernel-sign",
+    "claim_id": "C17",
+    "statement": "If $v|_S=c+d\\cdot x$, then $$Q(v)_{ss}|_S=D_0c+D_1d\\cdot x,\n \\qquad D_0=\\frac{2\\kappa}{a},\\quad\n D_1=\\frac2{a^2}+\\frac{2\\kappa}{a}=\\frac{6m_0}{a^3}.$$ Thus $Q(v)_{ss}|_S\\geq0$ is equivalent to $D_0c\\geq D_1|d|$. A nonzero pure dipole fails that condition, but a sufficiently large positive radial component makes a mixed radial–dipole seed satisfy it. This is a compatibility statement about seeds, not an existence claim for branches satisfying outermostness and outer area-minimization. In particular, the boundary sign cannot be used to discard the degree-one null directions from the proof."
+   },
+   {
+    "anchor": "stmt-prop-quartic",
+    "claim_id": "C18",
+    "statement": "Suppose that $c_2[q]=0$. Write the representation furnished by Corollary <a href=\"#cor:kernel\" data-reference-type=\"ref\" data-reference=\"cor:kernel\">16</a> as $$q=Q(v):=\\mathop{\\mathrm{Hess}}_{g_0}v-Bv,\\qquad Lv=0,\n \\qquad v=v_0(s)+v_1(s,x),$$ where $v_1$ has only degree-one spherical modes and $v$ decays at infinity. Then $$c_0[q]=c_1[q]=c_2[q]=c_3[q]=0,\n \\qquad c_4[q]\\geq 0.$$ If $v_1\\not\\equiv0$, then $c_4[q]>0$. In particular, in that case the actual deficit $\\mathfrak D_q(\\epsilon)$ is strictly positive for all sufficiently small positive $\\epsilon$."
+   },
+   {
+    "anchor": "stmt-lem-slice",
+    "claim_id": "C19",
+    "statement": "There is a decaying finite-angular-type function $w$, with $w|_S=0$, for which the following construction is defined through degree four. Formally evolve the initial jets in Gaussian time and take the graph $$T=-\\epsilon v+\\epsilon^2w.\n \\label{quart:time-graph}$$ The induced metric and future second fundamental form, denoted by $\\widetilde g$ and $\\widetilde K$, satisfy $$\\begin{aligned}\n \\widetilde K&=\\epsilon^2k+O(\\epsilon^3),\n &\\mathop{\\mathrm{tr}}_{g_0}k&=0,&\\mathop{\\mathrm{div}}_{g_0}k&=0,\n \\label{quart:leading-k}\\\\\n \\mathop{\\mathrm{Scal}}_{\\widetilde g}+6\n   &=\\epsilon^4|k|_{g_0}^2+O(\\epsilon^5).\n \\label{quart:scalar-four}\n\\end{aligned}$$ Here $k=O(r^{-3})$, with all derivatives needed for the fourth-order CMC construction. Coefficientwise through degree four, $$\\widetilde g-g_\\epsilon=O(r^{-6})\n \\label{quart:metric-decay}$$ with the required differentiated bounds. Thus the mass covectors and their Lorentz norms agree through that degree. Moreover, $$_2\n   =-2vq-Bv^2-\\mathrm{d}v\\otimes\\mathrm{d}v\n   =-\\mathop{\\mathrm{Hess}}_{g_0}(v^2)+\\mathrm{d}v\\otimes\\mathrm{d}v+Bv^2.\n \\label{quart:metric-two}$$"
+   },
+   {
+    "anchor": "stmt-lem-null-cut",
+    "claim_id": "C20",
+    "statement": "For the changed slice of Lemma <a href=\"#lem:slice\" data-reference-type=\"ref\" data-reference=\"lem:slice\">19</a> there is a sphere jet $S^\\sharp$, based at $S$, such that $$\\begin{aligned}\n |S^\\sharp|_{\\widetilde g}&=|S|_{g_\\epsilon}+O(\\epsilon^5),\n \\label{quart:null-area}\\\\\n H_{\\widetilde g}(S^\\sharp)\n      &=\\epsilon^2k_{ss}|_S+O(\\epsilon^3).\n \\label{quart:null-h}\n\\end{aligned}$$ Let $S_{\\min}$ be the minimal Taylor leaf of the CMC construction for $\\widetilde g$. Their height jets agree through degree one. If $$z=D^{-1}(k_{ss}|_S),\n \\label{quart:z}$$ then the height of $S^\\sharp$ minus that of $S_{\\min}$ is $\\epsilon^2z+O(\\epsilon^3)$, and $$|S^\\sharp|_{\\widetilde g}-|S_{\\min}|_{\\widetilde g}\n     =\\tfrac12\\epsilon^4\\int_S zDz\\,\\mathrm{d}A_{g_0}+O(\\epsilon^5).\n \\label{quart:area-hessian}$$ These statements remain valid when some leading boundary displacements are negative."
+   },
+   {
+    "anchor": "stmt-lem-round-jet",
+    "claim_id": "C21",
+    "statement": "Let $\\gamma_\\epsilon=\\sigma+\\epsilon P_1+\\epsilon^2P_2$ be a smooth metric two-jet on $S^2$ of finite angular type. Suppose its scalar curvature is angularly constant through degree two. Then there are a positive scalar two-jet $a_\\epsilon$, with $a_0=1$, and a diffeomorphism two-jet $\\Phi_\\epsilon$, based at the identity, such that $$\\gamma_\\epsilon=a_\\epsilon\\Phi_\\epsilon^*\\sigma+O(\\epsilon^3).$$ All coefficients can be chosen of finite angular type."
+   },
+   {
+    "anchor": "stmt-lem-dipole-obstruction",
+    "claim_id": "C22",
+    "statement": "Let $v=v_0(s)+V(s)x$ solve $Lv=0$, where $x$ is one fixed unit-axis linear coordinate on $S^2$ and $V=O(r^{-3})$. If <a href=\"#quart:necessary-tangent\" data-reference-type=\"eqref\" data-reference=\"quart:necessary-tangent\">[quart:necessary-tangent]</a> holds on every compact radial interval in the interior, with possibly different local vector fields and functions, then $V\\equiv0$."
+   },
+   {
+    "anchor": "stmt-prop-radial",
+    "claim_id": "C23",
+    "statement": "Suppose the fixed TT seed $q$ is invariant under rotations of $S^2$. Every branch in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> is radial for all sufficiently small $\\epsilon$, and on that parameter interval $$m_{\\mathrm{AH}}(\\epsilon)=b_*(A_\\epsilon).$$ This includes the zero seed, and requires no sign for $q_{ss}|_S$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Local Penrose deficit argument",
+    "evidence": [
+     {
+      "anchor": "stmt-thm-main",
+      "quote": "For every background, fixed TT seed, and solution branch satisfying <a href=\"#eq:background\" data-reference-type=\"eqref\" data-reference=\"eq:background\">[eq:background]</a>–<a href=\"#eq:branch\" data-reference-type=\"eqref\" data-reference=\"eq:branch\">[eq:branch]</a> and the mass assumptions above, there is $0<\\epsilon_0\\leq\\epsilon_*$ such that $$m_{\\mathrm{AH}}(\\epsilon)\\geq\n \\sqrt{\\frac{A_\\epsilon}{16\\pi}}\\left(1+\\frac{A_\\epsilon}{4\\pi}\\right)\n \\qquad(0\\leq\\epsilon<\\epsilon_0).$$ For all sufficiently small positive $\\epsilon$, equality holds if the seed is radial, and the inequality is strict otherwise.",
+      "quote_sha256": "d07acf4142087233ce56640aa77e7c7a691be7a57da4051a6ddd8a2762cfbf13"
+     }
+    ],
+    "requires_concepts": [
+     "TT seed",
+     "Weighted decay",
+     "Conformal constraints",
+     "Hyperbolic mass covector",
+     "MOTS boundary",
+     "CMC surface jets"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C1",
+   "exact_statement": "For every background, fixed TT seed, and solution branch satisfying <a href=\"#eq:background\" data-reference-type=\"eqref\" data-reference=\"eq:background\">[eq:background]</a>–<a href=\"#eq:branch\" data-reference-type=\"eqref\" data-reference=\"eq:branch\">[eq:branch]</a> and the mass assumptions above, there is $0<\\epsilon_0\\leq\\epsilon_*$ such that $$m_{\\mathrm{AH}}(\\epsilon)\\geq\n \\sqrt{\\frac{A_\\epsilon}{16\\pi}}\\left(1+\\frac{A_\\epsilon}{4\\pi}\\right)\n \\qquad(0\\leq\\epsilon<\\epsilon_0).$$ For all sufficiently small positive $\\epsilon$, equality holds if the seed is radial, and the inequality is strict otherwise.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "C2",
+   "exact_statement": "In addition to the hypotheses of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, suppose $q_{ss}\\geq0$ on $S$. Assume, for every sufficiently small positive $\\epsilon$, that no compact smooth embedded two-sided surface in the interior enclosing $S$ has $\\theta_+\\leq0$ everywhere, and that every smooth enclosing surface has area at least $A_\\epsilon$. Disconnected enclosing competitors are allowed, and $S$ itself is allowed in the area infimum. Then the exact local Penrose inequality holds with $A_{\\min}(S)=A_\\epsilon$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-penrose"
+  },
+  {
+   "claim_id": "C3",
+   "exact_statement": "The tensor $B$ and the static lapse satisfy $$\\begin{gathered}\n B=B_s\\,\\mathrm{d}s^2+B_t r^2\\sigma,\\qquad\n B_s=1-\\frac{2m_0}{r^3},\\qquad\n B_t=1+\\frac{m_0}{r^3},\\label{eq:B-components}\\\\\n \\nabla^2N=NB,\\qquad\n \\mathop{\\mathrm{tr}}_{g_0}B=3,\\qquad \\mathop{\\mathrm{div}}_{g_0}B=0,\\qquad\n LN=0.\\label{eq:static-identities}\n\\end{gathered}$$ Moreover $D$ is positive on all spherical harmonics and $$\\label{eq:boundary-constants}\n b_*(4\\pi a^2)=m_0,\\qquad\n b_*'(4\\pi a^2)=\\frac{\\kappa}{8\\pi}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-static"
+  },
+  {
+   "claim_id": "C4",
+   "exact_statement": "There are constants $c_\\beta,C_\\beta>0$ with the following properties. Suppose $z=o(e^{-\\beta s})$ uniformly at infinity and $$(L-V)z=F,\\qquad \\|V\\|_{C^0(M)}\\leq c_\\beta.$$ If either $z|_S=b$ or $\\partial_s z|_S=b$, then $$\\|z\\|_\\beta\\leq C_\\beta\n       \\bigl(\\|F\\|_\\beta+\\|b\\|_{C^0(S)}\\bigr).\n  \\label{ana:comparison}$$ The constants do not depend on an angular cutoff. The same estimate holds for $\\partial_s z-a_*z=b$ if $\\|a_*\\|_{C^0(S)}\\leq\\beta/2$.*\n\n\n*If $F$ and $b$ are smooth and of finite angular type, and $F=O(e^{-\\gamma s})$ for some $\\gamma>3$, there is a unique decaying finite angular type solution of $Lu=F$ with either of the above Dirichlet or Neumann data. It satisfies $$u=r^{-3}\\zeta(x)+o(r^{-3}),\\qquad\n  \\partial_s\\bigl(u-r^{-3}\\zeta(x)\\bigr)=o(r^{-3})\n  \\label{ana:inverse-asymptotic}$$ for a smooth finite angular type function $\\zeta$. These statements hold after any fixed number of angular differentiations. If $\\partial_s^jF=O(e^{-\\gamma s})$ for $0\\leq j\\leq k$, the remainder in <a href=\"#ana:inverse-asymptotic\" data-reference-type=\"eqref\" data-reference=\"ana:inverse-asymptotic\">[ana:inverse-asymptotic]</a> can also be differentiated in $s$ through order $k+2$, with each resulting remainder $o(r^{-3})$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-inverse"
+  },
+  {
+   "claim_id": "C5",
+   "exact_statement": "For every smooth finite angular type seed in $C^{1,\\alpha}_\\tau$, the coefficients through degree two are well defined and $$u_j=r^{-3}\\zeta_j(x)+o(r^{-3}),\\qquad j=1,2.$$ The first coefficient has this asymptotic with arbitrarily many spatial derivatives. The second has it with the first spatial derivatives, in particular with every derivative needed at degree two below.*\n\n\n*For the fourth-order construction, suppose specifically that $$\\begin{gathered}\n q=\\mathop{\\mathrm{Hess}}v-Bv,\\qquad Lv=0,\\qquad v\\longrightarrow0,\\\\\n v|_S\\text{ has only constant and degree-one spherical modes}.\n \\end{gathered}\n \\label{ana:kernel-seed}$$ Corollary <a href=\"#cor:kernel\" data-reference-type=\"ref\" data-reference=\"cor:kernel\">16</a> will show that every seed with zero quadratic deficit has this form, so fourth-order estimates are needed only in this class. Then $q$ and all its derivatives have $O(r^{-3})$ scaled components. The coefficients $u_1,\\ldots,u_4$ exist and have the above asymptotic with arbitrarily many spatial derivatives.*\n\n\n*Let $p=2$ in the first case and $p=4$ in the second. In the coordinate $\\eta=\\operatorname{arsinh}r$, the conformal metric jet $G=(1+\\sum_{j=1}^p\\epsilon^ju_j)^4g_0$, taken through degree $p$, satisfies $$\\begin{gathered}\n G-b=r^{-3}\\bigl(C\\,\\mathrm{d}\\eta^2+E r^2\\sigma\\bigr)+o(r^{-3}),\\\\\n C=2m_0+4\\sum_{j=1}^p\\epsilon^j\\zeta_j,\\qquad\n E=4\\sum_{j=1}^p\\epsilon^j\\zeta_j.\n \\end{gathered}\n \\label{ana:metric-asymptotic}$$ For coefficient $j$, the remainder has this decay after angular and $\\eta$ derivatives through order $p-j+1$, in scaled coframes $\\mathrm{d}\\eta,r\\,\\mathrm{d}x$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ana-coefficients"
+  },
+  {
+   "claim_id": "C6",
+   "exact_statement": "For every sufficiently small member of the actual branch, $$p_\\mu(\\epsilon)-p_\\mu(0)\n =\\frac1{2\\pi}\\left\\{\n   \\int_S\\bigl(\\psi\\partial_sW_\\mu-W_\\mu\\partial_s\\psi\\bigr)\\,\\mathrm{d}A_{g_0}\n   -\\int_M\\bigl(W_\\mu L\\psi-\\psi LW_\\mu\\bigr)\\,\\mathrm{d}V_{g_0}\n                 \\right\\}.\n \\label{ana:green}$$ In particular the right-hand side is an absolutely convergent integral expression. More generally the linear functional $$\\mathcal G_\\mu(u,F,B)\n =\\frac1{2\\pi}\\left\\{\n \\int_S(u\\partial_sW_\\mu-W_\\mu B)\\,\\mathrm{d}A_{g_0}\n -\\int_M(W_\\mu F-uLW_\\mu)\\,\\mathrm{d}V_{g_0}\\right\\}\n \\label{ana:green-functional}$$ is bounded in the norms $\\|u\\|_\\beta+\\|F\\|_{2\\beta}+\\|B\\|_{C^0(S)}$. For finite angular type coefficient jets, this same functional computes the coefficient of their metric mass.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-green"
+  },
+  {
+   "claim_id": "C7",
+   "exact_statement": "Every $q\\in\\mathscr T_{\\tau,\\alpha}$ is a limit, in $\\|\\cdot\\|_\\beta$, of finite angular type tensors $q_\\nu\\in\\mathscr T_{\\tau,\\alpha}$. The approximants may be chosen as averages of rotated copies of $q$. Their weighted norms are uniformly bounded, and the construction preserves a nonnegative boundary value $q_{ss}|_S$ when that condition holds.*\n\n*The maps $q\\mapsto u_1[q]$ and $q\\mapsto u_2[q]$ defined for finite angular type seeds extend uniquely by these approximations to continuous, respectively linear and quadratic, maps on $\\mathscr T_{\\tau,\\alpha}$ with values in the weighted uniform norm. The corresponding pairs $(F_j,B_j)$ in <a href=\"#ana:first-two\" data-reference-type=\"eqref\" data-reference=\"ana:first-two\">[ana:first-two]</a> extend continuously in the norms $\\|\\cdot\\|_{2\\beta}$ and $\\|\\cdot\\|_{C^0(S)}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-rotation"
+  },
+  {
+   "claim_id": "C8",
+   "exact_statement": "For every prescribed seed and branch in the theorem, set $p=2$ and take $u_j,F_j,B_j$ from Lemma <a href=\"#lem:rotation\" data-reference-type=\"ref\" data-reference=\"lem:rotation\">7</a>. If the seed has the form <a href=\"#ana:kernel-seed\" data-reference-type=\"eqref\" data-reference=\"ana:kernel-seed\">[ana:kernel-seed]</a>, we may instead take $p=4$ with the finite coefficient construction. In both cases, $$\\begin{aligned}\n \\left\\|\\psi-\\sum_{j=1}^p\\epsilon^ju_j\\right\\|_\\beta\n     &=O(\\epsilon^{p+1}),\\notag\\\\\n \\left\\|L\\psi-\\sum_{j=1}^p\\epsilon^jF_j\\right\\|_{2\\beta}\n     &=O(\\epsilon^{p+1}),\\notag\\\\\n \\left\\|\\partial_s\\psi|_S-\\sum_{j=1}^p\\epsilon^jB_j\\right\\|_{C^0(S)}\n     &=O(\\epsilon^{p+1}).\n \\label{ana:three-remainders}\n\\end{aligned}$$ The area and all four mass components have actual expansions to the same order. Their mass coefficients are $$a_{\\mu j}[q]=\\mathcal G_\\mu(u_j,F_j,B_j),\\qquad\n p_\\mu(\\epsilon)=p_\\mu(0)+\\sum_{j=1}^p\\epsilon^j a_{\\mu j}[q]\n                      +O(\\epsilon^{p+1}).\n \\label{ana:mass-coefficients}$$*\n\n\n*In particular, the actual deficit satisfies $$\\mathfrak D_q(\\epsilon)=c_2[q]\\epsilon^2+O(\\epsilon^3)\n \\label{ana:deficit-second}$$ for every seed under consideration. The coefficient $c_2$ is a continuous quadratic form on $\\mathscr T_{\\tau,\\alpha}$ in the $\\|\\cdot\\|_\\beta$ topology, invariant under rotations. For seeds of the form <a href=\"#ana:kernel-seed\" data-reference-type=\"eqref\" data-reference=\"ana:kernel-seed\">[ana:kernel-seed]</a> there is additionally the actual expansion $$\\mathfrak D_q(\\epsilon)\n     =c_2[q]\\epsilon^2+c_3[q]\\epsilon^3+c_4[q]\\epsilon^4+O(\\epsilon^5).\n \\label{ana:deficit-fourth}$$ The subsequent geometric arguments determine the signs and the vanishing of these coefficients.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-expansions"
+  },
+  {
+   "claim_id": "C9",
+   "exact_statement": "The derivative control used in <a href=\"#ana:flux-errors\" data-reference-type=\"eqref\" data-reference=\"ana:flux-errors\">[ana:flux-errors]</a> comes from each actual member’s assumed $C^{2,\\alpha}_\\tau$ decay. It is not a consequence of the weighted uniform Taylor estimates. The radius limit is taken for each fixed member to obtain the exact identity <a href=\"#ana:green\" data-reference-type=\"eqref\" data-reference=\"ana:green\">[ana:green]</a>; only then are its integrals expanded. Similarly, each finite angular type coefficient is identified with its own flux before passing to an approximant limit in the bounded functional <a href=\"#ana:green-functional\" data-reference-type=\"eqref\" data-reference=\"ana:green-functional\">[ana:green-functional]</a>. No uniform convergence of discarded derivative flux errors in either parameter or angular cutoff is used.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-ana-order-of-limits"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "Let $p\\geq1$, and let $G$ be a smooth Riemannian metric jet of order $p$, with base $G_0=g_0$, whose coefficients have finite angular type. Suppose that there are angular scalar jets $C,E$, with $C_0=2m_0$ and $E_0=0$, such that $$\\label{cmc:metric-asymptotics}\n G-b=r^{-3}\\bigl(C\\,\\mathrm{d}\\eta^2+E r^2\\sigma\\bigr)+o(r^{-3}).$$ For the coefficient of degree $j$, $1\\leq j\\leq p$, suppose that the remainder satisfies this estimate after every mixed radial and angular derivative of total order at most $p-j+1$.*\n\n*There is a smooth family of sphere jets $\\Sigma_s$, $0\\leq s<\\infty$, given by graphs over $\\{s\\}\\times S^2$, with the following properties:*\n\n1.  *$\\Sigma_s$ has constant outward mean curvature through order $p$, and $\\Sigma_0$ is minimal through that order.*\n\n2.  *The graph coefficients have finite angular type. The normal lapse $f$ for variation in $s$ has base value $f_0=1$.*\n\n\n\n3.  *If $A(s)$ and $H(s)$ are the area and mean curvature jets, then the CMC Hawking mass $$\\label{cmc:hawking-definition}\n     m_H(\\Sigma_s)=\n     \\sqrt{\\frac{A(s)}{16\\pi}}\n     \\left(1-\\frac{(H(s)^2-4)A(s)}{16\\pi}\\right)$$ satisfies, coefficientwise, $$\\label{cmc:hawking-limit}\n     \\lim_{s\\to\\infty}m_H(\\Sigma_s)\n     =m_{\\mathrm{AH}}(G)\n     :=\\sqrt{p_0(G)^2-\\sum_{i=1}^3p_i(G)^2}.$$ Here $p_\\mu(G)$ is the coefficientwise flux <a href=\"#eq:mass-flux\" data-reference-type=\"eqref\" data-reference=\"eq:mass-flux\">[eq:mass-flux]</a>, and the square root is its formal branch with base value $m_0>0$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-cmc-jets"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "For the conformal jets used in the quadratic argument, the coefficient of degree one solves a homogeneous finite-mode equation $Lu=0$; Lemma <a href=\"#lem:inverse\" data-reference-type=\"ref\" data-reference=\"lem:inverse\">4</a> gives all its differentiated asymptotics. The degree-two coefficient needs only the first differentiated asymptotic in Proposition <a href=\"#prop:cmc-jets\" data-reference-type=\"ref\" data-reference=\"prop:cmc-jets\">10</a>, which is supplied by the given $C^{1,\\alpha}_\\tau$ decay of a finite-angular-type seed and the same radial equation. The fourth-order construction will be used only after the seed has been reduced to $Q(v)=\\mathop{\\mathrm{Hess}}v-Bv$, with $v$ a homogeneous solution containing only constant and degree-one angular modes. Then all spatially differentiated decay estimates needed above hold. These are distinct uses of the proposition; higher radial decay derivatives of an arbitrary seed are not required.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cmc-regularity-budget"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "The following identity holds through the order of the sphere and metric jets: $$\\label{cmc:hawking-variation}\n \\frac{\\mathrm{d}}{\\mathrm{d}s}m_H\n =\\sqrt{\\frac A{16\\pi}}\\frac{HA}{8\\pi}\n \\left[\n \\bar f\\left\\langle\n      \\frac{\\mathop{\\mathrm{Scal}}_G+6+|\\mathrm{II}^\\circ|^2}{2}\n       \\right\\rangle\n +\\frac1{\\bar f}\\langle\\delta f\\,J\\delta f\\rangle\n \\right].$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-hawking-variation"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "Use the construction of Proposition <a href=\"#prop:cmc-jets\" data-reference-type=\"ref\" data-reference=\"prop:cmc-jets\">10</a> through order $2l$, where $l\\ge1$, and let $A_{\\mathrm{leaf}}=A(0)$ be the area jet of its minimal first leaf. Suppose, as ambient and leafwise coefficient identities, respectively, that $$\\label{cmc:leading-assumptions}\n \\mathop{\\mathrm{Scal}}_G+6=\\epsilon^{2l}|k|_{g_0}^2+O(\\epsilon^{2l+1}),\n \\qquad\n \\mathrm{II}^\\circ=\\epsilon^lU+O(\\epsilon^{l+1}),\n \\qquad\n \\delta f=\\epsilon^lF+O(\\epsilon^{l+1}).$$ Here $k$ is a smooth tensor on $M$; the fields $U,F$ on the background spheres are identified with fields on $M$. Then every coefficient below degree $2l$ of $m_{\\mathrm{AH}}(G)-b_*(A_{\\mathrm{leaf}})$ vanishes, and $$\\label{cmc:leading-integral}\n \\begin{split}\n &\\bigl[m_{\\mathrm{AH}}(G)-b_*(A_{\\mathrm{leaf}})\\bigr]_{2l}\\\\\n &\\quad=\\frac1{16\\pi}\\int_0^\\infty N(s)\n   \\int_{\\{s\\}\\times S^2}\n    \\left(|k|^2+|U|^2+2FJ_s^0F\\right)\\mathrm{d}A_{g_0}\\,\\mathrm{d}s\n \\ge0.\n \\end{split}$$ All norms in this formula use the background metrics. The displayed iterated integral is finite. If it vanishes, then $k,U,F$ vanish for $s>0$, and also at the boundary by continuity.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-leading-energy"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "Let $k$ be a smooth TT tensor of finite angular type, with decay $k=O(r^{-\\gamma})$ for some $\\gamma>3/2$. Let $v$ be the decaying solution of $$Lv=0,\n \\qquad v|_S=D^{-1}(k_{ss}|_S).\n \\label{eq:tt-dirichlet}$$ Then $Q(v)$ is TT, $Q(v)_{ss}|_S=k_{ss}|_S$, and $$\\int_M N|k|^2\\,\\mathrm{d}V_0\n -\\kappa\\int_S vDv\\,\\mathrm{d}A_0\n =\\int_M N|k-Q(v)|^2\\,\\mathrm{d}V_0.\n \\label{eq:tt-square}$$ All integrals in this identity converge. In particular, no sign assumption on $k_{ss}|_S$ is needed.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-tt-square"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "On the real linear space of all smooth TT seeds with the prescribed decay, the first deficit coefficient is zero and the second coefficient $c_2[q]$ is a continuous, rotation-invariant, nonnegative quadratic form. For a finite-angular-type seed it is given by $$\\begin{gathered}\n c_2[q]=\\frac1{16\\pi}\\int_M N\\left(\n |q-Q(v)|^2+|U|^2+2FJ_s^0F\\right)\\,\\mathrm{d}V_0,\\\\\n J_s^0=-\\Delta_{r^2\\sigma}-\\frac2{r^2}+\\frac{6m_0}{r^3}.\n \\end{gathered}\n \\label{eq:quadratic-positive-form}$$ The last term is integrated on the spheres before radial integration. For every actual branch in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, $$\\mathfrak D_q(\\epsilon)=c_2[q]\\epsilon^2+o(\\epsilon^2).\n \\label{eq:actual-quadratic-deficit}$$ In particular, $c_2[q]>0$ implies a strictly positive deficit for all sufficiently small positive $\\epsilon$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-quadratic"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "The kernel of $c_2$ is exactly $\\mathcal K$, a four-dimensional real vector space. In particular, the nonzero degree-one directions are genuine quadratic null directions.",
+   "kind": "classification",
+   "statement_anchor": "stmt-cor-kernel"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "If $v|_S=c+d\\cdot x$, then $$Q(v)_{ss}|_S=D_0c+D_1d\\cdot x,\n \\qquad D_0=\\frac{2\\kappa}{a},\\quad\n D_1=\\frac2{a^2}+\\frac{2\\kappa}{a}=\\frac{6m_0}{a^3}.$$ Thus $Q(v)_{ss}|_S\\geq0$ is equivalent to $D_0c\\geq D_1|d|$. A nonzero pure dipole fails that condition, but a sufficiently large positive radial component makes a mixed radial–dipole seed satisfy it. This is a compatibility statement about seeds, not an existence claim for branches satisfying outermostness and outer area-minimization. In particular, the boundary sign cannot be used to discard the degree-one null directions from the proof.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-rem-kernel-sign"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "Suppose that $c_2[q]=0$. Write the representation furnished by Corollary <a href=\"#cor:kernel\" data-reference-type=\"ref\" data-reference=\"cor:kernel\">16</a> as $$q=Q(v):=\\mathop{\\mathrm{Hess}}_{g_0}v-Bv,\\qquad Lv=0,\n \\qquad v=v_0(s)+v_1(s,x),$$ where $v_1$ has only degree-one spherical modes and $v$ decays at infinity. Then $$c_0[q]=c_1[q]=c_2[q]=c_3[q]=0,\n \\qquad c_4[q]\\geq 0.$$ If $v_1\\not\\equiv0$, then $c_4[q]>0$. In particular, in that case the actual deficit $\\mathfrak D_q(\\epsilon)$ is strictly positive for all sufficiently small positive $\\epsilon$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-quartic"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "There is a decaying finite-angular-type function $w$, with $w|_S=0$, for which the following construction is defined through degree four. Formally evolve the initial jets in Gaussian time and take the graph $$T=-\\epsilon v+\\epsilon^2w.\n \\label{quart:time-graph}$$ The induced metric and future second fundamental form, denoted by $\\widetilde g$ and $\\widetilde K$, satisfy $$\\begin{aligned}\n \\widetilde K&=\\epsilon^2k+O(\\epsilon^3),\n &\\mathop{\\mathrm{tr}}_{g_0}k&=0,&\\mathop{\\mathrm{div}}_{g_0}k&=0,\n \\label{quart:leading-k}\\\\\n \\mathop{\\mathrm{Scal}}_{\\widetilde g}+6\n   &=\\epsilon^4|k|_{g_0}^2+O(\\epsilon^5).\n \\label{quart:scalar-four}\n\\end{aligned}$$ Here $k=O(r^{-3})$, with all derivatives needed for the fourth-order CMC construction. Coefficientwise through degree four, $$\\widetilde g-g_\\epsilon=O(r^{-6})\n \\label{quart:metric-decay}$$ with the required differentiated bounds. Thus the mass covectors and their Lorentz norms agree through that degree. Moreover, $$_2\n   =-2vq-Bv^2-\\mathrm{d}v\\otimes\\mathrm{d}v\n   =-\\mathop{\\mathrm{Hess}}_{g_0}(v^2)+\\mathrm{d}v\\otimes\\mathrm{d}v+Bv^2.\n \\label{quart:metric-two}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-slice"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "For the changed slice of Lemma <a href=\"#lem:slice\" data-reference-type=\"ref\" data-reference=\"lem:slice\">19</a> there is a sphere jet $S^\\sharp$, based at $S$, such that $$\\begin{aligned}\n |S^\\sharp|_{\\widetilde g}&=|S|_{g_\\epsilon}+O(\\epsilon^5),\n \\label{quart:null-area}\\\\\n H_{\\widetilde g}(S^\\sharp)\n      &=\\epsilon^2k_{ss}|_S+O(\\epsilon^3).\n \\label{quart:null-h}\n\\end{aligned}$$ Let $S_{\\min}$ be the minimal Taylor leaf of the CMC construction for $\\widetilde g$. Their height jets agree through degree one. If $$z=D^{-1}(k_{ss}|_S),\n \\label{quart:z}$$ then the height of $S^\\sharp$ minus that of $S_{\\min}$ is $\\epsilon^2z+O(\\epsilon^3)$, and $$|S^\\sharp|_{\\widetilde g}-|S_{\\min}|_{\\widetilde g}\n     =\\tfrac12\\epsilon^4\\int_S zDz\\,\\mathrm{d}A_{g_0}+O(\\epsilon^5).\n \\label{quart:area-hessian}$$ These statements remain valid when some leading boundary displacements are negative.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-null-cut"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "Let $\\gamma_\\epsilon=\\sigma+\\epsilon P_1+\\epsilon^2P_2$ be a smooth metric two-jet on $S^2$ of finite angular type. Suppose its scalar curvature is angularly constant through degree two. Then there are a positive scalar two-jet $a_\\epsilon$, with $a_0=1$, and a diffeomorphism two-jet $\\Phi_\\epsilon$, based at the identity, such that $$\\gamma_\\epsilon=a_\\epsilon\\Phi_\\epsilon^*\\sigma+O(\\epsilon^3).$$ All coefficients can be chosen of finite angular type.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-round-jet"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "Let $v=v_0(s)+V(s)x$ solve $Lv=0$, where $x$ is one fixed unit-axis linear coordinate on $S^2$ and $V=O(r^{-3})$. If <a href=\"#quart:necessary-tangent\" data-reference-type=\"eqref\" data-reference=\"quart:necessary-tangent\">[quart:necessary-tangent]</a> holds on every compact radial interval in the interior, with possibly different local vector fields and functions, then $V\\equiv0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-dipole-obstruction"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "Suppose the fixed TT seed $q$ is invariant under rotations of $S^2$. Every branch in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> is radial for all sufficiently small $\\epsilon$, and on that parameter interval $$m_{\\mathrm{AH}}(\\epsilon)=b_*(A_\\epsilon).$$ This includes the zero seed, and requires no sign for $q_{ss}|_S$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-radial"
+  }
+ ],
+ "paper": "papers/EN-117-000-0022-2-2026-PR-T4-UK-EX-M2-B-ML-M-0538_PM-260.8_A_local_Penrose_inequality_for_conformal_perturbations_of_Schwarzschildanti_de_Sitter_data.md",
+ "purpose": "A local Penrose inequality for conformal perturbations of Schwarzschild–anti-de Sitter data",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "21ea1c152b876836ea51841211cfcfa45dbcbba48ac29e25f01413c438e3bd8e",
+   "pm.domains.v2": "212d6674a37969e1b4a6d91043b332ac5786af7cf2a283f52aae33c05208b0e6",
+   "pm.edges.v2": "e0b01c4d33dab88268b4166f18c6fe42f0cdf786ab6e3aa4d459ffc3dbfaf396",
+   "pm.extraction.v2": "79d9d1595a06930053c8b217096e6b3e3def86001eef7251891ed3c363bb0e2e",
+   "pm.formal.v2": "7a5c5d081f0dc0c37d79faba1138be67397752a0480d8183fec4aa10f8d2308e",
+   "pm.limits.v2": "eefc9de5eb763e1af858c902c4ffb1c827f35e90e3e6bcd403044c96a21d19b2",
+   "pm.node.v2": "e2a6e3fd8940ac62b294d3d8adb45066315ada00f7c3a2f591e9d1cf2c9b0e27",
+   "pm.objects.v2": "c5fbce3b934bf973950d83329433677c8a58a8125ca9ebe6d3e28bcadf3aee4e",
+   "pm.provenance.v2": "42add3a97516ec653dbdac5238c44abc167244a3d947b25cb35bb81ca64b9e17",
+   "pm.quantities.v2": "32be283d4858728ebb51555f450e71865bee95bc5d04d035d9a943f2ac3d82f8",
+   "pm.reading.v2": "72965c8d8968e8f40ebcd88123cee696b41ed23b75b7607f100a431762f26d90",
+   "pm.roadmap.v2": "e188b638483ce8fcc0f5528ac81c1d7ee7a2a84485b6d4531351f7653d23d31e",
+   "pm.search.v1": "d8ee2dea339a76bcf55f1d873bc9b138780c2f47bf924fd3a9347ae724019a7a",
+   "pm.triptych.v2": "1b7f7f78ef465f5c2aadffe11b51a62afa0d3253b8e897aa933903b1850fd56a"
+  },
+  "canonical_sha256": "c60cf7654d25612cc24814f10c6e120697656fdd238724687d39e0844f5a3a19",
+  "paper_sha256": "6c5eff4e777862b5c6c9ea1793ebff5a88349805c0d3fb17e6197ab0494530ea",
+  "repaired_body_sha256": "cd33cf228a7e24bdc7ac6ea6aefea2fc3b0c846fe8e2df44da8581366b4114c0"
+ },
+ "status": "ACTIVE",
+ "subject_id": 17,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "b8769342d447d99c4db8b9750d57108dea9f6cbc20b77fe620f1f009b93d43de",
+   "receipt_sha256": "fcea960ce93ae0c212f3e9b1788b80f0af8b5b37fe427a6d5dad0625f65b26c9",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "A local Penrose inequality for conformal perturbations of Schwarzschild–anti-de Sitter data"
+}

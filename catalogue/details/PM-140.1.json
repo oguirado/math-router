@@ -1,0 +1,642 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 556943,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 168259
+ },
+ "coordinate": "EN-114-000-0003-2-2026-PR-T4-UK-EX-M1-B-ML-H-0286",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "geometric_measure_theory",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-6",
+     "quote": "The displayed update stores real scalars and supplies no finite-bit upper bound.",
+     "quote_sha256": "9c3feed89d4ddf531d9c5191445e05db767708d38e3eeee0613dd0e93dc4715b"
+    }
+   ],
+   "query": "Finite-bit upper bound from the Kaczmarz benchmark",
+   "reason": "The displayed update stores real scalars and provides no finite-bit upper bound."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "h:introduction",
+     "quote": "The model fixes the rows in advance through their independent Gaussian law: it does not allow a learner to choose a row or revisit an earlier one.",
+     "quote_sha256": "5014291ee3f8d1f1f5667ccf08e8819ab456ad0d6adc2758794b985579d8d843"
+    }
+   ],
+   "query": "Adaptive selection or repeated reading of measurement rows",
+   "reason": "The observation law fixes independent rows and forbids choosing or revisiting them."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "h:introduction",
+     "quote": "The statement makes no uniform claim when $A=A(d)$ tends to infinity.",
+     "quote_sha256": "6f6afd373035df9e5e17a8518e3b23631137b9bfbfeb85b3ee7c1105ddec6b89"
+    }
+   ],
+   "query": "Uniform positive lower-bound constant for an unbounded quadratic-memory coefficient",
+   "reason": "The lower-bound constants depend on a fixed finite coefficient; the paper asserts no uniform extension to an increasing coefficient."
+  }
+ ],
+ "family": "PM-140",
+ "id": "PM-140.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-h-main",
+    "claim_id": "C1",
+    "statement": "For every fixed finite $A>0$, there are constants $c_A>0$ and $d_A$ such that the following holds. Let $d\\ge d_A$, let $0\\le M\\le Ad^2$ be an integer, and let $0<\\epsilon\\le1/10$. For any learner in Definition <a href=\"#h:model\" data-reference-type=\"ref\" data-reference=\"h:model\">1</a>, draw $S\\sim\\sigma_d$ independently of the rows and the learner’s data-independent randomness. If $$\\mathbb P\\{\\arccos\\langle \\widehat s,S\\rangle\\le\\epsilon\\}\\ge\\frac23,$$"
+   },
+   {
+    "anchor": "stmt-h-subquadratic",
+    "claim_id": "C2",
+    "statement": "Let $M(d)\\ge0$ be integer-valued with $M(d)=o(d^2)$, and let $0<\\epsilon(d)\\le1/10$ be any accuracy sequence. A family of learners in Definition <a href=\"#h:model\" data-reference-type=\"ref\" data-reference=\"h:model\">1</a> with uniform-sphere average success at least $2/3$"
+   },
+   {
+    "anchor": "stmt-h-worst-signal",
+    "claim_id": "C3",
+    "statement": "The conclusions of Theorem <a href=\"#h:main\" data-reference-type=\"ref\" data-reference=\"h:main\">2</a> and Corollary <a href=\"#h:subquadratic\" data-reference-type=\"ref\" data-reference=\"h:subquadratic\">3</a> also hold when their average-success assumption is replaced by $$\\mathbb P\\{\\arccos\\langle \\widehat s,s\\rangle\\le\\epsilon\\}\\ge\\frac23\n \\qquad\\text{for every }s\\in S^{d-1},$$ where this probability is over the rows and the learner’s randomness."
+   },
+   {
+    "anchor": "stmt-h-local-caps",
+    "claim_id": "C4",
+    "statement": "For $d\\ge2$, $z\\in S^{d-1}$, and $r>0$, $$\\label{h:local:cap}\n \\sigma_d(B(z,r))\\le r^{d-1}.$$ Consequently, if $Q$ is any probability law on $S^{d-1}$ independent of the signal and $$h(s)=Q\\{v:\\arccos\\langle v,s\\rangle\\le\\epsilon\\},$$ then $h$ has local mass at scale $R=\\epsilon$:"
+   },
+   {
+    "anchor": "stmt-h-local-caps",
+    "claim_id": "C4",
+    "statement": "$$\\label{h:local:terminal}\n \\int_{B(z,r)}h\\,d\\sigma_d\\le(\\epsilon r)^{(d-1)/2}.$$"
+   },
+   {
+    "anchor": "stmt-h-dv-finite-density",
+    "claim_id": "C5",
+    "statement": "Let $d,m\\ge1$ and $p\\ge2$ be integers, and let $\\beta>m+p-2$, $H,R>0$, and $z\\in\\mathbb R^d$. Suppose that $\\mu$ is a finite nonnegative Borel measure supported on $B(z,R)$ and satisfying $$\\label{h:dv:ambient-bound}\n \\mu(B(x,r))\\le Hr^\\beta\n \\qquad(x\\in\\mathbb R^d,\\ r>0).$$ For $0\\le j\\le p-2$, put $$J_j=1+3^j2^\\beta\\frac{m}{\\beta-j-m},$$ and define $$\\label{h:dv:moment-scale}\n \\mathcal B=(2\\pi)^{-m(p-1)/(2p)}\n H R^{\\beta-m(1-1/p)}\n \\left(\\prod_{j=0}^{p-2}J_j\\right)^{1/p}.$$"
+   },
+   {
+    "anchor": "stmt-h-dv-ambient-gram",
+    "claim_id": "C6",
+    "statement": "Under the assumptions of Theorem <a href=\"#h:dv:finite-density\" data-reference-type=\"ref\" data-reference=\"h:dv:finite-density\">6</a>, use the factors $J_j$ defined there."
+   },
+   {
+    "anchor": "stmt-h-proj-gaussian",
+    "claim_id": "C7",
+    "statement": "Let $d,m\\ge1$ and $k\\ge2$ be integers, let $\\delta>0$, and let $t_1,\\ldots,t_k\\in\\mathbb R^d$. Put $D=[t_2-t_1,\\ldots,t_k-t_1]$."
+   },
+   {
+    "anchor": "stmt-h-dv-gaussian-moment",
+    "claim_id": "C8",
+    "statement": "Under the assumptions of Theorem <a href=\"#h:dv:finite-density\" data-reference-type=\"ref\" data-reference=\"h:dv:finite-density\">6</a>, use the scale $\\mathcal B$ from <a href=\"#h:dv:moment-scale\" data-reference-type=\"eqref\" data-reference=\"h:dv:moment-scale\">[h:dv:moment-scale]</a>."
+   },
+   {
+    "anchor": "stmt-h-proj-density-by-tests",
+    "claim_id": "C9",
+    "statement": "Let $E$ be a Euclidean space, let $\\lambda$ be a locally finite, sigma-finite Borel measure on $E$, and let $\\eta$ be a finite nonnegative Borel measure on $E$."
+   },
+   {
+    "anchor": "stmt-h-proj-normalized",
+    "claim_id": "C10",
+    "statement": "Use the parameters in <a href=\"#h:local:parameters\" data-reference-type=\"eqref\" data-reference=\"h:local:parameters\">[h:local:parameters]</a>, and let $1\\le m\\le q$. Let $\\nu$ be a finite nonnegative Borel measure of mass at most one, supported on the unit ball in $\\mathbb R^d$, such that"
+   },
+   {
+    "anchor": "stmt-h-proj-normalized",
+    "claim_id": "C10",
+    "statement": "$$\\label{h:proj:growth}\n \\nu(B(t,\\rho))\\le\\rho^a\n \\qquad(t\\in\\operatorname{supp}\\nu,\\ \\rho>0).$$"
+   },
+   {
+    "anchor": "stmt-h-ev-ellipsoid",
+    "claim_id": "C11",
+    "statement": "Let $1\\le m\\le d$, $z\\in\\mathbb R^d$, and $R>0$."
+   },
+   {
+    "anchor": "stmt-h-block-bound",
+    "claim_id": "C12",
+    "statement": "Let $1\\le m\\le q$ and $N\\ge1$. Suppose the measurable functions $h_1,\\ldots,h_N:S^{d-1}\\to[0,1]$ have local mass at a common scale $R>0$, as in <a href=\"#h:local:bound\" data-reference-type=\"eqref\" data-reference=\"h:local:bound\">[h:local:bound]</a>. Let $g_j:\\mathbb R^{m\\times d}\\times\\mathbb R^m\\to[0,1]$ be Borel routing probabilities with $\\sum_{j=1}^N g_j\\le1$, and define $$h(s)=\\sum_{j=1}^N h_j(s)\\int g_j(A,As)\\,d\\gamma_m(A).$$"
+   },
+   {
+    "anchor": "stmt-h-stream-categories",
+    "claim_id": "C13",
+    "statement": "For a fixed-seed Borel learner with the state sets, output laws, and phase convention just specified, and the Borel terminal score $\\ell$, let $0\\le t<T$, $u\\in Q_t$, and $1\\le m\\le T-t$."
+   },
+   {
+    "anchor": "stmt-h-stream-borel",
+    "claim_id": "C14",
+    "statement": "Let $d\\ge2$, let $\\pi$ be a Borel probability measure on $S^{d-1}$, and let $X\\sim\\gamma_1=N(0,I_d)$ be independent of $S\\sim\\pi$. Suppose that $$\\label{h:stream:pair-domination}\n \\mathcal L(X,\\langle X,S\\rangle)\\ll\n \\lambda,\\qquad \\lambda(dx,dy)=\\gamma_1(dx)\\,dy$$ on $\\mathbb R^d\\times\\mathbb R$. Fix an integer horizon $T\\ge0$ and finite state sets at every sample index. For each state and index, suppose every coordinate of the finite vector of transition and stopping probabilities is measurable in the $\\lambda$-completion of the Borel sigma field. A terminal output law is a Borel probability measure on $S^{d-1}$ indexed only by its terminal state and stopping index. Decisions made without a new sample also depend only on the state and index.*"
+   },
+   {
+    "anchor": "stmt-h-stream-success",
+    "claim_id": "C15",
+    "statement": "There are absolute constants $C,d_0>0$ with the following property."
+   },
+   {
+    "anchor": "stmt-h-ev-reflection",
+    "claim_id": "C16",
+    "statement": "Let $d\\ge1$ be an integer and $T\\ge0$."
+   },
+   {
+    "anchor": "stmt-h-alt-selection",
+    "claim_id": "C17",
+    "statement": "Let $(E,\\mathcal E,\\lambda)$ be a measure space, let $\\mathcal D\\in\\mathcal E$ have finite measure, let $p>1$, let $U\\ge0$, and let $N\\ge1$ be an integer. Suppose finite nonnegative measures $\\eta_1,\\ldots,\\eta_N$ are supported on $\\mathcal D$, and that for every measurable $0\\le g\\le1$, $$\\label{h:alt:test}\n \\int g\\,d\\eta_j\n \\le U\\left(\\int_{\\mathcal D}g\\,d\\lambda\\right)^{1-1/p}\n \\qquad(1\\le j\\le N).$$"
+   },
+   {
+    "anchor": "stmt-h-cube-density",
+    "claim_id": "C18",
+    "statement": "Let $k$ be an integer with $1\\le k\\le p$, and let a Borel function $f:Q\\to[0,1]$ satisfy <a href=\"#h:cube:local\" data-reference-type=\"eqref\" data-reference=\"h:cube:local\">[h:cube:local]</a> with $L\\ge0$. For $z\\in\\mathbb R^n$ and $r>0$, define the finite joint measure $$\\label{h:cube:joint-measure}\n \\eta_{f,z,r}(E)\n =\\int\\!\\int_{\\mathcal B(z,r)}\n       \\mathbf 1_E(A,A\\iota(u))f(u)\\,du\\,\\gamma_k(dA)$$ for Borel $E\\subseteq\\mathbb R^{k\\times d}\\times\\mathbb R^k$."
+   },
+   {
+    "anchor": "stmt-h-cube-block",
+    "claim_id": "C19",
+    "statement": "Let $k,N$ be integers with $1\\le k\\le p$ and $N\\ge1$, and let Borel $f_1,\\ldots,f_N:Q\\to[0,1]$ satisfy <a href=\"#h:cube:local\" data-reference-type=\"eqref\" data-reference=\"h:cube:local\">[h:cube:local]</a> with the same $L\\ge0$. Suppose Borel functions $g_v:\\mathbb R^{k\\times d}\\times\\mathbb R^k\\to[0,\\infty)$ obey $\\sum_{v=1}^N g_v(A,y)\\le1$."
+   },
+   {
+    "anchor": "stmt-h-cube-success",
+    "claim_id": "C20",
+    "statement": "There are universal constants $D\\ge e$, $d_0\\ge16$, and $c>0$ with the following property."
+   },
+   {
+    "anchor": "stmt-h-cube-inverse",
+    "claim_id": "C21",
+    "statement": "Let $f:Q\\to[0,1]$ be Borel and satisfy <a href=\"#h:cube:local\" data-reference-type=\"eqref\" data-reference=\"h:cube:local\">[h:cube:local]</a> with $L\\ge0$. Let $k$ be an integer with $1\\le k\\le p$, and let $V\\subseteq\\mathbb R^n$ be a nonempty affine subspace of dimension $j\\le p-2$."
+   },
+   {
+    "anchor": "stmt-h-dv-measurable-test",
+    "claim_id": "C22",
+    "statement": "Under the assumptions of Proposition <a href=\"#h:dv:ambient-gram\" data-reference-type=\"ref\" data-reference=\"h:dv:ambient-gram\">7</a>, the exact image measure satisfies $$\\eta_\\mu(E)\\le \\mathcal B\\,\\lambda_m(E)^{1-1/p}\n \\label{h:dv:set-bound}$$ for every Borel set $E$ of finite $\\lambda_m$-measure."
+   },
+   {
+    "anchor": "stmt-h-dv-gaussian-ac",
+    "claim_id": "C23",
+    "statement": "Let $d\\ge2$ and $1\\le m<d$."
+   },
+   {
+    "anchor": "stmt-h-dv-joint-density",
+    "claim_id": "C24",
+    "statement": "Let $d\\ge2$, $1\\le m<d$, and let $\\mu$ be a finite nonnegative Borel measure with $\\mu\\ll\\sigma_d$."
+   },
+   {
+    "anchor": "stmt-h-dv-joint-l1",
+    "claim_id": "C25",
+    "statement": "In addition to the assumptions of Proposition <a href=\"#h:dv:ambient-gram\" data-reference-type=\"ref\" data-reference=\"h:dv:ambient-gram\">7</a>, suppose that $d\\ge2$, $1\\le m<d$, and $\\mu\\ll\\sigma_d$. Let $F$ be the joint density from Lemma <a href=\"#h:dv:joint-density\" data-reference-type=\"ref\" data-reference=\"h:dv:joint-density\">25</a>, and let $F_\\delta$ be the Gaussian regularization in Lemma <a href=\"#h:dv:gaussian-moment\" data-reference-type=\"ref\" data-reference=\"h:dv:gaussian-moment\">9</a>."
+   },
+   {
+    "anchor": "stmt-h-dv-pointwise-density",
+    "claim_id": "C26",
+    "statement": "Assume the same hypotheses as in Proposition <a href=\"#h:dv:joint-l1\" data-reference-type=\"ref\" data-reference=\"h:dv:joint-l1\">26</a>."
+   },
+   {
+    "anchor": "stmt-auto-corollary-1",
+    "claim_id": "C27",
+    "statement": "Under the hypotheses of Proposition <a href=\"#h:dv:ambient-gram\" data-reference-type=\"ref\" data-reference=\"h:dv:ambient-gram\">7</a>, suppose that $$d\\ge16,\\qquad p=\\lfloor d/8\\rfloor,\\qquad\n 1\\le m\\le p,\\qquad \\frac{d-1}{2}\\le\\beta\\le\\frac d2,\n \\label{h:dv:parameters}$$ Then, for every $0\\le j\\le p-2$, $$\\beta-j-m\\ge\\frac{d-1}{2}-2p+2\n \\ge\\frac d4+\\frac32,\n \\qquad J_j\\le C^d,\n \\label{h:dv:dimension-margin}$$ where $C\\ge1$ is an absolute constant."
+   },
+   {
+    "anchor": "stmt-h-ev-density",
+    "claim_id": "C28",
+    "statement": "Assume <a href=\"#h:dv:parameters\" data-reference-type=\"eqref\" data-reference=\"h:dv:parameters\">[h:dv:parameters]</a>, and let $H,R>0$ and $z\\in\\mathbb R^d$."
+   },
+   {
+    "anchor": "stmt-h-proj-volume",
+    "claim_id": "C29",
+    "statement": "For a standard Gaussian $m$-by-$d$ matrix $A$, where $1\\le m\\le d$, $$\\label{h:proj:volume-bound}\n \\mathbb E\\,\\operatorname{vol}_m B(0,\\|A\\|_{\\mathrm{op}})\\le\\exp(Cd).$$"
+   },
+   {
+    "anchor": "stmt-h-dv-hemisphere-cap",
+    "claim_id": "C30",
+    "statement": "Let $d\\ge2$, $n=d-1$, and let $\\sigma_d$ be uniform probability on $S^{d-1}$."
+   },
+   {
+    "anchor": "stmt-h-ev-polar-cap",
+    "claim_id": "C31",
+    "statement": "Let $d\\ge2$, $n=d-1$, and let $\\sigma$ be uniform on $S^{d-1}$."
+   },
+   {
+    "anchor": "stmt-h-ev-coefficient-step",
+    "claim_id": "C32",
+    "statement": "Assume <a href=\"#h:dv:parameters\" data-reference-type=\"eqref\" data-reference=\"h:dv:parameters\">[h:dv:parameters]</a>. Let $H>0$ and let $N\\ge1$ be an integer. Let $h_1,\\ldots,h_N:S^{d-1}\\to[0,1]$ be Borel functions satisfying $$\\int_{B(x,r)}h_w\\,d\\sigma\\le H r^\\beta\n \\qquad(x\\in\\mathbb R^d,\\ r>0,\\ 1\\le w\\le N).$$ Let $g_w(A,y)\\ge0$ be Borel functions with $\\sum_wg_w\\le1$, and define $$h(s)=\\mathbb E_A\\sum_{w=1}^N g_w(A,As)h_w(s).$$"
+   },
+   {
+    "anchor": "stmt-h-ev-coefficient-success",
+    "claim_id": "C33",
+    "statement": "Assume $d\\ge16$, set $n=d-1$, $p=\\lfloor d/8\\rfloor$, and let $n/2\\le\\beta\\le d/2$. Let $M,T\\ge0$ be integers, $0<\\epsilon\\le1/10$, and consider a learner in Definition <a href=\"#h:model\" data-reference-type=\"ref\" data-reference=\"h:model\">1</a>. Under the uniform-sphere signal prior, write $P_{\\mathrm{succ}}$ for its success probability with either angular or chordal error at most $\\epsilon$, and put $b=\\lceil T/p\\rceil$."
+   },
+   {
+    "anchor": "stmt-h-ev-success",
+    "claim_id": "C34",
+    "statement": "Assume $d\\ge16$ and $p=\\lfloor d/8\\rfloor$."
+   },
+   {
+    "anchor": "stmt-h-end-linear",
+    "claim_id": "C35",
+    "statement": "For all sufficiently large $d$, let $0\\le T\\le d/4$ be an integer."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Backward block bound",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-h-block-bound",
+      "quote": "The exact image-measure identity and two applications of Hölder give",
+      "quote_sha256": "862bfd5f5a1b887d98a5bc6c6fc99bef87702acda587df6bbf85460e01eafca8"
+     }
+    ],
+    "requires_concepts": [
+     "Local successful mass",
+     "Exact Gaussian projection density",
+     "Common projected support",
+     "Hölder selection"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Prior-preserving Borel reduction",
+    "evidence": [
+     {
+      "anchor": "stmt-h-stream-borel",
+      "quote": "There are everywhere-defined Borel transition and stopping kernels",
+      "quote_sha256": "cd07c8d1ea50ea1ce637a60b8765678806f1c2cf0650e87415d840ffc839b120"
+     }
+    ],
+    "requires_concepts": [
+     "Dominated fresh-pair law",
+     "Borel versions",
+     "Joint measurability"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C1",
+   "exact_statement": "For every fixed finite $A>0$, there are constants $c_A>0$ and $d_A$ such that the following holds. Let $d\\ge d_A$, let $0\\le M\\le Ad^2$ be an integer, and let $0<\\epsilon\\le1/10$. For any learner in Definition <a href=\"#h:model\" data-reference-type=\"ref\" data-reference=\"h:model\">1</a>, draw $S\\sim\\sigma_d$ independently of the rows and the learner’s data-independent randomness. If $$\\mathbb P\\{\\arccos\\langle \\widehat s,S\\rangle\\le\\epsilon\\}\\ge\\frac23,$$ then its prescribed horizon satisfies $$T\\ge c_A\\,d\\log(1/\\epsilon).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-h-main"
+  },
+  {
+   "claim_id": "C2",
+   "exact_statement": "Let $M(d)\\ge0$ be integer-valued with $M(d)=o(d^2)$, and let $0<\\epsilon(d)\\le1/10$ be any accuracy sequence. A family of learners in Definition <a href=\"#h:model\" data-reference-type=\"ref\" data-reference=\"h:model\">1</a> with uniform-sphere average success at least $2/3$ satisfies $$T(d)\\ge c\\,d\\log(1/\\epsilon(d))$$ for all sufficiently large $d$, where $c>0$ is absolute. The dimension threshold may depend on the memory sequence.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-subquadratic"
+  },
+  {
+   "claim_id": "C3",
+   "exact_statement": "The conclusions of Theorem <a href=\"#h:main\" data-reference-type=\"ref\" data-reference=\"h:main\">2</a> and Corollary <a href=\"#h:subquadratic\" data-reference-type=\"ref\" data-reference=\"h:subquadratic\">3</a> also hold when their average-success assumption is replaced by $$\\mathbb P\\{\\arccos\\langle \\widehat s,s\\rangle\\le\\epsilon\\}\\ge\\frac23\n \\qquad\\text{for every }s\\in S^{d-1},$$ where this probability is over the rows and the learner’s randomness.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-worst-signal"
+  },
+  {
+   "claim_id": "C4",
+   "exact_statement": "For $d\\ge2$, $z\\in S^{d-1}$, and $r>0$, $$\\label{h:local:cap}\n \\sigma_d(B(z,r))\\le r^{d-1}.$$ Consequently, if $Q$ is any probability law on $S^{d-1}$ independent of the signal and $$h(s)=Q\\{v:\\arccos\\langle v,s\\rangle\\le\\epsilon\\},$$ then $h$ has local mass at scale $R=\\epsilon$: $$\\label{h:local:terminal}\n \\int_{B(z,r)}h\\,d\\sigma_d\\le(\\epsilon r)^{(d-1)/2}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-local-caps"
+  },
+  {
+   "claim_id": "C5",
+   "exact_statement": "Let $d,m\\ge1$ and $p\\ge2$ be integers, and let $\\beta>m+p-2$, $H,R>0$, and $z\\in\\mathbb R^d$. Suppose that $\\mu$ is a finite nonnegative Borel measure supported on $B(z,R)$ and satisfying $$\\label{h:dv:ambient-bound}\n \\mu(B(x,r))\\le Hr^\\beta\n \\qquad(x\\in\\mathbb R^d,\\ r>0).$$ For $0\\le j\\le p-2$, put $$J_j=1+3^j2^\\beta\\frac{m}{\\beta-j-m},$$ and define $$\\label{h:dv:moment-scale}\n \\mathcal B=(2\\pi)^{-m(p-1)/(2p)}\n H R^{\\beta-m(1-1/p)}\n \\left(\\prod_{j=0}^{p-2}J_j\\right)^{1/p}.$$ Then $\\eta_\\mu$ has a nonnegative jointly Borel density $F$ with respect to $\\lambda_m$, which can be chosen to vanish outside $\\mathcal E_{z,R}$, and $$\\label{h:dv:finite-density-bound}\n \\|F\\|_{L^p(\\lambda_m)}\\le\\mathcal B.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-h-dv-finite-density"
+  },
+  {
+   "claim_id": "C6",
+   "exact_statement": "Under the assumptions of Theorem <a href=\"#h:dv:finite-density\" data-reference-type=\"ref\" data-reference=\"h:dv:finite-density\">6</a>, use the factors $J_j$ defined there. If $L$ is an affine $j$-plane with $0\\le j\\le p-2$, then, for $0<t\\le R$, $$\\begin{aligned}\n \\mu\\{s:\\operatorname{dist}(s,L)\\le t\\}\n &\\le 3^j2^\\beta H R^j t^{\\beta-j},\n \\label{h:dv:tube}\\\\\n \\int\\operatorname{dist}(s,L)^{-m}\\,d\\mu(s)\n &\\le J_j H R^{\\beta-m}.\n \\label{h:dv:inverse-distance}\n\\end{aligned}$$ For a tuple $(s_1,\\ldots,s_p)$, let $V=[s_2-s_1,\\ldots,s_p-s_1]$. The matrix $V$ has full column rank for $\\mu^{\\otimes p}$-almost every tuple, and $$\\int\\det(V^{\\mathsf T}V)^{-m/2}\\,d\\mu^{\\otimes p}\n \\le\n H^p R^{\\beta p-m(p-1)}\n \\prod_{j=0}^{p-2}J_j.\n \\label{h:dv:gram-product}$$ The integrand in <a href=\"#h:dv:gram-product\" data-reference-type=\"eqref\" data-reference=\"h:dv:gram-product\">[h:dv:gram-product]</a> may be assigned any value on the null set of rank-deficient tuples.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-dv-ambient-gram"
+  },
+  {
+   "claim_id": "C7",
+   "exact_statement": "Let $d,m\\ge1$ and $k\\ge2$ be integers, let $\\delta>0$, and let $t_1,\\ldots,t_k\\in\\mathbb R^d$. Put $D=[t_2-t_1,\\ldots,t_k-t_1]$. If $A$ has law $\\gamma_m$, then $$\\label{h:proj:gaussian-identity}\n\\begin{split}\n \\mathbb E_A\\int_{\\mathbb R^m}\\prod_{i=1}^k\\phi_\\delta(y-At_i)\\,dy\n ={}&(2\\pi)^{-m(k-1)/2}\\\\\n &{}\\times\n \\det\\!\\left(D^{\\mathsf T}D+\n \\delta^2(I_{k-1}+\\mathbf1\\mathbf1^{\\mathsf T})\\right)^{-m/2}.\n\\end{split}$$ If $D$ has full column rank, the right side is at most $(2\\pi)^{-m(k-1)/2}\\det(D^{\\mathsf T}D)^{-m/2}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-proj-gaussian"
+  },
+  {
+   "claim_id": "C8",
+   "exact_statement": "Under the assumptions of Theorem <a href=\"#h:dv:finite-density\" data-reference-type=\"ref\" data-reference=\"h:dv:finite-density\">6</a>, use the scale $\\mathcal B$ from <a href=\"#h:dv:moment-scale\" data-reference-type=\"eqref\" data-reference=\"h:dv:moment-scale\">[h:dv:moment-scale]</a>. Let $\\phi_\\delta$ be the $N(0,\\delta^2I_m)$ density and put $$F_\\delta(A,y)=\\int\\phi_\\delta(y-As)\\,d\\mu(s),\n \\qquad \\delta>0.$$ Then $F_\\delta$ is jointly Borel, and, with $V=[s_2-s_1,\\ldots,s_p-s_1]$, $$\\begin{aligned}\n \\int F_\\delta^p\\,d\\lambda_m\n &=(2\\pi)^{-m(p-1)/2}\n   \\int\\det\\!\\left(\n     V^{\\mathsf T}V+\n     \\delta^2(I_{p-1}+\\mathbf 1\\mathbf 1^{\\mathsf T})\n   \\right)^{-m/2}\\,d\\mu^{\\otimes p}\n \\notag\\\\\n &\\le \\mathcal B^p.\n \\label{h:dv:gaussian-moment-bound}\n\\end{aligned}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-dv-gaussian-moment"
+  },
+  {
+   "claim_id": "C9",
+   "exact_statement": "Let $E$ be a Euclidean space, let $\\lambda$ be a locally finite, sigma-finite Borel measure on $E$, and let $\\eta$ be a finite nonnegative Borel measure on $E$. Suppose $p>1$, $U\\ge0$, and $$\\left|\\int\\psi\\,d\\eta\\right|\n \\le U\\|\\psi\\|_{L^{p/(p-1)}(\\lambda)}\n \\qquad\\text{for every real }\\psi\\in C_c(E).$$ Then $\\eta=f\\lambda$ for a nonnegative $f\\in L^p(\\lambda)$ with $\\|f\\|_p\\le U$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-h-proj-density-by-tests"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "Use the parameters in <a href=\"#h:local:parameters\" data-reference-type=\"eqref\" data-reference=\"h:local:parameters\">[h:local:parameters]</a>, and let $1\\le m\\le q$. Let $\\nu$ be a finite nonnegative Borel measure of mass at most one, supported on the unit ball in $\\mathbb R^d$, such that $$\\label{h:proj:growth}\n \\nu(B(t,\\rho))\\le\\rho^a\n \\qquad(t\\in\\operatorname{supp}\\nu,\\ \\rho>0).$$ The image of $\\gamma_m(dA)\\nu(dt)$ under $(A,t)\\mapsto(A,At)$ has a nonnegative jointly Borel density $f_\\nu$ relative to $\\lambda_m$, and $$\\label{h:proj:norm}\n \\|f_\\nu\\|_{L^q(\\lambda_m)}\\le\\exp(Cd).$$ The constant is independent of $\\nu$ and $m$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-proj-normalized"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "Let $1\\le m\\le d$, $z\\in\\mathbb R^d$, and $R>0$. Use the Borel set $\\mathcal E_{z,R}$ from <a href=\"#h:dv:support-sets\" data-reference-type=\"eqref\" data-reference=\"h:dv:support-sets\">[h:dv:support-sets]</a>. There is an absolute $C_{\\mathrm E}\\ge1$ such that, for a standard Gaussian $m$-by-$d$ matrix, $$\\begin{aligned}\n \\lambda_m(\\mathcal E_{z,R})\n &=v_mR^m\\mathbb E_A\\sqrt{\\det(AA^{\\mathsf T})}\n \\notag\\\\\n &\\le v_mR^m d^{m/2}\n \\le R^m(2\\pi e d/m)^{m/2}\n \\le C_{\\mathrm E}^dR^m .\n \\label{h:ev:ellipsoid-volume}\n\\end{aligned}$$ Every density of the exact image of a measure supported on $B(z,R)$ vanishes almost everywhere outside $\\mathcal E_{z,R}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-ev-ellipsoid"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Let $1\\le m\\le q$ and $N\\ge1$. Suppose the measurable functions $h_1,\\ldots,h_N:S^{d-1}\\to[0,1]$ have local mass at a common scale $R>0$, as in <a href=\"#h:local:bound\" data-reference-type=\"eqref\" data-reference=\"h:local:bound\">[h:local:bound]</a>. Let $g_j:\\mathbb R^{m\\times d}\\times\\mathbb R^m\\to[0,1]$ be Borel routing probabilities with $\\sum_{j=1}^N g_j\\le1$, and define $$h(s)=\\sum_{j=1}^N h_j(s)\\int g_j(A,As)\\,d\\gamma_m(A).$$ Then, for every $z\\in S^{d-1}$ and $r>0$, $$\\label{h:block:mass}\n \\int_{B(z,r)}h\\,d\\sigma\n \\le\\exp(Cd)N^{1/q}(Rr)^a.$$ Equivalently, $h$ has local mass at scale $$\\label{h:block:scale}\n R'=R\\exp(Cd/a)N^{1/(aq)}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-block-bound"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "For a fixed-seed Borel learner with the state sets, output laws, and phase convention just specified, and the Borel terminal score $\\ell$, let $0\\le t<T$, $u\\in Q_t$, and $1\\le m\\le T-t$. There are an integer $$\\label{h:stream:destinations}\n 1\\le N\\le(m+2)2^M,$$ Borel routing functions $g_j:\\mathbb R^{m\\times d}\\times\\mathbb R^m\\to[0,1]$ with $\\sum_jg_j\\le1$, and Borel functions $h_j:S^{d-1}\\to[0,1]$ such that, for every $s\\in S^{d-1}$, $$\\label{h:stream:category-representation}\n h_{t,u}(s)=\\sum_{j=1}^N h_j(s)\n       \\int g_j(A,As)\\,d\\gamma_m(A).$$ Here $\\gamma_m$ is the law of an $m$-by-$d$ standard Gaussian matrix. Each destination is either a terminal state $w\\in Q_k$ at an index $k\\in\\{t,\\ldots,t+m\\}$, with score function $$h^{\\mathrm{out}}_{k,w}(s)\n =\\int_{S^{d-1}}\\ell(s,v)\\,\\mathsf Q_{k,w}(dv),$$ or a continuing state $w\\in Q_{t+m}$ before its stopping check, with score function $h_{t+m,w}(s)$. The terminal output law $\\mathsf Q_{k,w}$ depends only on its state and index. The value $g_j(A,b)$ is the probability of destination $j$ when the block data are $(A,b)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-stream-categories"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "Let $d\\ge2$, let $\\pi$ be a Borel probability measure on $S^{d-1}$, and let $X\\sim\\gamma_1=N(0,I_d)$ be independent of $S\\sim\\pi$. Suppose that $$\\label{h:stream:pair-domination}\n \\mathcal L(X,\\langle X,S\\rangle)\\ll\n \\lambda,\\qquad \\lambda(dx,dy)=\\gamma_1(dx)\\,dy$$ on $\\mathbb R^d\\times\\mathbb R$. Fix an integer horizon $T\\ge0$ and finite state sets at every sample index. For each state and index, suppose every coordinate of the finite vector of transition and stopping probabilities is measurable in the $\\lambda$-completion of the Borel sigma field. A terminal output law is a Borel probability measure on $S^{d-1}$ indexed only by its terminal state and stopping index. Decisions made without a new sample also depend only on the state and index.*\n\n*There are everywhere-defined Borel transition and stopping kernels, with the same state sets and terminal output laws, whose $\\pi$-prior joint law of the signal, state path, stopping index and output is the same as for the original rules. The domination <a href=\"#h:stream:pair-domination\" data-reference-type=\"eqref\" data-reference=\"h:stream:pair-domination\">[h:stream:pair-domination]</a> holds when $\\pi=\\sigma$ is uniform spherical probability, for every $d\\ge2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-h-stream-borel"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "There are absolute constants $C,d_0>0$ with the following property. For $d\\ge d_0$, every learner in the stated finite-state model with $M\\ge0$ bits and an integer deterministic horizon $T\\ge0$ has, for $S\\sim\\sigma$ independent of its fresh Gaussian rows, $$\\label{h:stream:success-bound}\n \\mathbb P\\{\\arccos\\langle\\widehat s,S\\rangle\\le\\epsilon\\}\n \\le\n \\min\\left\\{1,\n \\left[2\\epsilon\\exp\\!\\left(\n C\\left(1+\\frac{M}{d^2}\\right)\n \\left\\lceil\\frac{T}{q}\\right\\rceil\\right)\\right]^a\n \\right\\},$$ where $0<\\epsilon\\le1/10$ and $a=(d-1)/2$, $q=\\lfloor(d-1)/8\\rfloor$ as in <a href=\"#h:local:parameters\" data-reference-type=\"eqref\" data-reference=\"h:local:parameters\">[h:local:parameters]</a>. The probability includes data-independent initialization, the shared seed, and fresh random choices.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-stream-success"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "Let $d\\ge1$ be an integer and $T\\ge0$. Let $S$ be uniform on $S^{d-1}$. Let a matrix $A$ with $d$ columns, independent of $S$, have row span $U$ of dimension at most $T$. Suppose an output $\\widehat S$ is drawn from a probability kernel depending only on $(A,AS)$. Put $u=P_US$ and $v=(I-P_U)S$. For an arbitrary output in $\\mathbb R^d$ and $0<\\epsilon<1$, $$\\label{h:ev:direct-residual}\n \\Pr\\{\\|\\widehat S-S\\|\\le\\epsilon\\}\n \\le\\frac12+\\frac{T}{2d(1-\\epsilon^2)}.$$ More generally, for $0<b_0<1$ and $0\\le\\epsilon<\\sqrt{1-b_0}$, $$\\label{h:ev:antipodal}\n \\Pr\\{\\|\\widehat S-S\\|\\le\\epsilon\\}\n \\le\\frac12+\\frac12\\Pr\\{\\|u\\|^2\\ge b_0\\}\n \\le\\frac12+\\frac{T}{2b_0d}.$$ For a unit output one also has $$\\label{h:ev:reflection-expectation}\n \\mathbb E\\langle\\widehat S,v\\rangle=0,\\qquad\n \\mathbb E\\langle\\widehat S,S\\rangle\n \\le\\mathbb E\\|u\\|\\le\\sqrt{T/d}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-ev-reflection"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "Let $(E,\\mathcal E,\\lambda)$ be a measure space, let $\\mathcal D\\in\\mathcal E$ have finite measure, let $p>1$, let $U\\ge0$, and let $N\\ge1$ be an integer. Suppose finite nonnegative measures $\\eta_1,\\ldots,\\eta_N$ are supported on $\\mathcal D$, and that for every measurable $0\\le g\\le1$, $$\\label{h:alt:test}\n \\int g\\,d\\eta_j\n \\le U\\left(\\int_{\\mathcal D}g\\,d\\lambda\\right)^{1-1/p}\n \\qquad(1\\le j\\le N).$$ For measurable routes $g_j\\ge0$ with $\\sum_jg_j\\le1$, $$\\label{h:alt:selection-bound}\n \\sum_{j=1}^N\\int g_j\\,d\\eta_j\n \\le N^{1/p}U\\,\\lambda(\\mathcal D)^{1-1/p}.$$ A sufficient condition for <a href=\"#h:alt:test\" data-reference-type=\"eqref\" data-reference=\"h:alt:test\">[h:alt:test]</a> is $\\eta_j=f_j\\lambda$, where $f_j\\ge0$ vanishes outside $\\mathcal D$ and $\\|f_j\\|_{L^p(\\lambda)}\\le U$.*\n\n\n*In particular, if $r>0$, $m,\\beta\\in\\mathbb R$, and positive constants $H,V,L$ satisfy $$U\\le HLr^{\\beta-m(1-1/p)},\\qquad\n \\lambda(\\mathcal D)\\le Vr^m,$$ then the right side of <a href=\"#h:alt:selection-bound\" data-reference-type=\"eqref\" data-reference=\"h:alt:selection-bound\">[h:alt:selection-bound]</a> is at most $$\\label{h:alt:scale-cancellation}\n N^{1/p}H V^{1-1/p}Lr^\\beta.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-alt-selection"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "Let $k$ be an integer with $1\\le k\\le p$, and let a Borel function $f:Q\\to[0,1]$ satisfy <a href=\"#h:cube:local\" data-reference-type=\"eqref\" data-reference=\"h:cube:local\">[h:cube:local]</a> with $L\\ge0$. For $z\\in\\mathbb R^n$ and $r>0$, define the finite joint measure $$\\label{h:cube:joint-measure}\n \\eta_{f,z,r}(E)\n =\\int\\!\\int_{\\mathcal B(z,r)}\n       \\mathbf 1_E(A,A\\iota(u))f(u)\\,du\\,\\gamma_k(dA)$$ for Borel $E\\subseteq\\mathbb R^{k\\times d}\\times\\mathbb R^k$. There is a universal $C_2\\ge1$ such that $\\eta_{f,z,r}=h_{f,z,r}\\lambda_k$ for a nonnegative density with $$\\label{h:cube:density-bound}\n \\|h_{f,z,r}\\|_{L^p(\\lambda_k)}\n \\le C_2^n Lr^{\\beta-k(1-1/p)}.$$ If $\\mathcal B(z,r)\\ne\\varnothing$, fix any $u_*\\in\\mathcal B(z,r)$ and set $$\\label{h:cube:ellipsoid-support}\n \\mathcal E_{u_*,r}\n =\\{(A,y):y\\in A\\iota(u_*)+A B_d(0,4r)\\}.$$ Every such density, for this same $z,r,u_*$, vanishes almost everywhere outside $\\mathcal E_{u_*,r}$, and $$\\label{h:cube:ellipsoid-volume}\n \\lambda_k(\\mathcal E_{u_*,r})\\le C_2^n r^k.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-cube-density"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "Let $k,N$ be integers with $1\\le k\\le p$ and $N\\ge1$, and let Borel $f_1,\\ldots,f_N:Q\\to[0,1]$ satisfy <a href=\"#h:cube:local\" data-reference-type=\"eqref\" data-reference=\"h:cube:local\">[h:cube:local]</a> with the same $L\\ge0$. Suppose Borel functions $g_v:\\mathbb R^{k\\times d}\\times\\mathbb R^k\\to[0,\\infty)$ obey $\\sum_{v=1}^N g_v(A,y)\\le1$. Then $$F(u)=\\mathbb E_{A\\sim\\gamma_k}\n       \\sum_{v=1}^N g_v(A,A\\iota(u))f_v(u)$$ satisfies <a href=\"#h:cube:local\" data-reference-type=\"eqref\" data-reference=\"h:cube:local\">[h:cube:local]</a> with $C_3^nN^{1/p}L$ in place of $L$, for a universal $C_3\\ge1$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-cube-block"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "There are universal constants $D\\ge e$, $d_0\\ge16$, and $c>0$ with the following property. Let $d\\ge d_0$, $M\\ge0$, and $T\\ge0$ be integers, with $M\\le d^2$ and $0<\\epsilon\\le1/10$. Every learner in Definition <a href=\"#h:model\" data-reference-type=\"ref\" data-reference=\"h:model\">1</a> with these memory and sample bounds has angular success probability under $s=\\iota(u)$, $u\\sim du$, at most $$\\label{h:cube:success-bound}\n \\min\\left\\{1,\\,\n       D^{n(m+1)}\\epsilon^{n/4}\\right\\},\n \\qquad\n m=\\left\\lceil\\frac{T}{k_0}\\right\\rceil,\\qquad\n k_0=\\left\\lfloor\\frac n4\\right\\rfloor.$$ The probability averages over $u$, the fresh Gaussian samples, and the learner’s randomness. If that same learner has angular success probability at least $2/3$ for every $s\\in S^{d-1}$, then $$\\label{h:cube:sample-result}\n T\\ge c\\,d\\log(1/\\epsilon).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-cube-success"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "Let $f:Q\\to[0,1]$ be Borel and satisfy <a href=\"#h:cube:local\" data-reference-type=\"eqref\" data-reference=\"h:cube:local\">[h:cube:local]</a> with $L\\ge0$. Let $k$ be an integer with $1\\le k\\le p$, and let $V\\subseteq\\mathbb R^n$ be a nonempty affine subspace of dimension $j\\le p-2$. There is a universal $C_1\\ge1$ such that, for every $z\\in\\mathbb R^n$, $r>0$, and $0<t\\le1$, $$\\begin{aligned}\n \\int_{\\mathcal B(z,r)}f(u)\n   \\mathbf1_{\\{\\operatorname{dist}(u,V)\\le\\sqrt n\\,tr\\}}\\,du\n &\\le C_1^n Lr^\\beta t^{\\beta-j},\n \\label{h:cube:tube}\\\\\n \\int_{\\mathcal B(z,r)}f(u)\n   \\left(\\frac{\\operatorname{dist}(u,V)}{\\sqrt n}\\right)^{-k}\\,du\n &\\le C_1^n Lr^{\\beta-k}.\n \\label{h:cube:inverse-bound}\n\\end{aligned}$$ The second integrand is nonnegative and extended-valued on $V$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-cube-inverse"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "Under the assumptions of Proposition <a href=\"#h:dv:ambient-gram\" data-reference-type=\"ref\" data-reference=\"h:dv:ambient-gram\">7</a>, the exact image measure satisfies $$\\eta_\\mu(E)\\le \\mathcal B\\,\\lambda_m(E)^{1-1/p}\n \\label{h:dv:set-bound}$$ for every Borel set $E$ of finite $\\lambda_m$-measure. In particular $\\eta_\\mu\\ll\\lambda_m$, and the same inequality holds on the $\\lambda_m$-completion after extending $\\eta_\\mu$ to that completion. For every $\\lambda_m$-completed-measurable $0\\le\\varphi\\le1$, $$\\int\\varphi\\,d\\eta_\\mu\n \\le\\mathcal B\n \\left(\\int_{\\mathcal E_{z,R}}\\varphi\\,d\\lambda_m\\right)^{1-1/p}.\n \\label{h:dv:test-bound}$$ An infinite integral on the right is allowed.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-dv-measurable-test"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "Let $d\\ge2$ and $1\\le m<d$. If $A:\\mathbb R^d\\to\\mathbb R^m$ has full row rank, then $A_\\#\\sigma_d$ is absolutely continuous with respect to Lebesgue measure. The same holds for $A_\\#\\mu$ whenever $\\mu$ is a finite Borel measure with $\\mu\\ll\\sigma_d$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-h-dv-gaussian-ac"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "Let $d\\ge2$, $1\\le m<d$, and let $\\mu$ be a finite nonnegative Borel measure with $\\mu\\ll\\sigma_d$. Then $\\eta_\\mu$ has a nonnegative jointly Borel density $F(A,y)$ with respect to $\\lambda_m$. For $\\gamma_m$-almost every $A$, $F(A,\\cdot)$ is a density of $A_\\#\\mu$.*\n\n*If $\\mu$ is supported on $B(z,R)$, the density can be chosen to vanish outside the Borel set $\\mathcal E_{z,R}\\subseteq\\mathcal S_{z,R}$ defined in <a href=\"#h:dv:support-sets\" data-reference-type=\"eqref\" data-reference=\"h:dv:support-sets\">[h:dv:support-sets]</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-h-dv-joint-density"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "In addition to the assumptions of Proposition <a href=\"#h:dv:ambient-gram\" data-reference-type=\"ref\" data-reference=\"h:dv:ambient-gram\">7</a>, suppose that $d\\ge2$, $1\\le m<d$, and $\\mu\\ll\\sigma_d$. Let $F$ be the joint density from Lemma <a href=\"#h:dv:joint-density\" data-reference-type=\"ref\" data-reference=\"h:dv:joint-density\">25</a>, and let $F_\\delta$ be the Gaussian regularization in Lemma <a href=\"#h:dv:gaussian-moment\" data-reference-type=\"ref\" data-reference=\"h:dv:gaussian-moment\">9</a>. Then $$\\|F_\\delta-F\\|_{L^1(\\lambda_m)}\\longrightarrow0\n \\quad\\hbox{as }\\delta\\downarrow0,\n \\qquad\n \\|F\\|_{L^p(\\lambda_m)}\\le\\mathcal B.\n \\label{h:dv:joint-l1-bound}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-dv-joint-l1"
+  },
+  {
+   "claim_id": "C26",
+   "exact_statement": "Assume the same hypotheses as in Proposition <a href=\"#h:dv:joint-l1\" data-reference-type=\"ref\" data-reference=\"h:dv:joint-l1\">26</a>. For the Gaussian density $\\phi_\\delta$, define $$w_\\delta(r)\n =v_m r^m\\frac{r}{\\delta^2}\\phi_\\delta(r e_1),\n \\qquad r>0,\n \\label{h:dv:radial-mixture}$$ where $e_1$ is a unit coordinate vector. This is a probability density on $(0,\\infty)$, and $\\phi_\\delta$ is the corresponding mixture of uniform ball densities. Define $$F^\\sharp(A,y)=\n \\begin{cases}\n  \\displaystyle\\lim_{i\\to\\infty}F_{1/i}(A,y),\n       &\\text{if this limit exists and is finite},\\\\\n  0,   &\\text{otherwise}.\n \\end{cases}\n \\label{h:dv:pointwise-version}$$ Then $F^\\sharp$ is jointly Borel. For every full-row-rank $A$, $F^\\sharp(A,\\cdot)$ is a density of $A_\\#\\mu$ up to a Lebesgue null set, and it is a density of $\\eta_\\mu$ with respect to $\\lambda_m$. Moreover $$\\int(F^\\sharp)^p\\,d\\lambda_m\\le\\mathcal B^p.\n \\label{h:dv:pointwise-moment}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-h-dv-pointwise-density"
+  },
+  {
+   "claim_id": "C27",
+   "exact_statement": "Under the hypotheses of Proposition <a href=\"#h:dv:ambient-gram\" data-reference-type=\"ref\" data-reference=\"h:dv:ambient-gram\">7</a>, suppose that $$d\\ge16,\\qquad p=\\lfloor d/8\\rfloor,\\qquad\n 1\\le m\\le p,\\qquad \\frac{d-1}{2}\\le\\beta\\le\\frac d2,\n \\label{h:dv:parameters}$$ Then, for every $0\\le j\\le p-2$, $$\\beta-j-m\\ge\\frac{d-1}{2}-2p+2\n \\ge\\frac d4+\\frac32,\n \\qquad J_j\\le C^d,\n \\label{h:dv:dimension-margin}$$ where $C\\ge1$ is an absolute constant. Thus the right side of <a href=\"#h:dv:gram-product\" data-reference-type=\"eqref\" data-reference=\"h:dv:gram-product\">[h:dv:gram-product]</a> is at most $C^{d(p-1)}H^pR^{\\beta p-m(p-1)}$, uniformly also for short blocks $m<p$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-auto-corollary-1"
+  },
+  {
+   "claim_id": "C28",
+   "exact_statement": "Assume <a href=\"#h:dv:parameters\" data-reference-type=\"eqref\" data-reference=\"h:dv:parameters\">[h:dv:parameters]</a>, and let $H,R>0$ and $z\\in\\mathbb R^d$. Let $f:S^{d-1}\\to[0,1]$ be Borel measurable, let $\\nu=f\\sigma$, and suppose $\\nu(B(x,r))\\le H r^\\beta$ for every $x\\in\\mathbb R^d$ and $r>0$. For $\\mu=\\mathbf 1_{B(z,R)}\\nu$, the pushforward $A_\\#\\mu$ has, for almost every $A$, a Lebesgue density $F(A,\\cdot)$. There is an absolute $C_{\\mathrm D}\\ge1$ for which a jointly measurable nonnegative choice of these densities satisfies $$\\label{h:ev:density-moment}\n \\int F(A,y)^p\\,d\\lambda_m(A,y)\n \\le C_{\\mathrm D}^{d(p-1)}\n       H^pR^{\\beta p-m(p-1)}.$$ The density represents the exact labels $As$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-ev-density"
+  },
+  {
+   "claim_id": "C29",
+   "exact_statement": "For a standard Gaussian $m$-by-$d$ matrix $A$, where $1\\le m\\le d$, $$\\label{h:proj:volume-bound}\n \\mathbb E\\,\\operatorname{vol}_m B(0,\\|A\\|_{\\mathrm{op}})\\le\\exp(Cd).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-proj-volume"
+  },
+  {
+   "claim_id": "C30",
+   "exact_statement": "Let $d\\ge2$, $n=d-1$, and let $\\sigma_d$ be uniform probability on $S^{d-1}$. Then $$\\sigma_d(B(z,r))\\le(4r)^n\n \\qquad(z\\in\\mathbb R^d,\\ r>0).\n \\label{h:dv:hemisphere-ball}$$ Let $\\epsilon>0$, let $\\kappa$ be any probability law on $S^{d-1}$, independent of the target, and put $h(s)=\\int\\mathbf 1_{\\{\\|s-u\\|\\le\\epsilon\\}}\\,\\kappa(du)$. For $0<\\beta<n$, every $z\\in\\mathbb R^d$, and every $r>0$, $$\\int_{B(z,r)}h\\,d\\sigma_d\n \\le4^n\\min\\{r^n,\\epsilon^n\\}\n \\le4^n\\epsilon^{n-\\beta}r^\\beta.\n \\label{h:dv:terminal-coefficient}$$ The same upper bound holds for the angular-success function, since angular distance at most $\\epsilon$ implies chordal distance at most $\\epsilon$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-dv-hemisphere-cap"
+  },
+  {
+   "claim_id": "C31",
+   "exact_statement": "Let $d\\ge2$, $n=d-1$, and let $\\sigma$ be uniform on $S^{d-1}$. There is an absolute $C_0\\ge1$ such that $\\sigma(B(z,R))\\le C_0^dR^n$ for every ambient center $z$ and every $R>0$. Let $\\epsilon>0$. If a unit output is drawn from a law independent of the signal, its success function $h(s)$, for either angular error at most $\\epsilon$ or chordal error at most $\\epsilon$, satisfies $$\\label{h:ev:polar-terminal}\n \\int_{B(z,R)}h\\,d\\sigma\n \\le C_0^d\\min(R^n,\\epsilon^n)\n \\le C_0^d\\epsilon^{n-\\beta}R^\\beta\n \\qquad(0<\\beta<n).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-ev-polar-cap"
+  },
+  {
+   "claim_id": "C32",
+   "exact_statement": "Assume <a href=\"#h:dv:parameters\" data-reference-type=\"eqref\" data-reference=\"h:dv:parameters\">[h:dv:parameters]</a>. Let $H>0$ and let $N\\ge1$ be an integer. Let $h_1,\\ldots,h_N:S^{d-1}\\to[0,1]$ be Borel functions satisfying $$\\int_{B(x,r)}h_w\\,d\\sigma\\le H r^\\beta\n \\qquad(x\\in\\mathbb R^d,\\ r>0,\\ 1\\le w\\le N).$$ Let $g_w(A,y)\\ge0$ be Borel functions with $\\sum_wg_w\\le1$, and define $$h(s)=\\mathbb E_A\\sum_{w=1}^N g_w(A,As)h_w(s).$$ There is an absolute $C_{\\mathrm{step}}\\ge1$ such that $$\\label{h:ev:coefficient-bound}\n \\int_{B(z,R)}h\\,d\\sigma\n \\le C_{\\mathrm{step}}^dN^{1/p}H R^\\beta\n \\qquad(z\\in\\mathbb R^d,\\ R>0).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-ev-coefficient-step"
+  },
+  {
+   "claim_id": "C33",
+   "exact_statement": "Assume $d\\ge16$, set $n=d-1$, $p=\\lfloor d/8\\rfloor$, and let $n/2\\le\\beta\\le d/2$. Let $M,T\\ge0$ be integers, $0<\\epsilon\\le1/10$, and consider a learner in Definition <a href=\"#h:model\" data-reference-type=\"ref\" data-reference=\"h:model\">1</a>. Under the uniform-sphere signal prior, write $P_{\\mathrm{succ}}$ for its success probability with either angular or chordal error at most $\\epsilon$, and put $b=\\lceil T/p\\rceil$. Then $$\\label{h:ev:common-success}\n P_{\\mathrm{succ}}\\le\n \\min\\left\\{1,\\,\n 4^n\\epsilon^{n-\\beta}\n \\left[C_{\\mathrm{step}}^d\n       \\bigl((p+2)2^M\\bigr)^{1/p}\\right]^b\\right\\}.$$ The same assertion holds with the initial factor $4^n$ replaced by the polar-cap constant $C_0^d$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-ev-coefficient-success"
+  },
+  {
+   "claim_id": "C34",
+   "exact_statement": "Assume $d\\ge16$ and $p=\\lfloor d/8\\rfloor$. Let $M,T\\ge0$ be integers, let $0<\\epsilon\\le1/10$, and consider a learner in Definition <a href=\"#h:model\" data-reference-type=\"ref\" data-reference=\"h:model\">1</a> with these parameters. Draw $S\\sim\\sigma$ independently of its Gaussian rows $x_1,\\ldots,x_T$ and its data-independent randomness, and set the exact labels $y_t=\\langle x_t,S\\rangle$. Write $\\Pr_\\sigma$ for the resulting joint law and put $b=\\lceil T/p\\rceil$. With an absolute $C_{\\mathrm{step}}\\ge1$, the uniform-prior angular success probability satisfies $$\\label{h:ev:half-sphere-success}\n \\Pr_\\sigma\\{\\operatorname{angle}(\\widehat S,S)\\le\\epsilon\\}\n \\le\n \\min\\!\\left\\{1,\\,\n 4^d\\epsilon^{(d-1)/2}\n \\left[C_{\\mathrm{step}}^d\n       \\bigl((p+2)2^M\\bigr)^{1/p}\\right]^b\n \\right\\}.$$ The uniform-prior chordal success probability satisfies $$\\label{h:ev:half-ambient-success}\n \\Pr_\\sigma\\{\\|\\widehat S-S\\|\\le\\epsilon\\}\n \\le\n \\min\\!\\left\\{1,\\,\n C_0^d\\epsilon^{d/2-1}\n \\left[C_{\\mathrm{step}}^d\n       \\bigl((2p+4)2^M\\bigr)^{1/p}\\right]^b\n \\right\\}.$$ The second event contains the angular success event.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-ev-success"
+  },
+  {
+   "claim_id": "C35",
+   "exact_statement": "For all sufficiently large $d$, let $0\\le T\\le d/4$ be an integer. Let $S$ be uniform on $S^{d-1}$, let $X$ be an independent $T$-by-$d$ standard Gaussian matrix, and put $Y=XS$. For every $0<\\epsilon\\le1/10$, any possibly randomized estimator $W\\in\\mathbb R^d$ based on the entire pair $(X,Y)$ satisfies $$\\label{h:end:full-data-bound}\n \\mathbb P\\{\\|W-S\\|\\le\\epsilon\\}\n \\le \\frac13+\\left(\\frac25\\right)^{3d/4-1}\n <\\frac23.$$ Consequently, a learner with uniform-sphere angular success at least $2/3$ at accuracy $\\epsilon\\le1/10$ must have $T>d/4$, even with unlimited memory and access to all pre-generated samples.",
+   "kind": "bound",
+   "statement_anchor": "stmt-h-end-linear"
+  }
+ ],
+ "paper": "papers/EN-114-000-0003-2-2026-PR-T4-UK-EX-M1-B-ML-H-0286_PM-140.1_Memory_and_precision_in_noiseless_Gaussian_regression.md",
+ "purpose": "Memory and precision in noiseless Gaussian regression",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "8820e25a6f771086606d2d07a1232b4e4d90412d167f9865764393d5fa35c94a",
+   "pm.domains.v2": "2b248508af6536c91ae5000563b33298a24caebd446bbe929b774e4e9d000e6f",
+   "pm.edges.v2": "fbee5e3f82660e97081c945e02a34774c89308abd28f989e10a77dc739415402",
+   "pm.extraction.v2": "39e0b0b2c3ed33165adead79df628b775a8aa2ce6a06ab9fdb9055835db1180f",
+   "pm.formal.v2": "5470f8a7800422c20fb6437fd96f2d583170bcc9d5dca8503da5b9fcf41d92ac",
+   "pm.limits.v2": "f5b8a4e680f3fb80b5d822a4d9d9ead7bc8bdf4f5a2baf983a9659d08ba9f646",
+   "pm.node.v2": "0abd865955b3dae937c3ac191822b16ad939146f73a6542a8890577d0df23491",
+   "pm.objects.v2": "d99d457133d4298a1f9423ef66423ce4d796ca43df5d2a5879b8bd92d6e35660",
+   "pm.provenance.v2": "0e5925e5604eac6659ed06c1fe4ba6f1722df714f62a778e9b3052b39aed92f7",
+   "pm.quantities.v2": "b96bb0c81e47abd371946089a1dae0a15daae3b66fc95baa89f0ebd37c442edf",
+   "pm.reading.v2": "6487c4d427361e2de5610dca75d1389ee820585c8e5c755c1eca9e1f50df681b",
+   "pm.roadmap.v2": "8cc08c2487b63890daf532cd379e7fb29fdd7a59edb042e89ce17171b04f0498",
+   "pm.search.v1": "a6ea290b38f2306fcad30ae8eda62143bfdd60e7e7834ee11cc4a3efcffff9c6",
+   "pm.triptych.v2": "c7d9215ddad6982fe09387a336a68c9469a5156aafd4a7f7cc15e529e78647e7"
+  },
+  "canonical_sha256": "6c6ff262af86db9c75e37aa4de7f490f4edc91ec4a704c93a5873cefb1168ec6",
+  "paper_sha256": "b0018378000a614bcee2593839fbfc2a9b61b1002a6f7017838f5a29280a1bf5",
+  "repaired_body_sha256": "24038cac95fe6796f9b64db0d8c2fd4dc82f5e9a0622f205dc390d2bb5a7449b"
+ },
+ "status": "ACTIVE",
+ "subject_id": 14,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "7ee65cbc59c39ccf8373933683e8978f6b7107402fe31711fa8ea397e4ae4468",
+   "receipt_sha256": "87fd7b104e0689c6ae7c7a4a1e5aab72453a0a8128e8d026d11e21abbc2500c6",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Memory and precision in noiseless Gaussian regression"
+}

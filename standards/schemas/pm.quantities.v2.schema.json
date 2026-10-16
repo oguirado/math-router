@@ -1,0 +1,196 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "pm.quantities.v2"
+    },
+    "pm_id": {
+      "type": "string",
+      "pattern": "^PM-[0-9]{3}\\.[0-9]+$"
+    },
+    "generation_status": {
+      "type": "string",
+      "enum": [
+        "GENERATED-PLACEHOLDER",
+        "COMPLETE"
+      ]
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "constant",
+              "bound",
+              "rate",
+              "time",
+              "space"
+            ]
+          },
+          "quantity": {
+            "type": "string"
+          },
+          "relation": {
+            "type": "string",
+            "enum": [
+              "=",
+              "<",
+              ">",
+              "≤",
+              "≥",
+              "~"
+            ]
+          },
+          "value_latex": {
+            "type": "string"
+          },
+          "regime": {
+            "type": "object",
+            "properties": {
+              "hypotheses": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "source_id": {
+                      "type": "string"
+                    },
+                    "anchor": {
+                      "type": "string"
+                    },
+                    "exact_quote": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "source_id",
+                    "anchor",
+                    "exact_quote"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "quantifiers": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "source_id": {
+                      "type": "string"
+                    },
+                    "anchor": {
+                      "type": "string"
+                    },
+                    "exact_quote": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "source_id",
+                    "anchor",
+                    "exact_quote"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "ambient": {
+                "type": "string"
+              },
+              "parameter_scope": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "hypotheses",
+              "quantifiers",
+              "ambient",
+              "parameter_scope"
+            ],
+            "additionalProperties": false
+          },
+          "computational_model": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "prefactor": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "effectivity": {
+            "type": "string",
+            "enum": [
+              "effective",
+              "ineffective",
+              "partially_effective",
+              "not_applicable"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source_id": {
+                  "type": "string"
+                },
+                "anchor": {
+                  "type": "string"
+                },
+                "exact_quote": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_id",
+                "anchor",
+                "exact_quote"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "fidelity": {
+            "type": "string",
+            "enum": [
+              "PENDING",
+              "VERIFIED",
+              "REJECTED"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "quantity",
+          "relation",
+          "value_latex",
+          "regime",
+          "computational_model",
+          "prefactor",
+          "effectivity",
+          "evidence",
+          "fidelity"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "pm_id",
+    "generation_status",
+    "entries"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pm.quantities.v2"
+}

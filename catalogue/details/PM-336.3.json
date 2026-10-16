@@ -1,0 +1,911 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 947345,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 257168
+ },
+ "coordinate": "EN-107-000-0000-2-2026-PR-T4-UK-EX-M3-C-PH-M-0672",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "For every integer $n\\ge4$",
+     "quote_sha256": "fc0cc19e3a2c09c978d0694f4c1fa71a15457acd71b7961c0f2f8048b7022fe5"
+    }
+   ],
+   "query": "width bound for dimensions below four",
+   "reason": "The main theorem requires dimension at least four."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "Throughout, scalar curvature means the ordinary pointwise Riemannian invariant.",
+     "quote_sha256": "1cb9a3d78fbee731414eb32a7b8b30d7cd07f29318b69d556fa7c4c98174baa5"
+    }
+   ],
+   "query": "macroscopic scalar curvature hypotheses",
+   "reason": "Scalar curvature is the ordinary pointwise invariant."
+  }
+ ],
+ "family": "PM-336",
+ "id": "PM-336.3",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-width-bound",
+    "statement": "every connected complete smooth Riemannian $n$-manifold $(M,g)$, without boundary and with $\\mathop{\\mathrm{Scal}}_g\\ge1$,"
+   },
+   {
+    "anchor": "stmt-cor-filling-radius",
+    "claim_id": "claim-filling-radius-bound",
+    "statement": "Let $(M,g)$ be a closed connected smooth Riemannian $n$-manifold with $n\\ge4$ and $\\mathop{\\mathrm{Scal}}_g\\ge\\sigma^2$ for some $\\sigma>0$."
+   },
+   {
+    "anchor": "stmt-cover-main",
+    "claim_id": "claim-universal-cover-dimension",
+    "statement": "Let $(M,h)$ be a closed connected smooth Riemannian manifold of dimension $n\\ge2$ with positive scalar curvature."
+   },
+   {
+    "anchor": "stmt-cor-aspherical",
+    "claim_id": "claim-aspherical-obstruction",
+    "statement": "closed smooth aspherical manifold of dimension $n\\ge4$"
+   },
+   {
+    "anchor": "stmt-pressure-law",
+    "claim_id": "claim-pressure-law",
+    "statement": "$A_0,P_0,\\varepsilon,b_0>0$"
+   },
+   {
+    "anchor": "stmt-step-main",
+    "claim_id": "claim-local-stretching",
+    "statement": "Fix $n\\ge2$ and $0<\\delta<1/10$"
+   },
+   {
+    "anchor": "stmt-step-main",
+    "claim_id": "claim-local-stretching",
+    "statement": "Let $h_0$ be a complete smooth metric on a manifold $M^n$ without boundary, let $h\\ge h_0$ be smooth, and let $t\\ge T$ be smooth."
+   },
+   {
+    "anchor": "stmt-step-existence",
+    "claim_id": "claim-height-gradient-bounds",
+    "statement": "For each fixed $a>0$ as above"
+   },
+   {
+    "anchor": "stmt-step-locality",
+    "claim_id": "claim-locality-decay",
+    "statement": "On any compact subset of the fixed open region where $\\psi=0$ and $\\eta_1=0$"
+   },
+   {
+    "anchor": "stmt-step-raw-estimate",
+    "claim_id": "claim-raw-scalar-estimate",
+    "statement": "On this original neighborhood"
+   },
+   {
+    "anchor": "stmt-rounds-round",
+    "claim_id": "claim-complete-round",
+    "statement": "Suppose that $h_0$ is a complete metric, $t_0\\ge T$ is smooth, and $$\\mathcal D(h_0,t_0)\\ge c+t_0^2$$ for a constant $c$."
+   },
+   {
+    "anchor": "stmt-rounds-warp-identity",
+    "claim_id": "claim-warp-identity",
+    "statement": "For smooth functions $p_1,\\ldots,p_k$ on $(M,h)$"
+   },
+   {
+    "anchor": "stmt-rounds-wide",
+    "claim_id": "claim-prescribed-widths",
+    "statement": "Let $(M,g)$ be complete, connected and smooth, with $\\mathop{\\mathrm{Scal}}_g\\ge1$."
+   },
+   {
+    "anchor": "stmt-packet-counts",
+    "claim_id": "claim-count-inclusions",
+    "statement": "If $B$ is a $d$-fold further face of $E$"
+   },
+   {
+    "anchor": "stmt-packet-initialization",
+    "claim_id": "claim-initialization-radial",
+    "statement": "Let the stage-zero stabilized scalar curvature be at least $.4$"
+   },
+   {
+    "anchor": "stmt-finite-cut",
+    "claim_id": "claim-finite-compatible-cutting",
+    "statement": "Fix a finite number $N_*$ of labels"
+   },
+   {
+    "anchor": "stmt-finite-cut",
+    "claim_id": "claim-finite-compatible-cutting",
+    "statement": "Let $j_0$ be the next label, and suppose every nonempty parent packet has base dimension at least two."
+   },
+   {
+    "anchor": "pm-h-16",
+    "claim_id": "claim-countable-initial-data",
+    "statement": "Let $D$, the centers $x_i$, and the pairs $(A_i,B_i)$ be as in"
+   },
+   {
+    "anchor": "stmt-countable-locality",
+    "claim_id": "claim-countable-locality",
+    "statement": "hold at a finite stage"
+   },
+   {
+    "anchor": "stmt-countable-step",
+    "claim_id": "claim-countable-step",
+    "statement": "Suppose that all nonempty parents at stage $r$ have base dimension at least two and satisfy <a href=\"#countable:profile-invariant\" data-reference-type=\"eqref\" data-reference=\"countable:profile-invariant\">[countable:profile-invariant]</a>–<a href=\"#countable:scalar-invariant\" data-reference-type=\"eqref\" data-reference=\"countable:scalar-invariant\">[countable:scalar-invariant]</a>."
+   },
+   {
+    "anchor": "stmt-countable-dimension-one",
+    "claim_id": "claim-no-one-dimensional-packet",
+    "statement": "at a finite stage of the construction"
+   },
+   {
+    "anchor": "pm-h-16",
+    "claim_id": "claim-countable-construction",
+    "statement": "Let $D$, the centers $x_i$, and the pairs $(A_i,B_i)$ be as in"
+   },
+   {
+    "anchor": "sec:reconstruction",
+    "claim_id": "claim-reconstructed-partitions",
+    "statement": "We therefore assume that all $B_i$ are nonempty."
+   },
+   {
+    "anchor": "pm-h-22",
+    "claim_id": "claim-wall-thickening",
+    "statement": "Put $k=n-2$."
+   },
+   {
+    "anchor": "stmt-cover-uniform",
+    "claim_id": "claim-uniform-simplex-conversion",
+    "statement": "Let $k\\ge0$ be an integer."
+   },
+   {
+    "anchor": "stmt-cover-reeb",
+    "claim_id": "claim-reeb-graph",
+    "statement": "Let $u:N\\to\\mathbb R$ be a proper Morse function on a connected smooth manifold without boundary."
+   },
+   {
+    "anchor": "stmt-packet-split",
+    "claim_id": "claim-compatible-splitting",
+    "statement": "Suppose a packet diagram after the radial stage has the properties in <a href=\"#packet:category\" data-reference-type=\"ref\" data-reference=\"packet:category\">16</a>."
+   },
+   {
+    "anchor": "stmt-packet-geometry",
+    "claim_id": "claim-packet-geometry",
+    "statement": "Equip a packet diagram after the radial stage with compatible smooth base metrics and finitely many compatible smooth positive warp functions."
+   },
+   {
+    "anchor": "stmt-packet-escape",
+    "claim_id": "claim-packet-escape",
+    "statement": "If a sequence escapes all compact sets"
+   },
+   {
+    "anchor": "stmt-packet-approximation",
+    "claim_id": "claim-compatible-approximation",
+    "statement": "On a packet diagram after the radial stage"
+   },
+   {
+    "anchor": "stmt-packet-reconstruction",
+    "claim_id": "claim-finite-horizon-reconstruction",
+    "statement": "Starting with $X$, perform finitely many"
+   },
+   {
+    "anchor": "sec:cut",
+    "claim_id": "claim-pressure-realization",
+    "statement": "Fix a finite stage $r$ and the label $j_0$ to be processed."
+   },
+   {
+    "anchor": "stmt-cut-bv-compactness",
+    "claim_id": "claim-minimizer-existence-compactness",
+    "statement": "smooth locally bounded pressure on a smooth manifold"
+   },
+   {
+    "anchor": "stmt-cut-barriers",
+    "claim_id": "claim-barrier-containment",
+    "statement": "Every local absolute minimizer for a pressure of"
+   },
+   {
+    "anchor": "stmt-cut-generic-uniqueness",
+    "claim_id": "claim-generic-uniqueness",
+    "statement": "After the radial split"
+   },
+   {
+    "anchor": "stmt-cut-gmt",
+    "claim_id": "claim-gmt-regularity",
+    "statement": "Let $A$ satisfy <a href=\"#cut:local-minimality\" data-reference-type=\"eqref\" data-reference=\"cut:local-minimality\">[cut:local-minimality]</a> on a smooth $m$-manifold, $m\\ge2$, with smooth positive $\\omega$ and smooth $p$."
+   },
+   {
+    "anchor": "stmt-cut-end-convergence",
+    "claim_id": "claim-end-convergence",
+    "statement": "For the common generic shift, let $A_E$ be the true phase on each packet and let $A_B$ be that on a face."
+   },
+   {
+    "anchor": "stmt-cut-wall-stability",
+    "claim_id": "claim-wall-stability-form",
+    "statement": "compactly supported smooth invariant test $v$ on $S$"
+   },
+   {
+    "anchor": "stmt-cut-side-estimate",
+    "claim_id": "claim-side-seam-estimate",
+    "statement": "with support avoiding the singular set"
+   },
+   {
+    "anchor": "stmt-cut-raw-domination",
+    "claim_id": "claim-raw-scalar-domination",
+    "statement": "Let $V=R-1.02\\Pi_{j_0}$"
+   },
+   {
+    "anchor": "local:norm",
+    "claim_id": "claim-anchor-choice",
+    "statement": "Fix a true cut in a parent packet $E$"
+   },
+   {
+    "anchor": "stmt-local-flat-pieces",
+    "claim_id": "claim-flat-pieces",
+    "statement": "Let $O$ be an open subset of a parent packet"
+   },
+   {
+    "anchor": "stmt-local-flat-pieces",
+    "claim_id": "claim-flat-pieces",
+    "statement": "let $\\eta>0$"
+   },
+   {
+    "anchor": "stmt-local-shell",
+    "claim_id": "claim-shell-profile",
+    "statement": "Let $F$ be a compact subset of $\\Sigma\\cap\\{h_j>t_j\\}$"
+   },
+   {
+    "anchor": "stmt-local-rough",
+    "claim_id": "claim-rough-hardy",
+    "statement": "with $\\eta\\le\\eta_0$ in a sufficiently accurate"
+   },
+   {
+    "anchor": "stmt-local-sharp",
+    "claim_id": "claim-sharp-shielding",
+    "statement": "Let $F$ be any piece from"
+   },
+   {
+    "anchor": "stmt-shield-compactness",
+    "claim_id": "claim-joined-window-compactness",
+    "statement": "Assume $m\\ge8$."
+   },
+   {
+    "anchor": "stmt-shield-maximum",
+    "claim_id": "claim-maximum-of-costs",
+    "statement": "Fix a packet and its true pieces."
+   },
+   {
+    "anchor": "stmt-shield-extension",
+    "claim_id": "claim-extension-late-fronts",
+    "statement": "Let $B$ be a packet"
+   },
+   {
+    "anchor": "stmt-shield-caps",
+    "claim_id": "claim-compatible-caps",
+    "statement": "A compact forcing update from"
+   },
+   {
+    "anchor": "stmt-shield-global",
+    "claim_id": "claim-global-shielding",
+    "statement": "At a fixed stage $r$, let $j_0$ be the current label"
+   },
+   {
+    "anchor": "stmt-regular-guards",
+    "claim_id": "claim-regular-guards",
+    "statement": "Fix a finite integer $J\\ge4$."
+   },
+   {
+    "anchor": "sec:regularization",
+    "claim_id": "claim-regular-partition",
+    "statement": "a stage $r$ and its current label $j_0$ are fixed"
+   },
+   {
+    "anchor": "sec:regularization",
+    "claim_id": "claim-regular-transfer",
+    "statement": "a stage $r$ and its current label $j_0$ are fixed"
+   },
+   {
+    "anchor": "sec:regularization",
+    "claim_id": "claim-regular-seam",
+    "statement": "a stage $r$ and its current label $j_0$ are fixed"
+   },
+   {
+    "anchor": "stmt-regular-constant-preservation",
+    "claim_id": "claim-constant-preserving-approximation",
+    "statement": "A continuous scalar function on a packet"
+   },
+   {
+    "anchor": "sec:regularization",
+    "claim_id": "claim-restricted-profiles",
+    "statement": "a stage $r$ and its current label $j_0$ are fixed"
+   },
+   {
+    "anchor": "sec:regularization",
+    "claim_id": "claim-global-gap-correction",
+    "statement": "a stage $r$ and its current label $j_0$ are fixed"
+   },
+   {
+    "anchor": "stmt-regular-resolvent",
+    "claim_id": "claim-gapped-resolvent",
+    "statement": "Let $A$ be one of the resulting complete packets"
+   },
+   {
+    "anchor": "sec:regularization",
+    "claim_id": "claim-compatible-supersolutions",
+    "statement": "a stage $r$ and its current label $j_0$ are fixed"
+   },
+   {
+    "anchor": "stmt-regular-step",
+    "claim_id": "claim-full-invariant-step",
+    "statement": "Assume the stage $r$ invariant"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Urysohn width bound",
+    "evidence": [
+     {
+      "anchor": "sec:introduction",
+      "quote": "For a metric space $X$ and an integer $d\\ge0$, define its *Urysohn $d$-width* by $$\\mathop{\\mathrm{UW}}_d(X)=\\inf_f\\ \\sup_{y\\in K}\\mathop{\\mathrm{diam}}_X f^{-1}(y),$$ where the infimum runs over continuous maps $f:X\\to K$ to simplicial complexes of dimension at most $d$.",
+      "quote_sha256": "d1b38b70b54d636cad47d653d27732b457151beff7f51544bf8a0424cad75aa5"
+     }
+    ],
+    "requires_concepts": [
+     "scalar curvature",
+     "simplicial complexes",
+     "continuous maps with entire fibers"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-width-bound",
+   "exact_statement": "For every integer $n\\ge4$, there is a finite constant $C_n$ such that every connected complete smooth Riemannian $n$-manifold $(M,g)$, without boundary and with $\\mathop{\\mathrm{Scal}}_g\\ge1$, admits a continuous map $f:M\\to K$ to a simplicial complex of dimension at most $n-2$ satisfying $$\\mathop{\\mathrm{diam}}_g f^{-1}(y)\\le C_n\\qquad(y\\in K).$$ In particular, $\\mathop{\\mathrm{UW}}_{n-2}(M,g)\\le C_n$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-filling-radius-bound",
+   "exact_statement": "Let $(M,g)$ be a closed connected smooth Riemannian $n$-manifold with $n\\ge4$ and $\\mathop{\\mathrm{Scal}}_g\\ge\\sigma^2$ for some $\\sigma>0$. Then $$\\operatorname{FillRad}(M,g)\\le \\frac{C_n}{2\\sigma},$$ where $C_n$ is the constant in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-filling-radius"
+  },
+  {
+   "claim_id": "claim-universal-cover-dimension",
+   "exact_statement": "Let $(M,h)$ be a closed connected smooth Riemannian manifold of dimension $n\\ge2$ with positive scalar curvature. Its universal cover, with the lifted original metric $\\widetilde h$, satisfies $$\\dim_{\\mathrm{mc}}(\\widetilde M,\\widetilde h)\\le n-2.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cover-main"
+  },
+  {
+   "claim_id": "claim-aspherical-obstruction",
+   "exact_statement": "No closed smooth aspherical manifold of dimension $n\\ge4$ admits a Riemannian metric of strictly positive scalar curvature.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-aspherical"
+  },
+  {
+   "claim_id": "claim-pressure-law",
+   "exact_statement": "For every $A_0,P_0,\\varepsilon,b_0>0$ there exist $0<S_0\\le1$, $T\\ge1$, and a smooth function $$F:(-S_0,S_0)\\times[T,\\infty)\\longrightarrow\\mathbb R$$ which is odd in $x$, has $F_x>0$, and satisfies $$\\label{pressure:estimates}\n\\begin{gathered}\n F_x\\ge A_0t,\\qquad |F_t|\\le\\varepsilon|F|,\\qquad FF_t\\le\\varepsilon F_x,\\\\\n F_x\\le b_0t^2\\quad\\text{or}\\quad -FF_t\\ge P_0F_x,\\\\\n F_x\\le b_0t^2+\\varepsilon F^2.\n\\end{gathered}$$ For each fixed $t\\ge T$, $$\\lim_{x\\to-S_0}F(x,t)=-\\infty,\n \\qquad \\lim_{x\\to S_0}F(x,t)=+\\infty.$$ These limits are uniform when $t$ ranges over a compact subinterval of $[T,\\infty)$. The choices depend only on $A_0,P_0,\\varepsilon,b_0$ and fixed numerical constants. In particular, they are independent of any manifold, metric, local cutoff, or subsequent deformation parameter. The lower bound $T$ may be increased after the construction.",
+   "kind": "construction",
+   "statement_anchor": "stmt-pressure-law"
+  },
+  {
+   "claim_id": "claim-local-stretching",
+   "exact_statement": "Fix $n\\ge2$ and $0<\\delta<1/10$, and put $L_*=1.004$. There are constants $W,T\\ge1$, depending only on $n,\\delta$, with the following property. Let $h_0$ be a complete smooth metric on a manifold $M^n$ without boundary, let $h\\ge h_0$ be smooth, and let $t\\ge T$ be smooth. Let $A$ be a nonempty compact set and $B$ a nonempty closed set such that $$\\mathop{\\mathrm{dist}}_{h_0}(A,B)\\ge W.$$ For every $0<d<\\delta$ there are smooth $h'\\ge h$ and $t'\\ge t$ such that the changes have compact support in $\\{\\mathop{\\mathrm{dist}}_{h_0}(A,\\cdot)<W\\}$, $$\\label{step:conclusion}\n \\mathcal D(h',t')\\ge \\mathcal D(h,t)+(t'^2-t^2)\n -\\delta\\bigl(\\mathop{\\mathrm{tr}}_h h_0-\\mathop{\\mathrm{tr}}_{h'}h_0\\bigr)t'^2-dt'^2,$$ and $$\\label{step:distance}\n \\mathop{\\mathrm{dist}}_{h'}(A,B)\\ge L_*W.$$ In particular, $h'$ is complete. Neither $W$ nor $T$ depends on $d$, the geometry of $M$, or the sets $A,B$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-step-main"
+  },
+  {
+   "claim_id": "claim-height-gradient-bounds",
+   "exact_statement": "For each fixed $a>0$ as above and every $0<r\\le1/2$, <a href=\"#step:PDE\" data-reference-type=\"ref\" data-reference=\"step:PDE\">[step:PDE]</a> at $\\tau=1$ has a smooth solution $u$ on $N$. There are $S_1<S_0$ and $G<\\infty$, independent of $r$ and of $\\tau\\in[0,1]$, such that every solution along the continuation satisfies $$\\label{step:C01}\n |u-\\tau\\psi|\\le S_1\\eta,\\qquad |\\mathrm du|_h\\le G.$$ The constants $S_1,G$ may depend on $a$ and on the compact data.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-step-existence"
+  },
+  {
+   "claim_id": "claim-locality-decay",
+   "exact_statement": "Let $u_r$ be the solutions from <a href=\"#step:existence\" data-reference-type=\"ref\" data-reference=\"step:existence\">9</a> at $\\tau=1$. On any compact subset of the fixed open region where $\\psi=0$ and $\\eta_1=0$, the functions $u_r$ tend to zero in every $C^k$ norm as $r\\downarrow0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-step-locality"
+  },
+  {
+   "claim_id": "claim-raw-scalar-estimate",
+   "exact_statement": "On this original neighborhood, the raw output satisfies $$\\label{step:raw-inequality}\n \\mathcal D(h_u,t_u)\\ge\\mathcal D(h,t)+(t_u^2-t^2)\n -\\delta(\\mathop{\\mathrm{tr}}_hh_0-\\mathop{\\mathrm{tr}}_{h_u}h_0)t_u^2-\\frac d2t^2.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-step-raw-estimate"
+  },
+  {
+   "claim_id": "claim-complete-round",
+   "exact_statement": "Suppose that $h_0$ is a complete metric, $t_0\\ge T$ is smooth, and $$\\mathcal D(h_0,t_0)\\ge c+t_0^2$$ for a constant $c$. Let $(A_i,B_i)$ be a finite or countable family of nonempty closed pairs, with each $A_i$ compact and $\\mathop{\\mathrm{dist}}_{h_0}(A_i,B_i)\\ge W$. Suppose there are locally finite compact sets $K_i$ such that the open $h_0$-distance-$W$ neighborhood of $A_i$ is contained in $K_i\\setminus B_i$. Then there are smooth $h_1\\ge h_0$ and $t_1\\ge t_0$, obtained by a locally finite sequence of compactly supported changes inside the $K_i$, such that $$\\begin{aligned}\n \\mathop{\\mathrm{dist}}_{h_1}(A_i,B_i)&\\ge L_*W \\quad\\text{for every }i,\\label{rounds:separation}\\\\\n \\mathcal D(h_1,t_1)&\\ge c+\n \\bigl(1-(n+1)\\delta\\bigr)t_1^2.\\label{rounds:curvature}\n\\end{aligned}$$ The metric $h_1$ is complete.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rounds-round"
+  },
+  {
+   "claim_id": "claim-warp-identity",
+   "exact_statement": "For smooth functions $p_1,\\ldots,p_k$ on $(M,h)$, the metric $\\widehat h=h+\\sum_{\\alpha=1}^k e^{2p_\\alpha}\\mathrm d\\theta_\\alpha^2$ on $M\\times\\mathbb T^k$ has scalar curvature $$\\mathop{\\mathrm{Scal}}_{\\widehat h}=\\mathop{\\mathrm{Scal}}_h-2\\Delta_h P-|\\mathrm dP|_h^2\n                    -\\sum_{\\alpha=1}^k|\\mathrm dp_\\alpha|_h^2,\n \\qquad P=\\sum_{\\alpha=1}^k p_\\alpha.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rounds-warp-identity"
+  },
+  {
+   "claim_id": "claim-prescribed-widths",
+   "exact_statement": "Let $(M,g)$ be complete, connected and smooth, with $\\mathop{\\mathrm{Scal}}_g\\ge1$. There is a countable set of centers $(x_i)$ such that $$A_i=\\overline B_g(x_i,D),\\qquad\n B_i=M\\setminus B_g(x_i,2D)$$ have the following properties: the $A_i$ cover $M$, and the closed balls $\\overline B_g(x_i,2D)$ are locally finite. Suppose that every $B_i$ is nonempty. Given arbitrary finite numbers $L_i>0$, there exist a complete smooth metric $h\\ge g$ and a countable family of smooth functions $(p_\\alpha)$, whose supports form a locally finite family of compact sets, for which $$\\begin{aligned}\n \\mathop{\\mathrm{dist}}_h(A_i,B_i)&>L_i \\quad(i\\ge1),\\label{rounds:prescribed}\\\\\n \\mathop{\\mathrm{Scal}}_h-2\\Delta_h\\sum_\\alpha p_\\alpha\n       -\\left|\\mathrm d\\sum_\\alpha p_\\alpha\\right|_h^2\n       -\\sum_\\alpha|\\mathrm dp_\\alpha|_h^2&\\ge\\frac25.\\label{rounds:stabilized}\n\\end{aligned}$$ Every sum in <a href=\"#rounds:stabilized\" data-reference-type=\"eqref\" data-reference=\"rounds:stabilized\">[rounds:stabilized]</a> is locally finite. If some $B_i$ is empty, then $\\mathop{\\mathrm{diam}}_g M\\le4D$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rounds-wide"
+  },
+  {
+   "claim_id": "claim-count-inclusions",
+   "exact_statement": "If $B$ is a $d$-fold further face of $E$, the product projection sends $D_E$ in that tail into $D_B$. At a split of label $j_0$ on a parent of dimension $m$, suppose the remaining cores have been enlarged, giving $G'_j\\subset G_j$ for $j\\ne j_0$, and define the closed guard $$\\label{packet:guard}\n H_E^*=\\bigl\\{x:\\#\\{j\\in J_r\\setminus\\{j_0\\}:x\\in G'_j\\}\n                      \\ge m-2\\bigr\\}.$$ Suppose a regular zero wall $L$ lies in $\\operatorname{int}G_{j_0}$. Pull the remaining cores to a new side or hit packet $A$ by bulk inclusion, wall restriction, and projection of the attached cylinder. Define $D_A$ using these cores, the remaining labels, and the dimension of $A$, as in <a href=\"#packet:required-set\" data-reference-type=\"eqref\" data-reference=\"packet:required-set\">[packet:required-set]</a>. Then $D_A$ projects into both $H_E^*$ and the parent’s old set $D_E$. Guards likewise project into guards on further faces.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-packet-counts"
+  },
+  {
+   "claim_id": "claim-initialization-radial",
+   "exact_statement": "Let the stage-zero stabilized scalar curvature be at least $.4$, and suppose that every color pair has separation $$\\mathop{\\mathrm{dist}}_h(A_i,B_i)>T_0+4,\\qquad\n T_0=2\\pi\\sqrt{2/\\pi_0}.$$ Then the data of <a href=\"#packet:invariant\" data-reference-type=\"ref\" data-reference=\"packet:invariant\">17</a> exist at stage zero with $\\Pi_j=\\pi_0$. On a noncompact $X$ the radial cores can be chosen as alternating separating subbands of a smooth proper function, with compact smooth barrier domains around their closures lying in the same pole plateaus. Every regular radial partition respecting these signs has locally finite compact wall components and compact closed-side components before collar attachment. On a compact $X$ a decided radial label with empty wall has the same properties.",
+   "kind": "construction",
+   "statement_anchor": "stmt-packet-initialization"
+  },
+  {
+   "claim_id": "claim-finite-compatible-cutting",
+   "exact_statement": "Fix a finite number $N_*$ of labels and the stage constants in <a href=\"#packet:constants\" data-reference-type=\"eqref\" data-reference=\"packet:constants\">[packet:constants]</a>. Suppose a stage-$r$ packet diagram is obtained by the regular splitting construction of <a href=\"#packet:split\" data-reference-type=\"ref\" data-reference=\"packet:split\">31</a>, with compatible smooth base metrics and a finite common list of positive circle warps, and satisfies <a href=\"#packet:invariant\" data-reference-type=\"ref\" data-reference=\"packet:invariant\">17</a>. After the radial stage, require the complete compact-part/product-end geometry of [packet:category,packet:geometry] [packet:category](#packet:category), [packet:geometry](#packet:geometry). Let $j_0$ be the next label, and suppose every nonempty parent packet has base dimension at least two. Then $j_0$ can be processed as follows.*\n\n*On every parent there is a compatible smooth regular defining function with the prescribed signs on the current forced core closures. Keep its zero wall as the new hit space. To each closed sign side attach the full product cylinder over its boundary. These pieces form a compatible smooth stage-$(r+1)$ packet diagram with the continuous projections described above. The wall on a parent $E$ lies in $\\operatorname{int}G_{j_0}$. The remaining profiles may first be modified, their cores enlarged, and their potentials increased in the parents; these data are then carried to the new pieces by restriction and cylinder projection. There are compatible smooth metrics and potentials, and exactly $399$ new positive circle factors on each new packet, for which the entire stage-$(r+1)$ invariant holds. Earlier forced signs are preserved. The new packets have complete compact-part/product-end geometry. This assertion includes a possible one-dimensional output, on which its scalar lower bound holds everywhere.*\n\n*The operation fixes every old warp identically equal to $1$. For a remaining label that is passive on the finite downward source diagrams and the face copies used in their comparisons—constant pole profile, full corresponding core, and spatially constant potential $c_j$ agreeing on compared faces—the construction can preserve the pole and core and choose its new potential to be exactly $(1+3\\eta_r/2)c_j$, where $\\eta_r=1/(200N_*)$.*\n\n*At stage zero the single parent may instead be an arbitrary complete smooth manifold with no product-end or bounded-geometry assumption. Subject to the same scalar and separation assumptions, if its data are the radial initialization of <a href=\"#packet:initialization\" data-reference-type=\"ref\" data-reference=\"packet:initialization\">19</a>, the same conclusion holds for the first split. Every resulting wall component and every closed-side component is compact before the cylinders are attached, and these components form locally finite families.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-finite-cut"
+  },
+  {
+   "claim_id": "claim-countable-initial-data",
+   "exact_statement": "The data in <a href=\"#countable:profile-invariant\" data-reference-type=\"eqref\" data-reference=\"countable:profile-invariant\">[countable:profile-invariant]</a>–<a href=\"#countable:scalar-invariant\" data-reference-type=\"eqref\" data-reference=\"countable:scalar-invariant\">[countable:scalar-invariant]</a> exist at stage zero with $\\Pi_i=p_i^*$. The radial forced signs can be chosen so that every regular radial split preserving them has locally finite compact wall and closed-side components before cylinder attachment. On every compact radial block and buffer, only finitely many center labels fail to be identically the negative pole with full negative core, and only finitely many initial warps fail to be one.",
+   "kind": "construction",
+   "statement_anchor": "stmt-countable-initial"
+  },
+  {
+   "claim_id": "claim-countable-locality",
+   "exact_statement": "Suppose the packet geometry and [countable:finite-data](#countable:finite-data) hold at a finite stage. Then the following assertions hold.*\n\n1.  *The sum of potentials on a whole packet is a smooth function with bounded derivatives of every fixed order. The undecided counts, required sets, and guards use only a finite list and are closed.*\n\n2.  *On each whole packet and each finite comparison diagram, the old weight, stabilized scalar, stability forms, and weighted Laplacian are computed with one finite list of warps, after padding with unit factors. The bounded geometry and polynomial weighted growth conclusions of [packet:geometry](#packet:geometry) apply, including on any finite Euclidean product.*\n\n3.  *Compatible choices with positive packetwise tolerances can be made in the following order: fix individual requests, propagate numerical requests down the finite coface chains, and then construct data upward from deeper faces. Enlarging a coface’s exceptional list by the union over its downward source diagram suffices for the last pass. No data are propagated back from a newly constructed coface to an already constructed face.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-countable-locality"
+  },
+  {
+   "claim_id": "claim-countable-step",
+   "exact_statement": "Suppose that all nonempty parents at stage $r$ have base dimension at least two and satisfy <a href=\"#countable:profile-invariant\" data-reference-type=\"eqref\" data-reference=\"countable:profile-invariant\">[countable:profile-invariant]</a>–<a href=\"#countable:scalar-invariant\" data-reference-type=\"eqref\" data-reference=\"countable:scalar-invariant\">[countable:scalar-invariant]</a>. At $r=0$ use the compact radial blocks of [countable:initial](#countable:initial); at $r\\ge1$ suppose also that the packet geometry and [countable:finite-data](#countable:finite-data) hold. Processing label $r$ produces the compatible smooth split, preserves the forced signs, and gives the same assertions at stage $r+1$. Exactly $399$ new warp factors, with common indices, are appended at this stage. Each whole resulting packet has a finite relevant old warp list.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-countable-step"
+  },
+  {
+   "claim_id": "claim-no-one-dimensional-packet",
+   "exact_statement": "No nonempty one-dimensional packet can satisfy the invariant at a finite stage of the construction.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-countable-dimension-one"
+  },
+  {
+   "claim_id": "claim-countable-construction",
+   "exact_statement": "All labels can be processed successively. At every finite stage the packet diagram has the invariant above and no nonempty packet of dimension at most one. After the radial stage it has finite exceptional data on whole packets; at stage zero this assertion holds on buffered compact radial blocks. Its finite reconstruction $X_r$ has a proper collapse $q_r:X_r\\to M$ and closed signed sides $P_i^{(r)},N_i^{(r)}$ for each processed center label, with $$P_i^{(r)}\\cup N_i^{(r)}=X_r,\\qquad\n P_i^{(r)}\\cap N_i^{(r)}=W_i^{(r)},$$ where $W_i^{(r)}$ is its wall. The forced preimages satisfy $$q_r^{-1}(A_i)\\subset P_i^{(r)}\\setminus W_i^{(r)},\\qquad\n q_r^{-1}(B_i)\\subset N_i^{(r)}\\setminus W_i^{(r)}.$$ These inclusions hold in open phases and persist at every subsequent finite stage. No $n-1$ distinct walls, even including the radial wall, have a common point. Each center wall lies over its original open outer ball, and its components are compact and locally finite.*\n\n*Old horizons can be enlarged by identifications preserving collapse, all walls, and all signed statuses. For any prescribed sequence $\\varepsilon_r>0$ with $\\sum_r\\varepsilon_r<1$, the next finite collar compression can be chosen with collapse displacement less than $\\varepsilon_r$, preserving the previously decided wall strata and signed sides. These are finite-stage conclusions; the limiting fixed-copy construction is made in the next section.",
+   "kind": "construction",
+   "statement_anchor": "stmt-countable-construction"
+  },
+  {
+   "claim_id": "claim-reconstructed-partitions",
+   "exact_statement": "The compatible cuts of <a href=\"#countable:construction\" data-reference-type=\"ref\" data-reference=\"countable:construction\">26</a> give a continuous proper map $q:M\\to M$, and for every color $i$ closed sets $P_i,N_i,W_i$ such that $$\\begin{aligned}\n &d_0(q(x),x)<1,\\label{topology:displacement}\\\\\n &P_i\\cup N_i=M,\\qquad P_i\\cap N_i=W_i,\n   \\qquad W_i\\subset q^{-1}\\bigl(B_0(x_i,2D)\\bigr),\n   \\label{topology:sides}\\\\\n &q^{-1}(A_i)\\subset P_i\\setminus W_i,\n   \\qquad q^{-1}(B_i)\\subset N_i\\setminus W_i.\n   \\label{topology:forced}\n\\end{aligned}$$ The wall family $(W_i)$ is locally finite, and no $n-1$ distinct walls have a common point.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-topology-partitions"
+  },
+  {
+   "claim_id": "claim-wall-thickening",
+   "exact_statement": "There are locally finite open sets $T_i\\supset W_i$ such that $$\\label{topology:thickening}\n T_i\\subset q^{-1}\\bigl(B_0(x_i,2D)\\bigr)\n                  \\setminus q^{-1}(A_i\\cup B_i),\n \\qquad\n \\#\\{i:x\\in T_i\\}\\le k\\quad(x\\in M).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-topology-thicken"
+  },
+  {
+   "claim_id": "claim-uniform-simplex-conversion",
+   "exact_statement": "Let $k\\ge0$ be an integer. Suppose continuous functions $t_i:Y\\to[0,1]$ have locally finite supports, at least one equals $1$ at each point, and at most $k$ are strictly between $0$ and $1$. Their coordinate map admits an injective conversion to a simplicial complex of dimension at most $k$ with its uniform simplex metric. The converted map is continuous, and two of its values agree if and only if all the original coordinates agree.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cover-uniform"
+  },
+  {
+   "claim_id": "claim-reeb-graph",
+   "exact_statement": "Let $u:N\\to\\mathbb R$ be a proper Morse function on a connected smooth manifold without boundary. There is a locally finite simplicial graph $K$ and a continuous map $q:N\\to K$, with $K$ carrying its uniform simplex metric, whose point fibers are precisely the connected components of the levels of $u$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cover-reeb"
+  },
+  {
+   "claim_id": "claim-compatible-splitting",
+   "exact_statement": "Suppose a packet diagram after the radial stage has the properties in <a href=\"#packet:category\" data-reference-type=\"ref\" data-reference=\"packet:category\">16</a>. On every packet let $g_E$ be a smooth compatible function, with $0$ a regular value, including on every face. Keep $L_E=g_E^{-1}(0)$ as the new hit space. To each closed side $\\{\\pm g_E\\ge0\\}$ attach $L_E\\times[0,\\infty)$ along its boundary. Use smooth normal collars across the attachment, chosen as products in all sufficiently far old tails. Connected components of these spaces, with the appended statuses, form a new packet diagram.*\n\n*It has finite face and coface incidence, properly embedded closed tails, and compact remainders. Each packet admits a compact truncation which is a smooth manifold with corners and is a strong deformation retract of the full packet. Truncations can be chosen simultaneously on every finite downward diagram, with their faces equal to the corresponding truncated packets. If thresholds are in the product range of $g_E$, the old retractions preserve its zero set and both closed sides. These conclusions also hold at the first radial stage provided that, before attachment, its wall and closed-side components are compact and form a locally finite family in $X$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-packet-split"
+  },
+  {
+   "claim_id": "claim-packet-geometry",
+   "exact_statement": "Equip a packet diagram after the radial stage with compatible smooth base metrics and finitely many compatible smooth positive warp functions. Each connected packet $E$, separately, is complete and has bounded geometry: positive injectivity radius and bounds on curvature and every covariant derivative. Every warp and all its covariant derivatives are bounded on $E$, and every warp has a positive lower bound. For $\\omega_E$ the product of the warps there are constants $A_E<\\infty$ and an integer $d_E\\le\\dim E$ such that $$\\label{packet:growth}\n \\int_{B_E(x,R)}\\omega_E\\,\\mathrm d\\mathop{\\mathrm{vol}}_E\n       \\le A_E(1+R)^{d_E}\n       \\qquad(x\\in E,\\ R\\ge0).$$ The constant is uniform over centers in this packet. The same assertions hold on $E\\times\\mathbb R^a$, with the product metric, pulled-back warps, and growth exponent at most $d_E+a$, for every finite $a$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-packet-geometry"
+  },
+  {
+   "claim_id": "claim-packet-escape",
+   "exact_statement": "If a sequence escapes all compact sets of a fixed packet $E$, a subsequence has coordinates $(x_\\nu,t_{1,\\nu},\\ldots,t_{d,\\nu})$ in one further-face product, where $d\\ge1$, $x_\\nu$ converges in a compact subset of the face $B$, and every $t_{i,\\nu}\\to\\infty$. After translating these normal coordinates, the product charts contain each fixed metric neighborhood of the sequence for all sufficiently large $\\nu$. They exhaust $B\\times\\mathbb R^d$ locally. All compatible smooth data equal the corresponding product data on these windows.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-packet-escape"
+  },
+  {
+   "claim_id": "claim-compatible-approximation",
+   "exact_statement": "On a packet diagram after the radial stage, choices of smooth cutoffs and approximations can be made from deeper faces to cofaces, retaining exact products outside finite thresholds. More precisely, fix a finite derivative order and, on each packet, positive error tolerances for any finite collection of smooth data or approximations. A datum on a face may additionally be required to meet the tolerances of all its incident cofaces, including through chains. These requirements can be replaced in advance by strictly positive face tolerances, and then met by compatible blending, provided the individual local approximations and their required convergence to the face data are available. In particular there exist compatible smooth positive functions arbitrarily small in any prescribed finite derivative norm on each packet. Also, if compatible closed sets $F_E$ and compatible open sets $O_E$ satisfy $F_E\\subset O_E$ on every packet, then $\\mathop{\\mathrm{dist}}_E(F_E,E\\setminus O_E)>0$ on each fixed packet whenever both sets are nonempty.",
+   "kind": "construction",
+   "statement_anchor": "stmt-packet-approximation"
+  },
+  {
+   "claim_id": "claim-finite-horizon-reconstruction",
+   "exact_statement": "Starting with $X$, perform finitely many compatible regular splits as in <a href=\"#packet:split\" data-reference-type=\"ref\" data-reference=\"packet:split\">31</a>. For the first split require locally finite compact radial wall and side components. At the later split for color $i$, require the defining functions to be positive on the inverse image of $A_i$ and negative on the inverse image of $B_i$, with those inverse images contained in open regions of the stipulated signs. After any $r\\ge1$ of these splits, the diagram has a reconstruction $X_r$, obtained by finite collar truncations and gluing at hit faces, with the following properties:*\n\n1.  *$X_r$ is a smooth manifold homeomorphic to $X$. Its $r$ labelled walls are closed smooth hypersurfaces with simultaneous transverse intersection charts. Each wall component is compact, the component families are locally finite, and the closed sign/hit pieces are exactly the compact cornered truncations of the analytic packets, by components.*\n\n\n2.  *The packet maps glue to a proper continuous map $q_r:X_r\\to X$. There is a homeomorphism $H_r:X_r\\to X$ such that $$\\label{packet:displacement}\n     d_0\\bigl(H_r(z),q_r(z)\\bigr)\\le r\\qquad(z\\in X_r).$$*\n\n3.  *Horizons can be enlarged to exceed any already specified compatible product thresholds on the full analytic packets. A horizon is constant for all occurrences of a normal coordinate belonging to one connected global wall component. Such enlargement has an identification with the previous reconstruction which preserves $q_r$, every old wall, and every old side status.*\n\n4.  *Once color $i$ has been processed, $q_r^{-1}(A_i)$ remains in its open positive phase and $q_r^{-1}(B_i)$ remains in its open negative phase at every subsequent stage. In particular its wall misses $q_r^{-1}(A_i\\cup B_i)$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-packet-reconstruction"
+  },
+  {
+   "claim_id": "claim-pressure-realization",
+   "exact_statement": "There is a smooth finite compatible function $p_0$ and a number $c_*>0$ such that every $p=p_0+c$, $|c|<c_*$, satisfies $$\\label{cut:pressure-gradient}\n             2|\\mathop{\\mathrm{grad}}p|\\le .67p^2+1.02\\Pi_{j_0}.$$ There are compatible smooth barrier domains $D^+,D^-$ whose interiors contain the corresponding forced-core closures and whose closures lie in the respective pole interiors. Each admits a smooth vector field $Y^\\pm$ with $|Y^\\pm|\\le1$, equal to the outward unit normal on its boundary, such that, for all these shifts, $$\\label{cut:barrier-pressure}\n p\\ge1+\\mathop{\\mathrm{div}}_\\omega Y^+\\quad\\hbox{on }D^+,\n \\qquad\n -p\\ge1+\\mathop{\\mathrm{div}}_\\omega Y^-\\quad\\hbox{on }D^-.$$ After the radial split all this data has bounded derivatives on each packet. At the initial radial split the barriers are the separate relatively compact domains in the radial pole bands, and the choices are locally finite with locally prescribed bounds.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cut-pressure"
+  },
+  {
+   "claim_id": "claim-minimizer-existence-compactness",
+   "exact_statement": "Every smooth positive weight and smooth locally bounded pressure on a smooth manifold admit a local absolute minimizer. Suppose on exhausting coordinate windows that metrics and positive weights converge smoothly and pressures converge locally uniformly. Any sequence of corresponding local absolute minimizers has a subsequence whose indicators converge in $L^1_{\\rm loc}$ to a local absolute minimizer of the limit data. Along that subsequence the weighted perimeter measures converge weakly locally, as do the unweighted perimeter measures and their associated unoriented perimeter varifolds. The assertion includes smooth pointed rescalings when the rescaled data have the stated convergence.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cut-bv-compactness"
+  },
+  {
+   "claim_id": "claim-barrier-containment",
+   "exact_statement": "Every local absolute minimizer for a pressure of <a href=\"#cut:pressure\" data-reference-type=\"ref\" data-reference=\"cut:pressure\">37</a> contains $D^+$ and excludes $D^-$. Its boundary support consequently misses a neighborhood of each current core closure. After the radial split this neighborhood can be chosen with a positive uniform radius on each packet. At the radial split the assertion is local on the corresponding compact radial blocks.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cut-barriers"
+  },
+  {
+   "claim_id": "claim-generic-uniqueness",
+   "exact_statement": "After the radial split one common shift $c$, with $|c|<c_*$, can be chosen such that there is exactly one local absolute minimizer, modulo null sets, on every packet $E$ and every product $E\\times\\mathbb R^d$, $d\\ge0$, for the pulled-back weight and pressure $p_0+c$. The unique product phase is exactly $A_E\\times\\mathbb R^d$ modulo null sets, where $A_E$ is the unique phase on $E$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cut-generic-uniqueness"
+  },
+  {
+   "claim_id": "claim-gmt-regularity",
+   "exact_statement": "Let $A$ satisfy <a href=\"#cut:local-minimality\" data-reference-type=\"eqref\" data-reference=\"cut:local-minimality\">[cut:local-minimality]</a> on a smooth $m$-manifold, $m\\ge2$, with smooth positive $\\omega$ and smooth $p$. Put $S=\\mathop{\\mathrm{supp}}|D\\chi_A|$. Then $S=S_{\\rm reg}\\cup\\Sigma$, where $S_{\\rm reg}$ is a smooth embedded hypersurface, $\\Sigma$ is relatively closed, and $$\\label{cut:singular-dimension}\n                         \\dim_{\\mathcal H}\\Sigma\\le m-8.$$ A negative dimension bound means that $\\Sigma$ is empty. The outward measure-theoretic normal extends smoothly on $S_{\\rm reg}$. With $B(u,v)=\\langle\\nabla_u\\nu,v\\rangle$, its base mean curvature satisfies $$\\label{cut:base-mean-curvature}\n                    H_g=p-\\partial_\\nu\\log\\omega.$$ The unweighted multiplicity-one perimeter varifold has locally bounded generalized mean curvature. Its density exists at every support point; monotonicity gives local uniform area upper bounds and positive area lower bounds at support points. Under the convergences of <a href=\"#cut:bv-compactness\" data-reference-type=\"ref\" data-reference=\"cut:bv-compactness\">39</a>, densities are upper semicontinuous at converging points, provided the local generalized-mean-curvature bounds are uniform. The supports converge locally, and on every compact subset of the regular limiting hypersurface convergence is smooth and single-sheeted when the data converge smoothly. On compact subsets of the interiors of the limiting phases there is eventually no boundary.*\n\n*Every tangent at a point of $S$ is a multiplicity-one locally perimeter-minimizing boundary cone in the Euclidean tangent space. A flat tangent implies regularity. A tangent at a singular point is therefore nonflat, and its translation-invariance spine has dimension at most $m-8$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cut-gmt"
+  },
+  {
+   "claim_id": "claim-end-convergence",
+   "exact_statement": "For the common generic shift, let $A_E$ be the true phase on each packet and let $A_B$ be that on a face. On translated windows escaping in a product collar over a compact part of $B$, the phases $A_E$ converge to $A_B\\times\\mathbb R^d$ in $L^1_{\\rm loc}$, their perimeter measures and varifolds converge, and their regular boundaries converge smoothly on compact sets off the limiting singular set. Their boundary supports converge locally as well. The same conclusions hold after passage to any deeper product furnished by <a href=\"#packet:escape\" data-reference-type=\"ref\" data-reference=\"packet:escape\">33</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cut-end-convergence"
+  },
+  {
+   "claim_id": "claim-wall-stability-form",
+   "exact_statement": "For every compactly supported smooth invariant test $v$ on $S$, $$\\label{cut:wall-form}\n \\int_S\\bigl(2|\\mathop{\\mathrm{grad}}v|^2+R_Sv^2\\bigr)\\,\\mathrm d\\mu_S\n \\ge\\int_S\\bigl(R+p^2+|B|^2+2\\partial_\\nu p\\bigr)v^2\\,\\mathrm d\\mu_S.$$ In particular its right side is at least $\\int_S(R-1.02\\Pi_{j_0})v^2\\,\\mathrm d\\mu_S$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cut-wall-stability"
+  },
+  {
+   "claim_id": "claim-side-seam-estimate",
+   "exact_statement": "Every nonnegative compactly supported smooth function $f$ on the closed regular side, with support avoiding the singular set, satisfies $$\\label{cut:deletion}\n       \\int_S f\\,\\mathrm d\\mu_S\n       \\le\\int_\\Omega\\bigl(|\\mathop{\\mathrm{grad}}f|+p_sf\\bigr)\\,\\mathrm d\\mu.$$ For every smooth real test $v$ of the same type, $$\\label{cut:side-form}\n 3.05\\int_\\Omega|\\mathop{\\mathrm{grad}}v|^2\\,\\mathrm d\\mu\n       +2\\int_S H_{\\rm out}v^2\\,\\mathrm d\\mu_S\n       \\ge-1.02\\int_\\Omega\\Pi_{j_0}v^2\\,\\mathrm d\\mu.$$ Both statements extend to compactly supported Lipschitz tests by approximation.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cut-side-estimate"
+  },
+  {
+   "claim_id": "claim-raw-scalar-domination",
+   "exact_statement": "Let $V=R-1.02\\Pi_{j_0}$, restricted to the wall and pulled back to the cylinder when necessary. Then $$\\begin{aligned}\n\\label{cut:wall-domination}\n Q_S(v)&\\ge\\int_S Vv^2\\,\\mathrm d\\mu_S\n                    +1.99\\int_S|\\mathop{\\mathrm{grad}}v|^2\\,\\mathrm d\\mu_S,\\\\\n Q_\\Omega(v)&\\ge\\int_\\Omega Vv_b^2\\,\\mathrm d\\mu\n       +\\int_0^\\infty\\!\\int_S Vv_c^2\\,\\mathrm d\\mu_S\\,\\mathrm dt\\notag\\\\\n &\\quad+.94\\int_\\Omega|\\mathop{\\mathrm{grad}}v_b|^2\\,\\mathrm d\\mu\n       +1.99\\int_0^\\infty\\!\\int_S|\\mathop{\\mathrm{grad}}v_c|^2\n                                      \\,\\mathrm d\\mu_S\\,\\mathrm dt.\n                                      \\label{cut:side-domination}\n\\end{aligned}$$ Here $|\\mathop{\\mathrm{grad}}v_c|^2=|\\mathop{\\mathrm{grad}}_Sv_c|^2+|\\partial_tv_c|^2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cut-raw-domination"
+  },
+  {
+   "claim_id": "claim-anchor-choice",
+   "exact_statement": "There are compatible smooth functions $h_j$, for the remaining labels, within $.1$ of $\\max(-1,\\min(1,\\mu_j))$, and common numbers $t_j\\in(-.3,.3)$ such that, on the singular set in each parent of dimension $m$, at most $m-8$ of the equalities $h_j=t_j$ hold. The assertion is vacuous in dimensions below eight. Moreover $$\\{h_j>t_j\\}\\cap\\{\\mu_j=-\\infty\\}=\\varnothing,\n \\qquad\n \\{h_j<t_j\\}\\cap\\{\\mu_j=+\\infty\\}=\\varnothing.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-local-anchors"
+  },
+  {
+   "claim_id": "claim-flat-pieces",
+   "exact_statement": "Let $O$ be an open subset of a parent packet and let $\\eta>0$. The set $\\Sigma\\cap O$ is covered by countably many compact sets $F\\subset\\Sigma\\cap O$, each contained in a buffered coordinate chart, with the following property. There is $r_F>0$ such that, for every $x\\in F$ and $0<r<r_F$, some affine $(m-8)$-plane $L_{x,r}$ satisfies $$\\label{local:flatness}\n F\\cap B_r(x)\\subset\\{z:\\mathop{\\mathrm{dist}}_{\\rm Eucl}(z,L_{x,r})<\\eta r\\}.$$ The plane may depend on both the center and the radius.",
+   "kind": "construction",
+   "statement_anchor": "stmt-local-flat-pieces"
+  },
+  {
+   "claim_id": "claim-shell-profile",
+   "exact_statement": "Let $F$ be a compact subset of $\\Sigma\\cap\\{h_j>t_j\\}$. For every sufficiently small $\\varepsilon>0$ there is an extended-real profile $u_\\varepsilon$, equal to $+\\infty$ for $\\delta\\le\\varepsilon$ and $-\\infty$ for $\\delta\\ge R_\\varepsilon$, where $$\\delta(x)=\\mathop{\\mathrm{dist}}(x,F),\\qquad R_\\varepsilon=e^{5\\pi}\\varepsilon,$$ whose finite truncations are locally Lipschitz and which satisfies $$\\label{local:shell-gradient}\n 2|\\nabla u_\\varepsilon|\n       \\le .58u_\\varepsilon^2+2\\delta^{-2}\n       \\quad (\\varepsilon<\\delta<R_\\varepsilon).$$ There is a smooth nonnegative ambient function $D_\\varepsilon$ with $$\\label{local:shell-potential}\n \\begin{aligned}\n D_\\varepsilon&\\ge2\\delta^{-2}\n       &&\\text{on }\\{\\varepsilon\\le\\delta\\le R_\\varepsilon\\},\\\\\n D_\\varepsilon&\\le2.12\\delta^{-2}\n       &&\\text{everywhere off }F,\\\\\n \\mathop{\\mathrm{supp}}D_\\varepsilon&\\subset\n       \\{\\varepsilon/2<\\delta<2R_\\varepsilon\\}\n       \\Subset\\{h_j>t_j\\}.\n \\end{aligned}$$ Replacing $\\mu_j$ by $\\max(\\mu_j,u_\\varepsilon)$, adding $D_\\varepsilon$ to $\\Pi_j$, and adding $\\{\\delta<\\varepsilon/2\\}$ to $U_j^+$ preserves the profile inequality with coefficient $a_r$. There is an identical negative construction in $\\{h_j<t_j\\}$, using $\\min(\\mu_j,-u_\\varepsilon)$ and enlarging $U_j^-$. All supports and newly forced regions are compactly contained in the stated strict anchor region.",
+   "kind": "construction",
+   "statement_anchor": "stmt-local-shell"
+  },
+  {
+   "claim_id": "claim-rough-hardy",
+   "exact_statement": "For each $m\\ge8$ there are numbers $\\eta_0>0$ and $c_0>0$ with the following property. Suppose $F$ satisfies <a href=\"#local:flatness\" data-reference-type=\"eqref\" data-reference=\"local:flatness\">[local:flatness]</a> with $\\eta\\le\\eta_0$ in a sufficiently accurate buffered chart. There are $d_F>0$ and $C_F<\\infty$ such that, on the wall and on either joined side, $$\\label{local:rough-estimate}\n c_0\\int_{\\delta<d_F}\\delta^{-2}v^2\n             \\le\\mathcal N(v)+C_F\\|v\\|_2^2.$$ The constants $\\eta_0,c_0$ depend only on $m$ and a fixed permitted chart distortion. The constants $d_F,C_F$ may depend on the compact piece, its scale threshold, and the local smooth metric, weight, and pressure. No principal-curvature bound for the wall is assumed.",
+   "kind": "bound",
+   "statement_anchor": "stmt-local-rough"
+  },
+  {
+   "claim_id": "claim-sharp-shielding",
+   "exact_statement": "There is a sufficiently small flatness number $\\eta>0$, depending only on $m$ and the fixed numerical coefficients, with the following property. Let $F$ be any piece from <a href=\"#local:flat-pieces\" data-reference-type=\"ref\" data-reference=\"local:flat-pieces\">49</a> for this flatness number, in a sufficiently accurate chart. For the potential of <a href=\"#local:shell\" data-reference-type=\"ref\" data-reference=\"local:shell\">50</a>, there are $\\varepsilon_F>0$ and $C_F<\\infty$ such that, for every $0<\\varepsilon<\\varepsilon_F$, $$\\label{local:sharp-estimate}\n 1.16\\int D_\\varepsilon v^2\n           \\le .78\\mathcal N(v)+C_F\\|v\\|_2^2.$$ This holds on the true wall and either joined side, and hence on translated compact tests in a pure wall cylinder. The constants $\\varepsilon_F,C_F$ may depend on the local smooth data and $F$, but are independent of $\\varepsilon$. No vanishing trace condition is imposed at a joined seam.",
+   "kind": "bound",
+   "statement_anchor": "stmt-local-sharp"
+  },
+  {
+   "claim_id": "claim-joined-window-compactness",
+   "exact_statement": "Assume $m\\ge8$. On any fixed compact window, a bounded sequence in $\\mathcal H_Z$ has a strongly convergent $L^2$ subsequence. The following moving version also holds. Work in fixed smooth ambient geometry on each expanding window, as is the case after translation in an exact product end. Suppose positive weights and pressures converge smoothly there, and the true phases and walls converge as in [cut:gmt,cut:end-convergence] [cut:gmt](#cut:gmt), [cut:end-convergence](#cut:end-convergence). Consider normalized tests on the corresponding raw pieces $Z_i$, all supported in a fixed compact window strictly inside a larger window of convergence. After passage to a subsequence there is a function $v$ on the limiting raw piece $Z_\\infty$ such that:*\n\n1.  *On every regular compact subwindow, the tests converge weakly in $H^1$ and strongly in $L^2$ in the smooth graphical identifications. At a limiting regular seam the two traces agree.*\n\n2.  *No $L^2$ mass is lost in neighborhoods of the limiting singular set. In particular, integrals of $v_i^2$ converge to those of $v^2$, including integrals against any fixed bounded continuous ambient potential and its pullback to the wall and cylinder.*\n\n\n3.  *The limit belongs to $\\mathcal H_{Z_\\infty}$ and $$\\label{shield:liminf}\n     \\mathfrak h_{Z_\\infty}(v)\n           \\le\\liminf_i\\mathfrak h_{Z_i}(v_i).$$*\n\n*These assertions include pure cylinders, translated cylinder intervals, and Euclidean product limits. Constants are local to the enlarged window; no uniform bound among all packets is asserted. If the limiting wall is smooth on the enlarged window, the same conclusions follow from ordinary Rellich compactness and the bounded trace maps in the smooth graphical charts, in every base dimension.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-shield-compactness"
+  },
+  {
+   "claim_id": "claim-maximum-of-costs",
+   "exact_statement": "Fix a packet and its true pieces. Let $V\\ge0$ be a fixed bounded potential, pulled back to cylinders, satisfying $$\\label{shield:old-bound}\n \\int_Z Vv^2\\le\\theta\\mathfrak h_Z(v)$$ on its wall and both joined sides. Let $F\\subset\\Sigma$ be a compact piece and let $A_\\varepsilon=1.16D_\\varepsilon$ be one of the nonnegative shell potentials of [local:shell,local:sharp] [local:shell](#local:shell), [local:sharp](#local:sharp). In particular its base support lies in a fixed compact set and shrinks to $F$, and $$\\label{shield:local-input}\n \\int_Z A_\\varepsilon v^2\\le .78\\mathcal N_Z(v)+C_F\\norm v_2^2$$ for all sufficiently small $\\varepsilon$, on all three pieces. For every $\\eta>0$, a sufficiently small $\\varepsilon>0$ gives simultaneously $$\\label{shield:maximum-bound}\n \\int_Z(V+A_\\varepsilon)v^2\n \\le\\bigl(\\max\\{\\theta,.78\\}+\\eta\\bigr)\\mathfrak h_Z(v).$$ It suffices that $V$ be bounded on the compact base windows used below. In particular the assertion applies to a finite sum of compact additions on the initial radial parent.",
+   "kind": "bound",
+   "statement_anchor": "stmt-shield-maximum"
+  },
+  {
+   "claim_id": "claim-extension-late-fronts",
+   "exact_statement": "Let $B$ be a packet, let $D\\ge0$ be a fixed smooth compactly supported potential addition on $B$, and let $V$ denote the old cumulative potential on every packet. Suppose these old potentials are exactly compatible and obey the common form bound $\\theta\\mathfrak h$. Suppose also that $$\\int(V_B+1.16D)v^2\\le\\beta\\mathfrak h_B(v),\\qquad \\beta\\ge\\theta,$$ on the wall and joined sides over $B$. In each of the finitely many coface occurrences $B\\times(T,\\infty)^d\\subset E$, introduce a smooth potential $D_E$ with $$\\label{shield:extension-support}\n 0\\le D_E\\le D\\circ\\pi_B,\\qquad\n \\mathop{\\mathrm{supp}}D_E\\subset K\\times\\prod_{i=1}^d[R_i,\\infty),\n \\qquad K\\Subset B.$$ Use consistent functions on the normal coordinates identified by commuting face chains, so that these extensions are compatible. For every $\\eta>0$ all starts can be chosen sufficiently large that $$\\label{shield:extended-bound}\n \\int(V_E+1.16D_E)v^2\\le(\\beta+\\eta)\\mathfrak h_E(v)$$ on every affected raw piece. The conclusion concerns the same fixed true cuts; it uses their product convergence from <a href=\"#cut:end-convergence\" data-reference-type=\"ref\" data-reference=\"cut:end-convergence\">43</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-shield-extension"
+  },
+  {
+   "claim_id": "claim-compatible-caps",
+   "exact_statement": "A compact forcing update from <a href=\"#local:shell\" data-reference-type=\"ref\" data-reference=\"local:shell\">50</a> extends to all its cofaces so as to satisfy <a href=\"#shield:extension-support\" data-reference-type=\"ref\" data-reference=\"shield:extension-support\">[shield:extension-support]</a>, preserve the profile gradient inequality with coefficient $a_r$, and enlarge only the designated cores. The extension is an exact product sufficiently far in every old face collar and is made once per occurrence, independent of the order of commuting face relations.",
+   "kind": "construction",
+   "statement_anchor": "stmt-shield-caps"
+  },
+  {
+   "claim_id": "claim-global-shielding",
+   "exact_statement": "At a fixed stage $r$, let $j_0$ be the current label and keep its true minimizers fixed. There are updates of every remaining profile and core, and compatible smooth additions $D_j\\ge0$, with the following properties on every parent packet $E$ of dimension $m$:*\n\n\n1.  *The updated profiles have locally Lipschitz finite truncations and satisfy, almost everywhere on their finite bands, $$\\label{shield:profile-output}\n     2\\abs{\\nabla\\mu'_j}\\le a_r(\\mu'_j)^2+\\Pi_j+D_j.$$ All these data are exact compatible products. Each core only enlarges, and its closure remains in the interior of its designated updated pole set. The original forced sets and the anchor sign restrictions are preserved.*\n\n2.  *With $G'_j=E\\setminus(U_j^{\\prime+}\\cup U_j^{\\prime-})$, the set $$\\label{shield:guard-output}\n     H_E^*=\\left\\{x:\\#\\{j\\ne j_0:x\\in G'_j\\}\\ge m-2\\right\\}$$ is closed and misses $\\Sigma_E$. In an exact collar over a face $B$, its projection is contained in $H_B^*$. This holds for every further face and every simultaneous product limit.*\n\n\n3.  *For one common $\\theta_*<.9$, all walls and joined sides satisfy $$\\label{shield:form-output}\n     \\int 1.16\\sum_{j\\ne j_0}D_jv^2\n     \\le\\theta_*\\bigl(\\mathcal N(v)+e_0\\norm v_2^2\\bigr)\n     \\le .9\\bigl(\\mathcal N(v)+e_0\\norm v_2^2\\bigr).$$ The additions are bounded with their derivatives on each post-radial packet. There are only finitely many local additions on each such packet and only finitely many extensions into it.*\n\n*For the initial radial parent the same conclusions hold with locally finite additions over its compact transition shells; boundedness is asserted on the corresponding compact blocks and <a href=\"#shield:form-output\" data-reference-type=\"ref\" data-reference=\"shield:form-output\">[shield:form-output]</a> holds on every compact test. No convergence assertion at an end of the original manifold is needed.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-shield-global"
+  },
+  {
+   "claim_id": "claim-regular-guards",
+   "exact_statement": "Fix a finite integer $J\\ge4$. On each parent packet $E$, let $\\varsigma_E$ be signed distance to the true boundary support, truncated at $\\pm1$, positive in the plus phase. If the support is empty on a component, use the corresponding constant sign. After the radial split, the following choices can be made on each whole parent packet.*\n\n1.  *There is a positive $\\rho_E<1/10$ such that near $$\\{x:\\mathop{\\mathrm{dist}}(x,H_E^*)<4\\rho_E,\\ |\\varsigma_E(x)|<4\\rho_E\\}$$ the true boundary is regular, has an embedded normal tube, and signed distance has bounded derivatives through order $J+2$ on a slightly smaller tube. The current forced core closures have positive uniform distance from the true boundary.*\n\n2.  *On an elementary collar $B\\times(T,\\infty)$, signed distances converge uniformly to the pullback of $\\varsigma_B$ as $T\\to\\infty$. They converge in $C^J$ on the guarded tubes, with the coface tube chosen inside the face’s tube. These statements are uniform over the whole face, including its noncompact ends.*\n\n*For the initial radial parent, assertion <span class=\"upright\">(i)</span> holds separately on each enlarged compact radial block, with its own radius and derivative bounds; assertion <span class=\"upright\">(ii)</span> is not required. The radii depend on the true partitions and the updated guards, and can be chosen before any smooth-approximation tolerances.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-regular-guards"
+  },
+  {
+   "claim_id": "claim-regular-partition",
+   "exact_statement": "There are compatible smooth defining functions $g_E$ with $0$ a regular value, positive and negative on the respective current forced core closures, and with $L_E=g_E^{-1}(0)\\subset\\operatorname{int}G_{j_0}$. After the radial split they can be chosen uniformly as close as prescribed to $\\varsigma_E$ in value and in $C^J$ on smaller guarded tubes. In a buffered neighborhood of $H_E^*$, a smooth diffeomorphism arbitrarily close to the identity in $C^{J-1}$ identifies the smooth partition with the true partition. It uses the same map on the wall and on the boundaries of its two sides. At the initial radial step, the approximation tolerances and comparison buffers are chosen separately on enlarged compact radial blocks. The defining functions, but not this comparison map, are exact products in sufficiently far old collars.",
+   "kind": "construction",
+   "statement_anchor": "stmt-regular-partition"
+  },
+  {
+   "claim_id": "claim-regular-transfer",
+   "exact_statement": "The defining-function accuracies can be chosen so that on a uniform neighborhood of $D_A$ in each new packet the raw scalar form controls $$\\label{regular:raw-target}\n \\lambda_{r+1}+(1+3\\eta_r)b_{r+1}\\sum_{j\\ne j_0}\\widetilde\\Pi_j,$$ with a strictly positive mass and gradient reserve. The form has gradient coefficient $C=3.99$ and includes the seam term $2\\int H_{\\rm out}u(0)^2$ on a joined side. Tests are compactly supported, with matching seam traces.",
+   "kind": "bound",
+   "statement_anchor": "stmt-regular-transfer"
+  },
+  {
+   "claim_id": "claim-regular-seam",
+   "exact_statement": "The raw joined metrics admit smooth compatible metrics with arbitrarily small $C^0$ error, and their scalar forms converge to the raw forms in the following quantitative sense. On each joined packet and for every $\\delta>0$, the smoothing can be chosen so that the absolute form error is at most $$\\delta\\int(u^2+|\\nabla u|^2)$$ for every compact matching test, using the raw metric to measure the right side. The old warped-product structure and every sufficiently far old product end are preserved. The choices on a wall can satisfy the requests of both incident sides at once.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-regular-seam"
+  },
+  {
+   "claim_id": "claim-constant-preserving-approximation",
+   "exact_statement": "A continuous scalar function on a packet can be approximated by smooth functions, with any prescribed positive value error, by operators that reproduce constants. For compatible input on a packet diagram, the approximations can be chosen compatible in all sufficiently far product ends of that diagram. If the input and all face copies used at a packet equal the same constant $c$, the result equals $c$ there exactly. The same assertion holds componentwise for a finite list of functions and for a list having only finitely many nonconstant entries on each prescribed finite directed face/coface diagram.",
+   "kind": "construction",
+   "statement_anchor": "stmt-regular-constant-preservation"
+  },
+  {
+   "claim_id": "claim-restricted-profiles",
+   "exact_statement": "After the seam smoothing the pulled-back profiles and cores satisfy the stage $r+1$ profile conditions with smooth compatible potentials $\\Pi_j^{\\rm new}$ chosen so that $$(1+\\eta_r)\\widetilde\\Pi_j\n \\le\\Pi_j^{\\rm new}\\le(1+2\\eta_r)\\widetilde\\Pi_j.$$ If $$\\label{regular:Vstar}\n V_A^*=\\lambda_{r+1}+b_{r+1}\\sum_{j\\ne j_0}\\Pi_j^{\\rm new},\\qquad\n L_A^0=-C\\mathop{\\mathrm{\\Delta}}_{\\rm old}+R_{\\rm old}-V_A^*,$$ then on some positive uniform neighborhood of $D_A$ its form is bounded below by a positive multiple of $\\|u\\|_2^2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-regular-profiles"
+  },
+  {
+   "claim_id": "claim-global-gap-correction",
+   "exact_statement": "There are smooth nonnegative bounded compatible potentials $K_A$, with all derivatives bounded packetwise, such that $K_A=0$ in a positive uniform neighborhood of $D_A$ and $$\\label{regular:global-gap}\n Q_A(u):=\\int\\bigl(C|\\nabla u|^2+\n       (R_{\\rm old}-V_A^*+K_A)u^2\\bigr)\n \\ge g_A\\|u\\|_2^2\\qquad(g_A>0)$$ for every compact smooth test. Let $\\omega_A^{\\rm old}$ be the product of the retained circle length functions for the smoothed metric on $A$, before the new circle factors at this split are appended. With $K_A$ acting by multiplication, define $$L_A=L_A^0+K_A\n     =-C\\mathop{\\mathrm{\\Delta}}_{\\rm old}+R_{\\rm old}-V_A^*+K_A.$$ Its quadratic form in the measure $\\omega_A^{\\rm old}\\,\\mathrm d\\mathop{\\mathrm{vol}}_A$ is $Q_A$. In an exact end over $B$, the base metric is a product and every retained warp pulls back from $B$. Consequently $$\\mathop{\\mathrm{\\Delta}}_{{\\rm old},A}=\\mathop{\\mathrm{\\Delta}}_{{\\rm old},B}+\\mathop{\\mathrm{\\Delta}}_{\\rm normal},\n \\qquad L_A=L_B-C\\mathop{\\mathrm{\\Delta}}_{\\rm normal}.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-regular-correction"
+  },
+  {
+   "claim_id": "claim-gapped-resolvent",
+   "exact_statement": "Let $A$ be one of the resulting complete packets, with its weighted base measure. Suppose $W$ is smooth and bounded with bounded derivatives, and $L=-C\\mathop{\\mathrm{\\Delta}}_\\omega+W$ has form gap $g>0$. Then there is a unique bounded smooth solution $s$ of $Ls=1$. It satisfies $0<\\inf s\\le\\sup s<\\infty$ and has bounded derivatives of every fixed order. Bounded smooth supersolutions of $Lw\\ge0$ are nonnegative. The same conclusions hold on Euclidean products of $A$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-regular-resolvent"
+  },
+  {
+   "claim_id": "claim-compatible-supersolutions",
+   "exact_statement": "Fix *all* the corrections of [regular:correction](#regular:correction) and let $s_A$ denote the exact bounded solution $L_As_A=1$. There exist positive smooth compatible functions $v_A$ with $$\\label{regular:strict-supersolution}\n L_Av_A\\ge\\tfrac12$$ on every packet. They have positive infimum and bounded derivatives packetwise. These $v_A$ are approximations; they are not relabeled as the original exact solutions $s_A$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-regular-solutions"
+  },
+  {
+   "claim_id": "claim-full-invariant-step",
+   "exact_statement": "Assume the stage $r$ invariant and the conclusion of [shield:global](#shield:global). For every nonempty parent packet of base dimension at least two, processing $j_0$ produces the compatible smooth split packets of [packet:split](#packet:split), with the required forced signs and continuous projection maps. There are smooth compatible old metrics and $399$ new torus factors on every packet such that the profiles, cores, potentials, and scalar curvature satisfy the stage $r+1$ invariant. This includes a possible one-dimensional output, on which the scalar lower bound is global. After the radial split the packets have the complete compact-part/product-end geometry of [packet:geometry](#packet:geometry).",
+   "kind": "theorem",
+   "statement_anchor": "stmt-regular-step"
+  }
+ ],
+ "paper": "papers/EN-107-000-0000-2-2026-PR-T4-UK-EX-M3-C-PH-M-0672_PM-336.3_Positive_scalar_curvature_and_uniform_codimension_two_width.md",
+ "purpose": "Positive scalar curvature and uniform codimension-two width",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "6344c71adfefe62bea9c1cdc3b7845c386a3261f86f1a06b584aa1f4be2fe055",
+   "pm.domains.v2": "55a5df975423655deff184c6e7d5cb0cbf88d1097e475436f9d63fd117bc4b23",
+   "pm.edges.v2": "4562760cf5e04b9ade9fa362d4aa005a2023ef5169476e8d4a2cdfbd4e4c25b6",
+   "pm.extraction.v2": "a2d14e7ad810687e0be5ad32a6c395a6b6ebc26b68b6827adc1fe12bfc6be072",
+   "pm.formal.v2": "811ab207f42d847042c1ce02f90a30e18d02cab70a20e6d4189238d4d98f7835",
+   "pm.limits.v2": "a41400f97a08619e1c10b39b5765058f69f464a621cea0dfbfb6918656cac451",
+   "pm.node.v2": "3746099669f9463a6ecd5121cfc065882f84bc70c89b7faec8ba9fdce2738a47",
+   "pm.objects.v2": "6faa90a6549bb5f380a69f4f00ce406011827c1f4975ea395fcf0e4c2601f23d",
+   "pm.provenance.v2": "ccf3da2faf6f02038251f5c81ba23b7632c9c367d11d0f50258017db8f5fa287",
+   "pm.quantities.v2": "6713fa025a1d8e3c8cb65f840cced89ea9672ac89d95852e6ac95fc48794ee1d",
+   "pm.reading.v2": "b09b8261fcc83d0474dfe94e62b2d5979f08442d13a5e7a95096009c92625ac1",
+   "pm.roadmap.v2": "f912319ea3da2a77eb3894d157d626648c6024528164b2fada1bf38bf87ed436",
+   "pm.search.v1": "f1b5d5d9cfd51500c57b469ffb65e137bd5ce3fe1508be284def854dac92c4bd",
+   "pm.triptych.v2": "ac89fce945e12e05e9ddcc732a27f30263a891d331b73cbe7a55abb368f8708e"
+  },
+  "canonical_sha256": "71329ab9c161381d80e5143e5e33217be68c94855619f7b9b93d789cd077cd96",
+  "paper_sha256": "2f546b870f5c4020be0dee2936f8d440232f4c6c002539f8a2b8e79a090ac355",
+  "repaired_body_sha256": "83b05c4b3c8ec950fb5907a0539f129d356aa3af174033c37d13e4eaab745e00"
+ },
+ "status": "ACTIVE",
+ "subject_id": 7,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "bbdb1d38691551a263472429f03dce5acdc8c4c6eeefdd275e9a56428f82e296",
+   "receipt_sha256": "358ef4b015d31f168e36e9de5c9cdc0fc2c59e09a4b8442ec0c76422c6194468",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "exact rational vectors of length at most 4 with k between 0 and 3, including ties, several coordinates equal to one, and inadmissible vectors",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-staircase-simplex",
+     "oracle_basis": "chain, base-set containment, weight positivity and vertex count are checked on the candidate output; admissibility is decided from the input by an independent predicate"
+    },
+    {
+     "checked_domain": "same finite family of rational vectors",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-coordinate-recovery",
+     "oracle_basis": "every input coordinate is recovered exactly as the sum of weights of vertices containing it, so distinct vectors yield distinct weighted decompositions"
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-ascending-order",
+     "observed_exit": 1,
+     "receipt_sha256": "e3138d881b16b13bfccb2b75c8c995516ee8290f4afa5763f3022f1a4ec51e94"
+    },
+    {
+     "id": "mut-keep-zero-weight",
+     "observed_exit": 1,
+     "receipt_sha256": "984ef0ba3c9a3c58ec5ebe3d20ab547023d2aaddf57eaec6870e4574660ab376"
+    },
+    {
+     "id": "mut-fractional-bound",
+     "observed_exit": 1,
+     "receipt_sha256": "fc84ea7040910fef095b39565c9aad5aa1319b18922417885ef3797c8aa1d7df"
+    },
+    {
+     "id": "mut-drop-unit-requirement",
+     "observed_exit": 1,
+     "receipt_sha256": "23c8c43bb272f3b90ed33546a3bac6d5ce3db3f3c3f5c21638095245f25d7e48"
+    },
+    {
+     "id": "mut-drop-range-check",
+     "observed_exit": 1,
+     "receipt_sha256": "6d915573b94fc11764dc795c5cd90aa11a70693946c896644bbc1ee3c28fe9c3"
+    }
+   ],
+   "receipt_sha256": "3df0dda4bba9102769527a351c3f585be7f247955778ee6c2ec348aff4dbbdd2",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Positive scalar curvature and uniform codimension-two width"
+}

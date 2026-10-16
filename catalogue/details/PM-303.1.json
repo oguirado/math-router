@@ -1,0 +1,920 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 742334,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 225316
+ },
+ "coordinate": "EN-116-000-0000-2-2026-PR-T4-UK-EX-M3-B-TO-H-0620",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "operator algebra structure theory",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-exact-infiniteness",
+     "quote": "The weak-to-ordinary implication for arbitrary nonexact algebras remains outside these conclusions.",
+     "quote_sha256": "083898af359a0dc1769f8581c92a49e795bd81f5f1e7b259f23b36beb9cfff1e"
+    }
+   ],
+   "query": "Remove fixed amplification in an arbitrary nonexact algebra",
+   "reason": "The amplification-removal theorem assumes exactness. The source explicitly leaves the arbitrary nonexact weak-to-ordinary implication outside its conclusions."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-cor-absorption",
+     "quote": "Let $A$ be a separable nuclear complex $C^*$-algebra.",
+     "quote_sha256": "bd57c3a02e7bd8eac830a3a05129dc61944b1589887fb2e2ec8f0b9e8f273327"
+    }
+   ],
+   "query": "Infer tensorial absorption without separability or nuclearity",
+   "reason": "The stated tensorial consequence requires both separability and nuclearity; the broader strong-infiniteness theorem does not itself remove these absorption hypotheses."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "eq:property-F",
+     "quote": "In $\\textup{(F\\ensuremath{_n})}$, the same $n$ is chosen before all positive elements are tested.",
+     "quote_sha256": "f0f3cc1ff59058306f1b0e6b69158390b69d3f17e9b5249d9f81341301f71a17"
+    }
+   ],
+   "query": "Choose the amplification separately for each positive element",
+   "reason": "The amplification premise fixes a common integer before testing the positive elements, including their later scalar cutoffs."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-lem-forbidden-tuple",
+     "quote": "The conclusion excludes simultaneous equality for all finite matrix tests; it does not assert that a fixed finite list of tests suffices.",
+     "quote_sha256": "322dc34bed75349c56961ddee0e7e85f983100d2f4d22f5e94bb1dc600a38b6f"
+    }
+   ],
+   "query": "Replace all matrix-level tuple tests by a fixed finite test list",
+   "reason": "The nonexact tuple obstruction excludes simultaneous agreement across all finite matrix levels, without asserting that a fixed finite list is enough."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-20",
+     "quote": "In the obstruction, the same finite-dimensional copy must approximately intertwine both a contraction and its adjoint.",
+     "quote_sha256": "42a25154b223d355e6b19fa2dc71cbb3e0c5b54df385da7310933cc5cb39e0af"
+    }
+   ],
+   "query": "Approximate only the contraction and omit its adjoint",
+   "reason": "The uniform gap argument needs the same copy to approximately intertwine both operators, allowing tests of words involving the generator and its adjoint."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-prop-four-avoidance",
+     "quote": "Choose an ultrafilter $\\omega$ containing all tails of $\\Lambda$,",
+     "quote_sha256": "d131cd236cadbb9747828ecebf2aab32f35d529c527fff93b2ca6cb23436fd44"
+    },
+    {
+     "anchor": "proof-stmt-lem-uniform-shrinking",
+     "quote": "The resulting constant can be increased, if necessary, to lie in $(0,1)$.",
+     "quote_sha256": "3a589a00f85fc59f797b9c19967ea94cdf7e65d75ea45c1245cef97093a762c8"
+    }
+   ],
+   "query": "Extract a finite runtime procedure from the existential infiniteness theorem",
+   "reason": "The proof obtains universal constants and witnesses through product contradictions, ultrafilters, and irreducible representations; it supplies no finite executable decision procedure for the universal positive-element premise."
+  }
+ ],
+ "family": "PM-303",
+ "id": "PM-303.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-individual-to-strong",
+    "claim_id": "claim-individual-to-strong",
+    "statement": "Let $C$ be a complex $C^*$-algebra satisfying $\\textup{(P)}$."
+   },
+   {
+    "anchor": "stmt-thm-exact-infiniteness",
+    "claim_id": "claim-exact-amplification-removal",
+    "statement": "Let $C$ be an exact complex $C^*$-algebra."
+   },
+   {
+    "anchor": "stmt-thm-exact-infiniteness",
+    "claim_id": "claim-exact-amplification-removal",
+    "statement": "Suppose that there is one integer $n\\ge1$ such that $h^{\\oplus n}$ is properly infinite for every $h\\in C_+$."
+   },
+   {
+    "anchor": "stmt-cor-absorption",
+    "claim_id": "claim-nuclear-absorption",
+    "statement": "Let $A$ be a separable nuclear complex $C^*$-algebra."
+   },
+   {
+    "anchor": "stmt-cor-absorption",
+    "claim_id": "claim-nuclear-absorption",
+    "statement": "If there is one integer $n\\ge1$ such that $h^{\\oplus n}$ is properly infinite for every $h\\in A_+$,"
+   },
+   {
+    "anchor": "stmt-lem-comparison-rules",
+    "claim_id": "claim-elementary-comparison",
+    "statement": "Let $D$ be a $C^*$-algebra."
+   },
+   {
+    "anchor": "stmt-lem-comparison-rules",
+    "claim_id": "claim-elementary-comparison",
+    "statement": "If $0\\le u\\le K v$ for $u,v\\in D_+$ and $K\\ge0$,"
+   },
+   {
+    "anchor": "stmt-lem-comparison-rules",
+    "claim_id": "claim-elementary-comparison",
+    "statement": "If $d,v$ are positive elements in a common stabilization, $d\\in\\operatorname{Id}(v)$, and $v$ is properly infinite,"
+   },
+   {
+    "anchor": "stmt-lem-transport",
+    "claim_id": "claim-cutoff-transport",
+    "statement": "Let $C$ be a $C^*$-algebra, let $m,n\\ge1$ be integers, and let $d\\in M_n(C)_+$ and $v\\in M_m(C)_+$."
+   },
+   {
+    "anchor": "stmt-lem-transport",
+    "claim_id": "claim-cutoff-transport",
+    "statement": "Suppose $d\\precsim v$ in $C\\otimes\\mathcal K$."
+   },
+   {
+    "anchor": "stmt-lem-transport",
+    "claim_id": "claim-cutoff-transport",
+    "statement": "For $\\varepsilon>0$, put $h=(d-\\varepsilon)_+$."
+   },
+   {
+    "anchor": "stmt-lem-ideals-cutoffs",
+    "claim_id": "claim-ideal-cutoff-rules",
+    "statement": "Let $D$ be a $C^*$-algebra."
+   },
+   {
+    "anchor": "stmt-lem-ideals-cutoffs",
+    "claim_id": "claim-ideal-cutoff-rules",
+    "statement": "If $J=\\overline{\\bigcup_\\lambda J_\\lambda}$ for an increasing directed family of closed ideals and $z\\in J_+$,"
+   },
+   {
+    "anchor": "stmt-lem-ideals-cutoffs",
+    "claim_id": "claim-ideal-cutoff-rules",
+    "statement": "If $f,g$ are continuous nonnegative functions of a positive element $a$, vanish at zero, and have the same open positivity set in $\\operatorname{sp}(a)$,"
+   },
+   {
+    "anchor": "stmt-prop-graph",
+    "claim_id": "claim-fixed-graph-measurements",
+    "statement": "Let $C$ be a $C^*$-algebra, let $a,y\\in C_+$ be contractions with $a$ rich, and let $c\\in\\widetilde C$ be a contraction."
+   },
+   {
+    "anchor": "stmt-prop-graph",
+    "claim_id": "claim-fixed-graph-measurements",
+    "statement": "For an integer $k\\ge1$ and fixed positive $\\gamma_g,\\sigma_g$ satisfying <a href=\"#eq:graph-constants\" data-reference-type=\"eqref\" data-reference=\"eq:graph-constants\">[eq:graph-constants]</a>, there are $$X\\in\\operatorname{Her}((a-1/8)_+)_+,\\qquad\n B_1,\\ldots,B_k\\in\\operatorname{Her}((a-1/8)_+)$$ with the following property."
+   },
+   {
+    "anchor": "stmt-prop-graph",
+    "claim_id": "claim-fixed-graph-measurements",
+    "statement": "If a representation $\\pi$ of $C$ satisfies $$\\pi\\bigl(y(1-c^*p^2c)y\\bigr)=0,\\qquad \\|\\pi(y)\\|>s,$$"
+   },
+   {
+    "anchor": "stmt-lem-conditional-shrinking",
+    "claim_id": "claim-conditional-support-shrinking",
+    "statement": "Let $C$ be a $C^*$-algebra, let $a,y\\in C_+$ be contractions with $a$ rich, and let $c\\in\\widetilde C$ be a contraction."
+   },
+   {
+    "anchor": "stmt-lem-conditional-shrinking",
+    "claim_id": "claim-conditional-support-shrinking",
+    "statement": "Suppose $p\\in\\operatorname{Her}(a)$ is a rich positive contraction satisfying $$\\|\\pi(a)\\|>1/2\\quad\\Longrightarrow\\quad\\|\\pi(p)\\|=1\n \\qquad\\text{for every representation }\\pi\\text{ of }C.$$"
+   },
+   {
+    "anchor": "stmt-lem-conditional-shrinking",
+    "claim_id": "claim-conditional-support-shrinking",
+    "statement": "Put $d=y(1-c^*p^2c)y\\in C_+$, and assume $$\\label{eq:common-nonvanishing}\n \\pi(d)=0\\quad\\Longrightarrow\\quad\\|\\pi(y)\\|\\le\\frac14\n \\qquad\\text{for every representation }\\pi\\text{ of }C.$$"
+   },
+   {
+    "anchor": "stmt-lem-actual-range",
+    "claim_id": "claim-actual-range-cutoff",
+    "statement": "Let $x,Q$ be bounded positive operators on a Hilbert space $\\mathcal H$, and put $U=xQ^2x$."
+   },
+   {
+    "anchor": "stmt-prop-four-avoidance",
+    "claim_id": "claim-four-entry-avoidance",
+    "statement": "Suppose $C$ satisfies $\\textup{(P)}$."
+   },
+   {
+    "anchor": "stmt-prop-four-avoidance",
+    "claim_id": "claim-four-entry-avoidance",
+    "statement": "Let $X\\in C_+$ and $B_1,B_2,B_3,B_4\\in C$."
+   },
+   {
+    "anchor": "stmt-prop-shrinking-p",
+    "claim_id": "claim-shrinking-under-individual-infiniteness",
+    "statement": "Suppose $C$ satisfies $\\textup{(P)}$."
+   },
+   {
+    "anchor": "stmt-prop-shrinking-p",
+    "claim_id": "claim-shrinking-under-individual-infiniteness",
+    "statement": "Let $a,y\\in C$ be positive contractions and let $c\\in\\widetilde C$ be a contraction."
+   },
+   {
+    "anchor": "stmt-lem-product-p",
+    "claim_id": "claim-bounded-product-permanence",
+    "statement": "Let $(C_i)_{i\\in I}$ be any family of $C^*$-algebras satisfying $\\textup{(P)}$."
+   },
+   {
+    "anchor": "stmt-lem-product-p",
+    "claim_id": "claim-bounded-product-permanence",
+    "statement": "for a positive contraction $d=(d_i)\\in D$ and $0<\\delta<1/2$,"
+   },
+   {
+    "anchor": "stmt-lem-uniform-shrinking",
+    "claim_id": "claim-universal-support-contraction",
+    "statement": "for every $C^*$-algebra $C$ satisfying $\\textup{(P)}$, every pair of positive contractions $a,y\\in C$, and every contraction $c\\in C$,"
+   },
+   {
+    "anchor": "stmt-prop-iterated-separation",
+    "claim_id": "claim-iterated-support-separation",
+    "statement": "Suppose $C$ satisfies $\\textup{(P)}$."
+   },
+   {
+    "anchor": "stmt-prop-iterated-separation",
+    "claim_id": "claim-iterated-support-separation",
+    "statement": "For positive contractions $a_*,b_*\\in C$, a contraction $c_*\\in C$, and $\\zeta>0$,"
+   },
+   {
+    "anchor": "stmt-prop-bounded-diagonalization",
+    "claim_id": "claim-bounded-arbitrary-entry-diagonalization",
+    "statement": "Suppose $C$ satisfies $\\textup{(P)}$."
+   },
+   {
+    "anchor": "stmt-prop-bounded-diagonalization",
+    "claim_id": "claim-bounded-arbitrary-entry-diagonalization",
+    "statement": "Let $a,b\\in C_+$ be contractions and let $c\\in C$."
+   },
+   {
+    "anchor": "stmt-prop-bounded-diagonalization",
+    "claim_id": "claim-bounded-arbitrary-entry-diagonalization",
+    "statement": "Given $$0<\\delta<1/2,\\qquad 0<\\rho\\le2\\delta,\\qquad \\zeta>0,$$"
+   },
+   {
+    "anchor": "stmt-thm-nuclear-to-individual",
+    "claim_id": "claim-nuclear-amplification-removal",
+    "statement": "Let $C$ be a nuclear complex $C^*$-algebra."
+   },
+   {
+    "anchor": "stmt-thm-nuclear-to-individual",
+    "claim_id": "claim-nuclear-amplification-removal",
+    "statement": "Suppose that one integer $n\\ge1$, fixed for the whole algebra, makes $h^{\\oplus n}$ properly infinite for every $h\\in C_+$."
+   },
+   {
+    "anchor": "stmt-prop-nuclear-avoidance",
+    "claim_id": "claim-nuclear-measurement-avoidance",
+    "statement": "Let $C$ be nuclear and satisfy $\\textup{(F\\ensuremath{_n})}$ for a fixed $n\\ge1$, and let $\\ell$ be as in Lemma <a href=\"#lem:forbidden-tuple\" data-reference-type=\"ref\" data-reference=\"lem:forbidden-tuple\">18</a>."
+   },
+   {
+    "anchor": "stmt-prop-nuclear-avoidance",
+    "claim_id": "claim-nuclear-measurement-avoidance",
+    "statement": "For $X\\in C_+$ and fixed elements $B_{j,pq}\\in C$, where $1\\le j\\le\\ell$ and $1\\le p,q\\le n$,"
+   },
+   {
+    "anchor": "stmt-prop-shrinking-nuclear",
+    "claim_id": "claim-nuclear-support-shrinking",
+    "statement": "Let $C$ be nuclear and satisfy $\\textup{(F\\ensuremath{_n})}$ for one fixed $n\\ge1$."
+   },
+   {
+    "anchor": "stmt-prop-shrinking-nuclear",
+    "claim_id": "claim-nuclear-support-shrinking",
+    "statement": "Let $a,y\\in C_+$ be contractions, with $a$ rich, and let $c\\in\\widetilde C$ be a contraction."
+   },
+   {
+    "anchor": "stmt-lem-local-rich",
+    "claim_id": "claim-local-rich-witness",
+    "statement": "Let $C$ be a $C^*$-algebra, and suppose that one integer $n\\ge1$ makes $h^{\\oplus n}$ properly infinite for every $h\\in C_+$."
+   },
+   {
+    "anchor": "stmt-lem-local-rich",
+    "claim_id": "claim-local-rich-witness",
+    "statement": "If $u\\in C_+$ and an irreducible representation $\\pi:C\\to B(\\mathcal H)$ satisfies $\\pi(u)\\ne0$,"
+   },
+   {
+    "anchor": "stmt-lem-merger",
+    "claim_id": "claim-rich-witness-merger",
+    "statement": "Let $C$ be nuclear and satisfy $\\textup{(F\\ensuremath{_n})}$ for a fixed $n\\ge1$."
+   },
+   {
+    "anchor": "stmt-lem-merger",
+    "claim_id": "claim-rich-witness-merger",
+    "statement": "For $u\\in C_+$ and rich positive contractions $a,b\\in\\operatorname{Her}(u)$,"
+   },
+   {
+    "anchor": "stmt-lem-nonexact-universal",
+    "claim_id": "claim-universal-contraction-nonexactness",
+    "statement": "The universal contraction algebra $\\mathcal U$ is not exact."
+   },
+   {
+    "anchor": "stmt-lem-finite-matrix-tests",
+    "claim_id": "claim-polynomial-finite-matrix-tests",
+    "statement": "For every integer $r\\geq1$ and every $Z\\in M_r(\\mathcal U)$ whose entries are $*$-polynomials in $u,u^*$,"
+   },
+   {
+    "anchor": "stmt-lem-uniform-matrix-bound",
+    "claim_id": "claim-all-amplification-polynomial-bound",
+    "statement": "Let $E\\subset\\mathcal U$ be a finite-dimensional linear space consisting of $*$-polynomials in $u,u^*$."
+   },
+   {
+    "anchor": "stmt-lem-uniform-matrix-bound",
+    "claim_id": "claim-all-amplification-polynomial-bound",
+    "statement": "Suppose $v$ is a contraction in a unital $C^*$-algebra $B$, and fix one number $\\theta>0$."
+   },
+   {
+    "anchor": "stmt-lem-uniform-matrix-bound",
+    "claim_id": "claim-all-amplification-polynomial-bound",
+    "statement": "Assume that for every integer $d\\geq1$ and every contraction $D\\in M_d(\\mathbb C)$, there are a unital representation $\\pi:B\\to B(H_\\pi)$ and an isometry $J:\\mathbb C^d\\to H_\\pi$ satisfying the two inequalities in <a href=\"#eq:forbidden-models\" data-reference-type=\"eqref\" data-reference=\"eq:forbidden-models\">[eq:forbidden-models]</a> with $\\theta$ in place of $\\gamma$."
+   },
+   {
+    "anchor": "stmt-lem-ideal-comparison",
+    "claim_id": "claim-fixed-amplification-ideal-comparison",
+    "statement": "Let $C$ be a $C^*$-algebra, let $h\\in C_+$, and let $n\\geq1$ be an integer such that $h^{\\oplus n}$ is properly infinite."
+   },
+   {
+    "anchor": "stmt-lem-cut-implementation",
+    "claim_id": "claim-exact-cut-implementation",
+    "statement": "Let $C$ be a $C^*$-algebra, let $m,s\\geq1$, and suppose that $x\\in M_m(C)_+$ and $h\\in M_s(C)_+$ satisfy $x\\precsim h$."
+   },
+   {
+    "anchor": "stmt-lem-cut-implementation",
+    "claim_id": "claim-exact-cut-implementation",
+    "statement": "If $f\\colon[0,\\|x\\|]\\to[0,\\infty)$ is continuous and vanishes on a neighborhood of zero,"
+   },
+   {
+    "anchor": "stmt-lem-exact-matrix-unitization",
+    "claim_id": "claim-exact-matrix-unitization",
+    "statement": "If $A$ is an exact $C^*$-algebra and $n\\ge1$,"
+   },
+   {
+    "anchor": "stmt-prop-perturbation",
+    "claim_id": "claim-uniform-primitive-perturbation",
+    "statement": "Let $C$ be an exact $C^*$-algebra satisfying <span class=\"upright\">(F$_n$)</span> for one fixed integer $n\\geq1$."
+   },
+   {
+    "anchor": "stmt-prop-perturbation",
+    "claim_id": "claim-uniform-primitive-perturbation",
+    "statement": "Let $p,q\\in C$ be contractions and let $h,k,c\\in C_+$ satisfy $$p^*ph=h,\\qquad qq^*k=k,\\qquad\n c^{\\oplus n}\\precsim h,\\qquad c^{\\oplus n}\\precsim k.\n \\label{eq:perturbation-hypotheses}$$"
+   },
+   {
+    "anchor": "stmt-prop-perturbation",
+    "claim_id": "claim-uniform-primitive-perturbation",
+    "statement": "If $h,k$ belong to a hereditary subalgebra $\\mathcal D\\subset C$,"
+   },
+   {
+    "anchor": "stmt-prop-perturbation",
+    "claim_id": "claim-uniform-primitive-perturbation",
+    "statement": "If, in addition or independently, $p,q$ are positive and $pq=0$,"
+   },
+   {
+    "anchor": "stmt-lem-local-common-element",
+    "claim_id": "claim-local-orthogonal-common-elements",
+    "statement": "Let $C$ be an exact $C^*$-algebra satisfying <span class=\"upright\">(F$_n$)</span> for one fixed integer $n\\geq1$, and let $P\\in\\operatorname{Prim}(C)$.*\n\n1."
+   },
+   {
+    "anchor": "stmt-lem-local-common-element",
+    "claim_id": "claim-local-orthogonal-common-elements",
+    "statement": "If $h\\in C_+$ and $h_P\\ne0$,"
+   },
+   {
+    "anchor": "stmt-lem-local-common-element",
+    "claim_id": "claim-local-orthogonal-common-elements",
+    "statement": "If $h,k\\in C_+$ are nonzero at $P$,"
+   },
+   {
+    "anchor": "stmt-lem-purestateattainment",
+    "claim_id": "claim-irreducible-norm-attainment",
+    "statement": "If $B$ is a $C^*$-algebra and $0\\ne b\\in B_+$,"
+   },
+   {
+    "anchor": "stmt-lem-primitive-compactness",
+    "claim_id": "claim-quasicompact-primitive-norm-slices",
+    "statement": "Let $C$ be a $C^*$-algebra."
+   },
+   {
+    "anchor": "stmt-lem-primitive-compactness",
+    "claim_id": "claim-quasicompact-primitive-norm-slices",
+    "statement": "For $c\\in C_+$ and $\\alpha>0$,"
+   },
+   {
+    "anchor": "stmt-lem-finite-coupling",
+    "claim_id": "claim-finite-primitive-coupling",
+    "statement": "Let $C$ be an exact $C^*$-algebra satisfying <span class=\"upright\">(F$_n$)</span> for one fixed integer $n\\geq1$."
+   },
+   {
+    "anchor": "stmt-lem-finite-coupling",
+    "claim_id": "claim-finite-primitive-coupling",
+    "statement": "Let $K_0\\subset\\operatorname{Prim}(C)$ be quasi-compact and let $\\mathcal D\\subset C$ be hereditary."
+   },
+   {
+    "anchor": "stmt-lem-finite-coupling",
+    "claim_id": "claim-finite-primitive-coupling",
+    "statement": "Suppose that at each $P\\in K_0$ one can choose positive contractions $p,q\\in\\mathcal D$ and $h,k\\in\\mathcal D_+$ satisfying $$pq=0,\\qquad ph=h,\\qquad qk=k,\\qquad h_P\\ne0,\\quad k_P\\ne0.$$"
+   },
+   {
+    "anchor": "stmt-prop-square-zero",
+    "claim_id": "claim-quasicompact-square-zero-localization",
+    "statement": "Let $C$ be an exact $C^*$-algebra satisfying <span class=\"upright\">(F$_n$)</span> for one fixed integer $n\\geq1$."
+   },
+   {
+    "anchor": "stmt-prop-square-zero",
+    "claim_id": "claim-quasicompact-square-zero-localization",
+    "statement": "Let $K_0\\subset\\operatorname{Prim}(C)$ be quasi-compact, and let $\\mathcal D\\subset C$ be a hereditary subalgebra nonzero at every point of $K_0$."
+   },
+   {
+    "anchor": "stmt-cor-ideal-comparison",
+    "claim_id": "claim-whole-ideal-comparison",
+    "statement": "Let $C$ be a $C^*$-algebra satisfying <span class=\"upright\">(P)</span>."
+   },
+   {
+    "anchor": "stmt-cor-ideal-comparison",
+    "claim_id": "claim-whole-ideal-comparison",
+    "statement": "If $C$ is exact,"
+   },
+   {
+    "anchor": "stmt-lem-separating-positives",
+    "claim_id": "claim-fixed-floor-positive-separation",
+    "statement": "Let $C$ be an exact $C^*$-algebra satisfying $\\textup{(P)}$, and let $0<\\sigma<1$ be the constant in Proposition <a href=\"#prop:perturbation\" data-reference-type=\"ref\" data-reference=\"prop:perturbation\">31</a> with $n=1$."
+   },
+   {
+    "anchor": "stmt-lem-separating-positives",
+    "claim_id": "claim-fixed-floor-positive-separation",
+    "statement": "Let $a,b\\in C_+$ be contractions, and let $0<r<1$."
+   },
+   {
+    "anchor": "stmt-lem-bounded-implementation",
+    "claim_id": "claim-spectral-floor-bounded-implementation",
+    "statement": "Let $C$ be a $C^*$-algebra, let $Q,c\\in C_+$ with $\\|c\\|\\le1$, and let $m>0$."
+   },
+   {
+    "anchor": "stmt-lem-bounded-implementation",
+    "claim_id": "claim-spectral-floor-bounded-implementation",
+    "statement": "If $c\\precsim(Q^2-m^2/4)_+$,"
+   },
+   {
+    "anchor": "stmt-prop-direct-strong-infiniteness",
+    "claim_id": "claim-direct-exact-strong-infiniteness",
+    "statement": "Let $C$ be an exact $C^*$-algebra satisfying $\\textup{(P)}$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Strong pure infiniteness from individual proper infiniteness",
+    "evidence": [
+     {
+      "anchor": "sec:separation",
+      "quote": "The strict support bound in Proposition <a href=\"#prop:shrinking-P\" data-reference-type=\"ref\" data-reference=\"prop:shrinking-P\">12</a> initially depends on the inputs. Products turn it into a universal constant below one;",
+      "quote_sha256": "aebab0a9515b32f904755ab295cd35f36dd436868ed1bfd48c3c890fda68fe9d"
+     },
+     {
+      "anchor": "sec:separation",
+      "quote": "A final cutoff comparison gives coefficients whose norms are bounded independently of that requested smallness.",
+      "quote_sha256": "8168f17cc5af01c0bece0313c7341b844e349351de2fec689c6a9fe545ea83a7"
+     }
+    ],
+    "requires_concepts": [
+     "Stable Cuntz comparison",
+     "Cutoff transport",
+     "Hereditary subalgebras",
+     "Graph measurement avoidance",
+     "Bounded product permanence",
+     "Iterated support separation",
+     "Bounded comparison coefficients"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Amplification removal under exactness",
+    "evidence": [
+     {
+      "anchor": "sec:localization",
+      "quote": "Our immediate objective is to construct a square-zero element in a hereditary subalgebra that is nonzero on a prescribed quasi-compact subset of $\\operatorname{Prim}(C)$.",
+      "quote_sha256": "7fa207aec62b089026063880ec81a90ba05c34dd3b77846a1f27dfc88ae878d6"
+     },
+     {
+      "anchor": "sec:localization",
+      "quote": "Repeating the construction on one fixed norm slice will remove the amplification integer $n$ and give <span class=\"upright\">(P)</span>.",
+      "quote_sha256": "9b30c758482bce6c17fcb2c6c69c9a1604758e629b7a0a5f3bd1ee2e65aae092"
+     }
+    ],
+    "requires_concepts": [
+     "Universal contraction nonexactness",
+     "Finite matrix polynomial tests",
+     "Uniform exactness gap",
+     "Primitive quotient perturbation",
+     "Quasi-compact norm slices",
+     "Square-zero localization",
+     "Ideal comparison",
+     "Norm-limit comparison"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Nonunital nuclear tensorial absorption",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-rem-tuple-exact",
+      "quote": "The Proposition permits $C$ to be nonunital; the unital embedding is into the annihilator quotient $F(C)$.",
+      "quote_sha256": "8c1966d1ca8b1209444f4191cf3de15a9c1206c87db84534d4fc7f34f0328812"
+     }
+    ],
+    "requires_concepts": [
+     "Fixed-amplification removal",
+     "Strong pure infiniteness",
+     "Norm ultrapowers",
+     "Annihilator central-sequence quotients",
+     "Unital central-sequence embeddings",
+     "External absorption criterion"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-individual-to-strong",
+   "exact_statement": "Let $C$ be a complex $C^*$-algebra satisfying $\\textup{(P)}$. For all $a,b\\in C_+$, $c\\in C$, and $\\varepsilon>0$, there are $s,t\\in C$ such that $$\\label{eq:main-diagonalization}\n \\|s^*as-a\\|<\\varepsilon,\\qquad\n \\|t^*bt-b\\|<\\varepsilon,\\qquad\n \\|s^*ct\\|<\\varepsilon.$$ Consequently $C$ is strongly purely infinite.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-individual-to-strong"
+  },
+  {
+   "claim_id": "claim-exact-amplification-removal",
+   "exact_statement": "Let $C$ be an exact complex $C^*$-algebra. Suppose that there is one integer $n\\ge1$ such that $h^{\\oplus n}$ is properly infinite for every $h\\in C_+$. Then every positive element of $C$ is properly infinite. Consequently $C$ is strongly purely infinite.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-exact-infiniteness"
+  },
+  {
+   "claim_id": "claim-nuclear-absorption",
+   "exact_statement": "Let $A$ be a separable nuclear complex $C^*$-algebra. If there is one integer $n\\ge1$ such that $h^{\\oplus n}$ is properly infinite for every $h\\in A_+$, then $$A\\cong A\\otimes_{\\min}\\mathcal O_\\infty.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-absorption"
+  },
+  {
+   "claim_id": "claim-elementary-comparison",
+   "exact_statement": "Let $D$ be a $C^*$-algebra.*\n\n1.  *For $h\\in D_+$, $$\\operatorname{Her}_D(h)=D\\cap e_hD^{**}e_h.$$ If $0\\le u\\le K v$ for $u,v\\in D_+$ and $K\\ge0$, then $u\\in\\operatorname{Her}(v)$ and $u\\precsim v$. More generally, every positive element of $\\operatorname{Her}(v)$ is Cuntz subequivalent to $v$.*\n\n2.  *For a rectangular algebra matrix $z$, one has $z^*z\\sim_{\\mathrm{Cu}}zz^*$. Cuntz subequivalence is transitive, is preserved by block sums, and is closed under norm limits in its first variable when the second variable is fixed. Every $*$-homomorphism preserves Cuntz subequivalence and equivalence, after amplification. For integers $m,n\\ge1$, $d\\in M_n(D)_+$, and $v\\in M_m(D)_+$, stable comparison $d\\precsim v$ is equivalent to the existence of $r_j\\in M_{m,n}(D)$ with $r_j^*vr_j\\to d$ in norm.*\n\n3.  *If $d,v$ are positive elements in a common stabilization, $d\\in\\operatorname{Id}(v)$, and $v$ is properly infinite, then $d\\precsim v$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-comparison-rules"
+  },
+  {
+   "claim_id": "claim-cutoff-transport",
+   "exact_statement": "Let $C$ be a $C^*$-algebra, let $m,n\\ge1$ be integers, and let $d\\in M_n(C)_+$ and $v\\in M_m(C)_+$. Suppose $d\\precsim v$ in $C\\otimes\\mathcal K$. For $\\varepsilon>0$, put $h=(d-\\varepsilon)_+$. There is $w\\in M_{m,n}(C^{**})$ such that $$\\label{eq:transport-supports}\n w^*w=e_h,\\qquad ww^*\\le e_v,$$ and $$\\label{eq:transport-membership}\n w\\operatorname{Her}_{M_n(C)}(h)\\subset M_{m,n}(C),\\qquad\n w\\operatorname{Her}_{M_n(C)}(h)w^*\\subset\\operatorname{Her}_{M_m(C)}(v).$$ Conjugation by $w$ is an injective $*$-homomorphism on $\\operatorname{Her}(h)$. For $l\\in\\operatorname{Her}(h)_+$, $$\\label{eq:transport-cutoffs}\n (wlw^*-\\tau)_+=w(l-\\tau)_+w^*,\\qquad\n w(l-\\tau)_+w^*\\sim_{\\mathrm{Cu}}(l-\\tau)_+\\quad(\\tau\\ge0),$$ and $$\\label{eq:transport-hereditary-image}\n w\\operatorname{Her}(l)w^*=\\operatorname{Her}(wlw^*).$$ Every representation, with matching matrix amplifications, satisfies $$\\label{eq:transport-represented-norm}\n \\|\\pi^{(m)}(wkw^*)\\|=\\|\\pi^{(n)}(k)\\|\n \\qquad(k\\in\\operatorname{Her}(h)).$$ The products in these formulas are algebra elements; $w$ itself is only asserted to lie in the bidual.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-transport"
+  },
+  {
+   "claim_id": "claim-ideal-cutoff-rules",
+   "exact_statement": "Let $D$ be a $C^*$-algebra.*\n\n1.  *If $J=\\overline{\\bigcup_\\lambda J_\\lambda}$ for an increasing directed family of closed ideals and $z\\in J_+$, then for every $\\varepsilon>0$, $(z-\\varepsilon)_+$ lies in some $J_\\lambda$. In particular, the ideals $\\operatorname{Id}((z-\\delta)_+)$, directed as $\\delta\\downarrow0$, densely exhaust $\\operatorname{Id}(z)$.*\n\n2.  *For $u,v\\in D_+$, one has $u\\in\\operatorname{Id}(v)$ if and only if every irreducible representation $\\pi$ with $\\pi(v)=0$ also satisfies $\\pi(u)=0$.*\n\n3.  *If $f,g$ are continuous nonnegative functions of a positive element $a$, vanish at zero, and have the same open positivity set in $\\operatorname{sp}(a)$, then $\\operatorname{Her}(f(a))=\\operatorname{Her}(g(a))$ and $f(a)\\sim_{\\mathrm{Cu}}g(a)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-ideals-cutoffs"
+  },
+  {
+   "claim_id": "claim-fixed-graph-measurements",
+   "exact_statement": "Let $C$ be a $C^*$-algebra, let $a,y\\in C_+$ be contractions with $a$ rich, and let $c\\in\\widetilde C$ be a contraction. For an integer $k\\ge1$ and fixed positive $\\gamma_g,\\sigma_g$ satisfying <a href=\"#eq:graph-constants\" data-reference-type=\"eqref\" data-reference=\"eq:graph-constants\">[eq:graph-constants]</a>, there are $$X\\in\\operatorname{Her}((a-1/8)_+)_+,\\qquad\n B_1,\\ldots,B_k\\in\\operatorname{Her}((a-1/8)_+)$$ with the following property. For any contractions $$S_i\\in\\operatorname{Her}((X-\\alpha_0)_+),\\qquad 1\\le i\\le k,$$ one can form a rich positive contraction $p\\in\\operatorname{Her}(a)$ such that, for every representation $\\pi$ of $C$, $\\|\\pi(a)\\|>1/2$ implies $\\|\\pi(p)\\|=1$. If a representation $\\pi$ of $C$ satisfies $$\\pi\\bigl(y(1-c^*p^2c)y\\bigr)=0,\\qquad \\|\\pi(y)\\|>s,$$ then, in that same representation, $$\\label{eq:graph-failure}\n \\|\\pi(X)\\|>s,\\qquad \\pi(B_i)=\\pi(S_i)\\quad(1\\le i\\le k).$$ The elements $X,B_1,\\ldots,B_k$ are fixed before the $S_i$ are chosen.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-graph"
+  },
+  {
+   "claim_id": "claim-conditional-support-shrinking",
+   "exact_statement": "Let $C$ be a $C^*$-algebra, let $a,y\\in C_+$ be contractions with $a$ rich, and let $c\\in\\widetilde C$ be a contraction. Suppose $p\\in\\operatorname{Her}(a)$ is a rich positive contraction satisfying $$\\|\\pi(a)\\|>1/2\\quad\\Longrightarrow\\quad\\|\\pi(p)\\|=1\n \\qquad\\text{for every representation }\\pi\\text{ of }C.$$ Put $d=y(1-c^*p^2c)y\\in C_+$, and assume $$\\label{eq:common-nonvanishing}\n \\pi(d)=0\\quad\\Longrightarrow\\quad\\|\\pi(y)\\|\\le\\frac14\n \\qquad\\text{for every representation }\\pi\\text{ of }C.$$ Then there are positive contractions $$p_1\\in\\operatorname{Her}(a),\\qquad q_1\\in\\operatorname{Her}(y)$$ such that $p_1$ is rich, $$\\label{eq:shrinking-signals}\n \\begin{split}\n  \\|\\pi(a)\\|>1/2&\\ \\Longrightarrow\\ \\|\\pi(p_1)\\|=1,\\\\\n  \\|\\pi(y)\\|>1/2&\\ \\Longrightarrow\\ \\|\\pi(q_1)\\|=1\n \\end{split}\n \\qquad\\text{for every representation }\\pi\\text{ of }C,$$ and $$\\label{eq:shrinking-support}\n \\|e_{p_1}c e_{q_1}\\|_{C^{**}}<1.$$ The last inequality is a single norm bound in the universal bidual.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-conditional-shrinking"
+  },
+  {
+   "claim_id": "claim-actual-range-cutoff",
+   "exact_statement": "Let $x,Q$ be bounded positive operators on a Hilbert space $\\mathcal H$, and put $U=xQ^2x$. For every $\\eta>0$, $$\\label{eq:actual-range}\n e_{(U-\\eta)_+}\\mathcal H\\subset\\operatorname{ran}(xQ),\n \\qquad\n \\ker Q\\cap\\operatorname{ran}(xQ)=\\{0\\}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-actual-range"
+  },
+  {
+   "claim_id": "claim-four-entry-avoidance",
+   "exact_statement": "Suppose $C$ satisfies $\\textup{(P)}$. Let $X\\in C_+$ and $B_1,B_2,B_3,B_4\\in C$. With $$\\alpha_0=\\frac1{32}<\\alpha=\\frac1{16}\n <\\beta=\\frac18<s=\\frac14,\\qquad h=\\frac12,$$ there exist contractions $T_1,\\ldots,T_4$ in $\\operatorname{Her}((X-\\alpha_0)_+)$ for which no representation $\\pi$ of $C$ satisfies $$\\label{eq:four-forbidden}\n \\|\\pi(X)\\|>s,\\qquad \\pi(B_i)=\\pi(T_i)\\quad(1\\le i\\le4).$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-four-avoidance"
+  },
+  {
+   "claim_id": "claim-shrinking-under-individual-infiniteness",
+   "exact_statement": "Suppose $C$ satisfies $\\textup{(P)}$. Let $a,y\\in C$ be positive contractions and let $c\\in\\widetilde C$ be a contraction. There are positive contractions $p_1\\in\\operatorname{Her}(a)$ and $q_1\\in\\operatorname{Her}(y)$, with $p_1$ rich, such that for every representation $\\pi$ of $C$, $$\\label{eq:shrinking-P-signals}\n \\|\\pi(a)\\|>1/2\\ \\Longrightarrow\\ \\|\\pi(p_1)\\|=1,\n \\qquad\n \\|\\pi(y)\\|>1/2\\ \\Longrightarrow\\ \\|\\pi(q_1)\\|=1,$$ and, in the universal bidual, $$\\label{eq:shrinking-P-support}\n \\|e_{p_1}c e_{q_1}\\|<1.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-shrinking-p"
+  },
+  {
+   "claim_id": "claim-bounded-product-permanence",
+   "exact_statement": "Let $(C_i)_{i\\in I}$ be any family of $C^*$-algebras satisfying $\\textup{(P)}$. Their bounded product $D=\\prod_{i\\in I}C_i$ satisfies $\\textup{(P)}$. More precisely, for a positive contraction $d=(d_i)\\in D$ and $0<\\delta<1/2$, there is a row $s=(s_i)\\in M_{1,2}(D)$ such that $$\\label{eq:product-row}\n s^*ds=(d-2\\delta)_+\\oplus(d-2\\delta)_+,\\qquad\n \\|s\\|\\le\\delta^{-1/2}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-product-p"
+  },
+  {
+   "claim_id": "claim-universal-support-contraction",
+   "exact_statement": "There exists $\\theta\\in(0,1)$ such that for every $C^*$-algebra $C$ satisfying $\\textup{(P)}$, every pair of positive contractions $a,y\\in C$, and every contraction $c\\in C$, there are positive contractions $p\\in\\operatorname{Her}(a)$, $q\\in\\operatorname{Her}(y)$ such that, for every representation $\\pi$ of $C$, $$\\|\\pi(a)\\|>1/2\\ \\Longrightarrow\\ \\|\\pi(p)\\|=1,\n \\qquad\n \\|\\pi(y)\\|>1/2\\ \\Longrightarrow\\ \\|\\pi(q)\\|=1,$$ and $$\\label{eq:uniform-support}\n \\|e_p c e_q\\|\\le\\theta.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-uniform-shrinking"
+  },
+  {
+   "claim_id": "claim-iterated-support-separation",
+   "exact_statement": "Suppose $C$ satisfies $\\textup{(P)}$. For positive contractions $a_*,b_*\\in C$, a contraction $c_*\\in C$, and $\\zeta>0$, there are positive contractions $p\\in\\operatorname{Her}(a_*)$, $q\\in\\operatorname{Her}(b_*)$ such that $$\\|e_p c_*e_q\\|<\\zeta$$ and, for every representation $\\pi$, $$\\|\\pi(a_*)\\|>1/2\\ \\Longrightarrow\\ \\|\\pi(p)\\|=1,\n \\qquad\n \\|\\pi(b_*)\\|>1/2\\ \\Longrightarrow\\ \\|\\pi(q)\\|=1.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-iterated-separation"
+  },
+  {
+   "claim_id": "claim-bounded-arbitrary-entry-diagonalization",
+   "exact_statement": "Suppose $C$ satisfies $\\textup{(P)}$. Let $a,b\\in C_+$ be contractions and let $c\\in C$. Given $$0<\\delta<1/2,\\qquad 0<\\rho\\le2\\delta,\\qquad \\zeta>0,$$ there exist $s,t\\in C$ such that $$\\begin{aligned}\n \\|s^*as-a\\|,\\ \\|t^*bt-b\\|&<2\\delta+\\rho,\n \\label{eq:bounded-diagonals}\\\\\n \\|s^*ct\\|&<\\zeta,\\qquad\n \\|s\\|,\\ \\|t\\|\\le\\delta^{-1/2}.\n \\label{eq:bounded-cross}\n\\end{aligned}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-bounded-diagonalization"
+  },
+  {
+   "claim_id": "claim-nuclear-amplification-removal",
+   "exact_statement": "Let $C$ be a nuclear complex $C^*$-algebra. Suppose that one integer $n\\ge1$, fixed for the whole algebra, makes $h^{\\oplus n}$ properly infinite for every $h\\in C_+$. Then every positive element of $C$ is properly infinite.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-nuclear-to-individual"
+  },
+  {
+   "claim_id": "claim-forbidden-operator-tuple",
+   "exact_statement": "There are $\\ell\\ge1$, a $C^*$-algebra $W$, contractions $z_1,\\ldots,z_\\ell\\in W$, and contractions $z_j^{(r)}\\in M_{N_r}(\\mathbb C)$, where $N_r\\ge1$, $r\\ge1$, and $1\\le j\\le\\ell$, with the following properties.*\n\n1.  *No tuple $b_1,\\ldots,b_\\ell$ in any exact $C^*$-algebra satisfies $$\\label{eq:forbidden-tuple}\n     \\left\\|\\sum_{j=1}^{\\ell} A_j\\otimes b_j\\right\\|\n     =\\left\\|\\sum_{j=1}^{\\ell} A_j\\otimes z_j\\right\\|\n     \\quad\\text{for every }m\\ge1\\text{ and every }A_j\\in M_m(\\mathbb C).$$*\n\n\n2.  *For every fixed $m\\ge1$ and $A_j\\in M_m(\\mathbb C)$, $$\\label{eq:tuple-approximations}\n     \\lim_{r\\to\\infty}\n     \\left\\|\\sum_{j=1}^{\\ell} A_j\\otimes z_j^{(r)}\\right\\|\n     =\\left\\|\\sum_{j=1}^{\\ell} A_j\\otimes z_j\\right\\|.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-forbidden-tuple"
+  },
+  {
+   "claim_id": "claim-nuclear-measurement-avoidance",
+   "exact_statement": "Let $C$ be nuclear and satisfy $\\textup{(F\\ensuremath{_n})}$ for a fixed $n\\ge1$, and let $\\ell$ be as in Lemma <a href=\"#lem:forbidden-tuple\" data-reference-type=\"ref\" data-reference=\"lem:forbidden-tuple\">18</a>. For $X\\in C_+$ and fixed elements $B_{j,pq}\\in C$, where $1\\le j\\le\\ell$ and $1\\le p,q\\le n$, there are contractions $$S_{j,pq}\\in\\operatorname{Her}((X-\\alpha_0)_+)$$ such that no representation $\\pi$ satisfies simultaneously $$\\label{eq:nuclear-forbidden}\n \\|\\pi(X)\\|>s,\\qquad\n \\pi(B_{j,pq})=\\pi(S_{j,pq})\n \\quad(1\\le j\\le\\ell,\\ 1\\le p,q\\le n).$$ Here $\\alpha_0=1/32$ and $s=1/4$, as in Proposition <a href=\"#prop:graph\" data-reference-type=\"ref\" data-reference=\"prop:graph\">8</a>.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-nuclear-avoidance"
+  },
+  {
+   "claim_id": "claim-nuclear-support-shrinking",
+   "exact_statement": "Let $C$ be nuclear and satisfy $\\textup{(F\\ensuremath{_n})}$ for one fixed $n\\ge1$. Let $a,y\\in C_+$ be contractions, with $a$ rich, and let $c\\in\\widetilde C$ be a contraction. There are positive contractions $p_1\\in\\operatorname{Her}(a)$ and $q_1\\in\\operatorname{Her}(y)$ such that $p_1$ is rich, $$\\label{eq:nuclear-shrinking-signals}\n \\begin{split}\n \\|\\pi(a)\\|>1/2&\\quad\\Longrightarrow\\quad\\|\\pi(p_1)\\|=1,\\\\\n \\|\\pi(y)\\|>1/2&\\quad\\Longrightarrow\\quad\\|\\pi(q_1)\\|=1\n \\end{split}\n \\qquad\\text{for every representation }\\pi,$$ and $\\|e_{p_1}ce_{q_1}\\|_{C^{**}}<1$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-shrinking-nuclear"
+  },
+  {
+   "claim_id": "claim-local-rich-witness",
+   "exact_statement": "Let $C$ be a $C^*$-algebra, and suppose that one integer $n\\ge1$ makes $h^{\\oplus n}$ properly infinite for every $h\\in C_+$. If $u\\in C_+$ and an irreducible representation $\\pi:C\\to B(\\mathcal H)$ satisfies $\\pi(u)\\ne0$, then there is a rich positive contraction $p\\in\\operatorname{Her}(u)$ with $\\|\\pi(p)\\|=1$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-local-rich"
+  },
+  {
+   "claim_id": "claim-rich-witness-merger",
+   "exact_statement": "Let $C$ be nuclear and satisfy $\\textup{(F\\ensuremath{_n})}$ for a fixed $n\\ge1$. For $u\\in C_+$ and rich positive contractions $a,b\\in\\operatorname{Her}(u)$, there is a rich positive contraction $c_0\\in\\operatorname{Her}(u)$ such that every representation $\\pi$ satisfies $$\\label{eq:merger-signal}\n \\bigl(\\|\\pi(a)\\|>1/2\\ \\text{or}\\ \\|\\pi(b)\\|>1/2\\bigr)\n \\quad\\Longrightarrow\\quad\\|\\pi(c_0)\\|=1.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-merger"
+  },
+  {
+   "claim_id": "claim-uniform-exactness-gap",
+   "exact_statement": "There is a constant $\\gamma>0$ such that no unital exact $C^*$-algebra $B$ contains a contraction $v$ with the following property: for every integer $d\\geq1$ and every contraction $D\\in M_d(\\mathbb C)$, there are a unital representation $\\pi:B\\to B(H_\\pi)$ and an isometry $J:\\mathbb C^d\\to H_\\pi$ satisfying $$\\label{eq:forbidden-models}\n \\|\\pi(v)J-JD\\|<\\gamma,\n \\qquad\n \\|\\pi(v)^*J-JD^*\\|<\\gamma.$$ The representation and the isometry are allowed to depend on $d$ and $D$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-uniform-gap"
+  },
+  {
+   "claim_id": "claim-universal-contraction-nonexactness",
+   "exact_statement": "The universal contraction algebra $\\mathcal U$ is not exact.",
+   "kind": "counterexample",
+   "statement_anchor": "stmt-lem-nonexact-universal"
+  },
+  {
+   "claim_id": "claim-polynomial-finite-matrix-tests",
+   "exact_statement": "For every integer $r\\geq1$ and every $Z\\in M_r(\\mathcal U)$ whose entries are $*$-polynomials in $u,u^*$, $$\\label{eq:finite-matrix-tests}\n \\|Z\\|_{M_r(\\mathcal U)}\n =\\sup_{d\\geq1,\\ D\\in M_d(\\mathbb C),\\ \\|D\\|\\leq1}\\|Z(D,D^*)\\|.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-finite-matrix-tests"
+  },
+  {
+   "claim_id": "claim-all-amplification-polynomial-bound",
+   "exact_statement": "Let $E\\subset\\mathcal U$ be a finite-dimensional linear space consisting of $*$-polynomials in $u,u^*$. There is a finite constant $C_E\\geq0$ with the following property. Suppose $v$ is a contraction in a unital $C^*$-algebra $B$, and fix one number $\\theta>0$. Assume that for every integer $d\\geq1$ and every contraction $D\\in M_d(\\mathbb C)$, there are a unital representation $\\pi:B\\to B(H_\\pi)$ and an isometry $J:\\mathbb C^d\\to H_\\pi$ satisfying the two inequalities in <a href=\"#eq:forbidden-models\" data-reference-type=\"eqref\" data-reference=\"eq:forbidden-models\">[eq:forbidden-models]</a> with $\\theta$ in place of $\\gamma$. For the homomorphism $\\Phi:\\mathcal U\\to B$ with $\\Phi(u)=v$, one then has $$\\label{eq:all-amplification-bound}\n \\|\\Phi^{(r)}(Z)\\|\\geq(1-C_E\\theta)\\|Z\\|\n \\qquad (r\\geq1,\\ Z\\in M_r(E)).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-uniform-matrix-bound"
+  },
+  {
+   "claim_id": "claim-fixed-amplification-ideal-comparison",
+   "exact_statement": "Let $C$ be a $C^*$-algebra, let $h\\in C_+$, and let $n\\geq1$ be an integer such that $h^{\\oplus n}$ is properly infinite. For every $x\\in\\operatorname{Id}(h)_+$ and every integer $k\\geq1$, $$x^{\\oplus k}\\precsim h^{\\oplus n}.\n \\label{eq:ideal-multiplicity}$$ In particular, if $C$ satisfies <span class=\"upright\">(F$_n$)</span>, this conclusion holds for every $h\\in C_+$ with the same $n$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-ideal-comparison"
+  },
+  {
+   "claim_id": "claim-exact-cut-implementation",
+   "exact_statement": "Let $C$ be a $C^*$-algebra, let $m,s\\geq1$, and suppose that $x\\in M_m(C)_+$ and $h\\in M_s(C)_+$ satisfy $x\\precsim h$. If $f\\colon[0,\\|x\\|]\\to[0,\\infty)$ is continuous and vanishes on a neighborhood of zero, then there is $R\\in M_{s,m}(C)$ such that $$R^*R=f(x),\\qquad RR^*\\in\\operatorname{Her}(h),\\qquad\n \\|R\\|^2=\\|f(x)\\|.\n \\label{eq:exact-cut}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-cut-implementation"
+  },
+  {
+   "claim_id": "claim-exact-matrix-unitization",
+   "exact_statement": "If $A$ is an exact $C^*$-algebra and $n\\ge1$, then $\\widetilde{M_n(A)}$ is exact.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-exact-matrix-unitization"
+  },
+  {
+   "claim_id": "claim-uniform-primitive-perturbation",
+   "exact_statement": "Let $C$ be an exact $C^*$-algebra satisfying <span class=\"upright\">(F$_n$)</span> for one fixed integer $n\\geq1$. Let $p,q\\in C$ be contractions and let $h,k,c\\in C_+$ satisfy $$p^*ph=h,\\qquad qq^*k=k,\\qquad\n c^{\\oplus n}\\precsim h,\\qquad c^{\\oplus n}\\precsim k.\n \\label{eq:perturbation-hypotheses}$$ For every $T\\in C$ and every $\\eta,\\alpha>0$, there is a contraction $y\\in C$ such that $$\\|(T+\\eta pyq)_P\\|\\geq\\sigma\\eta\n \\quad\\text{for every }P\\in\\operatorname{Prim}(C)\\text{ with }\\|c_P\\|\\geq\\alpha.\n \\label{eq:perturbation-conclusion}$$ If $h,k$ belong to a hereditary subalgebra $\\mathcal D\\subset C$, then $y$ may be chosen in $\\mathcal D$. If, in addition or independently, $p,q$ are positive and $pq=0$, then $y$ may be chosen selfadjoint. Both conclusions may be imposed simultaneously. The constant $\\sigma$ is independent of all the data in the Proposition, including $n$ and the norms of $T,h,k,c$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-perturbation"
+  },
+  {
+   "claim_id": "claim-local-orthogonal-common-elements",
+   "exact_statement": "Let $C$ be an exact $C^*$-algebra satisfying <span class=\"upright\">(F$_n$)</span> for one fixed integer $n\\geq1$, and let $P\\in\\operatorname{Prim}(C)$.*\n\n1.  *If $h\\in C_+$ and $h_P\\ne0$, then for every integer $m\\ge1$ there are $m$ pairwise orthogonal elements of $\\operatorname{Her}(h)_+$, each nonzero at $P$.*\n\n2.  *If $h,k\\in C_+$ are nonzero at $P$, there is $c\\in C_+$ such that $c_P\\ne0$ and $$c^{\\oplus n}\\precsim h,\\qquad c^{\\oplus n}\\precsim k.$$ If $h,k$ belong to a hereditary subalgebra $\\mathcal D$, $c$ can also be chosen in $\\mathcal D$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-local-common-element"
+  },
+  {
+   "claim_id": "claim-irreducible-norm-attainment",
+   "exact_statement": "If $B$ is a $C^*$-algebra and $0\\ne b\\in B_+$, there is an irreducible representation $\\pi$ of $B$ with $\\|\\pi(b)\\|=\\|b\\|$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-purestateattainment"
+  },
+  {
+   "claim_id": "claim-quasicompact-primitive-norm-slices",
+   "exact_statement": "Let $C$ be a $C^*$-algebra. For $c\\in C_+$ and $\\alpha>0$, the set $$\\Omega(c,\\alpha)=\\{P\\in\\operatorname{Prim}(C):\\|c_P\\|>\\alpha\\}$$ is open, and $$K(c,\\alpha)=\\{P\\in\\operatorname{Prim}(C):\\|c_P\\|\\ge\\alpha\\}$$ is quasi-compact. No Hausdorff hypothesis is required.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-primitive-compactness"
+  },
+  {
+   "claim_id": "claim-finite-primitive-coupling",
+   "exact_statement": "Let $C$ be an exact $C^*$-algebra satisfying <span class=\"upright\">(F$_n$)</span> for one fixed integer $n\\geq1$. Let $K_0\\subset\\operatorname{Prim}(C)$ be quasi-compact and let $\\mathcal D\\subset C$ be hereditary. Suppose that at each $P\\in K_0$ one can choose positive contractions $p,q\\in\\mathcal D$ and $h,k\\in\\mathcal D_+$ satisfying $$pq=0,\\qquad ph=h,\\qquad qk=k,\\qquad h_P\\ne0,\\quad k_P\\ne0.$$ There are finitely many such choices $(p_i,q_i,h_i,k_i)$ and one selfadjoint $U\\in\\mathcal D$ such that, at every $P\\in K_0$, $$(p_iUq_i)_P\\ne0$$ for at least one selected index $i$. Any support conditions in the original choices are retained in the selected ones.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-finite-coupling"
+  },
+  {
+   "claim_id": "claim-quasicompact-square-zero-localization",
+   "exact_statement": "Let $C$ be an exact $C^*$-algebra satisfying <span class=\"upright\">(F$_n$)</span> for one fixed integer $n\\geq1$. Let $K_0\\subset\\operatorname{Prim}(C)$ be quasi-compact, and let $\\mathcal D\\subset C$ be a hereditary subalgebra nonzero at every point of $K_0$. There exists $x\\in\\mathcal D$ such that $$x^2=0,\\qquad x_P\\ne0\\quad(P\\in K_0).$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-square-zero"
+  },
+  {
+   "claim_id": "claim-whole-ideal-comparison",
+   "exact_statement": "Let $C$ be a $C^*$-algebra satisfying <span class=\"upright\">(P)</span>. For every $h\\in C_+$, $c\\in\\operatorname{Id}(h)_+$, and integer $k\\ge1$, $$c^{\\oplus k}\\precsim h.$$ If $C$ is exact, Proposition <a href=\"#prop:perturbation\" data-reference-type=\"ref\" data-reference=\"prop:perturbation\">31</a> may be applied with multiplicity $n=1$, with the same constant $\\sigma$ and all its stated options.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-ideal-comparison"
+  },
+  {
+   "claim_id": "claim-fixed-floor-positive-separation",
+   "exact_statement": "Let $C$ be an exact $C^*$-algebra satisfying $\\textup{(P)}$, and let $0<\\sigma<1$ be the constant in Proposition <a href=\"#prop:perturbation\" data-reference-type=\"ref\" data-reference=\"prop:perturbation\">31</a> with $n=1$. Let $a,b\\in C_+$ be contractions, and let $0<r<1$. Set $$m=\\frac{r\\sigma^2}{1024}.$$ For every $0<\\ell<1/10$ there are positives $Q_a\\in\\operatorname{Her}(a)$ and $Q_b\\in\\operatorname{Her}(b)$ such that $$\\begin{aligned}\n \\|(Q_a)_P\\|&\\ge m &&\\text{if }\\|a_P\\|\\ge r,\\notag\\\\\n \\|(Q_b)_P\\|&\\ge m &&\\text{if }\\|b_P\\|\\ge r,\n \\label{eq:separation-quotient-bounds}\\\\\n \\|Q_aQ_b\\|&\\le20\\sqrt\\ell.\n \\label{eq:separation-product-bound}\n\\end{aligned}$$ Here and below $P$ ranges over $\\operatorname{Prim}(C)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-separating-positives"
+  },
+  {
+   "claim_id": "claim-spectral-floor-bounded-implementation",
+   "exact_statement": "Let $C$ be a $C^*$-algebra, let $Q,c\\in C_+$ with $\\|c\\|\\le1$, and let $m>0$. If $c\\precsim(Q^2-m^2/4)_+$, then for each $0<\\delta<1$ there is $x\\in C$ such that $$\\label{eq:separation-bounded-implementation}\n \\|(Qx)^*(Qx)-c\\|<\\delta,\\qquad\n \\|Qx\\|\\le2,\\qquad \\|x\\|\\le\\frac4m.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-bounded-implementation"
+  },
+  {
+   "claim_id": "claim-direct-exact-strong-infiniteness",
+   "exact_statement": "Let $C$ be an exact $C^*$-algebra satisfying $\\textup{(P)}$. For every $a,b\\in C_+$ and every $\\varepsilon>0$, there are $s,t\\in C$ such that $$\\|s^*a^2s-a^2\\|<\\varepsilon,\\qquad\n \\|t^*b^2t-b^2\\|<\\varepsilon,\\qquad\n \\|s^*abt\\|<\\varepsilon.$$ Consequently $C$ is strongly purely infinite.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-direct-strong-infiniteness"
+  }
+ ],
+ "paper": "papers/EN-116-000-0000-2-2026-PR-T4-UK-EX-M3-B-TO-H-0620_PM-303.1_Weak_pure_infiniteness_and_O_infinity_absorption.md",
+ "purpose": "Weak pure infiniteness and O-infinity absorption",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "32134072cdfd93ab05f1b44319e728bacc8ac49899bd728de93728eb4d5a072c",
+   "pm.domains.v2": "c83a4bf5eac44653b43f41e610cb26bcfb9e0a4854cb6c4ca6ef9c8bf0e628c6",
+   "pm.edges.v2": "a7e533c54ec47335ee7d8e948ccfcf5ee01835bac76f23d0bc792ee59e7e2651",
+   "pm.extraction.v2": "d8a9e38b93dbf792e0014fcea8d698bc58975d0775c1ed236c78d71a30bc2a37",
+   "pm.formal.v2": "4e71fe290938d0a49d0e2d741ce11e158c7dd685b391a41a857d45f931f2911a",
+   "pm.limits.v2": "b36eec0bf613fa218b75f23cc5f484a0ac361177d3b86a60f2b3bddbe2d31adb",
+   "pm.node.v2": "6cafa95cd8595c3e627d21aac91e6874955c289a570d0e77ed095b344da9a939",
+   "pm.objects.v2": "a456a1f61bb65506a4cf40f139321dc38dcfefb9587150a397b0f5482c445053",
+   "pm.provenance.v2": "7c7e90192f2d8ab7dcf8dff2d091e0b97984eeda56082aed838650d1961064f8",
+   "pm.quantities.v2": "81e6dfd4c556f8508a89a5660e54bbe808d66b497df7d5b3247086ce2a588ae8",
+   "pm.reading.v2": "7e731f3ed1532cbb14bf42cdb8f1faecc7a4e6fed1e170c459158f1de9986fe0",
+   "pm.roadmap.v2": "a9daf12bfdaa937935a24bb021497182f161c7b44c25c8ace79caeed12602970",
+   "pm.search.v1": "411760fbc5a199c83462dc8a71e026aa78627d220b4421d57806e9078b2166e1",
+   "pm.triptych.v2": "53ecedfb4388631f611f6f784c3db200cfecd6d405922ecceae8c1c96a8a3d10"
+  },
+  "canonical_sha256": "764460ae55d6844380c55d4ce8f6401deab3d6bec35c986f8e1030abe37f7031",
+  "paper_sha256": "e00ed29a708dd6ef43b226ab3061a8807481cd3562a9e7b57db416201092ac24",
+  "repaired_body_sha256": "e8bbeeee37ef3d5e7a49d14a6c4c018268756a93dcf899e0a409e51a6f427594"
+ },
+ "status": "ACTIVE",
+ "subject_id": 16,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "3ccd66dfb12e63c920adbba6dfedc2e4b3fea62366d66219b924d63a9639771b",
+   "receipt_sha256": "6d0a966f84a00631c7ee7abe4f260464b649ffc99ac136c598fe66ba6e573280",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Weak pure infiniteness and O-infinity absorption"
+}

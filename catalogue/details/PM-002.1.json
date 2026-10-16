@@ -1,0 +1,1016 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 879614,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 239670
+ },
+ "coordinate": "EN-101-000-0022-2-2026-PR-T4-UK-EX-M1-C-ML-H-0003",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "computational arithmetic geometry: validating the BSD quotient",
+   "strength": "weak",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "Let $E/\\mathbb Q$ be an elliptic curve and let $q$ be any prime.",
+     "quote_sha256": "ee82ac4cf6cb7eb974c4d2c5624f72111357c2cad2763ca96896448d41da8116"
+    }
+   ],
+   "query": "curves with Selmer corank at least two",
+   "reason": "The low-corank hypothesis is essential and is not replaced by a Mordell-Weil rank hypothesis."
+  }
+ ],
+ "family": "PM-002",
+ "id": "PM-002.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-bsd",
+    "statement": "Let $E/\\mathbb Q$ be an elliptic curve and let $q$ be any prime."
+   },
+   {
+    "anchor": "stmt-classical-low-corank",
+    "claim_id": "claim-low-corank-converse",
+    "statement": "For every elliptic curve $A/\\mathbb Q$, every prime $q$, and $u\\in\\{0,1\\}$, the equality $s_q(A)=u$ implies $$a(A)=r(A)=u,\\qquad \\#\\mathop{\\mathrm{Sha}}(A/\\mathbb Q)<\\infty.$$"
+   },
+   {
+    "anchor": "stmt-classical-two-primary",
+    "claim_id": "claim-two-primary",
+    "statement": "For every elliptic curve $A/\\mathbb Q$ with $s_2(A)\\leq1$, the quotient $Q_A$ of <a href=\"#eq:normalized-quotient\" data-reference-type=\"eqref\" data-reference=\"eq:normalized-quotient\">[eq:normalized-quotient]</a>, with the total real period and the full-lattice regulator of <a href=\"#eq:height-convention\" data-reference-type=\"eqref\" data-reference=\"eq:height-convention\">[eq:height-convention]</a>, is a positive rational number, and $$v_2(Q_A)=v_2(\\#\\mathop{\\mathrm{Sha}}(A/\\mathbb Q)).$$"
+   },
+   {
+    "anchor": "stmt-classical-analytic-low-rank",
+    "claim_id": "claim-analytic-low-rank",
+    "statement": "If an elliptic curve $A/\\mathbb Q$ has $a(A)\\leq1$, then $r(A)=a(A)$ and the entire group $\\mathop{\\mathrm{Sha}}(A/\\mathbb Q)$ is finite."
+   },
+   {
+    "anchor": "stmt-classical-isogeny",
+    "claim_id": "claim-isogeny-invariance",
+    "statement": "Suppose $A$ and $A'$ are isogenous elliptic curves over $\\mathbb Q$ of analytic rank at most one."
+   },
+   {
+    "anchor": "stmt-classical-twist-density",
+    "claim_id": "claim-twist-density",
+    "statement": "For every elliptic curve $A/\\mathbb Q$, among nonzero squarefree integers $d$ ordered by $|d|$, the twists $A^d$ of analytic rank zero and one each have density $1/2$."
+   },
+   {
+    "anchor": "stmt-classical-auxiliary-fields",
+    "claim_id": "claim-auxiliary-fields",
+    "statement": "Let $E/\\mathbb Q$ have conductor $N$ and analytic rank $r\\in\\{0,1\\}$."
+   },
+   {
+    "anchor": "stmt-classical-gross-zagier",
+    "claim_id": "claim-gross-zagier-split",
+    "statement": "With the preceding conventions, $D$ odd fundamental, $(D,N)=1$, all level primes split, and $\\mathcal O_K^\\times=\\{\\pm1\\}$, one has $$\\begin{aligned}\n \\frac{\\sqrt{d_K}}{8\\pi^2(f,f)_N}L'(f/K,1)\n       &=2H_{\\rm abs,f}(P_X),\\label{eq:classical-gz}\\\\\n L'(E/K,1)&=\\frac{A_E}{\\sqrt{d_K}\\,c_E^2}\\cdot\n                        2H_{\\rm abs}(P_K).\n                                      \\label{eq:classical-gz-elliptic}\n\\end{aligned}$$ In the simple-zero case $P_K$ is nontorsion."
+   },
+   {
+    "anchor": "stmt-classical-discrepancy-identity",
+    "claim_id": "claim-discrepancy-identity",
+    "statement": "Assume $L(E/K,s)$ has a simple zero under the hypotheses of Theorem <a href=\"#classical:gross-zagier\" data-reference-type=\"ref\" data-reference=\"classical:gross-zagier\">8</a>."
+   },
+   {
+    "anchor": "stmt-models-finite-models",
+    "claim_id": "claim-finite-models",
+    "statement": "Consider continuous-cochain diagrams over finite local Artin rings of $p$-power characteristic, with finite free coefficient modules and compatible coefficient lifts."
+   },
+   {
+    "anchor": "stmt-models-orthogonality",
+    "claim_id": "claim-exact-orthogonality",
+    "statement": "Let paired perfect local maps $U_v\\to L_v$ and $U'_v\\to L'_v$ have a specified nullhomotopy of their cup restriction."
+   },
+   {
+    "anchor": "stmt-models-evaluations",
+    "claim_id": "claim-evaluation-detection",
+    "statement": "Let $G_R(M)$ be an unrestricted limiting global model as in Lemma <a href=\"#models:finite-models\" data-reference-type=\"ref\" data-reference=\"models:finite-models\">10</a>."
+   },
+   {
+    "anchor": "stmt-models-line-switch",
+    "claim_id": "claim-line-switch",
+    "statement": "Over a DVR $A$ with residue field $k$, suppose local finite and transverse coordinates are split free lines in degree one, with perfect mixed pairing."
+   },
+   {
+    "anchor": "stmt-models-square-switch",
+    "claim_id": "claim-square-switch",
+    "statement": "In the preceding local diagram over a DVR $A$ with residue field $k$, let $F,S$ be split free planes."
+   },
+   {
+    "anchor": "stmt-models-strict-finite",
+    "claim_id": "claim-strict-finite-volume",
+    "statement": "At a split pair $w,\\bar w$, let $C_*$ be strict at $w$ and full at $\\bar w$, and let $C_F$ impose exactly complementary finite conditions $U_w,U_{\\bar w}$."
+   },
+   {
+    "anchor": "stmt-models-haar",
+    "claim_id": "claim-haar-factors",
+    "statement": "For the minimal differential, write $P_\\ell(1)=L_\\ell(E,1)^{-1}$, $\\tau_\\ell=\\mathop{\\mathrm{length}}E(\\mathbb Q_\\ell)[p^\\infty]$, and $\\log_{\\omega_E}E(\\mathbb Q_p)=p^l\\mathbb Z_p$."
+   },
+   {
+    "anchor": "stmt-models-kummer-volume",
+    "claim_id": "claim-kummer-volume",
+    "statement": "Let $K$ be imaginary quadratic, suppose $E(K)$ has rank one and $\\mathop{\\mathrm{Sha}}(E/K)$ is finite, and let $C_{\\rm Kum}$ impose the full integral Kummer conditions."
+   },
+   {
+    "anchor": "stmt-models-series-division",
+    "claim_id": "claim-series-division",
+    "statement": "Let $\\mathcal O$ be one of these complete integer DVRs and let $L,B\\in\\mathcal O[[t,\\mathbf u]]$."
+   },
+   {
+    "anchor": "stmt-models-poles",
+    "claim_id": "claim-persistence-of-poles",
+    "statement": "Suppose integral stage numerators and denominators in a genuine variable converge coefficientwise along the ultrafilter, with nonzero limiting denominator."
+   },
+   {
+    "anchor": "stmt-models-field-points",
+    "claim_id": "claim-field-points",
+    "statement": "For a characteristic-zero height-one divisor in a bounded $\\mathbb Z_p$-power-series ring, finitely many functions nonzero on that divisor can be kept nonzero at a point whose coordinates lie in the open unit disk of a finite extension of $\\mathbb Q_p$."
+   },
+   {
+    "anchor": "stmt-vertical-auxiliary-tuples",
+    "claim_id": "claim-auxiliary-tame-tuples",
+    "statement": "For any finite list of fixed split support and test primes, the tame tuple may be chosen to have the following properties.*\n\n1."
+   },
+   {
+    "anchor": "stmt-vertical-tests",
+    "claim_id": "claim-residual-concentration",
+    "statement": "After adjoining finitely many more tame variables, the separate rational and imaginary tuples satisfy $$\\label{eq:source-1}\\tag{1}\n \\begin{array}{ll}\n \\mathrm{(a)}&G\\otimes_RR_{(p)}\\text{ is a free line in degree one};\\\\[2pt]\n \\mathrm{(b)}&L_w,L'_w\\not\\equiv0\\pmod{(p,t)}\n                  \\quad\\text{for both }w\\mid p.\n \\end{array}$$"
+   },
+   {
+    "anchor": "stmt-vertical-scalar-localization",
+    "claim_id": "claim-scalar-localization",
+    "statement": "For the constant roots coefficient, global degree-two localization is injective on these residual tests."
+   },
+   {
+    "anchor": "stmt-vertical-parity",
+    "claim_id": "claim-conjugate-parity",
+    "statement": "For an absolutely simple residual elliptic plane over $K$, each one-sided strict space above has even dimension."
+   },
+   {
+    "anchor": "stmt-vertical-lift-test",
+    "claim_id": "claim-lift-test",
+    "statement": "Let $x$ be an old strict class and $d$ a class in its paired opposite space."
+   },
+   {
+    "anchor": "stmt-vertical-obstruction-span",
+    "claim_id": "claim-obstruction-span",
+    "statement": "For the residual tests above, finitely many new tame directions have necessary lift matrices whose linear span contains every $s\\times(s+a)$ matrix over $k_r$ in the rational problem, every $s\\times s$ matrix for a reducible constituent in the imaginary problem, and every alternating $s\\times s$ matrix for an absolutely simple plane in the imaginary problem."
+   },
+   {
+    "anchor": "stmt-vertical-enlargement",
+    "claim_id": "claim-enlargement-persistence",
+    "statement": "Property <a href=\"#eq:source-1\" data-reference-type=\"eqref\" data-reference=\"eq:source-1\">[eq:source-1]</a>(b) persists when further tame primes are adjoined, provided each has a nonzero Frobenius exponent in the preceding artificial variables."
+   },
+   {
+    "anchor": "stmt-vertical-horizontal-directions",
+    "claim_id": "claim-horizontal-directions",
+    "statement": "Fix finitely many characteristic-zero height-one field tests of a tuple satisfying <a href=\"#eq:source-1\" data-reference-type=\"eqref\" data-reference=\"eq:source-1\">[eq:source-1]</a>(b), with at least two old artificial variables."
+   },
+   {
+    "anchor": "stmt-single-relative-lattice",
+    "claim_id": "claim-relative-lattice",
+    "statement": "Relative pullback and Poincare duality give an integral Galois map $$H^1(\\overline{Y_1(L_0)},\\mathbb Z_p)(1)\\longrightarrow T.$$"
+   },
+   {
+    "anchor": "stmt-single-siegel-traces",
+    "claim_id": "claim-siegel-traces",
+    "statement": "The classes just constructed are integral away from $pn_2\\infty$ and compatible with division traces and with corestriction as the $p$-part of $M$ grows with $A,c,d,\\xi$ fixed."
+   },
+   {
+    "anchor": "stmt-single-kato-calibration",
+    "claim_id": "claim-kato-calibration",
+    "statement": "In square order, before projection to the elliptic curve, the dual exponential of <a href=\"#single:K1\" data-reference-type=\"eqref\" data-reference=\"single:K1\">[single:K1]</a> is $$\\label{single:full-differential}\n \\pm M^{-2}(c^2E_P-cE_{cP})(d^2E_Q-dE_{dQ})\\,\\frac{dq}{q}.$$"
+   },
+   {
+    "anchor": "stmt-single-period-law",
+    "claim_id": "claim-period-law",
+    "statement": "In square or unfilled rectangular order, for every finite even character $\\nu$ of conductor dividing $M$, the coordinate of $\\exp^*(z_\\nu)$ in $\\omega$, in compatible field realizations, is $$\\tag{2}\\label{eq:source-2}\n \\pm\\Delta_\\nu\\frac{L^{(M)}(f,\\nu,1)}{\\Omega_0}\\delta_\\xi(a),\\qquad\n \\Delta_\\nu=(c^2-c\\nu(c)^{-1})(d^2-d\\nu(d)^{-1}).$$"
+   },
+   {
+    "anchor": "stmt-single-integral",
+    "claim_id": "claim-integral-coordinate",
+    "statement": "The generic cohomology of $G$ is a line in degree one, and $z$ is nonzero on that line."
+   },
+   {
+    "anchor": "stmt-single-line",
+    "claim_id": "claim-line-comparison",
+    "statement": "In any of these three settings, suppose that the chosen square or rectangular system class $z_{\\rm sys}$ is generically nonzero."
+   },
+   {
+    "anchor": "stmt-single-logarithm",
+    "claim_id": "claim-log-comparison",
+    "statement": "If $\\mathop{\\mathrm{ord}}_{s=1}L(E,s)=1$ and $P\\in E(\\mathbb Q)$ is nontorsion, then $$\\frac{\\log_\\omega z_b}{(\\log_\\omega P)^2}\n       =\\pm d_0\\frac{L'(E,1)}{\\Omega_0H(P)}.\n       \\tag{5}\\label{eq:source-5}$$ The right-hand quotient is rational, and is interpreted in $\\mathbb Q_p$."
+   },
+   {
+    "anchor": "stmt-single-height-direction",
+    "claim_id": "claim-height-direction",
+    "statement": "The horizontal sequence can be chosen to define bilinear tame heights whose rational limits satisfy $$h_\\lambda^{K_b}(P_1,P_2)=2h_\\lambda^\\mathbb Q(P_1,P_2)\n \\quad(P_1,P_2\\in E(\\mathbb Q)),\\qquad\n h_\\lambda^\\mathbb Q(P,P)\\ne0.$$"
+   },
+   {
+    "anchor": "stmt-single-cup",
+    "claim_id": "claim-cup-comparison",
+    "statement": "For the sequence of Lemma <a href=\"#single:height-direction\" data-reference-type=\"ref\" data-reference=\"single:height-direction\">37</a>, $$Z'\\log_\\omega P\n  =\\pm(2-a_*)\\frac{\\log_\\omega z_b}{\\log_\\omega P}\n                        h_\\lambda^\\mathbb Q(P,P).\n \\tag{6}\\label{eq:source-6}$$"
+   },
+   {
+    "anchor": "stmt-single-spectral",
+    "claim_id": "claim-spectral-height",
+    "statement": "For the horizontal sequence just constructed, $$C_0\\Omega_0L(f\\otimes\\varepsilon,1)\\frac{Z'}{d_0}\n       =\\pm(2-a_*)\\frac{h_\\lambda^{K_b}(Q_X,Q_X)}{\\delta_\\phi}.\n       \\tag{7}\\label{eq:source-7}$$"
+   },
+   {
+    "anchor": "stmt-single-center",
+    "claim_id": "claim-central-coordinate",
+    "statement": "The element $U$ of Proposition <a href=\"#single:integral\" data-reference-type=\"ref\" data-reference=\"single:integral\">34</a> satisfies $$X(E)=v_p(U(0))\\ge0.\n                         \\tag{8}\\label{eq:source-8}$$ This holds at every odd coefficient prime, for all reduction types and all residual representations of the non-CM curve."
+   },
+   {
+    "anchor": "stmt-pair-primitive",
+    "claim_id": "claim-integral-primitive",
+    "statement": "On the canonical ordinary locus define $$f^{[p]}=(1-a_pV_p+p\\epsilon_pV_p^2)f,\\qquad\n F_0=\\lim_{j\\to\\infty}d_{\\rm mod}^{(p-1)p^j-1}f^{[p]},\\qquad\n F=\\prod_{q\\in S^\\circ}P_q(V_q)F_0.$$"
+   },
+   {
+    "anchor": "stmt-pair-interpolation",
+    "claim_id": "claim-pair-interpolation",
+    "statement": "Let $\\theta$ be a sufficiently high finite character of $\\Gamma$, and let $\\theta_l=\\theta\\circ\\eta_\\Gamma$ have primitive conductor $p^m$."
+   },
+   {
+    "anchor": "stmt-pair-trace",
+    "claim_id": "claim-tame-removal",
+    "statement": "Choose each new base disk by a descending isogeny from the preceding conductor."
+   },
+   {
+    "anchor": "stmt-pair-descent",
+    "claim_id": "claim-ideal-descent",
+    "statement": "The principal ideals generated by $b_w^+$, $b_w^-$, $b_w^0$, and $B_w$ descend to $R$."
+   },
+   {
+    "anchor": "stmt-pair-vertical-primitivity",
+    "claim_id": "claim-vertical-primitivity",
+    "statement": "For each of the tuples under consideration and either $p$-adic place, $$p\\nmid B_w.\n \\tag{14}\\label{eq:source-14}$$"
+   },
+   {
+    "anchor": "stmt-pair-finite-divisibility",
+    "claim_id": "claim-finite-divisibility",
+    "statement": "For every sufficiently high finite $\\theta$, $$B_w(\\theta,\\mathbf u)\\in\n         L_w(\\theta,\\mathbf u)A_\\theta'.\n \\tag{15}\\label{eq:source-15}$$ With the same global character variable, the two nonzero quotients for $w$ and $\\bar w$ are associates in $A_\\theta'$."
+   },
+   {
+    "anchor": "stmt-pair-local-lines",
+    "claim_id": "claim-local-kummer-lines",
+    "statement": "At each $p$-adic place and after fixing $\\theta$ as above, degree-one local cohomology splits over $A_\\theta$ into a free Kummer line and its free complementary line."
+   },
+   {
+    "anchor": "stmt-pair-derivatives",
+    "claim_id": "claim-inert-derivatives",
+    "statement": "There are fresh inert good prime sequences $\\ell$, with $\\ell\\to-1$ and Tate Frobenius tending to $J=\\rho_T(\\tau)$ for complex conjugation $\\tau$, for which the limiting local degree-one cohomology splits into finite and transverse planes."
+   },
+   {
+    "anchor": "stmt-pair-integral-quotient",
+    "claim_id": "claim-integral-quotient",
+    "statement": "Using the descended analytic ideals, the fraction $$U_w=B_w/L_w$$ is represented by an integral series, and $p\\nmid U_w$."
+   },
+   {
+    "anchor": "stmt-theta-auxiliary-data",
+    "claim_id": "claim-theta-auxiliary-data",
+    "statement": "One may choose two sets of fixed finite theta data with the following properties."
+   },
+   {
+    "anchor": "stmt-theta-test-point",
+    "claim_id": "claim-theta-test-point",
+    "statement": "Let $\\mathfrak p$ be a horizontal divisor on which $b_w^0$ vanishes."
+   },
+   {
+    "anchor": "stmt-theta-canonical-levels",
+    "claim_id": "claim-canonical-levels",
+    "statement": "At each finite depth $s$, the ordinary branch of the normalization in level $J(s)$ on which the rank-three flag is multiplicative adds only finite etale character-group flags and frames."
+   },
+   {
+    "anchor": "stmt-theta-p-operators",
+    "claim_id": "claim-p-operators",
+    "statement": "For every $i,m$, the unnormalized right-coset operators $U_j=[J(s_i)\\operatorname{diag}(1_j,p^{-1}1_{4-j})J(s_i)]$, $j=2,3$, act on <a href=\"#eq:source-18\" data-reference-type=\"eqref\" data-reference=\"eq:source-18\">[eq:source-18]</a> by $p^2$."
+   },
+   {
+    "anchor": "stmt-theta-cut-moments",
+    "claim_id": "claim-cut-moments",
+    "statement": "Fix the integral position lattices, additive characters, Igusa frames, and the finite tests away from $p$ used for a finite product of unary theta functions."
+   },
+   {
+    "anchor": "stmt-theta-integral-family",
+    "claim_id": "claim-integral-theta-family",
+    "statement": "There is a fixed integer $c\\geq0$ such that $p^c\\Theta_{i,m}$ is an integral ordinary section on the canonical branch, coefficientwise in $\\mathcal O[G_i]$."
+   },
+   {
+    "anchor": "stmt-theta-fourier-measure",
+    "claim_id": "claim-fourier-measure",
+    "statement": "Choose connected and etale Tate coordinates $e_p,f_p$ at a split ordinary CM point."
+   },
+   {
+    "anchor": "stmt-theta-toric-limit",
+    "claim_id": "claim-toric-limit",
+    "statement": "At every fixed stage $i$, the periods $P_{j,i}(m)$ have coefficientwise limits as positive $m$ tends to zero on the chosen $p$-adic branch and tends to infinity ordinarily."
+   },
+   {
+    "anchor": "stmt-theta-boundary-small",
+    "claim_id": "claim-boundary-small",
+    "statement": "Assume $b_w^0(z_0)=0$, and choose the auxiliary tests and local parameters of Lemma <a href=\"#theta:test-point\" data-reference-type=\"ref\" data-reference=\"theta:test-point\">51</a>."
+   },
+   {
+    "anchor": "stmt-extraction-theta-implication",
+    "claim_id": "claim-theta-implication",
+    "statement": "Let $\\mathfrak p$ be a horizontal height-one prime of the deformation ring, with the auxiliary tuple conditions of Section <a href=\"#sec:theta\" data-reference-type=\"ref\" data-reference=\"sec:theta\">7</a>."
+   },
+   {
+    "anchor": "stmt-extraction-content",
+    "claim_id": "claim-theta-content",
+    "statement": "There are controlled theta sections at $z_0$, of weights $m_i$ as above and depths $s_i$, whose constant terms tend uniformly to zero and whose ordinary positive Fourier–Jacobi content has valuation bounded above by a constant independent of $i$."
+   },
+   {
+    "anchor": "stmt-extraction-cusp",
+    "claim_id": "claim-cusp-lift",
+    "statement": "After one fixed reduction of precision, the sections in Lemma <a href=\"#extraction:content\" data-reference-type=\"ref\" data-reference=\"extraction:content\">60</a> give finite integral operator orders $\\mathbb T_i^0$ on classical cusp spaces and maps $$\\lambda_i^0:\\mathbb T_i^0\\longrightarrow\n                 \\mathcal O_k/(p^{M_i}),\\qquad M_i\\longrightarrow\\infty.$$"
+   },
+   {
+    "anchor": "stmt-extraction-binary",
+    "claim_id": "claim-binary-separation",
+    "statement": "On an actual system with $\\Delta_v\\ne0$, the generalized $1$-primary projection $P_v^{\\mathrm{bin}}$ of $\\rho_\\pi(\\iota_v)$ is defined and satisfies $$(\\rho_\\pi(\\iota)-1)P_v^{\\mathrm{bin}}=0\n                           \\qquad(\\iota\\in I_v).$$"
+   },
+   {
+    "anchor": "stmt-extraction-cyclotomic",
+    "claim_id": "claim-cyclotomic-corner",
+    "statement": "The corner modules satisfy $D_{xy}=D_{xf}D_{fy}$."
+   },
+   {
+    "anchor": "stmt-extraction-no-line",
+    "claim_id": "claim-no-stable-line",
+    "statement": "The image of $D_{fy}$ is nonzero in every characteristic-zero field evaluation of the ambient ring."
+   },
+   {
+    "anchor": "stmt-unit-quotient-regularity",
+    "claim_id": "claim-quotient-regularity",
+    "statement": "At a horizontal height-one prime the primitive one-sided complexes are perfect of amplitude $[1,2]$ and Euler characteristic zero."
+   },
+   {
+    "anchor": "stmt-unit-association",
+    "claim_id": "claim-quotient-association",
+    "statement": "For every auxiliary tuple satisfying the preceding requirements, $$(U_w)=(U_{\\bar w})\n                         \\tag{17}\\label{eq:source-17}$$ in $R$."
+   },
+   {
+    "anchor": "stmt-unit-augmented-alternating",
+    "claim_id": "claim-augmented-alternating",
+    "statement": "Let $k$ have characteristic zero and let $s\\geq1$."
+   },
+   {
+    "anchor": "stmt-unit-tangent-minors",
+    "claim_id": "claim-tangent-minors",
+    "statement": "Let $(A,\\mathfrak m,k)$ be a regular local ring with $\\operatorname{char}k=0$."
+   },
+   {
+    "anchor": "stmt-unit-simultaneous-jumps",
+    "claim_id": "claim-simultaneous-jumps",
+    "statement": "The new tame directions can be chosen so that, for every such $\\mathfrak q$, the following two loci have codimension at least two in $\\mathop{\\mathrm{Spec}}S_{(\\mathfrak q,\\mathbf y)}$:*\n\n1."
+   },
+   {
+    "anchor": "stmt-unit-unit-comparison",
+    "claim_id": "claim-unit-comparison",
+    "statement": "The two quotients $U_w$ are units."
+   },
+   {
+    "anchor": "stmt-center-exact-factor",
+    "claim_id": "claim-central-exact-factor",
+    "statement": "Let $C_w^{s=1}(0)$ be the actual central strict/full complex after all artificial variables have been removed."
+   },
+   {
+    "anchor": "stmt-center-pair-discrepancy",
+    "claim_id": "claim-pair-discrepancy-zero",
+    "statement": "For every elliptic curve of analytic rank zero or one, including CM curves, and for the imaginary twist in Lemma <a href=\"#classical:auxiliary-fields\" data-reference-type=\"ref\" data-reference=\"classical:auxiliary-fields\">7</a>, $$X(E)+X(E^D)=0.\n                         \\tag{24}\\label{eq:source-24}$$"
+   },
+   {
+    "anchor": "stmt-center-cm-zero",
+    "claim_id": "claim-cm-rank-zero",
+    "statement": "If $E/\\mathbb Q$ has complex multiplication and $L(E,1)\\ne0$, the exact BSD formula holds for $E$ with the normalizations of Section <a href=\"#sec:intro\" data-reference-type=\"ref\" data-reference=\"sec:intro\">1</a>."
+   },
+   {
+    "anchor": "stmt-center-odd-valuations",
+    "claim_id": "claim-odd-valuations",
+    "statement": "For every elliptic curve $E/\\mathbb Q$ of analytic rank zero or one and every odd prime $p$, $$v_p(Q_E)=v_p(\\#\\mathop{\\mathrm{Sha}}(E/\\mathbb Q)).$$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Odd-prime valuation of the BSD quotient",
+    "evidence": [
+     {
+      "anchor": "stmt-center-odd-valuations",
+      "quote": "For every elliptic curve $E/\\mathbb Q$ of analytic rank zero or one and every odd prime $p$, $$v_p(Q_E)=v_p(\\#\\mathop{\\mathrm{Sha}}(E/\\mathbb Q)).$$",
+      "quote_sha256": "9af6a71ee0ac7604ea5e3f47e1624bb628f7387ec82fa625d481ed496afbecb1"
+     }
+    ],
+    "requires_concepts": [
+     "low corank converse",
+     "two-primary formula",
+     "twist density",
+     "Heegner point height formula"
+    ],
+    "supporting_pm_ids": [
+     "PM-002.2",
+     "PM-002.3",
+     "PM-006.1"
+    ]
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-bsd",
+   "exact_statement": "Let $E/\\mathbb Q$ be an elliptic curve and let $q$ be any prime. If $s_q(E)\\in\\{0,1\\}$, then $$r(E)=a(E)=s_q(E),\\qquad \\#\\mathop{\\mathrm{Sha}}(E/\\mathbb Q)<\\infty,$$ and, with $r=r(E)$ and the preceding normalizations, $$\\label{eq:bsd-main}\n \\frac{L^{(r)}(E,1)}{r!}\n =\\frac{\\Omega_E\\mathop{\\mathrm{Reg}}_E\\,\\#\\mathop{\\mathrm{Sha}}(E/\\mathbb Q)\n                  \\prod_{\\ell\\text{ finite}}c_\\ell(E)}\n              {\\#E(\\mathbb Q)_{\\rm tors}^{2}}.$$ There are no additional hypotheses on reduction, rational torsion, isogenies, complex multiplication, or residual Galois representations.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-low-corank-converse",
+   "exact_statement": "For every elliptic curve $A/\\mathbb Q$, every prime $q$, and $u\\in\\{0,1\\}$, the equality $s_q(A)=u$ implies $$a(A)=r(A)=u,\\qquad \\#\\mathop{\\mathrm{Sha}}(A/\\mathbb Q)<\\infty.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-classical-low-corank"
+  },
+  {
+   "claim_id": "claim-two-primary",
+   "exact_statement": "For every elliptic curve $A/\\mathbb Q$ with $s_2(A)\\leq1$, the quotient $Q_A$ of <a href=\"#eq:normalized-quotient\" data-reference-type=\"eqref\" data-reference=\"eq:normalized-quotient\">[eq:normalized-quotient]</a>, with the total real period and the full-lattice regulator of <a href=\"#eq:height-convention\" data-reference-type=\"eqref\" data-reference=\"eq:height-convention\">[eq:height-convention]</a>, is a positive rational number, and $$v_2(Q_A)=v_2(\\#\\mathop{\\mathrm{Sha}}(A/\\mathbb Q)).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-classical-two-primary"
+  },
+  {
+   "claim_id": "claim-analytic-low-rank",
+   "exact_statement": "If an elliptic curve $A/\\mathbb Q$ has $a(A)\\leq1$, then $r(A)=a(A)$ and the entire group $\\mathop{\\mathrm{Sha}}(A/\\mathbb Q)$ is finite.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-classical-analytic-low-rank"
+  },
+  {
+   "claim_id": "claim-isogeny-invariance",
+   "exact_statement": "Suppose $A$ and $A'$ are isogenous elliptic curves over $\\mathbb Q$ of analytic rank at most one. Then $$\\frac{Q_A}{\\#\\mathop{\\mathrm{Sha}}(A/\\mathbb Q)}\n       =\\frac{Q_{A'}}{\\#\\mathop{\\mathrm{Sha}}(A'/\\mathbb Q)}.$$ In particular $X(A)=X(A')$. Over a number field, the corresponding analytic-to-arithmetic BSD ratio is likewise invariant under isogeny when the Tate–Shafarevich groups are finite. It is compatible with products and restriction of scalars.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-classical-isogeny"
+  },
+  {
+   "claim_id": "claim-twist-density",
+   "exact_statement": "For every elliptic curve $A/\\mathbb Q$, among nonzero squarefree integers $d$ ordered by $|d|$, the twists $A^d$ of analytic rank zero and one each have density $1/2$. Consequently the set of $d$ with $a(A^d)\\geq2$ has density zero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-classical-twist-density"
+  },
+  {
+   "claim_id": "claim-auxiliary-fields",
+   "exact_statement": "Let $E/\\mathbb Q$ have conductor $N$ and analytic rank $r\\in\\{0,1\\}$. There exist coprime negative odd fundamental discriminants $D,D'<-4$ such that, for $$K=\\mathbb Q(\\sqrt D),\\qquad F=\\mathbb Q(\\sqrt{DD'}),\\qquad\n L=\\mathbb Q(\\sqrt D,\\sqrt{D'}),$$ the following statements hold.*\n\n1.  *Every prime dividing $2Np$ splits in both imaginary quadratic fields, and $\\left(\\frac{D}{|D'|}\\right)=1$.*\n\n2.  *The analytic ranks of $E^D,E^{D'},E^{DD'}$ are respectively $1-r,1-r,r$.*\n\n3.  *The extension $L/F$ is CM and unramified at every finite place, and $L$ has only the roots of unity $\\{\\pm1\\}$.*\n\n4.  *One may require $L\\cap\\mathbb Q(E[p])=\\mathbb Q$ and, when $E$ has CM, that $L$ not contain its CM field.*\n\n*Finitely many additional splitting conditions and exclusions of quadratic fields can be imposed. Both $L(E/K,s)$ and $L(E^{D'}/K,s)$ have a simple zero at $s=1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-classical-auxiliary-fields"
+  },
+  {
+   "claim_id": "claim-gross-zagier-split",
+   "exact_statement": "With the preceding conventions, $D$ odd fundamental, $(D,N)=1$, all level primes split, and $\\mathcal O_K^\\times=\\{\\pm1\\}$, one has $$\\begin{aligned}\n \\frac{\\sqrt{d_K}}{8\\pi^2(f,f)_N}L'(f/K,1)\n       &=2H_{\\rm abs,f}(P_X),\\label{eq:classical-gz}\\\\\n L'(E/K,1)&=\\frac{A_E}{\\sqrt{d_K}\\,c_E^2}\\cdot\n                        2H_{\\rm abs}(P_K).\n                                      \\label{eq:classical-gz-elliptic}\n\\end{aligned}$$ In the simple-zero case $P_K$ is nontorsion.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-classical-gross-zagier"
+  },
+  {
+   "claim_id": "claim-discrepancy-identity",
+   "exact_statement": "Assume $L(E/K,s)$ has a simple zero under the hypotheses of Theorem <a href=\"#classical:gross-zagier\" data-reference-type=\"ref\" data-reference=\"classical:gross-zagier\">8</a>. Then $$\\label{eq:real-discrepancy}\n \\frac{Q_E}{\\#\\mathop{\\mathrm{Sha}}(E/\\mathbb Q)}\n \\frac{Q_{E^D}}{\\#\\mathop{\\mathrm{Sha}}(E^D/\\mathbb Q)}\n =\\frac{[E(K):\\mathbb ZP_K]^2}\n {c_E^2\\prod_\\ell c_\\ell(E)^2\\,\\#\\mathop{\\mathrm{Sha}}(E/K)}.$$ The index on the right is the full group index, including torsion. Consequently, at any prime $p$, if $$n_P=v_p\\bigl([E(K)/E(K)_{\\rm tors}:\\mathbb Z\\overline P_K]\\bigr),\n \\qquad \\tau_g=v_p(\\#E(K)_{\\rm tors}),$$ then $$\\label{eq:classical-discrepancy}\n X_p(E)+X_p(E^D)\n =2(n_P+\\tau_g)-2v_p(c_E)\n             -2\\sum_\\ell v_p(c_\\ell(E))-v_p(\\#\\mathop{\\mathrm{Sha}}(E/K)).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-classical-discrepancy-identity"
+  },
+  {
+   "claim_id": "claim-finite-models",
+   "exact_statement": "Consider continuous-cochain diagrams over finite local Artin rings of $p$-power characteristic, with finite free coefficient modules and compatible coefficient lifts. Assume that residual cohomology dimensions are bounded uniformly, and vanish outside a uniformly bounded range for every complex for which a bounded model is required. Then the diagrams admit bounded finite free models with derived base change. Restriction, unramified inflation, local cones, cup products, invariant maps, conjugation, and specified comparison homotopies can be retained simultaneously.*\n\n*Suppose the scalar rings at the stages identify with every fixed Artin precision of a complete local ring $R$ with finite residue field. On a fixed nonprincipal ultrafilter $\\mathcal U$, the model matrices have compatible limits over $R$. Their marked identities survive arbitrary derived base change, in particular to residue fields of primes of $R$, including primes containing $p$. Fixed-group diagrams whose actions stabilize at every precision compute the actual cohomology of that group. A finite diagram may be enlarged on the same stages while retaining its previous models and markings.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-models-finite-models"
+  },
+  {
+   "claim_id": "claim-exact-orthogonality",
+   "exact_statement": "Let paired perfect local maps $U_v\\to L_v$ and $U'_v\\to L'_v$ have a specified nullhomotopy of their cup restriction. Suppose the induced morphism $$L'_v/U'_v\\longrightarrow U_v^\\vee[-2]$$ is an equivalence, where $\\vee$ denotes derived linear dual before shifting. Then their Selmer complexes are perfect duals with shift $-3$. The localization boundaries for nested such conditions are adjoint under this duality. These assertions hold over the model rings and after localization or derived specialization.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-models-orthogonality"
+  },
+  {
+   "claim_id": "claim-evaluation-detection",
+   "exact_statement": "Let $G_R(M)$ be an unrestricted limiting global model as in Lemma <a href=\"#models:finite-models\" data-reference-type=\"ref\" data-reference=\"models:finite-models\">10</a>. After any field specialization, including $R\\to\\mathop{\\mathrm{Frac}}(\\mathbb F_p[[\\mathbf u]])$, its degree-one cohomology injects into abstract crossed-homomorphism classes on the product of the stage absolute Galois groups. The action is obtained by taking entrywise coefficient limits before specialization. Invariants are detected in the same way. The assertion holds for a Selmer complex whenever its local conditions contain all local $H^0$ and inject into local field $H^1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-models-evaluations"
+  },
+  {
+   "claim_id": "claim-line-switch",
+   "exact_statement": "Over a DVR $A$ with residue field $k$, suppose local finite and transverse coordinates are split free lines in degree one, with perfect mixed pairing. The lower condition contains all $H^0$, the upper condition omits $H^2$, and the global lower and upper diagrams have exact complementary duality. Assume the finite and transverse global complexes have amplitude $[1,2]$ on the generic and residual tests. Suppose the finite complex has only a generic degree-one line. At a fiber with $\\dim H^1(C_f\\otimes_A k)=h>1$, assume nonzero finite evaluation both for a primitive reduction of that line and for some degree-one class of the opposite condition. Then switching lowers the degree-one dimension by one, and leaves one generic degree-one line. If integral classes $Y,Y'$ satisfy $s(Y')=f(Y)$ under a unit-volume isomorphism of coordinates, then $$d(C_f,Y)=d(C_s,Y').$$ Successive switches ending at dimension one prove nonnegativity of this common valuation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-models-line-switch"
+  },
+  {
+   "claim_id": "claim-square-switch",
+   "exact_statement": "In the preceding local diagram over a DVR $A$ with residue field $k$, let $F,S$ be split free planes. Retain all $H^0$ in the lower condition and omit $H^2$ from the upper condition. Assume amplitude $[1,2]$ for both switched global complexes on their generic and residual tests, exact self-duality of the lower and upper diagrams, and perfect mixed pairing. The pure finite and transverse planes are isotropic, with their compatible cup nullhomotopies retained. On a common plane let $e$ be unimodular alternating and $J$ an integral involution, with cross pairing $e(x,Jy)$ up to a unit. Suppose the finite complex has generic rank one in degrees one and two, with class $Y$ and $f(Y)\\ne0$, and an integral transverse class satisfies $s(Y')=Jf(Y)$ up to a unit. Then the transverse complex has the same generic ranks and $$d(C_f,(Y,Y^\\vee))=d(C_s,(Y',(Y')^\\vee)),$$ where the dual tensor uses the pairing functional on degree two. If finite evaluation has rank two at a fiber with $\\dim H^1(C_f\\otimes_A k)>1$ and is nonzero on a primitive reduction of $Y$, the switch lowers its degree-one dimension by two. Ending at dimension one gives nonnegative valuation for the class-functional tensor.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-models-square-switch"
+  },
+  {
+   "claim_id": "claim-strict-finite-volume",
+   "exact_statement": "At a split pair $w,\\bar w$, let $C_*$ be strict at $w$ and full at $\\bar w$, and let $C_F$ impose exactly complementary finite conditions $U_w,U_{\\bar w}$. Keep all other conditions fixed with conjugate duality. Suppose these comparisons are perfect over a DVR, $U_w$ is generically a line in degree one, $C_*$ is generically acyclic, and $Y\\in H^1(C_F)$ has nonzero localization. If $\\operatorname{loc}_wY=a e$ in a generic basis $e$ of $U_w$, then $$\\label{models:strict-finite-volume}\n d(C_F,(Y,Y^\\vee))=d(C_*,1)+2\\bigl(v(a)+d(U_w,e)\\bigr).$$ Moreover $C_F$ has exactly one generic line in each of degrees one and two. Conversely, these line assertions and the nonzero localization imply the strict acyclicity.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-models-strict-finite"
+  },
+  {
+   "claim_id": "claim-haar-factors",
+   "exact_statement": "For the minimal differential, write $P_\\ell(1)=L_\\ell(E,1)^{-1}$, $\\tau_\\ell=\\mathop{\\mathrm{length}}E(\\mathbb Q_\\ell)[p^\\infty]$, and $\\log_{\\omega_E}E(\\mathbb Q_p)=p^l\\mathbb Z_p$. Then $$\\label{models:haar-identities}\n \\tau_\\ell=v_p(c_\\ell P_\\ell(1))\\quad(\\ell\\ne p),\\qquad\n \\tau_p-l=v_p(c_pP_p(1)).$$ The connected real period $\\Omega_0$ on a primitive positive Betti cycle satisfies $\\Omega_E/\\Omega_0=\\#\\pi_0(E(\\mathbb R))$, a $p$-adic unit.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-models-haar"
+  },
+  {
+   "claim_id": "claim-kummer-volume",
+   "exact_statement": "Let $K$ be imaginary quadratic, suppose $E(K)$ has rank one and $\\mathop{\\mathrm{Sha}}(E/K)$ is finite, and let $C_{\\rm Kum}$ impose the full integral Kummer conditions. Put $\\tau_g=v_p(\\#E(K)_{\\rm tors})$ and $s_K=v_p(\\#\\mathop{\\mathrm{Sha}}(E/K))$. For a nontorsion point $P$ let $n_P$ be the valuation of its index in $E(K)/E(K)_{\\rm tors}$. Then $$\\label{models:kummer-volume-formula}\n d(C_{\\rm Kum},(P,P^\\vee))=2n_P+2\\tau_g-s_K.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-models-kummer-volume"
+  },
+  {
+   "claim_id": "claim-series-division",
+   "exact_statement": "Let $\\mathcal O$ be one of these complete integer DVRs and let $L,B\\in\\mathcal O[[t,\\mathbf u]]$. Suppose $L\\not\\equiv0\\pmod{(\\varpi,t)}$, where $\\varpi$ is a uniformizer. If, for every sufficiently high finite $p$-power character $\\theta$ of $1+t$, the specialization $B(\\theta,\\mathbf u)$ is divisible by $L(\\theta,\\mathbf u)$ after inversion of $p$, then $L$ divides $B$ integrally. The assertion applies simultaneously to finite products of such divisors and after the fixed constant extensions above.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-models-series-division"
+  },
+  {
+   "claim_id": "claim-persistence-of-poles",
+   "exact_statement": "Suppose integral stage numerators and denominators in a genuine variable converge coefficientwise along the ultrafilter, with nonzero limiting denominator. If every stage numerator is divisible by its denominator after inversion of $p$, each zero of the limiting denominator in the open unit disk is a zero of the limiting numerator with at least the same multiplicity.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-models-poles"
+  },
+  {
+   "claim_id": "claim-field-points",
+   "exact_statement": "For a characteristic-zero height-one divisor in a bounded $\\mathbb Z_p$-power-series ring, finitely many functions nonzero on that divisor can be kept nonzero at a point whose coordinates lie in the open unit disk of a finite extension of $\\mathbb Q_p$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-models-field-points"
+  },
+  {
+   "claim_id": "claim-auxiliary-tame-tuples",
+   "exact_statement": "For any finite list of fixed split support and test primes, the tame tuple may be chosen to have the following properties.*\n\n1.  *Its limiting elliptic Frobenius actions have determinant one and $V(\\gamma_j)-1$ invertible. Over $K$ the same holds for the companion. The weight character $\\mathcal C$ used in the theta construction has nontorsion value on each $\\gamma_j$, and its $\\Gamma$ value is nonzero.*\n\n2.  *The vectors of Frobenius exponents in the artificial variables at the prescribed primes are linearly independent over $\\mathbb Q_p$, one vector for each rational prime and with one place chosen in each split pair. The list includes the coefficient prime $p$.*\n\n3.  *There are at least two moving primes. Each moving inertia group maps onto its own cyclic quotient and trivially to the others. All fixed conductors and any prescribed finite set of primes are avoided.*\n\n*Here $\\mathcal C$ is the algebraic anticyclotomic character with infinity type one and split conductor used in [[C](#ref-C), Sections 2 and 4]. Finitely many such fixed characters may be treated simultaneously. In the rational case the conditions on $\\mathcal C$ and $\\Gamma$ are omitted.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-vertical-auxiliary-tuples"
+  },
+  {
+   "claim_id": "claim-residual-concentration",
+   "exact_statement": "After adjoining finitely many more tame variables, the separate rational and imaginary tuples satisfy $$\\label{eq:source-1}\\tag{1}\n \\begin{array}{ll}\n \\mathrm{(a)}&G\\otimes_RR_{(p)}\\text{ is a free line in degree one};\\\\[2pt]\n \\mathrm{(b)}&L_w,L'_w\\not\\equiv0\\pmod{(p,t)}\n                  \\quad\\text{for both }w\\mid p.\n \\end{array}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-vertical-tests"
+  },
+  {
+   "claim_id": "claim-scalar-localization",
+   "exact_statement": "For the constant roots coefficient, global degree-two localization is injective on these residual tests. In particular a cup of two paired classes which is locally zero has a global cochain primitive.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-vertical-scalar-localization"
+  },
+  {
+   "claim_id": "claim-conjugate-parity",
+   "exact_statement": "For an absolutely simple residual elliptic plane over $K$, each one-sided strict space above has even dimension. The same alternation statement holds on characteristic-zero localizations with unramified conditions at fixed non-$p$ places and constant inertia action.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-vertical-parity"
+  },
+  {
+   "claim_id": "claim-lift-test",
+   "exact_statement": "Let $x$ be an old strict class and $d$ a class in its paired opposite space. Choose a primitive $u$ of their scalar cup, $du=x\\cup d$. For whole spaces of such classes, fix cochain representatives on bases, choose the primitives on pairs of basis elements, and extend these choices bilinearly. Suppose $x$ lifts in the new direction, with derivative satisfying $dx_1=-\\lambda\\cup x$ in the chosen character convention. Put $$A=(M_x(\\gamma)-1)^{-1}x(\\gamma),$$ where $M_x$ is the coefficient representation of $x$. Then the Frobenius evaluation $z_\\gamma$ of $u-A\\cup d$ vanishes, up to a common nonzero sign or coordinate factor. Over $K$ the necessary equation is its difference with the conjugate evaluation, since the conjugate tame logarithm has the opposite sign. The test is linear in the new direction and bilinear in $x,d$, and is valid over $k_r$ as well as over the characteristic-zero field tests.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-vertical-lift-test"
+  },
+  {
+   "claim_id": "claim-obstruction-span",
+   "exact_statement": "For the residual tests above, finitely many new tame directions have necessary lift matrices whose linear span contains every $s\\times(s+a)$ matrix over $k_r$ in the rational problem, every $s\\times s$ matrix for a reducible constituent in the imaginary problem, and every alternating $s\\times s$ matrix for an absolutely simple plane in the imaginary problem. Previously prescribed Tate actions, radical data, old character actions, and acyclicity of the new local complexes can all be retained.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-vertical-obstruction-span"
+  },
+  {
+   "claim_id": "claim-enlargement-persistence",
+   "exact_statement": "Property <a href=\"#eq:source-1\" data-reference-type=\"eqref\" data-reference=\"eq:source-1\">[eq:source-1]</a>(b) persists when further tame primes are adjoined, provided each has a nonzero Frobenius exponent in the preceding artificial variables. On setting the new variables to zero, unramified inflation identifies the old diagram, with the full new-place singular factors retained. Those factors have nonzero reduction on the residual test.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-vertical-enlargement"
+  },
+  {
+   "claim_id": "claim-horizontal-directions",
+   "exact_statement": "Fix finitely many characteristic-zero height-one field tests of a tuple satisfying <a href=\"#eq:source-1\" data-reference-type=\"eqref\" data-reference=\"eq:source-1\">[eq:source-1]</a>(b), with at least two old artificial variables. One may adjoin finitely many tame directions, locally zero on all old support, so that the new prime complexes are acyclic at all these fields and the necessary lift tests of Lemma <a href=\"#vertical:lift-test\" data-reference-type=\"ref\" data-reference=\"vertical:lift-test\">26</a> retain their commutator-spanning property. The construction is compatible with further field extension and with the primitive unramified conditions at fixed non-$p$ places.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-vertical-horizontal-directions"
+  },
+  {
+   "claim_id": "claim-relative-lattice",
+   "exact_statement": "Relative pullback and Poincare duality give an integral Galois map $$H^1(\\overline{Y_1(L_0)},\\mathbb Z_p)(1)\\longrightarrow T.$$ For $A=1$, an integral combination $\\delta=\\sum_\\xi n_\\xi\\delta_\\xi$ of finitely many symbols satisfies $\\delta(a)=1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-single-relative-lattice"
+  },
+  {
+   "claim_id": "claim-siegel-traces",
+   "exact_statement": "The classes just constructed are integral away from $pn_2\\infty$ and compatible with division traces and with corestriction as the $p$-part of $M$ grows with $A,c,d,\\xi$ fixed. If $\\ell\\nmid cdn_2L_0$ is a fresh prime and is adjoined to both orders and the root index, the rational norm multiplier is $$\\label{single:good-norm}\n 1-\\frac{a_\\ell(f)[\\ell]}{\\ell}+\\frac{[\\ell]^2}{\\ell},$$ where $[\\ell]$ sends the determinant root to its $\\ell$-th power. For $q_0^a\\parallel b$, $q_0\\nmid b_1$, filling $q_0^a$ into the first row gives, at a finite even character $\\nu$, $$\\label{single:bad-row}\n z_{\\rm filled}=(1-a_{q_0}(f)\\nu(q_0)/q_0)z_{\\rm before}.$$ The trace maps themselves are integral in both assertions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-single-siegel-traces"
+  },
+  {
+   "claim_id": "claim-kato-calibration",
+   "exact_statement": "In square order, before projection to the elliptic curve, the dual exponential of <a href=\"#single:K1\" data-reference-type=\"eqref\" data-reference=\"single:K1\">[single:K1]</a> is $$\\label{single:full-differential}\n \\pm M^{-2}(c^2E_P-cE_{cP})(d^2E_Q-dE_{dQ})\\,\\frac{dq}{q}.$$ The sign is determined by cup, pairing, and orientation conventions and is common to the determinant components.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-single-kato-calibration"
+  },
+  {
+   "claim_id": "claim-period-law",
+   "exact_statement": "In square or unfilled rectangular order, for every finite even character $\\nu$ of conductor dividing $M$, the coordinate of $\\exp^*(z_\\nu)$ in $\\omega$, in compatible field realizations, is $$\\tag{2}\\label{eq:source-2}\n \\pm\\Delta_\\nu\\frac{L^{(M)}(f,\\nu,1)}{\\Omega_0}\\delta_\\xi(a),\\qquad\n \\Delta_\\nu=(c^2-c\\nu(c)^{-1})(d^2-d\\nu(d)^{-1}).$$ The superscript omits all primes dividing $M$, and the sign is common across symbols. In square order with $A=1$, an integral combination has $\\delta(a)=1$. In rectangular order, some choice of $A=p^k$ and $\\xi$ with lower row $(Ns,1)$ has $\\delta_\\xi(a)\\ne0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-single-period-law"
+  },
+  {
+   "claim_id": "claim-integral-coordinate",
+   "exact_statement": "The generic cohomology of $G$ is a line in degree one, and $z$ is nonzero on that line. If $U_0\\in\\mathop{\\mathrm{Frac}}R$ is its coordinate in the inverse determinant relative to an integral generator, then $$U=\\frac{U_0}{\\Delta}\n       \\prod_{q\\in S_f\\setminus\\{p\\}}\\frac{D_q}{P_q}\n       \\ \\in R\\setminus\\{0\\}.\n \\tag{3}\\label{eq:source-3}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-single-integral"
+  },
+  {
+   "claim_id": "claim-line-comparison",
+   "exact_statement": "In any of these three settings, suppose that the chosen square or rectangular system class $z_{\\rm sys}$ is generically nonzero. Then the global complex has a single generic cohomology line in degree one. At each of the indicated DVRs, $$d(G_{\\rm test},z_{\\rm sys})\\geq0.\n                  \\tag{4}\\label{eq:source-4}$$ In the third setting, $G_{\\rm test}$ denotes the complex with the unramified old local conditions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-single-line"
+  },
+  {
+   "claim_id": "claim-log-comparison",
+   "exact_statement": "If $\\mathop{\\mathrm{ord}}_{s=1}L(E,s)=1$ and $P\\in E(\\mathbb Q)$ is nontorsion, then $$\\frac{\\log_\\omega z_b}{(\\log_\\omega P)^2}\n       =\\pm d_0\\frac{L'(E,1)}{\\Omega_0H(P)}.\n       \\tag{5}\\label{eq:source-5}$$ The right-hand quotient is rational, and is interpreted in $\\mathbb Q_p$. The height is exactly the height $H$ fixed in the introduction.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-single-logarithm"
+  },
+  {
+   "claim_id": "claim-height-direction",
+   "exact_statement": "The horizontal sequence can be chosen to define bilinear tame heights whose rational limits satisfy $$h_\\lambda^{K_b}(P_1,P_2)=2h_\\lambda^\\mathbb Q(P_1,P_2)\n \\quad(P_1,P_2\\in E(\\mathbb Q)),\\qquad\n h_\\lambda^\\mathbb Q(P,P)\\ne0.$$ These heights are compatible with trace in the second argument.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-single-height-direction"
+  },
+  {
+   "claim_id": "claim-cup-comparison",
+   "exact_statement": "For the sequence of Lemma <a href=\"#single:height-direction\" data-reference-type=\"ref\" data-reference=\"single:height-direction\">37</a>, $$Z'\\log_\\omega P\n  =\\pm(2-a_*)\\frac{\\log_\\omega z_b}{\\log_\\omega P}\n                        h_\\lambda^\\mathbb Q(P,P).\n \\tag{6}\\label{eq:source-6}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-single-cup"
+  },
+  {
+   "claim_id": "claim-spectral-height",
+   "exact_statement": "For the horizontal sequence just constructed, $$C_0\\Omega_0L(f\\otimes\\varepsilon,1)\\frac{Z'}{d_0}\n       =\\pm(2-a_*)\\frac{h_\\lambda^{K_b}(Q_X,Q_X)}{\\delta_\\phi}.\n       \\tag{7}\\label{eq:source-7}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-single-spectral"
+  },
+  {
+   "claim_id": "claim-central-coordinate",
+   "exact_statement": "The element $U$ of Proposition <a href=\"#single:integral\" data-reference-type=\"ref\" data-reference=\"single:integral\">34</a> satisfies $$X(E)=v_p(U(0))\\ge0.\n                         \\tag{8}\\label{eq:source-8}$$ This holds at every odd coefficient prime, for all reduction types and all residual representations of the non-CM curve.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-single-center"
+  },
+  {
+   "claim_id": "claim-integral-primitive",
+   "exact_statement": "On the canonical ordinary locus define $$f^{[p]}=(1-a_pV_p+p\\epsilon_pV_p^2)f,\\qquad\n F_0=\\lim_{j\\to\\infty}d_{\\rm mod}^{(p-1)p^j-1}f^{[p]},\\qquad\n F=\\prod_{q\\in S^\\circ}P_q(V_q)F_0.$$ The limits are integral weight-zero functions. They satisfy $$d_{\\rm mod}F_0=f^{[p]},\\qquad\n F=\\sum_{\\substack{n\\ge1\\\\(n,p\\prod_{q\\in S^\\circ}q)=1}}\n          \\frac{a_n}{n}q_{\\rm Tate}^n$$ at a Tate cusp with all cyclic groups of multiplicative type. If $z$ is a Serre–Tate coordinate with $z=1$ at the canonical lift, the expansion $F(z)$ is the transform of a bounded integral measure $\\mu$ on $\\mathbb Z_p$, supported on $\\mathbb Z_p^\\times$. On every interior CM disk one has the exact identity $$F_0=P_p(V_p)G.\n \\tag{9}\\label{eq:source-9}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pair-primitive"
+  },
+  {
+   "claim_id": "claim-pair-interpolation",
+   "exact_statement": "Let $\\theta$ be a sufficiently high finite character of $\\Gamma$, and let $\\theta_l=\\theta\\circ\\eta_\\Gamma$ have primitive conductor $p^m$. Put $\\chi=\\theta\\psi_s$, and let $X$ be the point with parameter $\\zeta_{p^m}$ in the base disk at the original primitive level. Then $$\\left(\\sum_{j\\bmod p^m}\\theta_l(j)\\zeta_{p^m}^{\\,j}\\right)\n     b_s(\\theta,\\mathbf u)\n =\n \\left(\\sum_{\\rho\\in\\mathop{\\mathrm{Gal}}(H_{p^ms}/K)}\n        \\chi(\\rho)G(X^\\rho)\\right)\n        \\prod_{q\\in S^\\circ}P_q(\\chi(\\sigma_q)).\n \\tag{10}\\label{eq:source-10}$$ The character is extended by zero on nonunits in the Gauss sum, and $\\sigma_q$ is inverse translation by the oriented $V_q$-action. Let $b_w^0$ denote the first limiting series formed with $F_0$, without the non-$p$ depletions. Then, over the integral coefficient enlargement, $$\\begin{split}\n B_w&=\\text{\\rm unit}\\cdot(b_w^0)^2D,\\\\\n D&=\\prod_{q\\in S^\\circ}\n P_q(\\chi(\\mathop{\\mathrm{Frob}}_{v_q}))\n P_q(\\chi(\\mathop{\\mathrm{Frob}}_{v_q})^{-1}),\n \\end{split}\n \\tag{11}\\label{eq:source-11}$$ where in this identity $\\chi$ is the universal power-series character and either place $v_q\\mid q$ may be chosen. For conductor $s=1$, the central value is $$B_w^{s=1}(0)=\n \\pm c_E^{-2}\\log_{\\omega_E}(P_K)^2P_p(1)^2\n       \\prod_{q\\in S^\\circ}P_q(1)^2,\n \\tag{12}\\label{eq:source-12}$$ where $P_K$ is the single Hilbert-class trace of the conductor-one Heegner point under $\\phi$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pair-interpolation"
+  },
+  {
+   "claim_id": "claim-tame-removal",
+   "exact_statement": "Choose each new base disk by a descending isogeny from the preceding conductor. Setting a new tame variable equal to zero multiplies each single analytic series by $$a_r-\\chi_{\\rm old}(\\mathop{\\mathrm{Frob}}_{v_r})\n           -\\chi_{\\rm old}(\\mathop{\\mathrm{Frob}}_{v_r})^{-1}.\n \\tag{13}\\label{eq:source-13}$$ The notation denotes the limit of the stage coefficients and character values. The determinant $L_w$ is multiplied by the square of this factor up to an integral unit. These assertions hold successively for any subset of the new variables, including removal of all tame variables.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pair-trace"
+  },
+  {
+   "claim_id": "claim-ideal-descent",
+   "exact_statement": "The principal ideals generated by $b_w^+$, $b_w^-$, $b_w^0$, and $B_w$ descend to $R$. Each actual series differs from a generator over $R$ by an integral unit.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pair-descent"
+  },
+  {
+   "claim_id": "claim-vertical-primitivity",
+   "exact_statement": "For each of the tuples under consideration and either $p$-adic place, $$p\\nmid B_w.\n \\tag{14}\\label{eq:source-14}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pair-vertical-primitivity"
+  },
+  {
+   "claim_id": "claim-finite-divisibility",
+   "exact_statement": "For every sufficiently high finite $\\theta$, $$B_w(\\theta,\\mathbf u)\\in\n         L_w(\\theta,\\mathbf u)A_\\theta'.\n \\tag{15}\\label{eq:source-15}$$ With the same global character variable, the two nonzero quotients for $w$ and $\\bar w$ are associates in $A_\\theta'$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pair-finite-divisibility"
+  },
+  {
+   "claim_id": "claim-local-kummer-lines",
+   "exact_statement": "At each $p$-adic place and after fixing $\\theta$ as above, degree-one local cohomology splits over $A_\\theta$ into a free Kummer line and its free complementary line. The paired Kummer conditions at conjugate places are exactly orthogonal. After extension to $A_\\theta'$, the logarithm identifies the Kummer line with a free line, and its value on the weighted CM point classes is <a href=\"#eq:source-10\" data-reference-type=\"eqref\" data-reference=\"eq:source-10\">[eq:source-10]</a>, with the factor $c_E$ restored for $\\log_{\\omega_E}$. These assertions hold for bad reduction at $p$ as well.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pair-local-lines"
+  },
+  {
+   "claim_id": "claim-inert-derivatives",
+   "exact_statement": "There are fresh inert good prime sequences $\\ell$, with $\\ell\\to-1$ and Tate Frobenius tending to $J=\\rho_T(\\tau)$ for complex conjugation $\\tau$, for which the limiting local degree-one cohomology splits into finite and transverse planes. Their mixed pairing is, up to a unit, $\\langle x,Jy\\rangle$, and both planes are self-annihilating. For each fixed finite sequence of switches, there is a compatible family of descended weighted Kummer classes $Z_I$, indexed by the subsets occurring in that sequence, with $Z_\\varnothing=Z$. The class $Z_I$ uses the product of the ring-class derivatives $D_\\ell$ for $\\ell\\in I$; its local conditions are transverse at $I$ and the original conditions at the other places. These classes satisfy $$f_{\\rm loc}(Z_{I\\cup\\ell})=0,\\qquad\n s_{\\rm loc}(Z_{I\\cup\\ell})=Jf_{\\rm loc}(Z_I).$$ All prior local conditions can be retained, with one common point scaling for the classes in the fixed finite sequence.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pair-derivatives"
+  },
+  {
+   "claim_id": "claim-integral-quotient",
+   "exact_statement": "Using the descended analytic ideals, the fraction $$U_w=B_w/L_w$$ is represented by an integral series, and $p\\nmid U_w$. Removing any newly added tame variables specializes it to the old quotient times an integral unit. This includes removal of all tame variables, leaving the genuine anticyclotomic line.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-pair-integral-quotient"
+  },
+  {
+   "claim_id": "claim-theta-auxiliary-data",
+   "exact_statement": "One may choose two sets of fixed finite theta data with the following properties. Their extra rational good primes requiring nonspherical target controls are split completely in $L$, are different from $p$, and the two sets are disjoint. Outside these sets and the elliptic bad primes, the target tests are spherical. At an unramified-twist Steinberg place the source vector is Iwahori invariant and the target test has line-stabilizer parahoric level. At an additive place fixed nonspherical tests are permitted.*\n\n*For either set there are a compact vector $\\varphi\\in\\pi^\\vee$ and a finite-order character $d_0$ of $[T]=T(F)\\backslash T(\\mathbb A_F)$, where $T=\\mathrm U(Le_2)$, such that $$I_T(\\varphi,d_0)=\\int_{[T]}\\varphi(s)d_0(s)\\,ds\\ne0.$$ They retain the stated spherical and Iwahori conditions, and $d_0$ is unramified there. For the two lines $LB_j$ in $B$, let $\\vartheta_{j,d}$ denote the unary theta function with normalized position monomial of degree $d$. Its splitting character contributes a fixed shift $c_j$ to the infinity weight, with $c_1+c_2=1$. There are compatible characters $\\xi_{j,d}$ of weight $d+c_j$ such that, when $d_1+d_2+1=m$, $$\\xi_{1,d_1}\\xi_{2,d_2}=\\mathcal C^m d_0,\\qquad\n T_j(d)=\\int_{[\\mathrm U(1)]}\n          \\vartheta_{j,d}(s)\\xi_{j,d}(s)^{-1}\\,ds.$$ The tests with unit position support at $p$ can be chosen so that $T_1(d_{10})$ and $T_2(d_{20})$ are separately nonzero at positive integers $d_{10},d_{20}$. The integer $d_{10}+d_{20}+1$ is divisible by the fixed torsion orders and by an arbitrarily prescribed fixed power of $p$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-theta-auxiliary-data"
+  },
+  {
+   "claim_id": "claim-theta-test-point",
+   "exact_statement": "Let $\\mathfrak p$ be a horizontal divisor on which $b_w^0$ vanishes. Fix a strict side for each of the two elliptic representations, and suppose both corresponding primitive strict cohomology groups vanish generically on $\\mathfrak p$. There is an interior point $z_0=(t_0,\\mathbf u_0)$ on this divisor, over a fixed finite extension $k/\\mathbb Q_p$, retaining their vanishing and the following properties.*\n\n*The local $H^0,H^2$ vanishings at $p$ and the acyclicity of the moving local complexes hold for both elliptic representations, with the conjugate and $L$-restricted tests as required. One of the two sets of auxiliary tests in Lemma <a href=\"#theta:auxiliary-data\" data-reference-type=\"ref\" data-reference=\"theta:auxiliary-data\">50</a> has nonzero fixed-place spanning and binary separation denominators at $z_0$. At every moving prime the inverse fake Euler factor can be chosen nonzero in the limiting test. Binary separation there can be tested on inertia when the tested character is ramified, and on Frobenius when it is unramified.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-theta-test-point"
+  },
+  {
+   "claim_id": "claim-canonical-levels",
+   "exact_statement": "At each finite depth $s$, the ordinary branch of the normalization in level $J(s)$ on which the rank-three flag is multiplicative adds only finite etale character-group flags and frames. At a toroidal cusp it does not ramify the center Fourier parameter. Every component of this branch meets a compatible ordinary cusp, and reduction of all Fourier–Jacobi expansions detects divisibility of an integral section by the uniformizer. These assertions hold after every finite coefficient extension, with no loss of $p$-adic precision depending on $s$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-theta-canonical-levels"
+  },
+  {
+   "claim_id": "claim-p-operators",
+   "exact_statement": "For every $i,m$, the unnormalized right-coset operators $U_j=[J(s_i)\\operatorname{diag}(1_j,p^{-1}1_{4-j})J(s_i)]$, $j=2,3$, act on <a href=\"#eq:source-18\" data-reference-type=\"eqref\" data-reference=\"eq:source-18\">[eq:source-18]</a> by $p^2$. In weight $(m,m,1;-1)$ the integral ordinary normalization is $p^{-2}U_j$, so both normalized comparison values are $1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-theta-p-operators"
+  },
+  {
+   "claim_id": "claim-cut-moments",
+   "exact_statement": "Fix the integral position lattices, additive characters, Igusa frames, and the finite tests away from $p$ used for a finite product of unary theta functions. Moving tame tests may have bounded group-ring coefficients and additive Fourier normalizations that are $p$-units. At $p$ let $c$ be any locally constant function on the position lattices, with coefficients in any finite extension or finite group algebra and $\\|c\\|\\leq1$. Its conductor is unrestricted.*\n\n*For every finite polynomial combination $P$ of normalized position moments, the value of the corresponding period-normalized theta jets at a fixed integral ordinary CM object satisfies $$\\bigl|\\mathcal J(cP)\\bigr|_p\n       \\leq C\\,\\|P\\|_{\\mathrm{pos}}.$$ The constant $C$ depends only on the fixed data. It is independent of the moment degrees, the conductor of $c$, the moving tame levels, and the coefficient extension. The same bound applies to the canonical cusp expansions used to test ordinary integrality. The uncut moment functional is a bounded measure on the compact position lattice. When $c$ is invariant under the coordinate signs, inserting $c$ multiplies that measure by $c$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-theta-cut-moments"
+  },
+  {
+   "claim_id": "claim-integral-theta-family",
+   "exact_statement": "There is a fixed integer $c\\geq0$ such that $p^c\\Theta_{i,m}$ is an integral ordinary section on the canonical branch, coefficientwise in $\\mathcal O[G_i]$. The same $c$ works for all increasing depths $s_i$, all sufficiently large positive weights on the fixed branch, all the fixed test variants, and bounded locally constant cuts in the head of <a href=\"#eq:source-18\" data-reference-type=\"eqref\" data-reference=\"eq:source-18\">[eq:source-18]</a> that retain the source determinant equivariance on a fixed compact. The two trailing columns keep their full integral lattice tests; the canonical cusp changes preserve their integral-translation invariance, as proved below. Its Fourier–Jacobi coefficients are integral in the monomial-dual differential lattice.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-theta-integral-family"
+  },
+  {
+   "claim_id": "claim-fourier-measure",
+   "exact_statement": "Choose connected and etale Tate coordinates $e_p,f_p$ at a split ordinary CM point. The translation $n(j/p^b)$ gives the lattice $$\\mathbb Z_pe_p+\\mathbb Z_p\\bigl(f_p+(j/p^b)e_p\\bigr).$$ It corresponds, up to a fixed sign and a unit root-basis choice, to the Serre–Tate parameter $\\zeta_{p^b}^{cj}$ with $c\\in\\mathbb Z_p^\\times$, and preserves the connected differential frame integrally. Suppose $F(z)=\\int_{\\mathbb Z_p}z^y\\,d\\mu(y)$ for a bounded measure $\\mu$, and $\\chi$ has conductor dividing $p^b$ on units. For every $\\delta\\in\\mathbb Z_p^\\times$, $$\\label{theta:fourier-cancellation}\n p^{-b}\\sum_{j\\bmod p^b}\\sum_{x\\in(\\mathbb Z/p^b)^\\times}\n     \\chi^{-1}(x)\\zeta_{p^b}^{-xj}\n       F(\\zeta_{p^b}^{c\\delta j})\n   =\\int_{\\mathbb Z_p^\\times}\\chi^{-1}(c\\delta y)\\,d\\mu(y).$$ Its norm is at most $\\|\\mu\\|$, independently of $b$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-theta-fourier-measure"
+  },
+  {
+   "claim_id": "claim-toric-limit",
+   "exact_statement": "At every fixed stage $i$, the periods $P_{j,i}(m)$ have coefficientwise limits as positive $m$ tends to zero on the chosen $p$-adic branch and tends to infinity ordinarily. The limits, as group polynomials, have uniformly bounded coefficients as $i$ varies. Up to a fixed nonzero scalar and group-like units, the limit of $P_{0,i}(m)$ is the stage image of the undepleted series $b_w^0$. Consequently, when $b_w^0(z_0)=0$, weights may be chosen at each stage with arbitrary prescribed additional precision so that $$P_{0,i}(m_i)(z_0)\\longrightarrow0,\n \\qquad \\sup_i|P_{1,i}(m_i)(z_0)|_p<\\infty.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-theta-toric-limit"
+  },
+  {
+   "claim_id": "claim-boundary-small",
+   "exact_statement": "Assume $b_w^0(z_0)=0$, and choose the auxiliary tests and local parameters of Lemma <a href=\"#theta:test-point\" data-reference-type=\"ref\" data-reference=\"theta:test-point\">51</a>. After the fixed clearing of Proposition <a href=\"#theta:integral-family\" data-reference-type=\"ref\" data-reference=\"theta:integral-family\">55</a>, weights $m_i$ may be chosen so that all constant Fourier–Jacobi coefficients of $\\Theta_{i,m_i}$ at $z_0$ tend uniformly to zero. The weights tend to zero on the fixed $p$-adic branch and to infinity ordinarily. At each fixed stage they can satisfy arbitrarily strong additional weight-approximation requirements. The assertion holds simultaneously for the finitely many fixed variants used for nonconstant content and for their integral prime-to-$p$ translates.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-theta-boundary-small"
+  },
+  {
+   "claim_id": "claim-theta-implication",
+   "exact_statement": "Let $\\mathfrak p$ be a horizontal height-one prime of the deformation ring, with the auxiliary tuple conditions of Section <a href=\"#sec:theta\" data-reference-type=\"ref\" data-reference=\"sec:theta\">7</a>. If $b_w^0\\in\\mathfrak p$, then, over $\\mathop{\\mathrm{Frac}}(R/\\mathfrak p)$, at least one of $$H^1_{\\mathrm{prim},a}(K,V\\chi),\\qquad\n H^1_{\\mathrm{prim},a}(K,V'\\chi)$$ is nonzero. Here $a$ is one fixed side determined by the reciprocity convention of Section <a href=\"#sec:theta\" data-reference-type=\"ref\" data-reference=\"sec:theta\">7</a>. Replacing $w$ by $\\bar w$ replaces $a$ by its conjugate. Both alternatives use the scalar character of the determinant problem.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-extraction-theta-implication"
+  },
+  {
+   "claim_id": "claim-theta-content",
+   "exact_statement": "There are controlled theta sections at $z_0$, of weights $m_i$ as above and depths $s_i$, whose constant terms tend uniformly to zero and whose ordinary positive Fourier–Jacobi content has valuation bounded above by a constant independent of $i$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-extraction-content"
+  },
+  {
+   "claim_id": "claim-cusp-lift",
+   "exact_statement": "After one fixed reduction of precision, the sections in Lemma <a href=\"#extraction:content\" data-reference-type=\"ref\" data-reference=\"extraction:content\">60</a> give finite integral operator orders $\\mathbb T_i^0$ on classical cusp spaces and maps $$\\lambda_i^0:\\mathbb T_i^0\\longrightarrow\n                 \\mathcal O_k/(p^{M_i}),\\qquad M_i\\longrightarrow\\infty.$$ The maps have the tested theta values on the split good and controlled operators. Both normalized $p$-operators have value one. No upper bound on $s_i$ is required.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-extraction-cusp"
+  },
+  {
+   "claim_id": "claim-binary-separation",
+   "exact_statement": "On an actual system with $\\Delta_v\\ne0$, the generalized $1$-primary projection $P_v^{\\mathrm{bin}}$ of $\\rho_\\pi(\\iota_v)$ is defined and satisfies $$(\\rho_\\pi(\\iota)-1)P_v^{\\mathrm{bin}}=0\n                           \\qquad(\\iota\\in I_v).$$ Together with the Frobenius-separated projections, these identities give an exponent $C_0$ independent of stage and depth for which $$\\Delta^{C_0}\\ker(\\mathbb T_i^0\\longrightarrow\\mathbb T_i)=0,$$ where $\\mathbb T_i$ is the image order in characteristic-zero eigensystems.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-extraction-binary"
+  },
+  {
+   "claim_id": "claim-cyclotomic-corner",
+   "exact_statement": "The corner modules satisfy $D_{xy}=D_{xf}D_{fy}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-extraction-cyclotomic"
+  },
+  {
+   "claim_id": "claim-no-stable-line",
+   "exact_statement": "The image of $D_{fy}$ is nonzero in every characteristic-zero field evaluation of the ambient ring. Consequently $\\operatorname{Fitt}_{0,\\mathscr T}(D_{fy})=0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-extraction-no-line"
+  },
+  {
+   "claim_id": "claim-quotient-regularity",
+   "exact_statement": "At a horizontal height-one prime the primitive one-sided complexes are perfect of amplitude $[1,2]$ and Euler characteristic zero. If $M_{a,w}$ is the determinant of their differential, then $$L_{0,w}=D_0M_{0,w},\\qquad L_{1,w}=D_1M_{1,w}$$ up to units in the testing DVR. Here $L_{0,w}=L_w$, $L_{1,w}=L'_w$, and $D_a$ is the product of the singular Euler determinants at the fixed non-$p$ places. Every irreducible divisor of either $U_w$ is horizontal and has nonzero reduction modulo $(p,t)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-unit-quotient-regularity"
+  },
+  {
+   "claim_id": "claim-quotient-association",
+   "exact_statement": "For every auxiliary tuple satisfying the preceding requirements, $$(U_w)=(U_{\\bar w})\n                         \\tag{17}\\label{eq:source-17}$$ in $R$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-unit-association"
+  },
+  {
+   "claim_id": "claim-augmented-alternating",
+   "exact_statement": "Let $k$ have characteristic zero and let $s\\geq1$. On $$W_s=\\operatorname{Alt}_s(k)\\oplus\\operatorname{Mat}_{s,2}(k)$$ the locus where $[A\\mid B]$ has rank less than $s$ has codimension at least two. If $s_0,s_1$ are positive even integers, the locus $$\\{(A_0,A_1):\\det A_0=\\det A_1=0\\}\n \\subseteq\\operatorname{Alt}_{s_0}(k)\\oplus\n             \\operatorname{Alt}_{s_1}(k)$$ also has codimension at least two.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-unit-augmented-alternating"
+  },
+  {
+   "claim_id": "claim-tangent-minors",
+   "exact_statement": "Let $(A,\\mathfrak m,k)$ be a regular local ring with $\\operatorname{char}k=0$. Let $D:A^s\\to A^r$, $r\\geq s\\geq1$, have entries in $\\mathfrak m$, and let $D_1$ be its linear part on the tangent space $T_A=\\mathop{\\mathrm{Hom}}_k(\\mathfrak m/\\mathfrak m^2,k)$. Suppose there is a linear injection $\\iota:W_s\\to T_A$ such that, over every extension field $k'/k$, $$\\ker D_1(\\iota(A_0,B))\n       \\subseteq\\ker[A_0\\mid B]^{\\mathsf t}.$$ Then the maximal-minor ideal $I_s(D)$ has height at least two.*\n\n*There is also a simultaneous version. Let $D_a:A^{s_a}\\to A^{r_a}$, $r_a\\geq s_a>0$, for $a=0,1$, have zero residue, with $s_a$ even. Suppose a linear injection $$\\iota:\\operatorname{Alt}_{s_0}(k)\\oplus\n            \\operatorname{Alt}_{s_1}(k)\\longrightarrow T_A$$ satisfies, for every extension $k'/k$, every $(A_0,A_1)$ over $k'$, and each $a=0,1$, $$\\ker\\bigl((D_a)_1(\\iota(A_0,A_1))\\bigr)\\subseteq\\ker A_a.$$ Then $I_{s_0}(D_0)+I_{s_1}(D_1)$ has height at least two.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-unit-tangent-minors"
+  },
+  {
+   "claim_id": "claim-simultaneous-jumps",
+   "exact_statement": "The new tame directions can be chosen so that, for every such $\\mathfrak q$, the following two loci have codimension at least two in $\\mathop{\\mathrm{Spec}}S_{(\\mathfrak q,\\mathbf y)}$:*\n\n1.  *the locus where both one-sided primitive complexes for a single representation jump;*\n\n2.  *for each allocation of sides, the locus where one one-sided primitive complex for each of $V_0,V_1$ jumps.*\n\n*The old complexes are recovered on setting $\\mathbf y=0$, and the determinant and analytic specialization identities of Lemma <a href=\"#pair:trace\" data-reference-type=\"ref\" data-reference=\"pair:trace\">43</a> remain integral identities up to units.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-unit-simultaneous-jumps"
+  },
+  {
+   "claim_id": "claim-unit-comparison",
+   "exact_statement": "The two quotients $U_w$ are units. Their specialization with all artificial variables zero gives an integral unit comparison between the analytic series and strict determinant on the true anticyclotomic line.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-unit-unit-comparison"
+  },
+  {
+   "claim_id": "claim-central-exact-factor",
+   "exact_statement": "Let $C_w^{s=1}(0)$ be the actual central strict/full complex after all artificial variables have been removed. Its differential determinant satisfies $$\\begin{split}\n -v_p(L_w^{s=1}(0))\n &=d(C_w^{s=1}(0),1)\\\\\n &=2n_P+2\\tau_g-s_K\n   -2\\bigl(v_p(\\log_{\\omega_E}P_K)-l+\\tau_p\\bigr)\n   -2\\sum_{q\\in S^\\circ}\\tau_q .\n \\end{split}\n \\tag{22}\\label{eq:source-22}$$ Consequently $$2(n_P+\\tau_g)=s_K+2v_p(c_E)+2\\sum_q v_p(c_q(E)),\n \\tag{23}\\label{eq:source-23}$$ where the last sum ranges over all rational finite primes.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-center-exact-factor"
+  },
+  {
+   "claim_id": "claim-pair-discrepancy-zero",
+   "exact_statement": "For every elliptic curve of analytic rank zero or one, including CM curves, and for the imaginary twist in Lemma <a href=\"#classical:auxiliary-fields\" data-reference-type=\"ref\" data-reference=\"classical:auxiliary-fields\">7</a>, $$X(E)+X(E^D)=0.\n                         \\tag{24}\\label{eq:source-24}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-center-pair-discrepancy"
+  },
+  {
+   "claim_id": "claim-cm-rank-zero",
+   "exact_statement": "If $E/\\mathbb Q$ has complex multiplication and $L(E,1)\\ne0$, the exact BSD formula holds for $E$ with the normalizations of Section <a href=\"#sec:intro\" data-reference-type=\"ref\" data-reference=\"sec:intro\">1</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-center-cm-zero"
+  },
+  {
+   "claim_id": "claim-odd-valuations",
+   "exact_statement": "For every elliptic curve $E/\\mathbb Q$ of analytic rank zero or one and every odd prime $p$, $$v_p(Q_E)=v_p(\\#\\mathop{\\mathrm{Sha}}(E/\\mathbb Q)).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-center-odd-valuations"
+  }
+ ],
+ "paper": "papers/EN-101-000-0022-2-2026-PR-T4-UK-EX-M1-C-ML-H-0003_PM-002.1_Exact_BirchSwinnerton_Dyer_Formula_from_Low_Selmer_Corank.md",
+ "purpose": "Exact Birch–Swinnerton-Dyer Formula from Low Selmer Corank",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "aaee73d08227001096d9eb602cfbe3c5982dbb9f2a70828cc68f1bc79c4499ad",
+   "pm.domains.v2": "58638a0b6933e4e4efd5dba35bf476e37bf2db23f0c1632943c4168b3a11046b",
+   "pm.edges.v2": "9ff5dbe6cc3d7c5f1c667dfd6c1129480ecb7212e65546aca4cd8256cf5b220f",
+   "pm.extraction.v2": "a9c5dfbf7fbee2e08ed2896da5d2cfb03b30ad8079e89731e0db2199f947cf04",
+   "pm.formal.v2": "5258f233dd7af6701f3b9a77382452bdff3b70c521c2323cc58e56608ff97774",
+   "pm.limits.v2": "299a40b074c597a3d62c792b3b85c1a4c99e833941f16f7034fc78fbca0159f4",
+   "pm.node.v2": "49bc0721648e502d53182b9f204ace3d6fafa7769b782b5085048e4279d82c9a",
+   "pm.objects.v2": "7e65b12d957ad09dc0bbf118481a30ea9ee3e9f2a6e52edb5c86210ba28ec4dd",
+   "pm.provenance.v2": "91036e54e25e2492cb2939c73b199f580dbe96539086385d070c4af249c3128e",
+   "pm.quantities.v2": "665cff17d465c89fd17adf347280015b340ce05f5a2585082c786fceaa416d32",
+   "pm.reading.v2": "c13595908f0529be24971e7968b9be869e7f60f0e2f2e5a52a105760da96941e",
+   "pm.roadmap.v2": "c449010e3eeeaab7fda42e6c68db15215a4c836d1a357c0298d5854ef9d63686",
+   "pm.search.v1": "c572cb434d896d466dd83d2a46e28b5de13435b38bcea7e02411be4f0fd7f205",
+   "pm.triptych.v2": "5a7561c8a572246dd6a6429085cf03389c4dfac37c1c2ac584a3a41117337b8c"
+  },
+  "canonical_sha256": "f28ee85f260c98f9e3adbc6d439fc83b14c620baf7d4dd385fccab4c6faa5063",
+  "paper_sha256": "f5228883af6646162949cfa1291b0382cdaeedf0758c127497503da1149b233c",
+  "repaired_body_sha256": "98738fb69391b80a7e93409a50c7c676108e223712b2516089abc5b05cbd1e53"
+ },
+ "status": "ACTIVE",
+ "subject_id": 1,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "87b2af8813d311a5078b9fcc9fe794cff00092aa12869a98dad33192a55b465e",
+   "receipt_sha256": "29dcf5f353bea7d9981424d3e834ff8deb94536e79697b1e04093fe25a971eaf",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Exact Birch–Swinnerton-Dyer Formula from Low Selmer Corank"
+}

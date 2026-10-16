@@ -1,0 +1,880 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 906723,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 247654
+ },
+ "coordinate": "EN-113-000-0000-2-2026-PR-T4-UK-EX-M1-B-AL-H-0315",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-cor-fractional-hadwiger",
+     "quote": "<span id=\"cor:hadwiger\" label=\"cor:hadwiger\"></span>There are finite nonempty simple graphs $G$ of arbitrarily large order $m$ for which $$h(G)<\\frac{26m}{75}+\\frac23\n <\\frac m2\\le\\chi_f(G)\\le\\chi(G).$$",
+     "quote_sha256": "e1af96164b9e77552e98ddd9d683542240f14a38c6ff42cfc6b96d7d0b255b5a"
+    }
+   ],
+   "query": "Hadwiger conjecture holds for all graphs",
+   "reason": "The main theorem constructs counterexamples, so the coefficient-one inequality cannot be assumed."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "There are arbitrarily large integers $m$ for which an $m$-vertex finite simple graph $G$ satisfies $$\\alpha(G)\\le2\n             \\qquad\\text{and}\\qquad\n             \\mathop{\\mathrm{cm}}(G)<\\frac{m}{100}.$$",
+     "quote_sha256": "d64551506fa380aa025ea099e3c27a4b4796a7bcaaf4240cb5a7aa78848bd8cb"
+    }
+   ],
+   "query": "sharp connected-matching conjecture for independence number two",
+   "reason": "The constructed graphs also disprove it after deleting a few vertices."
+  }
+ ],
+ "family": "PM-157",
+ "id": "PM-157.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "pm-h-5",
+    "claim_id": "claim-main-counterexample",
+    "statement": "All vector spaces, matrices, ranks, and algebraic forms are over $\\mathbb F_2$."
+   },
+   {
+    "anchor": "stmt-cor-fractional-hadwiger",
+    "claim_id": "claim-fractional-hadwiger-failure",
+    "statement": "<span id=\"cor:hadwiger\" label=\"cor:hadwiger\"></span>There are finite nonempty simple graphs $G$ of arbitrarily large order $m$ for which $$h(G)<\\frac{26m}{75}+\\frac23\n <\\frac m2\\le\\chi_f(G)\\le\\chi(G).$$"
+   },
+   {
+    "anchor": "pm-h-7",
+    "claim_id": "claim-hole-triangle-free",
+    "statement": "Let $\\mathcal X$ and $\\mathcal V$ be finite-dimensional vector spaces over $\\mathbb F_2$."
+   },
+   {
+    "anchor": "pm-h-9",
+    "claim_id": "claim-cut-kernel",
+    "statement": "Let $W\\subset\\mathcal B\\otimes\\mathcal B$ be the span of the point moments $v(s,z)v(s,z)^{\\mathsf T}$."
+   },
+   {
+    "anchor": "stmt-thm-raw-supersaturation",
+    "claim_id": "claim-raw-supersaturation",
+    "statement": "For the construction parameters specified in [sec:geometry](#sec:geometry), [sec:parameters](#sec:parameters), for all sufficiently large $n$, every probability law $\\sigma$ on units satisfying $$\\label{eq:raw-law-caps}\n \\sigma_1\\le M\\mu,\\qquad \\sigma_2\\le M\\mu,\\qquad\n \\sigma\\le 2^{DN}\\mu^2$$ has the following property: two independent units drawn from $\\sigma$ have all four cross holes with probability at least $2^{-100gN}$."
+   },
+   {
+    "anchor": "stmt-lem-entropy-support",
+    "claim_id": "claim-entropy-support",
+    "statement": "Let $\\mathcal P$ be a nonempty compact convex set of probability measures on a finite set, and let $\\rho$ minimize $\\mathsf D(\\cdot\\Vert q)$ on $\\mathcal P$."
+   },
+   {
+    "anchor": "stmt-lem-terminal-cut",
+    "claim_id": "claim-terminal-cut",
+    "statement": "Let $R\\subseteq\\Omega_n^2$."
+   },
+   {
+    "anchor": "stmt-prop-raw-to-graph",
+    "claim_id": "claim-raw-to-graph",
+    "statement": "Assume the conclusion of [thm:raw-supersaturation](#thm:raw-supersaturation) at a given sufficiently large $n$."
+   },
+   {
+    "anchor": "stmt-prop-matching-minor",
+    "claim_id": "claim-matching-minor-bound",
+    "statement": "For every finite nonempty graph $G$ of order $m$, $$\\mathop{\\mathrm{h}}(G)\\le\\frac{m+4\\mathop{\\mathrm{cm}}(G)+2}{3}.$$"
+   },
+   {
+    "anchor": "stmt-lem-paired-frame-orbit",
+    "claim_id": "claim-paired-frame-orbit",
+    "statement": "Let $A,A':U\\to V$ and $B,B':W\\to V^*$ be injective maps between finite-dimensional spaces over $\\mathbb F_2$."
+   },
+   {
+    "anchor": "stmt-lem-gram-frame-normalization",
+    "claim_id": "claim-gram-normalization",
+    "statement": "Let $p,q$ be nonnegative integers with $p+q\\le N$."
+   },
+   {
+    "anchor": "stmt-lem-frame-images",
+    "claim_id": "claim-frame-images",
+    "statement": "The following statements hold for all sufficiently large $n$.*\n\n1."
+   },
+   {
+    "anchor": "stmt-lem-raw-intersections",
+    "claim_id": "claim-raw-intersections",
+    "statement": "Let $\\sigma$ satisfy the joint cap in [eq:raw-law-caps](#eq:raw-law-caps)."
+   },
+   {
+    "anchor": "stmt-lem-peeling",
+    "claim_id": "claim-peeling",
+    "statement": "Take the constants in [eq:pin-budgets](#eq:pin-budgets), [eq:law-budgets](#eq:law-budgets), and choose the reference accuracy in [eq:reference-image-cap](#eq:reference-image-cap) with $\\epsilon<\\zeta/4$."
+   },
+   {
+    "anchor": "stmt-lem-walsh",
+    "claim_id": "claim-walsh-estimates",
+    "statement": "Let all weights below have absolute value at most one.*\n\n1."
+   },
+   {
+    "anchor": "pm-h-5",
+    "claim_id": "claim-base-moments",
+    "statement": "All vector spaces, matrices, ranks, and algebraic forms are over $\\mathbb F_2$."
+   },
+   {
+    "anchor": "pm-h-5",
+    "claim_id": "claim-label-support",
+    "statement": "All vector spaces, matrices, ranks, and algebraic forms are over $\\mathbb F_2$."
+   },
+   {
+    "anchor": "stmt-lem-sparse-pin-labels",
+    "claim_id": "claim-sparse-pin-labels",
+    "statement": "Put $L_0^{\\rm lab}=R_*+14$."
+   },
+   {
+    "anchor": "stmt-item-mixer-binary",
+    "claim_id": "claim-uniform-mixers",
+    "statement": "<span id=\"lem:generic-mixers\" label=\"lem:generic-mixers\"></span> For all sufficiently large $n$ one can choose the matrices $L_j^{ef},R_j^{ef}$ and $M_a$ in [sec:geometry](#sec:geometry) so that:*\n\n1."
+   },
+   {
+    "anchor": "stmt-lem-small-tables",
+    "claim_id": "claim-small-tables",
+    "statement": "The following statements hold.*\n\n1."
+   },
+   {
+    "anchor": "stmt-thm-gradient-realization",
+    "claim_id": "claim-gradient-realization",
+    "statement": "Suppose two units in fixed leaves have lists satisfying <a href=\"#eq:recipe-scalars\" data-reference-type=\"eqref\" data-reference=\"eq:recipe-scalars\">[eq:recipe-scalars]</a>, the binary prescriptions yielding <a href=\"#eq:recipe-gradients\" data-reference-type=\"eqref\" data-reference=\"eq:recipe-gradients\">[eq:recipe-gradients]</a>, equal matched keys, and an admissible injecting small table."
+   },
+   {
+    "anchor": "stmt-prop-collision",
+    "claim_id": "claim-collision-criterion",
+    "statement": "Let $\\sigma$ be a unit law in [thm:raw-supersaturation](#thm:raw-supersaturation), and let $\\widetilde\\sigma$ be a restriction of it of relative mass at least $2^{-o(N)}$, decomposed into leaves satisfying <a href=\"#eq:final-leaf-minentropy\" data-reference-type=\"eqref\" data-reference=\"eq:final-leaf-minentropy\">[eq:final-leaf-minentropy]</a>."
+   },
+   {
+    "anchor": "stmt-thm-phase-alternative",
+    "claim_id": "claim-phase-alternative",
+    "statement": "Suppose a marked-unit law is obtained by restricting an admissible law in [thm:raw-supersaturation](#thm:raw-supersaturation) to mass at least $10^{-12}$, and $\\Delta_O\\ne0$ throughout."
+   },
+   {
+    "anchor": "stmt-lem-no-cover-rank",
+    "claim_id": "claim-no-cover-rank",
+    "statement": "Let $r\\ge1$ be an integer, set $m_r=100r+10$ and $q_r=2^{-m_r}$, and let $s$ be a power of two with $s\\ge2^{m_r}$."
+   },
+   {
+    "anchor": "stmt-lem-injection",
+    "claim_id": "claim-injection-accepting-pairs",
+    "statement": "Let a prepared marked-unit law have final pins of total dimension at most $K$, and mixed marginals at most $M2^{o(N)}\\mu$."
+   },
+   {
+    "anchor": "stmt-lem-tiny-cover",
+    "claim_id": "claim-tiny-cover",
+    "statement": "Suppose the second alternative of [thm:phase-alternative](#thm:phase-alternative) holds, and write $$F(A,B)=u_{B,\\{1,2\\}}(\\Delta_A).$$"
+   },
+   {
+    "anchor": "stmt-prop-status-preparation",
+    "claim_id": "claim-status-preparation",
+    "statement": "Along a subsequence, the unit law can be prepared with final pin dimension at most $K$ and the final per-leaf bounds of [lem:peeling](#lem:peeling), at relative mass cost $2^{-o(N)}$, so that one of the following descriptions applies.*\n\n1."
+   },
+   {
+    "anchor": "stmt-lem-empty-status",
+    "claim_id": "claim-empty-status",
+    "statement": "If $e_1=e_2=0$, deleting $o(1)$ unit mass makes $$p_i=T(\\lambda_i,\\cdot)+a\n \\quad\\text{on all of }\\mathcal X,\\qquad i=1,2,\n \\label{eq:exact-prediction}$$ an exact identity on every retained unit."
+   },
+   {
+    "anchor": "stmt-lem-synthetic-slice",
+    "claim_id": "claim-synthetic-slice",
+    "statement": "Fix a selector, a flavor, and a fixed number $d$ of affine parameter variables."
+   },
+   {
+    "anchor": "stmt-lem-zero-delta",
+    "claim_id": "claim-zero-delta",
+    "statement": "On a predicted branch with $\\Delta=0$ throughout, $\\alpha_1=\\alpha_2$."
+   },
+   {
+    "anchor": "stmt-lem-histogram-control",
+    "claim_id": "claim-histogram-control",
+    "statement": "Fix a query shape, a constant $C_L$, and an integer $F$."
+   },
+   {
+    "anchor": "stmt-lem-histogram-gram-normalization",
+    "claim_id": "claim-histogram-gram-normalization",
+    "statement": "Let $a$ plus slots and $b$ minus slots in one ambient component be independent uniform vectors, and prescribe their entire $a$ by $b$ Gram matrix."
+   },
+   {
+    "anchor": "stmt-lem-histogram-batch-comparison",
+    "claim_id": "claim-histogram-batch-comparison",
+    "statement": "Consider two bounded batches of prescribed nominal columns in one raw endpoint, or in two independent raw endpoints."
+   },
+   {
+    "anchor": "stmt-lem-reference-product",
+    "claim_id": "claim-reference-product",
+    "statement": "For a fixed query shape and arbitrary global single-key functions $f_{j,n}$ with $\\lvert f_{j,n}\\rvert\\le1$, $$\\int\\prod_jf_{j,n}(k_j)\\,d\\nu_n\n =\\prod_j\\int f_{j,n}\\,d\\Omega_{l_j,q_j,n}\n   +O(2^{-N/2}).$$"
+   },
+   {
+    "anchor": "stmt-lem-histogram-many-queries",
+    "claim_id": "claim-histogram-many-queries",
+    "statement": "Fix a bounded query shape."
+   },
+   {
+    "anchor": "stmt-lem-typicality",
+    "claim_id": "claim-typicality",
+    "statement": "Let $F_n$ be a uniformly bounded common function of the inputs and keys of a fixed bounded query, with no other orientation dependence."
+   },
+   {
+    "anchor": "stmt-lem-binary-mixing",
+    "claim_id": "claim-binary-mixing",
+    "statement": "Fix a query template whose labels are distinct at each used endpoint."
+   },
+   {
+    "anchor": "stmt-lem-histogram-quadratic-bias",
+    "claim_id": "claim-quadratic-bias",
+    "statement": "Let $Q$ be a quadratic function on a binary vector space and let its polar form have rank $2r$."
+   },
+   {
+    "anchor": "stmt-lem-unary-positivity",
+    "claim_id": "claim-unary-positivity",
+    "statement": "Fix an endpoint, tag, label, flavor, and feasible tester summary with diagonal $q$."
+   },
+   {
+    "anchor": "stmt-thm-weak-product",
+    "claim_id": "claim-weak-product",
+    "statement": "Let $W_n$ be any sequence of real functions on $\\mathcal K_n$ with $\\lVert W_n\\rVert_\\infty\\le B$, where $B$ is fixed."
+   },
+   {
+    "anchor": "stmt-lem-product-twisted-regularity",
+    "claim_id": "claim-product-twisted-regularity",
+    "statement": "Let $\\lvert W\\rvert\\le B$ on the product key space of $I\\cup J$, and let $\\delta>0$."
+   },
+   {
+    "anchor": "stmt-lem-product-terminal-remainder",
+    "claim_id": "claim-product-terminal-remainder",
+    "statement": "Let $I,J$ be a nontrivial partition of some of the template positions."
+   },
+   {
+    "anchor": "stmt-cor-weak-product-factorized-integration",
+    "claim_id": "claim-factorized-integration",
+    "statement": "For the structured sum in <a href=\"#eq:weak-product-approximant\" data-reference-type=\"eqref\" data-reference=\"eq:weak-product-approximant\">[eq:weak-product-approximant]</a> and arbitrary bounded unary input weights, outside exponentially small mixed mass, $$\\begin{aligned}\n\\label{eq:weak-product-factorized-integration}\n &\\mathbb E_z\\mathcal A_n(O,z)S_n(K(O,z))\\prod_jw_j(O,z_j)\\notag\\\\\n &\\qquad=\n \\kappa\\sum_{a=1}^{L}c_{a,n}\n       \\prod_j\\mathbb E_{z_j}\n        \\bigl[f_{a,j,n}(K_j(O,z_j))w_j(O,z_j)\\bigr]+o(1).\n\\end{aligned}$$ The error is uniform over the unary weights."
+   },
+   {
+    "anchor": "stmt-lem-limit-global-projection",
+    "claim_id": "claim-limit-global-projection",
+    "statement": "Let $(K_n,\\nu_n)$ be finite probability spaces."
+   },
+   {
+    "anchor": "stmt-lem-limit-model",
+    "claim_id": "claim-limit-model",
+    "statement": "There is a subsequence and a common limiting experiment with the following properties.*\n\n1."
+   },
+   {
+    "anchor": "stmt-lem-limit-zero-product",
+    "claim_id": "claim-limit-zero-product",
+    "statement": "Assume <a href=\"#eq:limit-vanishing-overlap\" data-reference-type=\"eqref\" data-reference=\"eq:limit-vanishing-overlap\">[eq:limit-vanishing-overlap]</a>."
+   },
+   {
+    "anchor": "stmt-lem-limit-density",
+    "claim_id": "claim-limit-density",
+    "statement": "For almost every $Z$, the full limiting successful-query measure on this side has density $$\\label{eq:limit-density}\nG_Z(u)=\\kappa\\int\n  \\prod_{\\ell}h^\\theta_{t_\\ell,\\upsilon_\\ell}\n                    \\bigl(\\xi_\\ell(u)\\bigr)\\,d\\alpha_Z(\\theta)\n\\qquad (u\\in\\Upsilon)$$ with respect to $\\rho$."
+   },
+   {
+    "anchor": "stmt-prop-limit-overlap",
+    "claim_id": "claim-limit-overlap-obstruction",
+    "statement": "Assume <a href=\"#eq:limit-vanishing-overlap\" data-reference-type=\"eqref\" data-reference=\"eq:limit-vanishing-overlap\">[eq:limit-vanishing-overlap]</a>."
+   },
+   {
+    "anchor": "stmt-lem-status-duality",
+    "claim_id": "claim-status-duality",
+    "statement": "Any obstruction to the scalar system has a nonzero vector of weights $(s_1,s_2,r_1,r_2)\\in\\mathbb F_2^4$."
+   },
+   {
+    "anchor": "stmt-lem-status-global-prediction",
+    "claim_id": "claim-status-global-prediction",
+    "statement": "On the no-prediction alternative of [prop:status-preparation](#prop:status-preparation), the probability that the iid base arrays are obstructable is less than $.1$."
+   },
+   {
+    "anchor": "stmt-lem-status-predicted",
+    "claim_id": "claim-status-predicted",
+    "statement": "For a predicted pair with a table satisfying the compatibility conditions of [prop:status-preparation](#prop:status-preparation), the system <a href=\"#eq:status-local-targets\" data-reference-type=\"eqref\" data-reference=\"eq:status-local-targets\">[eq:status-local-targets]</a>–<a href=\"#eq:status-coupled-targets\" data-reference-type=\"eqref\" data-reference=\"eq:status-coupled-targets\">[eq:status-coupled-targets]</a> is soluble."
+   },
+   {
+    "anchor": "stmt-lem-status-span",
+    "claim_id": "claim-status-span",
+    "statement": "In each positive-mass alternative of [prop:status-preparation](#prop:status-preparation), the common experiment has positive mass of passed injecting tables for which the scalar system is soluble, robustly under the exclusions needed below."
+   },
+   {
+    "anchor": "stmt-lem-fresh-lists",
+    "claim_id": "claim-fresh-lists",
+    "statement": "On each scalar-soluble pair from [lem:status-span](#lem:status-span), further bounded exclusions can be made so that every scalar solution on the resulting four edge spans can be realized by between one and seven available generators per edge."
+   },
+   {
+    "anchor": "stmt-prop-positive-overlap",
+    "claim_id": "claim-positive-overlap",
+    "statement": "For every positive-mass alternative of [prop:status-preparation](#prop:status-preparation), some fixed numerical option has expected unnormalized successful-query overlap bounded below by a positive constant along a subsequence."
+   },
+   {
+    "anchor": "stmt-lem-rare-large-set-hit",
+    "claim_id": "claim-rare-large-set-hit",
+    "statement": "Fix $\\delta>0$, and consider a sequence of unit laws whose mixed joint densities are at most $2^{O(N)}$ relative to $\\mu^2$, whose two marginals are at most $M2^{o(N)}\\mu$, and whose marked effective spaces have the rank and dimension bounds of [lem:unary-positivity](#lem:unary-positivity)."
+   },
+   {
+    "anchor": "stmt-lem-rare-superlevel-nets",
+    "claim_id": "claim-rare-superlevel-nets",
+    "statement": "Consider the family of unnormalized successful base-query densities on a prepared leaf, allowing every orientation-only filter."
+   },
+   {
+    "anchor": "stmt-prop-rare-overlap",
+    "claim_id": "claim-rare-overlap",
+    "statement": "In the inverse-polynomial alternative of [prop:status-preparation](#prop:status-preparation), the overlap criterion <a href=\"#eq:overlap-criterion\" data-reference-type=\"eqref\" data-reference=\"eq:overlap-criterion\">[eq:overlap-criterion]</a> holds with a lower bound $\\Omega(N^{-4})$, along the prepared sequence."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "clique-minor bound from connected matchings",
+    "evidence": [
+     {
+      "anchor": "stmt-prop-matching-minor",
+      "quote": "For every finite nonempty graph $G$ of order $m$, $$\\mathop{\\mathrm{h}}(G)\\le\\frac{m+4\\mathop{\\mathrm{cm}}(G)+2}{3}.$$",
+      "quote_sha256": "cfe9afb3880579d6eb255f9b6b7ef767e12a33626e3ad853d5b6335f91113737"
+     }
+    ],
+    "requires_concepts": [
+     "Hadwiger number",
+     "connected matching",
+     "independence number"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-counterexample",
+   "exact_statement": "There are arbitrarily large integers $m$ for which an $m$-vertex finite simple graph $G$ satisfies $$\\alpha(G)\\le2\n             \\qquad\\text{and}\\qquad\n             \\mathop{\\mathrm{cm}}(G)<\\frac{m}{100}.$$",
+   "kind": "counterexample",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-fractional-hadwiger-failure",
+   "exact_statement": "<span id=\"cor:hadwiger\" label=\"cor:hadwiger\"></span>There are finite nonempty simple graphs $G$ of arbitrarily large order $m$ for which $$h(G)<\\frac{26m}{75}+\\frac23\n <\\frac m2\\le\\chi_f(G)\\le\\chi(G).$$ Thus Hadwiger’s conjecture and its fractional-coloring weakening $\\chi_f(G)\\le h(G)$ are false.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-fractional-hadwiger"
+  },
+  {
+   "claim_id": "claim-hole-triangle-free",
+   "exact_statement": "The hole relation is symmetric, has no loops, and is triangle-free.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-hole-triangle-free"
+  },
+  {
+   "claim_id": "claim-cut-kernel",
+   "exact_statement": "The intersection of $W_l$ over any strict majority of tags is $W_*$. Two representations of the same cut profile differ by a constant tuple with value in $W_*$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-cut-kernel"
+  },
+  {
+   "claim_id": "claim-raw-supersaturation",
+   "exact_statement": "For the construction parameters specified in [sec:geometry](#sec:geometry), [sec:parameters](#sec:parameters), for all sufficiently large $n$, every probability law $\\sigma$ on units satisfying $$\\label{eq:raw-law-caps}\n \\sigma_1\\le M\\mu,\\qquad \\sigma_2\\le M\\mu,\\qquad\n \\sigma\\le 2^{DN}\\mu^2$$ has the following property: two independent units drawn from $\\sigma$ have all four cross holes with probability at least $2^{-100gN}$. The inequalities in [eq:raw-law-caps](#eq:raw-law-caps) are pointwise inequalities of measures on the finite raw spaces.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-raw-supersaturation"
+  },
+  {
+   "claim_id": "claim-entropy-support",
+   "exact_statement": "Let $\\mathcal P$ be a nonempty compact convex set of probability measures on a finite set, and let $\\rho$ minimize $\\mathsf D(\\cdot\\Vert q)$ on $\\mathcal P$. Then $\\rho$ is positive on the union of the supports of measures in $\\mathcal P$. For every $\\rho'\\in\\mathcal P$, $$\\mathsf D(\\rho'\\Vert q)-\\mathsf D(\\rho\\Vert q)\n \\ge \\mathsf D(\\rho'\\Vert\\rho).$$ If $\\rho'$ is supported on a set $S$, the right side is at least $-\\log\\rho(S)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-entropy-support"
+  },
+  {
+   "claim_id": "claim-terminal-cut",
+   "exact_statement": "Let $R\\subseteq\\Omega_n^2$. If no probability law supported on $R$ satisfies [eq:raw-law-caps](#eq:raw-law-caps), there are sets $S\\subseteq\\Omega_n$ and $E_0\\subseteq\\Omega_n^2$ such that $$\\mu(S)<1/M,\\qquad \\mu^2(E_0)<2^{-DN},$$ and every pair in $R$ either has an endpoint in $S$ or belongs to $E_0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-terminal-cut"
+  },
+  {
+   "claim_id": "claim-raw-to-graph",
+   "exact_statement": "Assume the conclusion of [thm:raw-supersaturation](#thm:raw-supersaturation) at a given sufficiently large $n$. For $m=2^{C_0gN}$, the sampled graph defined in [sec:geometry](#sec:geometry) satisfies $$\\alpha(G)\\le2,\\qquad \\mathop{\\mathrm{cm}}(G)<m/100$$ with probability $1-\\exp(-\\Omega(m))$. The implied positive constant is independent of $n$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-raw-to-graph"
+  },
+  {
+   "claim_id": "claim-matching-minor-bound",
+   "exact_statement": "For every finite nonempty graph $G$ of order $m$, $$\\mathop{\\mathrm{h}}(G)\\le\\frac{m+4\\mathop{\\mathrm{cm}}(G)+2}{3}.$$ In particular, if $\\alpha(G)\\le2$ and $\\mathop{\\mathrm{cm}}(G)<m/100$, then $$\\mathop{\\mathrm{h}}(G)<\\frac{26m}{75}+\\frac23<\\frac m2\\le\\chi(G)\n \\qquad(m\\ge5).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-matching-minor"
+  },
+  {
+   "claim_id": "claim-paired-frame-orbit",
+   "exact_statement": "Let $A,A':U\\to V$ and $B,B':W\\to V^*$ be injective maps between finite-dimensional spaces over $\\mathbb F_2$. If $$B^{\\mathsf T}A=(B')^{\\mathsf T}A',$$ there is $L\\in\\mathop{\\mathrm{GL}}(V)$ with $LA=A'$ and $L^{-\\mathsf T}B=B'$. Thus based individually injective plus and minus frames with a prescribed Gram matrix form one orbit under the simultaneous primal and dual action.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-paired-frame-orbit"
+  },
+  {
+   "claim_id": "claim-gram-normalization",
+   "exact_statement": "Let $p,q$ be nonnegative integers with $p+q\\le N$. For $p$ independent uniform plus vectors and $q$ independent uniform minus vectors in paired copies of $\\mathbb F_2^N$, and a prescribed $p$-by-$q$ Gram matrix $G$, the probability of that Gram matrix together with individual injectivity of both frames is at most $2^{-pq}$ and at least $$\\label{eq:bounded-gram-normalization}\n 2^{-pq}(1-2^{p-N})(1-2^{p+q-N}).$$ In particular, any consistent Gram specification on a bounded number of vectors, together with injectivity on each side, has probability bounded below by a positive constant for large $N$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-gram-frame-normalization"
+  },
+  {
+   "claim_id": "claim-frame-images",
+   "exact_statement": "The following statements hold for all sufficiently large $n$.*\n\n1.  *The plus frame $[P,X]$ is uniform among injective maps. Conditional on it, the minus columns are independent uniforms on the affine spaces prescribed in [eq:raw-frame-law](#eq:raw-frame-law), followed only by the conditioning that $[Q,Y]$ is injective. The failure probability of this last condition, before conditioning, is at most $2^{2(d+h)-N}$ per component.*\n\n    *Given $P,Q$, the channels $X,Y$ are independent uniform-column draws on $\\ker Q^{\\mathsf T}$ and $\\ker P^{\\mathsf T}$, respectively, conditioned on $[P,X]$ and $[Q,Y]$ being injective. The two rank-failure probabilities are exponentially small in $N$. Each channel frame alone is uniform among injective maps $\\mathbb F_2^h\\to\\mathbb F_2^N$. For any fixed $q$ independent vectors in its paired ambient space, the probability that transpose evaluation on their span is not injective is at most $$\\label{eq:channel-transpose-failure}\n     2^{q-h+1}.$$ The unconditional joint channel law is bounded above by a constant, depending on $g,h$ but not on $n$, times the completely independent uniform-column law.*\n\n2.  *At independently sampled raw vertices and components, images of prescribed primal coefficient tuples that are independent separately at each vertex and sign are uniform subject to their individual injectivities and their prescribed same-vertex Gram matrices. For tuples using channels as well, the same assertion holds conditionally on the full self-channel Gram matrices $X_e^{\\mathsf T}Y_e$; the relevant full Gram matrix is $\\begin{psmallmatrix}E&0\\\\0&X_e^{\\mathsf T}Y_e\\end{psmallmatrix}$.*\n\n3.  *Let a fixed tuple of nominal directions use arbitrary combinations of the two endpoints’ primal and channel coefficients. Compute its rank separately in each component and sign in the *direct sum over both endpoints*, and let the total be $t$. For every preassigned $\\epsilon>0$, choosing $M_0$ sufficiently large gives, under $\\mu^2$, $$\\label{eq:reference-image-cap}\n     \\mathbb P\\{\\text{all those images equal prescribed vectors}\\}\n     \\le 2^{-(1-\\epsilon)tN}\\qquad(t\\ge1).$$ This is valid for all possible ranks $t$, including $t=O(n)$, not only for bounded tuples.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-frame-images"
+  },
+  {
+   "claim_id": "claim-raw-intersections",
+   "exact_statement": "Let $\\sigma$ satisfy the joint cap in [eq:raw-law-caps](#eq:raw-law-caps). Outside a set of $\\sigma$-probability $2^{-\\Omega(N)}$, $$\\sum_{e\\in\\mathcal E}\n  \\dim\\bigl(\\mathop{\\mathrm{im}}P_{1,e}\\cap\\mathop{\\mathrm{im}}P_{2,e}\\bigr)\\le2D.$$ For any unit outside that exceptional set and any $U_1\\lambda_1=U_2\\lambda_2$, both $\\lambda_i$ have total component rank at most $2D$. Each has a unique representation $(w_{i,l})_l$ vanishing at a strict majority of tags, and $$|\\{l:w_{i,l}\\ne0\\}|\\le4D/g,\\qquad\n \\chi_*(w_1)=\\chi_*(w_2).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-raw-intersections"
+  },
+  {
+   "claim_id": "claim-peeling",
+   "exact_statement": "Take the constants in [eq:pin-budgets](#eq:pin-budgets), [eq:law-budgets](#eq:law-budgets), and choose the reference accuracy in [eq:reference-image-cap](#eq:reference-image-cap) with $\\epsilon<\\zeta/4$. For every law $\\sigma$ satisfying [eq:raw-law-caps](#eq:raw-law-caps), the following decompositions are available.*\n\n1.  *After discarding the exception in [lem:raw-intersections](#lem:raw-intersections) and at most $2^{-\\zeta N}$ further mass, the law is partitioned into *leaves*. Each leaf has fixed pin spaces with total dimension at most $K_1$, and its normalized law $\\sigma_\\lambda$ satisfies $$\\label{eq:leaf-minentropy}\n     \\sigma_\\lambda\\{\\text{a specified exact-image constraint of rank }t\n                     \\text{ modulo the pins}\\}\n     \\le 2^{-(1-\\zeta)tN}\n     \\qquad(t\\ge1).$$ The normalized leaf laws satisfy a common bound $2^{O(N)}\\mu^2$, with the implied constant determined by the early parameters.*\n\n\n2.  *Suppose a restriction of the mixed law has relative mass $2^{-o(N)}$. One may discard an exponentially small fraction of that restricted law so that every remaining normalized leaf restriction satisfies $$\\label{eq:final-leaf-minentropy}\n     \\sigma_\\lambda\\{\\text{a specified exact-image constraint of rank }t\n                     \\text{ modulo the pins}\\}\n     \\le 2^{-(1-2\\zeta)tN}\n     \\qquad(t\\ge1),$$ and still has density $2^{O(N)}$ relative to $\\mu^2$. For several successive restrictions, the same statement applies to their combined relative cost.*\n\n3.  *In addition, suppose at most $u_0$ further coefficient directions per unit must be pinned, their coefficient choices and all required scalar metadata having at most $2^{O(n)}$ possibilities per old leaf. After splitting by these choices and their exact images, discarding exponentially small mass, and peeling again, the total pin dimension is at most $K$. The fresh leaves satisfy [eq:leaf-minentropy](#eq:leaf-minentropy); after further restrictions as in <span class=\"upright\">(b)</span>, they satisfy [eq:final-leaf-minentropy](#eq:final-leaf-minentropy). They retain a uniform $2^{O(N)}\\mu^2$ density bound.*\n\n*In all parts the mixed law uses each leaf’s actual mass, normalized only after the indicated discards. No equal reweighting of leaves is used. After a restriction, $\\sigma_\\lambda$ denotes the normalized surviving law on that leaf.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-peeling"
+  },
+  {
+   "claim_id": "claim-walsh-estimates",
+   "exact_statement": "Let all weights below have absolute value at most one.*\n\n1.  *If $x,y$ are independent uniform vectors and $B(x,y)$ is a bilinear form of rank $d$, then $$\\left|\\mathbb Ef(x)g(y)(-1)^{B(x,y)}\\right|\\le2^{-d/2}.$$ Replacing either uniform law by a law of density at most $C_i$ multiplies this bound by at most $C_1C_2$.*\n\n2.  *If $\\alpha,\\beta$ are subprobability measures on $\\mathbb F_2^d$, with point masses at most $p_1,p_2$, respectively, then $$\\left|\\sum_{x,y}\\alpha(x)\\beta(y)f(x)g(y)(-1)^{x\\cdot y}\\right|\n     \\le2^{d/2}(p_1p_2)^{1/2}.$$*\n\n3.  *For independent uniform global $N$-bit vector slots in two groups, a cross-pairing character with coefficient matrix $C$ has bit rank $N\\mathop{\\mathrm{rank}}C$. In particular, if its cross coefficient pattern is nonzero, its correlation against two bounded weights, one on each group, is at most $2^{-N/2}$. Arbitrary phases depending separately on the groups may be included in these weights.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-walsh"
+  },
+  {
+   "claim_id": "claim-base-moments",
+   "exact_statement": "The span of $(1,z)(1,z)^{\\mathsf T}$, $z\\in\\mathbb F_2^{d_{\\mathrm b}}$, consists precisely of symmetric $(1+d_{\\mathrm b})$-by-$(1+d_{\\mathrm b})$ matrices $Z$ satisfying $Z_{ii}=Z_{0i}$ for every $i$. For any $u$ distinct selectors, their evaluation vectors $p_s$ are linearly independent if $j_*\\ge u-1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-base-moments"
+  },
+  {
+   "claim_id": "claim-label-support",
+   "exact_statement": "Every $w\\in W$ of rank at most $R_*$ has a representation $$\\label{eq:label-decomposition}\n w=\\sum_{s\\in L}(p_s\\otimes I)Z_s(p_s\\otimes I)^{\\mathsf T},\n \\qquad |L|\\le R_*,$$ where each $Z_s$ is symmetric, $(Z_s)_{ii}=(Z_s)_{0i}$, and $\\sum_{s\\in L}\\mathop{\\mathrm{rank}}Z_s\\le R_*$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-label-support"
+  },
+  {
+   "claim_id": "claim-sparse-pin-labels",
+   "exact_statement": "Put $L_0^{\\rm lab}=R_*+14$. At an endpoint, the union of the nonzero label supports of all vectors in all $S_{i,e}^{\\pm}$ that can be written as $\\sum_{s\\in L}p_s\\otimes z_s$ with $|L|\\le L_0^{\\rm lab}$ has size at most $$\\label{eq:label-budget}\n B_0=2|\\mathcal E|K(R_*+14).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-sparse-pin-labels"
+  },
+  {
+   "claim_id": "claim-uniform-mixers",
+   "exact_statement": "<span id=\"lem:generic-mixers\" label=\"lem:generic-mixers\"></span> For all sufficiently large $n$ one can choose the matrices $L_j^{ef},R_j^{ef}$ and $M_a$ in [sec:geometry](#sec:geometry) so that:*\n\n1.  *<span id=\"item:mixer-unary\" label=\"item:mixer-unary\"></span> For every nonzero $x\\in\\mathcal X$ of total component rank at most $K$, every tag, label and flavor, and every fixing of the non-$Z$ base coordinates, the quadratic function $T(x,\\mathfrak a_l(s,z))$ of the $n$ remaining $Z$ bits has polar rank at least $2(J-s_0)$. It uses a space of linear forms on $Z$ of bounded dimension, independent of $n$. This space can be chosen before the non-$Z$ coordinates are fixed.*\n\n2.  *For two distinct labels and any two flavors, every nonzero parity of the indexed $L_j^{ef},R_j^{ef}$ evaluations between the two point inputs, allowing each matrix in either order or both, and optionally either or both orders of $E$, has bilinear-part rank at least $n/5$. Here a nonzero parity involving an $L$ or $R$ evaluation means that at least one such indexed ordered evaluation occurs. The same rank bound holds for the three parities consisting of $E$ alone, its reverse alone, or their sum.*\n\n*The choices are made before any unit law is selected.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-item-mixer-binary"
+  },
+  {
+   "claim_id": "claim-small-tables",
+   "exact_statement": "The following statements hold.*\n\n1.  *For a fixed pair of leaves and a numerical small table, admissibility is the intersection of two unary orientation filters, one on each unit. Its numerical coordinate data, including injection and the bases of the effective spaces, have bounded description length apart from the nominal coefficient bases, which require $O(n)$ bits.*\n\n2.  *The key directions of the lists at either unit are jointly independent modulo its table-coordinate spaces, component by component and sign by sign.*\n\n\n3.  *Given <a href=\"#eq:recipe-scalars\" data-reference-type=\"eqref\" data-reference=\"eq:recipe-scalars\">[eq:recipe-scalars]</a>, there is a prescription of the binary $L,R$ evaluations between distinct atoms at each endpoint, depending only on their tags, tester summaries and $p$ bits, which makes $$\\label{eq:recipe-gradients}\n     r(v_{iz})(x)=\n     \\begin{cases}\n      0,&x\\text{ is an atom of the list toward }z,\\\\\n      p_{z'}(\\widetilde x),&x\\text{ is an atom toward }z',\n     \\end{cases}$$ where $z'$ is the other endpoint of the opposite unit and $\\widetilde x$ is the matched atom there.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-small-tables"
+  },
+  {
+   "claim_id": "claim-gradient-realization",
+   "exact_statement": "Suppose two units in fixed leaves have lists satisfying <a href=\"#eq:recipe-scalars\" data-reference-type=\"eqref\" data-reference=\"eq:recipe-scalars\">[eq:recipe-scalars]</a>, the binary prescriptions yielding <a href=\"#eq:recipe-gradients\" data-reference-type=\"eqref\" data-reference=\"eq:recipe-gradients\">[eq:recipe-gradients]</a>, equal matched keys, and an admissible injecting small table. Freeze their actual cross Gram entries whenever either argument is a pin or a key direction. Then there are abstract cross bilinear forms on the full nominal spaces, extending all these frozen entries, whose primal-versus-channel entries satisfy $$\\label{eq:realized-gradients}\n u_zU_i=r(v_{iz})\\quad\\text{on }\\mathcal X\n \\qquad(i\\text{ and }z\\text{ in opposite units}).$$ Only the primal-versus-channel entries need be prescribed in the final test. Their number is at most $16|\\mathcal E|h\\dim\\mathcal B=O(n)$, with its coefficient fixed before $M_0$. Agreement of the actual cross Grams with these entries produces all four cross holes, with witnesses $(v_{iz},v_{zi})$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-thm-gradient-realization"
+  },
+  {
+   "claim_id": "claim-collision-criterion",
+   "exact_statement": "Let $\\sigma$ be a unit law in [thm:raw-supersaturation](#thm:raw-supersaturation), and let $\\widetilde\\sigma$ be a restriction of it of relative mass at least $2^{-o(N)}$, decomposed into leaves satisfying <a href=\"#eq:final-leaf-minentropy\" data-reference-type=\"eqref\" data-reference=\"eq:final-leaf-minentropy\">[eq:final-leaf-minentropy]</a>. Mix the leaves with their actual masses in $\\widetilde\\sigma$. Suppose accepted numerical queries as above, with their leaf-pair choices of table and separate filters, satisfy $$\\label{eq:overlap-criterion}\n \\mathbb E_{\\text{independent leaf pair}}\n       \\int d_A d_B\\,d\\nu_n\\ge 2^{-o(N)}.$$ Then two independent units from the original $\\sigma$ have all four cross holes with probability at least $$\\label{eq:collision-conclusion}\n 2^{-(k_{\\max}+.03)N-o(N)}.$$ It suffices to obtain <a href=\"#eq:overlap-criterion\" data-reference-type=\"eqref\" data-reference=\"eq:overlap-criterion\">[eq:overlap-criterion]</a> after skipping some leaf pairs, or after summing over a bounded number of numerical options. Positive subsequential constants and inverse-polynomial overlap bounds both suffice. In particular, this conclusion contradicts a sequence violating [thm:raw-supersaturation](#thm:raw-supersaturation).",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-collision"
+  },
+  {
+   "claim_id": "claim-phase-alternative",
+   "exact_statement": "Suppose a marked-unit law is obtained by restricting an admissible law in [thm:raw-supersaturation](#thm:raw-supersaturation) to mass at least $10^{-12}$, and $\\Delta_O\\ne0$ throughout. For all sufficiently large $n$, one can retain a sublaw of fixed positive relative mass, bounded below using only the early parameters, such that one of the following holds for independent draws $A,B$:*\n\n1.  *every nontrivial phase mean $$\\mathbb E(-1)^{u_{B,S}(\\Delta_A)+u_{A,R}(\\Delta_B)},\n     \\qquad(S,R)\\ne(\\varnothing,\\varnothing),$$ has absolute value less than $.005$;*\n\n2.  *a componentwise cover of total dimension at most $d_0$ covers every $\\Delta_O$, and every displayed mean for which $|S|=1$ or $|R|=1$ is $2^{-\\Omega(N)}$.*\n\n*The cover may depend on the law and on $n$. The constants in its dimension bound and in the relative mass bound do not depend on the later selector or channel sizes.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-phase-alternative"
+  },
+  {
+   "claim_id": "claim-no-cover-rank",
+   "exact_statement": "Let $r\\ge1$ be an integer, set $m_r=100r+10$ and $q_r=2^{-m_r}$, and let $s$ be a power of two with $s\\ge2^{m_r}$. Suppose $T_1,\\ldots,T_s$ are independent copies of a random tensor of total component rank at most $r$. If every fixed componentwise cover with dimension at most $rs$ in each mode has probability less than $p$, then $$\\mathbb P\\left\\{\\mathop{\\mathrm{rank}}\\left(\\sum_{j=1}^sT_j\\right)<q_rs/4\\right\\}\n \\le 4^s p^{q_rs/2}.\n \\label{eq:no-cover-rank}$$ Here rank means the sum of component ranks.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-no-cover-rank"
+  },
+  {
+   "claim_id": "claim-injection-accepting-pairs",
+   "exact_statement": "Let a prepared marked-unit law have final pins of total dimension at most $K$, and mixed marginals at most $M2^{o(N)}\\mu$. Let ${\\cal A}$ be a pair event for independent draws, of probability at least $N^{-c_0}$ for some fixed $c_0$. For each fixed draw suppose its accepting opposite units form a member of a fixed family of cardinality at most $2^{C_sN}$. Assume $C_s$ is fixed before $h$. For every fixed $\\varepsilon>0$, by choosing $h$ sufficiently large in terms of $K,C_s,\\varepsilon,g$, the proportion of pairs in ${\\cal A}$ failing the small-table injection conditions is at most $\\varepsilon$, for all sufficiently large $n$. For the unconditional pair event the accepting family has one member.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-injection"
+  },
+  {
+   "claim_id": "claim-tiny-cover",
+   "exact_statement": "Suppose the second alternative of [thm:phase-alternative](#thm:phase-alternative) holds, and write $$F(A,B)=u_{B,\\{1,2\\}}(\\Delta_A).$$ Then the following assertions hold.*\n\n1.  *The matrix $F$ on the finite support has rank at most $d_0N$. Its alternating part $F+F^{\\mathsf T}$ has rank at most $2d_0N$. If $\\mathbb P\\{F(A,B)+F(B,A)=0\\}\\to0$, there is a restriction of mass $2^{-o(N)}$ on which that alternating part is identically zero.*\n\n2.  *If $F(A,A)=0$ throughout, then for either fixed $c\\in\\mathbb F_2$, $$\\mathbb P\\{u_{B,1}(\\Delta_A)=u_{B,2}(\\Delta_A)\n           =u_{A,1}(\\Delta_B)=u_{A,2}(\\Delta_B)=c\\}\n           \\ge c_1N^{-4}\n     \\label{eq:tiny-four-phases}$$ for a positive fixed $c_1$ and all large $n$.*\n\n3.  *In part <span class=\"upright\">(b)</span>, one can apply the second peeling so that the event in [eq:tiny-four-phases](#eq:tiny-four-phases) is determined by the two leaves. At most $4K_1+2d_0<u_0$ additional image directions are needed. The same $\\Omega(N^{-4})$ leaf-pair mass survives the exponentially small discards. On admissible small tables, the contractions on the old $\\lambda_i$’s then equal the actual contractions.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-tiny-cover"
+  },
+  {
+   "claim_id": "claim-status-preparation",
+   "exact_statement": "Along a subsequence, the unit law can be prepared with final pin dimension at most $K$ and the final per-leaf bounds of [lem:peeling](#lem:peeling), at relative mass cost $2^{-o(N)}$, so that one of the following descriptions applies.*\n\n1.  *There is no prediction as in [def:prediction](#def:prediction) on the first-peeled law. The effective spaces are still the first ones. For independent units, the mass admitting an admissible injecting small table is greater than $.99$.*\n\n2.  *A prediction with fixed $\\alpha_i,c$ and common classes $e_i$ is retained. The old marks and exceptions are preserved, and [eq:prediction](#eq:prediction) has uniform $o(1)$ error on every retained unit. The mass admitting an admissible injecting table satisfying [eq:phase-compatibility](#eq:phase-compatibility) is bounded below by a positive constant.*\n\n3.  *Both prediction classes are zero, and every retained unit satisfies the exact identities $$p_i=T(\\lambda_i,\\cdot)+a\n     \\quad\\text{on all of }\\mathcal X,\\qquad i=1,2.$$ There is a set of leaf pairs of mass at least $c_2N^{-4}$ under the final leaf mixture, for a fixed $c_2>0$, with phase compatibility determined by the two leaves. For each such pair one can choose a specific injecting compatible table whose two separate orientation admissibility filters have masses at least $a_0>0$. The constants $c_2,a_0$ are independent of $n$.*\n\n*In every case the mixed joint density is at most $2^{(D+o(1))N}\\mu^2$, and its individual marginals are at most $M2^{o(N)}\\mu$. Relative to the stored leaf bases and pin images, all numerical table formats, unary statuses, old-mark coordinates and exception-set descriptions have bounded length in $n$. The extra exact pins are used only in case <span class=\"upright\">(iii)</span>.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-status-preparation"
+  },
+  {
+   "claim_id": "claim-empty-status",
+   "exact_statement": "If $e_1=e_2=0$, deleting $o(1)$ unit mass makes $$p_i=T(\\lambda_i,\\cdot)+a\n \\quad\\text{on all of }\\mathcal X,\\qquad i=1,2,\n \\label{eq:exact-prediction}$$ an exact identity on every retained unit.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-empty-status"
+  },
+  {
+   "claim_id": "claim-synthetic-slice",
+   "exact_statement": "Fix a selector, a flavor, and a fixed number $d$ of affine parameter variables. Write a random affine coefficient map as $$C(t,u)=p_s\\otimes(t,z_0t+Lu),\n \\qquad (t,u)\\in\\mathbb F_2\\oplus\\mathbb F_2^d.$$ Assume the flavor retains an $n$-bit $Z$-block absent from $E$. Suppose we condition the affine coefficients on $C^{\\mathsf T}EC=G$, where $G$ is fixed, this event has probability at least a fixed $\\beta>0$, and it depends on no $Z$ coefficient. Let ${\\cal T}_n$ be any common test of absolute value at most one on the image column arrays $(P_eC,Q_eC)_e$, using a fixed set of components. Its empirical average over the conditioned affine coefficients, at a raw orientation, has variance $$O(2^{-N/2}+2^{2d+1-n})$$ around its mean under uniform injective image column arrays with internal Gram $G$. The constants may depend on the fixed column counts and $\\beta$, but the estimate is uniform over the tests ${\\cal T}_n$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-synthetic-slice"
+  },
+  {
+   "claim_id": "claim-zero-delta",
+   "exact_statement": "On a predicted branch with $\\Delta=0$ throughout, $\\alpha_1=\\alpha_2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-zero-delta"
+  },
+  {
+   "claim_id": "claim-histogram-control",
+   "exact_statement": "Fix a query shape, a constant $C_L$, and an integer $F$. Consider any collection of normalized leaf laws $\\pi$ satisfying $$\\label{eq:histogram-leaf-cap}\n \\pi\\le 2^{C_LN}\\mu^2.$$ The following assertions are uniform over those leaves and over the bounded numerical choices of a query.*\n\n1.  *If $A_n$ is a sequence of slot sets with $\\omega_n(A_n)\\to0$, then the probability that the unfiltered query key belongs to $A_n$, averaged on any choice of leaves, tends to zero. Equivalently, the averaged key laws are uniformly absolutely continuous in this asymptotic small-set sense.*\n\n2.  *On each leaf, choose any $F$ binary flags of the orientation and query parameters. Let $\\mathcal H_{\\pi,n}$ be the family of unnormalized key densities obtained by filtering by any event of the orientation and the flag values. For every $\\varepsilon>0$, this family has an $L^1(\\omega_n)$ $\\varepsilon$-net of cardinality bounded independently of $n$ and of the leaf, for all sufficiently large $n$. The net itself may depend on the leaf.*\n\n3.  *Both conclusions persist after restricting the query to $\\mathcal K_n$ and expressing the subdensities relative to $\\nu_n$. In particular these subdensities are uniformly integrable: for every $\\eta>0$ there is $R<\\infty$ such that, for all sufficiently large $n$, all their tails above $R$ have integral at most $\\eta$.*\n\n*The flag functions may vary with the leaf and with $n$. The number of flags is fixed. No bound on the normalized marginal of an individual leaf is assumed here.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-histogram-control"
+  },
+  {
+   "claim_id": "claim-histogram-gram-normalization",
+   "exact_statement": "Let $a$ plus slots and $b$ minus slots in one ambient component be independent uniform vectors, and prescribe their entire $a$ by $b$ Gram matrix. If $a+b\\le N/2$, the probability of that prescription together with injectivity in each mode is $$2^{-ab}\\bigl(1+O(2^{-N+a+b})\\bigr),$$ uniformly in the prescribed matrix. The same statement holds for a fixed collection of independent endpoint/component groups, with the sum of their Gram-bit counts in place of $ab$ and a fixed factor in the error bound. In particular, for a bounded number of slots all relevant Gram normalizations and their ratios are bounded above and below by positive constants, uniformly in the nominal inputs.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-histogram-gram-normalization"
+  },
+  {
+   "claim_id": "claim-histogram-batch-comparison",
+   "exact_statement": "Consider two bounded batches of prescribed nominal columns in one raw endpoint, or in two independent raw endpoints. Suppose their union is nominally independent in every endpoint, component, and mode. Let $F$ and $G$ be bounded functions of the separate image batches, respectively. The difference between their joint raw expectation and the product of their separate raw expectations is $$O\\bigl(\\lVert F\\rVert_\\infty\\lVert G\\rVert_\\infty 2^{-N/2}\\bigr).$$ The bound is uniform in the independent nominal columns and all their prescribed same-endpoint Gram entries. The functions may also depend on the fixed nominal inputs determining their own batch.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-histogram-batch-comparison"
+  },
+  {
+   "claim_id": "claim-reference-product",
+   "exact_statement": "For a fixed query shape and arbitrary global single-key functions $f_{j,n}$ with $\\lvert f_{j,n}\\rvert\\le1$, $$\\int\\prod_jf_{j,n}(k_j)\\,d\\nu_n\n =\\prod_j\\int f_{j,n}\\,d\\Omega_{l_j,q_j,n}\n   +O(2^{-N/2}).$$ The bound is uniform over the functions.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-reference-product"
+  },
+  {
+   "claim_id": "claim-histogram-many-queries",
+   "exact_statement": "Fix a bounded query shape. There are constants $c_1,c_2>0$, independent of any key-space partition, with the following property. Put $\\ell=\\lfloor c_1n\\rfloor$ and repeat the query independently $\\ell$ times at a common orientation. Let $A_1,\\ldots,A_\\ell$ be cells of a partition of the full slot space, with weights $w_j=\\omega_n(A_j)$. Suppose the partition has bounded size and its nonempty weights have a positive lower bound along the sequence under consideration. Conditional on any nominal inputs whose queried columns are jointly independent in every endpoint, component, and mode, the raw image probability that query $j$ lies in $A_j$ is at most $$\\label{eq:histogram-many-query-bound}\n 2^{c_2\\ell}\\prod_{j=1}^{\\ell}w_j$$ for all sufficiently large $n$. How large $n$ must be may depend on the partition and its weight bound. The constants $c_1,c_2$ do not.*\n\n*The probability, over the repeated fresh parameters, that the required nominal independence fails tends to zero exponentially in $n$, uniformly over the common orientation.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-histogram-many-queries"
+  },
+  {
+   "claim_id": "claim-typicality",
+   "exact_statement": "Let $F_n$ be a uniformly bounded common function of the inputs and keys of a fixed bounded query, with no other orientation dependence. Put $$A_n(O)=\\mathbb E_z F_n(z,K(O,z)),\\qquad\n m_n=\\mathbb E_{O\\sim\\mu^2,z}F_n(z,K(O,z)).$$ For every fixed $\\varepsilon>0$, under <a href=\"#eq:histogram-mixed-caps\" data-reference-type=\"eqref\" data-reference=\"eq:histogram-mixed-caps\">[eq:histogram-mixed-caps]</a>, $$\\rho_n\\{\\lvert A_n-m_n\\rvert>\\varepsilon\\}=2^{-\\Omega(n)}.$$ Repeated labels in the query are allowed. The constants may depend on the query and $\\varepsilon$, but the estimate is uniform over tests with the given sup bound. The exceptional set may depend on the test.*\n\n*For a query at just one endpoint, its raw variance about its raw mean is $2^{-\\Omega(n)}$. This variance bound is also uniform when an arbitrary external input-and-image datum is fixed as an argument of the test.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-typicality"
+  },
+  {
+   "claim_id": "claim-binary-mixing",
+   "exact_statement": "Fix a query template whose labels are distinct at each used endpoint. Impose the off-position Gram zeros of $\\mathcal K_n$ and a consistent fixed specification of the within-endpoint ordered $L,R$ evaluations used in [sec:realization](#sec:realization). Let $\\mathcal A_n(O,z)$ be their joint indicator. There is a template constant $\\kappa>0$ such that, outside an exponentially small set of orientations under <a href=\"#eq:histogram-mixed-caps\" data-reference-type=\"eqref\" data-reference=\"eq:histogram-mixed-caps\">[eq:histogram-mixed-caps]</a>, $$\\label{eq:binary-mixing}\n \\mathbb E_z\\mathcal A_n(O,z)\\prod_jw_j(O,z_j)\n =\\kappa\\prod_j\\mathbb E_{z_j}w_j(O,z_j)+O(2^{-c n})$$ uniformly over all unary weights with $\\lvert w_j\\rvert\\le1$. These weights may depend on the entire fixed orientation. The input laws may be conditioned separately on feasible diagonal values or tester summaries. The exceptional set is independent of the unary weights.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-binary-mixing"
+  },
+  {
+   "claim_id": "claim-quadratic-bias",
+   "exact_statement": "Let $Q$ be a quadratic function on a binary vector space and let its polar form have rank $2r$. Its uniform sign bias has magnitude at most $2^{-r}$. On an affine subspace of codimension $c$, the restricted polar rank is at least $2r-2c$, and its sign bias is at most $2^{-r+c}$ whenever this bound is less than one.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-histogram-quadratic-bias"
+  },
+  {
+   "claim_id": "claim-unary-positivity",
+   "exact_statement": "Fix an endpoint, tag, label, flavor, and feasible tester summary with diagonal $q$. For a bounded number of common global key tests, its empirical conditional key frequencies differ from $\\Omega_{l,q,n}$ by any prescribed fixed tolerance except on exponentially small mixed mass under <a href=\"#eq:histogram-mixed-caps\" data-reference-type=\"eqref\" data-reference=\"eq:histogram-mixed-caps\">[eq:histogram-mixed-caps]</a>.*\n\n*At each unit, let $C_i\\subset\\mathcal X$ be any orientation-dependent space of dimension at most $K^2$ all of whose elements have total component rank at most $K$, and choose any basis. Fix a sequence of global single-key sets $A_n$ with $\\Omega_{l,q,n}(A_n)\\ge\\delta>0$. Except on exponentially small mixed mass, every basis assignment has, conditional on the tester summary and on $K_i\\in A_n$, fraction at least $(7/8)2^{-\\dim C_i}$.*\n\n\n\n*For the full generic flavor and inputs conditional just on $q$, the following conservative constant is valid: $$\\label{eq:uniform-base-fraction}\n \\beta=2^{-K^2-1}4^{-(g^2+1)}>0.$$ For every feasible specified tester summary and basis assignment, outside an exponentially small exceptional set, $$\\label{eq:histogram-base-cell-lower}\n \\mathbb P_z\\{K_i\\in A_n,\\ \\text{the specified summary and basis bits}\\mid q\\}\n \\ge\\beta\\,\\Omega_{l,q,n}(A_n).$$ In particular each joint choice of the role $a(\\operatorname{atom})$ and the basis bits has this lower bound, after choosing a compatible summary. Both roles are available for either possible generic $q$.*\n\n*The lower constants do not depend on $\\delta$, on the key tests, or on the orientation-dependent choice of $C_i$. The onset of the asymptotics and the exceptional-set constants may depend on a fixed positive lower bound $\\delta$. The exceptional set is allowed to depend on the prescribed tests: there is no simultaneous assertion over all measurable key sets at one orientation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-unary-positivity"
+  },
+  {
+   "claim_id": "claim-weak-product",
+   "exact_statement": "Let $W_n$ be any sequence of real functions on $\\mathcal K_n$ with $\\lVert W_n\\rVert_\\infty\\le B$, where $B$ is fixed. Extend it to the product of the single-key spaces with the same bound. For every $\\varepsilon>0$ there are constants $L,C<\\infty$, independent of $n$, and functions $$\\label{eq:weak-product-approximant}\n S_n(k_1,\\ldots,k_r)\n   =\\sum_{a=1}^{L}c_{a,n}\\prod_{j=1}^{r}f_{a,j,n}(k_j),\n \\qquad\n \\lvert c_{a,n}\\rvert\\le C,\\quad \\lvert f_{a,j,n}\\rvert\\le1,$$ with the following properties.*\n\n\n1.  *For arbitrary global unary functions $g_{j,n}$ of bound one, $$\\label{eq:weak-product-reference}\n     \\lvert \\int(W_n-S_n)\\prod_jg_{j,n}(k_j)\\,d\\nu_n\\rvert\\le\\varepsilon$$ for all sufficiently large $n$.*\n\n\n2.  *Under any mixed unit law satisfying <a href=\"#eq:histogram-mixed-caps\" data-reference-type=\"eqref\" data-reference=\"eq:histogram-mixed-caps\">[eq:histogram-mixed-caps]</a>, outside an exponentially small exceptional set of orientations, $$\\label{eq:weak-product-actual}\n     \\sup_{\\lvert w_j\\rvert\\le1}\n     \\lvert \\mathbb E_z\\mathcal A_n(O,z)\n           (W_n-S_n)(K(O,z))\\prod_jw_j(O,z_j)\\rvert\\le\\varepsilon.$$ The unary input weights may depend on the entire fixed orientation and on any additional marks fixed with it. The exceptional set is independent of these weights.*\n\n*The functions $f_{a,j,n}$ are global key functions; they can be chosen to be indicators of sets, or finite linear combinations of such indicators with uniformly bounded complexity. They do not depend on the sampled orientation. The constants may depend on $B,\\varepsilon$ and the fixed template and construction parameters, but not on $n$.*\n\n*An additional orientation-only filter of bound one may multiply <a href=\"#eq:weak-product-actual\" data-reference-type=\"eqref\" data-reference=\"eq:weak-product-actual\">[eq:weak-product-actual]</a> without changing it. In particular, after averaging normalized leaves, the same error control applies to unnormalized admissibility-filtered query measures, even when the filter is chosen using the opposite leaf. No assertion is made for an arbitrary additional joint input filter.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-weak-product"
+  },
+  {
+   "claim_id": "claim-product-twisted-regularity",
+   "exact_statement": "Let $\\lvert W\\rvert\\le B$ on the product key space of $I\\cup J$, and let $\\delta>0$. There is a decomposition $$\\label{eq:twisted-regularity-decomposition}\n W=\\sum_{a=1}^{L'}c_a f_a(k_I)g_a(k_J)\\tau_a(k_I,k_J)+D,$$ where $\\lvert f_a\\rvert,\\lvert g_a\\rvert\\le1$, $\\tau_a\\in\\mathcal T_{I,J}$, $\\lvert c_a\\rvert\\le B$, $\\lVert D\\rVert_\\infty\\le2B$, and $\\lVert D\\rVert_{\\square,\\mathcal T}\\le\\delta$. The number $L'$ is bounded in terms of $B,\\delta$ and the twist count only. The functions $f_a,g_a$ may be chosen as indicators of cells in finite group partitions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-product-twisted-regularity"
+  },
+  {
+   "claim_id": "claim-product-terminal-remainder",
+   "exact_statement": "Let $I,J$ be a nontrivial partition of some of the template positions. Let $D_n$ be a common function of their global keys with $\\lVert D_n\\rVert_\\infty\\le B_1$ and $\\lVert D_n\\rVert_{\\square,\\mathcal T}\\le\\delta$. Let $\\psi_n(I,J)$ be any product of the specified nominal $L,R$ signs and global Gram signs crossing from $I$ to $J$, evaluated on their actual inputs and keys. For each fixed $\\rho>0$, except on exponentially small mixed mass, $$\\label{eq:product-remainder-actual}\n \\sup_{\\lvert f\\rvert,\\lvert g\\rvert\\le1}\n \\lvert \\mathbb E_{z_I,z_J}D_n(K_I,K_J)\\psi_n(I,J)f(O,z_I)g(O,z_J)\\rvert\n \\le\\bigl(C_3\\delta+\\rho+o(1)\\bigr)^{1/4}.$$ The constant $C_3$ and the vanishing error depend only on $B_1$ and the fixed template. The weights may depend arbitrarily on the fixed orientation. The exceptional set does not depend on those weights.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-product-terminal-remainder"
+  },
+  {
+   "claim_id": "claim-factorized-integration",
+   "exact_statement": "For the structured sum in <a href=\"#eq:weak-product-approximant\" data-reference-type=\"eqref\" data-reference=\"eq:weak-product-approximant\">[eq:weak-product-approximant]</a> and arbitrary bounded unary input weights, outside exponentially small mixed mass, $$\\begin{aligned}\n\\label{eq:weak-product-factorized-integration}\n &\\mathbb E_z\\mathcal A_n(O,z)S_n(K(O,z))\\prod_jw_j(O,z_j)\\notag\\\\\n &\\qquad=\n \\kappa\\sum_{a=1}^{L}c_{a,n}\n       \\prod_j\\mathbb E_{z_j}\n        \\bigl[f_{a,j,n}(K_j(O,z_j))w_j(O,z_j)\\bigr]+o(1).\n\\end{aligned}$$ The error is uniform over the unary weights. An orientation-only filter may be included before averaging this identity over leaves.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-weak-product-factorized-integration"
+  },
+  {
+   "claim_id": "claim-limit-global-projection",
+   "exact_statement": "Let $(K_n,\\nu_n)$ be finite probability spaces. On each first-side leaf $L$ and each second-side leaf $L'$ let there be a family of subdensities. Assume that, for each fixed $R<\\infty$ and $\\varepsilon>0$, their truncations at height $R$ have $L^1(\\nu_n)$ nets of uniformly bounded size, with the nets chosen using their own leaf only. The bounds may depend on $R,\\varepsilon$ but not on $n$ or the leaf.*\n\n\n*For every $R<\\infty$ and $\\eta>0$, there are deterministic partitions $\\mathcal P_n$ of uniformly bounded size such that the following holds. These partitions may depend on the leaf laws, but are chosen before the leaves are sampled. For independent leaves, choose a member $f$ and a member $g$ of the two truncated families, allowing either choice to depend on both leaves. If $P_n$ is conditional expectation onto $\\mathcal P_n$, then $$\\label{eq:limit-projection-error}\n\\mathbb E\\bigl|\\langle f,g\\rangle-\\langle P_nf,P_ng\\rangle\\bigr|\\le\\eta.$$ The same conclusion holds for every deterministic refinement of $\\mathcal P_n$ chosen independently of the sampled leaves. Multiplication of the discrepancy by any indicator determined by the leaf pair does not increase the bound.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-limit-global-projection"
+  },
+  {
+   "claim_id": "claim-limit-model",
+   "exact_statement": "There is a subsequence and a common limiting experiment with the following properties.*\n\n1.  *For each tag and diagonal bit $(l,q)$ there is a compact bit-sequence space $\\Xi_{l,q}$ with reference law $m_{l,q}$. For each key shape there is a compact tuple-test space $\\Upsilon$ with reference law $\\rho$. Its single-position projections $\\xi_\\ell$ have the independent laws $m_{l_\\ell,q_\\ell}$.*\n\n\n2.  *A base orientation array $\\theta$ contains its bounded discrete metadata and its single-atom status measures. For a unary type $t=(i,l,s,\\varphi,q)$ and a full numerical status $\\upsilon$, these measures have jointly measurable densities $$\\label{eq:limit-unary-densities}\n    h^\\theta_{t,\\upsilon}:\\Xi_{l,q}\\longrightarrow[0,1],\\qquad\n    \\sum_\\upsilon h^\\theta_{t,\\upsilon}=1\\quad m_{l,q}\\text{-almost everywhere}.$$ For the full generic flavor, the sum of these densities over statuses with any specified role and basis vector in the recorded actual dimension is bounded below by a positive construction constant, almost everywhere. Compatible finer tester requirements have the lower fractions supplied by [lem:unary-positivity](#lem:unary-positivity).*\n\n3.  *There is first a random limiting leaf-pair record $Z$, which includes two conditional laws $\\Lambda_A,\\Lambda_B$ of the arrays and their finite flag vectors. Conditional on $Z$, the two orientation records are drawn independently from these laws. After flags are dropped and $Z$ is averaged out, $\\theta_A,\\theta_B$ are iid.*\n\n4.  *Every discrete assertion of table usability, injection, and prepared phase compatibility is retained in this experiment. In particular, the positive mass of a passed compatible injecting table from [prop:status-preparation](#prop:status-preparation) is retained. On the no-prediction branch the mass of a passed injecting table is at least $.99$. On a predicted branch the prediction relation is exact in the limiting status measures outside its stored exceptions.*\n\n*All single-key tests used to define $\\Xi_{l,q}$ are functions of global keys only.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-limit-model"
+  },
+  {
+   "claim_id": "claim-limit-zero-product",
+   "exact_statement": "Assume <a href=\"#eq:limit-vanishing-overlap\" data-reference-type=\"eqref\" data-reference=\"eq:limit-vanishing-overlap\">[eq:limit-vanishing-overlap]</a>. For almost every $Z$, the measures $\\eta_A(Z),\\eta_B(Z)$ of every usable option are absolutely continuous with respect to $\\rho$, and their densities have product zero $\\rho$-almost everywhere.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-limit-zero-product"
+  },
+  {
+   "claim_id": "claim-limit-density",
+   "exact_statement": "For almost every $Z$, the full limiting successful-query measure on this side has density $$\\label{eq:limit-density}\nG_Z(u)=\\kappa\\int\n  \\prod_{\\ell}h^\\theta_{t_\\ell,\\upsilon_\\ell}\n                    \\bigl(\\xi_\\ell(u)\\bigr)\\,d\\alpha_Z(\\theta)\n\\qquad (u\\in\\Upsilon)$$ with respect to $\\rho$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-limit-density"
+  },
+  {
+   "claim_id": "claim-limit-overlap-obstruction",
+   "exact_statement": "Assume <a href=\"#eq:limit-vanishing-overlap\" data-reference-type=\"eqref\" data-reference=\"eq:limit-vanishing-overlap\">[eq:limit-vanishing-overlap]</a>. In the common experiment of [lem:limit-model](#lem:limit-model), almost every sampled pair of orientation records has the following property: there is no usable numerical option whose two orientation flags pass and for which, at every matched position, $$\\label{eq:limit-positive-generator}\n\\int_{\\Xi_{l,q}}\n h^{\\theta_A}_{t_A,\\upsilon_A}(\\xi)\n h^{\\theta_B}_{t_B,\\upsilon_B}(\\xi)\\,dm_{l,q}(\\xi)>0.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-limit-overlap"
+  },
+  {
+   "claim_id": "claim-status-duality",
+   "exact_statement": "Any obstruction to the scalar system has a nonzero vector of weights $(s_1,s_2,r_1,r_2)\\in\\mathbb F_2^4$. On every edge span $V_{ij}$ these give a relation $$\\label{eq:status-dual-relation}\ns_j(p_{A,i}+h_{A,i})+r_i(p_{B,j}+h_{B,j})\n=\\mathbf c_{ij}\\cdot\\mathbf x_{A,i}\n +\\mathbf c'_{ij}\\cdot\\mathbf x_{B,j}\n +\\beta_{ij}(h_{A,i}+h_{B,j})+\\gamma_{ij}q$$ for suitable coefficients. The scalar system is soluble if, for every such relation, the sum of the right sides evaluated at the local targets is zero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-status-duality"
+  },
+  {
+   "claim_id": "claim-status-global-prediction",
+   "exact_statement": "On the no-prediction alternative of [prop:status-preparation](#prop:status-preparation), the probability that the iid base arrays are obstructable is less than $.1$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-status-global-prediction"
+  },
+  {
+   "claim_id": "claim-status-predicted",
+   "exact_statement": "For a predicted pair with a table satisfying the compatibility conditions of [prop:status-preparation](#prop:status-preparation), the system <a href=\"#eq:status-local-targets\" data-reference-type=\"eqref\" data-reference=\"eq:status-local-targets\">[eq:status-local-targets]</a>–<a href=\"#eq:status-coupled-targets\" data-reference-type=\"eqref\" data-reference=\"eq:status-coupled-targets\">[eq:status-coupled-targets]</a> is soluble. The assertion survives any further bounded label exclusions leaving generic labels.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-status-predicted"
+  },
+  {
+   "claim_id": "claim-status-span",
+   "exact_statement": "In each positive-mass alternative of [prop:status-preparation](#prop:status-preparation), the common experiment has positive mass of passed injecting tables for which the scalar system is soluble, robustly under the exclusions needed below. On the no-prediction branch this holds whenever the total exclusions stay within $B_*$ per endpoint. On a predicted branch it holds after the stored exceptions and any further bounded exclusions leaving generic labels.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-status-span"
+  },
+  {
+   "claim_id": "claim-fresh-lists",
+   "exact_statement": "On each scalar-soluble pair from [lem:status-span](#lem:status-span), further bounded exclusions can be made so that every scalar solution on the resulting four edge spans can be realized by between one and seven available generators per edge. The two endpoint labels of each generator are retained with its certificate, and all labels used at an endpoint are distinct across its two incident lists. Every realized matched position has positive status overlap.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-fresh-lists"
+  },
+  {
+   "claim_id": "claim-positive-overlap",
+   "exact_statement": "For every positive-mass alternative of [prop:status-preparation](#prop:status-preparation), some fixed numerical option has expected unnormalized successful-query overlap bounded below by a positive constant along a subsequence. Consequently it satisfies <a href=\"#eq:overlap-criterion\" data-reference-type=\"eqref\" data-reference=\"eq:overlap-criterion\">[eq:overlap-criterion]</a>. This conclusion includes the prepared restrictions of reciprocal mass $2^{o(N)}$ permitted there.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-positive-overlap"
+  },
+  {
+   "claim_id": "claim-rare-large-set-hit",
+   "exact_statement": "Fix $\\delta>0$, and consider a sequence of unit laws whose mixed joint densities are at most $2^{O(N)}$ relative to $\\mu^2$, whose two marginals are at most $M2^{o(N)}\\mu$, and whose marked effective spaces have the rank and dimension bounds of [lem:unary-positivity](#lem:unary-positivity). The implied joint-density constant is uniform. Set $$c_{\\mathrm{hit}}(\\delta)\n   =\\frac14\\,\\kappa_{\\min}\\beta^{s_{\\max}}\\delta.\n \\label{eq:rare-hit-threshold}$$ For every fixed $p>0$, $$\\sup_{\\mathfrak r,W_n}\n \\mathbb P\\!\\left(\n \\begin{array}{l}\n \\mathfrak r\\text{ is feasible at }\\omega,\\\\\n Q_{\\omega,\\mathfrak r}(W_n)<c_{\\mathrm{hit}}(\\delta)\n \\end{array}\\right)\n =o(n^{-p}),\n \\label{eq:rare-superpolynomial-tail}$$ where the supremum is over the finitely many numerical requests and deterministic measurable sets $W_n\\subseteq\\mathcal K_{\\mathfrak r,n}$ satisfying $\\nu_{\\mathfrak r,n}(W_n)\\ge\\delta$. Each choice of $W_n$ has its own exceptional orientations.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-rare-large-set-hit"
+  },
+  {
+   "claim_id": "claim-rare-superlevel-nets",
+   "exact_statement": "Consider the family of unnormalized successful base-query densities on a prepared leaf, allowing every orientation-only filter. Suppose a member $d$ has total mass at least $b_0>0$. Uniformly over the prepared leaves and the finite formats, there are constants $t,\\delta_0>0$ such that, for every sufficiently small fixed $\\epsilon>0$, a bounded family of reference sets contains a set $W$ satisfying $$\\nu(W)\\ge\\delta_0/2,\\qquad\n \\nu\\{k\\in W:d(k)<t/4\\}\\le4\\epsilon/t.\n \\label{eq:rare-net-superlevel}$$ The family depends on the leaf, format, and $\\epsilon$, but not on the orientation-only filter subsequently selected. The constants $t,\\delta_0$ can be fixed before $\\epsilon$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-rare-superlevel-nets"
+  },
+  {
+   "claim_id": "claim-rare-overlap",
+   "exact_statement": "In the inverse-polynomial alternative of [prop:status-preparation](#prop:status-preparation), the overlap criterion <a href=\"#eq:overlap-criterion\" data-reference-type=\"eqref\" data-reference=\"eq:overlap-criterion\">[eq:overlap-criterion]</a> holds with a lower bound $\\Omega(N^{-4})$, along the prepared sequence.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-rare-overlap"
+  }
+ ],
+ "paper": "papers/EN-113-000-0000-2-2026-PR-T4-UK-EX-M1-B-AL-H-0315_PM-157.1_A_counterexample_to_Hadwiger_s_conjecture.md",
+ "purpose": "A counterexample to Hadwiger's conjecture",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "fe90ab55201890d46be8b3a55edf46905d0186bdfbc1ca7da6145d4519b61208",
+   "pm.domains.v2": "cd61dad9966ff7b08c9759ccdfea82902904acc24d5cb1c767d06a16a9c06bc4",
+   "pm.edges.v2": "88fb668b44c9357c516e9de4c2cefbcf274ff7773a6a91ce413270275cace462",
+   "pm.extraction.v2": "28548da8d471a735a2e5ea635aa35f97502e4ea585c9310a018ccb62fc353f74",
+   "pm.formal.v2": "d16702fc97105faea4ccab9efe9eff045f1f4cd009f45cdbd3456e2bd0421dc0",
+   "pm.limits.v2": "d3978d1ae00b1ee8635f158c53b49471e561947ca7adc3e894349c440ca50f42",
+   "pm.node.v2": "14e56a9034e337ddd2aa5cc9528f3e96177870c210ca127856339d3c7859b79c",
+   "pm.objects.v2": "4a0a9efb02228dd4c05f0a936d953d79575814d88a964a17854ad58d1dd8ad5e",
+   "pm.provenance.v2": "732fc8ec92147a8e237641bfb0e967b9c8d1df56c047cde1022a79adca3553a0",
+   "pm.quantities.v2": "8a5291aeb52e747a87f704a0ef66a513d387bfa790da26569f6ef06ae4aaa6b0",
+   "pm.reading.v2": "cef8134a306be1b008606e0157cc98337efab488540dc7744e450826612a7f08",
+   "pm.roadmap.v2": "c3d3b1f62377bc6cf1f47ef27286262f7a3e983fcd1639044909caf8c30ecb0d",
+   "pm.search.v1": "a8cd9ee8e5cae0290dec2342f54825c89bb3246023f8ad6521d490544bf22877",
+   "pm.triptych.v2": "c78f8a531772c9adfb055b5a2f4689ce16ceb0ecfc05a6a54e481023767cca23"
+  },
+  "canonical_sha256": "79c8092f68c9cf77e43f9fab4730d3778ba668d58752609bb024ffc1010ba3c0",
+  "paper_sha256": "312bca2dc5bb85033a248cd175f61b2229295c38707a799255f2c85f2845fcf4",
+  "repaired_body_sha256": "42d3e2c091b5158144b7d52e84f47b124b7fa7a1e752e9ffa65e30f506005d05"
+ },
+ "status": "ACTIVE",
+ "subject_id": 13,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "e2513db11196c39e77c2962bae136ed1ae9041b3856067c6a545ac5ae7ffff65",
+   "receipt_sha256": "7e6575c9e2103bcab5a5393f018ae42ef49f6a899e629c07264037fc75b81e6b",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Ten fixed simple graphs with 1 to 5 vertices, including the empty graph, a single vertex, a tight complete graph, paths, cycles and stars",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-hadwiger-matching-bound",
+     "oracle_basis": "Independent recomputation of both graph invariants by a different algorithm plus the counting inequality on each vector"
+    },
+    {
+     "checked_domain": "Only the underlying counting inequality is exercised; the gap statement itself is out of reach of exhaustive checking",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-small-matching-chromatic-gap",
+     "oracle_basis": "The inequality 3*h <= m + 4*cm + 2 is verified; the conclusion about half the order follows by arithmetic from the source"
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-drop-disjointness",
+     "observed_exit": 1,
+     "receipt_sha256": "67bac6bd25ecd619ff103f9dccd80ea056694d0d553b2f972c4893db873d0b4f"
+    },
+    {
+     "id": "mut-drop-touching",
+     "observed_exit": 1,
+     "receipt_sha256": "f723b601aa89d43102b23d7b45c899f86708cc2a70e069ce525e9276e3a88d4a"
+    },
+    {
+     "id": "mut-drop-connected-branch",
+     "observed_exit": 1,
+     "receipt_sha256": "cffefebde81770e52948dd9d5e76126aaa0037b698461d07523098dd75f05c33"
+    },
+    {
+     "id": "mut-hadwiger-off-by-one",
+     "observed_exit": 1,
+     "receipt_sha256": "0192ed5c92835eb37bf5b8d9ddb1f6074e08f7f632570c0d64c853f24c5cdcf8"
+    }
+   ],
+   "receipt_sha256": "7b698fd577d5a413cfa3eabefa6baa2f428c015bb1f1aa4197e0d97cb5681d0f",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "A counterexample to Hadwiger's conjecture"
+}

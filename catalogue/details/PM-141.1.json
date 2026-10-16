@@ -1,0 +1,507 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 403514,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 118190
+ },
+ "coordinate": "EN-114-000-0021-2-2026-PR-T4-UK-EX-M1-C-AL-H-0292",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "computational complexity of real algebraic decision problems",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-7",
+     "quote": "The hypothesis of fixed nesting is essential: the proposition does not assert closure under an input-dependent sequence of successive counting operations.",
+     "quote_sha256": "e78cbf065f02fd40aaaf646ce5ba698fedea1b4c6bd4e5a34dca9df2e71a7075"
+    }
+   ],
+   "query": "Closure under arbitrarily nested counting operations",
+   "reason": "Control is preserved only through fixed nesting; the result gives no input-dependent closure assertion."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-prop-root-labels",
+     "quote": "The construction is defined and controlled also when $P=0$, but no root-selection property is asserted in that case.",
+     "quote_sha256": "827a3f5597dd84c26ad518d8960515bc52e8d9c2083ebfadc5e1e3a9e9064f89"
+    }
+   ],
+   "query": "Selecting a root of the zero polynomial",
+   "reason": "The root-selection guarantee requires the source polynomial to be nonzero."
+  }
+ ],
+ "family": "PM-141",
+ "id": "PM-141.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C1",
+    "statement": "There is an absolute integer $j$ such that $$\\exists\\forall\\mathbb R_{\\mathrm{circ}}\\in\\mathsf C_{j}\\mathsf P.$$ The level $j$ is independent of the input length, the numbers of variables, the degrees of the circuit polynomials, and their coefficient magnitudes."
+   },
+   {
+    "anchor": "stmt-lem-counting",
+    "claim_id": "C2",
+    "statement": "Fix $a\\ge0$. Let $b(w)$ and $s(w)$ be polynomially bounded nonnegative integers computable in polynomial time. If $A(w,i)$, for $i\\in\\{0,1\\}^{b(w)}$, is a predicate computable in $\\mathsf F_{a}$, then $$C(w)=\\#\\{i\\in\\{0,1\\}^{b(w)}:A(w,i)\\}$$ is in $\\mathsf F_{a+1}$. Existential and universal quantification over these indices are also in $\\mathsf F_{a+1}$.*\n\n*If $f(w,i)$ is in $\\mathsf F_{a}$ and $0\\le f(w,i)<2^{s(w)}$, then $\\sum_i f(w,i)$ is in $\\mathsf F_{a+1}$. The same conclusion holds for sums modulo a positive short integer."
+   },
+   {
+    "anchor": "stmt-lem-field-coefficient",
+    "claim_id": "C3",
+    "statement": "Let $V_w(x,t)$ be a controlled family, where $x=(x_1,\\ldots,x_h)$ is a selected subset of its indeterminates and $t$ denotes the remaining ones. Let $\\beta\\in\\mathbb N^h$ be a short index. Then $[x^\\beta]V_w(x,t)$ is a controlled family, uniformly in $\\beta$. If the evaluation of $V$ is in $\\mathsf F_{a}$, the coefficient evaluations are in $\\mathsf F_{a+1}$, with cutoff $\\max(\\lambda,d+1)$, degree bound $d$, and coefficient-norm bound $2^b$."
+   },
+   {
+    "anchor": "stmt-prop-controlled-closure",
+    "claim_id": "C4",
+    "statement": "Controlled families are preserved by each of the following operations, applied a fixed number of times:*\n\n1.  *sums and products over short index sets, with uniform bounds on the summands or factors;*\n\n2.  *powers with short nonnegative exponents computable in polynomial time, and substitution of controlled polynomials for indeterminates;*\n\n3.  *extraction of indexed coefficients in any subset of the indeterminates, and differentiation in one variable to a short indexed nonnegative order.*\n\n*In the first operation the index domain is specified in polynomial time; more generally, an available predicate $A(w,i)$ may restrict the indices when polynomial-time uniform bounds for the unrestricted domain are retained. This predicate depends only on the primary word and the family index, not on an evaluation prime or evaluation point. All resulting bounds and prime cutoffs are computable in polynomial bit time from the primary family data. In particular, they are independent of evaluation primes."
+   },
+   {
+    "anchor": "stmt-prop-crt-sign",
+    "claim_id": "C5",
+    "statement": "Let $X(w)\\in\\mathbb Z$ and suppose that nonnegative short integers $m(w)$ and $\\lambda(w)$ are computable in polynomial time, with $|X(w)|\\le2^{m(w)}$. Define $$\\label{eq:crt-bounds}\n Z=\\max(16,m,\\lambda),\\qquad Y=2Z^4.$$ If $X(w)\\bmod p$, represented in $\\{0,\\ldots,p-1\\}$, is uniformly computable in $\\mathsf F_{a}$ for primes $\\lambda<p\\le Y$, then $\\mathop{\\mathrm{sgn}}X(w)$ is in $\\mathsf F_{\\max(a,5)+3}$."
+   },
+   {
+    "anchor": "stmt-cor-controlled-sign",
+    "claim_id": "C6",
+    "statement": "If a controlled family has no indeterminates, its sign is available, uniformly in any short indices belonging to its input word."
+   },
+   {
+    "anchor": "stmt-lem-monomial-basis",
+    "claim_id": "C7",
+    "statement": "The functional $\\mathcal L$ vanishes on $(f_1,\\ldots,f_n)$ and hence descends to $\\mathcal A$. If $\\deg_x v\\le n(\\ell-1)$, then $$\\label{eq:low-degree-functional}\n \\mathcal L(v)=[x^\\tau]v.$$ The algebra $\\mathcal A$ is a free $S$-module with basis $\\{x^a:0\\le a_i<\\ell\\}$."
+   },
+   {
+    "anchor": "stmt-prop-trace",
+    "claim_id": "C8",
+    "statement": "For the algebra in Equation <a href=\"#eq:quotient-algebra\" data-reference-type=\"eqref\" data-reference=\"eq:quotient-algebra\">[eq:quotient-algebra]</a>, over every commutative ring $S$ with identity, $$\\label{eq:trace-formula}\n \\operatorname{tr}(M_v)=\\mathcal L(vJ)\n \\qquad(v\\in S[x]).$$"
+   },
+   {
+    "anchor": "stmt-lem-real-eigenline",
+    "claim_id": "C9",
+    "statement": "Suppose that the coefficients of the relations in Equation <a href=\"#eq:quotient-algebra\" data-reference-type=\"eqref\" data-reference=\"eq:quotient-algebra\">[eq:quotient-algebra]</a> and of $v$ lie in $\\mathbb C$, and write $Q(y)=\\det(yI-M_v)$. Every common zero $\\xi\\in\\mathbb C^n$ of the $f_i$ satisfies $Q(v(\\xi))=0$. If all coefficients are real and $\\eta$ is a simple real root of $Q$, there is a common zero $\\xi\\in\\mathbb R^n$ with $v(\\xi)=\\eta$. Moreover, for any polynomial $g$ over $\\mathbb C$, $$\\label{eq:composition-determinant}\n M_{g(v)}=g(M_v),\\qquad\n \\det M_{g(v)}=\\prod_{Q(\\alpha)=0}g(\\alpha),$$ where the roots in the product are counted with multiplicity."
+   },
+   {
+    "anchor": "stmt-prop-char-coeff",
+    "claim_id": "C10",
+    "statement": "Consider fixed families $r_1,\\ldots,r_n,v\\in\\mathbb Z[x]$, indexed by a word of length $N$. Suppose that $n\\ge1$ is polynomially bounded and polynomial-time computable, that $\\ell\\ge2$ and $\\Omega\\ge0$ are short polynomial-time computable integers, and that $\\deg_x r_i<\\ell$ and $\\deg_x v\\le\\Omega$. Put $$f_i=x_i^\\ell-r_i,\\qquad\n J=\\det(\\partial_jf_i),\\qquad\n D=\\ell^n,\\qquad L_0=D\\Omega+n(\\ell-1).$$ For $a\\ge0$, suppose that $v$, the indexed $r_i$, and $J$ can be evaluated uniformly in $\\mathsf F_{a}$ over prime fields with $$\\label{eq:char-prime-bound}\n p>n(\\ell-1)+\\ell L_0+D^2+10.$$ Additional short, polynomial-time computable lower cutoffs on $p$ are allowed. Then, for every $0\\le d\\le D$, $$[y^d]\\det(yI-M_v)\\pmod p$$ is uniformly computable in $\\mathsf F_{a+8}$ in this prime range. All running-time and query-length bounds are polynomial in the length of the input, including $p$ and the coefficient index $d$."
+   },
+   {
+    "anchor": "stmt-prop-multiplication-determinant",
+    "claim_id": "C11",
+    "statement": "Let $n\\ge1$ be polynomially bounded and polynomial-time computable, and let $\\ell\\ge2$ be a short polynomial-time computable integer. Suppose that $r_1,\\ldots,r_n,v$ are controlled integer polynomial families in variables $x=(x_1,\\ldots,x_n)$ and a polynomially bounded number of parameter variables $t$, uniformly in $i$, and that $\\deg_x r_i<\\ell$. In the monomial basis of $$\\mathbb Z[t,x]/(x_1^\\ell-r_1,\\ldots,x_n^\\ell-r_n),$$ let $M_v$ denote multiplication by $v$. Then $$\\label{eq:controlled-characteristic}\n Q(t,y)=\\det(yI-M_v)$$ is a controlled family, monic of $y$-degree $D=\\ell^n$. If $d$ and $2^b$ are common total-degree and coefficient-norm bounds on the $r_i,v$, and $T=d+n(\\ell-1)$, valid total-degree and log-norm bounds on $Q$ are $$\\label{eq:determinant-size-bounds}\n d_Q=D\\bigl(1+d(1+T)\\bigr),\\qquad\n b_Q=D^2+D\\bigl(1+b(1+T)\\bigr).$$ The construction is compatible with specializing any parameters."
+   },
+   {
+    "anchor": "stmt-prop-root-labels",
+    "claim_id": "C12",
+    "statement": "Let $P(t)$ and $b_0(t)$ be controlled families of integer univariate polynomials, indexed by the same input word. There is a uniformly controlled family $L_a(t)\\in\\mathbb Z[t]$, with labels $a$ of polynomial binary length in a polynomial-time specified range, such that whenever $P\\ne0$:*\n\n1.  *For every label $a$ and every real root $\\alpha$ of $P$, either $L_a(\\alpha)\\ge\\tfrac12$ or $L_a(\\alpha)\\le-\\tfrac12$.*\n\n2.  *For every label $a$ and every real root $\\alpha$ of $P$, if $L_a(\\alpha)>0$, then $b_0(\\alpha)>0$.*\n\n3.  *For every real root $\\alpha$ of $P$ with $b_0(\\alpha)>0$, some label $a$ satisfies $L_a(\\alpha)>0$ and $L_a(\\beta)<0$ at every distinct real root $\\beta$ of $P$.*\n\n*The construction is defined and controlled also when $P=0$, but no root-selection property is asserted in that case. It uses a fixed number of applications of the controlled-family rules, independent of the degrees. Taking $b_0=1$ permits every real root to be selected."
+   },
+   {
+    "anchor": "stmt-lem-root-value-bounds",
+    "claim_id": "C13",
+    "statement": "Let $P\\in\\mathbb Z[t]$ be nonzero, with $\\deg P\\le d$ and $\\left\\lVert P\\right\\rVert_1\\le2^b$, where $d\\ge2$ and $b\\ge1$ are integers. If $g\\in\\mathbb Z[t]$ satisfies $\\deg g\\le d$ and $\\left\\lVert g\\right\\rVert_1\\le2^{b+d^2}$, put $$B_0=b+d^2+d(b+1),\\qquad\n B=d(bd+B_0)+bd+2.$$ At every complex root $\\alpha$ of $P$, either $g(\\alpha)=0$ or $$2^{-B}\\le |g(\\alpha)|\\le2^B.$$"
+   },
+   {
+    "anchor": "stmt-lem-thom-separation",
+    "claim_id": "C14",
+    "statement": "For a nonzero real polynomial $P$ of degree at most $d$, distinct real roots have distinct strings $$\\bigl(\\mathop{\\mathrm{sgn}}P^{(j)}(\\alpha)\\bigr)_{1\\le j\\le d}.$$"
+   },
+   {
+    "anchor": "stmt-lem-rational-sign",
+    "claim_id": "C15",
+    "statement": "For integers $B\\ge1$ and $s\\ge1$, define $$\\begin{aligned}\n C_{B,s}(z)\n   &=\\prod_{k=-B}^{B}\n       \\bigl(2^{\\max(0,k)}+2^{\\max(0,-k)}z\\bigr)^{2s},\\\\\n A_{B,s}(z)\n   &=\\frac{C_{B,s}(z)-C_{B,s}(-z)}\n           {C_{B,s}(z)+C_{B,s}(-z)}.\n\\end{aligned}$$ The denominator is at least $1$ for every real $z$, and $A_{B,s}(0)=0$. For $2^{-B}\\le|z|\\le2^B$, $$|A_{B,s}(z)-\\mathop{\\mathrm{sgn}}z|\\le2\\cdot3^{-2s}.$$ Moreover $C_{B,s}$ is an integer polynomial with $$\\deg C_{B,s}=2s(2B+1),\\qquad\n \\left\\lVert C_{B,s}\\right\\rVert_1\\le2^{2s(2B+1)(B+1)}.$$"
+   },
+   {
+    "anchor": "stmt-thm-controlled-existential",
+    "claim_id": "C16",
+    "statement": "Suppose that an input word specifies a conjunction of polynomially many equations and strict inequalities $$A_i(x)=0,\\qquad B_j(x)>0,$$ in polynomially many real variables. Assume that the numbers of variables and tests, and the type of each addressed test, are computable in polynomial time, and that the polynomials form controlled families uniformly in their indices. Then the existence of a real solution is an available decision. Its counting level depends only on the fixed family constructions and their evaluation algorithms, not on the input or any short outer indices."
+   },
+   {
+    "anchor": "stmt-lem-bounded-minimum",
+    "claim_id": "C17",
+    "statement": "For the nonnegative polynomial $F$ and deformation in Equation <a href=\"#eq:existential-deformation\" data-reference-type=\"eqref\" data-reference=\"eq:existential-deformation\">[eq:existential-deformation]</a>, the minimum $$m(u)=\\min_{x\\in\\mathbb R^n}h_u(x)$$ exists for every real $u\\ge0$. The function $m$ is continuous and nondecreasing, and $Q(u,m(u))=0$. Furthermore, $$F\\text{ has a real zero}\n \\quad\\Longleftrightarrow\\quad\n m(u)\\text{ remains bounded as }u\\to+\\infty.$$"
+   },
+   {
+    "anchor": "stmt-lem-existential-discriminant",
+    "claim_id": "C18",
+    "statement": "The polynomial $Q(0,y)$ has $D$ distinct complex roots. If $\\left\\lVert Q\\right\\rVert_1\\le2^H$, where $H\\ge0$ is an integer, there is a nonzero polynomial $\\Delta\\in\\mathbb Z[u]$ such that every parameter where $Q(u,y)$ has a repeated complex root is a zero of $\\Delta$, and $$\\label{eq:existential-discriminant-bound}\n \\left\\lVert\\Delta\\right\\rVert_1\\le2^{H_\\Delta},\\qquad\n H_\\Delta=(2D)^2+2D(H+D+1).$$"
+   },
+   {
+    "anchor": "stmt-prop-specialization",
+    "claim_id": "C19",
+    "statement": "Let $F\\in\\mathbb Z[x_1,\\ldots,x_n]$ be nonnegative on $\\mathbb R^n$, let $n\\ge1$, and choose an odd $\\ell\\ge3$ with $\\ell>\\deg F$. Define $G,h_u,f_i,Q,D$ by Equations <a href=\"#eq:existential-deformation\" data-reference-type=\"eqref\" data-reference=\"eq:existential-deformation\">[eq:existential-deformation]</a> and <a href=\"#eq:existential-characteristic\" data-reference-type=\"eqref\" data-reference=\"eq:existential-characteristic\">[eq:existential-characteristic]</a>. Let $H,V$ be nonnegative integers bounding $\\log_2\\left\\lVert Q\\right\\rVert_1$ and $\\deg_uQ$, respectively, and choose the parameters in Equation <a href=\"#eq:existential-specialization-parameters\" data-reference-type=\"eqref\" data-reference=\"eq:existential-specialization-parameters\">[eq:existential-specialization-parameters]</a>. Then $$q(y)=Q(U,y)$$ is monic and squarefree, has degree $D$ and coefficient norm at most $2^K$, and satisfies $$\\label{eq:existential-root-equivalence}\n F\\text{ has a real zero}\n \\quad\\Longleftrightarrow\\quad\n q\\text{ has a real root less than }R.$$ Every real root of $q$ is the value of $h_U$ at a real common zero of $f_1(\\cdot,U),\\ldots,f_n(\\cdot,U)$.*\n\n*When $F$ varies in a controlled family, $\\ell$ is chosen from its degree bound as above, and $H,V$ are polynomial-time computable short bounds, $q$ is controlled. All remaining bound parameters in Equation <a href=\"#eq:existential-specialization-parameters\" data-reference-type=\"eqref\" data-reference=\"eq:existential-specialization-parameters\">[eq:existential-specialization-parameters]</a>, including $D,H_\\Delta$, are computable in polynomial time and have polynomial binary length."
+   },
+   {
+    "anchor": "stmt-lem-quartic-fibers",
+    "claim_id": "C20",
+    "statement": "From a well-formed input of length $N$, one can construct in polynomial time an explicitly listed polynomial $F\\in\\mathbb Z[x_1,\\ldots,x_r,z_1,\\ldots,z_n]$, with $n\\ge1$ polynomially bounded in $N$, such that $F\\ge0$ on real inputs, $\\deg F\\le4$, and, for every $x\\in\\mathbb R^r$, $$\\label{eq:fiber-encoding}\n \\exists y\\in\\mathbb R^s\\;\\neg\\Phi(x,y)\n \\quad\\Longleftrightarrow\\quad\n \\exists z\\in\\mathbb R^n\\;F(x,z)=0.$$ The monomial count and coefficient bit lengths of $F$ are polynomially bounded in $N$."
+   },
+   {
+    "anchor": "stmt-prop-degree-pieces",
+    "claim_id": "C21",
+    "statement": "For $0\\le d\\le d_E$, let $$A_d=\\{x\\in\\mathbb R^r:E_d(x)\\ne0,\\ E_j(x)=0\\text{ for }j>d\\}.$$ The sets $A_d$ partition $\\mathbb R^r$. Within each $A_d$, the good parameters form a subset that is both open and closed in the relative topology."
+   },
+   {
+    "anchor": "stmt-prop-candidate-coordinates",
+    "claim_id": "C22",
+    "statement": "Let $W\\in\\mathbb R[c_1,\\ldots,c_k]$ be nonnegative on $\\mathbb R^k$, where $k\\ge1$, and let $C$ be a nonempty subset of $Z=\\{W=0\\}$ that is both open and closed in $Z$. Choose an odd integer $\\ell\\ge3$ with $\\ell>\\deg W$, and put $$G(c)=\\sum_{i=1}^k c_i^{\\ell+1},\\qquad\n H_w(c)=G(c)+(\\ell+1)wW(c).$$ In the quotient by $$\\label{eq:candidate-relations}\n c_i^\\ell+w\\frac{\\partial W}{\\partial c_i}=0\n \\qquad(1\\le i\\le k),$$ form the coordinate multiplication polynomials $$\\label{eq:coordinate-polynomials}\n P_i(w,T)=\\det(TI-M_{c_i})=\\sum_j P_{i,j}(T)w^j.$$ For each $i$, let $j_i$ be the largest index for which $P_{i,j_i}\\ne0$. There exists $c^*\\in C$ such that $$P_{i,j_i}(c_i^*)=0\\qquad(1\\le i\\le k).$$ If $W$ is a controlled family of integer polynomials, $k$ is polynomially bounded, and $\\ell$ is short and computable in polynomial time, then the polynomials $P_i$ and $P_{i,j}$ are uniformly controlled."
+   },
+   {
+    "anchor": "stmt-thm-etr-bound",
+    "claim_id": "C23",
+    "statement": "For the circuit encoding of the existential theory of the reals used in this paper, $$\\mathsf{ETR}\\in\\mathsf C_{26}\\mathsf P,\n \\qquad \\exists\\mathbb R\\subseteq\\mathsf C_{26}\\mathsf P.$$"
+   },
+   {
+    "anchor": "stmt-lem-sparse-selection",
+    "claim_id": "C24",
+    "statement": "Let $p\\in\\mathbb R[y]$ be a nonzero polynomial of degree $d\\ge1$, and let $S$ be a nonempty set of distinct real roots of $p$. There is a list of at most $\\lceil\\log_2|S|\\rceil$ conditions $$\\mathop{\\mathrm{sgn}}p^{(j)}(\\alpha)=v,\n \\qquad 1\\le j\\le d,\\quad v\\in\\{-1,0,1\\},$$ satisfied by exactly one member of $S$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Controlled existential feasibility",
+    "evidence": [
+     {
+      "anchor": "pm-h-22",
+      "quote": "The construction uses two applications of the determinant rule, one root-label construction, and a fixed number of closure operations.",
+      "quote_sha256": "c36b411f9fbc144983b15c0a80d4422b7b40cfd53b025c74ea6cc79e11b0a307"
+     }
+    ],
+    "requires_concepts": [
+     "Controlled polynomial families",
+     "Multiplication characteristic polynomials",
+     "Real-root labels",
+     "Signs from residues"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C1",
+   "exact_statement": "There is an absolute integer $j$ such that $$\\exists\\forall\\mathbb R_{\\mathrm{circ}}\\in\\mathsf C_{j}\\mathsf P.$$ The level $j$ is independent of the input length, the numbers of variables, the degrees of the circuit polynomials, and their coefficient magnitudes.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "C2",
+   "exact_statement": "Fix $a\\ge0$. Let $b(w)$ and $s(w)$ be polynomially bounded nonnegative integers computable in polynomial time. If $A(w,i)$, for $i\\in\\{0,1\\}^{b(w)}$, is a predicate computable in $\\mathsf F_{a}$, then $$C(w)=\\#\\{i\\in\\{0,1\\}^{b(w)}:A(w,i)\\}$$ is in $\\mathsf F_{a+1}$. Existential and universal quantification over these indices are also in $\\mathsf F_{a+1}$.*\n\n*If $f(w,i)$ is in $\\mathsf F_{a}$ and $0\\le f(w,i)<2^{s(w)}$, then $\\sum_i f(w,i)$ is in $\\mathsf F_{a+1}$. The same conclusion holds for sums modulo a positive short integer.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-counting"
+  },
+  {
+   "claim_id": "C3",
+   "exact_statement": "Let $V_w(x,t)$ be a controlled family, where $x=(x_1,\\ldots,x_h)$ is a selected subset of its indeterminates and $t$ denotes the remaining ones. Let $\\beta\\in\\mathbb N^h$ be a short index. Then $[x^\\beta]V_w(x,t)$ is a controlled family, uniformly in $\\beta$. If the evaluation of $V$ is in $\\mathsf F_{a}$, the coefficient evaluations are in $\\mathsf F_{a+1}$, with cutoff $\\max(\\lambda,d+1)$, degree bound $d$, and coefficient-norm bound $2^b$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-field-coefficient"
+  },
+  {
+   "claim_id": "C4",
+   "exact_statement": "Controlled families are preserved by each of the following operations, applied a fixed number of times:*\n\n1.  *sums and products over short index sets, with uniform bounds on the summands or factors;*\n\n2.  *powers with short nonnegative exponents computable in polynomial time, and substitution of controlled polynomials for indeterminates;*\n\n3.  *extraction of indexed coefficients in any subset of the indeterminates, and differentiation in one variable to a short indexed nonnegative order.*\n\n*In the first operation the index domain is specified in polynomial time; more generally, an available predicate $A(w,i)$ may restrict the indices when polynomial-time uniform bounds for the unrestricted domain are retained. This predicate depends only on the primary word and the family index, not on an evaluation prime or evaluation point. All resulting bounds and prime cutoffs are computable in polynomial bit time from the primary family data. In particular, they are independent of evaluation primes.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-controlled-closure"
+  },
+  {
+   "claim_id": "C5",
+   "exact_statement": "Let $X(w)\\in\\mathbb Z$ and suppose that nonnegative short integers $m(w)$ and $\\lambda(w)$ are computable in polynomial time, with $|X(w)|\\le2^{m(w)}$. Define $$\\label{eq:crt-bounds}\n Z=\\max(16,m,\\lambda),\\qquad Y=2Z^4.$$ If $X(w)\\bmod p$, represented in $\\{0,\\ldots,p-1\\}$, is uniformly computable in $\\mathsf F_{a}$ for primes $\\lambda<p\\le Y$, then $\\mathop{\\mathrm{sgn}}X(w)$ is in $\\mathsf F_{\\max(a,5)+3}$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-crt-sign"
+  },
+  {
+   "claim_id": "C6",
+   "exact_statement": "If a controlled family has no indeterminates, its sign is available, uniformly in any short indices belonging to its input word.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-controlled-sign"
+  },
+  {
+   "claim_id": "C7",
+   "exact_statement": "The functional $\\mathcal L$ vanishes on $(f_1,\\ldots,f_n)$ and hence descends to $\\mathcal A$. If $\\deg_x v\\le n(\\ell-1)$, then $$\\label{eq:low-degree-functional}\n \\mathcal L(v)=[x^\\tau]v.$$ The algebra $\\mathcal A$ is a free $S$-module with basis $\\{x^a:0\\le a_i<\\ell\\}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-monomial-basis"
+  },
+  {
+   "claim_id": "C8",
+   "exact_statement": "For the algebra in Equation <a href=\"#eq:quotient-algebra\" data-reference-type=\"eqref\" data-reference=\"eq:quotient-algebra\">[eq:quotient-algebra]</a>, over every commutative ring $S$ with identity, $$\\label{eq:trace-formula}\n \\operatorname{tr}(M_v)=\\mathcal L(vJ)\n \\qquad(v\\in S[x]).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-trace"
+  },
+  {
+   "claim_id": "C9",
+   "exact_statement": "Suppose that the coefficients of the relations in Equation <a href=\"#eq:quotient-algebra\" data-reference-type=\"eqref\" data-reference=\"eq:quotient-algebra\">[eq:quotient-algebra]</a> and of $v$ lie in $\\mathbb C$, and write $Q(y)=\\det(yI-M_v)$. Every common zero $\\xi\\in\\mathbb C^n$ of the $f_i$ satisfies $Q(v(\\xi))=0$. If all coefficients are real and $\\eta$ is a simple real root of $Q$, there is a common zero $\\xi\\in\\mathbb R^n$ with $v(\\xi)=\\eta$. Moreover, for any polynomial $g$ over $\\mathbb C$, $$\\label{eq:composition-determinant}\n M_{g(v)}=g(M_v),\\qquad\n \\det M_{g(v)}=\\prod_{Q(\\alpha)=0}g(\\alpha),$$ where the roots in the product are counted with multiplicity.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-real-eigenline"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "Consider fixed families $r_1,\\ldots,r_n,v\\in\\mathbb Z[x]$, indexed by a word of length $N$. Suppose that $n\\ge1$ is polynomially bounded and polynomial-time computable, that $\\ell\\ge2$ and $\\Omega\\ge0$ are short polynomial-time computable integers, and that $\\deg_x r_i<\\ell$ and $\\deg_x v\\le\\Omega$. Put $$f_i=x_i^\\ell-r_i,\\qquad\n J=\\det(\\partial_jf_i),\\qquad\n D=\\ell^n,\\qquad L_0=D\\Omega+n(\\ell-1).$$ For $a\\ge0$, suppose that $v$, the indexed $r_i$, and $J$ can be evaluated uniformly in $\\mathsf F_{a}$ over prime fields with $$\\label{eq:char-prime-bound}\n p>n(\\ell-1)+\\ell L_0+D^2+10.$$ Additional short, polynomial-time computable lower cutoffs on $p$ are allowed. Then, for every $0\\le d\\le D$, $$[y^d]\\det(yI-M_v)\\pmod p$$ is uniformly computable in $\\mathsf F_{a+8}$ in this prime range. All running-time and query-length bounds are polynomial in the length of the input, including $p$ and the coefficient index $d$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-char-coeff"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "Let $n\\ge1$ be polynomially bounded and polynomial-time computable, and let $\\ell\\ge2$ be a short polynomial-time computable integer. Suppose that $r_1,\\ldots,r_n,v$ are controlled integer polynomial families in variables $x=(x_1,\\ldots,x_n)$ and a polynomially bounded number of parameter variables $t$, uniformly in $i$, and that $\\deg_x r_i<\\ell$. In the monomial basis of $$\\mathbb Z[t,x]/(x_1^\\ell-r_1,\\ldots,x_n^\\ell-r_n),$$ let $M_v$ denote multiplication by $v$. Then $$\\label{eq:controlled-characteristic}\n Q(t,y)=\\det(yI-M_v)$$ is a controlled family, monic of $y$-degree $D=\\ell^n$. If $d$ and $2^b$ are common total-degree and coefficient-norm bounds on the $r_i,v$, and $T=d+n(\\ell-1)$, valid total-degree and log-norm bounds on $Q$ are $$\\label{eq:determinant-size-bounds}\n d_Q=D\\bigl(1+d(1+T)\\bigr),\\qquad\n b_Q=D^2+D\\bigl(1+b(1+T)\\bigr).$$ The construction is compatible with specializing any parameters.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-multiplication-determinant"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Let $P(t)$ and $b_0(t)$ be controlled families of integer univariate polynomials, indexed by the same input word. There is a uniformly controlled family $L_a(t)\\in\\mathbb Z[t]$, with labels $a$ of polynomial binary length in a polynomial-time specified range, such that whenever $P\\ne0$:*\n\n1.  *For every label $a$ and every real root $\\alpha$ of $P$, either $L_a(\\alpha)\\ge\\tfrac12$ or $L_a(\\alpha)\\le-\\tfrac12$.*\n\n2.  *For every label $a$ and every real root $\\alpha$ of $P$, if $L_a(\\alpha)>0$, then $b_0(\\alpha)>0$.*\n\n3.  *For every real root $\\alpha$ of $P$ with $b_0(\\alpha)>0$, some label $a$ satisfies $L_a(\\alpha)>0$ and $L_a(\\beta)<0$ at every distinct real root $\\beta$ of $P$.*\n\n*The construction is defined and controlled also when $P=0$, but no root-selection property is asserted in that case. It uses a fixed number of applications of the controlled-family rules, independent of the degrees. Taking $b_0=1$ permits every real root to be selected.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-root-labels"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "Let $P\\in\\mathbb Z[t]$ be nonzero, with $\\deg P\\le d$ and $\\left\\lVert P\\right\\rVert_1\\le2^b$, where $d\\ge2$ and $b\\ge1$ are integers. If $g\\in\\mathbb Z[t]$ satisfies $\\deg g\\le d$ and $\\left\\lVert g\\right\\rVert_1\\le2^{b+d^2}$, put $$B_0=b+d^2+d(b+1),\\qquad\n B=d(bd+B_0)+bd+2.$$ At every complex root $\\alpha$ of $P$, either $g(\\alpha)=0$ or $$2^{-B}\\le |g(\\alpha)|\\le2^B.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-root-value-bounds"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "For a nonzero real polynomial $P$ of degree at most $d$, distinct real roots have distinct strings $$\\bigl(\\mathop{\\mathrm{sgn}}P^{(j)}(\\alpha)\\bigr)_{1\\le j\\le d}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-thom-separation"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "For integers $B\\ge1$ and $s\\ge1$, define $$\\begin{aligned}\n C_{B,s}(z)\n   &=\\prod_{k=-B}^{B}\n       \\bigl(2^{\\max(0,k)}+2^{\\max(0,-k)}z\\bigr)^{2s},\\\\\n A_{B,s}(z)\n   &=\\frac{C_{B,s}(z)-C_{B,s}(-z)}\n           {C_{B,s}(z)+C_{B,s}(-z)}.\n\\end{aligned}$$ The denominator is at least $1$ for every real $z$, and $A_{B,s}(0)=0$. For $2^{-B}\\le|z|\\le2^B$, $$|A_{B,s}(z)-\\mathop{\\mathrm{sgn}}z|\\le2\\cdot3^{-2s}.$$ Moreover $C_{B,s}$ is an integer polynomial with $$\\deg C_{B,s}=2s(2B+1),\\qquad\n \\left\\lVert C_{B,s}\\right\\rVert_1\\le2^{2s(2B+1)(B+1)}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-rational-sign"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "Suppose that an input word specifies a conjunction of polynomially many equations and strict inequalities $$A_i(x)=0,\\qquad B_j(x)>0,$$ in polynomially many real variables. Assume that the numbers of variables and tests, and the type of each addressed test, are computable in polynomial time, and that the polynomials form controlled families uniformly in their indices. Then the existence of a real solution is an available decision. Its counting level depends only on the fixed family constructions and their evaluation algorithms, not on the input or any short outer indices.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-controlled-existential"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "For the nonnegative polynomial $F$ and deformation in Equation <a href=\"#eq:existential-deformation\" data-reference-type=\"eqref\" data-reference=\"eq:existential-deformation\">[eq:existential-deformation]</a>, the minimum $$m(u)=\\min_{x\\in\\mathbb R^n}h_u(x)$$ exists for every real $u\\ge0$. The function $m$ is continuous and nondecreasing, and $Q(u,m(u))=0$. Furthermore, $$F\\text{ has a real zero}\n \\quad\\Longleftrightarrow\\quad\n m(u)\\text{ remains bounded as }u\\to+\\infty.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-bounded-minimum"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "The polynomial $Q(0,y)$ has $D$ distinct complex roots. If $\\left\\lVert Q\\right\\rVert_1\\le2^H$, where $H\\ge0$ is an integer, there is a nonzero polynomial $\\Delta\\in\\mathbb Z[u]$ such that every parameter where $Q(u,y)$ has a repeated complex root is a zero of $\\Delta$, and $$\\label{eq:existential-discriminant-bound}\n \\left\\lVert\\Delta\\right\\rVert_1\\le2^{H_\\Delta},\\qquad\n H_\\Delta=(2D)^2+2D(H+D+1).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-existential-discriminant"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "Let $F\\in\\mathbb Z[x_1,\\ldots,x_n]$ be nonnegative on $\\mathbb R^n$, let $n\\ge1$, and choose an odd $\\ell\\ge3$ with $\\ell>\\deg F$. Define $G,h_u,f_i,Q,D$ by Equations <a href=\"#eq:existential-deformation\" data-reference-type=\"eqref\" data-reference=\"eq:existential-deformation\">[eq:existential-deformation]</a> and <a href=\"#eq:existential-characteristic\" data-reference-type=\"eqref\" data-reference=\"eq:existential-characteristic\">[eq:existential-characteristic]</a>. Let $H,V$ be nonnegative integers bounding $\\log_2\\left\\lVert Q\\right\\rVert_1$ and $\\deg_uQ$, respectively, and choose the parameters in Equation <a href=\"#eq:existential-specialization-parameters\" data-reference-type=\"eqref\" data-reference=\"eq:existential-specialization-parameters\">[eq:existential-specialization-parameters]</a>. Then $$q(y)=Q(U,y)$$ is monic and squarefree, has degree $D$ and coefficient norm at most $2^K$, and satisfies $$\\label{eq:existential-root-equivalence}\n F\\text{ has a real zero}\n \\quad\\Longleftrightarrow\\quad\n q\\text{ has a real root less than }R.$$ Every real root of $q$ is the value of $h_U$ at a real common zero of $f_1(\\cdot,U),\\ldots,f_n(\\cdot,U)$.*\n\n*When $F$ varies in a controlled family, $\\ell$ is chosen from its degree bound as above, and $H,V$ are polynomial-time computable short bounds, $q$ is controlled. All remaining bound parameters in Equation <a href=\"#eq:existential-specialization-parameters\" data-reference-type=\"eqref\" data-reference=\"eq:existential-specialization-parameters\">[eq:existential-specialization-parameters]</a>, including $D,H_\\Delta$, are computable in polynomial time and have polynomial binary length.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-specialization"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "From a well-formed input of length $N$, one can construct in polynomial time an explicitly listed polynomial $F\\in\\mathbb Z[x_1,\\ldots,x_r,z_1,\\ldots,z_n]$, with $n\\ge1$ polynomially bounded in $N$, such that $F\\ge0$ on real inputs, $\\deg F\\le4$, and, for every $x\\in\\mathbb R^r$, $$\\label{eq:fiber-encoding}\n \\exists y\\in\\mathbb R^s\\;\\neg\\Phi(x,y)\n \\quad\\Longleftrightarrow\\quad\n \\exists z\\in\\mathbb R^n\\;F(x,z)=0.$$ The monomial count and coefficient bit lengths of $F$ are polynomially bounded in $N$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-quartic-fibers"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "For $0\\le d\\le d_E$, let $$A_d=\\{x\\in\\mathbb R^r:E_d(x)\\ne0,\\ E_j(x)=0\\text{ for }j>d\\}.$$ The sets $A_d$ partition $\\mathbb R^r$. Within each $A_d$, the good parameters form a subset that is both open and closed in the relative topology.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-degree-pieces"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "Let $W\\in\\mathbb R[c_1,\\ldots,c_k]$ be nonnegative on $\\mathbb R^k$, where $k\\ge1$, and let $C$ be a nonempty subset of $Z=\\{W=0\\}$ that is both open and closed in $Z$. Choose an odd integer $\\ell\\ge3$ with $\\ell>\\deg W$, and put $$G(c)=\\sum_{i=1}^k c_i^{\\ell+1},\\qquad\n H_w(c)=G(c)+(\\ell+1)wW(c).$$ In the quotient by $$\\label{eq:candidate-relations}\n c_i^\\ell+w\\frac{\\partial W}{\\partial c_i}=0\n \\qquad(1\\le i\\le k),$$ form the coordinate multiplication polynomials $$\\label{eq:coordinate-polynomials}\n P_i(w,T)=\\det(TI-M_{c_i})=\\sum_j P_{i,j}(T)w^j.$$ For each $i$, let $j_i$ be the largest index for which $P_{i,j_i}\\ne0$. There exists $c^*\\in C$ such that $$P_{i,j_i}(c_i^*)=0\\qquad(1\\le i\\le k).$$ If $W$ is a controlled family of integer polynomials, $k$ is polynomially bounded, and $\\ell$ is short and computable in polynomial time, then the polynomials $P_i$ and $P_{i,j}$ are uniformly controlled.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-candidate-coordinates"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "For the circuit encoding of the existential theory of the reals used in this paper, $$\\mathsf{ETR}\\in\\mathsf C_{26}\\mathsf P,\n \\qquad \\exists\\mathbb R\\subseteq\\mathsf C_{26}\\mathsf P.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-etr-bound"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "Let $p\\in\\mathbb R[y]$ be a nonzero polynomial of degree $d\\ge1$, and let $S$ be a nonempty set of distinct real roots of $p$. There is a list of at most $\\lceil\\log_2|S|\\rceil$ conditions $$\\mathop{\\mathrm{sgn}}p^{(j)}(\\alpha)=v,\n \\qquad 1\\le j\\le d,\\quad v\\in\\{-1,0,1\\},$$ satisfied by exactly one member of $S$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-sparse-selection"
+  }
+ ],
+ "paper": "papers/EN-114-000-0021-2-2026-PR-T4-UK-EX-M1-C-AL-H-0292_PM-141.1_Existentialuniversal_real_sentences_in_the_counting_hierarchy.md",
+ "purpose": "Existential–universal real sentences in the counting hierarchy",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "c8ff85af308ec67f05647adedcab51ed69be8794b6e7780ed77478e6512147ef",
+   "pm.domains.v2": "86a1de1e0adbd144b0fdadde08df2e99af9968e3585738cd8a6f96f76778b6ee",
+   "pm.edges.v2": "1dee4536b53bd3f8b1aa5e37dbaba8fe5c027aedd16216ed4942593fe664a28c",
+   "pm.extraction.v2": "ba58c4d185dc718bf4f0dbbfbf853074e2e82fabd62f185075a5106c7969d25c",
+   "pm.formal.v2": "14007fa2a617be5e8c2042ab5f50e5e242efc953003fee22de9833db63a98cea",
+   "pm.limits.v2": "f5d7072804dff10e2cc5b68ced8f4067653d5b3ddad264386b0d14301715e7bd",
+   "pm.node.v2": "607ff01b7518ef0a50a5f7b2690ee90f5443b1e35bccb8dcde8b8183e0972074",
+   "pm.objects.v2": "7cc662ecb2ea9454b0c8a374af0934c799e1f2f3673fe4e49886438a86119726",
+   "pm.provenance.v2": "e59a1075cf7fa0753487ba7bcbd728ef4389c738eb8744a8ca520b1ebb0bee94",
+   "pm.quantities.v2": "94fdc601c93d5871fb21bddef9a804882fe8da2b9113695eca8d44f4805aede3",
+   "pm.reading.v2": "27f4ee42f1d5e67f73f12d3a3bf3fd3eb3f6bee65b889069a417da2c7c0536fe",
+   "pm.roadmap.v2": "ca7a481ec539424cbc58cee65b7f6e8ea96f89207e98824bf74121d650529342",
+   "pm.search.v1": "08ee08e3e4448ad74a34e1a44c93d0e7a419675cc01716b1912279b9d7dc4582",
+   "pm.triptych.v2": "d2ebbc375573d37fb6ddb73521d2627687cb812fee0b29ee2309df2ce099cfaf"
+  },
+  "canonical_sha256": "5d874ee874d7e86a3b215c12a9eb3b669a6883a14c870761262f5484d4a144db",
+  "paper_sha256": "c1d3ecd1782f392b12c542b905bde71ce1e55ad2877ae3830f89799b29f818da",
+  "repaired_body_sha256": "b548c158c13c47ec22010fcbc2e593bd0880cab45b821d440356c7faedd62950"
+ },
+ "status": "ACTIVE",
+ "subject_id": 14,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "ffdaf30b23705d2b47e26b4486cc9ad27e5893501982a3a0699d862a8a99a1b0",
+   "receipt_sha256": "e5eaec8c5eee7d613c590b7fba80c1a50b24ce47f238db14625ea07c12ad72d9",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive eighth-integer grids in the asserted range, including zero and both signed endpoints, for B,s in {1,2,3}.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I-sign",
+     "oracle_basis": "Independent symbolic expansion from roots and leading coefficient; exact rational evaluation, denominator, degree, norm and error inequalities."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M-endpoint",
+     "observed_exit": 1,
+     "receipt_sha256": "8ebda638d0667bf43a70fbe4574d96cacdc48f1f75c1165d9afd19e487759b89"
+    },
+    {
+     "id": "M-power",
+     "observed_exit": 1,
+     "receipt_sha256": "9d03c7cea39da9e3022104f753b229e117d7b0544abb1537a4ffb699b7c177a7"
+    },
+    {
+     "id": "M-sign",
+     "observed_exit": 1,
+     "receipt_sha256": "c23580d86fbedcba965ae3ede4e41a34184bf5721d5fa4a629687b4a95c5cd8e"
+    }
+   ],
+   "receipt_sha256": "9a655b8940665dd9eea502fc8675de26953c7d40fcb4f6de1df1b2cd04cffb72",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Existential–universal real sentences in the counting hierarchy"
+}

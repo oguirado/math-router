@@ -1,0 +1,618 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 442915,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 127285
+ },
+ "coordinate": "EN-113-000-0021-2-2026-PR-T4-UK-EX-M1-B-AL-H-0359",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Extremal graph theory and Ramsey theory",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:finite",
+     "quote": "The objects enumerated are weighted path systems; the ambient graphs are not enumerated.",
+     "quote_sha256": "28ed249f8c08937a59032af48230c1d3f1e8c7018145abd0c5f7071387cb2d57"
+    }
+   ],
+   "query": "Enumerating all ambient graphs or edge colourings.",
+   "reason": "The finite computation enumerates weighted path-system patterns."
+  }
+ ],
+ "family": "PM-189",
+ "id": "PM-189.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C1",
+    "statement": "For all integers $m\\ge n\\ge3$ with $(m,n)\\ne(3,3)$, $$R(C_m,K_n)=(m-1)(n-1)+1.$$ For the excluded pair, $R(C_3,K_3)=6$."
+   },
+   {
+    "anchor": "stmt-red-smaller",
+    "claim_id": "C2",
+    "statement": "For every integer $b$ with $0\\le b<a$, a graph $H$ containing no $C_{k+1}$ and satisfying $\\alpha(H)\\le b$ has at most $kb$ vertices."
+   },
+   {
+    "anchor": "stmt-red-expansion",
+    "claim_id": "C3",
+    "statement": "For every nonempty independent set $I$ in the graph $G$ fixed in <a href=\"#red:counterexample\" data-reference-type=\"eqref\" data-reference=\"red:counterexample\">[red:counterexample]</a>, $$|N_G[I]|\\ge k|I|+1.\n  \\label{red:expansion-bound}$$ In particular, $\\delta(G)\\ge k$ and $\\alpha(G)\\le k$."
+   },
+   {
+    "anchor": "stmt-clq-bound",
+    "claim_id": "C4",
+    "statement": "Let $k\\ge3$ and $2\\le a\\le k$ be integers, and let $G$ be a finite simple graph such that $$|V(G)|=ka+1,\\qquad \\alpha(G)\\le a,\\qquad C_{k+1}\\not\\subseteq G.$$ Suppose also that $$|N_G[I]|\\ge k|I|+1\n \\quad\\text{for every nonempty independent set }I\\subseteq V(G).$$ Then its maximum clique size $t$ satisfies $$\\label{clq:bound-equation}\n \\max\\{3,\\lfloor k/2\\rfloor\\}\\le t\\le k.$$"
+   },
+   {
+    "anchor": "stmt-clq-triangle",
+    "claim_id": "C5",
+    "statement": "Under the hypotheses of Theorem <a href=\"#clq:bound\" data-reference-type=\"ref\" data-reference=\"clq:bound\">4</a>, we have $3\\le t\\le k$."
+   },
+   {
+    "anchor": "stmt-clq-layer-interface",
+    "claim_id": "C6",
+    "statement": "Let $k\\ge8$ be an integer, set $s=\\lfloor k/2\\rfloor$, and let $G$ be a nonempty finite simple graph with $\\alpha(G)\\le k$ and $$|N_G[I]|\\ge k|I|+1\n \\quad\\text{for every nonempty independent set }I\\subseteq V(G).$$ Suppose that $G$ contains no $K_s$. Fix a vertex $r$ and a breadth-first spanning tree $T$ of its component, rooted at $r$. Then there exist $i\\in\\{1,\\ldots,s\\}$ and an induced subgraph $H$ of $G$, all of whose vertices have depth $i$ in $T$, such that $H$ is connected and nonbipartite, and $$\\label{clq:H-properties}\n \\begin{gathered}\n |V(H)|\\ge k,\\qquad \\delta(H)\\ge s,\\\\\n |N_H[I]|\\ge s|I|\n \\quad(I\\ne\\varnothing\\text{ independent in }H).\n \\end{gathered}$$ The last inequality is strict whenever $k$ is odd or $H-N_H[I]$ is nonempty."
+   },
+   {
+    "anchor": "stmt-clq-long-path",
+    "claim_id": "C7",
+    "statement": "Let $d\\ge 2$, and let $F$ be a finite connected graph with $\\delta(F)\\ge d$. Then $F$ contains a path of order at least $\\min\\{|V(F)|,2d+1\\}$."
+   },
+   {
+    "anchor": "stmt-clq-coloured-path",
+    "claim_id": "C8",
+    "statement": "Let $s\\ge 4$, and let $H$ be a finite connected nonbipartite graph containing no $K_s$. Suppose that $$\\delta(H)\\ge s,\n \\qquad\n |N_H[\\{a,b\\}]|\\ge 2s\n \\quad\\text{whenever $a,b$ are distinct and nonadjacent.}$$ For every nonconstant map $\\chi:V(H)\\to\\{0,1\\}$ and every integer $1\\le\\ell\\le 2s-2$, there is a path in $H$ of length exactly $\\ell$ whose ends receive different values of $\\chi$."
+   },
+   {
+    "anchor": "stmt-small-cases",
+    "claim_id": "C9",
+    "statement": "Let $k\\in\\{3,4\\}$ and let $a$ be an integer with $2\\le a\\le k$. There is no graph $G$ with $$|V(G)|=ka+1,\\qquad \\alpha(G)\\le a,\n  \\qquad G\\text{ contains no }C_{k+1},$$ such that $|N_G[I]|\\ge k|I|+1$ for every nonempty independent set $I\\subseteq V(G)$."
+   },
+   {
+    "anchor": "stmt-size-hamiltonian",
+    "claim_id": "C10",
+    "statement": "Every finite simple 2-connected graph $H$ with $\\alpha(H)\\le2$ contains a cycle through all its vertices."
+   },
+   {
+    "anchor": "stmt-size-shortening",
+    "claim_id": "C11",
+    "statement": "Let $H$ be a finite simple graph on $r\\ge7$ vertices with $\\alpha(H)\\le2$. If $H$ has a Hamiltonian cycle, then it has a cycle on exactly $r-1$ vertices."
+   },
+   {
+    "anchor": "stmt-size-test",
+    "claim_id": "C12",
+    "statement": "Let $k\\ge5$ and $t\\ge1$ be integers. Let $G$ be a finite simple graph with no cycle on exactly $k+1$ vertices and with clique number at most $t$. For every $Y\\subseteq V(G)$, $$|Y|>\\max\\{k,2t\\}\\quad\\Longrightarrow\\quad\\alpha(G[Y])\\ge3.$$"
+   },
+   {
+    "anchor": "stmt-path-interval",
+    "claim_id": "C13",
+    "statement": "Let $G$ be a finite simple graph with no cycle of order $k+1$, and let $Q$ be a clique of size $t$, where $3\\leq t\\leq k$. Put $h=k+1-t$. No path system on $Q$, of total amount $q$ and with $v$ incident clique vertices, satisfies $$\\label{path:forbidden-interval}\n h\\leq q\\leq k+1-v.$$"
+   },
+   {
+    "anchor": "stmt-path-optimality",
+    "claim_id": "C14",
+    "statement": "Let $\\mathcal R$ be any path system on $Q$, with total amount $A$, with $e'$ assigned paths, and with $v'$ incident clique vertices. Then $$\\label{path:optimality-interval}\n L+\\mathbf 1_{\\{e'\\geq e\\}}\\leq A\\leq k+1-v'$$ is impossible, where the indicator is one when $e'\\geq e$ and zero otherwise."
+   },
+   {
+    "anchor": "stmt-path-exterior",
+    "claim_id": "C15",
+    "statement": "Every vertex of $S$ has at least $k+1-|S|\\geq1$ neighbors in $F$."
+   },
+   {
+    "anchor": "stmt-path-separation",
+    "claim_id": "C16",
+    "statement": "Let $X\\subseteq V(G)$ and let $x,y\\in X$ be distinct.*\n\n1.  *For integers $r,s\\geq0$, if no outside $x$–$y$ path relative to $X$ has parameter $d$ with $1\\leq d\\leq r+s+2$, then $B_r(x;X)$ and $B_s(y;X)$ are disjoint and anticomplete.*\n\n2.  *For an integer $r\\geq1$, if no such path has parameter $1\\leq d\\leq r$, then $y$ has no neighbor in $B_{r-1}(x;X)$."
+   },
+   {
+    "anchor": "stmt-path-singleton",
+    "claim_id": "C17",
+    "statement": "Consider two options based at distinct vertices $x,y\\in X$, with integer radius labels $r,s\\geq-1$. If $r=s=-1$, the two options are disjoint and anticomplete whenever $xy\\notin E(G)$. Otherwise, they are disjoint and anticomplete whenever all outside $x$–$y$ paths relative to $X$ with parameters $$1\\leq d\\leq r+s+2$$ are forbidden."
+   },
+   {
+    "anchor": "stmt-grow-replacement",
+    "claim_id": "C18",
+    "statement": "Fix an orientation of the chains and distinct targets $q,q'\\in Q$. Suppose an outside path relative to $S$ joins $\\rho(q)$ to $\\rho(q')$ and has $d\\ge 1$ internal vertices. Let $r\\in\\{0,1,2\\}$ be the number of these two targets that have an incoming path. Deleting those $r$ paths from $\\mathcal P$ and inserting one new path from $q$ to $q'$ gives a valid path system with total amount $L+d$ and $e+1-r$ paths. It retains all the interior vertices of $\\mathcal P$."
+   },
+   {
+    "anchor": "stmt-grow-one",
+    "claim_id": "C19",
+    "statement": "For every orientation of the chains, no outside path relative to $S$ with one internal vertex joins two distinct representatives. Nor can such a path join consecutive vertices of any path of $\\mathcal P$."
+   },
+   {
+    "anchor": "stmt-grow-weights",
+    "claim_id": "C20",
+    "statement": "Fix an orientation and $x\\in R$. Suppose no outside path relative to $S$ with one or two internal vertices joins $x$ to any other representative. Then $$\\alpha\\bigl(B_2(x;S)\\bigr)\\ge 2.$$ If, in addition, $B_1(x;S)$ is not a clique and $t<k$, then $\\alpha(B_2(x;S))\\ge 3$."
+   },
+   {
+    "anchor": "stmt-grow-short",
+    "claim_id": "C21",
+    "statement": "Suppose $t\\ge 9$. For every fixed orientation of the chains of $\\mathcal P$, two distinct representatives are joined by an outside path relative to $S$ with $1\\le d\\le 6$ internal vertices. By Lemma <a href=\"#grow:one\" data-reference-type=\"ref\" data-reference=\"grow:one\">19</a>, such a path in fact has $2\\le d\\le 6$."
+   },
+   {
+    "anchor": "stmt-terminal-increment",
+    "claim_id": "C22",
+    "statement": "Let $t\\ge9$, and let $\\mathcal R$ be a valid path system consisting of some paths of $\\mathcal P$ and one new path. Suppose that its total amount is $L+d$, where $1\\le d\\le6$. Then $$L=h-1=k-t.$$ Moreover, $\\mathcal R$ contains all $e$ paths of $\\mathcal P$, its new path has amount $d$, and every old path has amount at least $d$. In particular, a construction of this kind that removes an old path is impossible."
+   },
+   {
+    "anchor": "stmt-terminal-five",
+    "claim_id": "C23",
+    "statement": "<span id=\"terminal:classification\" label=\"terminal:classification\"></span> Suppose that, for some orientation of the chains, an outside path with parameter $d\\in\\{1,\\ldots,6\\}$ joins two representatives. Then $L=k-t$, and exactly one of the following alternatives holds:*\n\n1.  *<span id=\"terminal:two\" label=\"terminal:two\"></span> $d=2$, $v\\ge t-2$, and every old amount is at least two;*\n\n2.  *<span id=\"terminal:three\" label=\"terminal:three\"></span> $d=3$, $t\\in\\{9,11\\}$, $e=(t-3)/2$, and $v=t-3$; the old paths represent a matching and have amounts at least three;*\n\n3.  *$d=5$, $t=9$, $k=19$, $e=2$, and $v=4$; the old paths represent a matching and both have amount five.*\n\n*In every alternative, the two targets must be starting vertices in their oriented chains. In Alternative <a href=\"#terminal:two\" data-reference-type=\"ref\" data-reference=\"terminal:two\">[terminal:two]</a> their union must contain all missing vertices. In Alternatives <a href=\"#terminal:three\" data-reference-type=\"ref\" data-reference=\"terminal:three\">[terminal:three]</a> and <a href=\"#terminal:five\" data-reference-type=\"ref\" data-reference=\"terminal:five\">23</a> both targets must be missing.*\n\n*Once one of these alternatives holds, its parameter and endpoint restrictions apply to every outside path with parameter between one and six between representatives, in every orientation."
+   },
+   {
+    "anchor": "stmt-terminal-weights",
+    "claim_id": "C24",
+    "statement": "Under any alternative of Lemma <a href=\"#terminal:classification\" data-reference-type=\"ref\" data-reference=\"terminal:classification\">[terminal:classification]</a>, there are at least two nonsingleton chains. For every vertex $x$ that is a representative in some orientation, $$|B_1(x;S)|\\ge t+1,\\qquad \\alpha(B_1(x;S))\\ge2.$$ If $k\\ge2t$, then also $\\alpha(B_2(x;S))\\ge3$."
+   },
+   {
+    "anchor": "stmt-terminal-contradiction",
+    "claim_id": "C25",
+    "statement": "There is no counterexample $G$ with maximum clique size $t\\ge9$."
+   },
+   {
+    "anchor": "stmt-finite-verified",
+    "claim_id": "C26",
+    "statement": "Let $k,t$ be integers such that $$\\label{finite:domain}\n 5\\le k\\le17,\\qquad\n \\max\\{3,\\lfloor k/2\\rfloor\\}\\le t\\le\\min\\{8,k\\}.$$ There is no finite simple graph $G$ satisfying all of the following: $G$ has no cycle on exactly $k+1$ vertices, its clique number is $t$, $\\alpha(G)\\le k$, and $$|N_G[I]|\\ge k|I|+1\n \\quad\\text{for every nonempty independent set }I\\subseteq V(G).$$ More precisely, every optimal path system on a maximum clique, chosen as in Section <a href=\"#sec:paths\" data-reference-type=\"ref\" data-reference=\"sec:paths\">6</a>, gives a contradiction under these hypotheses."
+   },
+   {
+    "anchor": "stmt-finite-coverage",
+    "claim_id": "C27",
+    "statement": "For nonnegative integers $t,B$, the nondecreasing lists of reversal-normalized positive tuples satisfying $$\\sum_{p\\in P}(\\ell(p)+1)=t,\n \\qquad \\sum_{p\\in P}\\sigma(p)\\le B$$ represent exactly once the isomorphism classes of linear forests on $t$ vertices with positive integer edge amounts of total at most $B$. Here empty tuples are allowed as singleton components.*\n\n*All these lists are generated by the following recursion. Choose a first tuple $p$ with $\\ell(p)\\le t-1$ and $\\sigma(p)\\le B$, subject to reversal normalization and any prescribed lower bound on $p$. Continue with $t-\\ell(p)-1$ vertices, budget $B-\\sigma(p)$, and lower bound $p$ on the next tuple. At zero remaining vertices, emit the empty list for every remaining nonnegative budget."
+   },
+   {
+    "anchor": "stmt-finite-labels",
+    "claim_id": "C28",
+    "statement": "The construction labels every vertex of $S$ exactly once. It has exactly $t$ clique labels and $L$ interior labels, and $$|\\mathcal E(P)|=e,\\qquad\n \\sum_{(a,b)\\in\\mathcal E(P)}(b-a-1)=L.$$ Every interior label belongs to exactly one open interval $(a,b)$ from $\\mathcal E(P)$, so <a href=\"#finite:tips\" data-reference-type=\"eqref\" data-reference=\"finite:tips\">[finite:tips]</a> is well defined. The list $\\mathcal E(P)$ is increasing, with $a<b$ in every pair. For any subset of its edges, a connecting route from a clique label $z$ to a larger clique label $w$ follows increasing edges in list order."
+   },
+   {
+    "anchor": "stmt-finite-extension-rule",
+    "claim_id": "C29",
+    "statement": "Let $\\mathcal P$ be the chosen optimal path system, with total amount $L<h=k+1-t$ and $e$ paths, labelled as in Lemma <a href=\"#finite:labels\" data-reference-type=\"ref\" data-reference=\"finite:labels\">28</a>. Fix $x<y$ in $S$, and choose $z\\in T(x)$, $w\\in T(y)$ with $z<w$. Let $E\\subseteq\\mathcal E(P)$ consist of old endpoint edges whose represented paths do not contain $x$ or $y$ in their interiors. Suppose that $z,w$ have degree at most one in $E$ and belong to different components of the forest $E$, with absent vertices treated as isolated. Here $V(E)$ denotes the set of endpoints of edges in $E$, excluding all isolated clique vertices. Put $$\\begin{split}\n e'&=|E|+1,\\\\\n v'&=\\bigl|V(E)\\cup\\{z,w\\}\\bigr|,\\\\\n q&=\\sum_{(a,b)\\in E}(b-a-1)+|x-z|+|y-w|.\n \\end{split}$$ Every positive integer $d$ satisfying $$\\label{finite:extension-interval}\n L+\\mathbf 1_{\\{e'\\ge e\\}}-q\n \\ \\le d\\le\\\n k+1-v'-q$$ is a forbidden outside-path parameter between $x,y$, relative to $S$."
+   },
+   {
+    "anchor": "stmt-finite-required-path-rule",
+    "claim_id": "C30",
+    "statement": "Let $X\\supseteq S$, let $J$ be a required-edge graph on $X$, and let $x,y\\in X$ be distinct. If $J$ contains a simple $x$-$y$ path of length $\\ell$, where $1\\le\\ell\\le k$, then $$k-\\ell\\in M_{xy}$$ is a valid forbidden outside-path constraint relative to $X$."
+   },
+   {
+    "anchor": "stmt-finite-inheritance",
+    "claim_id": "C31",
+    "statement": "Suppose $S\\subseteq X\\subseteq X'$. Every forbidden outside-path constraint relative to $X$, for endpoints in $X$, remains valid relative to $X'$."
+   },
+   {
+    "anchor": "stmt-finite-ball-bounds",
+    "claim_id": "C32",
+    "statement": "For $i\\in X$, put $$b_0=k+1-n_X+|\\{j\\in X:0\\in M_{ij}\\}|.$$ Assume $b_0>0$, and define $$u_0=1+\\mathbf 1_{\\{b_0\\ge t\\}}.$$ For $r=1,2$, recursively set $$\\begin{aligned}\n A_r(i)&=\\{j\\in X:\\{1,\\ldots,r\\}\\subseteq M_{ij}\\},\n &T_r&=|A_r(i)|,\\label{finite:excluded-neighbors}\\\\\n b_r&=\\max\\{b_{r-1},\\,ku_{r-1}+1-n_X+T_r\\},\\label{finite:ball-size}\\\\\n \\widehat u_r&=\\max\\bigl\\{u_{r-1},\n       1+\\mathbf 1_{\\{b_r>t\\}}\n        +\\mathbf 1_{\\{b_r>\\max(k,2t)\\}}\\bigr\\}.\n       \\label{finite:ordinary-weight}\n\\end{aligned}$$ Set $u_r=\\widehat u_r$, except that $u_r=2$ when $$\\label{finite:exception-condition}\n \\widehat u_r=1,\\qquad b_{r-1}=b_r=t,\\qquad\n k+1-n_X+T_r\\ge t.$$ Then, for $r=0,1,2$, $$|B_r(i;X)|\\ge b_r,\\qquad \\alpha(B_r(i;X))\\ge u_r.$$"
+   },
+   {
+    "anchor": "stmt-finite-packing",
+    "claim_id": "C33",
+    "statement": "Let a family of these options have distinct base vertices. For options based at $i,j$ with radius labels $r,s$, require $$\\label{finite:compatibility}\n \\begin{cases}\n 0\\in M_{ij},&r=s=-1,\\\\\n \\{1,\\ldots,r+s+2\\}\\subseteq M_{ij},&\\text{otherwise}.\n \\end{cases}$$ If every pair satisfies this condition, the sum of the option weights is at most $k$."
+   },
+   {
+    "anchor": "stmt-finite-strengthening",
+    "claim_id": "C34",
+    "statement": "Let $J$ be a required-edge graph on $S$, and let $M$ be a matrix of valid forbidden parameters relative to $S$. Fix distinct $i,j\\in S$ and $d\\in\\{0,1\\}$. Form a trial required-edge graph as follows:*\n\n1.  *If $d=0$, retain $X=S$ and require the edge $ij$ in addition to $J$.*\n\n2.  *If $d=1$, add a fresh vertex $z$, put $X=S\\cup\\{z\\}$, and require the edges $iz,zj$ in addition to $J$.*\n\n*On the trial set, retain the old entries of $M$ on pairs in $S$, start with empty entries involving $z$ when it is present, and add all forbidden parameters from Lemma <a href=\"#finite:required-path-rule\" data-reference-type=\"ref\" data-reference=\"finite:required-path-rule\">30</a>. If these trial data give either an immediate required-edge contradiction or a packing contradiction, then $d$ is forbidden between $i$ and $j$ relative to $S$."
+   },
+   {
+    "anchor": "stmt-finite-procedure-soundness",
+    "claim_id": "C35",
+    "statement": "The procedure terminates. An output of $1$ or $2$ proves that the pattern $P$ cannot be realized by an optimal path system in a graph with the hypotheses above. An output of $0$ asserts only that these tests have not produced a contradiction."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Path-system finite refutation",
+    "evidence": [
+     {
+      "anchor": "stmt-finite-verified",
+      "quote": "Let $k,t$ be integers such that $$\\label{finite:domain}\n 5\\le k\\le17,\\qquad\n \\max\\{3,\\lfloor k/2\\rfloor\\}\\le t\\le\\min\\{8,k\\}.$$ There is no finite simple graph $G$ satisfying all of the following: $G$ has no cycle on exactly $k+1$ vertices, its clique number is $t$, $\\alpha(G)\\le k$, and $$|N_G[I]|\\ge k|I|+1\n \\quad\\text{for every nonempty independent set }I\\subseteq V(G).$$ More precisely, every optimal path system on a maximum clique, chosen as in Section <a href=\"#sec:paths\" data-reference-type=\"ref\" data-reference=\"sec:paths\">6</a>, gives a contradiction under these hypotheses.",
+      "quote_sha256": "9bc276952b37445caa868dcd9689e31190d006fa9b138b66bb9ac2d8dc50e278"
+     }
+    ],
+    "requires_concepts": [
+     "Linear forests",
+     "Independent sets",
+     "Outside paths",
+     "Clique number",
+     "Neighborhood expansion"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C1",
+   "exact_statement": "For all integers $m\\ge n\\ge3$ with $(m,n)\\ne(3,3)$, $$R(C_m,K_n)=(m-1)(n-1)+1.$$ For the excluded pair, $R(C_3,K_3)=6$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "C2",
+   "exact_statement": "For every integer $b$ with $0\\le b<a$, a graph $H$ containing no $C_{k+1}$ and satisfying $\\alpha(H)\\le b$ has at most $kb$ vertices.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-red-smaller"
+  },
+  {
+   "claim_id": "C3",
+   "exact_statement": "For every nonempty independent set $I$ in the graph $G$ fixed in <a href=\"#red:counterexample\" data-reference-type=\"eqref\" data-reference=\"red:counterexample\">[red:counterexample]</a>, $$|N_G[I]|\\ge k|I|+1.\n  \\label{red:expansion-bound}$$ In particular, $\\delta(G)\\ge k$ and $\\alpha(G)\\le k$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-red-expansion"
+  },
+  {
+   "claim_id": "C4",
+   "exact_statement": "Let $k\\ge3$ and $2\\le a\\le k$ be integers, and let $G$ be a finite simple graph such that $$|V(G)|=ka+1,\\qquad \\alpha(G)\\le a,\\qquad C_{k+1}\\not\\subseteq G.$$ Suppose also that $$|N_G[I]|\\ge k|I|+1\n \\quad\\text{for every nonempty independent set }I\\subseteq V(G).$$ Then its maximum clique size $t$ satisfies $$\\label{clq:bound-equation}\n \\max\\{3,\\lfloor k/2\\rfloor\\}\\le t\\le k.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-clq-bound"
+  },
+  {
+   "claim_id": "C5",
+   "exact_statement": "Under the hypotheses of Theorem <a href=\"#clq:bound\" data-reference-type=\"ref\" data-reference=\"clq:bound\">4</a>, we have $3\\le t\\le k$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-clq-triangle"
+  },
+  {
+   "claim_id": "C6",
+   "exact_statement": "Let $k\\ge8$ be an integer, set $s=\\lfloor k/2\\rfloor$, and let $G$ be a nonempty finite simple graph with $\\alpha(G)\\le k$ and $$|N_G[I]|\\ge k|I|+1\n \\quad\\text{for every nonempty independent set }I\\subseteq V(G).$$ Suppose that $G$ contains no $K_s$. Fix a vertex $r$ and a breadth-first spanning tree $T$ of its component, rooted at $r$. Then there exist $i\\in\\{1,\\ldots,s\\}$ and an induced subgraph $H$ of $G$, all of whose vertices have depth $i$ in $T$, such that $H$ is connected and nonbipartite, and $$\\label{clq:H-properties}\n \\begin{gathered}\n |V(H)|\\ge k,\\qquad \\delta(H)\\ge s,\\\\\n |N_H[I]|\\ge s|I|\n \\quad(I\\ne\\varnothing\\text{ independent in }H).\n \\end{gathered}$$ The last inequality is strict whenever $k$ is odd or $H-N_H[I]$ is nonempty.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-clq-layer-interface"
+  },
+  {
+   "claim_id": "C7",
+   "exact_statement": "Let $d\\ge 2$, and let $F$ be a finite connected graph with $\\delta(F)\\ge d$. Then $F$ contains a path of order at least $\\min\\{|V(F)|,2d+1\\}$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-clq-long-path"
+  },
+  {
+   "claim_id": "C8",
+   "exact_statement": "Let $s\\ge 4$, and let $H$ be a finite connected nonbipartite graph containing no $K_s$. Suppose that $$\\delta(H)\\ge s,\n \\qquad\n |N_H[\\{a,b\\}]|\\ge 2s\n \\quad\\text{whenever $a,b$ are distinct and nonadjacent.}$$ For every nonconstant map $\\chi:V(H)\\to\\{0,1\\}$ and every integer $1\\le\\ell\\le 2s-2$, there is a path in $H$ of length exactly $\\ell$ whose ends receive different values of $\\chi$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-clq-coloured-path"
+  },
+  {
+   "claim_id": "C9",
+   "exact_statement": "Let $k\\in\\{3,4\\}$ and let $a$ be an integer with $2\\le a\\le k$. There is no graph $G$ with $$|V(G)|=ka+1,\\qquad \\alpha(G)\\le a,\n  \\qquad G\\text{ contains no }C_{k+1},$$ such that $|N_G[I]|\\ge k|I|+1$ for every nonempty independent set $I\\subseteq V(G)$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-small-cases"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "Every finite simple 2-connected graph $H$ with $\\alpha(H)\\le2$ contains a cycle through all its vertices.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-size-hamiltonian"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "Let $H$ be a finite simple graph on $r\\ge7$ vertices with $\\alpha(H)\\le2$. If $H$ has a Hamiltonian cycle, then it has a cycle on exactly $r-1$ vertices.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-size-shortening"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Let $k\\ge5$ and $t\\ge1$ be integers. Let $G$ be a finite simple graph with no cycle on exactly $k+1$ vertices and with clique number at most $t$. For every $Y\\subseteq V(G)$, $$|Y|>\\max\\{k,2t\\}\\quad\\Longrightarrow\\quad\\alpha(G[Y])\\ge3.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-size-test"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "Let $G$ be a finite simple graph with no cycle of order $k+1$, and let $Q$ be a clique of size $t$, where $3\\leq t\\leq k$. Put $h=k+1-t$. No path system on $Q$, of total amount $q$ and with $v$ incident clique vertices, satisfies $$\\label{path:forbidden-interval}\n h\\leq q\\leq k+1-v.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-path-interval"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "Let $\\mathcal R$ be any path system on $Q$, with total amount $A$, with $e'$ assigned paths, and with $v'$ incident clique vertices. Then $$\\label{path:optimality-interval}\n L+\\mathbf 1_{\\{e'\\geq e\\}}\\leq A\\leq k+1-v'$$ is impossible, where the indicator is one when $e'\\geq e$ and zero otherwise.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-path-optimality"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "Every vertex of $S$ has at least $k+1-|S|\\geq1$ neighbors in $F$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-path-exterior"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "Let $X\\subseteq V(G)$ and let $x,y\\in X$ be distinct.*\n\n1.  *For integers $r,s\\geq0$, if no outside $x$–$y$ path relative to $X$ has parameter $d$ with $1\\leq d\\leq r+s+2$, then $B_r(x;X)$ and $B_s(y;X)$ are disjoint and anticomplete.*\n\n2.  *For an integer $r\\geq1$, if no such path has parameter $1\\leq d\\leq r$, then $y$ has no neighbor in $B_{r-1}(x;X)$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-path-separation"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "Consider two options based at distinct vertices $x,y\\in X$, with integer radius labels $r,s\\geq-1$. If $r=s=-1$, the two options are disjoint and anticomplete whenever $xy\\notin E(G)$. Otherwise, they are disjoint and anticomplete whenever all outside $x$–$y$ paths relative to $X$ with parameters $$1\\leq d\\leq r+s+2$$ are forbidden.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-path-singleton"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "Fix an orientation of the chains and distinct targets $q,q'\\in Q$. Suppose an outside path relative to $S$ joins $\\rho(q)$ to $\\rho(q')$ and has $d\\ge 1$ internal vertices. Let $r\\in\\{0,1,2\\}$ be the number of these two targets that have an incoming path. Deleting those $r$ paths from $\\mathcal P$ and inserting one new path from $q$ to $q'$ gives a valid path system with total amount $L+d$ and $e+1-r$ paths. It retains all the interior vertices of $\\mathcal P$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-grow-replacement"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "For every orientation of the chains, no outside path relative to $S$ with one internal vertex joins two distinct representatives. Nor can such a path join consecutive vertices of any path of $\\mathcal P$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-grow-one"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "Fix an orientation and $x\\in R$. Suppose no outside path relative to $S$ with one or two internal vertices joins $x$ to any other representative. Then $$\\alpha\\bigl(B_2(x;S)\\bigr)\\ge 2.$$ If, in addition, $B_1(x;S)$ is not a clique and $t<k$, then $\\alpha(B_2(x;S))\\ge 3$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-grow-weights"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "Suppose $t\\ge 9$. For every fixed orientation of the chains of $\\mathcal P$, two distinct representatives are joined by an outside path relative to $S$ with $1\\le d\\le 6$ internal vertices. By Lemma <a href=\"#grow:one\" data-reference-type=\"ref\" data-reference=\"grow:one\">19</a>, such a path in fact has $2\\le d\\le 6$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-grow-short"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "Let $t\\ge9$, and let $\\mathcal R$ be a valid path system consisting of some paths of $\\mathcal P$ and one new path. Suppose that its total amount is $L+d$, where $1\\le d\\le6$. Then $$L=h-1=k-t.$$ Moreover, $\\mathcal R$ contains all $e$ paths of $\\mathcal P$, its new path has amount $d$, and every old path has amount at least $d$. In particular, a construction of this kind that removes an old path is impossible.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-terminal-increment"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "<span id=\"terminal:classification\" label=\"terminal:classification\"></span> Suppose that, for some orientation of the chains, an outside path with parameter $d\\in\\{1,\\ldots,6\\}$ joins two representatives. Then $L=k-t$, and exactly one of the following alternatives holds:*\n\n1.  *<span id=\"terminal:two\" label=\"terminal:two\"></span> $d=2$, $v\\ge t-2$, and every old amount is at least two;*\n\n2.  *<span id=\"terminal:three\" label=\"terminal:three\"></span> $d=3$, $t\\in\\{9,11\\}$, $e=(t-3)/2$, and $v=t-3$; the old paths represent a matching and have amounts at least three;*\n\n3.  *$d=5$, $t=9$, $k=19$, $e=2$, and $v=4$; the old paths represent a matching and both have amount five.*\n\n*In every alternative, the two targets must be starting vertices in their oriented chains. In Alternative <a href=\"#terminal:two\" data-reference-type=\"ref\" data-reference=\"terminal:two\">[terminal:two]</a> their union must contain all missing vertices. In Alternatives <a href=\"#terminal:three\" data-reference-type=\"ref\" data-reference=\"terminal:three\">[terminal:three]</a> and <a href=\"#terminal:five\" data-reference-type=\"ref\" data-reference=\"terminal:five\">23</a> both targets must be missing.*\n\n*Once one of these alternatives holds, its parameter and endpoint restrictions apply to every outside path with parameter between one and six between representatives, in every orientation.",
+   "kind": "classification",
+   "statement_anchor": "stmt-terminal-five"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "Under any alternative of Lemma <a href=\"#terminal:classification\" data-reference-type=\"ref\" data-reference=\"terminal:classification\">[terminal:classification]</a>, there are at least two nonsingleton chains. For every vertex $x$ that is a representative in some orientation, $$|B_1(x;S)|\\ge t+1,\\qquad \\alpha(B_1(x;S))\\ge2.$$ If $k\\ge2t$, then also $\\alpha(B_2(x;S))\\ge3$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-terminal-weights"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "There is no counterexample $G$ with maximum clique size $t\\ge9$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-terminal-contradiction"
+  },
+  {
+   "claim_id": "C26",
+   "exact_statement": "Let $k,t$ be integers such that $$\\label{finite:domain}\n 5\\le k\\le17,\\qquad\n \\max\\{3,\\lfloor k/2\\rfloor\\}\\le t\\le\\min\\{8,k\\}.$$ There is no finite simple graph $G$ satisfying all of the following: $G$ has no cycle on exactly $k+1$ vertices, its clique number is $t$, $\\alpha(G)\\le k$, and $$|N_G[I]|\\ge k|I|+1\n \\quad\\text{for every nonempty independent set }I\\subseteq V(G).$$ More precisely, every optimal path system on a maximum clique, chosen as in Section <a href=\"#sec:paths\" data-reference-type=\"ref\" data-reference=\"sec:paths\">6</a>, gives a contradiction under these hypotheses.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-finite-verified"
+  },
+  {
+   "claim_id": "C27",
+   "exact_statement": "For nonnegative integers $t,B$, the nondecreasing lists of reversal-normalized positive tuples satisfying $$\\sum_{p\\in P}(\\ell(p)+1)=t,\n \\qquad \\sum_{p\\in P}\\sigma(p)\\le B$$ represent exactly once the isomorphism classes of linear forests on $t$ vertices with positive integer edge amounts of total at most $B$. Here empty tuples are allowed as singleton components.*\n\n*All these lists are generated by the following recursion. Choose a first tuple $p$ with $\\ell(p)\\le t-1$ and $\\sigma(p)\\le B$, subject to reversal normalization and any prescribed lower bound on $p$. Continue with $t-\\ell(p)-1$ vertices, budget $B-\\sigma(p)$, and lower bound $p$ on the next tuple. At zero remaining vertices, emit the empty list for every remaining nonnegative budget.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-finite-coverage"
+  },
+  {
+   "claim_id": "C28",
+   "exact_statement": "The construction labels every vertex of $S$ exactly once. It has exactly $t$ clique labels and $L$ interior labels, and $$|\\mathcal E(P)|=e,\\qquad\n \\sum_{(a,b)\\in\\mathcal E(P)}(b-a-1)=L.$$ Every interior label belongs to exactly one open interval $(a,b)$ from $\\mathcal E(P)$, so <a href=\"#finite:tips\" data-reference-type=\"eqref\" data-reference=\"finite:tips\">[finite:tips]</a> is well defined. The list $\\mathcal E(P)$ is increasing, with $a<b$ in every pair. For any subset of its edges, a connecting route from a clique label $z$ to a larger clique label $w$ follows increasing edges in list order.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-finite-labels"
+  },
+  {
+   "claim_id": "C29",
+   "exact_statement": "Let $\\mathcal P$ be the chosen optimal path system, with total amount $L<h=k+1-t$ and $e$ paths, labelled as in Lemma <a href=\"#finite:labels\" data-reference-type=\"ref\" data-reference=\"finite:labels\">28</a>. Fix $x<y$ in $S$, and choose $z\\in T(x)$, $w\\in T(y)$ with $z<w$. Let $E\\subseteq\\mathcal E(P)$ consist of old endpoint edges whose represented paths do not contain $x$ or $y$ in their interiors. Suppose that $z,w$ have degree at most one in $E$ and belong to different components of the forest $E$, with absent vertices treated as isolated. Here $V(E)$ denotes the set of endpoints of edges in $E$, excluding all isolated clique vertices. Put $$\\begin{split}\n e'&=|E|+1,\\\\\n v'&=\\bigl|V(E)\\cup\\{z,w\\}\\bigr|,\\\\\n q&=\\sum_{(a,b)\\in E}(b-a-1)+|x-z|+|y-w|.\n \\end{split}$$ Every positive integer $d$ satisfying $$\\label{finite:extension-interval}\n L+\\mathbf 1_{\\{e'\\ge e\\}}-q\n \\ \\le d\\le\\\n k+1-v'-q$$ is a forbidden outside-path parameter between $x,y$, relative to $S$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-finite-extension-rule"
+  },
+  {
+   "claim_id": "C30",
+   "exact_statement": "Let $X\\supseteq S$, let $J$ be a required-edge graph on $X$, and let $x,y\\in X$ be distinct. If $J$ contains a simple $x$-$y$ path of length $\\ell$, where $1\\le\\ell\\le k$, then $$k-\\ell\\in M_{xy}$$ is a valid forbidden outside-path constraint relative to $X$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-finite-required-path-rule"
+  },
+  {
+   "claim_id": "C31",
+   "exact_statement": "Suppose $S\\subseteq X\\subseteq X'$. Every forbidden outside-path constraint relative to $X$, for endpoints in $X$, remains valid relative to $X'$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-finite-inheritance"
+  },
+  {
+   "claim_id": "C32",
+   "exact_statement": "For $i\\in X$, put $$b_0=k+1-n_X+|\\{j\\in X:0\\in M_{ij}\\}|.$$ Assume $b_0>0$, and define $$u_0=1+\\mathbf 1_{\\{b_0\\ge t\\}}.$$ For $r=1,2$, recursively set $$\\begin{aligned}\n A_r(i)&=\\{j\\in X:\\{1,\\ldots,r\\}\\subseteq M_{ij}\\},\n &T_r&=|A_r(i)|,\\label{finite:excluded-neighbors}\\\\\n b_r&=\\max\\{b_{r-1},\\,ku_{r-1}+1-n_X+T_r\\},\\label{finite:ball-size}\\\\\n \\widehat u_r&=\\max\\bigl\\{u_{r-1},\n       1+\\mathbf 1_{\\{b_r>t\\}}\n        +\\mathbf 1_{\\{b_r>\\max(k,2t)\\}}\\bigr\\}.\n       \\label{finite:ordinary-weight}\n\\end{aligned}$$ Set $u_r=\\widehat u_r$, except that $u_r=2$ when $$\\label{finite:exception-condition}\n \\widehat u_r=1,\\qquad b_{r-1}=b_r=t,\\qquad\n k+1-n_X+T_r\\ge t.$$ Then, for $r=0,1,2$, $$|B_r(i;X)|\\ge b_r,\\qquad \\alpha(B_r(i;X))\\ge u_r.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-finite-ball-bounds"
+  },
+  {
+   "claim_id": "C33",
+   "exact_statement": "Let a family of these options have distinct base vertices. For options based at $i,j$ with radius labels $r,s$, require $$\\label{finite:compatibility}\n \\begin{cases}\n 0\\in M_{ij},&r=s=-1,\\\\\n \\{1,\\ldots,r+s+2\\}\\subseteq M_{ij},&\\text{otherwise}.\n \\end{cases}$$ If every pair satisfies this condition, the sum of the option weights is at most $k$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-finite-packing"
+  },
+  {
+   "claim_id": "C34",
+   "exact_statement": "Let $J$ be a required-edge graph on $S$, and let $M$ be a matrix of valid forbidden parameters relative to $S$. Fix distinct $i,j\\in S$ and $d\\in\\{0,1\\}$. Form a trial required-edge graph as follows:*\n\n1.  *If $d=0$, retain $X=S$ and require the edge $ij$ in addition to $J$.*\n\n2.  *If $d=1$, add a fresh vertex $z$, put $X=S\\cup\\{z\\}$, and require the edges $iz,zj$ in addition to $J$.*\n\n*On the trial set, retain the old entries of $M$ on pairs in $S$, start with empty entries involving $z$ when it is present, and add all forbidden parameters from Lemma <a href=\"#finite:required-path-rule\" data-reference-type=\"ref\" data-reference=\"finite:required-path-rule\">30</a>. If these trial data give either an immediate required-edge contradiction or a packing contradiction, then $d$ is forbidden between $i$ and $j$ relative to $S$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-finite-strengthening"
+  },
+  {
+   "claim_id": "C35",
+   "exact_statement": "The procedure terminates. An output of $1$ or $2$ proves that the pattern $P$ cannot be realized by an optimal path system in a graph with the hypotheses above. An output of $0$ asserts only that these tests have not produced a contradiction.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-finite-procedure-soundness"
+  }
+ ],
+ "paper": "papers/EN-113-000-0021-2-2026-PR-T4-UK-EX-M1-B-AL-H-0359_PM-189.1_Cycle_clique_Ramsey_numbers.md",
+ "purpose": "Cycle--clique Ramsey numbers",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "752adf63c1d0322818167a67f7596625dbce24a3b94a389ff4aa375861a8346c",
+   "pm.domains.v2": "d0925319ac6215976c35ab68066561260fb55571cbcc8230160eb3320418bdf9",
+   "pm.edges.v2": "456aea5b56290b638b483d5d7095319fb92ebd62d46d2f72545c3c7cc67d81c9",
+   "pm.extraction.v2": "11c071582e00b00a2f7ce0b84a5ae29b19dc4712ea6d6d6e1c809912b84abc2c",
+   "pm.formal.v2": "fdfe3eb4f7116bdf53aeb9cbc53aaadfa5a6572663cd0b41a7199bbc21254670",
+   "pm.limits.v2": "a44e467485f7bffcb9e9041ca7618f37fac85b69d8a73f0f8703c6957405a74f",
+   "pm.node.v2": "3569dedd3b7c30c88d1d880b1610d7d6eb50ebb0aa7751ec39e1863e101577ba",
+   "pm.objects.v2": "f27d0679e06e353ea30efd51be6f272a6c96f8b69aa1ef51de77467896c358fc",
+   "pm.provenance.v2": "5735463c562c9f54d1630072502f7f312391fc5ebc8aa526d958e591d0a275c2",
+   "pm.quantities.v2": "8f665fa30575da61c8e07d24e16354d8e531586a1fba8649e37d02aaae259ada",
+   "pm.reading.v2": "fbc494803cfb09a29b98e5a23d79a078eafbd10b856f88e1d2a65ea7355d52ec",
+   "pm.roadmap.v2": "ef7fe95ff3a5f8ecacd128666631b7687f8ad07242f2168e146c2ab9115e665a",
+   "pm.search.v1": "67aad37d231e4c638dd62f646f68627e7bc75fbc85b8ad6d40f66e0709fc5d0e",
+   "pm.triptych.v2": "52511ea8fa6855e457062aec2f3cb9bcea76c865928d9b8acad209b8ba87f944"
+  },
+  "canonical_sha256": "f14213443934205ecb5bbdb3891fc81b7b08dc10a3c74730542e3caf84a36e9d",
+  "paper_sha256": "23033b74ae37095eba7a53e44cbf77bddaa69be21818689c18b975fa69079d93",
+  "repaired_body_sha256": "06a1e9e63b126b73d9cfa0ea98eff20642505f3ba9c1588d62e1e22dac8afa1a"
+ },
+ "status": "ACTIVE",
+ "subject_id": 13,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "c0a7d276ca7210259783e70d90b2aee39fb1aae167e95af94ad601def5eb6511",
+   "receipt_sha256": "5579e6fb71c5799d12eea4ea0870b6ae0ed868e1637e3fec2d677889432bbc66",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "All t,B in [0,5] x [0,5], every source-domain pair with B=k-t, and explicit zero/order/budget boundaries up to t=8,B=9.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I-pattern",
+     "oracle_basis": "Exact fmpz coefficient extraction from the independently derived multiset generating series; each output pattern is rechecked in exact Python for order, amount, positivity, reversal normalization, sorting, and uniqueness."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M1",
+     "observed_exit": 6,
+     "receipt_sha256": "dad0ac88447bd7ac7fe64325e555b44a36650f1281f41892e1a371e68e08e153"
+    },
+    {
+     "id": "M2",
+     "observed_exit": 6,
+     "receipt_sha256": "afbd63b5c85f7b4ec9c12f750e065d0bb899e53b0a935037fc8cce585b32d932"
+    },
+    {
+     "id": "M3",
+     "observed_exit": 6,
+     "receipt_sha256": "ac9524f09d7becf5cbe6964bca60f11c9dc56290b0589b91e4d3dcc57aec51ac"
+    }
+   ],
+   "receipt_sha256": "4342f8988c3cb009c85695cacb93d4659a1fe54fc5fab0943dac367bac549ce6",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Cycle--clique Ramsey numbers"
+}

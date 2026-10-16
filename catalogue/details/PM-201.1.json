@@ -1,0 +1,561 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 468107,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 133895
+ },
+ "coordinate": "EN-102-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-H-0376",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "Noncommutative algebra",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "The annihilating polynomial is allowed to depend on the element.",
+     "quote_sha256": "1791b6e5f789216bb906d05531b7a2625a32166515060b536f4d323f15c646ad"
+    }
+   ],
+   "query": "Uniform bounded-degree storage for the resulting division ring",
+   "reason": "Elementwise algebraicity supplies no uniform degree bound."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "The construction does not prescribe the center.",
+     "quote_sha256": "c14f1223102baadb743bdf9a4aeec2b3804aa473540d3767c545579fd91c217e"
+    }
+   ],
+   "query": "Construct a division ring over a prescribed center",
+   "reason": "The actual center is identified separately."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:countable-construction",
+     "quote": "The resulting division algebras need not embed in one another.",
+     "quote_sha256": "891d8dae9ba4d796ab7ff9800c00c6118d2e51b87bbce389fe66697043822896"
+    }
+   ],
+   "query": "Embed the successive division algebras in a tower",
+   "reason": "The limiting construction retains relations using an ultraproduct."
+  }
+ ],
+ "family": "PM-201",
+ "id": "PM-201.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-lifting",
+    "claim_id": "C2",
+    "statement": "Let $k$ be a countable field of characteristic zero containing every root of unity, and let $A$ be a finite-dimensional central division algebra over $k$. Suppose $X\\in A\\langle\\!\\langle z_1,z_2\\rangle\\!\\rangle^u$ satisfies:*\n\n1.  *$X_0$ generates $A$ as a $k$-algebra;*\n\n2.  *$X_1,X_2$ have linearly independent classes in $A^u/J_A(X_0)$.*\n\n*For every $w\\in A\\langle\\!\\langle z_1,z_2\\rangle\\!\\rangle$, there exist a countable field extension $k'/k$, a central division algebra $A'/k'$ of strictly larger degree, and series $$X'\\in A'\\langle\\!\\langle s_1,s_2\\rangle\\!\\rangle^u,\n \\qquad w'\\in A'\\langle\\!\\langle s_1,s_2\\rangle\\!\\rangle$$ with the following properties:*\n\n1.  *Every noncommutative polynomial identity over $k$ satisfied by the tuple $(X,w)$ is satisfied by $(X',w')$ as an identity of formal series.*\n\n2.  *The constant tuple $X'_0$ generates $A'$ over $k'$, and the classes of $X'_1,X'_2$ in $(A')^u/J_{A'}(X'_0)$ are linearly independent.*\n\n3.  *There is a monic nonzero polynomial $q\\in k'[t]$ such that $q(w')=0$.*\n\n*Here the degree of a central division algebra $B/F$ is $\\sqrt{[B:F]}$."
+   },
+   {
+    "anchor": "stmt-lem-admissible-evaluation",
+    "claim_id": "C3",
+    "statement": "Suppose a constant input pair $R$ is block upper triangular with $b$ blocks and small diagonal blocks. Its strictly upper blocks may have arbitrary entries in $E$. Let $H$ be a matrix pair of formal series of positive order in finitely many commuting or free variables. Then $W(R+H)$ is defined coefficientwise by convergent sums in $E$. The same assertion holds for products, finite determinants, and derivatives of fixed order of finitely many such entry series.*\n\n*These evaluations preserve formal entry identities. They also remain valid coefficientwise in an additional parameter $\\eta$ if the diagonal blocks have entries in $E[[\\eta]]$ with small constant terms, while the strictly upper blocks and the coefficients of $H$ have entries in $E((\\eta))$."
+   },
+   {
+    "anchor": "stmt-lem-generic-detection",
+    "claim_id": "C4",
+    "statement": "Let $$F(Q)=\\sum_\\alpha c_\\alpha Q^\\alpha\\in E[[Q_1,\\ldots,Q_N]],\n \\qquad \\inf_\\alpha v(c_\\alpha)>-\\infty.$$ Adjoin elements $Q_1^\\circ,\\ldots,Q_N^\\circ$ whose residues are algebraically independent over the residue field of $E$, and complete with respect to the extended valuation. Then $F(\\varepsilon Q^\\circ)$ is defined, and is nonzero whenever $F$ is nonzero."
+   },
+   {
+    "anchor": "stmt-lem-symbol-division",
+    "claim_id": "C5",
+    "statement": "The central simple algebra $A\\otimes_k B_n$ is division. Its pure rational scalar extensions and its central Laurent series extensions are division as well."
+   },
+   {
+    "anchor": "stmt-lem-nonconstant-roots",
+    "claim_id": "C6",
+    "statement": "For $n\\ge n_0$, every distinct generic eigenvalue of $W(P)$ has a nonzero differential in the input entries. Independent small generic points of sizes at least $n_0$ have disjoint spectra. Their spectra also avoid the constant spectrum of $w(0)$."
+   },
+   {
+    "anchor": "stmt-lem-stable-multiplicity",
+    "claim_id": "C7",
+    "statement": "For every $N\\ge1$, $$t_{pN}=t,\\qquad e_{pN}=Ne_p.$$"
+   },
+   {
+    "anchor": "stmt-lem-scalar-branches",
+    "claim_id": "C8",
+    "statement": "Let $V(T)$ be a matrix over a commuting formal Taylor ring $E[[T]]$. Suppose $V(0)$ is split semisimple with $e$ distinct eigenvalues and the minimal-polynomial degree of $V(T)$ over $\\operatorname{Frac}E[[T]]$ is at most $e$. Then a formal change of basis reducing to the identity separates $V(T)$ into $e$ scalar blocks. The sizes of these blocks are their multiplicities at $T=0$."
+   },
+   {
+    "anchor": "stmt-lem-paired-scalar",
+    "claim_id": "C9",
+    "statement": "There is a scalar $m_h(P,Q;U,V)$ such that $$M_h(P,Q;U,V)=m_h(P,Q;U,V)\\pi_h.$$ It is the coefficient of $xy$ in the branch reducing to $\\lambda_h$ for the commuting input deformation $$\\begin{pmatrix}P&xU\\\\yV&Q\\end{pmatrix}.$$ The same assertion holds at an admissible specialized pair whose spectra are disjoint and whose combined output is split semisimple with the maximal number $e_{n+n'}$ of distinct roots."
+   },
+   {
+    "anchor": "stmt-lem-active-specialization",
+    "claim_id": "C10",
+    "statement": "The scalar identities for $M_h$ and every linear identity expressing $m\\in\\mathcal T_P$ hold after any admissible specialization of the partner input for which the required inverses exist. For identities on a subset of labels, only the inverses for those labels are needed.*\n\n*After a field extension, the columns of $D$ and finitely many paired responses span $\\mathcal T_P$. These responses can be taken at independent small generic partner points, whose sizes need not be equal."
+   },
+   {
+    "anchor": "stmt-prop-active-partition",
+    "claim_id": "C11",
+    "statement": "For the direction $v$ chosen in <a href=\"#eq:nonzero-direction\" data-reference-type=\"eqref\" data-reference=\"eq:nonzero-direction\">[eq:nonzero-direction]</a>, there is a partition of $\\{1,\\ldots,e_n\\}$ such that $$\\mathcal T_P=\n \\left\\{c\\in\\Omega_P^{e_n}:\n \\frac{c_h}{D_h(P;v)}\\text{ is constant on each part}\\right\\}.$$"
+   },
+   {
+    "anchor": "stmt-lem-killed-pole",
+    "claim_id": "C12",
+    "statement": "Let $E$ be a field and let $M(\\xi)\\in\\operatorname{End}_E(V)[[\\xi]]$, where $V$ is finite dimensional. Suppose that zero is a semisimple eigenvalue of $M_0=M(0)$, and let $\\Pi$ be its spectral projection. Suppose that $$G=\\Pi M'(0)\\Pi\\big|_{\\ker M_0}$$ is invertible. Then $M(\\xi)^{-1}$ exists over $E((\\xi))$ and has a pole of order at most one. Let $J$ be zero on $\\ker M_0$ and equal to $M_0^{-1}$ on $\\operatorname{im}M_0$. If $L(\\xi)$ and $B(\\xi)$ are compatible matrix series satisfying $$L(0)\\Pi=0,\\qquad \\Pi B(0)=0,$$ then $$\\label{eq:killed-pole-limit}\n \\lim_{\\xi\\to0}L(\\xi)M(\\xi)^{-1}B(\\xi)=L(0)JB(0).$$*\n\n\n*Suppose additionally that $e$ is an idempotent, $f=1-e$, $fM_0f$ is invertible on $fV$, and $e:\\ker M_0\\to eV$ is an isomorphism. Under the same two coupling conditions, $$\\label{eq:fixed-complement-inverse}\n L(0)JB(0)=L(0)f(fM_0f)^{-1}fB(0).$$"
+   },
+   {
+    "anchor": "stmt-prop-word-transfer",
+    "claim_id": "C13",
+    "statement": "Let $R=\\operatorname{diag}(P,C_0)$ be a small matrix input of total size $N\\in\n\\mathcal S$; the block $C_0$ may be absent. Let $I$ be a set of labels at $P$ such that $W(C_0)-\\lambda_h$ is invertible for every $h\\in I$. Work over a field $E$ containing the labeled spectral data at $P$ and the entries of $C_0$, with the formal evaluations allowed by Lemma <a href=\"#lem:admissible-evaluation\" data-reference-type=\"ref\" data-reference=\"lem:admissible-evaluation\">3</a>. Let $$Z(s_1,s_2)\\in M_N(E)\\langle\\!\\langle s_1,s_2\\rangle\\!\\rangle^2$$ have constant term $R$. These are input matrices: their scalar entries act on the input factor and commute with the old coefficient algebra.*\n\n*For $h\\in I$, embed $\\pi_h$ at the $P$ block, put $\\bar\\pi_h=1-\\pi_h$, and form $$S_h(Z)=\\pi_h(W(Z)-\\lambda_h)\\pi_h\n -\\pi_hW(Z)\\bar\\pi_h\n \\bigl(\\bar\\pi_h(W(Z)-\\lambda_h)\\bar\\pi_h\\bigr)^{-1}\n \\bar\\pi_hW(Z)\\pi_h.$$ Suppose that every $S_h(Z)$ vanishes in degrees less than $\\ell$, where $\\ell\\ge1$. For each word $\\omega$ of length $\\ell$, there are scalars $c_{h,\\omega}\\in E$ such that $$[S_h(Z)]_\\omega=c_{h,\\omega}\\pi_h,\n \\qquad (c_{h,\\omega})_{h\\in I}\\in\n        (\\mathcal T_P|_I)\\otimes E.$$ The same conclusion holds for homogeneous degree-$\\ell$ coefficients of perturbations in finitely many ordinary commuting parameters."
+   },
+   {
+    "anchor": "stmt-prop-functional-linkage",
+    "claim_id": "C14",
+    "statement": "Let $P$ be a small generic input of size $p$, and let $h,h'$ be linked labels at $P$. Let $C_1,\\ldots,C_s$ be small generic inputs of sizes in $\\mathcal S$, jointly independent with $P$, where $s=0$ is allowed. Put $R=\\operatorname{diag}(P,C_1,\\ldots,C_s)$. Over a common spectral splitting field $E$, denote by $\\Lambda_j^R(\\Delta)$ the scalar eigenvalue branch of $W(R+\\Delta)$ whose value at zero is $\\lambda_j(P)$, for $j=h,h'$.*\n\n\n*Define $$g_j(\\eta)=\\lambda_j(P+\\eta v)-\\lambda_j(P)\n \\in\\Omega_P[[\\eta]],\\qquad j=h,h'.$$ Then $g_{h'}'(0)\\neq 0$, and $$\\Lambda_h^R(\\Delta)-\\lambda_h(P)\n =\\bigl(g_h\\circ g_{h'}^{-1}\\bigr)\n       \\bigl(\\Lambda_{h'}^R(\\Delta)-\\lambda_{h'}(P)\\bigr).\n \\label{eq:functional-linkage}$$ Here $g_{h'}^{-1}$ denotes the inverse for composition. In particular, the univariate series in this identity depends only on $P,h,h'$ and $v$, and is unchanged when auxiliary blocks are adjoined."
+   },
+   {
+    "anchor": "stmt-prop-active-replication",
+    "claim_id": "C15",
+    "statement": "For every positive integer $N$, $$a_{pN}=N a_p.$$"
+   },
+   {
+    "anchor": "stmt-cor-equal-size-partners",
+    "claim_id": "C16",
+    "statement": "There are $r\\in\\mathcal S$ and a positive integer $K_0$ with the following property. Let $P,Q_1,\\ldots,Q_{K_0}$ be independent small generic inputs of size $r$. For generic fixed input arrows $U_j:P\\leftarrow Q_j$, the loop columns and the images of $$V\\longmapsto m(P,Q_j;U_j,V),\n \\qquad V:Q_j\\leftarrow P,\\quad 1\\leq j\\leq K_0,$$ span $\\mathcal T_P$ after extension to the joint field of the data. The analogous assertion holds with the other arrow fixed. The same $r$ and $K_0$ may be used for both assertions."
+   },
+   {
+    "anchor": "stmt-lem-star-derivatives",
+    "claim_id": "C17",
+    "statement": "Let allowed-size blocks, evaluated by the preceding formal specialization conventions, have split semisimple outputs with disjoint spectra and the maximal total number of roots. Add input arrows only from designated hub blocks to designated leaf blocks, with no arrows between hubs or between leaves. The resulting input has the same roots and multiplicities as its diagonal part. A loop derivative at a block is its loop response $D$, with zero entries at all other blocks. If $U$ is a forward arrow between a leaf $P$ and a hub $Q$, a derivative in its reverse arrow $V$ has entries $$\\bigl(m_h(P,Q;U,V)\\bigr)_h,\n \\qquad\n \\bigl(m_k(Q,P;V,U)\\bigr)_k$$ at these two blocks and zero entries at the others."
+   },
+   {
+    "anchor": "stmt-lem-tail-defect",
+    "claim_id": "C18",
+    "statement": "One can choose an arbitrarily large allowed size $b$ and integers $a=a_b$ and $g\\geq0$, such that $$\\rho_b=a-g,\n \\qquad\n \\rho_{bM}\\leq Ma-g \\quad(M\\geq1).$$ At a generic size-$b$ point choose one root from each part of the active partition. Projection onto these $a$ selected roots identifies the active space with the full coordinate space. The quotient of that coordinate space by the loop-response image has dimension $g$."
+   },
+   {
+    "anchor": "stmt-lem-pair-quotient-surjectivity",
+    "claim_id": "C19",
+    "statement": "Let $P,Q$ be independent generic size-$b$ points. For a fixed generic arrow $U$ between them, varying the reverse arrow $V$ gives a joint paired-response map into $H_P\\oplus H_Q$ whose projection to either summand is surjective. This holds whichever orientation is fixed."
+   },
+   {
+    "anchor": "stmt-lem-common-tangent",
+    "claim_id": "C20",
+    "statement": "Fix $M\\geq1$ independent generic size-$b$ points and their selected roots. At inputs with this diagonal and arbitrary strictly upper block arrows, the collective span of all selected-root derivative columns has dimension at most $Ma-g$. The span of all loop columns and all two-block paired columns has dimension exactly $Ma-g$."
+   },
+   {
+    "anchor": "stmt-prop-compatible-relations",
+    "claim_id": "C21",
+    "statement": "For any finite nonempty collection of independent generic size-$b$ points $P_i$, there is a $g$-dimensional space $$\\mathcal G_{\\{P_i\\}}\\subseteq\\bigoplus_i H_{P_i}^*$$ with the following properties.*\n\n1.  *Projection to each $H_{P_i}^*$ is an isomorphism.*\n\n2.  *It annihilates all joint paired responses, with both arrows arbitrary.*\n\n3.  *For a fixed generic arrow between $P_i,P_j$, the annihilator in $H_{P_i}^*\\oplus H_{P_j}^*$ of the variable reverse-arrow image is exactly the restriction of $\\mathcal G_{\\{P_i\\}}$.*\n\n4.  *On adjoining independent blocks, restriction of the larger space is the original space after scalar extension.*\n\n*For one block this space is $H_P^*$. These statements include $g=0$."
+   },
+   {
+    "anchor": "stmt-thm-cyclic-compatibility",
+    "claim_id": "C22",
+    "statement": "Let $Z(s_1,s_2)$ be a pair of formal series in two free letters, with constant term $\\operatorname{diag}(P_1,\\ldots,P_m)$. Suppose that the fixed-root Schur expressions $S_{i,h}$, for every block $i$ and every root label $h$, vanish in every degree below $\\ell$, where $\\ell\\geq1$. By transfer, their degree-$\\ell$ coefficients are scalar on their root spaces; write $$[s^\\omega]S_{i,h}=e_{i,h,\\omega}\\pi_{i,h},\n \\qquad |\\omega|=\\ell.$$ For each word the scalar tuple at block $i$ belongs to its active space. For every cyclic orbit $\\mathcal O$ of words of length $\\ell$ and every $c\\in\\mathcal G$, $$\\sum_{\\omega\\in\\mathcal O}\n \\sum_{i=1}^m\\sum_{h\\in I_i}\n c_{i,h}e_{i,h,\\omega}=0.\n \\label{eq:cyclic-error-relation}$$ The orbit sum runs over distinct words, including when a word has a nontrivial rotational stabilizer."
+   },
+   {
+    "anchor": "stmt-lem-repeated-splitting",
+    "claim_id": "C23",
+    "statement": "Fix $L\\geq1$ and arbitrary scalar matrices $S_1,S_2\\in M_L(E)$. Substitute $s_c=\\delta S_c$ into $Z$, with a commuting Taylor parameter $\\delta$, and add an order-$\\delta^\\ell$ input loop $Y_i$ in each old block $i$. Here $Y_i$ is an arbitrary pair in $M_b(E)\\otimes M_L(E)$. Put $$B_{i,h}=\\sum_{|\\omega|=\\ell}\n e_{i,h,\\omega}S^\\omega+D_{i,h}(Y_i),$$ where $D_{i,h}$ is applied entrywise to the repeat-factor coefficients. One can choose the $Y_i$ so that every $B_{i,h}$, for all root labels $h$, has simple spectrum. For such a choice, after a finite splitting extension the leaf output has branches $$\\lambda_{i,h,j}(\\delta)\n =\\lambda_{i,h}+\\delta^\\ell\\theta_{i,h,j}\n    +O(\\delta^{\\ell+1}),\\qquad 1\\leq j\\leq L,$$ each scalar of multiplicity $t$, where $\\theta_{i,h,j}$ are the eigenvalues of $B_{i,h}$. Their spectral projections are integral in $\\delta$ and reduce to $\\pi_{i,h}\\otimes\\Pi_{i,h,j}$, where $\\Pi_{i,h,j}$ are the rank-one spectral projections of $B_{i,h}$."
+   },
+   {
+    "anchor": "stmt-lem-limiting-columns",
+    "claim_id": "C24",
+    "statement": "The following derivative columns at the preceding star have finite limits at $\\delta=0$.*\n\n1.  *A loop $Y\\otimes T$ inside old block $i$ has limit $$D_{i,h}(Y)\\operatorname{tr}(\\Pi_{i,h,j}T)$$ on row $(i,h,j)$, and zero on all other rows. Hub loops give their own loop responses.*\n\n2.  *For individual hub $p$, a reverse arrow of value $V$ from repeat position $r$ in old block $i$ has limit $$\\begin{aligned}\n     &m_{i,h}(P_i,Q_p;U_{i,p},V)\n          \\operatorname{tr}(\\Pi_{i,h,j}E_{pr})\n           &&\\text{on row }(i,h,j),\\\\\n     &\\mathbf 1_{p=r}\\,\n       m_{p,k}(Q_p,P_i;V,U_{i,p})\n           &&\\text{on hub row }(p,k),\n    \\end{aligned}$$ and zero elsewhere. Here $E_{pr}$ is the repeat-factor matrix unit with row $p$ and column $r$.*\n\n3.  *For the common hub, use arrow $U_{i,*}$ and replace the repeat-factor matrix by $$\\sum_{p=1}^L E_{pr}.$$ The hub contribution is the single response $m_{*,k}(Q_*,P_i;V,U_{i,*})$.*\n\n4.  *The derivative along the whole input $\\delta$-curve, multiplied by $\\delta^{1-\\ell}$, has limit $\\ell\\theta_{i,h,j}$ on leaf rows and zero on hub rows.*\n\n*The matrix consisting of a finite spanning collection of these limiting columns has rank at most $Na-g$."
+   },
+   {
+    "anchor": "stmt-lem-hub-nullspace",
+    "claim_id": "C25",
+    "statement": "The left nullspace of the limiting matrix in Lemma <a href=\"#lem:limiting-columns\" data-reference-type=\"ref\" data-reference=\"lem:limiting-columns\">24</a>, including its curve column, has dimension $g$. Its projection to the old blocks identifies it with $\\mathcal G$: for each $c\\in\\mathcal G$, its leaf weights are $c_{i,h}$ on every row $(i,h,j)$, independently of $j$, and its hub weights are the uniquely determined compatible functionals. Consequently $$\\sum_i\\sum_{h\\in I_i}c_{i,h}\\operatorname{tr}(B_{i,h})=0\n \\qquad(c\\in\\mathcal G).\n \\label{eq:error-matrix-trace}$$"
+   },
+   {
+    "anchor": "stmt-prop-eleven-block-correction",
+    "claim_id": "C26",
+    "statement": "Prescribe generic input-arrow pairs on the edges $$\\begin{array}{c|c}\n \\text{letter}&\\text{offsets }i-j\\text{ of edges }i\\leftarrow j\\\\ \\hline\n s_1&1,2\\\\\n s_2&3,4.\n \\end{array}$$ Under the response and cyclic-sum hypotheses above, there is a pair $Z(s_1,s_2)\\in M_{mb}(E)\\langle\\!\\langle s_1,s_2\\rangle\\!\\rangle^2$ with constant term $R$ and exactly these prescribed linear coefficients, for which $$S_{i,h}(Z)=0\\qquad\\text{for every }i,h.$$ It can be constructed by finite linear systems. At step $\\ell\\ge3$ the new unknowns are coefficients of degree $\\ell-1$ on the reverse edges and coefficients of degree $\\ell$ on the diagonal blocks."
+   },
+   {
+    "anchor": "stmt-lem-schur-polynomial",
+    "claim_id": "C27",
+    "statement": "Let $W\\in M_d(T_N)$ have constant term $$W_0=\\sum_{h=1}^{e}\\lambda_h\\pi_h,\n  \\qquad\n  \\pi_h\\pi_j=\\delta_{hj}\\pi_h,\n  \\qquad\n  \\sum_{h=1}^{e}\\pi_h=I_d,$$ where the $\\lambda_h\\in E$ are distinct and the $\\pi_h\\in M_d(E)$ are nonzero projections. Set $$q(t)=\\prod_{h=1}^{e}(t-\\lambda_h),\n  \\qquad \\bar\\pi_h=I_d-\\pi_h.$$ On the complementary summand $\\bar\\pi_h T_N^d$, the operator $$C_h=\\bar\\pi_h(W-\\lambda_h I_d)\\bar\\pi_h$$ is invertible. Define the Schur expression on $\\pi_h T_N^d$ by $$S_h=\\pi_h(W-\\lambda_h I_d)\\pi_h\n      -\\pi_hW\\bar\\pi_h C_h^{-1}\\bar\\pi_hW\\pi_h.$$ Then $q(W)=0$ if and only if $S_h=0$ for every $h$."
+   },
+   {
+    "anchor": "stmt-lem-derivatives-of-relations",
+    "claim_id": "C28",
+    "statement": "Let $A$ be a finite-dimensional central simple algebra over a field $k$ of characteristic zero. Let $X\\in A\\langle\\!\\langle z_1,z_2\\rangle\\!\\rangle^u$ have constant tuple $X_0$ generating $A$, and suppose its two linear coefficients $X_1,X_2$ are independent modulo $J(X_0)$. Define $$\\theta:k\\langle x_1,\\ldots,x_u\\rangle\\longrightarrow A,\n \\qquad \\theta(f)=f(X_0),\\qquad I=\\ker\\theta.$$ Then the map taking $f\\in I$ to the coefficients of $z_1,z_2$ in $f(X)$ is onto $A^2$."
+   },
+   {
+    "anchor": "stmt-lem-generic-generating-blocks",
+    "claim_id": "C29",
+    "statement": "Under the hypotheses of Lemma <a href=\"#lem:derivatives-of-relations\" data-reference-type=\"ref\" data-reference=\"lem:derivatives-of-relations\">28</a>, write $d=\\deg A$ and split $A$ into $d\\times d$ matrices. Fix a positive integer $b$ and finitely many independent small generic input pairs $$P_i=\\varepsilon P_i^{\\circ},\\qquad 1\\le i\\le r,$$ of $b\\times b$ matrices, with jointly independent entries in the $P_i^{\\circ}$. Work over a common splitting Laurent field. Then each tuple $C_i=X(P_i)$ generates $M_{db}$, and the diagonal tuple $C=\\operatorname{diag}(C_i)$ generates the full product of these matrix algebras.*\n\n*For distinct $i,j$, the output derivative of a generic input arrow $U=(U_1,U_2)$ from block $j$ to block $i$ is nonzero modulo $$\\{C_iT-TC_j:T\\in M_{db}\\}.$$ More precisely, the image of the arrow derivatives in this quotient has dimension at least $b^2$."
+   },
+   {
+    "anchor": "stmt-lem-translation-two-directions",
+    "claim_id": "C30",
+    "statement": "Let $E$ be a field of characteristic zero, let $n\\ge1$ be an integer, let $m=11$, and index the blocks of $M_{mn}(E)$ by $\\mathbb Z/m\\mathbb Z$. Suppose $$Y(s_1,s_2)\\in M_{mn}(E)\n       \\langle\\!\\langle s_1,s_2\\rangle\\!\\rangle^u$$ has constant tuple $C=\\operatorname{diag}(C_i)$ generating $\\prod_iM_n(E)$. Suppose its two linear coefficients have the following supports: $$(Y_1)_{ij}=0\\ \\text{unless }i-j\\in\\{1,2\\},\n \\qquad\n (Y_2)_{ij}=0\\ \\text{unless }i-j\\in\\{3,4\\}.$$ Assume every displayed edge coefficient is nonzero modulo the cross-inner image $\\{C_iT-TC_j:T\\in M_n(E)\\}$. For a new central Laurent parameter $\\gamma$, define $$Y'(s'_1,s'_2)=Y(\\gamma+s'_1,s'_2).$$ Then $Y'_0=Y(\\gamma,0)$ generates $M_{mn}(E((\\gamma)))$, and $Y'_1,Y'_2$ are independent modulo $J(Y'_0)$."
+   }
+  ],
+  "prerequisites": []
+ },
+ "outputs": [
+  {
+   "claim_id": "C1",
+   "exact_statement": "There is a countable division ring $D$ of characteristic zero, with center $F=Z(D)$, and elements $x,y\\in D$ such that $$D=F[x,y]=F(x,y),\\qquad [D:F]=\\infty,$$ while every element of $D$ is algebraic over $F$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "C2",
+   "exact_statement": "Let $k$ be a countable field of characteristic zero containing every root of unity, and let $A$ be a finite-dimensional central division algebra over $k$. Suppose $X\\in A\\langle\\!\\langle z_1,z_2\\rangle\\!\\rangle^u$ satisfies:*\n\n1.  *$X_0$ generates $A$ as a $k$-algebra;*\n\n2.  *$X_1,X_2$ have linearly independent classes in $A^u/J_A(X_0)$.*\n\n*For every $w\\in A\\langle\\!\\langle z_1,z_2\\rangle\\!\\rangle$, there exist a countable field extension $k'/k$, a central division algebra $A'/k'$ of strictly larger degree, and series $$X'\\in A'\\langle\\!\\langle s_1,s_2\\rangle\\!\\rangle^u,\n \\qquad w'\\in A'\\langle\\!\\langle s_1,s_2\\rangle\\!\\rangle$$ with the following properties:*\n\n1.  *Every noncommutative polynomial identity over $k$ satisfied by the tuple $(X,w)$ is satisfied by $(X',w')$ as an identity of formal series.*\n\n2.  *The constant tuple $X'_0$ generates $A'$ over $k'$, and the classes of $X'_1,X'_2$ in $(A')^u/J_{A'}(X'_0)$ are linearly independent.*\n\n3.  *There is a monic nonzero polynomial $q\\in k'[t]$ such that $q(w')=0$.*\n\n*Here the degree of a central division algebra $B/F$ is $\\sqrt{[B:F]}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-lifting"
+  },
+  {
+   "claim_id": "C3",
+   "exact_statement": "Suppose a constant input pair $R$ is block upper triangular with $b$ blocks and small diagonal blocks. Its strictly upper blocks may have arbitrary entries in $E$. Let $H$ be a matrix pair of formal series of positive order in finitely many commuting or free variables. Then $W(R+H)$ is defined coefficientwise by convergent sums in $E$. The same assertion holds for products, finite determinants, and derivatives of fixed order of finitely many such entry series.*\n\n*These evaluations preserve formal entry identities. They also remain valid coefficientwise in an additional parameter $\\eta$ if the diagonal blocks have entries in $E[[\\eta]]$ with small constant terms, while the strictly upper blocks and the coefficients of $H$ have entries in $E((\\eta))$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-admissible-evaluation"
+  },
+  {
+   "claim_id": "C4",
+   "exact_statement": "Let $$F(Q)=\\sum_\\alpha c_\\alpha Q^\\alpha\\in E[[Q_1,\\ldots,Q_N]],\n \\qquad \\inf_\\alpha v(c_\\alpha)>-\\infty.$$ Adjoin elements $Q_1^\\circ,\\ldots,Q_N^\\circ$ whose residues are algebraically independent over the residue field of $E$, and complete with respect to the extended valuation. Then $F(\\varepsilon Q^\\circ)$ is defined, and is nonzero whenever $F$ is nonzero.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-generic-detection"
+  },
+  {
+   "claim_id": "C5",
+   "exact_statement": "The central simple algebra $A\\otimes_k B_n$ is division. Its pure rational scalar extensions and its central Laurent series extensions are division as well.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-symbol-division"
+  },
+  {
+   "claim_id": "C6",
+   "exact_statement": "For $n\\ge n_0$, every distinct generic eigenvalue of $W(P)$ has a nonzero differential in the input entries. Independent small generic points of sizes at least $n_0$ have disjoint spectra. Their spectra also avoid the constant spectrum of $w(0)$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-nonconstant-roots"
+  },
+  {
+   "claim_id": "C7",
+   "exact_statement": "For every $N\\ge1$, $$t_{pN}=t,\\qquad e_{pN}=Ne_p.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-stable-multiplicity"
+  },
+  {
+   "claim_id": "C8",
+   "exact_statement": "Let $V(T)$ be a matrix over a commuting formal Taylor ring $E[[T]]$. Suppose $V(0)$ is split semisimple with $e$ distinct eigenvalues and the minimal-polynomial degree of $V(T)$ over $\\operatorname{Frac}E[[T]]$ is at most $e$. Then a formal change of basis reducing to the identity separates $V(T)$ into $e$ scalar blocks. The sizes of these blocks are their multiplicities at $T=0$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-scalar-branches"
+  },
+  {
+   "claim_id": "C9",
+   "exact_statement": "There is a scalar $m_h(P,Q;U,V)$ such that $$M_h(P,Q;U,V)=m_h(P,Q;U,V)\\pi_h.$$ It is the coefficient of $xy$ in the branch reducing to $\\lambda_h$ for the commuting input deformation $$\\begin{pmatrix}P&xU\\\\yV&Q\\end{pmatrix}.$$ The same assertion holds at an admissible specialized pair whose spectra are disjoint and whose combined output is split semisimple with the maximal number $e_{n+n'}$ of distinct roots.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-paired-scalar"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "The scalar identities for $M_h$ and every linear identity expressing $m\\in\\mathcal T_P$ hold after any admissible specialization of the partner input for which the required inverses exist. For identities on a subset of labels, only the inverses for those labels are needed.*\n\n*After a field extension, the columns of $D$ and finitely many paired responses span $\\mathcal T_P$. These responses can be taken at independent small generic partner points, whose sizes need not be equal.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-active-specialization"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "For the direction $v$ chosen in <a href=\"#eq:nonzero-direction\" data-reference-type=\"eqref\" data-reference=\"eq:nonzero-direction\">[eq:nonzero-direction]</a>, there is a partition of $\\{1,\\ldots,e_n\\}$ such that $$\\mathcal T_P=\n \\left\\{c\\in\\Omega_P^{e_n}:\n \\frac{c_h}{D_h(P;v)}\\text{ is constant on each part}\\right\\}.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-active-partition"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Let $E$ be a field and let $M(\\xi)\\in\\operatorname{End}_E(V)[[\\xi]]$, where $V$ is finite dimensional. Suppose that zero is a semisimple eigenvalue of $M_0=M(0)$, and let $\\Pi$ be its spectral projection. Suppose that $$G=\\Pi M'(0)\\Pi\\big|_{\\ker M_0}$$ is invertible. Then $M(\\xi)^{-1}$ exists over $E((\\xi))$ and has a pole of order at most one. Let $J$ be zero on $\\ker M_0$ and equal to $M_0^{-1}$ on $\\operatorname{im}M_0$. If $L(\\xi)$ and $B(\\xi)$ are compatible matrix series satisfying $$L(0)\\Pi=0,\\qquad \\Pi B(0)=0,$$ then $$\\label{eq:killed-pole-limit}\n \\lim_{\\xi\\to0}L(\\xi)M(\\xi)^{-1}B(\\xi)=L(0)JB(0).$$*\n\n\n*Suppose additionally that $e$ is an idempotent, $f=1-e$, $fM_0f$ is invertible on $fV$, and $e:\\ker M_0\\to eV$ is an isomorphism. Under the same two coupling conditions, $$\\label{eq:fixed-complement-inverse}\n L(0)JB(0)=L(0)f(fM_0f)^{-1}fB(0).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-killed-pole"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "Let $R=\\operatorname{diag}(P,C_0)$ be a small matrix input of total size $N\\in\n\\mathcal S$; the block $C_0$ may be absent. Let $I$ be a set of labels at $P$ such that $W(C_0)-\\lambda_h$ is invertible for every $h\\in I$. Work over a field $E$ containing the labeled spectral data at $P$ and the entries of $C_0$, with the formal evaluations allowed by Lemma <a href=\"#lem:admissible-evaluation\" data-reference-type=\"ref\" data-reference=\"lem:admissible-evaluation\">3</a>. Let $$Z(s_1,s_2)\\in M_N(E)\\langle\\!\\langle s_1,s_2\\rangle\\!\\rangle^2$$ have constant term $R$. These are input matrices: their scalar entries act on the input factor and commute with the old coefficient algebra.*\n\n*For $h\\in I$, embed $\\pi_h$ at the $P$ block, put $\\bar\\pi_h=1-\\pi_h$, and form $$S_h(Z)=\\pi_h(W(Z)-\\lambda_h)\\pi_h\n -\\pi_hW(Z)\\bar\\pi_h\n \\bigl(\\bar\\pi_h(W(Z)-\\lambda_h)\\bar\\pi_h\\bigr)^{-1}\n \\bar\\pi_hW(Z)\\pi_h.$$ Suppose that every $S_h(Z)$ vanishes in degrees less than $\\ell$, where $\\ell\\ge1$. For each word $\\omega$ of length $\\ell$, there are scalars $c_{h,\\omega}\\in E$ such that $$[S_h(Z)]_\\omega=c_{h,\\omega}\\pi_h,\n \\qquad (c_{h,\\omega})_{h\\in I}\\in\n        (\\mathcal T_P|_I)\\otimes E.$$ The same conclusion holds for homogeneous degree-$\\ell$ coefficients of perturbations in finitely many ordinary commuting parameters.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-word-transfer"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "Let $P$ be a small generic input of size $p$, and let $h,h'$ be linked labels at $P$. Let $C_1,\\ldots,C_s$ be small generic inputs of sizes in $\\mathcal S$, jointly independent with $P$, where $s=0$ is allowed. Put $R=\\operatorname{diag}(P,C_1,\\ldots,C_s)$. Over a common spectral splitting field $E$, denote by $\\Lambda_j^R(\\Delta)$ the scalar eigenvalue branch of $W(R+\\Delta)$ whose value at zero is $\\lambda_j(P)$, for $j=h,h'$.*\n\n\n*Define $$g_j(\\eta)=\\lambda_j(P+\\eta v)-\\lambda_j(P)\n \\in\\Omega_P[[\\eta]],\\qquad j=h,h'.$$ Then $g_{h'}'(0)\\neq 0$, and $$\\Lambda_h^R(\\Delta)-\\lambda_h(P)\n =\\bigl(g_h\\circ g_{h'}^{-1}\\bigr)\n       \\bigl(\\Lambda_{h'}^R(\\Delta)-\\lambda_{h'}(P)\\bigr).\n \\label{eq:functional-linkage}$$ Here $g_{h'}^{-1}$ denotes the inverse for composition. In particular, the univariate series in this identity depends only on $P,h,h'$ and $v$, and is unchanged when auxiliary blocks are adjoined.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-functional-linkage"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "For every positive integer $N$, $$a_{pN}=N a_p.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-active-replication"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "There are $r\\in\\mathcal S$ and a positive integer $K_0$ with the following property. Let $P,Q_1,\\ldots,Q_{K_0}$ be independent small generic inputs of size $r$. For generic fixed input arrows $U_j:P\\leftarrow Q_j$, the loop columns and the images of $$V\\longmapsto m(P,Q_j;U_j,V),\n \\qquad V:Q_j\\leftarrow P,\\quad 1\\leq j\\leq K_0,$$ span $\\mathcal T_P$ after extension to the joint field of the data. The analogous assertion holds with the other arrow fixed. The same $r$ and $K_0$ may be used for both assertions.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cor-equal-size-partners"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "Let allowed-size blocks, evaluated by the preceding formal specialization conventions, have split semisimple outputs with disjoint spectra and the maximal total number of roots. Add input arrows only from designated hub blocks to designated leaf blocks, with no arrows between hubs or between leaves. The resulting input has the same roots and multiplicities as its diagonal part. A loop derivative at a block is its loop response $D$, with zero entries at all other blocks. If $U$ is a forward arrow between a leaf $P$ and a hub $Q$, a derivative in its reverse arrow $V$ has entries $$\\bigl(m_h(P,Q;U,V)\\bigr)_h,\n \\qquad\n \\bigl(m_k(Q,P;V,U)\\bigr)_k$$ at these two blocks and zero entries at the others.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-star-derivatives"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "One can choose an arbitrarily large allowed size $b$ and integers $a=a_b$ and $g\\geq0$, such that $$\\rho_b=a-g,\n \\qquad\n \\rho_{bM}\\leq Ma-g \\quad(M\\geq1).$$ At a generic size-$b$ point choose one root from each part of the active partition. Projection onto these $a$ selected roots identifies the active space with the full coordinate space. The quotient of that coordinate space by the loop-response image has dimension $g$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-tail-defect"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "Let $P,Q$ be independent generic size-$b$ points. For a fixed generic arrow $U$ between them, varying the reverse arrow $V$ gives a joint paired-response map into $H_P\\oplus H_Q$ whose projection to either summand is surjective. This holds whichever orientation is fixed.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-pair-quotient-surjectivity"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "Fix $M\\geq1$ independent generic size-$b$ points and their selected roots. At inputs with this diagonal and arbitrary strictly upper block arrows, the collective span of all selected-root derivative columns has dimension at most $Ma-g$. The span of all loop columns and all two-block paired columns has dimension exactly $Ma-g$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-common-tangent"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "For any finite nonempty collection of independent generic size-$b$ points $P_i$, there is a $g$-dimensional space $$\\mathcal G_{\\{P_i\\}}\\subseteq\\bigoplus_i H_{P_i}^*$$ with the following properties.*\n\n1.  *Projection to each $H_{P_i}^*$ is an isomorphism.*\n\n2.  *It annihilates all joint paired responses, with both arrows arbitrary.*\n\n3.  *For a fixed generic arrow between $P_i,P_j$, the annihilator in $H_{P_i}^*\\oplus H_{P_j}^*$ of the variable reverse-arrow image is exactly the restriction of $\\mathcal G_{\\{P_i\\}}$.*\n\n4.  *On adjoining independent blocks, restriction of the larger space is the original space after scalar extension.*\n\n*For one block this space is $H_P^*$. These statements include $g=0$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-compatible-relations"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "Let $Z(s_1,s_2)$ be a pair of formal series in two free letters, with constant term $\\operatorname{diag}(P_1,\\ldots,P_m)$. Suppose that the fixed-root Schur expressions $S_{i,h}$, for every block $i$ and every root label $h$, vanish in every degree below $\\ell$, where $\\ell\\geq1$. By transfer, their degree-$\\ell$ coefficients are scalar on their root spaces; write $$[s^\\omega]S_{i,h}=e_{i,h,\\omega}\\pi_{i,h},\n \\qquad |\\omega|=\\ell.$$ For each word the scalar tuple at block $i$ belongs to its active space. For every cyclic orbit $\\mathcal O$ of words of length $\\ell$ and every $c\\in\\mathcal G$, $$\\sum_{\\omega\\in\\mathcal O}\n \\sum_{i=1}^m\\sum_{h\\in I_i}\n c_{i,h}e_{i,h,\\omega}=0.\n \\label{eq:cyclic-error-relation}$$ The orbit sum runs over distinct words, including when a word has a nontrivial rotational stabilizer.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-cyclic-compatibility"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "Fix $L\\geq1$ and arbitrary scalar matrices $S_1,S_2\\in M_L(E)$. Substitute $s_c=\\delta S_c$ into $Z$, with a commuting Taylor parameter $\\delta$, and add an order-$\\delta^\\ell$ input loop $Y_i$ in each old block $i$. Here $Y_i$ is an arbitrary pair in $M_b(E)\\otimes M_L(E)$. Put $$B_{i,h}=\\sum_{|\\omega|=\\ell}\n e_{i,h,\\omega}S^\\omega+D_{i,h}(Y_i),$$ where $D_{i,h}$ is applied entrywise to the repeat-factor coefficients. One can choose the $Y_i$ so that every $B_{i,h}$, for all root labels $h$, has simple spectrum. For such a choice, after a finite splitting extension the leaf output has branches $$\\lambda_{i,h,j}(\\delta)\n =\\lambda_{i,h}+\\delta^\\ell\\theta_{i,h,j}\n    +O(\\delta^{\\ell+1}),\\qquad 1\\leq j\\leq L,$$ each scalar of multiplicity $t$, where $\\theta_{i,h,j}$ are the eigenvalues of $B_{i,h}$. Their spectral projections are integral in $\\delta$ and reduce to $\\pi_{i,h}\\otimes\\Pi_{i,h,j}$, where $\\Pi_{i,h,j}$ are the rank-one spectral projections of $B_{i,h}$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-repeated-splitting"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "The following derivative columns at the preceding star have finite limits at $\\delta=0$.*\n\n1.  *A loop $Y\\otimes T$ inside old block $i$ has limit $$D_{i,h}(Y)\\operatorname{tr}(\\Pi_{i,h,j}T)$$ on row $(i,h,j)$, and zero on all other rows. Hub loops give their own loop responses.*\n\n2.  *For individual hub $p$, a reverse arrow of value $V$ from repeat position $r$ in old block $i$ has limit $$\\begin{aligned}\n     &m_{i,h}(P_i,Q_p;U_{i,p},V)\n          \\operatorname{tr}(\\Pi_{i,h,j}E_{pr})\n           &&\\text{on row }(i,h,j),\\\\\n     &\\mathbf 1_{p=r}\\,\n       m_{p,k}(Q_p,P_i;V,U_{i,p})\n           &&\\text{on hub row }(p,k),\n    \\end{aligned}$$ and zero elsewhere. Here $E_{pr}$ is the repeat-factor matrix unit with row $p$ and column $r$.*\n\n3.  *For the common hub, use arrow $U_{i,*}$ and replace the repeat-factor matrix by $$\\sum_{p=1}^L E_{pr}.$$ The hub contribution is the single response $m_{*,k}(Q_*,P_i;V,U_{i,*})$.*\n\n4.  *The derivative along the whole input $\\delta$-curve, multiplied by $\\delta^{1-\\ell}$, has limit $\\ell\\theta_{i,h,j}$ on leaf rows and zero on hub rows.*\n\n*The matrix consisting of a finite spanning collection of these limiting columns has rank at most $Na-g$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-limiting-columns"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "The left nullspace of the limiting matrix in Lemma <a href=\"#lem:limiting-columns\" data-reference-type=\"ref\" data-reference=\"lem:limiting-columns\">24</a>, including its curve column, has dimension $g$. Its projection to the old blocks identifies it with $\\mathcal G$: for each $c\\in\\mathcal G$, its leaf weights are $c_{i,h}$ on every row $(i,h,j)$, independently of $j$, and its hub weights are the uniquely determined compatible functionals. Consequently $$\\sum_i\\sum_{h\\in I_i}c_{i,h}\\operatorname{tr}(B_{i,h})=0\n \\qquad(c\\in\\mathcal G).\n \\label{eq:error-matrix-trace}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-hub-nullspace"
+  },
+  {
+   "claim_id": "C26",
+   "exact_statement": "Prescribe generic input-arrow pairs on the edges $$\\begin{array}{c|c}\n \\text{letter}&\\text{offsets }i-j\\text{ of edges }i\\leftarrow j\\\\ \\hline\n s_1&1,2\\\\\n s_2&3,4.\n \\end{array}$$ Under the response and cyclic-sum hypotheses above, there is a pair $Z(s_1,s_2)\\in M_{mb}(E)\\langle\\!\\langle s_1,s_2\\rangle\\!\\rangle^2$ with constant term $R$ and exactly these prescribed linear coefficients, for which $$S_{i,h}(Z)=0\\qquad\\text{for every }i,h.$$ It can be constructed by finite linear systems. At step $\\ell\\ge3$ the new unknowns are coefficients of degree $\\ell-1$ on the reverse edges and coefficients of degree $\\ell$ on the diagonal blocks.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-eleven-block-correction"
+  },
+  {
+   "claim_id": "C27",
+   "exact_statement": "Let $W\\in M_d(T_N)$ have constant term $$W_0=\\sum_{h=1}^{e}\\lambda_h\\pi_h,\n  \\qquad\n  \\pi_h\\pi_j=\\delta_{hj}\\pi_h,\n  \\qquad\n  \\sum_{h=1}^{e}\\pi_h=I_d,$$ where the $\\lambda_h\\in E$ are distinct and the $\\pi_h\\in M_d(E)$ are nonzero projections. Set $$q(t)=\\prod_{h=1}^{e}(t-\\lambda_h),\n  \\qquad \\bar\\pi_h=I_d-\\pi_h.$$ On the complementary summand $\\bar\\pi_h T_N^d$, the operator $$C_h=\\bar\\pi_h(W-\\lambda_h I_d)\\bar\\pi_h$$ is invertible. Define the Schur expression on $\\pi_h T_N^d$ by $$S_h=\\pi_h(W-\\lambda_h I_d)\\pi_h\n      -\\pi_hW\\bar\\pi_h C_h^{-1}\\bar\\pi_hW\\pi_h.$$ Then $q(W)=0$ if and only if $S_h=0$ for every $h$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-schur-polynomial"
+  },
+  {
+   "claim_id": "C28",
+   "exact_statement": "Let $A$ be a finite-dimensional central simple algebra over a field $k$ of characteristic zero. Let $X\\in A\\langle\\!\\langle z_1,z_2\\rangle\\!\\rangle^u$ have constant tuple $X_0$ generating $A$, and suppose its two linear coefficients $X_1,X_2$ are independent modulo $J(X_0)$. Define $$\\theta:k\\langle x_1,\\ldots,x_u\\rangle\\longrightarrow A,\n \\qquad \\theta(f)=f(X_0),\\qquad I=\\ker\\theta.$$ Then the map taking $f\\in I$ to the coefficients of $z_1,z_2$ in $f(X)$ is onto $A^2$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-derivatives-of-relations"
+  },
+  {
+   "claim_id": "C29",
+   "exact_statement": "Under the hypotheses of Lemma <a href=\"#lem:derivatives-of-relations\" data-reference-type=\"ref\" data-reference=\"lem:derivatives-of-relations\">28</a>, write $d=\\deg A$ and split $A$ into $d\\times d$ matrices. Fix a positive integer $b$ and finitely many independent small generic input pairs $$P_i=\\varepsilon P_i^{\\circ},\\qquad 1\\le i\\le r,$$ of $b\\times b$ matrices, with jointly independent entries in the $P_i^{\\circ}$. Work over a common splitting Laurent field. Then each tuple $C_i=X(P_i)$ generates $M_{db}$, and the diagonal tuple $C=\\operatorname{diag}(C_i)$ generates the full product of these matrix algebras.*\n\n*For distinct $i,j$, the output derivative of a generic input arrow $U=(U_1,U_2)$ from block $j$ to block $i$ is nonzero modulo $$\\{C_iT-TC_j:T\\in M_{db}\\}.$$ More precisely, the image of the arrow derivatives in this quotient has dimension at least $b^2$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-generic-generating-blocks"
+  },
+  {
+   "claim_id": "C30",
+   "exact_statement": "Let $E$ be a field of characteristic zero, let $n\\ge1$ be an integer, let $m=11$, and index the blocks of $M_{mn}(E)$ by $\\mathbb Z/m\\mathbb Z$. Suppose $$Y(s_1,s_2)\\in M_{mn}(E)\n       \\langle\\!\\langle s_1,s_2\\rangle\\!\\rangle^u$$ has constant tuple $C=\\operatorname{diag}(C_i)$ generating $\\prod_iM_n(E)$. Suppose its two linear coefficients have the following supports: $$(Y_1)_{ij}=0\\ \\text{unless }i-j\\in\\{1,2\\},\n \\qquad\n (Y_2)_{ij}=0\\ \\text{unless }i-j\\in\\{3,4\\}.$$ Assume every displayed edge coefficient is nonzero modulo the cross-inner image $\\{C_iT-TC_j:T\\in M_n(E)\\}$. For a new central Laurent parameter $\\gamma$, define $$Y'(s'_1,s'_2)=Y(\\gamma+s'_1,s'_2).$$ Then $Y'_0=Y(\\gamma,0)$ generates $M_{mn}(E((\\gamma)))$, and $Y'_1,Y'_2$ are independent modulo $J(Y'_0)$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-translation-two-directions"
+  }
+ ],
+ "paper": "papers/EN-102-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-H-0376_PM-201.1_A_Counterexample_to_Kuroshs_Division_Ring_Problem.md",
+ "purpose": "A Counterexample to Kurosh’s Division-Ring Problem",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "e0df6e252fc6de90c7937d7869eb99452fd78b47c66a78a8f41919461161338d",
+   "pm.domains.v2": "e62ad5bfa32c3e29fd1429989a398e878ea25508d0e17215413e37108b00b574",
+   "pm.edges.v2": "a57db5f60444e22dfe124dabc7175d4960522096d2d5f79449b1832151c405c6",
+   "pm.extraction.v2": "c7ff3689c459ced543127f71ac46f2e1a3858deca8f4038756ea1f7ccbe4b9dd",
+   "pm.formal.v2": "95c73a67b3d97b27e90dd0cd82c0b03d289f8852c1e01cedab8b3d5642b1bdb2",
+   "pm.limits.v2": "dc0989897b006ce755873668d59e349b101adf00dde9c8504dcc22fe4e546d7c",
+   "pm.node.v2": "3dae704700c06104831c99add5b4888e607316b9f083038aab8c0e38a010577b",
+   "pm.objects.v2": "c4c66ebfc1b1f25fc03f7c20b93ade93edaa7cec4aa86d89b2b47df2b64fb29f",
+   "pm.provenance.v2": "e82c82a230cee7bb28d7dd3959a8cdff97a72821eed6c6220847e90cb48968f9",
+   "pm.quantities.v2": "7bfda2a2fbced0dcfc6aebccf05a1f813c4c85c579e2f326afbbe2b36f327fb9",
+   "pm.reading.v2": "53960aac6f4f78bedd3a01b98fe01bc91b9d82595d62977dba52f7ffc1b5b56e",
+   "pm.roadmap.v2": "bd31e924e0af50631e08fad43257a1952575f6fda0ebaf1f2196291da672bf16",
+   "pm.search.v1": "80fcef0717ab12d9c5022125dd485a52f05285c07b917d25120fc286e3debe62",
+   "pm.triptych.v2": "363e99bc9bb3835aa2d3caafc5e98950d618fea7ee377d7d5cbcee29932aefc1"
+  },
+  "canonical_sha256": "5a4567943b617eb8e66c857147745d4b947cdb1f02876f38783798fec853ca64",
+  "paper_sha256": "3415695dc171e70defcbdd1b7244711ad41fa1a8e6ae1e43d2d6fffa56034d0c",
+  "repaired_body_sha256": "155b5006d449caba8672938e4e92dfc19a08471373ac6814af0ab6d6888c42fc"
+ },
+ "status": "ACTIVE",
+ "subject_id": 2,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "2b549dcceabc5ca8748e503abeaffbf53a0a54340640247c3b72508cec88f423",
+   "receipt_sha256": "fef41d377ed1c54101463d46c51d3a6f4d73cbfca7dea8aec640e4afeccf3212",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive base/query pairs of binary words of equal lengths 1 through 5; includes constant, periodic, asymmetric and outside-orbit words.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I-cycle",
+     "oracle_basis": "Exact integer matrix products and diagonal sums, independently of the rotation-counting implementation. The finite domain does not decide the universal theorem."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M-periodic",
+     "observed_exit": 6,
+     "receipt_sha256": "e6f68b471846911b26280e984b781c1d2d5554804e02c290997c9c7fb4b4ab2a"
+    },
+    {
+     "id": "M-rotate",
+     "observed_exit": 6,
+     "receipt_sha256": "49b3be0ede61749495f2032606355d1c8a48cb10934b170e850dc5f525896ae8"
+    },
+    {
+     "id": "M-zero",
+     "observed_exit": 6,
+     "receipt_sha256": "a43c1189b97fda87a11cc4c3d038eec7d2e73cb0c1258d51ea0213805b8891dd"
+    }
+   ],
+   "receipt_sha256": "0e0db697507826fe3cd2dcf264a6a400abf5028aa68e36852528877a1e13a210",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "A Counterexample to Kurosh’s Division-Ring Problem"
+}

@@ -1,0 +1,792 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1033636,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 310866
+ },
+ "coordinate": "EN-115-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-H-0444",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "The critical zero-field Gibbs measure is",
+     "quote_sha256": "3f1f9d88aa87ba0cccdb757477c67ae3b7bf337d1ef6d62fc5d875a08960dad3"
+    }
+   ],
+   "query": "dynamics in a nonzero external magnetic field",
+   "reason": "The measure and dynamics are zero-field; no statement covers a field."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "At the critical temperature of the Sherrington–Kirkpatrick model, the relevant relaxation time grows with the number of spins.",
+     "quote_sha256": "5288dd3db3fa66b57e667d8392297442dcb89de6a2aadac16853e85119e7f6c8"
+    }
+   ],
+   "query": "relaxation away from the critical temperature",
+   "reason": "The scaling and limit are stated at the critical temperature only."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "Let $D$ be either the standard Gaussian law or the uniform law on $\\{-1,1\\}$.",
+     "quote_sha256": "940a06046dfdb89c4949fff6b81ec40895998031a8bb84dbac518c88acedaa17"
+    }
+   ],
+   "query": "sparse or short-range interaction graphs",
+   "reason": "Couplings are dense symmetric entries with Gaussian or sign law, tied to the GOE edge."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-38",
+     "quote": "This constructs measurable $\\mu_s^g$ for rational $s$, and establishes existence.",
+     "quote_sha256": "a3a81d17388058179cc440670c542ca5f56f847594a6312ade175d9e55bd26ed"
+    }
+   ],
+   "query": "explicit algorithm or closed form for the entrance densities",
+   "reason": "The family is obtained by an existence and uniqueness argument."
+  }
+ ],
+ "family": "PM-227",
+ "id": "PM-227.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "pm-h-3",
+    "claim_id": "claim-main-universality",
+    "statement": "Let $D$ be either the standard Gaussian law or the uniform law on $\\{-1,1\\}$."
+   },
+   {
+    "anchor": "pm-h-7",
+    "claim_id": "claim-stationary-inputs",
+    "statement": "Until the disorder comparison, $J$ is Gaussian."
+   },
+   {
+    "anchor": "stmt-prop-edge-estimates",
+    "claim_id": "claim-cap-estimates",
+    "statement": "Fix $0<C_1<\\infty$, $0\\le R<\\infty$, positive tolerances $\\epsilon_{\\rm sp},\\epsilon_0,\\epsilon_v,\\epsilon_g$, and $\\zeta>0$."
+   },
+   {
+    "anchor": "pm-h-11",
+    "claim_id": "claim-spectral-counts",
+    "statement": "Throughout this section the disorder is Gaussian,"
+   },
+   {
+    "anchor": "pm-h-11",
+    "claim_id": "claim-saddle-norm-density",
+    "statement": "Throughout this section the disorder is Gaussian,"
+   },
+   {
+    "anchor": "stmt-edge-spherical-tails",
+    "claim_id": "claim-spherical-tails",
+    "statement": "Fix a field radius and a fixed number of replicas."
+   },
+   {
+    "anchor": "stmt-edge-limit-growth",
+    "claim_id": "claim-limit-growth",
+    "statement": "and every $b$ with $b+g_1>0$,"
+   },
+   {
+    "anchor": "stmt-edge-gram-cell",
+    "claim_id": "claim-overlap-cells",
+    "statement": "Let $\\mathcal{R}_n=\\{-1+2j/n:0\\le j\\le n\\}$ and $I_r=[r-1/n,r+1/n]$."
+   },
+   {
+    "anchor": "pm-h-11",
+    "claim_id": "claim-haar-second-moment",
+    "statement": "Throughout this section the disorder is Gaussian,"
+   },
+   {
+    "anchor": "pm-h-11",
+    "claim_id": "claim-cube-caps",
+    "statement": "Throughout this section the disorder is Gaussian,"
+   },
+   {
+    "anchor": "stmt-edge-path-annuli",
+    "claim_id": "claim-observation-annuli",
+    "statement": "On the fixed spectral restrictions,"
+   },
+   {
+    "anchor": "stmt-edge-score-covariance",
+    "claim_id": "claim-score-covariance",
+    "statement": "Let $I=[q,2q]$, with a prescribed fixed multiplicative enlargement inside the scale range."
+   },
+   {
+    "anchor": "stmt-edge-annular-extension",
+    "claim_id": "claim-annular-extension",
+    "statement": "Choose $\\eta>0$ sufficiently small compared with $\\gamma^2$, then the coarse curvature tolerance $\\epsilon_{\\rm aux}$ sufficiently small compared with $\\eta$."
+   },
+   {
+    "anchor": "pm-h-11",
+    "claim_id": "claim-positive-curvature",
+    "statement": "Throughout this section the disorder is Gaussian,"
+   },
+   {
+    "anchor": "stmt-thm-warming",
+    "claim_id": "claim-warming",
+    "statement": "Suppose that the couplings are Gaussian."
+   },
+   {
+    "anchor": "stmt-warm-profiles",
+    "claim_id": "claim-dissipation-profiles",
+    "statement": "Fix $C_{\\mathrm{lev}}<\\infty$ and $0<\\xi<1/100$."
+   },
+   {
+    "anchor": "stmt-warm-small-profile",
+    "claim_id": "claim-small-entropy-profile",
+    "statement": "Fix $C_{\\mathrm{lev}}<\\infty$."
+   },
+   {
+    "anchor": "stmt-warm-product",
+    "claim_id": "claim-product-endpoint",
+    "statement": "Fix the at most two product endpoints used below."
+   },
+   {
+    "anchor": "stmt-warm-posterior-mean",
+    "claim_id": "claim-posterior-mean-sqrt",
+    "statement": "with $j(1+\\eta)^2<1$."
+   },
+   {
+    "anchor": "stmt-warm-large-retention",
+    "claim_id": "claim-large-entropy-retention",
+    "statement": "Fix $0<\\lambda<C_{\\mathrm{lev}}<\\infty$, $C_E<\\infty$, and $0<\\omega<1$."
+   },
+   {
+    "anchor": "stmt-warm-log-layer",
+    "claim_id": "claim-log-level-test",
+    "statement": "Fix $b>0$ and $r>0$."
+   },
+   {
+    "anchor": "stmt-warm-entropy-profile",
+    "claim_id": "claim-entropy-dissipation",
+    "statement": "With tight constants,"
+   },
+   {
+    "anchor": "stmt-warm-support-profile",
+    "claim_id": "claim-support-profile",
+    "statement": "supported on a set of $\\mu$-mass $e^{-L_{\\rm supp}}$ with $L_{\\rm supp}\\ge K_0$,"
+   },
+   {
+    "anchor": "stmt-warm-kernel-log-tail",
+    "claim_id": "claim-kernel-log-tail",
+    "statement": "Fix $\\beta>0$, $A>0$, $0<C_\\star<\\infty$, and $\\vartheta>0$."
+   },
+   {
+    "anchor": "sec:gaussian-limits",
+    "claim_id": "claim-gaussian-subsequence",
+    "statement": "Throughout this section we use Gaussian couplings"
+   },
+   {
+    "anchor": "sec:gaussian-limits",
+    "claim_id": "claim-uniform-seed-escape",
+    "statement": "Throughout this section we use Gaussian couplings"
+   },
+   {
+    "anchor": "stmt-thm-entrance-selection",
+    "claim_id": "claim-entrance-selection",
+    "statement": "For every $g$ as above,"
+   },
+   {
+    "anchor": "stmt-entr-angular-realization",
+    "claim_id": "claim-angular-realization",
+    "statement": "Let $w$ be a bounded probability density with respect to $\\Pi$."
+   },
+   {
+    "anchor": "stmt-entr-kernels",
+    "claim_id": "claim-resolvent-kernels",
+    "statement": "where a hat denotes the Laplace transform and every kernel is zero on negative times."
+   },
+   {
+    "anchor": "stmt-entr-stochastic-kernels",
+    "claim_id": "claim-stochastic-kernels",
+    "statement": "Let $(W_i)$ be independent Brownian motions in a filtration,"
+   },
+   {
+    "anchor": "stmt-entr-volterra",
+    "claim_id": "claim-volterra-equation",
+    "statement": "and let $A_y$ be the candidate seed response defined above."
+   },
+   {
+    "anchor": "stmt-entr-escaping-seeds",
+    "claim_id": "claim-escaping-seeds",
+    "statement": "Suppose that, along a sequence of initial states possibly random, $\\sum_i p_i=1$ and $p_i\\to0$ in probability for every fixed $i$."
+   },
+   {
+    "anchor": "pm-h-40",
+    "claim_id": "claim-static-support",
+    "statement": "The Gibbs probability $\\mu$ is strictly positive for every finite matrix $\\theta$."
+   },
+   {
+    "anchor": "pm-h-41",
+    "claim_id": "claim-cutoff-hazards",
+    "statement": "For each leg $I=[a,b]$, repeatedly bisect time intervals until their lengths belong to $[1,2]$."
+   },
+   {
+    "anchor": "pm-h-41",
+    "claim_id": "claim-kernel-caps",
+    "statement": "Let $p_d(x,y)=P_d(x,y)/\\mu(y)$ be the true transition density."
+   },
+   {
+    "anchor": "pm-h-41",
+    "claim_id": "claim-gaussian-survival",
+    "statement": "For each leg $I=[a,b]$, repeatedly bisect time intervals until their lengths belong to $[1,2]$."
+   },
+   {
+    "anchor": "stmt-hist-conditional-interior",
+    "claim_id": "claim-conditional-interior",
+    "statement": "Let $I$ be a fixed node of a checked root in a tested path law."
+   },
+   {
+    "anchor": "stmt-hist-history-overlaps",
+    "claim_id": "claim-history-overlaps",
+    "statement": "With arbitrarily high inverse-polynomial probability under a tested path law,"
+   },
+   {
+    "anchor": "pm-h-43",
+    "claim_id": "claim-crude-coefficients",
+    "statement": "Throughout, $[u^l]$ means the $l$th Taylor coefficient at zero"
+   },
+   {
+    "anchor": "stmt-score-hellinger",
+    "claim_id": "claim-hellinger-cost",
+    "statement": "Let $\\mathcal F_t$ be the natural filtration of a nonexplosive marked path, augmented by an initial $\\sigma$-field,"
+   },
+   {
+    "anchor": "stmt-score-raw-size",
+    "claim_id": "claim-raw-size-reversal",
+    "statement": "under ordinary forward dynamics on an interval of length $d\\ge1$,"
+   },
+   {
+    "anchor": "stmt-score-one-insertion",
+    "claim_id": "claim-one-insertion",
+    "statement": "Let $H$ have length $d\\ge1$ within an admissible oriented portion of a checked root."
+   },
+   {
+    "anchor": "stmt-score-raw-projection",
+    "claim_id": "claim-raw-projection",
+    "statement": "Fix an admissible oriented law $\\mathsf Q$, its oriented filtration, and any permitted auxiliary-data augmentation."
+   },
+   {
+    "anchor": "stmt-prop-clock-scores",
+    "claim_id": "claim-clock-scores",
+    "statement": "Fix an admissible oriented law, its oriented filtration, and any permitted auxiliary-data augmentation,"
+   },
+   {
+    "anchor": "stmt-prop-universality",
+    "claim_id": "claim-rademacher-transfer",
+    "statement": "For the Rademacher coupling law,"
+   },
+   {
+    "anchor": "stmt-repl-history-derivatives",
+    "claim_id": "claim-history-derivatives",
+    "statement": "Suppose $0\\le v_\\alpha\\le n^B$."
+   },
+   {
+    "anchor": "pm-h-58",
+    "claim_id": "claim-observable-derivatives",
+    "statement": "We compare bounded smooth functions $F=F_n$ on $\\mathbb R^{\\mathcal Q_n}$ satisfying, for fixed constants independent of $n$,"
+   },
+   {
+    "anchor": "pm-h-58",
+    "claim_id": "claim-entrywise-replacement",
+    "statement": "We compare bounded smooth functions $F=F_n$ on $\\mathbb R^{\\mathcal Q_n}$ satisfying, for fixed constants independent of $n$,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "critical quench autocorrelation limit",
+    "evidence": [
+     {
+      "anchor": "pm-h-8",
+      "quote": "The following statements are the parts of the stationary manuscript that we use directly.",
+      "quote_sha256": "05d3bb1b0fd71d33315f91487ec3049b860a4981b37f8af7cf9aff7a54e1074c"
+     }
+    ],
+    "requires_concepts": [
+     "GOE edge process",
+     "conditioned edge measure",
+     "relaxed energy convergence",
+     "warming bounds",
+     "cap estimates"
+    ],
+    "supporting_pm_ids": [
+     "PM-227.2",
+     "PM-227.8",
+     "PM-227.5",
+     "PM-227.3"
+    ]
+   },
+   {
+    "concept": "Gaussian to Rademacher universality",
+    "evidence": [
+     {
+      "anchor": "pm-h-40",
+      "quote": "The Gaussian and Rademacher laws match through order three.",
+      "quote_sha256": "a0615f73d47ad28bdd3661657f487dc696fe8eaccc8e56166a9a9f5ff8cc4577"
+     }
+    ],
+    "requires_concepts": [
+     "entry replacement",
+     "static overlap-tail estimates",
+     "clock score projection"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-universality",
+   "exact_statement": "There is a measurable family $(h_s^g)_{s>0}$, with $h_s^g\\in L^2(\\Pi_g)$, such that for almost every $g$ the following properties hold.*\n\n1.  *For every $s>0$, $h_s^g\\ge0$ and $\\Pi_g[h_s^g]=1$. For $s,t>0$, $$h_{s+t}^g=S_t^g h_s^g.$$ Moreover, $$h_s^g\\Pi_g\\ \\Longrightarrow\\ \\delta_0\n           \\quad\\text{in the product topology on }\\mathbb R^\\mathbb N\n           \\quad(s\\downarrow0),\n           \\qquad\n           \\|h_s^g-1\\|_{L^1(\\Pi_g)}\\longrightarrow0\n           \\quad(s\\to\\infty).$$*\n\n2.  *The series $$\\label{eq:limit-B}\n           B_g(s,t)=\\sum_{a\\ge1}\n              \\int h_s^g(x)\\,x_a\\,(S_t^g x_a)(x)\\,\\,\\mathrm d\\Pi_g(x)$$ converges locally uniformly on $(0,\\infty)^2$ and defines a continuous function.*\n\n3.  *For both choices of $D$, $$\\mathop{\\mathrm{Law}}_D(A_{n,J},B_{n,J})\n           \\ \\Longrightarrow\\\n           \\mathop{\\mathrm{Law}}_g(A_g,B_g)$$ in $C_{\\mathrm{loc}}((0,\\infty))\n            \\times C_{\\mathrm{loc}}((0,\\infty)^2)$. The two coupling laws have the same $g$, the same family $h^g$, and the same coefficient $c_*$.*\n\n4.  *For every $0<a<b<\\infty$, $$\\sup_{a\\le t\\le b}|B_g(s,t)-A_g(t)|\n              \\longrightarrow0\n           \\quad\\text{in probability over }g\n           \\quad(s\\to\\infty).$$*\n\n*The positive-time density limits of the Gaussian dynamics with initial law $\\nu_n$ select this family, as made precise in Theorem <a href=\"#thm:entrance-selection\" data-reference-type=\"ref\" data-reference=\"thm:entrance-selection\">27</a>. The normalization is exactly <a href=\"#eq:finite-A\" data-reference-type=\"eqref\" data-reference=\"eq:finite-A\">[eq:finite-A]</a>–<a href=\"#eq:finite-B\" data-reference-type=\"eqref\" data-reference=\"eq:finite-B\">[eq:finite-B]</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-stationary-inputs",
+   "exact_statement": "The following hold for the edge law and the Gaussian finite models.*\n\n1.  *Let $b+g_1>0$, $\\ell_a=(g_a+b)^{-1}$. Almost surely $\\sum_a\\ell_a=\\infty$ and $\\sum_a\\ell_a^2<\\infty$. If $Z_a$ are independent $N(0,\\ell_a)$, the densities $q$ of $\\sum_a(Z_a^2-\\ell_a)$ and $q_m$ of $\\sum_{a>m}(Z_a^2-\\ell_a)$ are continuous, bounded, and strictly positive. The first $m$ coordinates of $\\Pi_g$ have density $$\\label{eq:edge-cylinder-density}\n           \\frac{q_m\\!\\left(D_g(b)-\\sum_{a\\le m}(x_a^2-\\ell_a)\\right)}\n                {q(D_g(b))}\n           \\prod_{a\\le m}\n              \\frac{e^{-x_a^2/(2\\ell_a)}}{\\sqrt{2\\pi\\ell_a}}.$$ These consistent densities are measurable in $g$ and independent of $b$. For each fixed $0\\le j<\\infty$, $\\Pi_g[|x_a|^j]\\le C_{j,g,b}\\ell_a^{j/2}$, with a finite constant uniform in $a$. For sufficiently large fixed $m$, the tail beyond $m$ has a density bounded by a finite constant relative to $\\bigotimes_{a>m}N(0,\\ell_a)$. Conditional on that tail, the first $m$ coordinates have the Gaussian angular law on the sphere of squared radius $$D_g(b)+\\sum_{a\\le m}\\ell_a-\\sum_{a>m}(x_a^2-\\ell_a).$$ In particular the renormalized constraint holds $\\Pi_g$-almost surely. These are the statements of (OpenAI 2026d, Proposition 2.3) [[FUA](#ref-FUA)].*\n\n2.  *With $b_n=1+(-g_{1,n})_+$ and $b=1+(-g_1)_+$, the spherical and cube edge marginals converge jointly with the edge points to $\\Pi_g$ on the represented subsequences described below. Cube integrals converge for every continuous cylinder of polynomial growth. Spherical coordinates obey the uniform bounds $$\\mu^{\\mathrm{sp}}[|x_a|^j]\\le C_j(g_{a,n}+b_n)^{-j/2},\n           \\qquad\n           \\lim_{m\\to\\infty}\\sup_n\\sum_{a>m}(g_{a,n}+b_n)^{-2}=0$$ after discarding finitely many $n$ on such a representation. Here $\\mu^{\\mathrm{sp}}$ is surface measure on $\\{|\\sigma|^2=n\\}$, tilted by $\\exp(\\sigma^{\\mathsf T}W\\sigma/2)$. The sources are (OpenAI 2026d, Proposition 2.3 and Corollary 3.3) [[FUA](#ref-FUA)].*\n\n3.  *The Euclidean gradient on smooth compact cylinders is closable from $L^2(\\Pi_g)$ to $L^2(\\Pi_g;\\ell^2)$. The associated closed form has kernel equal to the constants. Every coordinate belongs to its domain and satisfies $\\nabla x_a=e_a$, hence $\\mathcal E_g(x_a)=1$. This is (OpenAI 2026d, Proposition 5.1) [[FUA](#ref-FUA)]. The usual contraction rule for gradients passes to the closure, so the form is Dirichlet and $S_t^g$ is a conservative symmetric Markov semigroup.*\n\n\n4.  *On a quenched represented subsequence, say that $f_n$ converges weakly to $F\\in L^2(\\Pi_g)$ if its $L^2(\\mu)$ norms are bounded and $\\mu[f_n\\phi(x)]\\to\\Pi_g[F\\phi]$ for every smooth compact cylinder $\\phi$; call the convergence strong when in addition $\\mu[f_n^2]\\to\\Pi_g[F^2]$. Suppose, for fixed $C,D<\\infty$, that $\\|f_n\\|_\\infty\\le Cn^D$, that $T_n\\mathcal E(f_n)$ is bounded, and that $f_n$ converges weakly to $F$. Then $F$ belongs to the closed form domain and $$\\label{eq:relaxed-liminf}\n           \\liminf_n T_n\\mathcal E(f_n)\\ge c_*\\mathcal E_g(F).$$ Conversely, for every smooth compact cylinder $F$, there are functions $f_{n,j}$, polynomially bounded for each fixed $j$, such that $f_{n,j}$ converges strongly to $F$ as $n\\to\\infty$ for each $j$, and $$\\label{eq:relaxed-recovery}\n           \\lim_{j\\to\\infty}\\lim_{n\\to\\infty}T_n\\mathcal E(f_{n,j})\n              =c_*\\mathcal E_g(F).$$ The source asserts a common represented event for countably many chosen sources and tests. Recovery is used at each fixed $j$, followed by the displayed $j$-limit (OpenAI 2026d, Theorem 6.8) [[FUA](#ref-FUA)].",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-stationary-inputs"
+  },
+  {
+   "claim_id": "claim-cap-estimates",
+   "exact_statement": "Fix $0<C_1<\\infty$, $0\\le R<\\infty$, positive tolerances $\\epsilon_{\\rm sp},\\epsilon_0,\\epsilon_v,\\epsilon_g$, and $\\zeta>0$. For every $\\varepsilon>0$ there are finite positive constants $K,C,c,a,v_0$, a width $s_0>0$, a radius $R_{\\rm ann}<\\infty$, and Gaussian disorder events $\\mathcal C_n$ with $\\liminf_n\\mathbb P_{\\rm GOE}(\\mathcal C_n)\\ge1-\\varepsilon$, such that the following hold on $\\mathcal C_n$, simultaneously at every scale $$\\label{edge:scale-range}\n K\\le k_p=np^3,\\qquad p\\le C_1r_n.$$*\n\n\n1.  *The active dimension is between $ck_p$ and $Ck_p$, $d_1\\ge-\\epsilon_{\\rm sp}p^2$, and, with $b_0=4/(3\\pi)$, $$\\label{edge:trace-estimates}\n     \\left|\\frac{n-\\mathop{\\mathrm{Tr}}R_{p,0}}{np}-b_0\\right|\\le\\epsilon_{\\rm sp},\n     \\qquad\n     \\left|\\frac p n\\mathop{\\mathrm{Tr}}R_{p,0}^2-2b_0\\right|\\le\\epsilon_{\\rm sp}.$$ On $\\|h\\|\\le Rp^2M_p$, the saddle satisfies $-1+c_R\\le\\alpha_p(h)/p^2\\le C_R$. On $|u|\\le s_0p^2$, $\\ell_p(u)\\asymp p^2M_p$ and $\\ell'_p(u)\\asymp M_p$.*\n\n\n2.  *On the field ball $\\|h\\|\\le Rp^2M_p$, $$\\label{edge:static-estimates}\n     \\begin{split}\n     K_p(h)&\\preceq C_Rp^{-2}I_{\\mathcal H_p},\\\\\n     |\\phi_p(h)-\\phi_p^{\\rm sp}(h)|&\\le\\epsilon_v k_p,\\\\\n     \\|P_pm_p(h)-R_{p,\\alpha_p(h)}h\\|&\\le\\epsilon_gM_p .\n     \\end{split}$$ The constant $C_R$ in the first line may be chosen independently of the requested annular tolerance $\\epsilon_0$. On the full annulus $|\\alpha_p(h)|\\le s_0p^2$, the field is nonzero; for $e=h/\\|h\\|$, $$\\label{edge:coarse-curvature}\n     K_p(h)\\preceq(1+\\epsilon_0)p^{-2}I_{\\mathcal H_p},\n     \\qquad p^2\\langle e,K_p(h)e\\rangle\\le0.9 .$$ The annulus lies in $\\|h\\|\\le R_{\\rm ann}p^2M_p$, and the event also includes the static comparisons on this ball, with constants allowed to depend on $R_{\\rm ann}$.*\n\n\n\n3.  *For every $v\\ge v_0$, the uncapped law $\\mu$, every posterior $\\mu_{p,h}$ in the stated field ball, and their spherical counterparts satisfy $$\\label{edge:projection-tails}\n     \\Pr\\{\\|P_pX\\|>vM_p\\}\\le C e^{-c k_pv^6}.$$ The event is empty for $v>p^{-1/2}$. The spherical pair bound of Lemma <a href=\"#edge:spherical-tails\" data-reference-type=\"ref\" data-reference=\"edge:spherical-tails\">6</a> also holds for each number of replicas fixed in advance, with constants allowed to depend on that number. Moreover, $$\\label{edge:ordinary-annulus}\n     Q_\\mu\\{|\\alpha_p(h_p)|>\\zeta p^2\\}\\le C e^{-c k_p}.$$*\n\n\n4.  *For every scale in <a href=\"#edge:scale-range\" data-reference-type=\"eqref\" data-reference=\"edge:scale-range\">[edge:scale-range]</a> with $p\\le r_n$, simultaneously for every $0\\le f\\le1$, $$\\label{edge:variance-estimates}\n     \\begin{split}\n     V_p(f)&\\le Cp^{-2}\\mathcal E(f)+C e^{-c k_p^a},\\\\\n     p^2Q_\\mu\\|\\nabla_{\\mathcal H_p}F_p(h_p)\\|^2\n           &\\le C V_p(f)+C e^{-c k_p^a}.\n     \\end{split}$$ The event and constants in these inequalities are independent of $f$.*\n\n*All constants in the saddle, length, and comparison bounds are deterministic on $\\mathcal C_n$ and may depend on the fixed inputs and the requested failure probability, but not on $n$, $p$, or the field in its stated region.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-edge-estimates"
+  },
+  {
+   "claim_id": "claim-spectral-counts",
+   "exact_statement": "In the convention <a href=\"#edge:threshold-convention\" data-reference-type=\"eqref\" data-reference=\"edge:threshold-convention\">[edge:threshold-convention]</a>, the measures $\\nu_p=k_p^{-1}\\sum_i\\delta_{d_i/p^2}$ converge on fixed bounded intervals to $\\pi^{-1}\\sqrt v\\,\\mathbf 1_{\\{v>0\\}}\\mathrm dv$. Their distribution functions converge uniformly on compact intervals. The same convention gives $d_1/p^2\\ge-o(1)$, $\\dim\\mathcal H_p/k_p\\to2/(3\\pi)$, and the two limits in <a href=\"#edge:trace-estimates\" data-reference-type=\"eqref\" data-reference=\"edge:trace-estimates\">[edge:trace-estimates]</a>. On spectral events of arbitrarily large limiting probability there is also a fixed $C$ such that $$\\label{edge:counting-tail}\n \\begin{aligned}\n \\#\\{i:d_i\\le u\\}&\\le Cnu^{3/2}\n       &&(u\\ge cp^2,\\ u\\le4),\\\\\n \\int_{[A,\\infty)}(1+v)^{-2}\\nu_p(\\mathrm dv)&\\le CA^{-1/2}\n       &&(A\\ge1),\n \\end{aligned}$$ for every fixed $c>0$, after increasing the threshold. Every spectral restriction below also includes eigenvalue-only events $\\mathcal S_n^{\\rm glob}$ of probability $1-o(1)$ on which, uniformly over their spectra, $$\\label{edge:global-spectral}\n \\frac1n\\sum_i\\delta_{\\lambda_i}\\ \\Longrightarrow\\\n \\rho_{\\rm sc}(\\,\\mathrm dx):=\\frac1{2\\pi}\\sqrt{4-x^2}\\,\n             \\mathbf 1_{\\{|x|\\le2\\}}\\,\\mathrm dx,\\qquad\n \\lambda_1\\longrightarrow2,\\qquad \\|W\\|\\le3 .$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-edge-spectral"
+  },
+  {
+   "claim_id": "claim-saddle-norm-density",
+   "exact_statement": "On the spectral restrictions of Lemma <a href=\"#edge:spectral\" data-reference-type=\"ref\" data-reference=\"edge:spectral\">4</a>, the saddle and length conclusions in Proposition <a href=\"#prop:edge-estimates\" data-reference-type=\"ref\" data-reference=\"prop:edge-estimates\">3</a> hold. For a saddle field in a fixed ball let $$Y\\sim N(m,\\widehat R),\\qquad \\widehat R=R_{p,\\alpha_p(h)},\\quad m=\\widehat Rh,\\quad\n \\sigma^2=2\\mathop{\\mathrm{Tr}}\\widehat R^2+4m^{\\mathsf T}\\widehat Rm.$$ Then $\\sigma^2\\asymp n/p$, and the density $f_Y$ of $\\|Y\\|^2$ satisfies $f_Y(n)\\asymp\\sqrt{p/n}=p^2/\\sqrt{k_p}$. In standard-deviation units this density converges uniformly on $\\mathbb R$ to the standard normal density as $K\\to\\infty$.*\n\n\n*For a fixed number $m_0$ of replicas, suppose the spectral rows $Y_i\\in\\mathbb R^{m_0}$ are independent Gaussian vectors and at least $L>2$ row covariances obey $cu^{-1}I_{m_0}\\preceq C_i\\preceq Cu^{-1}I_{m_0}$. Their means are arbitrary. The joint density of $\\mathcal Q=(\\sum_iY_{i1}^2,\\ldots,\\sum_iY_{im_0}^2)$ obeys $$\\label{edge:replica-norm-density}\n \\sup_z f_{\\mathcal Q}(z)\\le C_{m_0}(u/\\sqrt L)^{m_0}.$$ This applies after rowwise Gaussian tilts which preserve the stated band and independence of the rows.",
+   "kind": "bound",
+   "statement_anchor": "stmt-edge-norm-density"
+  },
+  {
+   "claim_id": "claim-spherical-tails",
+   "exact_statement": "Fix a field radius and a fixed number of replicas. On the spectral restrictions above, for every $p$ with $k_p\\ge K$ and $p\\le C_1r_n$, both the uncapped zero-field spherical law and the capped spherical law at a field in that ball satisfy $$\\label{edge:spherical-tail-bounds}\n \\begin{aligned}\n \\Pr\\{\\|P_pX\\|>vM_p\\}&\\le C e^{-c k_pv^6}\n       &&(v\\ge v_0),\\\\\n \\Pr\\{|n^{-1}X^{\\mathsf T}X'|>w\\}&\\le C e^{-c n w^3}\n       &&(Cp\\le w\\le\\rho_0).\n \\end{aligned}$$ Here $X,X'$ are independent replicas at the same field, $\\rho_0>0$ is fixed and small, and the second bound holds for every pair of a fixed finite family. The constants are uniform in $p,n$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-edge-spherical-tails"
+  },
+  {
+   "claim_id": "claim-limit-growth",
+   "exact_statement": "For GOE-almost every $g$, and every $b$ with $b+g_1>0$, there are finite positive constants $c_{g,b},C_{g,b}$ such that $$\\label{edge:limit-rate-bounds}\n c_{g,b}(1+i)^{2/3}\\le g_i+b\\le C_{g,b}(1+i)^{2/3}\n \\qquad(i\\ge1).$$ They can be chosen measurably when $b$ is a measurable admissible function of $g$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-edge-limit-growth"
+  },
+  {
+   "claim_id": "claim-overlap-cells",
+   "exact_statement": "Let $\\mathcal{R}_n=\\{-1+2j/n:0\\le j\\le n\\}$ and $I_r=[r-1/n,r+1/n]$. The overlap of two independent uniform cube spins has mass $$p_n(r)=2^{-n}\\binom{n}{n(1+r)/2},\\qquad r\\in\\mathcal{R}_n,$$ whereas the overlap of two independent uniform spherical spins has density $$f_n(s)=\\frac{\\Gamma(n/2)}{\\sqrt\\pi\\,\\Gamma((n-1)/2)}\n             (1-s^2)^{(n-3)/2},\\qquad -1<s<1.$$ For a sufficiently small fixed $\\rho_0>0$, uniformly for large $n$ and $r\\in\\mathcal{R}_n$ with $|r|\\le\\rho_0$, $$\\label{edge:pair-cell-mass}\n p_n(r)\\le e^{C+Cnr^4}\\int_{I_r}f_n(s)\\,\\mathrm ds.$$ Let $H_2$ be the uniform law of an ordered orthonormal pair $(q,q')$. If a positive measurable angular weight $a_n(s,q,q')$ has finite integrals and satisfies, for $H_2$-almost every frame, $$|\\log a_n(s,q,q')-\\log a_n(r,q,q')|\\le K_0\n \\quad\\text{for almost every }s\\in I_r,$$ then $$\\label{edge:pair-cell-weighted}\n p_n(r)\\int a_n(r,q,q')\\,\\mathrm dH_2\n \\le e^{C+Cnr^4+K_0}\n       \\int_{I_r}\\!\\int a_n(s,q,q')\\,\\mathrm dH_2\\,f_n(s)\\,\\mathrm ds.$$ The cells have disjoint interiors. Summing over their midpoints in an overlap interval enlarges the spherical interval by at most $1/n$ at each endpoint.",
+   "kind": "bound",
+   "statement_anchor": "stmt-edge-gram-cell"
+  },
+  {
+   "claim_id": "claim-haar-second-moment",
+   "exact_statement": "On the spectral restrictions above, for every fixed spectral field in a prescribed ball and every $K\\le k_p$, $p\\le C_1r_n$, $$\\label{edge:likelihood-second-moment}\n E_U(L_p(h)-1)^2\\le C_Rn^{-1/4}.$$ The field is fixed inside the expectation; the constant is uniform over the indicated fields and scales.",
+   "kind": "bound",
+   "statement_anchor": "stmt-edge-replica-comparison"
+  },
+  {
+   "claim_id": "claim-cube-caps",
+   "exact_statement": "The static, curvature, and projection assertions <a href=\"#edge:static-estimates\" data-reference-type=\"eqref\" data-reference=\"edge:static-estimates\">[edge:static-estimates]</a>–<a href=\"#edge:projection-tails\" data-reference-type=\"eqref\" data-reference=\"edge:projection-tails\">[edge:projection-tails]</a> hold on ordinary Gaussian disorder events of arbitrarily large limiting probability, with a tight threshold and every fixed field radius, tolerance, and scale buffer prescribed in Proposition <a href=\"#prop:edge-estimates\" data-reference-type=\"ref\" data-reference=\"prop:edge-estimates\">3</a>. The projection bound also holds for $P_qX/M_q$ under a cap interpolated linearly between $B_p$ and $B_q$, whenever $q\\ge p$, $q/p$ is bounded, and the field lies in a fixed $q$-field ball.",
+   "kind": "bound",
+   "statement_anchor": "stmt-edge-cube-caps"
+  },
+  {
+   "claim_id": "claim-observation-annuli",
+   "exact_statement": "On the fixed spectral restrictions, there are $a_{\\rm an},c,C>0$ such that for every dyadic interval $[q,2q]$ with fixed buffers inside the enlarged scale range, $$\\label{edge:shrinking-annulus}\n \\mathbf P\\left\\{\\exists p\\in[q,2q]:\n       |\\alpha_p(h_p)|>Ck_p^{-1/10}p^2\\right\\}\n       \\le C e^{-c k_q^{a_{\\rm an}}}.$$ For every fixed $\\zeta>0$, after increasing the threshold, $$\\label{edge:fixed-annulus-biased}\n \\mathbf P\\left\\{\\exists p\\in[q,2q]:\n       |\\alpha_p(h_p)|>\\zeta p^2\\right\\}\n       \\le C_\\zeta e^{-c_\\zeta k_q}.$$ Consequently <a href=\"#edge:ordinary-annulus\" data-reference-type=\"eqref\" data-reference=\"edge:ordinary-annulus\">[edge:ordinary-annulus]</a> holds simultaneously at every scale on ordinary disorder events of arbitrarily large limiting probability.",
+   "kind": "bound",
+   "statement_anchor": "stmt-edge-path-annuli"
+  },
+  {
+   "claim_id": "claim-score-covariance",
+   "exact_statement": "Let $I=[q,2q]$, with a prescribed fixed multiplicative enlargement inside the scale range. At path fields write $$a_p=P_p(m_p-m_p^{\\rm sp}),\\qquad D_p=p^2K_p-I_{\\mathcal H_p}.$$ There are $c,C,a_1>0$ such that $$\\label{edge:score-bound}\n \\mathbf P\\left\\{\n   \\int_I\\|a_p\\|^2\\,\\mathrm d(p^2)>Ck_q^{1/2}\\right\\}\n       \\le C e^{-c k_q^{a_1}},$$ and $$\\label{edge:frobenius-bound}\n \\mathbf P\\left(\n \\mathcal G\\cap\n \\left\\{\\int_q^{2q}\\frac{\\|D_p\\|_{\\rm F}^2}{k_p}\\,\\mathrm d\\log p\n              >Ck_q^{-1/5}\\right\\}\\right)\n       \\le C e^{-c k_q^{a_1}} .$$ The same statements hold for every fixed enlargement of $I$, with adjusted constants. They are probability statements; no expectation of the untruncated score on their failures is asserted.",
+   "kind": "bound",
+   "statement_anchor": "stmt-edge-score-covariance"
+  },
+  {
+   "claim_id": "claim-annular-extension",
+   "exact_statement": "Choose $\\eta>0$ sufficiently small compared with $\\gamma^2$, then the coarse curvature tolerance $\\epsilon_{\\rm aux}$ sufficiently small compared with $\\eta$. One can choose $s_{\\rm aux}$, the static tolerances, and the threshold $K$ so that the following holds on $\\mathcal G$. For every child field satisfying $|\\alpha_q(h_q)|\\le s_{\\rm aux}q^2$, put $$\\mathcal A_p=\\{h:|\\alpha_p(h)|\\le s_{\\rm aux}p^2/2\\},\\qquad\n \\mathcal A_p^+=\\{h:|\\alpha_p(h)|<3s_{\\rm aux}p^2/4\\}.$$ There is a semiconcave extension $\\bar\\phi_p$ with upper Hessian bound $(1+\\eta)p^{-2}I$, agreeing with $\\phi_p$ on $\\mathcal A_p^+$. Moreover, $\\mathop{\\mathrm{dist}}(\\mathcal A_p,(\\mathcal A_p^+)^c)\\ge c_{\\rm buf}p^2M_p$ for a fixed $c_{\\rm buf}>0$. Under both $\\mathsf T_{q,p,h_q}$ and the transition obtained by replacing $\\phi_p$ with $\\bar\\phi_p$, the probability of $\\mathcal A_p^c$ is at most $Ce^{-c_1k_p}$. The same bound holds with any fixed polynomial moment of $\\|h_p\\|/(p^2M_p)$ inserted, after decreasing $c_1>0$. All constants are uniform in the indicated fields and scales.",
+   "kind": "construction",
+   "statement_anchor": "stmt-edge-annular-extension"
+  },
+  {
+   "claim_id": "claim-positive-curvature",
+   "exact_statement": "For some $a,c,C>0$, uniformly at every deterministic scale $K\\le k_p$, $p\\le r_n$, apart from activation points, $$\\label{edge:positive-curvature-bound}\n \\mathbf P\\left(\n \\mathcal G\\cap\n \\{p^2K_p\\npreceq(1+Ck_p^{-a})I_{\\mathcal H_p}\\}\\right)\n       \\le C e^{-c k_p^a}.$$ The probability is taken before restricting to $\\mathcal G$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-edge-positive-curvature"
+  },
+  {
+   "claim_id": "claim-warming",
+   "exact_statement": "Suppose that the couplings are Gaussian. Fix $\\vartheta>0$, an integer $m\\ge1$, and $0<\\xi<1/100$. There are measurable disorder events $\\mathcal G_n$, a constant $C<\\infty$, and deterministic $\\varepsilon_n\\downarrow0$ such that $\\liminf_{n\\to\\infty}\\mathbb P(\\mathcal G_n)\\ge1-\\vartheta$, and the following inequalities hold on $\\mathcal G_n$, for all sufficiently large $n$. The constant is independent of the initial law $\\rho$, which may be chosen after the disorder. $$\\begin{aligned}\n \\mathop{\\mathrm{Ent}}_\\mu(w_s^\\rho)&\\le C(1+s^{-1.54}),\n       &&s>0,\\quad\\hbox{for every probability }\\rho ,\n       \\label{warm:entropy}\\\\\n \\|P_{sT_n}\\|_{L^1(\\mu)\\to L^\\infty(\\mu)}\n       &=\\max_{\\sigma,\\tau}p_{sT_n}(\\sigma,\\tau)\n       \\le C\\exp(C s^{-1.54}),\n       &&s\\ge\\varepsilon_n ,\n       \\label{warm:kernel}\\\\\n \\left(1+\\mu\\!\\left[\n       w_s^\\rho(\\log_+w_s^\\rho)^m\\right]\\right)^{1/m}\n       &\\le C\\left(1+s^{-1/(2/3-\\xi)}\\right),\n       &&s>0,\\quad\\hbox{for every probability }\\rho .\n       \\label{warm:log-moment}\n\\end{aligned}$$ The events and constants may depend on the displayed fixed parameters. In particular the order $m$ is fixed before $n$ tends to infinity.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-warming"
+  },
+  {
+   "claim_id": "claim-dissipation-profiles",
+   "exact_statement": "Fix $C_{\\mathrm{lev}}<\\infty$ and $0<\\xi<1/100$. With tight constants, there are a threshold $K_0<\\infty$ and a number $\\delta>0$ such that every $0\\le f\\le1$ satisfying $$N=\\mu[f^2]=e^{-L},\\qquad\n K_0\\le L\\le C_{\\mathrm{lev}} n,\\qquad\n D\\!\\left(\\frac{f^2\\mu}{N}\\middle\\Vert\\mu\\right)\\ge\\frac L2\n                                                               \\label{warm:restricted-class}$$ obeys $$\\begin{aligned}\n T_n\\,\\frac{\\mathcal I(f^2)}{N}&\\ge c_\\xi L^{5/3-\\xi},\n                                                               \\label{warm:modified-profile}\\\\\n T_n\\,\\frac{\\mathcal E(f)}{N}&\\ge c\n \\begin{cases}\n L^{1.662},&L\\le n^\\delta,\\\\\n L^{1.162},&L>n^\\delta .\n \\end{cases}                                                   \\label{warm:classical-profile}\n\\end{aligned}$$ Here a threshold, a positive exponent, and constants are tight in the following precise sense. For each $\\vartheta>0$ they can be fixed, independently of $f$, on disorder events of limiting lower probability at least $1-\\vartheta$. They may depend on $C_{\\mathrm{lev}},\\xi,\\vartheta$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-warm-profiles"
+  },
+  {
+   "claim_id": "claim-small-entropy-profile",
+   "exact_statement": "Fix $C_{\\mathrm{lev}}<\\infty$. For every fixed $\\kappa>0$, there are tight $K_0$ and $\\delta>0$ such that every $f$ satisfying <a href=\"#warm:restricted-class\" data-reference-type=\"eqref\" data-reference=\"warm:restricted-class\">[warm:restricted-class]</a> with $L\\le n^\\delta$ satisfies $$T_n\\,\\frac{\\mathcal E(f)}{N}\\ge c_\\kappa L^{5/3-\\kappa}.\n                                                               \\label{warm:small-profile-bound}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-warm-small-profile"
+  },
+  {
+   "claim_id": "claim-product-endpoint",
+   "exact_statement": "Fix the at most two product endpoints used below. Each has precision $t'I+W$ for a fixed $t'>3$, chosen from the fixed path parameters before $f$. On the common disorder event of (OpenAI 2026b, Equation (19.10)) [[CM](#ref-CM)] for these endpoints, including its polynomial-moment field-tail control, the tests <a href=\"#warm:restricted-class\" data-reference-type=\"eqref\" data-reference=\"warm:restricted-class\">[warm:restricted-class]</a> satisfy $$H_{\\rm end}\\le\n C\\sqrt{\\log n+L}\\,\\frac{\\mathcal E(f)}N+O(n^{-3}),\n \\qquad\n H_{\\rm end}\\le\\frac{\\mathcal I(f^2)}N .                         \\label{warm:product-bounds}$$ The constants in the first inequality, including its remainder, may depend on these endpoints, the fixed path parameters, and $C_{\\mathrm{lev}}$, but not on $n$ or $f$. The second inequality holds for every observation channel whose posterior at the endpoint is a product measure; it does not require a field-tail estimate.",
+   "kind": "bound",
+   "statement_anchor": "stmt-warm-product"
+  },
+  {
+   "claim_id": "claim-posterior-mean-sqrt",
+   "exact_statement": "Fix an operator-norm bound for $J_*$ and the parameters in <a href=\"#warm:stability\" data-reference-type=\"eqref\" data-reference=\"warm:stability\">[warm:stability]</a>, with $j(1+\\eta)^2<1$. For every sufficiently small fixed $\\epsilon>0$, impose the ordinary word diagnostics of a finite length depending on $\\epsilon$. For any field $h$ satisfying <a href=\"#warm:stability\" data-reference-type=\"eqref\" data-reference=\"warm:stability\">[warm:stability]</a>, taking $A=V(y)$ verifies the hypothesis of (OpenAI 2026a, Lemma 5.7) [[SG](#ref-SG)] with residual threshold $2\\rho_0\\sqrt n$ and lower bound $b$. Let $y_*$ be its unique root of $F_h$, and set $m_*=\\tanh y_*$. This root existence is the source conclusion; the square-root energy dependence below is the new estimate. Define $$\\mu_h(\\sigma)\\ \\propto\\\n   \\exp\\{\\tfrac12\\sigma^{\\mathsf T}J_*\\sigma+h^{\\mathsf T}\\sigma\\},\n \\qquad\n \\mathcal D_h(f):=\\mathcal E_{\\mu_h}(f)\n       =\\sum_i\\mu_h[\\mathop{\\mathrm{Var}}(f\\mid\\sigma_{-i})].$$ For every real $f$ with $N_h=\\mu_h[f^2]>0$ and $\\nu_h=f^2\\mu_h/N_h$, $$\\frac{\\|\\nu_h[\\sigma]-m_*\\|}{\\sqrt n}\n \\le C_{\\rm lead}\\epsilon+\n       \\frac{C_\\epsilon}{\\sqrt n}\n          \\left(1+\\sqrt{\\frac{\\mathcal D_h(f)}{N_h}}\\right).\n                                                               \\label{warm:sqrt-posterior}$$ The constants are uniform in $n,h,f$ under these hypotheses. $C_{\\rm lead}$ depends only on the fixed stability and norm bounds; the finite diagnostic length and $C_\\epsilon$ may depend on $\\epsilon$. The statement is simultaneous on a fixed compact subinterval of $(0,1)$ carrying a common strict margin, as in the last paragraph of the proof of (OpenAI 2026b, Proposition 17.1) [[CM](#ref-CM)].",
+   "kind": "bound",
+   "statement_anchor": "stmt-warm-posterior-mean"
+  },
+  {
+   "claim_id": "claim-large-entropy-retention",
+   "exact_statement": "Fix $0<\\lambda<C_{\\mathrm{lev}}<\\infty$, $C_E<\\infty$, and $0<\\omega<1$. On Gaussian disorder events of probability tending to one, every test <a href=\"#warm:restricted-class\" data-reference-type=\"eqref\" data-reference=\"warm:restricted-class\">[warm:restricted-class]</a> with $\\lambda n\\le L\\le C_{\\mathrm{lev}}n$ and $$\\frac{\\mathcal E(f)}N\\le C_E n^{1-\\omega}                       \\label{warm:large-energy-assumption}$$ has an observation path to a product posterior for which $H_{\\rm end}\\ge c_{\\lambda,C_{\\mathrm{lev}}}n$. The path and disorder events are chosen independently of $f$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-warm-large-retention"
+  },
+  {
+   "claim_id": "claim-log-level-test",
+   "exact_statement": "Fix $b>0$ and $r>0$. Let $z>0$ be a density and suppose that, for some $d\\ge v/2$ and sufficiently large $v$, $$B=\\mu[z\\mathbf 1_{\\{d\\le\\log z\\le1.1d\\}}]\n       \\ge b(v/d)^r>0 .$$ Define $$u=\\mathcal U_d(z)\n   :=\\min\\{e^{1.1d},\\,z\\min(1,ze^{-0.8d})\\},\n \\qquad f^2=e^{-1.1d}u .                                 \\label{warm:level-transform}$$ Then $0\\le f\\le1$, $B\\le\\mu[u]\\le1$, and, if $N=\\mu[f^2]=e^{-L}$, $$1.1d\\le L\\le1.1d+C_{b,r}\\bigl(1+\\log_+(d/v)\\bigr),\n \\qquad\n D\\!\\left(\\frac{f^2\\mu}{N}\\middle\\Vert\\mu\\right)\\ge L/2 .$$ For large $v,n$, this test lies in the range $K_0\\le L\\le C_{\\mathrm{lev}}n$ of Proposition <a href=\"#warm:profiles\" data-reference-type=\"ref\" data-reference=\"warm:profiles\">16</a>. In addition, $$\\mathcal I(\\mathcal U_d(z))\\le4\\mathcal I(z).                          \\label{warm:level-dissipation}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-warm-log-layer"
+  },
+  {
+   "claim_id": "claim-entropy-dissipation",
+   "exact_statement": "With tight constants, every strictly positive density $z$ with $\\mathop{\\mathrm{Ent}}_\\mu(z)\\ge K_1$ satisfies $$T_n\\mathcal I(z)\\ge c\\,\\mathop{\\mathrm{Ent}}_\\mu(z)^{1.662}.                    \\label{warm:full-entropy-profile}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-warm-entropy-profile"
+  },
+  {
+   "claim_id": "claim-support-profile",
+   "exact_statement": "With the constants and $\\delta$ of Proposition <a href=\"#warm:profiles\" data-reference-type=\"ref\" data-reference=\"warm:profiles\">16</a>, every nonnegative $g$, supported on a set of $\\mu$-mass $e^{-L_{\\rm supp}}$ with $L_{\\rm supp}\\ge K_0$, satisfies $$T_n\\mathcal E(g)\\ge c\\mu[g^2]\\,\\Phi_n(L_{\\rm supp}),\\qquad\n \\Phi_n(L)=\n \\begin{cases}\n \\min\\{L^{1.654},\\,n^{1.154\\delta}\\},&L\\le n^\\delta,\\\\\n L^{1.154},&L>n^\\delta .\n \\end{cases}                                                \\label{warm:support-bound}$$ The zero function satisfies the assertion by convention.",
+   "kind": "bound",
+   "statement_anchor": "stmt-warm-support-profile"
+  },
+  {
+   "claim_id": "claim-kernel-log-tail",
+   "exact_statement": "Fix $\\beta>0$, $A>0$, $0<C_\\star<\\infty$, and $\\vartheta>0$. On Gaussian disorder events of limiting lower probability at least $1-\\vartheta$, with a fixed constant $C$, $$\\sup_{\\sigma}\\ \\sup_{1\\le d\\le C_\\star T_n}\n \\sum_\\tau P_d(\\sigma,\\tau)\n \\mathbf 1_{\\left\\{\\log p_d(\\sigma,\\tau)>\n       \\frac12 n^\\beta(T_n/d)^{3/2}\\right\\}}\n \\le Cn^{-A}                                                \\label{warm:kernel-tail}$$ for all sufficiently large $n$. For any initial law $\\rho$, averaging the displayed row probabilities over $\\sigma\\sim\\rho$ preserves the same bound.",
+   "kind": "bound",
+   "statement_anchor": "stmt-warm-kernel-log-tail"
+  },
+  {
+   "claim_id": "claim-gaussian-subsequence",
+   "exact_statement": "Every sequence of Gaussian system sizes tending to infinity has a further represented subsequence on which the following assertions hold almost surely. The edge coordinates converge to $g$, and there is a measurable random family $h_s\\in L^2(\\Pi_g)$, $s>0$, with the following properties. The family may at this stage depend on the represented data in addition to $g$.*\n\n\n\n*There is a finite random $C\\ge1$, independent of $s,t$, such that $$0\\le h_s\\le \\mathcal K(s):=C\\exp(C s^{-77/50}),\\qquad\n \\Pi_g[h_s]=1,\\qquad\n h_{s+t}=S^g_t h_s,\\qquad s,t>0,\n \\label{glim:density-family}$$ where $S^g_t=\\exp(-t c_*H_g)$. The map $s\\mapsto h_s$ is continuous in $L^2(\\Pi_g)$. For each $t>0$, $S^g_t$ has a nonnegative symmetric kernel $k_t^g$ relative to $\\Pi_g$ satisfying $$0\\le k_t^g(x,y)\\le \\mathcal K(t)\n \\quad\\text{for \\(\\Pi_g\\otimes\\Pi_g\\)-almost every \\((x,y)\\)}.\n \\label{glim:limit-kernel}$$ The constant $77/50$ is the exponent $1.54$ in Theorem <a href=\"#thm:warming\" data-reference-type=\"ref\" data-reference=\"thm:warming\">15</a>.*\n\n\n\n\n*On this subsequence, $$A_{n,J}\\longrightarrow A_g\n \\quad\\text{in }C_{\\mathrm{loc}}((0,\\infty)),\\qquad\n B_{n,J}\\longrightarrow B_h\n \\quad\\text{in }C_{\\mathrm{loc}}((0,\\infty)^2),\n \\label{glim:functional-subsequence}$$ where $$B_h(s,t)=\\sum_{a\\ge1}\\Pi_g[h_s x_a\\,S^g_t x_a].\n \\label{glim:correlation-series}$$ The series in <a href=\"#glim:correlation-series\" data-reference-type=\"eqref\" data-reference=\"glim:correlation-series\">[glim:correlation-series]</a> converges locally uniformly and is continuous. Finally, $$\\|h_s-1\\|_{L^2(\\Pi_g)}\\longrightarrow0,\\qquad\n B_h(s,\\cdot)\\longrightarrow A_g(\\cdot)\n \\quad\\text{in }C_{\\mathrm{loc}}((0,\\infty))\n \\quad(s\\to\\infty).\n \\label{glim:relaxation}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-gaussian-subsequence"
+  },
+  {
+   "claim_id": "claim-uniform-seed-escape",
+   "exact_statement": "There is a measurable admissible choice $b=b(g)$ such that, almost surely, $$r_a:=g_a+b>0,\\qquad D_g(b)>0,\\qquad\n c_g(1+a)^{2/3}\\le r_a\\le C_g(1+a)^{2/3}\\quad(a\\ge1)\n \\label{glim:rates}$$ for finite positive $c_g,C_g$. Define $$M_g(x)=\\frac12\\sum_{a\\ge1}\\frac{x_a^2}{r_a}.\n \\label{glim:weighted-size}$$ Then $0<M_g<\\infty$ $\\Pi_g$-almost surely. Choose a Borel full-measure set of edge realizations on which these assertions about $b$, $r_a$, and $M_g$ hold, with $b$ Borel there and $r_a=g_a+b$. On the product of this edge set with $\\mathbb R^\\mathbb N$, $M_g$ is an extended nonnegative Borel function of $(g,x)$, since its jointly Borel partial sums increase to it. In every escape event, $x_i^2/M_g(x)$ denotes the quotient on the subset where $0<M_g(x)<\\infty$, extended by zero to all remaining pairs in $\\mathbb R^\\mathbb N\\times\\mathbb R^\\mathbb N$. This version is jointly Borel and agrees with the usual quotient $\\Pi_g$-almost surely for every $g$ in the chosen edge set.*\n\n\n*For every represented family in Proposition <a href=\"#prop:gaussian-subsequence\" data-reference-type=\"ref\" data-reference=\"prop:gaussian-subsequence\">25</a>, every fixed $i\\ge1$, and every $\\epsilon>0$, $$\\lim_{s\\downarrow0}\n \\widehat{\\mathbb E}\\!\\left[\n    \\Pi_g\\!\\left[h_s\\mathbf 1_{\\{x_i^2/M_g>\\epsilon\\}}\\right]\\right]=0.\n \\label{glim:seed-escape}$$ Here the probability averages the represented environment as well as the draw from $h_s\\Pi_g$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-uniform-seed-escape"
+  },
+  {
+   "claim_id": "claim-entrance-selection",
+   "exact_statement": "For every $g$ as above, there is at most one family $(h_s)_{s>0}$ of probability densities with respect to $\\Pi_g$ with the following properties:*\n\n1.  *$h_s\\ge0$, $\\Pi_g[h_s]=1$, and $\\sup_{s_0\\le s\\le s_1}\\|h_s\\|_{L^\\infty(\\Pi_g)}<\\infty$ whenever $0<s_0<s_1<\\infty$;*\n\n2.  *$h_{s+t}=S_t^g h_s$ in $L^2(\\Pi_g)$ for $s,t>0$, where $S_t^g=\\exp(-t c_*H_g)$;*\n\n\n3.  *there is a sequence $s_k\\downarrow0$ such that, for every $i\\ge1$ and $\\varepsilon>0$, $$\\label{entr:escape}\n     \\Pi_g\\left[h_{s_k}\\,\n           \\mathbf 1_{\\{x_i^2/M(x)>\\varepsilon\\}}\\right]\\longrightarrow0.$$*\n\n\n*Any such family satisfies $$\\label{entr:zero-boundary}\n h_s\\Pi_g\\ \\Longrightarrow\\ \\delta_{\\boldsymbol 0}\n \\quad\\text{on \\(\\mathbb R^{\\mathbb N}\\) with its product topology, as \\(s\\downarrow0\\)}.$$ For almost every $g$ such a family exists. It can be chosen measurably in $g$, as a family of $L^2(\\Pi_g)$ density classes, and with jointly measurable density representatives in $(g,s,x)$. Every represented Gaussian limit in Proposition <a href=\"#prop:gaussian-subsequence\" data-reference-type=\"ref\" data-reference=\"prop:gaussian-subsequence\">25</a> is this family almost surely.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-entrance-selection"
+  },
+  {
+   "claim_id": "claim-angular-realization",
+   "exact_statement": "Let $w$ be a bounded probability density with respect to $\\Pi$. There is a continuous process $X(t)=(X_i(t))_{i\\ge1}$ on $\\mathbb R^\\mathbb N$, with law $(\\widetilde S_t w)\\Pi$ at time $t$, and independent standard Brownian motions $(W_i)_{i\\ge1}$ in its filtration, with the following property. Almost surely $R(X(t))>0$ for all $t\\ge0$. With $R(t)=R(X(t))$, $\\Theta_i(t)=\\theta_i(X(t))$, and $\\overline r(t)=\\overline r(X(t))$, one has $$\\begin{aligned}\n d\\Theta_i(t)\n &=\n \\frac{\\sqrt2}{R(t)}\n \\left(dW_i(t)-\\Theta_i(t)\\sum_{j\\le m}\\Theta_j(t)\\,dW_j(t)\\right)\n \\notag\\\\\n &\\quad+\n \\Theta_i(t)\\left(\n  \\frac{3-m-2\\mathbf 1_{\\{i\\le m\\}}}{R(t)^2}-r_i+\\overline r(t)\n \\right)dt .                                      \\label{entr:angular-sde}\n\\end{aligned}$$ All identities hold simultaneously for $i\\ge1$. The Brownian increments after zero are independent of the initial sigma field.",
+   "kind": "construction",
+   "statement_anchor": "stmt-entr-angular-realization"
+  },
+  {
+   "claim_id": "claim-resolvent-kernels",
+   "exact_statement": "For $L$ defined above, let $$\\widehat K(z)=\\frac{1}{D+z\\widehat L(z)}\\quad(z>0),$$ where a hat denotes the Laplace transform and every kernel is zero on negative times. The function $L$ is locally integrable, and $\\widehat K$ is the Laplace transform of a nonnegative, decreasing function $K$, smooth on $(0,\\infty)$. For $0<t\\le1$, $$\\label{entr:K-bounds}\n c_g t^{-1/2}\\le K(t)\\le C_g t^{-1/2},\n \\qquad |K'(t)|\\le C_g t^{-3/2}.$$ Set $K_i=K*E_i$. Then $$\\begin{aligned}\n K_i(t)&\\le C_g\\frac{\\sqrt t}{1+r_it},&\n |K_i'(t)|&\\le C_g\\frac{t^{-1/2}}{1+r_it},             \\label{entr:Ki-bounds}\\\\\n 2r_iK_i(t)&\\longrightarrow K(t)                       \\label{entr:Ki-limit}\n\\end{aligned}$$ uniformly on each compact subinterval of $(0,1]$ as $i\\to\\infty$. For $t>0$, $h\\ge0$, $t+h\\le1$, and $0\\le\\xi<1/4$, $$\\begin{aligned}\n \\sup_i r_iK_i(t)^2&\\le C_g,&\n \\sup_i r_i|K_i(t+h)-K_i(t)|^2\n   &\\le C_g\\min\\{1,h^2/t^2\\},                          \\label{entr:Ki-sup}\\\\\n \\sum_i(1+r_i)^{2\\xi}K_i(t)^2\n   &\\le C_{g,\\xi}t^{-1/2-2\\xi},                       \\label{entr:Ki-sum}\\\\\n \\sum_i|K_i(t+h)-K_i(t)|^2\n   &\\le C_g t^{-1/2}\\min\\{1,h^2/t^2\\}.                \\label{entr:Ki-increment}\n\\end{aligned}$$ As causal distributions, $$\\label{entr:kernel-inverse}\n K*(D\\delta_0+L')=\\delta_0.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-entr-kernels"
+  },
+  {
+   "claim_id": "claim-stochastic-kernels",
+   "exact_statement": "Let $(W_i)$ be independent Brownian motions in a filtration, let $(y_i)$ be measurable at time zero with $\\sum_i y_i^2/(2r_i)=1$, and let $q$ be progressively measurable with $|q(v)|\\le C_0v^{-1/4}$ for $0<v\\le1$. Define $$\\begin{aligned}\n Z_i^q(t)&=\\sqrt2\\int_0^t e^{-r_i(t-v)}q(v)\\,dW_i(v),\\notag\\\\\n \\mathsf G_q^y(t)&=2\\sqrt2\\sum_i\\int_0^t\n                K_i(t-v)q(v)e^{-r_iv}y_i\\,dW_i(v),\\label{entr:stochastic-parts}\\\\\n \\mathsf N_q(t)&=2\\sqrt2\\sum_i\\int_0^t\n                K_i(t-v)q(v)Z_i^q(v)\\,dW_i(v).\\notag\n\\end{aligned}$$ The two series converge in probability in $C([0,1])$, with value zero at zero. For every finite $j\\ge2$, their partial sums and their limits satisfy $$\\begin{aligned}\n \\|Z_i^q(t)\\|_{L^j}^2\n     &\\le C_{g,C_0,j}\\frac{\\sqrt t}{1+r_it},           \\label{entr:Z-moment}\\\\\n \\|\\mathsf G_q^y(t)\\|_{L^j}+\\|\\mathsf N_q(t)\\|_{L^j}\n     &\\le C_{g,C_0,j}t^{1/4},                         \\label{entr:stoch-moment}\\\\\n \\|\\mathsf G_q^y(t+h)-\\mathsf G_q^y(t)\\|_{L^j}\n  +\\|\\mathsf N_q(t+h)-\\mathsf N_q(t)\\|_{L^j}\n     &\\le C_{g,C_0,j}h^{1/4}\\quad(0\\le t<t+h\\le1).\n                                                               \\label{entr:stoch-increment}\n\\end{aligned}$$ The supremum on $[0,1]$ of either limit has every finite moment, bounded by a constant depending only on $g,C_0$, and that order.",
+   "kind": "bound",
+   "statement_anchor": "stmt-entr-stochastic-kernels"
+  },
+  {
+   "claim_id": "claim-volterra-equation",
+   "exact_statement": "Let the processes be as in <a href=\"#entr:YQ\" data-reference-type=\"eqref\" data-reference=\"entr:YQ\">[entr:YQ]</a>–<a href=\"#entr:common-sde\" data-reference-type=\"eqref\" data-reference=\"entr:common-sde\">[entr:common-sde]</a>, and let $A_y$ be the candidate seed response defined above. Almost surely, for $0<t\\le1$, $$\\label{entr:volterra-equation}\n f(t)=A_y(t)+2\\sqrt2\\sum_i\\int_0^t\n               K_i(t-v)Q(v)Y_i(v)\\,dW_i(v).$$ The stochastic series is defined by localization and has a continuous version on every compact subinterval of $(0,1]$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-entr-volterra"
+  },
+  {
+   "claim_id": "claim-escaping-seeds",
+   "exact_statement": "Suppose that, along a sequence of initial states possibly random, $\\sum_i p_i=1$ and $p_i\\to0$ in probability for every fixed $i$. Then $$\\label{entr:A-limit}\n A_y\\longrightarrow K\n \\quad\\text{in probability, uniformly on compact subintervals of \\((0,1]\\)}.$$ For each fixed $t>0$, the seed stochastic term $\\mathsf G_q^y(t)$ tends to zero in $L^2$, uniformly over all adapted $q$ satisfying $|q(v)|\\le C_0v^{-1/4}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-entr-escaping-seeds"
+  },
+  {
+   "claim_id": "claim-static-support",
+   "exact_statement": "There is a smooth function $\\chi_n(\\theta)\\in[0,1]$ with the following properties. On its support, and on the support of any of its derivatives of order at most $K$, the matrix satisfies $$\\label{hist:static-conditions}\n \\begin{gathered}\n \\mu^{\\otimes2}(A_2(d))\\le e^{-a_2(d)},\\qquad\n \\mu^{\\otimes4}(A_4(d))\\le e^{-a_4(d)},\\qquad d\\in\\mathcal{D}_n,\\\\\n n^{-6}\\sum_{i<j}\\theta_{ij}^2\\le2.\n \\end{gathered}$$ An assertion involving an omitted event is void. For some $b=b(\\beta)>0$, every derivative of $\\chi_n$ of positive order at most $K$ in one coefficient $\\theta_e$, and every differentiated factor in its product construction, is $O(n^{-b})$, uniformly in $e$ and $\\theta$. For Gaussian couplings, $\\chi_n=1$ with probability tending to one.",
+   "kind": "construction",
+   "statement_anchor": "stmt-hist-static-support"
+  },
+  {
+   "claim_id": "claim-cutoff-hazards",
+   "exact_statement": "For every level in <a href=\"#hist:node-level\" data-reference-type=\"eqref\" data-reference=\"hist:node-level\">[hist:node-level]</a> there is a smooth $W_N:\\mathbb R\\to(0,1)$ such that $$\\label{hist:cap-and-plateau}\n e^lW_N(l)\\le e^{CN},\\qquad\n 1-W_N(l)\\le e^{-(\\log n)^2/2}\\quad(l\\le N/2).$$ For $1\\le k\\le K$ its derivative in $l$ satisfies globally $$\\label{hist:global-ratios}\n \\frac{|W_N^{(k)}|}{W_N}+\\frac{|W_N^{(k)}|}{1-W_N}\\le C_K,\n \\qquad\n \\frac{|W_N^{(k)}|}{1-W_N}\\le\\frac{C_K(\\log n)^{2K}}N.$$ For each fixed $L$, wherever $W_N(l)\\ge n^{-L}$ one also has $$\\label{hist:survival-hazard}\n \\frac{|W_N^{(k)}(l)|}{W_N(l)}\n \\le \\frac{C_{K,L}(\\log n)^{2K}}N\\bigl(1-W_N(l)\\bigr).$$ Moreover, uniformly over these levels and for sufficiently large $n$, $$\\label{hist:log-cap-growth}\n |\\log W_N(l)|+|\\log(1-W_N(l))|\n       \\le C\\bigl(1+N+|l|+(\\log n)^2\\bigr).$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-hist-cutoff-hazards"
+  },
+  {
+   "claim_id": "claim-kernel-caps",
+   "exact_statement": "For every node $I$ of length $d$, $$\\label{hist:kernel-bounds}\n 0<k_I(x,y)\\le\\bar k_I(x,y)\\le p_d(x,y),\\qquad k_I(x,y)\\le e^{CN(d)}.$$ Both $k_I$ and $\\bar k_I$ are symmetric in $(x,y)$. If an interval of length $h$ lies inside a checked tree, with $h$ larger than a fixed constant, the weighted transition across it has density at most $e^{C'N(h)}$ after all weights other than one contained complete node are discarded. The same assertion holds when the top check of the tree is omitted or is a failure factor $1-w_I$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-hist-kernel-caps"
+  },
+  {
+   "claim_id": "claim-gaussian-survival",
+   "exact_statement": "For every $A<\\infty$ and $\\varepsilon>0$, there are Gaussian disorder events of limiting lower probability at least $1-\\varepsilon$ on which $\\chi_n=1$ and the mass lost by the checks in any complete query is at most $n^{-A}$. This bound is uniform over its query times in the fixed compact set and over its initial probability on the cube.",
+   "kind": "bound",
+   "statement_anchor": "stmt-hist-gaussian-survival"
+  },
+  {
+   "claim_id": "claim-conditional-interior",
+   "exact_statement": "Let $I$ be a fixed node of a checked root in a tested path law. Given the marked history outside the interior of $I$ and its two boundary states, the conditional law inside $I$ is $\\mathsf C_I^{X_a,X_b}$. In particular, resampling this interior independently from that law preserves the tested marginal. For an internal node its midpoint $z$ under $\\mathsf C_I^{x,y}$ has probability $$\\label{hist:midpoint-probability}\n \\pi_I^{x,y}(z)=\n   \\frac{\\mu(z)k_{I^-}(x,z)k_{I^+}(z,y)}{\\bar k_I(x,y)},$$ and conditional on $z$ the two interiors are independent with laws $\\mathsf C_{I^-}^{x,z}$ and $\\mathsf C_{I^+}^{z,y}$.*\n\n\n*For every $A$, there is $L=L(A,M_+,M_-)<\\infty$ such that $\\bar k_I(X_a,X_b)\\ge n^{-L}$ outside an endpoint event of probability $n^{-A}$ under any such tested law. If $d=|I|$ exceeds a fixed constant, then for these boundaries the density of its first two thirds under $\\mathsf C_I^{x,y}$ relative to the ordinary unconditioned prefix from $x$ is at most $$\\label{hist:prefix-density}\n n^L e^{C'N(d)}.$$ The reversed last two thirds have the same bound relative to the ordinary prefix from $y$ in reversed time.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-hist-conditional-interior"
+  },
+  {
+   "claim_id": "claim-history-overlaps",
+   "exact_statement": "With arbitrarily high inverse-polynomial probability under a tested path law, simultaneously for times in any one of its checked root intervals, $$\\label{hist:path-overlaps}\n |\\rho_2(X(t_1),X(t_2))|\\lesssim_\\beta(1+m)^{-1/2},\\qquad\n |\\rho_4(X(t_1),X(t_2),X(t_3),X(t_4))|\n                    \\lesssim_\\beta(1+m)^{-3/4}.$$ In each assertion the times are increasingly ordered, and $m$ is the minimum of their consecutive gaps and of the gap from the root’s start to $t_1$. The assertion includes a failing root. It also holds for the full history obtained by each of a fixed finite collection of interior resamplings in Lemma <a href=\"#hist:conditional-interior\" data-reference-type=\"ref\" data-reference=\"hist:conditional-interior\">38</a>, separately within each such history. All times in an overlap are taken from that one history.",
+   "kind": "bound",
+   "statement_anchor": "stmt-hist-history-overlaps"
+  },
+  {
+   "claim_id": "claim-crude-coefficients",
+   "exact_statement": "On the size support in <a href=\"#hist:static-conditions\" data-reference-type=\"eqref\" data-reference=\"hist:static-conditions\">[hist:static-conditions]</a>, for all nodes, boundaries and $e$, and $1\\le l\\le K$, $$\\left|[u^l]\\frac{\\bar k_I^u}{\\bar k_I}\\right|\n +\\left|[u^l]\\frac{k_I^u}{k_I}\\right|\n +\\left|[u^l]\\frac{w_I^u}{w_I}\\right|\n +\\left|[u^l]\\frac{1-w_I^u}{1-w_I}\\right|\\le n^{C_K}.$$ The exponent $C_K$ is independent of $\\beta$ in a fixed sufficiently small range and of any later number of conditional copies. Absolute fixed-order moments of clock counts and raw path coefficients are polynomial under tested laws and their resampled marginals. Conditional on an arbitrary boundary pair of one node, the same moments under $\\mathsf C_I^{x,y}$ are bounded by a polynomial (with exponent allowed to depend on the moment order). Finally, conditional on arbitrary designated external endpoints, the absolute normalized coefficient through total order $K$ of an entire checked or first-failure history is bounded by $n^{C_K}$, after enlarging $C_K$. Thus its unnormalized coefficient with any nonnegative external endpoint test held fixed under the interaction perturbation is bounded by $n^{C_K}$ times the test’s base mass, however small that mass is.",
+   "kind": "bound",
+   "statement_anchor": "stmt-hist-crude-ratios"
+  },
+  {
+   "claim_id": "claim-hellinger-cost",
+   "exact_statement": "Let $\\mathcal F_t$ be the natural filtration of a nonexplosive marked path, augmented by an initial $\\sigma$-field, and let $\\mathsf Q\\ll\\mathsf P$ be a change of law up to a finite stopping time $\\tau$, with density $Z$ there and with intensities $rb$ relative to the reference intensities $r$ conditional on that initial information. For the cost in <a href=\"#score:hellinger-cost\" data-reference-type=\"eqref\" data-reference=\"score:hellinger-cost\">[score:hellinger-cost]</a>, $$\\label{score:hellinger-inequality}\n \\mathsf Q\\{\\mathcal J_{[0,\\tau]}>A,\\ \\log Z\\le B\\}\n          \\le e^{(B-A)/2}.$$ Consequently, for every fixed $\\eta>0$, with arbitrarily high inverse-polynomial probability, $$\\label{score:action-bounds}\n \\begin{cases}\n \\mathcal J_{\\rm path}\\le n^\\eta,&\\text{under a tested forward law},\\\\\n \\mathcal J_{\\rm portion}\\le C N(|I|)+n^\\eta,\n       &\\text{under either oriented portion of }\\mathsf C_I^{x,y},\\quad |I|\\ge d_0.\n \\end{cases}$$ Here $d_0$ is a fixed constant large enough for Equation <a href=\"#hist:prefix-density\" data-reference-type=\"eqref\" data-reference=\"hist:prefix-density\">[hist:prefix-density]</a>. The second assertion is over the tested boundary law followed by the conditional interior. In all these cases the integrated new intensity at any one site on each specified unit-length block is at most $n^\\eta$ with the same probability convention. These integrated intensities and $\\mathcal J$ have polynomial fixed-order moments, also after averaging over the boundaries of a conditional interior.",
+   "kind": "bound",
+   "statement_anchor": "stmt-score-hellinger"
+  },
+  {
+   "claim_id": "claim-raw-size-reversal",
+   "exact_statement": "For every fixed $1\\le p<\\infty$ and $1\\le l\\le K$, under ordinary forward dynamics on an interval of length $d\\ge1$, $$\\label{score:martingale-moment}\n \\left\\|\\sup_{t\\in I}|\\ell_{l,e}([\\inf I,t])|\\right\\|_{L^p}\n       \\le C_{p,K}d^{l/2}.$$ For every marked path the exact likelihood reversal is $$\\label{score:reversal}\n \\frac{L_{I,e}^{\\to}(u)}{1+u q_e(X_{\\sup I})}\n   =\\frac{L_{I,e}^{\\leftarrow}(u)}{1+u q_e(X_{\\inf I})}.$$ It follows that, for every fixed $\\eta>0$, with arbitrarily high inverse-polynomial probability under tested laws and their resampled marginals, simultaneously over entries and specified tree intervals, $$\\label{score:raw-high-probability}\n |\\ell_{l,e}^{\\to}(I)|+|\\ell_{l,e}^{\\leftarrow}(I)|\n       \\le n^\\eta |I|^{l/2},\\qquad 1\\le l\\le K.$$ On a unit-length interval this also holds for partial products, with an arbitrarily small power allowance, when a bounded fixed-order product of earlier coefficients is included.",
+   "kind": "bound",
+   "statement_anchor": "stmt-score-raw-size"
+  },
+  {
+   "claim_id": "claim-one-insertion",
+   "exact_statement": "Let $H$ have length $d\\ge1$ within an admissible oriented portion of a checked root. Suppose $v_i(t)$ is predictable, $|v_i(t)|\\le1$, and does not depend on the index $j$ of the other endpoint or on the new mark $\\zeta$. Define $$D_{\\{i,j\\}}(H)=\\int_H X_j(t-)v_i(t)\n       \\sum_\\zeta r_{i,\\zeta}(b_{i,\\zeta}-1)(\\zeta-t_i)\\,dt\n       +\\int_H X_i(t-)v_j(t)\n       \\sum_\\zeta r_{j,\\zeta}(b_{j,\\zeta}-1)(\\zeta-t_j)\\,dt .$$ With arbitrarily high inverse-polynomial probability, using the joint boundary-and-interior convention for a bridge portion, $$\\label{score:one-insertion-bounds}\n |D(H)|_2\\lesssim_\\beta d^{1/4}\\sqrt{\\mathcal J_H/n},\\qquad\n |D(H)|_4\\lesssim_\\beta d^{5/16}n^{-1/4}\\sqrt{\\mathcal J_H}.$$ For an insertion of order $h>1$, or with bounded predictable weights that may depend on $e$, the same bounds with $d^{1/2}$ in place of $d^{1/4}$ and $d^{5/16}$ hold without using overlap estimates. In particular this version applies on unit blocks to previously accumulated bounded coefficients, with their power allowance included.",
+   "kind": "bound",
+   "statement_anchor": "stmt-score-one-insertion"
+  },
+  {
+   "claim_id": "claim-raw-projection",
+   "exact_statement": "Fix an admissible oriented law $\\mathsf Q$, its oriented filtration, and any permitted auxiliary-data augmentation. Fix a dyadic subtree $H$ of length $d$ in that oriented portion and an order $1\\le l\\le K$. There is a finite family of time-integral vectors $V_\\alpha^{(l)}(H)$, chosen from this fixed setup without reference to a subsequent choice of $A$, such that for every vector $A_e$ measurable at the oriented start of $H$ for which the displayed products are integrable, coordinatewise, $$\\label{score:raw-representation}\n \\mathsf E_{\\mathsf Q}[A_e\\ell_{l,e}(H)]\n       =\\mathsf E_{\\mathsf Q}\\left[A_e\\sum_\\alpha V_{\\alpha,e}^{(l)}(H)\\right].$$ The vectors and $A$ may depend on the same initial information. With arbitrarily high inverse-polynomial probability, using the joint boundary-and-interior convention for a bridge portion, their sum of norms obeys $$\\label{score:raw-projection-bounds}\n \\begin{split}\n \\sum_\\alpha|V_\\alpha^{(l)}(H)|_2\n       &\\lesssim_\\beta d^{(l-1)/2+1/4}\\sqrt{\\mathcal J_H/n},\\\\\n \\sum_\\alpha|V_\\alpha^{(l)}(H)|_4\n       &\\lesssim_\\beta d^{(l-1)/2+5/16}n^{-1/4}\\sqrt{\\mathcal J_H}.\n \\end{split}$$ Thus earlier vector factors can be included by Hölder’s inequality after the identity. This is a representation inside expectation, not a pointwise assertion about the raw coefficient $\\ell_l(H)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-score-raw-projection"
+  },
+  {
+   "claim_id": "claim-clock-scores",
+   "exact_statement": "*(i) Conditional coefficients.* For every deterministic matrix on <a href=\"#hist:static-conditions\" data-reference-type=\"eqref\" data-reference=\"hist:static-conditions\">[hist:static-conditions]</a>, every tested path law, and every node $I$ of length $D$ in its checked roots, the vectors in <a href=\"#score:R-definition\" data-reference-type=\"eqref\" data-reference=\"score:R-definition\">[score:R-definition]</a> satisfy, with arbitrarily high inverse-polynomial probability over their boundary states, $$\\label{score:R-basic}\n |R_l(I)|_\\infty\\lesssim_\\beta D^{l/2},\\qquad\n |R_l(I)|_2\\lesssim_\\beta D^{l/2-1},\\qquad\n |R_l(I)|_4\\lesssim_\\beta D^{l/2-1/2},\\qquad 1\\le l\\le K.$$ Also, $$\\label{score:R-l1}\n |R_3(I)|_1\\lesssim_\\beta D^{-1/4},\\qquad\n |R_l(I)|_1\\lesssim_\\beta D^{(l-4)/2},\\quad 4\\le l\\le K.$$ If $D\\ge Tn^{-0.005}$, the $L^4$ bound for $R_1$ has the additional factor $n^{-0.01}$, the $L^2$ bounds for $R_2,R_3$ have the additional factor $n^{-0.001}$, and the $L^1$ bound for $R_4$ has the additional factor $n^{-0.0007}$. The conclusions hold simultaneously for any polynomial collection of specified nodes and any fixed number of conditional copies, with the same exceptional-set convention.*\n\n\n\n**(ii) Raw representations.* Fix an admissible oriented law, its oriented filtration, and any permitted auxiliary-data augmentation, as in Lemma <a href=\"#score:raw-projection\" data-reference-type=\"ref\" data-reference=\"score:raw-projection\">44</a>. Then fix a dyadic subtree $H$ of length $d$ in that portion and an order $1\\le l\\le K$. The following representations satisfy <a href=\"#score:raw-representation\" data-reference-type=\"eqref\" data-reference=\"score:raw-representation\">[score:raw-representation]</a> for every earlier vector $A$ in that lemma’s class, with the representation chosen from this fixed setup before $A$. If $l\\ge2$ and $d\\ge Tn^{-0.02}$, there is a representation for which $$\\label{score:raw-improvement}\n \\sum_\\alpha|V_\\alpha^{(l)}(H)|_2\n       \\lesssim_\\beta n^{-0.004}\n                   d^{(l-1)/2+1/4}\\sqrt{\\mathcal J_H/n}.$$ For every $1\\le l\\le K$, there is a representation for which $$\\label{score:raw-l1-projection}\n \\sum_\\alpha|V_\\alpha^{(l)}(H)|_1\n       \\lesssim_\\beta \\max\\{\\sqrt d,d^{l/2-5/4}\\}\\sqrt{\\mathcal J_H/n}.$$ For $l=4$ and $d\\ge Tn^{-0.006}$, the latter estimate has the additional factor $n^{-0.001}$. The two families here may differ from each other and from the family giving the two basic bounds in Lemma <a href=\"#score:raw-projection\" data-reference-type=\"ref\" data-reference=\"score:raw-projection\">44</a>. These pathwise norm estimates have arbitrarily high inverse-polynomial probability with that lemma’s scope: for a bridge portion the probability is under the tested boundary law followed by the conditional interior. They are not uniform conditional assertions at every fixed boundary pair.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-clock-scores"
+  },
+  {
+   "claim_id": "claim-rademacher-transfer",
+   "exact_statement": "For the Rademacher coupling law, $$\\mathop{\\mathrm{Law}}_{\\mathrm{Rad}}\\bigl(A_{n,J},B_{n,J}\\bigr)\n \\Longrightarrow\\mathop{\\mathrm{Law}}_g\\bigl(A_g,B_g\\bigr)$$ in $C_{\\mathrm{loc}}((0,\\infty))\\times\nC_{\\mathrm{loc}}((0,\\infty)^2)$, where $(A_g,B_g)$ is the Gaussian limit obtained by combining Proposition <a href=\"#prop:gaussian-subsequence\" data-reference-type=\"ref\" data-reference=\"prop:gaussian-subsequence\">25</a> with the identification of the entrance family in Theorem <a href=\"#thm:entrance-selection\" data-reference-type=\"ref\" data-reference=\"thm:entrance-selection\">27</a>. In particular the entrance family and the semigroup in this limit are the same $h_s^g$ and $S_t^g=\\exp(-t c_*H_g)$ as in the Gaussian case, and the finite time scale is $T=T_n=n^{2/3}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-universality"
+  },
+  {
+   "claim_id": "claim-history-derivatives",
+   "exact_statement": "There are constants $a>0$ and $C_K<\\infty$ with the following property for all sufficiently small fixed $\\beta>0$. Fix $A,B<\\infty$, at most $K$ histories of the form <a href=\"#repl:tested-integral\" data-reference-type=\"eqref\" data-reference=\"repl:tested-integral\">[repl:tested-integral]</a>, and integers $j_\\alpha\\ge0$ with $1\\le k=\\sum_\\alpha j_\\alpha\\le K$. Suppose $0\\le v_\\alpha\\le n^B$. On the deterministic static support of Lemma <a href=\"#hist:static-support\" data-reference-type=\"ref\" data-reference=\"hist:static-support\">33</a>, put $$\\mathcal{D}_e=\\prod_\\alpha [u^{j_\\alpha}]Z_{\\alpha,e}(u).$$ Then, uniformly in the selected histories, $$\\begin{aligned}\n |\\mathcal{D}|_1\n &\\le C\\left(\\prod_\\alpha z_\\alpha\\right)\n \\begin{cases}\n n^{-a+C_K\\beta},&1\\le k\\le4,\\\\\n n^{C_K\\beta}T^{(k-4)/2},&5\\le k\\le K,\n \\end{cases}\n +n^{-A},                                                     \\label{repl:averaged-history}\\\\\n |\\mathcal{D}|_\\infty\n &\\le C n^{C_K\\beta}T^{k/2}\\prod_\\alpha z_\\alpha+n^{-A}.\n                                                               \\label{repl:sup-history}\n\\end{aligned}$$ The constant $C$ and the threshold for $n$ may depend on $A,B$ and on the fixed rectangles. The exponent constant $C_K$ is independent of these precision parameters and of $\\beta$. The same estimates hold for specified derivatives in $\\vartheta$ in place of the coefficients in $u$. Signed tests are covered by applying the statement to their positive and negative parts.",
+   "kind": "bound",
+   "statement_anchor": "stmt-repl-history-derivatives"
+  },
+  {
+   "claim_id": "claim-observable-derivatives",
+   "exact_statement": "The parameter $\\beta>0$ can be chosen so that there are $a_0>0$ and $0<\\delta<0.01$ with, for every disorder matrix $J$, $$\\begin{aligned}\n \\frac1{\\binom n2}\\sum_e|\\partial_e^4\\Phi(J)|\n     &\\le n^{-a_0},                                           \\label{repl:fourth-derivative}\\\\\n \\frac1{\\binom n2}\\sum_e|\\partial_e^k\\Phi(J)|\n     &\\le n^\\delta T^{(k-4)/2},\\quad 5\\le k<K,               \\label{repl:higher-derivative}\\\\\n \\max_e|\\partial_e^j\\Phi(J)|\n     &\\le n^\\delta T^{j/2},\\quad 1\\le j\\le K.                \\label{repl:global-derivative}\n\\end{aligned}$$ The constants may depend on the fixed exponents in <a href=\"#repl:test-class\" data-reference-type=\"eqref\" data-reference=\"repl:test-class\">[repl:test-class]</a> and on $d_0,c,C$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-repl-observable-derivatives"
+  },
+  {
+   "claim_id": "claim-entrywise-replacement",
+   "exact_statement": "For every sequence of query sets and tests satisfying <a href=\"#repl:test-class\" data-reference-type=\"eqref\" data-reference=\"repl:test-class\">[repl:test-class]</a>, $$\\mathbb E_{\\mathrm{Rad}}\\!\\left[G F(\\widetilde Y)\\right]\n -\\mathbb E_{\\mathrm{G}}\\!\\left[G F(\\widetilde Y)\\right]\\longrightarrow0 .$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-repl-comparison"
+  }
+ ],
+ "paper": "papers/EN-115-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-H-0444_PM-227.1_Universality_of_critical_quench_autocorrelations_in_the_SherringtonKirkpatrick_model.md",
+ "purpose": "Universality of critical quench autocorrelations in the Sherrington–Kirkpatrick model",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "c3e4167c82c18ef8892d650b8da4c524229606b6ba0c9f95e0f93b6311e74696",
+   "pm.domains.v2": "72f8368851cb072f86e6255c9bc97d38fa13b942ca8e32657297f468a943b876",
+   "pm.edges.v2": "377dce7fb0b0a75e513195d3026acadf43419acd9098e2787cadefb4457ba19f",
+   "pm.extraction.v2": "4e31ae47ef3f7f7e5361b8786dc8ec8e6fcec6437235c4cb8e9b1578babde6ef",
+   "pm.formal.v2": "5cab7e6bfcc5200b139d706520d6e58cc4b5626cb5742985c412994378c796ea",
+   "pm.limits.v2": "16ac12480f5304075478ea1bf8789023ca94313470284a3c0050ad7ca59cc77c",
+   "pm.node.v2": "6641bc0a702e366343767761601eaef5e7289534fbf4e7a13b9d1dfb408e773b",
+   "pm.objects.v2": "8d7e78a1e1d25fbe745b247424d965414df525eced0cd39b3a3e8df727e4a2f4",
+   "pm.provenance.v2": "1aa819f7701ca3055fff9b680b5800076e967c64752704299e7d6cbb01d71b47",
+   "pm.quantities.v2": "ef917ef83acf48043645bcc27118010652aad17901e84851c2260dda50b14b9c",
+   "pm.reading.v2": "d69f1cb0d400aaef595f8aff0c8cfb944226e8b284b4b22a13dad3bd4cc2eefe",
+   "pm.roadmap.v2": "0ef9dc24469cd41a70b0bb25c0c149c2fcee65cf422027837373e8d84b1cfb64",
+   "pm.search.v1": "cc56cf2cf70da854872b0251de0fd844a747b571e1f3af53da13477166b4feb8",
+   "pm.triptych.v2": "13780a09deb7e39c8e752fdc9de52b1e0c088472c37a5438657fe0b90197415e"
+  },
+  "canonical_sha256": "bd4e00fe88c17190d1d772bf300e96cfc2194cd02e0d3051ee8576f9a0b44f4c",
+  "paper_sha256": "42f61178e6f59c824e61767854f097380b113b7bdd6fa5c559066064d26129d1",
+  "repaired_body_sha256": "131f9efb8b7dd55cb3add10c9659ec31d2703a1a432fda04742ee37d40477956"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "50a52c3e862d4fd6a9c30d1f61b9a23fea4c5eeffd07557c5214698653b0268f",
+   "receipt_sha256": "8ad9108f3753358fb0c00a5eb45264bb7b6a801541a3aae6e5ba9c0ae9e47270",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Universality of critical quench autocorrelations in the Sherrington–Kirkpatrick model"
+}

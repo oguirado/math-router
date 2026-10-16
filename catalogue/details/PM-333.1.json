@@ -1,0 +1,430 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 444315,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 129606
+ },
+ "coordinate": "EN-107-000-0015-2-2026-PR-T4-UK-EX-M3-B-TO-H-0666",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "Smooth differential geometry",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "The result concerns immersion; self-intersections are allowed.",
+     "quote_sha256": "c2dfe5492d15ceed728e24beb909d9f75858afc88bfb71931e6ff62e196d559e"
+    }
+   ],
+   "query": "An embedded surface with no self-intersections",
+   "reason": "The result allows self-intersections and guarantees immersion."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-4",
+     "quote": "The number of global primitive additions is finite; within each addition, however, the exact correction uses an infinite smoothing iteration converging to one map in every $C^m$ norm.",
+     "quote_sha256": "eaae1425b4e954ab862ec636509e80faffb595d17501e8e591cedb699e3cc393"
+    }
+   ],
+   "query": "A finite exact computational immersion algorithm",
+   "reason": "Exact correction uses an infinite smoothing iteration."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "Let $M$ be a closed smooth surface: a compact smooth two-dimensional manifold without boundary.",
+     "quote_sha256": "ece19a52933eeb0faacd314f65ce49915c4f48923aa3413f3dac02065f5ca9a6"
+    }
+   ],
+   "query": "An isometric realization for a surface with boundary",
+   "reason": "The stated domain is compact and without boundary."
+  }
+ ],
+ "family": "PM-333",
+ "id": "PM-333.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C1",
+    "statement": "Every closed smooth Riemannian surface $(M,g)$ admits a $C^\\infty$ isometric immersion into $(\\mathbb{R}^4,\\delta_4)$, where $\\delta_4=\\sum_{i=1}^4 dx_i^2$."
+   },
+   {
+    "anchor": "stmt-lem-phase-data",
+    "claim_id": "C2",
+    "statement": "Let $F:M\\to\\mathbb{R}^4$ be a smooth immersion with $B_F(p)\\ne0$ for every $p$, and let $h_0$ be a smooth positive definite tensor. There are finitely many functions $\\phi_\\nu$ defined on coordinate patches, smooth cutoffs $\\psi_\\nu$ supported compactly in those patches, and smooth fiberwise linear forms $q_\\nu$ on symmetric tensors, such that $$\\label{eq:phase-decomposition}\n H=\\sum_\\nu b_\\nu(H)^2\\,d\\phi_\\nu^2,\n \\qquad b_\\nu(H)=\\psi_\\nu\\sqrt{q_\\nu(H)}$$ whenever $H$ is sufficiently close to $h_0$ in $C^0$. Every square root has a strict positive lower bound before multiplication by the cutoff. On the appropriate supports the differentials of $\\phi_\\nu$, $2\\phi_\\nu$, and $\\phi_\\nu\\pm\\phi_\\mu$ for $\\nu\\ne\\mu$ are nonzero and good. These conclusions persist for immersions in a sufficiently small $C^2$ neighborhood of $F$. Each phase or phase combination has a smooth complementary coordinate coframe on the support where it is used."
+   },
+   {
+    "anchor": "stmt-lem-polynomial-phase-data",
+    "claim_id": "C3",
+    "statement": "Fix a metric $h_*$ and suppose that $f_z$, $0<z<z_0$, are smooth immersions satisfying uniform upper and positive lower metric bounds, $$\\|f_z\\|_{C^j}=O(z^{-j})\\quad(0\\le j\\le3),\n \\qquad\n \\inf_{p\\in M}\\max_{|Y|=1}|B_{f_z}(Y,Y)|\\ge c>0.$$ Then the phase data of Lemma <a href=\"#lem:phase-data\" data-reference-type=\"ref\" data-reference=\"lem:phase-data\">3</a>, with $h_0=h_*$, can be chosen on cells of diameter comparable to $z^6$. The number of cells and all fixed-order derivatives of their cutoff and phase data are polynomially bounded. The good-direction estimates and metric nondegeneracy persist throughout the $C^2$ ball of radius $z^4$ about $f_z$, for all sufficiently small $z$.*\n\n*No regularity with respect to $z$ is required. The construction uses a bounded number of phase weights, independent of the number of cells. The inverse coframes and the reciprocals of the relevant second-form lengths have polynomial bounds. Consequently every fixed finite differential construction formed from these data by sums, products, derivatives, metric inversion, normal projection, and division by the stated nonzero quantities has polynomial bounds, provided its input has the required finite polynomial derivative bounds. Its exponents depend only on the derivative orders and on the input exponents, not on their implicit constants."
+   },
+   {
+    "anchor": "stmt-prop-primitive-addition",
+    "claim_id": "C4",
+    "statement": "Let $M$ be a closed smooth surface and $F:M\\to\\mathbb{R}^4$ a smooth immersion whose second fundamental form is nonzero as a tensor at every point. Assume $F$ has a preferred normal $n$. Let $D$ be a disk with smooth boundary $C_0$ and coordinates $(x,y)$ on a neighborhood of $\\overline D$. Let $a\\in C^\\infty(M)$ be nonnegative, positive exactly on $D$, and put $Y_0=\\partial_y$. Suppose $$\\operatorname{Hess}_{\\gamma(F)}x(\\partial_y,\\partial_y)>0\n \\quad\\text{on }\\overline D.\n \\label{eq:primitive-hessian}$$ Let $C_1,\\ldots,C_m$ be finitely many later curves with nonzero smooth vector fields $Y_i$ on their neighborhoods. Assume the following:*\n\n1.  *All curves $C_0,\\ldots,C_m$ are pairwise transverse and have no triple intersection.*\n\n2.  *On the portion of each later curve $C_i$, $1\\le i\\le m$, in $\\overline D$, the vector $\\partial_y$ is tangent to $C_i$ at only finitely many points.*\n\n3.  *At every $C_i\\cap C_l\\cap D$ with distinct $i,l>0$, $dx(Y_i)\\ne0$ and $dx(Y_l)\\ne0$.*\n\n4.  *Conditions <a href=\"#eq:boundary-invariants\" data-reference-type=\"eqref\" data-reference=\"eq:boundary-invariants\">[eq:boundary-invariants]</a> hold for all indices $0,\\ldots,m$.*\n\n*Then, for every $\\varepsilon>0$, there are a smooth immersion $F_+:M\\to\\mathbb{R}^4$ and a preferred normal $n_+$ such that $$\\gamma(F_+)=\\gamma_+:=\\gamma(F)+a^2\\,dx^2,\n \\qquad B_{F_+}\\ne0\\ \\text{at every point},$$ conditions <a href=\"#eq:boundary-invariants\" data-reference-type=\"eqref\" data-reference=\"eq:boundary-invariants\">[eq:boundary-invariants]</a> hold for $(F_+,n_+)$ and all later indices $1,\\ldots,m$, and $$\\|F_+-F\\|_{C^2(M\\setminus D)}<\\varepsilon.$$ The tensor $a^2dx^2$ is extended by zero outside the coordinate neighborhood."
+   },
+   {
+    "anchor": "stmt-prop-small-increment",
+    "claim_id": "C5",
+    "statement": "Let the phase data above be fixed. Let $P_1,\\ldots,P_d$ be fixed smooth tensor-valued differential operators polynomial above order two, and put $$\\mathcal P(G)=\\gamma(G)+\\sum_{i=1}^d\\epsilon^i P_i(G),\n \\qquad 0\\leq\\epsilon\\leq1.$$ There is a finite exponent $p$, depending on these operators and independent of the integer $q$ below, with the following property. Suppose $G$ is an immersion whose 2-jets satisfy the stated compact margins, $H\\in\\mathcal U_0$, and $$j^2G=O_s(1),\\qquad H=O_s(1).$$ For every positive integer $q$, every $\\delta>0$, and scales $0<\\tau\\leq s\\leq1$, define $$\\eta=\\frac\\tau s+\\epsilon\\tau^{-p}.$$ If $\\eta$ and $\\delta/\\tau$ are sufficiently small, there is a smooth displacement $U$ such that $$\\label{eq:small-increment-estimate}\n U=O_\\tau(\\delta\\tau),\\qquad\n \\mathcal P(G+U)-\\mathcal P(G)-\\delta^2H\n   =O_\\tau\\left(\\delta\\eta^q+\\frac{\\delta^3}{\\tau}\\right).$$ The smallness thresholds and every fixed output norm use only finitely many weighted input bounds. Their required orders may increase with $q$. Each local summand of $U$ is supported in an original phase support or an intersection of two such supports. If the perturbation sum is absent, take $\\eta=\\tau/s$."
+   },
+   {
+    "anchor": "stmt-prop-exact-correction",
+    "claim_id": "C6",
+    "statement": "Let $M$ be a closed smooth surface, and let $h_*$ be a smooth Riemannian metric on $M$. Fix background norms. There are positive integers $R,N$ with the following property. Suppose that $f_z:M\\to\\mathbb{R}^4$ are smooth immersions for sufficiently small $z>0$, and that $$\\begin{aligned}\n \\|f_z\\|_{C^m}&=O(z^{-m}) &&(0\\le m\\le R+2),\\label{eq:exact-input-jets}\\\\\n \\|\\gamma(f_z)-h_*\\|_{C^R}&=O(z^N),\\label{eq:exact-input-metric}\\\\\n \\min_{p\\in M}\\max_{|u|=1}|B_{f_z}(u,u)|&\\ge c>0.\n \\label{eq:exact-input-second-form}\n\\end{aligned}$$ Then, for all sufficiently small $z$, there is a smooth immersion $\\widetilde f_z:M\\to\\mathbb{R}^4$ such that $$\\gamma(\\widetilde f_z)=h_*,\\qquad\n \\|\\widetilde f_z-f_z\\|_{C^2}=o(1).$$ The integers $R,N$ do not depend on the constants in <a href=\"#eq:exact-input-jets\" data-reference-type=\"eqref\" data-reference=\"eq:exact-input-jets\">[eq:exact-input-jets]</a>–<a href=\"#eq:exact-input-second-form\" data-reference-type=\"eqref\" data-reference=\"eq:exact-input-second-form\">[eq:exact-input-second-form]</a>. The threshold on $z$ may depend on them. No regularity of the family with respect to $z$ is required or asserted."
+   },
+   {
+    "anchor": "stmt-lem-finite-order-smoothing",
+    "claim_id": "C7",
+    "statement": "For each positive integer $r$, there are linear smoothing operators $S_s$, $0<s\\le s_0$, on smooth sections of any fixed smooth vector bundle over $M$, with the following properties. For fixed nonnegative integers $q,m$, and $0\\le j\\le r$, $$\\begin{aligned}\n \\|S_s u\\|_{C^{q+m}}&\\le C_{q,m,r}s^{-m}\\|u\\|_{C^q},\n \\label{eq:smooth-derivative}\\\\\n \\|u-S_su\\|_{C^{q+j}}&\\le C_{q,j,r}s^{r-j}\\|u\\|_{C^{q+r}},\n \\label{eq:smooth-approximation}\\\\\n \\|S_su\\|_{C^m}&\\le C_{m,r}\\|u\\|_{C^m}.\n \\label{eq:smooth-boundedness}\n\\end{aligned}$$ The constants use only the fixed atlas, bundle, and displayed orders."
+   },
+   {
+    "anchor": "stmt-lem-exact-step",
+    "claim_id": "C8",
+    "statement": "Under <a href=\"#eq:exact-step-hypotheses\" data-reference-type=\"eqref\" data-reference=\"eq:exact-step-hypotheses\">[eq:exact-step-hypotheses]</a>, take either $\\delta'=\\tau^k$ or $\\delta'=\\tau^{k+1}$. For sufficiently small $t$, there is a smooth increment $U$ such that, with $$G'=G+U,\\qquad H'=\\delta'^{-2}(h_*-\\gamma(G')),\n \\qquad \\mathcal S'_m=\\mathcal S_m(\\tau;G',H'),$$ for every fixed $m\\ge0$, $$\\begin{aligned}\n |U|_{m,\\tau}&\\le C_m(z,k)\\delta\\tau,\n \\label{eq:exact-increment-bound}\\\\\n \\mathcal S'_m\n &\\le \\|G\\|_{C^2}+\\|h_*\\|_{C^0}\n       +C_m(z,k)t^{1/5}(1+\\mathcal S_m).\n \\label{eq:exact-all-order-recurrence}\n\\end{aligned}$$ The scale threshold and the constants are independent of derivatives of the true inputs $G,H$ above the controlled orders $r(k)+2,r(k)$. For fixed $k$, the inverse threshold is polynomially bounded in $z^{-1}$; for fixed $k,m$, the constants have the same property."
+   },
+   {
+    "anchor": "stmt-lem-velocity-plane",
+    "claim_id": "C9",
+    "statement": "On a neighborhood of $\\overline D$ and a sufficiently small neighborhood of the 2-jet section of $F$, the vectors $Y,C$ are independent, $P$ is a smooth 2-plane, and $R_0$ is bounded below by a positive constant. Projection to $P$ restricts to an isomorphism on the normal plane of $G$. There is a smooth orthonormal frame $(e_1,e_2)$ of $P$, depending smoothly on these jets, such that $e_1=v/|v|$ on a collar of $C_0$."
+   },
+   {
+    "anchor": "stmt-lem-loop-density",
+    "claim_id": "C10",
+    "statement": "Let a smooth family of circle-valued paths $p_b(t)\\in\\mathbb{R}^2$ and targets $c_b\\in\\mathbb{R}^2$ be parametrized by a finite-dimensional parameter $b$. On a compact parameter set, suppose each $c_b$ lies in the interior of the convex hull of $p_b$. Then, on a neighborhood of that set, there are smoothly varying strictly positive densities $\\rho_b(t)$ such that $$\\operatorname{avg}_t\\rho_b=1,\\qquad \\operatorname{avg}_t(\\rho_b p_b)=c_b.$$ These densities may be patched with any already prescribed positive solutions on an overlapping parameter neighborhood."
+   },
+   {
+    "anchor": "stmt-lem-small-value-derivative",
+    "claim_id": "C11",
+    "statement": "Let $K$ be a compact subset of a finite union of smooth embedded curves in the interior of a coordinate disk. Suppose the curves have only finitely many intersections and only finitely many tangencies to $\\partial_y$ near $K$, with no shared curve arcs. Given $B>0$ and $\\epsilon>0$, there is $h\\in C_c^\\infty(D)$ such that $$\\|h\\|_{C^0}<\\epsilon,\\qquad h_y=B\\quad\\text{on }K.$$ The support may be kept in any fixed precompact open neighborhood of $K$."
+   },
+   {
+    "anchor": "stmt-lem-velocity-loop",
+    "claim_id": "C12",
+    "statement": "Under the hypotheses of Proposition <a href=\"#prop:primitive-addition\" data-reference-type=\"ref\" data-reference=\"prop:primitive-addition\">5</a>, fix any finite threshold $T$. There is a neighborhood of the 2-jet section of $F$ over $\\overline D$ and a small exterior neighborhood, on which one can choose smooth $2\\pi$-periodic vectors $V,w$ as in <a href=\"#eq:velocity-plane\" data-reference-type=\"eqref\" data-reference=\"eq:velocity-plane\">[eq:velocity-plane]</a>–<a href=\"#eq:leading-velocity\" data-reference-type=\"eqref\" data-reference=\"eq:leading-velocity\">[eq:leading-velocity]</a>, with $$|V|=R_0>0,\\qquad \\operatorname{avg}V=v,\\qquad \\operatorname{avg}w=0.$$ They depend smoothly on position and the 2-jet; $w$ extends smoothly by zero outside $D$. The leading derivatives $(X,Y)$ have metric $\\gamma(G)+a^2dx^2$. At $G=F$, the limiting normal data defined in <a href=\"#eq:limiting-mixed-components\" data-reference-type=\"eqref\" data-reference=\"eq:limiting-mixed-components\">[eq:limiting-mixed-components]</a> have uniform bounds <a href=\"#eq:derivative-independent-bounds\" data-reference-type=\"eqref\" data-reference=\"eq:derivative-independent-bounds\">[eq:derivative-independent-bounds]</a>, a positive lower bound for $S_0$, and the collar inequality <a href=\"#eq:collar-inequality\" data-reference-type=\"eqref\" data-reference=\"eq:collar-inequality\">[eq:collar-inequality]</a>. On the remaining compact portions of the later curves, the only zeros of $\\alpha_\\theta$ are the two turns, and there $|N_0^*|>T$. The bounds for $S_0,1/S_0,D_0^*$ and the error $E_0$ can be fixed before choosing $T$ and $B_*$."
+   },
+   {
+    "anchor": "stmt-prop-primitive-realization",
+    "claim_id": "C13",
+    "statement": "Let $M$ be a closed smooth surface and let $F:M\\to\\mathbb{R}^4$ be a smooth immersion whose second fundamental form is nonzero at every point. Let $D$ be a disk with coordinates $x,y$ on a neighborhood of its closure, and let $a$ be a smooth nonnegative function, positive on $D$ and zero on its exterior. Suppose the following data are defined smoothly on a neighborhood of the $2$-jets of $F$ over $\\overline D$ and a collar. For a map $G$ with jets in that neighborhood, set $$Y=G_y,\\qquad C=G_{yy},\\qquad\n P=\\operatorname{span}(Y,C)^\\perp,\\qquad\n v=PG_x,\\qquad R_0=(|v|^2+a^2)^{1/2}.$$ Assume that $Y,C$ are independent and $R_0>0$. Suppose there is a smooth $2\\pi$-periodic vector $V=V(G;\\theta)$, depending only on position and the $2$-jet of $G$, such that $$V\\in P,\\qquad |V|=R_0,\\qquad \\operatorname{avg}_\\theta V=v.$$ Assume also that $V-v$ extends smoothly by zero across the boundary of $D$. These hypotheses hold for the loop of Lemma <a href=\"#lem:velocity-loop\" data-reference-type=\"ref\" data-reference=\"lem:velocity-loop\">15</a>.*\n\n\n*Put $h_*=\\gamma(F)+a^2dx^2$, extending the added tensor by zero. For all sufficiently small $z>0$ there is a smooth immersion $\\widetilde f_z:M\\to\\mathbb{R}^4$ with $\\gamma(\\widetilde f_z)=h_*$. To state its derivatives, evaluate the preceding quantities at $G=F$ and write $X=F_x-v+V$. Uniformly on $\\overline D$, with periodic arguments evaluated at $\\theta=x/z$, $$\\begin{aligned}\n (\\widetilde f_z)_x&=X+o(1),&\n (\\widetilde f_z)_y&=Y+o(1),\\\\\n (\\widetilde f_z)_{yy}&=C+o(1),&\n (\\widetilde f_z)_{xy}&=X_y+o(1),\\\\\n z(\\widetilde f_z)_{xx}&=V_\\theta+o(1).\n\\end{aligned}\n\\label{eq:realization-asymptotics}$$ Here $X_y$ means differentiation with $\\theta$ held fixed. On the exterior of $D$, $\\widetilde f_z$ converges to $F$ in $C^2$. There is a constant $c>0$, independent of sufficiently small $z$, such that $$\\min_{p\\in M}\\max_{|u|=1}\n       |B_{\\widetilde f_z}(u,u)|\\ge c,$$ where the unit vectors use the fixed background tangent norm."
+   },
+   {
+    "anchor": "stmt-lem-finite-periodic-expansion",
+    "claim_id": "C14",
+    "statement": "Under the hypotheses of Proposition <a href=\"#prop:primitive-realization\" data-reference-type=\"ref\" data-reference=\"prop:primitive-realization\">16</a>, for each integer $L\\ge2$ there are periodic differential operators $U_1,\\ldots,U_L$ with values in $\\mathbb{R}^4$, and symmetric tensor differential operators $E_1,\\ldots,E_{L-1}$, for which $$f_z[G]=G+\\sum_{j=1}^L z^jU_j(G;x/z)\n \\label{eq:finite-ansatz}$$ has the exact expansion $$\\gamma(f_z[G])\n   =a^2dx^2+\\mathcal P_z(G)\n        +\\sum_{r=L}^{2L}z^r\\mathcal R_r(G;x/z),\n \\qquad\n \\mathcal P_z(G)=\\gamma(G)+\\sum_{r=1}^{L-1}z^rE_r(G).\n \\label{eq:finite-metric-expansion}$$ Each $U_j$ has mean zero. The operators $U_j,E_r,\\mathcal R_r$ are smooth, supported on $\\overline D$, and polynomial in jets above order two, with smooth coefficients in the $2$-jet and position, and, where appropriate, $\\theta$. One may take the differential orders of $U_j$ and $E_r$ to be at most $2j$ and $2r+2$, respectively."
+   },
+   {
+    "anchor": "stmt-lem-spherical-preparation",
+    "claim_id": "C15",
+    "statement": "Let $M$ be a closed smooth surface and let $I:M\\to S^3$ be a smooth immersion. There are constants $C,c>0$ and $\\varepsilon_0>0$ with the following property. For every finite set $P\\subset M$ and every $0<\\varepsilon<\\varepsilon_0$, there is a smooth immersion $I_P:M\\to S^3$ such that $$B_{I_P}^{S^3}(p)=0\\quad(p\\in P),\\qquad\n \\|I_P-I\\|_{C^1}<\\varepsilon,\\qquad\n \\|I_P\\|_{C^2}\\le C,\n \\qquad I_P^*\\delta_4\\ge c\\,g_{\\mathrm{bg}},$$ where $g_{\\mathrm{bg}}$ is the fixed background metric. The constants are independent of the number and separation of the points of $P$."
+   },
+   {
+    "anchor": "stmt-lem-global-preparation",
+    "claim_id": "C16",
+    "statement": "Let $(M,g)$ be a closed smooth Riemannian surface. There exist a smooth immersion $F^0:M\\to\\mathbb{R}^4$, a smooth unit normal $n^0$, and a finite list $$(D_j,x_j,y_j,a_j),\\qquad 1\\le j\\le K,$$ with the following properties. Each $D_j$ is a coordinate disk with smooth boundary $C_j$; $(x_j,y_j)$ are coordinates on a neighborhood of $\\overline D_j$; and $a_j$ is smooth, positive on $D_j$, and zero on its exterior. Set $Y_j=\\partial_{y_j}$ and $$\\gamma^j=\\gamma(F^0)+\\sum_{i=1}^j a_i^2(dx_i)^2,\n \\qquad \\gamma^0=\\gamma(F^0).$$ Then:*\n\n1.  *$\\gamma^K=g$, and $\\operatorname{Hess}_{\\gamma^{j-1}}x_j(Y_j,Y_j)>0$ on $\\overline D_j$.*\n\n2.  *The boundaries are pairwise transverse and have no triple intersection. For $i\\ne j$, $Y_j$ is tangent to $C_i$ at only finitely many points of $\\overline D_j$. At $C_i\\cap C_l\\cap D_j$, with $i,l,j$ distinct, both $dx_j(Y_i)$ and $dx_j(Y_l)$ are nonzero.*\n\n3.  *$B_{F^0}$ is nowhere the zero tensor, and $F^0,n^0$ satisfy all boundary conditions <a href=\"#eq:boundary-invariants\" data-reference-type=\"eqref\" data-reference=\"eq:boundary-invariants\">[eq:boundary-invariants]</a> for this list."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Exact smooth correction",
+    "evidence": [
+     {
+      "anchor": "stmt-prop-exact-correction",
+      "quote": "Let $M$ be a closed smooth surface, and let $h_*$ be a smooth Riemannian metric on $M$. Fix background norms. There are positive integers $R,N$ with the following property. Suppose that $f_z:M\\to\\mathbb{R}^4$ are smooth immersions for sufficiently small $z>0$, and that $$\\begin{aligned}\n \\|f_z\\|_{C^m}&=O(z^{-m}) &&(0\\le m\\le R+2),\\label{eq:exact-input-jets}\\\\\n \\|\\gamma(f_z)-h_*\\|_{C^R}&=O(z^N),\\label{eq:exact-input-metric}\\\\\n \\min_{p\\in M}\\max_{|u|=1}|B_{f_z}(u,u)|&\\ge c>0.\n \\label{eq:exact-input-second-form}\n\\end{aligned}$$ Then, for all sufficiently small $z$, there is a smooth immersion $\\widetilde f_z:M\\to\\mathbb{R}^4$ such that $$\\gamma(\\widetilde f_z)=h_*,\\qquad\n \\|\\widetilde f_z-f_z\\|_{C^2}=o(1).$$ The integers $R,N$ do not depend on the constants in <a href=\"#eq:exact-input-jets\" data-reference-type=\"eqref\" data-reference=\"eq:exact-input-jets\">[eq:exact-input-jets]</a>–<a href=\"#eq:exact-input-second-form\" data-reference-type=\"eqref\" data-reference=\"eq:exact-input-second-form\">[eq:exact-input-second-form]</a>. The threshold on $z$ may depend on them. No regularity of the family with respect to $z$ is required or asserted.",
+      "quote_sha256": "e9a5de456cdeaa42439f8088b3174093e02e536bb9ce9230e7af60adc6bcaf9d"
+     }
+    ],
+    "requires_concepts": [
+     "Nonzero second fundamental form",
+     "Good phases",
+     "Small oscillatory metric increments",
+     "Finite-order smoothing"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C1",
+   "exact_statement": "Every closed smooth Riemannian surface $(M,g)$ admits a $C^\\infty$ isometric immersion into $(\\mathbb{R}^4,\\delta_4)$, where $\\delta_4=\\sum_{i=1}^4 dx_i^2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "C2",
+   "exact_statement": "Let $F:M\\to\\mathbb{R}^4$ be a smooth immersion with $B_F(p)\\ne0$ for every $p$, and let $h_0$ be a smooth positive definite tensor. There are finitely many functions $\\phi_\\nu$ defined on coordinate patches, smooth cutoffs $\\psi_\\nu$ supported compactly in those patches, and smooth fiberwise linear forms $q_\\nu$ on symmetric tensors, such that $$\\label{eq:phase-decomposition}\n H=\\sum_\\nu b_\\nu(H)^2\\,d\\phi_\\nu^2,\n \\qquad b_\\nu(H)=\\psi_\\nu\\sqrt{q_\\nu(H)}$$ whenever $H$ is sufficiently close to $h_0$ in $C^0$. Every square root has a strict positive lower bound before multiplication by the cutoff. On the appropriate supports the differentials of $\\phi_\\nu$, $2\\phi_\\nu$, and $\\phi_\\nu\\pm\\phi_\\mu$ for $\\nu\\ne\\mu$ are nonzero and good. These conclusions persist for immersions in a sufficiently small $C^2$ neighborhood of $F$. Each phase or phase combination has a smooth complementary coordinate coframe on the support where it is used.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-phase-data"
+  },
+  {
+   "claim_id": "C3",
+   "exact_statement": "Fix a metric $h_*$ and suppose that $f_z$, $0<z<z_0$, are smooth immersions satisfying uniform upper and positive lower metric bounds, $$\\|f_z\\|_{C^j}=O(z^{-j})\\quad(0\\le j\\le3),\n \\qquad\n \\inf_{p\\in M}\\max_{|Y|=1}|B_{f_z}(Y,Y)|\\ge c>0.$$ Then the phase data of Lemma <a href=\"#lem:phase-data\" data-reference-type=\"ref\" data-reference=\"lem:phase-data\">3</a>, with $h_0=h_*$, can be chosen on cells of diameter comparable to $z^6$. The number of cells and all fixed-order derivatives of their cutoff and phase data are polynomially bounded. The good-direction estimates and metric nondegeneracy persist throughout the $C^2$ ball of radius $z^4$ about $f_z$, for all sufficiently small $z$.*\n\n*No regularity with respect to $z$ is required. The construction uses a bounded number of phase weights, independent of the number of cells. The inverse coframes and the reciprocals of the relevant second-form lengths have polynomial bounds. Consequently every fixed finite differential construction formed from these data by sums, products, derivatives, metric inversion, normal projection, and division by the stated nonzero quantities has polynomial bounds, provided its input has the required finite polynomial derivative bounds. Its exponents depend only on the derivative orders and on the input exponents, not on their implicit constants.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-polynomial-phase-data"
+  },
+  {
+   "claim_id": "C4",
+   "exact_statement": "Let $M$ be a closed smooth surface and $F:M\\to\\mathbb{R}^4$ a smooth immersion whose second fundamental form is nonzero as a tensor at every point. Assume $F$ has a preferred normal $n$. Let $D$ be a disk with smooth boundary $C_0$ and coordinates $(x,y)$ on a neighborhood of $\\overline D$. Let $a\\in C^\\infty(M)$ be nonnegative, positive exactly on $D$, and put $Y_0=\\partial_y$. Suppose $$\\operatorname{Hess}_{\\gamma(F)}x(\\partial_y,\\partial_y)>0\n \\quad\\text{on }\\overline D.\n \\label{eq:primitive-hessian}$$ Let $C_1,\\ldots,C_m$ be finitely many later curves with nonzero smooth vector fields $Y_i$ on their neighborhoods. Assume the following:*\n\n1.  *All curves $C_0,\\ldots,C_m$ are pairwise transverse and have no triple intersection.*\n\n2.  *On the portion of each later curve $C_i$, $1\\le i\\le m$, in $\\overline D$, the vector $\\partial_y$ is tangent to $C_i$ at only finitely many points.*\n\n3.  *At every $C_i\\cap C_l\\cap D$ with distinct $i,l>0$, $dx(Y_i)\\ne0$ and $dx(Y_l)\\ne0$.*\n\n4.  *Conditions <a href=\"#eq:boundary-invariants\" data-reference-type=\"eqref\" data-reference=\"eq:boundary-invariants\">[eq:boundary-invariants]</a> hold for all indices $0,\\ldots,m$.*\n\n*Then, for every $\\varepsilon>0$, there are a smooth immersion $F_+:M\\to\\mathbb{R}^4$ and a preferred normal $n_+$ such that $$\\gamma(F_+)=\\gamma_+:=\\gamma(F)+a^2\\,dx^2,\n \\qquad B_{F_+}\\ne0\\ \\text{at every point},$$ conditions <a href=\"#eq:boundary-invariants\" data-reference-type=\"eqref\" data-reference=\"eq:boundary-invariants\">[eq:boundary-invariants]</a> hold for $(F_+,n_+)$ and all later indices $1,\\ldots,m$, and $$\\|F_+-F\\|_{C^2(M\\setminus D)}<\\varepsilon.$$ The tensor $a^2dx^2$ is extended by zero outside the coordinate neighborhood.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-primitive-addition"
+  },
+  {
+   "claim_id": "C5",
+   "exact_statement": "Let the phase data above be fixed. Let $P_1,\\ldots,P_d$ be fixed smooth tensor-valued differential operators polynomial above order two, and put $$\\mathcal P(G)=\\gamma(G)+\\sum_{i=1}^d\\epsilon^i P_i(G),\n \\qquad 0\\leq\\epsilon\\leq1.$$ There is a finite exponent $p$, depending on these operators and independent of the integer $q$ below, with the following property. Suppose $G$ is an immersion whose 2-jets satisfy the stated compact margins, $H\\in\\mathcal U_0$, and $$j^2G=O_s(1),\\qquad H=O_s(1).$$ For every positive integer $q$, every $\\delta>0$, and scales $0<\\tau\\leq s\\leq1$, define $$\\eta=\\frac\\tau s+\\epsilon\\tau^{-p}.$$ If $\\eta$ and $\\delta/\\tau$ are sufficiently small, there is a smooth displacement $U$ such that $$\\label{eq:small-increment-estimate}\n U=O_\\tau(\\delta\\tau),\\qquad\n \\mathcal P(G+U)-\\mathcal P(G)-\\delta^2H\n   =O_\\tau\\left(\\delta\\eta^q+\\frac{\\delta^3}{\\tau}\\right).$$ The smallness thresholds and every fixed output norm use only finitely many weighted input bounds. Their required orders may increase with $q$. Each local summand of $U$ is supported in an original phase support or an intersection of two such supports. If the perturbation sum is absent, take $\\eta=\\tau/s$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-small-increment"
+  },
+  {
+   "claim_id": "C6",
+   "exact_statement": "Let $M$ be a closed smooth surface, and let $h_*$ be a smooth Riemannian metric on $M$. Fix background norms. There are positive integers $R,N$ with the following property. Suppose that $f_z:M\\to\\mathbb{R}^4$ are smooth immersions for sufficiently small $z>0$, and that $$\\begin{aligned}\n \\|f_z\\|_{C^m}&=O(z^{-m}) &&(0\\le m\\le R+2),\\label{eq:exact-input-jets}\\\\\n \\|\\gamma(f_z)-h_*\\|_{C^R}&=O(z^N),\\label{eq:exact-input-metric}\\\\\n \\min_{p\\in M}\\max_{|u|=1}|B_{f_z}(u,u)|&\\ge c>0.\n \\label{eq:exact-input-second-form}\n\\end{aligned}$$ Then, for all sufficiently small $z$, there is a smooth immersion $\\widetilde f_z:M\\to\\mathbb{R}^4$ such that $$\\gamma(\\widetilde f_z)=h_*,\\qquad\n \\|\\widetilde f_z-f_z\\|_{C^2}=o(1).$$ The integers $R,N$ do not depend on the constants in <a href=\"#eq:exact-input-jets\" data-reference-type=\"eqref\" data-reference=\"eq:exact-input-jets\">[eq:exact-input-jets]</a>–<a href=\"#eq:exact-input-second-form\" data-reference-type=\"eqref\" data-reference=\"eq:exact-input-second-form\">[eq:exact-input-second-form]</a>. The threshold on $z$ may depend on them. No regularity of the family with respect to $z$ is required or asserted.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-exact-correction"
+  },
+  {
+   "claim_id": "C7",
+   "exact_statement": "For each positive integer $r$, there are linear smoothing operators $S_s$, $0<s\\le s_0$, on smooth sections of any fixed smooth vector bundle over $M$, with the following properties. For fixed nonnegative integers $q,m$, and $0\\le j\\le r$, $$\\begin{aligned}\n \\|S_s u\\|_{C^{q+m}}&\\le C_{q,m,r}s^{-m}\\|u\\|_{C^q},\n \\label{eq:smooth-derivative}\\\\\n \\|u-S_su\\|_{C^{q+j}}&\\le C_{q,j,r}s^{r-j}\\|u\\|_{C^{q+r}},\n \\label{eq:smooth-approximation}\\\\\n \\|S_su\\|_{C^m}&\\le C_{m,r}\\|u\\|_{C^m}.\n \\label{eq:smooth-boundedness}\n\\end{aligned}$$ The constants use only the fixed atlas, bundle, and displayed orders.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-finite-order-smoothing"
+  },
+  {
+   "claim_id": "C8",
+   "exact_statement": "Under <a href=\"#eq:exact-step-hypotheses\" data-reference-type=\"eqref\" data-reference=\"eq:exact-step-hypotheses\">[eq:exact-step-hypotheses]</a>, take either $\\delta'=\\tau^k$ or $\\delta'=\\tau^{k+1}$. For sufficiently small $t$, there is a smooth increment $U$ such that, with $$G'=G+U,\\qquad H'=\\delta'^{-2}(h_*-\\gamma(G')),\n \\qquad \\mathcal S'_m=\\mathcal S_m(\\tau;G',H'),$$ for every fixed $m\\ge0$, $$\\begin{aligned}\n |U|_{m,\\tau}&\\le C_m(z,k)\\delta\\tau,\n \\label{eq:exact-increment-bound}\\\\\n \\mathcal S'_m\n &\\le \\|G\\|_{C^2}+\\|h_*\\|_{C^0}\n       +C_m(z,k)t^{1/5}(1+\\mathcal S_m).\n \\label{eq:exact-all-order-recurrence}\n\\end{aligned}$$ The scale threshold and the constants are independent of derivatives of the true inputs $G,H$ above the controlled orders $r(k)+2,r(k)$. For fixed $k$, the inverse threshold is polynomially bounded in $z^{-1}$; for fixed $k,m$, the constants have the same property.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-exact-step"
+  },
+  {
+   "claim_id": "C9",
+   "exact_statement": "On a neighborhood of $\\overline D$ and a sufficiently small neighborhood of the 2-jet section of $F$, the vectors $Y,C$ are independent, $P$ is a smooth 2-plane, and $R_0$ is bounded below by a positive constant. Projection to $P$ restricts to an isomorphism on the normal plane of $G$. There is a smooth orthonormal frame $(e_1,e_2)$ of $P$, depending smoothly on these jets, such that $e_1=v/|v|$ on a collar of $C_0$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-velocity-plane"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "Let a smooth family of circle-valued paths $p_b(t)\\in\\mathbb{R}^2$ and targets $c_b\\in\\mathbb{R}^2$ be parametrized by a finite-dimensional parameter $b$. On a compact parameter set, suppose each $c_b$ lies in the interior of the convex hull of $p_b$. Then, on a neighborhood of that set, there are smoothly varying strictly positive densities $\\rho_b(t)$ such that $$\\operatorname{avg}_t\\rho_b=1,\\qquad \\operatorname{avg}_t(\\rho_b p_b)=c_b.$$ These densities may be patched with any already prescribed positive solutions on an overlapping parameter neighborhood.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-loop-density"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "Let $K$ be a compact subset of a finite union of smooth embedded curves in the interior of a coordinate disk. Suppose the curves have only finitely many intersections and only finitely many tangencies to $\\partial_y$ near $K$, with no shared curve arcs. Given $B>0$ and $\\epsilon>0$, there is $h\\in C_c^\\infty(D)$ such that $$\\|h\\|_{C^0}<\\epsilon,\\qquad h_y=B\\quad\\text{on }K.$$ The support may be kept in any fixed precompact open neighborhood of $K$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-small-value-derivative"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Under the hypotheses of Proposition <a href=\"#prop:primitive-addition\" data-reference-type=\"ref\" data-reference=\"prop:primitive-addition\">5</a>, fix any finite threshold $T$. There is a neighborhood of the 2-jet section of $F$ over $\\overline D$ and a small exterior neighborhood, on which one can choose smooth $2\\pi$-periodic vectors $V,w$ as in <a href=\"#eq:velocity-plane\" data-reference-type=\"eqref\" data-reference=\"eq:velocity-plane\">[eq:velocity-plane]</a>–<a href=\"#eq:leading-velocity\" data-reference-type=\"eqref\" data-reference=\"eq:leading-velocity\">[eq:leading-velocity]</a>, with $$|V|=R_0>0,\\qquad \\operatorname{avg}V=v,\\qquad \\operatorname{avg}w=0.$$ They depend smoothly on position and the 2-jet; $w$ extends smoothly by zero outside $D$. The leading derivatives $(X,Y)$ have metric $\\gamma(G)+a^2dx^2$. At $G=F$, the limiting normal data defined in <a href=\"#eq:limiting-mixed-components\" data-reference-type=\"eqref\" data-reference=\"eq:limiting-mixed-components\">[eq:limiting-mixed-components]</a> have uniform bounds <a href=\"#eq:derivative-independent-bounds\" data-reference-type=\"eqref\" data-reference=\"eq:derivative-independent-bounds\">[eq:derivative-independent-bounds]</a>, a positive lower bound for $S_0$, and the collar inequality <a href=\"#eq:collar-inequality\" data-reference-type=\"eqref\" data-reference=\"eq:collar-inequality\">[eq:collar-inequality]</a>. On the remaining compact portions of the later curves, the only zeros of $\\alpha_\\theta$ are the two turns, and there $|N_0^*|>T$. The bounds for $S_0,1/S_0,D_0^*$ and the error $E_0$ can be fixed before choosing $T$ and $B_*$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-velocity-loop"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "Let $M$ be a closed smooth surface and let $F:M\\to\\mathbb{R}^4$ be a smooth immersion whose second fundamental form is nonzero at every point. Let $D$ be a disk with coordinates $x,y$ on a neighborhood of its closure, and let $a$ be a smooth nonnegative function, positive on $D$ and zero on its exterior. Suppose the following data are defined smoothly on a neighborhood of the $2$-jets of $F$ over $\\overline D$ and a collar. For a map $G$ with jets in that neighborhood, set $$Y=G_y,\\qquad C=G_{yy},\\qquad\n P=\\operatorname{span}(Y,C)^\\perp,\\qquad\n v=PG_x,\\qquad R_0=(|v|^2+a^2)^{1/2}.$$ Assume that $Y,C$ are independent and $R_0>0$. Suppose there is a smooth $2\\pi$-periodic vector $V=V(G;\\theta)$, depending only on position and the $2$-jet of $G$, such that $$V\\in P,\\qquad |V|=R_0,\\qquad \\operatorname{avg}_\\theta V=v.$$ Assume also that $V-v$ extends smoothly by zero across the boundary of $D$. These hypotheses hold for the loop of Lemma <a href=\"#lem:velocity-loop\" data-reference-type=\"ref\" data-reference=\"lem:velocity-loop\">15</a>.*\n\n\n*Put $h_*=\\gamma(F)+a^2dx^2$, extending the added tensor by zero. For all sufficiently small $z>0$ there is a smooth immersion $\\widetilde f_z:M\\to\\mathbb{R}^4$ with $\\gamma(\\widetilde f_z)=h_*$. To state its derivatives, evaluate the preceding quantities at $G=F$ and write $X=F_x-v+V$. Uniformly on $\\overline D$, with periodic arguments evaluated at $\\theta=x/z$, $$\\begin{aligned}\n (\\widetilde f_z)_x&=X+o(1),&\n (\\widetilde f_z)_y&=Y+o(1),\\\\\n (\\widetilde f_z)_{yy}&=C+o(1),&\n (\\widetilde f_z)_{xy}&=X_y+o(1),\\\\\n z(\\widetilde f_z)_{xx}&=V_\\theta+o(1).\n\\end{aligned}\n\\label{eq:realization-asymptotics}$$ Here $X_y$ means differentiation with $\\theta$ held fixed. On the exterior of $D$, $\\widetilde f_z$ converges to $F$ in $C^2$. There is a constant $c>0$, independent of sufficiently small $z$, such that $$\\min_{p\\in M}\\max_{|u|=1}\n       |B_{\\widetilde f_z}(u,u)|\\ge c,$$ where the unit vectors use the fixed background tangent norm.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-primitive-realization"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "Under the hypotheses of Proposition <a href=\"#prop:primitive-realization\" data-reference-type=\"ref\" data-reference=\"prop:primitive-realization\">16</a>, for each integer $L\\ge2$ there are periodic differential operators $U_1,\\ldots,U_L$ with values in $\\mathbb{R}^4$, and symmetric tensor differential operators $E_1,\\ldots,E_{L-1}$, for which $$f_z[G]=G+\\sum_{j=1}^L z^jU_j(G;x/z)\n \\label{eq:finite-ansatz}$$ has the exact expansion $$\\gamma(f_z[G])\n   =a^2dx^2+\\mathcal P_z(G)\n        +\\sum_{r=L}^{2L}z^r\\mathcal R_r(G;x/z),\n \\qquad\n \\mathcal P_z(G)=\\gamma(G)+\\sum_{r=1}^{L-1}z^rE_r(G).\n \\label{eq:finite-metric-expansion}$$ Each $U_j$ has mean zero. The operators $U_j,E_r,\\mathcal R_r$ are smooth, supported on $\\overline D$, and polynomial in jets above order two, with smooth coefficients in the $2$-jet and position, and, where appropriate, $\\theta$. One may take the differential orders of $U_j$ and $E_r$ to be at most $2j$ and $2r+2$, respectively.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-finite-periodic-expansion"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "Let $M$ be a closed smooth surface and let $I:M\\to S^3$ be a smooth immersion. There are constants $C,c>0$ and $\\varepsilon_0>0$ with the following property. For every finite set $P\\subset M$ and every $0<\\varepsilon<\\varepsilon_0$, there is a smooth immersion $I_P:M\\to S^3$ such that $$B_{I_P}^{S^3}(p)=0\\quad(p\\in P),\\qquad\n \\|I_P-I\\|_{C^1}<\\varepsilon,\\qquad\n \\|I_P\\|_{C^2}\\le C,\n \\qquad I_P^*\\delta_4\\ge c\\,g_{\\mathrm{bg}},$$ where $g_{\\mathrm{bg}}$ is the fixed background metric. The constants are independent of the number and separation of the points of $P$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-spherical-preparation"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "Let $(M,g)$ be a closed smooth Riemannian surface. There exist a smooth immersion $F^0:M\\to\\mathbb{R}^4$, a smooth unit normal $n^0$, and a finite list $$(D_j,x_j,y_j,a_j),\\qquad 1\\le j\\le K,$$ with the following properties. Each $D_j$ is a coordinate disk with smooth boundary $C_j$; $(x_j,y_j)$ are coordinates on a neighborhood of $\\overline D_j$; and $a_j$ is smooth, positive on $D_j$, and zero on its exterior. Set $Y_j=\\partial_{y_j}$ and $$\\gamma^j=\\gamma(F^0)+\\sum_{i=1}^j a_i^2(dx_i)^2,\n \\qquad \\gamma^0=\\gamma(F^0).$$ Then:*\n\n1.  *$\\gamma^K=g$, and $\\operatorname{Hess}_{\\gamma^{j-1}}x_j(Y_j,Y_j)>0$ on $\\overline D_j$.*\n\n2.  *The boundaries are pairwise transverse and have no triple intersection. For $i\\ne j$, $Y_j$ is tangent to $C_i$ at only finitely many points of $\\overline D_j$. At $C_i\\cap C_l\\cap D_j$, with $i,l,j$ distinct, both $dx_j(Y_i)$ and $dx_j(Y_l)$ are nonzero.*\n\n3.  *$B_{F^0}$ is nowhere the zero tensor, and $F^0,n^0$ satisfy all boundary conditions <a href=\"#eq:boundary-invariants\" data-reference-type=\"eqref\" data-reference=\"eq:boundary-invariants\">[eq:boundary-invariants]</a> for this list.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-global-preparation"
+  }
+ ],
+ "paper": "papers/EN-107-000-0015-2-2026-PR-T4-UK-EX-M3-B-TO-H-0666_PM-333.1_Smooth_isometric_immersions_of_closed_surfaces_into_Euclidean_four_space.md",
+ "purpose": "Smooth isometric immersions of closed surfaces into Euclidean four-space",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "e67bb5c5753f8305a3cb90490aa06c9e2fced4573c9dcd4ced38cb70072619ec",
+   "pm.domains.v2": "62d37495a73aba01390bed525214336dd0d1c52ecea9dfaf12c380e105ab7f51",
+   "pm.edges.v2": "53145c7319f73090746d17dc7d26b7bda3bbf22a0f41605c0e951c462df3cd82",
+   "pm.extraction.v2": "ba707eb27941b00db815ab8bb30c56ae73b5a7d776db1c3ae071ba1a2d9aabd3",
+   "pm.formal.v2": "aae66b13391e9434bc190d524c5e863b25f18a41eb3cc4ef683ffb2e484e9e20",
+   "pm.limits.v2": "a92c957f88180e9d50cfce024ec11c8c9fb708a2b7d8ac8dd1c6c142ef1e9f68",
+   "pm.node.v2": "eaf45f0cdc2a853fe7a38da180e0e77e7dde50c38d5deff5446e286dd25f5ed4",
+   "pm.objects.v2": "8a942176a2961e06ee086bc9412281a43a920421f1d564706c3dc2d3fe15cee4",
+   "pm.provenance.v2": "6598de27d97613241276ab5d11164dcffa6ac76d64640a78ca43ffbd5b232877",
+   "pm.quantities.v2": "01fb535c9c50dbc4a3ddff27aba35f4605c6e56bfcb750ff767c4aef80f24f0b",
+   "pm.reading.v2": "1a1f120d241c59c11c4cabdcdc14db22c617416aeb75ac97bde1141db12aea71",
+   "pm.roadmap.v2": "4bb7035c822186a8ea4015bfc79f5045871f8645175d8967b9511787604bc542",
+   "pm.search.v1": "8fd897338eb0df2eb6bacbaf65e90d92617d2b9a72b69498f75b7a1a226cbf39",
+   "pm.triptych.v2": "fe5c680ac8ec89ef65c10d6c5c5f846ff1970b09a5e518d6168c37bd35d873e0"
+  },
+  "canonical_sha256": "01a7d3d3e4bd9fe6447b0188ddad40458ab24679341482af5e36150b993091d8",
+  "paper_sha256": "7d2a976a2494bbfd6498fa0f372c34d2ba8b0f8bbf25e3af878eb232de613a05",
+  "repaired_body_sha256": "9015b09011e5f22a57da8acee1f3282f5898cf5daa7b509367b139d893f9249b"
+ },
+ "status": "ACTIVE",
+ "subject_id": 7,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "37916e3ad1e804165139e7c27fe1d19bc6a4ca7621f5e37ef80865964a827bc8",
+   "receipt_sha256": "4259d41603429510f5cabd9195a458d3b2ab7ad01b9603b85c8a0bad83c471c6",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "All increasing integer node subsets of {1,2,3,4,5} of lengths 2 through 4; singleton, rational, reordered and invalid boundary lists.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I3",
+     "oracle_basis": "The candidate uses Lagrange evaluation products with exact fmpq; the independent oracle rechecks every moment using Fraction. Distinct-node Vandermonde uniqueness identifies the returned coefficients. This does not check smooth kernels or immersions."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M1",
+     "observed_exit": 1,
+     "receipt_sha256": "6fa24c07f7412fa874909456494c043a5983dedc6eb92b80f859c60e5c42e5b9"
+    },
+    {
+     "id": "M2",
+     "observed_exit": 1,
+     "receipt_sha256": "7974f4c03ab1163d9839ec19da277da774e1de017426a7213f23222ed541952e"
+    },
+    {
+     "id": "M3",
+     "observed_exit": 1,
+     "receipt_sha256": "6ce5611c268079579daf4e023538db389f3eb0c88074b08161b5029ee927875b"
+    }
+   ],
+   "receipt_sha256": "fc2d18b1ae7274fb84a97305c51ebdf7d4e8a42b9b2d3ff43226af6c3cc391f0",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Smooth isometric immersions of closed surfaces into Euclidean four-space"
+}

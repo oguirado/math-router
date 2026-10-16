@@ -1,0 +1,1155 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1038621,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 306828
+ },
+ "coordinate": "EN-114-000-0003-2-2026-PR-T4-UK-EX-M1-B-ML-M-0288",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "l:model",
+     "quote": "This is a bit-state model, not a model with persistent real registers.",
+     "quote_sha256": "d565b9451646ff9e310378b8be1ee30fa8ce315bb39e2184535fc7bb7ad00cd1"
+    }
+   ],
+   "query": "Persistent real-register algorithms",
+   "reason": "The finite-state lower bounds do not establish the same statement for unrestricted persistent real registers."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "l:model",
+     "quote": "It cannot choose a row or revisit an earlier observation.",
+     "quote_sha256": "fe354533b0717bddc5cffe208f10470170eabc000d9d85a66dc28d5423194121"
+    }
+   ],
+   "query": "Actively chosen rows or repeated access to earlier samples",
+   "reason": "The observation protocol prohibits choosing measurement rows and revisiting observations."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "l:model",
+     "quote": "A signal $s\\in S^{d-1}$ is fixed before sampling. At index $j$ the learner receives $$x_j\\sim N(0,I_d),\\qquad y_j=\\langle x_j,s\\rangle,$$ with independent rows $x_j$.",
+     "quote_sha256": "8d553f50055bf5ae008b7dc72f07e21efe78c0bb4d75fdb74229cb50169a5636"
+    },
+    {
+     "anchor": "pm-h-4",
+     "quote": "The separate condition-number conjecture in their Section 1.1 concerns exact labels and ill-conditioned Gaussian covariance at constant error; the covariance here is the identity and the lower bound tracks the required accuracy.",
+     "quote_sha256": "a36c1ce2b0560186701d96e283f7af1fa8f3e5d66086472fcde878eb3ed83c16"
+    }
+   ],
+   "query": "Generic noisy or anisotropic regression rates",
+   "reason": "The paper's estimates concern exact labels and standard Gaussian rows; different observation models need separate justification."
+  }
+ ],
+ "family": "PM-140",
+ "id": "PM-140.3",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-l-borel",
+    "claim_id": "claim-borel-replacement",
+    "statement": "Let $P$ be a probability measure on $S^{d-1}$ such that, for independent $S\\sim P$ and $x\\sim\\gamma_d$, the pair $(x,\\langle x,S\\rangle)$ has law absolutely continuous with respect to $\\lambda$."
+   },
+   {
+    "anchor": "stmt-l-borel",
+    "claim_id": "claim-borel-replacement",
+    "statement": "Fix a realization of the shared rule randomness and a finite horizon."
+   },
+   {
+    "anchor": "stmt-l-prior-ac",
+    "claim_id": "claim-prior-absolute-continuity",
+    "statement": "$d\\ge2$"
+   },
+   {
+    "anchor": "stmt-l-prior-ac",
+    "claim_id": "claim-prior-absolute-continuity",
+    "statement": "It also holds for $S=\\phi(Z)$ when $Z$ has a density relative to Lebesgue measure on a bounded $q$-dimensional cube, $q\\ge1$, and $\\phi$ is $C^1$ on a neighborhood of its interior with $\\operatorname{rank}D\\phi(z)\\ge1$ for almost every $z$."
+   },
+   {
+    "anchor": "stmt-l-caps-endpoint",
+    "claim_id": "claim-caps-and-residual-endpoint",
+    "statement": "Write $n=d-1$."
+   },
+   {
+    "anchor": "stmt-l-caps-endpoint",
+    "claim_id": "claim-caps-and-residual-endpoint",
+    "statement": "$S\\sim\\sigma$"
+   },
+   {
+    "anchor": "stmt-l-caps-endpoint",
+    "claim_id": "claim-caps-and-residual-endpoint",
+    "statement": "$0\\le T<d$"
+   },
+   {
+    "anchor": "l:dyadic",
+    "claim_id": "claim-cube-chart-geometry",
+    "statement": "Let $\\mu_0$ be normalized Lebesgue measure on the half-open cube $$Q_0=[-1/(2\\sqrt n),1/(2\\sqrt n))^n,\n \\qquad \\phi(z)=(z,\\sqrt{1-\\|z\\|^2}).$$"
+   },
+   {
+    "anchor": "stmt-ld-thm-main",
+    "claim_id": "claim-repeated-dyadic-localization",
+    "statement": "For any fixed $C_0>0$, consider the experiment above with $t\\ge0$ blocks and $N\\ge1$ possible message values, and suppose $$\\label{ld:eq:alphabet}\n \\bigl(2/m+e^{-ck}\\bigr)\\log N\\le C_0d.$$"
+   },
+   {
+    "anchor": "stmt-ld-lem-density",
+    "claim_id": "claim-weighted-exact-projection",
+    "statement": "Under <a href=\"#ld:eq:spread\" data-reference-type=\"eqref\" data-reference=\"ld:eq:spread\">[ld:eq:spread]</a>"
+   },
+   {
+    "anchor": "stmt-ld-lem-density",
+    "claim_id": "claim-weighted-exact-projection",
+    "statement": "$\\|h\\|_{L^2(\\mu)}\\le1$"
+   },
+   {
+    "anchor": "stmt-ld-lem-block",
+    "claim_id": "claim-dyadic-block-information",
+    "statement": "Let $\\mu,Q,B$ satisfy <a href=\"#ld:eq:spread\" data-reference-type=\"eqref\" data-reference=\"ld:eq:spread\">[ld:eq:spread]</a>."
+   },
+   {
+    "anchor": "stmt-ld-lem-block",
+    "claim_id": "claim-dyadic-block-information",
+    "statement": "Draw $Z\\sim\\mu$ and a standard Gaussian $k\\times d$ matrix $X$ independently."
+   },
+   {
+    "anchor": "stmt-ld-lem-block",
+    "claim_id": "claim-dyadic-block-information",
+    "statement": "Suppose $W$ has at most $N$ values and conditional probabilities $\\pi_w(X,X\\phi(Z))$."
+   },
+   {
+    "anchor": "stmt-ld-lem-block",
+    "claim_id": "claim-dyadic-block-information",
+    "statement": "Assume each $\\pi_w$ is Borel on $\\mathbb R^{k\\times d}\\times\\mathbb R^k$, with $\\pi_w\\ge0$ and $\\sum_w\\pi_w(X,y)=1$ for every $(X,y)$."
+   },
+   {
+    "anchor": "ld:sec:localization",
+    "claim_id": "claim-deepest-heavy-cell",
+    "statement": "Fix a finite-valued history $H$ and a value $h$ of probability $p>0$. Suppose the posterior $\\lambda=\\mathcal L(Z\\mid H=h)$ is supported in a level-$J$ dyadic cell $Q$."
+   },
+   {
+    "anchor": "stmt-ld-cor-streaming",
+    "claim_id": "claim-dyadic-streaming-precision",
+    "statement": "Suppose $M(d)=o(d^2)$ and $0<\\epsilon(d)\\le1/10$."
+   },
+   {
+    "anchor": "stmt-ld-cor-streaming",
+    "claim_id": "claim-dyadic-streaming-precision",
+    "statement": "If a family of learners in the model of Section <a href=\"#l:model\" data-reference-type=\"ref\" data-reference=\"l:model\">2</a> satisfies $$\\mathbb P\\{\\arccos\\langle\\widehat s,s\\rangle\\le\\epsilon(d)\\}\n \\ge2/3\\qquad\\text{for every }s\\in S^{d-1},$$"
+   },
+   {
+    "anchor": "stmt-l-maxscore-refinement",
+    "claim_id": "claim-maximum-score-refinement",
+    "statement": "Let a positive-probability discrete history, of probability $P>0$, have posterior $\\pi$ for $Z\\sim\\tau$, supported on a depth-$i$ cell $C$."
+   },
+   {
+    "anchor": "stmt-l-maxscore-projection",
+    "claim_id": "claim-restricted-projection-moment",
+    "statement": "Let $\\mu$ be a probability measure supported on a depth-$i$ cell $C\\subseteq Q$ satisfying <a href=\"#l:maxscore:spread\" data-reference-type=\"eqref\" data-reference=\"l:maxscore:spread\">[l:maxscore:spread]</a> with slack $a\\ge0$."
+   },
+   {
+    "anchor": "stmt-l-maxscore-projection",
+    "claim_id": "claim-restricted-projection-moment",
+    "statement": "Set $r=2^{-i}$."
+   },
+   {
+    "anchor": "stmt-l-maxscore-block",
+    "claim_id": "claim-maximum-score-block-information",
+    "statement": "In the setting of Lemma <a href=\"#l:maxscore:projection\" data-reference-type=\"ref\" data-reference=\"l:maxscore:projection\">11</a>, let $Z\\sim\\mu$ be independent of $A$."
+   },
+   {
+    "anchor": "stmt-l-maxscore-block",
+    "claim_id": "claim-maximum-score-block-information",
+    "statement": "Suppose a variable $U$, taking at most $W\\le(k+2)2^{d^2}$ values, is generated from the exact data $(A,As(Z))$ by a measurable probability kernel."
+   },
+   {
+    "anchor": "stmt-l-maxscore-iteration",
+    "claim_id": "claim-maximum-score-iteration",
+    "statement": "Suppose $M\\le d^2$."
+   },
+   {
+    "anchor": "stmt-l-finite-entropy-regularization",
+    "claim_id": "claim-finite-entropy-regularization",
+    "statement": "Suppose $P\\ll\\mu_C$ and $K_0=D(P\\Vert\\mu_C)<\\infty$."
+   },
+   {
+    "anchor": "stmt-l-finite-entropy-ball",
+    "claim_id": "claim-regular-law-ball-bound",
+    "statement": "Suppose $d\\ge3$ and $P$ is regular on a depth-$j$ cell."
+   },
+   {
+    "anchor": "stmt-l-finite-entropy-ball",
+    "claim_id": "claim-regular-law-ball-bound",
+    "statement": "Let $z$ be the graph image of its center and set $R=2\\,2^{-j}$."
+   },
+   {
+    "anchor": "stmt-l-finite-entropy-projection",
+    "claim_id": "claim-projection-density-multiplier",
+    "statement": "Fix $\\beta=1/3$, put $\\gamma=\\beta/2=1/6$, and let $p=\\lfloor\\beta d/2\\rfloor\\ge2$."
+   },
+   {
+    "anchor": "stmt-l-finite-entropy-projection",
+    "claim_id": "claim-projection-density-multiplier",
+    "statement": "Let $1\\le k\\le\\gamma d/2$"
+   },
+   {
+    "anchor": "stmt-l-finite-entropy-projection",
+    "claim_id": "claim-projection-density-multiplier",
+    "statement": "Suppose that $\\nu$ is a finite positive Borel measure of mass at most one, supported in $B(z,R)$ for $R>0$, and that for some $a\\ge0$, $$\\nu(B(x,r))\\le e^{ad}C_0^d(r/R)^{\\beta d}\n \\quad(x\\in\\mathbb R^d,\\ 0<r\\le R).$$"
+   },
+   {
+    "anchor": "stmt-l-finite-entropy-block",
+    "claim_id": "claim-regular-block-information",
+    "statement": "Let $W$ have any law $P$ regular on one cell of $Q_{\\mathrm{ho}}$, let $A$ be an independent $k$-by-$d$ standard Gaussian matrix, and put $Y=As(W)$."
+   },
+   {
+    "anchor": "stmt-l-finite-entropy-block",
+    "claim_id": "claim-regular-block-information",
+    "statement": "Suppose $U$ takes at most $m_d$ values and is conditionally independent of $W$ given $(A,Y)$."
+   },
+   {
+    "anchor": "stmt-l-finite-entropy-block",
+    "claim_id": "claim-regular-block-information",
+    "statement": "$\\log m_d=o(d^2)$"
+   },
+   {
+    "anchor": "stmt-l-bounded-split-decomposition",
+    "claim_id": "claim-bounded-density-split",
+    "statement": "Let $\\mu$ be a probability supported on a dyadic cell $A$, with bounded density relative to $\\tau_A$."
+   },
+   {
+    "anchor": "stmt-l-bounded-split-density",
+    "claim_id": "claim-split-exact-label-density",
+    "statement": "Let $\\mu$ be a probability on a depth-$h$ dyadic cell $A$ such that, for some $q\\in(0,1]$, every relative-depth-$\\ell$ descendant $D$ satisfies $\\mu(D)\\le q^{-1}2^{-n\\ell/2}$."
+   },
+   {
+    "anchor": "stmt-l-bounded-split-density",
+    "claim_id": "claim-split-exact-label-density",
+    "statement": "Put $Q_*=\\log(1/q)$, $R=2^{-h}$, and $s_0=s(\\operatorname{center}A)$, with $J,p$ as fixed above."
+   },
+   {
+    "anchor": "stmt-l-bounded-split-density",
+    "claim_id": "claim-split-exact-label-density",
+    "statement": "Let $X'$ have $J$ independent standard Gaussian rows, independently of $z\\sim\\mu$, and put $b=X'(s(z)-s_0)$."
+   },
+   {
+    "anchor": "stmt-l-bounded-split-block",
+    "claim_id": "claim-split-block-information",
+    "statement": "Let $\\mu$ be a probability on a depth-$h$ dyadic cell $A$ such that, for some $q\\in(0,1]$, every relative-depth-$\\ell$ descendant $D$ satisfies $\\mu(D)\\le q^{-1}2^{-n\\ell/2}$, and put $Q_*=\\log(1/q)$."
+   },
+   {
+    "anchor": "stmt-l-bounded-split-block",
+    "claim_id": "claim-split-block-information",
+    "statement": "Suppose $\\log W\\le n^2$, with $k=\\lfloor n/64\\rfloor$ as above."
+   },
+   {
+    "anchor": "stmt-l-bounded-split-iteration",
+    "claim_id": "claim-finite-split-iteration",
+    "statement": "Let $z\\sim\\tau$, and let $B\\ge0$ and $W\\ge1$ be integers with $\\log W\\le n^2$."
+   },
+   {
+    "anchor": "stmt-l-bounded-split-iteration",
+    "claim_id": "claim-finite-split-iteration",
+    "statement": "Independently of $z$, draw independent standard Gaussian $k\\times d$ matrices $X_1,\\ldots,X_B$, with $k$ as fixed above."
+   },
+   {
+    "anchor": "stmt-l-bounded-split-iteration",
+    "claim_id": "claim-finite-split-iteration",
+    "statement": "Consider a computation with a fixed initial state $u_0$ and at most $W$ states at each block boundary."
+   },
+   {
+    "anchor": "stmt-l-bounded-split-iteration",
+    "claim_id": "claim-finite-split-iteration",
+    "statement": "At block $b$, the outgoing state $u_b$ is an everywhere-defined Borel function of $(u_{b-1},X_b,X_bs(z))$.*\n\n*Before each block one can reveal a finite partition label $i_b$, determined by $z$ and the preceding analysis history, such that the complete history $$\\mathcal H=(i_1,u_1,\\ldots,i_B,u_B)$$ has finite range and satisfies $I(z;\\mathcal H)\\le4C'nB$ for an absolute constant $C'>0$ and all sufficiently large $n$."
+   },
+   {
+    "anchor": "stmt-thm-l-lt-precision",
+    "claim_id": "claim-likelihood-truncation-precision",
+    "statement": "Let $M(d)=o(d^2)$ be a nonnegative integer-valued memory bound, and let $0<\\epsilon(d)\\le1/10$."
+   },
+   {
+    "anchor": "stmt-thm-l-lt-precision",
+    "claim_id": "claim-likelihood-truncation-precision",
+    "statement": "Suppose a family of learners in the model above satisfies $$\\mathbb P\\!\\left\\{\\arccos\\langle\\widehat s,s\\rangle\n              \\le\\epsilon(d)\\right\\}\\ge\\frac23\n \\qquad\\text{for every }s\\in S^{d-1}.$$"
+   },
+   {
+    "anchor": "stmt-lem-l-lt-borel",
+    "claim_id": "claim-deterministic-borel-cube-reduction",
+    "statement": "Fix $d\\ge2$, $M$, and a finite horizon $T$."
+   },
+   {
+    "anchor": "stmt-lem-l-lt-borel",
+    "claim_id": "claim-deterministic-borel-cube-reduction",
+    "statement": "If a learner in the stated model has average success at least $2/3$ under <a href=\"#l:lt:chart\" data-reference-type=\"eqref\" data-reference=\"l:lt:chart\">[l:lt:chart]</a>,"
+   },
+   {
+    "anchor": "stmt-lem-l-lt-projection",
+    "claim_id": "claim-truncation-restricted-projection",
+    "statement": "Let $P$ be regular in a cell $C$ of scale $R$."
+   },
+   {
+    "anchor": "stmt-lem-l-lt-projection",
+    "claim_id": "claim-truncation-restricted-projection",
+    "statement": "a Borel set $E\\subseteq C$ of mass $\\rho=P(E)>0$"
+   },
+   {
+    "anchor": "stmt-lem-l-lt-likelihood",
+    "claim_id": "claim-regular-cell-likelihood-cutoff",
+    "statement": "Let $P$ be regular in a cell $C$, let $A\\sim\\gamma_{n,d}$ be independent of $z\\sim P$, and let $$W=f(A,As(z))$$ for a Borel map $f$ with at most $N$ values."
+   },
+   {
+    "anchor": "stmt-lem-l-lt-likelihood",
+    "claim_id": "claim-regular-cell-likelihood-cutoff",
+    "statement": "Suppose $N^{1/k}\\le2^d$"
+   },
+   {
+    "anchor": "stmt-lem-l-lt-selection-step",
+    "claim_id": "claim-selected-cell-survival-step",
+    "statement": "Suppose a positive-probability history after $t$ blocks has a fixed state and a conditional law satisfying <a href=\"#l:lt:regular\" data-reference-type=\"eqref\" data-reference=\"l:lt:regular\">[l:lt:regular]</a> and <a href=\"#l:lt:density-depth\" data-reference-type=\"eqref\" data-reference=\"l:lt:density-depth\">[l:lt:density-depth]</a> in a cell $C$ of depth $l$."
+   },
+   {
+    "anchor": "stmt-prop-l-lt-forward",
+    "claim_id": "claim-finite-horizon-cube-success",
+    "statement": "For sufficiently large $d$, consider a deterministic Borel computation padded to $m\\ge0$ blocks of $n$ rows as above."
+   },
+   {
+    "anchor": "stmt-prop-l-lt-forward",
+    "claim_id": "claim-finite-horizon-cube-success",
+    "statement": "Suppose its boundary alphabet has size at most $N$, where $N^{1/k}\\le2^d$, and its final boundary state fixes its unit output."
+   },
+   {
+    "anchor": "stmt-lem-l-lt-residual",
+    "claim_id": "claim-residual-sphere-sample-endpoint",
+    "statement": "For $0<\\epsilon\\le1/10$ and all sufficiently large $d$"
+   },
+   {
+    "anchor": "stmt-lem-l-lt-residual",
+    "claim_id": "claim-residual-sphere-sample-endpoint",
+    "statement": "success at least $2/3$ for every unit signal"
+   },
+   {
+    "anchor": "stmt-l-grid-refinement",
+    "claim_id": "claim-charged-grid-refinement",
+    "statement": "Let $S\\sim\\sigma$, and let $G,W$ be countable discrete variables with $H(G,W)<\\infty$."
+   },
+   {
+    "anchor": "stmt-l-grid-refinement",
+    "claim_id": "claim-charged-grid-refinement",
+    "statement": "Suppose $G$ determines an integer $a\\ge0$ and a level-$a$ cube containing $S$ almost surely, and that $\\mathbb E a<\\infty$."
+   },
+   {
+    "anchor": "stmt-l-grid-block",
+    "claim_id": "claim-grid-block-information",
+    "statement": "Let $S\\sim\\sigma$."
+   },
+   {
+    "anchor": "stmt-l-grid-block",
+    "claim_id": "claim-grid-block-information",
+    "statement": "Let $G$ be countable with $H(G)<\\infty$, and suppose that it determines an integer $a\\ge0$ and a level-$a$ cube containing $S$, with $\\mathbb E a<\\infty$."
+   },
+   {
+    "anchor": "stmt-l-grid-block",
+    "claim_id": "claim-grid-block-information",
+    "statement": "Independently of $(S,G)$, draw a standard Gaussian $k$-by-$d$ matrix $A$. Given $(A,AS,G)$, let a measurable probability kernel produce $W$, with at most $e^m$ possible values for each $G=g$, where $m\\ge0$."
+   },
+   {
+    "anchor": "stmt-l-grid-iteration",
+    "claim_id": "claim-grid-information-iteration",
+    "statement": "Let $S\\sim\\sigma$, and start from a fixed state."
+   },
+   {
+    "anchor": "stmt-l-grid-iteration",
+    "claim_id": "claim-grid-information-iteration",
+    "statement": "Let $B\\ge0$ be an integer."
+   },
+   {
+    "anchor": "stmt-l-grid-iteration",
+    "claim_id": "claim-grid-information-iteration",
+    "statement": "Consider $B$ blocks, each consisting of $k$ fresh standard Gaussian rows and their exact labels. In each block, the outgoing state is a measurable kernel of the incoming state and that block’s data, and its alphabet has logarithm at most $m\\ge0$."
+   },
+   {
+    "anchor": "stmt-l-grid-precision",
+    "claim_id": "claim-grid-spherical-precision",
+    "statement": "Let $M(d)=o(d^2)$ and $0<\\epsilon(d)\\le1/10$."
+   },
+   {
+    "anchor": "stmt-l-grid-precision",
+    "claim_id": "claim-grid-spherical-precision",
+    "statement": "uniform-sphere average angular success at least $2/3$"
+   },
+   {
+    "anchor": "stmt-l-side-local-information",
+    "claim_id": "claim-locally-diffuse-message-information",
+    "statement": "Let $\\nu\\ll\\mu$ be a probability measure supported in $B(c,R)$, where $c\\in\\mathbb R^d$ and $R>0$."
+   },
+   {
+    "anchor": "stmt-l-side-local-information",
+    "claim_id": "claim-locally-diffuse-message-information",
+    "statement": "Suppose that for $\\nu$-almost every $s$, simultaneously for all $r>0$, $$\\label{l:side:local-mass}\n \\nu(B(s,r))\\le K(r/R)^\\alpha,\\qquad K\\ge1.$$"
+   },
+   {
+    "anchor": "stmt-l-side-local-information",
+    "claim_id": "claim-locally-diffuse-message-information",
+    "statement": "$1\\le k\\le k_*$"
+   },
+   {
+    "anchor": "stmt-l-side-adaptive",
+    "claim_id": "claim-adaptive-cells-with-side-data",
+    "statement": "Let $\\nu$ be a probability measure with $d\\nu/d\\mu\\le B<\\infty$."
+   },
+   {
+    "anchor": "stmt-l-side-adaptive",
+    "claim_id": "claim-adaptive-cells-with-side-data",
+    "statement": "Draw $S\\sim\\nu$, an independent standard Gaussian $k$-by-$d$ matrix $A$ with $1\\le k\\le k_*$, and a message $Z$ in an alphabet of size $w\\ge1$ from a measurable kernel of $(A,AS)$. Independently of the signal, the matrix, and the message randomness, draw a standard Gaussian $\\ell$-by-$d$ matrix $W$, and put $D_*=(W,WS)$."
+   },
+   {
+    "anchor": "stmt-l-sep-information",
+    "claim_id": "claim-sliced-potential-information",
+    "statement": "For the preceding $K,r$ and a fresh block"
+   },
+   {
+    "anchor": "l:sep:area-bound",
+    "claim_id": "claim-sliced-potential-information",
+    "statement": "Let $K$ be a countable transcript with $H(K)<\\infty$. Suppose $K$ specifies a closed ball $B(z,r)$ containing $S$, where $0<r\\le1$, and put $$\\Lambda=\\mathbb E[-\\log r]<\\infty.$$"
+   },
+   {
+    "anchor": "pm-h-42",
+    "claim_id": "claim-separated-tuple-localization",
+    "statement": "Let $A=(X_A,Y_A)$ be the actual next block, fresh relative to $K$. Let $W$ be its outgoing message, with at most $e^b$ values."
+   },
+   {
+    "anchor": "pm-h-43",
+    "claim_id": "claim-equal-label-tuple-comparison",
+    "statement": "Use the coupling of Lemma <a href=\"#l:sep:localization\" data-reference-type=\"ref\" data-reference=\"l:sep:localization\">38</a> conditional on $(K,A,C_*)$, and draw a common $W$ from the learner’s kernel given $(K,A)$."
+   },
+   {
+    "anchor": "stmt-l-sep-recurrence",
+    "claim_id": "claim-controlled-horizon-recurrence",
+    "statement": "Suppose the outgoing message has at most $e^b$ values, with $b\\le d^2$."
+   },
+   {
+    "anchor": "stmt-l-sep-theorem",
+    "claim_id": "claim-separated-tuple-precision",
+    "statement": "Let $M(d)=o(d^2)$ be integer-valued and let $0<\\epsilon(d)\\le1/10$."
+   },
+   {
+    "anchor": "stmt-l-sep-theorem",
+    "claim_id": "claim-separated-tuple-precision",
+    "statement": "uniform-sphere angular success probability at least $2/3$"
+   },
+   {
+    "anchor": "stmt-l-span-equal-label-assumption",
+    "claim_id": "claim-equal-label-finite-measure",
+    "statement": "Let $r\\ge1$, $p\\ge2$, and $r+p-1\\le d-2$."
+   },
+   {
+    "anchor": "stmt-l-span-extra-moment",
+    "claim_id": "claim-extra-inverse-volume-moment",
+    "statement": "Let $k\\ge1$, $p\\ge2$, and $k+p+1<d$."
+   },
+   {
+    "anchor": "l:span:incoming",
+    "claim_id": "claim-finite-entropy-replica-likelihood",
+    "statement": "Suppose $A$ contains the state at the beginning of a block. Assume that the conditional signal law $f_A\\mu$ is supported in an $A$-measurable closed ball $B(c_A,r_A)$, where $0<r_A\\le1$, and $$\\mathcal D(A)<\\infty,\\qquad\n \\mathbb E|\\log r_A|<\\infty.\n \\label{l:span:incoming}$$"
+   },
+   {
+    "anchor": "pm-h-49",
+    "claim_id": "claim-uniformly-selected-replica-information",
+    "statement": "Choose an independent uniform $I\\in\\{1,\\ldots,p\\}$, use $s_I$ as the signal for the next block, and set $$A_*=(A,w,I,s_1,\\ldots,s_{I-1}).$$"
+   },
+   {
+    "anchor": "pm-h-49",
+    "claim_id": "claim-predecessor-span-ball-code",
+    "statement": "Choose an independent uniform $I\\in\\{1,\\ldots,p\\}$, use $s_I$ as the signal for the next block, and set $$A_*=(A,w,I,s_1,\\ldots,s_{I-1}).$$"
+   },
+   {
+    "anchor": "stmt-l-span-block-bound",
+    "claim_id": "claim-predecessor-span-block-success",
+    "statement": "For sufficiently large $d$"
+   },
+   {
+    "anchor": "stmt-l-span-block-bound",
+    "claim_id": "claim-predecessor-span-block-success",
+    "statement": "$\\log W\\le2d^2$"
+   },
+   {
+    "anchor": "stmt-l-span-block-bound",
+    "claim_id": "claim-predecessor-span-block-success",
+    "statement": "$0<\\epsilon\\le1/10$"
+   },
+   {
+    "anchor": "stmt-l-span-theorem",
+    "claim_id": "claim-predecessor-span-precision",
+    "statement": "Let $M(d)=o(d^2)$ be integer-valued and let $0<\\epsilon(d)\\le1/10$."
+   },
+   {
+    "anchor": "stmt-l-span-theorem",
+    "claim_id": "claim-predecessor-span-precision",
+    "statement": "angular success probability is at least $2/3$"
+   },
+   {
+    "anchor": "stmt-l-span-theorem",
+    "claim_id": "claim-predecessor-span-precision",
+    "statement": "for a uniform spherical signal"
+   },
+   {
+    "anchor": "lk:definition",
+    "claim_id": "claim-kernel-convexity-coercivity",
+    "statement": "For a probability measure $\\nu\\le H\\sigma$, $H<\\infty$"
+   },
+   {
+    "anchor": "lk:definition",
+    "claim_id": "claim-kernel-convexity-coercivity",
+    "statement": "$2p<n$"
+   },
+   {
+    "anchor": "stmt-lk-density",
+    "claim_id": "claim-projection-density-versions",
+    "statement": "Let $1\\le\\ell<d-1$, let $G$ have $\\ell$ independent standard Gaussian rows, and let $\\nu\\le H\\sigma$ be a probability measure."
+   },
+   {
+    "anchor": "stmt-lk-density",
+    "claim_id": "claim-projection-density-versions",
+    "statement": "If instead $G$ and $S\\sim\\sigma$ are marginally independent and $W$ is finite with any joint law with them,"
+   },
+   {
+    "anchor": "stmt-lk-entropy",
+    "claim_id": "claim-kernel-projection-entropy",
+    "statement": "Let $X$ have $p$ independent standard Gaussian rows and be independent of $S\\sim\\nu\\le H\\sigma$, $H\\ge1$."
+   },
+   {
+    "anchor": "stmt-lk-mixed-input",
+    "claim_id": "claim-mixed-positive-scale-projection",
+    "statement": "Let $m,r,q\\ge1$ be integers, $\\ell=m+r<n=d-1$, and $\\ell-m-(q-1)\\ge1$."
+   },
+   {
+    "anchor": "stmt-lk-mixed-input",
+    "claim_id": "claim-mixed-positive-scale-projection",
+    "statement": "Let $\\rho$ be a finite measure on the sphere such that, for every ambient $z$ and $t>0$, $\\rho(B(z,t))\\le Bt^\\ell$ and $\\rho(B(z,t))\\le Dt^n$, with $B,D>0$."
+   },
+   {
+    "anchor": "stmt-lk-reweight",
+    "claim_id": "claim-kernel-reweighting",
+    "statement": "For $\\nu\\le H\\sigma$"
+   },
+   {
+    "anchor": "stmt-lk-reweight",
+    "claim_id": "claim-kernel-reweighting",
+    "statement": "define $d\\rho=d\\nu/J_\\nu$."
+   },
+   {
+    "anchor": "stmt-lk-drift",
+    "claim_id": "claim-kernel-functional-drift",
+    "statement": "Let $S\\sim\\sigma$, let $V$ have at most $N$ values, and let a $k$-row Gaussian matrix $A$ be independent of $(S,V)$."
+   },
+   {
+    "anchor": "stmt-lk-drift",
+    "claim_id": "claim-kernel-functional-drift",
+    "statement": "Suppose $W$ has at most $N$ values and is generated by a Borel probability kernel of $(V,A,AS)$ and independent randomness."
+   },
+   {
+    "anchor": "stmt-lk-drift",
+    "claim_id": "claim-kernel-functional-drift",
+    "statement": "$\\log N\\le d^2$"
+   },
+   {
+    "anchor": "stmt-lk-regression",
+    "claim_id": "claim-kernel-regression-precision",
+    "statement": "Let $M(d)=o(d^2)$ and $0<\\epsilon(d)\\le1/10$."
+   },
+   {
+    "anchor": "stmt-lk-regression",
+    "claim_id": "claim-kernel-regression-precision",
+    "statement": "uniform-sphere average angular success at least $2/3$"
+   },
+   {
+    "anchor": "stmt-lc-cell-coercivity",
+    "claim_id": "claim-cell-correction-coercivity",
+    "statement": "For the conditional laws and selected-cell partition just defined"
+   },
+   {
+    "anchor": "stmt-lc-cell-inverse",
+    "claim_id": "claim-inverse-volume-arbitrary-scales",
+    "statement": "Let $n=k=\\lfloor d/100\\rfloor$ and $\\alpha=(d-1)/2$, with $d$ sufficiently large."
+   },
+   {
+    "anchor": "stmt-lc-cell-inverse",
+    "claim_id": "claim-inverse-volume-arbitrary-scales",
+    "statement": "Suppose a Borel probability $\\nu$ on $\\mathbb R^d$ satisfies $\\nu(B(x,r))\\le r^\\alpha$ for all $x,r$."
+   },
+   {
+    "anchor": "stmt-lc-cell-moment",
+    "claim_id": "claim-fixed-target-projection-moment",
+    "statement": "For a subprobability $\\eta\\ll\\sigma$ on the sphere satisfying <a href=\"#lc:cell-eq3\" data-reference-type=\"eqref\" data-reference=\"lc:cell-eq3\">[lc:cell-eq3]</a>, let $q=\\eta(S^{d-1})>0$."
+   },
+   {
+    "anchor": "stmt-lc-cell-fiber-comparison",
+    "claim_id": "claim-exact-fiber-information-comparison",
+    "statement": "With the incoming selected part $D$, outgoing mass bin $t$, and density versions specified above"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Repeated dyadic localization information bound",
+    "evidence": [
+     {
+      "anchor": "pm-h-3",
+      "quote": "The proof first inserts arbitrary $L^2$ weights into the posterior, bounds the exact projected density in $L^m$, and then uses duality to control the message likelihoods.",
+      "quote_sha256": "dc28f9c3546ecee4e852354e675fd1e07dcf0de08c31b97735f533db0284e085"
+     },
+     {
+      "anchor": "proof-stmt-ld-lem-heavy",
+      "quote": "Notice that this uses the probability $p_R$ of *selection*; replacing $p_R$ by $\\lambda(R)$ would condition on a different event.",
+      "quote_sha256": "3ba7a375c65aea43f35ae2e5166cf2b3d5e3b027248fc04c7bf03705e7f2f2f0"
+     }
+    ],
+    "requires_concepts": [
+     "Uniform cube chart",
+     "Dyadic descendant mass bounds",
+     "Weighted exact projection density",
+     "Finite-message information",
+     "Selection-event normalization",
+     "Conditional information chain rule"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Predecessor-span information bound",
+    "evidence": [
+     {
+      "anchor": "stmt-l-span-extra-moment",
+      "quote": "Let $k\\ge1$, $p\\ge2$, and $k+p+1<d$.",
+      "quote_sha256": "c6cda8d0fd490d33f61d84d695b54826fdf0b711e44cf7c252b148e4084cf180"
+     },
+     {
+      "anchor": "proof-stmt-l-span-likelihood",
+      "quote": "In particular, no bounded posterior theorem has been applied to $f_A$; the only geometric input was the identity for $\\mu$.",
+      "quote_sha256": "942cd225648dc11a5fe4107b6f4c97f2d9fb168a24afadefbc2cd26cf513c286"
+     },
+     {
+      "anchor": "proof-stmt-l-span-selected",
+      "quote": "The product-reference chain rule and the uniform choice of $I$ give the exact identity $$\\mathcal D(A_*)\n =\\frac1p\\,\\mathbb E D\\!\\left(\n     \\mathcal L(\\mathbf s\\mid A,w)\\middle\\|\\mu^{\\otimes p}\\right).$$",
+      "quote_sha256": "e8051ca8bd4c52e44ce23fce42d4a120cd83d4af55de2e8c288ffb333e9f0181"
+     }
+    ],
+    "requires_concepts": [
+     "Equal-label finite-measure identity",
+     "Additional inverse-volume moment",
+     "Finite-relative-entropy replica likelihood",
+     "Uniform replica selection",
+     "Countable prefix coding"
+    ],
+    "supporting_pm_ids": [
+     "PM-140.2"
+    ]
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-borel-replacement",
+   "exact_statement": "Let $P$ be a probability measure on $S^{d-1}$ such that, for independent $S\\sim P$ and $x\\sim\\gamma_d$, the pair $(x,\\langle x,S\\rangle)$ has law absolutely continuous with respect to $\\lambda$. Fix a realization of the shared rule randomness and a finite horizon. Every completed-measurable finite-state learner has everywhere-defined Borel transition and stopping kernels with the same state sets and output laws and the same $P$-prior joint law of the signal, state path, stopping index, and output.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-borel"
+  },
+  {
+   "claim_id": "claim-prior-absolute-continuity",
+   "exact_statement": "The hypothesis of Lemma <a href=\"#l:borel\" data-reference-type=\"ref\" data-reference=\"l:borel\">1</a> holds for uniform probability $\\sigma$ on $S^{d-1}$, $d\\ge2$. It also holds for $S=\\phi(Z)$ when $Z$ has a density relative to Lebesgue measure on a bounded $q$-dimensional cube, $q\\ge1$, and $\\phi$ is $C^1$ on a neighborhood of its interior with $\\operatorname{rank}D\\phi(z)\\ge1$ for almost every $z$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-prior-ac"
+  },
+  {
+   "claim_id": "claim-caps-and-residual-endpoint",
+   "exact_statement": "Write $n=d-1$. Uniform spherical probability satisfies $$\\sigma(B(u,r))\\le r^n\\quad(u\\in S^{d-1},\\ r>0),\n \\qquad\n \\sigma(B(z,r))\\le(2r)^n\\quad(z\\in\\mathbb R^d,\\ r>0).$$ If $S\\sim\\sigma$, $0\\le T<d$ independent Gaussian rows and all their exact labels are revealed, and an estimate uses these data and independent randomness, then for every $0<\\epsilon<r_0<1$, $$\\label{l:raw-success}\n \\mathbb P\\{\\|\\widehat S-S\\|\\le\\epsilon\\}\n \\le \\frac12+\\frac12\\,\n \\mathbb P\\!\\left\\{\\|P_{\\ker X}S\\|\\le r_0\\right\\}\n \\le \\frac12+\\frac{T}{2d(1-r_0^2)}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-caps-endpoint"
+  },
+  {
+   "claim_id": "claim-cube-chart-geometry",
+   "exact_statement": "The map $\\phi$ is $2$-Lipschitz, and a level-$J$ dyadic cell has side $2^{-J}/\\sqrt n$ and $\\mu_0$-mass $2^{-nJ}$. For every fixed $v\\in S^{d-1}$ and $\\epsilon>0$, $$\\mu_0\\{z:\\arccos\\langle\\phi(z),v\\rangle\\le\\epsilon\\}\n \\le \\bigl(\\sqrt{2\\pi e}\\,\\epsilon\\bigr)^n\n \\le(5\\epsilon)^n.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-ld-cube-geometry"
+  },
+  {
+   "claim_id": "claim-repeated-dyadic-localization",
+   "exact_statement": "There is an absolute constant $c>0$ with the following property. For any fixed $C_0>0$, consider the experiment above with $t\\ge0$ blocks and $N\\ge1$ possible message values, and suppose $$\\label{ld:eq:alphabet}\n \\bigl(2/m+e^{-ck}\\bigr)\\log N\\le C_0d.$$ One can reveal nested dyadic cells $Q_0\\supset Q_1\\supset\\cdots\\supset Q_t$ containing $Z$, where $Q_i$ is a finite-valued measurable function of $Z$, the preceding revelations, and $W_1,\\ldots,W_i$, so that the augmented transcript $$\\Pi_t=(W_1,Q_1,\\ldots,W_t,Q_t)$$ satisfies $$\\label{ld:eq:main}\n I(Z;\\Pi_t)\\le Cdt.$$ Here $C$ is a constant depending only on $C_0$. If $J_t$ is the level of $Q_t$, the construction also gives $\\mathbb EJ_t\\le Ct$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ld-thm-main"
+  },
+  {
+   "claim_id": "claim-weighted-exact-projection",
+   "exact_statement": "Under <a href=\"#ld:eq:spread\" data-reference-type=\"eqref\" data-reference=\"ld:eq:spread\">[ld:eq:spread]</a>, for every measurable $h$ with $\\|h\\|_{L^2(\\mu)}\\le1$, put $\\nu=|h|\\mu$. The image of $P_X(dX)\\nu(dz)$ under $(X,z)\\mapsto(X,Xa(z))$ has a density $f_\\nu$ relative to $P_X(dX)\\,du$, where $du$ is Lebesgue measure on $\\mathbb R^k$, and $$\\label{ld:eq:density}\n \\|f_\\nu\\|_{L^m(P_Xdu)}\\le C^d B^{1/2}$$ for an absolute constant $C$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ld-lem-density"
+  },
+  {
+   "claim_id": "claim-dyadic-block-information",
+   "exact_statement": "Let $\\mu,Q,B$ satisfy <a href=\"#ld:eq:spread\" data-reference-type=\"eqref\" data-reference=\"ld:eq:spread\">[ld:eq:spread]</a>. Draw $Z\\sim\\mu$ and a standard Gaussian $k\\times d$ matrix $X$ independently. Suppose $W$ has at most $N$ values and conditional probabilities $\\pi_w(X,X\\phi(Z))$. Assume each $\\pi_w$ is Borel on $\\mathbb R^{k\\times d}\\times\\mathbb R^k$, with $\\pi_w\\ge0$ and $\\sum_w\\pi_w(X,y)=1$ for every $(X,y)$. Then $$\\label{ld:eq:block}\n I_\\mu(Z;W)\\le Cd+\\log B+\\bigl(2/m+e^{-ck}\\bigr)\\log N$$ for absolute constants $C,c>0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ld-lem-block"
+  },
+  {
+   "claim_id": "claim-deepest-heavy-cell",
+   "exact_statement": "The selection $U$ is measurable and finite-valued. Put $p_R=\\mathbb P(U=R\\mid H=h)$ for each selected cell of positive probability, and define $$B_R=\\max\\{1,2^{-\\alpha n j(R)}/p_R\\}.$$ The conditional law $\\mathcal L(Z\\mid H=h,U=R)$ satisfies <a href=\"#ld:eq:spread\" data-reference-type=\"eqref\" data-reference=\"ld:eq:spread\">[ld:eq:spread]</a> with parent $R$ and constant $B_R$. Moreover, $$\\begin{aligned}\n H(U)&\\le H(j(U))+\\alpha n\\log2\\,\\mathbb Ej(U),\\label{ld:eq:cell-entropy}\\\\\n H(j(U))&\\le\\log2\\,(\\mathbb Ej(U)+1),\\label{ld:eq:scale-entropy}\\\\\n \\mathbb E\\log B_U&\\le H(j(U))+1.\\label{ld:eq:excess-entropy}\n\\end{aligned}$$ Here every probability, entropy, and expectation is conditional on $H=h$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ld-lem-heavy"
+  },
+  {
+   "claim_id": "claim-dyadic-streaming-precision",
+   "exact_statement": "Suppose $M(d)=o(d^2)$ and $0<\\epsilon(d)\\le1/10$. If a family of learners in the model of Section <a href=\"#l:model\" data-reference-type=\"ref\" data-reference=\"l:model\">2</a> satisfies $$\\mathbb P\\{\\arccos\\langle\\widehat s,s\\rangle\\le\\epsilon(d)\\}\n \\ge2/3\\qquad\\text{for every }s\\in S^{d-1},$$ then $T(d)\\ge c d\\log(1/\\epsilon(d))$ for an absolute $c>0$ and all sufficiently large $d$. The dimension threshold may depend on the memory sequence.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ld-cor-streaming"
+  },
+  {
+   "claim_id": "claim-maximum-score-refinement",
+   "exact_statement": "Let a positive-probability discrete history, of probability $P>0$, have posterior $\\pi$ for $Z\\sim\\tau$, supported on a depth-$i$ cell $C$. Thus $\\pi\\le\\tau/P$. For $z\\in C$, let $C_{i+j}(z)$ be its depth-$(i+j)$ cell. Choose the first maximizer $J\\ge0$ of $$2^{\\beta j}\\pi(C_{i+j}(Z)),\\qquad j\\ge0,$$ and reveal $(J,B)$, where $B=C_{i+J}(Z)$. This is a measurable finite selection and $$J\\le\\frac{\\log(1/P)}{(n-\\beta)\\log2}.$$ For an outcome $(j,B)$ of conditional probability $p>0$, the resulting posterior satisfies <a href=\"#l:maxscore:spread\" data-reference-type=\"eqref\" data-reference=\"l:maxscore:spread\">[l:maxscore:spread]</a> in $B$ with slack $a'=\\log(\\pi(B)/p)\\ge0$. Conditionally on the original history, $$\\begin{aligned}\n \\mathbb E a'&\\le H(J)\\le(1+\\mathbb EJ)\\log2,\n \\label{l:maxscore:slack-charge}\\\\\n H(J,B)&\\le(\\beta+1)(\\log2)\\mathbb EJ+\\log2.\n \\label{l:maxscore:label-charge}\n\\end{aligned}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-l-maxscore-refinement"
+  },
+  {
+   "claim_id": "claim-restricted-projection-moment",
+   "exact_statement": "Let $\\mu$ be a probability measure supported on a depth-$i$ cell $C\\subseteq Q$ satisfying <a href=\"#l:maxscore:spread\" data-reference-type=\"eqref\" data-reference=\"l:maxscore:spread\">[l:maxscore:spread]</a> with slack $a\\ge0$. Set $r=2^{-i}$. There are absolute constants $C_2,C_3\\ge1$ such that, with $K=C_2^ne^a$, the following assertions hold. For every $\\mu$-measurable $F\\subseteq C$ of mass $f=\\mu(F)$ and every affine subspace $P\\subseteq\\mathbb R^d$ of dimension at most $\\ell$, $$\\label{l:maxscore:fractional}\n \\int_F\\operatorname{dist}(s(z),P)^{-k}\\,d\\mu(z)\n \\le 2r^{-k}K^{1/3}f^{2/3}.$$ Let $\\gamma_{k,d}$ be the law of a $k$-by-$d$ standard Gaussian matrix $A$. The joint image of $\\gamma_{k,d}(dA)\\,\\mu|_F(dz)$ under $(A,z)\\mapsto(A,As(z))$ has a nonnegative density $v_F(A,b)$ relative to $\\gamma_{k,d}(dA)\\,db$, and $$\\label{l:maxscore:moment}\n \\int v_F(A,b)^\\ell\\,d\\gamma_{k,d}(A)\\,db\n \\le f\\left[C_3^k r^{-k}K^{1/3}f^{2/3}\\right]^{\\ell-1}.$$ In particular, for almost every $A$, $v_F(A,\\cdot)$ is a density of the image of the unnormalized measure $\\mu|_F$ under $As$. When $f=0$, all these measures and integrals are zero.",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-maxscore-projection"
+  },
+  {
+   "claim_id": "claim-maximum-score-block-information",
+   "exact_statement": "In the setting of Lemma <a href=\"#l:maxscore:projection\" data-reference-type=\"ref\" data-reference=\"l:maxscore:projection\">11</a>, let $Z\\sim\\mu$ be independent of $A$. Suppose a variable $U$, taking at most $W\\le(k+2)2^{d^2}$ values, is generated from the exact data $(A,As(Z))$ by a measurable probability kernel. There is an absolute $C_0$ such that, for all sufficiently large $d$, $$\\label{l:maxscore:block-information}\n I(Z;U)\\le C_0d+\\frac a2.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-maxscore-block"
+  },
+  {
+   "claim_id": "claim-maximum-score-iteration",
+   "exact_statement": "Suppose $M\\le d^2$. For $N=\\lceil T/k\\rceil$, the learner under $Z\\sim\\tau$ has an augmented discrete history $\\mathcal H_N$ satisfying $$\\label{l:maxscore:total-information}\n I(Z;\\mathcal H_N)\\le C_6dN,\\qquad\n I(Z;\\widehat S)\\le C_6dN$$ for an absolute $C_6$ and all sufficiently large $d$. If a data-independent shared seed selects the rules, the first inequality holds conditional on that seed with the same constant; the displayed output bound holds after averaging over it. The statement holds for every finite $T$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-maxscore-iteration"
+  },
+  {
+   "claim_id": "claim-finite-entropy-regularization",
+   "exact_statement": "Suppose $P\\ll\\mu_C$ and $K_0=D(P\\Vert\\mu_C)<\\infty$. For all sufficiently large $n$, a countable label determined by $W\\sim P$ specifies a descendant $C'$ and a conditional law $P'$ regular on $C'$. The label is the whole terminating history in the construction below, including every complement decision; $P'$ is conditioned on this label and need not be $P(\\,\\cdot\\mid C')$.*\n\n\n*Let $H$ be the increase in cell depth and $A_*$ the number of attempts. Then $$\\mathbb EH<\\infty,\\qquad\n \\mathbb EA_*\\le2(1+\\mathbb EH)<\\infty,$$ and, with $b=(1-\\alpha)(\\log2)/2$, $$\\label{l:finite-entropy:budget}\n \\mathbb E D(P'\\Vert\\mu_{C'})+bn\\,\\mathbb EH\\le K_0+2/e.$$ The hypothesis imposes no boundedness on $dP/d\\mu_C$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-l-finite-entropy-regularization"
+  },
+  {
+   "claim_id": "claim-regular-law-ball-bound",
+   "exact_statement": "Suppose $d\\ge3$ and $P$ is regular on a depth-$j$ cell. Let $z$ be the graph image of its center and set $R=2\\,2^{-j}$. Then the image of $P$ is supported in $B(z,R)$. With $\\beta=1/3$, there is an absolute $C_0\\ge1$ such that $$\\label{l:finite-entropy:ball-bound}\n P\\{w:\\|s(w)-x\\|\\le r\\}\n \\le C_0^d(r/R)^{\\beta d}\n \\quad(x\\in\\mathbb R^d,\\ 0<r\\le R).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-finite-entropy-ball"
+  },
+  {
+   "claim_id": "claim-projection-density-multiplier",
+   "exact_statement": "Fix $\\beta=1/3$, put $\\gamma=\\beta/2=1/6$, and let $p=\\lfloor\\beta d/2\\rfloor\\ge2$. Let $1\\le k\\le\\gamma d/2$, and let $\\rho$ be the law of a $k$-by-$d$ standard Gaussian matrix. Suppose that $\\nu$ is a finite positive Borel measure of mass at most one, supported in $B(z,R)$ for $R>0$, and that for some $a\\ge0$, $$\\nu(B(x,r))\\le e^{ad}C_0^d(r/R)^{\\beta d}\n \\quad(x\\in\\mathbb R^d,\\ 0<r\\le R).$$ The image of $\\rho(dA)\\nu(ds)$ under $(A,s)\\mapsto(A,As)$ has a nonnegative density $g$ relative to $\\rho(dA)\\,dy$ with $$\\label{l:finite-entropy:projection-moment}\n \\int g(A,y)^p\\,d\\rho(A)\\,dy\n \\le\\left[2R^{-k}e^{(a+C_1)k/\\gamma}\\right]^{p-1}.$$ Here $C_1\\ge0$ depends only on $C_0$, uniformly over all the other parameters in the stated ranges.",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-finite-entropy-projection"
+  },
+  {
+   "claim_id": "claim-regular-block-information",
+   "exact_statement": "There is an absolute $c_*>0$ such that the following holds for $k=\\lfloor c_*d\\rfloor$. Let $W$ have any law $P$ regular on one cell of $Q_{\\mathrm{ho}}$, let $A$ be an independent $k$-by-$d$ standard Gaussian matrix, and put $Y=As(W)$. Suppose $U$ takes at most $m_d$ values and is conditionally independent of $W$ given $(A,Y)$. If $\\log m_d=o(d^2)$, then $$\\label{l:finite-entropy:block-information}\n I(W;U)\\le2d$$ for all sufficiently large $d$, uniformly over these laws and channels. The threshold may depend on the alphabet sequence, while $c_*$ and the coefficient $2$ are absolute.",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-finite-entropy-block"
+  },
+  {
+   "claim_id": "claim-bounded-density-split",
+   "exact_statement": "Let $\\mu$ be a probability supported on a dyadic cell $A$, with bounded density relative to $\\tau_A$. There is a finite measurable partition into positive-probability labels $i$, with probabilities $p_i$, descendant cells $A_i$ of relative depths $j_i$, and numbers $q_i\\in(0,1]$. Writing $\\mu_i=\\mu(\\,\\cdot\\mid i)$ and $Q_i=\\log(1/q_i)$, each $\\mu_i$ is supported on $A_i$ and satisfies $$\\label{l:bounded-split:spread}\n \\mu_i(D)\\le q_i^{-1}2^{-n\\ell/2}$$ for every relative-depth-$\\ell$ descendant $D$ of $A_i$, and $$\\begin{aligned}\n -\\log p_i&\\le\\tfrac12n(\\log2)j_i+Q_i,\n &\\mathbb E_iQ_i&\\le1+\\mathbb E_i j_i.\n \\label{l:bounded-split:label-cost}\n\\end{aligned}$$ $$\\label{l:bounded-split:entropy-identity}\n \\mathbb E_iD(\\mu_i\\Vert\\tau_{A_i})\n =D(\\mu\\Vert\\tau_A)+H(i)-n(\\log2)\\mathbb E_i j_i.$$ The descendant bound includes $\\ell=0$, and $\\mathbb E_i$ means expectation with weights $p_i$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-l-bounded-split-decomposition"
+  },
+  {
+   "claim_id": "claim-split-exact-label-density",
+   "exact_statement": "Let $\\mu$ be a probability on a depth-$h$ dyadic cell $A$ such that, for some $q\\in(0,1]$, every relative-depth-$\\ell$ descendant $D$ satisfies $\\mu(D)\\le q^{-1}2^{-n\\ell/2}$. Put $Q_*=\\log(1/q)$, $R=2^{-h}$, and $s_0=s(\\operatorname{center}A)$, with $J,p$ as fixed above. Let $X'$ have $J$ independent standard Gaussian rows, independently of $z\\sim\\mu$, and put $b=X'(s(z)-s_0)$. On the open region $\\Omega=\\{b\\in\\mathbb R^J:\\|b\\|<3\\sqrt J R\\}$, the joint law of $(X',b)$ has a density $f$ relative to $dP_{X'}\\,db$. If $h_R$ is the density of $N(0,R^2I_J)$, then $$\\label{l:bounded-split:reference-norm}\n \\left\\|\\mathbf1_\\Omega f/h_R\\right\\|_\n {L^p(dP_{X'}h_R(b)\\,db)}\n \\le C^J e^{C(J/n)Q_*},$$ where $\\mathbf1_\\Omega f/h_R$ is extended by zero outside $\\Omega$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-bounded-split-density"
+  },
+  {
+   "claim_id": "claim-split-block-information",
+   "exact_statement": "Let $\\mu$ be a probability on a depth-$h$ dyadic cell $A$ such that, for some $q\\in(0,1]$, every relative-depth-$\\ell$ descendant $D$ satisfies $\\mu(D)\\le q^{-1}2^{-n\\ell/2}$, and put $Q_*=\\log(1/q)$. Suppose $\\log W\\le n^2$, with $k=\\lfloor n/64\\rfloor$ as above. From a fixed entering state, let $u$ be any variable with at most $W$ values obtained by a measurable probability kernel from a $k$-row standard Gaussian matrix $X$ and exact labels $Xs(z)$, where $X$ is independent of $z\\sim\\mu$. Then $$\\label{l:bounded-split:block-information}\n I_\\mu(z;u)\\le Cn+CQ_*.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-bounded-split-block"
+  },
+  {
+   "claim_id": "claim-finite-split-iteration",
+   "exact_statement": "Let $z\\sim\\tau$, and let $B\\ge0$ and $W\\ge1$ be integers with $\\log W\\le n^2$. Independently of $z$, draw independent standard Gaussian $k\\times d$ matrices $X_1,\\ldots,X_B$, with $k$ as fixed above. Consider a computation with a fixed initial state $u_0$ and at most $W$ states at each block boundary. At block $b$, the outgoing state $u_b$ is an everywhere-defined Borel function of $(u_{b-1},X_b,X_bs(z))$.*\n\n*Before each block one can reveal a finite partition label $i_b$, determined by $z$ and the preceding analysis history, such that the complete history $$\\mathcal H=(i_1,u_1,\\ldots,i_B,u_B)$$ has finite range and satisfies $I(z;\\mathcal H)\\le4C'nB$ for an absolute constant $C'>0$ and all sufficiently large $n$. The labels indicate nested dyadic cells containing $z$; they do not alter the computation’s state rules.",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-bounded-split-iteration"
+  },
+  {
+   "claim_id": "claim-likelihood-truncation-precision",
+   "exact_statement": "Let $M(d)=o(d^2)$ be a nonnegative integer-valued memory bound, and let $0<\\epsilon(d)\\le1/10$. Suppose a family of learners in the model above satisfies $$\\mathbb P\\!\\left\\{\\arccos\\langle\\widehat s,s\\rangle\n              \\le\\epsilon(d)\\right\\}\\ge\\frac23\n \\qquad\\text{for every }s\\in S^{d-1}.$$ There is an absolute $c>0$ such that, for all sufficiently large $d$, $$T(d)\\ge c\\,d\\log_2\\frac1{\\epsilon(d)}.$$ The eventual dimension threshold may depend on the memory sequence.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-l-lt-precision"
+  },
+  {
+   "claim_id": "claim-deterministic-borel-cube-reduction",
+   "exact_statement": "Fix $d\\ge2$, $M$, and a finite horizon $T$. If a learner in the stated model has average success at least $2/3$ under <a href=\"#l:lt:chart\" data-reference-type=\"eqref\" data-reference=\"l:lt:chart\">[l:lt:chart]</a>, then there is a deterministic learner with Borel transition and stopping rules, the same state and horizon bounds, and a fixed unit output at each terminal state/index label, whose average success under that prior is at least $3/5$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-l-lt-borel"
+  },
+  {
+   "claim_id": "claim-truncation-restricted-projection",
+   "exact_statement": "There are absolute constants $C_0,C_1,C_2\\ge1$ such that the following holds with <a href=\"#l:lt:parameters\" data-reference-type=\"eqref\" data-reference=\"l:lt:parameters\">[l:lt:parameters]</a> for all sufficiently large $d$. Let $P$ be regular in a cell $C$ of scale $R$. For every $x\\in\\mathbb R^d$, $u>0$, and affine subspace $H\\subseteq\\mathbb R^d$ of dimension at most $k$, $$\\begin{aligned}\n P\\{z:s(z)\\in B(x,u)\\}\n &\\le C_0^d(u/R)^\\lambda, \\label{l:lt:ball}\\\\\n P\\{z:\\operatorname{dist}(s(z),H)\\le u\\}\n &\\le(C_1u/R)^Q. \\label{l:lt:tube}\n\\end{aligned}$$ For a Borel set $E\\subseteq C$ of mass $\\rho=P(E)>0$, $$\\label{l:lt:inverse}\n \\int_E\\operatorname{dist}(s(z),H)^{-n}\\,dP(z)\n \\le C_2^dR^{-n}\\rho^{1-\\alpha}.$$*\n\n\n\n*Let $\\gamma_{n,d}$ denote standard Gaussian probability on $\\mathbb R^{n\\times d}$ and put $\\beta(dA,dy)=\\gamma_{n,d}(dA)\\,dy$. For $\\eta>0$, let $\\varphi_\\eta$ be the centered Gaussian density on $\\mathbb R^n$ with covariance $\\eta^2I_n$, and define $$J_\\eta(A,y)=\\int_E\\varphi_\\eta(y-As(z))\\,dP(z).$$ Then $$\\label{l:lt:moment}\n \\int J_\\eta^k\\,d\\beta\n \\le \\bigl(C_2^dR^{-n}\\bigr)^{k-1}\n       \\rho^{\\,1+(k-1)(1-\\alpha)}.$$ For every Borel joint set $B\\subseteq\n\\mathbb R^{n\\times d}\\times\\mathbb R^n$ with $\\beta(B)<\\infty$, the exact observations satisfy $$\\label{l:lt:exact-set}\n \\mathbb P_{z\\sim P,\\,A\\sim\\gamma_{n,d}}\n       \\{z\\in E,\\ (A,As(z))\\in B\\}\n \\le \\beta(B)^{1-1/k}\n       \\bigl(C_2^dR^{-n}\\bigr)^{1-1/k}\\rho^{1-\\alpha}.$$ The same assertions involving $E$ are trivial when $\\rho=0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-l-lt-projection"
+  },
+  {
+   "claim_id": "claim-regular-cell-likelihood-cutoff",
+   "exact_statement": "There are absolute $a,c_1>0$ and a dimension threshold such that the following holds. Let $P$ be regular in a cell $C$, let $A\\sim\\gamma_{n,d}$ be independent of $z\\sim P$, and let $$W=f(A,As(z))$$ for a Borel map $f$ with at most $N$ values. Suppose $N^{1/k}\\le2^d$, and set $$q_w(z)=\\mathbb P_A\\{f(A,As(z))=w\\},\\qquad\n b_w=\\int q_w\\,dP.$$ Then $$\\label{l:lt:likelihood-tail}\n \\mathbb P\\{q_W(z)>2^{ad}b_W\\}\\le2^{-c_1d}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-l-lt-likelihood"
+  },
+  {
+   "claim_id": "claim-selected-cell-survival-step",
+   "exact_statement": "Suppose a positive-probability history after $t$ blocks has a fixed state and a conditional law satisfying <a href=\"#l:lt:regular\" data-reference-type=\"eqref\" data-reference=\"l:lt:regular\">[l:lt:regular]</a> and <a href=\"#l:lt:density-depth\" data-reference-type=\"eqref\" data-reference=\"l:lt:density-depth\">[l:lt:density-depth]</a> in a cell $C$ of depth $l$. One can discard conditional probability at most $$\\label{l:lt:one-step-deletion}\n 3\\cdot2^{-c_1d}+(\\lfloor J_t\\rfloor+1)2^{-d},\n \\qquad\n J_t=\\frac{ad+1+Ddt}{p-\\lambda},$$ and partition the remaining outcomes into finitely many positive-probability histories satisfying both properties at time $t+1$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-l-lt-selection-step"
+  },
+  {
+   "claim_id": "claim-finite-horizon-cube-success",
+   "exact_statement": "For sufficiently large $d$, consider a deterministic Borel computation padded to $m\\ge0$ blocks of $n$ rows as above. Suppose its boundary alphabet has size at most $N$, where $N^{1/k}\\le2^d$, and its final boundary state fixes its unit output. Its average success under <a href=\"#l:lt:chart\" data-reference-type=\"eqref\" data-reference=\"l:lt:chart\">[l:lt:chart]</a> is at most $$\\label{l:lt:forward-bound}\n \\Delta_m+2^{2Ddm}(5\\epsilon)^p,\\qquad\n \\Delta_m=3m2^{-c_1d}\n       +2^{-d}\\sum_{t=0}^{m-1}(\\lfloor J_t\\rfloor+1).$$ The sum is empty when $m=0$. In particular, $\\Delta_m=o(1)$ for any sequence $m=o(d)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-l-lt-forward"
+  },
+  {
+   "claim_id": "claim-residual-sphere-sample-endpoint",
+   "exact_statement": "For $0<\\epsilon\\le1/10$ and all sufficiently large $d$, any learner with success at least $2/3$ for every unit signal must have $T>d/4$. This holds even if the learner is given all $T$ observations before producing its output.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-l-lt-residual"
+  },
+  {
+   "claim_id": "claim-charged-grid-refinement",
+   "exact_statement": "Let $S\\sim\\sigma$, and let $G,W$ be countable discrete variables with $H(G,W)<\\infty$. Suppose $G$ determines an integer $a\\ge0$ and a level-$a$ cube containing $S$ almost surely, and that $\\mathbb E a<\\infty$. For every pair $(g,w)$ of positive probability, put $\\mu=\\mathcal L(S\\mid G=g,W=w)$. For $\\mu$-almost every $s$, define $$J(s)=\\max_{j\\ge a}\n \\bigl\\{\\log\\mu(Q_j(s))+q(j-a)\\log2\\bigr\\},$$ and let $b(s)$ be the least level attaining this maximum. In the joint law define $$N=\\lfloor J(S)/d\\rfloor,\\qquad Z=(b(S),Q_{b(S)}(S)).$$ The choices are measurable and finite almost surely. They satisfy $\\mathbb E b<\\infty$, $H(G,W,Z)<\\infty$, and $$\\begin{aligned}\n 0\\le N&\\le b-a,\\label{l:grid:level-bound}\\\\\n \\mathbb E J\n &\\le-H(Z\\mid G,W)+H(b\\mid G,W)\n       +q(\\log2)\\mathbb E(b-a),\\label{l:grid:label-charge}\\\\\n H(b\\mid G,W)+H(N\\mid G,W)\n &\\le2\\bigl(1+\\mathbb E(b-a)\\bigr)\\log2.\n \\label{l:grid:level-entropies}\n\\end{aligned}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-l-grid-refinement"
+  },
+  {
+   "claim_id": "claim-grid-block-information",
+   "exact_statement": "Let $S\\sim\\sigma$. Let $G$ be countable with $H(G)<\\infty$, and suppose that it determines an integer $a\\ge0$ and a level-$a$ cube containing $S$, with $\\mathbb E a<\\infty$. Independently of $(S,G)$, draw a standard Gaussian $k$-by-$d$ matrix $A$. Given $(A,AS,G)$, let a measurable probability kernel produce $W$, with at most $e^m$ possible values for each $G=g$, where $m\\ge0$. Form $J,N$ from $(G,W)$ as in Lemma <a href=\"#l:grid:refinement\" data-reference-type=\"ref\" data-reference=\"l:grid:refinement\">31</a>. Then $$\\label{l:grid:block-bound}\n I(S;W\\mid G)\\le Cd+\\frac mp+\\mathbb E J+H(N\\mid G,W).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-grid-block"
+  },
+  {
+   "claim_id": "claim-grid-information-iteration",
+   "exact_statement": "Let $S\\sim\\sigma$, and start from a fixed state. Let $B\\ge0$ be an integer. Consider $B$ blocks, each consisting of $k$ fresh standard Gaussian rows and their exact labels. In each block, the outgoing state is a measurable kernel of the incoming state and that block’s data, and its alphabet has logarithm at most $m\\ge0$. There is a countable analysis history $G_B$ of finite entropy that contains the final state and satisfies $$\\label{l:grid:final-information}\n I(S;G_B)\\le C\\{d+B(d+m/p)\\}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-grid-iteration"
+  },
+  {
+   "claim_id": "claim-grid-spherical-precision",
+   "exact_statement": "Let $M(d)=o(d^2)$ and $0<\\epsilon(d)\\le1/10$. For learners in the finite-state model of Section <a href=\"#l:model\" data-reference-type=\"ref\" data-reference=\"l:model\">2</a>, uniform-sphere average angular success at least $2/3$ requires $$T(d)\\ge c\\,d\\log\\frac1{\\epsilon(d)}$$ for an absolute $c>0$ and all sufficiently large $d$. The dimension threshold may depend on the memory sequence.",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-grid-precision"
+  },
+  {
+   "claim_id": "claim-locally-diffuse-message-information",
+   "exact_statement": "Let $\\nu\\ll\\mu$ be a probability measure supported in $B(c,R)$, where $c\\in\\mathbb R^d$ and $R>0$. Suppose that for $\\nu$-almost every $s$, simultaneously for all $r>0$, $$\\label{l:side:local-mass}\n \\nu(B(s,r))\\le K(r/R)^\\alpha,\\qquad K\\ge1.$$ Draw $S\\sim\\nu$ and an independent standard Gaussian $k$-by-$d$ matrix $A$, where $1\\le k\\le k_*$. A measurable probability kernel of $(A,AS)$ produces a message $Z$ in an alphabet of cardinality $w\\ge1$. Then $$\\label{l:side:local-bound}\n I(S;Z)\\le C(d+\\log K)+\\frac{\\log w}{p}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-side-local-information"
+  },
+  {
+   "claim_id": "claim-adaptive-cells-with-side-data",
+   "exact_statement": "Let $\\nu$ be a probability measure with $d\\nu/d\\mu\\le B<\\infty$. Draw $S\\sim\\nu$, an independent standard Gaussian $k$-by-$d$ matrix $A$ with $1\\le k\\le k_*$, and a message $Z$ in an alphabet of size $w\\ge1$ from a measurable kernel of $(A,AS)$. Independently of the signal, the matrix, and the message randomness, draw a standard Gaussian $\\ell$-by-$d$ matrix $W$, and put $D_*=(W,WS)$. Then $$\\label{l:side:adaptive-bound}\n I(S;Z\\mid D_*)\\le\n C\\left[d+\\log\\left(C\\left(2+\\frac{\\log B}{d}\\right)\\right)\\right]\n +\\frac{\\log w}{p}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-side-adaptive"
+  },
+  {
+   "claim_id": "claim-sliced-potential-information",
+   "exact_statement": "For the preceding $K,r$ and a fresh block, $$\\begin{aligned}\n I(Y_B;K\\mid X_B)&\\le\\frac{k}{d-1}I(S;K)+Cd,\n &h(Y_B\\mid X_B)&\\ge-Cd,\n \\label{l:sep:subset-bounds}\\\\\n I(S;K)&\\le C(P+d\\Lambda+d),\n &-h(Y_B\\mid X_B,K)&\\le C(P+d\\Lambda+d).\n \\label{l:sep:information-bounds}\n\\end{aligned}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-sep-information"
+  },
+  {
+   "claim_id": "claim-separated-tuple-localization",
+   "exact_statement": "There are fixed absolute constants $a\\ge1$, $\\delta>0$, and $b_0>0$ with the following property. Put $\\eta=e^{-a}$, $p_0=1/(4\\ell)$, and $u_d=\\log(1/p_0)+1$. There is a countable string $C_*$, generated from $(K,A,S)$ and separate randomness, and an integrable integer $N\\ge0$, such that $K,C_*$ specifies a ball of radius $r_*=re^{-aN}$ containing $S$. The string is conditionally independent of $W$ given $(K,A,S)$, and in fact $W$ is independent of $(S,C_*)$ given $(K,A)$. Moreover, $$\\begin{aligned}\n H(C_*\\mid K,A)&\\le(b_0d+\\ell a+u_d)\\mathbb E N+u_d,\n \\label{l:sep:conditional-code}\\\\\n H(C_*\\mid K)&\\le C_a d(1+\\mathbb E N),\n \\label{l:sep:ambient-code}\\\\\n 0\\le P_{\\mathrm{mid}}\n &:=b_n+n\\mathbb E\\log r_*-h_n(S\\mid K,A,C_*) \\notag\\\\\n &\\le P-\\delta da\\,\\mathbb E N+u_d.\n \\label{l:sep:refinement-payment}\n\\end{aligned}$$ Conditional on $(K,A,C_*)$, there is a symmetric law $Q$ of $\\ell$ points, each with the conditional signal marginal, such that $$\\mathsf V(\\mathbf s)\\ge(\\eta r_*)^q,\\qquad\n D\\!\\left(Q\\middle\\|\n       \\mathcal L(S\\mid K,A,C_*)^{\\otimes\\ell}\\right)\\le\\log2.\n \\label{l:sep:passing-tuple}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-l-sep-localization"
+  },
+  {
+   "claim_id": "claim-equal-label-tuple-comparison",
+   "exact_statement": "The divergence $\\mathcal E$ is finite and $$\\begin{aligned}\n \\mathcal E\n &=I(X_A;C_*\\mid S,K)\n   +q\\{h_f-h_{\\mathrm{mid}}+\\mathbb E\\log j_{X_A}(S)\\}\n       \\notag\\\\\n &\\quad-\\frac{kq}{2}\\log(2\\pi)\n       -k\\mathbb E\\log\\mathsf V(\\mathbf S)+D_{\\mathrm{coup}}.\n \\label{l:sep:comparison-identity}\n\\end{aligned}$$ Furthermore, $$\\ell I(S;W\\mid K,C_*)\\le b+\\mathcal E.\n \\label{l:sep:message-sharing}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-sep-comparison"
+  },
+  {
+   "claim_id": "claim-controlled-horizon-recurrence",
+   "exact_statement": "Suppose the outgoing message has at most $e^b$ values, with $b\\le d^2$. For the localization update above, there are absolute $\\gamma,C_1,C_2>0$ such that $$P_++\\gamma d\\Lambda_+\n \\le(1+C_1/d)(P+\\gamma d\\Lambda)+C_2d.\n \\label{l:sep:recurrence-formula}$$ Starting with radius one and signal-independent initial information, after $m\\le d$ blocks whose messages have at most $e^{d^2}$ values, $$P_m+\\gamma d\\Lambda_m\\le C d(m+1),\\qquad\n I(S;K_m)\\le C d(m+1).\n \\label{l:sep:horizon}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-sep-recurrence"
+  },
+  {
+   "claim_id": "claim-separated-tuple-precision",
+   "exact_statement": "Let $M(d)=o(d^2)$ be integer-valued and let $0<\\epsilon(d)\\le1/10$. Every learner of Section <a href=\"#l:model\" data-reference-type=\"ref\" data-reference=\"l:model\">2</a> with uniform-sphere angular success probability at least $2/3$ must satisfy $$T(d)\\ge c\\,d\\log(1/\\epsilon(d))$$ for all sufficiently large $d$, with an absolute $c>0$. The eventual dimension threshold may depend on the memory sequence. Success at least $2/3$ for every fixed signal implies the same conclusion by averaging.",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-sep-theorem"
+  },
+  {
+   "claim_id": "claim-equal-label-finite-measure",
+   "exact_statement": "Let $r\\ge1$, $p\\ge2$, and $r+p-1\\le d-2$. For every nonnegative Borel $H$, $$\\begin{aligned}\n &\\int\\gamma_r(dX)\\int_{\\mathbb R^r}\\rho_{0,r}(X,y)^p\n       \\int H(X,y,\\mathbf s)\\,\\mu_{X,y}^{\\otimes p}(d\\mathbf s)\\,dy\n       \\notag\\\\\n &\\quad=(2\\pi)^{-r(p-1)/2}\n       \\int J(\\mathbf s)^{-r}\\,\\mu^{\\otimes p}(d\\mathbf s)\n       \\int H(X,Xs_1,\\mathbf s)\\,\\gamma_{r,B_{\\mathbf s}}(dX).\n \\label{l:span:equal-label-input}\n\\end{aligned}$$ These are finite measures before inserting $H$. They are supported on $Xs_1=\\cdots=Xs_p=y$, full ranks of $X$ and $B_{\\mathbf s}$, and positive-radius spherical fibers. The input uses the exact density and fiber versions above; its ball-average and Gaussian approximation versions agree at the constrained label outside a null set for the finite measure. The more general theorem permits bounded nonnegative densities over spherical or Gaussian base probability. Only the density-one spherical instance is used below.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-span-equal-label-assumption"
+  },
+  {
+   "claim_id": "claim-extra-inverse-volume-moment",
+   "exact_statement": "Let $k\\ge1$, $p\\ge2$, and $k+p+1<d$. Then $$\\int J^{-(k+1)}\\,d\\mu^{\\otimes p}<\\infty.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-span-extra-moment"
+  },
+  {
+   "claim_id": "claim-finite-entropy-replica-likelihood",
+   "exact_statement": "Under <a href=\"#l:span:incoming\" data-reference-type=\"eqref\" data-reference=\"l:span:incoming\">[l:span:incoming]</a>, $$\\frac{d\\pi_A}{d\\lambda}(\\mathbf s,X)\n  =(2\\pi)^{-k(p-1)/2}J(\\mathbf s)^{-k}\n       \\frac{\\prod_{i=1}^p f_A(s_i)}\n            {\\rho_A(X,Xs_1)^{p-1}}.\n \\label{l:span:likelihood-formula}$$ The multiplier is defined as zero unless $J>0$ and its denominator is finite and positive. Under the replica experiment, each $\\log f_A(s_i)$, $\\log\\rho_A(X,Y)$, and $\\log J$ is absolutely integrable after averaging over $A$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-span-likelihood"
+  },
+  {
+   "claim_id": "claim-uniformly-selected-replica-information",
+   "exact_statement": "The conditional signal law given $A_*$ is absolutely continuous with respect to $\\mu$, and $$\\mathcal D(A_*)\\le \\mathcal D(A)+\\frac{\\log W}{p}\n                    +\\frac{k}{2}+k\\,\\mathbb E\\Delta_I.\n \\label{l:span:selected-bound}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-span-selected"
+  },
+  {
+   "claim_id": "claim-predecessor-span-ball-code",
+   "exact_statement": "There is a discrete code $C$, determined by $(A_*,s_I)$, and an $A'=(A_*,C)$-measurable ball $B(c',r')$ supporting the conditional signal law, for which $$\\begin{aligned}\n 0<r'&\\le r_A,&\n \\log r'&\\le\\log r_A-\\Delta_I+2\\log2,\n \\label{l:span:radius}\\\\\n H(C\\mid A_*)&\\le p\\,\\mathbb E\\Delta_I+C_1p,&\n \\mathcal D(A')&\\le\\mathcal D(A_*)+H(C\\mid A_*).\n \\label{l:span:code}\n\\end{aligned}$$ Here $C_1$ is absolute. Both $\\mathcal D(A')$ and $\\mathbb E|\\log r'|$ are finite.",
+   "kind": "construction",
+   "statement_anchor": "stmt-l-span-localization"
+  },
+  {
+   "claim_id": "claim-predecessor-span-block-success",
+   "exact_statement": "For sufficiently large $d$, put $K=p=\\lfloor d/8\\rfloor$. Consider a learner of Section <a href=\"#l:model\" data-reference-type=\"ref\" data-reference=\"l:model\">2</a> with horizon $T$ and $M$ persistent bits, and set $W=(T+2)2^M$. If $\\log W\\le2d^2$, then its uniform-sphere angular success probability $\\pi$ at $0<\\epsilon\\le1/10$ satisfies $$\\pi(d-1)\\log(1/\\epsilon)\n \\le C d\\left(\\left\\lceil T/K\\right\\rceil+1\\right)\n \\label{l:span:success-bound}$$ for an absolute $C$. In particular, success at least $2/3$ implies $$\\left\\lceil T/K\\right\\rceil\n       \\ge c\\log(1/\\epsilon)-C'$$ with absolute $c>0,C'>0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-span-block-bound"
+  },
+  {
+   "claim_id": "claim-predecessor-span-precision",
+   "exact_statement": "Let $M(d)=o(d^2)$ be integer-valued and let $0<\\epsilon(d)\\le1/10$. A family of learners in Section <a href=\"#l:model\" data-reference-type=\"ref\" data-reference=\"l:model\">2</a> whose angular success probability is at least $2/3$ for a uniform spherical signal must use $$T(d)\\ge c\\,d\\log(1/\\epsilon(d))$$ for all sufficiently large $d$, where $c>0$ is absolute. The eventual threshold may depend on the memory sequence. The same conclusion follows from success at least $2/3$ for every fixed signal.",
+   "kind": "bound",
+   "statement_anchor": "stmt-l-span-theorem"
+  },
+  {
+   "claim_id": "claim-kernel-convexity-coercivity",
+   "exact_statement": "The functional $\\Phi$ is convex under finite mixtures of bounded-density probability measures and $$\\Phi(\\nu)\\ge\\tfrac12D(\\nu\\|\\sigma)-Cd,\\qquad\n \\Phi(\\sigma)\\le p\\log2$$ for an absolute $C$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lk-coercive"
+  },
+  {
+   "claim_id": "claim-projection-density-versions",
+   "exact_statement": "Let $1\\le\\ell<d-1$, let $G$ have $\\ell$ independent standard Gaussian rows, and let $\\nu\\le H\\sigma$ be a probability measure. For each full-row-rank $g$, the image $g_\\#\\nu$ has a Lebesgue density. The limit, where finite and existent, of $$p_{\\nu,a}(g,y)=(2a)^{-\\ell}\n     \\nu\\{u:\\|gu-y\\|_\\infty\\le a\\},\n \\qquad a=1,1/2,1/3,\\ldots,$$ and zero elsewhere is a jointly Borel density version $p_\\nu(g,y)$. Under the independent law of $G$ and $S\\sim\\nu$, $\\log p_\\nu(G,GS)$ is integrable.*\n\n*If instead $G$ and $S\\sim\\sigma$ are marginally independent and $W$ is finite with any joint law with them, the actual conditional law of $GS$ given $(G,W)$ has a Lebesgue density. Its logarithm and $\\log p_{\\nu_W}(G,GS)$, where $\\nu_w=P_{S\\mid W=w}$, are integrable under the actual law. The same assertion holds after first conditioning on a finite entering variable $V$, provided the fresh $G$ is jointly independent of $(S,V)$. Equivalently, conditional on each positive-probability value of $V$, the joint law of $(G,S)$ must be the product of the original Gaussian row law and the conditional law of $S$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lk-density"
+  },
+  {
+   "claim_id": "claim-kernel-projection-entropy",
+   "exact_statement": "Let $X$ have $p$ independent standard Gaussian rows and be independent of $S\\sim\\nu\\le H\\sigma$, $H\\ge1$. For a sufficiently large absolute $C_0$, put $b_H=\\lceil C_0(d+\\log(2H))\\rceil$. Then $$h(XS\\mid X)\\le -B(\\nu)+Cd+2\\log(b_H+2).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lk-entropy"
+  },
+  {
+   "claim_id": "claim-mixed-positive-scale-projection",
+   "exact_statement": "Let $m,r,q\\ge1$ be integers, $\\ell=m+r<n=d-1$, and $\\ell-m-(q-1)\\ge1$. Let $\\rho$ be a finite measure on the sphere such that, for every ambient $z$ and $t>0$, $\\rho(B(z,t))\\le Bt^\\ell$ and $\\rho(B(z,t))\\le Dt^n$, with $B,D>0$. For independent Gaussian matrices $X,Z$ with $m,r$ rows, put $G=(X;Z)$ and $$p_{\\rho,\\delta}(G,y)=(2\\delta)^{-\\ell}\n      \\int\\mathbf 1_{\\{\\|Gu-y\\|_\\infty\\le\\delta\\}}\\,d\\rho(u).$$ For every fixed $s\\in S^{d-1}$ and every $\\delta>0$, $$\\left[\\mathbb E_X\\left(\\mathbb E_Zp_{\\rho,\\delta}(G,Gs)\\right)^q\\right]^{1/q}\n \\le e^{Cd}B\\bigl(1+\\log^+(D/B)\\bigr).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lk-mixed-input"
+  },
+  {
+   "claim_id": "claim-kernel-reweighting",
+   "exact_statement": "For $\\nu\\le H\\sigma$, define $d\\rho=d\\nu/J_\\nu$. Then $$\\rho(B(z,r))\\le(2r)^p,\\qquad \\rho\\le2^pH\\sigma.$$ By Theorem <a href=\"#lk:mixed-input\" data-reference-type=\"ref\" data-reference=\"lk:mixed-input\">53</a>, for independent $k$-row Gaussian matrices $A,A'$, $X=(A;A')$, every $s\\in S^{d-1}$, and every $\\delta>0$, $$\\label{lk:moment}\n \\left[\\mathbb E_A\\left(\\mathbb E_{A'}p_{\\rho,\\delta}(X,Xs)\\right)^k\\right]^{1/k}\n \\le e^{Cd}(b_H+2).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lk-reweight"
+  },
+  {
+   "claim_id": "claim-kernel-functional-drift",
+   "exact_statement": "Let $S\\sim\\sigma$, let $V$ have at most $N$ values, and let a $k$-row Gaussian matrix $A$ be independent of $(S,V)$. Suppose $W$ has at most $N$ values and is generated by a Borel probability kernel of $(V,A,AS)$ and independent randomness. If $\\log N\\le d^2$, then, for sufficiently large $d$, $$\\mathbb E\\Phi(P_{S\\mid W})\\le \\mathbb E\\Phi(P_{S\\mid V})+Cd.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lk-drift"
+  },
+  {
+   "claim_id": "claim-kernel-regression-precision",
+   "exact_statement": "Let $M(d)=o(d^2)$ and $0<\\epsilon(d)\\le1/10$. A learner in the model of Section <a href=\"#l:model\" data-reference-type=\"ref\" data-reference=\"l:model\">2</a> with uniform-sphere average angular success at least $2/3$ requires $T(d)\\ge c d\\log(1/\\epsilon(d))$ for an absolute $c>0$ in sufficiently large dimension. The threshold may depend on the memory sequence.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lk-regression"
+  },
+  {
+   "claim_id": "claim-cell-correction-coercivity",
+   "exact_statement": "For the conditional laws and selected-cell partition just defined, $$\\label{lc:cell-eq2}\nJ_V \\le \\frac{\\alpha}{d-1} I_V + O(d).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lc-cell-coercivity"
+  },
+  {
+   "claim_id": "claim-inverse-volume-arbitrary-scales",
+   "exact_statement": "Let $n=k=\\lfloor d/100\\rfloor$ and $\\alpha=(d-1)/2$, with $d$ sufficiently large. Suppose a Borel probability $\\nu$ on $\\mathbb R^d$ satisfies $\\nu(B(x,r))\\le r^\\alpha$ for all $x,r$. Fix any $u$, draw $z_1,\\ldots,z_k$ independently from $\\nu$, and denote by $S$ the $k$-volume of the parallelepiped of $z_1-u,\\ldots,z_k-u$ (the square root of the Gram determinant). There is an absolute constant $C$ such that $$\\label{lc:cell-eq4}\n\\mathbb E S^{-n}\\le \\exp(Cdk).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lc-cell-inverse"
+  },
+  {
+   "claim_id": "claim-fixed-target-projection-moment",
+   "exact_statement": "For a subprobability $\\eta\\ll\\sigma$ on the sphere satisfying <a href=\"#lc:cell-eq3\" data-reference-type=\"eqref\" data-reference=\"lc:cell-eq3\">[lc:cell-eq3]</a>, let $q=\\eta(S^{d-1})>0$. For Gaussian $A$ write $g_{\\eta,A}$ for the Lebesgue density of $Az$ under $\\eta$. Such densities exist almost surely since $A$ has rank $n<d-1$ and they exist for $\\sigma$. We may evaluate a version by the liminf of mass densities on shrinking cubes (say radii $1/l,\\ l\\to\\infty$), which gives the Lebesgue density almost everywhere by differentiation. With this latter evaluation, for every fixed $u$ we have $$\\label{lc:cell-eq5}\n\\mathbb E_A g_{\\eta,A}(Au)^k\n \\le \\left[\\exp(Cd) q^{1-n/\\alpha}m_0^{n/\\alpha}\\right]^k.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lc-cell-moment"
+  },
+  {
+   "claim_id": "claim-exact-fiber-information-comparison",
+   "exact_statement": "With the incoming selected part $D$, outgoing mass bin $t$, and density versions specified above, $$\\label{lc:cell-eq7}\nI_W-I_V\n \\ \\le\\ \\mathbb E\\log g_{w,D,t,A}(b) - \\mathbb E\\log g_{v,D,A}(b)\n       + H(t\\mid W,D).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lc-cell-fiber-comparison"
+  }
+ ],
+ "paper": "papers/EN-114-000-0003-2-2026-PR-T4-UK-EX-M1-B-ML-M-0288_PM-140.3_Localization_costs_and_information_growth_for_exact_Gaussian_observations.md",
+ "purpose": "Localization costs and information growth for exact Gaussian observations",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "a7f8ce58cc90d26f690ea85c06294944f13310a97698910151b6935ce393234e",
+   "pm.domains.v2": "85bbbd39428be9a252079a7c264974d8ab993ac255247d80c1f5c52aba28a07b",
+   "pm.edges.v2": "2610e573aec26fbcac59e20fdc7a7db7085b8ad912f67ca79a94f0daac838adf",
+   "pm.extraction.v2": "761aecb072a03fd99f2df72720250acda0ffb1cd9a3ca778e452dc220cbcd0af",
+   "pm.formal.v2": "3d8cb2fee3b1439c0e02a3ce785f44834fef838768e8e5d39053f045e457bf3c",
+   "pm.limits.v2": "d011fecfd21a57a818b5f8e8fb97fb1154b5f175fcd47058fb241103a8da9a55",
+   "pm.node.v2": "85ca7372017d3337b46247f3cffafe36d794a60789c84395f329dbd9cfc10f38",
+   "pm.objects.v2": "ff93f75d3678d8dd29c5b2e17021cb3ff336eb98252bbd8b7f1af8d7dedb210b",
+   "pm.provenance.v2": "97b6228fed78c598fb6e185a4e000e46c844ca597bf4321787181c8208deee90",
+   "pm.quantities.v2": "e7ddf5789998d7dfc5dc7b06c6d95eeaf8ee76cd553e802fd587325bdf00eaf0",
+   "pm.reading.v2": "9d1e24ef6f221b885eafe45eb9960884bd4944407ef9ee9ff93399122b2b4af2",
+   "pm.roadmap.v2": "3a7c303fb4ea42f803f77f800ae08b57d97b03f1f0bf5cbde857ec797c5f8f70",
+   "pm.search.v1": "b6570e083369773619a89d0f2fdf92ba98278b1de0236d093655badba097983a",
+   "pm.triptych.v2": "3171a35fc1838f4b075a684813c488eafb82a179fd4056d2ce61e2844fe55c94"
+  },
+  "canonical_sha256": "44071a2183e57867814dc62c4a49d90c192cf797804b6195af12acc4f25bcd29",
+  "paper_sha256": "e51fe94c026b279b496ced44c59a6d6d7d3d2af73f840962a2cb6aad62c110bc",
+  "repaired_body_sha256": "81e8f41bcad2053292b7a2cee0993b2df9a63807841b81febafc0f59464183d4"
+ },
+ "status": "ACTIVE",
+ "subject_id": 14,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "8b35a974102c4d4346e5b08b22da400eccc6ac8d85af239933c3fcccebcbe5a6",
+   "receipt_sha256": "6ae3604241564abdac2460cbf7ab913fd57201235fe7663f6b55908c7acdc7ad",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Localization costs and information growth for exact Gaussian observations"
+}

@@ -1,0 +1,540 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 509392,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 157006
+ },
+ "coordinate": "EN-107-000-0000-2-2026-PR-T4-UK-EX-M3-C-PH-H-0709",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "Metric geometry and geometric analysis",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-2",
+     "quote": "The open region $\\mathcal U$ may contain points outside the exact regular locus; the corollary does not assert that this locus is open.",
+     "quote_sha256": "d1089f36760fa6ffdcb4af6c85a3b9d34383c7e5a32d9e7189d1f3e05f490862"
+    }
+   ],
+   "query": "Openness of the exact regular locus",
+   "reason": "The full-measure open chart region may contain points outside the exact regular locus."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "it does not assert Hölder continuity of the metric tensor in that chart.",
+     "quote_sha256": "47c7d5843dfb8a3b6c55c4a7c0e4d5687d685b97d2a58f119b2b68cee3a9c9b0"
+    }
+   ],
+   "query": "Hölder continuous metric tensor in the limiting chart",
+   "reason": "The chart conclusion does not assert this additional metric-tensor regularity."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "their components are not asserted to have bounded Laplacian.",
+     "quote_sha256": "e06b9a19467c125a0a761a823c196964322e9aefc75f1d217df61dc81d0da44d"
+    }
+   ],
+   "query": "Bounded Laplacians of the limiting coordinate components",
+   "reason": "The limiting components are not asserted to have bounded Laplacian."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-re-limit-chart",
+     "quote": "F(x)=\\lim_{i\\to\\infty}h_i(u(x))",
+     "quote_sha256": "2cef3f45fb530a45a285b37b4c358405e77367497653568b24b10fb44fc6c0dd"
+    }
+   ],
+   "query": "A finite algorithm computing the chart from sampled data",
+   "reason": "The source constructs a limiting chart under geometric hypotheses and supplies no finite data-input algorithm."
+  }
+ ],
+ "family": "PM-357",
+ "id": "PM-357.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C001",
+    "statement": "For every integer $n\\ge2$ there is a constant $L_n\\ge1$ with the following property. Let $K\\in\\mathbb R$, and let $(X,d,\\mathcal H_d^n)$ be a noncollapsed $\\mathrm{RCD}(K,n)$ space. Let $p\\in X$. If every pointed Gromov–Hausdorff tangent of $X$ at $p$ is pointed-isometric to $(\\mathbb R^n,|\\cdot|,0)$, then there exist an open neighborhood $U$ of $p$, an open set $V\\subset\\mathbb R^n$, and a homeomorphism $F:U\\to V$ such that $$L_n^{-1}d(x,z)\\le |F(x)-F(z)|\\le L_nd(x,z)\n \\qquad (x,z\\in U).$$ The distance on the left and right is the original distance $d$ restricted to $U$."
+   },
+   {
+    "anchor": "stmt-cor-full-measure-atlas",
+    "claim_id": "C002",
+    "statement": "Under the hypotheses of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, there is an open set $\\mathcal U\\subset X$ containing every $n$-regular point, with $\\mathcal H_d^n(X\\setminus\\mathcal U)=0$, and a countable atlas of $L_n$-bi-Lipschitz charts from ambient-open subsets of $\\mathcal U$ onto open subsets of $\\mathbb R^n$. Each chart uses the restricted ambient distance, and its transition maps are $L_n^2$-bi-Lipschitz."
+   },
+   {
+    "anchor": "stmt-co-local-calculus",
+    "claim_id": "C003",
+    "statement": "Let $(Y,d,\\mathfrak m)$ be a noncollapsed $\\mathrm{RCD}(-\\kappa,n)$ space and let $\\Omega\\subset Y$ be open. A locally bounded solution of $\\Delta w=a$ in $\\Omega$, with $a$ constant, is locally Lipschitz and is a local test function. In particular it has a local $L^2$ Hessian, $\\Gamma(w_1,w_2)\\in W^{1,2}_{\\rm loc}(\\Omega)$ for two such functions, and the Hessian product rule holds locally. The measure $$\\label{co:M-definition}\n M(w)=\\frac12\\Delta\\Gamma(w)+\\kappa\\Gamma(w)\\mathfrak m$$ is locally finite and nonnegative. For every constant $b$, $$\\label{co:shifted-bochner}\n M(w)-(2b\\Delta w-nb^2)\\mathfrak m\n \\ge |\\operatorname{Hess}w-bg|^2\\mathfrak m.$$ On the real vector space of local constant-Laplacian functions, the left side is a nonnegative quadratic form in the pair $(w,b)$, with both entries scaled together. All these statements hold on interior balls for weak solutions with locally bounded $L^2$ norm, after using the interior estimates to obtain local boundedness.*\n\n\n*On fixed interior scales, bounded Lipschitz cutoffs with bounded Laplacian are available. Under uniform local volume comparison and a uniform rescaled curvature bound, their bounds, local Poincare and Sobolev constants, and interior harmonic and Poisson estimates are uniform. In particular, on a fixed-radius ball in the rescaled spaces below there is a number $d_*>1$ and a constant $C$ such that $$\\label{co:dirichlet-sobolev}\n \\|h\\|_{L^2}+\\|h\\|_{L^{2d_*}}\n \\le C\\|\\nabla h\\|_{L^2},\\qquad h\\in W^{1,2}_0(B),$$ whenever the ball and a fixed larger ball are contained in the working region."
+   },
+   {
+    "anchor": "stmt-co-flat-setup",
+    "claim_id": "C004",
+    "statement": "Fix an $n$-regular point $p$ in the space of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>. There are rescalings $$(X_\\nu,d_\\nu,\\mathfrak m_\\nu,p_\\nu)\n =(X,s_\\nu^{-1}d,s_\\nu^{-n}\\mathcal H_d^n,p),\n \\qquad s_\\nu\\downarrow0,$$ numbers $\\kappa_\\nu\\downarrow0$, and radii $T_\\nu\\uparrow\\infty$ with $\\kappa_\\nu T_\\nu^2\\to0$, having the following properties. The space $X_\\nu$ is $\\mathrm{RCD}(-\\kappa_\\nu,n)$. For a sequence $\\delta_\\nu\\downarrow0$, all balls with center in $B_{64T_\\nu}(p_\\nu)$ and radius at most $64T_\\nu$ satisfy $$\\label{co:uniform-flatness}\n \\left|\\frac{\\mathfrak m_\\nu(B_r(y))}{\\omega_n r^n}-1\\right|\n \\le\\delta_\\nu,\n \\qquad\n d_{GH}\\bigl(\\overline B_r(y),\\overline B_r(0^n)\\bigr)\n \\le\\delta_\\nu r.$$ There are harmonic columns $u_\\nu$ on $B_{32T_\\nu}(p_\\nu)$, converging on every fixed ball locally uniformly and strongly in $W^{1,2}$ to Euclidean coordinates, and $$\\label{co:original-gradient-bound}\n |\\nabla u_\\nu|\\le C_n\n \\quad\\text{on }B_{16T_\\nu}(p_\\nu).$$"
+   },
+   {
+    "anchor": "stmt-co-harmonic-normalization",
+    "claim_id": "C005",
+    "statement": "For every pair of fixed constants $A,C\\ge1$, the matrices $R_i(y)$ are positive definite for $y\\in B_A(p)$ and $i\\ge0$. In the rescaled ball $B_{Cr_i}(y)$, the map $$\\label{co:normalized-column}\n U_{i,y}=\\frac{R_i(y)^{-1/2}(u-u(y))}{r_i}$$ is, after an orthogonal change of target coordinates, an $o(1)$ approximation to Euclidean coordinates, uniformly and strongly in interior $W^{1,2}$. Its gradients are uniformly bounded on each fixed interior enlargement. Its Gram matrix converges strongly in every finite $L^p$ on such enlargements to $\\mathrm{Id}$.*\n\n\n\n\n*For every fixed $C\\ge1$, if $d(y,z)\\le Cr_i$ and $C^{-1}r_i\\le r_j\\le Cr_i$, then $$\\label{co:nearby-R}\n (1-o(1))R_i(y)\\le R_j(z)\\le(1+o(1))R_i(y).$$ For every $a>0$, after choosing a sufficiently late rescaling, $$\\label{co:slow-R}\n C_a^{-1}2^{-2a|i-j|}R_j(y)\n \\le R_i(y)\\le C_a2^{2a|i-j|}R_j(y).$$ The constants are uniform in the center and the two indices. In particular, since $R_0(y)=\\mathrm{Id}+o(1)$ on fixed balls, $$\\label{co:R-lower}\n c_a r_i^{2a}\\mathrm{Id}\\le R_i(y)\\le C\\mathrm{Id}.$$"
+   },
+   {
+    "anchor": "stmt-co-bochner-small",
+    "claim_id": "C006",
+    "statement": "For each pair of fixed constants $A,C\\ge1$, uniformly for $y\\in B_A(p)$ and $i\\ge0$, $$\\label{co:small-mass}\n r_i^{2-n}M(B_{Cr_i}(y))\\le o(1)R_i(y).$$"
+   },
+   {
+    "anchor": "stmt-co-open-coordinates",
+    "claim_id": "C007",
+    "statement": "For every fixed $A\\ge1$, the map $u$ is a homeomorphism from $B_A(p)$ onto an open subset of $\\mathbb R^n$, once the rescaling is sufficiently late. There is a fixed $c>0$ such that, whenever the balls involved stay in a fixed interior working region, $$\\label{co:ellipsoid-containment}\n \\{P:|P-u(x)|_{R_i(x)^{-1}}<c r_i\\}\n \\subset u(B_{r_i/2}(x)).$$ Moreover, for every fixed $D\\ge1$, if $D^{-1}r_i\\le d(x,z)\\le Dr_i$, then $$\\label{co:separation-scale}\n \\bigl||u(z)-u(x)|_{R_i(x)^{-1}}-d(x,z)\\bigr|\n \\le o_D(1)r_i.$$"
+   },
+   {
+    "anchor": "stmt-co-kernel-measures",
+    "claim_id": "C008",
+    "statement": "Fix $C_0\\ge1$, $x,y$ in a fixed testing region, and $d(x,y)\\le C_0r$, where $0<r\\le1$. Put $$K_t(z)=\\mathop{\\mathchoice\n {\\displaystyle\\int\\mkern-18mu-}\n {\\textstyle\\int\\mkern-15mu-}\n {\\scriptstyle\\int\\mkern-12mu-}\n {\\scriptscriptstyle\\int\\mkern-10mu-}}\\nolimits_{B_r(y)}p_t(a,z)\\,\\mathrm d\\mathfrak m(a),\n \\qquad D=d(x,z).$$ After enlarging fixed constants, the following bounds hold at every source pole $z$: $$\\begin{aligned}\n K_t(z)&\\le C r^{-n}e^{-cD^2/r^2},&&0<t\\le r^2,\n       \\label{co:short-kernel}\\\\\n |K_t(z)-p_t(x,z)|&\\le C r t^{-(n+1)/2}e^{-cD^2/t},\n       &&r^2\\le t\\le1.\\label{co:long-kernel}\n\\end{aligned}$$ If $f\\in W^{1,2}\\cap L^\\infty$ has compact support and its Laplacian is a finite signed measure $\\mu$ of compact support, then $$\\label{co:semigroup-measure}\n P_t f-P_s f=\\int_s^t P_\\tau\\mu\\,\\mathrm d\\tau,\n \\qquad 0<s<t,$$ using the continuous representatives. In the application $f=\\chi\\Gamma(u_j,u_k)$, this identity can also be averaged over a ball and passed to $s\\downarrow0$."
+   },
+   {
+    "anchor": "stmt-co-heat-matrices",
+    "claim_id": "C009",
+    "statement": "There is $\\lambda=\\lambda_\\nu>0$, with $\\lambda_\\nu\\to0$, such that, at all fixed testing centers and $0<t\\le1$, $$\\label{co:heat-derivative}\n P_t(\\chi M)\n \\le\\partial_t\\bigl(P_t(\\chi G)+\\lambda t\\mathrm{Id}\\bigr)\n \\le 3P_t(\\chi M)+C\\mathrm{Id}.$$ Define $$\\label{co:QH-definition}\n Q_i(x)=P_{r_i^2}(\\chi G)(x)+\\lambda r_i^2\\mathrm{Id},\n \\qquad H_i(x)=Q_i(x)^{-1}.$$ Then $$\\begin{aligned}\n &(1-o(1))R_i(x)\\le Q_i(x)\\le(1+o(1))R_i(x),\n       \\qquad Q_0(x)=\\mathrm{Id}+o(1),\\label{co:QR-comparison}\\\\\n &H_i(x)\\le H_{i+1}(x)\\le(1+o(1))H_i(x).\n       \\label{co:H-monotone}\n\\end{aligned}$$ The nearby-center and slow-growth estimates of Lemma <a href=\"#co:harmonic-normalization\" data-reference-type=\"ref\" data-reference=\"co:harmonic-normalization\">5</a> hold for $Q_i$ as well. In particular, for every prescribed $a>0$, with a sufficiently late rescaling, $$\\label{co:slow-QH}\n Q_j(x)\\le C_a2^{2a(i-j)}Q_i(x)\\quad(j\\le i),\n \\qquad \\|H_i(x)\\|\\le C_a2^{2ai}.$$"
+   },
+   {
+    "anchor": "stmt-co-heat-comparison",
+    "claim_id": "C010",
+    "statement": "Fix constants $A,C_0\\ge1$, where $C_0$ bounds $d(x,y)/r_i$, and fix a bounded region for $x$. There is a fixed exponent $\\gamma>0$, which may be taken to be $1/2$, with the following properties for all sufficiently late rescalings. Set $$\\label{co:F-definition}\n \\mathcal F_i(x)=2^{-\\gamma i}\\mathrm{Id}+\n       \\sum_{j=0}^i2^{-\\gamma(i-j)}N_j(x).$$ For the prescribed enlargement $A$, $$\\label{co:heat-decrement}\n c_A r_i^{2-n}M(B_{Ar_i}(x))\n \\le Q_i(x)-Q_{i+1}(x)\\le C\\mathcal F_i(x).$$ For $d(x,y)\\le C_0r_i$ and $v,w\\in\\mathbb R^n$, $$\\label{co:bilinear-heat-comparison}\n |v^T(R_i(y)-Q_i(x))w|\n \\le C|v|_{Q_i(x)}\\sqrt{\\mathcal F_i(x)[w]}.$$ All constants are independent of $i$ and of the expanding cutoff radius. They may depend on the stated fixed parameters."
+   },
+   {
+    "anchor": "stmt-co-inverse-increments",
+    "claim_id": "C011",
+    "statement": "Fix a testing center $x$, and suppress it in the notation. Let $a>0$ in <a href=\"#co:slow-QH\" data-reference-type=\"eqref\" data-reference=\"co:slow-QH\">[co:slow-QH]</a> be chosen so that $4a<\\gamma$. Set $$B_i=H_{i+1}-H_i,\\qquad \\Delta_i=Q_i-Q_{i+1},\n \\qquad a_i=H_i\\xi$$ for a fixed $\\xi\\in\\mathbb R^n$. Then, uniformly for every integer $k\\ge0$, $$\\begin{aligned}\n &H_i\\Delta_iH_i\\le B_i\\le(1+C\\varepsilon_\\nu)H_i\\Delta_iH_i,\n             \\label{co:inverse-increment-order}\\\\\n &\\sum_{i<k}\\mathcal F_i[a_i]\\le C H_k[\\xi],\n             \\label{co:weighted-total}\\\\\n &C^{-1}H_k\\le \\mathrm{Id}+\\sum_{i<k}H_iN_iH_i\\le C H_k.\n             \\label{co:central-cumulative}\n\\end{aligned}$$ For every fixed $A\\ge1$, the upper sum bound also holds with $r_i^{2-n}M(B_{Ar_i}(x))$ in place of $N_i$."
+   },
+   {
+    "anchor": "stmt-co-normalization-error",
+    "claim_id": "C012",
+    "statement": "Fix $C_0\\ge1$. For $d(x,y)\\le C_0r_i$, put $$A_{i,y}=R_i(y)-Q_i(x),\\qquad\n e_{i,y}=R_i(y)^{-1}\\xi-H_i(x)\\xi.$$ Then $$\\label{co:normalization-error-pointwise}\n |e_{i,y}|_{Q_i(x)}^2\n \\le C\\mathcal F_i(x)[H_i(x)\\xi].$$ If at each $i<k$ at most $J$ such centers are chosen, then $$\\label{co:normalization-error-sum}\n \\sum_{i<k}\\sum_y|e_{i,y}|_{Q_i(x)}^2\n \\le C_J H_k(x)[\\xi].$$ For any positive semidefinite matrices $C_{i,y}$ satisfying $C_{i,y}\\le\\varepsilon_\\nu Q_i(x)$, their error cost is $$\\label{co:normalization-mass-error}\n \\sum_{i<k}\\sum_y C_{i,y}[e_{i,y}]\n \\le C_J\\varepsilon_\\nu H_k(x)[\\xi].$$"
+   },
+   {
+    "anchor": "stmt-co-cumulative-comparison",
+    "claim_id": "C013",
+    "statement": "Fix constants $A_0,C_0,L\\ge1$ and a positive integer $J$. At each center $x\\in B_{A_0}(p)$ and each scale $i\\ge0$, choose at most $J$ centers $y$ with $d(x,y)\\le C_0r_i$. The choice may depend arbitrarily on $x,i$. Set $$\\label{co:D-definition}\n C_{i,y}=r_i^{2-n}M(B_{Lr_i}(y)),\n \\qquad D_{i,y}=R_i(y)^{-1}C_{i,y}R_i(y)^{-1}.$$ Give the chosen centers weights $\\theta_{i,y}\\in[0,1]$, and suppose that for every $i$ at least one has weight one and satisfies $B_{Lr_i}(y)\\supset B_{r_i}(x)$. Write $$\\label{co:ZS-definition}\n Z_i=\\sum_yD_{i,y},\\qquad\n S_i=\\sum_y\\theta_{i,y}D_{i,y}.$$ There is $C_*<\\infty$, depending only on $n,A_0,C_0,L,J$, such that for all sufficiently late rescalings, every such choice, and every integer $k\\ge0$, $$\\label{co:cumulative-estimates}\n Z_i\\le o(1)H_i(x),\\qquad\n \\mathrm{Id}+\\sum_{i<k}Z_i\\le C_*H_k(x),\\qquad\n H_k(x)\\le C_*\\left(\\mathrm{Id}+\\sum_{i<k}S_i\\right).$$ The $o(1)$ is uniform over the stated centers, all scales, and all choices satisfying these conditions."
+   },
+   {
+    "anchor": "stmt-pi-positive-source",
+    "claim_id": "C014",
+    "statement": "Let $\\Omega$ be one of the bounded rescaled domains satisfying <a href=\"#pi:dirichlet-sobolev\" data-reference-type=\"eqref\" data-reference=\"pi:dirichlet-sobolev\">[pi:dirichlet-sobolev]</a>, and suppose that $h\\in W^{1,2}_0(\\Omega)$ is nonnegative and bounded, with $$\\int\\langle\\nabla h,\\nabla\\psi\\rangle\\,\\mathrm d\\mathfrak m\n =\\int\\psi\\,\\mathrm d\\mu$$ for compactly supported Lipschitz tests, where $\\mu$ is a finite positive measure. If $\\mu(\\Omega)\\le P$, then $$\\int_\\Omega|\\nabla h|\\,\\mathrm d\\mathfrak m\\le CP,\n \\qquad\n \\int_\\Omega|\\nabla h|^2\\,\\mathrm d\\mathfrak m\\le\\|h\\|_\\infty P.\n \\label{pi:positive-source-bounds}$$ The constant in the first inequality depends only on the Sobolev constant, its exponent, and an upper bound for $\\mathfrak m(\\Omega)$."
+   },
+   {
+    "anchor": "stmt-pi-poisson-pinching",
+    "claim_id": "C015",
+    "statement": "There are nonnegative numbers $P_i(a)$, defined for every $a\\in B_4(p)$ and $i\\ge0$, with $$\\sup_{a\\in B_4(p)}\\sum_{i=0}^{\\infty}P_i(a)=o(1),\n \\label{pi:poisson-sum}$$ and functions $f_i^a$ on $B_{8Sr_i}(a)$ such that, with $q^a=d_a^2/2$, $$\\Delta f_i^a=a_i:=n+C_0\\kappa r_i^2,\n \\qquad f_i^a-q^a\\in W^{1,2}_0(B_{8Sr_i}(a)).\n \\label{pi:poisson-definition}$$ Here $C_0$ depends only on $n,S$ and is the same for every center and every scale. The following bounds hold: $$\\begin{aligned}\n 0\\le q^a-f_i^a&\\le Cr_i^2,\n &\\sup_{B_{4Sr_i}(a)}|\\nabla f_i^a|&\\le Cr_i,\n \\label{pi:poisson-boundedness}\\\\\n \\int_{B_{8Sr_i}(a)}|\\nabla(f_i^a-q^a)|^2\\,\\mathrm d\\mathfrak m\n &\\le Cr_i^{n+2}P_i(a),\n &\\int_{B_{8Sr_i}(a)}|\\nabla(f_i^a-q^a)|\\,\\mathrm d\\mathfrak m\n &\\le Cr_i^{n+1}P_i(a),\n \\label{pi:poisson-errors}\\\\\n \\mathcal B_\\kappa(f_i^a,1)(B_{2Sr_i}(a))\n &\\le Cr_i^nP_i(a).\n \\label{pi:poisson-shifted-mass}\n\\end{aligned}$$"
+   },
+   {
+    "anchor": "stmt-pi-weak-cancellation",
+    "claim_id": "C016",
+    "statement": "Suppose that $f$ has constant Laplacian and $a$ is harmonic on a ball on which both functions have bounded gradients. Put $g_a=\\langle\\nabla f,\\nabla a\\rangle$. For interior Sobolev tests $\\phi\\in W^{1,2}_0$ one has $$\\int\\langle\\nabla g_a,\\nabla\\phi\\rangle\\,\\mathrm d\\mathfrak m\n =2\\int(\\operatorname{Hess}f-g)(\\nabla a,\\nabla\\phi)\\,\\mathrm d\\mathfrak m.\n \\label{pi:weak-cancellation-equation}$$ The identity is local, with the right side interpreted on a slightly larger interior ball if a cutoff is needed."
+   },
+   {
+    "anchor": "stmt-pi-affine-improvement",
+    "claim_id": "C017",
+    "statement": "There is an integer $m\\ge3$, depending only on $n,S$, such that, with $\\theta=2^{-m}$, the following holds for all sufficiently late spaces, all $i$ and all $a\\in B_4(p)$. If $w$ is harmonic on $B_{Sr_i}(a)$, then there is an affine combination $F$ of the components of $u$ with $$\\|w-F\\|_{2,B_{S\\theta r_i}(a)}^{\\mathrm{av}}\n \\le\\tfrac12\\theta^{3/2}\n       \\|w\\|_{2,B_{Sr_i}(a)}^{\\mathrm{av}}.\n \\label{pi:affine-improvement-equation}$$"
+   },
+   {
+    "anchor": "stmt-pi-radial-invariance",
+    "claim_id": "C018",
+    "statement": "There are functions $E_i(a)>0$, for $a\\in B_4(p)$, such that $$E_i(a)\\ge P_i(a),\\qquad\n \\sup_a\\sum_{i=0}^\\infty E_i(a)=o(1),\\qquad\n \\inf_a E_i(a)>0\\quad\\hbox{for each fixed }i.\n \\label{pi:pinching-summability}$$ Let $T=R_i(y)^{-1/2}$ with $d(a,y)\\le C_{\\mathrm{sep}}r_i$, and put $U=T(u-u(a))/r_i$. In the metric $r_i^{-1}d$, with $\\widehat f_i^a=f_i^a/r_i^2$, there is a matrix $A_i^a(T)$ satisfying $\\|A_i^a(T)-\\mathrm{Id}\\|=o(1)$ and $$\\left\\|\\langle\\nabla\\widehat f_i^a,\\nabla U\\rangle\n       -A_i^a(T)(U-U(a))\\right\\|_{W^{1,2}(B_{S/2}(a))}\n \\le C\\sqrt{E_i(a)}.\n \\label{pi:radial-invariance-equation}$$ The ball and all derivatives in this display use the rescaled metric. Arbitrary additive constants may be used in $U$."
+   },
+   {
+    "anchor": "stmt-pi-commutator",
+    "claim_id": "C019",
+    "statement": "On $B_{8R}(z)$ one has $$\\Delta v=0,\\qquad\n |\\nabla v|\\le C,\\qquad\n M(v)(B_{8R}(z))\\le Cs^2,\n \\label{pi:pair-poisson-bounds}$$ and $$\\|h-(U(x)-U(z))\\|_{L^2(B_{8R}(z))}\\le Cs.\n \\label{pi:constant-direction}$$"
+   },
+   {
+    "anchor": "stmt-pi-radial-transport",
+    "claim_id": "C020",
+    "statement": "Work in the rescaled units above. Suppose that $w$ is a bounded Sobolev function on $B_{4R}(z)$ with $\\|w\\|_\\infty\\le C_1$, and that $$L_zw=w+\\ell\\cdot U+k+e_w,\n \\qquad \\|e_w\\|_{L^2(B_{4R}(z))}\\le C_1s.\n \\label{pi:transport-hypothesis}$$ Put $\\alpha=\\|w\\|_{L^2(B_R(z))}$. If $|\\ell|+|k|\\le C_1(\\alpha+s)$, then $$\\|w\\|_{L^2(B_{2R}(z))}\\le C(\\alpha+s),\n \\label{pi:transport-conclusion}$$ where $C$ is independent of $\\alpha,s$. The constants may depend on $C_1$ and the already fixed radii and coordinate bounds."
+   },
+   {
+    "anchor": "stmt-pi-sharp-projection",
+    "claim_id": "C021",
+    "statement": "For all sufficiently late spaces, there is a vector $b\\in\\mathbb R^n$ with $|b|\\le C$ such that $$\\|\\nabla(v-b\\cdot U)\\|_{L^2(B_{2L+4}(y))}\\le Cs.\n \\label{pi:sharp-projection-equation}$$ The constants and the late-space threshold are uniform in the configuration <a href=\"#pi:center-configuration\" data-reference-type=\"eqref\" data-reference=\"pi:center-configuration\">[pi:center-configuration]</a> and the dyadic scale."
+   },
+   {
+    "anchor": "stmt-pi-directional-pinching",
+    "claim_id": "C022",
+    "statement": "For every fixed $L,C_{\\mathrm{sep}}>1$, the functions $E_i$ may be chosen as in <a href=\"#pi:definition-E\" data-reference-type=\"eqref\" data-reference=\"pi:definition-E\">[pi:definition-E]</a>, with the uniform summability and positive floors in <a href=\"#pi:pinching-summability\" data-reference-type=\"eqref\" data-reference=\"pi:pinching-summability\">[pi:pinching-summability]</a>, so that the following holds for all sufficiently late spaces. Define $$D_{i,y}=R_i(y)^{-1}\n       \\bigl[r_i^{2-n}M(u)(B_{Lr_i}(y))\\bigr]R_i(y)^{-1}.$$ For every configuration <a href=\"#pi:center-configuration\" data-reference-type=\"eqref\" data-reference=\"pi:center-configuration\">[pi:center-configuration]</a>, $$D_{i,y}[u(x)-u(z)]\n \\le Cr_i^2\\bigl(E_i(x)+E_i(z)\\bigr).\n \\label{pi:directional-estimate}$$ The same functions work simultaneously for all such centers and all dyadic scales. All enlargement constants are fixed before choosing the late-space threshold."
+   },
+   {
+    "anchor": "stmt-re-field-estimates",
+    "claim_id": "C023",
+    "statement": "At $P=P_x$, $x\\in B_1(p)$, write $r=r_i$, $H=H_i(x)$, $Q=Q_i(x)$, $Z=Z_i(x)$, $S=S_i(x)$, and $E=E_i(x)$. There is a linear error $e(\\xi)$ such that $$\\begin{aligned}\n r^{-1}|v_i|_Q&\\le C\\sqrt\\varepsilon\\sqrt E,\n       \\label{re:field-value}\\\\\n (\\mathrm Dv_i)\\xi&=S\\xi+e(\\xi),\n       \\label{re:field-linear}\\\\\n |S\\xi|_Q&\\le\\sqrt\\varepsilon\\sqrt{Z[\\xi]},\n       &|e(\\xi)|_Q&\\le C\\sqrt\\varepsilon\\sqrt E\\,|\\xi|_H,\n       \\label{re:field-small-linear}\\\\\n |\\xi^Te(\\xi)|&\\le C\\sqrt{Z[\\xi]E}\\,|\\xi|_H,\n       \\label{re:field-diagonal}\\\\\n r|\\mathrm D^2v_i(\\xi,\\xi)|_Q\n       &\\le C\\left(\\sqrt{Z[\\xi]}\\,|\\xi|_H\n                          +\\sqrt E\\,|\\xi|_H^2\\right).\n       \\label{re:field-second}\n\\end{aligned}$$ There is a fixed $C_v\\ge1$ such that, in every order $m\\ge0$, $$\\label{re:field-jets}\n r_i^{m-1}\\|\\mathrm D^m v_i(P_x)\\|_{H_i(x)\\to Q_i(x)}\n       \\le\\varepsilon C_v^{m+1}(m!)^s.$$"
+   },
+   {
+    "anchor": "stmt-re-inverse-majorant",
+    "claim_id": "C024",
+    "statement": "Fix $\\sigma\\ge1$ and put $L_0=1$ and $$L_m=(m+1)((m+1)!)^\\sigma\\qquad(m\\ge1).$$ Then $$\\label{re:convolution-decay}\n \\delta_m:=\\sum_{l=1}^{m-1}\\frac{L_lL_{m-l}}{L_m}\n       \\longrightarrow0,\n \\qquad\n \\sum_{l=0}^m L_lL_{m-l}\\le C_\\sigma L_m.$$ Suppose a smooth matrix-valued function $J$ is invertible at a point and, in Euclidean operator norms at that point, $$\\|J^{-1}\\|\\le\\sqrt A,\\qquad\n \\frac{\\|\\mathrm D^mJ\\|}{m!}\\le B^mL_m\\quad(m\\ge1),\n \\qquad A,B\\ge1.$$ There is a constant $C_{A,\\sigma}$, independent of $m$ and $B$, such that $$\\label{re:inverse-jets}\n \\frac{\\|\\mathrm D^m(J^{-1})\\|}{m!}\n       \\le C_{A,\\sigma}B^mL_m\\qquad(m\\ge0).$$ The assertion also holds for the inverse transpose."
+   },
+   {
+    "anchor": "stmt-re-jet-step",
+    "claim_id": "C025",
+    "statement": "Choose $B\\ge C_v$ sufficiently large and then $\\varepsilon$ sufficiently small, depending on $A,\\sigma,B$ and the fixed data. If <a href=\"#re:metric-bootstrap\" data-reference-type=\"eqref\" data-reference=\"re:metric-bootstrap\">[re:metric-bootstrap]</a> and <a href=\"#re:jet-bootstrap\" data-reference-type=\"eqref\" data-reference=\"re:jet-bootstrap\">[re:jet-bootstrap]</a> hold at level $i$, the update <a href=\"#re:iteration\" data-reference-type=\"eqref\" data-reference=\"re:iteration\">[re:iteration]</a> satisfies <a href=\"#re:jet-bootstrap\" data-reference-type=\"eqref\" data-reference=\"re:jet-bootstrap\">[re:jet-bootstrap]</a> at level $i+1$. This assertion does not require the new-level metric bound."
+   },
+   {
+    "anchor": "stmt-re-metric-iteration",
+    "claim_id": "C026",
+    "statement": "There are fixed $A,B$ and a sufficiently small flatness threshold such that the maps <a href=\"#re:iteration\" data-reference-type=\"eqref\" data-reference=\"re:iteration\">[re:iteration]</a> are smooth on all of $\\Omega$ for every finite $i$, their Jacobians are invertible there, and <a href=\"#re:metric-bootstrap\" data-reference-type=\"eqref\" data-reference=\"re:metric-bootstrap\">[re:metric-bootstrap]</a>–<a href=\"#re:jet-bootstrap\" data-reference-type=\"eqref\" data-reference=\"re:jet-bootstrap\">[re:jet-bootstrap]</a> hold for all $x\\in B_1(p)$ and every $i$."
+   },
+   {
+    "anchor": "stmt-re-limit-chart",
+    "claim_id": "C027",
+    "statement": "For sufficiently flat data in the preceding construction, there is $\\rho>0$ such that the uniform limit $$F(x)=\\lim_{i\\to\\infty}h_i(u(x)),\\qquad x\\in B_1(p),$$ restricts to a bi-Lipschitz homeomorphism from $B_\\rho(p)$ onto an open subset of $\\mathbb R^n$. Its distance comparisons use the ambient distance $d$ restricted to $B_\\rho(p)$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Open bi-Lipschitz limiting chart",
+    "evidence": [
+     {
+      "anchor": "stmt-re-limit-chart",
+      "quote": "For sufficiently flat data in the preceding construction, there is $\\rho>0$ such that the uniform limit $$F(x)=\\lim_{i\\to\\infty}h_i(u(x)),\\qquad x\\in B_1(p),$$ restricts to a bi-Lipschitz homeomorphism from $B_\\rho(p)$ onto an open subset of $\\mathbb R^n$. Its distance comparisons use the ambient distance $d$ restricted to $B_\\rho(p)$.",
+      "quote_sha256": "4ee065a634da90dd5b4843c264fa9832bf5c8c98a01910ac1e2f7f368713f688"
+     }
+    ],
+    "requires_concepts": [
+     "Open harmonic coordinates",
+     "Cumulative matrix comparison",
+     "Summable directional pinching",
+     "Metric and jet bounds",
+     "Invariance of domain"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C001",
+   "exact_statement": "For every integer $n\\ge2$ there is a constant $L_n\\ge1$ with the following property. Let $K\\in\\mathbb R$, and let $(X,d,\\mathcal H_d^n)$ be a noncollapsed $\\mathrm{RCD}(K,n)$ space. Let $p\\in X$. If every pointed Gromov–Hausdorff tangent of $X$ at $p$ is pointed-isometric to $(\\mathbb R^n,|\\cdot|,0)$, then there exist an open neighborhood $U$ of $p$, an open set $V\\subset\\mathbb R^n$, and a homeomorphism $F:U\\to V$ such that $$L_n^{-1}d(x,z)\\le |F(x)-F(z)|\\le L_nd(x,z)\n \\qquad (x,z\\in U).$$ The distance on the left and right is the original distance $d$ restricted to $U$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "C002",
+   "exact_statement": "Under the hypotheses of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, there is an open set $\\mathcal U\\subset X$ containing every $n$-regular point, with $\\mathcal H_d^n(X\\setminus\\mathcal U)=0$, and a countable atlas of $L_n$-bi-Lipschitz charts from ambient-open subsets of $\\mathcal U$ onto open subsets of $\\mathbb R^n$. Each chart uses the restricted ambient distance, and its transition maps are $L_n^2$-bi-Lipschitz.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-full-measure-atlas"
+  },
+  {
+   "claim_id": "C003",
+   "exact_statement": "Let $(Y,d,\\mathfrak m)$ be a noncollapsed $\\mathrm{RCD}(-\\kappa,n)$ space and let $\\Omega\\subset Y$ be open. A locally bounded solution of $\\Delta w=a$ in $\\Omega$, with $a$ constant, is locally Lipschitz and is a local test function. In particular it has a local $L^2$ Hessian, $\\Gamma(w_1,w_2)\\in W^{1,2}_{\\rm loc}(\\Omega)$ for two such functions, and the Hessian product rule holds locally. The measure $$\\label{co:M-definition}\n M(w)=\\frac12\\Delta\\Gamma(w)+\\kappa\\Gamma(w)\\mathfrak m$$ is locally finite and nonnegative. For every constant $b$, $$\\label{co:shifted-bochner}\n M(w)-(2b\\Delta w-nb^2)\\mathfrak m\n \\ge |\\operatorname{Hess}w-bg|^2\\mathfrak m.$$ On the real vector space of local constant-Laplacian functions, the left side is a nonnegative quadratic form in the pair $(w,b)$, with both entries scaled together. All these statements hold on interior balls for weak solutions with locally bounded $L^2$ norm, after using the interior estimates to obtain local boundedness.*\n\n\n*On fixed interior scales, bounded Lipschitz cutoffs with bounded Laplacian are available. Under uniform local volume comparison and a uniform rescaled curvature bound, their bounds, local Poincare and Sobolev constants, and interior harmonic and Poisson estimates are uniform. In particular, on a fixed-radius ball in the rescaled spaces below there is a number $d_*>1$ and a constant $C$ such that $$\\label{co:dirichlet-sobolev}\n \\|h\\|_{L^2}+\\|h\\|_{L^{2d_*}}\n \\le C\\|\\nabla h\\|_{L^2},\\qquad h\\in W^{1,2}_0(B),$$ whenever the ball and a fixed larger ball are contained in the working region.",
+   "kind": "bound",
+   "statement_anchor": "stmt-co-local-calculus"
+  },
+  {
+   "claim_id": "C004",
+   "exact_statement": "Fix an $n$-regular point $p$ in the space of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>. There are rescalings $$(X_\\nu,d_\\nu,\\mathfrak m_\\nu,p_\\nu)\n =(X,s_\\nu^{-1}d,s_\\nu^{-n}\\mathcal H_d^n,p),\n \\qquad s_\\nu\\downarrow0,$$ numbers $\\kappa_\\nu\\downarrow0$, and radii $T_\\nu\\uparrow\\infty$ with $\\kappa_\\nu T_\\nu^2\\to0$, having the following properties. The space $X_\\nu$ is $\\mathrm{RCD}(-\\kappa_\\nu,n)$. For a sequence $\\delta_\\nu\\downarrow0$, all balls with center in $B_{64T_\\nu}(p_\\nu)$ and radius at most $64T_\\nu$ satisfy $$\\label{co:uniform-flatness}\n \\left|\\frac{\\mathfrak m_\\nu(B_r(y))}{\\omega_n r^n}-1\\right|\n \\le\\delta_\\nu,\n \\qquad\n d_{GH}\\bigl(\\overline B_r(y),\\overline B_r(0^n)\\bigr)\n \\le\\delta_\\nu r.$$ There are harmonic columns $u_\\nu$ on $B_{32T_\\nu}(p_\\nu)$, converging on every fixed ball locally uniformly and strongly in $W^{1,2}$ to Euclidean coordinates, and $$\\label{co:original-gradient-bound}\n |\\nabla u_\\nu|\\le C_n\n \\quad\\text{on }B_{16T_\\nu}(p_\\nu).$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-co-flat-setup"
+  },
+  {
+   "claim_id": "C005",
+   "exact_statement": "For every pair of fixed constants $A,C\\ge1$, the matrices $R_i(y)$ are positive definite for $y\\in B_A(p)$ and $i\\ge0$. In the rescaled ball $B_{Cr_i}(y)$, the map $$\\label{co:normalized-column}\n U_{i,y}=\\frac{R_i(y)^{-1/2}(u-u(y))}{r_i}$$ is, after an orthogonal change of target coordinates, an $o(1)$ approximation to Euclidean coordinates, uniformly and strongly in interior $W^{1,2}$. Its gradients are uniformly bounded on each fixed interior enlargement. Its Gram matrix converges strongly in every finite $L^p$ on such enlargements to $\\mathrm{Id}$.*\n\n\n\n\n*For every fixed $C\\ge1$, if $d(y,z)\\le Cr_i$ and $C^{-1}r_i\\le r_j\\le Cr_i$, then $$\\label{co:nearby-R}\n (1-o(1))R_i(y)\\le R_j(z)\\le(1+o(1))R_i(y).$$ For every $a>0$, after choosing a sufficiently late rescaling, $$\\label{co:slow-R}\n C_a^{-1}2^{-2a|i-j|}R_j(y)\n \\le R_i(y)\\le C_a2^{2a|i-j|}R_j(y).$$ The constants are uniform in the center and the two indices. In particular, since $R_0(y)=\\mathrm{Id}+o(1)$ on fixed balls, $$\\label{co:R-lower}\n c_a r_i^{2a}\\mathrm{Id}\\le R_i(y)\\le C\\mathrm{Id}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-co-harmonic-normalization"
+  },
+  {
+   "claim_id": "C006",
+   "exact_statement": "For each pair of fixed constants $A,C\\ge1$, uniformly for $y\\in B_A(p)$ and $i\\ge0$, $$\\label{co:small-mass}\n r_i^{2-n}M(B_{Cr_i}(y))\\le o(1)R_i(y).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-co-bochner-small"
+  },
+  {
+   "claim_id": "C007",
+   "exact_statement": "For every fixed $A\\ge1$, the map $u$ is a homeomorphism from $B_A(p)$ onto an open subset of $\\mathbb R^n$, once the rescaling is sufficiently late. There is a fixed $c>0$ such that, whenever the balls involved stay in a fixed interior working region, $$\\label{co:ellipsoid-containment}\n \\{P:|P-u(x)|_{R_i(x)^{-1}}<c r_i\\}\n \\subset u(B_{r_i/2}(x)).$$ Moreover, for every fixed $D\\ge1$, if $D^{-1}r_i\\le d(x,z)\\le Dr_i$, then $$\\label{co:separation-scale}\n \\bigl||u(z)-u(x)|_{R_i(x)^{-1}}-d(x,z)\\bigr|\n \\le o_D(1)r_i.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-co-open-coordinates"
+  },
+  {
+   "claim_id": "C008",
+   "exact_statement": "Fix $C_0\\ge1$, $x,y$ in a fixed testing region, and $d(x,y)\\le C_0r$, where $0<r\\le1$. Put $$K_t(z)=\\mathop{\\mathchoice\n {\\displaystyle\\int\\mkern-18mu-}\n {\\textstyle\\int\\mkern-15mu-}\n {\\scriptstyle\\int\\mkern-12mu-}\n {\\scriptscriptstyle\\int\\mkern-10mu-}}\\nolimits_{B_r(y)}p_t(a,z)\\,\\mathrm d\\mathfrak m(a),\n \\qquad D=d(x,z).$$ After enlarging fixed constants, the following bounds hold at every source pole $z$: $$\\begin{aligned}\n K_t(z)&\\le C r^{-n}e^{-cD^2/r^2},&&0<t\\le r^2,\n       \\label{co:short-kernel}\\\\\n |K_t(z)-p_t(x,z)|&\\le C r t^{-(n+1)/2}e^{-cD^2/t},\n       &&r^2\\le t\\le1.\\label{co:long-kernel}\n\\end{aligned}$$ If $f\\in W^{1,2}\\cap L^\\infty$ has compact support and its Laplacian is a finite signed measure $\\mu$ of compact support, then $$\\label{co:semigroup-measure}\n P_t f-P_s f=\\int_s^t P_\\tau\\mu\\,\\mathrm d\\tau,\n \\qquad 0<s<t,$$ using the continuous representatives. In the application $f=\\chi\\Gamma(u_j,u_k)$, this identity can also be averaged over a ball and passed to $s\\downarrow0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-co-kernel-measures"
+  },
+  {
+   "claim_id": "C009",
+   "exact_statement": "There is $\\lambda=\\lambda_\\nu>0$, with $\\lambda_\\nu\\to0$, such that, at all fixed testing centers and $0<t\\le1$, $$\\label{co:heat-derivative}\n P_t(\\chi M)\n \\le\\partial_t\\bigl(P_t(\\chi G)+\\lambda t\\mathrm{Id}\\bigr)\n \\le 3P_t(\\chi M)+C\\mathrm{Id}.$$ Define $$\\label{co:QH-definition}\n Q_i(x)=P_{r_i^2}(\\chi G)(x)+\\lambda r_i^2\\mathrm{Id},\n \\qquad H_i(x)=Q_i(x)^{-1}.$$ Then $$\\begin{aligned}\n &(1-o(1))R_i(x)\\le Q_i(x)\\le(1+o(1))R_i(x),\n       \\qquad Q_0(x)=\\mathrm{Id}+o(1),\\label{co:QR-comparison}\\\\\n &H_i(x)\\le H_{i+1}(x)\\le(1+o(1))H_i(x).\n       \\label{co:H-monotone}\n\\end{aligned}$$ The nearby-center and slow-growth estimates of Lemma <a href=\"#co:harmonic-normalization\" data-reference-type=\"ref\" data-reference=\"co:harmonic-normalization\">5</a> hold for $Q_i$ as well. In particular, for every prescribed $a>0$, with a sufficiently late rescaling, $$\\label{co:slow-QH}\n Q_j(x)\\le C_a2^{2a(i-j)}Q_i(x)\\quad(j\\le i),\n \\qquad \\|H_i(x)\\|\\le C_a2^{2ai}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-co-heat-matrices"
+  },
+  {
+   "claim_id": "C010",
+   "exact_statement": "Fix constants $A,C_0\\ge1$, where $C_0$ bounds $d(x,y)/r_i$, and fix a bounded region for $x$. There is a fixed exponent $\\gamma>0$, which may be taken to be $1/2$, with the following properties for all sufficiently late rescalings. Set $$\\label{co:F-definition}\n \\mathcal F_i(x)=2^{-\\gamma i}\\mathrm{Id}+\n       \\sum_{j=0}^i2^{-\\gamma(i-j)}N_j(x).$$ For the prescribed enlargement $A$, $$\\label{co:heat-decrement}\n c_A r_i^{2-n}M(B_{Ar_i}(x))\n \\le Q_i(x)-Q_{i+1}(x)\\le C\\mathcal F_i(x).$$ For $d(x,y)\\le C_0r_i$ and $v,w\\in\\mathbb R^n$, $$\\label{co:bilinear-heat-comparison}\n |v^T(R_i(y)-Q_i(x))w|\n \\le C|v|_{Q_i(x)}\\sqrt{\\mathcal F_i(x)[w]}.$$ All constants are independent of $i$ and of the expanding cutoff radius. They may depend on the stated fixed parameters.",
+   "kind": "bound",
+   "statement_anchor": "stmt-co-heat-comparison"
+  },
+  {
+   "claim_id": "C011",
+   "exact_statement": "Fix a testing center $x$, and suppress it in the notation. Let $a>0$ in <a href=\"#co:slow-QH\" data-reference-type=\"eqref\" data-reference=\"co:slow-QH\">[co:slow-QH]</a> be chosen so that $4a<\\gamma$. Set $$B_i=H_{i+1}-H_i,\\qquad \\Delta_i=Q_i-Q_{i+1},\n \\qquad a_i=H_i\\xi$$ for a fixed $\\xi\\in\\mathbb R^n$. Then, uniformly for every integer $k\\ge0$, $$\\begin{aligned}\n &H_i\\Delta_iH_i\\le B_i\\le(1+C\\varepsilon_\\nu)H_i\\Delta_iH_i,\n             \\label{co:inverse-increment-order}\\\\\n &\\sum_{i<k}\\mathcal F_i[a_i]\\le C H_k[\\xi],\n             \\label{co:weighted-total}\\\\\n &C^{-1}H_k\\le \\mathrm{Id}+\\sum_{i<k}H_iN_iH_i\\le C H_k.\n             \\label{co:central-cumulative}\n\\end{aligned}$$ For every fixed $A\\ge1$, the upper sum bound also holds with $r_i^{2-n}M(B_{Ar_i}(x))$ in place of $N_i$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-co-inverse-increments"
+  },
+  {
+   "claim_id": "C012",
+   "exact_statement": "Fix $C_0\\ge1$. For $d(x,y)\\le C_0r_i$, put $$A_{i,y}=R_i(y)-Q_i(x),\\qquad\n e_{i,y}=R_i(y)^{-1}\\xi-H_i(x)\\xi.$$ Then $$\\label{co:normalization-error-pointwise}\n |e_{i,y}|_{Q_i(x)}^2\n \\le C\\mathcal F_i(x)[H_i(x)\\xi].$$ If at each $i<k$ at most $J$ such centers are chosen, then $$\\label{co:normalization-error-sum}\n \\sum_{i<k}\\sum_y|e_{i,y}|_{Q_i(x)}^2\n \\le C_J H_k(x)[\\xi].$$ For any positive semidefinite matrices $C_{i,y}$ satisfying $C_{i,y}\\le\\varepsilon_\\nu Q_i(x)$, their error cost is $$\\label{co:normalization-mass-error}\n \\sum_{i<k}\\sum_y C_{i,y}[e_{i,y}]\n \\le C_J\\varepsilon_\\nu H_k(x)[\\xi].$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-co-normalization-error"
+  },
+  {
+   "claim_id": "C013",
+   "exact_statement": "Fix constants $A_0,C_0,L\\ge1$ and a positive integer $J$. At each center $x\\in B_{A_0}(p)$ and each scale $i\\ge0$, choose at most $J$ centers $y$ with $d(x,y)\\le C_0r_i$. The choice may depend arbitrarily on $x,i$. Set $$\\label{co:D-definition}\n C_{i,y}=r_i^{2-n}M(B_{Lr_i}(y)),\n \\qquad D_{i,y}=R_i(y)^{-1}C_{i,y}R_i(y)^{-1}.$$ Give the chosen centers weights $\\theta_{i,y}\\in[0,1]$, and suppose that for every $i$ at least one has weight one and satisfies $B_{Lr_i}(y)\\supset B_{r_i}(x)$. Write $$\\label{co:ZS-definition}\n Z_i=\\sum_yD_{i,y},\\qquad\n S_i=\\sum_y\\theta_{i,y}D_{i,y}.$$ There is $C_*<\\infty$, depending only on $n,A_0,C_0,L,J$, such that for all sufficiently late rescalings, every such choice, and every integer $k\\ge0$, $$\\label{co:cumulative-estimates}\n Z_i\\le o(1)H_i(x),\\qquad\n \\mathrm{Id}+\\sum_{i<k}Z_i\\le C_*H_k(x),\\qquad\n H_k(x)\\le C_*\\left(\\mathrm{Id}+\\sum_{i<k}S_i\\right).$$ The $o(1)$ is uniform over the stated centers, all scales, and all choices satisfying these conditions.",
+   "kind": "bound",
+   "statement_anchor": "stmt-co-cumulative-comparison"
+  },
+  {
+   "claim_id": "C014",
+   "exact_statement": "Let $\\Omega$ be one of the bounded rescaled domains satisfying <a href=\"#pi:dirichlet-sobolev\" data-reference-type=\"eqref\" data-reference=\"pi:dirichlet-sobolev\">[pi:dirichlet-sobolev]</a>, and suppose that $h\\in W^{1,2}_0(\\Omega)$ is nonnegative and bounded, with $$\\int\\langle\\nabla h,\\nabla\\psi\\rangle\\,\\mathrm d\\mathfrak m\n =\\int\\psi\\,\\mathrm d\\mu$$ for compactly supported Lipschitz tests, where $\\mu$ is a finite positive measure. If $\\mu(\\Omega)\\le P$, then $$\\int_\\Omega|\\nabla h|\\,\\mathrm d\\mathfrak m\\le CP,\n \\qquad\n \\int_\\Omega|\\nabla h|^2\\,\\mathrm d\\mathfrak m\\le\\|h\\|_\\infty P.\n \\label{pi:positive-source-bounds}$$ The constant in the first inequality depends only on the Sobolev constant, its exponent, and an upper bound for $\\mathfrak m(\\Omega)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-pi-positive-source"
+  },
+  {
+   "claim_id": "C015",
+   "exact_statement": "There are nonnegative numbers $P_i(a)$, defined for every $a\\in B_4(p)$ and $i\\ge0$, with $$\\sup_{a\\in B_4(p)}\\sum_{i=0}^{\\infty}P_i(a)=o(1),\n \\label{pi:poisson-sum}$$ and functions $f_i^a$ on $B_{8Sr_i}(a)$ such that, with $q^a=d_a^2/2$, $$\\Delta f_i^a=a_i:=n+C_0\\kappa r_i^2,\n \\qquad f_i^a-q^a\\in W^{1,2}_0(B_{8Sr_i}(a)).\n \\label{pi:poisson-definition}$$ Here $C_0$ depends only on $n,S$ and is the same for every center and every scale. The following bounds hold: $$\\begin{aligned}\n 0\\le q^a-f_i^a&\\le Cr_i^2,\n &\\sup_{B_{4Sr_i}(a)}|\\nabla f_i^a|&\\le Cr_i,\n \\label{pi:poisson-boundedness}\\\\\n \\int_{B_{8Sr_i}(a)}|\\nabla(f_i^a-q^a)|^2\\,\\mathrm d\\mathfrak m\n &\\le Cr_i^{n+2}P_i(a),\n &\\int_{B_{8Sr_i}(a)}|\\nabla(f_i^a-q^a)|\\,\\mathrm d\\mathfrak m\n &\\le Cr_i^{n+1}P_i(a),\n \\label{pi:poisson-errors}\\\\\n \\mathcal B_\\kappa(f_i^a,1)(B_{2Sr_i}(a))\n &\\le Cr_i^nP_i(a).\n \\label{pi:poisson-shifted-mass}\n\\end{aligned}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-pi-poisson-pinching"
+  },
+  {
+   "claim_id": "C016",
+   "exact_statement": "Suppose that $f$ has constant Laplacian and $a$ is harmonic on a ball on which both functions have bounded gradients. Put $g_a=\\langle\\nabla f,\\nabla a\\rangle$. For interior Sobolev tests $\\phi\\in W^{1,2}_0$ one has $$\\int\\langle\\nabla g_a,\\nabla\\phi\\rangle\\,\\mathrm d\\mathfrak m\n =2\\int(\\operatorname{Hess}f-g)(\\nabla a,\\nabla\\phi)\\,\\mathrm d\\mathfrak m.\n \\label{pi:weak-cancellation-equation}$$ The identity is local, with the right side interpreted on a slightly larger interior ball if a cutoff is needed.",
+   "kind": "bound",
+   "statement_anchor": "stmt-pi-weak-cancellation"
+  },
+  {
+   "claim_id": "C017",
+   "exact_statement": "There is an integer $m\\ge3$, depending only on $n,S$, such that, with $\\theta=2^{-m}$, the following holds for all sufficiently late spaces, all $i$ and all $a\\in B_4(p)$. If $w$ is harmonic on $B_{Sr_i}(a)$, then there is an affine combination $F$ of the components of $u$ with $$\\|w-F\\|_{2,B_{S\\theta r_i}(a)}^{\\mathrm{av}}\n \\le\\tfrac12\\theta^{3/2}\n       \\|w\\|_{2,B_{Sr_i}(a)}^{\\mathrm{av}}.\n \\label{pi:affine-improvement-equation}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-pi-affine-improvement"
+  },
+  {
+   "claim_id": "C018",
+   "exact_statement": "There are functions $E_i(a)>0$, for $a\\in B_4(p)$, such that $$E_i(a)\\ge P_i(a),\\qquad\n \\sup_a\\sum_{i=0}^\\infty E_i(a)=o(1),\\qquad\n \\inf_a E_i(a)>0\\quad\\hbox{for each fixed }i.\n \\label{pi:pinching-summability}$$ Let $T=R_i(y)^{-1/2}$ with $d(a,y)\\le C_{\\mathrm{sep}}r_i$, and put $U=T(u-u(a))/r_i$. In the metric $r_i^{-1}d$, with $\\widehat f_i^a=f_i^a/r_i^2$, there is a matrix $A_i^a(T)$ satisfying $\\|A_i^a(T)-\\mathrm{Id}\\|=o(1)$ and $$\\left\\|\\langle\\nabla\\widehat f_i^a,\\nabla U\\rangle\n       -A_i^a(T)(U-U(a))\\right\\|_{W^{1,2}(B_{S/2}(a))}\n \\le C\\sqrt{E_i(a)}.\n \\label{pi:radial-invariance-equation}$$ The ball and all derivatives in this display use the rescaled metric. Arbitrary additive constants may be used in $U$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-pi-radial-invariance"
+  },
+  {
+   "claim_id": "C019",
+   "exact_statement": "On $B_{8R}(z)$ one has $$\\Delta v=0,\\qquad\n |\\nabla v|\\le C,\\qquad\n M(v)(B_{8R}(z))\\le Cs^2,\n \\label{pi:pair-poisson-bounds}$$ and $$\\|h-(U(x)-U(z))\\|_{L^2(B_{8R}(z))}\\le Cs.\n \\label{pi:constant-direction}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-pi-commutator"
+  },
+  {
+   "claim_id": "C020",
+   "exact_statement": "Work in the rescaled units above. Suppose that $w$ is a bounded Sobolev function on $B_{4R}(z)$ with $\\|w\\|_\\infty\\le C_1$, and that $$L_zw=w+\\ell\\cdot U+k+e_w,\n \\qquad \\|e_w\\|_{L^2(B_{4R}(z))}\\le C_1s.\n \\label{pi:transport-hypothesis}$$ Put $\\alpha=\\|w\\|_{L^2(B_R(z))}$. If $|\\ell|+|k|\\le C_1(\\alpha+s)$, then $$\\|w\\|_{L^2(B_{2R}(z))}\\le C(\\alpha+s),\n \\label{pi:transport-conclusion}$$ where $C$ is independent of $\\alpha,s$. The constants may depend on $C_1$ and the already fixed radii and coordinate bounds.",
+   "kind": "bound",
+   "statement_anchor": "stmt-pi-radial-transport"
+  },
+  {
+   "claim_id": "C021",
+   "exact_statement": "For all sufficiently late spaces, there is a vector $b\\in\\mathbb R^n$ with $|b|\\le C$ such that $$\\|\\nabla(v-b\\cdot U)\\|_{L^2(B_{2L+4}(y))}\\le Cs.\n \\label{pi:sharp-projection-equation}$$ The constants and the late-space threshold are uniform in the configuration <a href=\"#pi:center-configuration\" data-reference-type=\"eqref\" data-reference=\"pi:center-configuration\">[pi:center-configuration]</a> and the dyadic scale.",
+   "kind": "bound",
+   "statement_anchor": "stmt-pi-sharp-projection"
+  },
+  {
+   "claim_id": "C022",
+   "exact_statement": "For every fixed $L,C_{\\mathrm{sep}}>1$, the functions $E_i$ may be chosen as in <a href=\"#pi:definition-E\" data-reference-type=\"eqref\" data-reference=\"pi:definition-E\">[pi:definition-E]</a>, with the uniform summability and positive floors in <a href=\"#pi:pinching-summability\" data-reference-type=\"eqref\" data-reference=\"pi:pinching-summability\">[pi:pinching-summability]</a>, so that the following holds for all sufficiently late spaces. Define $$D_{i,y}=R_i(y)^{-1}\n       \\bigl[r_i^{2-n}M(u)(B_{Lr_i}(y))\\bigr]R_i(y)^{-1}.$$ For every configuration <a href=\"#pi:center-configuration\" data-reference-type=\"eqref\" data-reference=\"pi:center-configuration\">[pi:center-configuration]</a>, $$D_{i,y}[u(x)-u(z)]\n \\le Cr_i^2\\bigl(E_i(x)+E_i(z)\\bigr).\n \\label{pi:directional-estimate}$$ The same functions work simultaneously for all such centers and all dyadic scales. All enlargement constants are fixed before choosing the late-space threshold.",
+   "kind": "bound",
+   "statement_anchor": "stmt-pi-directional-pinching"
+  },
+  {
+   "claim_id": "C023",
+   "exact_statement": "At $P=P_x$, $x\\in B_1(p)$, write $r=r_i$, $H=H_i(x)$, $Q=Q_i(x)$, $Z=Z_i(x)$, $S=S_i(x)$, and $E=E_i(x)$. There is a linear error $e(\\xi)$ such that $$\\begin{aligned}\n r^{-1}|v_i|_Q&\\le C\\sqrt\\varepsilon\\sqrt E,\n       \\label{re:field-value}\\\\\n (\\mathrm Dv_i)\\xi&=S\\xi+e(\\xi),\n       \\label{re:field-linear}\\\\\n |S\\xi|_Q&\\le\\sqrt\\varepsilon\\sqrt{Z[\\xi]},\n       &|e(\\xi)|_Q&\\le C\\sqrt\\varepsilon\\sqrt E\\,|\\xi|_H,\n       \\label{re:field-small-linear}\\\\\n |\\xi^Te(\\xi)|&\\le C\\sqrt{Z[\\xi]E}\\,|\\xi|_H,\n       \\label{re:field-diagonal}\\\\\n r|\\mathrm D^2v_i(\\xi,\\xi)|_Q\n       &\\le C\\left(\\sqrt{Z[\\xi]}\\,|\\xi|_H\n                          +\\sqrt E\\,|\\xi|_H^2\\right).\n       \\label{re:field-second}\n\\end{aligned}$$ There is a fixed $C_v\\ge1$ such that, in every order $m\\ge0$, $$\\label{re:field-jets}\n r_i^{m-1}\\|\\mathrm D^m v_i(P_x)\\|_{H_i(x)\\to Q_i(x)}\n       \\le\\varepsilon C_v^{m+1}(m!)^s.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-re-field-estimates"
+  },
+  {
+   "claim_id": "C024",
+   "exact_statement": "Fix $\\sigma\\ge1$ and put $L_0=1$ and $$L_m=(m+1)((m+1)!)^\\sigma\\qquad(m\\ge1).$$ Then $$\\label{re:convolution-decay}\n \\delta_m:=\\sum_{l=1}^{m-1}\\frac{L_lL_{m-l}}{L_m}\n       \\longrightarrow0,\n \\qquad\n \\sum_{l=0}^m L_lL_{m-l}\\le C_\\sigma L_m.$$ Suppose a smooth matrix-valued function $J$ is invertible at a point and, in Euclidean operator norms at that point, $$\\|J^{-1}\\|\\le\\sqrt A,\\qquad\n \\frac{\\|\\mathrm D^mJ\\|}{m!}\\le B^mL_m\\quad(m\\ge1),\n \\qquad A,B\\ge1.$$ There is a constant $C_{A,\\sigma}$, independent of $m$ and $B$, such that $$\\label{re:inverse-jets}\n \\frac{\\|\\mathrm D^m(J^{-1})\\|}{m!}\n       \\le C_{A,\\sigma}B^mL_m\\qquad(m\\ge0).$$ The assertion also holds for the inverse transpose.",
+   "kind": "bound",
+   "statement_anchor": "stmt-re-inverse-majorant"
+  },
+  {
+   "claim_id": "C025",
+   "exact_statement": "Choose $B\\ge C_v$ sufficiently large and then $\\varepsilon$ sufficiently small, depending on $A,\\sigma,B$ and the fixed data. If <a href=\"#re:metric-bootstrap\" data-reference-type=\"eqref\" data-reference=\"re:metric-bootstrap\">[re:metric-bootstrap]</a> and <a href=\"#re:jet-bootstrap\" data-reference-type=\"eqref\" data-reference=\"re:jet-bootstrap\">[re:jet-bootstrap]</a> hold at level $i$, the update <a href=\"#re:iteration\" data-reference-type=\"eqref\" data-reference=\"re:iteration\">[re:iteration]</a> satisfies <a href=\"#re:jet-bootstrap\" data-reference-type=\"eqref\" data-reference=\"re:jet-bootstrap\">[re:jet-bootstrap]</a> at level $i+1$. This assertion does not require the new-level metric bound.",
+   "kind": "bound",
+   "statement_anchor": "stmt-re-jet-step"
+  },
+  {
+   "claim_id": "C026",
+   "exact_statement": "There are fixed $A,B$ and a sufficiently small flatness threshold such that the maps <a href=\"#re:iteration\" data-reference-type=\"eqref\" data-reference=\"re:iteration\">[re:iteration]</a> are smooth on all of $\\Omega$ for every finite $i$, their Jacobians are invertible there, and <a href=\"#re:metric-bootstrap\" data-reference-type=\"eqref\" data-reference=\"re:metric-bootstrap\">[re:metric-bootstrap]</a>–<a href=\"#re:jet-bootstrap\" data-reference-type=\"eqref\" data-reference=\"re:jet-bootstrap\">[re:jet-bootstrap]</a> hold for all $x\\in B_1(p)$ and every $i$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-re-metric-iteration"
+  },
+  {
+   "claim_id": "C027",
+   "exact_statement": "For sufficiently flat data in the preceding construction, there is $\\rho>0$ such that the uniform limit $$F(x)=\\lim_{i\\to\\infty}h_i(u(x)),\\qquad x\\in B_1(p),$$ restricts to a bi-Lipschitz homeomorphism from $B_\\rho(p)$ onto an open subset of $\\mathbb R^n$. Its distance comparisons use the ambient distance $d$ restricted to $B_\\rho(p)$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-re-limit-chart"
+  }
+ ],
+ "paper": "papers/EN-107-000-0000-2-2026-PR-T4-UK-EX-M3-C-PH-H-0709_PM-357.1_Bi_Lipschitz_Coordinates_at_Regular_Points_of_Noncollapsed_RCD_Spaces.md",
+ "purpose": "Bi-Lipschitz Coordinates at Regular Points of Noncollapsed RCD Spaces",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "f0bbb21697f6326e9e9701114730acf79b28d2adfa8e5df4258ea8a07db1df44",
+   "pm.domains.v2": "beb4425f3207d148579274e3308018b0e9844ad8ed14cc83203ac9ea1dfe9e1c",
+   "pm.edges.v2": "c41afa701aecc67402f7b846f641a3a88e061ad6f3d72c5a4d5d008b6a010c9e",
+   "pm.extraction.v2": "15125a44f8e29978663ed48b9af98604bf3e4771c003528d2ac977a8748f98e7",
+   "pm.formal.v2": "ebb43d8a61d4792f35ce49727bd256aafe31aa3e28c45aea653eea70f13efdd2",
+   "pm.limits.v2": "f5d989e996d5505d4ab47ef01a159e37788fe60fcabe04bca365dba3bed01726",
+   "pm.node.v2": "0e4951234a0e9a716f8063ed4d57800d1ff5764f51f4136aeb70456ba27c2593",
+   "pm.objects.v2": "0dc6e5cf29bbd7d171d09254fe74c3b80d9904a60c36853adfbc16a1fcaf0962",
+   "pm.provenance.v2": "d494c055c5f6a5405b0c7b2052c70622d921ff590efc7bb149bf369576e2e093",
+   "pm.quantities.v2": "49a547b75c49a5eca894dfa5db3794696efb017f544a1dd10aa57922700a4c35",
+   "pm.reading.v2": "94099cd521474a84584c9bc58e642ba2e74995585b9d853c956892370e69223f",
+   "pm.roadmap.v2": "7a0086b6185abef6ecd525c2a6ae0325ccc67954838341371b4065172d2cb4e5",
+   "pm.search.v1": "437884312d12875e86b2173a3b8c640efc0bc510a9b7d97583c14501c53011cf",
+   "pm.triptych.v2": "316324942233c697a1b0f562e11da98abe84e609e15909fca36da1c6caaa5089"
+  },
+  "canonical_sha256": "575de0d53830dc2593799821c3983a415f518af028b5480bbedf87352277eb3e",
+  "paper_sha256": "fae759851642d6e1ca5349afa0b580f943632249580266343655576a0049980c",
+  "repaired_body_sha256": "c543a6c25d6b886c0976ebbab4b7491a637cc4ba86fcaf15dc57189e4ddc93e7"
+ },
+ "status": "ACTIVE",
+ "subject_id": 7,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "fd2640b84fb72e3853b61da06174f730b084a53c207825e115079ddc0f47d91d",
+   "receipt_sha256": "63319b43d26c074282ac556707aaee3fbbb15bf97d97a27fd3b54588e10c8977",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Bi-Lipschitz Coordinates at Regular Points of Noncollapsed RCD Spaces"
+}

@@ -1,0 +1,566 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 699914,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 227784
+ },
+ "coordinate": "EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-C-TO-H-0117",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "Algebraic geometry and mixed Hodge theory",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "For every smooth projective complex curve $C$ of genus $g\\ge2$, every composite integer $n\\ge4$, every integer $d$ with $\\gcd(n,d)=1$, and every $L\\in\\mathop{\\mathrm{Pic}}^d(C)$, one has $$P_kH^m(X^B,\\mathbb Q)=W_{2k}H^m(X^B,\\mathbb Q)\n=W_{2k+1}H^m(X^B,\\mathbb Q)$$ for all $m,k\\ge0$.",
+     "quote_sha256": "a2ffbdf501ea02a34c7fa32c25e44ffbb39d8b6486fcc80d3cf5b78334750796"
+    }
+   ],
+   "query": "P=W for singular noncoprime Higgs moduli",
+   "reason": "The geometric comparison here assumes coprime rank and degree and smooth moduli spaces."
+  }
+ ],
+ "family": "PM-043",
+ "id": "PM-043.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C01",
+    "statement": "For every smooth projective complex curve $C$ of genus $g\\ge2$, every composite integer $n\\ge4$, every integer $d$ with $\\gcd(n,d)=1$, and every $L\\in\\mathop{\\mathrm{Pic}}^d(C)$, one has $$P_kH^m(X^B,\\mathbb Q)=W_{2k}H^m(X^B,\\mathbb Q)\n=W_{2k+1}H^m(X^B,\\mathbb Q)$$ for all $m,k\\ge0$."
+   },
+   {
+    "anchor": "stmt-norm-dimensions",
+    "claim_id": "C02",
+    "statement": "Set $R=(n^2-1)(g-1)$. Then $\\dim X=2R$, $\\dim A=R$, and every fiber of $h$ has dimension $R$. In particular, $$r:=\\dim(X\\times_A X)-\\dim X=R.$$"
+   },
+   {
+    "anchor": "stmt-norm-low-cohomology",
+    "claim_id": "C03",
+    "statement": "For the composite ranks $n\\ge4$ under consideration, $$H^0(X)=\\mathbb Q,\\qquad H^1(X)=0,\\qquad H^2(X)=\\mathbb Q e,\n \\qquad e\\ne0.$$ Every ample class on $X$ is a nonzero scalar multiple of $e$."
+   },
+   {
+    "anchor": "stmt-norm-relative-lefschetz",
+    "claim_id": "C04",
+    "statement": "Cup product by $e$ sends $P_kH^m(X)$ into $P_{k+2}H^{m+2}(X)$. For every $i\\ge0$ and every $m$, it induces an isomorphism $$\\label{norm:relative-hl}\n e^i:\\operatorname{Gr}^P_{R-i}H^m(X)\n \\xrightarrow{\\ \\sim\\ }\n \\operatorname{Gr}^P_{R+i}H^{m+2i}(X).$$"
+   },
+   {
+    "anchor": "stmt-alg-comparison",
+    "claim_id": "C05",
+    "statement": "Let $H$ be a finite-dimensional vector space over a field of characteristic zero, with finite, exhaustive, separated increasing integer-indexed filtrations $F_\\bullet$ and $G_\\bullet$. Suppose that $e,f\\in\\operatorname{End}(H)$ satisfy, for $A_\\bullet=F_\\bullet$ and $A_\\bullet=G_\\bullet$, $$e(A_k)\\subseteq A_{k+2},\\qquad f(A_k)\\subseteq A_{k-2}.$$ Assume that the induced raiser on each associated graded is Lefschetz with the same center $r$, and that $$\\label{alg:double-commutator}\n [[f,e],e]=-2e,\n \\qquad [u,v]=uv-vu.$$ Then $F_k=G_k$ for every integer $k$. If $H$ has a further grading respected by both filtrations, and $e,f$ have degrees $2,-2$ for that grading, the equality holds degree by degree."
+   },
+   {
+    "anchor": "stmt-alg-tensor",
+    "claim_id": "C06",
+    "statement": "Let $V,W$ be nonzero finite integer-graded vector spaces over a field of characteristic zero, and let $E_V,E_W$ have degree two. If $E_V\\otimes1+1\\otimes E_W$ is Lefschetz with center $r$ on $V\\otimes W$, then $E_V$ and $E_W$ are Lefschetz with centers $r_V,r_W$, respectively, where $r_V+r_W=r$."
+   },
+   {
+    "anchor": "stmt-betti-lefschetz",
+    "claim_id": "C07",
+    "statement": "The mixed Hodge structure on $H^*(X^{\\mathrm B},\\mathbb Q)$ is Hodge–Tate. Under the nonabelian-Hodge identification, the class $e$ has nonzero image in $\\operatorname{Gr}^W_4H^2(X^{\\mathrm B},\\mathbb Q)$, and $$e^i:\\operatorname{Gr}^W_{2R-2i}H^m(X^{\\mathrm B},\\mathbb Q)\n \\xrightarrow{\\ \\sim\\ }\n \\operatorname{Gr}^W_{2R+2i}H^{m+2i}(X^{\\mathrm B},\\mathbb Q)\n \\qquad(i\\geq0).$$ In particular, $W_{2k}=W_{2k+1}$ on this cohomology. These assertions concern the entire cohomology, including all nontrivial $\\Gamma$-character summands after complexification."
+   },
+   {
+    "anchor": "stmt-betti-geometry",
+    "claim_id": "C08",
+    "statement": "The morphism $Y^{\\mathrm B}\\to V$ is smooth of relative dimension $2R+2b$. There is a correspondence $$X^{\\mathrm B}\\xleftarrow{\\ \\pi\\ }Z^{\\mathrm B}\n \\xrightarrow{\\ \\iota\\ }Y^{\\mathrm B}_q,$$ where $Z^{\\mathrm B}$ imposes $\\nu=\\zeta I$ and $\\pi$ is the full flag bundle. The map $\\iota$ is a regular embedding of codimension $b$ with normal bundle $T_\\pi^*$. The cohomological operators $$\\mathsf A=\\pi_*\\iota^*,\\qquad\n \\mathsf B=\\iota_*\\pi^*$$ have degrees $-2b$ and $2b$, respectively, and satisfy $$\\label{betti:split}\n \\mathsf A\\mathsf B=(-1)^b n!\\,\\mathrm{id}.$$ Here and below a covariant star denotes the Gysin map."
+   },
+   {
+    "anchor": "stmt-betti-finite-cover",
+    "claim_id": "C09",
+    "statement": "Pulling the preceding auxiliary bundles and stratifications back along <a href=\"#betti:cover\" data-reference-type=\"eqref\" data-reference=\"betti:cover\">[betti:cover]</a> has the following consequences.*\n\n1.  *Every fiber of $\\widehat Y^{\\mathrm B}\\to V$ and of $Y^{\\mathrm B}\\to V$ has Hodge–Tate cohomology. For $\\widehat Y^{\\mathrm B}$ at a parameter with distinct eigenvalues, the pulled-back class satisfies curious hard Lefschetz on ordinary cohomology with half-weight center $\\delta/2=R+b+g$.*\n\n2.  *The cohomology sheaves of both ordinary and compact-support integral direct images over $V$ are locally constant and finitely generated. Ordinary direct image commutes with restriction to every fiber. The same assertions hold for $Y^{\\mathrm B}\\to V$."
+   },
+   {
+    "anchor": "stmt-diag-variation",
+    "claim_id": "C10",
+    "statement": "Under the preceding hypotheses, $H^j(\\mathscr H_t,\\mathbb Q)$ carries a graded-polarizable mixed Hodge structure, functorial for maps of flat bundles that are algebraic in flat trivializations. As $t$ varies, these structures form an admissible graded-polarizable variation of mixed Hodge structures, with an integral underlying local system up to torsion. They are computed by $H^j(i_t^*K_{\\mathscr H})$.*\n\n*If $H^j(H_t,\\mathbb Q)$ is Hodge–Tate for every $j$ and $t$, then $H^j(\\mathscr H_t,\\mathbb Q)$ is Hodge–Tate as well. We call its weight filtration the *diagram weight filtration*."
+   },
+   {
+    "anchor": "stmt-diag-gysin",
+    "claim_id": "C11",
+    "statement": "The diagram weight filtrations have the following properties.*\n\n1.  *For the product $S\\times M$, with $M$ a complex algebraic variety, the ordinary Künneth isomorphism identifies its mixed Hodge structure with that on $$H^*(S,\\mathbb Q)\\otimes H^*(M,\\mathbb Q),$$ where every $H^a(S,\\mathbb Q)$ is pure of weight zero and type $(0,0)$, and $H^*(M,\\mathbb Q)$ has its Deligne mixed Hodge structure. If $S$ is oriented and closed of real dimension $d_S$, projection pullback and integration over $S$ preserve weight; the latter has cohomological degree $-d_S$.*\n\n2.  *Pullbacks by maps of flat bundles preserve weight.*\n\n3.  *Suppose $u:\\mathscr H_t\\to\\mathscr H'_t$ is a proper map of flat bundles with smooth equidimensional algebraic fibers. Put $c=\\dim_{\\mathbb C}H'_t-\\dim_{\\mathbb C}H_t$. With the complex orientations on the fibers, its ordinary Gysin map satisfies $$u_*:W_aH^j(\\mathscr H_t)\\longrightarrow\n           W_{a+2c}H^{j+2c}(\\mathscr H'_t).$$ If $S$ is oriented, this is the Gysin map for the induced orientations on the total spaces."
+   },
+   {
+    "anchor": "stmt-diag-finite",
+    "claim_id": "C12",
+    "statement": "Assume the Hodge–Tate hypothesis of Proposition <a href=\"#diag:variation\" data-reference-type=\"ref\" data-reference=\"diag:variation\">10</a>. The combined monodromy action on all $\\operatorname{Gr}^W_aH^j(\\mathscr H_t,\\mathbb Q)$ has finite image. For any loop with cohomology monodromy $T$, there is an integer $M>0$ such that $T^M$ is unipotent and $$\\label{diag:log}\n  N=\\frac{1}{M}\\log(T^M)\n  \\quad\\text{satisfies}\\quad N(W_a)\\subset W_{a-2}.$$ The logarithm is a finite polynomial. On the total cohomology ring, $N$ is a derivation of cohomological degree zero."
+   },
+   {
+    "anchor": "stmt-log-scalar-product",
+    "claim_id": "C13",
+    "statement": "Tensoring by $(J,D_{J,\\lambda})$ gives an algebraic isomorphism $\\mathcal O\\simeq S\\times\\mathcal X$ over $S\\times\\mathbb A^1$. At $\\lambda=0$ it preserves the ordinary Hitchin coefficients."
+   },
+   {
+    "anchor": "stmt-log-families",
+    "claim_id": "C14",
+    "statement": "The morphism $\\mathcal Y\\to S\\times\\Lambda$ is smooth of relative dimension $2R+2b$, and $\\mathcal X\\to\\mathbb A^1$ is smooth of relative dimension $2R$. Their total spaces are semiprojective for scaling the operators, which scales $\\lambda$ and every $u_i$ with weight one. The same holds for the inverse image in $\\mathcal Y$ of every linear subspace of $\\Lambda$ through zero. In Figure <a href=\"#log:scalar-correspondence\" data-reference-type=\"ref\" data-reference=\"log:scalar-correspondence\">1</a>, $\\pi$ is a smooth proper flag projection of relative dimension $b$, and $\\iota$ is a regular embedding of codimension $b$ with normal bundle $T_\\pi^*$."
+   },
+   {
+    "anchor": "stmt-log-restriction",
+    "claim_id": "C15",
+    "statement": "For every $(\\lambda,u)\\in\\Lambda$, restriction induces an isomorphism $$\\rho_{\\lambda,u}:H^*(\\mathcal Y,\\mathbb Q)\n       \\xrightarrow{\\ \\sim\\ }H^*(Y_{\\lambda,u},\\mathbb Q).\n \\label{log:rho}$$ Restriction to the inverse image of any line through zero in $\\Lambda$ is also an isomorphism, as is restriction from that inverse image to any of its fibers. The analogous restriction isomorphisms hold for all four families in Figure <a href=\"#log:scalar-correspondence\" data-reference-type=\"ref\" data-reference=\"log:scalar-correspondence\">1</a> over the $\\lambda$-line. They commute with pullbacks and with the proper Gysin maps in that correspondence, including integration in the $S$ factor."
+   },
+   {
+    "anchor": "stmt-log-rh",
+    "claim_id": "C16",
+    "statement": "Over $U$, Riemann–Hilbert identifies $Y_{1,u}$ with the total space over $S$ of this flat bundle at parameter $t(u)$. These identifications are homeomorphisms of families. At $u=0$ they identify the scalar correspondence of Figure <a href=\"#log:scalar-correspondence\" data-reference-type=\"ref\" data-reference=\"log:scalar-correspondence\">1</a> at $\\lambda=1$ with the flat Betti scalar correspondence, compatibly with its pullbacks and Gysin maps."
+   },
+   {
+    "anchor": "stmt-log-scalar-flat-product",
+    "claim_id": "C17",
+    "statement": "The product identification in Lemma <a href=\"#log:scalar-product\" data-reference-type=\"ref\" data-reference=\"log:scalar-product\">13</a>, at $\\lambda=1$, identifies the scalar unflagged Betti family with $S\\times X^{\\rm B}$ as a flat bundle with algebraic fiber. Its projection to $X^{\\rm B}$ corresponds to $\\operatorname{pr}$."
+   },
+   {
+    "anchor": "stmt-log-finite-ambiguity",
+    "claim_id": "C18",
+    "statement": "Let a finite group $G$ act algebraically on a smooth connected complex variety $B$, and let $q:B\\to B/G$ be the quotient. Suppose $g:A\\to B$ is a homeomorphism and $f:A\\to B$ is continuous with $qf=qg$. Then $f=\\gamma g$ for a single $\\gamma\\in G$."
+   },
+   {
+    "anchor": "stmt-log-nah",
+    "claim_id": "C19",
+    "statement": "The comparison <a href=\"#log:comparison\" data-reference-type=\"eqref\" data-reference=\"log:comparison\">[log:comparison]</a> transports the Deligne weight filtration on the whole $H^*(X^{\\rm B},\\mathbb Q)$ in the same way as the nonabelian-Hodge identification. The conclusion is unchanged when $\\mathcal O_C(d x_0)$ is replaced by an arbitrary $L\\in\\operatorname{Pic}^d(C)$ and the Higgs spaces are identified by tensoring with a degree-zero nth root of their determinant ratio."
+   },
+   {
+    "anchor": "stmt-trans-translation",
+    "claim_id": "C20",
+    "statement": "The two modifications define a continuous family of isomorphisms $$\\label{trans:path}\nF_a:Y_{a,v}\\longrightarrow Y_{a,v-a\\ell},\\qquad 0\\le a\\le1.$$ At $a=0$ they define an algebraic automorphism of $Y_{0,v}$. More generally, the same modification defines an automorphism over the punctured Higgs line $(\\lambda,u)=(0,zv)$, $z\\ne0$, preserving the logarithmic Hitchin map. At $a=1$, the Riemann–Hilbert identifications make $F_1$ the identity on the underlying Betti space."
+   },
+   {
+    "anchor": "stmt-log-compact-cycles",
+    "claim_id": "C21",
+    "statement": "Let $I$ be a connected real interval and let $p:M\\to I$ and $q:N\\to I$ be smooth submersions, with finite-dimensional rational cohomology on their fibers. Suppose there are spaces $A,B$ and continuous maps $a:M\\to A$, $b:N\\to B$ whose restrictions induce isomorphisms $$\\alpha_t:H^*(A,\\mathbb Q)\\xrightarrow{\\sim}H^*(M_t,\\mathbb Q),\n \\qquad\n \\beta_t:H^*(B,\\mathbb Q)\\xrightarrow{\\sim}H^*(N_t,\\mathbb Q)$$ for every $t\\in I$. If $F:M\\to N$ is continuous over $I$, then $\\alpha_t^{-1}F_t^*\\beta_t:H^*(B,\\mathbb Q)\\to H^*(A,\\mathbb Q)$ is independent of $t$."
+   },
+   {
+    "anchor": "stmt-trans-logarithm",
+    "claim_id": "C22",
+    "statement": "There is an integer $M>0$ such that $$\\label{trans:N}\nN=\\frac1M\\log(\\mathsf T^M)$$ is a well-defined nilpotent derivation of $H^*(\\mathcal Y,\\mathbb Q)$. Let $N_{\\lambda,u}=\\rho_{\\lambda,u}N\\rho_{\\lambda,u}^{-1}$. On $H^*(Y_{1,0},\\mathbb Q)$, equipped with the diagram weights of Section <a href=\"#sec:diagram\" data-reference-type=\"ref\" data-reference=\"sec:diagram\">4</a>, one has $$N_{1,0}W_j\\subset W_{j-2}.$$"
+   },
+   {
+    "anchor": "stmt-trans-weights",
+    "claim_id": "C23",
+    "statement": "Under nonabelian Hodge theory, the operator <a href=\"#trans:fprime\" data-reference-type=\"eqref\" data-reference=\"trans:fprime\">[trans:fprime]</a> satisfies $$f'W_jH^m(X^B,\\mathbb Q)\\subset W_{j-4}H^{m-2}(X^B,\\mathbb Q).$$"
+   },
+   {
+    "anchor": "stmt-spec-geometry",
+    "claim_id": "C24",
+    "statement": "The morphism $g_v$ is proper, and $\\mathcal Y_v\\to D$ is smooth. The translation defines an automorphism $T_v$ of $\\mathcal Y_v|_{D^*}$ over $\\mathcal E\\times D^*$. Scaling gives an isomorphism $$\\mathcal Y_v|_{D^*}\\simeq Y_{0,v}\\times D^*$$ over $D^*$, and restriction from $H^*(\\mathcal Y_v)$ to either $Y_{0,0}$ or $Y_{0,v}$ is an isomorphism."
+   },
+   {
+    "anchor": "stmt-spec-specialization",
+    "claim_id": "C25",
+    "statement": "Let $Y\\to D=\\mathbb A^1$ be a smooth morphism of complex algebraic varieties, and let $g:Y\\to B\\times D$ be a proper morphism commuting with the maps to $D$. Suppose that $Y|_{D^*}$ is isomorphic to $Y_1\\times D^*$ over $D^*$ and that the actual restriction maps $$r_i:H^*(Y,\\mathbb Q)\\longrightarrow H^*(Y_i,\\mathbb Q),\n \\qquad i=0,1,$$ are isomorphisms. An automorphism $T$ of $Y|_{D^*}$ over $B\\times D^*$ then induces an endomorphism $\\tau_0$ of $Rg_{0,*}\\mathbb Q_{Y_0}$ whose cohomological action is $$H^*(\\tau_0)=r_0r_1^{-1}T_1^*r_1r_0^{-1}.$$ Neither $B$ nor $Y_i$ is required to be proper."
+   },
+   {
+    "anchor": "stmt-spec-perverse-lowering",
+    "claim_id": "C26",
+    "statement": "The operator $f'$ of <a href=\"#trans:fprime\" data-reference-type=\"eqref\" data-reference=\"trans:fprime\">[trans:fprime]</a> is induced by a morphism $$\\label{spec:derived-lowering}\n Rh_*\\mathbb Q_X\\longrightarrow Rh_*\\mathbb Q_X[-2]$$ in the constructible derived category on $A$. Consequently $$f'(P_kH^m(X,\\mathbb Q))\\subseteq P_{k-2}H^{m-2}(X,\\mathbb Q)$$ for all integers $m,k$."
+   },
+   {
+    "anchor": "stmt-calc-translation-formula",
+    "claim_id": "C27",
+    "statement": "For the translation $T:Y_{0,v}\\to Y_{0,v}$ associated with $\\ell=(1,-1,0,\\ldots,0)$ and every integer $k\\ge0$, $$\\label{calc:translation-polynomial}\n T^{k*}e_{\\mathcal Y}=e_{\\mathcal Y}+ky+k^2t_C.$$ Consequently the logarithm from Section <a href=\"#sec:translation\" data-reference-type=\"ref\" data-reference=\"sec:translation\">6</a> satisfies $$\\label{calc:logarithm}\n N(e_{\\mathcal Y})=y$$ on $H^*(\\mathcal Y,\\mathbb Q)$ and, by restriction, on every fiber."
+   },
+   {
+    "anchor": "stmt-calc-flag-sum",
+    "claim_id": "C28",
+    "statement": "Let $\\pi:\\operatorname{Fl}(V)\\to B$ be the full-flag bundle of a rank-$n$ complex vector bundle, and let $w_1,\\ldots,w_n$ be its formal Chern roots. For [(calc:permutation)](#calc:permutation) a polynomial $F$ in the first Chern classes of the ordered flag lines, $$\\pi_*\\bigl(F(Q_\\bullet)c_b(T_\\pi)\\bigr)\n   =\\sum_{\\sigma\\in\\mathfrak S_n}\n      F(w_{\\sigma(1)},\\ldots,w_{\\sigma(n)}).$$ If $\\sum_i\\ell_i=0$, then $$\\label{calc:permutation}\n \\sum_{\\sigma\\in\\mathfrak S_n}\n       \\left(\\sum_i\\ell_iw_{\\sigma(i)}\\right)^2\n =n(n-2)!\\|\\ell\\|^2\n    \\left(\\sum_iw_i^2-\\frac{(\\sum_iw_i)^2}{n}\\right).$$ Both identities, when their expressions are invariant under common translation of the roots, hold for the associated flag bundle of a principal $\\mathrm{PGL}_n$-bundle with rational coefficients."
+   },
+   {
+    "anchor": "stmt-calc-double-commutator",
+    "claim_id": "C29",
+    "statement": "Let $\\delta=\\deg(x:S\\to C)$. The operator $f'$ of <a href=\"#trans:fprime\" data-reference-type=\"eqref\" data-reference=\"trans:fprime\">[trans:fprime]</a> satisfies $$\\label{calc:scalar}\n [[f',e],e]=8(-1)^b n(n-2)!\\delta\\,e.$$ Consequently $$\\label{calc:f}\n f=\\frac{(-1)^{b+1}}{4n(n-2)!\\delta}\\,f'$$ has cohomological degree $-2$, lowers perversity by two and Betti weights by four, and satisfies $[[f,e],e]=-2e$."
+   },
+   {
+    "anchor": "stmt-auto-corollary-1",
+    "claim_id": "C30",
+    "statement": "Let $C$ be a smooth projective complex curve of genus $g\\ge2$, let $n\\ge2$ and $d$ be coprime integers, and let $L\\in\\mathop{\\mathrm{Pic}}^d(C)$. For the moduli space $X$ of stable rank-$n$, determinant-$L$, trace-free Higgs bundles and its corresponding twisted $\\mathop{\\mathrm{SL}}_n$ character variety $X^B$, nonabelian Hodge theory identifies $$P_k H^m(X,\\mathbb Q)=W_{2k}H^m(X^B,\\mathbb Q)=W_{2k+1}H^m(X^B,\\mathbb Q)\n \\qquad\\text{for all integers }m,k.$$ The equality holds on full rational cohomology, including its $\\mathop{\\mathrm{Pic}}^0(C)[n]$-variant part."
+   },
+   {
+    "anchor": "stmt-cor-endoscopic-weights",
+    "claim_id": "C31",
+    "statement": "Keep $C,n,d,L$ as in the preceding corollary. Put $\\Gamma=\\mathop{\\mathrm{Pic}}^0(C)[n]$, let $\\gamma\\in\\Gamma$ have order $m$, and let $\\kappa\\in\\widehat{\\Gamma}$ be the character $\\kappa(\\gamma')=\\langle\\gamma,\\gamma'\\rangle_\\Gamma$ defined by the Weil pairing in (Maulik and Shen 2021, sec. 1.3) [[MSEndoscopy2021](#ref-MSEndoscopy2021)]. Let $\\pi:C'\\to C$ be the associated cyclic étale cover, set $r=n/m$, and put $$d_\\gamma=\\operatorname{codim}_{\\mathcal A^{K_C}}\\mathcal A_\\gamma^{K_C},$$ where $\\mathcal A_\\gamma^{K_C}$ is their endoscopic Hitchin base. For $D=K_C$ and $D'=\\pi^*K_C=K_{C'}$, let $\\mathfrak p_\\kappa^B$ denote their nonabelian-Hodge-transported operator in (Maulik and Shen 2021, sec. 5.4) [[MSEndoscopy2021](#ref-MSEndoscopy2021)]. Write $\\widetilde{\\mathcal M}_{r,d}^B(C')$ for the full degree-$d$ twisted $\\mathop{\\mathrm{GL}}_r$ character variety and $\\mathcal M_{n,L}^B(C)=X^B$ for the fixed-determinant twisted $\\mathop{\\mathrm{SL}}_n$ character variety. On complexified cohomology, for all integers $i,k\\ge0$, $$\\begin{gathered}\n\\mathfrak p_\\kappa^B\\!\\left(W_{2k}H^i(\\widetilde{\\mathcal M}_{r,d}^B(C'),\\mathbb C)\\right)\\\\\n=W_{2k+2d_\\gamma}H^{i+2d_\\gamma}(\\mathcal M_{n,L}^B(C),\\mathbb C)_\\kappa,\n\\end{gathered}$$ where the subscript $\\kappa$ denotes the pullback-action summand on which $\\gamma'^*\\alpha=\\kappa(\\gamma')\\alpha$ for every $\\gamma'\\in\\Gamma$."
+   },
+   {
+    "anchor": "stmt-cor-perverse-multiplicativity",
+    "claim_id": "C32",
+    "statement": "In the setting of the all-rank corollary above, use the normalization <a href=\"#intro:P\" data-reference-type=\"eqref\" data-reference=\"intro:P\">[intro:P]</a>. For all $i,j\\ge0$ and $a,b\\in\\mathbb Z$, $$P_aH^i(X,\\mathbb Q)\\smile P_bH^j(X,\\mathbb Q)\n\\subseteq P_{a+b}H^{i+j}(X,\\mathbb Q).$$ Put $\\Gamma=\\mathop{\\mathrm{Pic}}^0(C)[n]$ and $P_aH^i(X,\\mathbb C)=P_aH^i(X,\\mathbb Q)\\otimes_{\\mathbb Q}\\mathbb C$. For the pullback-action isotypic parts indexed by $\\chi,\\psi\\in\\widehat\\Gamma\n=\\operatorname{Hom}(\\Gamma,\\mathbb C^\\times)$, one also has $$\\bigl(P_aH^i(X,\\mathbb C)\\bigr)_\\chi\\smile\n\\bigl(P_bH^j(X,\\mathbb C)\\bigr)_\\psi\n\\subseteq\\bigl(P_{a+b}H^{i+j}(X,\\mathbb C)\\bigr)_{\\chi\\psi}.$$ This includes trivial and distinct characters, with the same normalized $P$ on every character summand."
+   }
+  ],
+  "prerequisites": []
+ },
+ "outputs": [
+  {
+   "claim_id": "C01",
+   "exact_statement": "For every smooth projective complex curve $C$ of genus $g\\ge2$, every composite integer $n\\ge4$, every integer $d$ with $\\gcd(n,d)=1$, and every $L\\in\\mathop{\\mathrm{Pic}}^d(C)$, one has $$P_kH^m(X^B,\\mathbb Q)=W_{2k}H^m(X^B,\\mathbb Q)\n=W_{2k+1}H^m(X^B,\\mathbb Q)$$ for all $m,k\\ge0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "C02",
+   "exact_statement": "Set $R=(n^2-1)(g-1)$. Then $\\dim X=2R$, $\\dim A=R$, and every fiber of $h$ has dimension $R$. In particular, $$r:=\\dim(X\\times_A X)-\\dim X=R.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-norm-dimensions"
+  },
+  {
+   "claim_id": "C03",
+   "exact_statement": "For the composite ranks $n\\ge4$ under consideration, $$H^0(X)=\\mathbb Q,\\qquad H^1(X)=0,\\qquad H^2(X)=\\mathbb Q e,\n \\qquad e\\ne0.$$ Every ample class on $X$ is a nonzero scalar multiple of $e$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-norm-low-cohomology"
+  },
+  {
+   "claim_id": "C04",
+   "exact_statement": "Cup product by $e$ sends $P_kH^m(X)$ into $P_{k+2}H^{m+2}(X)$. For every $i\\ge0$ and every $m$, it induces an isomorphism $$\\label{norm:relative-hl}\n e^i:\\operatorname{Gr}^P_{R-i}H^m(X)\n \\xrightarrow{\\ \\sim\\ }\n \\operatorname{Gr}^P_{R+i}H^{m+2i}(X).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-norm-relative-lefschetz"
+  },
+  {
+   "claim_id": "C05",
+   "exact_statement": "Let $H$ be a finite-dimensional vector space over a field of characteristic zero, with finite, exhaustive, separated increasing integer-indexed filtrations $F_\\bullet$ and $G_\\bullet$. Suppose that $e,f\\in\\operatorname{End}(H)$ satisfy, for $A_\\bullet=F_\\bullet$ and $A_\\bullet=G_\\bullet$, $$e(A_k)\\subseteq A_{k+2},\\qquad f(A_k)\\subseteq A_{k-2}.$$ Assume that the induced raiser on each associated graded is Lefschetz with the same center $r$, and that $$\\label{alg:double-commutator}\n [[f,e],e]=-2e,\n \\qquad [u,v]=uv-vu.$$ Then $F_k=G_k$ for every integer $k$. If $H$ has a further grading respected by both filtrations, and $e,f$ have degrees $2,-2$ for that grading, the equality holds degree by degree.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-alg-comparison"
+  },
+  {
+   "claim_id": "C06",
+   "exact_statement": "Let $V,W$ be nonzero finite integer-graded vector spaces over a field of characteristic zero, and let $E_V,E_W$ have degree two. If $E_V\\otimes1+1\\otimes E_W$ is Lefschetz with center $r$ on $V\\otimes W$, then $E_V$ and $E_W$ are Lefschetz with centers $r_V,r_W$, respectively, where $r_V+r_W=r$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-alg-tensor"
+  },
+  {
+   "claim_id": "C07",
+   "exact_statement": "The mixed Hodge structure on $H^*(X^{\\mathrm B},\\mathbb Q)$ is Hodge–Tate. Under the nonabelian-Hodge identification, the class $e$ has nonzero image in $\\operatorname{Gr}^W_4H^2(X^{\\mathrm B},\\mathbb Q)$, and $$e^i:\\operatorname{Gr}^W_{2R-2i}H^m(X^{\\mathrm B},\\mathbb Q)\n \\xrightarrow{\\ \\sim\\ }\n \\operatorname{Gr}^W_{2R+2i}H^{m+2i}(X^{\\mathrm B},\\mathbb Q)\n \\qquad(i\\geq0).$$ In particular, $W_{2k}=W_{2k+1}$ on this cohomology. These assertions concern the entire cohomology, including all nontrivial $\\Gamma$-character summands after complexification.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-betti-lefschetz"
+  },
+  {
+   "claim_id": "C08",
+   "exact_statement": "The morphism $Y^{\\mathrm B}\\to V$ is smooth of relative dimension $2R+2b$. There is a correspondence $$X^{\\mathrm B}\\xleftarrow{\\ \\pi\\ }Z^{\\mathrm B}\n \\xrightarrow{\\ \\iota\\ }Y^{\\mathrm B}_q,$$ where $Z^{\\mathrm B}$ imposes $\\nu=\\zeta I$ and $\\pi$ is the full flag bundle. The map $\\iota$ is a regular embedding of codimension $b$ with normal bundle $T_\\pi^*$. The cohomological operators $$\\mathsf A=\\pi_*\\iota^*,\\qquad\n \\mathsf B=\\iota_*\\pi^*$$ have degrees $-2b$ and $2b$, respectively, and satisfy $$\\label{betti:split}\n \\mathsf A\\mathsf B=(-1)^b n!\\,\\mathrm{id}.$$ Here and below a covariant star denotes the Gysin map.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-betti-geometry"
+  },
+  {
+   "claim_id": "C09",
+   "exact_statement": "Pulling the preceding auxiliary bundles and stratifications back along <a href=\"#betti:cover\" data-reference-type=\"eqref\" data-reference=\"betti:cover\">[betti:cover]</a> has the following consequences.*\n\n1.  *Every fiber of $\\widehat Y^{\\mathrm B}\\to V$ and of $Y^{\\mathrm B}\\to V$ has Hodge–Tate cohomology. For $\\widehat Y^{\\mathrm B}$ at a parameter with distinct eigenvalues, the pulled-back class satisfies curious hard Lefschetz on ordinary cohomology with half-weight center $\\delta/2=R+b+g$.*\n\n2.  *The cohomology sheaves of both ordinary and compact-support integral direct images over $V$ are locally constant and finitely generated. Ordinary direct image commutes with restriction to every fiber. The same assertions hold for $Y^{\\mathrm B}\\to V$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-betti-finite-cover"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "Under the preceding hypotheses, $H^j(\\mathscr H_t,\\mathbb Q)$ carries a graded-polarizable mixed Hodge structure, functorial for maps of flat bundles that are algebraic in flat trivializations. As $t$ varies, these structures form an admissible graded-polarizable variation of mixed Hodge structures, with an integral underlying local system up to torsion. They are computed by $H^j(i_t^*K_{\\mathscr H})$.*\n\n*If $H^j(H_t,\\mathbb Q)$ is Hodge–Tate for every $j$ and $t$, then $H^j(\\mathscr H_t,\\mathbb Q)$ is Hodge–Tate as well. We call its weight filtration the *diagram weight filtration*.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-diag-variation"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "The diagram weight filtrations have the following properties.*\n\n1.  *For the product $S\\times M$, with $M$ a complex algebraic variety, the ordinary Künneth isomorphism identifies its mixed Hodge structure with that on $$H^*(S,\\mathbb Q)\\otimes H^*(M,\\mathbb Q),$$ where every $H^a(S,\\mathbb Q)$ is pure of weight zero and type $(0,0)$, and $H^*(M,\\mathbb Q)$ has its Deligne mixed Hodge structure. If $S$ is oriented and closed of real dimension $d_S$, projection pullback and integration over $S$ preserve weight; the latter has cohomological degree $-d_S$.*\n\n2.  *Pullbacks by maps of flat bundles preserve weight.*\n\n3.  *Suppose $u:\\mathscr H_t\\to\\mathscr H'_t$ is a proper map of flat bundles with smooth equidimensional algebraic fibers. Put $c=\\dim_{\\mathbb C}H'_t-\\dim_{\\mathbb C}H_t$. With the complex orientations on the fibers, its ordinary Gysin map satisfies $$u_*:W_aH^j(\\mathscr H_t)\\longrightarrow\n           W_{a+2c}H^{j+2c}(\\mathscr H'_t).$$ If $S$ is oriented, this is the Gysin map for the induced orientations on the total spaces.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-diag-gysin"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Assume the Hodge–Tate hypothesis of Proposition <a href=\"#diag:variation\" data-reference-type=\"ref\" data-reference=\"diag:variation\">10</a>. The combined monodromy action on all $\\operatorname{Gr}^W_aH^j(\\mathscr H_t,\\mathbb Q)$ has finite image. For any loop with cohomology monodromy $T$, there is an integer $M>0$ such that $T^M$ is unipotent and $$\\label{diag:log}\n  N=\\frac{1}{M}\\log(T^M)\n  \\quad\\text{satisfies}\\quad N(W_a)\\subset W_{a-2}.$$ The logarithm is a finite polynomial. On the total cohomology ring, $N$ is a derivation of cohomological degree zero.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-diag-finite"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "Tensoring by $(J,D_{J,\\lambda})$ gives an algebraic isomorphism $\\mathcal O\\simeq S\\times\\mathcal X$ over $S\\times\\mathbb A^1$. At $\\lambda=0$ it preserves the ordinary Hitchin coefficients.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-log-scalar-product"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "The morphism $\\mathcal Y\\to S\\times\\Lambda$ is smooth of relative dimension $2R+2b$, and $\\mathcal X\\to\\mathbb A^1$ is smooth of relative dimension $2R$. Their total spaces are semiprojective for scaling the operators, which scales $\\lambda$ and every $u_i$ with weight one. The same holds for the inverse image in $\\mathcal Y$ of every linear subspace of $\\Lambda$ through zero. In Figure <a href=\"#log:scalar-correspondence\" data-reference-type=\"ref\" data-reference=\"log:scalar-correspondence\">1</a>, $\\pi$ is a smooth proper flag projection of relative dimension $b$, and $\\iota$ is a regular embedding of codimension $b$ with normal bundle $T_\\pi^*$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-log-families"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "For every $(\\lambda,u)\\in\\Lambda$, restriction induces an isomorphism $$\\rho_{\\lambda,u}:H^*(\\mathcal Y,\\mathbb Q)\n       \\xrightarrow{\\ \\sim\\ }H^*(Y_{\\lambda,u},\\mathbb Q).\n \\label{log:rho}$$ Restriction to the inverse image of any line through zero in $\\Lambda$ is also an isomorphism, as is restriction from that inverse image to any of its fibers. The analogous restriction isomorphisms hold for all four families in Figure <a href=\"#log:scalar-correspondence\" data-reference-type=\"ref\" data-reference=\"log:scalar-correspondence\">1</a> over the $\\lambda$-line. They commute with pullbacks and with the proper Gysin maps in that correspondence, including integration in the $S$ factor.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-log-restriction"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "Over $U$, Riemann–Hilbert identifies $Y_{1,u}$ with the total space over $S$ of this flat bundle at parameter $t(u)$. These identifications are homeomorphisms of families. At $u=0$ they identify the scalar correspondence of Figure <a href=\"#log:scalar-correspondence\" data-reference-type=\"ref\" data-reference=\"log:scalar-correspondence\">1</a> at $\\lambda=1$ with the flat Betti scalar correspondence, compatibly with its pullbacks and Gysin maps.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-log-rh"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "The product identification in Lemma <a href=\"#log:scalar-product\" data-reference-type=\"ref\" data-reference=\"log:scalar-product\">13</a>, at $\\lambda=1$, identifies the scalar unflagged Betti family with $S\\times X^{\\rm B}$ as a flat bundle with algebraic fiber. Its projection to $X^{\\rm B}$ corresponds to $\\operatorname{pr}$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-log-scalar-flat-product"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "Let a finite group $G$ act algebraically on a smooth connected complex variety $B$, and let $q:B\\to B/G$ be the quotient. Suppose $g:A\\to B$ is a homeomorphism and $f:A\\to B$ is continuous with $qf=qg$. Then $f=\\gamma g$ for a single $\\gamma\\in G$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-log-finite-ambiguity"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "The comparison <a href=\"#log:comparison\" data-reference-type=\"eqref\" data-reference=\"log:comparison\">[log:comparison]</a> transports the Deligne weight filtration on the whole $H^*(X^{\\rm B},\\mathbb Q)$ in the same way as the nonabelian-Hodge identification. The conclusion is unchanged when $\\mathcal O_C(d x_0)$ is replaced by an arbitrary $L\\in\\operatorname{Pic}^d(C)$ and the Higgs spaces are identified by tensoring with a degree-zero nth root of their determinant ratio.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-log-nah"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "The two modifications define a continuous family of isomorphisms $$\\label{trans:path}\nF_a:Y_{a,v}\\longrightarrow Y_{a,v-a\\ell},\\qquad 0\\le a\\le1.$$ At $a=0$ they define an algebraic automorphism of $Y_{0,v}$. More generally, the same modification defines an automorphism over the punctured Higgs line $(\\lambda,u)=(0,zv)$, $z\\ne0$, preserving the logarithmic Hitchin map. At $a=1$, the Riemann–Hilbert identifications make $F_1$ the identity on the underlying Betti space.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-trans-translation"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "Let $I$ be a connected real interval and let $p:M\\to I$ and $q:N\\to I$ be smooth submersions, with finite-dimensional rational cohomology on their fibers. Suppose there are spaces $A,B$ and continuous maps $a:M\\to A$, $b:N\\to B$ whose restrictions induce isomorphisms $$\\alpha_t:H^*(A,\\mathbb Q)\\xrightarrow{\\sim}H^*(M_t,\\mathbb Q),\n \\qquad\n \\beta_t:H^*(B,\\mathbb Q)\\xrightarrow{\\sim}H^*(N_t,\\mathbb Q)$$ for every $t\\in I$. If $F:M\\to N$ is continuous over $I$, then $\\alpha_t^{-1}F_t^*\\beta_t:H^*(B,\\mathbb Q)\\to H^*(A,\\mathbb Q)$ is independent of $t$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-log-compact-cycles"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "There is an integer $M>0$ such that $$\\label{trans:N}\nN=\\frac1M\\log(\\mathsf T^M)$$ is a well-defined nilpotent derivation of $H^*(\\mathcal Y,\\mathbb Q)$. Let $N_{\\lambda,u}=\\rho_{\\lambda,u}N\\rho_{\\lambda,u}^{-1}$. On $H^*(Y_{1,0},\\mathbb Q)$, equipped with the diagram weights of Section <a href=\"#sec:diagram\" data-reference-type=\"ref\" data-reference=\"sec:diagram\">4</a>, one has $$N_{1,0}W_j\\subset W_{j-2}.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-trans-logarithm"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "Under nonabelian Hodge theory, the operator <a href=\"#trans:fprime\" data-reference-type=\"eqref\" data-reference=\"trans:fprime\">[trans:fprime]</a> satisfies $$f'W_jH^m(X^B,\\mathbb Q)\\subset W_{j-4}H^{m-2}(X^B,\\mathbb Q).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-trans-weights"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "The morphism $g_v$ is proper, and $\\mathcal Y_v\\to D$ is smooth. The translation defines an automorphism $T_v$ of $\\mathcal Y_v|_{D^*}$ over $\\mathcal E\\times D^*$. Scaling gives an isomorphism $$\\mathcal Y_v|_{D^*}\\simeq Y_{0,v}\\times D^*$$ over $D^*$, and restriction from $H^*(\\mathcal Y_v)$ to either $Y_{0,0}$ or $Y_{0,v}$ is an isomorphism.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-spec-geometry"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "Let $Y\\to D=\\mathbb A^1$ be a smooth morphism of complex algebraic varieties, and let $g:Y\\to B\\times D$ be a proper morphism commuting with the maps to $D$. Suppose that $Y|_{D^*}$ is isomorphic to $Y_1\\times D^*$ over $D^*$ and that the actual restriction maps $$r_i:H^*(Y,\\mathbb Q)\\longrightarrow H^*(Y_i,\\mathbb Q),\n \\qquad i=0,1,$$ are isomorphisms. An automorphism $T$ of $Y|_{D^*}$ over $B\\times D^*$ then induces an endomorphism $\\tau_0$ of $Rg_{0,*}\\mathbb Q_{Y_0}$ whose cohomological action is $$H^*(\\tau_0)=r_0r_1^{-1}T_1^*r_1r_0^{-1}.$$ Neither $B$ nor $Y_i$ is required to be proper.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-spec-specialization"
+  },
+  {
+   "claim_id": "C26",
+   "exact_statement": "The operator $f'$ of <a href=\"#trans:fprime\" data-reference-type=\"eqref\" data-reference=\"trans:fprime\">[trans:fprime]</a> is induced by a morphism $$\\label{spec:derived-lowering}\n Rh_*\\mathbb Q_X\\longrightarrow Rh_*\\mathbb Q_X[-2]$$ in the constructible derived category on $A$. Consequently $$f'(P_kH^m(X,\\mathbb Q))\\subseteq P_{k-2}H^{m-2}(X,\\mathbb Q)$$ for all integers $m,k$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-spec-perverse-lowering"
+  },
+  {
+   "claim_id": "C27",
+   "exact_statement": "For the translation $T:Y_{0,v}\\to Y_{0,v}$ associated with $\\ell=(1,-1,0,\\ldots,0)$ and every integer $k\\ge0$, $$\\label{calc:translation-polynomial}\n T^{k*}e_{\\mathcal Y}=e_{\\mathcal Y}+ky+k^2t_C.$$ Consequently the logarithm from Section <a href=\"#sec:translation\" data-reference-type=\"ref\" data-reference=\"sec:translation\">6</a> satisfies $$\\label{calc:logarithm}\n N(e_{\\mathcal Y})=y$$ on $H^*(\\mathcal Y,\\mathbb Q)$ and, by restriction, on every fiber.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-calc-translation-formula"
+  },
+  {
+   "claim_id": "C28",
+   "exact_statement": "Let $\\pi:\\operatorname{Fl}(V)\\to B$ be the full-flag bundle of a rank-$n$ complex vector bundle, and let $w_1,\\ldots,w_n$ be its formal Chern roots. For [(calc:permutation)](#calc:permutation) a polynomial $F$ in the first Chern classes of the ordered flag lines, $$\\pi_*\\bigl(F(Q_\\bullet)c_b(T_\\pi)\\bigr)\n   =\\sum_{\\sigma\\in\\mathfrak S_n}\n      F(w_{\\sigma(1)},\\ldots,w_{\\sigma(n)}).$$ If $\\sum_i\\ell_i=0$, then $$\\label{calc:permutation}\n \\sum_{\\sigma\\in\\mathfrak S_n}\n       \\left(\\sum_i\\ell_iw_{\\sigma(i)}\\right)^2\n =n(n-2)!\\|\\ell\\|^2\n    \\left(\\sum_iw_i^2-\\frac{(\\sum_iw_i)^2}{n}\\right).$$ Both identities, when their expressions are invariant under common translation of the roots, hold for the associated flag bundle of a principal $\\mathrm{PGL}_n$-bundle with rational coefficients.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-calc-flag-sum"
+  },
+  {
+   "claim_id": "C29",
+   "exact_statement": "Let $\\delta=\\deg(x:S\\to C)$. The operator $f'$ of <a href=\"#trans:fprime\" data-reference-type=\"eqref\" data-reference=\"trans:fprime\">[trans:fprime]</a> satisfies $$\\label{calc:scalar}\n [[f',e],e]=8(-1)^b n(n-2)!\\delta\\,e.$$ Consequently $$\\label{calc:f}\n f=\\frac{(-1)^{b+1}}{4n(n-2)!\\delta}\\,f'$$ has cohomological degree $-2$, lowers perversity by two and Betti weights by four, and satisfies $[[f,e],e]=-2e$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-calc-double-commutator"
+  },
+  {
+   "claim_id": "C30",
+   "exact_statement": "Let $C$ be a smooth projective complex curve of genus $g\\ge2$, let $n\\ge2$ and $d$ be coprime integers, and let $L\\in\\mathop{\\mathrm{Pic}}^d(C)$. For the moduli space $X$ of stable rank-$n$, determinant-$L$, trace-free Higgs bundles and its corresponding twisted $\\mathop{\\mathrm{SL}}_n$ character variety $X^B$, nonabelian Hodge theory identifies $$P_k H^m(X,\\mathbb Q)=W_{2k}H^m(X^B,\\mathbb Q)=W_{2k+1}H^m(X^B,\\mathbb Q)\n \\qquad\\text{for all integers }m,k.$$ The equality holds on full rational cohomology, including its $\\mathop{\\mathrm{Pic}}^0(C)[n]$-variant part.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-auto-corollary-1"
+  },
+  {
+   "claim_id": "C31",
+   "exact_statement": "Keep $C,n,d,L$ as in the preceding corollary. Put $\\Gamma=\\mathop{\\mathrm{Pic}}^0(C)[n]$, let $\\gamma\\in\\Gamma$ have order $m$, and let $\\kappa\\in\\widehat{\\Gamma}$ be the character $\\kappa(\\gamma')=\\langle\\gamma,\\gamma'\\rangle_\\Gamma$ defined by the Weil pairing in (Maulik and Shen 2021, sec. 1.3) [[MSEndoscopy2021](#ref-MSEndoscopy2021)]. Let $\\pi:C'\\to C$ be the associated cyclic étale cover, set $r=n/m$, and put $$d_\\gamma=\\operatorname{codim}_{\\mathcal A^{K_C}}\\mathcal A_\\gamma^{K_C},$$ where $\\mathcal A_\\gamma^{K_C}$ is their endoscopic Hitchin base. For $D=K_C$ and $D'=\\pi^*K_C=K_{C'}$, let $\\mathfrak p_\\kappa^B$ denote their nonabelian-Hodge-transported operator in (Maulik and Shen 2021, sec. 5.4) [[MSEndoscopy2021](#ref-MSEndoscopy2021)]. Write $\\widetilde{\\mathcal M}_{r,d}^B(C')$ for the full degree-$d$ twisted $\\mathop{\\mathrm{GL}}_r$ character variety and $\\mathcal M_{n,L}^B(C)=X^B$ for the fixed-determinant twisted $\\mathop{\\mathrm{SL}}_n$ character variety. On complexified cohomology, for all integers $i,k\\ge0$, $$\\begin{gathered}\n\\mathfrak p_\\kappa^B\\!\\left(W_{2k}H^i(\\widetilde{\\mathcal M}_{r,d}^B(C'),\\mathbb C)\\right)\\\\\n=W_{2k+2d_\\gamma}H^{i+2d_\\gamma}(\\mathcal M_{n,L}^B(C),\\mathbb C)_\\kappa,\n\\end{gathered}$$ where the subscript $\\kappa$ denotes the pullback-action summand on which $\\gamma'^*\\alpha=\\kappa(\\gamma')\\alpha$ for every $\\gamma'\\in\\Gamma$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cor-endoscopic-weights"
+  },
+  {
+   "claim_id": "C32",
+   "exact_statement": "In the setting of the all-rank corollary above, use the normalization <a href=\"#intro:P\" data-reference-type=\"eqref\" data-reference=\"intro:P\">[intro:P]</a>. For all $i,j\\ge0$ and $a,b\\in\\mathbb Z$, $$P_aH^i(X,\\mathbb Q)\\smile P_bH^j(X,\\mathbb Q)\n\\subseteq P_{a+b}H^{i+j}(X,\\mathbb Q).$$ Put $\\Gamma=\\mathop{\\mathrm{Pic}}^0(C)[n]$ and $P_aH^i(X,\\mathbb C)=P_aH^i(X,\\mathbb Q)\\otimes_{\\mathbb Q}\\mathbb C$. For the pullback-action isotypic parts indexed by $\\chi,\\psi\\in\\widehat\\Gamma\n=\\operatorname{Hom}(\\Gamma,\\mathbb C^\\times)$, one also has $$\\bigl(P_aH^i(X,\\mathbb C)\\bigr)_\\chi\\smile\n\\bigl(P_bH^j(X,\\mathbb C)\\bigr)_\\psi\n\\subseteq\\bigl(P_{a+b}H^{i+j}(X,\\mathbb C)\\bigr)_{\\chi\\psi}.$$ This includes trivial and distinct characters, with the same normalized $P$ on every character summand.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cor-perverse-multiplicativity"
+  }
+ ],
+ "paper": "papers/EN-103-000-0000-2-2026-PR-T4-UK-EX-M3-C-TO-H-0117_PM-043.1_P_W_in_composite_rank_for_fixed_determinant.md",
+ "purpose": "P=W in composite rank for fixed determinant",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "29edf8fb2490054e10bddea59c0ee0a421d1e341fdcf1c831607491bf709d707",
+   "pm.domains.v2": "38abcb32f31a3f5066f35ffb3a6575e46088766940e953b9861bb202e466026a",
+   "pm.edges.v2": "b3ab02b17b4635d36a9a3566e2b15dc4db4aacdd036891bf5635d773c9261d75",
+   "pm.extraction.v2": "ddd323cd781e42c83421b907c724e8148e54cbfb044f7f5077efc551f7bc6aee",
+   "pm.formal.v2": "4a772c4a1dcadff2c6bb68d889b1ae577f308c1c9d77812185f6a6f79f69d630",
+   "pm.limits.v2": "8436940607440fd9842dcd1856e3702d733ab706361937a88658307a07b6f42f",
+   "pm.node.v2": "2ad74e86013021b925eda2398edfaacf92a17b56263d2e7a3249894d1154d6dc",
+   "pm.objects.v2": "b16863ddd8db32551955ef3e620e073bdc123edb7e4c6917f9dc90fa74e5b77e",
+   "pm.provenance.v2": "1a8d619e503d9d1723a22fe1d6688221f578779bb9cc443e817c42242ef9a7b6",
+   "pm.quantities.v2": "e935b81a696b540fadf9a9df5bd5eb5899fc6384f028b3c46642b7c75c376d40",
+   "pm.reading.v2": "cd1172617d633f20f2bc67466a2a322fd3a8d9a242720defbe7e628c7aab52eb",
+   "pm.roadmap.v2": "ab5e2efa6c7ea5f2df58a4b27ecc38fbd289eb34048f8b464e89a701d14331d9",
+   "pm.search.v1": "0ec56ceb8e13e41be089ff2a04c84d6cfc20d36d94ac1894b0c508b8f19ecb1f",
+   "pm.triptych.v2": "ea68c438782cac888c88129ddd188f75a0c218935d98dd91a9827246a746f12d"
+  },
+  "canonical_sha256": "50dbc80151889379eaced802b80bfaf4b78a208d6ebbff7604d7d4d99c1bf7cf",
+  "paper_sha256": "759aa5532b16a03cb8879da52dc1c3cb952e09f586071e002e7eb86bbc090c36",
+  "repaired_body_sha256": "9a06d6a961a45bb7bc085426752053ca7d343b478cd974caba599f72a7f95cd5"
+ },
+ "status": "ACTIVE",
+ "subject_id": 3,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "935e789d438a32772384ba1ca42d2f85cb606c006ba934b99618d533056f4e56",
+   "receipt_sha256": "773a1200f2f04212ff3a862bd7d92ee7160c63d2e6750d0fa8a907beec11617a",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive integer cases for n=2,3,4: first n-1 ell entries and every root in {-1,0,1}, final ell entry fixed by zero sum; selected n=5,6 rational cases and constant/translated roots.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I-permutation",
+     "oracle_basis": "Independent Fraction arithmetic enumerates every ordered permutation, retaining multiplicities for repeated roots; no closed-form coefficient is used by the oracle."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M1",
+     "observed_exit": 6,
+     "receipt_sha256": "5d525eeb441caf8a437f2b819b4ffc24c2950910654160aafd30d30ac3e64297"
+    },
+    {
+     "id": "M2",
+     "observed_exit": 6,
+     "receipt_sha256": "cacc65ceaf34850600bc5be13385a014a6e044052edc90c64972791ba34d9b39"
+    },
+    {
+     "id": "M3",
+     "observed_exit": 6,
+     "receipt_sha256": "a43423cfcb2cf284d23544bf91b9f0a93b8af52224bcba1cd9b1aae45e59a0cf"
+    }
+   ],
+   "receipt_sha256": "53cd14a6c59e5681e583aba25ef566a5985e0cc83db69d820bcc73e5ebd8d667",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "P=W in composite rank for fixed determinant"
+}

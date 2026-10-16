@@ -1,0 +1,511 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "pm.domains.v2"
+    },
+    "pm_id": {
+      "type": "string",
+      "pattern": "^PM-[0-9]{3}\\.[1-9][0-9]*$"
+    },
+    "generation_status": {
+      "type": "string",
+      "enum": [
+        "COMPLETE"
+      ]
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string",
+            "enum": [
+              "software",
+              "games_simulation",
+              "tools",
+              "algorithms",
+              "data_structures",
+              "hardware_accelerators",
+              "crypto_security",
+              "machine_learning",
+              "optimisation_operations_research",
+              "distributed_systems",
+              "other"
+            ]
+          },
+          "proposed_domain": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "applies": {
+            "type": "boolean"
+          },
+          "strength": {
+            "type": "string",
+            "enum": [
+              "none",
+              "weak",
+              "moderate",
+              "strong"
+            ]
+          },
+          "why": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maturity": {
+            "type": "string",
+            "enum": [
+              "implementable",
+              "adaptable",
+              "inspirational",
+              "not_applicable"
+            ]
+          },
+          "basis": {
+            "type": "string",
+            "enum": [
+              "stated",
+              "inferred"
+            ]
+          },
+          "pseudocode": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "data_structure": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "time_complexity": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "space_complexity": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "computational_model": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "implementation_checks": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "anti_uses": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "source_evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "anchor": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "exact_quote": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source_object": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "anchor",
+                "exact_quote",
+                "source_object"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "PENDING",
+              "SUPPORTED",
+              "REJECTED"
+            ]
+          }
+        },
+        "required": [
+          "domain",
+          "proposed_domain",
+          "applies",
+          "strength",
+          "why",
+          "maturity",
+          "basis",
+          "pseudocode",
+          "data_structure",
+          "time_complexity",
+          "space_complexity",
+          "computational_model",
+          "implementation_checks",
+          "anti_uses",
+          "source_evidence",
+          "verification"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 11,
+      "maxItems": 11,
+      "allOf": [
+        {
+          "contains": {
+            "properties": {
+              "domain": {
+                "const": "software"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "domain": {
+                "const": "games_simulation"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "domain": {
+                "const": "tools"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "domain": {
+                "const": "algorithms"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "domain": {
+                "const": "data_structures"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "domain": {
+                "const": "hardware_accelerators"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "domain": {
+                "const": "crypto_security"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "domain": {
+                "const": "machine_learning"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "domain": {
+                "const": "optimisation_operations_research"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "domain": {
+                "const": "distributed_systems"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "domain": {
+                "const": "other"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        }
+      ]
+    },
+    "additional_domains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "const": "other"
+          },
+          "proposed_domain": {
+            "type": "string",
+            "minLength": 1
+          },
+          "applies": {
+            "type": "boolean"
+          },
+          "strength": {
+            "type": "string",
+            "enum": [
+              "none",
+              "weak",
+              "moderate",
+              "strong"
+            ]
+          },
+          "why": {
+            "type": "string",
+            "minLength": 1
+          },
+          "maturity": {
+            "type": "string",
+            "enum": [
+              "implementable",
+              "adaptable",
+              "inspirational",
+              "not_applicable"
+            ]
+          },
+          "basis": {
+            "type": "string",
+            "enum": [
+              "stated",
+              "inferred"
+            ]
+          },
+          "pseudocode": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "data_structure": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "time_complexity": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "space_complexity": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "computational_model": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "implementation_checks": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "anti_uses": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "source_evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "anchor": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "exact_quote": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source_object": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "anchor",
+                "exact_quote",
+                "source_object"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "PENDING",
+              "SUPPORTED",
+              "REJECTED"
+            ]
+          }
+        },
+        "required": [
+          "domain",
+          "proposed_domain",
+          "applies",
+          "strength",
+          "why",
+          "maturity",
+          "basis",
+          "pseudocode",
+          "data_structure",
+          "time_complexity",
+          "space_complexity",
+          "computational_model",
+          "implementation_checks",
+          "anti_uses",
+          "source_evidence",
+          "verification"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "pm_id",
+    "generation_status",
+    "domains",
+    "additional_domains"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pm.domains.v2"
+}

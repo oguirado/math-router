@@ -1,0 +1,973 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1295346,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 357479
+ },
+ "coordinate": "EN-107-000-0015-2-2026-PR-T4-UK-EX-M3-C-TO-H-0706",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "intro:rescalings",
+     "quote": "The center $x_0$ and the ambient coordinates stay fixed throughout.",
+     "quote_sha256": "bccbd771082a7254d0017c70f94e060ee1f18392ac9e76bab58637c89469f311"
+    }
+   ],
+   "query": "Moving-center singularity blowups",
+   "reason": "The rescaling fixes the singular center and ambient frame; moving-center limits require a separate result."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "The theorem concerns a fixed center and the smooth evolution before the first singular time; moving-center rescalings and continuations through a singularity are different questions.",
+     "quote_sha256": "6c6a6319afe8604216e509a55d71939aad7a2808bc86e34f6b59d6fe3450eb21"
+    }
+   ],
+   "query": "Continuation or surgery after the first singular time",
+   "reason": "The theorem concerns the smooth flow before its first singularity and does not determine a continuation through it."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-flow-uniqueness",
+     "quote": "The rescaled flow converges smoothly on every fixed compact set, at all rescaled times, to $S$ in the original ambient coordinates.",
+     "quote_sha256": "65b2411443c596e797139c868a860c186100d5478b808c8c8f6ed7bdd2676f93"
+    }
+   ],
+   "query": "An executable algorithm computing the tangent shrinker with certified numerical error",
+   "reason": "The source proves continuum convergence and existential estimates without a finite approximation contract."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "A shrinker with cylindrical ends need not have been identified as an exact round cylinder.",
+     "quote_sha256": "127961e0f4eee9912557bb8b2533b139759aaea6a53f9a57f1a88212aafb93c1"
+    }
+   ],
+   "query": "Cylinder rigidity from the presence of a cylindrical end",
+   "reason": "The end structure is used without identifying every shrinker with a cylindrical tail as an exact cylinder."
+  }
+ ],
+ "family": "PM-355",
+ "id": "PM-355.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-fixed-center-tangent-uniqueness",
+    "statement": "Let $M_0\\subset\\mathbb R^3$ be a smooth compact connected embedded surface without boundary, and let $(M_t)_{0\\le t<T}$ be its maximal smooth mean curvature flow."
+   },
+   {
+    "anchor": "stmt-geo-representative",
+    "claim_id": "claim-all-endpoint-representative-equality",
+    "statement": "Let $I\\subset(-\\infty,0)$ be an open interval, let $S$ be a smooth properly embedded self-shrinker without boundary, and put $\\nu_s=\\mathcal H^2\\!\\llcorner(\\sqrt{-s}\\,S)$."
+   },
+   {
+    "anchor": "stmt-geo-representative",
+    "claim_id": "claim-all-endpoint-representative-equality",
+    "statement": "Let $(\\mu_s)_{s\\in I}$ be a weakly measurable family of Radon measures."
+   },
+   {
+    "anchor": "stmt-geo-representative",
+    "claim_id": "claim-all-endpoint-representative-equality",
+    "statement": "Suppose that for almost every $s$, $\\mu_s$ is the weight of a rectifiable $2$-varifold $V_s$ with measurable generalized mean curvature $\\mathbf H_\\mu$ and first variation $\\delta V_s=-\\mathbf H_\\mu\\mu_s$ on compactly supported vector fields."
+   },
+   {
+    "anchor": "stmt-geo-representative",
+    "claim_id": "claim-all-endpoint-representative-equality",
+    "statement": "Suppose also that for every compact $K\\subset\\mathbb R^3$ and compact interval $J\\Subset I$, $$\\label{geo:representative-integrability}\n \\int_J\\!\\int_K(1+|\\mathbf H_\\mu|^2)\\,d\\mu_s\\,ds<\\infty.$$"
+   },
+   {
+    "anchor": "stmt-geo-representative",
+    "claim_id": "claim-all-endpoint-representative-equality",
+    "statement": "Assume that for every $a<b$ in $I$ and every nonnegative $\\varphi\\in C_c^1(\\mathbb R^3\\times[a,b])$, $$\\begin{gathered}\n\\label{geo:all-endpoint-brakke}\n \\mu_b(\\varphi(\\cdot,b))-\\mu_a(\\varphi(\\cdot,a))\n \\\\\n \\le\\int_a^b\\!\\int\\bigl(\\partial_s\\varphi\n       +\\nabla\\varphi\\cdot\\mathbf H_\\mu\n       -\\varphi|\\mathbf H_\\mu|^2\\bigr)\\,d\\mu_s\\,ds.\n\\end{gathered}$$"
+   },
+   {
+    "anchor": "stmt-geo-representative",
+    "claim_id": "claim-all-endpoint-representative-equality",
+    "statement": "If $\\mu_s=\\nu_s$ as Radon measures for almost every $s\\in I$, then $\\mu_s=\\nu_s$ for every $s\\in I$."
+   },
+   {
+    "anchor": "stmt-geo-tangent",
+    "claim_id": "claim-tangent-section-and-separated-ends",
+    "statement": "A backward tangent flow of the flow in [thm:main](#thm:main) has multiplicity one and is the homothetic motion $\\sqrt{-s}\\,S$, $s<0$, of a smooth properly embedded self-shrinking surface."
+   },
+   {
+    "anchor": "stmt-lin-gaussian",
+    "claim_id": "claim-gaussian-domain-and-compact-resolvent",
+    "statement": "Let $H^2_G$ be the completion of $C_c^\\infty(S)$ for $$\\|u\\|_{H^2_G}=\\sum_{i=0}^2\\|\\nabla^iu\\|_{L^2_G}.$$"
+   },
+   {
+    "anchor": "stmt-lin-observations",
+    "claim_id": "claim-compact-observation-augmentation",
+    "statement": "Moreover, let $u_1,\\ldots,u_a\\in H^2_G$ have smooth compactly supported $Lu_j$."
+   },
+   {
+    "anchor": "stmt-lin-strip",
+    "claim_id": "claim-strip-bulk-and-boundary-estimates",
+    "statement": "Suppose $$\\operatorname{Re}a\\ge c_*E,\\quad |a|\\le C_*E,\n \\quad\\operatorname{Re}c\\ge c_*,\\quad |c|\\le C_*,\n \\quad |b|\\le\\varepsilon_*\\sqrt E,$$ the normalized derivatives of these coefficients are bounded, $|d_1|\\le C_*E$, and $d_0,d_2$ and their required derivatives are bounded."
+   },
+   {
+    "anchor": "stmt-lin-strip",
+    "claim_id": "claim-strip-bulk-and-boundary-estimates",
+    "statement": "The leading coefficients are independent of $\\theta$."
+   },
+   {
+    "anchor": "stmt-gauge-radial",
+    "claim_id": "claim-radial-analytic-coefficient-map",
+    "statement": "The graph neighborhood keeps the radius and metric denominators away from zero and retains the strict principal accretivity margins."
+   },
+   {
+    "anchor": "stmt-gauge-radial",
+    "claim_id": "claim-radial-analytic-coefficient-map",
+    "statement": "If $v=R-\\sqrt2$ is small in the unweighted uniformly local strip norm,"
+   },
+   {
+    "anchor": "stmt-lin-rates",
+    "claim_id": "claim-separated-cylindrical-rates",
+    "statement": "For <a href=\"#lin:cylinder-operator\" data-reference-type=\"eqref\" data-reference=\"lin:cylinder-operator\">[lin:cylinder-operator]</a>, and for perturbations satisfying the normalized decay condition below,"
+   },
+   {
+    "anchor": "stmt-lin-rates",
+    "claim_id": "claim-separated-cylindrical-rates",
+    "statement": "$\\alpha\\notin\\{2-j^2:j\\in\\mathbb Z\\}$"
+   },
+   {
+    "anchor": "stmt-lin-rates",
+    "claim_id": "claim-separated-cylindrical-rates",
+    "statement": "Finite intervals have logarithmic length at least a fixed $\\ell_*>0$, with constants allowed to depend on $\\ell_*$."
+   },
+   {
+    "anchor": "stmt-lin-conical",
+    "claim_id": "claim-conical-entrance-isomorphism",
+    "statement": "Assume the real symmetric matrix $\\left(\\begin{smallmatrix}a&b\\\\b&c\\end{smallmatrix}\\right)$ is at least $c_*I$, and the coefficients and their required derivatives are uniformly bounded."
+   },
+   {
+    "anchor": "stmt-lin-conical",
+    "claim_id": "claim-conical-entrance-isomorphism",
+    "statement": "$t_0\\ge t_*$"
+   },
+   {
+    "anchor": "stmt-lin-gaussian-conical",
+    "claim_id": "claim-gaussian-solutions-enter-conical-domain",
+    "statement": "Let $J\\in H^2_G(S)$ solve $LJ=f_c$ with $f_c\\in L^2_G$ compactly supported."
+   },
+   {
+    "anchor": "stmt-gauge-fiber-atlas",
+    "claim_id": "claim-unified-real-base-fiber-chart",
+    "statement": "Let $\\vartheta$ denote the finite end-rotation parameters."
+   },
+   {
+    "anchor": "stmt-gauge-fiber-atlas",
+    "claim_id": "claim-unified-real-base-fiber-chart",
+    "statement": "After fixing real coordinate identifications on the compact overlaps,"
+   },
+   {
+    "anchor": "stmt-gauge-compact",
+    "claim_id": "claim-conical-and-compact-analytic-maps",
+    "statement": "On a sufficiently small neighborhood in fixed compact graph charts,"
+   },
+   {
+    "anchor": "stmt-lin-family",
+    "claim_id": "claim-normalized-family-and-formal-openings",
+    "statement": "Let $\\kappa$ be the number of cylindrical ends."
+   },
+   {
+    "anchor": "stmt-lin-family",
+    "claim_id": "claim-normalized-family-and-formal-openings",
+    "statement": "When the limiting links and cylindrical directions are separated, as for the tangent section in [geo:tangent](#geo:tangent),"
+   },
+   {
+    "anchor": "stmt-lin-shifted-gaussian",
+    "claim_id": "claim-shifted-gaussian-comparison",
+    "statement": "Let $L_b^{\\mathrm{norm}}$ denote the derivative of <a href=\"#lin:normalized-equation\" data-reference-type=\"eqref\" data-reference=\"lin:normalized-equation\">[lin:normalized-equation]</a> about $S_b$, including derivatives of its compact multiplier terms."
+   },
+   {
+    "anchor": "stmt-lin-shifted-gaussian",
+    "claim_id": "claim-shifted-gaussian-comparison",
+    "statement": "For real $b$ sufficiently small and real $|\\delta|$ sufficiently small,"
+   },
+   {
+    "anchor": "stmt-ref-finite-taylor",
+    "claim_id": "claim-finite-taylor-normal-graphs",
+    "statement": "On every region where the absolute sum of the finite nonconstant height terms and their first two spatial derivatives is sufficiently small,"
+   },
+   {
+    "anchor": "stmt-ref-real-comparison",
+    "claim_id": "claim-localized-real-normalized-comparison",
+    "statement": "Fix $M$, an admissible weight $a$, and $0<\\vartheta<1$, and take real $(b,x)$ in the stated neighborhood with $|x|$ sufficiently small."
+   },
+   {
+    "anchor": "stmt-ref-real-comparison",
+    "claim_id": "claim-localized-real-normalized-comparison",
+    "statement": "Let $u$ be a smooth real normal graph over $S_b$ on $|Y|<R$, with sufficiently small height and slope."
+   },
+   {
+    "anchor": "stmt-ref-real-comparison",
+    "claim_id": "claim-localized-real-normalized-comparison",
+    "statement": "Suppose also that the graph represents the entire part of a real surface $U$ used inside $|Y|\\le\\vartheta R$, and that the absolute action of its omitted part is at most $\\tau_{\\vartheta R}$."
+   },
+   {
+    "anchor": "stmt-arr-contours",
+    "claim_id": "claim-strict-lateral-contour-families",
+    "statement": "Fix the finite list of nonzero leading opening coefficients."
+   },
+   {
+    "anchor": "stmt-gauge-mixed",
+    "claim_id": "claim-mixed-gauge-nonlinear-estimates",
+    "statement": "Let $B\\ge1$ and, on a bounded interval, prescribe smooth circular reference functions and transverse coefficients"
+   },
+   {
+    "anchor": "stmt-gauge-mixed",
+    "claim_id": "claim-mixed-gauge-nonlinear-estimates",
+    "statement": "Assume that $R_0$, $\\zeta_0'$ and $c_2\\zeta_0'-c_1R_0'$ are bounded away from zero, that their required fixed derivatives are bounded, and that the circular reference has the strict ellipticity margins of Lemma <a href=\"#lin:strip\" data-reference-type=\"ref\" data-reference=\"lin:strip\">6</a> after division by its drift."
+   },
+   {
+    "anchor": "stmt-gauge-mixed",
+    "claim_id": "claim-mixed-gauge-nonlinear-estimates",
+    "statement": "If $\\|u\\|_{\\mathcal X_h(B^{-2})}\\le W$ and $BW$ is sufficiently small,"
+   },
+   {
+    "anchor": "stmt-gauge-height",
+    "claim_id": "claim-long-polar-height-estimates",
+    "statement": "Prescribe the polar height chart $$X=(Zg(r,\\theta),r e_r(\\theta))$$ on real parameters along a fixed complex $r$ contour."
+   },
+   {
+    "anchor": "stmt-gauge-height",
+    "claim_id": "claim-long-polar-height-estimates",
+    "statement": "Assume $|Br|\\ge Y_0$ and put $E=|Br|^{-2}$ on each strip."
+   },
+   {
+    "anchor": "stmt-gauge-height",
+    "claim_id": "claim-long-polar-height-estimates",
+    "statement": "All metric and graph denominators in $\\mathcal F_t$ remain bounded analytic units in their normalized scales on the graph neighborhood."
+   },
+   {
+    "anchor": "stmt-lin-global",
+    "claim_id": "claim-uniform-weighted-normalized-inverse",
+    "statement": "(Weighted normalized inverse). *Fix an angular order $h$, a finite geometric parameter $D$, a cylindrical weight rate $\\alpha_{\\mathrm{cyl}}>2.1$, and the compact observations from Lemma <a href=\"#lin:observations\" data-reference-type=\"ref\" data-reference=\"lin:observations\">5</a>. Consider surfaces of parameter size $B\\to\\infty$, obtained by replacing far cylindrical pieces by real-parameter paths with complex coefficients, optionally followed by height charts of length $O(\\log B)$. The conical ends may remain infinite. The following are the hypotheses on the linear operators and prescribed charts.* 1. *On each fixed compact subset, the coefficients, compact multiplier sources, and observations converge smoothly to <a href=\"#lin:augmented\" data-reference-type=\"eqref\" data-reference=\"lin:augmented\">[lin:augmented]</a>, or to a member of a sufficiently small uniformly invertible perturbation of that block.* 2. *From a fixed entrance to $z=cB$, the cylindrical operator is a sufficiently small perturbation of <a href=\"#lin:cylinder-operator\" data-reference-type=\"eqref\" data-reference=\"lin:cylinder-operator\">[lin:cylinder-operator]</a>. Choose $c>0$ so that a propagation rate $2.1$ is available. Beyond that point, bounded bands of length depending on $D$ satisfy Lemma <a href=\"#lin:strip\" data-reference-type=\"ref\" data-reference=\"lin:strip\">6</a>. A height chart is the real-parameter pullback of $\\tau=\\log(r_0/r)$, with $E\\asymp(B|r|)^{-2}$, ending with $B|r|\\ge Y_0$. Its coefficients obey the same accretivity, derivative, lower-term, and small-perturbation bounds.* 3. *Each modified cylindrical end has one ordered real outward interval $[s_0,T_B]$, equal to the original log coordinate on its long real part. Local real outward coordinates on overlaps are $t_i=\\chi_i(s)$ with $0<c\\le\\chi_i'\\le C$ and bounded required fixed derivatives; the real angular coordinate is unchanged. There is a positive scale $E_B(s)$ comparable to the local scales with bounded logarithmic derivatives. The prescribed scalar variables are descriptions of one scalar variable through transition factors $A_i(s,\\theta)$ on fixed overlap bands. The functions $A_i,A_i^{-1}$ and their ordinary real-coordinate derivatives through the required fixed orders are bounded. Choose this scalar variable to agree with each prescribed long-chart variable off those bands and with the prescribed exit variable near $T_B$. After these changes, the normalized reference operators and their source rows are smooth restrictions of one operator on the interval; any additional terms from the actual backgrounds satisfy the bounded lower-term and small domain-to-range perturbation hypotheses in (ii). These requirements exclude distributional seams. The coefficients on conical ends satisfy Lemma <a href=\"#lin:conical\" data-reference-type=\"ref\" data-reference=\"lin:conical\">9</a>, up to a small domain-to-range perturbation.* 4. *For each fixed $B$ and sufficiently remote finite stops on the conical ends, fixed domain and range isomorphisms identify the actual stopped operator with an operator connected to a real coercive scalar elliptic problem by an operator-norm continuous homotopy on the fixed compact $H^2$ domain with homogeneous boundary conditions and range $L^2$. Its coefficients and boundaries are smooth, its symbols are properly elliptic, and its boundary conditions are complementing throughout. The equal-dimensional compact observation and multiplier augmentation is retained. This is only an index hypothesis: the uniform estimates in the preceding items are required for the actual operators, not for the artificial operators along the homotopy.* *For clarity, the coefficient requirement in (iii) includes the tangent of every prescribed complex log path. If $t=t(s)$ is such a log and $H=t_s$ is its complex tangent, independent of $\\theta$, then the chain rule on the real $s$ interval gives $$\\label{lin:complex-log-pullback} \\begin{split} H\\mathcal L={}&\\partial_s-\\frac aH\\partial_{ss} -2b\\partial_{s\\theta}-Hc\\partial_{\\theta\\theta}\\\\ &+\\left(d_1+\\frac{aH_s}{H^2}\\right)\\partial_s +Hd_2\\partial_\\theta+Hd_0, \\end{split}$$ and the source is multiplied by $H$. Thus $H,H^{-1}$ and its required fixed derivatives, including $H_s$, must be bounded. If the full drift is divided out, its divisor is $\\delta_H=1+d_1+aH_s/H^2$, and the actual inequalities in (ii) are $$\\operatorname{Re}\\frac{a}{H\\delta_H}\\ge cE_B,\\quad \\operatorname{Re}\\frac{Hc}{\\delta_H}\\ge c,\\quad \\left|\\frac{a}{H\\delta_H}\\right|\\le CE_B,\\quad \\left|\\frac{Hc}{\\delta_H}\\right|\\le C,\\quad \\left|\\frac b{\\delta_H}\\right|\\le\\varepsilon_*\\sqrt{E_B}.$$ The divided source is $Hf/\\delta_H$. A nonzero divisor alone does not imply these real-part inequalities. If $\\delta_H=1+O(E_B)$, its closeness to one preserves previously fixed strict margins.* *Choose a weight $\\rho_B$ with rate $\\alpha_{\\mathrm{cyl}}$ on the long real cylinder, a sufficiently large fixed rate $d_D$ on the bounded modified bands, and a sufficiently large fixed rate $d_{\\mathrm{cap}}$ on a height chart, retaining its value at the entrance of each new chart. All rates exceed their propagation rates by fixed positive margins, are at least $\\alpha_{\\mathrm{cyl}}$, and their interpolations occupy fixed overlap bands where the adjacent coefficient estimates both hold. Choose $Y_0$ after these rates so that $d_{\\mathrm{cap}}\\sup E$ is sufficiently small; take $B$ large only after these choices.* *Here $u$ denotes the scalar unknown in each prescribed chart: normal height on the core, radius on cylindrical charts, relative height on cap charts, and link displacement on conical charts. The corresponding source uses the same change of graph units and drift normalization. Let $X_B$ consist of the compact norm <a href=\"#lin:compact-norm\" data-reference-type=\"eqref\" data-reference=\"lin:compact-norm\">[lin:compact-norm]</a>, the cylindrical and height norms <a href=\"#lin:weighted-strip\" data-reference-type=\"eqref\" data-reference=\"lin:weighted-strip\">[lin:weighted-strip]</a>, the conical norms <a href=\"#lin:conical-norm\" data-reference-type=\"eqref\" data-reference=\"lin:conical-norm\">[lin:conical-norm]</a>, and the Euclidean norm of the compact multiplier vector. Let $Y_B$ consist of the corresponding compact and end source norms and the Euclidean observation norm. Homogeneous outgoing graph-derivative conditions are included in the domain. Then $$\\label{lin:global-estimate} \\|(u,\\lambda)\\|_{X_B} \\le C_{D,Y_0,h,\\alpha_{\\mathrm{cyl}}} \\left\\|\\bigl(L_Bu+\\sum_i\\lambda_i\\chi_{i,B},P_Bu\\bigr)\\right\\|_{Y_B},$$ and this normalized operator is onto. At a true terminal section define $g=u_s(T_B)$ for the prescribed scalar variable in the real outward coordinate. If $t=t(s)$ is a local log coordinate, this means $g=H u_t(T_B)$ with $H=t_s$. For this prescribed exit derivative the right hand side is augmented by $\\rho_B(T_B)^{-1}\\|g\\|_{\\mathcal T^N_{E(T_B),h}}$ at each terminal section; the sum over the fixed finite list of exits is understood. The thresholds and constant may depend on the fixed rate, but are independent of $B$ and of the lengths of the exhausted conical ends. Removing $\\rho_B$, or converting a relative height to physical height on a cap, costs at most a fixed power of $B$. The preliminary construction uses $\\alpha_{\\mathrm{cyl}}=2.2$; a source with a fixed higher Taylor growth rate is permitted by choosing $\\alpha_{\\mathrm{cyl}}$ equal to or larger than that rate. The strict buffer is above the propagation rate, so equality with the source growth rate is allowed in the uniformly local source norm.*"
+   },
+   {
+    "anchor": "stmt-lin-global",
+    "claim_id": "claim-uniform-weighted-normalized-inverse",
+    "statement": "These requirements exclude distributional seams."
+   },
+   {
+    "anchor": "stmt-lin-global",
+    "claim_id": "claim-uniform-weighted-normalized-inverse",
+    "statement": "This is only an index hypothesis: the uniform estimates in the preceding items are required for the actual operators, not for the artificial operators along the homotopy."
+   },
+   {
+    "anchor": "stmt-lin-shielding",
+    "claim_id": "claim-exponential-backward-shielding",
+    "statement": "On a fixed log-length overlap suppose the hypotheses of Lemma <a href=\"#lin:strip\" data-reference-type=\"ref\" data-reference=\"lin:strip\">6</a> hold with $E\\asymp B^{-2}$."
+   },
+   {
+    "anchor": "stmt-lin-shielding",
+    "claim_id": "claim-exponential-backward-shielding",
+    "statement": "A solution of the homogeneous difference equation with zero entrance value and polynomially bounded farther data"
+   },
+   {
+    "anchor": "stmt-arr-preliminary-solves",
+    "claim_id": "claim-preliminary-normalized-arrays",
+    "statement": "Fix $D$, the bounded scaled portions of the contour families of Lemma <a href=\"#arr:contours\" data-reference-type=\"ref\" data-reference=\"arr:contours\">17</a>, and a fixed lower radius $r_*>0$."
+   },
+   {
+    "anchor": "stmt-arr-preliminary-solves",
+    "claim_id": "claim-preliminary-normalized-arrays",
+    "statement": "Let $p_0(s)$ be a sufficiently high polynomial truncation of $\\widehat p(s)$."
+   },
+   {
+    "anchor": "stmt-arr-first-variation",
+    "claim_id": "claim-endpoint-first-variation",
+    "statement": "At fixed compact observation values,"
+   },
+   {
+    "anchor": "stmt-arr-first-variation",
+    "claim_id": "claim-endpoint-first-variation",
+    "statement": "if the moving exits satisfy $\\operatorname{Re}z^2\\ge H$, and the normalized shapes, exit data and their derivatives have polynomial bounds in $B$,"
+   },
+   {
+    "anchor": "stmt-arr-real-stops",
+    "claim_id": "claim-real-stopped-holomorphic-approximants",
+    "statement": "$H\\le H'\\le\\Lambda H$"
+   },
+   {
+    "anchor": "stmt-arr-real-stops",
+    "claim_id": "claim-real-stopped-holomorphic-approximants",
+    "statement": "for fixed $\\Lambda$,"
+   },
+   {
+    "anchor": "stmt-arr-gevrey",
+    "claim_id": "claim-gevrey-stationary-action-expansion",
+    "statement": "For any sufficiently high real-coefficient polynomial path $p_0(s)$ with the specified opening jet and any sufficiently large fixed $\\ell$,"
+   },
+   {
+    "anchor": "stmt-arr-division",
+    "claim_id": "claim-gevrey-closure-and-fixed-division",
+    "statement": "when its first $q$ formal coefficients vanish identically on the parameter ball."
+   },
+   {
+    "anchor": "stmt-arr-formal-replacement",
+    "claim_id": "claim-formal-maximal-rank-replacement",
+    "statement": "Let $f_0=\\mathcal F-\\mathcal F(0)$ and $f_i=\\partial_{p_i}\\mathcal F$."
+   },
+   {
+    "anchor": "stmt-arr-regular-implicit",
+    "claim_id": "claim-sectorial-regular-implicit-selection",
+    "statement": "For the $g_i$ selected above, form actual expressions $g_{\\pm,i}(s,p)$ by applying the same finite differentiations and polynomial operations to $$G_\\pm(s,p)-\\mathcal F(0),\\qquad \\nabla_pG_\\pm(s,p).$$"
+   },
+   {
+    "anchor": "stmt-arr-flatness-upgrade",
+    "claim_id": "claim-almost-holomorphic-flatness-improvement",
+    "statement": "Suppose an error $e(w)$ on an exterior sector $$|w|>R,\\qquad |\\arg w|<\\pi/2+\\delta$$ satisfies $$|e(w)|\\le C_D e^{-c_2(D)|w|},\\qquad\n |\\bar\\partial_we(w)|\\le C_D(1+|w|)^M e^{-D|w|/6},\n \\quad c_2(D)>0.$$"
+   },
+   {
+    "anchor": "stmt-arr-action-upper",
+    "claim_id": "claim-common-parameter-action-upper-bound",
+    "statement": "The formal critical arc <a href=\"#arr:critical-arc\" data-reference-type=\"eqref\" data-reference=\"arr:critical-arc\">[arr:critical-arc]</a>"
+   },
+   {
+    "anchor": "stmt-jump-jump",
+    "claim_id": "claim-universal-adverse-end-action-jump",
+    "statement": "Let $G_+$ and $G_-$ be the two array actions at a common parameter $p$ in the inner parameter ball, and hence at common compact observation values, for a nonempty finite adverse end list with the same ordering of the bypasses on every end."
+   },
+   {
+    "anchor": "stmt-jump-jump",
+    "claim_id": "claim-universal-adverse-end-action-jump",
+    "statement": "The longer shrinking branches have $\\psi=0$ at their own exits, and the shorter interpolation uses their actual remainder traces at the common shorter section."
+   },
+   {
+    "anchor": "stmt-jump-height-inverse",
+    "claim_id": "claim-finite-height-mean-and-oscillatory-inverse",
+    "statement": "On the real parameter interval $[0,T]$, let $\\mathcal L_0$ be the circular operator <a href=\"#jump:height-linear\" data-reference-type=\"eqref\" data-reference=\"jump:height-linear\">[jump:height-linear]</a> with <a href=\"#jump:height-coefficients\" data-reference-type=\"eqref\" data-reference=\"jump:height-coefficients\">[jump:height-coefficients]</a>, the normalized derivative bounds just stated, $T\\geq T_{\\min}$, and $E\\leq E_*$ sufficiently small."
+   },
+   {
+    "anchor": "stmt-jump-compatibility",
+    "claim_id": "claim-normalized-height-family-compatibility",
+    "statement": "Fix the common parameter $p$ on the inner parameter ball and the matched numbers $Z,Z_*$ on each adverse end."
+   },
+   {
+    "anchor": "stmt-jump-compatibility",
+    "claim_id": "claim-normalized-height-family-compatibility",
+    "statement": "Choose the fixed constants in the preliminary and refined contraction balls before $B$."
+   },
+   {
+    "anchor": "stmt-jump-moving-exit",
+    "claim_id": "claim-logarithmic-exit-position-control",
+    "statement": "Keep $p,Z,Z_*$ fixed and use the canonical prescription $\\partial_s(g-g_c)=0$ at the moving exit."
+   },
+   {
+    "anchor": "stmt-jump-moving-exit",
+    "claim_id": "claim-logarithmic-exit-position-control",
+    "statement": "Put $\\eta=\\log Y$."
+   },
+   {
+    "anchor": "stmt-jump-endpoints",
+    "claim_id": "claim-small-endpoint-error-and-translator-limit",
+    "statement": "For the common parameter $p$, first make the high-stop synchronization <a href=\"#jump:nonadverse-sync\" data-reference-type=\"eqref\" data-reference=\"jump:nonadverse-sync\">[jump:nonadverse-sync]</a>, then shorten all adverse turns from fixed scaled size to $|y|\\asymp Y_0$."
+   },
+   {
+    "anchor": "stmt-jump-stokes",
+    "claim_id": "claim-nonzero-translator-stokes-difference",
+    "statement": "Finite homothetic bypass solutions satisfying <a href=\"#jump:negative-exit\" data-reference-type=\"eqref\" data-reference=\"jump:negative-exit\">[jump:negative-exit]</a> and <a href=\"#jump:translator-matching\" data-reference-type=\"eqref\" data-reference=\"jump:translator-matching\">[jump:translator-matching]</a>"
+   },
+   {
+    "anchor": "stmt-phase-jets",
+    "claim_id": "claim-improved-opening-jet-growth",
+    "statement": "Let $w_{[n]}$ denote the term homogeneous of degree $n$ in $x$ in the stationary jet, with $b$ retained as an analytic parameter."
+   },
+   {
+    "anchor": "stmt-phase-inner-evaluation",
+    "claim_id": "claim-inner-mean-evaluation",
+    "statement": "Fix a sufficiently small $\\epsilon_1>0$, and put $z_1=B^{1-\\epsilon_1}$ on the real incoming portion of an adverse end."
+   },
+   {
+    "anchor": "stmt-phase-primitive",
+    "claim_id": "claim-integrated-averaged-equation",
+    "statement": "Continue the preliminary solution from $z_1$ to its fixed real-radius height section $r_0\\in(0,\\sqrt2)$."
+   },
+   {
+    "anchor": "stmt-phase-primitive",
+    "claim_id": "claim-integrated-averaged-equation",
+    "statement": "In prescribed transition gauges, use the circular averages of the scaled axial and unscaled radial positions."
+   },
+   {
+    "anchor": "stmt-phase-expansion",
+    "claim_id": "claim-adverse-phase-through-constant-order",
+    "statement": "(The phase to constant order). *For an adverse end set $Z_0=(-\\beta)^{-1/2}$ on the branch continued from positive values, and define $Z$ by its mean height at the common section as in Proposition <a href=\"#jump:jump\" data-reference-type=\"ref\" data-reference=\"jump:jump\">32</a>. Let $$\\phi(r)=\\sqrt{1-r^2/2},\\qquad (1/r-r/2)d_0'+d_0/2=-\\phi''/\\phi'^2,\\qquad d_0(r_0)=0,$$ and write $d_0=2\\log r+d_*+O(r^2(1+|\\log r|))$. With $$Z_*=Z+Z^{-1}\\{d_*-2\\log(Z/2)\\},$$ one has $$Z_*^2=-\\frac1\\beta-8\\log Z_0+\\frac{c_2(b,x)}{\\beta^2} +C(r_0)+o(1), \\label{phase:expansion-eq}$$ where $C(r_0)=2+2\\log2$ for the stated normalization $d_0(r_0)=0$ and definition of $Z_*$, independently of $r_0$. The logarithmic coefficient $-8$ is the same for every end, and the error is uniform on the finite set of adverse ends. All logarithms retain their prescribed continuation from the common incoming contours.*"
+   },
+   {
+    "anchor": "stmt-phase-expansion",
+    "claim_id": "claim-adverse-phase-through-constant-order",
+    "statement": "and write $d_0=2\\log r+d_*+O(r^2(1+|\\log r|))$."
+   },
+   {
+    "anchor": "stmt-phase-no-arc",
+    "claim_id": "claim-no-real-formal-critical-opening-arc",
+    "statement": "through the origin"
+   },
+   {
+    "anchor": "stmt-phase-no-arc",
+    "claim_id": "claim-no-real-formal-critical-opening-arc",
+    "statement": "satisfying $\\nabla\\mathcal F(b(s),x(s))=0$,"
+   },
+   {
+    "anchor": "stmt-jet-finite-power",
+    "claim_id": "claim-uniform-finite-power-opening-control",
+    "statement": "for real $(b,x)$ in that neighborhood."
+   },
+   {
+    "anchor": "stmt-flow-localized",
+    "claim_id": "claim-localized-gradient-and-opening-control",
+    "statement": "Suppose $M$ obeys <a href=\"#flow:area-ratios\" data-reference-type=\"eqref\" data-reference=\"flow:area-ratios\">[flow:area-ratios]</a>, its observations lie in that neighborhood, and $M$ is a complete graph with that weak tolerance over $S_b$ to radius $R\\ge R_\\eta$."
+   },
+   {
+    "anchor": "stmt-flow-localized",
+    "claim_id": "claim-localized-gradient-and-opening-control",
+    "statement": "When $\\mathcal D\\le1$,"
+   },
+   {
+    "anchor": "stmt-flow-improvement",
+    "claim_id": "claim-small-speed-graphical-improvement",
+    "statement": "Fix a spatial loss $\\zeta\\in(0,1)$."
+   },
+   {
+    "anchor": "stmt-flow-improvement",
+    "claim_id": "claim-small-speed-graphical-improvement",
+    "statement": "Suppose the hypotheses of Proposition <a href=\"#flow:localized\" data-reference-type=\"ref\" data-reference=\"flow:localized\">44</a> hold to radius $R$, and $$\\label{flow:small-speed}\n d\\le C_0e^{-R^2/8}.$$"
+   },
+   {
+    "anchor": "stmt-flow-improvement",
+    "claim_id": "claim-small-speed-graphical-improvement",
+    "statement": "Suppose also that, on each fixed interior fraction of the graphical ball, the actual second fundamental form and its derivatives through a sufficiently large fixed order are bounded by a fixed polynomial in $R$."
+   },
+   {
+    "anchor": "stmt-flow-propagation",
+    "claim_id": "claim-uniform-complete-graph-propagation",
+    "statement": "Fix the closed small parameter neighborhood above, an area-ratio bound, $0<U<1$, a spatial loss $0<\\mu<1$, and a target weak $C^1$ normal graph tolerance $\\varepsilon_1>0$."
+   },
+   {
+    "anchor": "stmt-flow-propagation",
+    "claim_id": "claim-uniform-complete-graph-propagation",
+    "statement": "If a smooth closed mean curvature flow $N_t$ has the prescribed area ratios, $N_0$ is a complete normal graph of norm at most $\\varepsilon_0$ over $S_b$ to radius $R\\ge R_0$, and $|\\lambda(b,0)|\\le\\ell_0$,"
+   },
+   {
+    "anchor": "stmt-flow-radius-induction",
+    "claim_id": "claim-delayed-radius-graphical-induction",
+    "statement": "On every complete bootstrap interval,"
+   },
+   {
+    "anchor": "stmt-flow-finite-length",
+    "claim_id": "claim-uniform-finite-prefix-rescaled-length",
+    "statement": "For $\\mathcal E(0)$ sufficiently small,"
+   },
+   {
+    "anchor": "stmt-flow-uniqueness",
+    "claim_id": "claim-all-time-fixed-frame-convergence",
+    "statement": "For the smooth closed embedded surface flow and fixed first singular point of [thm:main](#thm:main),"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Fixed-frame tangent-flow uniqueness",
+    "evidence": [
+     {
+      "anchor": "pm-h-5",
+      "quote": "Finite rescaled length then closes the compact-core bootstrap and gives convergence at every intermediate rescaled time in the original ambient frame.",
+      "quote_sha256": "bb72fb8a5def22d4063feee97f470f134370140ab0808e49a05e314274bf5190"
+     },
+     {
+      "anchor": "stmt-geo-representative",
+      "quote": "If $\\mu_s=\\nu_s$ as Radon measures for almost every $s\\in I$, then $\\mu_s=\\nu_s$ for every $s\\in I$.",
+      "quote_sha256": "a755ad200a6572438be7be1b41663ccf17770deecce72162bd9b05a0e9a6e6ff"
+     }
+    ],
+    "requires_concepts": [
+     "Multiplicity-one tangent structure",
+     "Separated conical and cylindrical ends",
+     "Localized Gaussian gradient inequality",
+     "Finite rescaled length",
+     "All-endpoint Brakke representative equality"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Finite-power control of opening variables",
+    "evidence": [
+     {
+      "anchor": "pm-h-5",
+      "quote": "The formal real Nullstellensatz, in the arc formulation of Aschenbrenner–Srhir (Aschenbrenner and Srhir 2024, Corollary 4.8) [[AS2024](#ref-AS2024)], turns the exclusion of opening arcs into finite real-radical certificates for the gradient ideal.",
+      "quote_sha256": "7399f359cc305a46d2ff449e4b43fe2fe2e911689c78187a6a75a7787de3c29a"
+     },
+     {
+      "anchor": "pm-h-5",
+      "quote": "Artin’s approximation theorem (Artin 1968, Theorem 1.2) [[Artin1968](#ref-Artin1968)] converts the required finite quotients into analytic certificates.",
+      "quote_sha256": "eb4fc668509e6d33f2e35f447d6060383e214ec76c6647706399814749d0ddfa"
+     }
+    ],
+    "requires_concepts": [
+     "Formal Gaussian action",
+     "Exclusion of real formal critical opening arcs",
+     "Formal real-radical certificates",
+     "Analytic approximation"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-fixed-center-tangent-uniqueness",
+   "exact_statement": "Let $M_0\\subset\\mathbb R^3$ be a smooth compact connected embedded surface without boundary, and let $(M_t)_{0\\le t<T}$ be its maximal smooth mean curvature flow. At every singular point $(x_0,T)$ at its first singular time there is a smooth properly embedded self-shrinker $S$ such that, as $\\lambda\\to\\infty$, the full family <a href=\"#intro:rescalings\" data-reference-type=\"eqref\" data-reference=\"intro:rescalings\">[intro:rescalings]</a> converges locally smoothly in space and with multiplicity one to $\\sqrt{-s}\\,S$, uniformly for $s$ in compact subintervals of $(-\\infty,0)$. The convergence is in the original ambient coordinates, including the axes and position of the limit. Every backward integral Brakke tangent in the stated convention therefore equals the area-measure flow of $\\sqrt{-s}\\,S$ at every negative time.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-all-endpoint-representative-equality",
+   "exact_statement": "Let $I\\subset(-\\infty,0)$ be an open interval, let $S$ be a smooth properly embedded self-shrinker without boundary, and put $\\nu_s=\\mathcal H^2\\!\\llcorner(\\sqrt{-s}\\,S)$. Let $(\\mu_s)_{s\\in I}$ be a weakly measurable family of Radon measures. Suppose that for almost every $s$, $\\mu_s$ is the weight of a rectifiable $2$-varifold $V_s$ with measurable generalized mean curvature $\\mathbf H_\\mu$ and first variation $\\delta V_s=-\\mathbf H_\\mu\\mu_s$ on compactly supported vector fields. Suppose also that for every compact $K\\subset\\mathbb R^3$ and compact interval $J\\Subset I$, $$\\label{geo:representative-integrability}\n \\int_J\\!\\int_K(1+|\\mathbf H_\\mu|^2)\\,d\\mu_s\\,ds<\\infty.$$ Assume that for every $a<b$ in $I$ and every nonnegative $\\varphi\\in C_c^1(\\mathbb R^3\\times[a,b])$, $$\\begin{gathered}\n\\label{geo:all-endpoint-brakke}\n \\mu_b(\\varphi(\\cdot,b))-\\mu_a(\\varphi(\\cdot,a))\n \\\\\n \\le\\int_a^b\\!\\int\\bigl(\\partial_s\\varphi\n       +\\nabla\\varphi\\cdot\\mathbf H_\\mu\n       -\\varphi|\\mathbf H_\\mu|^2\\bigr)\\,d\\mu_s\\,ds.\n\\end{gathered}$$ The test is defined on the closed slab and may be nonzero at its temporal endpoints, and $\\partial_s$ is taken at fixed ambient position. Both $a$ and $b$ are arbitrary, including exceptional times. If $\\mu_s=\\nu_s$ as Radon measures for almost every $s\\in I$, then $\\mu_s=\\nu_s$ for every $s\\in I$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geo-representative"
+  },
+  {
+   "claim_id": "claim-tangent-section-and-separated-ends",
+   "exact_statement": "A backward tangent flow of the flow in [thm:main](#thm:main) has multiplicity one and is the homothetic motion $\\sqrt{-s}\\,S$, $s<0$, of a smooth properly embedded self-shrinking surface. Its time slices have uniform quadratic local area bounds. The surface $S$ has bounded geometry and finite genus. Outside a compact set it is the disjoint union of finitely many ends, each either smoothly asymptotic to a regular cone under dilations or a cylindrical tail whose translates centered at points receding outward along a ray from the origin converge smoothly on compact sets to the full round cylinder of radius $\\sqrt2$. The corresponding links and cylindrical directions are separated on the unit sphere.",
+   "kind": "classification",
+   "statement_anchor": "stmt-geo-tangent"
+  },
+  {
+   "claim_id": "claim-gaussian-domain-and-compact-resolvent",
+   "exact_statement": "Let $H^2_G$ be the completion of $C_c^\\infty(S)$ for $$\\|u\\|_{H^2_G}=\\sum_{i=0}^2\\|\\nabla^iu\\|_{L^2_G}.$$ The self-adjoint realization of $L$ has domain $H^2_G$, compact resolvent, and $$\\label{lin:gaussian-estimate}\n \\|u\\|_{H^2_G}+\\||X|\\nabla u\\|_{L^2_G}\n       +\\||X|^2u\\|_{L^2_G}\n \\le C\\bigl(\\|Lu\\|_{L^2_G}+\\|u\\|_{L^2_G}\\bigr).$$ In particular its kernel $K$ is finite dimensional and consists of smooth functions.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lin-gaussian"
+  },
+  {
+   "claim_id": "claim-compact-observation-augmentation",
+   "exact_statement": "There is a finite list of compact observations for which $$\\label{lin:augmented}\n \\mathcal A(u,\\lambda)\n    =\\bigl(Lu+P^*\\lambda,Pu\\bigr):\n H^2_G\\oplus\\mathbb R^m\\longrightarrow L^2_G\\oplus\\mathbb R^m$$ is an isomorphism. Moreover, let $u_1,\\ldots,u_a\\in H^2_G$ have smooth compactly supported $Lu_j$. The list can be enlarged while preserving this isomorphism so that each $u_j$ occurs among the derivatives of the normalized homogeneous solution family $Lu+P^*\\lambda=0$ obtained by varying $Pu$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lin-observations"
+  },
+  {
+   "claim_id": "claim-strip-bulk-and-boundary-estimates",
+   "exact_statement": "Consider $$\\label{lin:admissible-operator}\n \\mathcal L v=v_t-a(t)v_{tt}-2b(t)v_{t\\theta}\n       -c(t)v_{\\theta\\theta}+d_1(t)v_t+d_2(t)v_\\theta+d_0(t)v$$ on an interval of real $t$ coordinates. Suppose $$\\operatorname{Re}a\\ge c_*E,\\quad |a|\\le C_*E,\n \\quad\\operatorname{Re}c\\ge c_*,\\quad |c|\\le C_*,\n \\quad |b|\\le\\varepsilon_*\\sqrt E,$$ the normalized derivatives of these coefficients are bounded, $|d_1|\\le C_*E$, and $d_0,d_2$ and their required derivatives are bounded. The leading coefficients are independent of $\\theta$. Sufficiently small operator-norm perturbations from the strip domain to $L^2_tH^h_\\theta$ are allowed. The constants below depend only on these bounds and a fixed strict accretivity margin.*\n\n\n\n\n\n*There is a patch estimate $$\\label{lin:patch}\n N_{E_I,h}(v;I)\n \\le C\\bigl(\\|\\mathcal Lv\\|_{L^2(I^+;H^h)}\n                   +\\|v\\|_{L^2(I^+;H^h)}\\bigr),$$ where $I^+$ is a fixed enlargement. The corresponding boundary estimate holds with homogeneous entrance Dirichlet or outgoing derivative data. Moreover $$\\label{lin:first-traces}\n \\sup_{t\\in I}\\bigl(\\|v(t)\\|_{H^h}\n +\\|v_\\theta(t)\\|_{H^h}+\\sqrt{E_I}\\|v_t(t)\\|_{H^h}\\bigr)\n \\le C N_{E_I,h}(v;I^+).$$ For inhomogeneous boundary data one can use the spaces $$\\begin{aligned}\n \\|\\varphi\\|_{\\mathcal T^{D}_{E,h}}^2\n &=\\sum_{j\\in\\mathbb Z}(1+j^2)^h(1+j^2)\n                  (1+\\sqrt E|j|)|\\varphi_j|^2,\n       \\label{lin:dirichlet-trace}\\\\\n \\|\\psi\\|_{\\mathcal T^{N}_{E,h}}^2\n &=E\\sum_{j\\in\\mathbb Z}(1+j^2)^h\n                  (1+\\sqrt E|j|)|\\psi_j|^2.\n       \\label{lin:neumann-trace}\n\\end{aligned}$$ They are bounded by the bulk norm for $\\varphi=v|_{\\partial I}$ and $\\psi=v_t|_{\\partial I}$. In particular an outgoing derivative lift has norm at most $C\\sqrt E\\|\\psi\\|_{H^{h+1}}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lin-strip"
+  },
+  {
+   "claim_id": "claim-radial-analytic-coefficient-map",
+   "exact_statement": "In the cylindrical radius variable, the normalized stationary operator is analytic from a sufficiently small strip graph neighborhood, with the norm <a href=\"#lin:strip-norm\" data-reference-type=\"eqref\" data-reference=\"lin:strip-norm\">[lin:strip-norm]</a> and traces <a href=\"#lin:first-traces\" data-reference-type=\"eqref\" data-reference=\"lin:first-traces\">[lin:first-traces]</a>, to $L^2_tH^h_\\theta$. Its coefficient variables are $$R,\\quad R_\\theta,\\quad \\mu R_t,$$ and it is affine in the bulk second-derivative variables $$\\mu^2(R_{tt}-R_t),\\quad \\mu R_{t\\theta},\\quad\n R_{\\theta\\theta}.$$ The graph neighborhood keeps the radius and metric denominators away from zero and retains the strict principal accretivity margins. If $v=R-\\sqrt2$ is small in the unweighted uniformly local strip norm, the mean-value factorization $$\\mathcal E_{\\mathrm{rad}}(v)\n =(\\mathcal L_{\\mathrm{cyl}}+Q_v)v,\\qquad\n Q_v=\\int_0^1\\!\\bigl(D\\mathcal E_{\\mathrm{rad}}(sv)-D\\mathcal E_{\\mathrm{rad}}(0)\\bigr)\\,ds,$$ of minus twice the radial graph velocity obeys $$\\|Q_v w\\|_{Y_{\\rho,h}}\n \\le C_{\\rho,h}\\|v\\|_{X_{1,h}}\\|w\\|_{X_{\\rho,h}}$$ for every fixed weight $\\rho$ with bounded logarithmic derivatives. The same coefficient rule applies after fixed real translations or angular commutations when the corresponding graph norms are controlled.",
+   "kind": "bound",
+   "statement_anchor": "stmt-gauge-radial"
+  },
+  {
+   "claim_id": "claim-separated-cylindrical-rates",
+   "exact_statement": "For <a href=\"#lin:cylinder-operator\" data-reference-type=\"eqref\" data-reference=\"lin:cylinder-operator\">[lin:cylinder-operator]</a>, and for perturbations satisfying the normalized decay condition below, a weight $e^{\\alpha t}$ with $\\alpha\\notin\\{2-j^2:j\\in\\mathbb Z\\}$ gives separated end estimates. Slow data of rate below $\\alpha$ are prescribed at the entrance; slow data of rate above $\\alpha$ are prescribed at infinity (or at the appropriate finite exit). Finite intervals have logarithmic length at least a fixed $\\ell_*>0$, with constants allowed to depend on $\\ell_*$. Crossing a rate changes the solution space by exactly the corresponding angular modes. Estimates hold with every fixed number of log-coordinate derivatives when the source has the corresponding regularity, with an arbitrarily small loss in a stated polynomial power.*\n\n\n*Here the second-order differential perturbation $Q=\\mathcal L-\\mathcal L_{\\mathrm{cyl}}$ retains the strict principal accretivity of Lemma <a href=\"#lin:strip\" data-reference-type=\"ref\" data-reference=\"lin:strip\">6</a>, with $E\\asymp e^{-2t}$, and, for the chosen $0<\\eta<1$, has the following gain on every fixed weight used in the assertion: $$\\label{lin:normalized-decay}\n \\|Qv\\|_{Y_{e^{(\\beta-2+\\eta)t},h}}\n       \\le C_{\\beta,h,\\eta}\\|v\\|_{X_{e^{\\beta t},h}}.$$ The analogous bound is required after the fixed translations and commutations used to obtain derivative estimates. Thus the changes of the radial, mixed, and angular principal coefficients are measured in their respective units $E$, $\\sqrt E$, and $1$; lower coefficient terms may instead be measured in the corresponding coefficient–module operator norm. Ordinary absolute decay of the radial coefficient is not the condition in <a href=\"#lin:normalized-decay\" data-reference-type=\"eqref\" data-reference=\"lin:normalized-decay\">[lin:normalized-decay]</a>.*\n\n\n*Consequently, on each cylindrical end and for every small $\\eta>0$, $$\\label{lin:end-expansion}\n R-\\sqrt2=O(z^{-2+\\eta}),\\qquad\n J=c z^2+z(\\ell\\cdot e_r)+O(z^\\eta)$$ for a Gaussian Jacobi solution with compact source. If $c=0$, subtracting the exact infinitesimal rotation with tilt $\\ell$ leaves $O(z^{-2+\\eta})$. End solutions with arbitrary prescribed $c,\\ell$ exist, and their inward cutoffs have compact Jacobi source.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lin-rates"
+  },
+  {
+   "claim_id": "claim-conical-entrance-isomorphism",
+   "exact_statement": "Let $$\\label{lin:conical-operator}\n \\mathcal Cv=v_t-\\mu^2\n       (a v_{tt}+2b v_{t\\theta}+c v_{\\theta\\theta}\n                               +d v_t+qv_\\theta+ev).$$ Assume the real symmetric matrix $\\left(\\begin{smallmatrix}a&b\\\\b&c\\end{smallmatrix}\\right)$ is at least $c_*I$, and the coefficients and their required derivatives are uniformly bounded. There is $t_*$ depending only on these bounds such that, for $t_0\\ge t_*$, the entrance Dirichlet problem on $[t_0,\\infty)\\times S^1$ is an isomorphism in the spaces $$\\begin{aligned}\n \\|v\\|_{X^{\\mathrm{con}}_h}\n ={}&\\sup_{t\\ge t_0}\n       \\bigl(\\|v(t)\\|_{H^{h+1}}+\\|v_t(t)\\|_{H^h}\\bigr)\n       +\\|\\mu^{-1}v_t\\|_{L^2H^h}\n       +\\|\\mu D^2v\\|_{L^2H^h},\\label{lin:conical-norm}\\\\\n \\|f\\|_{Y^{\\mathrm{con}}_h}\n ={}&\\|\\mu^{-1}f\\|_{L^2H^h}.\\label{lin:conical-source}\n\\end{aligned}$$ More explicitly, $$\\label{lin:conical-estimate}\n \\|v\\|_{X^{\\mathrm{con}}_h}\n \\le C_h\\bigl(\\|\\mathcal Cv\\|_{Y^{\\mathrm{con}}_h}\n                  +\\|v(t_0)\\|_{H^{h+3/2}}\\bigr).$$ The same bound holds on $[t_0,T]$, $T\\ge t_0+2$, with $v_t(T)=0$, uniformly in $T$. For the entrance term the constant may depend on the fixed $t_0$. Small complex perturbations in the full domain-to-range operator norm preserve these assertions.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lin-conical"
+  },
+  {
+   "claim_id": "claim-gaussian-solutions-enter-conical-domain",
+   "exact_statement": "Let $J\\in H^2_G(S)$ solve $LJ=f_c$ with $f_c\\in L^2_G$ compactly supported. On a conical tail outside that support, its link displacement belongs to $X^{\\mathrm{con}}_h$ for every fixed $h$, and obeys the entrance estimate <a href=\"#lin:conical-estimate\" data-reference-type=\"eqref\" data-reference=\"lin:conical-estimate\">[lin:conical-estimate]</a>. The same conclusion holds after a conical source in $Y^{\\mathrm{con}}_h$ has first been removed by its zero-entrance particular solution. These assertions concern the real reference operator and its complex-valued solutions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lin-gaussian-conical"
+  },
+  {
+   "claim_id": "claim-unified-real-base-fiber-chart",
+   "exact_statement": "Let $\\vartheta$ denote the finite end-rotation parameters. After fixing real coordinate identifications on the compact overlaps, the core and prescribed end graphs can be represented by one fiber map $$\\Gamma_\\vartheta(y,s),\\qquad \\Gamma_0(y,0)=X(y),$$ over the fixed real base atlas of $S$. It is smooth in $y$ and analytic in $(\\vartheta,s)$. It agrees with the fixed core graph map on the common observation support, independently of $\\vartheta$, and with the prescribed rotated radius or link map sufficiently far on each end. On the compact overlaps, $(y,s)\\mapsto\\Gamma_\\vartheta(y,s)$ is a local diffeomorphism for small real $(\\vartheta,s)$. Its scalar derivative supplies the linear graph-unit identifications on those overlaps.",
+   "kind": "construction",
+   "statement_anchor": "stmt-gauge-fiber-atlas"
+  },
+  {
+   "claim_id": "claim-conical-and-compact-analytic-maps",
+   "exact_statement": "The normalized conical stationary operator is analytic from a sufficiently small link-graph ball in $X^{\\mathrm{con}}_h$ to $Y^{\\mathrm{con}}_h$. On a sufficiently small neighborhood in fixed compact graph charts, the stationary operator is analytic from the commuted $H^2$ norm <a href=\"#lin:compact-norm\" data-reference-type=\"eqref\" data-reference=\"lin:compact-norm\">[lin:compact-norm]</a> to its commuted $L^2$ range. The exact fiber chart of Lemma <a href=\"#gauge:fiber-atlas\" data-reference-type=\"ref\" data-reference=\"gauge:fiber-atlas\">11</a> gives the compact transitions. The fixed family of commutations can span the core and reduce to angular commutations sufficiently far out without loss of derivatives.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-gauge-compact"
+  },
+  {
+   "claim_id": "claim-normalized-family-and-formal-openings",
+   "exact_statement": "Let $\\kappa$ be the number of cylindrical ends. The observations can be chosen so that their values are $q=\\mathsf P(p)$ in analytic reduced coordinates $p=(b,x)\\in\\mathbb R^{m-\\kappa}\\times\\mathbb R^\\kappa$, with the following properties.*\n\n\n1.  *At $x=0$ there is a real analytic family $S_b$ of normalized solutions of <a href=\"#lin:normalized-equation\" data-reference-type=\"eqref\" data-reference=\"lin:normalized-equation\">[lin:normalized-equation]</a>. It has the same end types as $S$, permits independent end tilts, and permits changes of its conical links within the normalized family. Outside the fixed observation support it is an exact shrinker. Its cylindrical remainder after rotating the end is $O(z^{-2+\\eta})$ for every fixed $\\eta>0$, on a parameter neighborhood that may depend on this choice. On each conical end its link graph satisfies $$\\label{lin:family-conical-asymptotics}\n     v_b(t,\\theta)=v_{b,\\infty}(\\theta)+O(e^{-2t})$$ in every fixed log and angular derivative, with $v_{b,\\infty}$ analytic in $b$. These bounds and their fixed parameter derivatives are uniform on a closed small parameter ball.*\n\n\n2.  *There is a unique formal normalized solution in $x$, $$u(b,x)\\sim\\sum_{\\alpha\\in\\mathbb N^\\kappa}u_\\alpha(b)x^\\alpha,\n     \\qquad\\lambda(b,x)\\sim\\sum_\\alpha\\lambda_\\alpha(b)x^\\alpha,$$ based at $S_b$, whose coefficients in the prescribed graph charts have polynomial growth and are analytic in $b$. For real $b$, their coefficientwise conversions to normal graph jets are smooth in $b$ and have uniform polynomial bounds at every fixed derivative order. After removal of the first-order tilt, the term homogeneous of degree one in $x$ on cylindrical end $j$ is $$\\label{lin:opening-coefficient}\n      \\frac{\\sqrt2}{2}\\,\\beta_j(b,x)z^2+O(|x|z^\\eta),\n      \\qquad \\beta(b,x)=M(b)x,$$ where $M(b)$ is an analytic invertible $\\kappa\\times\\kappa$ matrix. In particular $\\beta$ is exactly homogeneous linear in $x$ for fixed $b$.*\n\n\n3.  *Integrating the Gaussian action coefficient by coefficient defines $\\mathcal F\\in\\mathbb R\\{b\\}[[x]]$, with $$\\label{lin:action-multipliers}\n      \\nabla_p\\mathcal F=(D_p\\mathsf P)^{\\mathsf T}\\lambda.$$ Every fixed truncation of the prescribed graph series and every fixed number of its parameter or spatial derivatives has uniform polynomial end bounds on a sufficiently small complex $b$ neighborhood. The real normal truncations have the analogous smooth bounds for real parameters. This neighborhood may depend on the fixed truncation and derivative orders.*\n\n*When the limiting links and cylindrical directions are separated, as for the tangent section in [geo:tangent](#geo:tangent), the real family on a closed sufficiently small ball has the following additional geometry. Its smooth rescaled conical annuli, the rotated cylindrical tails, and the compact core have uniform bounded geometry. There is a uniform positive normal tubular radius; on a sufficiently far conical annulus of radius $r$ the tubular radius is at least $cr$. In the prescribed parametrizations $|\\partial_bX_b|\\le C(1+|X|)$ and its physical first derivative is bounded. These statements concern the real surfaces; complex parameter continuation is taken in the prescribed coordinates on a fixed real atlas.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lin-family"
+  },
+  {
+   "claim_id": "claim-shifted-gaussian-comparison",
+   "exact_statement": "Let $L_b^{\\mathrm{norm}}$ denote the derivative of <a href=\"#lin:normalized-equation\" data-reference-type=\"eqref\" data-reference=\"lin:normalized-equation\">[lin:normalized-equation]</a> about $S_b$, including derivatives of its compact multiplier terms. For real $b$ sufficiently small and real $|\\delta|$ sufficiently small, put $d\\gamma_{b,\\delta}=\\exp(-(1+\\delta)|X|^2/4)dA_{S_b}$. There is a constant independent of these parameters such that $$\\label{lin:shifted-estimate}\n \\|u\\|_{H^2_{G,b,\\delta}}+|\\lambda|\n \\le C\\left(\n  \\left\\|L_b^{\\mathrm{norm}}u+\\sum_i\\lambda_i\\chi_{i,b}\n        \\right\\|_{L^2_{G,b,\\delta}}+|D P_bu|\\right).$$ The domain also controls $|X|\\nabla u$ and $|X|^2u$ in this weight. For complex $b$, the corresponding inverse is the analytic inverse on the fixed pulled-back half-density spaces described in the proof of Proposition <a href=\"#lin:family\" data-reference-type=\"ref\" data-reference=\"lin:family\">13</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lin-shifted-gaussian"
+  },
+  {
+   "claim_id": "claim-finite-taylor-normal-graphs",
+   "exact_statement": "For every fixed $M\\ge1$, let $v^{(M)}(b,x)$ be the coefficientwise real normal-height polynomial through degree $M$ in the opening variables, let $\\lambda_M$ be the multiplier polynomial, and let $f_M$ be the same truncation of $\\mathcal F$. On a smaller closed real $b$-neighborhood, each fixed spatial and real parameter derivative of the normal coefficients is bounded by a fixed polynomial in $1+|Y|$. The multiplier and action polynomials retain the analytic $b$ dependence of the prescribed-coordinate jets. For real parameters, $\\lambda_M-\\lambda_b=O(|x|)$.*\n\n*On every region where the absolute sum of the finite nonconstant height terms and their first two spatial derivatives is sufficiently small, the normalized equation of $v^{(M)}$ has an $L^2_a$ remainder at most $C_M|x|^{M+1}$. When the region contains the observation support, its observation error is at most $C_M|x|^{M+1}$. The corresponding local area integral differs by at most $C_M|x|^{M+1}$ from the integral of the normal-coordinate density coefficients determined by those finite normal jets through degree $M$ on that region. Their complete integrals sum to $f_M$ for real parameters, and these normal density coefficients have Gaussian tails bounded by $C_M(1+r)^{d_M}e^{-c_Mr^2}$ outside $|Y|\\le r$.*\n\n\n\n\n*There is also a globally small real normal graph $T_M$, with height $\\widetilde v_M$ obtained by cutting off $v^{(M)}$ at a radius $|x|^{-\\sigma_M}$, and with $T_M=S_b$ when $x=0$, for which $$\\begin{aligned}\n \\|\\mathcal N_b(\\widetilde v_M,\\lambda_M)\\|_{L^2_a}\n       &\\le C_M|x|^{M+1},\\label{ref:taylor-equation}\\\\\n |P(T_M)-\\mathsf P(p)|+|F(T_M)-f_M(p)|\n       &\\le C_M|x|^{M+1},\\label{ref:taylor-action}\\\\\n |\\nabla_p f_M(p)-J(p)^{\\mathsf T}\\lambda_M(p)|\n       &\\le C_M|x|^M,\\qquad J=D_p\\mathsf P.\n       \\label{ref:taylor-multiplier}\n\\end{aligned}$$ Its normal height has $C^2$ norm $O(|x|^{1/2})$. The finitely many weights $a$ and spatial orders needed in an application are fixed before $\\sigma_M$ is chosen.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ref-finite-taylor"
+  },
+  {
+   "claim_id": "claim-localized-real-normalized-comparison",
+   "exact_statement": "Fix $M$, an admissible weight $a$, and $0<\\vartheta<1$, and take real $(b,x)$ in the stated neighborhood with $|x|$ sufficiently small. Let $R$ be large enough that the observation support lies in $|Y|<\\vartheta R$, and let $\\chi_R$ equal one there and on $|Y|\\le\\vartheta R$, vanish before $|Y|=R$, and satisfy derivative bounds $C_{j,\\vartheta}R^{-j}$. Let $u$ be a smooth real normal graph over $S_b$ on $|Y|<R$, with sufficiently small height and slope. Let $v$ be either $v^{(M)}$ in the coefficientwise smallness regime of Lemma <a href=\"#ref:finite-taylor\" data-reference-type=\"ref\" data-reference=\"ref:finite-taylor\">15</a> or the height of $T_M$, and require its $C^2$ norm there to be sufficiently small. For an arbitrary real multiplier $\\lambda_U$, put $$r_U=\\mathcal N_b(u,\\lambda_U),\\qquad\n e_P=P(u)-\\mathsf P(p),\\qquad\n w=\\chi_R(u-v),\\qquad \\ell=\\lambda_U-\\lambda_M,$$ and define the annular error $$\\mathfrak a_R=\n \\left\\|(1+|Y|)|\\nabla(u-v)|+(1+|Y|)^2|u-v|\n \\right\\|_{L^2_a(\\{\\vartheta R<|Y|<R\\})}.$$ Then $$\\label{ref:real-comparison-estimate}\n \\|w\\|_{\\mathcal H^2_a}+|\\ell|\n \\le C_{M,\\vartheta}\\left(\\|\\chi_R r_U\\|_{L^2_a}+|e_P|\n                    +|x|^{M+1}+\\mathfrak a_R\\right).$$ The constants are uniform for $b$ in the fixed closed real neighborhood. In particular, a polynomial bound for the height and its first derivative on the annulus makes $\\mathfrak a_R\\le C(1+R)^d e^{-cR^2}$, where one may take any $c<a\\vartheta^2/8$ after absorbing the polynomial factor.*\n\n\n*Suppose also that the graph represents the entire part of a real surface $U$ used inside $|Y|\\le\\vartheta R$, and that the absolute action of its omitted part is at most $\\tau_{\\vartheta R}$. Then $$\\label{ref:real-action-estimate}\n |F(U)-f_M(p)|\\le C_M\\left(\\|w\\|_{\\mathcal H^2_a}\n                         +|x|^{M+1}\\right)\n                 +\\tau_{\\vartheta R}\n                 +C_{M,\\vartheta}(1+R)^{d_M}e^{-c_{M,\\vartheta}R^2}.$$ For this last conclusion $a$ is chosen so that $a<2c$ for a Gaussian exponent $c$ retained by the small real graph densities.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ref-real-comparison"
+  },
+  {
+   "claim_id": "claim-strict-lateral-contour-families",
+   "exact_statement": "Fix the finite list of nonzero leading opening coefficients. For every sufficiently large fixed $D$, there are upper and lower families of contours on sectors of the $a$-cover containing, respectively, the argument intervals $[0,\\pi]$ and $[-\\pi,0]$, with excess angle $\\delta=\\eta D^{-1/2}$, where $\\eta>0$ is fixed sufficiently small. The contours start on the real axis, satisfy <a href=\"#arr:path-signs\" data-reference-type=\"eqref\" data-reference=\"arr:path-signs\">[arr:path-signs]</a> strictly, avoid $1+\\beta z^2=0$, and end at $\\operatorname{Re}z^2=D/|a|$. They obey $|a||z|^2\\le C_D$. Their normalized derivatives and the inverse diffusion margins are bounded by constants depending on $D$.*\n\n*The families can be chosen smooth in sector parameters. As geometric paths they admit shortening, deformation before an adverse pole to a common real contour with endpoint at three quarters of the leading squared pole height, and deformation beyond that pole to the height turns used in the jump calculation. The bounded scaled part of these homotopies can be kept in $|R_c|\\ge r_*$ for a fixed $r_*>0$. The homothetic turns with shrinking $|R_c|$ retain the displayed geometric signs, but their solutions will be constructed in the separate height norms of [sec:jump](#sec:jump). Boundary data are specified by the solve statements below, not by this geometric lemma. These assertions persist in sufficiently small polynomial-radius complex balls about any fixed high-order polynomial approximation to $\\widehat p$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-arr-contours"
+  },
+  {
+   "claim_id": "claim-mixed-gauge-nonlinear-estimates",
+   "exact_statement": "Let $B\\ge1$ and, on a bounded interval, prescribe smooth circular reference functions and transverse coefficients $$X(t,\\theta)=(B\\zeta(t,\\theta),R(t,\\theta)e_r(\\theta)),\\quad\n \\zeta=\\zeta_0+c_1u,\\qquad R=R_0+c_2u.\n \\label{gauge:immersion}$$ Assume that $R_0$, $\\zeta_0'$ and $c_2\\zeta_0'-c_1R_0'$ are bounded away from zero, that their required fixed derivatives are bounded, and that the circular reference has the strict ellipticity margins of Lemma <a href=\"#lin:strip\" data-reference-type=\"ref\" data-reference=\"lin:strip\">6</a> after division by its drift. Constants may depend on these fixed margins. Then the scalar stationary operator divided by the normal component of $X_u$ is an analytic map from a sufficiently small $\\mathcal X_h(B^{-2})$ ball to $\\mathcal Y_h$. If $\\|u\\|_{\\mathcal X_h(B^{-2})}\\le W$ and $BW$ is sufficiently small, its nonlinear remainder satisfies $$\\|\\mathcal Q(u)-\\mathcal Q(0)-D\\mathcal Q(0)u\\|_{\\mathcal Y_h}\n       \\le C_h(BW^2+B^2W^3).\n \\label{gauge:mixed-bound}$$ On that ball its Lipschitz constant, after subtraction of the linear part, is at most $C_h(BW+B^2W^2)$. Averaging the equation in these prescribed coordinates gives the same bound for the defect of the circular mean curve. These statements include all angular commutations through order $h$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-gauge-mixed"
+  },
+  {
+   "claim_id": "claim-long-polar-height-estimates",
+   "exact_statement": "Prescribe the polar height chart $$X=(Zg(r,\\theta),r e_r(\\theta))$$ on real parameters along a fixed complex $r$ contour. Let $|Z|\\asymp B$, $t=-\\log r$, and assume a uniformly bounded circular reference $g_0$ satisfies $|(g_0)_t|\\asymp |r|^2$, with its fixed log derivatives of this size. Assume $|Br|\\ge Y_0$ and put $E=|Br|^{-2}$ on each strip. The reference conditions include the full real pullback and drift division. More precisely, if $t=t(\\xi)$ on the real outward parameter and $J=t_\\xi$, assume $J,J^{-1}$ and their required fixed derivatives are bounded. Let $\\mathcal F_t(g)$ denote the left side of the log-normalized equation <a href=\"#gauge:polar-normalized\" data-reference-type=\"eqref\" data-reference=\"gauge:polar-normalized\">[gauge:polar-normalized]</a> below, including its graph-dependent $H_1$ division. Write its circular linearization in the log coordinate as $$D\\mathcal F_t(g_0)v=(1+d_{\\mathrm{ref}})v_t-a_{\\mathrm{ref}}v_{tt}\n       -c_{\\mathrm{ref}}v_{\\theta\\theta}+q_{\\mathrm{ref}}v.$$ Its full pulled drift is $\\Delta_{\\mathrm{ref}}=1+d_{\\mathrm{ref}}\n             +a_{\\mathrm{ref}}J_\\xi/J^2$. Assume this is a bounded unit and that, after division by it, $$\\operatorname{Re}\\frac{a_{\\mathrm{ref}}}{J\\Delta_{\\mathrm{ref}}}\\ge cE,\n \\quad \\left|\\frac{a_{\\mathrm{ref}}}{J\\Delta_{\\mathrm{ref}}}\\right|\\le CE,\n \\quad \\operatorname{Re}\\frac{Jc_{\\mathrm{ref}}}{\\Delta_{\\mathrm{ref}}}\\ge c,\n \\quad \\left|\\frac{Jc_{\\mathrm{ref}}}{\\Delta_{\\mathrm{ref}}}\\right|\\le C.$$ The normalized coefficient derivatives and lower terms satisfy the bounds of Lemma <a href=\"#lin:strip\" data-reference-type=\"ref\" data-reference=\"lin:strip\">6</a>. All metric and graph denominators in $\\mathcal F_t$ remain bounded analytic units in their normalized scales on the graph neighborhood. These are algebraic hypotheses on the prescribed reference, checked for the collapsing paths below. Let $\\operatorname{pb}_J$ mean the algebraic pullback obtained by replacing $\\partial_t$ with $J^{-1}\\partial_\\xi$ and reading all prescribed coefficients along the real path. We use the fixed circular row $$\\label{gauge:fixed-row}\n \\mathcal F_{\\mathrm{norm}}(g)\n   =\\Delta_{\\mathrm{ref}}^{-1}J\\,\\operatorname{pb}_J\\mathcal F_t(g).$$ In particular $\\Delta_{\\mathrm{ref}}$ is held fixed when this map is linearized at the possibly nonexact profile $g_0$. This circular row depends only on $\\xi$, so it preserves mean and oscillatory projections. All strip norms use the real parameter $\\xi$ after this pullback. Take $Y_0$ large. The map $\\mathcal F_{\\mathrm{norm}}$ is analytic whenever $$\\frac{E^{-1/2}}{|r|^2}(W_m+W_o)\\ll1,\n \\qquad\n \\frac{E^{-1/2}}{|r|^2}W_o\\ll1,\n \\label{gauge:height-small}$$ where $v=g-g_0$ has mean and oscillation of $\\mathcal X_h(E)$ sizes $W_m,W_o$ respectively. Writing $W=W_m+W_o$, its remainder $\\mathcal N(v)=\\mathcal F_{\\mathrm{norm}}(g_0+v)\n-\\mathcal F_{\\mathrm{norm}}(g_0)-D\\mathcal F_{\\mathrm{norm}}(g_0)v$ obeys $$\\|\\mathcal N(v)\\|_{\\mathcal Y_h}\n \\le C_h\\left(\\frac{E^{-1/2}}{|r|^2}W^2\n              +\\frac{E^{-1}}{|r|^4}W_o^2W\\right).\n \\label{gauge:height-bound}$$ With $A_r=E^{-1/2}/|r|^2$ and $C_r=E^{-1}/|r|^4$, its mean and oscillatory outputs satisfy, respectively, $$\\begin{aligned}\n \\|\\langle\\mathcal N(v)\\rangle\\|_{L^2_\\xi}\n       &\\le C_h\\{A_r(W_m^2+W_o^2)+C_rW_o^2W\\},\\notag\\\\\n \\|\\mathcal N(v)-\\langle\\mathcal N(v)\\rangle\\|_{\\mathcal Y_h}\n       &\\le C_h\\{A_r W_oW+C_rW_o^2W\\}.\n \\label{gauge:height-projections}\n\\end{aligned}$$ The corresponding multilinear difference estimates hold. These estimates are uniform at each fixed angular order.",
+   "kind": "bound",
+   "statement_anchor": "stmt-gauge-height"
+  },
+  {
+   "claim_id": "claim-uniform-weighted-normalized-inverse",
+   "exact_statement": "Fix an angular order $h$, a finite geometric parameter $D$, a cylindrical weight rate $\\alpha_{\\mathrm{cyl}}>2.1$, and the compact observations from Lemma <a href=\"#lin:observations\" data-reference-type=\"ref\" data-reference=\"lin:observations\">5</a>. Consider surfaces of parameter size $B\\to\\infty$, obtained by replacing far cylindrical pieces by real-parameter paths with complex coefficients, optionally followed by height charts of length $O(\\log B)$. The conical ends may remain infinite. The following are the hypotheses on the linear operators and prescribed charts.*\n\n1.  *On each fixed compact subset, the coefficients, compact multiplier sources, and observations converge smoothly to <a href=\"#lin:augmented\" data-reference-type=\"eqref\" data-reference=\"lin:augmented\">[lin:augmented]</a>, or to a member of a sufficiently small uniformly invertible perturbation of that block.*\n\n2.  *From a fixed entrance to $z=cB$, the cylindrical operator is a sufficiently small perturbation of <a href=\"#lin:cylinder-operator\" data-reference-type=\"eqref\" data-reference=\"lin:cylinder-operator\">[lin:cylinder-operator]</a>. Choose $c>0$ so that a propagation rate $2.1$ is available. Beyond that point, bounded bands of length depending on $D$ satisfy Lemma <a href=\"#lin:strip\" data-reference-type=\"ref\" data-reference=\"lin:strip\">6</a>. A height chart is the real-parameter pullback of $\\tau=\\log(r_0/r)$, with $E\\asymp(B|r|)^{-2}$, ending with $B|r|\\ge Y_0$. Its coefficients obey the same accretivity, derivative, lower-term, and small-perturbation bounds.*\n\n3.  *Each modified cylindrical end has one ordered real outward interval $[s_0,T_B]$, equal to the original log coordinate on its long real part. Local real outward coordinates on overlaps are $t_i=\\chi_i(s)$ with $0<c\\le\\chi_i'\\le C$ and bounded required fixed derivatives; the real angular coordinate is unchanged. There is a positive scale $E_B(s)$ comparable to the local scales with bounded logarithmic derivatives. The prescribed scalar variables are descriptions of one scalar variable through transition factors $A_i(s,\\theta)$ on fixed overlap bands. The functions $A_i,A_i^{-1}$ and their ordinary real-coordinate derivatives through the required fixed orders are bounded. Choose this scalar variable to agree with each prescribed long-chart variable off those bands and with the prescribed exit variable near $T_B$. After these changes, the normalized reference operators and their source rows are smooth restrictions of one operator on the interval; any additional terms from the actual backgrounds satisfy the bounded lower-term and small domain-to-range perturbation hypotheses in (ii). These requirements exclude distributional seams. The coefficients on conical ends satisfy Lemma <a href=\"#lin:conical\" data-reference-type=\"ref\" data-reference=\"lin:conical\">9</a>, up to a small domain-to-range perturbation.*\n\n4.  *For each fixed $B$ and sufficiently remote finite stops on the conical ends, fixed domain and range isomorphisms identify the actual stopped operator with an operator connected to a real coercive scalar elliptic problem by an operator-norm continuous homotopy on the fixed compact $H^2$ domain with homogeneous boundary conditions and range $L^2$. Its coefficients and boundaries are smooth, its symbols are properly elliptic, and its boundary conditions are complementing throughout. The equal-dimensional compact observation and multiplier augmentation is retained. This is only an index hypothesis: the uniform estimates in the preceding items are required for the actual operators, not for the artificial operators along the homotopy.*\n\n\n*For clarity, the coefficient requirement in (iii) includes the tangent of every prescribed complex log path. If $t=t(s)$ is such a log and $H=t_s$ is its complex tangent, independent of $\\theta$, then the chain rule on the real $s$ interval gives $$\\label{lin:complex-log-pullback}\n \\begin{split}\n H\\mathcal L={}&\\partial_s-\\frac aH\\partial_{ss}\n       -2b\\partial_{s\\theta}-Hc\\partial_{\\theta\\theta}\\\\\n &+\\left(d_1+\\frac{aH_s}{H^2}\\right)\\partial_s\n       +Hd_2\\partial_\\theta+Hd_0,\n \\end{split}$$ and the source is multiplied by $H$. Thus $H,H^{-1}$ and its required fixed derivatives, including $H_s$, must be bounded. If the full drift is divided out, its divisor is $\\delta_H=1+d_1+aH_s/H^2$, and the actual inequalities in (ii) are $$\\operatorname{Re}\\frac{a}{H\\delta_H}\\ge cE_B,\\quad\n \\operatorname{Re}\\frac{Hc}{\\delta_H}\\ge c,\\quad\n \\left|\\frac{a}{H\\delta_H}\\right|\\le CE_B,\\quad\n \\left|\\frac{Hc}{\\delta_H}\\right|\\le C,\\quad\n \\left|\\frac b{\\delta_H}\\right|\\le\\varepsilon_*\\sqrt{E_B}.$$ The divided source is $Hf/\\delta_H$. A nonzero divisor alone does not imply these real-part inequalities. If $\\delta_H=1+O(E_B)$, its closeness to one preserves previously fixed strict margins.*\n\n*Choose a weight $\\rho_B$ with rate $\\alpha_{\\mathrm{cyl}}$ on the long real cylinder, a sufficiently large fixed rate $d_D$ on the bounded modified bands, and a sufficiently large fixed rate $d_{\\mathrm{cap}}$ on a height chart, retaining its value at the entrance of each new chart. All rates exceed their propagation rates by fixed positive margins, are at least $\\alpha_{\\mathrm{cyl}}$, and their interpolations occupy fixed overlap bands where the adjacent coefficient estimates both hold. Choose $Y_0$ after these rates so that $d_{\\mathrm{cap}}\\sup E$ is sufficiently small; take $B$ large only after these choices.*\n\n\n*Here $u$ denotes the scalar unknown in each prescribed chart: normal height on the core, radius on cylindrical charts, relative height on cap charts, and link displacement on conical charts. The corresponding source uses the same change of graph units and drift normalization. Let $X_B$ consist of the compact norm <a href=\"#lin:compact-norm\" data-reference-type=\"eqref\" data-reference=\"lin:compact-norm\">[lin:compact-norm]</a>, the cylindrical and height norms <a href=\"#lin:weighted-strip\" data-reference-type=\"eqref\" data-reference=\"lin:weighted-strip\">[lin:weighted-strip]</a>, the conical norms <a href=\"#lin:conical-norm\" data-reference-type=\"eqref\" data-reference=\"lin:conical-norm\">[lin:conical-norm]</a>, and the Euclidean norm of the compact multiplier vector. Let $Y_B$ consist of the corresponding compact and end source norms and the Euclidean observation norm. Homogeneous outgoing graph-derivative conditions are included in the domain. Then $$\\label{lin:global-estimate}\n \\|(u,\\lambda)\\|_{X_B}\n \\le C_{D,Y_0,h,\\alpha_{\\mathrm{cyl}}}\n \\left\\|\\bigl(L_Bu+\\sum_i\\lambda_i\\chi_{i,B},P_Bu\\bigr)\\right\\|_{Y_B},$$ and this normalized operator is onto. At a true terminal section define $g=u_s(T_B)$ for the prescribed scalar variable in the real outward coordinate. If $t=t(s)$ is a local log coordinate, this means $g=H u_t(T_B)$ with $H=t_s$. For this prescribed exit derivative the right hand side is augmented by $\\rho_B(T_B)^{-1}\\|g\\|_{\\mathcal T^N_{E(T_B),h}}$ at each terminal section; the sum over the fixed finite list of exits is understood. The thresholds and constant may depend on the fixed rate, but are independent of $B$ and of the lengths of the exhausted conical ends. Removing $\\rho_B$, or converting a relative height to physical height on a cap, costs at most a fixed power of $B$. The preliminary construction uses $\\alpha_{\\mathrm{cyl}}=2.2$; a source with a fixed higher Taylor growth rate is permitted by choosing $\\alpha_{\\mathrm{cyl}}$ equal to or larger than that rate. The strict buffer is above the propagation rate, so equality with the source growth rate is allowed in the uniformly local source norm.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lin-global"
+  },
+  {
+   "claim_id": "claim-exponential-backward-shielding",
+   "exact_statement": "On a fixed log-length overlap suppose the hypotheses of Lemma <a href=\"#lin:strip\" data-reference-type=\"ref\" data-reference=\"lin:strip\">6</a> hold with $E\\asymp B^{-2}$. A solution of the homogeneous difference equation with zero entrance value and polynomially bounded farther data is, on every fixed earlier band separated from those data, bounded by $$\\label{lin:shielding-estimate}\n C B^M\\exp(-cB^2)$$ in the strip norm, with every fixed number of admissible derivatives. The assertion is stable under the small coefficient perturbations in the same shifted domain-to-range norms. It holds with actual outgoing derivative data as well as with a farther Dirichlet trace. For holomorphic finite-parameter derivatives, the solution and the displayed bound are assumed on an outer parameter ball and the derivatives are evaluated on an inner ball whose distance from the outer boundary is at least $cB^{-q}$ for fixed $c,q>0$. For smooth contour derivatives, the pulled-back differentiated operators and data must separately obey the corresponding shifted bounds, with a fixed separation of the two bands.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lin-shielding"
+  },
+  {
+   "claim_id": "claim-preliminary-normalized-arrays",
+   "exact_statement": "Fix $D$, the bounded scaled portions of the contour families of Lemma <a href=\"#arr:contours\" data-reference-type=\"ref\" data-reference=\"arr:contours\">17</a>, and a fixed lower radius $r_*>0$. Let $p_0(s)$ be a sufficiently high polynomial truncation of $\\widehat p(s)$. For some fixed $L$ and outer ball in <a href=\"#arr:parameter-reserve\" data-reference-type=\"eqref\" data-reference=\"arr:parameter-reserve\">[arr:parameter-reserve]</a>, for every $p\\in\\mathcal B_s^{\\rm out}$ and every choice of outgoing data in <a href=\"#arr:allowed-traces\" data-reference-type=\"eqref\" data-reference=\"arr:allowed-traces\">[arr:allowed-traces]</a> at the artificial exits, the normalized stationary problem on either contour family has a unique solution in the perturbative neighborhood. For each fixed contour, the solution operator is jointly holomorphic in $p$ and an independent complex trace remainder $\\delta g\\in\\mathfrak T_B$ for $p\\in\\mathcal B_s^{\\rm out}$ and $\\|\\delta g\\|_{\\mathfrak T_B}<c_{\\rm hol}B^{-4}$, with a fixed $c_{\\rm hol}>c_{\\rm exit}$. Hence a chosen $p$-dependent datum gives a holomorphic solution when $\\delta g(p)$ is holomorphic into that fixed trace space and remains in the stated trace ball on $\\mathcal B_s^{\\rm out}$. Smooth contour families with smooth prescribed data give smooth solution families. Every allowed solution lies in the growth-weighted augmented ball $$\\|(u,\\lambda)-(u_{\\rm app},\\lambda_{\\rm app})\\|_{X_B}\n       \\le C_{\\rm pre}B^{-4},$$ where the fixed $C_{\\rm pre}$ is chosen before $B$. In the preceding strip norms its correction satisfies $$\\label{arr:preliminary-bound}\n W(z)\\le C_D B^{-4}(1+|z|)^{2.2}.$$ Its compact and conical correction is $O(B^{-4})$. In particular on $|z|\\asymp B$ its discrepancy from circular data is $O(B^{-1.8})$. The same conclusions hold in one such neighborhood along curtailment, path, and exit-data homotopies that retain the fixed lower radius and <a href=\"#arr:allowed-traces\" data-reference-type=\"eqref\" data-reference=\"arr:allowed-traces\">[arr:allowed-traces]</a>, with the just stated regularity of the data for the corresponding family-regularity conclusion. This includes the first fixed-radius height turn, but not the subsequent shrinking height turns. Fixed finite parameter derivatives on $\\mathcal B_s$ and the prescribed smooth contour derivatives have only polynomial losses in $B$ and $|s|^{-1}$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-arr-preliminary-solves"
+  },
+  {
+   "claim_id": "claim-endpoint-first-variation",
+   "exact_statement": "At fixed compact observation values, a differentiable family of the preceding exact normalized solves satisfies $$\\frac{dG}{d\\tau}\n   =\\sum_{\\text{exits}}\\text{boundary position and momentum terms}.$$ This algebraic identity holds for prescribed artificial Neumann data satisfying <a href=\"#arr:allowed-traces\" data-reference-type=\"eqref\" data-reference=\"arr:allowed-traces\">[arr:allowed-traces]</a>, and for the refined class later proved in [jump:compatibility](#jump:compatibility). No natural boundary condition or vanishing boundary momentum is required. For the preliminary fixed-radius, bounded-scaled families, if the moving exits satisfy $\\operatorname{Re}z^2\\ge H$, and the normalized shapes, exit data and their derivatives have polynomial bounds in $B$, then, after any fixed finite parameter differentiations, $$\\label{arr:endpoint-estimate}\n \\left|\\frac{dG}{d\\tau}\\right|\n \\le C_D B^M e^{-H/4+o(B^2)}.$$ Consequently, on slightly smaller parameter balls and sectors, $$\\label{arr:dbar}\n |\\bar\\partial_s\\partial_p^\\alpha G_\\pm(s,p)|\n \\le C_{\\alpha,D}|s|^{-M_\\alpha}e^{-D/(5|a|)}$$ for each fixed $\\alpha$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-arr-first-variation"
+  },
+  {
+   "claim_id": "claim-real-stopped-holomorphic-approximants",
+   "exact_statement": "There are a fixed small complex $b$-neighborhood, $d_0>0$, and $H_0$ with the following property. For every independent stop length $H\\ge H_0$, stop each cylindrical end on its real path at height comparable to $H$, leaving the conical ends infinite. For $$b\\text{ in that neighborhood},\\qquad |x|<d_0H^{-2},$$ the normalized comparison problem has a solution $U_H(b,x)$, holomorphic in these finite parameters. In the analogue of $X_B$ with $B$ replaced by $H$, its correction from the base-plus-first-jet comparison pair is at most $C H^{-4}$. Thus the cylindrical strip bound is $C H^{-4}(1+z)^{2.2}$ and the compact and conical correction is $O(H^{-4})$. The paths and cutoffs are real and independent of the finite parameters, and the outgoing comparison derivatives are holomorphic in them. For real parameters the stopped surface is real.*\n\n\n*Let $F_H(b,x)$ be its Gaussian action. It is holomorphic and uniformly bounded on a fixed smaller polydisc. If $H\\le H'\\le\\Lambda H$ for fixed $\\Lambda$, then on the common smaller polydisc $$\\label{arr:real-stop-difference}\n |F_{H'}-F_H|\\le C_\\Lambda e^{-c_\\Lambda H^2}.$$ For every fixed $0<\\nu<1$, the real $U_H$ is a small normal graph over $S_b$ on $|Y|\\le2H^\\nu$ for large $H$. Its action outside the part over $|Y|\\le H^\\nu$ is at most $C H^d e^{-cH^{2\\nu}}$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-arr-real-stops"
+  },
+  {
+   "claim_id": "claim-gevrey-stationary-action-expansion",
+   "exact_statement": "For any sufficiently high real-coefficient polynomial path $p_0(s)$ with the specified opening jet and any sufficiently large fixed $\\ell$, the arrays $G_\\pm(s,p_0(s)+s^\\ell h)$, uniformly for $h$ in a fixed complex ball, have the formal stationary expansion of Gevrey order $1/k$. More precisely, if that expansion is $\\sum_{n\\ge0}f_n(h)s^n$, then $$\\begin{aligned}\n \\|f_n\\|&\\le C A^n\\Gamma(1+n/k),\\label{arr:gevrey-coeff}\\\\\n \\left\\|G_\\pm(s,p_0(s)+s^\\ell h)\n      -\\sum_{n<N}f_n(h)s^n\\right\\|\n   &\\le C A^N\\Gamma(1+N/k)|s|^N\n       \\quad(N\\ge0).\\label{arr:gevrey-remainder}\n\\end{aligned}$$ The norm is the supremum on a fixed smaller $h$-ball. These statements hold also after any fixed finite number of parameter derivatives. The constants can depend on $D$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-arr-gevrey"
+  },
+  {
+   "claim_id": "claim-gevrey-closure-and-fixed-division",
+   "exact_statement": "The class of arrays in Lemma <a href=\"#arr:gevrey\" data-reference-type=\"ref\" data-reference=\"arr:gevrey\">26</a>, with their full-disk exponentially telescoping approximants, is stable under finite sums, products, analytic operations on a fixed bounded neighborhood, and regular finite-dimensional implicit solution. It is also stable under division by a fixed power $s^q$ when its first $q$ formal coefficients vanish identically on the parameter ball. Division means the quotient of actual sector values. A formally zero result satisfies $Ce^{-c/|s|^k}$ for some $c>0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-arr-division"
+  },
+  {
+   "claim_id": "claim-formal-maximal-rank-replacement",
+   "exact_statement": "Let $f_0=\\mathcal F-\\mathcal F(0)$ and $f_i=\\partial_{p_i}\\mathcal F$. There are finitely many expressions $g_1,\\dots,g_r$, each obtained from these formal series and coordinates by finitely many partial differentiations and polynomial operations, such that the following holds. After choosing coordinates $p=(u,v)$, $g_u$ has a minor $\\Delta$ nonzero along $\\widehat p$. Replacing the free coordinates $v$ by sufficiently accurate polynomial approximations and solving $g=0$ formally preserves all the equations $f_i=0$. The substitution converges adically despite possible divergence of $\\widehat p$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-arr-formal-replacement"
+  },
+  {
+   "claim_id": "claim-sectorial-regular-implicit-selection",
+   "exact_statement": "For the $g_i$ selected above, form actual expressions $g_{\\pm,i}(s,p)$ by applying the same finite differentiations and polynomial operations to $$G_\\pm(s,p)-\\mathcal F(0),\\qquad \\nabla_pG_\\pm(s,p).$$ There are parameter functions $p_\\pm(s)$ on the two sectors, obtained by regular analytic implicit operations after fixed-power rescaling, for which $g_\\pm(s,p_\\pm)=0$. They have the same formal expansion, with real coefficients. For every original constraint $$e_{\\pm,0}=G_\\pm(s,p_\\pm)-\\mathcal F(0),\\qquad\n e_{\\pm,i}=\\partial_{p_i}G_\\pm(s,p_\\pm),$$ there is $c_2(D)>0$ such that $$\\label{arr:initial-flatness}\n |e_{\\pm,i}|\\le C_D e^{-c_2(D)/|a|},\\qquad\n |\\bar\\partial_s e_{\\pm,i}|\n       \\le C_D|s|^{-M}e^{-D/(6|a|)}.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-arr-regular-implicit"
+  },
+  {
+   "claim_id": "claim-almost-holomorphic-flatness-improvement",
+   "exact_statement": "Suppose an error $e(w)$ on an exterior sector $$|w|>R,\\qquad |\\arg w|<\\pi/2+\\delta$$ satisfies $$|e(w)|\\le C_D e^{-c_2(D)|w|},\\qquad\n |\\bar\\partial_we(w)|\\le C_D(1+|w|)^M e^{-D|w|/6},\n \\quad c_2(D)>0.$$ Then on the ray $\\arg w=\\pi/2$, $$\\label{arr:improved-exponent}\n |e(w)|\\le C'_D\n       \\exp\\{-D\\sin(\\delta/2)|w|/8\\}.$$ In particular, if $\\delta\\ge cD^{-1/2}$, the obtainable decay coefficient tends to infinity with $D$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-arr-flatness-upgrade"
+  },
+  {
+   "claim_id": "claim-common-parameter-action-upper-bound",
+   "exact_statement": "The formal critical arc <a href=\"#arr:critical-arc\" data-reference-type=\"eqref\" data-reference=\"arr:critical-arc\">[arr:critical-arc]</a> implies that there are common parameters $p(s)$, having a formal expansion with real coefficients, such that $$\\label{arr:upper-estimate}\n G_+(s,p(s))-G_-(s,p(s))\n                  =O(e^{-1.25A_{\\mathrm{lead}}}).$$ Here $A_{\\mathrm{lead}}$ is the minimum leading adverse action scale in <a href=\"#arr:A0\" data-reference-type=\"eqref\" data-reference=\"arr:A0\">[arr:A0]</a>. If there is a negative real leading opening, the evaluation is on positive real $s$. If all nonzero leading openings are positive, the evaluation is at $a<0$ with the two continuations taken on the same sheet in $s$; the common parameters may then be complex. In particular this conclusion includes even $k$. After a sufficiently small fixed generic change of evaluation angle the same assertion holds with $1.2$ in place of $1.25$, using $A_{\\mathrm{lead}}=\\min |Z_{j,\\mathrm{lead}}|^2/4$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arr-action-upper"
+  },
+  {
+   "claim_id": "claim-universal-adverse-end-action-jump",
+   "exact_statement": "Let $G_+$ and $G_-$ be the two array actions at a common parameter $p$ in the inner parameter ball, and hence at common compact observation values, for a nonempty finite adverse end list with the same ordering of the bypasses on every end. Starting from these arrays, make the nonadverse synchronization <a href=\"#jump:nonadverse-sync\" data-reference-type=\"eqref\" data-reference=\"jump:nonadverse-sync\">[jump:nonadverse-sync]</a> and use the single normalized preliminary solution stopped at $T_{\\rm pre}$ above. Match $Z_{*,j}$ from that solution by <a href=\"#jump:matching-Z\" data-reference-type=\"eqref\" data-reference=\"jump:matching-Z\">[jump:matching-Z]</a>–<a href=\"#jump:scaling\" data-reference-type=\"eqref\" data-reference=\"jump:scaling\">[jump:scaling]</a>. The adverse continuations use the canonical profile $g_c$ and outgoing remainder derivatives $$\\psi=\\left.\\partial_s(g-g_c)\\right|_{\\mathrm{exit}}$$ in the natural Neumann trace class <a href=\"#jump:permitted-data\" data-reference-type=\"eqref\" data-reference=\"jump:permitted-data\">[jump:permitted-data]</a>, in the prescribed real path parameter at each exit. Let $Y_0$ be the fixed large exit cutoff for this class. The continuation at the first fixed radius interpolates the preliminary circular derivative and that of $g_c$ as in Proposition <a href=\"#jump:compatibility\" data-reference-type=\"ref\" data-reference=\"jump:compatibility\">34</a>. The longer shrinking branches have $\\psi=0$ at their own exits, and the shorter interpolation uses their actual remainder traces at the common shorter section. Proposition <a href=\"#jump:compatibility\" data-reference-type=\"ref\" data-reference=\"jump:compatibility\">34</a> proves membership in the relevant uniqueness balls and exact equality of the interpolation endpoints with the longer restrictions.*\n\n\n*For these actions there is a universal constant $\\mathfrak c\\ne0$ such that $$\\label{jump:action-jump}\n G_+-G_-=\\mathfrak c\n       \\sum_{j\\ \\mathrm{adverse}}\n       Z_{*,j}^{-2}e^{-Z_{*,j}^2/4}\n       +o\\left(\\sum_{j\\ \\mathrm{adverse}}\n                    |Z_{*,j}|^{-2}e^{-\\Re Z_{*,j}^2/4}\\right).$$ With $c_0$ defined by the upper-minus-lower $y^2$ lateral labels in Lemma <a href=\"#jump:stokes\" data-reference-type=\"ref\" data-reference=\"jump:stokes\">37</a>, $\\mathfrak c=\\epsilon_{\\rm lab}8\\pi c_0$ for one common $\\epsilon_{\\rm lab}\\in\\{1,-1\\}$ determined by the array labels. Indeed an upper axial bypass in $z^2/Z_0^2$ becomes a lower $r^2$ bypass under $r^2=2(1-z^2/Z_0^2)$; this is one global label reversal, not an end-dependent sign. Reversing both array labels reverses $\\mathfrak c$. More precisely, the limsup of the relative error as $B\\to\\infty$ at fixed $Y_0$ is bounded by a quantity tending to zero as $Y_0\\to\\infty$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-jump-jump"
+  },
+  {
+   "claim_id": "claim-finite-height-mean-and-oscillatory-inverse",
+   "exact_statement": "On the real parameter interval $[0,T]$, let $\\mathcal L_0$ be the circular operator <a href=\"#jump:height-linear\" data-reference-type=\"eqref\" data-reference=\"jump:height-linear\">[jump:height-linear]</a> with <a href=\"#jump:height-coefficients\" data-reference-type=\"eqref\" data-reference=\"jump:height-coefficients\">[jump:height-coefficients]</a>, the normalized derivative bounds just stated, $T\\geq T_{\\min}$, and $E\\leq E_*$ sufficiently small. For entrance data $\\varphi$ in $\\mathcal T^D_{E(0),h}$ and outgoing coordinate-derivative data $\\psi$ in $\\mathcal T^N_{E(T),h}$, the problem $$\\mathcal L_0v=f,\\qquad v(0)=\\varphi,\\qquad v_s(T)=\\psi$$ has a unique solution in the finite strip domain. Write subscripts $m,o$ for its angular mean and nonconstant part. The mean satisfies $$\\label{jump:mean-inverse}\n \\|v_m\\|_{X_\\omega}\\leq C\\left\\{\n \\frac{|\\varphi_m|}{\\omega(0)}\n +\\mathfrak M_\\omega(f_m)\n +\\frac{\\|\\psi_m\\|_{\\mathcal T^N_{E(T),h}}}{\\omega(T)}\n \\right\\}.$$ There is a weight $\\rho_o\\asymp (|r|/r_0)^{9/10}$, with $\\rho_o(0)=1$, logarithmic rate $-9/10$ on the long incoming pieces away from the reserved collars, bounded smooth interpolation on those $J=1$ collars, and rate zero on the bounded modified bands, for which $$\\label{jump:oscillatory-inverse}\n \\|v_o\\|_{X_{\\rho_o}}\\leq C\\left\\{\n \\|\\varphi_o\\|_{\\mathcal T^D_{E(0),h}}\n +\\sup_\\nu(\\inf_{I_\\nu}\\rho_o)^{-1}\\|f_o\\|_{L^2(I_\\nu;H^h)}\n +\\frac{\\|\\psi_o\\|_{\\mathcal T^N_{E(T),h}}}{\\rho_o(T)}\n \\right\\}.$$ The constants are independent of $B,T$ and the exit size $Y\\in[Y_0,cB]$. A fixed positive separation between the first exit and the entrance is included in this assertion.",
+   "kind": "bound",
+   "statement_anchor": "stmt-jump-height-inverse"
+  },
+  {
+   "claim_id": "claim-normalized-height-family-compatibility",
+   "exact_statement": "Fix the common parameter $p$ on the inner parameter ball and the matched numbers $Z,Z_*$ on each adverse end. Choose the fixed constants in the preliminary and refined contraction balls before $B$. Then the following hold for large $B$.*\n\n1.  *At a fixed positive physical radius on the first height turn, the normalized height solution with derivative interpolated between the preliminary circular profile and $g_c$ belongs to the preliminary uniqueness ball of <a href=\"#arr:preliminary-solves\" data-reference-type=\"ref\" data-reference=\"arr:preliminary-solves\">23</a> and to a fixed refined ball. It is the preliminary normalized solution with those same path and exit data.*\n\n2.  *Let $V_L$ be either of the two normalized solutions on longer canonical paths with zero remainder derivative at its own exit, and let $g_L$ be its relative height. At a common shorter incoming height section let $\\psi_L=\\partial_s(g_L-g_c)$ be its actual remainder derivative, in the shorter scalar coordinate. The restriction $(V_L|_{\\rm short},\\lambda_L)$ belongs to the augmented ball <a href=\"#jump:augmented-ball\" data-reference-type=\"eqref\" data-reference=\"jump:augmented-ball\">[jump:augmented-ball]</a> for the shorter canonical exterior solve with datum $\\psi_L$. It equals that shorter normalized solve. The linear interpolation between the two data $\\psi_-$ and $\\psi_+$ gives an actual normalized family whose endpoints are exactly the two restrictions.*\n\n*All constants are uniform in the shorter size $Y\\in[Y_0,cB]$. The comparison retains the compact multiplier, and all members use the same $Z,Z_*$ and observation value. The nonadverse paths, exit sections, and outgoing derivative prescriptions are the common frozen ones specified before the height construction.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-jump-compatibility"
+  },
+  {
+   "claim_id": "claim-logarithmic-exit-position-control",
+   "exact_statement": "Keep $p,Z,Z_*$ fixed and use the canonical prescription $\\partial_s(g-g_c)=0$ at the moving exit. Put $\\eta=\\log Y$. For the normalized family obtained above, its physical boundary position $X_{\\rm e}$ satisfies $$\\label{jump:exit-derivative}\n \\|\\partial_\\eta X_{\\rm e}\\|_{H^h_\\theta}\n                 \\leq B^{-1}P(Y),\\qquad Y_0\\leq Y\\leq cB,$$ where $P$ is a fixed polynomial independent of $B,Y$. The assertion is uniform on the inner parameter ball.",
+   "kind": "bound",
+   "statement_anchor": "stmt-jump-moving-exit"
+  },
+  {
+   "claim_id": "claim-small-endpoint-error-and-translator-limit",
+   "exact_statement": "For the common parameter $p$, first make the high-stop synchronization <a href=\"#jump:nonadverse-sync\" data-reference-type=\"eqref\" data-reference=\"jump:nonadverse-sync\">[jump:nonadverse-sync]</a>, then shorten all adverse turns from fixed scaled size to $|y|\\asymp Y_0$. At each fixed sufficiently large $Y_0$ and for large $B$, this changes either original action by at most $$\\label{jump:endpoint-bound}\n C e^{-cY_0^2}\\sum_{j\\ \\mathrm{adverse}}\n B^{-2}\\exp\\bigl(-\\Re Z_{*,j}^2/4\\bigr).$$ At each fixed sufficiently large $Y_0$, as $B\\to\\infty$ the height functions in <a href=\"#jump:scaling\" data-reference-type=\"eqref\" data-reference=\"jump:scaling\">[jump:scaling]</a> have smooth subsequential limits on compact parts of the two exterior paths and of the interpolated incoming problems. Their oscillations vanish, and their radial limits obey $$\\label{jump:translator}\n h'=l,\\qquad l'=(1+l^2)(1-l/y).$$ On a homothetic bypass of size $Y$ these limits satisfy $$\\label{jump:translator-matching}\n h=y^2/2-\\log y+O(Y^{-\\sigma}),\\qquad\n l/y=1+O(Y^{-\\sigma}),$$ with harmlessly reduced $\\sigma>0$, uniformly also in the interpolation parameter.",
+   "kind": "bound",
+   "statement_anchor": "stmt-jump-endpoints"
+  },
+  {
+   "claim_id": "claim-nonzero-translator-stokes-difference",
+   "exact_statement": "Equation <a href=\"#jump:translator\" data-reference-type=\"eqref\" data-reference=\"jump:translator\">[jump:translator]</a> has two exterior lateral slope solutions selected by $l/y\\to1$ on sectors reaching $\\arg(y^2)=\\pm2\\pi/3$. On their common positive ray, $$\\label{jump:stokes-difference}\n l_+(y)-l_-(y)=c_0y^3e^{-y^2/2}(1+O(y^{-2})),\n \\qquad c_0\\ne0.$$ Finite homothetic bypass solutions satisfying <a href=\"#jump:negative-exit\" data-reference-type=\"eqref\" data-reference=\"jump:negative-exit\">[jump:negative-exit]</a> and <a href=\"#jump:translator-matching\" data-reference-type=\"eqref\" data-reference=\"jump:translator-matching\">[jump:translator-matching]</a> have the same difference at $y=Y$, up to $Y^3e^{-Y^2/2}O(e^{-cY^2})$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-jump-stokes"
+  },
+  {
+   "claim_id": "claim-improved-opening-jet-growth",
+   "exact_statement": "Let $w_{[n]}$ denote the term homogeneous of degree $n$ in $x$ in the stationary jet, with $b$ retained as an analytic parameter. For each fixed $n$ and every sufficiently small $\\eta>0$, the estimates below hold uniformly for $b$ in a smaller complex neighborhood, with fixed logarithmic and angular derivatives: $$\\begin{aligned}\n \\langle w_{[0]}\\rangle&=O(z^{-4+\\eta}),\\notag\\\\\n \\langle w_{[1]}\\rangle\n       &=\\beta(z^2-2)+O(|x|z^{-2+\\eta}),\\notag\\\\\n \\langle w_{[2]}\\rangle\n       &=(-4\\beta^2\\log z+c_2(b,x))z^2\n                                  +O(|x|^2z^{1+\\eta}),\n \\label{phase:mean-jets}\\\\\n w_{[n]}&=O_n(|x|^n z^{2n-2+\\eta})\\qquad(n\\ge2).\n \\label{phase:all-jets}\n\\end{aligned}$$ Here $c_2$ is quadratic homogeneous in $x$, analytic in $b$, and real for real parameters.",
+   "kind": "bound",
+   "statement_anchor": "stmt-phase-jets"
+  },
+  {
+   "claim_id": "claim-inner-mean-evaluation",
+   "exact_statement": "Fix a sufficiently small $\\epsilon_1>0$, and put $z_1=B^{1-\\epsilon_1}$ on the real incoming portion of an adverse end. For the preliminary normalized solution at the common parameters, $$\\frac{\\langle w(z_1)\\rangle}{z_1^2}\n =\\beta-\\frac{2\\beta}{z_1^2}-4\\beta^2\\log z_1+c_2(b,x)\n                                                   +o(B^{-4}).\n \\label{phase:inner-value}$$ The error is uniform over the finite list of ends and the allowed parameter balls.",
+   "kind": "bound",
+   "statement_anchor": "stmt-phase-inner-evaluation"
+  },
+  {
+   "claim_id": "claim-integrated-averaged-equation",
+   "exact_statement": "Continue the preliminary solution from $z_1$ to its fixed real-radius height section $r_0\\in(0,\\sqrt2)$. In prescribed transition gauges, use the circular averages of the scaled axial and unscaled radial positions. Denote the resulting mean curve again by $(z,R)$ and set $w=R^2/2-1$. Then $$\\frac{d}{d\\log z}\\left(\\frac w{z^2}\\right)\n       =\\frac{4\\beta}{z^2}-\\frac{4\\beta^2}{1+\\beta z^2}\n           +\\mathcal E,\n \\qquad \\int_{z_1}^{z(r_0)}\\mathcal E\\,d\\log z=o(B^{-4}).\n \\label{phase:integrated-equation}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-phase-primitive"
+  },
+  {
+   "claim_id": "claim-adverse-phase-through-constant-order",
+   "exact_statement": "For an adverse end set $Z_0=(-\\beta)^{-1/2}$ on the branch continued from positive values, and define $Z$ by its mean height at the common section as in Proposition <a href=\"#jump:jump\" data-reference-type=\"ref\" data-reference=\"jump:jump\">32</a>. Let $$\\phi(r)=\\sqrt{1-r^2/2},\\qquad\n (1/r-r/2)d_0'+d_0/2=-\\phi''/\\phi'^2,\\qquad d_0(r_0)=0,$$ and write $d_0=2\\log r+d_*+O(r^2(1+|\\log r|))$. With $$Z_*=Z+Z^{-1}\\{d_*-2\\log(Z/2)\\},$$ one has $$Z_*^2=-\\frac1\\beta-8\\log Z_0+\\frac{c_2(b,x)}{\\beta^2}\n                                  +C(r_0)+o(1),\n \\label{phase:expansion-eq}$$ where $C(r_0)=2+2\\log2$ for the stated normalization $d_0(r_0)=0$ and definition of $Z_*$, independently of $r_0$. The logarithmic coefficient $-8$ is the same for every end, and the error is uniform on the finite set of adverse ends. All logarithms retain their prescribed continuation from the common incoming contours.",
+   "kind": "bound",
+   "statement_anchor": "stmt-phase-expansion"
+  },
+  {
+   "claim_id": "claim-no-real-formal-critical-opening-arc",
+   "exact_statement": "Every real formal arc $(b(s),x(s))$ through the origin satisfying $\\nabla\\mathcal F(b(s),x(s))=0$, where $\\mathcal F$ is the formal Gaussian action of [lin:family](#lin:family), has $x\\equiv0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-phase-no-arc"
+  },
+  {
+   "claim_id": "claim-uniform-finite-power-opening-control",
+   "exact_statement": "There is an integer $m\\geq1$ such that, for every sufficiently large fixed $N$, there are a neighborhood of $(0,0)$ and a constant $C_N$ for which $$\\label{jet:inequality}\n |x|^m\\leq C_N\\bigl(|\\nabla f_N(b,x)|+|x|^{N-1}\\bigr)$$ for real $(b,x)$ in that neighborhood. The exponent $m$ is independent of $N$. If there are no cylindrical ends, there are no $x$ variables and the assertion is vacuous.",
+   "kind": "bound",
+   "statement_anchor": "stmt-jet-finite-power"
+  },
+  {
+   "claim_id": "claim-localized-gradient-and-opening-control",
+   "exact_statement": "There are $\\theta\\in(0,1/2)$ and $\\gamma>0$ with the following property. For every sufficiently small $\\eta>0$ there are a neighborhood of $S$ on the observation core, a weak normal height and slope tolerance, and $R_\\eta,C_\\eta<\\infty$ such that the following holds. Suppose $M$ obeys <a href=\"#flow:area-ratios\" data-reference-type=\"eqref\" data-reference=\"flow:area-ratios\">[flow:area-ratios]</a>, its observations lie in that neighborhood, and $M$ is a complete graph with that weak tolerance over $S_b$ to radius $R\\ge R_\\eta$. Put $$\\label{flow:D}\n \\mathcal D=\\|\\Phi_M\\|_{L^2_G(M)}\n              +e^{-(1-\\eta)R^2/8}.$$ Then $$\\label{flow:localized-conclusions}\n |F(M)-F(S)|^{1-\\theta}\\le C_\\eta\\mathcal D,\n \\qquad |x|\\le C_\\eta\\mathcal D^\\gamma .$$ For each fixed compact reference region $K$, transported to $K_b\\subset\nS_b$ by the family charts, there are $R_{\\eta,K}\\ge R_\\eta$ and $C_{\\eta,K}<\\infty$ such that, when $R\\ge R_{\\eta,K}$, the normal height $u$ of $M$ satisfies $$\\label{flow:compact-height}\n \\|u\\|_{H^2(K_b)}\\le C_{\\eta,K}\n        (\\mathcal D+\\mathcal D^\\gamma).$$ When $\\mathcal D\\le1$, the right side can be replaced by $C_{\\eta,K}\\mathcal D^\\gamma$. Also $$\\label{flow:base-multiplier}\n |\\lambda(b,0)|\\le C_\\eta\n       (\\mathcal D+\\mathcal D^\\gamma).$$ The exponents $\\theta,\\gamma$ are independent of $\\eta$; the neighborhood, tolerance, minimum radius, and constants need not be.",
+   "kind": "bound",
+   "statement_anchor": "stmt-flow-localized"
+  },
+  {
+   "claim_id": "claim-small-speed-graphical-improvement",
+   "exact_statement": "Fix a spatial loss $\\zeta\\in(0,1)$. Suppose the hypotheses of Proposition <a href=\"#flow:localized\" data-reference-type=\"ref\" data-reference=\"flow:localized\">44</a> hold to radius $R$, and $$\\label{flow:small-speed}\n d\\le C_0e^{-R^2/8}.$$ Suppose also that, on each fixed interior fraction of the graphical ball, the actual second fundamental form and its derivatives through a sufficiently large fixed order are bounded by a fixed polynomial in $R$. Then the physical height and first derivatives over the same $S_b$ tend uniformly to zero on $B_{(1-\\zeta)R}$ as $R\\longrightarrow\\infty$. The compact multipliers of $S_b$ tend to zero too. All statements are uniform in the fixed parameter neighborhood and in the polynomial geometric bounds.",
+   "kind": "bound",
+   "statement_anchor": "stmt-flow-improvement"
+  },
+  {
+   "claim_id": "claim-uniform-complete-graph-propagation",
+   "exact_statement": "Fix the closed small parameter neighborhood above, an area-ratio bound, $0<U<1$, a spatial loss $0<\\mu<1$, and a target weak $C^1$ normal graph tolerance $\\varepsilon_1>0$. There are $R_0<\\infty$ and $\\varepsilon_0,\\ell_0>0$ such that the following holds. If a smooth closed mean curvature flow $N_t$ has the prescribed area ratios, $N_0$ is a complete normal graph of norm at most $\\varepsilon_0$ over $S_b$ to radius $R\\ge R_0$, and $|\\lambda(b,0)|\\le\\ell_0$, then for $0\\le t\\le U$ it is a complete graph of norm at most $\\varepsilon_1$ over $$S_b(t)=\\sqrt{1-t}\\,S_b$$ in $B_{(1-\\mu)R}$, while the smooth flow exists. On every fixed positive-time interval $[t_*,U]$, all fixed interior curvature derivative orders are bounded uniformly. More precisely, the graph error has a modulus tending to zero as $$\\varepsilon_0+|\\lambda(b,0)|+R^{-1}\\longrightarrow0,$$ and after positive time this holds in every fixed derivative order, on the same ball with an arbitrarily small further margin. The constants are fixed before $R$ or any discrete time index. In particular the lemma applies with $U=1-e^{-2}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-flow-propagation"
+  },
+  {
+   "claim_id": "claim-delayed-radius-graphical-induction",
+   "exact_statement": "On every complete bootstrap interval, the hypotheses of Proposition <a href=\"#flow:localized\" data-reference-type=\"ref\" data-reference=\"flow:localized\">44</a> and of Lemma <a href=\"#flow:improvement\" data-reference-type=\"ref\" data-reference=\"flow:improvement\">45</a> hold at $\\tau_j$ to radius $R_j$, with the harmless outer margins specified above.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-flow-radius-induction"
+  },
+  {
+   "claim_id": "claim-uniform-finite-prefix-rescaled-length",
+   "exact_statement": "Put $$p=\\frac{\\theta-c}{1-c}\\in(0,1/2),\\qquad\n \\kappa=\\frac{1-\\eta}{1-c}>1,\\qquad q=Q^2,\n \\qquad h=\\kappa/8.$$ For $\\mathcal E(0)$ sufficiently small, every available finite prefix satisfies $$\\label{flow:length-bound}\n \\sum_{j=0}^{n}a_j\n \\le 2\\bigl(C\\mathcal E(0)^p+B(R_{\\rm in})\\bigr),\\qquad\n B(R)=\\frac{e^{-hR^2}}{1-e^{-h(q-1)R^2}}.$$ In particular the length on complete unit intervals can be made arbitrarily small, uniformly in the number of intervals.",
+   "kind": "bound",
+   "statement_anchor": "stmt-flow-finite-length"
+  },
+  {
+   "claim_id": "claim-all-time-fixed-frame-convergence",
+   "exact_statement": "The rescaled flow converges smoothly on every fixed compact set, at all rescaled times, to $S$ in the original ambient coordinates. For the smooth closed embedded surface flow and fixed first singular point of [thm:main](#thm:main), every backward tangent flow consequently equals the multiplicity-one homothetic motion $\\sqrt{-s}\\,S$ at every negative time $s$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-flow-uniqueness"
+  }
+ ],
+ "paper": "papers/EN-107-000-0015-2-2026-PR-T4-UK-EX-M3-C-TO-H-0706_PM-355.1_Uniqueness_of_tangent_flows_at_the_first_singular_time_of_embedded_surface_mean_curvature_flow.md",
+ "purpose": "Uniqueness of tangent flows at the first singular time of embedded surface mean-curvature flow",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "60f80badea08ac2bd7d7b47903e3b8ae5080285eb07a428c468622b3e450016e",
+   "pm.domains.v2": "c4beb7cf039fd450debcbeff83501bf6024eaed0b4c065cb9b85c3ebd611adec",
+   "pm.edges.v2": "4320f6ed1c031b3865c70f3da02ff473169c3b9d6b2bbf815b661ea23327f04b",
+   "pm.extraction.v2": "eac3e365e8e258a9e7630aa772a0cf54f40d66a2f957151d5dae18fa0ba4d1d1",
+   "pm.formal.v2": "02745336b59771be7a88599d5ef7fca5d8ba1b48931cdeda1f503ab2480cfcef",
+   "pm.limits.v2": "76e9e9f0de18a5df966cc42f9c97ba7c141d1a53894391fdab69646b527c89e7",
+   "pm.node.v2": "c8633e17707eba3df286ae020fe6d5ea0f771a317770117ea8c74f87865f3e51",
+   "pm.objects.v2": "e9cd2bfacef1db8a16ded8a11b335cda3072f85049c74910bf10d68256348d94",
+   "pm.provenance.v2": "3b5394cac5c16b34117e4a12244e6b538d11808225b2db9778ad546fd2aeba15",
+   "pm.quantities.v2": "ffef48cccf0629003cec14f8f2168a4712c974fe0b730b8ff4dc894ebd547f17",
+   "pm.reading.v2": "b7d6abea3a74b269007b814a8d3c589bb9f7168558569dc47e8e321504a1526f",
+   "pm.roadmap.v2": "d4e7c15ea58baf2392766a08f309bccc4e89ba82f13c0bb55312b74b35d2f388",
+   "pm.search.v1": "0890de82c9f0422a0e85591a66cf34fd6ac70803cd09b939cc0854e44f19736d",
+   "pm.triptych.v2": "97e53129a72f01ca82714ef89354e0d97708caf465f4f4c0ecef1aafa6dcd98c"
+  },
+  "canonical_sha256": "cc088cf8749c2b8578d7a015528de8c778f19f28e9cd22e63d55de0413fb4ee4",
+  "paper_sha256": "0d529b97955eee73c2a1d93d2dc88fe7d34b3165164bbe7ce983a0557c2c9cbc",
+  "repaired_body_sha256": "cddc9bc6b1f91538c3d24219116bfb5ab0956b3243c840f262e37ed79b76d5b9"
+ },
+ "status": "ACTIVE",
+ "subject_id": 7,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "52b37c04fd81d7af710a3b77d5c408ca0b15e1801b63efcee834c40fda6a4c17",
+   "receipt_sha256": "ec9616a81135e709645af37e734b54e306579dcffffff2e1aead1cfab581b375",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Uniqueness of tangent flows at the first singular time of embedded surface mean-curvature flow"
+}

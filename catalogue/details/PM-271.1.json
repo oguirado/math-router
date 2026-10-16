@@ -1,0 +1,562 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 535415,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 175237
+ },
+ "coordinate": "EN-117-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-H-0570",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "quantum statistical mechanics",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-4",
+     "quote": "A zero-field free-energy estimate does not by itself control the one-sided field derivative that defines spontaneous magnetization.",
+     "quote_sha256": "d915a8cf8678bfcf0952051532f58595b7591904c564f3d30094afd3446d137d"
+    }
+   ],
+   "query": "Magnetization from a zero-field free-energy estimate alone",
+   "reason": "The field derivative requires uniform observable control before passing to pressure increments."
+  }
+ ],
+ "family": "PM-271",
+ "id": "PM-271.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C1",
+    "statement": "For every fixed $S\\in\\{\\tfrac12,1,\\tfrac32,\\ldots\\}$ and every interaction satisfying <a href=\"#eq:interaction\" data-reference-type=\"eqref\" data-reference=\"eq:interaction\">[eq:interaction]</a>, $$\\lim_{\\beta\\to\\infty}\\beta^{3/2}\\bigl(S-m_{S,J}(\\beta)\\bigr)\n   =\\frac{\\zeta(3/2)}{8\\pi^{3/2}\\sqrt{\\det D_{S,J}}}.\n \\label{eq:bloch-law}$$"
+   },
+   {
+    "anchor": "stmt-prop-loop-representation",
+    "claim_id": "C2",
+    "statement": "For every finite cube, every $\\beta>0$, and every real $h$, $$\\label{eq:loop-partition}\n Z_\\Lambda(h):=\\mathop{\\mathrm{Tr}}e^{-\\beta(H^J_{S,N}-hM_{S,N})}\n   =e^{\\beta w_\\Lambda/4}\\,\n           \\mathbb E_{\\rm b}\\sum_\\sigma e^{\\beta hM(\\sigma)}.$$ At zero field the Gibbs spectral law of total magnetization is obtained by weighting each picture by $2^{\\#\\{\\text{cycles}\\}}$, coloring its cycles independently and fairly, and evaluating $M(\\sigma)$. More precisely, for every function $\\Phi$ on the finite spectrum of $M_{S,N}$, $$\\label{eq:loop-spectral-law}\n \\frac{\\mathop{\\mathrm{Tr}}\\bigl(e^{-\\beta H^J_{S,N}}\\Phi(M_{S,N})\\bigr)}{Z_\\Lambda(0)}\n   =\\frac{\\mathbb E_{\\rm b}\\sum_\\sigma\\Phi(M(\\sigma))}\n           {\\mathbb E_{\\rm b}2^{\\#\\{\\text{cycles}\\}}}.$$"
+   },
+   {
+    "anchor": "stmt-lem-dense-boundary",
+    "claim_id": "C3",
+    "statement": "Let $F$ be a finite deterministic pin set and let $\\mathcal T_n$ be increasing finite sets of times containing zero, with dense union. Set $$D_n=F\\cup\\bigl(\\partial\\Lambda\\times\\{1,\\ldots,\\ell\\}\n                                      \\times\\mathcal T_n\\bigr),\n \\qquad D=F\\cup D_0.$$ Almost surely, $n_{D_n}=n_D$ and $\\mathcal B_{D_n}=\\mathcal B_D$ for all sufficiently large $n$. Moreover $\\mathbb P_{D_n}$ converges to $\\mathbb P_D$ in total variation. If bounded observables $X_n$ converge almost surely to $X$, with a common deterministic bound, then $\\mathbb E_{D_n}X_n\\to\\mathbb E_DX$."
+   },
+   {
+    "anchor": "stmt-lem-factorial",
+    "claim_id": "C4",
+    "statement": "For an allowed or finite pin set $D$, an integer $j\\ge1$, and a nonnegative measurable function $F$ on $X_\\Lambda^j$, $$\\label{eq:factorial-bound}\n \\mathbb E_D\\sum_{(u_1,\\ldots,u_j)\\in(\\omega_{\\rm m})^j_{\\ne}}\n                         F(u_1,\\ldots,u_j)\n \\le 2^j\\int F\\,d\\lambda_{\\rm b}^{\\otimes j}.$$ Here the sum is over ordered tuples of distinct marks. The estimate also holds with any prescribed time order or time restrictions."
+   },
+   {
+    "anchor": "stmt-prop-pin-identities",
+    "claim_id": "C5",
+    "statement": "For $E,T$ as above, $$\\label{eq:pin-identities}\n d_E(i)=\\frac{r(E,\\{i\\})}{1+r(E,\\{i\\})}\\quad(i\\notin E),\n \\qquad\n \\mathbb P_E(T\\subseteq\\mathcal B_E)\\le(2r(E,T))^{m_T}.$$"
+   },
+   {
+    "anchor": "stmt-prop-exposure",
+    "claim_id": "C6",
+    "statement": "Almost surely under $\\mathbb P_P$, $g_P(\\mathbf a)>0$ and the conditional remaining-picture law given $\\mathscr H$ is $\\mathbb Q_{\\mathbf a}(\\,\\cdot\\mid G_P)$.*\n\n\n\n*More precisely, for a deterministic initial label set $A\\subseteq V_\\Lambda$, let $\\mu_A$ be the base distribution of its trajectories and endpoint mappings. Let $F_A$ be the event that these paths avoid $P$ and their endpoint set is $A$. On $F_A$, let $c_A(\\mathbf a)$ be the number of cycles of their endpoint permutation. For any bounded measurable $\\Phi$ of the exposure and remaining picture $\\omega_{\\rm h}$, $$\\label{eq:exposure-disintegration}\n \\mathbb E_P\\Phi(\\mathbf a,\\omega_{\\rm h})\n =\\frac1{\\mathcal Z_P}\\sum_{A\\subseteq V_\\Lambda}\n     \\int_{F_A}2^{c_A(\\mathbf a)}\n        \\mathbb E_{\\mathbb Q_{\\mathbf a}}\n                 [\\mathbf 1_{G_P}\\Phi(\\mathbf a,\\omega_{\\rm h})]\n                                            \\,\\mu_A(d\\mathbf a).$$ In particular, the exposure marginal on this branch is $$\\label{eq:exposure-marginal}\n \\mathcal Z_P^{-1}\\mathbf 1_{F_A}2^{c_A(\\mathbf a)}g_P(\\mathbf a)\n                                                   \\,\\mu_A(d\\mathbf a).$$ The same assertions hold for finite deterministic $P$."
+   },
+   {
+    "anchor": "stmt-lem-exterior-moments",
+    "claim_id": "C7",
+    "statement": "Suppose a random permutation matrix $\\Pi$ on a finite set is a distributional limit of products of independent Bernoulli transpositions and deterministic permutations. If $K=\\mathbb E\\Pi$, then $$\\label{eq:exterior-moments}\n            \\mathbb E\\bigwedge\\nolimits^k\\Pi=\\bigwedge\\nolimits^kK\n                        \\qquad(0\\le k\\le|V|).$$ For every fixed exposure and finite set of cuts, the layered permutation obtained under $\\mathbb Q_{\\mathbf a}$ by following holes to the next cyclic cut has this property."
+   },
+   {
+    "anchor": "stmt-prop-next-pin-kernel",
+    "claim_id": "C8",
+    "statement": "Let $V=I\\sqcup B$ be a finite set with $I\\ne\\varnothing$. Suppose a random permutation matrix $\\Pi$ satisfies <a href=\"#eq:exterior-moments\" data-reference-type=\"eqref\" data-reference=\"eq:exterior-moments\">[eq:exterior-moments]</a>, and let $K=\\mathbb E\\Pi$. Let $G_I$ be the event that every cycle meets $I$. On $G_I$, let $\\Sigma$ be the column-forward permutation matrix on $I$ giving the next positive visit to $I$. Then $$\\label{eq:all-hit-determinant}\n                         \\Pr(G_I)=\\det(I-K_{BB}).$$ If this probability is positive, then $K_{BB}$ is transient and $$\\label{eq:conditional-next-pin}\n \\mathbb E[\\Sigma\\mid G_I]\n       =K_{II}+K_{IB}(I-K_{BB})^{-1}K_{BI}.$$ The right-hand side is the first positive $I$-hitting kernel of the Markov chain with independent transitions according to $K$. If $B$ is empty, the determinant is one and the correction is zero."
+   },
+   {
+    "anchor": "stmt-prop-fresh-walk",
+    "claim_id": "C9",
+    "statement": "For almost every exposure under $\\mathbb P_P$ and every $i\\in T$, $$\\mathbb P_P(\\mathcal R_i(E,T)\\mid\\mathscr H)=q_i(\\mathbf a).$$ In particular, $$\\label{eq:fresh-return}\n                m_Tr(E,T)=\\mathbb E_P\\sum_{i\\in T}q_i(\\mathbf a).$$"
+   },
+   {
+    "anchor": "stmt-prop-nash",
+    "claim_id": "C10",
+    "statement": "Suppose $R\\ge R_0$ and $t$ is regular for $z$ at radius $R$. Every nonnegative function $v$ on $\\mathcal H_t$, supported on slots above $\\mathfrak B_R(z)$, satisfies $$\\label{eq:local-nash}\n \\|v\\|_2^{10/3}\\le C\\mathcal D_t(v)\\|v\\|_1^{4/3}.$$ The constant is independent of $R,z,t$ and the unavailable slots."
+   },
+   {
+    "anchor": "stmt-lem-routed-flow",
+    "claim_id": "C11",
+    "statement": "Consider an available-slot nearest-neighbor graph on $\\mathbb Z^3$, with at most $\\ell$ slots per site, all pairs of available slots above each nearest-neighbor site edge joined, and all slots available outside a finite set. Suppose $z$ satisfies the two conditions in Definition <a href=\"#def:regular\" data-reference-type=\"ref\" data-reference=\"def:regular\">11</a> for this graph, and $R\\ge R_0$. For each available slot $a$ at $y\\in B_R(z)$, there is a flow $F_a$ such that $$\\label{eq:global-flow-envelope}\n \\mathop{\\mathrm{div}}F_a=\\mathbf 1_{\\{a\\}},\\qquad\n |F_a(e)|\\le C(1+\\mathop{\\mathrm{dist}}(e,y))^{-k},\\qquad\n k=2-3\\nu=\\frac{199}{100}.$$ The flows can be chosen with the following common routing construction. For each blocked component $C$, thicken it by supremum radius four, fill the finite nearest-neighbor components of the complement, and call the resulting finite hull $H_C$. Let $\\operatorname{Box}_C^+$ be the unit enlargement of the coordinate bounding box of that thickening. The hull lies in this box. Keep the inclusion-maximal hulls, which are disjoint, and send each original site in such a hull to a chosen surviving exterior-boundary representative, fixing other sites. Apply this map only once to each original endpoint.*\n\n\n*There are simple surviving routes for the original lattice edges. Each route is contained in its original edge together with the boxes $\\operatorname{Box}_C^+$ of the maximal hulls containing its original endpoints. Lift the routes using a fixed available slot at every surviving site. The flow $F_a$ is the sum of a unit path flow along a connector of uniformly bounded length and displacement from $a$, and the routed values of a lattice unit flow $G_y$ satisfying $$\\label{eq:lattice-flow-envelope}\n |G_y(e')|\\le C(1+\\mathop{\\mathrm{dist}}(e',y))^{-2}.$$ All constants are uniform over the graph, anchor, radius, and source."
+   },
+   {
+    "anchor": "stmt-prop-sparse-energy",
+    "claim_id": "C12",
+    "statement": "Let $R\\ge R_0$, and let $(z_i)_{i=1}^m$ be a sparse list of centers, counting repetitions. At a fixed slice let $I\\subseteq\n\\{1,\\ldots,m\\}$ be any subset for which the slice is regular for $z_i$ at radius $R$. For $i\\in I$, let $\\mu_i\\ge0$ be a mass on the available slots, supported above $\\mathfrak B_R(z_i)$ and with total mass at most one. For every finitely supported real $Y$, $$\\label{eq:sparse-source-pairing}\n \\left|\\left\\langle\\sum_{i\\in I}\\mu_i,Y\\right\\rangle\\right|^2\n \\le C m R^\\alpha\\mathcal D_t(Y).$$"
+   },
+   {
+    "anchor": "stmt-lem-near-flow",
+    "claim_id": "C13",
+    "statement": "The same flows as in Lemma <a href=\"#lem:routed-flow\" data-reference-type=\"ref\" data-reference=\"lem:routed-flow\">13</a> satisfy $$\\label{eq:near-flow-envelope}\n |F_a(e)|\\le C(1+h)^{-2}\n \\qquad\\text{if }h=\\mathop{\\mathrm{dist}}(e,y)\\le R.$$ The constant and the lower threshold $R_0$ are independent of $R$."
+   },
+   {
+    "anchor": "stmt-prop-spread-energy",
+    "claim_id": "C14",
+    "statement": "Suppose $R\\ge R_0$, $1\\le\\tau\\le R$, and the slice $t$ is regular for $z$ at radius $R$. Let $\\mu\\ge0$ be supported on available slots above $\\mathfrak B_R(z)$, with $$\\|\\mu\\|_1\\le1,\\qquad \\|\\mu\\|_2\\le C_1\\tau^{-3/4}.$$ For every finitely supported real function $Y$ on $\\mathcal H_t$, $$\\label{eq:spread-source-pairing}\n |\\langle\\mu,Y\\rangle|^2\n \\le C\\tau^{-1/2}\\mathcal D_t(Y).$$ The constant may depend on $C_1$ and the fixed geometry, but is independent of $\\tau,R$, the slice, and the volume."
+   },
+   {
+    "anchor": "stmt-lem-blocking",
+    "claim_id": "C15",
+    "statement": "Assume $\\mathsf I(P)$. At every deterministic time $t$, in every coset, a prescribed set $A$ of distinct coordinate sites satisfies $$\\begin{aligned}\n \\mathbb P_P(A\\subseteq\\mathcal O_t^\\gamma)&\\le Cp^6\n &&\\text{if }|A|=6,\\label{eq:six-blocking}\\\\\n \\mathbb P_P(A\\subseteq\\mathcal O_t^\\gamma)&\\le(C\\sqrt p)^{|A|}\n &&\\text{if }A\\ne\\varnothing\\text{ is sparse}.\n \\label{eq:sparse-blocking}\n\\end{aligned}$$ The constants are uniform in the choice and size of the grid."
+   },
+   {
+    "anchor": "stmt-lem-component-tail",
+    "claim_id": "C16",
+    "statement": "There are $\\beta_0,c,C,\\lambda>0$ such that, if $\\beta\\ge\\beta_0$ and $\\mathsf I(P)$ holds, then $$\\label{eq:component-tail}\n \\mathbb P_P\\bigl(w\\in\\mathcal O_t^\\gamma,\n   \\operatorname{rad}_w\\mathcal C_t^\\gamma(w)\\ge h\\bigr)\n \\le C\\exp(-ch^\\lambda),\\qquad h\\ge1.$$ This holds for every deterministic time $t$, coset $\\gamma$, and coordinate site $w$, with the same constants for all $\\beta\\ge\\beta_0$."
+   },
+   {
+    "anchor": "stmt-prop-irregularity",
+    "claim_id": "C17",
+    "statement": "Under $\\mathsf I(P)$, for $\\beta\\ge\\beta_0$, every deterministic time $t$, anchor $z\\in\\mathbb Z^3$, and radius $R\\ge1$ satisfy $$\\label{eq:irregularity}\n \\mathbb P_P(t\\text{ is not regular for }z\\text{ at radius }R)\n \\le\\delta_R:=CR^3p^6+C\\exp(-cR^\\xi),\n \\qquad \\xi=\\nu\\lambda>0.$$"
+   },
+   {
+    "anchor": "stmt-lem-localization",
+    "claim_id": "C18",
+    "statement": "One may choose $a$ in <a href=\"#eq:scales\" data-reference-type=\"eqref\" data-reference=\"eq:scales\">[eq:scales]</a> independently of $K$ so that the following holds, without assuming $\\mathsf I(P)$. Let $i$ be a deterministic slot point that is almost surely a hole under the exposure law for an allowed pin set $P$, and put $z=\\bar x_i$. Let $\\mathcal K$ be a deterministic schedule of at most $2K+2$ full or partial boundary-killed traversals starting at $i$, each in either direction and each covering at most one period. Use matching layers at every concatenation. If $\\mathcal K_R$ is localized throughout at $z$, then $$\\label{eq:localization-loss}\n \\mathbb E_P\\bigl\\|(\\mathcal K-\\mathcal K_R)\n          \\mathbf 1_{\\{i\\}}\\bigr\\|_1\\le C_K e^{-c\\beta}.$$ The same estimate holds for localization of the walk on the full slot lattice, with all slots available and no exposed trajectories."
+   },
+   {
+    "anchor": "stmt-prop-diffusion",
+    "claim_id": "C19",
+    "statement": "Fix an exposure good for $z,R_K$. Let a kernel be a subinterval of a concatenation of full traversals in arbitrary directions, localized throughout at $z$. For every nonnegative input of mass at most one, its output after elapsed time $b'\\ge\\beta/16$ satisfies $$\\label{eq:diffusion-l2}\n \\|v_{\\rm out}\\|_2\\le C(b')^{-3/4}.$$ The same statement holds for the adjoint of any such subinterval. For such a kernel $\\mathcal K_R$ of length $b'\\ge\\beta/8$, $$\\label{eq:diffusion-entry}\n \\max_{j,k}(\\mathcal K_R)_{jk}\\le C(b')^{-3/2}.$$ The constants are independent of $K$ and $R_K$."
+   },
+   {
+    "anchor": "stmt-lem-hitting-energy",
+    "claim_id": "C20",
+    "statement": "Let $E$ be allowed and let $T\\ne\\varnothing$ be a finite set of slot points at a deterministic cut $\\theta$, disjoint from $E$. Put $P=E\\cup T$, $m_T=|T|$, and $\\eta=\\mathbf 1_{T}$. At almost every exposure under $\\mathbb P_P$, define $f=1$ on $T$; at every other cut hole let $f$ be the probability that the boundary-killed fresh walk ever hits $T$ at a subsequent integer turn. Then $0\\le f\\le1$, $f$ has zero boundary values, and, for $g=f-\\eta$, $$\\label{eq:hitting-energy}\n \\sum_{i\\in T}q_i(\\mathbf a)\n \\le m_T-\\langle f,A_Qf\\rangle\n =\\langle\\eta,Q\\eta\\rangle+2\\langle Q\\eta,g\\rangle\n       -\\langle g,A_Qg\\rangle.$$"
+   },
+   {
+    "anchor": "stmt-lem-suffix-energy",
+    "claim_id": "C21",
+    "statement": "With these definitions and zero extension to the available-slot graph at the split, $$\\label{eq:suffix-energy}\n \\int_I\\mathcal D_{t_d(u)}(Y_d(u))\\,du\n \\le\\frac12\\bigl(\\|y\\|_2^2-\\|U_d^*y\\|_2^2\\bigr)\n \\le E_y.$$ Moreover $\\|Y_d(u)\\|_\\infty\\le\\|y\\|_\\infty$."
+   },
+   {
+    "anchor": "stmt-thm-sparse-pins",
+    "claim_id": "C22",
+    "statement": "There is $\\beta_1<\\infty$, independent of the cube and pins, such that for every $\\beta\\ge\\beta_1$, every allowed pin set $E$, and every nonempty sparse set $T$ at one deterministic time, disjoint from $E$, $$\\label{eq:sparse-pins}\n \\mathbb P_E(T\\subseteq\\mathcal B_E)\n \\le\\beta^{-9|T|/10}.$$ Consequently <a href=\"#eq:irregularity\" data-reference-type=\"eqref\" data-reference=\"eq:irregularity\">[eq:irregularity]</a> and <a href=\"#eq:good-exposure\" data-reference-type=\"eqref\" data-reference=\"eq:good-exposure\">[eq:good-exposure]</a> hold under every allowed pin law, with no induction hypothesis."
+   },
+   {
+    "anchor": "stmt-lem-return-expansion",
+    "claim_id": "C23",
+    "statement": "For almost every exposure, define $$v=\\sum_{n=1}^{K-1}Q^n\\eta,\\qquad y=g-v,\\qquad\n E_y=\\langle y,A_Qy\\rangle,$$ with the empty sum interpreted as zero. Then $E_y\\ge0$, $\\|y\\|_\\infty\\le K+1$, and the fresh return probability satisfies $$\\label{eq:return-expansion}\n q_i\\le\\sum_{n=1}^{2K-1}\\langle\\eta,Q^n\\eta\\rangle\n          +2\\langle Q^K\\eta,y\\rangle-E_y .$$"
+   },
+   {
+    "anchor": "stmt-prop-long-tail",
+    "claim_id": "C24",
+    "statement": "For every fixed integer $K\\ge1$, as $\\beta\\to\\infty$, $$\\label{eq:long-tail}\n \\mathbb E_P\\bigl[2\\langle Q^K\\eta,y\\rangle-E_y\\bigr]\n \\le C K^{-1/2}\\beta^{-3/2}+o_K(\\beta^{-3/2}).$$ Here $C$ depends only on the fixed interaction, spin, and geometric choices, and is independent of $K$. The error has the uniformity specified above."
+   },
+   {
+    "anchor": "stmt-cor-singleton-bound",
+    "claim_id": "C25",
+    "statement": "For every sufficiently large $\\beta$, uniformly in all allowed pin sets $E$, cubes, cuts, and slot-time points $i\\notin E$, $$\\label{eq:singleton-return}\n r(E,\\{i\\})\\le C\\beta^{-3/2}.$$ Consequently, for every allowed pin set $D$ and every slot-time point $j$ at a deterministic time, $$\\label{eq:free-slot}\n \\mathbb P_D(j\\in\\mathcal B_D)\\le C\\beta^{-3/2}.$$"
+   },
+   {
+    "anchor": "stmt-lem-ideal-kernel",
+    "claim_id": "C26",
+    "statement": "The full site kernel satisfies $$\\label{eq:ideal-site-bounds}\n \\sup_{y,w}p_t(y,w)\\le C(1+t)^{-3/2},\\qquad\n p_t(x,x)=t^{-3/2}(\\kappa+o(1)).$$ The first estimate holds for all $t\\ge0$; the second is as $t\\to\\infty$. For every fixed $K$, every $1\\le n\\le2K$, and every direction word of length $n$, $$\\label{eq:ideal-diagonal}\n (\\widehat W_\\infty(\\mathbf d))_{ii}\n =\\ell^{-1}p_{n\\beta}(x,x)\n =\\beta^{-3/2}\\bigl((\\kappa/\\ell)n^{-3/2}+o_K(1)\\bigr).$$ The error is uniform in the word, cut, and initial slot. Always, $$\\label{eq:ideal-killed-upper}\n 0\\le(\\widehat W_R(\\mathbf d))_{ii}\n \\le(\\widehat W_\\infty(\\mathbf d))_{ii}.$$ If $\\mathfrak B_R(z)\\subseteq\\Lambda^\\circ$, then $$\\label{eq:ideal-killed-interior}\n 0\\le(\\widehat W_\\infty(\\mathbf d))_{ii}\n          -(\\widehat W_R(\\mathbf d))_{ii}\n \\le C_K e^{-c\\beta}.$$"
+   },
+   {
+    "anchor": "stmt-prop-finite-word",
+    "claim_id": "C27",
+    "statement": "For every fixed $K$, $$\\label{eq:finite-word}\n \\left|\\mathbb E_P[(W_R(\\mathbf d))_{ii}]\n                 -(\\widehat W_R(\\mathbf d))_{ii}\\right|\n       =o_K(\\beta^{-3/2}).$$ The error is uniform over $1\\le n\\le2K$, all direction words of length $n$, all cubes, deterministic cuts and slots, and all allowed pin sets $E$ with arbitrary finitely many extra pins. The product inside the expectation is formed before averaging over the exposure."
+   },
+   {
+    "anchor": "stmt-thm-return-bounds",
+    "claim_id": "C28",
+    "statement": "There is a constant $C<\\infty$, independent of $K$, with the following property. For every integer $K\\ge1$ there are $\\beta_K<\\infty$ and a nonnegative function $\\epsilon_K(\\beta)\\to0$ as $\\beta\\to\\infty$, such that for $\\beta\\ge\\beta_K$, every finite cube, every allowed pin set $E$, and every deterministic slot-time point $i$, $$\\label{eq:down-upper}\n d_E(i)\\le\\beta^{-3/2}\n \\left(\\frac\\kappa\\ell\\sum_{n=1}^{2K-1}n^{-3/2}\n                  +CK^{-1/2}+\\epsilon_K(\\beta)\\right).$$ If the site $x$ of $i$ additionally satisfies $$\\label{eq:pin-free-ball}\n \\mathfrak B_{R_K}(\\bar x)\\subseteq\\Lambda^\\circ,\n \\qquad E\\text{ has no pin over }\\mathfrak B_{R_K}(\\bar x),$$ then $$\\label{eq:down-lower}\n d_E(i)\\ge\\beta^{-3/2}\n \\left(\\frac\\kappa\\ell\\sum_{n=1}^{K}n^{-3/2}\n                                      -\\epsilon_K(\\beta)\\right).$$ For $i\\notin E$, the same two bounds hold for $r(E,\\{i\\})$, with the same choice of error function. The threshold and error function are independent of the cube, cut, slot, and number, locations, and times of all finite extra pins. Only the fixed model and geometric choices, and $K$, may affect them."
+   },
+   {
+    "anchor": "stmt-prop-pressure-equivalence",
+    "claim_id": "C29",
+    "statement": "For every fixed $\\beta>0$ and $h\\ge0$, $$\\lim_{N\\to\\infty}p_N^+(h)=p_\\beta(h).\n \\label{eq:boundary-pressure}$$"
+   },
+   {
+    "anchor": "stmt-lem-pin-mixture",
+    "claim_id": "C30",
+    "statement": "For $h\\ge0$, the colored-picture law defining $Z^+_\\Lambda(h)$ is a mixture of the zero-field pinned laws with pin sets $E=D_0\\cup F$, where $F$ consists of time-zero slots. Under the mixing law, $$\\Pr(i\\in F)\\le b(h):=1-e^{-\\beta h}\n \\qquad\\text{for every time-zero slot }i.\n \\label{eq:pin-marginal}$$ Moreover, $$S-(p_N^+)'(h)\n   =\\frac1V\\sum_{i\\in V_\\Lambda}\\mathbb E_F[d_{D_0\\cup F}(i)].\n \\label{eq:field-deficit}$$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Sharp magnetization deficit",
+    "evidence": [
+     {
+      "anchor": "pm-h-5",
+      "quote": "The uniform pin estimates, the finite-index geometric reduction, and the energy bound for a spread source are the reusable parts of the argument.",
+      "quote_sha256": "549df7b9fa6df65404857f033dcdc0151bc8a449d79f1aaf87198a2b3f094da1"
+     }
+    ],
+    "requires_concepts": [
+     "Pinned returns",
+     "Good-exposure diffusion",
+     "Full interaction heat kernel",
+     "Pressure increments"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C1",
+   "exact_statement": "For every fixed $S\\in\\{\\tfrac12,1,\\tfrac32,\\ldots\\}$ and every interaction satisfying <a href=\"#eq:interaction\" data-reference-type=\"eqref\" data-reference=\"eq:interaction\">[eq:interaction]</a>, $$\\lim_{\\beta\\to\\infty}\\beta^{3/2}\\bigl(S-m_{S,J}(\\beta)\\bigr)\n   =\\frac{\\zeta(3/2)}{8\\pi^{3/2}\\sqrt{\\det D_{S,J}}}.\n \\label{eq:bloch-law}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "C2",
+   "exact_statement": "For every finite cube, every $\\beta>0$, and every real $h$, $$\\label{eq:loop-partition}\n Z_\\Lambda(h):=\\mathop{\\mathrm{Tr}}e^{-\\beta(H^J_{S,N}-hM_{S,N})}\n   =e^{\\beta w_\\Lambda/4}\\,\n           \\mathbb E_{\\rm b}\\sum_\\sigma e^{\\beta hM(\\sigma)}.$$ At zero field the Gibbs spectral law of total magnetization is obtained by weighting each picture by $2^{\\#\\{\\text{cycles}\\}}$, coloring its cycles independently and fairly, and evaluating $M(\\sigma)$. More precisely, for every function $\\Phi$ on the finite spectrum of $M_{S,N}$, $$\\label{eq:loop-spectral-law}\n \\frac{\\mathop{\\mathrm{Tr}}\\bigl(e^{-\\beta H^J_{S,N}}\\Phi(M_{S,N})\\bigr)}{Z_\\Lambda(0)}\n   =\\frac{\\mathbb E_{\\rm b}\\sum_\\sigma\\Phi(M(\\sigma))}\n           {\\mathbb E_{\\rm b}2^{\\#\\{\\text{cycles}\\}}}.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-loop-representation"
+  },
+  {
+   "claim_id": "C3",
+   "exact_statement": "Let $F$ be a finite deterministic pin set and let $\\mathcal T_n$ be increasing finite sets of times containing zero, with dense union. Set $$D_n=F\\cup\\bigl(\\partial\\Lambda\\times\\{1,\\ldots,\\ell\\}\n                                      \\times\\mathcal T_n\\bigr),\n \\qquad D=F\\cup D_0.$$ Almost surely, $n_{D_n}=n_D$ and $\\mathcal B_{D_n}=\\mathcal B_D$ for all sufficiently large $n$. Moreover $\\mathbb P_{D_n}$ converges to $\\mathbb P_D$ in total variation. If bounded observables $X_n$ converge almost surely to $X$, with a common deterministic bound, then $\\mathbb E_{D_n}X_n\\to\\mathbb E_DX$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-dense-boundary"
+  },
+  {
+   "claim_id": "C4",
+   "exact_statement": "For an allowed or finite pin set $D$, an integer $j\\ge1$, and a nonnegative measurable function $F$ on $X_\\Lambda^j$, $$\\label{eq:factorial-bound}\n \\mathbb E_D\\sum_{(u_1,\\ldots,u_j)\\in(\\omega_{\\rm m})^j_{\\ne}}\n                         F(u_1,\\ldots,u_j)\n \\le 2^j\\int F\\,d\\lambda_{\\rm b}^{\\otimes j}.$$ Here the sum is over ordered tuples of distinct marks. The estimate also holds with any prescribed time order or time restrictions.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-factorial"
+  },
+  {
+   "claim_id": "C5",
+   "exact_statement": "For $E,T$ as above, $$\\label{eq:pin-identities}\n d_E(i)=\\frac{r(E,\\{i\\})}{1+r(E,\\{i\\})}\\quad(i\\notin E),\n \\qquad\n \\mathbb P_E(T\\subseteq\\mathcal B_E)\\le(2r(E,T))^{m_T}.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-pin-identities"
+  },
+  {
+   "claim_id": "C6",
+   "exact_statement": "Almost surely under $\\mathbb P_P$, $g_P(\\mathbf a)>0$ and the conditional remaining-picture law given $\\mathscr H$ is $\\mathbb Q_{\\mathbf a}(\\,\\cdot\\mid G_P)$.*\n\n\n\n*More precisely, for a deterministic initial label set $A\\subseteq V_\\Lambda$, let $\\mu_A$ be the base distribution of its trajectories and endpoint mappings. Let $F_A$ be the event that these paths avoid $P$ and their endpoint set is $A$. On $F_A$, let $c_A(\\mathbf a)$ be the number of cycles of their endpoint permutation. For any bounded measurable $\\Phi$ of the exposure and remaining picture $\\omega_{\\rm h}$, $$\\label{eq:exposure-disintegration}\n \\mathbb E_P\\Phi(\\mathbf a,\\omega_{\\rm h})\n =\\frac1{\\mathcal Z_P}\\sum_{A\\subseteq V_\\Lambda}\n     \\int_{F_A}2^{c_A(\\mathbf a)}\n        \\mathbb E_{\\mathbb Q_{\\mathbf a}}\n                 [\\mathbf 1_{G_P}\\Phi(\\mathbf a,\\omega_{\\rm h})]\n                                            \\,\\mu_A(d\\mathbf a).$$ In particular, the exposure marginal on this branch is $$\\label{eq:exposure-marginal}\n \\mathcal Z_P^{-1}\\mathbf 1_{F_A}2^{c_A(\\mathbf a)}g_P(\\mathbf a)\n                                                   \\,\\mu_A(d\\mathbf a).$$ The same assertions hold for finite deterministic $P$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-exposure"
+  },
+  {
+   "claim_id": "C7",
+   "exact_statement": "Suppose a random permutation matrix $\\Pi$ on a finite set is a distributional limit of products of independent Bernoulli transpositions and deterministic permutations. If $K=\\mathbb E\\Pi$, then $$\\label{eq:exterior-moments}\n            \\mathbb E\\bigwedge\\nolimits^k\\Pi=\\bigwedge\\nolimits^kK\n                        \\qquad(0\\le k\\le|V|).$$ For every fixed exposure and finite set of cuts, the layered permutation obtained under $\\mathbb Q_{\\mathbf a}$ by following holes to the next cyclic cut has this property.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-exterior-moments"
+  },
+  {
+   "claim_id": "C8",
+   "exact_statement": "Let $V=I\\sqcup B$ be a finite set with $I\\ne\\varnothing$. Suppose a random permutation matrix $\\Pi$ satisfies <a href=\"#eq:exterior-moments\" data-reference-type=\"eqref\" data-reference=\"eq:exterior-moments\">[eq:exterior-moments]</a>, and let $K=\\mathbb E\\Pi$. Let $G_I$ be the event that every cycle meets $I$. On $G_I$, let $\\Sigma$ be the column-forward permutation matrix on $I$ giving the next positive visit to $I$. Then $$\\label{eq:all-hit-determinant}\n                         \\Pr(G_I)=\\det(I-K_{BB}).$$ If this probability is positive, then $K_{BB}$ is transient and $$\\label{eq:conditional-next-pin}\n \\mathbb E[\\Sigma\\mid G_I]\n       =K_{II}+K_{IB}(I-K_{BB})^{-1}K_{BI}.$$ The right-hand side is the first positive $I$-hitting kernel of the Markov chain with independent transitions according to $K$. If $B$ is empty, the determinant is one and the correction is zero.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-next-pin-kernel"
+  },
+  {
+   "claim_id": "C9",
+   "exact_statement": "For almost every exposure under $\\mathbb P_P$ and every $i\\in T$, $$\\mathbb P_P(\\mathcal R_i(E,T)\\mid\\mathscr H)=q_i(\\mathbf a).$$ In particular, $$\\label{eq:fresh-return}\n                m_Tr(E,T)=\\mathbb E_P\\sum_{i\\in T}q_i(\\mathbf a).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-fresh-walk"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "Suppose $R\\ge R_0$ and $t$ is regular for $z$ at radius $R$. Every nonnegative function $v$ on $\\mathcal H_t$, supported on slots above $\\mathfrak B_R(z)$, satisfies $$\\label{eq:local-nash}\n \\|v\\|_2^{10/3}\\le C\\mathcal D_t(v)\\|v\\|_1^{4/3}.$$ The constant is independent of $R,z,t$ and the unavailable slots.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-nash"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "Consider an available-slot nearest-neighbor graph on $\\mathbb Z^3$, with at most $\\ell$ slots per site, all pairs of available slots above each nearest-neighbor site edge joined, and all slots available outside a finite set. Suppose $z$ satisfies the two conditions in Definition <a href=\"#def:regular\" data-reference-type=\"ref\" data-reference=\"def:regular\">11</a> for this graph, and $R\\ge R_0$. For each available slot $a$ at $y\\in B_R(z)$, there is a flow $F_a$ such that $$\\label{eq:global-flow-envelope}\n \\mathop{\\mathrm{div}}F_a=\\mathbf 1_{\\{a\\}},\\qquad\n |F_a(e)|\\le C(1+\\mathop{\\mathrm{dist}}(e,y))^{-k},\\qquad\n k=2-3\\nu=\\frac{199}{100}.$$ The flows can be chosen with the following common routing construction. For each blocked component $C$, thicken it by supremum radius four, fill the finite nearest-neighbor components of the complement, and call the resulting finite hull $H_C$. Let $\\operatorname{Box}_C^+$ be the unit enlargement of the coordinate bounding box of that thickening. The hull lies in this box. Keep the inclusion-maximal hulls, which are disjoint, and send each original site in such a hull to a chosen surviving exterior-boundary representative, fixing other sites. Apply this map only once to each original endpoint.*\n\n\n*There are simple surviving routes for the original lattice edges. Each route is contained in its original edge together with the boxes $\\operatorname{Box}_C^+$ of the maximal hulls containing its original endpoints. Lift the routes using a fixed available slot at every surviving site. The flow $F_a$ is the sum of a unit path flow along a connector of uniformly bounded length and displacement from $a$, and the routed values of a lattice unit flow $G_y$ satisfying $$\\label{eq:lattice-flow-envelope}\n |G_y(e')|\\le C(1+\\mathop{\\mathrm{dist}}(e',y))^{-2}.$$ All constants are uniform over the graph, anchor, radius, and source.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-routed-flow"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Let $R\\ge R_0$, and let $(z_i)_{i=1}^m$ be a sparse list of centers, counting repetitions. At a fixed slice let $I\\subseteq\n\\{1,\\ldots,m\\}$ be any subset for which the slice is regular for $z_i$ at radius $R$. For $i\\in I$, let $\\mu_i\\ge0$ be a mass on the available slots, supported above $\\mathfrak B_R(z_i)$ and with total mass at most one. For every finitely supported real $Y$, $$\\label{eq:sparse-source-pairing}\n \\left|\\left\\langle\\sum_{i\\in I}\\mu_i,Y\\right\\rangle\\right|^2\n \\le C m R^\\alpha\\mathcal D_t(Y).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-sparse-energy"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "The same flows as in Lemma <a href=\"#lem:routed-flow\" data-reference-type=\"ref\" data-reference=\"lem:routed-flow\">13</a> satisfy $$\\label{eq:near-flow-envelope}\n |F_a(e)|\\le C(1+h)^{-2}\n \\qquad\\text{if }h=\\mathop{\\mathrm{dist}}(e,y)\\le R.$$ The constant and the lower threshold $R_0$ are independent of $R$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-near-flow"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "Suppose $R\\ge R_0$, $1\\le\\tau\\le R$, and the slice $t$ is regular for $z$ at radius $R$. Let $\\mu\\ge0$ be supported on available slots above $\\mathfrak B_R(z)$, with $$\\|\\mu\\|_1\\le1,\\qquad \\|\\mu\\|_2\\le C_1\\tau^{-3/4}.$$ For every finitely supported real function $Y$ on $\\mathcal H_t$, $$\\label{eq:spread-source-pairing}\n |\\langle\\mu,Y\\rangle|^2\n \\le C\\tau^{-1/2}\\mathcal D_t(Y).$$ The constant may depend on $C_1$ and the fixed geometry, but is independent of $\\tau,R$, the slice, and the volume.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-spread-energy"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "Assume $\\mathsf I(P)$. At every deterministic time $t$, in every coset, a prescribed set $A$ of distinct coordinate sites satisfies $$\\begin{aligned}\n \\mathbb P_P(A\\subseteq\\mathcal O_t^\\gamma)&\\le Cp^6\n &&\\text{if }|A|=6,\\label{eq:six-blocking}\\\\\n \\mathbb P_P(A\\subseteq\\mathcal O_t^\\gamma)&\\le(C\\sqrt p)^{|A|}\n &&\\text{if }A\\ne\\varnothing\\text{ is sparse}.\n \\label{eq:sparse-blocking}\n\\end{aligned}$$ The constants are uniform in the choice and size of the grid.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-blocking"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "There are $\\beta_0,c,C,\\lambda>0$ such that, if $\\beta\\ge\\beta_0$ and $\\mathsf I(P)$ holds, then $$\\label{eq:component-tail}\n \\mathbb P_P\\bigl(w\\in\\mathcal O_t^\\gamma,\n   \\operatorname{rad}_w\\mathcal C_t^\\gamma(w)\\ge h\\bigr)\n \\le C\\exp(-ch^\\lambda),\\qquad h\\ge1.$$ This holds for every deterministic time $t$, coset $\\gamma$, and coordinate site $w$, with the same constants for all $\\beta\\ge\\beta_0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-component-tail"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "Under $\\mathsf I(P)$, for $\\beta\\ge\\beta_0$, every deterministic time $t$, anchor $z\\in\\mathbb Z^3$, and radius $R\\ge1$ satisfy $$\\label{eq:irregularity}\n \\mathbb P_P(t\\text{ is not regular for }z\\text{ at radius }R)\n \\le\\delta_R:=CR^3p^6+C\\exp(-cR^\\xi),\n \\qquad \\xi=\\nu\\lambda>0.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-irregularity"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "One may choose $a$ in <a href=\"#eq:scales\" data-reference-type=\"eqref\" data-reference=\"eq:scales\">[eq:scales]</a> independently of $K$ so that the following holds, without assuming $\\mathsf I(P)$. Let $i$ be a deterministic slot point that is almost surely a hole under the exposure law for an allowed pin set $P$, and put $z=\\bar x_i$. Let $\\mathcal K$ be a deterministic schedule of at most $2K+2$ full or partial boundary-killed traversals starting at $i$, each in either direction and each covering at most one period. Use matching layers at every concatenation. If $\\mathcal K_R$ is localized throughout at $z$, then $$\\label{eq:localization-loss}\n \\mathbb E_P\\bigl\\|(\\mathcal K-\\mathcal K_R)\n          \\mathbf 1_{\\{i\\}}\\bigr\\|_1\\le C_K e^{-c\\beta}.$$ The same estimate holds for localization of the walk on the full slot lattice, with all slots available and no exposed trajectories.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-localization"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "Fix an exposure good for $z,R_K$. Let a kernel be a subinterval of a concatenation of full traversals in arbitrary directions, localized throughout at $z$. For every nonnegative input of mass at most one, its output after elapsed time $b'\\ge\\beta/16$ satisfies $$\\label{eq:diffusion-l2}\n \\|v_{\\rm out}\\|_2\\le C(b')^{-3/4}.$$ The same statement holds for the adjoint of any such subinterval. For such a kernel $\\mathcal K_R$ of length $b'\\ge\\beta/8$, $$\\label{eq:diffusion-entry}\n \\max_{j,k}(\\mathcal K_R)_{jk}\\le C(b')^{-3/2}.$$ The constants are independent of $K$ and $R_K$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-diffusion"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "Let $E$ be allowed and let $T\\ne\\varnothing$ be a finite set of slot points at a deterministic cut $\\theta$, disjoint from $E$. Put $P=E\\cup T$, $m_T=|T|$, and $\\eta=\\mathbf 1_{T}$. At almost every exposure under $\\mathbb P_P$, define $f=1$ on $T$; at every other cut hole let $f$ be the probability that the boundary-killed fresh walk ever hits $T$ at a subsequent integer turn. Then $0\\le f\\le1$, $f$ has zero boundary values, and, for $g=f-\\eta$, $$\\label{eq:hitting-energy}\n \\sum_{i\\in T}q_i(\\mathbf a)\n \\le m_T-\\langle f,A_Qf\\rangle\n =\\langle\\eta,Q\\eta\\rangle+2\\langle Q\\eta,g\\rangle\n       -\\langle g,A_Qg\\rangle.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-hitting-energy"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "With these definitions and zero extension to the available-slot graph at the split, $$\\label{eq:suffix-energy}\n \\int_I\\mathcal D_{t_d(u)}(Y_d(u))\\,du\n \\le\\frac12\\bigl(\\|y\\|_2^2-\\|U_d^*y\\|_2^2\\bigr)\n \\le E_y.$$ Moreover $\\|Y_d(u)\\|_\\infty\\le\\|y\\|_\\infty$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-suffix-energy"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "There is $\\beta_1<\\infty$, independent of the cube and pins, such that for every $\\beta\\ge\\beta_1$, every allowed pin set $E$, and every nonempty sparse set $T$ at one deterministic time, disjoint from $E$, $$\\label{eq:sparse-pins}\n \\mathbb P_E(T\\subseteq\\mathcal B_E)\n \\le\\beta^{-9|T|/10}.$$ Consequently <a href=\"#eq:irregularity\" data-reference-type=\"eqref\" data-reference=\"eq:irregularity\">[eq:irregularity]</a> and <a href=\"#eq:good-exposure\" data-reference-type=\"eqref\" data-reference=\"eq:good-exposure\">[eq:good-exposure]</a> hold under every allowed pin law, with no induction hypothesis.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-sparse-pins"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "For almost every exposure, define $$v=\\sum_{n=1}^{K-1}Q^n\\eta,\\qquad y=g-v,\\qquad\n E_y=\\langle y,A_Qy\\rangle,$$ with the empty sum interpreted as zero. Then $E_y\\ge0$, $\\|y\\|_\\infty\\le K+1$, and the fresh return probability satisfies $$\\label{eq:return-expansion}\n q_i\\le\\sum_{n=1}^{2K-1}\\langle\\eta,Q^n\\eta\\rangle\n          +2\\langle Q^K\\eta,y\\rangle-E_y .$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-return-expansion"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "For every fixed integer $K\\ge1$, as $\\beta\\to\\infty$, $$\\label{eq:long-tail}\n \\mathbb E_P\\bigl[2\\langle Q^K\\eta,y\\rangle-E_y\\bigr]\n \\le C K^{-1/2}\\beta^{-3/2}+o_K(\\beta^{-3/2}).$$ Here $C$ depends only on the fixed interaction, spin, and geometric choices, and is independent of $K$. The error has the uniformity specified above.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-long-tail"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "For every sufficiently large $\\beta$, uniformly in all allowed pin sets $E$, cubes, cuts, and slot-time points $i\\notin E$, $$\\label{eq:singleton-return}\n r(E,\\{i\\})\\le C\\beta^{-3/2}.$$ Consequently, for every allowed pin set $D$ and every slot-time point $j$ at a deterministic time, $$\\label{eq:free-slot}\n \\mathbb P_D(j\\in\\mathcal B_D)\\le C\\beta^{-3/2}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-singleton-bound"
+  },
+  {
+   "claim_id": "C26",
+   "exact_statement": "The full site kernel satisfies $$\\label{eq:ideal-site-bounds}\n \\sup_{y,w}p_t(y,w)\\le C(1+t)^{-3/2},\\qquad\n p_t(x,x)=t^{-3/2}(\\kappa+o(1)).$$ The first estimate holds for all $t\\ge0$; the second is as $t\\to\\infty$. For every fixed $K$, every $1\\le n\\le2K$, and every direction word of length $n$, $$\\label{eq:ideal-diagonal}\n (\\widehat W_\\infty(\\mathbf d))_{ii}\n =\\ell^{-1}p_{n\\beta}(x,x)\n =\\beta^{-3/2}\\bigl((\\kappa/\\ell)n^{-3/2}+o_K(1)\\bigr).$$ The error is uniform in the word, cut, and initial slot. Always, $$\\label{eq:ideal-killed-upper}\n 0\\le(\\widehat W_R(\\mathbf d))_{ii}\n \\le(\\widehat W_\\infty(\\mathbf d))_{ii}.$$ If $\\mathfrak B_R(z)\\subseteq\\Lambda^\\circ$, then $$\\label{eq:ideal-killed-interior}\n 0\\le(\\widehat W_\\infty(\\mathbf d))_{ii}\n          -(\\widehat W_R(\\mathbf d))_{ii}\n \\le C_K e^{-c\\beta}.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-ideal-kernel"
+  },
+  {
+   "claim_id": "C27",
+   "exact_statement": "For every fixed $K$, $$\\label{eq:finite-word}\n \\left|\\mathbb E_P[(W_R(\\mathbf d))_{ii}]\n                 -(\\widehat W_R(\\mathbf d))_{ii}\\right|\n       =o_K(\\beta^{-3/2}).$$ The error is uniform over $1\\le n\\le2K$, all direction words of length $n$, all cubes, deterministic cuts and slots, and all allowed pin sets $E$ with arbitrary finitely many extra pins. The product inside the expectation is formed before averaging over the exposure.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-finite-word"
+  },
+  {
+   "claim_id": "C28",
+   "exact_statement": "There is a constant $C<\\infty$, independent of $K$, with the following property. For every integer $K\\ge1$ there are $\\beta_K<\\infty$ and a nonnegative function $\\epsilon_K(\\beta)\\to0$ as $\\beta\\to\\infty$, such that for $\\beta\\ge\\beta_K$, every finite cube, every allowed pin set $E$, and every deterministic slot-time point $i$, $$\\label{eq:down-upper}\n d_E(i)\\le\\beta^{-3/2}\n \\left(\\frac\\kappa\\ell\\sum_{n=1}^{2K-1}n^{-3/2}\n                  +CK^{-1/2}+\\epsilon_K(\\beta)\\right).$$ If the site $x$ of $i$ additionally satisfies $$\\label{eq:pin-free-ball}\n \\mathfrak B_{R_K}(\\bar x)\\subseteq\\Lambda^\\circ,\n \\qquad E\\text{ has no pin over }\\mathfrak B_{R_K}(\\bar x),$$ then $$\\label{eq:down-lower}\n d_E(i)\\ge\\beta^{-3/2}\n \\left(\\frac\\kappa\\ell\\sum_{n=1}^{K}n^{-3/2}\n                                      -\\epsilon_K(\\beta)\\right).$$ For $i\\notin E$, the same two bounds hold for $r(E,\\{i\\})$, with the same choice of error function. The threshold and error function are independent of the cube, cut, slot, and number, locations, and times of all finite extra pins. Only the fixed model and geometric choices, and $K$, may affect them.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-return-bounds"
+  },
+  {
+   "claim_id": "C29",
+   "exact_statement": "For every fixed $\\beta>0$ and $h\\ge0$, $$\\lim_{N\\to\\infty}p_N^+(h)=p_\\beta(h).\n \\label{eq:boundary-pressure}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-pressure-equivalence"
+  },
+  {
+   "claim_id": "C30",
+   "exact_statement": "For $h\\ge0$, the colored-picture law defining $Z^+_\\Lambda(h)$ is a mixture of the zero-field pinned laws with pin sets $E=D_0\\cup F$, where $F$ consists of time-zero slots. Under the mixing law, $$\\Pr(i\\in F)\\le b(h):=1-e^{-\\beta h}\n \\qquad\\text{for every time-zero slot }i.\n \\label{eq:pin-marginal}$$ Moreover, $$S-(p_N^+)'(h)\n   =\\frac1V\\sum_{i\\in V_\\Lambda}\\mathbb E_F[d_{D_0\\cup F}(i)].\n \\label{eq:field-deficit}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-pin-mixture"
+  }
+ ],
+ "paper": "papers/EN-117-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-H-0570_PM-271.1_Bloch_s_Law_for_Finite_Range_Heisenberg_Ferromagnets_in_Three_Dimensions.md",
+ "purpose": "Bloch's Law for Finite-Range Heisenberg Ferromagnets in Three Dimensions",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "899e06b9e0ce8ad69341857770a2a4f88a83cf48e6dd68571828462af36a44f6",
+   "pm.domains.v2": "f719a38da357279cda11edd1cca0fff9b877b381b33892527014b05ae69cf6ec",
+   "pm.edges.v2": "f47f090e87baf271962dfdbd206517df54c8aa4d717187468c8c0ab7b45cf614",
+   "pm.extraction.v2": "4279a9e72183c5cc3509bf6beda3450637953b531d5a3ddfdfde22633b605c58",
+   "pm.formal.v2": "99696e2498eb87c4f951384583eb80a98d19d9d46ab5790274fff2a9360b525d",
+   "pm.limits.v2": "a5db447a05e1ea9e7de5fed8875875cd2d0c9c374e4b57c0bcf4769f127dcdf6",
+   "pm.node.v2": "48e81745d441d62bab7e09c3100f205a0cefb27aac63c924731abdbdd33c1fc2",
+   "pm.objects.v2": "8fca9edfc4ec908a3fb15e9a7aa158381af12f29ba0f4cbfb242ef390c597e6c",
+   "pm.provenance.v2": "da129a78386deb393fcb5f3e44079c7af47c8594fa43408ffe6c9dcab6564268",
+   "pm.quantities.v2": "e33bfa9578024dd68a5f35814cefe39a1185fcdf69d1b6aeb821bd585aaef2cb",
+   "pm.reading.v2": "4217f985c5850cb1aa208ead059807e696bdb7429e6badb7460069e3521ac673",
+   "pm.roadmap.v2": "982c9a3530c1ecce775d8863846cb098b7dd2e05515640b3ad357d487a53b9b2",
+   "pm.search.v1": "f6084ff6bc88d060018a324a8e0bbdc56e47456612f6e766bcbf80bd37621c64",
+   "pm.triptych.v2": "169fdfc3dbdbc750ee0bf7bdddc614cb4bacc0f6d0740f7e44abbc15d1928220"
+  },
+  "canonical_sha256": "034f4eddddd56d97c03da4246d7a1c08b3e570801d568476961fe3c32e9e7cf3",
+  "paper_sha256": "1134d364db0d9d50f8feebcb34e61bb2096ea0621d39d76bff8dcff28a8369b5",
+  "repaired_body_sha256": "d3edd0e2b71995243e474e4bd0e95924ea64e9ec86608a428a56b944f0c5c400"
+ },
+ "status": "ACTIVE",
+ "subject_id": 17,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "06c4d0d9f374feb33245f9a4547775b37685645fb092ec03c7e3ebe65b8dffac",
+   "receipt_sha256": "9ccfaa34d1fd59a8ae6a7af0a7632190a4fcf8913e5f22012dde6a41a6339158",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive n=1..3, all nonempty pin subsets, zero to two transpositions, probabilities 0, 1/2, 1, identity final permutation; additionally all final permutations on three vertices with fixed probabilities 1/3 and 2/3.",
+     "coverage": "PARTIAL",
+     "invariant_id": "next-pin",
+     "oracle_basis": "Exact Fraction-weighted enumeration of every Bernoulli outcome; direct cycle tracing and next positive pin visits, without determinant or matrix inverse."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M_det",
+     "observed_exit": 1,
+     "receipt_sha256": "600eef9ac757709bdd9b6dae341e275fee6d5db1e470cb89e59f43b2dd0c0187"
+    },
+    {
+     "id": "M_correction",
+     "observed_exit": 7,
+     "receipt_sha256": "2f68db28b851614194a2add815f9d2eed0403982f6110fef51041de1244b3112"
+    },
+    {
+     "id": "M_orientation",
+     "observed_exit": 7,
+     "receipt_sha256": "c528968dffc24a4025ea5ae9ff4e1a03f94ec7cb95a67f39248a5b8e0ff9f87f"
+    }
+   ],
+   "receipt_sha256": "b5278581c959036685599a4c5df93d178a7abe7120aaab82c5a3fe1d20881027",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Bloch's Law for Finite-Range Heisenberg Ferromagnets in Three Dimensions"
+}

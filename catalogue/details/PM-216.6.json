@@ -1,0 +1,562 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1209637,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 340435
+ },
+ "coordinate": "EN-115-000-0020-2-2026-PR-T4-UK-EX-M2-C-PH-M-0414",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "mathematical statistical mechanics",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-6",
+     "quote": "They assert neither a spin-field limit at the BKT endpoint nor equality of the two models’ effective coefficients at the same bare $b$.",
+     "quote_sha256": "7c2c392935a94b4abf502d1109642da73dd7fa5c5ec447dd2667048904b6a4ad"
+    }
+   ],
+   "query": "Spin-field limit at the BKT endpoint",
+   "reason": "The spin results apply only at sufficiently large fixed inverse temperatures."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-6",
+     "quote": "They assert neither a spin-field limit at the BKT endpoint nor equality of the two models’ effective coefficients at the same bare $b$.",
+     "quote_sha256": "7c2c392935a94b4abf502d1109642da73dd7fa5c5ec447dd2667048904b6a4ad"
+    }
+   ],
+   "query": "Equality of XY and Villain effective coefficients at the same bare inverse temperature",
+   "reason": "The coefficient bridge is specific to Villain duality; equality between the spin models is not asserted."
+  }
+ ],
+ "family": "PM-216",
+ "id": "PM-216.6",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-main-heights",
+    "claim_id": "C1",
+    "statement": "For every admissible $J$, the threshold in Equation <a href=\"#main:physical-threshold\" data-reference-type=\"eqref\" data-reference=\"main:physical-threshold\">[main:physical-threshold]</a> satisfies $0<\\beta_{\\mathrm c}(J)<\\infty$."
+   },
+   {
+    "anchor": "stmt-main-spins",
+    "claim_id": "C2",
+    "statement": "For each $M\\in\\{\\mathrm{Villain},\\mathrm{XY}\\}$ there are a finite $b_0(M)>0$ and functions $K_M(b)>1/(4\\pi)$ and $A_M(b)>0$, defined for all $b\\ge b_0(M)$, with $K_M(b)/b\\to1$ as $b\\to\\infty$, such that $$\\label{main:spin-limit}\n S_{M,b,n}:=n^{-2}\\sum_{x\\in D_n^\\circ}\n       A_M(b)e^{G_n(x,x)/(2K_M(b))}e^{i\\theta_x}\\delta_x\n       \\ \\Longrightarrow\\ V_{K_M(b),D}$$ along the full sequence of integers $n\\to\\infty$, with tightness and convergence in $H^{-3}_{\\mathrm{loc}}(D)$."
+   },
+   {
+    "anchor": "stmt-main-bridge",
+    "claim_id": "C3",
+    "statement": "The choices in Theorem <a href=\"#main:spins\" data-reference-type=\"ref\" data-reference=\"main:spins\">2</a> can be made so that $\\pi^2b\\ge\\beta_{\\mathrm c}(J_{\\mathrm{nn}})$ throughout the asserted Villain range and $$\\label{main:bridge-equality}\n K_{\\mathrm{Villain}}(b)\n       =\\frac{\\beta_{\\mathrm{eff}}(J_{\\mathrm{nn}},\\pi^2b)}{\\pi^2}.$$"
+   },
+   {
+    "anchor": "stmt-st-finite-gaussian",
+    "claim_id": "C4",
+    "statement": "Let $\\mathcal L$ be a lattice in a finite-dimensional Euclidean space $E$, let $V=\\operatorname{span}\\mathcal L$, and let $P_V$ be orthogonal projection onto $V$."
+   },
+   {
+    "anchor": "stmt-st-free-rectangle-limit",
+    "claim_id": "C5",
+    "statement": "There is a number $a=a(k)\\in[0,k]$ such that $a_m(k)\\to a$."
+   },
+   {
+    "anchor": "stmt-st-fractional-mean",
+    "claim_id": "C6",
+    "statement": "Suppose $a(k)>0$, and let $u_m$ be the uniform probability on $B_m$."
+   },
+   {
+    "anchor": "stmt-st-charge-gap",
+    "claim_id": "C7",
+    "statement": "For every admissible $J$ and $k>0$, $$\\label{st:gap}\n a(k)=0\\quad\\hbox{or}\\quad 8\\pi\\le a(k)\\le k.$$"
+   },
+   {
+    "anchor": "stmt-st-zero-localization",
+    "claim_id": "C8",
+    "statement": "If $a(k)=0$, there is a finite constant $C_{J,k}$ such that $$\\label{st:localized-criterion}\n \\sup_{R\\ge1}\\mathbb E_{\\mu^0_{J,v^2k,R}}h_0^2\\le C_{J,k}.$$ Moreover, there is a fixed integer $m\\ge1$ for which centered height laws on every sufficiently large square torus of side divisible by $m$ satisfy $\\sup_{x,y}\\mathbb E(h_x-h_y)^2\\le C_{J,k,m}$."
+   },
+   {
+    "anchor": "stmt-an-dirichlet-torus",
+    "claim_id": "C9",
+    "statement": "For $a(k)>0$, the centered, unprojected zero-Dirichlet height law on every fixed square converges, in smooth density observations and their Laplace transforms, to the real zero-Dirichlet GFF of covariance $a(k)(-\\Delta_D)^{-1}$."
+   },
+   {
+    "anchor": "stmt-an-physical-criterion",
+    "claim_id": "C10",
+    "statement": "For every fixed $J$ and $k>0$, $$a(k)>0\\quad\\Longleftrightarrow\\quad\n \\sup_{R\\ge1}\\mathbb E_{\\mu^0_{J,v_J^2k,R}}h_0^2=\\infty.\n \\label{an:physical-equivalence}$$"
+   },
+   {
+    "anchor": "stmt-an-coefficient-regularity",
+    "claim_id": "C11",
+    "statement": "The function $a:(0,\\infty)\\to[0,\\infty)$ is nondecreasing, upper semicontinuous, and bounded above by $k$."
+   },
+   {
+    "anchor": "stmt-rg-kernels",
+    "claim_id": "C12",
+    "statement": "Set $p=32$, $\\gamma=1/16$, and assume $|s|\\le1/4$."
+   },
+   {
+    "anchor": "stmt-rg-partition-map",
+    "claim_id": "C13",
+    "statement": "Under the locality, finite-range, and norm hypotheses already specified, shell integration, localizations on small linear inputs, and extraction of their designated field-independent coefficients define activities $K'$ and numbers $a_b$, one at each coarse block, satisfying the exact identity $$\\label{rg:exact-map}\n \\mathbb E\\mathcal Z_m(K;\\phi+\\zeta)\n =\\prod_{b\\in\\mathcal B_S}(1+a_b)\\mathcal Z_S(K';\\phi).$$ The map preserves the period, locality, and every symmetry respected by the designated localizations."
+   },
+   {
+    "anchor": "stmt-vi-duality",
+    "claim_id": "C14",
+    "statement": "Let $D_n$ be the spin square defined in Section <a href=\"#main:spin-models\" data-reference-type=\"ref\" data-reference=\"main:spin-models\">1.2</a>, and set $M=2n$."
+   },
+   {
+    "anchor": "stmt-vi-villain-spin",
+    "claim_id": "C15",
+    "statement": "There is $b_0(\\mathrm V)<\\infty$ such that for every $b\\ge b_0(\\mathrm V)$ the ordinary Villain model with zero boundary angles satisfies $$n^{-2}\\sum_{x\\in D_n^\\circ}\n A_{\\mathrm V}(b)\\exp\\{G_n(x,x)/(2K_{\\mathrm V}(b))\\}\n       e^{i\\theta_x}\\delta_x\n \\ \\Longrightarrow\\ V_{K_{\\mathrm V}(b),D}\n       \\quad\\hbox{in }H^{-3}_{\\mathrm{loc}}(D)$$ along all integers $n\\to\\infty$, with joint convergence of every finite collection of complex smears and convergence of all their mixed moments."
+   },
+   {
+    "anchor": "stmt-xyh-contraction",
+    "claim_id": "C16",
+    "statement": "Fix one live Gaussian root."
+   },
+   {
+    "anchor": "stmt-xyf-spin",
+    "claim_id": "C17",
+    "statement": "There is $b_0(\\mathrm{XY})<\\infty$ such that for every fixed $b\\ge b_0(\\mathrm{XY})$, the choices $$K_{\\mathrm{XY}}(b)=\\frac{b}{s+d_c^2/\\mu},\n \\qquad A_{\\mathrm{XY}}(b)=c_b^{-1}\n \\label{xyf:stiffness}$$ satisfy $K_{\\mathrm{XY}}(b)>1/(4\\pi)$, $A_{\\mathrm{XY}}(b)>0$, and $K_{\\mathrm{XY}}(b)/b\\to1$."
+   },
+   {
+    "anchor": "stmt-wh-map",
+    "claim_id": "C18",
+    "statement": "Choose the regulator parameters and $h_0$ first, then $L$ sufficiently large, and then $A$ sufficiently large depending on $L$."
+   },
+   {
+    "anchor": "stmt-wh-quadratic-coefficients",
+    "claim_id": "C19",
+    "statement": "In the continuum limit at $a'=k_0$, the balanced coefficients are independent of the scale and satisfy $$\\label{wh:coefficient-signs}\n b^{tt}=0,\\qquad b^{tz}=-b<0,\\qquad b^{zz}=-H<0.$$ The positive numbers $b,H$ stay in compact subintervals of $(0,\\infty)$ as $u$ ranges over the compact interval in Lemma <a href=\"#wh:kernels\" data-reference-type=\"ref\" data-reference=\"wh:kernels\">69</a>."
+   },
+   {
+    "anchor": "stmt-wh-high-temperature",
+    "claim_id": "C20",
+    "statement": "For every admissible fixed $J$, the positive-coefficient regime is nonempty and its physical onset is finite."
+   },
+   {
+    "anchor": "stmt-wh-spread-out",
+    "claim_id": "C21",
+    "statement": "For the spread-out family, $$\\frac{\\beta_{\\mathrm c}(J_\\rho)}{8\\pi v_{J_\\rho}^2}\\longrightarrow1.$$"
+   },
+   {
+    "anchor": "stmt-en-entry",
+    "claim_id": "C22",
+    "statement": "Fix $J,k_h,a_h$ as above."
+   },
+   {
+    "anchor": "stmt-ep-gaussian-curves",
+    "claim_id": "C23",
+    "statement": "Fix $J$, an allowed compact interval of reference coefficients, and admissible long-map parameters, including $L,A,h_0,\\kappa$, the regulator margins $h_*,p_1,p_2$ when $e^V$ is used, and the terminal clearance $D$."
+   },
+   {
+    "anchor": "stmt-ep-finite-response",
+    "claim_id": "C24",
+    "statement": "For a pinned periodic height law with precision $A_0/k$, let $C$ denote its covariance."
+   },
+   {
+    "anchor": "stmt-ep-supermarginal",
+    "claim_id": "C25",
+    "statement": "If $a(k_h)>8\\pi$, then $k_h$ has an open neighborhood on which $a>8\\pi$ and $a$ is continuously differentiable."
+   },
+   {
+    "anchor": "stmt-ep-state-strip",
+    "claim_id": "C26",
+    "statement": "At $k_c$, after a finite step and a choice of the half-period convention, $$Z_j>0,\\quad \\|B_{o,j}\\|\\le\\varepsilon Z_j,\\quad\n \\|B_{e,j}\\|\\le C_eZ_j^2 .$$ The first two remainder inequalities persist in a sufficiently small tube, also for sufficiently small $\\mu=1-\\lambda\\ge0$."
+   },
+   {
+    "anchor": "stmt-ep-derivative-dichotomy",
+    "claim_id": "C27",
+    "statement": "At the critical input the derivative either tends to zero in all coordinates, or its scalar part aligns with the unstable eigenspace of $$\\label{ep:critical-matrix}\n M=\\begin{pmatrix}0&-2H\\\\-b&-\\sqrt{bH}\\end{pmatrix}.$$ The second alternative actually occurs."
+   },
+   {
+    "anchor": "stmt-ep-infinite-response",
+    "claim_id": "C28",
+    "statement": "As $k\\downarrow k_c$, $$\\label{ep:infinite-derivative}\n \\frac{d}{dk}a(k)\\longrightarrow+\\infty ,\n \\qquad\n \\frac{a(k)-a(k_c)}{k-k_c}\\longrightarrow+\\infty .$$"
+   },
+   {
+    "anchor": "stmt-ep-height-conclusion",
+    "claim_id": "C29",
+    "statement": "For every admissible finite-range $J$, the uniquely determined effective temperature is $$\\beta_{\\mathrm{eff}}(J,\\beta)=v_J^2a(\\beta/v_J^2),\\qquad\n \\beta\\ge\\beta_{\\mathrm c}(J).$$ It has the field, Laplace-functional, and tightness conclusions in Theorem <a href=\"#main:heights\" data-reference-type=\"ref\" data-reference=\"main:heights\">1</a>, is differentiable for $\\beta>\\beta_{\\mathrm c}(J)$, and satisfies $$\\beta_{\\mathrm{eff}}(J,\\beta_{\\mathrm c}(J))=8\\pi v_J^2,\\qquad\n \\lim_{\\beta\\downarrow\\beta_{\\mathrm c}(J)}\n \\frac{\\beta_{\\mathrm{eff}}(J,\\beta)-\\beta_{\\mathrm{eff}}(J,\\beta_{\\mathrm c}(J))}\n      {\\beta-\\beta_{\\mathrm c}(J)}=+\\infty .$$ Its high-temperature normalization and spread-out onset are $$\\beta_{\\mathrm{eff}}(J,\\beta)=\\beta+O_J(e^{-c_J\\beta}),\\qquad\n \\frac{\\beta_{\\mathrm c}(J_\\rho)}{8\\pi v_{J_\\rho}^2}\\longrightarrow1 .$$ For nearest neighbors the endpoint value is $2\\pi$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Low-temperature spin-field convergence",
+    "evidence": [
+     {
+      "anchor": "pm-h-9",
+      "quote": "In either spin model, marked estimates give all separated fundamental spin correlations and a common insertion amplitude. The full field law then follows from a uniform two-point bound, Lee–Yang moment bounds, collision estimates, and Sobolev tightness. These steps retain the full Green diagonal in Equation <a href=\"#main:spin-limit\" data-reference-type=\"eqref\" data-reference=\"main:spin-limit\">[main:spin-limit]</a>.",
+      "quote_sha256": "4cd352a817b097dc981f3cd0111f76a22e088432004cffa89055eab7b0aeadeb"
+     }
+    ],
+    "requires_concepts": [
+     "Dirichlet Gaussian free field",
+     "imaginary Gaussian multiplicative chaos",
+     "Lee–Yang moment bounds",
+     "Sobolev tightness"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C1",
+   "exact_statement": "For every admissible $J$, the threshold in Equation <a href=\"#main:physical-threshold\" data-reference-type=\"eqref\" data-reference=\"main:physical-threshold\">[main:physical-threshold]</a> satisfies $0<\\beta_{\\mathrm c}(J)<\\infty$. The supremum there is finite when $0<\\beta<\\beta_{\\mathrm c}(J)$ and infinite when $\\beta\\ge\\beta_{\\mathrm c}(J)$, including equality.*\n\n\n*There are an integer $L=L(J)\\ge2$ and a unique positive function $\\beta_{\\mathrm{eff}}(J,\\beta)$, defined for $\\beta\\ge\\beta_{\\mathrm c}(J)$, such that along the full sequence $N\\to\\infty$ $$\\label{main:height-limit}\n H_N\\ \\Longrightarrow\\\n       \\sqrt{\\frac{\\beta_{\\mathrm{eff}}(J,\\beta)}{v_J^2}}\\,\\Phi_{\\mathbb T}\n       \\quad\\hbox{in }H^{-3}(\\mathbb T^2).$$ For every smooth real mean-zero $f$, $$\\label{main:height-laplace}\n \\lim_{N\\to\\infty}\\log\\mathbb Ee^{H_N(f)}\n =\\frac{\\beta_{\\mathrm{eff}}(J,\\beta)}{2v_J^2}\n           (f,(-\\Delta_{\\mathbb T})^{-1}f).$$ Furthermore, $$\\begin{aligned}\n \\beta_{\\mathrm{eff}}(J,\\beta_{\\mathrm c}(J))&=8\\pi v_J^2,\\label{main:height-endpoint}\\\\\n \\lim_{\\beta\\downarrow\\beta_{\\mathrm c}(J)}\n \\frac{\\beta_{\\mathrm{eff}}(J,\\beta)-\\beta_{\\mathrm{eff}}(J,\\beta_{\\mathrm c}(J))}{\\beta-\\beta_{\\mathrm c}(J)}\n    &=+\\infty.\\label{main:height-slope}\n\\end{aligned}$$ The function $\\beta_{\\mathrm{eff}}(J,\\cdot)$ is differentiable on $(\\beta_{\\mathrm c}(J),\\infty)$, and for some $c_J>0$, $$\\label{main:height-high-temperature}\n \\beta_{\\mathrm{eff}}(J,\\beta)=\\beta+O_J(e^{-c_J\\beta})\\qquad(\\beta\\to\\infty).$$ For $J_\\rho=\\{x\\in\\mathbb Z^2\\setminus\\{0\\}:|x|_\\infty\\le\\rho\\}$, $$\\label{main:height-spread}\n \\frac{\\beta_{\\mathrm c}(J_\\rho)}{8\\pi v_{J_\\rho}^2}\\longrightarrow1\n      \\qquad(\\rho\\to\\infty).$$ In particular $v_{J_{\\mathrm{nn}}}^2=1/4$ and the nearest-neighbor effective temperature at roughening is $2\\pi$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-main-heights"
+  },
+  {
+   "claim_id": "C2",
+   "exact_statement": "For each $M\\in\\{\\mathrm{Villain},\\mathrm{XY}\\}$ there are a finite $b_0(M)>0$ and functions $K_M(b)>1/(4\\pi)$ and $A_M(b)>0$, defined for all $b\\ge b_0(M)$, with $K_M(b)/b\\to1$ as $b\\to\\infty$, such that $$\\label{main:spin-limit}\n S_{M,b,n}:=n^{-2}\\sum_{x\\in D_n^\\circ}\n       A_M(b)e^{G_n(x,x)/(2K_M(b))}e^{i\\theta_x}\\delta_x\n       \\ \\Longrightarrow\\ V_{K_M(b),D}$$ along the full sequence of integers $n\\to\\infty$, with tightness and convergence in $H^{-3}_{\\mathrm{loc}}(D)$. For every finite collection of complex smooth compactly supported test functions, their smeared fields converge jointly, including real and imaginary parts. The coefficients $K_M(b)$ and $A_M(b)$ are independent of the test functions, the insertion locations, and $n$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-main-spins"
+  },
+  {
+   "claim_id": "C3",
+   "exact_statement": "The choices in Theorem <a href=\"#main:spins\" data-reference-type=\"ref\" data-reference=\"main:spins\">2</a> can be made so that $\\pi^2b\\ge\\beta_{\\mathrm c}(J_{\\mathrm{nn}})$ throughout the asserted Villain range and $$\\label{main:bridge-equality}\n K_{\\mathrm{Villain}}(b)\n       =\\frac{\\beta_{\\mathrm{eff}}(J_{\\mathrm{nn}},\\pi^2b)}{\\pi^2}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-main-bridge"
+  },
+  {
+   "claim_id": "C4",
+   "exact_statement": "Let $\\mathcal L$ be a lattice in a finite-dimensional Euclidean space $E$, let $V=\\operatorname{span}\\mathcal L$, and let $P_V$ be orthogonal projection onto $V$. Suppose $T\\ge0$ is symmetric and $T_V=P_VT|_V$ is positive definite. For $x\\in E$ set $w_T(x)=\\sum_{u\\in\\mathcal L+x}\\exp\\{-(u,Tu)/2\\}$. Then $$\\label{st:lattice-inequality}\n w_T(0)^2w_T(x+y)w_T(x-y)\\ge w_T(x)^2w_T(y)^2.$$ The covariance of the Gaussian on $\\mathcal L+x$ is at least that on $\\mathcal L$ at the same precision, in positive-semidefinite order; the same lower bound holds after a real linear tilt of the shifted law. For each fixed ambient displacement $x$, the ratio $w_{T+tB}(x)/w_{T+tB}(0)$ is nonincreasing in $t\\ge0$ whenever $B\\ge0$. For the centered Gaussian $H$ on $\\mathcal L$, every real linear test $X=(\\ell,H)$ satisfies $$\\label{st:mgf-sandwich}\n \\tfrac12\\operatorname{Var}(X)\\le\\log\\mathbb Ee^X\n \\le\\tfrac12(\\ell_V,T_V^{-1}\\ell_V),\\qquad \\ell_V=P_V\\ell.$$ Centered variances and real moment generating functions decrease when precision increases. For any two real linear tests, $$\\label{st:paired-cumulant}\n \\kappa(X,X,Y,Y)\n =\\mathbb EX^2Y^2-\\mathbb EX^2\\mathbb EY^2-2(\\mathbb EXY)^2\\ge0.$$ The centered characteristic function is strictly positive, and its logarithm has Hessian everywhere at least its Hessian at zero. These centered conclusions apply after added centered pins or equalities. For free graphs they apply to real tests annihilating every released constant. The centered characteristic function is strictly positive for characters invariant under every released translation, and its logarithmic Hessian comparison holds along directions annihilating those constants. The probability of a specified collection of centered lattice equalities increases under a positive-semidefinite increase of precision.",
+   "kind": "bound",
+   "statement_anchor": "stmt-st-finite-gaussian"
+  },
+  {
+   "claim_id": "C5",
+   "exact_statement": "There is a number $a=a(k)\\in[0,k]$ such that $a_m(k)\\to a$. Let $B_n$ be discrete axis rectangles at mesh $n^{-1}$ whose endpoints converge to those of a fixed nondegenerate rectangle $B$. For every finite collection of smooth shifts $g$ on a neighborhood of $\\overline B$, $$\\label{st:rectangle-laplace}\n \\log\\mathbb E_{B_n,k}\\exp\\{(h,A_{B_n}g(\\cdot/n))\\}\n \\longrightarrow \\frac a2\\int_B|\\nabla g|^2.$$ The corresponding tests converge jointly to centered Gaussian variables with covariance $a\\int_B\\nabla g\\cdot\\nabla g'$; all joint moments converge. For zero-total profiles $f_n$ whose scaled piecewise constant densities $n^2f_n$ converge in $L^2(B)$ to a bounded piecewise continuous $f$ of integral zero, the corresponding assertion is $$\\label{st:rectangle-smear}\n \\log\\mathbb E_{B_n,k}e^{(h,f_n)}\n \\longrightarrow \\frac a2(f,(-\\Delta_{B,N})^{-1}f)_{L^2(B)}.$$ Here the inverse Neumann Laplacian is on integral-zero functions. These statements hold along every such sequence of rectangles and jointly for mixed finite lists of the displayed tests.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-st-free-rectangle-limit"
+  },
+  {
+   "claim_id": "C6",
+   "exact_statement": "Suppose $a(k)>0$, and let $u_m$ be the uniform probability on $B_m$. Then $(h,u_m)$ modulo $2\\pi$ converges to uniform measure on the circle, independently of the Gaussian observations in Theorem <a href=\"#st:free-rectangle-limit\" data-reference-type=\"ref\" data-reference=\"st:free-rectangle-limit\">5</a> on a square. More generally, for every fixed $l\\in\\mathbb Z\\setminus\\{0\\}$ and every sequence of zero-total profiles $t_m$ of uniformly bounded bare inverse energy, $$\\label{st:vanishing-phase}\n w_{B_m}(lu_m+t_m)\\longrightarrow0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-st-fractional-mean"
+  },
+  {
+   "claim_id": "C7",
+   "exact_statement": "For every admissible $J$ and $k>0$, $$\\label{st:gap}\n a(k)=0\\quad\\hbox{or}\\quad 8\\pi\\le a(k)\\le k.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-st-charge-gap"
+  },
+  {
+   "claim_id": "C8",
+   "exact_statement": "If $a(k)=0$, there is a finite constant $C_{J,k}$ such that $$\\label{st:localized-criterion}\n \\sup_{R\\ge1}\\mathbb E_{\\mu^0_{J,v^2k,R}}h_0^2\\le C_{J,k}.$$ Moreover, there is a fixed integer $m\\ge1$ for which centered height laws on every sufficiently large square torus of side divisible by $m$ satisfy $\\sup_{x,y}\\mathbb E(h_x-h_y)^2\\le C_{J,k,m}$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-st-zero-localization"
+  },
+  {
+   "claim_id": "C9",
+   "exact_statement": "For $a(k)>0$, the centered, unprojected zero-Dirichlet height law on every fixed square converges, in smooth density observations and their Laplace transforms, to the real zero-Dirichlet GFF of covariance $a(k)(-\\Delta_D)^{-1}$. For growing square tori, at every $k>0$ the mean-subtracted height field converges to the mean-zero torus GFF with covariance $a(k)(-\\Delta_{\\mathbb T^2})^{-1}$, where $a=0$ denotes the zero distribution. Convergence holds along every sequence of increasing integer side lengths and in $H^{-3}(\\mathbb T^2)$. For smooth mean-zero $f$, $$\\lim_{n\\to\\infty}\\log\\mathbb Ee^{H_n(f)}\n     =\\frac{a(k)}2(f,(-\\Delta_{\\mathbb T^2})^{-1}f).\n \\label{an:torus-laplace}$$ On the positive branch the uniquely determined temperature coefficient in Equation <a href=\"#main:coefficient-convention\" data-reference-type=\"eqref\" data-reference=\"main:coefficient-convention\">[main:coefficient-convention]</a> is $$\\beta_{\\mathrm{eff}}(J,\\beta)=v_J^2a(\\beta/v_J^2).\n \\label{an:effective-temperature}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-an-dirichlet-torus"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "For every fixed $J$ and $k>0$, $$a(k)>0\\quad\\Longleftrightarrow\\quad\n \\sup_{R\\ge1}\\mathbb E_{\\mu^0_{J,v_J^2k,R}}h_0^2=\\infty.\n \\label{an:physical-equivalence}$$",
+   "kind": "classification",
+   "statement_anchor": "stmt-an-physical-criterion"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "The function $a:(0,\\infty)\\to[0,\\infty)$ is nondecreasing, upper semicontinuous, and bounded above by $k$. It is strictly increasing on its positive set. More precisely, if $k_2>k_1$ and $a(k_1)>0$, then $$\\frac1{a(k_2)}\\le\\frac1{a(k_1)}+\n                                    \\frac1{k_2}-\\frac1{k_1}.\n \\label{an:strict-growth}$$ If its positive set is nonempty, it equals $[k_c,\\infty)$ for some $k_c\\ge8\\pi$, and the physical critical temperature is $\\beta_{\\mathrm c}(J)=v_J^2k_c$. In particular the endpoint is rough.",
+   "kind": "bound",
+   "statement_anchor": "stmt-an-coefficient-regularity"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Set $p=32$, $\\gamma=1/16$, and assume $|s|\\le1/4$. For integral $t\\ge1$ define the polynomial $$Q_t(\\cos z)=\\left(\\frac{\\sin(tz/2)}{t\\sin(z/2)}\\right)^{2p}.$$ Let $L$ be a power of two, $S=Lm$, and $m$ a power of $L$. The operator with multiplier $$\\label{rg:shell}\n \\Gamma_m(\\lambda)=\\frac{1-\\gamma\\lambda}{(1+s)\\lambda}\n \\{Q_m(1-\\lambda/16)-Q_S(1-\\lambda/16)\\}$$ is positive semidefinite on the plane, the square torus, and the free square of cells. It has range at most $2pS$. The quotient at zero is its polynomial continuation. Together with independent variance $\\gamma/(1+s)$ and the terminal covariance $$\\label{rg:terminal-kernel}\n \\Gamma_*(\\lambda)=\\frac{(1-\\gamma\\lambda)Q_{m_*}(1-\\lambda/16)}{(1+s)\\lambda},\n \\qquad \\lambda>0,$$ the shells with upper scale at most $m_*$ sum to $(1+s)^{-1}\\mathcal L^{-1}$ on nonconstant modes. Here $D_0\\ge2$ is fixed sufficiently large. In a square of side $M>D_0$, let $m_*$ be the largest nonnegative power of $L$ strictly below $M/D_0$. For $M\\le D_0$, set $m_*=1$ and use no shells. Since $Q_1=1$, the latter convention gives the same decomposition; for $M=1$ there are no nonconstant modes. The constant mode of the terminal covariance can be set to zero.*\n\n\n*For the plane shells and the finite-volume shells included above, $$\\begin{aligned}\n |\\Gamma_m(x,y)|&\\le C\\left(1+\\log^+\\frac{S}{m+\\operatorname{dist}(x,y)}\\right),\n &\\Gamma_m(x,x)&\\ge c\\log L,\\label{rg:kernel-pointwise}\\\\\n \\|\\Gamma_m\\|_{2\\to2}&\\le CS^2,\n &\\|\\nabla^r\\Gamma_m^{1/2}\\|_{2\\to2}^2&\\le C_r m^{-2(r-1)},\\quad1\\le r\\le6.\\label{rg:kernel-operator}\n\\end{aligned}$$ For mixed differences in the two kernel arguments of total order $r=|a|+|c|$, with the reflected difference conventions at a free side, $$|\\nabla_x^a\\nabla_y^c\\Gamma_m(x,y)|\n \\le C_r\\bigl(m+\\operatorname{dist}(x,y)\\bigr)^{-r},\n \\qquad 1\\le r\\le12.$$ In particular $\\mathbb E|\\nabla^r\\zeta(x)|^2\\le C_r m^{-2r}$ for $1\\le r\\le6$ when $\\zeta$ has covariance $\\Gamma_m$. These positive-order diagonal and operator estimates also hold for $\\Gamma_*$ at scale $m_*$, with constants independent of $D_0,L$ when $M\\ge2m_*$, as the stopping convention guarantees for $M\\ge2$. For $M=1$ all positive differences vanish.",
+   "kind": "construction",
+   "statement_anchor": "stmt-rg-kernels"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "Under the locality, finite-range, and norm hypotheses already specified, shell integration, localizations on small linear inputs, and extraction of their designated field-independent coefficients define activities $K'$ and numbers $a_b$, one at each coarse block, satisfying the exact identity $$\\label{rg:exact-map}\n \\mathbb E\\mathcal Z_m(K;\\phi+\\zeta)\n =\\prod_{b\\in\\mathcal B_S}(1+a_b)\\mathcal Z_S(K';\\phi).$$ The map preserves the period, locality, and every symmetry respected by the designated localizations. To first order, $K'$ is the sum of the subtracted small expectations, the unchanged large expectations, and the nonconstant parts assigned to coarse singletons. When singleton polynomials are measured separately, write $$K(X)=K_{\\rm reg}(X)+\\mathbf 1_{X=\\{B\\}}\\sum_{\\nu\\in I}t_{B,\\nu}P^\\nu_{m,B},\n \\qquad\n |P^\\nu_{m,B}|_{m,\\{B\\},\\phi}\\le C_{\\rm pol}W_m^\\kappa(\\{B\\},\\phi).$$ Here $I$ is fixed and finite, and the $P^\\nu_{m,B}$ form a fixed family of local polynomials, independent of the activity inputs, with the prescribed collar and period. The displayed point-norm bound is uniform in $\\nu$, the retained scale, the block, and the finite volume. Suppose $$\\|K_{\\rm reg}\\|_{m,A,\\kappa}\n       +\\sup_B\\sum_{\\nu\\in I}|t_{B,\\nu}|\\le\\varepsilon.$$ If a fixed scalar representation retains $K_{\\rm reg}=\\sum_\\mu K_{\\rm reg}^\\mu$ as separate components, replace $\\|K_{\\rm reg}\\|_{m,A,\\kappa}$ in this bound by $\\sum_\\mu\\|K_{\\rm reg}^\\mu\\|_{m,A,\\kappa}$, and include every separately retained coefficient occurrence in the absolute coefficient sum. With external parameters fixed, all designated localization and scalar extraction maps are fixed complex-linear maps of this measured input vector. Let $F_{Y,b}$ be the complete singleton piece assigned from the small linear inputs with original closure $Y$ to $b\\in Y$, retaining $Y$ as its exclusion label, and let $a_b$ be the sum of the designated field-independent scalar contributions from these same local $Y\\to b$ inputs. Each assigned piece has the prescribed target collar and period. For every complex input vector obeying the displayed bound, require $$\\sup_b\\left\\{\n \\sum_{Y\\ni b}\\sup_\\phi\n \\frac{|F_{Y,b}|_{S,\\{b\\},\\phi}}{W_S^\\kappa(\\{b\\},\\phi)}\n       +|a_b|\\right\\}\\le C_{L,A}\\varepsilon,$$ uniformly in retained scales and finite volumes. Then on a sufficiently small ball $$\\label{rg:nonlinear-map}\n \\|K'-K'_{\\rm lin}\\|_{S,A,\\kappa}\\le C_{L,A}\\varepsilon^2.$$ This is a complex analytic map of its activity inputs, with the corresponding convergent Taylor series and derivative bounds. The assertion is not analyticity in the frequency convention $\\alpha$.*\n\n*The same finite algebra and spatial enumeration apply to a separately specified representation under the same locality, finite-range, and exclusion hypotheses, with fixed complex-linear designated maps, provided its input size includes every retained component and it supplies the corresponding bounds for compatible-family products, Gaussian integration, complete assigned singleton pieces, and scalars in its normalized size. The point-norm and complex analyticity assertions above are statements about the scalar representation.*\n\n*After $L$ has been fixed, taking $A$ sufficiently large makes the contribution from large linear inputs an arbitrarily small multiple of their norm. The small linear estimates are those of Lemmas <a href=\"#rg:localization\" data-reference-type=\"ref\" data-reference=\"rg:localization\">30</a>, <a href=\"#rg:charged\" data-reference-type=\"ref\" data-reference=\"rg:charged\">31</a> and Corollary <a href=\"#rg:restricted-localization\" data-reference-type=\"ref\" data-reference=\"rg:restricted-localization\">32</a>. All constants and smallness radii are uniform in finite volumes. For the terminal assertion, separately assume that the retained activity grid at scale $m_*$ satisfies the grid conditions above and $M/m_*\\le D_0L$; its block count is then at most $C(D_0L)^2$. The spectral decomposition and terminal estimates retain their own stated domains.",
+   "kind": "construction",
+   "statement_anchor": "stmt-rg-partition-map"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "Let $D_n$ be the spin square defined in Section <a href=\"#main:spin-models\" data-reference-type=\"ref\" data-reference=\"main:spin-models\">1.2</a>, and set $M=2n$. Fuse its boundary vertices to a single vertex $\\mathfrak p$ and delete its perimeter edges. The resulting planar multigraph has dual the free square grid of $M^2$ cells. Write $d,d'$ for primal and dual gradients, and $\\mathcal R$ for a signed rotation identifying crossing edges. Then $$\\ker d^*=\\mathcal R\\operatorname{im}d',\\qquad\n \\ker d^*\\cap\\mathbb Z^{E}=\\mathcal R d'\\mathbb Z^{M^2},\n \\label{vi:hodge}$$ where divergences on the primal graph are tested off $\\mathfrak p$, and dual heights in either expression are taken modulo constants. If $l=\\sum_{i=1}^k\\varsigma_i\\delta_{x_i}$, with $x_i\\in D_n^\\circ$ and $\\varsigma_i\\in\\{-1,1\\}$, then there are a real dual stream $a$ and a dual connection $\\eta$ such that $$\\begin{aligned}\n J&=-dG_nl,& u^0&=J+\\mathcal R d'a\\in\\mathbb Z^E,&\n d^*u^0&=-l,\\label{vi:current}\\\\\n \\omega&=b^{-1/2},&\\alpha&=2\\pi\\sqrt b,&\n \\vartheta&=-a/\\sqrt b,\\qquad \\eta=\\mathcal R^{-1}J/\\sqrt b.\n \\label{vi:twist}\n\\end{aligned}$$ The connection satisfies $$d'^*\\eta=0,\\qquad\n \\eta-d'\\vartheta\\in\\omega\\mathbb Z^{E'},\\qquad\n \\lVert \\eta\\rVert^2=(l,G_nl)/b.\\label{vi:connection}$$ For the ordinary Villain measure with boundary spin zero, $$\\mathbb Ee^{i(l,\\theta)}\n =e^{-(l,G_nl)/(2b)}\\frac{Z(\\vartheta)}{Z(0)}.\n \\label{vi:exact-duality}$$ Here $Z(\\vartheta)$ is the Gaussian integral of energy $\\lVert d'\\psi\\rVert^2/2$, with its common constant averaged uniformly modulo $\\omega$, against the normalized comb $$\\prod_v\\mathfrak c_\\omega(\\psi_v+\\vartheta_v),\\qquad\n \\mathfrak c_\\omega(t)=\\omega\\sum_{h\\in\\mathbb Z}\\delta(t-\\omega h)\n                 =\\sum_{q\\in\\mathbb Z}e^{iq\\alpha t}.\n \\label{vi:comb}$$ The integral in this statement is a Gaussian lattice sum; it need not be interpreted as an ordinary function before its first convolution.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-vi-duality"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "There is $b_0(\\mathrm V)<\\infty$ such that for every $b\\ge b_0(\\mathrm V)$ the ordinary Villain model with zero boundary angles satisfies $$n^{-2}\\sum_{x\\in D_n^\\circ}\n A_{\\mathrm V}(b)\\exp\\{G_n(x,x)/(2K_{\\mathrm V}(b))\\}\n       e^{i\\theta_x}\\delta_x\n \\ \\Longrightarrow\\ V_{K_{\\mathrm V}(b),D}\n       \\quad\\hbox{in }H^{-3}_{\\mathrm{loc}}(D)$$ along all integers $n\\to\\infty$, with joint convergence of every finite collection of complex smears and convergence of all their mixed moments. Here $$A_{\\mathrm V}(b)=c(b)^{-1}>0,\\qquad\n K_{\\mathrm V}(b)=\\frac b{1+s(b)}\n  =\\frac{\\beta_{\\mathrm{eff}}(J_{\\mathrm{nn}},\\pi^2b)}{\\pi^2},\\qquad\n \\frac{K_{\\mathrm V}(b)}b\\longrightarrow1.$$ The lower bound can be chosen so that $K_{\\mathrm V}(b)>1/(4\\pi)$ and $\\pi^2b\\ge\\beta_{\\mathrm c}(J_{\\mathrm{nn}})$ for every such $b$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-vi-villain-spin"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "Fix one live Gaussian root. On its distinct microscopic tilt edges, let $R_wx,R_py$ be the attenuated edge and gradient totals. On the distinct $F_b$ edges let $R_Fx$ be its edge total. Then $$\\label{xyh:contracting-maps}\n \\|R_w\\|\\le1,\\qquad\\|R_p\\|\\le1,\\qquad\n \\|R_F\\|\\le1,\\qquad R_wJ=R_p.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-xyh-contraction"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "There is $b_0(\\mathrm{XY})<\\infty$ such that for every fixed $b\\ge b_0(\\mathrm{XY})$, the choices $$K_{\\mathrm{XY}}(b)=\\frac{b}{s+d_c^2/\\mu},\n \\qquad A_{\\mathrm{XY}}(b)=c_b^{-1}\n \\label{xyf:stiffness}$$ satisfy $K_{\\mathrm{XY}}(b)>1/(4\\pi)$, $A_{\\mathrm{XY}}(b)>0$, and $K_{\\mathrm{XY}}(b)/b\\to1$. Along every integer sequence $n\\to\\infty$, $$n^{-2}\\sum_{x\\in D_n^\\circ}\n  A_{\\mathrm{XY}}(b)e^{G_n(x,x)/(2K_{\\mathrm{XY}}(b))}\n       e^{i\\theta_x}\\delta_x\n       \\ \\Longrightarrow\\ V_{K_{\\mathrm{XY}}(b),D}$$ in $H^{-3}_{\\mathrm{loc}}(D)$, and jointly on any finite collection of complex smooth compactly supported test functions. The limit uses the full Dirichlet-variance Wick convention.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-xyf-spin"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "Choose the regulator parameters and $h_0$ first, then $L$ sufficiently large, and then $A$ sufficiently large depending on $L$. On a fixed small activity ball the exact partition algebra induces analytic maps $$\\label{wh:triangular}\n \\begin{pmatrix}t_+\\\\z_+\\\\R_+\\end{pmatrix}\n =\\begin{pmatrix}t+P_j^tR\\\\\\lambda_jz+P_j^zR\\\\C_jR\\end{pmatrix}\n     +\\mathcal N_j(t,z,R),\n \\quad\n \\|C_j\\|\\le\\theta<1,\\quad\n \\|P_j^t\\|+\\|P_j^z\\|\\le C_{L,A},$$ where $\\theta$ can be chosen arbitrarily small and $$\\label{wh:nonlinear}\n \\|\\mathcal N_j(t,z,R)\\|\n       \\le C_{L,A}(|t|+|z|+\\|R\\|)^2.$$ The same ball has uniform analytic Taylor coefficient and differentiated estimates at fixed $a'$. These assertions hold on a fixed one-sided reference interval $k_0\\le a'\\le k_0+\\delta_{\\rm ref}$, uniformly in sufficiently spread-out $J_\\rho$ for the first kernel family. For every fixed $J$, they hold at a sufficiently large starting scale for either the first family or the entry family of Lemma <a href=\"#wh:kernels\" data-reference-type=\"ref\" data-reference=\"wh:kernels\">69</a>.*\n\n*On a compact subinterval of $a'>k_0$, one may omit the cosine coordinate and leave every charged activity in the remainder. Choose $L$ depending on the gap from $k_0$; then the corresponding map has the same assertions with its $z$ row deleted. For $a'\\ge4k_0$ there is also such a map with a charged contraction uniform in $a'$.*\n\n*The scalar coefficients obtained on the plane are exactly the torus coefficients through the stopping scale. Torus remainders and their activity derivatives obey the same estimates. Each fixed-support finite recursion and each finite scalar projection is continuous in the parameters while its preceding activities remain in the small ball. This last assertion does not assert norm analyticity under variation of $\\alpha$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-wh-map"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "In the continuum limit at $a'=k_0$, the balanced coefficients are independent of the scale and satisfy $$\\label{wh:coefficient-signs}\n b^{tt}=0,\\qquad b^{tz}=-b<0,\\qquad b^{zz}=-H<0.$$ The positive numbers $b,H$ stay in compact subintervals of $(0,\\infty)$ as $u$ ranges over the compact interval in Lemma <a href=\"#wh:kernels\" data-reference-type=\"ref\" data-reference=\"wh:kernels\">69</a>. Consequently, given $\\varepsilon>0$, one can first take $\\mu_0$ small and then $\\rho$ large so that, uniformly in $j$, $|b_j^{tt}|\\le\\varepsilon$ and $-b_j^{tz},-b_j^{zz}$ lie in fixed compact positive intervals. For every fixed $J$ the same conclusion follows by making the starting scale sufficiently large. At that fixed $J$ the coefficients converge to their continuum limits as $j\\to\\infty$ when $a'=k_0$.*\n\n*For the fixed-$J$ entry family, use its own multipliers $\\lambda_j^{\\rm en}$ and its own projection operators in the same balanced coordinates. Its critical continuum coefficients are $$\\begin{gathered}\n b_{\\rm en}^{tt}=0,\\qquad b_{\\rm en}^{tz}=-b_{\\rm en},\n \\qquad b_{\\rm en}^{zz}=-H_{\\rm en},\\\\\n b_{\\rm en}=2\\log L,\\qquad\n H_{\\rm en}=\\frac{8\\pi\\cdot\\pi}{4}\n       e^{8\\pi c_{\\upsilon_{\\rm en}}}\\log L>0,\\\\\n \\upsilon_{\\rm en}=\\frac{v}{\\sqrt{32}}.\n\\end{gathered}$$ At this fixed $J$, the corresponding discrete coefficients converge to these limits at criticality and have the stated positive bounds on a sufficiently small one-sided reference interval once $m$ is large. If $d$ is the largest power of two not exceeding the sup range of $J$, then $u_{\\rm wh}=v/(d\\sqrt{32})$ is the width of the first fixed-$J$ family at the same block ratio, and $H_{\\rm en}=d^4H_{\\rm wh}$, whereas $b_{\\rm en}=b_{\\rm wh}$. These entry-family bounds are not uniform in a varying $J$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-wh-quadratic-coefficients"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "For every admissible fixed $J$, the positive-coefficient regime is nonempty and its physical onset is finite. Moreover, $$\\label{wh:normalization}\n a(k)=k+O_J(e^{-c_Jk}),\\qquad\n \\beta_{\\mathrm{eff}}(J,\\beta)=\\beta+O_J(e^{-c_J'\\beta})\n       \\quad(k,\\beta\\to\\infty).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-wh-high-temperature"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "For the spread-out family, $$\\frac{\\beta_{\\mathrm c}(J_\\rho)}{8\\pi v_{J_\\rho}^2}\\longrightarrow1.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-wh-spread-out"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "Fix $J,k_h,a_h$ as above. Fix admissible parameters for the small-activity maps of Proposition <a href=\"#wh:map\" data-reference-type=\"ref\" data-reference=\"wh:map\">71</a>, including their block factor $L$, activity weights $A$, and analytic radius $h_0$, with the regulator choices allowed by Lemma <a href=\"#en:regulator\" data-reference-type=\"ref\" data-reference=\"en:regulator\">78</a>. For every $\\epsilon>0$ there are a fixed dyadic integer $q$, an arbitrarily large dyadic $R$, $P=R^5$, a dyadic $s$, and a neighborhood $\\mathcal U\\subset(0,\\infty)\\times\\operatorname{int}I$ of $(k_h,a_h)$, such that the following assertions hold at $m=qRs$.*\n\n\n*On the plane there are real, even, square-covariant local activities $K_m(X;k,a')$, invariant under translations of the block grids and under common field translation by $2\\pi/\\alpha$, with $$\\label{en:small}\n                 \\|K_m(k,a')\\|_{m,A,V}\\leq\\epsilon\n                 \\quad ((k,a')\\in\\mathcal U).$$ Their subset expansion on every dyadic torus fitting the hierarchy and with side $n\\geq sP$ is an exact representation of Equation <a href=\"#en:exact-density\" data-reference-type=\"eqref\" data-reference=\"en:exact-density\">[en:exact-density]</a>, after integrating the observation noise and the Gaussian covariance below side $m$, up to a field-independent factor that cancels upon normalization. The torus activities obey the same estimate. A support whose padded neighborhood unwraps has exactly its plane activity. This copying property persists under the local maps up to their specified stopping scale. Here fitting means that $n/s$ is a multiple of $qR$, the torus uses the same grid origin, and $n/(mL^j)$ is an integer for every retained coarse grid.*\n\n\n*On a smaller neighborhood the activities are analytic in $k$ at fixed $a'$. For every integer $r\\geq0$ there is $C_r<\\infty$ such that $$\\label{en:derivatives}\n \\|\\partial_k^rK_m(k,a')\\|_{m,A,V}\\leq C_r\\epsilon.$$ The constants may depend on $s,R,J,k_h$ and the chosen neighborhoods. Finite-support evaluations, their field derivatives, and scalar localization projections are continuous in $a'$.*\n\n*The choices are made in the following order: the downstream norm parameters and the imaginary field strip widths are fixed first; then $R$ and $P$; then a finite large-field threshold; then $s$; and finally $\\mathcal U$. No uniform scaling assertion at temperatures other than $k_h$ is part of either the hypotheses or the proof.",
+   "kind": "construction",
+   "statement_anchor": "stmt-en-entry"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "Fix $J$, an allowed compact interval of reference coefficients, and admissible long-map parameters, including $L,A,h_0,\\kappa$, the regulator margins $h_*,p_1,p_2$ when $e^V$ is used, and the terminal clearance $D$. There is a sufficiently large starting scale $m_{\\min}$ and a disk $|d|<d_0$ such that, at every entry scale $m\\ge m_{\\min}$ and every reference in that interval, the long maps have exact Gaussian trajectories satisfying $$T_j^g(d)=d+O(d^2),\\qquad Z_j^g(d)=0,\\qquad\n \\mathcal R_j^g(d)=O(d^2).$$ The bounds are uniform in the step, the entry scale, and the reference, and analytic in $d$. The maps $T_j^g$ have analytic inverses on a common smaller disk. In particular both disks can be chosen before the physical entry scale and its observation-cell size are selected. In the coordinates $$\\label{ep:normal-coordinates}\n u_j=(T_j^g)^{-1}(T_j),\\qquad\n B_j=\\mathcal R_j-\\mathcal R_j^g(u_j),$$ the exact pure Gaussian trajectory is $(u,0,0)$ at every step. Its first coordinate is unchanged, so there is no nonlinear forcing depending only on $u$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ep-gaussian-curves"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "For a pinned periodic height law with precision $A_0/k$, let $C$ denote its covariance. For every real $f_0$ annihilating constants, $$\\label{ep:response-bound}\n \\frac{\\partial}{\\partial k}\\operatorname{Var}(h,f_0)\n \\ge\\frac{(Cf_0,A_0Cf_0)}{k^2}\n \\ge\\frac{\\operatorname{Var}(h,f_0)^2}{k^2(f_0,A_0^+f_0)}.$$ In particular, if $U_n=\\operatorname{Var}(X_n)/g$ at an input with $a(k)>0$, then $$\\label{ep:positive-physical-response}\n \\liminf_{n\\to\\infty}U_n'(k)\\ge a(k)^2/k^2>0.$$ The same strictly positive lower bound, weakened by a fixed factor, holds uniformly on a sufficiently small neighborhood where the limiting variance is bounded below.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ep-finite-response"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "If $a(k_h)>8\\pi$, then $k_h$ has an open neighborhood on which $a>8\\pi$ and $a$ is continuously differentiable. Consequently $$\\label{ep:endpoint-value}\n a(k_c)=8\\pi .$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ep-supermarginal"
+  },
+  {
+   "claim_id": "C26",
+   "exact_statement": "At $k_c$, after a finite step and a choice of the half-period convention, $$Z_j>0,\\quad \\|B_{o,j}\\|\\le\\varepsilon Z_j,\\quad\n \\|B_{e,j}\\|\\le C_eZ_j^2 .$$ The first two remainder inequalities persist in a sufficiently small tube, also for sufficiently small $\\mu=1-\\lambda\\ge0$. Any trajectory in these cones which tends to zero satisfies $$\\label{ep:strip}\n c_-\\frac{Z_j^2}{\\mu+Z_j}\n     <u_j<\n c_+\\frac{Z_j^2}{\\mu+Z_j},\n \\qquad \\|B_j\\|=O(Z_j^2)$$ after a further transient, with fixed $0<c_-<c_+$. At $k_c$ in particular, $$\\label{ep:critical-state-asymptotics}\n Z_j\\asymp j^{-1},\\qquad\n \\sum_jZ_j=\\infty,\\qquad\n \\frac{u_j}{Z_j}\\longrightarrow\\sqrt{H/b}.$$ The strip in <a href=\"#ep:strip\" data-reference-type=\"eqref\" data-reference=\"ep:strip\">[ep:strip]</a> is a necessary condition for convergence to zero; its boundaries are not asserted to be forward invariant.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ep-state-strip"
+  },
+  {
+   "claim_id": "C27",
+   "exact_statement": "At the critical input the derivative either tends to zero in all coordinates, or its scalar part aligns with the unstable eigenspace of $$\\label{ep:critical-matrix}\n M=\\begin{pmatrix}0&-2H\\\\-b&-\\sqrt{bH}\\end{pmatrix}.$$ The second alternative actually occurs. More precisely, eventually $$\\label{ep:critical-response-sign}\n p_j>0,\\qquad p_j\\longrightarrow\\infty,\\qquad\n \\frac{d_j}{p_j}\\longrightarrow-\\frac12\\sqrt{b/H},\n \\qquad \\|r_j\\|=o(p_j).$$",
+   "kind": "classification",
+   "statement_anchor": "stmt-ep-derivative-dichotomy"
+  },
+  {
+   "claim_id": "C28",
+   "exact_statement": "As $k\\downarrow k_c$, $$\\label{ep:infinite-derivative}\n \\frac{d}{dk}a(k)\\longrightarrow+\\infty ,\n \\qquad\n \\frac{a(k)-a(k_c)}{k-k_c}\\longrightarrow+\\infty .$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ep-infinite-response"
+  },
+  {
+   "claim_id": "C29",
+   "exact_statement": "For every admissible finite-range $J$, the uniquely determined effective temperature is $$\\beta_{\\mathrm{eff}}(J,\\beta)=v_J^2a(\\beta/v_J^2),\\qquad\n \\beta\\ge\\beta_{\\mathrm c}(J).$$ It has the field, Laplace-functional, and tightness conclusions in Theorem <a href=\"#main:heights\" data-reference-type=\"ref\" data-reference=\"main:heights\">1</a>, is differentiable for $\\beta>\\beta_{\\mathrm c}(J)$, and satisfies $$\\beta_{\\mathrm{eff}}(J,\\beta_{\\mathrm c}(J))=8\\pi v_J^2,\\qquad\n \\lim_{\\beta\\downarrow\\beta_{\\mathrm c}(J)}\n \\frac{\\beta_{\\mathrm{eff}}(J,\\beta)-\\beta_{\\mathrm{eff}}(J,\\beta_{\\mathrm c}(J))}\n      {\\beta-\\beta_{\\mathrm c}(J)}=+\\infty .$$ Its high-temperature normalization and spread-out onset are $$\\beta_{\\mathrm{eff}}(J,\\beta)=\\beta+O_J(e^{-c_J\\beta}),\\qquad\n \\frac{\\beta_{\\mathrm c}(J_\\rho)}{8\\pi v_{J_\\rho}^2}\\longrightarrow1 .$$ For nearest neighbors the endpoint value is $2\\pi$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ep-height-conclusion"
+  }
+ ],
+ "paper": "papers/EN-115-000-0020-2-2026-PR-T4-UK-EX-M2-C-PH-M-0414_PM-216.6_BKT_universality_for_height_and_planar_spin_fields.md",
+ "purpose": "BKT universality for height and planar spin fields",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "14dbeddae9811a8b561dec14311ef14e52d860a3eab8b5db837be43f854fdd8a",
+   "pm.domains.v2": "5180938603502bd73ad187ba12dd81576542e91082a310233d78f81abc388cff",
+   "pm.edges.v2": "85f85fd54003ec5af65cc0ab72bd28ace54875e75069a81694cd15faf90f41d7",
+   "pm.extraction.v2": "b7e446d6c31e0e66bfd9bdd927057b59e68597d7c1215caf42af0a9b6263961f",
+   "pm.formal.v2": "39c4318dd9c1d699926b0d47a5ca86f5e4a26c5dc292a4e3d8b7cc9812214dd6",
+   "pm.limits.v2": "53663965af63a2b53accaf50ae895726f52d0b8da1e15081c39c0f19433d9807",
+   "pm.node.v2": "5e7070627208ac25d9233ce5e6d14f1615b2ab1ac91cfe7db4a8a179847d63ff",
+   "pm.objects.v2": "65c75deb384b5c084a67ea34b4ccf109a40964ddb1064746eaf3e9cb3baf73b7",
+   "pm.provenance.v2": "cb4d45cbd971be2d0b8e87cdb56555d5451c5be4ab09926c2caeb17d99b6aff7",
+   "pm.quantities.v2": "4e3bbfc0728cb488bc2cecec3478e26cec4c6116262697f7bcba170fe56b9379",
+   "pm.reading.v2": "c4ed743da94bba9e1a183b27d6b0a5bade32cddc178538a076a3fe0cabe4b600",
+   "pm.roadmap.v2": "6304da60c64f017b4e482200a601591e1970064385d0d9b34ecfa96e961c5e84",
+   "pm.search.v1": "f285821d8f36e6753d7577cb7633e2317aea465708d351961f56f189f8b17f77",
+   "pm.triptych.v2": "f4ed3e54934fdc1485e19a3b13c43c14a65b87f24ca12d495034d390852f095f"
+  },
+  "canonical_sha256": "cf5097dddd08732c23156296308a08ddc002c3b4e116f39c17715d1bce309f55",
+  "paper_sha256": "240ab3d996826b4737214a9e2256970ae4a15fbcccdb3dfc06e1c8e191406bbb",
+  "repaired_body_sha256": "b9a3d0df59c71dedf0f294877b02ef386bb8270077b1b37c6e35ad3999b35acd"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "0eb92bedbe77add69967d46e54d459d8a88e270e21c45daddd4a9355fa56e77a",
+   "receipt_sha256": "6379a96cecbde6f0f9c9b0a8510f5e80258a063b520da19be2a840ebfe452562",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Every integer radius from 1 through 32, including both contract boundaries.",
+     "coverage": "DECIDED",
+     "invariant_id": "I-spread-variance",
+     "oracle_basis": "Direct exact enumeration of every nonzero integer point of each square; sums of squared first coordinates divided by twice the enumerated cardinality, using rational arithmetic."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M1",
+     "observed_exit": 5,
+     "receipt_sha256": "9ffa119ddefc2361273227037fc0ac08200554ace618fb03915517a15d0394ba"
+    },
+    {
+     "id": "M2",
+     "observed_exit": 5,
+     "receipt_sha256": "788903ffd649ebe2b8f3e8f146390b96ed68fb8888ae028e913e72703cbe001e"
+    },
+    {
+     "id": "M3",
+     "observed_exit": 5,
+     "receipt_sha256": "fbe10b5125efc1453bd70772c544a08ec4efe261f62bdcde5ec42dd6831500b0"
+    }
+   ],
+   "receipt_sha256": "9b7d2e336bfdb972ed0146cdf0ed5e4340ad8cc4fba555154819818b974fbeba",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "BKT universality for height and planar spin fields"
+}

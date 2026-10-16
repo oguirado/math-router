@@ -1,0 +1,632 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 711684,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 204119
+ },
+ "coordinate": "EN-113-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-H-0324",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "Hindman constructed a finite coloring of $\\mathbb N$ with no infinite set whose terms, pairwise sums and pairwise products all have one color",
+     "quote_sha256": "44dfdcc3e1ec823543195fe218967f05a19c23e9041a74468e3f47745af3700e"
+    }
+   ],
+   "query": "infinite set with monochromatic terms, sums and products",
+   "reason": "The result concerns prescribed finite sets; a coloring without such an infinite set is known."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-cor-finite-interval",
+     "quote": "If no $N$ worked, the finite colorings avoiding such a configuration would form a finitely branching tree, closed under restriction and with a node at every depth.",
+     "quote_sha256": "84fbe4e7ca3e7f8c785438819a5af520cb2fa39066d8a1951441436f7884a122"
+    }
+   ],
+   "query": "explicit numerical bound for the interval size",
+   "reason": "The finite interval comes from a compactness argument with no numerical estimate."
+  }
+ ],
+ "family": "PM-164",
+ "id": "PM-164.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-theorem",
+    "statement": "Let $r,m\\ge1$ be integers, and fix real numbers $R\\ge2$ and $D\\ge1$."
+   },
+   {
+    "anchor": "stmt-cor-distinct-expressions",
+    "claim_id": "claim-distinct-expressions",
+    "statement": "For every finite coloring of $\\mathbb N$ and every $m\\ge1$, there is an $m$-element set $A\\subset\\mathbb N$ for which $\\mathop{\\mathrm{FS}}(A)\\cup\\mathop{\\mathrm{FP}}(A)$ is monochromatic and $$|\\mathop{\\mathrm{FS}}(A)|=|\\mathop{\\mathrm{FP}}(A)|=2^m-1,\\qquad \\mathop{\\mathrm{FS}}(A)\\cap\\mathop{\\mathrm{FP}}(A)=A.$$"
+   },
+   {
+    "anchor": "stmt-pr-prediction",
+    "claim_id": "claim-prediction-principle",
+    "statement": "For every $m\\ge2$ there is an integer $s=s(m)$ with the following property."
+   },
+   {
+    "anchor": "stmt-pr-alignment",
+    "claim_id": "claim-alignment-principle",
+    "statement": "For every $n,r,s$ there are finite lists $\\mathcal B,\\mathcal A$ satisfying <a href=\"#eq:scale-list-closure\" data-reference-type=\"eqref\" data-reference=\"eq:scale-list-closure\">[eq:scale-list-closure]</a> and a constant $\\delta>0$, depending only on $n,r,s$, such that the following holds."
+   },
+   {
+    "anchor": "stmt-lem-chain-selection",
+    "claim_id": "claim-chain-selection",
+    "statement": "For every $m,r$ there is $n=n(m,r)$ such that, for every coloring $\\chi:\\mathbb N\\to[r]$ and every list $x_1,\\ldots,x_n\\in\\mathbb N$, a chain $B_1,\\ldots,B_m$ has all nonempty products of $x_{B_1},\\ldots,x_{B_m}$ in a single color class."
+   },
+   {
+    "anchor": "stmt-cor-finite-interval",
+    "claim_id": "claim-finite-interval",
+    "statement": "Fix integers $r,m,q\\ge1$ and real numbers $R\\ge2$, $D\\ge1$."
+   },
+   {
+    "anchor": "stmt-lem-sampling",
+    "claim_id": "claim-sampling-identities",
+    "statement": "Let $X\\ge2$ be an integer, set $$\\vartheta_W=\\frac{\\phi(W)}W,\\quad L_X=\\log X,\\quad\n Z_X=\\sum_{\\substack{X\\le n<X^2\\\\(n,W)=1}}\\frac1n,\\quad\n \\mu_X(n)=\\frac{\\mathbf 1_{[X,X^2)}(n)\\mathbf 1_{(n,W)=1}}{nZ_X},$$ and suppose $L_X>W/X$."
+   },
+   {
+    "anchor": "stmt-cor-product-law",
+    "claim_id": "claim-product-law",
+    "statement": "Let $B=T\\cup\\{i\\}$ be a block, and let $t_j$ be the independent harmonic samples at its raw cutoffs."
+   },
+   {
+    "anchor": "stmt-lem-master-scales",
+    "claim_id": "claim-master-scales",
+    "statement": "Fix $N$, a bound on block sizes, a finite set $\\mathcal A\\subset\\mathbb Q_{>0}$, and a finite list $\\mathcal D$ of nonzero integer polynomials in finitely many prime-parameter slots."
+   },
+   {
+    "anchor": "stmt-rem-arithmetic-diagonal",
+    "claim_id": "claim-arithmetic-diagonal",
+    "statement": "Later, a fixed test may be raised to any fixed moment or combined with any fixed number of other tests."
+   },
+   {
+    "anchor": "stmt-lem-rough-coprimality",
+    "claim_id": "claim-rough-coprimality",
+    "statement": "Let $F$ and $G$ be fixed nonzero integer polynomials in disjoint tuples of independent prime variables."
+   },
+   {
+    "anchor": "stmt-prop-linear-forms",
+    "claim_id": "claim-weighted-linear-forms",
+    "statement": "Fix the number $q$ of rows, the number $d$ of base variables, and a bound $b$ on the number of raw factors in each divisor."
+   },
+   {
+    "anchor": "stmt-lem-prime-insertion",
+    "claim_id": "claim-prime-insertion",
+    "statement": "Let $i>l$ and let $Y$ have law $\\mu_i$."
+   },
+   {
+    "anchor": "stmt-lem-mask-removal",
+    "claim_id": "claim-mask-removal",
+    "statement": "Put $q_{\\mathrm{mask}}=2^m-1$ and $K_m=q_{\\mathrm{mask}}2^{q_{\\mathrm{mask}}}$."
+   },
+   {
+    "anchor": "stmt-lem-row-directions",
+    "claim_id": "claim-row-directions",
+    "statement": "For each $R\\ne *$ there is an integer polynomial vector $w_R$ such that $$A_Rw_R=0,\\qquad A_Iw_R\\ne0\\quad(I\\ne R).$$"
+   },
+   {
+    "anchor": "stmt-lem-additive-elimination",
+    "claim_id": "claim-additive-elimination",
+    "statement": "With the rows, good-tuple law, and modulus of Lemma <a href=\"#lem:row-directions\" data-reference-type=\"ref\" data-reference=\"lem:row-directions\">17</a>, fix $J_0\\in\\mathbb N$ and put $$L(\\boldsymbol p)=\\left\\lfloor\\frac{R}{J_0M(\\boldsymbol p)}\\right\\rfloor.\n \\label{eq:correlation-shift-length}$$ Independently conditional on the primes, let every $u_R^0,u_R^1$ be uniform on $[0,L(\\boldsymbol p))\\cap\\mathbb Z$, for $R\\ne *$."
+   },
+   {
+    "anchor": "stmt-prop-correlation-test",
+    "claim_id": "claim-correlation-test",
+    "statement": "For every $m\\ge2$ and every nonsingleton target support $J_*$, the construction above determines a finite family of integer polynomial templates $D$, with good prime-tuple laws, such that the following holds for every fixed master chain and valid gap $l$."
+   },
+   {
+    "anchor": "stmt-rem-correlation-dual-interface",
+    "claim_id": "claim-correlation-dual-interface",
+    "statement": "The base vertex in <a href=\"#eq:correlation-test\" data-reference-type=\"eqref\" data-reference=\"eq:correlation-test\">[eq:correlation-test]</a> is $g_*(y)$."
+   },
+   {
+    "anchor": "stmt-lem-dual-pseudorandomness",
+    "claim_id": "claim-dual-pseudorandomness",
+    "statement": "For every fixed $b\\geq0$ and dual tests $\\mathcal D_1,\\ldots,\\mathcal D_b$ at the same block, $$\\label{eq:prediction-dual-products}\n \\mathbb E_{\\mu_i}(\\nu-1)\\prod_{q=1}^b\\mathcal D_q=o(1)$$ uniformly over their inputs."
+   },
+   {
+    "anchor": "stmt-prop-dense-model",
+    "claim_id": "claim-dense-model",
+    "statement": "There are functions $F_{B,a,c}:\\mathbb Z\\to[0,1]$ such that, for every fixed $J_0$ and every dual test at $B$, $$\\label{eq:prediction-dense-approximation}\n \\mathbb E_{\\mu_i}(\\rho-F_{B,a,c})\\mathcal D=o(1)$$ uniformly over its inputs and over the finitely many master blocks, scale labels, and colors."
+   },
+   {
+    "anchor": "stmt-lem-nilsequence-testing",
+    "claim_id": "claim-nilsequence-testing",
+    "statement": "Fix $B=T\\cup\\{i\\}$ and a gap $\\max T<l<i$."
+   },
+   {
+    "anchor": "stmt-lem-energy-selection",
+    "claim_id": "claim-energy-selection",
+    "statement": "For every $\\varepsilon>0$, a master count $N$ depending only on $n,r,|\\mathcal A|,\\varepsilon$ can be chosen so that there are indices $$k_1<j_1<k_2<j_2<\\cdots<k_n<j_n$$ and $[0,1]$-valued piecewise models $S_{B,a,c}$ at pivot $i=j_u$ on intervals of length $R_{k_u}$ such that $$\\label{eq:prediction-coarse-approximation}\n \\|S_{B,a,c}-P_{j_u,k_u}F_{B,a,c}\\|_2\\leq\\varepsilon.$$"
+   },
+   {
+    "anchor": "stmt-lem-subgroup-inverse",
+    "claim_id": "claim-subgroup-inverse",
+    "statement": "Fix a cube type of dimension $d$, a gap $l<i$, and $J_0\\geq1$."
+   },
+   {
+    "anchor": "stmt-thm-quantitative-leibman",
+    "claim_id": "claim-quantitative-leibman",
+    "statement": "Fix a rational filtered nilmanifold as above, a number $d$ of variables, and $0<\\delta<1$."
+   },
+   {
+    "anchor": "stmt-lem-rough-interpolation",
+    "claim_id": "claim-rough-interpolation",
+    "statement": "Fix $e\\geq1$, $q\\geq e$, and $A>0$."
+   },
+   {
+    "anchor": "stmt-prop-rough-step",
+    "claim_id": "claim-rough-step-removal",
+    "statement": "Fix $G/\\Gamma$, a number $d\\geq1$ of spatial variables, a degree bound $D$, and constants $c,C,B>0$."
+   },
+   {
+    "anchor": "stmt-cor-rough-residual-step",
+    "claim_id": "claim-rough-residual-step",
+    "statement": "In Proposition <a href=\"#prop:rough-step\" data-reference-type=\"ref\" data-reference=\"prop:rough-step\">28</a>, let $q$ be another positive integer, fixed while $t$ varies but permitted to change with $w$."
+   },
+   {
+    "anchor": "stmt-lem-upper-face-coordinates",
+    "claim_id": "claim-upper-face-coordinates",
+    "statement": "The group $C^q(H_\\bullet)$ is connected, simply connected, and rational."
+   },
+   {
+    "anchor": "stmt-lem-cube-corner",
+    "claim_id": "claim-cube-corner",
+    "statement": "Let $G$ be a connected simply connected nilpotent Lie group of step at most $s$, and let $\\Gamma$ be a lattice in $G$."
+   },
+   {
+    "anchor": "stmt-lem-adapted-factorization",
+    "claim_id": "claim-adapted-factorization",
+    "statement": "Fix a connected simply connected nilpotent group $K$, a lattice $\\Lambda$, and a rational filtration $K_\\bullet$ satisfying <a href=\"#eq:cube-filtration\" data-reference-type=\"eqref\" data-reference=\"eq:cube-filtration\">[eq:cube-filtration]</a>."
+   },
+   {
+    "anchor": "stmt-prop-local-cube-law",
+    "claim_id": "claim-local-cube-law",
+    "statement": "Under the hypotheses of Lemma <a href=\"#lem:adapted-factorization\" data-reference-type=\"ref\" data-reference=\"lem:adapted-factorization\">32</a>, retain the subsequence and its data."
+   },
+   {
+    "anchor": "stmt-prop-face-lift",
+    "claim_id": "claim-face-lift",
+    "statement": "Let $K=K'\\times K''$ be a connected simply connected nilpotent Lie group with lattice $\\Lambda=\\Lambda'\\times\\Lambda''$, and let $\\pi$ denote the first group projection and its induced map of nilmanifolds."
+   },
+   {
+    "anchor": "stmt-lem-shear-haar",
+    "claim_id": "claim-shear-haar",
+    "statement": "On any finite-dimensional real vector space with coordinate weights in $\\{1,\\ldots,s\\}$, all the shears <a href=\"#eq:weighted-shear\" data-reference-type=\"eqref\" data-reference=\"eq:weighted-shear\">[eq:weighted-shear]</a> form a group of nilpotence class at most $s$."
+   },
+   {
+    "anchor": "stmt-lem-finite-word-plan",
+    "claim_id": "claim-finite-word-plan",
+    "statement": "For given $n,r,s$, there are a positive integer $q_0$ and finite lists of scale updates and word jumps with the following property, uniformly over the actions and palette maps just specified and the initial centers at all pivots."
+   },
+   {
+    "anchor": "stmt-lem-conditional-face-invariance",
+    "claim_id": "claim-conditional-face-invariance",
+    "statement": "Fix the bounded-complexity model family and the finite lists above."
+   },
+   {
+    "anchor": "stmt-lem-alignment-mass",
+    "claim_id": "claim-alignment-mass",
+    "statement": "For every fixed $\\tau>0$ and every permitted bounded-complexity family of models, outside a set of earlier-variable/microcell/residue conditionings of probability tending to zero, the conditional uniform pivot probability that $$\\mathcal P_i(b;p+s(v))\\quad\\text{holds for some prescribed slot }v$$ is at least $1/(2Q_i)$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Prediction Principle",
+    "evidence": [
+     {
+      "anchor": "stmt-pr-prediction",
+      "quote": "For every $m\\ge2$ there is an integer $s=s(m)$ with the following property.",
+      "quote_sha256": "b086c12b89b3b7df8c38520980cbcae5709d4c5a45953e7e0080c6b78eaf33a2"
+     }
+    ],
+    "requires_concepts": [
+     "nilsequence",
+     "dense model theorem",
+     "Gowers norm inverse theorem",
+     "harmonic sampling"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Alignment Principle",
+    "evidence": [
+     {
+      "anchor": "stmt-pr-alignment",
+      "quote": "For every $n,r,s$ there are finite lists $\\mathcal B,\\mathcal A$ satisfying <a href=\"#eq:scale-list-closure\" data-reference-type=\"eqref\" data-reference=\"eq:scale-list-closure\">[eq:scale-list-closure]</a> and a constant $\\delta>0$, depending only on $n,r,s$, such that the following holds.",
+      "quote_sha256": "d51065d7544b4e2d414345440c3383fed134a56e21732b38851474a3603402d8"
+     }
+    ],
+    "requires_concepts": [
+     "nilpotent polynomial recurrence",
+     "quantitative equidistribution on nilmanifolds",
+     "cube groups"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-theorem",
+   "exact_statement": "Let $r,m\\ge1$ be integers, and fix real numbers $R\\ge2$ and $D\\ge1$. For every coloring $\\chi:\\mathbb N\\to[r]$, there are distinct positive integers $a_1<\\cdots<a_m$ and a color $c\\in[r]$ such that $$\\chi\\left(\\sum_{j\\in J}a_j\\right)\n =\\chi\\left(\\prod_{j\\in J}a_j\\right)=c\n \\quad\\text{for every }\\varnothing\\ne J\\subseteq[m].$$ Equivalently, $\\mathop{\\mathrm{FS}}(A)\\cup\\mathop{\\mathrm{FP}}(A)$ is monochromatic for a set $A\\subset\\mathbb N$ of cardinality $m$. The elements can additionally be chosen to satisfy $$\\label{eq:separated-elements}\n a_1>R,\\qquad\n a_d>R\\left(\\sum_{k<d}a_k+\\prod_{k<d}a_k\\right)^D\n \\quad(2\\le d\\le m).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-distinct-expressions",
+   "exact_statement": "For every finite coloring of $\\mathbb N$ and every $m\\ge1$, there is an $m$-element set $A\\subset\\mathbb N$ for which $\\mathop{\\mathrm{FS}}(A)\\cup\\mathop{\\mathrm{FP}}(A)$ is monochromatic and $$|\\mathop{\\mathrm{FS}}(A)|=|\\mathop{\\mathrm{FP}}(A)|=2^m-1,\\qquad \\mathop{\\mathrm{FS}}(A)\\cap\\mathop{\\mathrm{FP}}(A)=A.$$ In particular, the union has $2(2^m-1)-m$ distinct elements.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-distinct-expressions"
+  },
+  {
+   "claim_id": "claim-prediction-principle",
+   "exact_statement": "For every $m\\ge2$ there is an integer $s=s(m)$ with the following property. Given $n,r,\\chi$, finite lists satisfying <a href=\"#eq:scale-list-closure\" data-reference-type=\"eqref\" data-reference=\"eq:scale-list-closure\">[eq:scale-list-closure]</a>, and tolerances $0<\\tau<1/4$, $\\eta>0$, there are admissible parameters and step-at-most-$s$ models such that the following conclusions hold along the fixed ultrafilter $\\mathcal U$ in $w$.*\n\n\n1.  *For each $B,a,c$, $$\\label{eq:prediction-calibration}\n     \\lim_{\\mathcal U}\\mathbb P\\bigl(\n     \\chi(h_Bat_B)=c,\\ S_{B,a,c}(t_B)\\le2\\tau\\bigr)\n     \\le3\\tau+\\eta.$$*\n\n\n\n2.  *Fix a chain $B_1,\\ldots,B_m$, $b\\in\\mathcal B$ and a color $c\\in[r]$. Put $$c_d=h_{B_d}b_{B_d},\\qquad\n     f_d(y)=\\mathbf 1_{\\chi(c_dy)=c},\\qquad\n     \\nu_d=\\nu_{B_d},\\qquad S_d=S_{B_d,b_{B_d},c}.$$ Here $f_d$ is defined on positive integers and may be extended by zero elsewhere. For $\\varnothing\\ne J\\subseteq[m]$ write $d(J)=\\max J$ and $$\\begin{aligned}\n     L_J(z)&=\\sum_{k\\in J}\\frac{c_k}{c_{d(J)}}z_k,\n     \\label{eq:sum-forms}\\\\\n     U(z)&=\\prod_{\\varnothing\\ne J\\subseteq[m]}\n     \\mathbf 1_{\\chi(\\prod_{k\\in J}c_kz_k)=c}.\n     \\label{eq:product-mask}\n    \\end{aligned}$$ Then the nonnegative weighted count $$\\label{eq:weighted-count}\n     \\mathcal I_{b,c,\\mathbf B}=\n     \\mathbb E_{z\\sim\\bigotimes_{d=1}^m\\mu_{i_d}}\n     U(z)\\prod_{d=1}^m\\nu_d(z_d)\n     \\prod_{\\substack{J\\subseteq[m]\\\\|J|\\ge2}}\n     (f_{d(J)}\\nu_{d(J)})(L_J(z))$$ satisfies, for $z(t)_d=t_{B_d}$, $$\\label{eq:prediction-counting}\n     \\lim_{\\mathcal U}\n     \\abs*{\\mathcal I_{b,c,\\mathbf B}\n     -\\mathbb E_t U(z(t))\n     \\prod_{\\substack{J\\subseteq[m]\\\\|J|\\ge2}}\n     S_{d(J)}(L_J(z(t)))}\\le\\eta.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-pr-prediction"
+  },
+  {
+   "claim_id": "claim-alignment-principle",
+   "exact_statement": "For every $n,r,s$ there are finite lists $\\mathcal B,\\mathcal A$ satisfying <a href=\"#eq:scale-list-closure\" data-reference-type=\"eqref\" data-reference=\"eq:scale-list-closure\">[eq:scale-list-closure]</a> and a constant $\\delta>0$, depending only on $n,r,s$, such that the following holds. For any admissible family, any system of step-at-most-$s$ models, and any fixed $\\tau>0$, define $\\mathsf A_w$ to be the event that some $b\\in\\mathcal B$ satisfies, simultaneously for every block $B$, color $c\\in[r]$, and subset $D\\subseteq\\mathcal E_B$, $$\\label{eq:alignment-implication}\n \\begin{split}\n S_{B,b_B,c}(t_B)>2\\tau\\quad\\Longrightarrow\\quad\n S_{B,b_B,c}\\left(\n t_B+\\sum_{A\\in D}\\frac{h_Ab_A}{h_Bb_B}t_A\\right)>\\tau.\n \\end{split}$$ Then $$\\label{eq:alignment-probability}\n \\liminf_{w\\to\\infty}\\mathbb P(\\mathsf A_w)\\ge\\delta.$$ In particular, $\\delta$ is independent of $\\tau$ and of the model complexity bound.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-pr-alignment"
+  },
+  {
+   "claim_id": "claim-chain-selection",
+   "exact_statement": "For every $m,r$ there is $n=n(m,r)$ such that, for every coloring $\\chi:\\mathbb N\\to[r]$ and every list $x_1,\\ldots,x_n\\in\\mathbb N$, a chain $B_1,\\ldots,B_m$ has all nonempty products of $x_{B_1},\\ldots,x_{B_m}$ in a single color class.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-chain-selection"
+  },
+  {
+   "claim_id": "claim-finite-interval",
+   "exact_statement": "Fix integers $r,m,q\\ge1$ and real numbers $R\\ge2$, $D\\ge1$. There exists $N$ such that every $r$-coloring of $[N]$ admits $A=\\{a_1<\\cdots<a_m\\}\\subset q\\mathbb N$ with $\\mathop{\\mathrm{FS}}(A)\\cup\\mathop{\\mathrm{FP}}(A)\\subseteq[N]$ monochromatic and $$a_1>R,\\qquad\n a_d>R\\left(\\sum_{k<d}a_k+\\prod_{k<d}a_k\\right)^D\n \\quad(2\\le d\\le m).$$ The subset sums and products have the distinctness properties of Corollary <a href=\"#cor:distinct-expressions\" data-reference-type=\"ref\" data-reference=\"cor:distinct-expressions\">2</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-finite-interval"
+  },
+  {
+   "claim_id": "claim-sampling-identities",
+   "exact_statement": "Let $X\\ge2$ be an integer, set $$\\vartheta_W=\\frac{\\phi(W)}W,\\quad L_X=\\log X,\\quad\n Z_X=\\sum_{\\substack{X\\le n<X^2\\\\(n,W)=1}}\\frac1n,\\quad\n \\mu_X(n)=\\frac{\\mathbf 1_{[X,X^2)}(n)\\mathbf 1_{(n,W)=1}}{nZ_X},$$ and suppose $L_X>W/X$. Let $Y$ have law $\\mu_X$.*\n\n\n\n1.  *For $(k,W)=1$, every residue $a\\pmod k$, and $0<A<B$, $$\\label{eq:periodic-harmonic}\n     \\left|\\sum_{\\substack{A\\le n<B\\\\(n,W)=1\\\\n\\equiv a\\ (k)}}\\frac1n\n      -\\frac{\\vartheta_W}{k}\\log\\frac BA\\right|\n     \\le\\frac{\\phi(W)}A.$$ In particular $|Z_X-\\vartheta_WL_X|\\le\\phi(W)/X$, and $$\\label{eq:harmonic-residue-error}\n     \\left|k\\mathbb P(Y\\equiv a\\pmod k)-1\\right|\n     \\le E_X(k):=\\frac{W(k+1)}{X(L_X-W/X)}.$$ The total-mass distance of the residue law from uniform measure is also at most $E_X(k)$.*\n\n\n2.  *If $h\\in W\\mathbb Z$, then $$\\label{eq:harmonic-translation}\n     \\|\\operatorname{Law}(Y+h)-\\mu_X\\|_1\n     \\le \\min\\left(2,\\frac{2|h|}{X(L_X-W/X)}\\right).$$*\n\n\n3.  *If $1\\le k\\le X$ and $(k,W)=1$, let $\\eta_k(n)=k\\mathbf 1_{k\\mid n}\\mu_X(n)$, an unnormalized positive measure. Then $$\\label{eq:harmonic-dilation}\n     \\|\\operatorname{Law}(kY)-\\eta_k\\|_1\n     \\le\\frac{2\\log k+(Wk/X)(1+1/X)}{L_X-W/X},$$ and $|\\eta_k(\\mathbb Z)-1|\\le E_X(k)$.*\n\n*For the asymptotic conclusions, let $K,H,V\\ge1$ be auxiliary quantities depending on $w$. Each residue and translation error is $o(V^{-C})$, for every fixed $C$, uniformly for $k\\le K$ and $|h|\\le H$, if $X$ dominates every fixed power of $2+W+K+H+V$. The dilation error has the same conclusion if $\\log X$ dominates every fixed power of $2+W+K+V$. These conclusions still hold in expectations of functions bounded by any fixed power of $V$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-sampling"
+  },
+  {
+   "claim_id": "claim-product-law",
+   "exact_statement": "Let $B=T\\cup\\{i\\}$ be a block, and let $t_j$ be the independent harmonic samples at its raw cutoffs. Let $V=V(w)\\ge1$ be an auxiliary scale, and put $K_T=\\prod_{j\\in T}X_j^2$. If $\\log X_i$ dominates every fixed power of $2+W+K_T+V$, then $$\\label{eq:block-product-law}\n \\left\\|\\operatorname{Law}(t_B)-\n                  \\nu_B\\mu_i\\right\\|_1=o(V^{-C})\n \\qquad\\text{for every fixed }C>0.$$ For any fixed family of disjoint blocks the corresponding joint law differs in the same sense from the product of their weighted pivot measures, when these hypotheses hold at each pivot.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-product-law"
+  },
+  {
+   "claim_id": "claim-master-scales",
+   "exact_statement": "Fix $N$, a bound on block sizes, a finite set $\\mathcal A\\subset\\mathbb Q_{>0}$, and a finite list $\\mathcal D$ of nonzero integer polynomials in finitely many prime-parameter slots. There are choices of $h_j,M,X_j,R_l,P_l^-,P_l^+$, for $1\\le j,l\\le N$, with the following properties.*\n\n1.  *$h_j=W^{w2^{N-j}}$, and $M$ is a power of $W$, divisible by $W^w$, with $h_j\\le M$ for every index and $h_B\\le M$ for every block under consideration. Every permitted adding pair satisfies $h_A/h_B\\in W^w\\mathbb N$. For a master chain and $c_d=h_{B_d}a_d$, $a_d\\in\\mathcal A$, all $c_d$ are integers and $c_u/c_d\\in W\\mathbb N$ when $u<d$, for sufficiently large $w$.*\n\n\n2.  *There is an integer $e_0=e_0(w)$ such that, for independent uniform units in the slots modulo $W^{e_0}$, $$\\label{eq:small-prime-exception}\n     \\mathbb P\\bigl(p^{e_0}\\mid D(\\boldsymbol u)\n           \\text{ for some }p\\le w,\\ D\\in\\mathcal D\\bigr)=o(1).$$ Moreover $W^{e_0+1}c_d\\mid M$ for every possible $c_d$.*\n\n3.  *Writing $$V_l=2+M+\\prod_{j<l}X_j^2,\n     \\qquad\n     Q_l=W^{e_0}\\prod_{w<p\\le V_l}p,$$ the pool $\\mathcal P_l$ consists of all primes in a finite union of consecutive complete dyadic intervals $[P_l^-,P_l^+)$. Its law and harmonic mass are $$\\label{eq:prime-pool-law}\n     H_l^{\\rm pr}=\\sum_{p\\in\\mathcal P_l}\\frac1p,\n     \\qquad \\lambda_l(p)=\\frac1{pH_l^{\\rm pr}}.$$ Both $P_l^-$ and $H_l^{\\rm pr}$ dominate every fixed power of $V_l$. The residue law of a sample modulo $Q_l$ differs from uniform measure on $(\\mathbb Z/Q_l\\mathbb Z)^\\times$ by $o(V_l^{-C})$ in total variation, for every fixed $C$. All slots are sampled independently, including slots in different gaps.*\n\n4.  *$R_l$ dominates every fixed power of $P_l^++V_l$. It is divisible by $M$, by every earlier $R_j$, and by $M|D(\\boldsymbol p)|$ for all the nonzero values required for divisibility in gap $l$, with these polynomial slots drawn from that gap’s pool. The integer $X_l$ is a power of two, and $\\log X_l$ dominates every fixed power of $R_l$.*\n\n*One can include any prescribed finite family of polynomial nonvanishing conditions in $\\mathcal D$. Repeated entries and zero values then have probability $o(V_l^{-C})$ for every fixed $C$, whereas the small-prime exceptions in <a href=\"#eq:small-prime-exception\" data-reference-type=\"eqref\" data-reference=\"eq:small-prime-exception\">[eq:small-prime-exception]</a> have probability $o(1)$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-master-scales"
+  },
+  {
+   "claim_id": "claim-arithmetic-diagonal",
+   "exact_statement": "Later, a fixed test may be raised to any fixed moment or combined with any fixed number of other tests. This does not require a moment order growing inside an estimate. Enumerate the resulting integer-polynomial templates and positive integer auxiliary parameters. At stage $j$ impose the requirements for the first $j$ templates. Each stage has finitely many requirements, so the preceding proof applies. Choose increasing thresholds $w_j$ so that the finitely many error bounds at that stage, including constants in the estimates below, are at most $1/j$ once $w\\ge w_j$. At a given $w$ use stage $\\max\\{j:w_j\\le w\\}$, with the growth exponents also tending to infinity. Every fixed finite test family then satisfies all the conclusions eventually. This diagonal choice can be made before the functions to be tested are chosen, because its templates depend only on their algebraic forms. All moment limits below mean first $w\\to\\infty$ at a fixed moment order.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-rem-arithmetic-diagonal"
+  },
+  {
+   "claim_id": "claim-rough-coprimality",
+   "exact_statement": "Let $F$ and $G$ be fixed nonzero integer polynomials in disjoint tuples of independent prime variables. Each variable is sampled with probability proportional to $1/p$ in a dyadic interval $[Y,2Y)$. Let $L$ be the smallest of these lower endpoints. For all sufficiently large $w,L$, $$\\begin{aligned}\n \\mathbb P(FG=0)&\\ll_{F,G}\\frac{\\log L}{L},\\label{eq:polynomial-zero-bound}\\\\\n \\mathbb P\\bigl(FG\\ne0,\\ \\gcd(|F|_{>w},|G|_{>w})>1\\bigr)\n &\\ll_{F,G}\\frac1w+\\frac{\\log L}{\\sqrt L}.\n \\label{eq:rough-coprimality-bound}\n\\end{aligned}$$ The constants are independent of the ratios between the dyadic endpoints. Consequently two independent tuples from any of the constructed pools have coprime rough polynomial values with probability $1-o(1)$. The same assertion holds after restricting each tuple to a prime-only event of probability $1-o(1)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-rough-coprimality"
+  },
+  {
+   "claim_id": "claim-weighted-linear-forms",
+   "exact_statement": "Fix the number $q$ of rows, the number $d$ of base variables, and a bound $b$ on the number of raw factors in each divisor. For each $u\\in[q]$, let $\\sigma_u$ be a product of at most $b$ independent harmonic $W$-unit variables at the master cutoffs of Lemma <a href=\"#lem:master-scales\" data-reference-type=\"ref\" data-reference=\"lem:master-scales\">11</a>, and write $\\nu_u(y)=\\mathbb E\\sigma_u\\mathbf 1_{\\sigma_u\\mid y}$. All these raw draws are independent across occurrences. Suppose $\\sigma_u\\le V$ surely, where $V\\ge M\\to\\infty$. Let $\\boldsymbol p$ consist of independent prime slots from finitely many gaps, each having $V_l\\ge V$. These slots are independent of all divisor draws.*\n\n*Let $\\mathcal G$ be a domain depending only on $\\boldsymbol p$, and let $\\ell_u(\\boldsymbol x;\\boldsymbol p)$ be homogeneous linear rows. On $\\mathcal G$ their arguments are integers on the base sampling support. Assume the following conditions.*\n\n1.  *Given $\\boldsymbol p$ and any possible divisor draws, the joint residue law of $\\boldsymbol x$ modulo $K=\\prod_{u=1}^q\\sigma_u$ differs in total variation by at most $\\epsilon_{\\rm base}$ from the uniform law on $(\\mathbb Z/K\\mathbb Z)^d$. The bound is uniform on $\\mathcal G$.*\n\n2.  *For every $w<p\\le V$, each row is nonzero modulo $p$ on $\\mathcal G$. There is a fixed finite list of nonzero integer polynomials in the prime slots such that, if all their values are nonzero modulo $p$, every pair of rows is linearly independent over $\\mathbb F_p$.*\n\n\n*The CRT law of all prime slots at the primes $w<p\\le V$ is within total variation $\\epsilon_{\\rm CRT}$ of independent uniform units, with independence also across these primes. Then, uniformly in every further prime-only event $\\mathcal E\\subseteq\\mathcal G$, $$\\label{eq:restricted-linear-forms}\n \\mathbb E_{\\boldsymbol p,\\boldsymbol x}\n   \\mathbf 1_{\\mathcal E}(\\boldsymbol p)\n   \\prod_{u=1}^q\\nu_u(\\ell_u(\\boldsymbol x;\\boldsymbol p))\n =\\mathbb P(\\mathcal E)+\n O\\left(\\frac1w+V^q(\\epsilon_{\\rm base}+\n                              \\epsilon_{\\rm CRT})\\right).$$ The error is absolute, so the statement also applies when $\\mathbb P(\\mathcal E)$ tends to zero. The implied constant depends only on the fixed row and divisor templates and polynomial tests. In particular the error is $o(1)$ with the scales of Lemma <a href=\"#lem:master-scales\" data-reference-type=\"ref\" data-reference=\"lem:master-scales\">11</a> and base residue errors smaller than every fixed inverse power of $V$.*\n\n*Rows may have rational coefficients if their denominators are units modulo every possible divisor: interpret their residues by inverting those denominators. The integer-value and row hypotheses must still hold. Clearing such denominators leaves the congruence calculation unchanged. In particular this permits smooth denominators and prime pool denominators larger than $V$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-linear-forms"
+  },
+  {
+   "claim_id": "claim-prime-insertion",
+   "exact_statement": "Let $i>l$ and let $Y$ have law $\\mu_i$. For every fixed $A>0$, uniformly over functions $F$ with $|F|\\le V^A$, $$\\mathbb E_Y F(Y)=\\mathbb E_{p,Y}F(pY)+o(1).\n \\label{eq:prime-average-insertion}$$ For a fixed positive integer $k$, coprime to $W$ and bounded by a fixed power of $P_l^++V$, one also has $$\\mathbb E_Y F(kY)=\\mathbb E_Y k\\mathbf 1_{k\\mid Y}F(Y)+o(1),\n \\label{eq:prime-fixed-dilation}$$ uniformly in $k$. The total-mass error before multiplication by $F$ is smaller than every fixed negative power of $P_l^++V$. These assertions remain valid with other independent variables as parameters.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-prime-insertion"
+  },
+  {
+   "claim_id": "claim-mask-removal",
+   "exact_statement": "Put $q_{\\mathrm{mask}}=2^m-1$ and $K_m=q_{\\mathrm{mask}}2^{q_{\\mathrm{mask}}}$. Starting from <a href=\"#eq:correlation-initial\" data-reference-type=\"eqref\" data-reference=\"eq:correlation-initial\">[eq:correlation-initial]</a>, one obtains a family $\\mathcal R$ of at most $K_m$ pairwise nonparallel row templates, with one distinguished row $*$, and functions $f_R$ that may depend on the introduced primes, such that $$|\\mathcal C|^{2^{q_{\\mathrm{mask}}}}\n \\le C_m\\left|\\mathbb E_{\\boldsymbol p,z}\n                 \\prod_{R\\in\\mathcal R}f_R(\\ell_R(z))\\right|+o(1).\n \\label{eq:mask-removal-output}$$ Here $|f_R|\\le W_R$, the distinguished function is exactly $f_*=g_*$, its support is $J_*$, and every prime parameter has the law $\\lambda$, independently before deletion of exceptional tuples. The row templates, the number of parameters, and $C_m$ depend only on $m$ and the choice of $J_*$. They are independent of the scales and functions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-mask-removal"
+  },
+  {
+   "claim_id": "claim-row-directions",
+   "exact_statement": "For each $R\\ne *$ there is an integer polynomial vector $w_R$ such that $$A_Rw_R=0,\\qquad A_Iw_R\\ne0\\quad(I\\ne R).$$ There is also an integer polynomial vector $w_0$ with $A_*w_0=0$ and $A_Iw_0\\ne0$ for $I\\ne *$. These choices can be made from a finite list determined solely by the row templates. Set $$d_R=A_*w_R,\\qquad D=\\prod_{R\\ne *}d_R,\\qquad\n M(\\boldsymbol p)=M|D(\\boldsymbol p)|_{>w}.\n \\label{eq:correlation-modulus}$$ On the good prime tuples planned in Lemma <a href=\"#lem:master-scales\" data-reference-type=\"ref\" data-reference=\"lem:master-scales\">11</a>, the vectors $$v_{R,k}=M(\\boldsymbol p)\\frac{c_{a_*}}{c_k}\n                  \\frac{w_{R,k}}{d_R},\\qquad\n v_{0,k}=M\\frac{c_{a_*}}{c_k}w_{0,k}\n \\label{eq:correlation-integer-directions}$$ belong to $W\\mathbb Z^m$ and have sizes bounded by a fixed power of $P_l^++V$. Their responses satisfy $$\\ell_*(v_R)=M(\\boldsymbol p),\\qquad\n \\ell_R(v_R)=0,\\qquad \\ell_*(v_0)=0.\n \\label{eq:correlation-direction-responses}$$ Every other response is nonzero. At primes $w<\\pi\\le V$ it is a unit unless a member of a fixed list of nonzero integer polynomials in the prime slots vanishes modulo $\\pi$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-row-directions"
+  },
+  {
+   "claim_id": "claim-additive-elimination",
+   "exact_statement": "With the rows, good-tuple law, and modulus of Lemma <a href=\"#lem:row-directions\" data-reference-type=\"ref\" data-reference=\"lem:row-directions\">17</a>, fix $J_0\\in\\mathbb N$ and put $$L(\\boldsymbol p)=\\left\\lfloor\\frac{R}{J_0M(\\boldsymbol p)}\\right\\rfloor.\n \\label{eq:correlation-shift-length}$$ Independently conditional on the primes, let every $u_R^0,u_R^1$ be uniform on $[0,L(\\boldsymbol p))\\cap\\mathbb Z$, for $R\\ne *$. Then $$\\left|\\mathbb E_{\\boldsymbol p,z}\\prod_{I\\in\\mathcal R}f_I(\\ell_I(z))\n \\right|^{2^d}\n \\le C_m\\left|\\mathbb E_{\\boldsymbol p,z,u}\n       \\prod_{\\omega\\in\\{0,1\\}^d}\n       g_*\\left(\\ell_*(z)+M(\\boldsymbol p)\n                    \\sum_{R\\ne *}u_R^{\\omega_R}\\right)\\right|+o(1).\n \\label{eq:additive-elimination-output}$$ The constants are independent of $J_0$; the error is for fixed $J_0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-additive-elimination"
+  },
+  {
+   "claim_id": "claim-correlation-test",
+   "exact_statement": "For every $m\\ge2$ and every nonsingleton target support $J_*$, the construction above determines a finite family of integer polynomial templates $D$, with good prime-tuple laws, such that the following holds for every fixed master chain and valid gap $l$. There are an integer $1\\le d\\le K_m-1$, a constant $C_m$, and $\\theta>0$, all bounded in terms of $m$ alone, for which $$\\boxed{\\quad\n |\\mathcal C|\n \\le o(1)+C_m\\left|\n  \\mathbb E_{\\boldsymbol p,y,u}\n  \\prod_{\\omega\\subseteq[d]}\n  g_*\\left(y+M(\\boldsymbol p)\n                  \\sum_{R\\in\\omega}(u_R^1-u_R^0)\\right)\n                       \\right|^{\\theta}.\n \\quad}\n \\label{eq:correlation-test}$$ Here $y$ has law $\\mu_{i_{a_*}}$, independently of the primes and shifts; the primes have the normalized good-tuple law of Lemma <a href=\"#lem:row-directions\" data-reference-type=\"ref\" data-reference=\"lem:row-directions\">17</a>; $M(\\boldsymbol p)$ is given by <a href=\"#eq:correlation-modulus\" data-reference-type=\"eqref\" data-reference=\"eq:correlation-modulus\">[eq:correlation-modulus]</a>; and the shifts have the conditional laws in <a href=\"#eq:correlation-shift-length\" data-reference-type=\"eqref\" data-reference=\"eq:correlation-shift-length\">[eq:correlation-shift-length]</a>. One may take $\\theta=2^{-(q_{\\mathrm{mask}}+d)}$. The gap length $R_l$ is divisible by every $M(\\boldsymbol p)$ that occurs.*\n\n*The estimate is uniform over all the masks and functions in <a href=\"#eq:correlation-initial\" data-reference-type=\"eqref\" data-reference=\"eq:correlation-initial\">[eq:correlation-initial]</a>, including $g_*$, and over each fixed finite set of positive integers $J_0$. Neither $d$, $C_m$, nor $\\theta^{-1}$ depends on $N$, on the scales, or on the functions. The polynomial templates and direction choices are fixed before $M$ and the prime pools are chosen. In particular, the same tests can be used both for a bounded error and for an error bounded by $1+\\nu_{a_*}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-correlation-test"
+  },
+  {
+   "claim_id": "claim-correlation-dual-interface",
+   "exact_statement": "The base vertex in <a href=\"#eq:correlation-test\" data-reference-type=\"eqref\" data-reference=\"eq:correlation-test\">[eq:correlation-test]</a> is $g_*(y)$. All its other vertices may therefore be regarded as inputs in a dual test $$\\mathcal D(y)=\\mathbb E_{\\boldsymbol p,u}e(\\boldsymbol p)\n  \\prod_{\\emptyset\\ne\\omega\\subseteq[d]}\n  h_{\\omega,\\boldsymbol p}\\left(y+M(\\boldsymbol p)\n              \\sum_{R\\in\\omega}(u_R^1-u_R^0)\\right),\n \\quad |e|\\le1,\\quad |h_{\\omega,\\boldsymbol p}|\\le1+\\nu_{a_*}.$$ In particular, choosing every $h_{\\omega,\\boldsymbol p}=g_*$ and $e=1$ recovers its cube expectation as $\\mathbb E_{\\mu_{i_{a_*}}}g_*\\mathcal D$. The enlarged test class, including independently chosen inputs and bounded prime-dependent signs, is fixed without reference to a dense model. Proposition <a href=\"#prop:correlation-test\" data-reference-type=\"ref\" data-reference=\"prop:correlation-test\">19</a> itself asserts the inequality for the repeated target function; the pseudorandomness of the enlarged test class is proved in Section <a href=\"#sec:prediction\" data-reference-type=\"ref\" data-reference=\"sec:prediction\">5</a>.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-rem-correlation-dual-interface"
+  },
+  {
+   "claim_id": "claim-dual-pseudorandomness",
+   "exact_statement": "For every fixed $b\\geq0$ and dual tests $\\mathcal D_1,\\ldots,\\mathcal D_b$ at the same block, $$\\label{eq:prediction-dual-products}\n \\mathbb E_{\\mu_i}(\\nu-1)\\prod_{q=1}^b\\mathcal D_q=o(1)$$ uniformly over their inputs. The tests may use different permissible gaps and different cube types. If $d_*$ bounds the dimensions of these types and $A_*=2^{2^{d_*}-1}$, then for every fixed positive integer $b$, $$\\label{eq:prediction-dual-moments}\n \\mathbb E_{\\mu_i}(1+\\nu)|\\mathcal D|^b\\leq2A_*^b+o(1).$$ For any fixed $K>A_*$, replacing every test by its clipping to $[-K,K]$ changes it by $o(1)$ in every fixed $L^p((1+\\nu)\\mu_i)$ norm, and <a href=\"#eq:prediction-dual-products\" data-reference-type=\"eqref\" data-reference=\"eq:prediction-dual-products\">[eq:prediction-dual-products]</a> remains true for the clipped tests.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-dual-pseudorandomness"
+  },
+  {
+   "claim_id": "claim-dense-model",
+   "exact_statement": "There are functions $F_{B,a,c}:\\mathbb Z\\to[0,1]$ such that, for every fixed $J_0$ and every dual test at $B$, $$\\label{eq:prediction-dense-approximation}\n \\mathbb E_{\\mu_i}(\\rho-F_{B,a,c})\\mathcal D=o(1)$$ uniformly over its inputs and over the finitely many master blocks, scale labels, and colors.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-dense-model"
+  },
+  {
+   "claim_id": "claim-nilsequence-testing",
+   "exact_statement": "Fix $B=T\\cup\\{i\\}$ and a gap $\\max T<l<i$. Let $S'$ be any family of bounded real piecewise nilsequences on intervals of length $R_l$ and residues modulo $M$, of step at most $s$ and bounded complexity in the sense of Definition <a href=\"#def:piecewise-model\" data-reference-type=\"ref\" data-reference=\"def:piecewise-model\">4</a>. Then $$\\label{eq:prediction-nilsequence-testing}\n \\mathbb E_{\\mu_i}(\\rho-F_{B,a,c})S'=o(1).$$ The assertion is uniform for each fixed finite list of nilmanifolds and fixed observable bounds.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-nilsequence-testing"
+  },
+  {
+   "claim_id": "claim-energy-selection",
+   "exact_statement": "For every $\\varepsilon>0$, a master count $N$ depending only on $n,r,|\\mathcal A|,\\varepsilon$ can be chosen so that there are indices $$k_1<j_1<k_2<j_2<\\cdots<k_n<j_n$$ and $[0,1]$-valued piecewise models $S_{B,a,c}$ at pivot $i=j_u$ on intervals of length $R_{k_u}$ such that $$\\label{eq:prediction-coarse-approximation}\n \\|S_{B,a,c}-P_{j_u,k_u}F_{B,a,c}\\|_2\\leq\\varepsilon.$$ For a chain on the principal indices $j_1,\\ldots,j_n$, let $l$ be the padding index immediately before its first pivot. At every block $B=T\\cup\\{j_u\\}$ of the chain, $$\\label{eq:prediction-fine-projection}\n \\|P_{j_u,l}(F_{B,a,c}-S_{B,a,c})\\|_2\\leq2\\varepsilon.$$ The families $S$ have bounded complexity after $N$ and $\\varepsilon$ are fixed.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-energy-selection"
+  },
+  {
+   "claim_id": "claim-subgroup-inverse",
+   "exact_statement": "Fix a cube type of dimension $d$, a gap $l<i$, and $J_0\\geq1$. Assume $2(2^d)-2\\leq s$. For every $\\gamma>0$ there is $\\kappa=\\kappa(d,J_0,\\gamma)>0$, independent of the master count, the gap, the cutoffs, and the cell probabilities, with the following property. If $h:\\mathbb Z\\to[-1,1]$ is a family with $\\|P_{i,l}h\\|_2<\\kappa$, then $$\\label{eq:prediction-subgroup-conclusion}\n \\lim_{\\mathcal U}\\left|\n \\mathbb E_{\\boldsymbol p,y,u}\n \\prod_{\\omega\\subset[d]}\n h\\left(y+M_{\\boldsymbol p}\n       \\sum_{j\\in\\omega}(u_j^1-u_j^0)\\right)\\right|\n \\leq\\gamma+O_d(J_0^{-1}).$$ Here $y\\sim\\mu_i$, and primes and shifts have the laws in <a href=\"#eq:prediction-dual-test\" data-reference-type=\"eqref\" data-reference=\"eq:prediction-dual-test\">[eq:prediction-dual-test]</a>. The constant in the last term depends only on $d$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-subgroup-inverse"
+  },
+  {
+   "claim_id": "claim-quantitative-leibman",
+   "exact_statement": "Fix a rational filtered nilmanifold as above, a number $d$ of variables, and $0<\\delta<1$. There is a constant $A$, depending only on these data, with the following property. If $P:\\mathbb Z^d\\to G$ is polynomial for this filtration and $(P(v)\\Gamma)_{v\\in\\{0,\\ldots,N-1\\}^d}$ is not $\\delta$-equidistributed, then there is a nonzero horizontal character $\\xi$ of size at most $A$ such that, on writing $$\\xi(P(v))=\\sum_I\\alpha_I\\binom vI,\n \\qquad \\binom vI=\\prod_{j=1}^d\\binom{v_j}{I_j},$$ one has $$N^{\\abs I}\\norm{\\alpha_I}_{\\mathbb R/\\mathbb Z}\\leq A\n \\qquad (\\abs I>0).\n \\label{eq:rough-leibman-binomial}$$ Here $\\delta$-equidistribution means comparison with Haar probability to error at most $\\delta$ against every observable of Lipschitz norm at most one. The constant $A$ is independent of the coefficients of $P$ and of $N$.*\n\n\n\n*The following consequence will be used. Fix also $c,C,B,\\eta>0$. Let $\\mathcal Q\\subseteq[-CZ,CZ]^d$ be an axis-parallel box with each side at least $cZ$, sampled at its integer points. If $$\\abs{\\mathbb E_{x\\in\\mathcal Q\\cap\\mathbb Z^d}F(P(x)\\Gamma)\n       -\\int_{G/\\Gamma}F}\\geq\\eta,\n \\qquad \\norm F_{\\mathop{\\mathrm{Lip}}}\\leq B,\n \\label{eq:rough-haar-obstruction}$$ then, for sufficiently large $Z$, there is a nonzero horizontal character in a fixed finite list such that, writing $\\xi(P(x))=\\sum_I\\theta_Ix^I$ in ordinary monomials, $$\\norm{\\theta_I}_{\\mathbb R/\\mathbb Z}\\leq A'Z^{-\\abs I}\n \\qquad (\\abs I>0).\n \\label{eq:rough-leibman-monomial}$$ The list and $A'$ depend only on the fixed filtered nilmanifold, $d,c,C,B,\\eta$. The same assertions hold with the nilmanifold and its filtration chosen from a fixed finite list.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-quantitative-leibman"
+  },
+  {
+   "claim_id": "claim-rough-interpolation",
+   "exact_statement": "Fix $e\\geq1$, $q\\geq e$, and $A>0$. For a fixed integer $H\\geq2q+2$, let $$t_z=t_0+mz\\in[S,2S),\\qquad 0\\leq z<H,$$ where $m$ is a positive integer with all prime factors at most $w$, and $\\gcd(t_z,W)=1$ for every $z$, with $W=\\prod_{p\\leq w}p$. Suppose $w,S\\to\\infty$ and $Z/S^a\\to\\infty$ for every fixed $a>0$. Let $\\theta(z)$ be a real polynomial such that $\\deg(t_z^e\\theta(z))\\leq q$ and $$\\norm{t_z^e\\theta(z)}_{\\mathbb R/\\mathbb Z}\\leq A(S/Z)^e\n \\qquad(0\\leq z<H).\n \\label{eq:rough-interpolation-input}$$ For all sufficiently large $w$ there is a rational polynomial $M(z)$, of degree at most $q-e$, integral at every index $0\\leq z<H$, such that $$\\abs{\\theta(z)-M(z)}\\leq C_{q}A Z^{-e}\n \\qquad(0\\leq z<H).\n \\label{eq:rough-interpolation-output}$$ Its coefficient denominators have only prime factors at most $w$. The constant in <a href=\"#eq:rough-interpolation-output\" data-reference-type=\"eqref\" data-reference=\"eq:rough-interpolation-output\">[eq:rough-interpolation-output]</a> is independent of $H$. The threshold for $w$ is permitted to depend on $H$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-rough-interpolation"
+  },
+  {
+   "claim_id": "claim-rough-step-removal",
+   "exact_statement": "Fix $G/\\Gamma$, a number $d\\geq1$ of spatial variables, a degree bound $D$, and constants $c,C,B>0$. Along an arbitrary sequence $w\\to\\infty$, let $L,S,Z$ satisfy $$W\\mid L,\\quad L\\text{ is }w\\text{-smooth},\\quad\n S\\to\\infty,\\quad S/L\\to\\infty,\\quad\n Z/S^a\\to\\infty\\quad\\text{for every fixed }a>0.\n \\label{eq:rough-scales}$$ Fix a residue $r$ modulo $L$ with $\\gcd(r,W)=1$, and put $\\mathcal T=[S,2S)\\cap(r+L\\mathbb Z)$. Let $P_t(x)$ be $G$-valued, with logarithmic coordinates polynomial jointly in $(t,x)\\in\\mathbb R\\times\\mathbb R^d$ of total degree at most $D$. These polynomials and their coefficients may change with $w$.*\n\n\n*For every $\\eta>0$, the proportion of $t\\in\\mathcal T$ for which there exist a box $\\mathcal Q\\subseteq[-CZ,CZ]^d$ with all sides at least $cZ$, a vector $b\\in\\mathbb Z^d$, and an observable $F:G/\\Gamma\\to\\mathbb C$ with $\\norm F_{\\mathop{\\mathrm{Lip}}}\\leq B$, such that $$\\abs{\\mathbb E_{x\\in\\mathcal Q\\cap\\mathbb Z^d}F(P_t(x)\\Gamma)\n       -\\mathbb E_{x\\in\\mathcal Q\\cap(b+t\\mathbb Z^d)}F(P_t(x)\\Gamma)}\n       \\geq\\eta\n \\label{eq:rough-discrepancy}$$ tends to zero.*\n\n*This conclusion holds for every sequence of the allowed data. In particular the exceptional proportion is uniform over the polynomial coefficients, the residue $r$, and all the boxes, residue vectors and observables in <a href=\"#eq:rough-discrepancy\" data-reference-type=\"eqref\" data-reference=\"eq:rough-discrepancy\">[eq:rough-discrepancy]</a>. The latter three may be chosen separately for every $t$ without any polynomial dependence. The same conclusion holds for a fixed finite list of nilmanifolds and fixed complexity bounds.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-rough-step"
+  },
+  {
+   "claim_id": "claim-rough-residual-step",
+   "exact_statement": "In Proposition <a href=\"#prop:rough-step\" data-reference-type=\"ref\" data-reference=\"prop:rough-step\">28</a>, let $q$ be another positive integer, fixed while $t$ varies but permitted to change with $w$. Let $a\\in\\{0,\\ldots,q-1\\}^d$ also be independent of $t$. Suppose the spatial boxes have common scale $Z_0$, with $Z_0/q$ dominating every fixed power of $S$. Suppose $\\log P_t(a+qy)$ is polynomial jointly in $(t,y)$ with fixed degree bound, and the normalized boxes lie in fixed multiples of $[-Z_0/q,Z_0/q]^d$ with comparable sides. Then, outside an exceptional proportion tending to zero, averaging $P_t$ over the class $a+q\\mathbb Z^d$ agrees to any prescribed accuracy with averaging over any compatible class modulo $qt$, with the same uniformities in boxes and tests. No coprimality between $q$ and $t$ is assumed.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-rough-residual-step"
+  },
+  {
+   "claim_id": "claim-upper-face-coordinates",
+   "exact_statement": "The group $C^q(H_\\bullet)$ is connected, simply connected, and rational. Order the subsets of $[q]$ by increasing cardinality, breaking ties in any fixed way. Every element of $C^q(H_\\bullet)$ has a unique expression $$\\prod_{D\\subseteq[q]}(g_D)_D,\\qquad g_D\\in H_{|D|},\n \\label{eq:ordered-face-product}$$ in this order; the map from the face coefficients to the array is a diffeomorphism. An array in this group which is the identity except possibly at the all-ones vertex has its remaining entry in $H_q$. The group is invariant under permutations and reflections of cube coordinates. If $\\Gamma$ is a lattice in $H$, its image in $(H/\\Gamma)^{\\{0,1\\}^q}$ is compact.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-upper-face-coordinates"
+  },
+  {
+   "claim_id": "claim-cube-corner",
+   "exact_statement": "Let $G$ be a connected simply connected nilpotent Lie group of step at most $s$, and let $\\Gamma$ be a lattice in $G$. Equip $G$ with its lower central filtration, with $G_0=G_1=G$. In dimension $s+1$, any $2^{s+1}-1$ vertices of a cube in the image of $C^{s+1}(G_\\bullet)$ determine the last vertex uniquely and continuously on the set of admissible partial cubes. Linear orbit cubes $$\\bigl(g^{b_0+\\sum_{j=1}^{s+1}e_jb_j}x\\bigr)_e$$ belong to this compact cube set.*\n\n*Consequently, for every $\\varepsilon>0$ and every bounded Lipschitz observable $F$ on $G/\\Gamma$, its value at the missing vertex is uniformly within $\\varepsilon$ of a finite sum of products of bounded continuous functions of the other individual vertices. Those individual functions may be taken Lipschitz and bounded by one, with scalar coefficients outside the products. For a fixed finite list of nilmanifolds and fixed bounds on $\\norm{F}_\\infty$ and $\\mathop{\\mathrm{Lip}}(F)$, finitely many such approximation recipes suffice at each accuracy.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-cube-corner"
+  },
+  {
+   "claim_id": "claim-adapted-factorization",
+   "exact_statement": "Fix a connected simply connected nilpotent group $K$, a lattice $\\Lambda$, and a rational filtration $K_\\bullet$ satisfying <a href=\"#eq:cube-filtration\" data-reference-type=\"eqref\" data-reference=\"eq:cube-filtration\">[eq:cube-filtration]</a>. Let $L\\to\\infty$ along any sequence, and let $P_L$ be arbitrary adapted polynomials. After passing to a subsequence there exist a fixed rational filtration $H_\\bullet$ with $H_i\\subseteq K_i$, a positive integer $d_0$, rational elements $\\sigma_0,\\ldots,\\sigma_{d_0-1}$ of $K$, and factorizations $$P_L(b)\\Lambda\n =h_L(b)Q_L(b)\\gamma_L(b)\\Lambda,\n \\qquad\n Q_L(b)=\\prod_{j=1}^s a_{j,L}^{\\binom bj},\\quad a_{j,L}\\in H_j,\n \\label{eq:adapted-factorization}$$ such that the following hold.*\n\n1.  *The maps $\\beta\\mapsto h_L(L\\beta)$ converge locally uniformly on $\\mathbb R$ to a smooth map $h:\\mathbb R\\to K$. They and their first derivatives are bounded on every fixed compact interval, uniformly in $L$.*\n\n2.  *For integer $b$, $\\gamma_L(b)\\Lambda=\\sigma_{b\\bmod d_0}\\Lambda$.*\n\n\n3.  *If $1\\leq j\\leq s$ and $\\xi:H_j\\to\\mathbb R$ is a nonzero rational homomorphism annihilating $H_{j+1}$ and every $[H_i,H_{j-i}]$, $1\\leq i<j$, then $$L^j\\norm{\\xi(a_{j,L})}_{\\mathbb R/\\mathbb Z}\\longrightarrow\\infty.\n     \\label{eq:level-irrationality}$$ Here rational homomorphisms include all nonzero rational multiples of one another. No boundedness of the Taylor coefficients $a_{j,L}$ is asserted or required.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-adapted-factorization"
+  },
+  {
+   "claim_id": "claim-local-cube-law",
+   "exact_statement": "Under the hypotheses of Lemma <a href=\"#lem:adapted-factorization\" data-reference-type=\"ref\" data-reference=\"lem:adapted-factorization\">32</a>, retain the subsequence and its data. Define probability measures $$m_{\\beta,r}^{[q]}\n =\\text{Haar image on }\n h(\\beta)^{\\mathrm{diag}} C^q(H_\\bullet)\n \\sigma_r^{\\mathrm{diag}}\\Lambda^{\\{0,1\\}^q}/\n              \\Lambda^{\\{0,1\\}^q}.\n \\label{eq:local-cube-haar}$$ The empirical point laws satisfy $$\\frac1{\\lfloor L\\rfloor}\\sum_{0\\leq b<\\lfloor L\\rfloor}\n       \\delta_{P_L(b)\\Lambda}\n \\ \\Longrightarrow\n \\frac1{d_0}\\sum_{r=0}^{d_0-1}\\int_0^1 m_{\\beta,r}^{[0]}\\,d\\beta.\n \\label{eq:joint-point-law}$$ For every fixed cube dimension $q$, every $\\beta\\in(0,1)$, every residue $r\\bmod d_0$, and every bounded Lipschitz test $F$ on $(K/\\Lambda)^{\\{0,1\\}^q}$, $$\\lim_{\\alpha\\downarrow0}\\limsup_{L\\to\\infty}\n \\left|\n \\mathbb E_{\\substack{b_0/L\\in[\\beta,\\beta+\\alpha),\\ b_0\\equiv r\\ (d_0)\\\\\n                 b_j/L\\in[0,\\alpha),\\ b_j\\equiv0\\ (d_0),\\ 1\\leq j\\leq q}}\n F\\bigl((P_L(b_0+\\sum_{j=1}^q e_jb_j)\\Lambda)_e\\bigr)\n -\\int F\\,dm_{\\beta,r}^{[q]}\n \\right|=0.\n \\label{eq:local-cube-limit-order}$$ The inputs in this average are independent and uniform on the specified integer progressions. The same assertion holds for boxes with side lengths between $c\\alpha L$ and $C\\alpha L$, whose base coordinates are within $C\\alpha L$ of $\\beta L$ and whose increments have absolute value at most $C\\alpha L$, where $c,C>0$ are fixed before either limit. For fixed bounds the assertions are uniform over the tests and these boxes. In particular, arbitrary fixed-modulus progression restrictions are permitted if the base has residue $r$ and all increments have residue zero modulo $d_0$. Every progression modulus is fixed before the length limit, which always precedes the locality limit. The same factorization supplies these conclusions for every fixed $q$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-local-cube-law"
+  },
+  {
+   "claim_id": "claim-face-lift",
+   "exact_statement": "Let $K=K'\\times K''$ be a connected simply connected nilpotent Lie group with lattice $\\Lambda=\\Lambda'\\times\\Lambda''$, and let $\\pi$ denote the first group projection and its induced map of nilmanifolds. Let $H\\subseteq K$ be a connected rational subgroup with a connected rational filtration $H_\\bullet$ satisfying <a href=\"#eq:cube-filtration\" data-reference-type=\"eqref\" data-reference=\"eq:cube-filtration\">[eq:cube-filtration]</a>. Let $h\\in K$, and let $\\sigma\\in K$ be rational. Let $S$ be a fixed automorphism of $K'$ preserving $\\Lambda'$. Suppose that, for every $1\\leq q\\leq s+1$, applying $S$ to the entries on any upper codimension-one face preserves setwise the projected cube coset $$\\pi\\left(h^{\\mathrm{diag}}C^q(H_\\bullet)\n                \\sigma^{\\mathrm{diag}}\\Lambda^{\\{0,1\\}^q}/\n                   \\Lambda^{\\{0,1\\}^q}\\right).\n \\label{eq:projected-face-coset}$$ Then there is a polynomial shear $T:\\mathfrak h\\to\\mathfrak h$ such that, for every $u\\in\\mathfrak h$, $$\\pi\\bigl(h\\exp(Tu)\\sigma\\Lambda\\bigr)\n =S\\bigl(\\pi(h\\exp(u)\\sigma\\Lambda)\\bigr).\n \\label{eq:joint-lift-identity}$$ The lift is a bijection of the cover. Its action on the other component is unrestricted. This conclusion applies separately to every point coset from Proposition <a href=\"#prop:local-cube-law\" data-reference-type=\"ref\" data-reference=\"prop:local-cube-law\">33</a>; no measurable choice of lifts as a function of $\\beta,r$ is required.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-face-lift"
+  },
+  {
+   "claim_id": "claim-shear-haar",
+   "exact_statement": "On any finite-dimensional real vector space with coordinate weights in $\\{1,\\ldots,s\\}$, all the shears <a href=\"#eq:weighted-shear\" data-reference-type=\"eqref\" data-reference=\"eq:weighted-shear\">[eq:weighted-shear]</a> form a group of nilpotence class at most $s$. This bound does not depend on the dimension or the coefficients of the shears. A direct product with any group of ordinary translations has the same bound.*\n\n\n*Let $\\mathfrak h$ carry the adapted coordinates above, and let $\\lambda_E$ be normalized Lebesgue measure on $$B_E=\\{u:\\ \\abs{u_{j,k}}\\leq E^j\\text{ for all }j,k\\},\n \\qquad E\\longrightarrow\\infty.\n \\label{eq:weighted-haar-boxes}$$ For every fixed finite set $\\mathcal T$ of shears, $$\\max_{T\\in\\mathcal T}\n   \\norm{T_*\\lambda_E-\\lambda_E}_{\\mathop{\\mathrm{TV}}}\\longrightarrow0.\n \\label{eq:fixed-shear-tv}$$ For every fixed $h\\in K$ and rational $\\sigma\\in K$, the images of $\\lambda_E$ under $u\\mapsto h\\exp(u)\\sigma\\Lambda$ converge weakly to the Haar image on $hH\\sigma\\Lambda/\\Lambda$. The same limit holds after any fixed shear, and hence after each word in any fixed finite list of words in the lifts from Proposition <a href=\"#prop:face-lift\" data-reference-type=\"ref\" data-reference=\"prop:face-lift\">34</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-shear-haar"
+  },
+  {
+   "claim_id": "claim-finite-word-plan",
+   "exact_statement": "For given $n,r,s$, there are a positive integer $q_0$ and finite lists of scale updates and word jumps with the following property, uniformly over the actions and palette maps just specified and the initial centers at all pivots. Start the scale tuple at $(1,\\ldots,1)$, process the pivots increasingly, and fix an order of their targets. At each pivot one can choose updates <a href=\"#eq:alignment-scale-update\" data-reference-type=\"eqref\" data-reference=\"eq:alignment-scale-update\">[eq:alignment-scale-update]</a> and jumps from these lists so that, at the resulting scale $b$ and center, the terminal palette comparisons hold simultaneously for all its targets. These comparisons are <a href=\"#eq:alignment-word-requirement\" data-reference-type=\"eqref\" data-reference=\"eq:alignment-word-requirement\">[eq:alignment-word-requirement]</a> with leading multiplier $d_B$ and word $$\\label{eq:alignment-terminal-word}\n \\prod_{A\\in D}\\bigl((B,A),d_A/d_B\\bigr)[b],$$ in a fixed order, for every target $B$, every $D\\subset\\mathcal E_B$, and every multiplier tuple $d$ obtainable from later prescribed updates. When later pivots are processed, the center at this pivot is left fixed: these terminal requirements already include all the later scale changes.*\n\n*All these lists depend only on $n,r,s$. There are finite lists $\\mathcal B\\subset\\mathbb Q_{>0}^n$ and $\\mathcal A\\subset\\mathbb Q_{>0}$ containing, respectively, the final scale tuples and every palette index consulted during the construction. All intermediate scales belong to finite lists as well. The list $\\mathcal A$ also contains every required product of entries of a tuple in $\\mathcal B$. All powers used in <a href=\"#eq:alignment-letter\" data-reference-type=\"eqref\" data-reference=\"eq:alignment-letter\">[eq:alignment-letter]</a> are integral. If each $L_e$ also translates an auxiliary integer coordinate $v_e$ by $1$, all auxiliary indices visited from $v=0$ lie in a prescribed finite slot list.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-finite-word-plan"
+  },
+  {
+   "claim_id": "claim-conditional-face-invariance",
+   "exact_statement": "Fix the bounded-complexity model family and the finite lists above. For a good conditioning on the earlier variables, the pivot microcell, and its residue, form the joint orbit $Y(\\ell)$ just constructed. Fix a cube dimension $a\\le s+1$, a positive integer $d$, constants $0<c<C$, and a bound for the supremum and Lipschitz norms of tests. Uniformly over boxes for $(\\ell_0,\\ldots,\\ell_a)$ in $[-CN_{\\rm loc},CN_{\\rm loc}]^{a+1}$ with sides at least $cN_{\\rm loc}$, all fixed residue vectors modulo $d$, all such tests of one marginal cube, and every own-pair automorphism, the difference between the marginal cube average and its image under that automorphism on an upper codimension-one face tends to zero in probability over the conditioning.*\n\n*Consequently, from any sets of conditionings of probability bounded away from zero one can select a sequence on which, simultaneously for all these fixed data, the marginal face invariances hold. On a further subsequence to which Proposition <a href=\"#prop:local-cube-law\" data-reference-type=\"ref\" data-reference=\"prop:local-cube-law\">33</a> applies, every projected local cube coset has the corresponding face symmetry in dimensions through $s+1$. The modulus in this last assertion may be the period selected by that Proposition.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-conditional-face-invariance"
+  },
+  {
+   "claim_id": "claim-alignment-mass",
+   "exact_statement": "For every fixed $\\tau>0$ and every permitted bounded-complexity family of models, outside a set of earlier-variable/microcell/residue conditionings of probability tending to zero, the conditional uniform pivot probability that $$\\mathcal P_i(b;p+s(v))\\quad\\text{holds for some prescribed slot }v$$ is at least $1/(2Q_i)$. The same statement holds for the conditional harmonic probability, after replacing the constant by $1/(3Q_i)$ if necessary. The constants are independent of the threshold and model complexity.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-alignment-mass"
+  }
+ ],
+ "paper": "papers/EN-113-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-H-0324_PM-164.1_Monochromatic_finite_sums_and_products_in_the_positive_integers.md",
+ "purpose": "Monochromatic finite sums and products in the positive integers",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "28fed211dc49bbe4bc2f5610640c5b1e3dd32caa9e496950fe2cf08433efb17d",
+   "pm.domains.v2": "36f53fa3c9c6af1cede62bac8a84678ea127566af3f79e09335a999d907f75c9",
+   "pm.edges.v2": "ddf353a4da13457b587d9cf340898251ea3da8b951f565331b95bec58d0bdf38",
+   "pm.extraction.v2": "5c5bed861a3baf2d584c9fa4e7d0bbf0b8084221b0c3b8870156dea40e6aa614",
+   "pm.formal.v2": "839c5bd84cc5992275e9026af9280b6613f682477c7e2ba099215b0b5892ffc3",
+   "pm.limits.v2": "ae03cc4c149d0d468f77abaefae25f36e1dedfb58f66e58dda18511d808df120",
+   "pm.node.v2": "b2bfad414a0c9914fe78f7c058d143abead7137b7630671851cc170dddb278c4",
+   "pm.objects.v2": "0e7bc21e654ca5491ab5dca0b17a7561b7151fd9eb7ee4652ee40192694a2fc6",
+   "pm.provenance.v2": "9ce5ec1648172b1a7b2be07481e2923fdefb3d1631c25eeec19c3c6616f9d8dc",
+   "pm.quantities.v2": "966c3996892bbb8618a2afb39dc9708f0be8476a5f4cdc0af54a614292f93804",
+   "pm.reading.v2": "d747348c24344244f79d3901437fb695a3bbfe9ccfe7929145572ad9c2f70e86",
+   "pm.roadmap.v2": "750e1d727a566d86a103a78ec627d3dbae1fcbf89e1098bff2ee61d75537972d",
+   "pm.search.v1": "3f3dcd0072ef765292e6aabae424ebea7b6c795d4232a02e9f2e8227f7137f43",
+   "pm.triptych.v2": "d8fce6f35c2f12be5e7c05181c2624acf523d76a42c7a796dc025ab0b5cdf685"
+  },
+  "canonical_sha256": "032a68cd107d20af7168d1d5f26d91d58dd63c3b3dc9ac59ddae681fa3978967",
+  "paper_sha256": "0fe3a86fd43a2096fabb5a712671f0822323caba63cdf01f74fc2fbe7770ad39",
+  "repaired_body_sha256": "b9a33ef4dba81af911941995d3a45c4797d88a9a9de09fb82b36122726f4f7e1"
+ },
+ "status": "ACTIVE",
+ "subject_id": 13,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "bcc37f44679e9c9bc15cbd207965ad942773e287cc0014948fd1deec51424ff2",
+   "receipt_sha256": "1cb271134c6ccd2b02efda6dbcbce54063c25951439aeede7207cc52c9b975c7",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Monochromatic finite sums and products in the positive integers"
+}

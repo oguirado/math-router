@@ -1,0 +1,138 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "pm.node.v2"
+    },
+    "pm_id": {
+      "type": "string",
+      "pattern": "^PM-[0-9]{3}\\.[0-9]+$"
+    },
+    "generation_status": {
+      "type": "string",
+      "enum": [
+        "ASSEMBLED"
+      ]
+    },
+    "corpus": {
+      "const": "071"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "family": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 17
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "WITHDRAWN",
+        "SUPERSEDED"
+      ]
+    },
+    "source_coordinate": {
+      "type": "string"
+    },
+    "coordinate": {
+      "type": "string"
+    },
+    "filename": {
+      "type": "string"
+    },
+    "abstract_verbatim": {
+      "type": "string"
+    },
+    "canonical_anchor": {
+      "type": "string"
+    },
+    "claim_status": {
+      "type": "string",
+      "enum": [
+        "CORPUS_CLAIMED",
+        "LEAN_STATED",
+        "LEAN_CHECKED",
+        "ABSENT"
+      ]
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "tokenizer": {
+          "type": "string"
+        },
+        "tokens": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tier": {
+          "type": "string",
+          "enum": [
+            "T1",
+            "T2",
+            "T3",
+            "T4",
+            "T5",
+            "UNMEASURED"
+          ]
+        }
+      },
+      "required": [
+        "tokenizer",
+        "tokens",
+        "bytes",
+        "tier"
+      ],
+      "additionalProperties": false
+    },
+    "publication_status": {
+      "type": "string",
+      "enum": [
+        "DRAFT",
+        "VERIFIED",
+        "QUARANTINED"
+      ]
+    }
+  },
+  "required": [
+    "schema",
+    "pm_id",
+    "generation_status",
+    "corpus",
+    "slug",
+    "family",
+    "title",
+    "subject_id",
+    "status",
+    "source_coordinate",
+    "coordinate",
+    "filename",
+    "abstract_verbatim",
+    "canonical_anchor",
+    "claim_status",
+    "context",
+    "publication_status"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pm.node.v2"
+}

@@ -1,0 +1,637 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 599920,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 186791
+ },
+ "coordinate": "EN-101-000-0022-2-2026-PR-T4-UK-EX-M1-B-ML-H-0034",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "Here the limit is taken over all real $X$, with ordinary, unweighted counting.",
+     "quote_sha256": "52c2ad14fd1fe6d6ebe2669344a11b2054680e62b34ca0d62f536caec758523b"
+    }
+   ],
+   "query": "effective error term for finite ranges",
+   "reason": "The result is an unquantified asymptotic limit."
+  }
+ ],
+ "family": "PM-012",
+ "id": "PM-012.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-joint-dickman-law",
+    "statement": "For every fixed $a,b\\in(0,1)$, $$\\lim_{X\\to\\infty}\\frac1X\n \\#\\{2\\leq n\\leq X:P^+(n)\\leq n^a,\n                         \\ P^+(n+1)\\leq n^b\\}\n =\\rho(1/a)\\rho(1/b).$$"
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-ordering-density",
+    "statement": "For every fixed $a,b\\in(0,1)$, $$\\lim_{X\\to\\infty}\\frac1X\n \\#\\{2\\leq n\\leq X:P^+(n)\\leq n^a,\n                         \\ P^+(n+1)\\leq n^b\\}\n =\\rho(1/a)\\rho(1/b).$$"
+   },
+   {
+    "anchor": "stmt-lem-labels-marginal",
+    "claim_id": "claim-label-marginal-limit",
+    "statement": "For every fixed $0<\\alpha<\\beta<\\infty$, positive integer $q$, and residue class $a\\pmod q$, the distribution of $$\\bigl(\\Omega_{\\mathcal B_{k,x}}(n)\\bigr)_{1\\leq k<J}$$ among the integers $\\alpha x<n\\leq\\beta x$, $n\\equiv a\\pmod q$, normalized to have mass one, converges as $x\\to\\infty$."
+   },
+   {
+    "anchor": "stmt-prop-mixed",
+    "claim_id": "claim-mixed-decorrelation",
+    "statement": "For every fixed integer $J\\geq2$ and every pair of fixed phase vectors $(\\zeta_k)_{k=1}^{J-1}$ and $(\\xi_k)_{k=1}^{J-1}$ of absolute value one, the corresponding labels satisfy $$\\label{eq:mixed}\n \\lim_{x\\to\\infty}\\frac1x\\sum_{1\\leq n<x}\n                   \\overline{g_x(n)}F_x(n+1)=0,$$ where $F_x=f_x-\\mu$ and the limit is through all integer scales."
+   },
+   {
+    "anchor": "stmt-lem-labels-short",
+    "claim_id": "claim-weighted-short-averages",
+    "statement": "Let $T=T(B)\\to\\infty$, let $L_B$ be positive integers tending to infinity, and let $a_B$ be any integer for each $B$."
+   },
+   {
+    "anchor": "stmt-thm-labels-real-mr",
+    "claim_id": "claim-real-short-interval",
+    "statement": "There is a function $r(H)$ tending to zero as $H\\to\\infty$ such that, for every real multiplicative function $g:\\mathbb N\\to[-1,1]$ and $2\\leq H\\leq X$, $$\\label{eq:labels-real-MR}\n \\frac1X\\int_X^{2X}\n   |\\mathcal A_Hg(z)-\\mathcal L_Xg|^2\\,dz\\leq r(H).$$"
+   },
+   {
+    "anchor": "stmt-thm-labels-complex-mrt",
+    "claim_id": "claim-complex-short-interval",
+    "statement": "For every multiplicative function $g:\\mathbb N\\to\\mathbb C$ with $|g|\\leq1$ and $X\\geq H\\geq10$, $$\\label{eq:labels-complex-quantitative}\n \\frac1X\\int_X^{2X}|\\mathcal A_Hg(z)|^2\\,dz\n \\ll (1+M(g;X))e^{-M(g;X)}\n       +\\left(\\frac{\\log\\log H}{\\log H}\\right)^2\n       +(\\log X)^{-1/50},$$ with an absolute implied constant."
+   },
+   {
+    "anchor": "stmt-lem-labels-character-distance",
+    "claim_id": "claim-character-distance-divergence",
+    "statement": "Fix $J\\geq2$, positive constants $c,C$, a nonprincipal Dirichlet character $\\chi$ of modulus $q_\\chi$, and a finite set $E$ of primes."
+   },
+   {
+    "anchor": "stmt-lem-arith-classical-sd",
+    "claim_id": "claim-classical-selberg-delange",
+    "statement": "For each fixed nonnegative integer $H$ and either of the above values of $z$, there are real constants $c_j(z)$ such that, for $Y\\ge3$, $$\\sum_{n\\le Y}g_z(n)\n =Y\\sum_{j=0}^{H}c_j(z)(\\log Y)^{z-1-j}\n       +O_H\\bigl(Y(\\log Y)^{z-2-H}\\bigr),$$ where $$c_0(z)=\\frac1{\\Gamma(z)}\n          \\prod_p(1+z/p)(1-1/p)^z>0.$$"
+   },
+   {
+    "anchor": "stmt-lem-arith-rough-sd",
+    "claim_id": "claim-rough-selberg-delange",
+    "statement": "Fix $D>0$."
+   },
+   {
+    "anchor": "stmt-prop-arith-local-laws",
+    "claim_id": "claim-local-coefficient-laws",
+    "statement": "Let $w_3$ be smooth and supported in a fixed compact subinterval of $(0,\\infty)$."
+   },
+   {
+    "anchor": "stmt-lem-arith-weighted-sieve",
+    "claim_id": "claim-weighted-sieve",
+    "statement": "There is a sufficiently small $c_k>0$, depending only on fixed $k$, with the following properties for $Z\\ge2$.*\n\n*In an interval of length $N\\ge1$, at most $k$ forbidden residues at each prime $p\\le Z$ give an upper bound $$C_kN\\prod_{p\\le Z}(1-\\theta_p)+O_k(N^{0.8})\n       \\qquad(Z\\le N^{c_k}).$$"
+   },
+   {
+    "anchor": "stmt-lem-arith-coefficient-moments",
+    "claim_id": "claim-coefficient-moments",
+    "statement": "On these intervals, $$X^{-1}\\sum_{n\\asymp X}A_0(n)\\ll1,\\qquad\n X^{-1}\\sum_{n\\asymp X}A_0(n)^2\\ll B^{1/4+o(1)}.\n \\label{eq:5}$$"
+   },
+   {
+    "anchor": "stmt-lem-arith-form-bounds",
+    "claim_id": "claim-form-bounds",
+    "statement": "Uniformly for $0<|j|\\le T$ and squarefree rough $b\\asymp TX$, $$\\sum_{\\substack{c\\asymp X\\\\b+jc\\asymp TX,\\ b+jc>0}}\n               A_0(c)A_0(b+jc)\\ll X\\Sigma(j).\n \\label{eq:6}$$ On the same fixed log-size ranges, $$\\sum_{\\substack{b\\asymp TX,\\ c\\asymp X\\\\a=b+jc\\asymp TX,\\ a>0}}\n               A_0(b)A_0(a)A_0(c)\\ll TX^2\\Sigma(j).\n \\label{eq:7}$$ The implied constants do not depend on $b,j,X$, or $B$."
+   },
+   {
+    "anchor": "stmt-lem-arith-regularity-loss",
+    "claim_id": "claim-regularity-loss",
+    "statement": "There is an absolute $c_3>0$ such that, for each fixed choice of the grid, tolerance, and compact log-size ranges above, there are $C>0$ and a function $\\epsilon_B\\to0$ such that the part of the untruncated sum in <a href=\"#eq:7\" data-reference-type=\"eqref\" data-reference=\"eq:7\">[eq:7]</a> where at least one coefficient is not regular is at most $$C TX^2\\Sigma(j)\\bigl(\\epsilon_B+e^{-c_3C_*}\\bigr).\n \\label{eq:9}$$ The constant $C$ may depend on the fixed grid, tolerance, and scale ranges, but not on $C_*,j,X,B$."
+   },
+   {
+    "anchor": "stmt-lem-amp-divisor-moments",
+    "claim_id": "claim-divisor-weight-moments",
+    "statement": "There exist $C_0>0$ and $d_0>0$ such that, for each fixed $C_*\\ge C_0$ and all sufficiently large $B$, $$\\label{eq:12}\n \\|D_B\\|_{L^2(\\widehat{\\mathbb Z})}\\ll_{C_*}1,\n \\qquad\n \\int_{\\widehat{\\mathbb Z}}D_B(w)\\,dw\\ge d_0.$$"
+   },
+   {
+    "anchor": "stmt-lem-amp-site-model",
+    "claim_id": "claim-site-model-reduction",
+    "statement": "For each fixed $C_*\\ge0$, as $B\\to\\infty$, $$\\int_{\\widehat{\\mathbb Z}}D_B(w)^r\\,dw=\\mathbb E\\widetilde D_B^r+o(1)\n \\qquad(r=1,2).$$"
+   },
+   {
+    "anchor": "stmt-lem-amp-small-ball",
+    "claim_id": "claim-addition-small-ball",
+    "statement": "Fix $H>0$."
+   },
+   {
+    "anchor": "stmt-lem-preservation",
+    "claim_id": "claim-profile-preservation",
+    "statement": "For each fixed $C_*\\ge C_0$, put $H(t,w)=\\phi(t)W(t,w)$."
+   },
+   {
+    "anchor": "stmt-prop-amp-energy",
+    "claim_id": "claim-amplified-energy",
+    "statement": "There is $c_5>0$, independent of all sufficiently large fixed $C_*$, for which the nonnegative energy below satisfies the displayed lower bound: $$\\label{eq:15}\n\\begin{gathered}\n I_{2,x}\n = \\frac1x\\sum_{c\\ge1}\n   \\rho_0(\\log c/B)A(c)\n   \\sum_{m\\ge1}K(m)\n   \\left|\n     \\sum_{\\substack{a\\ge1\\\\c\\mid am+1}}\n     A(a)K(l_a)\\psi(a/(Tc))\n     \\phi(am/x)F_x(am+1)\n   \\right|^2,\n \\\\\n \\liminf_{B\\to\\infty}\\ \\liminf_{x\\to\\infty}\n       \\frac{I_{2,x}}{BT}\\ge c_5\n\\end{gathered}$$ Its diagonal contribution is negligible: $$\\lim_{B\\to\\infty}\\ \\limsup_{x\\to\\infty}\n       \\frac{I_{2,x}^{\\mathrm{diag}}}{BT}=0.$$"
+   },
+   {
+    "anchor": "stmt-lem-graph-edge-mass",
+    "claim_id": "claim-edge-mass",
+    "statement": "Uniformly for $0<|j|\\le T$ and $s\\in\\mathcal S$, $$\\label{eq:18}\n \\mathbb E_{u\\in\\widehat{\\mathbb Z}}\\mathcal K_j(u,s)\\ll\\frac{\\Sigma(j)}T.$$"
+   },
+   {
+    "anchor": "stmt-lem-graph-row-mean",
+    "claim_id": "claim-row-mean",
+    "statement": "For every possible endpoint type $S_i$, not merely almost every typical type, and every allowed lag $j=k-i$, $$\\label{eq:23}\n \\mathbb E_{S_k}\\mathcal L_{ik}(S_i,S_k;s)\n \\ll\\frac{\\Sigma(j)}T.$$"
+   },
+   {
+    "anchor": "stmt-prop-graph-root-comparison",
+    "claim_id": "claim-root-comparison",
+    "statement": "Let $\\mathcal M_{ik}(S_i,S_k;s)$ be a symmetric real kernel, zero on nonpairs, with total absolute mass $O(B^{10})$ uniformly in its arguments."
+   },
+   {
+    "anchor": "stmt-prop-moments-rows",
+    "claim_id": "claim-row-second-moments",
+    "statement": "For a sufficiently fine fixed regularity grid and then a sufficiently small fixed tolerance, the independent-site latent kernel satisfies $$\\sum_{k\\ne i}\\mathbb E\\,\\mathcal L_{ik}^{2}\\ll B^{-.21}\n \\qquad (1\\le i\\le M).\n \\label{eq:24}$$ Moreover, its normalized total mass has bounded second moment: $$\\mathbb E\\left(\\frac1M\\sum_{i,k}\\mathcal L_{ik}\\right)^2\\ll1.$$"
+   },
+   {
+    "anchor": "stmt-lem-moments-multiplicity",
+    "claim_id": "claim-representation-multiplicity",
+    "statement": "The grid and tolerance can be chosen so that, uniformly for $(a,b,c)\\in\\mathcal C_j$ and $\\eta T\\le |j|\\le T$, $$\\mathbb E^{\\mathrm{tilt}}_{a,b}\n   \\big[\n    \\mathbf 1_{\\mathcal T_b\\ \\mathrm{regular}}\n    \\mathbf 1_{\\mathcal T_a\\ \\mathrm{regular}}\n    N_{a,b,c}(\\mathcal T_b,\\mathcal T_a)\n   \\big]\n \\ll B^{.009}.$$"
+   },
+   {
+    "anchor": "stmt-prop-channels-operators",
+    "claim_id": "claim-channel-operators",
+    "statement": "For every fixed coarse partition, uniformly for $1\\le d\\le B$, $$\\label{eq:31}\n \\|U_d\\|\\ll 1,\\qquad\n \\|(1-P_{\\rm av})U_d\\|\\ll B^{-c_7},\n \\qquad c_7=\\frac1{200}.$$"
+   },
+   {
+    "anchor": "stmt-lem-channels-two-splits",
+    "claim_id": "claim-two-splits-coupling",
+    "statement": "Let $b_1,b_2$ be two conditionally independent fair splits of the same site."
+   },
+   {
+    "anchor": "stmt-lem-channels-low-exclusive",
+    "claim_id": "claim-low-exclusive",
+    "statement": "For $0<\\theta\\le1/10$, the contribution to $K_d^{\\rm ind}$ from $\\ell_B(E_i)\\le\\theta$, for either $i=1$ or $i=2$, has operator norm $$\\ll (\\theta+1/R)^{1/4}+B^{-70}+B^5/P_0,$$ uniformly for $d\\le B$."
+   },
+   {
+    "anchor": "stmt-cor-channels-features",
+    "claim_id": "claim-coarse-features",
+    "statement": "For the chosen coarse partition, define $$V_l(S)=\\frac1{|I_l|}\n          \\mathbb P_{\\rm split}(x_b\\in I_l\\mid S).$$"
+   },
+   {
+    "anchor": "stmt-lem-kernel-cutoffs",
+    "claim_id": "claim-kernel-cutoff-removal",
+    "statement": "Let $k=i+j$ be an allowed pair with $j>0$, and let $\\lvert g\\rvert,\\lvert h\\rvert\\le1$."
+   },
+   {
+    "anchor": "stmt-prop-kernel-comparison",
+    "claim_id": "claim-kernel-comparison",
+    "statement": "For the matrix $\\mathcal M$ in <a href=\"#eq:43\" data-reference-type=\"eqref\" data-reference=\"eq:43\">[eq:43]</a>, put $\\mathcal E_{ik}=\\mathcal L_{ik}-\\mathcal M_{ik}$, with all three matrices zero on nonpairs."
+   },
+   {
+    "anchor": "stmt-prop-sampling-comparison",
+    "claim_id": "claim-sampling-comparison",
+    "statement": "For every fixed $\\epsilon_2>0$, $$\\mathbb E\\big\\|\\big(\\mathcal E_{ik}(S_i,S_k;s)\\big)\\big\\|_\\square\n       \\le E_0+\\epsilon_2+o(1),\n \\label{eq:45}$$ uniformly for $s$ in the fixed compact range."
+   },
+   {
+    "anchor": "stmt-lem-sampling-good",
+    "claim_id": "claim-sampling-good-event",
+    "statement": "There is a fixed $K>0$ such that, on an event $\\mathcal G_B$ of probability $1-O(B^{-0.01})-O(B^{-0.03})$, $$\\frac1M\\sum_{i,k}\\mathcal E_{ik}^2\\le B^{-0.20},\n \\qquad\n \\max_i\\sum_k|\\mathcal E_{ik}|\\le K B^{0.07}.\n \\label{eq:46}$$ The event may also be required to satisfy $\\max_i\\sum_k\\mathcal H_{ik}\\le K B^{0.07}$."
+   },
+   {
+    "anchor": "stmt-lem-sampling-skeleton",
+    "claim_id": "claim-sampling-skeleton",
+    "statement": "Put $m_2=\\lfloor M B^{-0.18}\\rfloor$."
+   },
+   {
+    "anchor": "stmt-lem-sampling-conditional-mean",
+    "claim_id": "claim-sampling-conditional-mean",
+    "statement": "Fix a deterministic subset $J'$ of size $m_2$ and a deterministic assignment $\\sigma\\in\\{-1,1\\}^{J'}$."
+   },
+   {
+    "anchor": "stmt-lem-conclusion-features",
+    "claim_id": "claim-feature-polynomial-approx",
+    "statement": "Fix the coarse partition $I=\\bigcup_{l=1}^{m_1}I_l$ used in <a href=\"#eq:43\" data-reference-type=\"eqref\" data-reference=\"eq:43\">[eq:43]</a>."
+   },
+   {
+    "anchor": "stmt-lem-conclusion-periodic",
+    "claim_id": "claim-periodic-lag-approx",
+    "statement": "For a fixed prime cutoff $P_1\\ge2$, define on all integers $j$ $$\\mathfrak S_{P_1}(j)\n =\\prod_{\\substack{p\\le P_1\\\\p\\mid j}}(1-1/p)^{-1}\n   \\prod_{\\substack{p\\le P_1\\\\p\\nmid j}}\n       \\left(1-\\frac1{(p-1)^2}\\right).$$"
+   },
+   {
+    "anchor": "stmt-prop-conclusion-main-vanishes",
+    "claim_id": "claim-main-energy-vanishes",
+    "statement": "With $C_*$, $\\eta$, $C_6$, and the coarse partition fixed as above, $$\\lim_{B\\to\\infty}\\ \\limsup_{x\\to\\infty}\n                   |\\mathcal Q^{\\mathrm{main}}_{B,x}|=0.$$"
+   },
+   {
+    "anchor": "stmt-lem-distribution-dickman",
+    "claim_id": "claim-dickman-marginal",
+    "statement": "For every fixed $c\\in(0,1)$, $$\\lim_{x\\to\\infty}\\frac1x\n   \\#\\{1\\le m\\le x:P^+(m)\\le x^c\\}=\\rho(1/c).\n \\label{eq:distribution-dickman}$$ The limit is through all real $x$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "joint Dickman law",
+    "evidence": [
+     {
+      "anchor": "sec:introduction",
+      "quote": "### Introduction\n\nFor an integer $n\\geq2$, let $P^+(n)$ denote its largest prime divisor, and put $P^+(1)=1$.",
+      "quote_sha256": "758010e2c8abdb944a35b4778fede168abf8eda44cb9dd43118cb031b679cd17"
+     }
+    ],
+    "requires_concepts": [
+     "Dickman function",
+     "multiplicative short-interval averages",
+     "sieve upper bounds"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-joint-dickman-law",
+   "exact_statement": "For every fixed $a,b\\in(0,1)$, $$\\lim_{X\\to\\infty}\\frac1X\n \\#\\{2\\leq n\\leq X:P^+(n)\\leq n^a,\n                         \\ P^+(n+1)\\leq n^b\\}\n =\\rho(1/a)\\rho(1/b).$$ Here the limit is taken over all real $X$, with ordinary, unweighted counting.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-ordering-density",
+   "exact_statement": "One has $$\\lim_{X\\to\\infty}\\frac1X\n \\#\\{2\\leq n\\leq X:P^+(n)<P^+(n+1)\\}=\\frac12.$$ The reverse ordering has the same natural density.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-comparison"
+  },
+  {
+   "claim_id": "claim-label-marginal-limit",
+   "exact_statement": "For every fixed $0<\\alpha<\\beta<\\infty$, positive integer $q$, and residue class $a\\pmod q$, the distribution of $$\\bigl(\\Omega_{\\mathcal B_{k,x}}(n)\\bigr)_{1\\leq k<J}$$ among the integers $\\alpha x<n\\leq\\beta x$, $n\\equiv a\\pmod q$, normalized to have mass one, converges as $x\\to\\infty$. Its limit depends only on $J$, and not on $\\alpha,\\beta,q,a$.*\n\n\n\n*Consequently there is a number $\\mu=\\mu(J,\\zeta_1,\\ldots,\\zeta_{J-1})$ with $|\\mu|\\leq1$ such that $$\\label{eq:labels-marginal-mean}\n \\lim_{x\\to\\infty}\n \\frac{q}{(\\beta-\\alpha)x}\n \\sum_{\\substack{\\alpha x<n\\leq\\beta x\\\\n\\equiv a\\pmod q}}f_x(n)\n =\\mu.$$ The same assertion holds for $g_x$, with a mean $\\mu_g$ depending only on $J$ and the vector $(\\xi_k)_{k=1}^{J-1}$. Write $$\\label{eq:labels-centered}\n F_x(n)=f_x(n)-\\mu.$$ Then $|F_x(n)|\\leq2$, and for every fixed positive integer $u$, $$\\label{eq:labels-multiplier}\n F_x(un)=F_x(n),\\qquad g_x(un)=g_x(n)\\qquad(n\\geq1)$$ for all sufficiently large $x$ in terms of $u,J$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-labels-marginal"
+  },
+  {
+   "claim_id": "claim-mixed-decorrelation",
+   "exact_statement": "For every fixed integer $J\\geq2$ and every pair of fixed phase vectors $(\\zeta_k)_{k=1}^{J-1}$ and $(\\xi_k)_{k=1}^{J-1}$ of absolute value one, the corresponding labels satisfy $$\\label{eq:mixed}\n \\lim_{x\\to\\infty}\\frac1x\\sum_{1\\leq n<x}\n                   \\overline{g_x(n)}F_x(n+1)=0,$$ where $F_x=f_x-\\mu$ and the limit is through all integer scales.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-mixed"
+  },
+  {
+   "claim_id": "claim-weighted-short-averages",
+   "exact_statement": "Let $T=T(B)\\to\\infty$, let $L_B$ be positive integers tending to infinity, and let $a_B$ be any integer for each $B$. Fix $0<s_0<s_1<\\infty$, a positive integer $D$, a residue $r\\pmod D$, and $v\\geq0$. Then $$\\label{eq:labels-short}\n \\lim_{B\\to\\infty}\\limsup_{x\\to\\infty}\n \\frac1{Tx}\\sum_{s_0Tx\\leq n\\leq s_1Tx}\n \\left|\n   \\frac1{L_B}\\sum_{i=a_B+1}^{a_B+L_B}\n     \\mathbf 1_{i\\equiv r\\ (D)}F_x(n+i)G_{B,v}(n+i)\n \\right|^2=0.$$ For each fixed $B$ all the arguments of the arithmetic functions are positive once $x$ is sufficiently large. The same conclusion holds if the inner upper limit is taken along any sequence $x\\to\\infty$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-labels-short"
+  },
+  {
+   "claim_id": "claim-real-short-interval",
+   "exact_statement": "There is a function $r(H)$ tending to zero as $H\\to\\infty$ such that, for every real multiplicative function $g:\\mathbb N\\to[-1,1]$ and $2\\leq H\\leq X$, $$\\label{eq:labels-real-MR}\n \\frac1X\\int_X^{2X}\n   |\\mathcal A_Hg(z)-\\mathcal L_Xg|^2\\,dz\\leq r(H).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-labels-real-mr"
+  },
+  {
+   "claim_id": "claim-complex-short-interval",
+   "exact_statement": "For every multiplicative function $g:\\mathbb N\\to\\mathbb C$ with $|g|\\leq1$ and $X\\geq H\\geq10$, $$\\label{eq:labels-complex-quantitative}\n \\frac1X\\int_X^{2X}|\\mathcal A_Hg(z)|^2\\,dz\n \\ll (1+M(g;X))e^{-M(g;X)}\n       +\\left(\\frac{\\log\\log H}{\\log H}\\right)^2\n       +(\\log X)^{-1/50},$$ with an absolute implied constant.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-labels-complex-mrt"
+  },
+  {
+   "claim_id": "claim-character-distance-divergence",
+   "exact_statement": "Fix $J\\geq2$, positive constants $c,C$, a nonprincipal Dirichlet character $\\chi$ of modulus $q_\\chi$, and a finite set $E$ of primes. Suppose that, for each $x$, $h_x$ is a 1-bounded multiplicative function satisfying $$h_x(p)=\\chi(p)\\qquad(p\\leq x^{1/J},\\ p\\notin E).$$ With $X=cx$, one has $$\\label{eq:labels-character-distance}\n \\inf_{|t|\\leq CX}\\mathbb D(h_x,n^{it};X)^2\\longrightarrow\\infty\n \\qquad(x\\to\\infty).$$ The assertion is uniform over all the functions $h_x$ with this prime agreement. The threshold for $x$ may depend on $J,c,C,\\chi,E$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-labels-character-distance"
+  },
+  {
+   "claim_id": "claim-classical-selberg-delange",
+   "exact_statement": "For each fixed nonnegative integer $H$ and either of the above values of $z$, there are real constants $c_j(z)$ such that, for $Y\\ge3$, $$\\sum_{n\\le Y}g_z(n)\n =Y\\sum_{j=0}^{H}c_j(z)(\\log Y)^{z-1-j}\n       +O_H\\bigl(Y(\\log Y)^{z-2-H}\\bigr),$$ where $$c_0(z)=\\frac1{\\Gamma(z)}\n          \\prod_p(1+z/p)(1-1/p)^z>0.$$ For each fixed $C,D>0$, uniformly over nonprincipal Dirichlet characters $\\chi$ of modulus $d\\le(\\log Y)^C$, one has $$\\sum_{n\\le Y}g_z(n)\\chi(n)\\ll_{C,D}Y(\\log Y)^{-D}.$$ The constants in the second estimate, and the threshold after which it holds, need not be effective.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-arith-classical-sd"
+  },
+  {
+   "claim_id": "claim-rough-selberg-delange",
+   "exact_statement": "Fix $D>0$. There is a fixed integer $H=H(D)$ and real coefficients $C_{j,z}(P_0)$, $0\\le j\\le H$, such that uniformly for $B^{0.89}\\le\\log Y\\le4B$, $$\\sum_{n\\le Y}g_{z,P_0}(n)\n =Y\\sum_{j=0}^{H}C_{j,z}(P_0)(\\log Y)^{z-1-j}\n       +O_D(YB^{-D}).$$ There is an absolute constant $C_0$ such that for every fixed $j$, $$|C_{j,z}(P_0)|\\ll_j(\\log P_0)^{C_0+j},\\qquad\n C_{0,z}(P_0)=c_0(z)\\prod_{p\\le P_0}(1+z/p)^{-1}\n       \\sim\\frac{e^{-\\gamma_{\\rm E}z}}{\\Gamma(z)}(\\log P_0)^{-z},$$ where $\\gamma_{\\rm E}$ is Euler’s constant. Uniformly for nonprincipal $\\chi$ of modulus $d\\le B^{15}$ in the same size range, $$\\sum_{n\\le Y}g_{z,P_0}(n)\\chi(n)\\ll_D YB^{-D}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-arith-rough-sd"
+  },
+  {
+   "claim_id": "claim-local-coefficient-laws",
+   "exact_statement": "Let $w_3$ be smooth and supported in a fixed compact subinterval of $(0,\\infty)$. Uniformly for $0.9B\\le\\log X\\le2.2B$, $q\\le B^{15}$, $(u,q)=1$, and real $\\xi$ with $|\\xi|\\le B^{14}$, $$\\sum_c A_0(c)w_3(c/X)e(cu/q+\\xi c/X)\n =X\\frac{\\mu_{\\rm Mob}(q)}{\\varphi(q)}\n       \\int w_3(t)m_B(\\log(Xt)/B)e(\\xi t)\\,dt\n       +O(XB^{-50}).\n \\label{eq:1}$$ The convention $q=1$ is included. The constant in the error is controlled by a fixed constant times finitely many low-order smooth norms of $w_3$; the expansion order defining $m_B$ is independent of $w_3$.*\n\n\n\n\n*Let $\\nu_z$ be the law of the product of primes of $\\mathcal P$ selected independently with probabilities $z/p$, and write $s=\\log a/B$ for its log coordinate. For $d\\le B^{15}$, every such product is a unit modulo $d$. Uniformly for all intervals $I'\\subset[B^{-1/10},3.2]$ and unit residues $r\\pmod d$, $$\\mathbb P_{\\nu_z}(s\\in I',\\ a\\equiv r\\pmod d)\n =\\frac1{\\varphi(d)}\\int_{I'}f_{z,B}(s)\\,ds+O(B^{-80}).\n \\label{eq:2}$$ Uniformly for $0\\le\\delta\\le1$, $$\\mathbb P_{\\nu_z}(s\\le\\delta)\\ll(\\delta+1/R)^z.\n \\label{eq:3}$$ For each positive integer $n\\le\\exp(3.2B)$, $$\\nu_{1/2}(n)\\ll\\frac{A_0(n)}{Bn},\n \\label{eq:4}$$ where both sides are zero unless $n$ is a squarefree rough product, apart from the allowed empty product $n=1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-arith-local-laws"
+  },
+  {
+   "claim_id": "claim-weighted-sieve",
+   "exact_statement": "There is a sufficiently small $c_k>0$, depending only on fixed $k$, with the following properties for $Z\\ge2$.*\n\n*In an interval of length $N\\ge1$, at most $k$ forbidden residues at each prime $p\\le Z$ give an upper bound $$C_kN\\prod_{p\\le Z}(1-\\theta_p)+O_k(N^{0.8})\n       \\qquad(Z\\le N^{c_k}).$$ In a rectangle of side lengths $N_1,N_2\\ge1$, suppose that at each prime the forbidden set is a union of at most $k$ proper affine lines. With $N_* =\\min(N_1,N_2)$, there is the corresponding bound $$C_kN_1N_2\\prod_{p\\le Z}(1-\\theta_p)\n       +O_k(N_1N_2N_*^{-0.4})\n       \\qquad(Z\\le N_*^{c_k}).$$ An application may omit specified primes from the restrictions, provided it also omits their factors from the products.*\n\n*Both assertions also apply to reducing local weights. At each prime, attach a factor in $[0,1]$ to each of at most $k$ specified residue classes modulo $p$ in the interval case, or at most $k$ proper affine lines in the rectangle case. The factor is applied on its class or line and equals one off it. Replace $1-\\theta_p$ by the residue average of the product of these factors.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-arith-weighted-sieve"
+  },
+  {
+   "claim_id": "claim-coefficient-moments",
+   "exact_statement": "On these intervals, $$X^{-1}\\sum_{n\\asymp X}A_0(n)\\ll1,\\qquad\n X^{-1}\\sum_{n\\asymp X}A_0(n)^2\\ll B^{1/4+o(1)}.\n \\label{eq:5}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-arith-coefficient-moments"
+  },
+  {
+   "claim_id": "claim-form-bounds",
+   "exact_statement": "Uniformly for $0<|j|\\le T$ and squarefree rough $b\\asymp TX$, $$\\sum_{\\substack{c\\asymp X\\\\b+jc\\asymp TX,\\ b+jc>0}}\n               A_0(c)A_0(b+jc)\\ll X\\Sigma(j).\n \\label{eq:6}$$ On the same fixed log-size ranges, $$\\sum_{\\substack{b\\asymp TX,\\ c\\asymp X\\\\a=b+jc\\asymp TX,\\ a>0}}\n               A_0(b)A_0(a)A_0(c)\\ll TX^2\\Sigma(j).\n \\label{eq:7}$$ The implied constants do not depend on $b,j,X$, or $B$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-arith-form-bounds"
+  },
+  {
+   "claim_id": "claim-regularity-loss",
+   "exact_statement": "There is an absolute $c_3>0$ such that, for each fixed choice of the grid, tolerance, and compact log-size ranges above, there are $C>0$ and a function $\\epsilon_B\\to0$ such that the part of the untruncated sum in <a href=\"#eq:7\" data-reference-type=\"eqref\" data-reference=\"eq:7\">[eq:7]</a> where at least one coefficient is not regular is at most $$C TX^2\\Sigma(j)\\bigl(\\epsilon_B+e^{-c_3C_*}\\bigr).\n \\label{eq:9}$$ The constant $C$ may depend on the fixed grid, tolerance, and scale ranges, but not on $C_*,j,X,B$. The function $\\epsilon_B$ may depend on the same fixed data but is independent of $C_*$. The analogous bound with scale $X$ applies to the first-moment sum of $A_0$ in <a href=\"#eq:5\" data-reference-type=\"eqref\" data-reference=\"eq:5\">[eq:5]</a>. For the product of two independent coefficient weights in a box, it applies with the corresponding area in place of $TX^2\\Sigma(j)$.*\n\n*The same upper probability $O(\\epsilon_B+e^{-c_3C_*})$ holds for failure of regularity in a set of independent prime indicators on $\\mathcal P$ with parameters $1/(2p)+O(p^{-2})$, uniformly when the constant in the $O$ term is fixed. It also holds after omitting a deterministic subset $E_B\\subset\\mathcal P$ satisfying $$\\sum_{p\\in E_B}\\frac1p\\le C_E\\frac{B}{P_0}$$ for a fixed $C_E>0$. The subset may depend on $B$, and the bound is uniform over all such subsets for each fixed $C_E$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-arith-regularity-loss"
+  },
+  {
+   "claim_id": "claim-divisor-weight-moments",
+   "exact_statement": "There exist $C_0>0$ and $d_0>0$ such that, for each fixed $C_*\\ge C_0$ and all sufficiently large $B$, $$\\label{eq:12}\n \\|D_B\\|_{L^2(\\widehat{\\mathbb Z})}\\ll_{C_*}1,\n \\qquad\n \\int_{\\widehat{\\mathbb Z}}D_B(w)\\,dw\\ge d_0.$$ The constant $d_0$ is independent of $C_*$ and $B$. In addition, $\\int D_B\\ll1$ with a constant independent of $C_*$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-amp-divisor-moments"
+  },
+  {
+   "claim_id": "claim-site-model-reduction",
+   "exact_statement": "For each fixed $C_*\\ge0$, as $B\\to\\infty$, $$\\int_{\\widehat{\\mathbb Z}}D_B(w)^r\\,dw=\\mathbb E\\widetilde D_B^r+o(1)\n \\qquad(r=1,2).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-amp-site-model"
+  },
+  {
+   "claim_id": "claim-addition-small-ball",
+   "exact_statement": "Fix $H>0$. Write $L=\\log P_0$. For sufficiently large $B$, let $L\\le Y\\le8B$, put $U=\\min(Y,4B)$, and form a random product $Q_Y$ by including each prime $P_0<p\\le e^U$ independently with probability $1/(4p)$. Uniformly over all intervals $J\\subset\\mathbb R$ of length at most $H$, $$\\mathbb P\\bigl(\\log Q_Y\\in J\\cap[Y/2,\\infty)\\bigr)\n \\ll_H\\frac1Y.$$ The implicit constant is independent of $B$, $Y$, and $J$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-amp-small-ball"
+  },
+  {
+   "claim_id": "claim-profile-preservation",
+   "exact_statement": "For each fixed $C_*\\ge C_0$, put $H(t,w)=\\phi(t)W(t,w)$. Then $$\\label{eq:amp-preservation}\n \\int H(t,w)D_B(w)\\,dt\\,dw\n -\\left(\\int H\\,dt\\,dw\\right)\\left(\\int D_B\\,dw\\right)\n \\longrightarrow0\\qquad(B\\to\\infty).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-preservation"
+  },
+  {
+   "claim_id": "claim-amplified-energy",
+   "exact_statement": "There is $c_5>0$, independent of all sufficiently large fixed $C_*$, for which the nonnegative energy below satisfies the displayed lower bound: $$\\label{eq:15}\n\\begin{gathered}\n I_{2,x}\n = \\frac1x\\sum_{c\\ge1}\n   \\rho_0(\\log c/B)A(c)\n   \\sum_{m\\ge1}K(m)\n   \\left|\n     \\sum_{\\substack{a\\ge1\\\\c\\mid am+1}}\n     A(a)K(l_a)\\psi(a/(Tc))\n     \\phi(am/x)F_x(am+1)\n   \\right|^2,\n \\\\\n \\liminf_{B\\to\\infty}\\ \\liminf_{x\\to\\infty}\n       \\frac{I_{2,x}}{BT}\\ge c_5\n\\end{gathered}$$ Its diagonal contribution is negligible: $$\\lim_{B\\to\\infty}\\ \\limsup_{x\\to\\infty}\n       \\frac{I_{2,x}^{\\mathrm{diag}}}{BT}=0.$$ Here $I_{2,x}^{\\mathrm{diag}}$ denotes the terms with equal coefficient indices on expanding the square, and $l_a=(am+1)/c$ as in <a href=\"#eq:10\" data-reference-type=\"eqref\" data-reference=\"eq:10\">[eq:10]</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-amp-energy"
+  },
+  {
+   "claim_id": "claim-edge-mass",
+   "exact_statement": "Uniformly for $0<|j|\\le T$ and $s\\in\\mathcal S$, $$\\label{eq:18}\n \\mathbb E_{u\\in\\widehat{\\mathbb Z}}\\mathcal K_j(u,s)\\ll\\frac{\\Sigma(j)}T.$$ The implied constant can be independent of the regularity parameter $C_*$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-graph-edge-mass"
+  },
+  {
+   "claim_id": "claim-row-mean",
+   "exact_statement": "For every possible endpoint type $S_i$, not merely almost every typical type, and every allowed lag $j=k-i$, $$\\label{eq:23}\n \\mathbb E_{S_k}\\mathcal L_{ik}(S_i,S_k;s)\n \\ll\\frac{\\Sigma(j)}T.$$ In particular, every conditional expected degree is $O(1)$, and $\\mathbb E\\sum_{i,k}\\mathcal L_{ik}=O(M)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-graph-row-mean"
+  },
+  {
+   "claim_id": "claim-root-comparison",
+   "exact_statement": "Let $\\mathcal M_{ik}(S_i,S_k;s)$ be a symmetric real kernel, zero on nonpairs, with total absolute mass $O(B^{10})$ uniformly in its arguments. Then $$\\label{eq:21}\n\\begin{split}\n &\\mathbb E_u\\left\\|\n  \\bigl(\\mathcal K_{k-i}(u+i,s)\n  -\\mathcal M_{ik}(S_i(u),S_k(u);s)\\bigr)_{i,k}\n  \\right\\|_\\square\\\\\n &\\hspace{15pt}\\le o(1)+\n \\mathbb E_{(S_i)\\,\\mathrm{indep}}\n \\left\\|\\bigl(\\mathcal L_{ik}(S_i,S_k;s)\n                   -\\mathcal M_{ik}(S_i,S_k;s)\\bigr)_{i,k}\\right\\|_\\square.\n\\end{split}$$ The error is uniform for $s\\in\\mathcal S$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-graph-root-comparison"
+  },
+  {
+   "claim_id": "claim-row-second-moments",
+   "exact_statement": "For a sufficiently fine fixed regularity grid and then a sufficiently small fixed tolerance, the independent-site latent kernel satisfies $$\\sum_{k\\ne i}\\mathbb E\\,\\mathcal L_{ik}^{2}\\ll B^{-.21}\n \\qquad (1\\le i\\le M).\n \\label{eq:24}$$ Moreover, its normalized total mass has bounded second moment: $$\\mathbb E\\left(\\frac1M\\sum_{i,k}\\mathcal L_{ik}\\right)^2\\ll1.$$ For every set $I\\subseteq\\{1,\\ldots,M\\}$, the same estimates hold after replacing $\\mathcal L_{ik}$ by $\\mathbf 1_{\\{i,k\\in I\\}}\\mathcal L_{ik}$; the normalization remains $M$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-moments-rows"
+  },
+  {
+   "claim_id": "claim-representation-multiplicity",
+   "exact_statement": "The grid and tolerance can be chosen so that, uniformly for $(a,b,c)\\in\\mathcal C_j$ and $\\eta T\\le |j|\\le T$, $$\\mathbb E^{\\mathrm{tilt}}_{a,b}\n   \\big[\n    \\mathbf 1_{\\mathcal T_b\\ \\mathrm{regular}}\n    \\mathbf 1_{\\mathcal T_a\\ \\mathrm{regular}}\n    N_{a,b,c}(\\mathcal T_b,\\mathcal T_a)\n   \\big]\n \\ll B^{.009}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-moments-multiplicity"
+  },
+  {
+   "claim_id": "claim-channel-operators",
+   "exact_statement": "For every fixed coarse partition, uniformly for $1\\le d\\le B$, $$\\label{eq:31}\n \\|U_d\\|\\ll 1,\\qquad\n \\|(1-P_{\\rm av})U_d\\|\\ll B^{-c_7},\n \\qquad c_7=\\frac1{200}.$$ Moreover, for every $\\epsilon_1>0$, one can choose $m_1$ such that $$\\label{eq:32}\n \\limsup_{B\\to\\infty}\\ \n \\sup_{\\|g\\|_2\\le1}\\|u_g-P_{m_1}u_g\\|_2\\le\\epsilon_1 .$$ All constants are independent of the input $g$. The sufficiently large threshold for $B$ may depend on the chosen fixed partition.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-channels-operators"
+  },
+  {
+   "claim_id": "claim-two-splits-coupling",
+   "exact_statement": "Let $b_1,b_2$ be two conditionally independent fair splits of the same site. Their joint law can be coupled, with failure probability $O(P_0^{-1})$, to $$(CE_1,CE_2),$$ where $C,E_1,E_2$ are independent products with law $\\nu_{1/4}$. Replacing the two-split step kernel by this independent-product step kernel changes its operator norm by $O(B^5/P_0)$, uniformly for $d\\le B$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-channels-two-splits"
+  },
+  {
+   "claim_id": "claim-low-exclusive",
+   "exact_statement": "For $0<\\theta\\le1/10$, the contribution to $K_d^{\\rm ind}$ from $\\ell_B(E_i)\\le\\theta$, for either $i=1$ or $i=2$, has operator norm $$\\ll (\\theta+1/R)^{1/4}+B^{-70}+B^5/P_0,$$ uniformly for $d\\le B$. The same bound, with a different absolute constant, holds for the union of the two events.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-channels-low-exclusive"
+  },
+  {
+   "claim_id": "claim-coarse-features",
+   "exact_statement": "For the chosen coarse partition, define $$V_l(S)=\\frac1{|I_l|}\n          \\mathbb P_{\\rm split}(x_b\\in I_l\\mid S).$$ Then $0\\le V_l\\le |I_l|^{-1}$, and for every $g\\in L^2(\\Omega_B)$ the coarse value of $P_{m_1}u_g$ on $I_l$ is exactly $$\\mathbb E[g(S)V_l(S)].$$ In particular the bounds <a href=\"#eq:31\" data-reference-type=\"eqref\" data-reference=\"eq:31\">[eq:31]</a>–<a href=\"#eq:32\" data-reference-type=\"eqref\" data-reference=\"eq:32\">[eq:32]</a> and this identity hold uniformly when $g$ varies with a position, with $B$, or with an external parameter.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-channels-features"
+  },
+  {
+   "claim_id": "claim-kernel-cutoff-removal",
+   "exact_statement": "Let $k=i+j$ be an allowed pair with $j>0$, and let $\\lvert g\\rvert,\\lvert h\\rvert\\le1$. Replacing the coefficient and remaining-site regularity restrictions in $\\mathbb E[\\mathcal L_{ik}g(S_i)h(S_k)]$ by no restrictions, while keeping the scalar $k_B$, incurs an absolute error at most $$\\label{eq:33}\n C\\frac{\\Sigma(j)}{T}\n       \\big(r_B+e^{-c_3C_*}\\big),\\qquad r_B\\longrightarrow0.$$ Here $r_B$ may depend on the fixed regularity parameters and on $C_*$, but the constant $C$ is independent of $C_*$, $\\eta$, and $C_6$. The pairwise gcd restrictions may then be removed at an additional error $O(B^{-998})$. The resulting integral is $$\\label{eq:34}\n k_B B\\sum_{a-b=jc}\\gamma_g(b)\\gamma_h(a)A_0(c)\n       \\rho_0(\\log c/B)\n       \\Psi_s\\big(a/(Tc),b/(Tc)\\big).$$ The sum is over positive integers $a,b,c$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-kernel-cutoffs"
+  },
+  {
+   "claim_id": "claim-kernel-comparison",
+   "exact_statement": "For the matrix $\\mathcal M$ in <a href=\"#eq:43\" data-reference-type=\"eqref\" data-reference=\"eq:43\">[eq:43]</a>, put $\\mathcal E_{ik}=\\mathcal L_{ik}-\\mathcal M_{ik}$, with all three matrices zero on nonpairs. Given $\\epsilon_1>0$, choose the coarse partition as in <a href=\"#eq:32\" data-reference-type=\"eqref\" data-reference=\"eq:32\">[eq:32]</a>. Then $$\\label{eq:44}\n \\sup_{\\substack{g_i,h_k:\\Omega_B\\to[-1,1]\\\\\n                  g_i,h_k\\ \\text{real measurable}}}\n \\frac1M\\left|\n  \\sum_{i,k}\\mathbb E_{S_i,S_k}\n      [\\mathcal E_{ik}(S_i,S_k;s)g_i(S_i)h_k(S_k)]\\right|\n \\le C e^{-c_3C_*}+C_\\eta\\epsilon_1+o(1).$$ The $o(1)$ is uniform in $s$ and in all the indicated tests. The coefficient of $e^{-c_3C_*}$ is independent of $\\eta$, $C_6$, and $C_*$. In addition, for every realization of the site types, $$\\label{eq:kernel-main-row-bounds}\n \\sup_i\\sum_k|\\mathcal M_{ik}|\\ll_{\\eta,m_1}1,\n \\qquad\n \\sup_i\\sum_k|\\mathcal M_{ik}|^2\\ll_{\\eta,m_1}T^{-1}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-kernel-comparison"
+  },
+  {
+   "claim_id": "claim-sampling-comparison",
+   "exact_statement": "For every fixed $\\epsilon_2>0$, $$\\mathbb E\\big\\|\\big(\\mathcal E_{ik}(S_i,S_k;s)\\big)\\big\\|_\\square\n       \\le E_0+\\epsilon_2+o(1),\n \\label{eq:45}$$ uniformly for $s$ in the fixed compact range.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-sampling-comparison"
+  },
+  {
+   "claim_id": "claim-sampling-good-event",
+   "exact_statement": "There is a fixed $K>0$ such that, on an event $\\mathcal G_B$ of probability $1-O(B^{-0.01})-O(B^{-0.03})$, $$\\frac1M\\sum_{i,k}\\mathcal E_{ik}^2\\le B^{-0.20},\n \\qquad\n \\max_i\\sum_k|\\mathcal E_{ik}|\\le K B^{0.07}.\n \\label{eq:46}$$ The event may also be required to satisfy $\\max_i\\sum_k\\mathcal H_{ik}\\le K B^{0.07}$. Moreover, the normalized total absolute mass $$A_B=\\frac1M\\sum_{i,k}|\\mathcal E_{ik}|$$ has bounded second moment, uniformly in $B$ and $s$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-sampling-good"
+  },
+  {
+   "claim_id": "claim-sampling-skeleton",
+   "exact_statement": "Put $m_2=\\lfloor M B^{-0.18}\\rfloor$. On $\\mathcal G_B$ there are a subset $J'\\subset\\{1,\\ldots,M\\}$ of size $m_2$ and signs $(\\delta_j)_{j\\in J'}$ such that, with $$\\widetilde g_i\n =\\mathop{\\mathrm{sgn}}\\left(\\sum_{j\\in J'}\\mathcal E_{ij}\\delta_j\\right),\n \\qquad R' =\\{1,\\ldots,M\\}\\setminus J',$$ and assigning the sign $+1$ at zero for all sign choices in this section, $$\\|\\mathcal E\\|_\\square\n \\le\\frac1M\\sum_{k\\in R'}\n       \\left|\\sum_{i\\in R'}\\mathcal E_{ik}\\widetilde g_i\\right|\n       +O(B^{-0.01})+O(B^{-0.11}).$$ The constants are independent of the realized matrix on $\\mathcal G_B$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-sampling-skeleton"
+  },
+  {
+   "claim_id": "claim-sampling-conditional-mean",
+   "exact_statement": "Fix a deterministic subset $J'$ of size $m_2$ and a deterministic assignment $\\sigma\\in\\{-1,1\\}^{J'}$. Condition on its site types $\\mathbf S_{J'}=\\mathbf t$. For $i\\in R'$, define the fixed single-site function $$g_i(u)=\\mathop{\\mathrm{sgn}}\\left(\\sum_{j\\in J'}\n                 \\mathcal E_{ij}(u,t_j;s)\\sigma_j\\right).$$ Then, writing $$Z_{J',\\sigma,\\mathbf t}\n   =\\frac1M\\sum_{k\\in R'}\n       \\left|\\sum_{i\\in R'}\\mathcal E_{ik}(S_i,S_k;s)g_i(S_i)\\right|,$$ we have $\\mathbb E[Z_{J',\\sigma,\\mathbf t}\\mid\\mathbf S_{J'}=\\mathbf t]\n\\le E_0+o(1)$, uniformly in $J'$, $\\sigma$, $\\mathbf t$, and $s$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-sampling-conditional-mean"
+  },
+  {
+   "claim_id": "claim-feature-polynomial-approx",
+   "exact_statement": "Fix the coarse partition $I=\\bigcup_{l=1}^{m_1}I_l$ used in <a href=\"#eq:43\" data-reference-type=\"eqref\" data-reference=\"eq:43\">[eq:43]</a>. For every $\\zeta>0$ there are real polynomials $$p_l(t)=\\sum_{v=0}^{d_l}\\alpha_{l,v}t^v,\n \\qquad 1\\le l\\le m_1,$$ independent of $B$, such that the functions $$\\widetilde V_{l,B}(S)\n   =\\sum_{v=0}^{d_l}\\alpha_{l,v}\n       \\prod_{p\\in S}\\frac{1+p^{-v/B}}2$$ satisfy, for all sufficiently large $B$, $$\\|V_l-\\widetilde V_{l,B}\\|_{L^2(S)}\\le\\zeta.$$ Here the norm uses the independent site law with inclusion probabilities $1/p$. For $0<\\zeta\\le1$, the approximants can be chosen with a common bound depending only on the fixed coarse partition. At actual integer sites they are the fixed finite combinations $$\\widetilde V_{l,B}(S_i(n))\n       =\\sum_{v=0}^{d_l}\\alpha_{l,v}G_{B,v}(n+i),$$ where $G_{B,v}$ is the function in <a href=\"#eq:labels-G\" data-reference-type=\"eqref\" data-reference=\"eq:labels-G\">[eq:labels-G]</a> with $P_B=\\mathcal P$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-conclusion-features"
+  },
+  {
+   "claim_id": "claim-periodic-lag-approx",
+   "exact_statement": "For a fixed prime cutoff $P_1\\ge2$, define on all integers $j$ $$\\mathfrak S_{P_1}(j)\n =\\prod_{\\substack{p\\le P_1\\\\p\\mid j}}(1-1/p)^{-1}\n   \\prod_{\\substack{p\\le P_1\\\\p\\nmid j}}\n       \\left(1-\\frac1{(p-1)^2}\\right).$$ This is a bounded nonnegative function of period $D=\\prod_{p\\le P_1}p$. Moreover, $$\\lim_{P_1\\to\\infty}\\ \n   \\sup_{\\substack{T\\in\\mathbb N\\\\T\\ge1}}\\frac1T\n       \\sum_{1\\le j\\le T}\n         |\\mathfrak S(j)-\\mathfrak S_{P_1}(j)|=0,$$ with the supremum taken over positive integers $T$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-conclusion-periodic"
+  },
+  {
+   "claim_id": "claim-main-energy-vanishes",
+   "exact_statement": "With $C_*$, $\\eta$, $C_6$, and the coarse partition fixed as above, $$\\lim_{B\\to\\infty}\\ \\limsup_{x\\to\\infty}\n                   |\\mathcal Q^{\\mathrm{main}}_{B,x}|=0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-conclusion-main-vanishes"
+  },
+  {
+   "claim_id": "claim-dickman-marginal",
+   "exact_statement": "For every fixed $c\\in(0,1)$, $$\\lim_{x\\to\\infty}\\frac1x\n   \\#\\{1\\le m\\le x:P^+(m)\\le x^c\\}=\\rho(1/c).\n \\label{eq:distribution-dickman}$$ The limit is through all real $x$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-distribution-dickman"
+  }
+ ],
+ "paper": "papers/EN-101-000-0022-2-2026-PR-T4-UK-EX-M1-B-ML-H-0034_PM-012.1_The_joint_Dickman_law_for_consecutive_integers.md",
+ "purpose": "The joint Dickman law for consecutive integers",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "549f5c914eeb04b12ea807497326658ea9a2c3f890bbd8428cc06941a13d86df",
+   "pm.domains.v2": "7b3799c80b67c0b016f53b7ccef5b2d376775140790894a3747914d8cbc69ef8",
+   "pm.edges.v2": "f76069a472ae105bc1c23a7f2d47bdddd39d65061af1acc4ffec6a5b8049c64f",
+   "pm.extraction.v2": "9b410dcfae742475dd8e52575ed54db900bc621d51514f7f61a2bf5fc2550f0f",
+   "pm.formal.v2": "6134da21c2d5b5ce35103858382b20f6f8959901cd10a6022a749caa8586412d",
+   "pm.limits.v2": "bfce9cc65fc3fa9cc68b1178ceded63063c80965bee9d06267a21907f7ca6d4e",
+   "pm.node.v2": "7aa7dad995c21e9dba92a39494fa5a01bed83dceabb279b2ac52bc2ac73539da",
+   "pm.objects.v2": "5b662838263a8579769510e7a09b6278592ce57c5d8e288b7a23627fb68ce571",
+   "pm.provenance.v2": "cf00e0d0e1b7936828562b3a89e95b50232b8d70a5b7fcdb07de677e9df1f78e",
+   "pm.quantities.v2": "5ebd6f873855f495e7e550714b1be4328ffb2d2e3869ac481b95c87023169593",
+   "pm.reading.v2": "8993e0f4ea92c830eec70ee4cef05f017efb28e1e039b31ebb28cc128641d4f8",
+   "pm.roadmap.v2": "38f06296930a65a34e568574d90ac7a54054672e5c39c65679f23f6c28c0b6ab",
+   "pm.search.v1": "c7361ce36d15a061e8be07c18f4fda113ae08f28eb96da39c3d781b852c7ebb0",
+   "pm.triptych.v2": "0d892abbf8e4d014ebe04c694a659b0298d5727fa08f01ae4cbc40f279e4561f"
+  },
+  "canonical_sha256": "c46c559fe431851edfae1f72a60e6c02c838a8158dfe1663bad618435b02a5d2",
+  "paper_sha256": "d9b868768dfa57404807d68e7e03905142bee65c333fe71ba7451d6803c1f1c2",
+  "repaired_body_sha256": "4a6f4123f0fab12ddfee2bf43b06fc43222d37e4f78a84ba98e0c870e7ac17ab"
+ },
+ "status": "ACTIVE",
+ "subject_id": 1,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "e83cfd9edbd726e39e3def5e55da7bb60910f3c8f3a607f99c340a870c1b2514",
+   "receipt_sha256": "0774f2794dc0e31fcf625c73a4c2587818c2c833e05a42fa7605ced845df2260",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The joint Dickman law for consecutive integers"
+}

@@ -1,0 +1,767 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 650648,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 174292
+ },
+ "coordinate": "EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-M-0394",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "Thus the marginal weight of $M_n$ is proportional to its number of spanning trees",
+     "quote_sha256": "7e9fccd81d766c10f3040bf8ae76e374076496530b5537683d1337cd91b91452"
+    }
+   ],
+   "query": "random walk on planar maps that are not weighted by their number of spanning trees",
+   "reason": "The ensemble has marginal weight proportional to the number of spanning trees, which fixes the Liouville parameter used."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "eq:walk-generator",
+     "quote": "Conditional on the map, let $X^n$ start from $\\mu_n$.",
+     "quote_sha256": "418c787f867add636a9bbda3819fd3fb701a60139acdffb4e88b867b569dddce"
+    }
+   ],
+   "query": "walk started from an arbitrary fixed vertex",
+   "reason": "The result is stated for the walk started from the degree measure, which is stationary."
+  }
+ ],
+ "family": "PM-211",
+ "id": "PM-211.3",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "pm-h-3",
+    "claim_id": "claim-main-linear-clock",
+    "statement": "For $n\\ge1$, let $(M_n,T_n)$ be uniform among rooted maps with $n$ edges decorated by one of their spanning trees."
+   },
+   {
+    "anchor": "sec:inputs",
+    "claim_id": "claim-sewing-background",
+    "statement": "A compact containment $K\\Subset U$ means that $K$ is compact and contained in the open coordinate domain $U$."
+   },
+   {
+    "anchor": "stmt-inp-topology",
+    "claim_id": "claim-topological-comparison",
+    "statement": "In the contour coupling, the projections $\\pi_m$ may be chosen so that the following conclusions hold on the sphere and on every buffered compact part of the plane."
+   },
+   {
+    "anchor": "stmt-inp-complete-core",
+    "claim_id": "claim-complete-core",
+    "statement": "Fix $K\\Subset U$ in a coordinate chart."
+   },
+   {
+    "anchor": "stmt-inp-sandwich",
+    "claim_id": "claim-selector-sandwich",
+    "statement": "In the setting of Lemma <a href=\"#inp:complete-core\" data-reference-type=\"ref\" data-reference=\"inp:complete-core\">5</a>, suppose $K\\subset O$ with $K$ compact, $O$ open, and $\\overline O\\Subset U$."
+   },
+   {
+    "anchor": "stmt-inp-kernel-transfer",
+    "claim_id": "claim-kernel-transfer",
+    "statement": "Consider finitely many packages as in Definition <a href=\"#inp:packages\" data-reference-type=\"ref\" data-reference=\"inp:packages\">4</a>."
+   },
+   {
+    "anchor": "stmt-inp-local-kernels",
+    "claim_id": "claim-local-kernels",
+    "statement": "On each open coordinate domain, take the limits of the numerical tests on complete buffered prescriptions, with relative labels localized to their cells."
+   },
+   {
+    "anchor": "stmt-inp-transport",
+    "claim_id": "claim-coordinate-unit-transport",
+    "statement": "The kernels in Proposition <a href=\"#inp:local-kernels\" data-reference-type=\"ref\" data-reference=\"inp:local-kernels\">8</a> can be retained jointly with the following transformations.*\n\n1."
+   },
+   {
+    "anchor": "stmt-inp-gaussian",
+    "claim_id": "claim-gaussian-patches",
+    "statement": "On a buffered patch compactly inside the cone’s normalization disk and away from its marked point, the actual real and imaginary fields are locally equivalent to Gaussian reference restrictions."
+   },
+   {
+    "anchor": "sec:inputs",
+    "claim_id": "claim-primal-dual-reflection",
+    "statement": "A compact containment $K\\Subset U$ means that $K$ is compact and contained in the open coordinate domain $U$."
+   },
+   {
+    "anchor": "sec:inputs",
+    "claim_id": "claim-array-interface",
+    "statement": "A compact containment $K\\Subset U$ means that $K$ is compact and contained in the open coordinate domain $U$."
+   },
+   {
+    "anchor": "nd:el-definition",
+    "claim_id": "claim-el-traffic-duality",
+    "statement": "Let $\\mathcal P$ be a nonempty family of paths in a finite graph, with no path of length zero."
+   },
+   {
+    "anchor": "stmt-nd-germs",
+    "claim_id": "claim-germ-determinism",
+    "statement": "In an ordinary field chart,"
+   },
+   {
+    "anchor": "stmt-nd-coverage",
+    "claim_id": "claim-aligned-annuli",
+    "statement": "Fix an ordinary chart and a compact subset of its interior."
+   },
+   {
+    "anchor": "stmt-nd-densities",
+    "claim_id": "claim-displacement-densities",
+    "statement": "Under the hypotheses of Lemma <a href=\"#nd:coverage\" data-reference-type=\"ref\" data-reference=\"nd:coverage\">16</a>, let $U$ be a finite union of open boxes compactly in a fixed ordinary chart."
+   },
+   {
+    "anchor": "sec:nondegeneration",
+    "claim_id": "claim-nondegeneration",
+    "statement": "Throughout this section we work with the bilateral sewing, at rates $m\\to\\infty$,"
+   },
+   {
+    "anchor": "stmt-nd-cutoffs",
+    "claim_id": "claim-ring-cutoffs",
+    "statement": "Fix a compact subpatch of an ordinary chart and an aspect ratio $\\tau>1$."
+   },
+   {
+    "anchor": "stmt-en-circuit",
+    "claim_id": "claim-separating-circuit",
+    "statement": "Fix concentric disks with radii $0<r<R$ and with a neighborhood of the closed larger disk inside an ordinary chart."
+   },
+   {
+    "anchor": "stmt-en-harmonic-compactness",
+    "claim_id": "claim-harmonic-compactness",
+    "statement": "Let $U$ be a connected open subset of an ordinary chart."
+   },
+   {
+    "anchor": "sec:energy",
+    "claim_id": "claim-uniform-variational-limits",
+    "statement": "Throughout this section we work in an ordinary conformal chart,"
+   },
+   {
+    "anchor": "stmt-en-fundamental",
+    "claim_id": "claim-gluing-estimate",
+    "statement": "Let $v_m,w_m$ converge uniformly to the same continuous function on a fixed transition region."
+   },
+   {
+    "anchor": "sec:energy",
+    "claim_id": "claim-quadratic-energy-measures",
+    "statement": "Throughout this section we work in an ordinary conformal chart,"
+   },
+   {
+    "anchor": "sec:energy",
+    "claim_id": "claim-integral-representation",
+    "statement": "Throughout this section we work in an ordinary conformal chart,"
+   },
+   {
+    "anchor": "sec:energy",
+    "claim_id": "claim-deterministic-scalar",
+    "statement": "Throughout this section we work in an ordinary conformal chart,"
+   },
+   {
+    "anchor": "stmt-en-condenser",
+    "claim_id": "claim-condenser-convergence",
+    "statement": "Prescribe $u_m=0$ on every primal vertex over $|z|\\le r$ and $u_m=1$ on every vertex over $|z|\\ge R$, using a protected cap outside the chart."
+   },
+   {
+    "anchor": "stmt-en-current-period",
+    "claim_id": "claim-current-rotation",
+    "statement": "Rotate the primal current $\\mathrm du_m$ from Lemma <a href=\"#en:condenser\" data-reference-type=\"ref\" data-reference=\"en:condenser\">27</a> to the dual edges, with one consistent crossing orientation."
+   },
+   {
+    "anchor": "stmt-en-recovery-measures",
+    "claim_id": "claim-recovery-energy-measures",
+    "statement": "Let $V$ be a bounded patch and let $p$ be smooth on a neighborhood of its closure."
+   },
+   {
+    "anchor": "stmt-en-angular-recovery",
+    "claim_id": "claim-angular-recovery",
+    "statement": "For every sufficiently small $\\eta>0$, let $A_\\eta=A(r-\\eta,R+\\eta)$."
+   },
+   {
+    "anchor": "sec:energy",
+    "claim_id": "claim-exact-conductance-normalization",
+    "statement": "Throughout this section we work in an ordinary conformal chart,"
+   },
+   {
+    "anchor": "sec:energy",
+    "claim_id": "claim-uniform-conformal-energy-limit",
+    "statement": "Throughout this section we work in an ordinary conformal chart,"
+   },
+   {
+    "anchor": "stmt-sph-block-density",
+    "claim_id": "claim-excursion-block-density",
+    "statement": "Fix $0<a<b<1$."
+   },
+   {
+    "anchor": "stmt-sph-transfer",
+    "claim_id": "claim-sphere-energy-transfer",
+    "statement": "Consider any joint subsequential extraction of the sphere contour and the countable internal variational arrays on $I_d$, for every rational $d\\in(0,1/2)$, using the extraction convention of Proposition <a href=\"#inp:array-interface\" data-reference-type=\"ref\" data-reference=\"inp:array-interface\">12</a>."
+   },
+   {
+    "anchor": "stmt-sph-removability",
+    "claim_id": "claim-sobolev-removability",
+    "statement": "Let $p$ be a point of a smooth two-dimensional surface."
+   },
+   {
+    "anchor": "pm-h-3",
+    "claim_id": "claim-global-sphere-energies",
+    "statement": "For $n\\ge1$, let $(M_n,T_n)$ be uniform among rooted maps with $n$ edges decorated by one of their spanning trees."
+   },
+   {
+    "anchor": "pm-h-3",
+    "claim_id": "claim-joint-spatial-comparison",
+    "statement": "For $n\\ge1$, let $(M_n,T_n)$ be uniform among rooted maps with $n$ edges decorated by one of their spanning trees."
+   },
+   {
+    "anchor": "sec:green",
+    "claim_id": "claim-small-mass-green",
+    "statement": "Let $H_n$ be the positive graph Laplacian on $V_n$, using counting measure and unit conductances"
+   },
+   {
+    "anchor": "stmt-gr-forest",
+    "claim_id": "claim-forest-representation",
+    "statement": "Let $\\mathcal G$ be a finite connected multigraph, with positive probability measure $\\mu$ on its vertex set $V$, and let $H$ be its unit-conductance graph Laplacian."
+   },
+   {
+    "anchor": "sec:green",
+    "claim_id": "claim-tour-mass-cut-size",
+    "statement": "Let $H_n$ be the positive graph Laplacian on $V_n$, using counting measure and unit conductances"
+   },
+   {
+    "anchor": "stmt-gr-dyck",
+    "claim_id": "claim-contour-distance",
+    "statement": "Let $\\mathcal T_s$ be a uniform rooted plane tree with $s/2$ edges, where $s\\geq2$ is even, and write $w_i$, $i\\in\\mathbb Z/s\\mathbb Z$, for its cyclic contour vertices."
+   },
+   {
+    "anchor": "sec:green",
+    "claim_id": "claim-one-scale-estimate",
+    "statement": "Let $H_n$ be the positive graph Laplacian on $V_n$, using counting measure and unit conductances"
+   },
+   {
+    "anchor": "stmt-dyn-conditional",
+    "claim_id": "claim-deterministic-path-law-criterion",
+    "statement": "In the deterministic setting just defined, assume the following."
+   },
+   {
+    "anchor": "pm-h-35",
+    "claim_id": "claim-closed-form-sobolev",
+    "statement": "Let $S^2$ carry its round distance $d_0$ and area $\\mathrm dA$."
+   },
+   {
+    "anchor": "pm-h-35",
+    "claim_id": "claim-uniform-resolvent-convergence",
+    "statement": "Let $S^2$ carry its round distance $d_0$ and area $\\mathrm dA$."
+   },
+   {
+    "anchor": "pm-h-35",
+    "claim_id": "claim-resolvent-approximate-identity",
+    "statement": "Let $S^2$ carry its round distance $d_0$ and area $\\mathrm dA$."
+   },
+   {
+    "anchor": "pm-h-35",
+    "claim_id": "claim-exit-estimate-tightness",
+    "statement": "Let $S^2$ carry its round distance $d_0$ and area $\\mathrm dA$."
+   },
+   {
+    "anchor": "eq:walk-generator",
+    "claim_id": "claim-energy-clock-identity",
+    "statement": "At the times of an independent rate-one Poisson process it chooses an incident half-edge uniformly and moves to its other endpoint."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "convergence of conditional walk laws on tree-weighted maps",
+    "evidence": [
+     {
+      "anchor": "eq:metric-premise",
+      "quote": "Gromov--Hausdorff--Prokhorov topology",
+      "quote_sha256": "73670198293beee04217f9115a504cd1351d4dff9f6d101f1f8d90213b011f4b"
+     }
+    ],
+    "requires_concepts": [
+     "metric-measure convergence of the maps",
+     "mating of trees",
+     "Dirichlet forms",
+     "Green potential estimates"
+    ],
+    "supporting_pm_ids": [
+     "PM-211.6"
+    ]
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-linear-clock",
+   "exact_statement": "For every finite $T>0$, define $$Q_n^T=\\mathop{\\mathrm{Law}}\\bigl((X^n_{nt})_{0\\le t\\le T}\\mid M_n,T_n\\bigr),\n \\qquad\n Q_h^T=\\mathop{\\mathrm{Law}}\\bigl((B^h_t)_{0\\le t\\le T}\\mid h\\bigr).$$ With the spatial normalization <a href=\"#eq:spatial-normalization\" data-reference-type=\"eqref\" data-reference=\"eq:spatial-normalization\">[eq:spatial-normalization]</a>, $$(V_n,a_nd_n,\\mu_n,Q_n^T)\n       \\xrightarrow{\\ d\\ }(S,D_h,\\mu_h,Q_h^T)\n       \\qquad\\text{for }\\delta_T,$$ through all positive integers $n$. Thus the deterministic clock multiplier for <a href=\"#eq:walk-generator\" data-reference-type=\"eqref\" data-reference=\"eq:walk-generator\">[eq:walk-generator]</a> and <a href=\"#eq:continuum-form\" data-reference-type=\"eqref\" data-reference=\"eq:continuum-form\">[eq:continuum-form]</a> is $c=1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-sewing-background",
+   "exact_statement": "The following couplings and normalizations will be used.*\n\n1.  *A uniform rooted map–spanning-tree pair with $n$ edges is encoded by the axial walk conditioned to remain in $\\mathbb Z_{\\ge0}^2$ and return to zero after $2n$ steps. The preceding rules recover every primal and dual edge with its incidences.*\n\n2.  *Give the bilateral walk an independent Poisson clock of rate $m$ and multiply its heights by $m^{-1/2}$. As $m\\to\\infty$, its interpolated contour converges locally uniformly in distribution to $Z=(L,R)$, whose independent Brownian coordinates have variance $1/2$ per unit time. The limiting contour has the peanosphere coupling with a $\\sqrt2$-quantum cone $h$ and an independent whole-plane space-filling $\\mathrm{SLE}_8$, subsequently parameterized by $\\mu_h$. Write this curve as $\\eta$ and normalize $\\eta(0)=0$.*\n\n3.  *The imaginary field $\\widehat h$ is independent of $h$ and is a whole-plane GFF modulo $2\\pi\\chi\\mathbb Z$, with uniform phase in one period. It determines the oriented curve before area parameterization. The fields, curve, and contour are retained with their joint peanosphere law.*\n\n4.  *A finite interval of contour increments determines its abstract decorated quantum surface, its restricted curve, and the quantum lengths of its incoming and outgoing frontiers, modulo conformal coordinates. The analogous statement holds for every symmetric interior interval of the Brownian-excursion encoding of the ordinary unit-area sphere.",
+   "kind": "construction",
+   "statement_anchor": "stmt-inp-sewing"
+  },
+  {
+   "claim_id": "claim-topological-comparison",
+   "exact_statement": "In the contour coupling, the projections $\\pi_m$ may be chosen so that the following conclusions hold on the sphere and on every buffered compact part of the plane. Each conclusion is eventual for each fixed choice of margins.*\n\n1.  *If the projections of two primal vertices approach each other, they can be joined by primal paths with arbitrarily small projected diameter. This is uniform over all lifts in a fixed compact region. The same statement holds on the dual graph and for surface paths. In particular fixed tubes with clearance contain paths following them on either graph.*\n\n2.  *All lifts of a sufficiently small closed disk or other compact well can be included in a connected set over any fixed open enlargement. A loop projecting into a small disk can be filled over a slightly larger disk, provided that both have the prescribed clearance.*\n\n3.  *The projection has degree $+1$ or $-1$ in a compact spherical completion. Robustly transverse primal and dual tube crossings intersect at an edge and its dual. Projected circuits with nonzero winding difference about two separated wells separate all the corresponding lifted fibers.*\n\n4.  *Integer winding differences about two wells agree upstairs and downstairs up to the common degree sign, when loops and wells have fixed separation. These statements retain repeated edge and face incidences.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-inp-topology"
+  },
+  {
+   "claim_id": "claim-complete-core",
+   "exact_statement": "Fix $K\\Subset U$ in a coordinate chart. Almost surely, there is a finite prescription, selectable from the local cells in $U$ and their frontier data, with the following property. In a neighborhood of $K$, its instruction graph agrees with the actual discrete graph, including vertex equalities and all edge incidences, for all sufficiently large resolutions in the coupling. The same prescription can retain both the primal and the dual graph. One can require any fixed smaller collar of this neighborhood before restricting the tests to it.*\n\n*The prescriptions can be taken from the countable instruction scheme above and chosen measurably using the fields and spatial cut marks in $U$, with an arbitrarily small open buffer. The assertion also holds in the interior of a fixed interval cell, using only its internal increment string.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-inp-complete-core"
+  },
+  {
+   "claim_id": "claim-selector-sandwich",
+   "exact_statement": "In the setting of Lemma <a href=\"#inp:complete-core\" data-reference-type=\"ref\" data-reference=\"inp:complete-core\">5</a>, suppose $K\\subset O$ with $K$ compact, $O$ open, and $\\overline O\\Subset U$. There is an interval selector on a complete prescription which, eventually, includes every vertex projected into $K$ and includes only vertices projected into $O$. Several such choices may be made together, for confinement and for each port set.*\n\n*Let $u$ be continuous on a neighborhood of $\\overline O$. For any two uniform value tolerances $0<\\delta_-<\\delta_+$, finite rational interval constraints on selected visit labels can be placed between the constraints $|v-u\\circ\\pi_m|\\le\\delta_-$ on a slightly larger compact set and $|v-u\\circ\\pi_m|\\le\\delta_+$ on a smaller one. All these comparisons hold simultaneously for every continuous target through the same retained test library.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-inp-sandwich"
+  },
+  {
+   "claim_id": "claim-kernel-transfer",
+   "exact_statement": "Consider finitely many packages as in Definition <a href=\"#inp:packages\" data-reference-type=\"ref\" data-reference=\"inp:packages\">4</a>. Different packages use disjoint master blocks and disjoint offset forests. Sample their Poissonized strings independently; give their durations, cuts, and offset vectors smooth positive densities, with offsets discretized on the height lattice. Retain any finite or countable vector of compactified numerical tests of their instruction graphs, including tests on both graphs.*\n\n\n*Along a common subsequence the reference laws have disintegrations $$\\nu_r(\\mathrm dx_r)K_r(x_r,\\mathrm dy_r),$$ where $x_r$ denotes the durations, cuts, increment strings, and forest offsets, and $y_r$ denotes the numerical outputs. Insert these blocks in the actual bilateral walk with positive omitted gaps. Conditional on the entire limiting contour and its cuts, their output law is $$\\label{inp:conditional-product}\n             \\bigotimes_r K_r(x_r,\\mathrm dy_r).$$ The kernels are invariant under changes of positive reference densities and under relabeling blocks or changing the forest basis. They are compatible with jointly retained refinements and merged tests. These identities hold after selection from the countable instruction library using the limiting contour and cuts.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-inp-kernel-transfer"
+  },
+  {
+   "claim_id": "claim-local-kernels",
+   "exact_statement": "On each open coordinate domain, take the limits of the numerical tests on complete buffered prescriptions, with relative labels localized to their cells. Conditional on $(h,\\widehat h)$, the resulting local arrays admit kernels depending only on the fields in an arbitrarily small open enlargement of the testing region. Arrays using disjoint such enlargements are conditionally independent given the complete fields.*\n\n*One may retain the local Poisson marks. Their conditional laws are the corresponding Poisson processes with intensity proportional to $\\mu_h$, and their restrictions to disjoint domains are independent. The kernels are consistent under restriction, common refinements, and compact exhaustion.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-inp-local-kernels"
+  },
+  {
+   "claim_id": "claim-coordinate-unit-transport",
+   "exact_statement": "The kernels in Proposition <a href=\"#inp:local-kernels\" data-reference-type=\"ref\" data-reference=\"inp:local-kernels\">8</a> can be retained jointly with the following transformations.*\n\n1.  *For a fixed conformal coordinate map $\\phi$, pull back the fields by $$g\\longmapsto g\\circ\\phi+Q\\log|\\phi'|,\n     \\qquad\n     \\widehat g\\longmapsto\\widehat g\\circ\\phi-\\chi\\arg\\phi'.$$ The numerical-array law is transported by the corresponding spatial relabeling of its tests.*\n\n2.  *Fix $v=2^k$, $k\\in\\mathbb Z$, and put $c_v=\\gamma^{-1}\\log v$. Expressing the surface in the field $g-c_v$ replaces area time by time divided by $v$ and replaces rate $m$ by rate $mv$. Electrical energies and extremal lengths are unchanged by this relabeling. If a numerical output is divided by $b_m$, retain this same factor $b_m$ in the $mv$ experiment of the joint extraction.*\n\n\n3.  *Write $K_{(1)}$ for the original local law, including the mark kernel, and $K_{(v)}$ for the law of the corresponding transformed rate experiment. Then $$\\label{inp:unit-kernel}\n     K_{(v)}(g,\\widehat g)\n         =\\operatorname{Relabel}_v K_{(1)}(g+c_v,\\widehat g).$$ All fixed dyadic indices, their transformed templates, and the required Poisson layers may be retained in one joint extraction.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-inp-transport"
+  },
+  {
+   "claim_id": "claim-gaussian-patches",
+   "exact_statement": "On a buffered patch compactly inside the cone’s normalization disk and away from its marked point, the actual real and imaginary fields are locally equivalent to Gaussian reference restrictions. The real-field pinning circle can be fixed outside all testing buffers. This comparison preserves the actual additive constant and can be made after any fixed affine change of coordinates.*\n\n*Adjoining any of the local kernels above preserves the same field-only Radon–Nikodym derivative. Consequently one fixed density truncation transfers high-probability events uniformly over all kernels attached to that reference marginal. Fixed additive real-field shifts and the fixed coordinate transforms used in Proposition <a href=\"#inp:transport\" data-reference-type=\"ref\" data-reference=\"inp:transport\">9</a> preserve the corresponding local null sets.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-inp-gaussian"
+  },
+  {
+   "claim_id": "claim-primal-dual-reflection",
+   "exact_statement": "The joint local-array laws are invariant under exchanging the primal and dual graphs and reflecting their coordinate tests. They are also covariant under fixed rigid motions, with the natural transformations of the two fields.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-inp-reflection"
+  },
+  {
+   "claim_id": "claim-array-interface",
+   "exact_statement": "From every sequence of resolutions tending to infinity one can extract, jointly with the continuum peanosphere background, all compactified numerical tests described above, on both graphs and at every fixed dyadic area offset. Prescribed deterministic normalizing factors may be retained even when they tend to zero. In this extraction:*\n\n1.  *complete buffered graph pieces and the selector sandwich of Lemmas <a href=\"#inp:complete-core\" data-reference-type=\"ref\" data-reference=\"inp:complete-core\">5</a> and <a href=\"#inp:sandwich\" data-reference-type=\"ref\" data-reference=\"inp:sandwich\">6</a> identify local tests with actual graph observations;*\n\n2.  *Proposition <a href=\"#inp:local-kernels\" data-reference-type=\"ref\" data-reference=\"inp:local-kernels\">8</a> supplies buffer-local conditional kernels and product laws in disjoint domains;*\n\n3.  *Proposition <a href=\"#inp:transport\" data-reference-type=\"ref\" data-reference=\"inp:transport\">9</a> and Lemmas <a href=\"#inp:gaussian\" data-reference-type=\"ref\" data-reference=\"inp:gaussian\">10</a>–<a href=\"#inp:reflection\" data-reference-type=\"ref\" data-reference=\"inp:reflection\">11</a> supply their coordinate, unit, Gaussian-reference, and primal–dual comparisons;*\n\n4.  *these properties persist under further joint extraction and under countable exhaustion with strict margins.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-inp-array-interface"
+  },
+  {
+   "claim_id": "claim-el-traffic-duality",
+   "exact_statement": "For a finite family of simple paths, $$\\label{nd:traffic-identity}\n \\mathop{\\mathrm{EL}}(\\mathcal P)=\\min_{\\nu}\\sum_e j_\\nu(e)^2.$$ If $\\mathcal P$ consists of all paths between two disjoint wired sets in a finite subgraph, then $\\mathop{\\mathrm{EL}}(\\mathcal P)$ is the reciprocal of the minimum energy $\\mathsf e(u)$ subject to the values zero and one on the two sets. In particular, $\\mathop{\\mathrm{EL}}(\\mathcal P)\\ge b>0$ supplies a density charging each path by one with squared norm at most $1/b$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-nd-el-traffic"
+  },
+  {
+   "claim_id": "claim-germ-determinism",
+   "exact_statement": "In an ordinary field chart, every bounded real point-germ readout of the extracted local arrays is, almost surely, equal at Lebesgue-almost every point to a deterministic measurable function of the point. The same conclusion holds for readouts with values in a separable metric space, using a countable family of bounded coordinates that separates its points.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-nd-germs"
+  },
+  {
+   "claim_id": "claim-aligned-annuli",
+   "exact_statement": "Fix an ordinary chart and a compact subset of its interior. Suppose that, at every fixed backward index $i$, a local unit-annulus event has probability at least $1-\\varepsilon_*$ in the reference law and supplies, on both graphs, a crossing density of charge one and squared norm at most $C/b_m$. Here $b_m>0$ is deterministic and the events belong to the common extracted offset kernels. For a sufficiently small reference threshold $\\varepsilon_*>0$, there are constants $0<a<B$, $c>0$ such that the following holds almost surely for all sufficiently large integers $N$. Every point in the compact set belongs to the central holes of at least $cN$ pairwise disjoint buffered annuli whose local barrier events hold. Their radii belong to one fixed geometric sequence in $[e^{-BN},e^{-aN}]$, their centers lie on deterministic meshes of spacing comparable to their radii, and their assigned indices belong to $\\{N,\\ldots,2N\\}$. For each fixed such finite configuration, its density conclusions hold on the discrete graphs for all sufficiently large $m$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-nd-coverage"
+  },
+  {
+   "claim_id": "claim-displacement-densities",
+   "exact_statement": "Under the hypotheses of Lemma <a href=\"#nd:coverage\" data-reference-type=\"ref\" data-reference=\"nd:coverage\">16</a>, let $U$ be a finite union of open boxes compactly in a fixed ordinary chart. For all sufficiently large $N$, and then all sufficiently large $m$, there is on either graph a nonnegative density $g_{m,N,U}$, supported near $U$, such that $$\\label{nd:density-area}\n b_m\\sum_e g_{m,N,U}(e)^2\n       \\le C\\mathop{\\mathrm{vol}}(U^{+CR_N}).$$ Every path subinterval whose projection is contained in $U$ pays at least $$\\label{nd:density-charge}\n c\\mathop{\\mathrm{diam}}(\\pi_m(P))-CR_N-o_m(1).$$ The constants depend only on the smaller chart and the fixed annular geometry. The error and the threshold in $m$ may depend on $N$ and $U$. Charges add over disjoint path subintervals.",
+   "kind": "bound",
+   "statement_anchor": "stmt-nd-densities"
+  },
+  {
+   "claim_id": "claim-nondegeneration",
+   "exact_statement": "For the quantiles in <a href=\"#nd:quantiles\" data-reference-type=\"eqref\" data-reference=\"nd:quantiles\">[nd:quantiles]</a>, with $\\varepsilon$ chosen as in Lemma <a href=\"#nd:coverage\" data-reference-type=\"ref\" data-reference=\"nd:coverage\">16</a>, $$\\label{nd:positive-quantile}\n                    \\liminf_{m\\to\\infty}q_m>0.$$ The conclusion holds along all rates in the chosen countable set.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-nd-nondegeneration"
+  },
+  {
+   "claim_id": "claim-ring-cutoffs",
+   "exact_statement": "Fix a compact subpatch of an ordinary chart and an aspect ratio $\\tau>1$. Along a coupled further extraction from any rate sequence, there is a constant $C$, depending only on the chart and $\\tau$, with the following property. For every fixed disk $\\overline{B(z,\\tau r)}$ contained with a margin in that subpatch, both graphs eventually admit functions $\\chi_m$ valued in $[0,1]$ such that $$\\chi_m=1\\quad\\text{on every lift of }\\overline{B(z,r)},\n \\qquad\n \\chi_m=0\\quad\\text{on every lift outside }B(z,\\tau r),\n \\qquad\n \\mathsf e(\\chi_m)\\le C$$ on the primal graph, with $\\mathsf e^{*}(\\chi_m)\\le C$ on the dual. Their energy is supported in the indicated ring, up to vanishing projected mesh. The constant is independent of $z,r,m$; the threshold in $m$ may depend on the fixed disk. These assertions hold simultaneously for the countable buffered disk tests, and extend to arbitrary fixed disks by strict inner and outer margins.",
+   "kind": "bound",
+   "statement_anchor": "stmt-nd-cutoffs"
+  },
+  {
+   "claim_id": "claim-separating-circuit",
+   "exact_statement": "Fix concentric disks with radii $0<r<R$ and with a neighborhood of the closed larger disk inside an ordinary chart. Given a primal function $v_m$, there is a simple primal circuit $C_m$ in a slightly buffered annulus which surrounds all lifts of the smaller disk and whose inside contains no lift outside a slightly enlarged larger disk, such that $$\\label{en:circuit-bound}\n \\left(\\sum_{e\\in C_m}|\\mathrm dv_m(e)|\\right)^2\n \\le C\\,\\mathsf e_m(v_m;A^+).$$ Here $A^+$ is a fixed buffered annulus and $C$ depends only on its aspect and the chart constants. The conclusion holds eventually for every fixed annulus. It also holds with the primal and dual graphs exchanged.",
+   "kind": "bound",
+   "statement_anchor": "stmt-en-circuit"
+  },
+  {
+   "claim_id": "claim-harmonic-compactness",
+   "exact_statement": "Let $U$ be a connected open subset of an ordinary chart. Suppose that $v_m$ is graph-harmonic at every vertex whose star projects into $U$, and that its energies are bounded on compactly contained neighborhoods. Then $v_m$ is macroscopically equicontinuous on every compact subset of $U$: for $K\\Subset U$, $$\\lim_{\\delta\\downarrow0}\\limsup_{m\\to\\infty}\n \\sup_{\\substack{\\pi_m x,\\pi_m y\\in K\\\\\n                  |\\pi_m x-\\pi_m y|<\\delta}}\n                  |v_m(x)-v_m(y)|=0.$$ If $x_m$ is a vertex sequence with $\\pi_mx_m\\to z_0\\in U$ and $v_m(x_m)$ is bounded, the functions have locally uniformly convergent subsequences. The assertions hold for both graphs and for local branches of potentials, with a normalization on each initial branch.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-en-harmonic-compactness"
+  },
+  {
+   "claim_id": "claim-uniform-variational-limits",
+   "exact_statement": "The value in <a href=\"#en:relaxation\" data-reference-type=\"eqref\" data-reference=\"en:relaxation\">[en:relaxation]</a> is unchanged if $\\liminf$ is replaced by $\\limsup$. It is lower semicontinuous for locally uniform convergence and inner regular in $U$. Moreover:*\n\n1.  *Every locally uniformly convergent sequence $v_m\\to u$ has local energy lower bounds given by $F(u,\\cdot)$, also along further subsequences.*\n\n2.  *If $F(u,U)<\\infty$, there are compact sets $K_m$ exhausting $U$ and functions $v_m$ on their graph neighborhoods such that $v_m\\to u$ locally uniformly and $\\mathsf e_m(v_m;K_m)\\le F(u,U)+o(1)$.*\n\n*These statements hold simultaneously for all continuous targets. The values $F(u,U)$ are locally readable from the arrays with arbitrarily small open buffers.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-en-envelope"
+  },
+  {
+   "claim_id": "claim-gluing-estimate",
+   "exact_statement": "Let $v_m,w_m$ converge uniformly to the same continuous function on a fixed transition region. Suppose $0\\le b_m\\le1$ has bounded energy, is supported where $v_m$ is defined, and equals one wherever $w_m$ is not used. Then $z_m=b_mv_m+(1-b_m)w_m$ has, on the gluing region, $$\\begin{aligned}\n\\label{en:gluing-estimate}\n \\mathsf e_m(z_m)\n &\\le(1+\\varepsilon)\\sum_e\n \\left(\\overline b_m(e)|\\mathrm dv_m(e)|^2\n +(1-\\overline b_m(e))|\\mathrm dw_m(e)|^2\\right)\\notag\\\\\n &\\quad +(1+\\varepsilon^{-1})\n       \\|v_m-w_m\\|_{\\infty,\\mathrm{tr}}^2\\mathsf e_m(b_m),\n \\qquad \\varepsilon>0.\n\\end{aligned}$$ Finite partitions of unity have the corresponding estimate, with an error tending to zero when the local approximations agree uniformly on overlaps. Bounded-energy gluing weights exist for every fixed finite open cover of a compact set.",
+   "kind": "bound",
+   "statement_anchor": "stmt-en-fundamental"
+  },
+  {
+   "claim_id": "claim-quadratic-energy-measures",
+   "exact_statement": "For each open $U$, the functional $F(\\cdot,U)$ is quadratic on its finite-energy space and vanishes on constants. If $u$ has locally finite relaxed energy, then $$U\\longmapsto F(u,U)$$ is the restriction to open sets of a Radon measure. For smooth $u$, on a smaller ordinary chart, $$\\label{en:smooth-upper}\n                  F(u,U)\\le C\\int_U|\\nabla u|^2\\,\\mathrm dz.$$ The same statements hold for $F^*$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-en-measure"
+  },
+  {
+   "claim_id": "claim-integral-representation",
+   "exact_statement": "In every ordinary chart there is a measurable symmetric matrix field $A$, locally bounded and uniformly positive definite on smaller charts, such that, for every open $U$ and every $u\\in C(U)$, $$\\label{en:matrix-form}\n F(u,U)=\n \\begin{cases}\n \\displaystyle\\int_U\\nabla u^{\\mathsf T}A\\nabla u\\,\\mathrm dz,\n                &u\\in W^{1,2}_{\\mathrm{loc}}(U),\\\\[4pt]\n +\\infty,       &u\\notin W^{1,2}_{\\mathrm{loc}}(U).\n \\end{cases}$$ The integral is allowed to be infinite. There is an analogous field $A^*$ for the dual functional.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-en-representation"
+  },
+  {
+   "claim_id": "claim-deterministic-scalar",
+   "exact_statement": "In each coupled extraction there is a deterministic $\\lambda\\in(0,\\infty)$ such that $$\\label{en:scalar-form}\n                    A=A^*=\\lambda I$$ almost everywhere in all ordinary charts. At this stage $\\lambda$ may depend on the extracted rate sequence.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-en-scalar"
+  },
+  {
+   "claim_id": "claim-condenser-convergence",
+   "exact_statement": "Prescribe $u_m=0$ on every primal vertex over $|z|\\le r$ and $u_m=1$ on every vertex over $|z|\\ge R$, using a protected cap outside the chart. Let $C_m$ be the minimum primal energy. Then $$\\label{en:condenser-limit}\n                             C_m\\longrightarrow\\lambda C_0.$$ The minimizers converge uniformly, including at the two plate boundaries, to the round radial condenser potential.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-en-condenser"
+  },
+  {
+   "claim_id": "claim-current-rotation",
+   "exact_statement": "Rotate the primal current $\\mathrm du_m$ from Lemma <a href=\"#en:condenser\" data-reference-type=\"ref\" data-reference=\"en:condenser\">27</a> to the dual edges, with one consistent crossing orientation. In the annulus this is a closed dual cochain with harmonic local potential branches and period $\\pm C_m$. The branches have subsequential locally uniform limits with period $\\pm\\lambda C_0$ and with total dual relaxed energy at most $\\lambda C_0$ over one turn.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-en-current-period"
+  },
+  {
+   "claim_id": "claim-recovery-energy-measures",
+   "exact_statement": "Let $V$ be a bounded patch and let $p$ be smooth on a neighborhood of its closure. Choose a recovery sequence on compact sets exhausting $V$ whose total energy tends to $F^*(p,V)$. Count only edges with both endpoints in these recovery sets, and put their squared increments at any of the corresponding projected edge locations. These measures converge vaguely in $V$ to $\\lambda|\\nabla p|^2\\,\\mathrm dz$. In particular, energies weighted by a compactly supported continuous function converge to the corresponding weighted integral.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-en-recovery-measures"
+  },
+  {
+   "claim_id": "claim-angular-recovery",
+   "exact_statement": "For every sufficiently small $\\eta>0$, let $A_\\eta=A(r-\\eta,R+\\eta)$. On the dual edges in a neighborhood of the closed annulus there are closed cochains $\\alpha_m$ with exact period one and $$\\label{en:angular-energy}\n \\limsup_{m\\to\\infty}\\sum_{e^*\\subset A_\\eta}|\\alpha_m(e^*)|^2\n \\le\\lambda\\left(\\frac1{C_0}+o_\\eta(1)\\right),\n             \\qquad o_\\eta(1)\\longrightarrow0.$$ The cochains are closed at every cell whose star lies in this neighborhood; the region can be chosen to contain every edge where $\\mathrm du_m\\ne0$ for all large $m$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-en-angular-recovery"
+  },
+  {
+   "claim_id": "claim-exact-conductance-normalization",
+   "exact_statement": "The scalar in Lemma <a href=\"#en:scalar\" data-reference-type=\"ref\" data-reference=\"en:scalar\">26</a> equals one.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-en-reciprocity"
+  },
+  {
+   "claim_id": "claim-uniform-conformal-energy-limit",
+   "exact_statement": "In every coupled extraction and every ordinary chart, both unnormalized network energies have the same inner relaxed limit: $$\\label{en:final-energy}\n                   F(u,U)=F^*(u,U)=\\int_U|\\nabla u|^2\\,\\mathrm dz$$ for every $u\\in C(U)\\cap W^{1,2}_{\\mathrm{loc}}(U)$, with infinite value when the integral diverges or local Sobolev regularity fails. The local uniform lower bounds and recovery conclusions of Lemma <a href=\"#en:envelope\" data-reference-type=\"ref\" data-reference=\"en:envelope\">22</a>, the gluing estimate, and harmonic compactness hold simultaneously. In particular, the limiting energy has no subsequence-dependent multiplicative constant.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-en-variational"
+  },
+  {
+   "claim_id": "claim-excursion-block-density",
+   "exact_statement": "Fix $0<a<b<1$. Let $W_N$ be the diffusively rescaled free axial increment path on $[\\lfloor aN\\rfloor,\\lfloor bN\\rfloor]$, with linear interpolation, and let $Z_N$ be any measurable function of these increments with values in a fixed compact metrizable space. Suppose $(W_N,Z_N)\\Rightarrow(W,Z)$ along a sequence of even $N$. There is a nonnegative continuous function $f_{a,b}$ of the limiting path, with expectation one, such that the corresponding pair under quadrant-excursion conditioning converges to the law $$f_{a,b}(w)\\,\\mathop{\\mathrm{Law}}(W,Z)(\\mathrm dw,\\mathrm dz).$$ In particular, every probability-one property of $(W,Z)$ also holds for this conditioned limit. A countable product of compact-valued observations is allowed for $Z_N$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sph-block-density"
+  },
+  {
+   "claim_id": "claim-sphere-energy-transfer",
+   "exact_statement": "Consider any joint subsequential extraction of the sphere contour and the countable internal variational arrays on $I_d$, for every rational $d\\in(0,1/2)$, using the extraction convention of Proposition <a href=\"#inp:array-interface\" data-reference-type=\"ref\" data-reference=\"inp:array-interface\">12</a>. Almost surely, on every open domain compactly contained in the interior of one of these interval surfaces, both primal and dual inner relaxed energies equal $\\mathcal D$. This identity holds simultaneously for all continuous targets, with the value $+\\infty$ when the target is not locally Sobolev or its Dirichlet integral diverges.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sph-transfer"
+  },
+  {
+   "claim_id": "claim-sobolev-removability",
+   "exact_statement": "Let $p$ be a point of a smooth two-dimensional surface. If $u$ is continuous near $p$, is locally $W^{1,2}$ off $p$, and has finite Dirichlet integral near $p$, then $u$ is $W^{1,2}$ across $p$. Moreover, if $u$ is continuous and Sobolev on a compact surface, there are continuous Sobolev functions $u_r$, constant on a neighborhood of $p$ and equal to $u$ outside a shrinking disk, such that $$\\|u_r-u\\|_\\infty\\longrightarrow0,\n \\qquad\n \\|u_r-u\\|_{W^{1,2}}\\longrightarrow0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sph-removability"
+  },
+  {
+   "claim_id": "claim-global-sphere-energies",
+   "exact_statement": "From any subsequence of the tree-decorated sphere maps, one can take a further joint extraction and a coupling with the limiting ordinary quantum sphere such that the following statements hold almost surely.*\n\n1.  *If $u_n$ converges uniformly to $u\\in C(S^2)$, then $$\\liminf_{n\\to\\infty}\\mathsf e_n(u_n)\\ge\\mathcal D(u).$$*\n\n2.  *For each $u\\in C(S^2)\\cap W^{1,2}(S^2)$ there are uniformly convergent approximations $u_n$ for which $$\\mathsf e_n(u_n)\\longrightarrow\\mathcal D(u).$$ Both assertions hold on the dual with $\\mathsf e_n^*$ and $\\pi_n^*$.*\n\n3.  *On every open set, graph-harmonic functions with bounded energy and bounded absolute value are locally equicontinuous under these locations and have locally uniformly convergent subsequences. This holds also on the dual and at the tour endpoint.*\n\n*All these conclusions may be required in the same extraction as the metric and measure comparison below.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sph-energy"
+  },
+  {
+   "claim_id": "claim-joint-spatial-comparison",
+   "exact_statement": "The extraction in Theorem <a href=\"#sph:energy\" data-reference-type=\"ref\" data-reference=\"sph:energy\">36</a> can be chosen so that its limiting sphere is the one in the metric-measure limit and, almost surely, $$\\begin{aligned}\n \\sup_{v,w\\in V_n}\n \\big|a_n d_n(v,w)-D_h(\\pi_n(v),\\pi_n(w))\\big|&\\longrightarrow0,\n \\label{sph:distortion}\\\\\n \\sup_{x\\in S^2}\\mathop{\\mathrm{dist}}_{D_h}(x,\\pi_n(V_n))&\\longrightarrow0,\n \\label{sph:dense}\\\\\n (\\pi_n)_*\\mu_n&\\Longrightarrow\\mu_h.\n \\label{sph:measure}\n\\end{aligned}$$ The maximum round diameter of a projected edge tends to zero. The measure $\\mu_h$ is nonatomic and has full support, and $D_h$ induces the round topology.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sph-comparison"
+  },
+  {
+   "claim_id": "claim-small-mass-green",
+   "exact_statement": "For each fixed $\\rho\\in(0,1/2)$ there are nonnegative random variables $A_n$, measurable functions of $M_n$, such that $$\\label{gr:green-main}\n \\sup_{n\\geq1}\\mathbb EA_n<\\infty,\n \\qquad\n \\|G_nf\\|_\\infty\\leq A_n\\,\\mu_n(|f|)^\\rho$$ simultaneously for all real functions $f:V_n\\to\\mathbb R$ satisfying $\\|f\\|_\\infty\\leq1$ and $\\mu_n(f)=0$. The expectation is under the map marginal of the uniform rooted map–spanning-tree pair law. In particular, $(A_n)$ is tight.",
+   "kind": "bound",
+   "statement_anchor": "stmt-gr-green-bound"
+  },
+  {
+   "claim_id": "claim-forest-representation",
+   "exact_statement": "Let $\\mathcal G$ be a finite connected multigraph, with positive probability measure $\\mu$ on its vertex set $V$, and let $H$ be its unit-conductance graph Laplacian. Suppose $q:V\\to\\mathbb R$ satisfies $\\sum_{v\\in V}q(v)=0$, and let $u$ solve $Hu=q$, $\\mu(u)=0$. For a uniform spanning tree $T$ of $\\mathcal G$ and an edge $e\\in T$, choose either component $S_e$ of $T\\setminus e$, and let $b_e$ be the number of graph edges between $S_e$ and $V\\setminus S_e$, with multiplicity. Then $$\\label{gr:forest-identity}\n u(x)=\\mathbb E_T\\sum_{e\\in T}\n       \\frac{q(S_e)\\bigl(\\mathbf 1_{\\{x\\in S_e\\}}-\\mu(S_e)\\bigr)}{b_e},\n \\qquad x\\in V,$$ where $q(S)=\\sum_{v\\in S}q(v)$. The value does not depend on the choice of component for any $e$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-gr-forest"
+  },
+  {
+   "claim_id": "claim-tour-mass-cut-size",
+   "exact_statement": "For each $v\\in V_n$, $$\\label{gr:tour-degree}\n \\#\\{0\\leq i<N:v_i=v\\}=\\deg_{M_n}(v).$$ For $e\\in T$, the step starts visiting either component of $T\\setminus e$ form a cyclic interval. Choose a component $S_e$ whose interval $I_e$ has length $\\ell_e\\leq N/2$. If the lengths agree, choose the component not containing $v_0$. Then $$\\label{gr:tour-cut-identities}\n \\mu_n(S_e)=\\frac{\\ell_e}{N},\n \\qquad b_e=1+D_e^*,$$ where $D_e^*$ is the distance in $T^*$ between the dual vertices at the two horizontal traversal steps of $e$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-gr-tour-cut"
+  },
+  {
+   "claim_id": "claim-contour-distance",
+   "exact_statement": "Let $\\mathcal T_s$ be a uniform rooted plane tree with $s/2$ edges, where $s\\geq2$ is even, and write $w_i$, $i\\in\\mathbb Z/s\\mathbb Z$, for its cyclic contour vertices. If $i,j$ are deterministic with $0\\leq j\\leq s$, set $$D=\\mathop{\\mathrm{dist}}_{\\mathcal T_s}(w_i,w_{i+j}),\n \\qquad d=1+\\min(j,s-j).$$ There are absolute constants $C,c>0$ such that, for every integer $a\\geq0$, $$\\label{gr:dyck-density}\n \\mathbb P(D=a)\\leq C(a+1)^2d^{-3/2}e^{-ca^2/d}.$$ Consequently, for every fixed $p>0$, $$\\label{gr:dyck-moments}\n \\|(1+D)^{-1}\\|_{L^2}\\leq C d^{-1/2},\n \\qquad \\|D\\|_{L^p}\\leq C_p\\sqrt d.$$ For every deterministic cyclic segment $K$ from corner $i$ through corner $i+L$, where $1\\leq L\\leq s$, $$\\label{gr:contour-diameter}\n \\bigl\\|\\mathop{\\mathrm{diam}}_{\\mathcal T_s}\\{w_{i+r}:0\\leq r\\leq L\\}\\bigr\\|_{L^4}\n       \\leq C\\sqrt L.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-gr-dyck"
+  },
+  {
+   "claim_id": "claim-one-scale-estimate",
+   "exact_statement": "There is an absolute constant $C$ such that, for every $n$, every dyadic $M\\leq N/2$, and every deterministic tour time $t$, $$\\label{gr:Ut}\n \\mathbb EU_{M,t}^2\\leq C.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-gr-one-scale"
+  },
+  {
+   "claim_id": "claim-deterministic-path-law-criterion",
+   "exact_statement": "In the deterministic setting just defined, assume the following.*\n\n1.  *$(\\pi_n)_*\\mu_n\\Rightarrow\\mu$, and the maximum projected edge length tends to zero: $$\\max_{\\{v,w\\}\\in E(\\mathcal G_n)}d_0(\\pi_n(v),\\pi_n(w))\\longrightarrow0.$$*\n\n2.  *Every uniformly convergent sequence with continuous limit $u$ satisfies $$\\liminf_n\\mathsf e_n(u_n)\\ge\\int|\\nabla u|^2\\,\\mathrm dA,$$ where the right side is $+\\infty$ unless $u\\in W^{1,2}(S^2)$. Every smooth $u$ has a uniformly convergent recovery sequence with energy tending to that integral.*\n\n3.  *For every open $U\\subset S^2$, sequences that are graph-harmonic at all vertices in $\\pi_n^{-1}(U)$ and have uniformly bounded supremum and total energy are locally equicontinuous in $U$ under $\\pi_n$, and locally uniformly precompact there. Here equicontinuity means that, for every compact $K\\subset U$, $$\\lim_{\\delta\\downarrow0}\\limsup_n\n     \\sup_{\\substack{\\pi_n(v),\\pi_n(w)\\in K\\\\\n                      d_0(\\pi_n(v),\\pi_n(w))\\le\\delta}}\n           |u_n(v)-u_n(w)|=0,$$ and precompactness means uniform comparison with a continuous function on each compact subset after a common subsequence.*\n\n\n4.  *For the centered solution operator $$H_nG_ng=\\mu_n g,\\qquad \\mu_n(G_ng)=0,\n     \\qquad \\mu_n(g)=0,$$ there are constants $C<\\infty$ and $\\rho>0$, independent of $n$, such that $$\\label{dyn:green-assumption}\n     \\|G_ng\\|_\\infty\\le C\\,\\mu_n(|g|)^\\rho\n     \\quad\\text{if }\\|g\\|_\\infty\\le1\\text{ and }\\mu_n(g)=0.$$*\n\n*Then the laws of $(\\pi_n(Y^n_t))_{0\\le t\\le T}$, with initial law $\\mu_n$, converge in $D([0,T],S^2)$ to the law of $(B_t)_{0\\le t\\le T}$, for every finite $T$. The limit has continuous paths. In addition, for every $\\alpha>0$ and $f\\in C(S^2)$, the resolvents converge uniformly under $\\pi_n$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-dyn-conditional"
+  },
+  {
+   "claim_id": "claim-closed-form-sobolev",
+   "exact_statement": "If $u\\in C(S^2)\\cap W^{1,2}(S^2)$, then $u\\in\\mathcal F$ and its closed-form energy is the right side of <a href=\"#dyn:continuum-form\" data-reference-type=\"eqref\" data-reference=\"dyn:continuum-form\">[dyn:continuum-form]</a>. It has smooth approximations converging both uniformly and in the form norm. Two continuous versions of the same element of $L^2(\\mu)$ are equal everywhere.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-dyn-smooth-core"
+  },
+  {
+   "claim_id": "claim-uniform-resolvent-convergence",
+   "exact_statement": "For every $\\alpha>0$ and $f\\in C(S^2)$, $R_\\alpha f$ has a unique continuous version, which belongs to round $W^{1,2}$, and $$\\label{dyn:resolvent-limit}\n \\bigl\\|R^n_\\alpha(f\\circ\\pi_n)\n              -(R_\\alpha f)\\circ\\pi_n\\bigr\\|_\\infty\n       \\longrightarrow0.$$ The same conclusion holds with right-hand sides $f_n$ converging uniformly under $\\pi_n$ to $f$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-dyn-resolvent"
+  },
+  {
+   "claim_id": "claim-resolvent-approximate-identity",
+   "exact_statement": "For every $f\\in C(S^2)$, $$\\label{dyn:approximate-identity}\n \\|\\alpha R_\\alpha f-f\\|_\\infty\\longrightarrow0\n \\qquad\\text{as }\\alpha\\longrightarrow\\infty.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-dyn-feller"
+  },
+  {
+   "claim_id": "claim-exit-estimate-tightness",
+   "exact_statement": "For $d>0$ and $v\\in V_n$, let $$\\tau^n_d(v)=\\inf\\{t\\ge0:\n   d_0(\\pi_n(Y^n_t),\\pi_n(v))\\ge d\\}.$$ Then $$\\label{dyn:exit}\n \\lim_{s\\downarrow0}\\limsup_{n\\to\\infty}\n       \\sup_{v\\in V_n}\\mathbb P_v[\\tau^n_d(v)\\le s]=0.$$ The stationary projected path laws are tight in $D([0,T],S^2)$, and all their limits are supported on continuous paths.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-dyn-tightness"
+  },
+  {
+   "claim_id": "claim-energy-clock-identity",
+   "exact_statement": "For the half-edge walk of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, $$-\\langle u,nL_nu\\rangle_{L^2(\\mu_n)}=\\frac12\\mathsf e_n(u).$$ Equivalently, $nL_n=-\\tfrac12\\mu_n^{-1}H_n$, where $\\mu_n^{-1}$ denotes division by vertex mass.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-dyn-energy-clock"
+  }
+ ],
+ "paper": "papers/EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-M-0394_PM-211.3_A_Linear_Clock_for_Random_Walk_on_Tree_Weighted_Planar_Maps.md",
+ "purpose": "A Linear Clock for Random Walk on Tree-Weighted Planar Maps",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "2f569f9579876ebaf96d48e3512ddc53cd5c3d7c2da03ab10e4d52eb3c539c35",
+   "pm.domains.v2": "14903bab4ab5eba2e3d79b4fc1485a249511b0c216893b1ac2c52774a4f98ac8",
+   "pm.edges.v2": "68a61ac3bd81d78f17bab7221e4a4e655128dd0cd4da6e3655abd3d54bd7e116",
+   "pm.extraction.v2": "cdb2468e8604f023eb458fc96ec3aa4efe82f4bbfd64bbaf67581b956c11ea07",
+   "pm.formal.v2": "f865e836d688d74e35c0d27a704b4327f7530ee34753b56b328f1a87a878a952",
+   "pm.limits.v2": "5695240c2925e94eb7b16ccd8a76e188ab2a75448a9e3c661c845d7a96546129",
+   "pm.node.v2": "031601266f7705598fac35f51a7c05c5f8457233217d2757ef11c202b504964e",
+   "pm.objects.v2": "d99d6a7bee64e399eb9e519d8c3f08d8cd029000ce78a99bb97d3a032dddba56",
+   "pm.provenance.v2": "970734c24e62777631d4ea51c7176b09ae6cadecbaacbbcea997b2a68cdfdc34",
+   "pm.quantities.v2": "ad14511cb41b2c33e4d9c595c8413e6650fe36d613e65167fd24cf06108a2f69",
+   "pm.reading.v2": "8b1aecdeb2f2c4938d5f3f521d6cf1f4a0b03cd55ac3f8b9265284874458a202",
+   "pm.roadmap.v2": "2fe45721f38757b2062799db757322cc941a0e32edd5480f7d2c187b6e51bbde",
+   "pm.search.v1": "e229d2be37facc635075ee1fd6776664c8d80b3a9095e6141d9733f0454566d3",
+   "pm.triptych.v2": "5d53a0125b9906a731083bfe4ea83690b72581434ed227103c2301aea18f0160"
+  },
+  "canonical_sha256": "4882c1d551d25bf0cf6848906f84364ab59585b5f71fe6d83939f2bf80e54ce1",
+  "paper_sha256": "da8f45c5f839429c5f75cb2b9a742e73392f8e7b582d3dae1ac215e1410cbb34",
+  "repaired_body_sha256": "08b9ebbee58b2d7421c06813eafa121d394de704927e4f63eacf7917794ea1fb"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "780224d4d9274f1169b3aa74b4d672ecada28c0a9822f766806b91adecfaba43",
+   "receipt_sha256": "cd37a57212c3e07a2e6a40eb96bae351e03e79d62c2cced077b9b08080d69096",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Six small connected multigraphs with at most three vertices and three edges, integer values, including a loop-only graph and a parallel-edge graph.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-energy-clock-identity",
+     "oracle_basis": "Exact comparison with half the Laplacian quadratic form."
+    },
+    {
+     "checked_domain": "Graphs with a loop at a vertex, where the loop adds two half-edges.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-loop-degree-convention",
+     "oracle_basis": "Loops are skipped in the oracle's Laplacian, so a wrong loop convention changes the comparison."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-measure-doubled",
+     "observed_exit": 1,
+     "receipt_sha256": "b05fbecc41810e6abe4c60cd86db3f06a5ffbd6c70d68116eca437d8d4b6d1a5"
+    },
+    {
+     "id": "mut-sign-flip",
+     "observed_exit": 1,
+     "receipt_sha256": "3cc906d5dbbf5df08e7d8f4432e7b40123a229631eefa14aa3648c8bb96be63e"
+    },
+    {
+     "id": "mut-missing-acceleration",
+     "observed_exit": 1,
+     "receipt_sha256": "6e5277b84b5b3cddb5813a823e20ae601a508289cf20e2f574647f590894bfde"
+    },
+    {
+     "id": "mut-wrong-normaliser",
+     "observed_exit": 1,
+     "receipt_sha256": "44cbedb3447094d8901593ebf7bf239b6742e1060996c40590d7a9ba1c851569"
+    },
+    {
+     "id": "mut-bad-start",
+     "observed_exit": 1,
+     "receipt_sha256": "582638573f58803602d1e7401afc9829ea75671f9b83d8ac672952164e3bfbb1"
+    }
+   ],
+   "receipt_sha256": "c0033ceb7931713e00e2404ba79674f6c0290dc27826a0a02d125fd5a1e45831",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "A Linear Clock for Random Walk on Tree-Weighted Planar Maps"
+}

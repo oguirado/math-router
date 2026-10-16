@@ -1,0 +1,170 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "pm.claims.v2"
+    },
+    "pm_id": {
+      "type": "string",
+      "pattern": "^PM-[0-9]{3}\\.[0-9]+$"
+    },
+    "generation_status": {
+      "type": "string",
+      "enum": [
+        "GENERATED-PLACEHOLDER",
+        "COMPLETE"
+      ]
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "theorem",
+              "counterexample",
+              "algorithm",
+              "bound",
+              "classification",
+              "construction",
+              "conditional_result"
+            ]
+          },
+          "statement_anchor": {
+            "type": "string"
+          },
+          "exact_statement": {
+            "type": "string"
+          },
+          "explanation": {
+            "type": "string"
+          },
+          "hypotheses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source_id": {
+                  "type": "string"
+                },
+                "anchor": {
+                  "type": "string"
+                },
+                "exact_quote": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_id",
+                "anchor",
+                "exact_quote"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "quantifiers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source_id": {
+                  "type": "string"
+                },
+                "anchor": {
+                  "type": "string"
+                },
+                "exact_quote": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_id",
+                "anchor",
+                "exact_quote"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "conclusion": {
+            "type": "object",
+            "properties": {
+              "source_id": {
+                "type": "string"
+              },
+              "anchor": {
+                "type": "string"
+              },
+              "exact_quote": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "source_id",
+              "anchor",
+              "exact_quote"
+            ],
+            "additionalProperties": false
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source_id": {
+                  "type": "string"
+                },
+                "anchor": {
+                  "type": "string"
+                },
+                "exact_quote": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_id",
+                "anchor",
+                "exact_quote"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "fidelity": {
+            "type": "string",
+            "enum": [
+              "PENDING",
+              "VERIFIED",
+              "REJECTED"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "statement_anchor",
+          "exact_statement",
+          "explanation",
+          "hypotheses",
+          "quantifiers",
+          "conclusion",
+          "evidence",
+          "fidelity"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "pm_id",
+    "generation_status",
+    "claims"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pm.claims.v2"
+}

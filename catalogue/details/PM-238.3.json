@@ -1,0 +1,968 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 692138,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 213237
+ },
+ "coordinate": "EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-M-0489",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "l:introduction",
+     "quote": "Parity gives the simplest example: the uniform law on the alternating group has uniform images on any set of at most $n-2$ labels.",
+     "quote_sha256": "142fa4bd51ef22d0e77be53cb474063a7dbe628ec6273fc22978cf4deef5e564"
+    }
+   ],
+   "query": "mixing of permutations with persistent sign bias",
+   "reason": "The sign representation is treated separately and must have vanishing mean."
+  }
+ ],
+ "family": "PM-238",
+ "id": "PM-238.3",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-l-main",
+    "claim_id": "claim-main",
+    "statement": "Partition $X$ into $b$ nonempty sets $M_1,\\ldots,M_b$."
+   },
+   {
+    "anchor": "stmt-l-degree-basic",
+    "claim_id": "claim-degree-basic",
+    "statement": "For every $u>0$, $C_u<\\infty$ and $$Z_u(n):=\\sum_{\\lambda\\vdash n,\\ \\lambda\\notin\\{(n),(1^n)\\}}D_\\lambda^{-u}\\longrightarrow0.$$"
+   },
+   {
+    "anchor": "stmt-l-partition-selection",
+    "claim_id": "claim-partition-selection",
+    "statement": "If $n$ is divisible by $b$ and a law $\\mu$ on $S_n$ satisfies $$\\mathbb E_{|M|=n/b}\\|\\mu_{H_M}-U_{G/H_M}\\|_{\\mathrm{TV}}\\le\\delta,$$ there is a partition into $b$ equal blocks for which the sum of the complementary coset errors is at most $b\\delta$."
+   },
+   {
+    "anchor": "stmt-l-trim",
+    "claim_id": "claim-trim",
+    "statement": "Let $H_1,\\ldots,H_b$ be subgroups of a finite group $G$, let $\\mu$ be a probability, and put $\\delta_i=\\|\\mu_{H_i}-U_{G/H_i}\\|_{\\mathrm{TV}}$ and $\\delta=\\sum_i\\delta_i$."
+   },
+   {
+    "anchor": "stmt-l-plancherel",
+    "claim_id": "claim-plancherel",
+    "statement": "For every complex mass function $a$ on a finite group $G$, $$|G|\\sum_g|a(g)|^2=\\sum_{\\rho\\in\\mathop{\\mathrm{Irr}}(G)}D_\\rho\\|\\widehat a(\\rho)\\|_{\\mathrm{HS}}^2.$$"
+   },
+   {
+    "anchor": "stmt-l-amplification",
+    "claim_id": "claim-amplification",
+    "statement": "Let $\\mu_n$ be probabilities on $S_n$ with $\\widehat\\mu_n(\\mathop{\\mathrm{sgn}})=o(1)$."
+   },
+   {
+    "anchor": "stmt-l-single-orbit",
+    "claim_id": "claim-single-orbit",
+    "statement": "Let $H$ act unitarily on $V$, and suppose a vector $v$ has components only in $H$-types belonging to a set $\\Lambda\\subseteq\\mathop{\\mathrm{Irr}}(H)$."
+   },
+   {
+    "anchor": "stmt-l-orbit-span",
+    "claim_id": "claim-orbit-span",
+    "statement": "Under the assumptions of Theorem <a href=\"#l:main\" data-reference-type=\"ref\" data-reference=\"l:main\">1</a>, for every $u>0$, $$\\|\\widehat f(\\rho)\\|_{\\mathrm{op}}\\le\\sqrt{bBC_u}\\,D^{-1/2+(u+2)/(2b)}.$$"
+   },
+   {
+    "anchor": "stmt-l-eight-convolutions",
+    "claim_id": "claim-eight-convolutions",
+    "statement": "<span id=\"l:orbit-completion\" label=\"l:orbit-completion\"></span>Let $n\\to\\infty$ through multiples of eight."
+   },
+   {
+    "anchor": "stmt-l-central-isotypic",
+    "claim_id": "claim-central-isotypic",
+    "statement": "Let $H\\le G$ and let $f\\ge0$ have mass $z\\le1$ and satisfy $f(gH)\\le B/[G:H]$."
+   },
+   {
+    "anchor": "stmt-l-isotypic",
+    "claim_id": "claim-isotypic",
+    "statement": "Under the assumptions of Theorem <a href=\"#l:main\" data-reference-type=\"ref\" data-reference=\"l:main\">1</a>, $$\\|\\widehat f(\\rho)\\|_{\\mathrm{HS}}^2\\le bBC_uD^{-1+(u+2)/b}.$$"
+   },
+   {
+    "anchor": "stmt-l-four-convolutions",
+    "claim_id": "claim-four-convolutions",
+    "statement": "<span id=\"l:isotypic-completion\" label=\"l:isotypic-completion\"></span>Under the hypotheses of Corollary <a href=\"#l:orbit-completion\" data-reference-type=\"ref\" data-reference=\"l:orbit-completion\">[l:orbit-completion]</a>, $\\|\\mu_n^{*2}-U_G\\|_{\\mathrm{TV}}\\to0$."
+   },
+   {
+    "anchor": "stmt-l-coefficient-evaluation",
+    "claim_id": "claim-coefficient-evaluation",
+    "statement": "Let $H$ be a finite group and let $\\Lambda\\subseteq\\mathop{\\mathrm{Irr}}(H)$."
+   },
+   {
+    "anchor": "stmt-l-coefficient-operator",
+    "claim_id": "claim-coefficient-operator",
+    "statement": "For every $u>0$ and irreducible $\\rho$ of degree $D$, $$\\|\\widehat f(\\rho)\\|_{\\mathrm{op}}\\le\\sqrt{bBC_u}\\,D^{-1/2+(u+2)/(2b)}.$$"
+   },
+   {
+    "anchor": "stmt-l-isotypic-alternatives",
+    "claim_id": "claim-isotypic-alternatives",
+    "statement": "Let $H\\le G$, let $f\\ge0$ have mass at most one and coset cap $B/[G:H]$, and let $\\tau\\in\\mathop{\\mathrm{Irr}}(H)$ have degree $a$."
+   },
+   {
+    "anchor": "stmt-l-coarse-character-lift",
+    "claim_id": "claim-coarse-character-lift",
+    "statement": "<span id=\"l:coefficient-lift\" label=\"l:coefficient-lift\"></span>For the disjoint-block data of this section and every $u>0$, $$\\begin{aligned}\n \\|\\widehat f(\\rho)\\|_{\\mathrm{HS}}^2&\\le B^2bC_uD^{-1+(u+2)/b},\\label{l:coefficient-hs}\\\\\n \\|\\widehat f(\\rho)\\|_{\\mathrm{HS}}^2&\\le B^2bC_uD^{-1+(u+4)/b}.\\label{l:coarse-hs}\n\\end{aligned}$$"
+   },
+   {
+    "anchor": "stmt-l-central-projector-operator",
+    "claim_id": "claim-central-projector-operator",
+    "statement": "Let $\\eta$ be a probability satisfying the coset caps of this section."
+   },
+   {
+    "anchor": "stmt-l-branching-hs",
+    "claim_id": "claim-branching-hs",
+    "statement": "For an irreducible $\\rho_\\lambda$ of degree $D$, the disjoint-block caps give $$\\|\\widehat f(\\rho_\\lambda)\\|_{\\mathrm{HS}}^2\\le BbM(k_\\lambda)D^{-1+2/b}.$$"
+   },
+   {
+    "anchor": "stmt-l-random-partition",
+    "claim_id": "claim-random-partition",
+    "statement": "Let $n$ tend to infinity through multiples of a fixed integer $q>3$, and let $\\mu$ be probability laws on $S_n$."
+   },
+   {
+    "anchor": "stmt-l-tableau-constructions",
+    "claim_id": "claim-tableau-constructions",
+    "statement": "Suppose a diagram has first row of length $a$, lower diagram $\\gamma$ of size $k$, and second row of length $c$ (put $c=0$ if $k=0$).*\n\n1."
+   },
+   {
+    "anchor": "stmt-l-degree-hook-ratio",
+    "claim_id": "claim-degree-hook-ratio",
+    "statement": "With the notation of Lemma <a href=\"#l:tableau-constructions\" data-reference-type=\"ref\" data-reference=\"l:tableau-constructions\">20</a>, let $b_j$ be the number of lower boxes in column $j$."
+   },
+   {
+    "anchor": "stmt-l-degree-all-powers",
+    "claim_id": "claim-degree-all-powers",
+    "statement": "For every fixed real $u>0$, $$\\label{l:degree-all-powers-equation}\n C_u:=\\sup_{n\\ge1}\\sum_{\\lambda\\vdash n}D_\\lambda^{-u}<\\infty,\n \\qquad Z_u(n)\\longrightarrow0.$$"
+   },
+   {
+    "anchor": "stmt-l-degree-inverse-first",
+    "claim_id": "claim-degree-inverse-first",
+    "statement": "For $1\\le k=k(\\lambda)\\le n/4$, with $\\gamma$ the lower diagram after orienting a longest line as the first row, $$\\label{l:degree-first-row-bound}\n D_\\lambda\\ge e^{-1/2}\\binom nkD_\\gamma\n                  \\ge\\tfrac12\\binom nk.$$"
+   },
+   {
+    "anchor": "stmt-l-degree-type-absorption",
+    "claim_id": "claim-degree-type-absorption",
+    "statement": "Let $M(k)=\\sum_{j=0}^kp(j)$."
+   },
+   {
+    "anchor": "stmt-l-small-index-character",
+    "claim_id": "claim-small-index-character",
+    "statement": "For every irreducible complex representation of $S_n$, of degree $D$, there are a subgroup $J\\le S_n$ and a character $\\chi:J\\to\\{1,-1\\}$ occurring in its restriction such that $$[S_n:J]\\le D^{1024}.$$"
+   },
+   {
+    "anchor": "stmt-l-subcharacter-isotypic",
+    "claim_id": "claim-subcharacter-isotypic",
+    "statement": "Let $G$ be a finite group, $H\\le G$, and let $f\\ge0$ have mass $z\\le1$ and satisfy $f(gH)\\le B/[G:H]$ for every $g\\in G$."
+   },
+   {
+    "anchor": "stmt-l-character-lift",
+    "claim_id": "claim-character-lift",
+    "statement": "Let $H_i=\\mathop{\\mathrm{Sym}}(M_i)\\le S_n$, $1\\le i\\le b$, for disjoint nonempty sets $M_i$."
+   },
+   {
+    "anchor": "stmt-l-joint-types",
+    "claim_id": "claim-joint-types",
+    "statement": "Put $k=n-\\max(\\lambda_1,\\lambda'_1)$ and $M(k)=\\sum_{j=0}^kp(j)$, where $p(0)=1$ and $p(j)$ is the partition number."
+   },
+   {
+    "anchor": "stmt-l-joint-type-operator",
+    "claim_id": "claim-joint-type-operator",
+    "statement": "Let $f\\ge0$ be a mass function on $S_n$, of total mass $z\\le1$, such that $f(gH_i)\\le B/[S_n:H_i]$ for every $g,i$."
+   },
+   {
+    "anchor": "stmt-l-four-block-reservoir",
+    "claim_id": "claim-four-block-reservoir",
+    "statement": "Partition $n$ points into four sets of size $n/4$, and let $H_i$ permute those sets."
+   },
+   {
+    "anchor": "stmt-l-eight-block-probe",
+    "claim_id": "claim-eight-block-probe",
+    "statement": "Partition $n$ points into eight sets of size $n/8$, and let $H_i$ permute those sets."
+   },
+   {
+    "anchor": "stmt-l-two-sided",
+    "claim_id": "claim-two-sided",
+    "statement": "Let $H_1,\\ldots,H_b$ be the disjoint symmetric block subgroups above."
+   },
+   {
+    "anchor": "stmt-l-two-sided-completion",
+    "claim_id": "claim-two-sided-completion",
+    "statement": "Fix $b>4$ and finite constants $B_L,B_R$."
+   },
+   {
+    "anchor": "stmt-l-equivariant-sixteen",
+    "claim_id": "claim-equivariant-sixteen",
+    "statement": "Consider a sequence of the preceding state spaces and partitions with $\\min_i m_i\\to\\infty$."
+   },
+   {
+    "anchor": "stmt-l-three-group",
+    "claim_id": "claim-three-group",
+    "statement": "Consider a sequence of kernels <a href=\"#l:three-convolution-kernel\" data-reference-type=\"eqref\" data-reference=\"l:three-convolution-kernel\">[l:three-convolution-kernel]</a> satisfying <a href=\"#l:three-bistochastic\" data-reference-type=\"eqref\" data-reference=\"l:three-bistochastic\">[l:three-bistochastic]</a>, with $\\min_i m_i\\to\\infty$."
+   },
+   {
+    "anchor": "stmt-l-spectral-pruning",
+    "claim_id": "claim-spectral-pruning",
+    "statement": "Let $n\\to\\infty$ through multiples of $16$."
+   },
+   {
+    "anchor": "stmt-l-adaptive-domain-preparation",
+    "claim_id": "claim-adaptive-domain-preparation",
+    "statement": "Let $q\\ge2$ divide $n$, put $r=n/q$, and let $\\mu$ be a probability on $S_n$."
+   },
+   {
+    "anchor": "stmt-l-omitted-set-transfer",
+    "claim_id": "claim-omitted-set-transfer",
+    "statement": "Let $n\\to\\infty$ through multiples of $1024$, and let $\\mu_n$ be probabilities on $S_n$ such that $$\\delta_n=\\mathbb E_{|R|=n/1024}\n       \\|(\\mu_n)_{-R}-U_{-R}\\|_{\\mathrm{TV}}\\longrightarrow0.$$"
+   },
+   {
+    "anchor": "stmt-l-domain-transfer",
+    "claim_id": "claim-domain-transfer",
+    "statement": "Let $n\\to\\infty$ through multiples of $256$, and let $\\mu_n$ be probabilities on $S_n$ satisfying $$\\delta_n=\\mathbb E_{|R|=n/256}\n       \\|(\\mu_n)_{-R}-U_{-R}\\|_{\\mathrm{TV}}\\longrightarrow0.$$"
+   },
+   {
+    "anchor": "stmt-l-tilted-entropy",
+    "claim_id": "claim-tilted-entropy",
+    "statement": "Let $128$ divide $n$, let $\\mathcal G\\in\\mathcal F$, and suppose $a=\\mathbb P(\\mathcal G)>0$."
+   },
+   {
+    "anchor": "stmt-l-palette-information",
+    "claim_id": "claim-palette-information",
+    "statement": "In the experiment just described, fix an integer $0\\le v<h$ and an event $\\mathcal G\\subseteq\\Omega$ of reference probability $z>0$."
+   },
+   {
+    "anchor": "stmt-l-palette-degree",
+    "claim_id": "claim-palette-degree",
+    "statement": "There is an absolute $c_0>0$ such that, for all sufficiently large $b$, if $\\gamma\\vdash b$, $L=\\max(\\gamma_1,\\gamma'_1)$, and $k=b-L>0$, then $$\\log D_\\gamma\\ge\n \\begin{cases}\n c_0 k\\log(b/k),&k\\le b/2,\\\\\n c_0 b,&k>b/2.\n \\end{cases}\n \\label{l:palette-degree-bound}$$ In particular $\\log D_\\gamma\\ge c_1k$ for an absolute $c_1>0$."
+   },
+   {
+    "anchor": "stmt-l-signed-palette",
+    "claim_id": "claim-signed-palette",
+    "statement": "There is an absolute $C_0<\\infty$ such that, for every sufficiently large $h$ and every $\\beta\\vdash h$, there are positive integers $l_1,\\ldots,l_u$ summing to $h$ and a product character $\\theta=\\theta_1\\otimes\\cdots\\otimes\\theta_u$ of $H=S_{l_1}\\times\\cdots\\times S_{l_u}$, each $\\theta_i$ either trivial or sign, for which $$\\operatorname{Hom}_H(\\theta,V_\\beta)\\ne0,\n \\qquad h\\mathcal H((l_i/h)_i)\\le C_0\\log D_\\beta.\n \\label{l:signed-palette-bound}$$ The same character occurrence holds for every placement of the classes of these sizes on an $h$-element set."
+   },
+   {
+    "anchor": "stmt-l-palette-transfer",
+    "claim_id": "claim-palette-transfer",
+    "statement": "Let $n$ tend to infinity through even integers."
+   },
+   {
+    "anchor": "stmt-l-replica-clipping",
+    "claim_id": "claim-replica-clipping",
+    "statement": "Partition $\\{1,\\ldots,n\\}$ into $q\\ge1$ nonempty blocks, and let $H_i$ be the subgroup supported on block $i$."
+   },
+   {
+    "anchor": "stmt-l-replica-partition-selection",
+    "claim_id": "claim-replica-partition-selection",
+    "statement": "Let $q$ divide $n$, put $r=n/q$, and suppose the image law $w_I$ of a uniformly chosen ordered list $I$ of $n-r$ distinct inputs satisfies $$\\mathbb E_I D(w_I\\Vert U_I)\\le K_0,$$ where $U_I$ is uniform on ordered distinct output lists of that length."
+   },
+   {
+    "anchor": "stmt-l-replica-large-dimension",
+    "claim_id": "claim-replica-large-dimension",
+    "statement": "Let $n=2^d$ and suppose, for each sufficiently large integer $d$, that a probability $w$ has an equal partition into $q=256$ blocks with total complement entropy $O(d^4)$."
+   },
+   {
+    "anchor": "stmt-l-forest-clipping",
+    "claim_id": "claim-forest-clipping",
+    "statement": "Suppose $$E_n:=\\sum_{j=1}^{16}D(\\mu_j\\Vert U_j)\n       \\le C(1+\\log n)^4\n \\label{l:forest-entropy-hyp}$$ for a constant $C$ independent of $n$."
+   },
+   {
+    "anchor": "stmt-l-forest-degree",
+    "claim_id": "claim-forest-degree",
+    "statement": "There is an absolute $c>0$ such that, for all sufficiently large $n$, every $\\lambda\\vdash n$ with $\\lambda'_1\\le n/2$ and $k>0$ satisfies $$\\log D_\\lambda\\ge ck.\n \\label{l:forest-degree-bound}$$"
+   },
+   {
+    "anchor": "stmt-l-forest-bulk",
+    "claim_id": "claim-forest-bulk",
+    "statement": "Let $\\nu$ be any probability on $S_n$ satisfying the sixteen coset caps in <a href=\"#l:forest-caps\" data-reference-type=\"eqref\" data-reference=\"l:forest-caps\">[l:forest-caps]</a>."
+   },
+   {
+    "anchor": "stmt-l-forest-hybrid",
+    "claim_id": "claim-forest-hybrid",
+    "statement": "Let $n\\to\\infty$ through multiples of $16$."
+   },
+   {
+    "anchor": "stmt-l-tabloid-product",
+    "claim_id": "claim-tabloid-product",
+    "statement": "Put $C_0=2{,}000{,}000$, and fix an integer $L\\ge 2C_0$."
+   },
+   {
+    "anchor": "stmt-l-tabloid-embedding",
+    "claim_id": "claim-tabloid-embedding",
+    "statement": "For every $m\\ge1$ and every partition $\\lambda\\vdash m$, the irreducible representation $V_\\lambda$ occurs in a signed tabloid representation of dimension $M$ with $$M\\le D_\\lambda^{C_0},\\qquad C_0=2{,}000{,}000.$$"
+   },
+   {
+    "anchor": "stmt-l-tabloid-hs",
+    "claim_id": "claim-tabloid-hs",
+    "statement": "Let $E$ have $m$ elements, partitioned into $L$ buffers, and let $\\nu$ be a subprobability on $S_E$."
+   },
+   {
+    "anchor": "stmt-l-tabloid-lr",
+    "claim_id": "claim-tabloid-lr",
+    "statement": "For $\\lambda\\vdash 2h$ and $\\alpha,\\beta\\vdash h$, let $c_{\\alpha\\beta}^\\lambda$ be the multiplicity of $V_\\alpha\\otimes V_\\beta$ in the restriction of $V_\\lambda$ to $S_h\\times S_h$."
+   },
+   {
+    "anchor": "stmt-l-tabloid-completion",
+    "claim_id": "claim-tabloid-completion",
+    "statement": "Identify $V$ with $\\{1,\\ldots,2h\\}$, and consider a sequence of the data of Theorem <a href=\"#l:tabloid-product\" data-reference-type=\"ref\" data-reference=\"l:tabloid-product\">52</a> with $h\\to\\infty$ and fixed $L$."
+   },
+   {
+    "anchor": "stmt-l-degree-reciprocal-twenty",
+    "claim_id": "claim-degree-reciprocal-twenty",
+    "statement": "One has $Z_{20}(n)\\to0$."
+   },
+   {
+    "anchor": "stmt-l-degree-reciprocal-two",
+    "claim_id": "claim-degree-reciprocal-two",
+    "statement": "<span id=\"l:degree-inverse-square\" label=\"l:degree-inverse-square\"></span>One has $C_2<\\infty$ and $Z_2(n)\\to0$."
+   },
+   {
+    "anchor": "stmt-l-degree-elementary-sixteen",
+    "claim_id": "claim-degree-elementary-sixteen",
+    "statement": "The conclusions $C_u<\\infty$ and $Z_u(n)\\to0$ for $u=13,16$ follow from tableau counting and $p(n)\\le2^n$ alone."
+   },
+   {
+    "anchor": "stmt-l-degree-diagonal-four",
+    "claim_id": "claim-degree-diagonal-four",
+    "statement": "For all sufficiently large $n$ and every shape of deficit $k=k(\\lambda)\\ge1$, $$D_\\lambda\\ge2^{k/2},\\qquad D_\\lambda\\ge L(\\lambda)\\ge\\sqrt n.$$"
+   },
+   {
+    "anchor": "stmt-l-degree-inverse-ten",
+    "claim_id": "claim-degree-inverse-ten",
+    "statement": "One has $C_{10}<\\infty$ and $Z_{10}(n)\\to0$, using only the first-row interleaving construction and the bound $p(n)\\le e^{3\\sqrt n}$."
+   },
+   {
+    "anchor": "stmt-l-degree-sqrt-deficit",
+    "claim_id": "claim-degree-sqrt-deficit",
+    "statement": "For every $n\\ge1$ and $\\lambda\\vdash n$, $$\\label{l:degree-sqrt-deficit-equation}\n \\log D_\\lambda\\ge\\frac{\\log2}{2}\\sqrt{k(\\lambda)}.$$"
+   },
+   {
+    "anchor": "stmt-l-tabloid-degree-sums",
+    "claim_id": "claim-tabloid-degree-sums",
+    "statement": "For every fixed $s>0$, $$\\sum_{\\substack{\\lambda\\vdash m\\\\D_\\lambda>1}}\n             D_\\lambda^{-s}\\longrightarrow0\n \\qquad(m\\longrightarrow\\infty).$$"
+   },
+   {
+    "anchor": "stmt-l-coefficient-average",
+    "claim_id": "claim-coefficient-average",
+    "statement": "For $b=32$ and cap $B=4$, $$\\|\\widehat f(\\rho)\\|_{\\mathrm{op}}\\le\\frac83\\sqrt{C_1}\\,D^{-5/16}.$$"
+   },
+   {
+    "anchor": "stmt-l-orbit-average",
+    "claim_id": "claim-orbit-average",
+    "statement": "For $b=256$ and cap $B=4$, $$\\|\\widehat f(\\rho)\\|_{\\mathrm{op}}\\le4\\sqrt{C_{32}}D^{-1/4}.$$"
+   },
+   {
+    "anchor": "stmt-l-four-coefficient",
+    "claim_id": "claim-four-coefficient",
+    "statement": "If there are four blocks and the subprobability cap is $B=2$, then $$\\|\\widehat f(\\rho)\\|_{\\mathrm{op}}\\le2C_{1/4}^2D^{-1/8}.$$"
+   },
+   {
+    "anchor": "stmt-l-peeling-character",
+    "claim_id": "claim-peeling-character",
+    "statement": "Put $C_{\\rm peel}=512^2$."
+   },
+   {
+    "anchor": "stmt-l-peeling-inverse-one",
+    "claim_id": "claim-peeling-inverse-one",
+    "statement": "The preceding stepwise estimate independently implies $$\\sum_{\\lambda\\vdash m:\\,D_\\lambda>1}D_\\lambda^{-1}\\longrightarrow0.$$"
+   },
+   {
+    "anchor": "stmt-l-peeling-lift",
+    "claim_id": "claim-peeling-lift",
+    "statement": "Let $b=2^{22}$ and partition $n=bm$ points into $b$ sets of size $m$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Fourier bounds from partial permutation information",
+    "evidence": [
+     {
+      "anchor": "pm-h-4",
+      "quote": "#### Relation to earlier methods\n\nFourier analysis of random walks on finite groups converts distributional convergence into estimates of matrix transforms.",
+      "quote_sha256": "61400c2dec31371130f62800128af199cc3e1b6fceb594fde1ea5cce1003c045"
+     }
+    ],
+    "requires_concepts": [
+     "representation theory of the symmetric group",
+     "hook-length formula",
+     "Plancherel formula",
+     "total variation distance"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main",
+   "exact_statement": "Partition $X$ into $b$ nonempty sets $M_1,\\ldots,M_b$. Put $H_i=H_{M_i}$. Suppose $f$ is a nonnegative measure on $G$ of mass at most one and, for every $g\\in G$ and $i$, $$\\label{l:main-cap}\n f(gH_i)\\le \\frac{B}{[G:H_i]}.$$ For every $u>0$ and every irreducible $\\rho$ of degree $D$, $$\\label{l:main-hs}\n \\|\\widehat f(\\rho)\\|_{\\mathrm{HS}}^2\n \\le bBC_uD^{-1+(u+2)/b}.$$ There is also an independent orbit-span proof of the bound $$\\label{l:main-orbit}\n \\|\\widehat f(\\rho)\\|_{\\mathrm{op}}^2\n \\le bBC_uD^{-1+(u+2)/b}.$$ No restriction is imposed on block sizes or on the multiplicities in $\\rho|_{H_1\\times\\cdots\\times H_b}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-main"
+  },
+  {
+   "claim_id": "claim-degree-basic",
+   "exact_statement": "For every $u>0$, $C_u<\\infty$ and $$Z_u(n):=\\sum_{\\lambda\\vdash n,\\ \\lambda\\notin\\{(n),(1^n)\\}}D_\\lambda^{-u}\\longrightarrow0.$$ The excluded partitions form a set, so the unique partition of one is removed only once.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-degree-basic"
+  },
+  {
+   "claim_id": "claim-partition-selection",
+   "exact_statement": "If $n$ is divisible by $b$ and a law $\\mu$ on $S_n$ satisfies $$\\mathbb E_{|M|=n/b}\\|\\mu_{H_M}-U_{G/H_M}\\|_{\\mathrm{TV}}\\le\\delta,$$ there is a partition into $b$ equal blocks for which the sum of the complementary coset errors is at most $b\\delta$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-partition-selection"
+  },
+  {
+   "claim_id": "claim-trim",
+   "exact_statement": "Let $H_1,\\ldots,H_b$ be subgroups of a finite group $G$, let $\\mu$ be a probability, and put $\\delta_i=\\|\\mu_{H_i}-U_{G/H_i}\\|_{\\mathrm{TV}}$ and $\\delta=\\sum_i\\delta_i$. There is a subprobability $f\\le\\mu$ with $$f(G)\\ge1-\\delta,\\qquad f(gH_i)\\le[G:H_i]^{-1}\\quad(g\\in G,i\\le b).$$ For any $c>1$, deleting the union of all cosets with original density greater than $c$ loses mass at most $c\\delta/(c-1)$. If that loss is $\\eta<1$, the conditional law $\\nu$ has $$\\|\\nu-\\mu\\|_{\\mathrm{TV}}=\\eta,\\qquad \\nu(gH_i)\\le\\frac{c}{1-\\eta}[G:H_i]^{-1}.$$ In particular $c=2$ loses at most $2\\delta$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-trim"
+  },
+  {
+   "claim_id": "claim-plancherel",
+   "exact_statement": "For every complex mass function $a$ on a finite group $G$, $$|G|\\sum_g|a(g)|^2=\\sum_{\\rho\\in\\mathop{\\mathrm{Irr}}(G)}D_\\rho\\|\\widehat a(\\rho)\\|_{\\mathrm{HS}}^2.$$ If $f\\ge0$ has mass $z\\le1$, then $$\\begin{aligned}\n |G|\\sum_g|f(g)-zU(g)|^2&=\\sum_{\\rho\\ne\\mathbf 1}D_\\rho\\|\\widehat f(\\rho)\\|_{\\mathrm{HS}}^2,\\label{l:centered-plancherel}\\\\\n \\left(\\sum_g|f(g)-U(g)|\\right)^2&\\le(1-z)^2+\\sum_{\\rho\\ne\\mathbf 1}D_\\rho\\|\\widehat f(\\rho)\\|_{\\mathrm{HS}}^2.\\label{l:deficit-plancherel}\n\\end{aligned}$$ If $f\\le\\mu$ for a probability $\\mu$, its normalization, when $z>0$, is at variation distance at most $1-z$ from $\\mu$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-plancherel"
+  },
+  {
+   "claim_id": "claim-amplification",
+   "exact_statement": "Let $\\mu_n$ be probabilities on $S_n$ with $\\widehat\\mu_n(\\mathop{\\mathrm{sgn}})=o(1)$. Suppose either $f_n$ is a nonnegative subprobability with $f_n\\le\\mu_n$ and mass tending to one, or $f_n$ is a probability with $\\|f_n-\\mu_n\\|_{\\mathrm{TV}}=o(1)$. If, uniformly for every irreducible of degree $D>1$, $$\\|\\widehat f_n\\|_{\\mathrm{op}}\\le A D^{-\\beta},$$ where $A,\\beta>0$ are fixed, then $\\|\\mu_n^{*r}-U\\|_{\\mathrm{TV}}\\to0$ for every fixed integer $r$ with $2-2r\\beta<0$. If instead $\\|\\widehat f_n\\|_{\\mathrm{HS}}^2\\le A D^{-\\gamma}$, the sufficient condition is $1-r\\gamma<0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-amplification"
+  },
+  {
+   "claim_id": "claim-single-orbit",
+   "exact_statement": "Let $H$ act unitarily on $V$, and suppose a vector $v$ has components only in $H$-types belonging to a set $\\Lambda\\subseteq\\mathop{\\mathrm{Irr}}(H)$. Then $$\\dim\\mathop{\\mathrm{span}}\\{\\rho(h)v:h\\in H\\}\\le\\sum_{\\tau\\in\\Lambda}(\\dim\\tau)^2.$$ All copies of a type are included in this estimate.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-single-orbit"
+  },
+  {
+   "claim_id": "claim-orbit-span",
+   "exact_statement": "Under the assumptions of Theorem <a href=\"#l:main\" data-reference-type=\"ref\" data-reference=\"l:main\">1</a>, for every $u>0$, $$\\|\\widehat f(\\rho)\\|_{\\mathrm{op}}\\le\\sqrt{bBC_u}\\,D^{-1/2+(u+2)/(2b)}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-orbit-span"
+  },
+  {
+   "claim_id": "claim-eight-convolutions",
+   "exact_statement": "<span id=\"l:orbit-completion\" label=\"l:orbit-completion\"></span>Let $n\\to\\infty$ through multiples of eight. Suppose probabilities $\\mu_n$ on $S_n$ have sign mean $o(1)$ and $$\\mathbb E_{|M|=n/8}\\|\\mu_{n,H_M}-U_{G/H_M}\\|_{\\mathrm{TV}}=o(1).$$ Then $\\|\\mu_n^{*4}-U_G\\|_{\\mathrm{TV}}\\to0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-eight-convolutions"
+  },
+  {
+   "claim_id": "claim-central-isotypic",
+   "exact_statement": "Let $H\\le G$ and let $f\\ge0$ have mass $z\\le1$ and satisfy $f(gH)\\le B/[G:H]$. For an irreducible $H$-type $\\tau$ of degree $a$, $$\\label{l:central-global}\n \\sum_{\\rho\\in\\mathop{\\mathrm{Irr}}(G)}D_\\rho\\|\\widehat f(\\rho)P_{\\rho,H,\\tau}\\|_{\\mathrm{HS}}^2\\le Bza^2.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-central-isotypic"
+  },
+  {
+   "claim_id": "claim-isotypic",
+   "exact_statement": "Under the assumptions of Theorem <a href=\"#l:main\" data-reference-type=\"ref\" data-reference=\"l:main\">1</a>, $$\\|\\widehat f(\\rho)\\|_{\\mathrm{HS}}^2\\le bBC_uD^{-1+(u+2)/b}.$$ In fact the right side can be multiplied by $f(G)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-isotypic"
+  },
+  {
+   "claim_id": "claim-four-convolutions",
+   "exact_statement": "<span id=\"l:isotypic-completion\" label=\"l:isotypic-completion\"></span>Under the hypotheses of Corollary <a href=\"#l:orbit-completion\" data-reference-type=\"ref\" data-reference=\"l:orbit-completion\">[l:orbit-completion]</a>, $\\|\\mu_n^{*2}-U_G\\|_{\\mathrm{TV}}\\to0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-four-convolutions"
+  },
+  {
+   "claim_id": "claim-coefficient-evaluation",
+   "exact_statement": "Let $H$ be a finite group and let $\\Lambda\\subseteq\\mathop{\\mathrm{Irr}}(H)$. If $F$ is a linear combination of matrix coefficients of the types in $\\Lambda$, then $$\\max_{h\\in H}|F(h)|^2\\le\\left(\\sum_{\\tau\\in\\Lambda}(\\dim\\tau)^2\\right)\\mathbb E_{h\\sim U_H}|F(h)|^2.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-coefficient-evaluation"
+  },
+  {
+   "claim_id": "claim-coefficient-operator",
+   "exact_statement": "For every $u>0$ and irreducible $\\rho$ of degree $D$, $$\\|\\widehat f(\\rho)\\|_{\\mathrm{op}}\\le\\sqrt{bBC_u}\\,D^{-1/2+(u+2)/(2b)}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-coefficient-operator"
+  },
+  {
+   "claim_id": "claim-isotypic-alternatives",
+   "exact_statement": "Let $H\\le G$, let $f\\ge0$ have mass at most one and coset cap $B/[G:H]$, and let $\\tau\\in\\mathop{\\mathrm{Irr}}(H)$ have degree $a$. For every $\\rho\\in\\mathop{\\mathrm{Irr}}(G)$, $$\\begin{aligned}\n D_\\rho\\|\\widehat f(\\rho)P_{\\rho,H,\\tau}\\|_{\\mathrm{HS}}^2&\\le B^2a^2,\\label{l:coefficient-isotypic}\\\\\n D_\\rho\\|\\widehat f(\\rho)P_{\\rho,H,\\tau}\\|_{\\mathrm{HS}}^2&\\le B^2a^4.\\label{l:pointwise-isotypic}\n\\end{aligned}$$ The first bound comes from coefficient projection on each coset; the second comes from a pointwise bound on the character idempotent.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-isotypic-alternatives"
+  },
+  {
+   "claim_id": "claim-coarse-character-lift",
+   "exact_statement": "<span id=\"l:coefficient-lift\" label=\"l:coefficient-lift\"></span>For the disjoint-block data of this section and every $u>0$, $$\\begin{aligned}\n \\|\\widehat f(\\rho)\\|_{\\mathrm{HS}}^2&\\le B^2bC_uD^{-1+(u+2)/b},\\label{l:coefficient-hs}\\\\\n \\|\\widehat f(\\rho)\\|_{\\mathrm{HS}}^2&\\le B^2bC_uD^{-1+(u+4)/b}.\\label{l:coarse-hs}\n\\end{aligned}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-coarse-character-lift"
+  },
+  {
+   "claim_id": "claim-central-projector-operator",
+   "exact_statement": "Let $\\eta$ be a probability satisfying the coset caps of this section. Let $P_i$ select its $H_i$-types of degree at most $D^{1/b}$ and put $R_i=\\sum_{\\dim\\tau\\le D^{1/b}}(\\dim\\tau)^2$. Then $$\\|\\widehat\\eta(\\rho)P_i\\|_{\\mathrm{op}}\\le BD^{-1/2}R_i,\n \\qquad D\\|\\widehat\\eta(\\rho)P_i\\|_{\\mathrm{HS}}^2\\le B^2R_i.$$ Consequently $$\\begin{aligned}\n \\|\\widehat\\eta(\\rho)\\|_{\\mathrm{op}}&\\le BC_u\\sqrt b\\,D^{-1/2+(u+2)/b},\\\\\n \\|\\widehat\\eta(\\rho)\\|_{\\mathrm{op}}&\\le B\\sqrt{bC_u}\\,D^{-1/2+(u+2)/(2b)}.\n\\end{aligned}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-central-projector-operator"
+  },
+  {
+   "claim_id": "claim-branching-hs",
+   "exact_statement": "For an irreducible $\\rho_\\lambda$ of degree $D$, the disjoint-block caps give $$\\|\\widehat f(\\rho_\\lambda)\\|_{\\mathrm{HS}}^2\\le BbM(k_\\lambda)D^{-1+2/b}.$$ The blocks may have unequal sizes.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-branching-hs"
+  },
+  {
+   "claim_id": "claim-random-partition",
+   "exact_statement": "Let $n$ tend to infinity through multiples of a fixed integer $q>3$, and let $\\mu$ be probability laws on $S_n$. For a uniform $n/q$-subset $C$, put $H_C=\\mathop{\\mathrm{Sym}}(C)$, fixing its complement pointwise. Suppose $$\\mathbb E_C\\|\\mu_{H_C}-(U_G)_{H_C}\\|_{\\mathrm{TV}}=o(1),\n \\qquad \\widehat\\mu(\\mathop{\\mathrm{sgn}})=0.$$ There is a conditional probability law $\\nu$ with $\\|\\nu-\\mu\\|_{\\mathrm{TV}}=o(1)$ such that, for every irreducible $\\rho$ of degree $D$, $$\\label{l:random-op}\n \\|\\widehat\\nu(\\rho)\\|_{\\mathrm{op}}\n \\le \\frac2M\\sqrt{2qC_1}\\,D^{-(1-3/q)/2},$$ where $M=1-o(1)$ is the retained mass and $C_1$ is from Lemma <a href=\"#l:degree-basic\" data-reference-type=\"ref\" data-reference=\"l:degree-basic\">2</a>. In particular for $q=8$, $\\|\\mu^{*8}-U_G\\|_{\\mathrm{TV}}=o(1)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-random-partition"
+  },
+  {
+   "claim_id": "claim-tableau-constructions",
+   "exact_statement": "Suppose a diagram has first row of length $a$, lower diagram $\\gamma$ of size $k$, and second row of length $c$ (put $c=0$ if $k=0$).*\n\n1.  *Every tableau on a Young subdiagram extends to the whole diagram. For $0\\le b\\le\\min(a,k)$, $$\\label{l:tableau-interleave}\n     D_\\lambda\\ge\\binom ab,\n     \\qquad D_\\lambda\\ge\\binom{a+k-c}{k}.$$*\n\n\n2.  *If $k\\le a$, ballot interleavings give $$\\label{l:tableau-ballot}\n     D_\\lambda\\ge\\binom{a+k}{k}-\\binom{a+k}{k-1}\n     =\\binom{a+k}{k}\\frac{a-k+1}{a+1}\n     \\ge\\frac1{k+1}\\binom{2k}{k}.$$ In particular a two-row rectangle of width $b$ has $\\binom{2b}{b}/(b+1)$ tableaux.*\n\n3.  *If the nonempty diagonals of constant row-plus-column index have sizes $t_1,\\ldots,t_q$, then $$\\label{l:tableau-diagonal}\n     D_\\lambda\\ge\\prod_{j=1}^q t_j!\n     \\ge2^{n-q},\\qquad\n     D_\\lambda\\ge\\left(\\frac n{qe}\\right)^n.$$ Thus width and height at most $r$ give $q\\le2r-1$ and $D_\\lambda\\ge2^{n-2r+1}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-tableau-constructions"
+  },
+  {
+   "claim_id": "claim-degree-hook-ratio",
+   "exact_statement": "With the notation of Lemma <a href=\"#l:tableau-constructions\" data-reference-type=\"ref\" data-reference=\"l:tableau-constructions\">20</a>, let $b_j$ be the number of lower boxes in column $j$. Then $$\\begin{aligned}\n D_\\lambda\n &=\\binom{a+k}{k}D_\\gamma\n       \\prod_{j=1}^a\\left(1+\\frac{b_j}{a-j+1}\\right)^{-1}\n       \\label{l:hook-exact}\\\\\n &\\ge\\binom{a+k}{k}D_\\gamma\n       \\exp\\left(-\\frac{k(1+\\log a)}a\\right).\n       \\label{l:hook-rearrangement}\n\\end{aligned}$$ If $k\\le a$, a second lower bound is $$\\label{l:hook-short-tail}\n D_\\lambda\\ge\\binom{a+k}{k}D_\\gamma\n                \\exp\\left(-\\frac{k}{a-k+1}\\right).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-degree-hook-ratio"
+  },
+  {
+   "claim_id": "claim-degree-all-powers",
+   "exact_statement": "For every fixed real $u>0$, $$\\label{l:degree-all-powers-equation}\n C_u:=\\sup_{n\\ge1}\\sum_{\\lambda\\vdash n}D_\\lambda^{-u}<\\infty,\n \\qquad Z_u(n)\\longrightarrow0.$$ Moreover there are absolute constants $c_1,c_2>0$ such that, for all sufficiently large $n$ and every $\\lambda\\vdash n$, $$\\label{l:degree-tail-exponential}\n D_\\lambda\\ge c_1e^{c_2k(\\lambda)}.$$ For each fixed positive $k$, these dimensions tend uniformly to infinity among shapes with $k(\\lambda)=k$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-degree-all-powers"
+  },
+  {
+   "claim_id": "claim-degree-inverse-first",
+   "exact_statement": "For $1\\le k=k(\\lambda)\\le n/4$, with $\\gamma$ the lower diagram after orienting a longest line as the first row, $$\\label{l:degree-first-row-bound}\n D_\\lambda\\ge e^{-1/2}\\binom nkD_\\gamma\n                  \\ge\\tfrac12\\binom nk.$$ For $k>n/4$ and all sufficiently large $n$, $D_\\lambda\\ge e^{n/100}$. These estimates independently give $Z_1(n)\\to0$ and $C_1<\\infty$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-degree-inverse-first"
+  },
+  {
+   "claim_id": "claim-degree-type-absorption",
+   "exact_statement": "Let $M(k)=\\sum_{j=0}^kp(j)$. For every fixed $B\\ge1$ and all sufficiently large $n$, uniformly over $\\lambda\\vdash n$ with $k(\\lambda)\\ge1$, $$\\label{l:degree-type-absorption-equation}\n 4B M(k(\\lambda))\\le D_\\lambda^{1/4}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-degree-type-absorption"
+  },
+  {
+   "claim_id": "claim-small-index-character",
+   "exact_statement": "For every irreducible complex representation of $S_n$, of degree $D$, there are a subgroup $J\\le S_n$ and a character $\\chi:J\\to\\{1,-1\\}$ occurring in its restriction such that $$[S_n:J]\\le D^{1024}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-small-index-character"
+  },
+  {
+   "claim_id": "claim-subcharacter-isotypic",
+   "exact_statement": "Let $G$ be a finite group, $H\\le G$, and let $f\\ge0$ have mass $z\\le1$ and satisfy $f(gH)\\le B/[G:H]$ for every $g\\in G$. Let $\\tau\\in\\mathop{\\mathrm{Irr}}(H)$ have degree $d_\\tau$. Suppose $J\\le H$ has a one-dimensional unitary character $\\chi$ occurring in $\\tau|_J$, and put $I=[H:J]$. For $\\rho\\in\\mathop{\\mathrm{Irr}}(G)$ of degree $D$, let $Q_\\tau$ be the full $\\tau$-isotypic projection in $\\rho|_H$. Then $$\\label{l:subcharacter-isotypic-bound}\n D\\|\\widehat f(\\rho)Q_\\tau\\|_{\\mathrm{HS}}^2\n \\le BzI d_\\tau.$$ All copies of $\\tau$ are included in $Q_\\tau$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-subcharacter-isotypic"
+  },
+  {
+   "claim_id": "claim-character-lift",
+   "exact_statement": "Let $H_i=\\mathop{\\mathrm{Sym}}(M_i)\\le S_n$, $1\\le i\\le b$, for disjoint nonempty sets $M_i$. Let $f\\ge0$ have mass $z\\le1$ and suppose $$f(gH_i)\\le\\frac B{[S_n:H_i]}\n       \\quad(g\\in S_n,\\ 1\\le i\\le b).$$ For every irreducible $\\rho$ of degree $D$, $$\\label{l:character-lift-bound}\n \\|\\widehat f(\\rho)\\|_{\\mathrm{HS}}^2\n \\le BzbC_1D^{-1+1026/b},$$ where $C_1=\\sup_{m\\ge1}\\sum_{\\tau\\in\\mathop{\\mathrm{Irr}}(S_m)}d_\\tau^{-1}$. More generally, if $a\\ge0$ and every type of every $H_i$ has a one-dimensional subcharacter of index at most $d_\\tau^a$, the exponent $1026/b$ in <a href=\"#l:character-lift-bound\" data-reference-type=\"eqref\" data-reference=\"l:character-lift-bound\">[l:character-lift-bound]</a> may be replaced by $(a+2)/b$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-character-lift"
+  },
+  {
+   "claim_id": "claim-joint-types",
+   "exact_statement": "Put $k=n-\\max(\\lambda_1,\\lambda'_1)$ and $M(k)=\\sum_{j=0}^kp(j)$, where $p(0)=1$ and $p(j)$ is the partition number. Then $$\\label{l:joint-types-bound}\n K_\\lambda\\le M(k)^b.$$ For every fixed $b$ and every fixed $\\eta>0$, $$\\label{l:joint-types-summability}\n \\sum_{\\lambda\\vdash n:\\,D_\\lambda>1}\n         K_\\lambda^2D_\\lambda^{-\\eta}\\longrightarrow0.$$ The statement is uniform over the disjoint sets $M_i$ and does not require them to have equal sizes.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-joint-types"
+  },
+  {
+   "claim_id": "claim-joint-type-operator",
+   "exact_statement": "Let $f\\ge0$ be a mass function on $S_n$, of total mass $z\\le1$, such that $f(gH_i)\\le B/[S_n:H_i]$ for every $g,i$. With $K_\\lambda$ as in <a href=\"#l:joint-decomposition\" data-reference-type=\"eqref\" data-reference=\"l:joint-decomposition\">[l:joint-decomposition]</a>, $$\\label{l:joint-type-operator-bound}\n \\|\\widehat f(\\lambda)\\|_{\\mathrm{op}}\n       \\le\\sqrt{BzK_\\lambda}\\,D_\\lambda^{-1/2+1/b}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-joint-type-operator"
+  },
+  {
+   "claim_id": "claim-four-block-reservoir",
+   "exact_statement": "Partition $n$ points into four sets of size $n/4$, and let $H_i$ permute those sets. For all sufficiently large such $n$, every subprobability $f$ with $f(gH_i)\\le2/[S_n:H_i]$ satisfies $$\\|\\widehat f(\\lambda)\\|_{\\mathrm{op}}\\le D_\\lambda^{-1/8}\n       \\qquad(D_\\lambda>1).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-four-block-reservoir"
+  },
+  {
+   "claim_id": "claim-eight-block-probe",
+   "exact_statement": "Partition $n$ points into eight sets of size $n/8$, and let $H_i$ permute those sets. For all sufficiently large such $n$, every subprobability $f$ with $f(gH_i)\\le2/[S_n:H_i]$ satisfies $$\\|\\widehat f(\\lambda)\\|_{\\mathrm{op}}\\le D_\\lambda^{-1/4}\n       \\qquad(D_\\lambda>1).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-eight-block-probe"
+  },
+  {
+   "claim_id": "claim-two-sided",
+   "exact_statement": "Let $H_1,\\ldots,H_b$ be the disjoint symmetric block subgroups above. Let $\\alpha,\\beta\\ge0$ have masses $a,c\\le1$ and satisfy $$\\label{l:two-sided-caps}\n \\alpha(H_i g)\\le\\frac{B_L}{[S_n:H_i]},\\qquad\n \\beta(gH_i)\\le\\frac{B_R}{[S_n:H_i]}\n       \\quad(g\\in S_n,\\ 1\\le i\\le b).$$ Then every irreducible $\\lambda\\vdash n$ satisfies $$\\label{l:two-sided-bound}\n D_\\lambda\\|\\widehat\\beta(\\lambda)\n                     \\widehat\\alpha(\\lambda)\\|_{\\mathrm{HS}}^2\n \\le B_LB_Rac\\,K_\\lambda^2D_\\lambda^{-1+4/b}.$$ In particular, for eight blocks and $B_L=B_R=2$, the bound is $4K_\\lambda^2D_\\lambda^{-1/2}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-two-sided"
+  },
+  {
+   "claim_id": "claim-two-sided-completion",
+   "exact_statement": "Fix $b>4$ and finite constants $B_L,B_R$. Suppose probabilities $\\mu_n,\\nu_n$ on $S_n$ dominate subprobabilities $\\alpha_n,\\beta_n$, respectively, whose masses tend to one and which satisfy <a href=\"#l:two-sided-caps\" data-reference-type=\"eqref\" data-reference=\"l:two-sided-caps\">[l:two-sided-caps]</a> for $b$ disjoint nonempty blocks. If $\\widehat\\nu_n(\\mathop{\\mathrm{sgn}})\\widehat\\mu_n(\\mathop{\\mathrm{sgn}})\\to0$, then $$\\|\\nu_n*\\mu_n-U_{S_n}\\|_{\\mathrm{TV}}\\longrightarrow0.$$ In particular this applies to a single law with small sign mean when separate subprobabilities supply its two cap orientations.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-two-sided-completion"
+  },
+  {
+   "claim_id": "claim-equivariant-sixteen",
+   "exact_statement": "Consider a sequence of the preceding state spaces and partitions with $\\min_i m_i\\to\\infty$. Let $K$ be a doubly stochastic, $H$-equivariant kernel. Suppose that, for every $i$, $$\\frac1{L_i}\\sum_{a\\in X_i}\n \\frac12\\sum_{b\\in X_i}|q_i(a,b)-L_i^{-1}|\\le\\delta,\n \\label{l:sixteen-marginal-input}$$ where $\\delta\\to0$. Choose $\\varepsilon\\to0$ with $\\delta/\\varepsilon\\to0$, form the kernels <a href=\"#l:sixteen-cutoff\" data-reference-type=\"eqref\" data-reference=\"l:sixteen-cutoff\">[l:sixteen-cutoff]</a>, and assume also that $$\\beta_i:=\\|T_i^{\\mathrm{sgn}}\\|_{\\mathrm{HS}}^2\\longrightarrow0\n \\qquad(1\\le i\\le16).\n \\label{l:sixteen-sign-input}$$ Then $$\\frac1{|\\Omega|}\\sum_{x\\in\\Omega}\n       \\|K^{16}(x,\\cdot)-U_\\Omega(x,\\cdot)\\|_{\\mathrm{TV}}\n \\longrightarrow0.$$ If $K$ is equivariant under a transitive group of permutations of $\\Omega$, the same conclusion holds for the maximum over starting states.*\n\n\n*More precisely, put $T=T_1\\cdots T_{16}$. For a product type $\\boldsymbol\\alpha=(\\alpha_1,\\ldots,\\alpha_{16})$, set $f_i=\\dim\\alpha_i$ and $D=\\prod_i f_i$. If $T_{i,\\boldsymbol\\alpha}$ is the operator on its full $H$-multiplicity space, then $$\\|T_{i,\\boldsymbol\\alpha}\\|_{\\mathrm{HS}}^2\n       \\le(1+\\varepsilon)\\frac{f_i^2}{D},\\qquad\n D\\|T_{1,\\boldsymbol\\alpha}\\cdots\n             T_{16,\\boldsymbol\\alpha}\\|_{\\mathrm{HS}}^2\n       \\le(1+\\varepsilon)^{16}D^{-13}.\n \\label{l:sixteen-type-bounds}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-equivariant-sixteen"
+  },
+  {
+   "claim_id": "claim-three-group",
+   "exact_statement": "Consider a sequence of kernels <a href=\"#l:three-convolution-kernel\" data-reference-type=\"eqref\" data-reference=\"l:three-convolution-kernel\">[l:three-convolution-kernel]</a> satisfying <a href=\"#l:three-bistochastic\" data-reference-type=\"eqref\" data-reference=\"l:three-bistochastic\">[l:three-bistochastic]</a>, with $\\min_i m_i\\to\\infty$. Suppose $\\delta\\to0$ and, for every $i$, $$\\begin{aligned}\n \\sum_{s',h_{-i}}|q_i(s,s',h_{-i})-M_i^{-1}|&\\le2\\delta\n                                      &&(s\\in\\mathcal S),\\label{l:three-row-input}\\\\\n \\sum_{s,h_{-i}}|q_i(s,s',h_{-i})-M_i^{-1}|&\\le2\\delta\n                                      &&(s'\\in\\mathcal S).\\label{l:three-column-input}\n\\end{aligned}$$ Let $\\chi(h)=\\prod_{i=1}^3\\mathrm{sgn}(h_i)$, and assume that the untrimmed all-sign matrix $$A_\\chi(s,s')=\\sum_{h\\in H}p_{s,s'}(h)\\chi(h^{-1})$$ has absolute row and column sums at most $a$, where $a\\to0$. Then $K^{15}$ mixes in average row total variation: $$\\frac1{|\\Omega|}\\sum_x\n       \\|K^{15}(x,\\cdot)-U_\\Omega(x,\\cdot)\\|_{\\mathrm{TV}}\n \\longrightarrow0.$$ The maximum row distance also tends to zero if $K$ is equivariant under a transitive group of permutations of $\\Omega$.*\n\n\n\n*Specifically, retain the fibers $$\\widetilde p_{s,s'}(h)=p_{s,s'}(h)\n     \\prod_{i=1}^3\\mathbf1\\{q_i(s,s',h_{-i})\\le2/M_i\\},\n \\label{l:three-cutoff}$$ and let $\\widetilde K$ be the corresponding kernel. At most $6\\delta$ mass is removed from every row and column. For an irreducible product type $\\rho=\\rho_1\\otimes\\rho_2\\otimes\\rho_3$, put $D_i=\\dim\\rho_i$ and $D=\\prod_iD_i$. Its multiplicity matrix is the $M$ by $M$ block matrix $$B_\\rho(s,s')=\\sum_{h\\in H}\\widetilde p_{s,s'}(h)\\rho(h^{-1}),\n \\label{l:three-fourier-block}$$ with blocks of size $D$ by $D$, and it satisfies $$\\|B_\\rho\\|_{\\mathrm{HS}}^2\n       \\le4\\frac{D_i}{\\prod_{j\\ne i}D_j}\\quad(1\\le i\\le3),\n \\qquad\n D\\|B_\\rho^{15}\\|_{\\mathrm{HS}}^2\\le2^{30}D^{-4}.\n \\label{l:three-type-bounds}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-three-group"
+  },
+  {
+   "claim_id": "claim-spectral-pruning",
+   "exact_statement": "Let $n\\to\\infty$ through multiples of $16$. For each $n$, partition $[n]$ into $b=16$ equal blocks $R_i$, and let $\\mu_n$ be a probability on $S_n$ satisfying $$\\|(\\mu_n)_{-R_i}-U_{-R_i}\\|_{\\mathrm{TV}}\\le\\delta_n\n \\quad(1\\le i\\le16),\\qquad \\delta_n\\longrightarrow0.$$ There is a nonnegative measure $0\\le\\nu_n\\le\\mu_n$ of mass $1-\\gamma_n$, with $\\gamma_n\\to0$, such that $$\\|\\widehat\\nu_n(\\rho)\\|_{\\mathrm{op}}\\le D^{-1/8}\n \\quad\\text{for every irreducible $\\rho$ of degree $D>1$}.$$ The operator bound has constant one, and $\\nu_n$ is not normalized.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-spectral-pruning"
+  },
+  {
+   "claim_id": "claim-adaptive-domain-preparation",
+   "exact_statement": "Let $q\\ge2$ divide $n$, put $r=n/q$, and let $\\mu$ be a probability on $S_n$. Define $$\\delta=\\mathbb E_{|R|=r}\\|\\mu_{-R}-U_{-R}\\|_{\\mathrm{TV}},\\qquad\n e_R(g)=\\mathbf1\\{\\mu(gH_R)\\le2/[S_n:H_R]\\},$$ and $$E=\\{g:\\mathbb E_R e_R(g)\\ge7/8\\}.$$ Then $\\mu(E)\\ge1-16\\delta$. If $\\mu(E)\\ge1/2$, the probability $\\nu=\\mu(\\,\\cdot\\mid E)$ satisfies $\\|\\nu-\\mu\\|_{\\mathrm{TV}}=1-\\mu(E)\\le16\\delta$.*\n\n\n\n\n*Fix an irreducible unitary representation $\\rho$ of $S_n$ on $V$, with $D=\\dim V>1$, and fix $\\xi>0$. Let $P_R$ project onto the sum of the $H_R$-isotypic spaces whose irreducible type has degree at most $D^\\xi$. Then $$\\mathbb E_R P_R=cI,\\qquad c\\ge1-\\frac1{q\\xi}.\n \\label{l:adaptive-scalar-projection}$$ For $z\\in V$ with $\\|z\\|\\le1$, put $W_R(z)=\\operatorname{span}\\{\\rho(h)P_Rz:h\\in H_R\\}$. With the absolute constant $$C_2=\\sup_{m\\ge1}\\sum_{\\tau\\in\\widehat{S_m}}(\\dim\\tau)^{-2}$$ from Lemma <a href=\"#l:degree-inverse-square\" data-reference-type=\"ref\" data-reference=\"l:degree-inverse-square\">[l:degree-inverse-square]</a>, one has $$\\dim W_R(z)\\le C_2D^{4\\xi}.\n \\label{l:adaptive-small-orbit}$$ If $\\mu(E)\\ge1/2$, then for every unit $u\\in V$, $$\\mathbb E_{g\\sim\\nu} e_R(g)\n       |\\langle u,\\rho(g)P_Rz\\rangle|\n \\le 2\\sqrt{C_2}\\,D^{-1/2+2\\xi}.\n \\label{l:adaptive-good-coefficient}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-adaptive-domain-preparation"
+  },
+  {
+   "claim_id": "claim-omitted-set-transfer",
+   "exact_statement": "Let $n\\to\\infty$ through multiples of $1024$, and let $\\mu_n$ be probabilities on $S_n$ such that $$\\delta_n=\\mathbb E_{|R|=n/1024}\n       \\|(\\mu_n)_{-R}-U_{-R}\\|_{\\mathrm{TV}}\\longrightarrow0.$$ For all sufficiently large $n$, condition $\\mu_n$ on the event $E$ of Lemma <a href=\"#l:adaptive-domain-preparation\" data-reference-type=\"ref\" data-reference=\"l:adaptive-domain-preparation\">37</a>, obtaining $\\nu_n$. Then $\\|\\nu_n-\\mu_n\\|_{\\mathrm{TV}}\\le16\\delta_n$, and there is an absolute $C$ such that every irreducible representation $\\rho$ of degree $D>1$ satisfies $$\\|\\widehat\\nu_n(\\rho)\\|_{\\mathrm{op}}\\le CD^{-1/4}.$$ If in addition $\\mathbb E_{\\mu_n}\\mathop{\\mathrm{sgn}}(g)=o(1)$, then $\\|\\mu_n^{*8}-U_n\\|_{\\mathrm{TV}}\\to0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-omitted-set-transfer"
+  },
+  {
+   "claim_id": "claim-domain-transfer",
+   "exact_statement": "Let $n\\to\\infty$ through multiples of $256$, and let $\\mu_n$ be probabilities on $S_n$ satisfying $$\\delta_n=\\mathbb E_{|R|=n/256}\n       \\|(\\mu_n)_{-R}-U_{-R}\\|_{\\mathrm{TV}}\\longrightarrow0.$$ Condition on the event that at least $7/8$ of the sets $R$ satisfy $\\mu_n(gH_R)\\le2/[S_n:H_R]$, and call the resulting law $\\nu_n$. For all sufficiently large $n$ it is defined, satisfies $\\|\\nu_n-\\mu_n\\|_{\\mathrm{TV}}\\le16\\delta_n$, and obeys $$\\|\\widehat\\nu_n(\\rho)\\|_{\\mathrm{op}}\\le CD^{-1/8}\n \\qquad(D=\\dim\\rho>1)$$ with an absolute $C$. If $\\mathbb E_{\\mu_n}\\mathop{\\mathrm{sgn}}(g)=o(1)$, then $\\|\\mu_n^{*32}-U_n\\|_{\\mathrm{TV}}\\to0$. The averaged relative-entropy hypothesis $$\\mathbb E_{|R|=n/256}D((\\mu_n)_{-R}\\|U_{-R})=o(1)$$ is sufficient for these conclusions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-domain-transfer"
+  },
+  {
+   "claim_id": "claim-tilted-entropy",
+   "exact_statement": "Let $128$ divide $n$, let $\\mathcal G\\in\\mathcal F$, and suppose $a=\\mathbb P(\\mathcal G)>0$. Assume that *every* probability law $\\sigma$ on $(\\Omega,\\mathcal F)$ supported on $\\mathcal G$ ($\\sigma(\\mathcal G)=1$) satisfies $$D(\\sigma\\|\\mathbb P)\\ge\n \\mathbb E_{X:\\,|X|=n-n/128}D(\\sigma_X\\|U_X)-n^{-2}.\n \\label{l:all-tilts-entropy-input}$$ There is an absolute $C$ such that, for every irreducible unitary representation $\\rho$ of $S_n$ of degree $D$ and all unit vectors $u,z$, $$\\mathbb P\\{\\mathcal G,\n       |\\langle z,\\rho(g)u\\rangle|\\ge D^{-1/8}\\}\n \\le CD^{-1/256}.\n \\label{l:tilted-coefficient-tail}$$ If $\\eta$ is the endpoint law conditioned on $\\mathcal G$, then $$\\|\\widehat\\eta(\\rho)\\|_{\\mathrm{op}}\n \\le D^{-1/8}+\\frac C aD^{-1/256}.\n \\label{l:tilted-operator-bound}$$ In particular, when $a\\ge1/2$, this is at most $C'D^{-1/256}$ for an absolute $C'$. The statement therefore applies uniformly to a sequence with $\\mathbb P(\\mathcal G)=1-o(1)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-tilted-entropy"
+  },
+  {
+   "claim_id": "claim-palette-information",
+   "exact_statement": "In the experiment just described, fix an integer $0\\le v<h$ and an event $\\mathcal G\\subseteq\\Omega$ of reference probability $z>0$. Assume that <a href=\"#l:palette-reference-cap\" data-reference-type=\"eqref\" data-reference=\"l:palette-reference-cap\">[l:palette-reference-cap]</a> holds for both half-first order conventions and every $0\\le r<n-v$. Suppose that every $\\omega\\in\\mathcal G$ satisfies $$\\mathbb E_{AB}\\sum_{r=0}^{n-v-1}\\Delta_r^o(\\omega)\n +\\mathbb E_{BA}\\sum_{r=0}^{n-v-1}\\Delta_r^o(\\omega)\n \\le a_n.\n \\label{l:palette-retained-cap}$$ Let $\\mu$ be the law of $g$ under $P(\\,\\cdot\\mid\\mathcal G)$. For every palette on either half, its subgroup $H$, and every $x\\in S_n$, $$\\mu(xH)\\le \\frac{1}{[S_n:H]}\n       \\exp\\{v\\mathcal H(p)+n^2a_n-\\log z\\}.\n \\label{l:palette-information-cap}$$ In particular, if $a_n\\le n^{-6}$ and $z=1-o(1)$, the last two terms in the exponent are $o(1)$, uniformly over all palettes and cosets.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-palette-information"
+  },
+  {
+   "claim_id": "claim-palette-degree",
+   "exact_statement": "There is an absolute $c_0>0$ such that, for all sufficiently large $b$, if $\\gamma\\vdash b$, $L=\\max(\\gamma_1,\\gamma'_1)$, and $k=b-L>0$, then $$\\log D_\\gamma\\ge\n \\begin{cases}\n c_0 k\\log(b/k),&k\\le b/2,\\\\\n c_0 b,&k>b/2.\n \\end{cases}\n \\label{l:palette-degree-bound}$$ In particular $\\log D_\\gamma\\ge c_1k$ for an absolute $c_1>0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-palette-degree"
+  },
+  {
+   "claim_id": "claim-signed-palette",
+   "exact_statement": "There is an absolute $C_0<\\infty$ such that, for every sufficiently large $h$ and every $\\beta\\vdash h$, there are positive integers $l_1,\\ldots,l_u$ summing to $h$ and a product character $\\theta=\\theta_1\\otimes\\cdots\\otimes\\theta_u$ of $H=S_{l_1}\\times\\cdots\\times S_{l_u}$, each $\\theta_i$ either trivial or sign, for which $$\\operatorname{Hom}_H(\\theta,V_\\beta)\\ne0,\n \\qquad h\\mathcal H((l_i/h)_i)\\le C_0\\log D_\\beta.\n \\label{l:signed-palette-bound}$$ The same character occurrence holds for every placement of the classes of these sizes on an $h$-element set.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-signed-palette"
+  },
+  {
+   "claim_id": "claim-palette-transfer",
+   "exact_statement": "Let $n$ tend to infinity through even integers. For each $n$, partition $[n]=A\\sqcup B$ into equal halves and let $\\mu$ be a probability on $S_n$. Suppose that $\\varepsilon_n\\to0$ and that, for every palette on either half, every placement of its classes, its subgroup $H$, and every $x\\in S_n$, $$\\mu(xH)\\le [S_n:H]^{-1}\n            \\exp\\{v\\mathcal H(p)+\\varepsilon_n\\}.\n \\label{l:palette-transfer-hyp}$$ Here $\\delta$ and $v$ satisfy <a href=\"#l:palette-delta\" data-reference-type=\"eqref\" data-reference=\"l:palette-delta\">[l:palette-delta]</a>. For all sufficiently large $n$, uniformly over $\\lambda\\notin\\{(n),(1^n)\\}$, $$\\begin{aligned}\n \\|\\widehat\\mu(\\lambda)\\|_{\\mathrm{HS}}^2\n &\\le D_\\lambda^{-1/3},\\label{l:palette-fourier-hs}\\\\\n \\|\\widehat\\mu(\\lambda)\\|_{\\mathrm{op}}\n &\\le D_\\lambda^{-1/6}.\n \\label{l:palette-fourier}\n\\end{aligned}$$ If in addition $|\\widehat\\mu(\\mathrm{sgn})|=o(1)$, then $\\|\\mu^{*4}-U_{S_n}\\|_{\\mathrm{TV}}=o(1)$, and consequently $\\|\\mu^{*30}-U_{S_n}\\|_{\\mathrm{TV}}=o(1)$ as well. Both conclusions also hold with $\\mu$ replaced in every factor by a probability $\\mu_0$ satisfying $\\|\\mu_0-\\mu\\|_{\\mathrm{TV}}=o(1)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-palette-transfer"
+  },
+  {
+   "claim_id": "claim-replica-clipping",
+   "exact_statement": "Partition $\\{1,\\ldots,n\\}$ into $q\\ge1$ nonempty blocks, and let $H_i$ be the subgroup supported on block $i$. Suppose a probability $w$ on $S_n$ satisfies $$\\label{l:replica-entropy-assumption}\n \\sum_{i=1}^qD(w_{H_i}\\Vert U_{G/H_i})\\le K.$$ For every $t>0$ there is a subprobability $v\\le w$, of mass $m$, such that $$\\begin{aligned}\n 1-m&\\le\\frac{K+q/e}{t},\\label{l:replica-mass}\\\\\n v(gH_i)&\\le e^t\\frac{|H_i|}{|G|}\\quad(g\\in G,\\ 1\\le i\\le q),\n \\label{l:replica-cap}\\\\\n \\sum_{h\\in H_i}(\\check v*v)(h)\n &\\le e^t\\frac{|H_i|}{|G|},\\label{l:replica-collision}\\\\\n \\|\\widehat v(\\lambda)\\|_{\\mathrm{HS}}^2\n &\\le qC_u e^tD_\\lambda^{-1+(u+2)/q}\n        \\quad(\\lambda\\vdash n, u>0).\n \\label{l:replica-hs}\n\\end{aligned}$$ Here $\\check v(g)=v(g^{-1})$, $C_u$ is the constant in Theorem <a href=\"#l:degree-all-powers\" data-reference-type=\"ref\" data-reference=\"l:degree-all-powers\">22</a>, the Fourier transform is the mass transform $\\widehat v(\\lambda)=\\sum_gv(g)\\rho_\\lambda(g)$, and the Hilbert–Schmidt norm is unnormalized.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-replica-clipping"
+  },
+  {
+   "claim_id": "claim-replica-partition-selection",
+   "exact_statement": "Let $q$ divide $n$, put $r=n/q$, and suppose the image law $w_I$ of a uniformly chosen ordered list $I$ of $n-r$ distinct inputs satisfies $$\\mathbb E_I D(w_I\\Vert U_I)\\le K_0,$$ where $U_I$ is uniform on ordered distinct output lists of that length. There is a partition into $q$ blocks of size $r$ for which <a href=\"#l:replica-entropy-assumption\" data-reference-type=\"eqref\" data-reference=\"l:replica-entropy-assumption\">[l:replica-entropy-assumption]</a> holds with $K=qK_0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-replica-partition-selection"
+  },
+  {
+   "claim_id": "claim-replica-large-dimension",
+   "exact_statement": "Let $n=2^d$ and suppose, for each sufficiently large integer $d$, that a probability $w$ has an equal partition into $q=256$ blocks with total complement entropy $O(d^4)$. There is $v\\le w$ of mass $1-O(d^{-2})$ such that $$\\label{l:replica-34-exponent}\n \\|\\widehat v(\\lambda)\\|_{\\mathrm{HS}}^2\n \\le256 C_{32}e^{d^6}D_\\lambda^{-1+34/256}.$$ In particular, whenever $\\log D_\\lambda>d^8$, this is at most $D_\\lambda^{-1/2}$ for all sufficiently large $d$, uniformly in $\\lambda$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-replica-large-dimension"
+  },
+  {
+   "claim_id": "claim-forest-clipping",
+   "exact_statement": "Suppose $$E_n:=\\sum_{j=1}^{16}D(\\mu_j\\Vert U_j)\n       \\le C(1+\\log n)^4\n \\label{l:forest-entropy-hyp}$$ for a constant $C$ independent of $n$. Set $b_n=n^{1/50}$ and $\\eta_n=(E_n+16/e)/b_n$. For all sufficiently large $n$, there is an event $\\mathcal G\\subseteq S_n$ with $z:=\\mu(\\mathcal G)\\ge1-\\eta_n>0$ such that $\\nu=\\mu(\\,\\cdot\\mid\\mathcal G)$ satisfies $$\\|\\nu-\\mu\\|_{\\mathrm{TV}}=1-z\\le\\eta_n=o(1),\n \\qquad\n \\nu(xH_j)\\le\\frac{M_n}{[S_n:H_j]},\n \\quad M_n=2\\exp(n^{1/50}).\n \\label{l:forest-caps}$$ The cap holds for every $x\\in S_n$ and every $j$ under this same law $\\nu$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-forest-clipping"
+  },
+  {
+   "claim_id": "claim-forest-degree",
+   "exact_statement": "There is an absolute $c>0$ such that, for all sufficiently large $n$, every $\\lambda\\vdash n$ with $\\lambda'_1\\le n/2$ and $k>0$ satisfies $$\\log D_\\lambda\\ge ck.\n \\label{l:forest-degree-bound}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-forest-degree"
+  },
+  {
+   "claim_id": "claim-forest-bulk",
+   "exact_statement": "Let $\\nu$ be any probability on $S_n$ satisfying the sixteen coset caps in <a href=\"#l:forest-caps\" data-reference-type=\"eqref\" data-reference=\"l:forest-caps\">[l:forest-caps]</a>. Uniformly over all partitions with $$k=n-\\lambda_1>n^{1/20},\\qquad \\lambda'_1\\le n/2,$$ one has, for sufficiently large $n$, $$\\|\\widehat\\nu(\\lambda)\\|_{\\mathrm{op}}\n \\le D_\\lambda^{-1/3}.\n \\label{l:forest-bulk-bound}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-forest-bulk"
+  },
+  {
+   "claim_id": "claim-forest-hybrid",
+   "exact_statement": "Let $n\\to\\infty$ through multiples of $16$. For each $n$, let $\\mu$ and $K$ be probabilities on $S_n$. Suppose a fixed equal sixteen-block partition satisfies <a href=\"#l:forest-entropy-hyp\" data-reference-type=\"eqref\" data-reference=\"l:forest-entropy-hyp\">[l:forest-entropy-hyp]</a> for $\\mu$. Suppose also that $K$ satisfies $$\\begin{aligned}\n \\|\\widehat K(\\lambda)\\|_{\\mathrm{op}}\n &\\le n^{-k/10}\n &&\\left(1\\le k=n-\\lambda_1\\le n^{1/20}\\right),\n \\label{l:forest-sparse-hyp}\\\\\n \\widehat K(\\lambda)&=0\n &&\\left(\\lambda'_1>n/2\\right).\n \\label{l:forest-row-hyp}\n\\end{aligned}$$ Then the retained probability $\\nu$ from Lemma <a href=\"#l:forest-clipping\" data-reference-type=\"ref\" data-reference=\"l:forest-clipping\">48</a> satisfies $$\\|\\nu^{*12}*K^{*40}-U_{S_n}\\|_{\\mathrm{TV}}=o(1),\n \\qquad\n \\|\\mu^{*12}*K^{*40}-U_{S_n}\\|_{\\mathrm{TV}}=o(1).\n \\label{l:forest-hybrid-conclusion}$$ All factors in these convolutions are independent. There is no assumed identity between $K$ and a convolution root or power of $\\mu$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-forest-hybrid"
+  },
+  {
+   "claim_id": "claim-tabloid-product",
+   "exact_statement": "Put $C_0=2{,}000{,}000$, and fix an integer $L\\ge 2C_0$. Let $V=A\\sqcup C$, where $|A|=|C|=h$ and $L$ divides $h$. Partition each half into $L$ buffers of size $h/L$, and put $H=S_A\\times S_C\\subseteq S_V$. Let $\\xi$ be a subprobability on $S_V$ such that, for $J=A,C$ and every ordered injection $\\mathbf v:J\\longrightarrow V$, $$\\xi\\{x:x^{-1}|_J=\\mathbf v\\}\n \\le 2U_V\\{x:x^{-1}|_J=\\mathbf v\\}.\n \\label{l:tabloid-inverse-caps}$$ Let $Z$ have any probability distribution. Measurably in $z$, let $t_z\\in S_V$ and let $\\nu_A^z,\\nu_C^z$ be subprobabilities on $S_A,S_C$, respectively. Suppose that for almost every $z$, each $J=A,C$, each of its buffers $B$, and every ordered injection $\\mathbf w:J\\setminus B\\longrightarrow J$, $$\\nu_J^z\\{y:y|_{J\\setminus B}=\\mathbf w\\}\n \\le 2U_J\\{y:y|_{J\\setminus B}=\\mathbf w\\}.\n \\label{l:tabloid-factor-caps}$$ Regard the product $\\nu_A^z\\otimes\\nu_C^z$ as a measure on $H$ and set $$\\omega=\\mathbb E_Z\\bigl[\\delta_{t_Z}*\n                (\\nu_A^Z\\otimes\\nu_C^Z)\\bigr],\n \\qquad \\theta=\\omega*\\xi.$$ Then, for all sufficiently large $h$, every irreducible representation of $S_V$ with $D_\\lambda>1$ satisfies $$\\|\\widehat\\theta(\\lambda)\\|_{\\mathrm{op}}\n \\le K_0D_\\lambda^{-1/40},\\qquad K_0=\\sqrt{22}.\n \\label{l:tabloid-product-bound}$$ The threshold on $h$ and the constant $K_0$ are independent of the environment, the transporters and all the measures.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-tabloid-product"
+  },
+  {
+   "claim_id": "claim-tabloid-embedding",
+   "exact_statement": "For every $m\\ge1$ and every partition $\\lambda\\vdash m$, the irreducible representation $V_\\lambda$ occurs in a signed tabloid representation of dimension $M$ with $$M\\le D_\\lambda^{C_0},\\qquad C_0=2{,}000{,}000.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-tabloid-embedding"
+  },
+  {
+   "claim_id": "claim-tabloid-hs",
+   "exact_statement": "Let $E$ have $m$ elements, partitioned into $L$ buffers, and let $\\nu$ be a subprobability on $S_E$. Suppose that for every buffer $B$, the marginal of $\\nu$ on the ordered image tuple of $E\\setminus B$ is pointwise at most twice its uniform marginal. If $L\\ge2C_0$, then for every irreducible $\\gamma$ of $S_E$, $$\\frac{\\|\\widehat\\nu(\\gamma)\\|_{\\mathrm{HS}}^2}{D_\\gamma}\n \\le \\min\\{1,2D_\\gamma^{-1/2}\\}.\n \\label{l:tabloid-normalized-hs}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-tabloid-hs"
+  },
+  {
+   "claim_id": "claim-tabloid-lr",
+   "exact_statement": "For $\\lambda\\vdash 2h$ and $\\alpha,\\beta\\vdash h$, let $c_{\\alpha\\beta}^\\lambda$ be the multiplicity of $V_\\alpha\\otimes V_\\beta$ in the restriction of $V_\\lambda$ to $S_h\\times S_h$. Then $$c_{\\alpha\\beta}^\\lambda\\le\\min(D_\\alpha,D_\\beta).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-tabloid-lr"
+  },
+  {
+   "claim_id": "claim-tabloid-completion",
+   "exact_statement": "Identify $V$ with $\\{1,\\ldots,2h\\}$, and consider a sequence of the data of Theorem <a href=\"#l:tabloid-product\" data-reference-type=\"ref\" data-reference=\"l:tabloid-product\">52</a> with $h\\to\\infty$ and fixed $L$. Suppose that $\\mu$ is a probability on $S_{2h}$ satisfying $\\theta\\le\\mu$ pointwise, $$\\theta(S_{2h})=1-o(1),\\qquad\n \\left|\\widehat\\mu(\\mathrm{sgn})\\right|=o(1).$$ Then $$\\|\\mu^{*100}-U_{\\{1,\\ldots,2h\\}}\\|_{\\mathrm{TV}}\n \\longrightarrow0.$$ In particular the sign hypothesis holds if $\\mu$ has exactly zero expected sign.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-tabloid-completion"
+  },
+  {
+   "claim_id": "claim-degree-reciprocal-twenty",
+   "exact_statement": "One has $Z_{20}(n)\\to0$. There is an absolute constant $K_0$ such that, for all $n\\ge1$ and $R\\ge1$, $$\\label{l:degree-twenty-type-count}\n \\#\\{\\lambda\\vdash n:D_\\lambda\\le R\\}\\le K_0R^{20}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-degree-reciprocal-twenty"
+  },
+  {
+   "claim_id": "claim-degree-reciprocal-two",
+   "exact_statement": "<span id=\"l:degree-inverse-square\" label=\"l:degree-inverse-square\"></span>One has $C_2<\\infty$ and $Z_2(n)\\to0$. This conclusion admits each of the tableau, hook-ratio, and second-row proofs below.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-degree-reciprocal-two"
+  },
+  {
+   "claim_id": "claim-degree-elementary-sixteen",
+   "exact_statement": "The conclusions $C_u<\\infty$ and $Z_u(n)\\to0$ for $u=13,16$ follow from tableau counting and $p(n)\\le2^n$ alone.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-degree-elementary-sixteen"
+  },
+  {
+   "claim_id": "claim-degree-diagonal-four",
+   "exact_statement": "For all sufficiently large $n$ and every shape of deficit $k=k(\\lambda)\\ge1$, $$D_\\lambda\\ge2^{k/2},\\qquad D_\\lambda\\ge L(\\lambda)\\ge\\sqrt n.$$ These inequalities and $p(k)\\le2^k$ prove $C_4<\\infty$ and $Z_4(n)\\to0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-degree-diagonal-four"
+  },
+  {
+   "claim_id": "claim-degree-inverse-ten",
+   "exact_statement": "One has $C_{10}<\\infty$ and $Z_{10}(n)\\to0$, using only the first-row interleaving construction and the bound $p(n)\\le e^{3\\sqrt n}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-degree-inverse-ten"
+  },
+  {
+   "claim_id": "claim-degree-sqrt-deficit",
+   "exact_statement": "For every $n\\ge1$ and $\\lambda\\vdash n$, $$\\label{l:degree-sqrt-deficit-equation}\n \\log D_\\lambda\\ge\\frac{\\log2}{2}\\sqrt{k(\\lambda)}.$$ In particular $C_{32}<\\infty$ follows from this bound alone and $p(k)\\le e^{3\\sqrt k}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-degree-sqrt-deficit"
+  },
+  {
+   "claim_id": "claim-tabloid-degree-sums",
+   "exact_statement": "For every fixed $s>0$, $$\\sum_{\\substack{\\lambda\\vdash m\\\\D_\\lambda>1}}\n             D_\\lambda^{-s}\\longrightarrow0\n \\qquad(m\\longrightarrow\\infty).$$ In particular $\\sum_{\\lambda\\vdash m}D_\\lambda^{-1}\\le3$ for all sufficiently large $m$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-tabloid-degree-sums"
+  },
+  {
+   "claim_id": "claim-coefficient-average",
+   "exact_statement": "For $b=32$ and cap $B=4$, $$\\|\\widehat f(\\rho)\\|_{\\mathrm{op}}\\le\\frac83\\sqrt{C_1}\\,D^{-5/16}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-coefficient-average"
+  },
+  {
+   "claim_id": "claim-orbit-average",
+   "exact_statement": "For $b=256$ and cap $B=4$, $$\\|\\widehat f(\\rho)\\|_{\\mathrm{op}}\\le4\\sqrt{C_{32}}D^{-1/4}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-orbit-average"
+  },
+  {
+   "claim_id": "claim-four-coefficient",
+   "exact_statement": "If there are four blocks and the subprobability cap is $B=2$, then $$\\|\\widehat f(\\rho)\\|_{\\mathrm{op}}\\le2C_{1/4}^2D^{-1/8}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-four-coefficient"
+  },
+  {
+   "claim_id": "claim-peeling-character",
+   "exact_statement": "Put $C_{\\rm peel}=512^2$. Every irreducible representation of $S_m$ of degree $D$ has a one-dimensional character in its restriction to some subgroup $J$ with $[S_m:J]\\le D^{C_{\\rm peel}}$. At a step removing a longest first row or first column of length $r$, leaving size $s$ and degree $D'$, one has $$\\label{l:peeling-ratio}\n \\frac D{D'}\\ge\\binom{r+s}r^{1/C_{\\rm peel}}.$$ The degree of the empty remainder is one.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-peeling-character"
+  },
+  {
+   "claim_id": "claim-peeling-inverse-one",
+   "exact_statement": "The preceding stepwise estimate independently implies $$\\sum_{\\lambda\\vdash m:\\,D_\\lambda>1}D_\\lambda^{-1}\\longrightarrow0.$$ Consequently, for all sufficiently large $m$ and every $Y\\ge1$, $S_m$ has at most $3Y$ irreducible types of degree at most $Y$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-peeling-inverse-one"
+  },
+  {
+   "claim_id": "claim-peeling-lift",
+   "exact_statement": "Let $b=2^{22}$ and partition $n=bm$ points into $b$ sets of size $m$. Let $H_i$ permute the $i$th set. If $f\\ge0$ has mass at most one and $f(gH_i)\\le2/[S_n:H_i]$ for every $g,i$, then for all sufficiently large $m$ and every irreducible of degree $D$, $$\\label{l:peeling-lift-bound}\n \\|\\widehat f(\\rho)\\|_{\\mathrm{HS}}^2\n \\le6bD^{-1+(C_{\\rm peel}+2)/b}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-l-peeling-lift"
+  }
+ ],
+ "paper": "papers/EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-M-0489_PM-238.3_From_partial_permutation_information_to_Fourier_bounds.md",
+ "purpose": "From partial permutation information to Fourier bounds",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "ce2c57f5558444ef88ba9d02b09a89b4a81d7f6c5a27fd44f9730269ae4a47c0",
+   "pm.domains.v2": "d42a74b1bddcfe5b05b36dca14d8e43666a738fb74145681df0325e53cf32864",
+   "pm.edges.v2": "ac8859b1593e464529737cfc92272348d41048d4f52c26835f67db364e70e740",
+   "pm.extraction.v2": "8bfd5880434cda4a03159ad365f6af5221721f1f91a42386937ea040ef8214ee",
+   "pm.formal.v2": "fcd0241d30a4d96c19252b5c685f64bf2e45dc0ef08add1bf958299ca8cd95f8",
+   "pm.limits.v2": "9c89b1af83ac1c776122ecc1cb918f1f336418d70ba1e14d8b3b7c7ff4e079db",
+   "pm.node.v2": "ab2ca9252166fce8db4b771a2b09225a1328cfd54a67fd44c91746b5b0832724",
+   "pm.objects.v2": "4e79aa2341722dd74bb2d8feb8fd63b28112347452ae2934b9bf172cf99d34a1",
+   "pm.provenance.v2": "22162b63b4a4c0b331b5f768f7e15b157f02183549afc9d31662e20c855758f6",
+   "pm.quantities.v2": "bd71d2fa1b85fe4a11f888158583309fb70cb675068ecce85b9260c3baf8bcb1",
+   "pm.reading.v2": "741090fb40b27c72b7e9bb05c682732de9f9e006c386bbc8f51ebe124f6b3735",
+   "pm.roadmap.v2": "0a45e080b02874596da16f8bddaa95ee7b20a67942037fc6eb189643cb353803",
+   "pm.search.v1": "a2695b8d5bacf92991108b1e3f64f1b0484d25c70bd34ca8826c00255699df62",
+   "pm.triptych.v2": "5bdf4e120b7a5f07e29e8b9d54cf49a794648404efa894fa43d11b8ad39d7148"
+  },
+  "canonical_sha256": "75c5ad5fb3707e0286f3b98f467d154c3d9aee601a4a9000030c5b5243106384",
+  "paper_sha256": "dcb4115e8f446779effbb2ae61dabb123fa88b1ffee47d1dfdf32ce635c13b6e",
+  "repaired_body_sha256": "e755f01c6c673c0cd2a44cac33709c2df4e7661d1fd3f49ca394a58ea41372d2"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "aa5adf6fa2df96c1e914440c2a8a2de34f08518133e8f0527151fa4e7bf5f0ec",
+   "receipt_sha256": "cde994a6da57e553a143a2b9ab5ebf0e6165e1c3bda4bbb4d4342bc7a8226737",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "From partial permutation information to Fourier bounds"
+}

@@ -1,0 +1,1031 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 978330,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 245894
+ },
+ "coordinate": "EN-114-000-0007-2-2026-PR-T4-UK-EX-M1-C-AL-H-0256",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "implementable",
+   "proposed_domain": "Constructive graph theory",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "The input is a simple undirected unweighted graph $G=([n],E)$, where $n\\ge1$ and $m=|E|$.",
+     "quote_sha256": "447385d51c47d8d35d0e82362cbe6d3a97b83dbd50e070d4b5aa4a587e0cc932"
+    },
+    {
+     "anchor": "sec:f-factors",
+     "quote": "The problem selects an edge subset; it does not encode binary edge multiplicities or optimize edge weights.",
+     "quote_sha256": "3de9d30dc642252572c561b83c5b342748132b43ad7a907a271c4b930749db26"
+    }
+   ],
+   "query": "Minimum-weight or maximum-weight matching with arbitrary edge costs",
+   "reason": "The main construction solves unweighted maximum cardinality, and the factor application selects an edge subset without optimizing edge weights."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:f-factors",
+     "quote": "Recall that an *$f$-factor* of $G=([n],E)$ is a set $F\\subseteq E$ with $\\deg_F(v)=f(v)$ for every vertex $v$.",
+     "quote_sha256": "b6c06a714acaa5227e95ebdf804c1d8700eefd823c6aefd609540e23ec30bdc7"
+    }
+   ],
+   "query": "Exact factor feasibility interpreted as additive variable-size capacity packing",
+   "reason": "Prescribed degrees count selected host incidences. They do not provide a contract for sums of independently weighted item sizes."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-subcubic",
+     "quote": "Every computation halts with a checked perfect matching, a negative answer, or a suspension. It has no false positive.",
+     "quote_sha256": "034416f5cab22f7de77244cc82aac99a9c09f59858b41f6b5104a4123e8e5da2"
+    },
+    {
+     "anchor": "stmt-thm-subcubic",
+     "quote": "This statement bounds erroneous answers, not suspensions, and holds conditionally for adaptive invocations with fresh randomness and valid prerequisites.",
+     "quote_sha256": "fbf67a76d160ef125c92e0708d6aba08e813861ac88a45cc4cdc5adc1fb1af6f"
+    }
+   ],
+   "query": "A negative randomized perfect-matching answer treated as a deterministic infeasibility certificate",
+   "reason": "Capped stochastic failure can produce an erroneous negative answer; checked positive witnesses and deterministic suspensions have different guarantees."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-7",
+     "quote": "No argument permits a free scan of all coordinates after an implicit path update.",
+     "quote_sha256": "7cc668bad3e93c37f398769b0a53c0a9a6ccf5a7922c0168b3d47efb715831af"
+    }
+   ],
+   "query": "A graph repair that scans every coordinate after every implicit path update",
+   "reason": "The representation contract charges touched records and notifications and expressly excludes a free full-coordinate scan."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-46",
+     "quote": "The sequential implementation, explicit caps, and resource-load bounds needed here are established below; we do not invoke their distributed-algorithm guarantee.",
+     "quote_sha256": "7a0e90aef1c638cc248ab8029c4a82d41dc960115071609d3e7b0743f7839e25"
+    }
+   ],
+   "query": "A distributed communication-round bound for the routing construction",
+   "reason": "The borrowed hierarchical routing idea is supplied with a sequential implementation; its distributed-algorithm guarantee is not invoked."
+  }
+ ],
+ "family": "PM-120",
+ "id": "PM-120.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "pm-h-3",
+    "claim_id": "claim-uniform-maximum-matching",
+    "statement": "The input is a simple undirected unweighted graph $G=([n],E)$, where $n\\ge1$ and $m=|E|$. It is given by an array of adjacency-list boundaries and two neighbor occurrences per edge."
+   },
+   {
+    "anchor": "stmt-lem-integral-flow",
+    "claim_id": "claim-static-integral-flow",
+    "statement": "For an explicitly represented directed network of total size at most $P$, with integral capacities, demands and costs bounded in magnitude by a fixed power of $P$,"
+   },
+   {
+    "anchor": "stmt-prelim-small-violation",
+    "claim_id": "claim-integral-small-violation",
+    "statement": "Let every lower and upper arc bound be integral, with lower bound no larger than upper bound."
+   },
+   {
+    "anchor": "stmt-prelim-small-violation",
+    "claim_id": "claim-integral-small-violation",
+    "statement": "If an exactly conserved real arc vector has total bound violation less than one,"
+   },
+   {
+    "anchor": "stmt-lem-capacity-scaling",
+    "claim_id": "claim-binary-capacity-scaling",
+    "statement": "For maximum flow with nonnegative integral upper capacities of at most $b$ bits,"
+   },
+   {
+    "anchor": "stmt-match-bottom-surplus",
+    "claim_id": "claim-bottom-ledger-surplus",
+    "statement": "At each settled state"
+   },
+   {
+    "anchor": "stmt-match-deletion",
+    "claim_id": "claim-deletion-net-debt",
+    "statement": "In a preserved ledger of floor $cw$,"
+   },
+   {
+    "anchor": "stmt-match-deletion",
+    "claim_id": "claim-deletion-net-debt",
+    "statement": "If $O$ is redirected mass, $I$ is removed rows’ allocation to the exterior, and $f$ is the number of free bins removed,"
+   },
+   {
+    "anchor": "stmt-match-top-maintenance",
+    "claim_id": "claim-local-top-barrier-maintenance",
+    "statement": "The top ledger can be maintained on the $\\varepsilon$-grid with logarithmic arguments above $\\delta$ before pricing and above $\\delta/10$ at refreshes. Apart from structural work, repairs cost constantly many explicit point operations per dirty coordinate. Between structural operations a small-allocation repair decreases $\\Phi$ by at most $O(\\delta)$, and slack repairs never decrease it. Positivity repairs add less than $S^{-800}$ debt on every guarded phase prefix. Moreover, $$\\begin{split}\n \\widehat s_d\\ge4C&\\ \\Longrightarrow\\ s_d\\ge3C,\\\\\n \\text{no eligible expansion}&\\ \\Longrightarrow\\\n s_d\\le5C\\quad\\text{for every bin with a \\(U\\)-contact}.\n \\end{split}\n \\label{match:contact-slacks}$$"
+   },
+   {
+    "anchor": "stmt-match-exchange-projection",
+    "claim_id": "claim-exact-exchange-projection",
+    "statement": "An integral maximum flow in the exchange network produces either a zero-debt ledger of floor $cw$ on the whole state, or a nonempty bin set $R$ whose peel leaves such a ledger on the remaining state. In the latter case, $$Lh(R)<c_jw(R).\n \\label{match:failed-floor}$$ Every preserved coarser ledger loses at least $w(R)$ in net debt, and the number $f$ of new blockers satisfies $$f\\le h(R)<\\frac{Cw(R)}{L}.\n \\label{match:peel-blockers}$$"
+   },
+   {
+    "anchor": "stmt-match-tight-contraction",
+    "claim_id": "claim-tight-factor-critical-alternative",
+    "statement": "Suppose <a href=\"#match:bottom-certificate\" data-reference-type=\"eqref\" data-reference=\"match:bottom-certificate\">[match:bottom-certificate]</a> holds and an edge joins distinct bins $i,j$."
+   },
+   {
+    "anchor": "stmt-match-pair-action",
+    "claim_id": "claim-bounded-randomized-pair-action",
+    "statement": "At a settled state,"
+   },
+   {
+    "anchor": "stmt-match-pair-action",
+    "claim_id": "claim-bounded-randomized-pair-action",
+    "statement": "Conditional on the valid current state,"
+   },
+   {
+    "anchor": "stmt-match-materialization",
+    "claim_id": "claim-bin-materialization",
+    "statement": "A current bin can be materialized with any prescribed physical exposure in time linear in its physical size up to logarithmic factors. All current bins can be dissolved at an erasure or phase boundary within the corresponding total physical-size bound."
+   },
+   {
+    "anchor": "stmt-lem-projection",
+    "claim_id": "claim-local-exact-ledger-projection",
+    "statement": "Suppose an integral parent ledger satisfies <a href=\"#proj:parent\" data-reference-type=\"eqref\" data-reference=\"proj:parent\">[proj:parent]</a> in a partition state of a subcubic graph on at most $S$ physical vertices."
+   },
+   {
+    "anchor": "stmt-lem-projection",
+    "claim_id": "claim-local-exact-ledger-projection",
+    "statement": "Its allocations, column residuals, weights, and positive debts support point access and sparse indexed updates."
+   },
+   {
+    "anchor": "stmt-lem-projection",
+    "claim_id": "claim-local-exact-ledger-projection",
+    "statement": "Assume $P=O_a(S)$ for the fixed-parameter asymptotic bound."
+   },
+   {
+    "anchor": "stmt-proj-threshold",
+    "claim_id": "claim-local-threshold-certificate",
+    "statement": "if the unlocked optimistic maximum is at least $T$ in scaled units."
+   },
+   {
+    "anchor": "stmt-proj-local-cut",
+    "claim_id": "claim-full-residual-cut-recovery",
+    "statement": "Suppose $\\beta>0$, and let $v$ be the full unscaled exchange maximum."
+   },
+   {
+    "anchor": "stmt-proj-local-cut",
+    "claim_id": "claim-full-residual-cut-recovery",
+    "statement": "Suppose a true explored region of maximum $v$ is available when $v>0$, and an unlocked optimistic region of maximum $v$ is available when $v<\\beta$."
+   },
+   {
+    "anchor": "stmt-phase-accounting",
+    "claim_id": "claim-phase-debt-and-structure-accounting",
+    "statement": "In a phase with initial deficit $K$, threshold $L$, and target $g_*$,"
+   },
+   {
+    "anchor": "stmt-phase-stall",
+    "claim_id": "claim-perfect-matching-prevents-stall",
+    "statement": "If the subcubic graph has a perfect matching,"
+   },
+   {
+    "anchor": "stmt-phase-stall",
+    "claim_id": "claim-perfect-matching-prevents-stall",
+    "statement": "when neither a distinct-bin contact nor an eligible expansion is available,"
+   },
+   {
+    "anchor": "stmt-phase-guard-adequacy",
+    "claim_id": "claim-eventual-pm-guard-adequacy",
+    "statement": "For every sufficiently large fixed $a$ and fixed admissible reliability parameter $\\sigma$"
+   },
+   {
+    "anchor": "stmt-thm-subcubic",
+    "claim_id": "claim-fixed-parameter-subcubic-search",
+    "statement": "For the integers $a\\ge1000$ and fixed reliability parameters $0\\le\\sigma\\le a+1$,"
+   },
+   {
+    "anchor": "stmt-thm-subcubic",
+    "claim_id": "claim-fixed-parameter-subcubic-search",
+    "statement": "For each fixed input with a perfect matching,"
+   },
+   {
+    "anchor": "stmt-lem-priced-steps",
+    "claim_id": "claim-priced-logarithmic-step-interface",
+    "statement": "Suppose a nominal bound $R$ counts the logical vertex and edge births and endpoint insertions over one instance, including retargetings."
+   },
+   {
+    "anchor": "stmt-lem-priced-steps",
+    "claim_id": "claim-priced-logarithmic-step-interface",
+    "statement": "Assume $$\\label{engine:nominal-size}\n                         R+B\\le S^{1+2/a}.$$"
+   },
+   {
+    "anchor": "stmt-lem-flat-cycle",
+    "claim_id": "claim-dynamic-flat-cycle-interface",
+    "statement": "Let $M=2^u$, where $u$ is divisible by $2a^2$, and suppose $$\\label{engine:backend-size-range}\n                         S^{1/a}\\le M\\le S^2.$$"
+   },
+   {
+    "anchor": "stmt-lem-flat-cycle",
+    "claim_id": "claim-dynamic-flat-cycle-interface",
+    "statement": "Consider a dynamic undirected graph with reference orientations and fixed vertex slots, of total current size at most $M$ and maximum degree at most three."
+   },
+   {
+    "anchor": "stmt-lem-flat-cycle",
+    "claim_id": "claim-dynamic-flat-cycle-interface",
+    "statement": "It has positive integral lengths $\\ell_e$ and integral signed gradients $\\gamma_e$, both of magnitude at most $M^{1200a}$."
+   },
+   {
+    "anchor": "stmt-engine-tree-cost",
+    "claim_id": "claim-augmented-dynamic-tree-cost",
+    "statement": "On a forest of at most $N_f$ subdivided nodes,"
+   },
+   {
+    "anchor": "stmt-engine-refresh-bound",
+    "claim_id": "claim-register-accuracy-under-forest-churn",
+    "statement": "After settlement,"
+   },
+   {
+    "anchor": "stmt-lem-routing-helper",
+    "claim_id": "claim-static-resource-routing-sparsifier",
+    "statement": "Let $F$ be an explicitly listed undirected multigraph with identified edge copies, and let $v_+$ be its number of incident vertex labels."
+   },
+   {
+    "anchor": "stmt-lem-routing-helper",
+    "claim_id": "claim-static-resource-routing-sparsifier",
+    "statement": "For each edge $f$, an explicit list specifies resource counts $m_{xf}\\in\\{1,\\ldots,10\\}$; unlisted counts are zero."
+   },
+   {
+    "anchor": "stmt-lem-routing-helper",
+    "claim_id": "claim-static-resource-routing-sparsifier",
+    "statement": "Suppose that $$\\deg_F(v)\\le C_0,\\qquad \\sum_{f\\in F}m_{xf}\\le C_0\n \\quad\\text{for every vertex $v$ and resource $x$},$$ where $C_0\\ge1$ is an integer, degrees count incidences, and both $2|F|$ and the total resource-list length are at most $M^2$."
+   },
+   {
+    "anchor": "stmt-lem-routing-helper",
+    "claim_id": "claim-static-resource-routing-sparsifier",
+    "statement": "Assume that identifiers and numerical input data have $(\\log S)^{O_a(1)}$ bits."
+   },
+   {
+    "anchor": "stmt-route-sampling",
+    "claim_id": "claim-sampled-cut-and-resource-concentration",
+    "statement": "For a sampled piece,"
+   },
+   {
+    "anchor": "stmt-route-sampling",
+    "claim_id": "claim-sampled-cut-and-resource-concentration",
+    "statement": "Conditional on the input pieces at a fixed depth,"
+   },
+   {
+    "anchor": "stmt-route-cheeger",
+    "claim_id": "claim-lazy-walk-conductance-mixing",
+    "statement": "In a connected undirected multigraph with at least two vertices and conductance $\\phi$,"
+   },
+   {
+    "anchor": "stmt-route-cheeger",
+    "claim_id": "claim-lazy-walk-conductance-mixing",
+    "statement": "If the graph has at most $N_p$ labels, degree ratio at most $D_c\\le\\Lambda^{1/20}$, and conductance at least $1/(4r_m)$,"
+   },
+   {
+    "anchor": "stmt-route-router",
+    "claim_id": "claim-recursive-packet-routing",
+    "statement": "Conditional on an overlay satisfying Lemma <a href=\"#route:overlay\" data-reference-type=\"ref\" data-reference=\"route:overlay\">27</a>,"
+   },
+   {
+    "anchor": "stmt-back-base",
+    "claim_id": "claim-bottom-level-cycle-search",
+    "statement": "At level $d$,"
+   },
+   {
+    "anchor": "stmt-back-base",
+    "claim_id": "claim-bottom-level-cycle-search",
+    "statement": "whenever $\\mathop{\\mathrm{OPT}}_d>0$."
+   },
+   {
+    "anchor": "stmt-back-covers",
+    "claim_id": "claim-verified-padded-covers",
+    "statement": "For every layer $j$ one can construct $K_h$ partitions of the frozen vertices into cells"
+   },
+   {
+    "anchor": "stmt-back-path-law",
+    "claim_id": "claim-fixed-marginal-upward-routes",
+    "statement": "The independent layer choices $\\mathcal L_j(v)$ define an upward path $P(v)$ in the layered system with all OUT options. For every frozen edge $e=vw$, its two path laws admit a coupling such that the closed walk $e+P(w)-P(v)$, after canceling a common final suffix, has expected full length at most $A_*\\ell_e$. The marginal law of $P(v)$ is the same for every incident edge used in this assertion."
+   },
+   {
+    "anchor": "stmt-back-frozen-decomposition",
+    "claim_id": "claim-frozen-decomposition-with-holes",
+    "statement": "Fix any state of the epoch and any circulation $\\Delta$ on its current nonloops."
+   },
+   {
+    "anchor": "stmt-back-frozen-decomposition",
+    "claim_id": "claim-frozen-decomposition-with-holes",
+    "statement": "Write $\\Delta=\\Delta_s+\\Delta_n$ for its surviving frozen and new coordinates."
+   },
+   {
+    "anchor": "stmt-back-portals",
+    "claim_id": "claim-postorder-portal-grid",
+    "statement": "A forest admits a set of at most its number of vertices divided by $k$ portals such that every component remaining after portal removal has fewer than $k$ vertices. The set is constructed by one postorder traversal."
+   },
+   {
+    "anchor": "stmt-back-compression",
+    "claim_id": "claim-exact-terminal-forest-compression",
+    "statement": "If a vector on a forest has divergence only at a specified terminal set,"
+   },
+   {
+    "anchor": "stmt-lem-backend-reduction",
+    "claim_id": "claim-one-level-cycle-quality-reduction",
+    "statement": "In every state of an epoch, suppose the active logical path assignments use selected chords and have at most $p_*$ hops."
+   },
+   {
+    "anchor": "stmt-lem-backend-reduction",
+    "claim_id": "claim-one-level-cycle-quality-reduction",
+    "statement": "Let $L_{\\mathrm{best}}$ be the largest local correction score <a href=\"#back:local-score\" data-reference-type=\"eqref\" data-reference=\"back:local-score\">[back:local-score]</a>, or zero if there is none."
+   },
+   {
+    "anchor": "stmt-back-quality-induction",
+    "claim_id": "claim-recursive-certified-cycle-quality",
+    "statement": "Assume the path assignments and public forest lifting of Section <a href=\"#sec:backend-updates\" data-reference-type=\"ref\" data-reference=\"sec:backend-updates\">8</a>."
+   },
+   {
+    "anchor": "stmt-update-classes",
+    "claim_id": "claim-local-logical-class-edits",
+    "statement": "The leg assignments of Section <a href=\"#sec:backend-quality\" data-reference-type=\"ref\" data-reference=\"sec:backend-quality\">7</a> can be maintained with logical degree at most $D_\\ell$. One input edit induces only a logarithmic factor many logical edit units across all tree–width graphs, where a unit is a class split, a pair of fragment-class births at a cluster activation, or a single chord death. Each unit involves at most $O(D_\\ell)$ incidence work. Every change to the leg of a surviving active incidence entails a split of its class."
+   },
+   {
+    "anchor": "stmt-update-anchor-core",
+    "claim_id": "claim-anchor-core-snapshot-rebuild",
+    "statement": "Suppose the interval from a parent snapshot to a rebuild contains $E_0$ logical edit units in one tree–width graph."
+   },
+   {
+    "anchor": "stmt-update-support",
+    "claim_id": "claim-cumulative-support-and-assignment-work",
+    "statement": "The initial assignments use at most $h_i$ times a logarithmic factor many support chords. On every epoch prefix of $t'\\le h_i$ edits, the additional support selections number at most $bt'$ times a logarithmic factor, and local assignment work is $t'M^{O(1/a)+o_a(1)}$ after initialization. Initialization costs $n_iM^{O(1/a)+o_a(1)}$."
+   },
+   {
+    "anchor": "stmt-update-compressed-edits",
+    "claim_id": "claim-small-compressed-child-edits",
+    "statement": "The single child graph $J$ can be initialized nonempty. Throughout an epoch it uses at most $h_ib$ times a logarithmic factor many active slots and edges, including slots assigned earlier in that epoch. On an epoch prefix of $t'$ further input edits it receives at most $bt'$ times a logarithmic factor individual edits. Its degree is a logarithmic factor, and its integral prices obey the level-$(i+1)$ bounds. The local construction work per parent edit is $M^{O(1/a)+o_a(1)}$ amortized."
+   },
+   {
+    "anchor": "stmt-update-flat-lift",
+    "claim_id": "claim-public-flat-forest-lifting",
+    "statement": "The construction is a forest with valid current actual or null edge maps. A child forest-path piece lifts to at most one public forest-path piece, preserving its signed projection and with parent raw length at most its child raw length. An individual child-edge piece lifts to one path or one actual-edge piece, or can be omitted if null. The lifted sum of a child circulation is a circulation with the same gradient. The number of returned pieces is $M^{O(1/a)+o_a(1)}$."
+   },
+   {
+    "anchor": "stmt-update-multiplicity",
+    "claim_id": "claim-public-occurrence-multiplicity",
+    "statement": "For all sufficiently large $M$ at fixed parameters"
+   },
+   {
+    "anchor": "stmt-update-recourse",
+    "claim_id": "claim-persistent-public-forest-recourse",
+    "statement": "For one parent input edit within an epoch, let $Q$ be the set of child labels assigned or changed, or incident to a changed child edge or changed segment realization."
+   },
+   {
+    "anchor": "stmt-update-recurrences",
+    "claim_id": "claim-recursive-work-and-log-bounds",
+    "statement": "For a prefix of $s$ graph operations, counting queries and edits and including an operation that terminates partway through,"
+   },
+   {
+    "anchor": "stmt-update-reliability",
+    "claim_id": "claim-backend-guards-and-adaptive-reliability",
+    "statement": "The construction can enforce all size, multiplicity, arithmetic, and sampling prerequisites by finite checks. For every sufficiently large fixed $a$ and every fixed $\\sigma\\ge0$, those deterministic prerequisites are adequate for all sufficiently large sizes in the permitted engine range, on every random path. Conditional on any adaptively specified history before an invocation, the detected sampling failure probability over an entire engine instance is at most $2^{-\\sigma}S^{-60}$."
+   },
+   {
+    "anchor": "stmt-uniform-network",
+    "claim_id": "claim-uniform-permutation-network",
+    "statement": "For every power of two $s\\ge1$"
+   },
+   {
+    "anchor": "stmt-uniform-cardinality",
+    "claim_id": "claim-cardinality-to-perfect-matching",
+    "statement": "Given $G$ and an integer $0\\le k\\le\\lfloor n/2\\rfloor$,"
+   },
+   {
+    "anchor": "stmt-uniform-degree",
+    "claim_id": "claim-witness-preserving-subcubic-reduction",
+    "statement": "A loopless graph with $v$ vertices and $e$ edges"
+   },
+   {
+    "anchor": "stmt-uniform-fixed-branch",
+    "claim_id": "claim-fixed-branch-every-path-performance",
+    "statement": "For every sufficiently large fixed $t$"
+   },
+   {
+    "anchor": "stmt-uniform-physical-ram",
+    "claim_id": "claim-single-physical-word-program",
+    "statement": "The schedule is realizable by one finite program with a fixed physical word constant $c_0$. On every path, including failed paths, it halts after polynomially many instructions and uses polynomially many addressed words, with constants independent of the input."
+   },
+   {
+    "anchor": "stmt-cor-f-factor",
+    "claim_id": "claim-uniform-prescribed-degree-factor-search",
+    "statement": "The input is a simple graph $G=([n],E)$ with $n\\ge1$, $m=|E|$, and $p=n+m$, in the adjacency-list representation of Section <a href=\"#sec:introduction\" data-reference-type=\"ref\" data-reference=\"sec:introduction\">1</a>, together with one-word integers $f(v)$ satisfying $0\\le f(v)\\le\\deg_G(v)$ for all $v$."
+   },
+   {
+    "anchor": "stmt-factor-reduction",
+    "claim_id": "claim-linearithmic-factor-to-perfect-matching",
+    "statement": "For the input of Corollary <a href=\"#cor:f-factor\" data-reference-type=\"ref\" data-reference=\"cor:f-factor\">53</a>,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Constructive factor-critical contraction",
+    "evidence": [
+     {
+      "anchor": "stmt-match-tight-contraction",
+      "quote": "Suppose <a href=\"#match:bottom-certificate\" data-reference-type=\"eqref\" data-reference=\"match:bottom-certificate\">[match:bottom-certificate]</a> holds and an edge joins distinct bins $i,j$. Either the injection can be rearranged to leave both free, or a unique inclusion-minimal $X\\supseteq\\{i,j\\}$ satisfies $h(X)=1$.",
+      "quote_sha256": "a5c6dcbd9196a84df1a62f75ff62d0ad93f5138c4003027fd601d320c66f0ca4"
+     },
+     {
+      "anchor": "stmt-match-tight-contraction",
+      "quote": "In the latter case $w(X)\\le L$, and the physical block $\\bigl(\\bigcup_{d\\in X}d\\bigr)\\cup A(X)$ is constructively factor-critical using the joining edge, its row–bin incidences, and its child-bin witnesses.",
+      "quote_sha256": "489129b3bc279599769805d429e6ed84eb5ac662249af96f076d8a293916ebd9"
+     }
+    ],
+    "requires_concepts": [
+     "Assigned-row injection",
+     "Captive rows and deficiency",
+     "Debt-free bottom ledger",
+     "Hall's condition",
+     "Child-bin exposure witnesses"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Local exact ledger projection",
+    "evidence": [
+     {
+      "anchor": "stmt-lem-projection",
+      "quote": "Suppose an integral parent ledger satisfies <a href=\"#proj:parent\" data-reference-type=\"eqref\" data-reference=\"proj:parent\">[proj:parent]</a> in a partition state of a subcubic graph on at most $S$ physical vertices. Its allocations, column residuals, weights, and positive debts support point access and sparse indexed updates. Assume $P=O_a(S)$ for the fixed-parameter asymptotic bound.",
+      "quote_sha256": "e260074e2d30c237b7746640400a2f78acd36e6ff6866279b6c09b5b6353585b"
+     },
+     {
+      "anchor": "stmt-proj-threshold",
+      "quote": "An unfailed, nonsuspended threshold test cannot report $\\mathrm{LOW}$ if the unlocked optimistic maximum is at least $T$ in scaled units. Its success exit implies that the explored true unscaled maximum is at least $b$.",
+      "quote_sha256": "b11a6a41296f1bd0ee87aec2b4bfcc26709d2e7f88275371574a1d0d29db18d4"
+     },
+     {
+      "anchor": "stmt-proj-local-cut",
+      "quote": "The union of the available regions, using true capacities and original arc identifiers, suffices to compute an exact full exchange flow and, when $v<\\beta$, the full residual source-reachable bin set.",
+      "quote_sha256": "27a407b5fe5e5accfd2d94ceeab51517bd2c29b6c0f6a7d1ce3b86489534fc94"
+     }
+    ],
+    "requires_concepts": [
+     "Integral parent residual floor",
+     "Indexed positive debts",
+     "Optimistic and true regions",
+     "Priced logarithmic steps",
+     "Integral cuts from small total violation",
+     "Full residual cut recovery"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "One uniform almost-linear matching program",
+    "evidence": [
+     {
+      "anchor": "stmt-uniform-fixed-branch",
+      "quote": "For every sufficiently large fixed $t$, branch $t$ avoids deterministic suspension on all sufficiently large inputs, on every computation path.",
+      "quote_sha256": "4cdbcf0486822f93a51e8ea074a497e5f21e68d79077e0f3d186418b7974c1c1"
+     },
+     {
+      "anchor": "stmt-uniform-physical-ram",
+      "quote": "The schedule is realizable by one finite program with a fixed physical word constant $c_0$. On every path, including failed paths, it halts after polynomially many instructions and uses polynomially many addressed words, with constants independent of the input.",
+      "quote_sha256": "ae4f991b9f9df9c4b2a3c438b4c0de1f504938c97fbe4c86ae1dd6fa70dc1483"
+     }
+    ],
+    "requires_concepts": [
+     "Permutation-network cardinality reduction",
+     "Subcubic path-gadget reduction",
+     "Fixed-parameter subcubic search",
+     "Clocked deterministic fallback",
+     "Interruptible finite-word simulation",
+     "Instruction-level dovetailing"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Prescribed-degree factor construction",
+    "evidence": [
+     {
+      "anchor": "stmt-factor-reduction",
+      "quote": "For the input of Corollary <a href=\"#cor:f-factor\" data-reference-type=\"ref\" data-reference=\"cor:f-factor\">53</a>, one can construct a possibly empty simple graph $H_f$ with $|V(H_f)|+|E(H_f)|=O(m\\log(n+2))$ such that $H_f$ has a perfect matching if and only if $G$ has an $f$-factor.",
+      "quote_sha256": "82cf6027c9562566b21066c492678e45950c1080b842dda644176fe162be2eab"
+     },
+     {
+      "anchor": "stmt-factor-reduction",
+      "quote": "The construction takes $O(n+m\\log(n+2))$ word instructions and records. A perfect matching of $H_f$ yields an explicit $f$-factor within the same bound.",
+      "quote_sha256": "2206fc845ba3e0eae240ba2d7bb9764cc54836a80905b1a00080fed49cb98f80"
+     }
+    ],
+    "requires_concepts": [
+     "Incidence ports",
+     "Local permutation networks",
+     "Perfect matching",
+     "Cross-edge witness decoding",
+     "Explicit degree checks"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-uniform-maximum-matching",
+   "exact_statement": "There are a single uniform randomized word-RAM algorithm, fixed constants $c_0\\ge2$ and $C\\ge1$, and a nonincreasing function $\\eta:\\mathbb N_{\\ge1}\\to\\mathbb R_{\\ge0}$ with $\\eta(q)\\to0$ as $q\\to\\infty$ such that the following holds. For every input graph $G=([n],E)$ with $m=|E|$ and $p=n+m$, the algorithm halts on every computation path in at most $$C p^{1+\\eta(p)}$$ instructions. With probability at least $2/3$ it outputs an explicit list of edges of a matching of size $\\nu(G)$.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-static-integral-flow",
+   "exact_statement": "For an explicitly represented directed network of total size at most $P$, with integral capacities, demands and costs bounded in magnitude by a fixed power of $P$, exact integral minimum-cost flow can be computed uniformly and deterministically in $P^{1+o(1)}$ time. Its finite-precision operations can be simulated with polynomially logarithmic overhead on logarithmic-bit words. In particular, integral source–sink maximum flow with nonnegative upper capacities and zero lower capacities returns an explicit integral arc vector and a residual-reachability minimum-cut certificate within that bound.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-integral-flow"
+  },
+  {
+   "claim_id": "claim-integral-small-violation",
+   "exact_statement": "Let every lower and upper arc bound be integral, with lower bound no larger than upper bound. If an exactly conserved real arc vector has total bound violation less than one, the bounds admit an exactly feasible integral circulation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prelim-small-violation"
+  },
+  {
+   "claim_id": "claim-binary-capacity-scaling",
+   "exact_statement": "For maximum flow with nonnegative integral upper capacities of at most $b$ bits, a single fixed polynomial-capacity version of Lemma <a href=\"#lem:integral-flow\" data-reference-type=\"ref\" data-reference=\"lem:integral-flow\">2</a> suffices, using $b$ calls on linear-size residual graphs, together with the charged capacity arithmetic and identifier translations.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-capacity-scaling"
+  },
+  {
+   "claim_id": "claim-clocked-perfect-matching-fallback",
+   "exact_statement": "There is one uniform deterministic algorithm on explicit loopless graphs of maximum degree three that halts within a fixed polynomial number of finite-word instructions. It returns a checked perfect matching when one exists and a negative answer otherwise.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-fallback"
+  },
+  {
+   "claim_id": "claim-bottom-ledger-surplus",
+   "exact_statement": "At each settled state and every nonempty $X\\subseteq\\mathcal D$, $$Lh(X)\\ge y^a(X)\\ge w(X)>0.\n \\label{match:bottom-certificate}$$ Thus $h(X)\\ge1$, every bin has weight at most $L$, and a tight set $h(X)=1$ has total weight at most $L$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-match-bottom-surplus"
+  },
+  {
+   "claim_id": "claim-deletion-net-debt",
+   "exact_statement": "In a preserved ledger of floor $cw$, redirect each allocation of a surviving row into $R$ to its current assigned edge, adding an equal debt at the recipient bin. This preserves the exterior ledger invariant. If $O$ is redirected mass, $I$ is removed rows’ allocation to the exterior, and $f$ is the number of free bins removed, then $$\\begin{split}\n O&=I+Lf-y(R),\\\\\n I&\\le L(h(R)-f),\\\\\n \\Delta\\!\\left(\\sum_d p_d\\right)=O-p(R)&\\le Lh(R)-cw(R).\n \\end{split}\n \\label{match:deletion-debt}$$ The last bound is at most $2L$ at a gain. A gain decreases the represented unmatched count by two; contractions, expansions, and peels leave it unchanged.",
+   "kind": "construction",
+   "statement_anchor": "stmt-match-deletion"
+  },
+  {
+   "claim_id": "claim-local-top-barrier-maintenance",
+   "exact_statement": "The top ledger can be maintained on the $\\varepsilon$-grid with logarithmic arguments above $\\delta$ before pricing and above $\\delta/10$ at refreshes. Apart from structural work, repairs cost constantly many explicit point operations per dirty coordinate. Between structural operations a small-allocation repair decreases $\\Phi$ by at most $O(\\delta)$, and slack repairs never decrease it. Positivity repairs add less than $S^{-800}$ debt on every guarded phase prefix. Moreover, $$\\begin{split}\n \\widehat s_d\\ge4C&\\ \\Longrightarrow\\ s_d\\ge3C,\\\\\n \\text{no eligible expansion}&\\ \\Longrightarrow\\\n s_d\\le5C\\quad\\text{for every bin with a \\(U\\)-contact}.\n \\end{split}\n \\label{match:contact-slacks}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-match-top-maintenance"
+  },
+  {
+   "claim_id": "claim-exact-exchange-projection",
+   "exact_statement": "An integral maximum flow in the exchange network produces either a zero-debt ledger of floor $cw$ on the whole state, or a nonempty bin set $R$ whose peel leaves such a ledger on the remaining state. In the latter case, $$Lh(R)<c_jw(R).\n \\label{match:failed-floor}$$ Every preserved coarser ledger loses at least $w(R)$ in net debt, and the number $f$ of new blockers satisfies $$f\\le h(R)<\\frac{Cw(R)}{L}.\n \\label{match:peel-blockers}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-match-exchange-projection"
+  },
+  {
+   "claim_id": "claim-tight-factor-critical-alternative",
+   "exact_statement": "Suppose <a href=\"#match:bottom-certificate\" data-reference-type=\"eqref\" data-reference=\"match:bottom-certificate\">[match:bottom-certificate]</a> holds and an edge joins distinct bins $i,j$. Either the injection can be rearranged to leave both free, or a unique inclusion-minimal $X\\supseteq\\{i,j\\}$ satisfies $h(X)=1$. In the latter case $w(X)\\le L$, and the physical block $\\bigl(\\bigcup_{d\\in X}d\\bigr)\\cup A(X)$ is constructively factor-critical using the joining edge, its row–bin incidences, and its child-bin witnesses.",
+   "kind": "construction",
+   "statement_anchor": "stmt-match-tight-contraction"
+  },
+  {
+   "claim_id": "claim-bounded-randomized-pair-action",
+   "exact_statement": "At a settled state, the preceding searches process a queried distinct-bin edge as follows. A returned contraction is the minimal tight set with a valid factor-critical witness; a returned gain has a valid joint-freeing witness. Conditional on the valid current state, the probability of a premature negative answer, including a late-witness abort, is at most $2^{-\\sigma}S^{-60}$. Continued contractions cost $O(|X|\\mathop{\\mathrm{polylog}}S)$; a gain attempt or final abort costs $O(L\\mathop{\\mathrm{polylog}}S)$, with fixed-parameter reliability factors. These work bounds hold on every path.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-match-pair-action"
+  },
+  {
+   "claim_id": "claim-bin-materialization",
+   "exact_statement": "A current bin can be materialized with any prescribed physical exposure in time linear in its physical size up to logarithmic factors. All current bins can be dissolved at an erasure or phase boundary within the corresponding total physical-size bound.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-match-materialization"
+  },
+  {
+   "claim_id": "claim-local-exact-ledger-projection",
+   "exact_statement": "Suppose an integral parent ledger satisfies <a href=\"#proj:parent\" data-reference-type=\"eqref\" data-reference=\"proj:parent\">[proj:parent]</a> in a partition state of a subcubic graph on at most $S$ physical vertices. Its allocations, column residuals, weights, and positive debts support point access and sparse indexed updates. Assume $P=O_a(S)$ for the fixed-parameter asymptotic bound. Then the exact exchange projection can be implemented in $$\\label{proj:time}\n                         (P+B)S^{O(1/a)+o_a(1)}$$ total time on every path, at all sufficiently large sizes for fixed sufficiently large parameters.*\n\n*The implementation either returns the exact exchange-flow changes and, if needed, the full residual reachable set $R_0$; reports a detected stochastic failure; or suspends on a deterministic prerequisite check. It uses $O(\\log S)$ priced-step instances. Each reached instance with valid prerequisites has its conditional detected-failure allowance $2^{-\\sigma}S^{-60}$. All updates to a fresh child ledger and all necessary physical scans are confined to $O(P)$ represented incidences and bin weight, apart from the padding and subpolynomial factors in <a href=\"#proj:time\" data-reference-type=\"eqref\" data-reference=\"proj:time\">[proj:time]</a>. The stated deterministic prerequisites do not cause suspension in the sufficiently large fixed-parameter range.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-projection"
+  },
+  {
+   "claim_id": "claim-local-threshold-certificate",
+   "exact_statement": "An unfailed, nonsuspended threshold test cannot report $\\mathrm{LOW}$ if the unlocked optimistic maximum is at least $T$ in scaled units. Its success exit implies that the explored true unscaled maximum is at least $b$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-proj-threshold"
+  },
+  {
+   "claim_id": "claim-full-residual-cut-recovery",
+   "exact_statement": "Suppose $\\beta>0$, and let $v$ be the full unscaled exchange maximum. Suppose a true explored region of maximum $v$ is available when $v>0$, and an unlocked optimistic region of maximum $v$ is available when $v<\\beta$. The union of the available regions, using true capacities and original arc identifiers, suffices to compute an exact full exchange flow and, when $v<\\beta$, the full residual source-reachable bin set.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-proj-local-cut"
+  },
+  {
+   "claim_id": "claim-phase-debt-and-structure-accounting",
+   "exact_statement": "In a phase with initial deficit $K$, threshold $L$, and target $g_*$, every guarded prefix before completion satisfies $$\\label{phase:peel-budget}\n \\sum_{\\rm peels}w(R_0)\\le2L(g_*-1)+S^{-800},\n \\qquad\n \\#\\{\\text{blockers}\\}\\le2C(g_*-1).$$ There are $O(N+Lg_*)$ expansions, the sum of contraction arities $|X|$ is $O(N+Lg_*)$, and the total tick increase is $\\tau=O_a(N)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-phase-accounting"
+  },
+  {
+   "claim_id": "claim-perfect-matching-prevents-stall",
+   "exact_statement": "If the subcubic graph has a perfect matching, a settled phase state with fewer than $g_*$ gains admits neither a valid $\\mathrm{LOW}$ exit nor a permanent lack of progress. More precisely, when neither a distinct-bin contact nor an eligible expansion is available, the top objective has a circulation direction $d$ with $$g^{\\mathsf T}d\n                           >\\tfrac12\\|\\lambda d\\|_1 .$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-phase-stall"
+  },
+  {
+   "claim_id": "claim-eventual-pm-guard-adequacy",
+   "exact_statement": "For every sufficiently large fixed $a$ and fixed admissible reliability parameter $\\sigma$, all deterministic guards of the PM construction are adequate for all sufficiently large $S$, on every computation path. The bounds just proved apply also to a prefix ending in a failed or interrupted attempted operation. No perfect-matching promise is needed for these time and adequacy assertions.",
+   "kind": "bound",
+   "statement_anchor": "stmt-phase-guard-adequacy"
+  },
+  {
+   "claim_id": "claim-fixed-parameter-subcubic-search",
+   "exact_statement": "For the integers $a\\ge1000$ and fixed reliability parameters $0\\le\\sigma\\le a+1$, the construction defines a uniform randomized algorithm on loopless subcubic graphs with identified edge copies and $N\\le S$ vertices. Every computation halts with a checked perfect matching, a negative answer, or a suspension. It has no false positive. For each fixed input with a perfect matching, the probability of a negative answer is at most $$\\label{phase:pm-error}\n                            2^{-\\sigma}S^{-5}.$$ This statement bounds erroneous answers, not suspensions, and holds conditionally for adaptive invocations with fresh randomness and valid prerequisites.*\n\n\n*For every sufficiently large fixed $a$ and fixed admissible $\\sigma$, there is no suspension on any path at all sufficiently large $S$. The total time on every path is then $$\\label{phase:pm-time}\n                              S^{1+O(1/a)+o_a(1)},$$ where the exponent coefficients in $O(1/a)$ are absolute. All initialization, physical data movement, arithmetic, random bits, and explicit witness writing are included.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-thm-subcubic"
+  },
+  {
+   "claim_id": "claim-priced-logarithmic-step-interface",
+   "exact_statement": "Suppose a nominal bound $R$ counts the logical vertex and edge births and endpoint insertions over one instance, including retargetings. Mere value or price changes on retained topology need not be counted as new incidences. Assume $$\\label{engine:nominal-size}\n                         R+B\\le S^{1+2/a}.$$ There is a uniform implementation with the following properties.*\n\n\n1.  *A pricing call may return <span class=\"nodecor\"><span class=\"smallcaps\">Low</span></span>, but it cannot do so if there is a nonzero circulation $d$ satisfying $$\\label{engine:high-direction}\n                        g^{\\mathsf T}d\\ge\\tfrac12\\|\\lambda d\\|_1,$$ unless it reports a detected failure or suspends.*\n\n\n2.  *A call not returning <span class=\"nodecor\"><span class=\"smallcaps\">Low</span></span>, failure, or suspension performs an exact increment $h\\in\\varepsilon\\mathbb Z^E$ that is a circulation and satisfies $$\\label{engine:step-guarantee}\n           \\|\\lambda h\\|_1\\le q/100,\n           \\qquad g^{\\mathsf T}h\\ge q^2/1000.$$ It leaves all logarithmic arguments positive and increases $\\Phi$ by $\\Omega(q^2)$.*\n\n\n3.  *The implementation exposes registers $\\widehat f_e$. After settling updates and before the next pricing call, the descriptors are valid at these registers and $$\\label{engine:register-guarantee}\n           \\lambda_e(\\widehat f_e)|f_e-\\widehat f_e|\\le q/100.$$ An explicit client setting can reanchor the coordinate exactly. Apart from such client settings, the number of refresh notifications is at most the number of successful pricing steps times $S^{O(1/a)+o_a(1)}$. Notifications are supplied as a list of dirty coordinates. Maintaining the representation without taking a step causes no implicit primal motion.*\n\n\n4.  *With $Q$ external pricing, point, and edge operations, total time, excluding the client’s own work, is $$\\label{engine:time}\n                         (R+B+Q)S^{O(1/a)+o_a(1)}.$$ The bound is on every computation path and includes initialization, arithmetic, random bits, and all representation changes. Polynomially many operations are allowed, with a loose guard $Q\\le S^{100}$.*\n\n*The conditional probability of detected failure in the entire instance is at most $2^{-\\sigma}S^{-60}$, including when the instance is chosen adaptively. Deterministic size, precision, and representation checks may suspend, but none does so for all sufficiently large $S$ at each sufficiently large fixed $a$ and each fixed $\\sigma\\ge0$ within the stated hypotheses.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-priced-steps"
+  },
+  {
+   "claim_id": "claim-dynamic-flat-cycle-interface",
+   "exact_statement": "Let $M=2^u$, where $u$ is divisible by $2a^2$, and suppose $$\\label{engine:backend-size-range}\n                         S^{1/a}\\le M\\le S^2.$$ Consider a dynamic undirected graph with reference orientations and fixed vertex slots, of total current size at most $M$ and maximum degree at most three. It has positive integral lengths $\\ell_e$ and integral signed gradients $\\gamma_e$, both of magnitude at most $M^{1200a}$. Insertions and deletions are arbitrary; a price replacement is a deletion followed by an insertion. Put $$\\mathop{\\mathrm{OPT}}=\\max_{d\\ne0,\\ d\\text{ a circulation}}\n          \\frac{|\\gamma^{\\mathsf T}d|}{\\|\\ell d\\|_1},$$ with value zero if there is no nonzero circulation.*\n\n*The backend exposes a forest. Every forest vertex maps to an input vertex slot; every forest edge either maps to a current input edge with specified endpoint correspondence, or is null and joins equal images. The multiplicity over each input slot is at most $M^{10/a}/4$. A query returns a list of oriented single input edges and oriented forest paths, the latter specified by endpoints. Each piece is used with unit multiplicity, with repeated pieces listed separately. Their signed physical projection is a circulation $c$. Its *raw length* $V$ is the sum of input lengths over all mapped edge traversals with repetition; a null forest traversal contributes zero. If $\\mathop{\\mathrm{OPT}}>0$, the answer has $V>0$ and $$\\label{engine:flat-quality}\n                   \\frac{|\\gamma^{\\mathsf T}c|}{V}\n                       \\ge M^{-10/a}\\mathop{\\mathrm{OPT}}.$$ An empty or missing answer is permitted when $\\mathop{\\mathrm{OPT}}=0$. There are $M^{O(1/a)+o_a(1)}$ pieces in an answer.*\n\n*Initialization costs $M^{1+O(1/a)+o_a(1)}$. Amortized edit and query costs, including explicitly exposed forest logs, are $M^{O(1/a)+o_a(1)}$, with bounds on every path. Retained forest occurrences and edges have stable lifetimes. Endpoint or mapping changes are replacements, and removals are exposed before the old mappings or input data are invalidated. Transactions permit deletion-first old-to-final updates with no intervening path query.*\n\n*The bounds apply over the polynomial lifespans required by Lemma <a href=\"#lem:priced-steps\" data-reference-type=\"ref\" data-reference=\"lem:priced-steps\">21</a>, and against adaptive clients. Reliability can be chosen so that detected failure in an entire engine instance has conditional probability at most $2^{-\\sigma}S^{-60}$. A flagged state has no quality requirement. Deterministic prerequisite checks may suspend, with eventual adequacy as in Lemma <a href=\"#lem:priced-steps\" data-reference-type=\"ref\" data-reference=\"lem:priced-steps\">21</a>.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-flat-cycle"
+  },
+  {
+   "claim_id": "claim-augmented-dynamic-tree-cost",
+   "exact_statement": "On a forest of at most $N_f$ subdivided nodes, the preceding operations use $O(\\log N_f)$ amortized tree primitives per link, cut, evert, expose, point operation, or lazy path update. Reporting and disabling a witnessed threshold violation costs the same amortized amount per reported node. Each primitive uses a constant number of operations on the stored fields.",
+   "kind": "bound",
+   "statement_anchor": "stmt-engine-tree-cost"
+  },
+  {
+   "claim_id": "claim-register-accuracy-under-forest-churn",
+   "exact_statement": "After settlement, <a href=\"#engine:register-guarantee\" data-reference-type=\"eqref\" data-reference=\"engine:register-guarantee\">[engine:register-guarantee]</a> holds. The total number of engine refresh reports and copy-disable events is $O(D)$ times the number of successful pricing steps, apart from explicit client operations. The assertion is unaffected by arbitrary forest churn, dormant-slot reuse, or client reanchoring.",
+   "kind": "bound",
+   "statement_anchor": "stmt-engine-refresh-bound"
+  },
+  {
+   "claim_id": "claim-static-resource-routing-sparsifier",
+   "exact_statement": "Let $F$ be an explicitly listed undirected multigraph with identified edge copies, and let $v_+$ be its number of incident vertex labels. For each edge $f$, an explicit list specifies resource counts $m_{xf}\\in\\{1,\\ldots,10\\}$; unlisted counts are zero. Suppose that $$\\deg_F(v)\\le C_0,\\qquad \\sum_{f\\in F}m_{xf}\\le C_0\n \\quad\\text{for every vertex $v$ and resource $x$},$$ where $C_0\\ge1$ is an integer, degrees count incidences, and both $2|F|$ and the total resource-list length are at most $M^2$. Assume that identifiers and numerical input data have $(\\log S)^{O_a(1)}$ bits. There is a uniform randomized algorithm that either reports detected failure or returns a set $F'\\subseteq F$ and, for every $f=vw\\in F$, an explicit walk $Q_f$ from $v$ to $w$ in $F'$, such that $$\\label{route:guarantees}\n |F'|\\le P_*v_+,\\qquad\n |Q_f|\\le P_*,\\qquad\n \\sum_{f\\in F}\\ \\sum_{e\\text{ traversed in }Q_f}m_{xe}\n       \\le P_*C_0\\quad\\text{for every $x$}.$$ The inner sum counts traversal multiplicities and ignores orientation. A loop demand may be assigned the empty walk. Every returned result is verified. For each fixed reliability parameter $\\sigma\\ge0$, the time on every computation path is $$\\label{route:time}\n (1+\\text{input list size})\\,b\\,M^{o_a(1)},$$ and the probability of detected failure is at most $2^{-\\sigma}S^{-800}$. The same statement holds conditionally when the input is determined by earlier computation and this call uses fresh bits.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-routing-helper"
+  },
+  {
+   "claim_id": "claim-sampled-cut-and-resource-concentration",
+   "exact_statement": "For a sampled piece, except with probability at most $4s'\\exp[-K_s/(100\\chi^2)]$, every vertex set $X$ satisfies $$\\label{route:cut-approximation}\n \\left|\\sum_{e\\in\\partial X\\text{ retained}}\\omega_e\n                -|\\partial X|\\right|\n \\le\\frac{\\min\\{\\mathop{\\mathrm{vol}}(X),\\mathop{\\mathrm{vol}}(\\bar X)\\}}{4\\chi}.$$ This event implies the total-weight check in <a href=\"#route:sample-checks\" data-reference-type=\"eqref\" data-reference=\"route:sample-checks\">[route:sample-checks]</a>; the sample-count check also holds with exponentially high probability in $K_s$. Conditional on the input pieces at a fixed depth, for each resource $x$, $$\\label{route:sample-resources}\n \\sum_{\\substack{e\\text{ retained}\\\\\\text{over all pieces at this depth}}}\n          \\omega_e m_{xe}\\le2C_0$$ except with probability at most $\\exp(-K_s/30)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-route-sampling"
+  },
+  {
+   "claim_id": "claim-median-overlay-conductance",
+   "exact_statement": "There is a median rule for which a piece completing all $r_m$ rounds has an $r_m$-regular overlay of conductance at least $1/(4r_m)$, except with probability at most $4N_p^3\\exp[-r_m/(80\\Lambda)]$. This guarantee holds for any choice of perfect matching across each chosen pair of halves.",
+   "kind": "construction",
+   "statement_anchor": "stmt-route-overlay"
+  },
+  {
+   "claim_id": "claim-lazy-walk-conductance-mixing",
+   "exact_statement": "In a connected undirected multigraph with at least two vertices and conductance $\\phi$, the lazy walk has spectral gap at least $\\phi^2/4$. If the graph has at most $N_p$ labels, degree ratio at most $D_c\\le\\Lambda^{1/20}$, and conductance at least $1/(4r_m)$, then for every $h\\ge t$, $$\\label{route:pointwise-mixing}\n \\tfrac12\\pi(y)\\le P^h(x,y)\\le2\\pi(y)\n \\quad\\text{for all $x,y$}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-route-cheeger"
+  },
+  {
+   "claim_id": "claim-recursive-packet-routing",
+   "exact_statement": "Conditional on an overlay satisfying Lemma <a href=\"#route:overlay\" data-reference-type=\"ref\" data-reference=\"route:overlay\">27</a>, the procedure above produces explicit routes for all packets with both maximum length and total traversal congestion on each overlay edge at most $H_*$, except with probability less than $M^{-20}$ throughout the checked parameter range. All its data sizes and running times remain bounded by the specified caps even when it fails.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-route-router"
+  },
+  {
+   "claim_id": "claim-bottom-level-cycle-search",
+   "exact_statement": "At level $d$, a query can return individual oriented edges forming a circulation with certified score at least $\\mathop{\\mathrm{OPT}}_d/2$, whenever $\\mathop{\\mathrm{OPT}}_d>0$. Initialization and each graph operation or query cost $M^{O(1/a)+o_a(1)}$, and the answer has at most $n_d=M^{2/a}$ pieces.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-back-base"
+  },
+  {
+   "claim_id": "claim-verified-padded-covers",
+   "exact_statement": "For every layer $j$ one can construct $K_h$ partitions of the frozen vertices into cells, with a shortest-path tree in each cell, such that:*\n\n1.  *every cell tree has radius at most $\\Gamma R_j$ about its center;*\n\n2.  *for every vertex, at least one of the partitions has a cell containing its entire closed $R_j$-ball in $\\bar G$.*\n\n*The properties are verified before use. The construction takes $n_iM^{o_a(1)}$ time on every path for fixed reliability parameter $\\sigma$, with detected-failure probability at most $2^{-\\sigma}S^{-800}$ conditional on any valid frozen input. It uses integer operations and fresh fair random bits.",
+   "kind": "construction",
+   "statement_anchor": "stmt-back-covers"
+  },
+  {
+   "claim_id": "claim-finite-routing-forest-family",
+   "exact_statement": "There is a family of at most $(K_h^2(u+1))^{O(r)}$ forests $T^0$ with the following property. At each layer, any two distinct lower slots can be prescribed arbitrary OUT options, and some family member realizes all these prescriptions simultaneously across the layers. Each member contains separate copies of all cell trees and IN links, and exactly one OUT link per lower slot.",
+   "kind": "construction",
+   "statement_anchor": "stmt-back-forest-family"
+  },
+  {
+   "claim_id": "claim-fixed-marginal-upward-routes",
+   "exact_statement": "The independent layer choices $\\mathcal L_j(v)$ define an upward path $P(v)$ in the layered system with all OUT options. For every frozen edge $e=vw$, its two path laws admit a coupling such that the closed walk $e+P(w)-P(v)$, after canceling a common final suffix, has expected full length at most $A_*\\ell_e$. The marginal law of $P(v)$ is the same for every incident edge used in this assertion.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-back-path-law"
+  },
+  {
+   "claim_id": "claim-frozen-decomposition-with-holes",
+   "exact_statement": "Fix any state of the epoch and any circulation $\\Delta$ on its current nonloops. Write $\\Delta=\\Delta_s+\\Delta_n$ for its surviving frozen and new coordinates. There are real coefficients $\\alpha_f$ on live fundamental chords and a vector $z$ on the unduplicated raw forests $H_j$ such that, before restricting the frozen coordinates, $$\\begin{aligned}\n \\sum_f\\alpha_f\\pi C_f^0&=\\Delta_s+\\pi z,\n                                      \\label{back:frozen-identity}\\\\\n \\sum_f|\\alpha_f|w_f&\\le A_*\\|\\ell\\Delta_s\\|_1,\n                                      \\label{back:coefficient-bound}\\\\\n \\|z\\|_{\\mathrm{length}}&\\le A_*\\|\\ell\\Delta_s\\|_1.\n                                      \\label{back:raw-residual-bound}\n\\end{aligned}$$ Moreover $z$ is the raw-tree part of $$\\label{back:marginal-cancellation}\n \\sum_v\\bigl(\\operatorname{in}_{\\Delta_s}(v)\n                  -\\operatorname{out}_{\\Delta_s}(v)\\bigr)\\mathbb E[P(v)].$$ Consequently this description uses only upward paths starting at slots incident to new edges. If $z_L$ is the restriction of $z$ to live raw forest edges, then $$\\label{back:clipped-identity}\n             \\sum_f\\alpha_f\\pi C_f^{\\mathrm{clip}}-\\pi z_L\n                                  =\\Delta_s.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-back-frozen-decomposition"
+  },
+  {
+   "claim_id": "claim-postorder-portal-grid",
+   "exact_statement": "A forest admits a set of at most its number of vertices divided by $k$ portals such that every component remaining after portal removal has fewer than $k$ vertices. The set is constructed by one postorder traversal.",
+   "kind": "construction",
+   "statement_anchor": "stmt-back-portals"
+  },
+  {
+   "claim_id": "claim-exact-terminal-forest-compression",
+   "exact_statement": "If a vector on a forest has divergence only at a specified terminal set, it vanishes off the terminal Steiner subtrees and has constant oriented coefficient along each suppressed segment. Compression therefore preserves its gradient and its length norm exactly.",
+   "kind": "construction",
+   "statement_anchor": "stmt-back-compression"
+  },
+  {
+   "claim_id": "claim-one-level-cycle-quality-reduction",
+   "exact_statement": "In every state of an epoch, suppose the active logical path assignments use selected chords and have at most $p_*$ hops. Let $L_{\\mathrm{best}}$ be the largest local correction score <a href=\"#back:local-score\" data-reference-type=\"eqref\" data-reference=\"back:local-score\">[back:local-score]</a>, or zero if there is none. Then, for every nonzero circulation $\\Delta$ on the current nonloops, $$\\label{back:reduction-bound}\n \\frac{|\\gamma^{\\mathsf T}\\Delta|}{\\|\\ell\\Delta\\|_1}\n \\le 2Z_*A_*L_{\\mathrm{best}}+12Z_*A_*\\mathop{\\mathrm{OPT}}(J)\n \\le b^2\\max\\{L_{\\mathrm{best}},\\mathop{\\mathrm{OPT}}(J)\\}.$$ This conclusion is simultaneous for all current circulations and requires no independence between the state and the verified covers or path assignments.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-backend-reduction"
+  },
+  {
+   "claim_id": "claim-recursive-certified-cycle-quality",
+   "exact_statement": "Assume the path assignments and public forest lifting of Section <a href=\"#sec:backend-updates\" data-reference-type=\"ref\" data-reference=\"sec:backend-updates\">8</a>. The backend at level $i$ returns a certified score at least $$\\label{back:level-score}\n                    \\frac12 b^{-2(d-i)}\\mathop{\\mathrm{OPT}}_i.$$ At the outer level this is at least $M^{-10/a}\\mathop{\\mathrm{OPT}}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-back-quality-induction"
+  },
+  {
+   "claim_id": "claim-local-logical-class-edits",
+   "exact_statement": "The leg assignments of Section <a href=\"#sec:backend-quality\" data-reference-type=\"ref\" data-reference=\"sec:backend-quality\">7</a> can be maintained with logical degree at most $D_\\ell$. One input edit induces only a logarithmic factor many logical edit units across all tree–width graphs, where a unit is a class split, a pair of fragment-class births at a cluster activation, or a single chord death. Each unit involves at most $O(D_\\ell)$ incidence work. Every change to the leg of a surviving active incidence entails a split of its class.",
+   "kind": "construction",
+   "statement_anchor": "stmt-update-classes"
+  },
+  {
+   "claim_id": "claim-anchor-core-snapshot-rebuild",
+   "exact_statement": "Suppose the interval from a parent snapshot to a rebuild contains $E_0$ logical edit units in one tree–width graph. The rebuild can restore <a href=\"#update:snapshot-bounds\" data-reference-type=\"eqref\" data-reference=\"update:snapshot-bounds\">[update:snapshot-bounds]</a> using a helper instance on $O(E_0)$ incident labels. It selects at most $O(P_*E_0)$ additional central chords. The work is $$O(1+D_\\ell E_0)\\,bM^{o_a(1)},\n \\label{update:rebuild-work}$$ in addition to scanning the interval’s edit log with logarithmic overhead per tick and explicitly handled incidence.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-update-anchor-core"
+  },
+  {
+   "claim_id": "claim-cumulative-support-and-assignment-work",
+   "exact_statement": "The initial assignments use at most $h_i$ times a logarithmic factor many support chords. On every epoch prefix of $t'\\le h_i$ edits, the additional support selections number at most $bt'$ times a logarithmic factor, and local assignment work is $t'M^{O(1/a)+o_a(1)}$ after initialization. Initialization costs $n_iM^{O(1/a)+o_a(1)}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-update-support"
+  },
+  {
+   "claim_id": "claim-small-compressed-child-edits",
+   "exact_statement": "The single child graph $J$ can be initialized nonempty. Throughout an epoch it uses at most $h_ib$ times a logarithmic factor many active slots and edges, including slots assigned earlier in that epoch. On an epoch prefix of $t'$ further input edits it receives at most $bt'$ times a logarithmic factor individual edits. Its degree is a logarithmic factor, and its integral prices obey the level-$(i+1)$ bounds. The local construction work per parent edit is $M^{O(1/a)+o_a(1)}$ amortized.",
+   "kind": "construction",
+   "statement_anchor": "stmt-update-compressed-edits"
+  },
+  {
+   "claim_id": "claim-public-flat-forest-lifting",
+   "exact_statement": "The construction is a forest with valid current actual or null edge maps. A child forest-path piece lifts to at most one public forest-path piece, preserving its signed projection and with parent raw length at most its child raw length. An individual child-edge piece lifts to one path or one actual-edge piece, or can be omitted if null. The lifted sum of a child circulation is a circulation with the same gradient. The number of returned pieces is $M^{O(1/a)+o_a(1)}$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-update-flat-lift"
+  },
+  {
+   "claim_id": "claim-public-occurrence-multiplicity",
+   "exact_statement": "For all sufficiently large $M$ at fixed parameters, level $i$ has at most $D_i$ public forest vertices over each input slot. In particular the outer multiplicity is at most $M^{10/a}/4$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-update-multiplicity"
+  },
+  {
+   "claim_id": "claim-persistent-public-forest-recourse",
+   "exact_statement": "For one parent input edit within an epoch, let $Q$ be the set of child labels assigned or changed, or incident to a changed child edge or changed segment realization. Apart from local full-copy edits, the public forest can be updated in $$|Q|D_{i+1}(k+1)\\log^{O_a(1)}(2+M)\n       +\\mathcal L\\log^{O_a(1)}(2+M)\n \\label{update:recourse-cost}$$ work and public log records, where $\\mathcal L$ is the number of child log records processed. Retained arm edges at labels outside $Q$ keep their lifetimes and maps, even if their arm slot is reassigned to a different child occurrence.",
+   "kind": "construction",
+   "statement_anchor": "stmt-update-recourse"
+  },
+  {
+   "claim_id": "claim-recursive-work-and-log-bounds",
+   "exact_statement": "For a prefix of $s$ graph operations, counting queries and edits and including an operation that terminates partway through, level $i$ has total work and explicit public-log size at most $n_iA_i+sU_i$, where $$A_i,U_i=M^{O(1/a)+o_a(1)}.$$ All coefficients in the $O(1/a)$ exponents are absolute.",
+   "kind": "bound",
+   "statement_anchor": "stmt-update-recurrences"
+  },
+  {
+   "claim_id": "claim-backend-guards-and-adaptive-reliability",
+   "exact_statement": "The construction can enforce all size, multiplicity, arithmetic, and sampling prerequisites by finite checks. For every sufficiently large fixed $a$ and every fixed $\\sigma\\ge0$, those deterministic prerequisites are adequate for all sufficiently large sizes in the permitted engine range, on every random path. Conditional on any adaptively specified history before an invocation, the detected sampling failure probability over an entire engine instance is at most $2^{-\\sigma}S^{-60}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-update-reliability"
+  },
+  {
+   "claim_id": "claim-uniform-permutation-network",
+   "exact_statement": "For every power of two $s\\ge1$, there is a directed acyclic network with $s$ distinct input positions and $s$ distinct output positions, of size $O(s\\log(s+2))$, in which every permutation of inputs to outputs is routable by vertex-disjoint directed paths. A position may be both an input and an output when $s=1$. The network can be constructed uniformly within its size bound.",
+   "kind": "construction",
+   "statement_anchor": "stmt-uniform-network"
+  },
+  {
+   "claim_id": "claim-cardinality-to-perfect-matching",
+   "exact_statement": "Given $G$ and an integer $0\\le k\\le\\lfloor n/2\\rfloor$, one can construct in $O(m+n\\log(n+2))$ time a loopless graph $H_k$ of that size such that $H_k$ has a perfect matching if and only if $G$ has a matching of size $k$. A perfect matching of $H_k$ yields an explicit size-$k$ matching of $G$ in linear time in the constructed size.",
+   "kind": "construction",
+   "statement_anchor": "stmt-uniform-cardinality"
+  },
+  {
+   "claim_id": "claim-witness-preserving-subcubic-reduction",
+   "exact_statement": "A loopless graph with $v$ vertices and $e$ edges either has an isolated vertex, certifying absence of a perfect matching, or can be replaced in $O(v+e)$ time by an equivalent perfect-matching instance of maximum degree three and size $O(v+e)$. Witnesses can be converted in either direction within the same bound.",
+   "kind": "construction",
+   "statement_anchor": "stmt-uniform-degree"
+  },
+  {
+   "claim_id": "claim-fixed-branch-every-path-performance",
+   "exact_statement": "For every sufficiently large fixed $t$, branch $t$ avoids deterministic suspension on all sufficiently large inputs, on every computation path. Its total instruction count, including unsuccessful tests, threshold search, and explicit witness handling, is $$p^{1+O(1/a)+o_a(1)}.$$ The coefficient in $O(1/a)$ is absolute.",
+   "kind": "bound",
+   "statement_anchor": "stmt-uniform-fixed-branch"
+  },
+  {
+   "claim_id": "claim-single-physical-word-program",
+   "exact_statement": "The schedule is realizable by one finite program with a fixed physical word constant $c_0$. On every path, including failed paths, it halts after polynomially many instructions and uses polynomially many addressed words, with constants independent of the input.",
+   "kind": "construction",
+   "statement_anchor": "stmt-uniform-physical-ram"
+  },
+  {
+   "claim_id": "claim-uniform-prescribed-degree-factor-search",
+   "exact_statement": "There are a single uniform randomized word-RAM algorithm, fixed constants $c_f\\ge2$ and $C_f\\ge1$, and a nonincreasing function $\\eta_f:\\mathbb N_{\\ge1}\\to\\mathbb R_{\\ge0}$ with $\\eta_f(q)\\to0$ as $q\\to\\infty$ such that the following holds. The input is a simple graph $G=([n],E)$ with $n\\ge1$, $m=|E|$, and $p=n+m$, in the adjacency-list representation of Section <a href=\"#sec:introduction\" data-reference-type=\"ref\" data-reference=\"sec:introduction\">1</a>, together with one-word integers $f(v)$ satisfying $0\\le f(v)\\le\\deg_G(v)$ for all $v$. With the instruction set and costs of Section <a href=\"#sec:introduction\" data-reference-type=\"ref\" data-reference=\"sec:introduction\">1</a> and word length $w_f=\\lceil c_f\\log_2(n+2)\\rceil$, the algorithm halts on every computation path in at most $$C_f p^{1+\\eta_f(p)}$$ instructions. Every output is either an explicit edge list of a valid $f$-factor or <span class=\"nodecor\">NO</span>. If an $f$-factor exists, it returns one with probability at least $2/3$; otherwise it always returns <span class=\"nodecor\">NO</span>.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-cor-f-factor"
+  },
+  {
+   "claim_id": "claim-linearithmic-factor-to-perfect-matching",
+   "exact_statement": "For the input of Corollary <a href=\"#cor:f-factor\" data-reference-type=\"ref\" data-reference=\"cor:f-factor\">53</a>, one can construct a possibly empty simple graph $H_f$ with $|V(H_f)|+|E(H_f)|=O(m\\log(n+2))$ such that $H_f$ has a perfect matching if and only if $G$ has an $f$-factor. The construction takes $O(n+m\\log(n+2))$ word instructions and records. A perfect matching of $H_f$ yields an explicit $f$-factor within the same bound.",
+   "kind": "construction",
+   "statement_anchor": "stmt-factor-reduction"
+  }
+ ],
+ "paper": "papers/EN-114-000-0007-2-2026-PR-T4-UK-EX-M1-C-AL-H-0256_PM-120.1_Almost_Linear_Time_Maximum_Cardinality_Matching_in_General_Graphs.md",
+ "purpose": "Almost-Linear-Time Maximum-Cardinality Matching in General Graphs",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "9424185ae8d795350d3ffbafa8aefb20222fd5c42fd2ab5bd65b48876ee44fd3",
+   "pm.domains.v2": "a065c36591193b71494f179e52f22e3543ef231941f3e232103ba825e52ca5ca",
+   "pm.edges.v2": "e27851727a6ee9c3ffaead8a63cc23018c3d49fb35b2d2c52dc866bde26deda3",
+   "pm.extraction.v2": "e41e95b72eb5be34371db808331a40bd15c0252d1344fc63c63825be2205d13c",
+   "pm.formal.v2": "b65e478f476124c71720d6044731fa1f19c5d46d567a06adca4cb48550b741b9",
+   "pm.limits.v2": "0d0a487f6ad2487294029adedef314f4cc5f47fe38b096ec36774be5f479d53f",
+   "pm.node.v2": "3407c0439c9dfd91dda19dd97f91428f65c7e097913665d5e640317e688a9f3a",
+   "pm.objects.v2": "3ba4cbfbf197322e8710978d829f5d3e7e82f1289054eacd9b52dc6620227b97",
+   "pm.provenance.v2": "abdbfdda119f057f82e51551ccdb8d5382027ab40f4343dfe8e1d2a359607659",
+   "pm.quantities.v2": "3126bc4882a091ddb45d6babf15347b130a94829818ff194d2dec7731c1b168f",
+   "pm.reading.v2": "82b4348be36e7359082407315a7a6039a8ca68b8cf3abbca96fed2ce59f181fe",
+   "pm.roadmap.v2": "2ba8f5049a285d0ec66a055fb00eb70160213a729661c9a1d388500ee3906d08",
+   "pm.search.v1": "d124372329e608e25495731dd026b89384423fa535eeb3ae1d380d1ed487f6cc",
+   "pm.triptych.v2": "dd43170bdba3d1905b40dadee92ace9db4d297abc60cd706d4d7abcdb81044c9"
+  },
+  "canonical_sha256": "1ffa07cb457d7101afb6b06e907ec01dafbad5760d6b39f873ed9c9f314dc338",
+  "paper_sha256": "83104ad0ee6e5b155b5d7f3f24d8549177f52ab180ec353a9e31c11dfbb3696d",
+  "repaired_body_sha256": "003a429508559541726552618a0959b21c0c8516656b5a4a23c18eefeaedfe0f"
+ },
+ "status": "ACTIVE",
+ "subject_id": 14,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "6253f11b39d573c089b64efee3039b2e9b7a05635e0d516b37ac0890a41c7db7",
+   "receipt_sha256": "99c8f122bd31fb8b22f3486461752fa799d2e94b918b090fb36dfb6c7d2a4e81",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Listed simple undirected forest inputs with 0 <= n <= 8 and 1 <= k <= 8. For each supplied instance the oracle exhaustively enumerates all possible portal sets.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-portal-budget-and-pockets",
+     "oracle_basis": "Exact subset enumeration and edge-set component closure decide the conjunction of the portal-budget bound and strict remaining-component bound for each tested input. The vector suite does not exhaust all forests or certify the general running-time claim."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-strict-marking-threshold",
+     "observed_exit": 1,
+     "receipt_sha256": "5bfba8c65e1828b87ce3134a38f1daf22a0aba66795ed9eadcb6ad7ee311047f"
+    },
+    {
+     "id": "mutant-retained-marked-subtree-count",
+     "observed_exit": 1,
+     "receipt_sha256": "4e401c4a08f067b68ece62edefaba112217b3c7431a47f7a88912929aa71277e"
+    },
+    {
+     "id": "mutant-omitted-portal-mark",
+     "observed_exit": 1,
+     "receipt_sha256": "a9319956e1964915e6043781ffa367a4da0a41ebb8274c0748c9a7e568bcebc9"
+    }
+   ],
+   "receipt_sha256": "2cbfa17a9eba9f758550c857aada56a7f12c9f6210225622c2ba4a61b9f16de0",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Almost-Linear-Time Maximum-Cardinality Matching in General Graphs"
+}

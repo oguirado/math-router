@@ -1,0 +1,638 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1649404,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 432291
+ },
+ "coordinate": "EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-M-0397",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Probabilistic planar geometry",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-tree-thm-main",
+     "quote": "a conclusion for the uniform measure on vertices would require a separate argument.",
+     "quote_sha256": "ab39a082f7fe21a774aab312c8b27970edbe4bafb076aaca01464ab0017bd3db"
+    }
+   ],
+   "query": "Uniform vertex sampling",
+   "reason": "The stated measure is degree weighted; the uniform vertex conclusion needs a separate argument."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-tree-thm-main",
+     "quote": "No uniformity in $q$, endpoint FK statement, normalization power law, or convergence rate is asserted.",
+     "quote_sha256": "19dd414671fb5a4c47b6c538b090ae4fed91ea4b042eca449736da0a10bd0692"
+    }
+   ],
+   "query": "Explicit normalization power or convergence rate",
+   "reason": "The theorem does not assert either."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-tree-thm-main",
+     "quote": "For each fixed $q\\in(0,4)$ in the FK ensemble",
+     "quote_sha256": "fdbcfd0f03bf6756073f7dea557ada063d5bffaecb3b962a102b0bdf3e799fee"
+    }
+   ],
+   "query": "Endpoint FK parameter",
+   "reason": "The FK theorem assumes a fixed parameter in the stated open range."
+  }
+ ],
+ "family": "PM-211",
+ "id": "PM-211.6",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-tree-thm-main",
+    "claim_id": "stmt-tree-thm-main",
+    "statement": "For each fixed $q\\in(0,4)$ in the FK ensemble, and for the spanning-tree ensemble, there are deterministic positive numbers $a_n\\to0$ such that $$(V(M_n),a_nd_n,\\mu_n)\n             \\xrightarrow[n\\to\\infty]{\\mathrm{law}}\n          (S,D_h,\\mu_h)$$ in Gromov–Hausdorff–Prokhorov topology on compact metric probability spaces modulo measure-preserving isometry. The limit has the parameter specified above. Convergence holds through all positive integers $n$; the root and decoration are forgotten."
+   },
+   {
+    "anchor": "stmt-measure-criterion",
+    "claim_id": "stmt-measure-criterion",
+    "statement": "Let $(X_n,d_n,\\mu_n)$ and $(X,d,\\mu)$ be random compact metric probability spaces, with $\\mu$ almost surely of full support. Conditional on each space, sample a sequence $(x_{n,i})_{i\\geq1}$, respectively $(x_i)_{i\\geq1}$, independently with its probability measure. Suppose that, for every fixed $k$, $$(d_n(x_{n,i},x_{n,j}))_{i,j\\leq k}\n \\ \\Longrightarrow\\ (d(x_i,x_j))_{i,j\\leq k},$$ and that, for every $r>0$, $$\\label{measure:covering}\n \\lim_{k\\to\\infty}\\limsup_{n\\to\\infty}\n \\mathbb P(R_{n,k}>r)=0,\n \\qquad\n R_{n,k}:=\\sup_{z\\in X_n}\\min_{i\\leq k}d_n(z,x_{n,i}).$$ Then $(X_n,d_n,\\mu_n)$ converges in distribution to $(X,d,\\mu)$ in Gromov–Hausdorff–Prokhorov topology. Only the indicated conditional sampling laws are assumed; no joint coupling of the spaces is needed."
+   },
+   {
+    "anchor": "stmt-measure-common-completion",
+    "claim_id": "stmt-measure-common-completion",
+    "statement": "Suppose two random compact metric probability spaces with full-support measures have sample sequences which are conditionally iid in each marginal. If their labeled distance arrays agree almost surely, their unique label-preserving completion isometry preserves their measures. No conditional independence given both spaces is required."
+   },
+   {
+    "anchor": "stmt-measure-parameter",
+    "claim_id": "stmt-measure-parameter",
+    "statement": "Let $f_n:[0,1]\\to X_n$ and $f:[0,1]\\to X$ be measurable surjections onto compact metric spaces, and let their pushforwards of Lebesgue measure be $\\mu_n$ and $\\mu$. If $$e_n:=\\sup_{s,t\\in[0,1]}\n |d_n(f_n(s),f_n(t))-d(f(s),f(t))|\\longrightarrow0,$$ then $d_{\\mathrm{GHP}}((X_n,d_n,\\mu_n),(X,d,\\mu))\\leq e_n/2$."
+   },
+   {
+    "anchor": "stmt-tree-lem-diameter-center",
+    "claim_id": "stmt-tree-lem-diameter-center",
+    "statement": "For every finite real random variable $Y$, there is a unique $m(Y)\\in\\mathbb R$ satisfying $$\\label{tree:eq:sphere_arctan_center}\n                    \\mathbb E\\arctan(Y-m(Y))=0.$$ It depends only on the law of $Y$, satisfies $m(Y+c)=m(Y)+c$ for every deterministic $c\\in\\mathbb R$, and is continuous under convergence in distribution of finite real random variables."
+   },
+   {
+    "anchor": "stmt-measure-normalization",
+    "claim_id": "stmt-measure-normalization",
+    "statement": "Let $(V_n,d_n,\\mu_n)$ be random compact metric probability spaces, let $s_n>0$ be deterministic with $s_n\\to\\infty$, and let $(S,D,\\mu)$ be a random compact metric probability space whose diameter $H$ is finite and strictly positive almost surely. Suppose every subsequence has a further subsequence on which $$(V_n,d_n/s_n,\\mu_n)\\Longrightarrow(S,cD,\\mu)$$ in GHP topology, for some deterministic $c\\in(0,\\infty)$ which may depend on that further subsequence. With $m$ as in Lemma <a href=\"#measure:center\" data-reference-type=\"ref\" data-reference=\"measure:center\">[measure:center]</a>, write $H_n=\\operatorname{diam}(V_n,d_n)$ and put $$b_n=\\exp\\{m(\\log(H_n\\vee1))-m(\\log H)\\},\\qquad a_n=b_n^{-1}.$$ Then $a_n>0$, $a_n\\to0$, and $$(V_n,a_nd_n,\\mu_n)\\Longrightarrow(S,D,\\mu)$$ along the full sequence."
+   },
+   {
+    "anchor": "stmt-bg-finite-law",
+    "claim_id": "stmt-bg-finite-law",
+    "statement": "The inventory word of length $2n$ conditioned to reduce to the empty word induces the joint law proportional to $q^{\\ell(M,A)/2}$ in the statement of [thm:main](#thm:main). Conditional on the unrooted decorated map, its root corner is uniform."
+   },
+   {
+    "anchor": "stmt-bg-continuum-inputs",
+    "claim_id": "stmt-bg-continuum-inputs",
+    "statement": "After fixed deterministic changes of time and height units:*"
+   },
+   {
+    "anchor": "stmt-bg-metric-inputs",
+    "claim_id": "stmt-bg-metric-inputs",
+    "statement": "For the fixed subcritical parameter, the LQG metric $D_h$ is a continuous length metric inducing the Euclidean topology. In whole-plane GFF coordinates it is proper and geodesic, and geodesics between each fixed pair of distinct points are almost surely unique. Internal metrics are local in the field. Conformal covariance and Weyl scaling hold: adding a continuous function $f$ multiplies path length locally by $e^{\\xi f}$.*"
+   },
+   {
+    "anchor": "stmt-arm-finite-diagram-polarity",
+    "claim_id": "stmt-arm-finite-diagram-polarity",
+    "statement": "For each $\\varepsilon>0$ there are $C_\\varepsilon<\\infty$ and $\\delta_0>0$, depending on the fixed windows, $m$, $\\Sigma$, and $\\varepsilon$, such that for $0<\\delta<\\delta_0$, $$\\label{arm:finite-diagram-probability}\n \\mathbb P(\\mathcal E_G)\n \\le C_\\varepsilon\\delta^{\\beta e-m-\\varepsilon}.$$ More precisely, there are measurable events $\\mathcal F_{G,\\delta}\\supset\\mathcal E_G$ which satisfy the same bound. The constants are uniform in the law and values of the starting vectors $A_i$. Consequently $\\mathcal E_G$ has probability zero whenever $\\beta e>m$."
+   },
+   {
+    "anchor": "stmt-arm-finite-diagram-transfer",
+    "claim_id": "stmt-arm-finite-diagram-transfer",
+    "statement": "The polarity assertion of Lemma <a href=\"#arm:finite-diagram-bound\" data-reference-type=\"ref\" data-reference=\"arm:finite-diagram-bound\">[arm:finite-diagram-bound]</a> holds under every law absolutely continuous with respect to the joint law of the pieces and their starting vectors described above. Under a density bound $L\\le K$, its measurable mesh-cover events obey $$\\mathbb Q(\\mathcal F_{G,\\delta}\\cap\\{L\\le K\\})\n \\le K C_\\varepsilon\\delta^{\\beta e-m-\\varepsilon}.$$ Mere absolute continuity transfers polarity, without asserting the same polynomial bound for the mesh-cover events under the untruncated law.*"
+   },
+   {
+    "anchor": "stmt-bg-protected-atlas",
+    "claim_id": "stmt-bg-protected-atlas",
+    "statement": "On the Brownian sewing event specified in [arm:generic-chords](#arm:generic-chords), compactly confined graph observations can be exhausted by the finite charts just described. More precisely, for $K\\Subset U$, there is a countable collection of buffered chart descriptions with the following properties.*"
+   },
+   {
+    "anchor": "stmt-bg-axial-completion",
+    "claim_id": "stmt-bg-axial-completion",
+    "statement": "A finite walk in $\\mathbb Z_{\\ge0}^2$ with steps $\\{(1,0),(-1,0),(0,1),(0,-1)\\}$, starting and ending at $(0,0)$, defines an actual connected primal tree/cotree map on an oriented sphere. A down-step is matched to the most recent unmatched up-step of its own coordinate. The associated triangle and quadrangle cell complex, rather than the literal quotient of the chronological circle, is the discrete surface.*"
+   },
+   {
+    "anchor": "stmt-loc-finite-transfer",
+    "claim_id": "stmt-loc-finite-transfer",
+    "statement": "Fix a finite collection of protected time charts, fixed instructions, and measurable $E$-valued observations of their raw words and exact parameters. Extract their independent reference experiments jointly as in Equation <a href=\"#loc:reference-law\" data-reference-type=\"eqref\" data-reference=\"loc:reference-law\">[loc:reference-law]</a>. Consider either the bilateral inventory word or a finite word conditioned to be empty. In the finite case keep every chart in a strict interior time interval. Use the same time and distance units in the reference and actual experiments.*"
+   },
+   {
+    "anchor": "stmt-loc-spatial-kernels",
+    "claim_id": "stmt-loc-spatial-kernels",
+    "statement": "Let $K\\Subset U$ be a compact confinement in an open real-field domain, and let $V$ be an open imaginary-field domain containing a neighborhood of $\\overline U$. One may alternatively first replace $U$ by any relatively compact neighborhood of $K$ inside it. The limiting local certificate and universal-endpoint observations in $K$, interpreted with open loss inside $U$, have conditional kernels measurable in $$\\label{loc:local-sigma-field}\n h|_U,\\qquad h^{\\rm IG}|_V\\pmod{\\text{period}},\\qquad\n \\text{area marks in }U,\\qquad O,$$ where $O$ is the finite relative global order of the buffered local traversals needed by the observation. Conditional on the complete continuum fields, curve, and marks, observations in disjoint real-field buffers have independent kernels. The imaginary buffers may be larger and may overlap for this conditional-independence assertion.*"
+   },
+   {
+    "anchor": "stmt-common-identification",
+    "claim_id": "stmt-common-identification",
+    "statement": "Fix $\\gamma\\in[\\sqrt2,2)$ and $\\lambda>1$. Let a family of local passage laws satisfy Definition <a href=\"#common:admissible\" data-reference-type=\"ref\" data-reference=\"common:admissible\">63</a> and the reference metric inputs stated above. Suppose a law in this family has a finite positive deterministic optimal upper comparison $0<C<\\infty$, with its comparison bounds retained at its fixed quantum offsets and further extractions. Then its optimal lower comparison equals $C$, and $$F_U(x,y)=C D_h(x,y;U)$$ on every ordinary open chart $U$, with compact confinement and exhaustion as above. The multiplier $C$ is deterministic for the entire joint law. This theorem gives no estimate for a prescribed discrete endpoint."
+   },
+   {
+    "anchor": "stmt-comp-bilateral-comparison",
+    "claim_id": "stmt-comp-bilateral-comparison",
+    "statement": "For the fixed FK parameter, every sequence of bilateral time units tending to infinity has a further joint extraction, normalized by $B(n)$, with $$F_U=C D_h(\\cdot,\\cdot;U)$$ simultaneously in all strict intrinsic charts. The multiplier $C$ is deterministic for that extraction and belongs to a fixed compact subset of $(0,\\infty)$. Upper comparisons follow paths inside any open clearance; lower comparisons apply to all compactly confined certificates and use the intrinsic metric of their confinement. Also $B(n)\\to\\infty$ and Equation <a href=\"#comp:polynomial-normalization\" data-reference-type=\"eqref\" data-reference=\"comp:polynomial-normalization\">[comp:polynomial-normalization]</a> holds. This conclusion concerns crossing data and infimal continuum costs, and supplies no uniform estimate for arbitrary discrete endpoints."
+   },
+   {
+    "anchor": "stmt-arm-sorted-scalar-contacts",
+    "claim_id": "stmt-arm-sorted-scalar-contacts",
+    "statement": "Let $f$ be continuous on a compact interval containing pairwise disjoint nonempty compact intervals $I_1,\\ldots,I_m$, ordered from left to right. Choose $t_v\\in I_v$ and write $$h_v=f(t_v),\\qquad \\omega_v=\\max_{I_v}f-\\min_{I_v}f.$$ Let $G$ be a graph on these intervals, each of whose edges is witnessed by a minimum chord with one endpoint in each incident interval. Let $C$ be a connected component of $G$, and list its vertices in increasing order as $v_1,\\ldots,v_k$. For $1\\le i<k$ set $$\\label{arm:sorted-contact-errors}\n \\mu_i=\\min_{[t_{v_i},t_{v_{i+1}}]} f,\n \\qquad E_i=h_{v_i}+h_{v_{i+1}}-2\\mu_i.$$ Then $E_i\\ge0$, $$\\label{arm:sorted-contact-walls}\n |h_{v_{i+1}}-h_{v_i}|\\le E_i,\n \\qquad\n \\inf_{[t_{v_i},t_{v_{i+1}}]}f\n \\ge \\max\\{h_{v_i},h_{v_{i+1}}\\}-E_i,$$ and $$\\label{arm:sorted-contact-total}\n \\sum_{i=1}^{k-1}E_i\\le 6\\sum_{v\\in C}\\omega_v.$$ Thus the wall bound also holds on the gap between the two intervals, or on any part of that gap obtained by deleting other intervals. The same bound can be summed over all components of $G$."
+   },
+   {
+    "anchor": "stmt-arm-noncrossing-contact-forest",
+    "claim_id": "stmt-arm-noncrossing-contact-forest",
+    "statement": "In the setting of Lemma <a href=\"#arm:sorted-scalar-contacts\" data-reference-type=\"ref\" data-reference=\"arm:sorted-scalar-contacts\">107</a>, one may add minimum chords whose endpoints are among the original chord endpoints and then retain an outerplanar forest on the interval vertices with the following properties.*"
+   },
+   {
+    "anchor": "stmt-arm-projected-rank",
+    "claim_id": "stmt-arm-projected-rank",
+    "statement": "At level $j$, retain all occupied boxes, and place the projected colored chords between them, including isolated vertices. Let $c_j$ be the number of components of the union graph, let $b_j$ be the number of occupied base boxes, and let $D_j$ count active jump entries whose two endpoints lie in different level-$j$ boxes. If $e_j$ is the sum of the two monochrome graph ranks, then $$\\label{arm:rank-component-bound}\n c_j\\leq b_j+D_j,\n \\qquad e_j\\geq m_j-c_j\\geq m_j-b_j-D_j.$$ These counts are made before any sampling slots are discarded."
+   },
+   {
+    "anchor": "stmt-arm-occupancy-tail",
+    "claim_id": "stmt-arm-occupancy-tail",
+    "statement": "Put $\\beta=1/2+d_2>1$. Assume the fixed-code test of Proposition <a href=\"#arm:fixed-code-test\" data-reference-type=\"ref\" data-reference=\"arm:fixed-code-test\">121</a> in the following quantitative form: for every sufficiently small $\\zeta>0$, choose a fixed boundary tolerance sufficiently small and a fixed $R$ sufficiently large so that, once the minimum radius is sufficiently large, every *favorable admissible* decorated code $\\mathfrak c$ satisfies $$\\label{arm:required-fixed-code-bound}\n \\mathbb P\\{\\mathfrak c\\text{ is realized}\\}\n \\leq\\exp\\bigl\\{-\\beta\\lambda E(\\mathfrak c)\n          +\\zeta\\lambda T(\\mathfrak c)\n          +C_{R,\\zeta}M(\\mathfrak c)\\bigr\\}.$$ This estimate is required uniformly in the fixed displacement $U$. The realization event includes all the actual marked chord constraints. The fractional boundary deletions are absorbed into the $\\zeta\\lambda T$ term, and the structural deletions into the explicit terminal term, using the bounded number of sorted-chain charges at each deleted vertex. The fixed-code estimate includes its oscillation exceptions. No such estimate is asserted here for codes whose slots are predominantly irregular.*"
+   },
+   {
+    "anchor": "stmt-view-moore",
+    "claim_id": "stmt-view-moore",
+    "statement": "Let $L,R:[0,T]\\to[0,\\infty)$ be continuous, zero at the endpoints and strictly positive in between. On the circle $\\mathcal C=[0,T]/(0=T)$, let $\\sim_c$ be the scalar contour relation $$s\\sim_c t\\quad\\Longleftrightarrow\\quad\n c(s)=c(t)=\\min_{u\\in[s,t]}c(u),\\qquad c\\in\\{L,R\\},$$ with ordered representatives and the endpoint convention. Let $\\sim$ be the relation generated by the two scalar relations. Suppose:*"
+   },
+   {
+    "anchor": "stmt-spike-endpoint-modulus",
+    "claim_id": "stmt-spike-endpoint-modulus",
+    "statement": "Under their respective hypotheses, the chronological and spatial endpoint conclusions of Propositions <a href=\"#spike:time-modulus\" data-reference-type=\"ref\" data-reference=\"spike:time-modulus\">163</a> and <a href=\"#spike:spatial-modulus\" data-reference-type=\"ref\" data-reference=\"spike:spatial-modulus\">164</a> hold simultaneously."
+   },
+   {
+    "anchor": "stmt-tree-thm-background-mullin",
+    "claim_id": "stmt-tree-thm-background-mullin",
+    "statement": "Rooted spherical map–spanning-tree pairs with $n$ edges are in bijection with length-$2n$ axial walks starting at the origin, remaining in $\\mathbb Z_{\\geq0}^2$, and ending at the origin. The reconstruction is <a href=\"#tree:eq:discrete_tree_equivalence\" data-reference-type=\"eqref\" data-reference=\"tree:eq:discrete_tree_equivalence\">[tree:eq:discrete_tree_equivalence]</a>– <a href=\"#tree:eq:discrete_R_match\" data-reference-type=\"eqref\" data-reference=\"tree:eq:discrete_R_match\">[tree:eq:discrete_R_match]</a>, with the contour order supplying the embedding and root. Thus uniform pairs correspond exactly to the walk conditioned on this excursion event. Applying the bilateral sewing gives the uniform infinite spanning-tree decorated planar map $\\mathcal M$."
+   },
+   {
+    "anchor": "stmt-tree-thm-background-peanosphere",
+    "claim_id": "stmt-tree-thm-background-peanosphere",
+    "statement": "The following statements hold at $\\gamma=\\sqrt2$.*"
+   },
+   {
+    "anchor": "stmt-tree-thm-background-metric",
+    "claim_id": "stmt-tree-thm-background-metric",
+    "statement": "With one deterministic normalization fixed, the $\\gamma$-LQG metric $D_h$ is a measurable function of $h$, is a length metric, and induces the conformal-chart topology. Its internal metric $D_h(\\cdot,\\cdot;U)$ is determined by $h|_U$. For continuous $f$, $$\\label{tree:eq:metric_weyl}\n D_{h+f}(x,y)=\\inf_{P:x\\to y}\n   \\int_0^{\\mathop{\\mathrm{len}}(P;D_h)}e^{\\xi f(P(t))}\\,dt,$$ where the infimum is over $D_h$-rectifiable paths parameterized by $D_h$-length. For conformal $\\phi:U\\to V$, $$\\label{tree:eq:metric_covariance}\n D_{h\\circ\\phi+Q\\log|\\phi'|}(x,y;U)\n =D_h(\\phi(x),\\phi(y);V).$$ On the whole plane geodesics exist between all points, and for each fixed pair the geodesic is almost surely unique. The metric extends intrinsically to the cone and sphere; the unit-area sphere is almost surely a nondegenerate compact metric space."
+   },
+   {
+    "anchor": "stmt-tree-lem-moment-compactness",
+    "claim_id": "stmt-tree-lem-moment-compactness",
+    "statement": "Fix $K<\\infty$. Suppose $j\\geq0$ and a deterministic $B>0$ satisfy $$\\label{tree:eq:past_ratio_bound}\n \\frac{A_{j-r}}{B}\\leq K2^{-sr},\\qquad 0\\leq r\\leq j.$$ For each $T\\geq1$ there is a finite $C_T$, depending only on $T,k,s$, such that every deterministic integer interval $I$ of length $1\\leq m\\leq T2^j$ satisfies $$\\label{tree:eq:internal_diameter_bound}\n \\left\\|\\frac{\\Delta_I}{B}\\right\\|_{L^k}\n \\leq C_TK\\left(\\frac{m}{2^j}\\right)^s.$$ Put $q=s-1/k>0$. For $2^{-j}\\leq\\delta\\leq1$, set $$\\Omega_{j,T}(\\delta)=\\frac1B\n \\max\\left\\{X_{[a,b]}:\n  a,b\\in\\mathbb Z\\cap[-T2^j,T2^j],\\ 0\\leq b-a\\leq\\delta2^j\\right\\}.$$ Then $$\\label{tree:eq:uniform_time_modulus}\n \\|\\Omega_{j,T}(\\delta)\\|_{L^k}\\leq C_TK\\delta^q.$$ In particular, along any sequence $j\\to\\infty$ satisfying <a href=\"#tree:eq:past_ratio_bound\" data-reference-type=\"eqref\" data-reference=\"tree:eq:past_ratio_bound\">[tree:eq:past_ratio_bound]</a> with a common $K$, $B\\to\\infty$; the rescaled pullbacks of $d_J$, for a fixed bounded macroscopic confinement window $J$, are tight after interpolation and every limit is a continuous pseudometric. The same estimates apply on every fixed finite enlargement of the base window."
+   },
+   {
+    "anchor": "stmt-tree-thm-rigidity",
+    "claim_id": "stmt-tree-thm-rigidity",
+    "statement": "For every normalized tree law furnished by Proposition <a href=\"#tree:prop:comparison_families\" data-reference-type=\"ref\" data-reference=\"tree:prop:comparison_families\">187</a>, and every extraction of one of its controlled families after a change of units with positive limiting internal endpoint norm, the optimal constants in <a href=\"#tree:eq:rigidity_constants\" data-reference-type=\"eqref\" data-reference=\"tree:eq:rigidity_constants\">[tree:eq:rigidity_constants]</a> satisfy $c=C>0$. Almost surely, simultaneously on every open set $U$, $$F_U=C D_U.$$ In particular the metric multiplier is deterministic."
+   },
+   {
+    "anchor": "stmt-tree-prop-bootstrap",
+    "claim_id": "stmt-tree-prop-bootstrap",
+    "statement": "There are an integer $J$ and a finite deterministic $K$ such that every $j\\geq J$ satisfies <a href=\"#tree:eq:bootstrap_success\" data-reference-type=\"eqref\" data-reference=\"tree:eq:bootstrap_success\">[tree:eq:bootstrap_success]</a>, and $$\\frac{A_{j-i}}{A_j}\\leq K2^{-si}\n \\qquad(j\\geq J,\\ 0\\leq i\\leq j).\n \\label{tree:eq:bootstrap_allscale_bound}$$ In particular, $A_j\\to\\infty$. Every sequence $j_r\\to\\infty$ has a subsequence whose joint normalized data converge to a law in $\\mathcal R$."
+   },
+   {
+    "anchor": "stmt-tree-thm-bilateral-limit",
+    "claim_id": "stmt-tree-thm-bilateral-limit",
+    "statement": "For a positive integer $N$ set $$j(N)=\\lfloor\\log_2 N\\rfloor,\\qquad B_N=A_{j(N)}.$$ Then $B_N\\to\\infty$. From every sequence $N_r\\to\\infty$ one can extract a subsequence such that the bilateral contours and all their local certificate data, in time units $N_r$ and cost units $B_{N_r}$, converge jointly. The continuum background is the fixed-unit $\\sqrt2$-quantum cone decorated by its area-parametrized $\\mathrm{SLE}_8$. For one deterministic $$\\lambda\\in[C_-,2^p C_+],\n \\label{tree:eq:bootstrap_lambda_range}$$ its limiting local passage rule is $$F_U(x,y)=\\lambda D_h(x,y;U)\n \\label{tree:eq:bootstrap_bilateral_identification}$$ for every open $U$ and every $x,y$ joined by a path compactly in $U$. The equality uses the internal length metric on $U$, equivalently exhaustion by compactly confined paths, and includes the upper realization and lower subpath-extraction assertions with open margins.*"
+   },
+   {
+    "anchor": "stmt-finite-profile",
+    "claim_id": "stmt-finite-profile",
+    "statement": "Let $(V,\\delta)$ be a finite graph with its length metric. Let $C\\subset V$ meet every path from $v$ to each of the vertices $x_1,\\ldots,x_k$, and put $e=\\delta(v,C)$. Then $$e+\\inf_{z\\in C}\\delta(z,x_i)\n \\le \\delta(v,x_i)\n \\le e+\\sup_{z\\in C}\\delta(z,x_i).$$ In particular, if $\\sup_{z\\in C}|\\delta(z,x_i)-a_i|\\le t$ for each $i$, then $$|(\\delta(v,x_i)-\\delta(v,x_1))-(a_i-a_1)|\\le2t .$$ The last bound is independent of $e$."
+   },
+   {
+    "anchor": "stmt-finite-metric-nets",
+    "claim_id": "stmt-finite-metric-nets",
+    "statement": "For every $\\varepsilon>0$, $$\\lim_{k\\to\\infty}\\limsup_{n\\to\\infty}\n \\mathbb P\\!\\left[\n   \\max_{v\\in V(M_n)}\\min_{1\\le i\\le k}\n       \\delta_n(v,X_n^i)>\\varepsilon\n \\right]=0$$ along the selected subsequence."
+   },
+   {
+    "anchor": "stmt-finite-full-sequence",
+    "claim_id": "stmt-finite-full-sequence",
+    "statement": "The numbers in Equation <a href=\"#finite:normalization\" data-reference-type=\"eqref\" data-reference=\"finite:normalization\">[finite:normalization]</a> satisfy $a_n(q)>0$, $a_n(q)\\to0$, and $$(V(M_n),a_n(q)d_n,\\mu_n)\n                    \\ \\Longrightarrow\\ (S,D_h,\\mu_h)$$ in Gromov–Hausdorff–Prokhorov topology as $n\\to\\infty$ through all positive integers."
+   },
+   {
+    "anchor": "stmt-tree-lem-tour-measure",
+    "claim_id": "stmt-tree-lem-tour-measure",
+    "statement": "Let $v_i$ be the primal vertex represented by contour time $i$, with $v_N=v_0$. Then, for every $v\\in V(M_n)$, $$\\label{tree:eq:tour_degree}\n \\#\\{0\\leq i<N:v_i=v\\}=\\deg_{M_n}(v).$$ Consequently, if $$\\mu_n=\\frac1{2n}\\sum_{v\\in V(M_n)}\\deg_{M_n}(v)\\,\\delta_v,\n \\qquad f_n(t)=v_{\\lfloor Nt\\rfloor},\\quad 0\\leq t\\leq1,$$ then $(f_n)_*\\mathrm{Leb}_{[0,1]}=\\mu_n$. Conditional on the map, independent uniform times give independent samples from $\\mu_n$."
+   },
+   {
+    "anchor": "stmt-tree-prop-sphere-identification",
+    "claim_id": "stmt-tree-prop-sphere-identification",
+    "statement": "For every sequence of positive integers $n\\to\\infty$, there is a further subsequence and a deterministic $\\Lambda\\in(0,\\infty)$ such that $$\\label{tree:eq:sphere_preliminary_limit}\n        (V(M_n),B_{2n}^{-1}d_n,\\mu_n)\n              \\ \\Rightarrow\\ (S,\\Lambda D_h,\\mu_h)$$ in the Gromov–Hausdorff–Prokhorov topology. The constants $\\Lambda$ lie in a fixed deterministic compact subset of $(0,\\infty)$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Measured quantum sphere limit",
+    "evidence": [
+     {
+      "anchor": "pm-h-5",
+      "quote": "The common objective is to identify local graph distances, control every vertex, and then retain the measure under the passage to the limit.",
+      "quote_sha256": "7d3b0a9e8e07a553e160c2d9e496e518d986771fdb08e96eae95f7790612ec40"
+     }
+    ],
+    "requires_concepts": [
+     "Local passage identification",
+     "Endpoint control",
+     "Sampling measure retention"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "stmt-tree-thm-main",
+   "exact_statement": "(Metric and measure convergence). *<span id=\"thm:main\" label=\"thm:main\"></span>For each fixed $q\\in(0,4)$ in the FK ensemble, and for the spanning-tree ensemble, there are deterministic positive numbers $a_n\\to0$ such that $$(V(M_n),a_nd_n,\\mu_n) \\xrightarrow[n\\to\\infty]{\\mathrm{law}} (S,D_h,\\mu_h)$$ in Gromov–Hausdorff–Prokhorov topology on compact metric probability spaces modulo measure-preserving isometry. The limit has the parameter specified above. Convergence holds through all positive integers $n$; the root and decoration are forgotten.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tree-thm-main"
+  },
+  {
+   "claim_id": "stmt-measure-criterion",
+   "exact_statement": "Let $(X_n,d_n,\\mu_n)$ and $(X,d,\\mu)$ be random compact metric probability spaces, with $\\mu$ almost surely of full support. Conditional on each space, sample a sequence $(x_{n,i})_{i\\geq1}$, respectively $(x_i)_{i\\geq1}$, independently with its probability measure. Suppose that, for every fixed $k$, $$(d_n(x_{n,i},x_{n,j}))_{i,j\\leq k}\n \\ \\Longrightarrow\\ (d(x_i,x_j))_{i,j\\leq k},$$ and that, for every $r>0$, $$\\label{measure:covering}\n \\lim_{k\\to\\infty}\\limsup_{n\\to\\infty}\n \\mathbb P(R_{n,k}>r)=0,\n \\qquad\n R_{n,k}:=\\sup_{z\\in X_n}\\min_{i\\leq k}d_n(z,x_{n,i}).$$ Then $(X_n,d_n,\\mu_n)$ converges in distribution to $(X,d,\\mu)$ in Gromov–Hausdorff–Prokhorov topology. Only the indicated conditional sampling laws are assumed; no joint coupling of the spaces is needed.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-measure-criterion"
+  },
+  {
+   "claim_id": "stmt-measure-common-completion",
+   "exact_statement": "Suppose two random compact metric probability spaces with full-support measures have sample sequences which are conditionally iid in each marginal. If their labeled distance arrays agree almost surely, their unique label-preserving completion isometry preserves their measures. No conditional independence given both spaces is required.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-measure-common-completion"
+  },
+  {
+   "claim_id": "stmt-measure-parameter",
+   "exact_statement": "Let $f_n:[0,1]\\to X_n$ and $f:[0,1]\\to X$ be measurable surjections onto compact metric spaces, and let their pushforwards of Lebesgue measure be $\\mu_n$ and $\\mu$. If $$e_n:=\\sup_{s,t\\in[0,1]}\n |d_n(f_n(s),f_n(t))-d(f(s),f(t))|\\longrightarrow0,$$ then $d_{\\mathrm{GHP}}((X_n,d_n,\\mu_n),(X,d,\\mu))\\leq e_n/2$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-measure-parameter"
+  },
+  {
+   "claim_id": "stmt-tree-lem-diameter-center",
+   "exact_statement": "(A continuous translation-equivariant center). *<span id=\"measure:center\" label=\"measure:center\"></span> For every finite real random variable $Y$, there is a unique $m(Y)\\in\\mathbb R$ satisfying $$\\label{tree:eq:sphere_arctan_center} \\mathbb E\\arctan(Y-m(Y))=0.$$ It depends only on the law of $Y$, satisfies $m(Y+c)=m(Y)+c$ for every deterministic $c\\in\\mathbb R$, and is continuous under convergence in distribution of finite real random variables.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tree-lem-diameter-center"
+  },
+  {
+   "claim_id": "stmt-measure-normalization",
+   "exact_statement": "Let $(V_n,d_n,\\mu_n)$ be random compact metric probability spaces, let $s_n>0$ be deterministic with $s_n\\to\\infty$, and let $(S,D,\\mu)$ be a random compact metric probability space whose diameter $H$ is finite and strictly positive almost surely. Suppose every subsequence has a further subsequence on which $$(V_n,d_n/s_n,\\mu_n)\\Longrightarrow(S,cD,\\mu)$$ in GHP topology, for some deterministic $c\\in(0,\\infty)$ which may depend on that further subsequence. With $m$ as in Lemma <a href=\"#measure:center\" data-reference-type=\"ref\" data-reference=\"measure:center\">[measure:center]</a>, write $H_n=\\operatorname{diam}(V_n,d_n)$ and put $$b_n=\\exp\\{m(\\log(H_n\\vee1))-m(\\log H)\\},\\qquad a_n=b_n^{-1}.$$ Then $a_n>0$, $a_n\\to0$, and $$(V_n,a_nd_n,\\mu_n)\\Longrightarrow(S,D,\\mu)$$ along the full sequence.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-measure-normalization"
+  },
+  {
+   "claim_id": "stmt-bg-finite-law",
+   "exact_statement": "The inventory word of length $2n$ conditioned to reduce to the empty word induces the joint law proportional to $q^{\\ell(M,A)/2}$ in the statement of [thm:main](#thm:main). Conditional on the unrooted decorated map, its root corner is uniform.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-bg-finite-law"
+  },
+  {
+   "claim_id": "stmt-bg-continuum-inputs",
+   "exact_statement": "After fixed deterministic changes of time and height units:*\n\n1.  *The bilateral resolved contour, viewed at time scale $m$ and height scale $\\sqrt m$, converges locally uniformly in law to a two-dimensional Brownian motion with equal coordinate variances and correlation $\\rho$. The empty-word contour at total time $2n$, with total rescaled time one, converges to the corresponding quadrant excursion from zero to zero.*\n\n2.  *The bilateral Brownian contour determines a curve-decorated $\\gamma$-quantum cone. Its curve $\\eta:\\mathbb R\\to\\mathbb C$ is continuous, transient, space filling, and parameterized by quantum area. The excursion determines the ordinary unit-area DMS quantum sphere with its area-parameterized space-filling curve. The latter sphere is the quantum-sphere measure disintegrated at area one.*\n\n3.  *The spatial equivalence relation of the sewing is generated by finite chains of scalar horizontal chords. For a scalar coordinate $X$, a horizontal chord joins $s<t$ if $$X(s)=X(t)=\\inf_{[s,t]}X.$$ At the deterministic or independently sampled cuts used below, the two boundary strands are contour-tree lineages parameterized by quantum boundary length. In the cone coupling, the intrinsic decorated surface of each fixed bounded time interval is determined by its contour increments. This assertion may be used simultaneously for a countable collection of deterministic cuts or cuts sampled independently of the surface, and for later selection among that collection.*\n\n4.  *On a buffered spatial patch, the imaginary field determines its directed local traversals and their frontier flow lines. Together with the real field and local Poisson area marks, these determine the clocked local pieces, their incoming and outgoing sides, and the quantum lengths of the local frontier arcs. This statement does not determine the global order of separate traversals.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bg-continuum-inputs"
+  },
+  {
+   "claim_id": "stmt-bg-metric-inputs",
+   "exact_statement": "For the fixed subcritical parameter, the LQG metric $D_h$ is a continuous length metric inducing the Euclidean topology. In whole-plane GFF coordinates it is proper and geodesic, and geodesics between each fixed pair of distinct points are almost surely unique. Internal metrics are local in the field. Conformal covariance and Weyl scaling hold: adding a continuous function $f$ multiplies path length locally by $e^{\\xi f}$.*\n\n*For a compact set $K$ in an ordinary field chart and $0<\\chi<\\xi(Q-2)$, there are almost surely finite random constants controlling connections between nearby points of $K$ inside Euclidean balls of a fixed multiple of their separation by $C|z-w|^\\chi$. The corresponding internal diameters of small dyadic squares, with a bounded enlargement still in the chart, have the same type of bound. Fixed boxes of bounded aspect ratio admit access to their flat faces by completion of the internal metric.*\n\n*In whole-plane GFF coordinates, strong confluence holds simultaneously for all geodesics: an interior segment of any geodesic persists in all geodesics whose endpoints sufficiently closely approximate slightly longer interior subsegments. The same local assertion holds for short geodesic subarcs in buffered ordinary surface charts. In particular, every nonempty open geodesic subarc contains a segment of a geodesic between points of a deterministic countable dense set.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bg-metric-inputs"
+  },
+  {
+   "claim_id": "stmt-arm-finite-diagram-polarity",
+   "exact_statement": "(Finite-cell Brownian diagram bound). *<span id=\"arm:finite-diagram-bound\" label=\"arm:finite-diagram-bound\"></span> For each $\\varepsilon>0$ there are $C_\\varepsilon<\\infty$ and $\\delta_0>0$, depending on the fixed windows, $m$, $\\Sigma$, and $\\varepsilon$, such that for $0<\\delta<\\delta_0$, $$\\label{arm:finite-diagram-probability} \\mathbb P(\\mathcal E_G) \\le C_\\varepsilon\\delta^{\\beta e-m-\\varepsilon}.$$ More precisely, there are measurable events $\\mathcal F_{G,\\delta}\\supset\\mathcal E_G$ which satisfy the same bound. The constants are uniform in the law and values of the starting vectors $A_i$. Consequently $\\mathcal E_G$ has probability zero whenever $\\beta e>m$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arm-finite-diagram-polarity"
+  },
+  {
+   "claim_id": "stmt-arm-finite-diagram-transfer",
+   "exact_statement": "The polarity assertion of Lemma <a href=\"#arm:finite-diagram-bound\" data-reference-type=\"ref\" data-reference=\"arm:finite-diagram-bound\">[arm:finite-diagram-bound]</a> holds under every law absolutely continuous with respect to the joint law of the pieces and their starting vectors described above. Under a density bound $L\\le K$, its measurable mesh-cover events obey $$\\mathbb Q(\\mathcal F_{G,\\delta}\\cap\\{L\\le K\\})\n \\le K C_\\varepsilon\\delta^{\\beta e-m-\\varepsilon}.$$ Mere absolute continuity transfers polarity, without asserting the same polynomial bound for the mesh-cover events under the untruncated law.*\n\n\n*Suppose a collection of eligible time points has a scalar chord relation in each color, and every fixed finite family of pairwise separated enlarged windows about distinct eligible points has this joint absolute-continuity property. Assume also that every tested finite chord diagram is realized by a continuous completion in a fixed order of those windows, or one of finitely many such orders. Then, almost surely, every class generated by the two chord relations has at most $$\\label{arm:finite-class-bound}\n \\left\\lfloor\\frac{\\beta}{\\beta-1}\\right\\rfloor$$ distinct eligible points, provided each finite connected subdiagram of that class uses only eligible points and can be localized in a countable family of such windows.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arm-finite-diagram-transfer"
+  },
+  {
+   "claim_id": "stmt-bg-protected-atlas",
+   "exact_statement": "On the Brownian sewing event specified in [arm:generic-chords](#arm:generic-chords), compactly confined graph observations can be exhausted by the finite charts just described. More precisely, for $K\\Subset U$, there is a countable collection of buffered chart descriptions with the following properties.*\n\n1.  *Every graph path with projected range in $K$, and every finite collection of its marked subpaths, is eventually represented in one of these charts. The same holds for the universal endpoint observations with an open confinement loss.*\n\n2.  *Within the compact confinement, the reconstructed chart has exactly the primal incidences of the original graph for all sufficiently large scales. No unrecorded minimum in an omitted gap is used to decide one of these incidences.*\n\n3.  *The continuous block input, relevant forest differences, and allowed local gluing bands are measurable from the directed local traversals, frontier lengths, and the finite global traversal order. Exterior flexible decisions are treated by the buffered comparison instructions of [loc:finite-instructions](#loc:finite-instructions), [loc:first-error](#loc:first-error).*\n\n4.  *Disjoint spatial buffers use disjoint raw blocks and distinct local observations. The countable atlas can be refined to accommodate any prescribed finite collection of observations.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-bg-protected-atlas"
+  },
+  {
+   "claim_id": "stmt-bg-axial-completion",
+   "exact_statement": "A finite walk in $\\mathbb Z_{\\ge0}^2$ with steps $\\{(1,0),(-1,0),(0,1),(0,-1)\\}$, starting and ending at $(0,0)$, defines an actual connected primal tree/cotree map on an oriented sphere. A down-step is matched to the most recent unmatched up-step of its own coordinate. The associated triangle and quadrangle cell complex, rather than the literal quotient of the chronological circle, is the discrete surface.*\n\n*For lattice endpoints $a,b$, an axial filler of $m$ steps is possible only if $$m\\ge \\lVert b-a\\rVert_1,\n \\qquad m\\equiv(b_1-a_1)+(b_2-a_2)\\pmod 2.$$ These conditions are sufficient with a nonnegative filler when both endpoints are nonnegative. Moreover, a continuous filler which is positive on its open time interval can be uniformly approximated, under height scale $\\sqrt n$ and time scale $n$, by such fillers of prescribed positive macroscopic duration and compatible rounded endpoints. Strict positivity holds on every fixed interior time compact for all sufficiently large $n$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-bg-axial-completion"
+  },
+  {
+   "claim_id": "stmt-loc-finite-transfer",
+   "exact_statement": "(Common conditional kernels on fixed charts). *<span id=\"loc:fixed-chart-kernels\" label=\"loc:fixed-chart-kernels\"></span>Fix a finite collection of protected time charts, fixed instructions, and measurable $E$-valued observations of their raw words and exact parameters. Extract their independent reference experiments jointly as in Equation <a href=\"#loc:reference-law\" data-reference-type=\"eqref\" data-reference=\"loc:reference-law\">[loc:reference-law]</a>. Consider either the bilateral inventory word or a finite word conditioned to be empty. In the finite case keep every chart in a strict interior time interval. Use the same time and distance units in the reference and actual experiments.* *In every joint subsequential limit, conditional on the complete limiting contours, the retained cuts and marks locating the charts, and any independently adjoined surface-coordinate data, the observations have the reference kernels evaluated at their chart inputs. For charts in disjoint spatial buffers these kernels are conditionally independent. The assertion includes the universal endpoint observations, not only existential path certificates.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-loc-finite-transfer"
+  },
+  {
+   "claim_id": "stmt-loc-spatial-kernels",
+   "exact_statement": "Let $K\\Subset U$ be a compact confinement in an open real-field domain, and let $V$ be an open imaginary-field domain containing a neighborhood of $\\overline U$. One may alternatively first replace $U$ by any relatively compact neighborhood of $K$ inside it. The limiting local certificate and universal-endpoint observations in $K$, interpreted with open loss inside $U$, have conditional kernels measurable in $$\\label{loc:local-sigma-field}\n h|_U,\\qquad h^{\\rm IG}|_V\\pmod{\\text{period}},\\qquad\n \\text{area marks in }U,\\qquad O,$$ where $O$ is the finite relative global order of the buffered local traversals needed by the observation. Conditional on the complete continuum fields, curve, and marks, observations in disjoint real-field buffers have independent kernels. The imaginary buffers may be larger and may overlap for this conditional-independence assertion.*\n\n*The kernels are intrinsic under changes of the quantum-surface coordinate representation. They are the same in the bilateral and strict-interior finite-excursion experiments with common time and distance units. No fixed positive separation between the test and the real-field boundary is required uniformly across all applications: any prescribed $K\\Subset U$ is allowed before taking the limit.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-loc-spatial-kernels"
+  },
+  {
+   "claim_id": "stmt-common-identification",
+   "exact_statement": "Fix $\\gamma\\in[\\sqrt2,2)$ and $\\lambda>1$. Let a family of local passage laws satisfy Definition <a href=\"#common:admissible\" data-reference-type=\"ref\" data-reference=\"common:admissible\">63</a> and the reference metric inputs stated above. Suppose a law in this family has a finite positive deterministic optimal upper comparison $0<C<\\infty$, with its comparison bounds retained at its fixed quantum offsets and further extractions. Then its optimal lower comparison equals $C$, and $$F_U(x,y)=C D_h(x,y;U)$$ on every ordinary open chart $U$, with compact confinement and exhaustion as above. The multiplier $C$ is deterministic for the entire joint law. This theorem gives no estimate for a prescribed discrete endpoint.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-common-identification"
+  },
+  {
+   "claim_id": "stmt-comp-bilateral-comparison",
+   "exact_statement": "For the fixed FK parameter, every sequence of bilateral time units tending to infinity has a further joint extraction, normalized by $B(n)$, with $$F_U=C D_h(\\cdot,\\cdot;U)$$ simultaneously in all strict intrinsic charts. The multiplier $C$ is deterministic for that extraction and belongs to a fixed compact subset of $(0,\\infty)$. Upper comparisons follow paths inside any open clearance; lower comparisons apply to all compactly confined certificates and use the intrinsic metric of their confinement. Also $B(n)\\to\\infty$ and Equation <a href=\"#comp:polynomial-normalization\" data-reference-type=\"eqref\" data-reference=\"comp:polynomial-normalization\">[comp:polynomial-normalization]</a> holds. This conclusion concerns crossing data and infimal continuum costs, and supplies no uniform estimate for arbitrary discrete endpoints.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-comp-bilateral-comparison"
+  },
+  {
+   "claim_id": "stmt-arm-sorted-scalar-contacts",
+   "exact_statement": "Let $f$ be continuous on a compact interval containing pairwise disjoint nonempty compact intervals $I_1,\\ldots,I_m$, ordered from left to right. Choose $t_v\\in I_v$ and write $$h_v=f(t_v),\\qquad \\omega_v=\\max_{I_v}f-\\min_{I_v}f.$$ Let $G$ be a graph on these intervals, each of whose edges is witnessed by a minimum chord with one endpoint in each incident interval. Let $C$ be a connected component of $G$, and list its vertices in increasing order as $v_1,\\ldots,v_k$. For $1\\le i<k$ set $$\\label{arm:sorted-contact-errors}\n \\mu_i=\\min_{[t_{v_i},t_{v_{i+1}}]} f,\n \\qquad E_i=h_{v_i}+h_{v_{i+1}}-2\\mu_i.$$ Then $E_i\\ge0$, $$\\label{arm:sorted-contact-walls}\n |h_{v_{i+1}}-h_{v_i}|\\le E_i,\n \\qquad\n \\inf_{[t_{v_i},t_{v_{i+1}}]}f\n \\ge \\max\\{h_{v_i},h_{v_{i+1}}\\}-E_i,$$ and $$\\label{arm:sorted-contact-total}\n \\sum_{i=1}^{k-1}E_i\\le 6\\sum_{v\\in C}\\omega_v.$$ Thus the wall bound also holds on the gap between the two intervals, or on any part of that gap obtained by deleting other intervals. The same bound can be summed over all components of $G$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arm-sorted-scalar-contacts"
+  },
+  {
+   "claim_id": "stmt-arm-noncrossing-contact-forest",
+   "exact_statement": "In the setting of Lemma <a href=\"#arm:sorted-scalar-contacts\" data-reference-type=\"ref\" data-reference=\"arm:sorted-scalar-contacts\">107</a>, one may add minimum chords whose endpoints are among the original chord endpoints and then retain an outerplanar forest on the interval vertices with the following properties.*\n\n1.  *The forest has one tree in each component of the enlarged chord graph. Every original graph component is contained in one of these components.*\n\n2.  *Every forest edge is witnessed by a genuine minimum chord.*\n\n3.  *The vertices occur on the outer boundary in their time order. There are at most $32^m$ possible simple forests of this form on $m$ prescribed ordered vertices.*\n\n*If the construction is applied to the endpoints belonging to a single original connected component, it produces a noncrossing spanning tree on exactly that component’s vertices. Forests obtained separately in this way need not be noncrossing with one another.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arm-noncrossing-contact-forest"
+  },
+  {
+   "claim_id": "stmt-arm-projected-rank",
+   "exact_statement": "At level $j$, retain all occupied boxes, and place the projected colored chords between them, including isolated vertices. Let $c_j$ be the number of components of the union graph, let $b_j$ be the number of occupied base boxes, and let $D_j$ count active jump entries whose two endpoints lie in different level-$j$ boxes. If $e_j$ is the sum of the two monochrome graph ranks, then $$\\label{arm:rank-component-bound}\n c_j\\leq b_j+D_j,\n \\qquad e_j\\geq m_j-c_j\\geq m_j-b_j-D_j.$$ These counts are made before any sampling slots are discarded.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arm-projected-rank"
+  },
+  {
+   "claim_id": "stmt-arm-occupancy-tail",
+   "exact_statement": "Put $\\beta=1/2+d_2>1$. Assume the fixed-code test of Proposition <a href=\"#arm:fixed-code-test\" data-reference-type=\"ref\" data-reference=\"arm:fixed-code-test\">121</a> in the following quantitative form: for every sufficiently small $\\zeta>0$, choose a fixed boundary tolerance sufficiently small and a fixed $R$ sufficiently large so that, once the minimum radius is sufficiently large, every *favorable admissible* decorated code $\\mathfrak c$ satisfies $$\\label{arm:required-fixed-code-bound}\n \\mathbb P\\{\\mathfrak c\\text{ is realized}\\}\n \\leq\\exp\\bigl\\{-\\beta\\lambda E(\\mathfrak c)\n          +\\zeta\\lambda T(\\mathfrak c)\n          +C_{R,\\zeta}M(\\mathfrak c)\\bigr\\}.$$ This estimate is required uniformly in the fixed displacement $U$. The realization event includes all the actual marked chord constraints. The fractional boundary deletions are absorbed into the $\\zeta\\lambda T$ term, and the structural deletions into the explicit terminal term, using the bounded number of sorted-chain charges at each deleted vertex. The fixed-code estimate includes its oscillation exceptions. No such estimate is asserted here for codes whose slots are predominantly irregular.*\n\n\n*Then there are $C,c,C_1>0$, independent of any fixed finite exploration cutoff, such that for all sufficiently large $N$ and all $u\\geq0$, $$\\label{arm:occupancy-exponential-tail}\n \\mathbb P\\{A\\geq CN+u\\}\n \\leq C_1\\exp(-cN-cu).$$ The estimate holds for any word-dependent selection of witness lists made before $U$. It also holds for a fixed reference grid, and with $A$ replaced by its maximum over grid displacements. The threshold in “sufficiently large” may depend on the fixed exploration cutoff. If Equation <a href=\"#arm:address-tilt\" data-reference-type=\"eqref\" data-reference=\"arm:address-tilt\">[arm:address-tilt]</a> holds, then $$\\label{arm:occupancy-tilted-mean}\n \\mathbb E_{\\mathbb Q_N}A=O(N).$$ The corresponding code has length at most a deterministic constant times $N$ with $\\mathbb Q_N$-probability tending to one. At an independently and uniformly sampled level $j\\in\\{0,\\ldots,J\\}$, $\\mathbb E_{\\mathbb Q_N}m_j=O(1)$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-arm-occupancy-tail"
+  },
+  {
+   "claim_id": "stmt-view-moore",
+   "exact_statement": "Let $L,R:[0,T]\\to[0,\\infty)$ be continuous, zero at the endpoints and strictly positive in between. On the circle $\\mathcal C=[0,T]/(0=T)$, let $\\sim_c$ be the scalar contour relation $$s\\sim_c t\\quad\\Longleftrightarrow\\quad\n c(s)=c(t)=\\min_{u\\in[s,t]}c(u),\\qquad c\\in\\{L,R\\},$$ with ordered representatives and the endpoint convention. Let $\\sim$ be the relation generated by the two scalar relations. Suppose:*\n\n1.  *a finite constant $M$ bounds the cardinality of every $\\sim$-class;*\n\n2.  *for every $\\sim$-class $E$, the bipartite multigraph with vertices the $L$-classes and the $R$-classes in $E$, and one edge for each $t\\in E$ joining its two scalar classes, is a tree.*\n\n*Then $\\mathcal C/\\sim$ is homeomorphic to the sphere. The quotient map is continuous and its fibers are exactly the $\\sim$-classes.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-view-moore"
+  },
+  {
+   "claim_id": "stmt-spike-endpoint-modulus",
+   "exact_statement": "Under their respective hypotheses, the chronological and spatial endpoint conclusions of Propositions <a href=\"#spike:time-modulus\" data-reference-type=\"ref\" data-reference=\"spike:time-modulus\">163</a> and <a href=\"#spike:spatial-modulus\" data-reference-type=\"ref\" data-reference=\"spike:spatial-modulus\">164</a> hold simultaneously.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-spike-endpoint-modulus"
+  },
+  {
+   "claim_id": "stmt-tree-thm-background-mullin",
+   "exact_statement": "Rooted spherical map–spanning-tree pairs with $n$ edges are in bijection with length-$2n$ axial walks starting at the origin, remaining in $\\mathbb Z_{\\geq0}^2$, and ending at the origin. The reconstruction is <a href=\"#tree:eq:discrete_tree_equivalence\" data-reference-type=\"eqref\" data-reference=\"tree:eq:discrete_tree_equivalence\">[tree:eq:discrete_tree_equivalence]</a>– <a href=\"#tree:eq:discrete_R_match\" data-reference-type=\"eqref\" data-reference=\"tree:eq:discrete_R_match\">[tree:eq:discrete_R_match]</a>, with the contour order supplying the embedding and root. Thus uniform pairs correspond exactly to the walk conditioned on this excursion event. Applying the bilateral sewing gives the uniform infinite spanning-tree decorated planar map $\\mathcal M$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tree-thm-background-mullin"
+  },
+  {
+   "claim_id": "stmt-tree-thm-background-peanosphere",
+   "exact_statement": "The following statements hold at $\\gamma=\\sqrt2$.*\n\n1.  *A $\\gamma$-quantum cone decorated by an independent space-filling $\\mathrm{SLE}_8$ curve $\\eta$, subsequently parameterized by $\\mu_h$-area with $\\eta(0)=0$, has a bilateral boundary-length process $Z=(L,R)$ with independent Brownian coordinates. The process determines the decorated quantum surface up to its conformal coordinate equivalence.*\n\n2.  *For the ordinary unit-area sphere, the corresponding area-parameterized curve has duration one, with $\\eta(0)=\\eta(1)$, and its boundary-length process consists of two independent Brownian excursions. It determines the decorated sphere.*\n\n3.  *On the cone, for a deterministic finite interval $[a,b]$, the restricted increments $(Z_t-Z_a)_{a\\leq t\\leq b}$ determine the abstract quantum surface $\\eta([a,b])$, its restricted curve, and its incoming and outgoing boundary arcs with their quantum lengths. The determination is modulo conformal maps. Abstract decorated surfaces from disjoint bilateral intervals are independent. For the sphere, the same reconstruction holds on $[\\delta,1-\\delta]$ for every fixed $0<\\delta<1/2$, with its excursion increment law.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tree-thm-background-peanosphere"
+  },
+  {
+   "claim_id": "stmt-tree-thm-background-metric",
+   "exact_statement": "With one deterministic normalization fixed, the $\\gamma$-LQG metric $D_h$ is a measurable function of $h$, is a length metric, and induces the conformal-chart topology. Its internal metric $D_h(\\cdot,\\cdot;U)$ is determined by $h|_U$. For continuous $f$, $$\\label{tree:eq:metric_weyl}\n D_{h+f}(x,y)=\\inf_{P:x\\to y}\n   \\int_0^{\\mathop{\\mathrm{len}}(P;D_h)}e^{\\xi f(P(t))}\\,dt,$$ where the infimum is over $D_h$-rectifiable paths parameterized by $D_h$-length. For conformal $\\phi:U\\to V$, $$\\label{tree:eq:metric_covariance}\n D_{h\\circ\\phi+Q\\log|\\phi'|}(x,y;U)\n =D_h(\\phi(x),\\phi(y);V).$$ On the whole plane geodesics exist between all points, and for each fixed pair the geodesic is almost surely unique. The metric extends intrinsically to the cone and sphere; the unit-area sphere is almost surely a nondegenerate compact metric space.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tree-thm-background-metric"
+  },
+  {
+   "claim_id": "stmt-tree-lem-moment-compactness",
+   "exact_statement": "Fix $K<\\infty$. Suppose $j\\geq0$ and a deterministic $B>0$ satisfy $$\\label{tree:eq:past_ratio_bound}\n \\frac{A_{j-r}}{B}\\leq K2^{-sr},\\qquad 0\\leq r\\leq j.$$ For each $T\\geq1$ there is a finite $C_T$, depending only on $T,k,s$, such that every deterministic integer interval $I$ of length $1\\leq m\\leq T2^j$ satisfies $$\\label{tree:eq:internal_diameter_bound}\n \\left\\|\\frac{\\Delta_I}{B}\\right\\|_{L^k}\n \\leq C_TK\\left(\\frac{m}{2^j}\\right)^s.$$ Put $q=s-1/k>0$. For $2^{-j}\\leq\\delta\\leq1$, set $$\\Omega_{j,T}(\\delta)=\\frac1B\n \\max\\left\\{X_{[a,b]}:\n  a,b\\in\\mathbb Z\\cap[-T2^j,T2^j],\\ 0\\leq b-a\\leq\\delta2^j\\right\\}.$$ Then $$\\label{tree:eq:uniform_time_modulus}\n \\|\\Omega_{j,T}(\\delta)\\|_{L^k}\\leq C_TK\\delta^q.$$ In particular, along any sequence $j\\to\\infty$ satisfying <a href=\"#tree:eq:past_ratio_bound\" data-reference-type=\"eqref\" data-reference=\"tree:eq:past_ratio_bound\">[tree:eq:past_ratio_bound]</a> with a common $K$, $B\\to\\infty$; the rescaled pullbacks of $d_J$, for a fixed bounded macroscopic confinement window $J$, are tight after interpolation and every limit is a continuous pseudometric. The same estimates apply on every fixed finite enlargement of the base window.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tree-lem-moment-compactness"
+  },
+  {
+   "claim_id": "stmt-tree-thm-rigidity",
+   "exact_statement": "For every normalized tree law furnished by Proposition <a href=\"#tree:prop:comparison_families\" data-reference-type=\"ref\" data-reference=\"tree:prop:comparison_families\">187</a>, and every extraction of one of its controlled families after a change of units with positive limiting internal endpoint norm, the optimal constants in <a href=\"#tree:eq:rigidity_constants\" data-reference-type=\"eqref\" data-reference=\"tree:eq:rigidity_constants\">[tree:eq:rigidity_constants]</a> satisfy $c=C>0$. Almost surely, simultaneously on every open set $U$, $$F_U=C D_U.$$ In particular the metric multiplier is deterministic.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tree-thm-rigidity"
+  },
+  {
+   "claim_id": "stmt-tree-prop-bootstrap",
+   "exact_statement": "There are an integer $J$ and a finite deterministic $K$ such that every $j\\geq J$ satisfies <a href=\"#tree:eq:bootstrap_success\" data-reference-type=\"eqref\" data-reference=\"tree:eq:bootstrap_success\">[tree:eq:bootstrap_success]</a>, and $$\\frac{A_{j-i}}{A_j}\\leq K2^{-si}\n \\qquad(j\\geq J,\\ 0\\leq i\\leq j).\n \\label{tree:eq:bootstrap_allscale_bound}$$ In particular, $A_j\\to\\infty$. Every sequence $j_r\\to\\infty$ has a subsequence whose joint normalized data converge to a law in $\\mathcal R$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tree-prop-bootstrap"
+  },
+  {
+   "claim_id": "stmt-tree-thm-bilateral-limit",
+   "exact_statement": "For a positive integer $N$ set $$j(N)=\\lfloor\\log_2 N\\rfloor,\\qquad B_N=A_{j(N)}.$$ Then $B_N\\to\\infty$. From every sequence $N_r\\to\\infty$ one can extract a subsequence such that the bilateral contours and all their local certificate data, in time units $N_r$ and cost units $B_{N_r}$, converge jointly. The continuum background is the fixed-unit $\\sqrt2$-quantum cone decorated by its area-parametrized $\\mathrm{SLE}_8$. For one deterministic $$\\lambda\\in[C_-,2^p C_+],\n \\label{tree:eq:bootstrap_lambda_range}$$ its limiting local passage rule is $$F_U(x,y)=\\lambda D_h(x,y;U)\n \\label{tree:eq:bootstrap_bilateral_identification}$$ for every open $U$ and every $x,y$ joined by a path compactly in $U$. The equality uses the internal length metric on $U$, equivalently exhaustion by compactly confined paths, and includes the upper realization and lower subpath-extraction assertions with open margins.*\n\n\n*There is also the following uniform discrete estimate. For each fixed $T<\\infty$ there is $K_T<\\infty$ such that, for every integer $N\\geq1$ and every translated integer interval $I$ of length $|I|\\leq TN$, $$\\left\\|\\frac{\\mathop{\\mathrm{diam}}(V(G_I),d_I)}{B_N}\\right\\|_k\n \\leq K_T\\left(\\frac{|I|+1}{N}\\right)^s.\n \\label{tree:eq:bootstrap_uniform_interval_diameter}$$ The corresponding curve-time modulus on each bounded window is uniform, with any exponent smaller than $s-1/k$. The fixed-interval endpoint $k$th moments are uniformly integrable along these extractions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tree-thm-bilateral-limit"
+  },
+  {
+   "claim_id": "stmt-finite-profile",
+   "exact_statement": "Let $(V,\\delta)$ be a finite graph with its length metric. Let $C\\subset V$ meet every path from $v$ to each of the vertices $x_1,\\ldots,x_k$, and put $e=\\delta(v,C)$. Then $$e+\\inf_{z\\in C}\\delta(z,x_i)\n \\le \\delta(v,x_i)\n \\le e+\\sup_{z\\in C}\\delta(z,x_i).$$ In particular, if $\\sup_{z\\in C}|\\delta(z,x_i)-a_i|\\le t$ for each $i$, then $$|(\\delta(v,x_i)-\\delta(v,x_1))-(a_i-a_1)|\\le2t .$$ The last bound is independent of $e$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-finite-profile"
+  },
+  {
+   "claim_id": "stmt-finite-metric-nets",
+   "exact_statement": "For every $\\varepsilon>0$, $$\\lim_{k\\to\\infty}\\limsup_{n\\to\\infty}\n \\mathbb P\\!\\left[\n   \\max_{v\\in V(M_n)}\\min_{1\\le i\\le k}\n       \\delta_n(v,X_n^i)>\\varepsilon\n \\right]=0$$ along the selected subsequence.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-finite-metric-nets"
+  },
+  {
+   "claim_id": "stmt-finite-full-sequence",
+   "exact_statement": "The numbers in Equation <a href=\"#finite:normalization\" data-reference-type=\"eqref\" data-reference=\"finite:normalization\">[finite:normalization]</a> satisfy $a_n(q)>0$, $a_n(q)\\to0$, and $$(V(M_n),a_n(q)d_n,\\mu_n)\n                    \\ \\Longrightarrow\\ (S,D_h,\\mu_h)$$ in Gromov–Hausdorff–Prokhorov topology as $n\\to\\infty$ through all positive integers.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-finite-full-sequence"
+  },
+  {
+   "claim_id": "stmt-tree-lem-tour-measure",
+   "exact_statement": "Let $v_i$ be the primal vertex represented by contour time $i$, with $v_N=v_0$. Then, for every $v\\in V(M_n)$, $$\\label{tree:eq:tour_degree}\n \\#\\{0\\leq i<N:v_i=v\\}=\\deg_{M_n}(v).$$ Consequently, if $$\\mu_n=\\frac1{2n}\\sum_{v\\in V(M_n)}\\deg_{M_n}(v)\\,\\delta_v,\n \\qquad f_n(t)=v_{\\lfloor Nt\\rfloor},\\quad 0\\leq t\\leq1,$$ then $(f_n)_*\\mathrm{Leb}_{[0,1]}=\\mu_n$. Conditional on the map, independent uniform times give independent samples from $\\mu_n$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tree-lem-tour-measure"
+  },
+  {
+   "claim_id": "stmt-tree-prop-sphere-identification",
+   "exact_statement": "For every sequence of positive integers $n\\to\\infty$, there is a further subsequence and a deterministic $\\Lambda\\in(0,\\infty)$ such that $$\\label{tree:eq:sphere_preliminary_limit}\n        (V(M_n),B_{2n}^{-1}d_n,\\mu_n)\n              \\ \\Rightarrow\\ (S,\\Lambda D_h,\\mu_h)$$ in the Gromov–Hausdorff–Prokhorov topology. The constants $\\Lambda$ lie in a fixed deterministic compact subset of $(0,\\infty)$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tree-prop-sphere-identification"
+  }
+ ],
+ "paper": "papers/EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-B-ML-M-0397_PM-211.6_Metric_measure_limits_of_subcritical_FK_and_spanning_tree_planar_maps.md",
+ "purpose": "Metric-measure limits of subcritical FK and spanning-tree planar maps",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "deb3e33ce4ea689f5d346031cd06ae850821a692ed7e5931cbca19b64667c921",
+   "pm.domains.v2": "40171f0a590bb7d291f3bf07bb94522cf480cfeed7618fb3221c94a8c0a82650",
+   "pm.edges.v2": "e7df6252736deca165b57d05fbac17e6dad39319b44b250eade89f8efc97ba5d",
+   "pm.extraction.v2": "427ddad17fd97a4594d8a51efc49211760e46326bc0f15bbafee84bee6ab2301",
+   "pm.formal.v2": "ad4b768c92f63f42380705a0c79fa7e8752f1776fba24a6caff254946cee45bb",
+   "pm.limits.v2": "7564dce94f2904d58846344fd382fc3f69eda43bf19f72ab395a906aa26fb9ab",
+   "pm.node.v2": "212c94b409f554e202fec25a0ae4cb66c53b2808941eca52a4f24c4f4052d3f8",
+   "pm.objects.v2": "1b5fa71bac1346a8e1dea5c20eb4b13c9f4d70a1257f77ae1f7ed5fee59888f3",
+   "pm.provenance.v2": "e400b9b10f47aecb3c375c963a932a3cf63f63fb523229bed1c061e1e8b0844d",
+   "pm.quantities.v2": "b188cd9000ae5279d5be6187f77569532940d9e7874bfb11ab4ad0e9d6a53c9f",
+   "pm.reading.v2": "5e01c9da6285c8ec5347a760121c4df9c0c364239a3ebc11a9288805abbf3d06",
+   "pm.roadmap.v2": "9f11cb023ae2dbf049160040a1fd36272edbca12a9ee38f87b1fe5651869fef7",
+   "pm.search.v1": "7ad05424dd92337168391119dbfe2b9c79236a54c8b7a23288ec7c624be4ae8d",
+   "pm.triptych.v2": "0ea8f992d22c36c7699f30905823a8c6bab906b6303a2675aab64a8531118878"
+  },
+  "canonical_sha256": "78e6257716f09d8aefc4379f8b69bdd13896ed28bede859b4190731e849d8494",
+  "paper_sha256": "be7c672cbc936dd804e97b13188c1c69d1c1f3a82466d7d291791e5d9d409e29",
+  "repaired_body_sha256": "9a8748fd9d5f69162c6d55236376b41cfab53d45768095e5cfa5818c993092c4"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "8392a6f95ec798589a6bf6dcdd20e42aec9967d203755607c58c7550e2b7f407",
+   "receipt_sha256": "7bd2c069a357fe4cf76093ea343cb3c147b63a6d30b061471ec8686f63f3e7aa",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "All 567 endpoint-duration tuples with endpoint coordinates in {0,1,2} and m in {0,...,6}, plus boundary cases through m=10.",
+     "coverage": "PARTIAL",
+     "invariant_id": "axial-filler",
+     "oracle_basis": "Independent exact enumeration of all reachable states at each depth; all returned witnesses are rechecked with Python integers."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M1",
+     "observed_exit": 7,
+     "receipt_sha256": "200d49b9d599ec1d4f023ea54ebe82073e4e7bb97a50417bbae893d49bbebd09"
+    },
+    {
+     "id": "M2",
+     "observed_exit": 7,
+     "receipt_sha256": "5097cee41a9552f7a84d503fe7733f61812cb5fe955714365e57452fdf5fb064"
+    },
+    {
+     "id": "M3",
+     "observed_exit": 7,
+     "receipt_sha256": "1df5ee77ae1e8debe1d6982d489a50052f3085cb441d2bdc4ca9348a2686e9bb"
+    }
+   ],
+   "receipt_sha256": "4d4cfd9f3f7e49eb7d3bab222bb5a4ffde47df79a919adda49c54c6cea59a161",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Metric-measure limits of subcritical FK and spanning-tree planar maps"
+}

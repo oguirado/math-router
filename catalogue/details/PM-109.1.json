@@ -1,0 +1,696 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 755759,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 210136
+ },
+ "coordinate": "EN-114-000-0007-2-2026-PR-T4-UK-EX-M1-C-AL-H-0237",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Computational algebra and certified fixed-point polynomial arithmetic",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-2",
+     "quote": "The constants and thresholds in the construction are extremely large; the algorithm is intended to establish a bit-complexity bound.",
+     "quote_sha256": "b2b4fa75cf010b62ea54b6b4e255298d738e059299f0028014ad239da832633f"
+    }
+   ],
+   "query": "Practical arbitrary-precision library speedup",
+   "reason": "The paper establishes an asymptotic fixed-tape bound with extremely large construction constants and thresholds; it supplies no practical performance comparison."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-10",
+     "quote": "It is neither a bit-complexity consequence nor a stable floating-point FFT consequence of the fixed-tape multiplication theorem,",
+     "quote_sha256": "e1c7ff736c42e316a9388ca3c9364c83248318f3bd118d909f3a01c0d2dc6cef"
+    }
+   ],
+   "query": "Stable floating-point Fourier transform",
+   "reason": "The companion exact-register application and its unrestricted exact scalars do not establish floating-point stability."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-9",
+     "quote": "It therefore lies outside models restricted to moving data without such computations;",
+     "quote_sha256": "6325d74b8b79bd1c585f6896a196761d5be250619d091696080aeb9316180228"
+    }
+   ],
+   "query": "Routing-only address permutation lower bounds",
+   "reason": "The address procedure computes intermediate XOR combinations, so a model permitting only movement of intact data does not admit the construction."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:streams",
+     "quote": "A machine has one fixed finite alphabet and one fixed finite number of one-dimensional tapes.",
+     "quote_sha256": "2014a01561a6342baa438a6c92dce7d6129be7b0739dcfc9b502bf9a634e9574"
+    }
+   ],
+   "query": "Unit-cost random-access multiplication bound",
+   "reason": "The theorem measures fixed-tape bit cost; the separately discussed random-access results use different cost conventions."
+  }
+ ],
+ "family": "PM-109",
+ "id": "PM-109.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "pm-cite-2",
+    "claim_id": "claim-exact-multiplication",
+    "statement": "For a binary string $x$ of length $n$, let $\\operatorname{val}(x)$ be its nonnegative integer value, with the leftmost bit most significant."
+   },
+   {
+    "anchor": "pm-cite-2",
+    "claim_id": "claim-exact-multiplication",
+    "statement": "We consider exact multiplication: on input $x\\#y$, with $x,y\\in\\{0,1\\}^n$, the output must be $\\operatorname{bin}_{2n}(\\operatorname{val}(x)\\operatorname{val}(y))$."
+   },
+   {
+    "anchor": "pm-cite-2",
+    "claim_id": "claim-exact-multiplication",
+    "statement": "Write $\\lg n=\\max\\{\\lceil\\log_2 n\\rceil,1\\}$."
+   },
+   {
+    "anchor": "stmt-cor-exact-arithmetic",
+    "claim_id": "claim-exact-division-square-root",
+    "statement": "For $x,y\\in\\{0,1\\}^n$, put $a=\\operatorname{val}(x)$ and $b=\\operatorname{val}(y)$."
+   },
+   {
+    "anchor": "stmt-cor-exact-arithmetic",
+    "claim_id": "claim-exact-division-square-root",
+    "statement": "If $b>0$,"
+   },
+   {
+    "anchor": "stmt-lem-elementary-streams",
+    "claim_id": "claim-elementary-stream-operations",
+    "statement": "Fix a radix $q\\ge2$."
+   },
+   {
+    "anchor": "stmt-lem-elementary-streams",
+    "claim_id": "claim-elementary-stream-operations",
+    "statement": "when $W$ divides $R$,"
+   },
+   {
+    "anchor": "stmt-lem-ordered-affine-streams",
+    "claim_id": "claim-ordered-affine-updates",
+    "statement": "Fix a prime $q$, a fixed number of control fields, and finitely many rational coefficients whose denominators are prime to $q$. Whenever a coefficient is used as a unit, also require its numerator to be prime to $q$. Put $Q=q^b$, $b\\ge1$. Suppose a target field $y\\in[Q]$ follows its control fields, each control used in an offset having $O(b)$ digits."
+   },
+   {
+    "anchor": "stmt-lem-ordered-affine-streams",
+    "claim_id": "claim-ordered-affine-updates",
+    "statement": "if the offset can be prepared in $b^{O(1)}$ time from the fixed number of control values."
+   },
+   {
+    "anchor": "stmt-lem-scalar-motifs",
+    "claim_id": "claim-restored-scalar-bank-exchange",
+    "statement": "For arbitrary initial values of its auxiliary wires,"
+   },
+   {
+    "anchor": "stmt-lem-motif-residuals",
+    "claim_id": "claim-comparable-residual-labels",
+    "statement": "if $c$ is the number of central wires per invocation and $W$ the total number of wires,"
+   },
+   {
+    "anchor": "stmt-prop-bit-motif-interface",
+    "claim_id": "claim-bit-network-rank-deficit",
+    "statement": "The bit network has $W_{\\rm b}$ wires, uses only pointwise XOR gates, and sends its input vector to the permutation $\\rho$ of that vector. Its rational matrices are common to all incidences of a gate and obey $$M_{\\mathrm{sink}(\\rho(w))}-M_{\\mathrm{source}(w)}=I_m\n \\quad\\text{for every input role }w.$$ The sum of the rational ranks of all edge differences is $$\\begin{aligned}\n s_{\\rm b}\n &=\\sum_{e}\\operatorname{rank}_{\\mathbb Q}\n      (M_{\\mathrm{head}(e)}-M_{\\mathrm{tail}(e)})\\\\\n &=W_{\\rm b}m-N+2L_{\\rm b}\n  =177176569088785861287000000<W_{\\rm b}m.\n\\end{aligned}$$"
+   },
+   {
+    "anchor": "stmt-prop-complex-motif-interface",
+    "claim_id": "claim-complex-network-phase-deficit",
+    "statement": "For each edge of the complex network, write $U,V$ for its tail and head labels."
+   },
+   {
+    "anchor": "stmt-lem-lower-lower",
+    "claim_id": "claim-lower-triangular-factorisation",
+    "statement": "rational $m\\times m$ matrix $A$ of rank $a$"
+   },
+   {
+    "anchor": "stmt-lem-matrix-shear",
+    "claim_id": "claim-rank-counted-matrix-shear",
+    "statement": "Let $\\mathcal A$ be a fixed finite collection of rational $m\\times m$ matrices."
+   },
+   {
+    "anchor": "stmt-lem-matrix-shear",
+    "claim_id": "claim-rank-counted-matrix-shear",
+    "statement": "Let $H=(H_1,\\ldots,H_m)$ and $D=(D_1,\\ldots,D_m)$ be two ordered groups of fields, every field ranging over $[q^b]$, with every $H_i$ before every $D_j$."
+   },
+   {
+    "anchor": "stmt-lem-matrix-shear",
+    "claim_id": "claim-rank-counted-matrix-shear",
+    "statement": "For $A\\in\\mathcal A$ of rational rank $a$,"
+   },
+   {
+    "anchor": "stmt-prop-power-interchange",
+    "claim_id": "claim-power-width-row-interchange",
+    "statement": "Assume the fixed circuit data satisfy <a href=\"#eq:finite-shear-contract\" data-reference-type=\"eqref\" data-reference=\"eq:finite-shear-contract\">[eq:finite-shear-contract]</a>, and let $q$ be a prime as in Lemma <a href=\"#lem:matrix-shear\" data-reference-type=\"ref\" data-reference=\"lem:matrix-shear\">10</a> for its edge matrices, also avoiding the denominators of every assigned terminal and gate matrix $M$."
+   },
+   {
+    "anchor": "stmt-prop-power-interchange",
+    "claim_id": "claim-power-width-row-interchange",
+    "statement": "Choose a rational number $\\tau\\in(0,1)$ with $s/W<m^\\tau$."
+   },
+   {
+    "anchor": "stmt-prop-power-interchange",
+    "claim_id": "claim-power-width-row-interchange",
+    "statement": "Suppose a row field preceding both chunks has length divisible by $W^k$."
+   },
+   {
+    "anchor": "stmt-lem-chunk-swap",
+    "claim_id": "claim-arbitrary-width-chunk-interchange",
+    "statement": "For positive integers $P,G,B$ and $u\\ge1$,"
+   },
+   {
+    "anchor": "stmt-lem-packed-selected-bit-rectangle",
+    "claim_id": "claim-packed-rectangle-selected-xor",
+    "statement": "Let $R\\ge1$, $K\\ge6$, $f\\ge1$, $L=fK$, and $0\\le\\rho<K$."
+   },
+   {
+    "anchor": "stmt-lem-packed-selected-bit-rectangle",
+    "claim_id": "claim-packed-rectangle-selected-xor",
+    "statement": "Let $N_0,N_1,N_2,N_3$ be positive integers, and let $(\\chi_1,\\chi_2,\\chi_3)$ be a permutation of $(x,y,z)$."
+   },
+   {
+    "anchor": "stmt-prop-simultaneous-layer",
+    "claim_id": "claim-simultaneous-normalised-layer",
+    "statement": "Fix $$\\tau=\\sigma=1-2^{-50},\\qquad \\beta=\\frac12,\\qquad C_1=20.$$"
+   },
+   {
+    "anchor": "stmt-prop-simultaneous-layer",
+    "claim_id": "claim-simultaneous-normalised-layer",
+    "statement": "Let $c,\\epsilon,\\lambda,\\lambda'$ be fixed positive rational numbers satisfying $$\\max\\{\\tau,\\sigma\\}<\\lambda<1,\\qquad\n \\tau(1+c/\\beta)<\\lambda,\\qquad\n \\max\\{\\lambda,\\sigma+\\beta(1-\\sigma)\\}<\\lambda'<1,\n \\qquad \\epsilon C_1<1.$$"
+   },
+   {
+    "anchor": "stmt-prop-simultaneous-layer",
+    "claim_id": "claim-simultaneous-normalised-layer",
+    "statement": "Fix positive constants $a_d\\le b_d$ and $a_r\\le b_r$, and fix positive constants $C_M,C_{\\rm desc},C_w$ with $C_w>1$."
+   },
+   {
+    "anchor": "stmt-prop-simultaneous-layer",
+    "claim_id": "claim-simultaneous-normalised-layer",
+    "statement": "Assume that this header is valid with the stated values and that the accompanying array is in lexicographic order on the complete address set $$[P]\\times[2^K]^D\\times[S],\n \\qquad M=PS\\,2^{KD},$$ with the following record format."
+   },
+   {
+    "anchor": "stmt-prop-simultaneous-layer",
+    "claim_id": "claim-simultaneous-normalised-layer",
+    "statement": "For every $x$ and $0\\le j<r$, assume $\\lvert z_{x,j}\\rvert\\le1$ and $\\Re z_{x,j},\\Im z_{x,j}\\in2^{-p}\\mathbb Z$."
+   },
+   {
+    "anchor": "stmt-prop-simultaneous-layer",
+    "claim_id": "claim-simultaneous-normalised-layer",
+    "statement": "Require the pointwise bounds $$\\log_2(2M)\\le C_Mp,\\qquad\n |\\mathcal E|\\le C_{\\rm desc}p,\\qquad\n p+2\\le w\\le C_wp,$$ where $|\\mathcal E|$ is the header’s bit length."
+   },
+   {
+    "anchor": "stmt-lem-synthetic-characters",
+    "claim_id": "claim-synthetic-character-cancellation",
+    "statement": "If $j$ is an integer,"
+   },
+   {
+    "anchor": "pm-h-38",
+    "claim_id": "claim-synthetic-character-cancellation",
+    "statement": "For a power of two $t$ dividing $2r$,"
+   },
+   {
+    "anchor": "stmt-lem-synthetic-transform-cost",
+    "claim_id": "claim-retained-synthetic-transform-layout",
+    "statement": "Fix the rational parameters and positive comparison constants $a_d\\leq b_d$, $a_r\\leq b_r$ of Proposition"
+   },
+   {
+    "anchor": "stmt-lem-synthetic-transform-cost",
+    "claim_id": "claim-retained-synthetic-transform-layout",
+    "statement": "Fix constants $C_\\ell>0$ and $C_w>1$, and choose the layer constants once as $$C_M=C_\\ell+1,\\qquad\n C_{\\rm desc}=32(C_\\ell+C_w+1).$$"
+   },
+   {
+    "anchor": "stmt-lem-synthetic-transform-cost",
+    "claim_id": "claim-retained-synthetic-transform-layout",
+    "statement": "suppose $d\\geq2$ and $r=2^\\ell$ with an integer $2\\leq\\ell<p$, and require $$d\\ell\\leq C_\\ell p,\\qquad\n 1\\leq K=\\lfloor d^c\\rfloor\\leq\\ell-1.$$"
+   },
+   {
+    "anchor": "stmt-lem-synthetic-transform-cost",
+    "claim_id": "claim-retained-synthetic-transform-layout",
+    "statement": "Assume that the header is valid with the stated values and that the input records use the two’s-complement component format of Proposition <a href=\"#prop:simultaneous-layer\" data-reference-type=\"ref\" data-reference=\"prop:simultaneous-layer\">14</a> with width $w$."
+   },
+   {
+    "anchor": "stmt-lem-signed-ring-product",
+    "claim_id": "claim-signed-packed-ring-product",
+    "statement": "Let $r=2^\\ell<2^p$ with integers $\\ell\\geq1$ and $p\\geq2$, and fix $C_w>1$."
+   },
+   {
+    "anchor": "stmt-lem-signed-ring-product",
+    "claim_id": "claim-signed-packed-ring-product",
+    "statement": "Let $w$ be an integer with $p+2\\leq w\\leq C_wp$."
+   },
+   {
+    "anchor": "stmt-lem-signed-ring-product",
+    "claim_id": "claim-signed-packed-ring-product",
+    "statement": "The input supplies $\\Gamma(p)\\Gamma(r)\\Gamma(w)$ and two disk grid polynomials $f,g\\in\\mathcal R_r$ in the component format of Proposition <a href=\"#prop:simultaneous-layer\" data-reference-type=\"ref\" data-reference=\"prop:simultaneous-layer\">14</a> with width $w$."
+   },
+   {
+    "anchor": "stmt-prop-synthetic-convolution",
+    "claim_id": "claim-normalised-synthetic-convolution",
+    "statement": "Under the hypotheses of Lemma"
+   },
+   {
+    "anchor": "stmt-prop-synthetic-convolution",
+    "claim_id": "claim-normalised-synthetic-convolution",
+    "statement": "If one operand has norm at most $\\rho<1$ and the bound in <a href=\"#eq:synthetic-convolution-error\" data-reference-type=\"eqref\" data-reference=\"eq:synthetic-convolution-error\">[eq:synthetic-convolution-error]</a> is at most $1-\\rho$,"
+   },
+   {
+    "anchor": "stmt-lem-no-sort-resampling",
+    "claim_id": "claim-no-sort-gaussian-resampling",
+    "statement": "Fix $0<\\delta<1/8$."
+   },
+   {
+    "anchor": "stmt-lem-no-sort-resampling",
+    "claim_id": "claim-no-sort-gaussian-resampling",
+    "statement": "Let $p>100$, $2\\leq s<t<2^p$ and $2\\leq\\alpha<\\sqrt p$ be integers, with $\\gcd(s,t)=1$ and $$\\theta:=t/s-1>p/\\alpha^4.$$"
+   },
+   {
+    "anchor": "stmt-lem-tensor-resampling",
+    "claim_id": "claim-tensor-resampling-interface",
+    "statement": "Suppose every pair $(s_i,t_i)$, $1\\leq i\\leq d$, satisfies Lemma <a href=\"#lem:no-sort-resampling\" data-reference-type=\"ref\" data-reference=\"lem:no-sort-resampling\">19</a> with the same $p,\\alpha,\\delta$."
+   },
+   {
+    "anchor": "stmt-lem-tensor-resampling",
+    "claim_id": "claim-tensor-resampling-interface",
+    "statement": "If each $t_i\\in\\{r/2,r\\}$ with $r=2^\\ell$, the array is kept in the full padded box of $T$ entries, and each entry occupies $O(p)$ bits,"
+   },
+   {
+    "anchor": "stmt-lem-chirp-permutation",
+    "claim_id": "claim-chirp-permutation-cancellation",
+    "statement": "With $R,Q,s_i,t_i$ as in Lemma <a href=\"#lem:tensor-resampling\" data-reference-type=\"ref\" data-reference=\"lem:tensor-resampling\">20</a>, assume every $t_i$ is even."
+   },
+   {
+    "anchor": "stmt-lem-packed-selected-bit-addition",
+    "claim_id": "claim-grouped-packed-selected-xor",
+    "statement": "Let a valid grouped packed stream of Definition <a href=\"#def:grouped-packed-stream\" data-reference-type=\"ref\" data-reference=\"def:grouped-packed-stream\">22</a> be supplied, and let $A\\ge2$ bound the actual total bit length of its descriptor $\\mathcal D$, including the header and the entry for $R$."
+   },
+   {
+    "anchor": "stmt-lem-packed-selected-bit-addition",
+    "claim_id": "claim-grouped-packed-selected-xor",
+    "statement": "When $A=O(p)$, $R$ exceeds every fixed polynomial in $p$, $f\\le d\\le p$, and $K/\\log p\\to\\infty$,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Accelerated address interchange",
+    "evidence": [
+     {
+      "anchor": "sec:tape-interchange",
+      "quote": "An edge matrix of rank $a$ will require $a$ smaller interchanges.",
+      "quote_sha256": "2887cb4d0b52e65d459bff44ffecbca013628bab1ee900e2bd5b41b9808e04db"
+     },
+     {
+      "anchor": "sec:tape-interchange",
+      "quote": "Because the sum of these ranks is less than the number of wires times $m$, the resulting recurrence saves a power of the chunk width.",
+      "quote_sha256": "cbe2896fc908618ed333786ef48ceb4189bf6a774b3c4d9e05858dac65172b22"
+     }
+    ],
+    "requires_concepts": [
+     "Fixed-tape stream operations",
+     "Rational lower triangular factorisation",
+     "Common frames",
+     "Strict rank deficit",
+     "Whole-row role splitting"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Simultaneous normalised butterfly layer",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-prop-simultaneous-layer",
+      "quote": "The packed selected-bit procedure supplies the binary basis changes.",
+      "quote_sha256": "9aeede04d42e2cf59a70e23985e7d65c2780503cb15c337c847d2a11318a0f24"
+     },
+     {
+      "anchor": "pm-h-36",
+      "quote": "The accelerated network is evaluated exactly until an entire normalized butterfly layer is complete.",
+      "quote_sha256": "c7fa9064707da3029829b4db660af46b1830046b18a80dc0c71cfaeacec82d89"
+     }
+    ],
+    "requires_concepts": [
+     "Restored complex bank exchange",
+     "Binary orthonormal residual bases",
+     "Packed selected-bit addition",
+     "Exact Gaussian-dyadic guard widths"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Exact multiplication recovery",
+    "evidence": [
+     {
+      "anchor": "pm-h-62",
+      "quote": "The strict error below $1/2$ makes the nearest integer to that value the unique correct coefficient.",
+      "quote_sha256": "c72998fad9879fd7cfd44c48a998cb9b0317294c1cd220668938b19682b1eec5"
+     },
+     {
+      "anchor": "pm-h-62",
+      "quote": "Undo the coefficient-address isomorphism $\\Phi$ before propagating radix carries.",
+      "quote_sha256": "677e86471c75f2abf724ee77bea02faae6fa1eebd149c34328858748b2a9143b"
+     }
+    ],
+    "requires_concepts": [
+     "Triangular coefficient-address isomorphism",
+     "Gaussian resampling",
+     "Chirp permutation cancellation",
+     "Synthetic convolution",
+     "Strict coefficient error margin",
+     "Radix carry propagation"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-exact-multiplication",
+   "exact_statement": "There is one deterministic Turing machine $A$, with a fixed finite alphabet and a fixed finite number of one-dimensional tapes, that computes this exact product for every $n\\ge1$ and every pair of $n$-bit inputs. Its worst-case running time satisfies $$T_A(n)=O\\!\\left(n(\\lg n)^{1-\\kappa}\\right),\n \\qquad \\kappa=2^{-182}.$$",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-exact-division-square-root",
+   "exact_statement": "There are deterministic machines with fixed finite alphabets and fixed finite numbers of one-dimensional tapes performing the following tasks in $O(n(\\lg n)^{1-\\kappa})$ worst-case time, for every $n\\ge1$. For $x,y\\in\\{0,1\\}^n$, put $a=\\operatorname{val}(x)$ and $b=\\operatorname{val}(y)$. If $b>0$, the division machine takes $x\\#y$ and returns $\\operatorname{bin}_n(q)\\#\\operatorname{bin}_n(r)$, where $q=\\lfloor a/b\\rfloor$ and $r=a-bq$. The square-root machine takes $x$ and returns $\\operatorname{bin}_n(\\lfloor\\sqrt a\\rfloor)$. Leading zeroes are allowed, and $\\kappa$ is as in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-cor-exact-arithmetic"
+  },
+  {
+   "claim_id": "claim-elementary-stream-operations",
+   "exact_statement": "Fix a radix $q\\ge2$. Each of the following operations on an array of volume $V$ takes $O(V)$ steps on a fixed number of one-dimensional tapes:*\n\n1.  *any fixed permutation of the pair of digit values at two specified radix-$q$ positions, whether or not the positions are adjacent;*\n\n2.  *moving one specified radix-$q$ digit to another position, preserving the order of the intervening positions;*\n\n3.  *splitting on a specified radix-$q$ digit, applying a fixed pointwise map to aligned streams, and merging them back;*\n\n4.  *for positive integers $P,R,B$, within each prefix of an array on $[P]\\times[R]\\times[B]$, splitting whole rows cyclically into a fixed number $W$ of streams, and, when $W$ divides $R$, merging those streams in any fixed order of the row classes.*\n\n*The bounds include shape preparation, counter initialization and resets, and returning or clearing the visited portions of work tapes. Their constants may depend on the fixed radix, the fixed pointwise map, and the fixed number of row classes.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-elementary-streams"
+  },
+  {
+   "claim_id": "claim-ordered-affine-updates",
+   "exact_statement": "Fix a prime $q$, a fixed number of control fields, and finitely many rational coefficients whose denominators are prime to $q$. Whenever a coefficient is used as a unit, also require its numerator to be prime to $q$. Put $Q=q^b$, $b\\ge1$. Suppose a target field $y\\in[Q]$ follows its control fields, each control used in an offset having $O(b)$ digits. An update $$y\\longmapsto y+a(\\text{controls})\\pmod Q$$ costs $O(V)$ if the offset can be prepared in $b^{O(1)}$ time from the fixed number of control values. In particular, this holds for a fixed rational linear combination of them, specialized modulo $Q$. Multiplication of $y$ by any of the specified rational units, and its inverse, also costs $O(V)$. Arbitrarily long intervening spectator fields and suffix records are permitted.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-ordered-affine-streams"
+  },
+  {
+   "claim_id": "claim-restored-scalar-bank-exchange",
+   "exact_statement": "For arbitrary initial values of its auxiliary wires, a forward invocation changes $y_S$ to $y_S+x_S$ and leaves every other value unchanged. Performing a forward invocation from $X$ to $Y$ at stage 1, the inverse forward schedule from $Y$ to $X$ at stage 2, and a forward invocation from $X$ to $Y$ at stage 3 sends $$(X_a,Y_a)\\longmapsto(-Y_a,X_a)$$ and restores every auxiliary value. In the bit construction this is the permutation exchanging $X_a$ and $Y_a$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-scalar-motifs"
+  },
+  {
+   "claim_id": "claim-comparable-residual-labels",
+   "exact_statement": "Every edge joins comparable nondegenerate labels. The only decreasing edges are the central-wire edges from time 3 to time 4; their dimension loss is $h$. Consequently, if $c$ is the number of central wires per invocation and $W$ the total number of wires, then $$L=Ich,\\qquad\n \\sum_{e}\\bigl|\\dim U_{\\mathrm{head}(e)}-\n                       \\dim U_{\\mathrm{tail}(e)}\\bigr|\n =Wm-2N+2L.                                      \\label{eq:rank-budget-labels}$$ For the binary label space, every nonzero orthogonal residual of an edge has an orthonormal basis.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-motif-residuals"
+  },
+  {
+   "claim_id": "claim-bit-network-rank-deficit",
+   "exact_statement": "The bit network has $W_{\\rm b}$ wires, uses only pointwise XOR gates, and sends its input vector to the permutation $\\rho$ of that vector. Its rational matrices are common to all incidences of a gate and obey $$M_{\\mathrm{sink}(\\rho(w))}-M_{\\mathrm{source}(w)}=I_m\n \\quad\\text{for every input role }w.$$ The sum of the rational ranks of all edge differences is $$\\begin{aligned}\n s_{\\rm b}\n &=\\sum_{e}\\operatorname{rank}_{\\mathbb Q}\n      (M_{\\mathrm{head}(e)}-M_{\\mathrm{tail}(e)})\\\\\n &=W_{\\rm b}m-N+2L_{\\rm b}\n  =177176569088785861287000000<W_{\\rm b}m.\n\\end{aligned}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-bit-motif-interface"
+  },
+  {
+   "claim_id": "claim-complex-network-phase-deficit",
+   "exact_statement": "For each edge of the complex network, write $U,V$ for its tail and head labels. Its phase-frame difference $\\mathcal C_V\\mathcal C_U^{-1}$ is a product of one translation kernel $aI+bX_v$, or its inverse, per vector in an orthonormal basis of the edge residual. Here $(X_vf)(x)=f(x+v)$. The sum of these basis lengths is $$s_{\\rm c}=W_{\\rm c}m-2N+2L_{\\rm c}\n =1873807244636671267308000000<W_{\\rm c}m.$$ After source and sink diagonal corrections, and undoing the signed bank exchange, telescoping these phase frames gives $C^{\\otimes m}$ on every role, including auxiliary roles. The same assertion holds on any positive number of columns by taking tensor products over columns.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-complex-motif-interface"
+  },
+  {
+   "claim_id": "claim-lower-triangular-factorisation",
+   "exact_statement": "Every rational $m\\times m$ matrix $A$ of rank $a$ has a factorization $$A=E_1\\Pi E_2,$$ where $E_1,E_2$ are invertible lower triangular rational matrices and $\\Pi$ has exactly $a$ entries equal to one, with at most one in each row and column, and all remaining entries zero.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-lower-lower"
+  },
+  {
+   "claim_id": "claim-rank-counted-matrix-shear",
+   "exact_statement": "Let $\\mathcal A$ be a fixed finite collection of rational $m\\times m$ matrices. There is a fixed odd prime $q$ such that the following holds. Let $H=(H_1,\\ldots,H_m)$ and $D=(D_1,\\ldots,D_m)$ be two ordered groups of fields, every field ranging over $[q^b]$, with every $H_i$ before every $D_j$. For $A\\in\\mathcal A$ of rational rank $a$, the permutation $$(H,D)\\longmapsto(H+AD,D)\n \\quad\\text{over }\\mathbb Z/q^b\\mathbb Z$$ can be performed with exactly $a$ interchanges of pairs of $b$-digit fields and $O(V)$ further work. Every interchange is between an $H$ field and a $D$ field. Spectators between any of the formal fields are allowed.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-matrix-shear"
+  },
+  {
+   "claim_id": "claim-power-width-row-interchange",
+   "exact_statement": "Assume the fixed circuit data satisfy <a href=\"#eq:finite-shear-contract\" data-reference-type=\"eqref\" data-reference=\"eq:finite-shear-contract\">[eq:finite-shear-contract]</a>, and let $q$ be a prime as in Lemma <a href=\"#lem:matrix-shear\" data-reference-type=\"ref\" data-reference=\"lem:matrix-shear\">10</a> for its edge matrices, also avoiding the denominators of every assigned terminal and gate matrix $M$. Choose a rational number $\\tau\\in(0,1)$ with $s/W<m^\\tau$. For every $e=m^k$, $k\\ge0$, consider two disjoint contiguous address chunks of $e$ radix-$q$ digits each. Suppose a row field preceding both chunks has length divisible by $W^k$. There may be additional fields before and after the row field, between the chunks, and after them. The chunks can be interchanged in $O(Ve^\\tau)$ time, preserving every other address field, on a fixed number of finite-alphabet tapes. The constant is independent of all field lengths and of the data.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-prop-power-interchange"
+  },
+  {
+   "claim_id": "claim-arbitrary-width-chunk-interchange",
+   "exact_statement": "There exist fixed $0<\\tau<1$ and one fixed finite-alphabet multitape procedure with the following property. For positive integers $P,G,B$ and $u\\ge1$, it transforms an arbitrary bit array on $$[P]\\times[2^u]\\times[G]\\times[2^u]\\times[B]$$ by the address permutation $$(p,h,g,d,z)\\longmapsto(p,d,g,h,z)$$ in $O(Vu^\\tau)$ steps, where $V=PG B\\,2^{2u}$. The integers specifying the shape are part of the input. The time includes their processing, all padding and unpadding, and fixed-tape workspace cleanup. In particular, $B=1$ is allowed.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-chunk-swap"
+  },
+  {
+   "claim_id": "claim-packed-rectangle-selected-xor",
+   "exact_statement": "Let $R\\ge1$, $K\\ge6$, $f\\ge1$, $L=fK$, and $0\\le\\rho<K$. Let $N_0,N_1,N_2,N_3$ be positive integers, and let $(\\chi_1,\\chi_2,\\chi_3)$ be a permutation of $(x,y,z)$. Consider $R$-bit records in lexicographic order on $$[N_0]\\times[2^L]_{\\chi_1}\\times[N_1]\\times[2^L]_{\\chi_2}\n \\times[N_2]\\times[2^L]_{\\chi_3}\\times[N_3].$$ The subscript names the chunk at that position. The input supplies $N_0,\\ldots,N_3,R,K,f,\\rho$ as a fixed number of canonical binary integers, together with the finite permutation of the chunk names, as in Section <a href=\"#sec:streams\" data-reference-type=\"ref\" data-reference=\"sec:streams\">2</a>. Put $$M=2^{3L}\\prod_{h=0}^3N_h,\\qquad V=MR,\\qquad\n A_{\\rm rect}=\\lceil\\log_2(2V)\\rceil.$$ At the selected positions $j_i=\\rho+iK$, numbered from the least significant bit, one fixed multitape procedure performs $$y_{j_i}\\longleftarrow y_{j_i}\\mathbin\\oplus x_{j_i}\n \\quad(0\\le i<f).$$ It preserves the spectator coordinates, all other chunk bits, and every record payload; in particular, it restores the entire chunk $z$ for every initial value. With $\\delta_{\\rm bad}=\\min\\{1,80(f-1)2^{-K}\\}$, its time is $$\\label{eq:packed-rectangle-time}\n O\\!\\left(V(L^\\tau+1)+MA_{\\rm rect}^3+\n       \\delta_{\\rm bad}MA_{\\rm rect}(R+A_{\\rm rect})\\right).$$ When $A_{\\rm rect}=O(p)$, $R$ exceeds every fixed polynomial in $p$, $f\\le d\\le p$, and $K/\\log p\\to\\infty$, this is $O(V(L^\\tau+1))$, uniformly over the permitted lengths and payloads in the fixed family.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-packed-selected-bit-rectangle"
+  },
+  {
+   "claim_id": "claim-simultaneous-normalised-layer",
+   "exact_statement": "Fix $$\\tau=\\sigma=1-2^{-50},\\qquad \\beta=\\frac12,\\qquad C_1=20.$$ Let $c,\\epsilon,\\lambda,\\lambda'$ be fixed positive rational numbers satisfying $$\\max\\{\\tau,\\sigma\\}<\\lambda<1,\\qquad\n \\tau(1+c/\\beta)<\\lambda,\\qquad\n \\max\\{\\lambda,\\sigma+\\beta(1-\\sigma)\\}<\\lambda'<1,\n \\qquad \\epsilon C_1<1.$$ Fix positive constants $a_d\\le b_d$ and $a_r\\le b_r$, and fix positive constants $C_M,C_{\\rm desc},C_w$ with $C_w>1$. For these fixed choices there are a cutoff $p_0$, one fixed finite-alphabet multitape procedure, and an implicit time constant with the following guarantee. The cutoff and time constant may depend on the fixed rational parameters and these constants. For every choice of positive integers $p,d,r$ with $p\\ge p_0$ and $$a_dp^\\epsilon\\le d\\le b_dp^\\epsilon,\\qquad\n 2^{a_rp/d}\\le r\\le 2^{b_rp/d},$$ put $K=\\lfloor d^c\\rfloor$, and let $1\\le D\\le d$, $P,S\\ge1$, and $0\\le\\rho<K$ be integers. Let $w\\ge1$ be an integer component width. The input supplies on a descriptor tape the self-delimiting header $$\\mathcal E=\n \\Gamma(p)\\Gamma(d)\\Gamma(r)\\Gamma(D)\\Gamma(P)\\Gamma(S)\n \\Gamma(K)\\Gamma(\\rho+1)\\Gamma(w),$$ using the integer code from <a href=\"#eq:integer-descriptor-code\" data-reference-type=\"eqref\" data-reference=\"eq:integer-descriptor-code\">[eq:integer-descriptor-code]</a>. Assume that this header is valid with the stated values and that the accompanying array is in lexicographic order on the complete address set $$[P]\\times[2^K]^D\\times[S],\n \\qquad M=PS\\,2^{KD},$$ with the following record format. For every address $x\\in[P]\\times[2^K]^D\\times[S]$, write its record as $$z(x)=\\sum_{j=0}^{r-1}z_{x,j}y^j,$$ stored in coefficient order. For every $x$ and $0\\le j<r$, assume $\\lvert z_{x,j}\\rvert\\le1$ and $\\Re z_{x,j},\\Im z_{x,j}\\in2^{-p}\\mathbb Z$. Each component is $2^{-p}$ times a signed $w$-bit two’s-complement integer, written most significant bit first; the real component precedes the imaginary component. Require the pointwise bounds $$\\log_2(2M)\\le C_Mp,\\qquad\n |\\mathcal E|\\le C_{\\rm desc}p,\\qquad\n p+2\\le w\\le C_wp,$$ where $|\\mathcal E|$ is the header’s bit length. The condition $w\\ge p+2$ allows every permitted disk-grid component, including $-1$ and $1$. The logical bit volume is $V=2Mrw=\\Theta(Mrp)$.*\n\n*On each of the $D$ consecutive $K$-bit address chunks, select bit $\\rho$, numbered from the least significant bit, and let $\\mathcal H$ be the tensor product of $$H_0=\\frac12\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}$$ on those selected bits. It acts coefficientwise and fixes every unselected address bit and both spectator fields. Let $Q_p$ truncate the real and imaginary parts of every coefficient toward zero to $2^{-p}\\mathbb Z$.*\n\n*The procedure returns $Q_p(\\mathcal H z)$ in the same array, coefficient order, and component format in $O(Vd^{\\lambda'})$ time, uniformly over all these choices of $p,d,r,D,P,S,\\rho,w$ and $z$. Every returned coefficient belongs to the complex unit disk, and, in the maximum coefficient norm, $$\\|Q_p(\\mathcal H z)-\\mathcal H z\\|_\\infty\n       <\\sqrt2\\,2^{-p}.$$ The procedure evaluates the entire layer exactly before this final truncation. Put $$C_0=128m\\bigl(s_{\\rm c}+64(W_{\\rm c}+m+1)^3\\bigr)^2,$$ where $m,W_{\\rm c},s_{\\rm c}$ are the fixed constants of Proposition <a href=\"#prop:complex-motif-interface\" data-reference-type=\"ref\" data-reference=\"prop:complex-motif-interface\">8</a>. The procedure uses at most $p+\\lceil C_0d^{C_1}\\rceil$ fractional bits and $\\lceil C_0d^{C_1}\\rceil+3$ integer and sign bits per real component internally; these widths are $O(p)$. The time includes address changes, deterministic repair, row padding and its removal, and fixed-tape workspace cleanup. Its tape count is fixed, and its time constant is independent of the allowed array lengths and coefficient values.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-prop-simultaneous-layer"
+  },
+  {
+   "claim_id": "claim-synthetic-character-cancellation",
+   "exact_statement": "If $j$ is an integer, then $$\\sum_{k=0}^{t-1}\\omega_t^{jk}\n =\\begin{cases}t,&t\\mid j,\\\\0,&t\\nmid j.\\end{cases}\n \\qquad F_t^+F_t^-=t^{-1}I.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-synthetic-characters"
+  },
+  {
+   "claim_id": "claim-retained-synthetic-transform-layout",
+   "exact_statement": "Fix the rational parameters and positive comparison constants $a_d\\leq b_d$, $a_r\\leq b_r$ of Proposition <a href=\"#prop:simultaneous-layer\" data-reference-type=\"ref\" data-reference=\"prop:simultaneous-layer\">14</a>. Fix constants $C_\\ell>0$ and $C_w>1$, and choose the layer constants once as $$C_M=C_\\ell+1,\\qquad\n C_{\\rm desc}=32(C_\\ell+C_w+1).$$ Use these constants and $C_w$ in Proposition <a href=\"#prop:simultaneous-layer\" data-reference-type=\"ref\" data-reference=\"prop:simultaneous-layer\">14</a>. These fixed choices determine a cutoff $p_1$, one fixed-tape procedure, and an implicit time constant with the following guarantee. For every choice of positive integers $p,d,r$ with $p\\geq p_1$ and $$a_dp^\\epsilon\\leq d\\leq b_dp^\\epsilon,\\qquad\n 2^{a_rp/d}\\leq r\\leq2^{b_rp/d},$$ suppose $d\\geq2$ and $r=2^\\ell$ with an integer $2\\leq\\ell<p$, and require $$d\\ell\\leq C_\\ell p,\\qquad\n 1\\leq K=\\lfloor d^c\\rfloor\\leq\\ell-1.$$ Let $t_i\\in\\{2^{\\ell-1},2^\\ell\\}$ for $1\\leq i\\leq d-1$, put $M=\\prod_{i=1}^{d-1}t_i$ and $T=rM$, and let $w$ be an integer with $p+2\\leq w\\leq C_wp$. The cutoff and time constant are independent of $p,d,r$, these axis choices, the round headers constructed from them, and $w$ within the displayed bounds.*\n\n*The input supplies the self-delimiting header $$\\mathcal T=\\Gamma(p)\\Gamma(d)\\Gamma(r)\\Gamma(K)\\Gamma(w)\n       \\prod_{i=1}^{d-1}\\Gamma(t_i),$$ where the product is concatenation in axis order and $\\Gamma$ is the integer code of <a href=\"#eq:integer-descriptor-code\" data-reference-type=\"eqref\" data-reference=\"eq:integer-descriptor-code\">[eq:integer-descriptor-code]</a>. The supplied $d$ determines the number of axis entries, and $\\ell=\\log_2r$ is obtained from the supplied power of two $r$. Assume that the header is valid with the stated values and that the input records use the two’s-complement component format of Proposition <a href=\"#prop:simultaneous-layer\" data-reference-type=\"ref\" data-reference=\"prop:simultaneous-layer\">14</a> with width $w$.*\n\n\n*The procedure constructs an explicit positional layout permutation $L$ of record addresses, preserving their polynomial suffixes, and transforms disk grid arrays of $M$ contiguous degree-less-than-$r$ polynomial records. Its exact counterpart is $LB F_{\\boldsymbol t}^-$. Its opposite procedure consumes that order and has exact counterpart $F_{\\boldsymbol t}^+B^{-1}L^{-1}$. Each procedure has error less than $\\sqrt2\\ell\\,2^{-p}$, returns disk grid coefficients in the same component format, and costs $$O\\left(Tp\\left[dK+pK^{\\tau-1}+\\ell d^{\\lambda'}\\right]\\right).\n \\label{eq:synthetic-transform-cost}$$ Both layout construction and final restoration are charged in this bound. The forward procedure may retain its output layout for a pointwise product and the following opposite procedure.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-synthetic-transform-cost"
+  },
+  {
+   "claim_id": "claim-signed-packed-ring-product",
+   "exact_statement": "Let $r=2^\\ell<2^p$ with integers $\\ell\\geq1$ and $p\\geq2$, and fix $C_w>1$. Let $w$ be an integer with $p+2\\leq w\\leq C_wp$. The input supplies $\\Gamma(p)\\Gamma(r)\\Gamma(w)$ and two disk grid polynomials $f,g\\in\\mathcal R_r$ in the component format of Proposition <a href=\"#prop:simultaneous-layer\" data-reference-type=\"ref\" data-reference=\"prop:simultaneous-layer\">14</a> with width $w$. One can compute the exact Gaussian integer numerators of $fg$, and then return $Q_p(fg/r)$ in that same format, in time $O(rp\\log(rp))$ on a fixed number of tapes. The output is a disk grid polynomial with error less than $\\sqrt2\\,2^{-p}$ from $fg/r$.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-signed-ring-product"
+  },
+  {
+   "claim_id": "claim-normalised-synthetic-convolution",
+   "exact_statement": "Under the hypotheses of Lemma <a href=\"#lem:synthetic-transform-cost\" data-reference-type=\"ref\" data-reference=\"lem:synthetic-transform-cost\">16</a>, $\\mathcal M_r$ on disk grid operands has an approximation with error less than $$\\sqrt2\\,M(3\\ell+1)2^{-p}\n \\label{eq:synthetic-convolution-error}$$ and cost $$O\\left(Tp\\left[dK+pK^{\\tau-1}+\\ell d^{\\lambda'}\n                    +\\log(rp)\\right]\\right).$$ Put $m_M=\\log_2M$ and $w_M=w+m_M$. The returned grid array is in the original array and coefficient order, with the same two’s-complement component format at width $w_M$. The procedure supplies $\\Gamma(w_M)$ on the output descriptor tape, so the caller knows every component boundary from this width and the retained shape parameters. If one operand has norm at most $\\rho<1$ and the bound in <a href=\"#eq:synthetic-convolution-error\" data-reference-type=\"eqref\" data-reference=\"eq:synthetic-convolution-error\">[eq:synthetic-convolution-error]</a> is at most $1-\\rho$, the returned grid array is a disk array.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-prop-synthetic-convolution"
+  },
+  {
+   "claim_id": "claim-no-sort-gaussian-resampling",
+   "exact_statement": "Fix $0<\\delta<1/8$. Let $p>100$, $2\\leq s<t<2^p$ and $2\\leq\\alpha<\\sqrt p$ be integers, with $\\gcd(s,t)=1$ and $$\\theta:=t/s-1>p/\\alpha^4.$$ Define coordinate permutations by $$(P_su)_j=u_{tj},\\qquad (P_tv)_k=v_{-sk}.$$ There are linear contractions $A:\\mathbb C^s\\to\\mathbb C^t$ and $B_0:\\mathbb C^t\\to\\mathbb C^s$ satisfying $$P_sF_s=2^{2\\alpha^2}B_0P_tF_tA.\n \\label{eq:no-sort-one-dimensional}$$ There are fixed multitape algorithms for approximations $\\widetilde A:\\mathbb D_p^s\\to\\mathbb D_p^t$ and $\\widetilde B_0:\\mathbb D_p^t\\to\\mathbb D_p^s$, each with error less than $p^2$ and time $$O(tp^{3/2+\\delta}\\alpha).$$ The constant is uniform in $p,s,t,\\alpha$. Inputs and outputs use the scalar component format above and occur in increasing coordinate order.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-no-sort-resampling"
+  },
+  {
+   "claim_id": "claim-tensor-resampling-interface",
+   "exact_statement": "Suppose every pair $(s_i,t_i)$, $1\\leq i\\leq d$, satisfies Lemma <a href=\"#lem:no-sort-resampling\" data-reference-type=\"ref\" data-reference=\"lem:no-sort-resampling\">19</a> with the same $p,\\alpha,\\delta$. Put $T=\\prod_i t_i$, $\\gamma=2d\\alpha^2$, and $$R=\\bigotimes_iP_{s_i},\\quad Q=\\bigotimes_iP_{t_i},\\quad\n \\mathcal A=\\bigotimes_i A_i,\\quad\n \\mathcal B_0=\\bigotimes_i B_{0,i}.$$ Then $$RF_{\\boldsymbol s}\n   =2^\\gamma\\mathcal B_0QF_{\\boldsymbol t}\\mathcal A,\n \\qquad F_{\\boldsymbol q}:=\\bigotimes_iF_{q_i}.\n \\label{eq:no-sort-tensor}$$ Also write $F_{\\boldsymbol q}^+=\\bigotimes_iF_{q_i}^+$. Both $\\mathcal A$ and $\\mathcal B_0$ are contractions. The linewise implementations of $\\mathcal A$ and $\\mathcal B_0$ each have error less than $dp^2$. The total time spent in the one-dimensional algorithms for both maps is $O(dTp^{3/2+\\delta}\\alpha)$, with a constant independent of $d$.*\n\n*If each $t_i\\in\\{r/2,r\\}$ with $r=2^\\ell$, the array is kept in the full padded box of $T$ entries, and each entry occupies $O(p)$ bits, then exposing and restoring all the lines costs $$O\\bigl(Tp\\,d^2(1+\\ell^\\tau)\\bigr)$$ using the equal-width chunk-swap bound $O(Vu^\\tau)$ and the fixed-digit movement primitive. Any fixed polynomial in $p$ of setup per line is negligible compared with $Tp$ when $r$ grows faster than every such polynomial and $d$ is polynomially bounded in $p$.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-tensor-resampling"
+  },
+  {
+   "claim_id": "claim-chirp-permutation-cancellation",
+   "exact_statement": "With $R,Q,s_i,t_i$ as in Lemma <a href=\"#lem:tensor-resampling\" data-reference-type=\"ref\" data-reference=\"lem:tensor-resampling\">20</a>, assume every $t_i$ is even. For $\\boldsymbol j\\in\\mathbb Z^d$, define $$a_{\\boldsymbol j}\n =\\exp\\left(-\\pi i\\sum_{i=1}^d\\frac{s_i j_i^2}{t_i}\\right).$$ Then $a$ has period $t_i$ in coordinate $i$, and $$QF_{\\boldsymbol t}u\n =\\overline a\\mathbin{\\cdot}\n       \\frac{a*(\\overline a\\mathbin{\\cdot}u)}{T}.\n \\label{eq:permuted-chirp}$$ If $S=\\prod_i s_i$, then $$(RF_{\\boldsymbol s}^+)\n   \\bigl[(RF_{\\boldsymbol s}u)\\mathbin{\\cdot}\n         (RF_{\\boldsymbol s}v)\\bigr]\n =\\frac{u*v}{S^2}.\n \\label{eq:source-permutation-cancel}$$ Complex conjugation of the input and output of an algorithm for $RF_{\\boldsymbol s}$ gives an algorithm for $RF_{\\boldsymbol s}^+$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-chirp-permutation"
+  },
+  {
+   "claim_id": "claim-grouped-packed-selected-xor",
+   "exact_statement": "Let a valid grouped packed stream of Definition <a href=\"#def:grouped-packed-stream\" data-reference-type=\"ref\" data-reference=\"def:grouped-packed-stream\">22</a> be supplied, and let $A\\ge2$ bound the actual total bit length of its descriptor $\\mathcal D$, including the header and the entry for $R$. At the positions $j_i=\\rho+iK$, numbered from the least significant bit, one fixed multitape procedure performs $$y_{j_i}\\longleftarrow y_{j_i}\\mathbin\\oplus x_{j_i}\n \\quad(0\\le i<f)$$ in every group. It fixes the group, row ordinal, spectator coordinates, all other chunk bits, and every record payload; in particular, the chunk $z$ is restored. For $V=MR$, its time is $$\\label{eq:packed-selected-time}\n O\\!\\left(V(L^\\tau+1)+MA^3+\n       M\\min\\{1,80(f-1)2^{-K}\\}\\,A(R+A)\\right).$$ When $A=O(p)$, $R$ exceeds every fixed polynomial in $p$, $f\\le d\\le p$, and $K/\\log p\\to\\infty$, this is $O(V(L^\\tau+1))$, uniformly over the group counts, shapes, and payloads whose supplied descriptors satisfy that bound.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-packed-selected-bit-addition"
+  }
+ ],
+ "paper": "papers/EN-114-000-0007-2-2026-PR-T4-UK-EX-M1-C-AL-H-0237_PM-109.1_Integer_multiplication_below_n_log_n.md",
+ "purpose": "Integer multiplication below n log n",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "24213a6d6fd69e7859933882640fd7c0565a89493d937bce139ea6969d9c1d10",
+   "pm.domains.v2": "4226f6d2d8453337ef62231d0a570a546ff020eac8a3ad4c8ccbf1f47ec314be",
+   "pm.edges.v2": "5b5329f67b244d25a8850053ab1d4a2da68afce0c21e20a0e966395c3c6032c8",
+   "pm.extraction.v2": "3a58af8063112f642a13e71f517c3870d8fa0b17ec1176293fbe7c9c07672711",
+   "pm.formal.v2": "4d16b028d414e9a6e90641a25622b905191b56fa4fa2b89c5edeae40e2b1433e",
+   "pm.limits.v2": "adc0a239d3795deab9fff7792e36b636436b35e9adffe11a78ce8cd83234b65f",
+   "pm.node.v2": "9f43a92ecdecd427f82802960521fd8d4f107f9d0534e8e9516e0fc33e95269e",
+   "pm.objects.v2": "86848a47f07a09860daeda3624a78dd89ff9fbf51cc374a0d08809c935d410b1",
+   "pm.provenance.v2": "4413001bc0f1b86c6fc28b549cfa7de0c997ef958d93a4c968ce8c7a47ca315e",
+   "pm.quantities.v2": "2a17b093161940fa450607635b56ea9feb0543b69480bcfe22e68fc9482ad11f",
+   "pm.reading.v2": "01571c5630b7b840af441c73bb26bebe11c1df500a491008b15873ba3f56f67c",
+   "pm.roadmap.v2": "6be1788705a45d56c219ffa2f3ebb23475835f83585044a562096fb44138a277",
+   "pm.search.v1": "af69037ba7d426f126acd76253246c4ec644158ab89b25a5290a8dc236d4a679",
+   "pm.triptych.v2": "e28fb9eee77803101e5dadd5af921ffebdb11c0364d1ed3953a96aa1c7b38424"
+  },
+  "canonical_sha256": "cf89ecd66f77fa4465f17e7ac4bd42246a9bcc786e4523d616536ef7a7978d77",
+  "paper_sha256": "7b463aaa0d5a594b63967175f54fb175648438851282cff1a6b96194c01ce2b2",
+  "repaired_body_sha256": "6cbb4914439fbcddd63b4adc5ebbe01ddbe6cd923816417c43d9b4f24bdaa6a0"
+ },
+ "status": "ACTIVE",
+ "subject_id": 14,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "3faf66f8a9cd0dea867b3526553e349b60ce15ae166979becc9b39fa4fde2a41",
+   "receipt_sha256": "a30a49ecfdb3f36e584765d79cfe41f368a7bb869b58572dbb600ae95b17ba89",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive target and auxiliary integers from -4 through 4 with both Boolean controls, plus endpoint rectangles at -100 and 100. Each Cartesian rectangle is enumerated completely.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-controlled-parity-toggle",
+     "oracle_basis": "Independent least-significant-bit XOR gives the expected target; exact floor division checks quotient preservation. The bounded enumeration does not decide the universal integer identity."
+    },
+    {
+     "checked_domain": "Every auxiliary value in the declared finite test rectangles, for every enumerated target and control.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-arbitrary-auxiliary-restoration",
+     "oracle_basis": "The oracle requires the returned auxiliary value to equal its independently recorded input value on every row. Arbitrary integers outside the tested rectangles remain untested."
+    },
+    {
+     "checked_domain": "All inactive-control tuples in the exhaustive central rectangle and endpoint rectangles.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-zero-control-identity",
+     "oracle_basis": "For an unset control the independent XOR reference returns the original target, and the oracle separately requires the original auxiliary value."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-first-rotation-sign",
+     "observed_exit": 1,
+     "receipt_sha256": "c6553ccc236baa42fea7a3f79660447068607bae810e5408600fe1edf3920c39"
+    },
+    {
+     "id": "mutant-omit-auxiliary-restoration",
+     "observed_exit": 1,
+     "receipt_sha256": "6b24b31f3763ee63b28b7fcdff0e936d8e1a41f4255dd93db6b2557881f3f159"
+    },
+    {
+     "id": "mutant-ignore-inactive-control",
+     "observed_exit": 1,
+     "receipt_sha256": "bf10e741837ab9439a70c3d9b2019b04266045288fac1b5c12abec03724281da"
+    }
+   ],
+   "receipt_sha256": "1c772165d069c4705d2c2a323f91df1c178ce8e861834f7007618ccef7ca6b18",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Integer multiplication below n log n"
+}

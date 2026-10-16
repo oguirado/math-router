@@ -1,0 +1,1206 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1193678,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 312258
+ },
+ "coordinate": "EN-114-000-0000-2-2026-PR-T4-UK-EX-M1-B-AL-H-0226",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Exact stream arithmetic with bounded suspended storage",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:intro",
+     "quote": "The precision parameter is unary; the running-time bound is exponential in general $q$.",
+     "quote_sha256": "5d10f6ea7f87e49c6d9bb6f199f5ba8f9b5aeff085d895042832e0d75322381d"
+    }
+   ],
+   "query": "A polynomial-time algorithm in arbitrary requested precision",
+   "reason": "The variable-precision result retains exponential dependence on the unary precision parameter."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:intro",
+     "quote": "The supplied bounds are hypotheses on the source, rather than properties the compiler must decide.",
+     "quote_sha256": "9a036824cb44eaeeddc6e55e9222804038d82cd9de1bcde6d03cc48b38beb212"
+    }
+   ],
+   "query": "A compiler that decides whether an arbitrary randomized source satisfies its resource bounds",
+   "reason": "Source resource bounds are supplied hypotheses rather than semantic properties inferred by the compiler."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-cor-certified-search",
+     "quote": "On every other input it outputs either an accepting computation or a failure symbol.",
+     "quote_sha256": "a8830dbd1abc2f3bcf2c464500335f12f3eb4ef27f3bbc38d9676153b4f52361"
+    }
+   ],
+   "query": "Automatic accepting-path discovery whenever an accepting path merely exists",
+   "reason": "Guaranteed search success requires an inverse-polynomial lower bound on acceptance probability."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-lem-est-mean-comparison",
+     "quote": "No independence of estimated factors is required.",
+     "quote_sha256": "c77e14608507fd0a422437fdb2ca56ad839e8bb59c3385db9c0eac886cbebf2c"
+    }
+   ],
+   "query": "Independent-error analysis for estimated products",
+   "reason": "The estimates share an environment; the comparison is established without independence of estimated factors."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-54",
+     "quote": "A rank over the full incoming vertex universe need not have a $2^{O(d)}$ descriptor domain.",
+     "quote_sha256": "c35873d4e4f54d9e63d214e8cc5f0d4cc997ecd77d6e21cf1fd52df51f59a6a3"
+    }
+   ],
+   "query": "An unrestricted incoming rank implemented by bounded descriptor enumeration",
+   "reason": "The full incoming vertex universe uses a separate terminal-configuration procedure."
+  }
+ ],
+ "family": "PM-103",
+ "id": "PM-103.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-logspace-equality",
+    "statement": "$$\\mathsf L=\\mathsf{RL}=\\mathsf{BPL}.$$"
+   },
+   {
+    "anchor": "stmt-thm-probability",
+    "claim_id": "claim-unary-probability-approximation",
+    "statement": "Fix a randomized machine $\\mathcal M$ with polynomial worst-case running time and $O(\\log(n+2))$ work space."
+   },
+   {
+    "anchor": "stmt-lem-model-reduction",
+    "claim_id": "claim-configuration-reduction",
+    "statement": "Fix a polynomial-time randomized machine using $O(\\log(n+2))$ work space."
+   },
+   {
+    "anchor": "stmt-lem-env-ranks",
+    "claim_id": "claim-rank-channel-estimates",
+    "statement": "For distinct identifiers $x,y$ and any admissible rates $u,a$,"
+   },
+   {
+    "anchor": "stmt-lem-env-ranks",
+    "claim_id": "claim-rank-channel-estimates",
+    "statement": "If $A_0$ is a deterministic set of $q$ distinct identifiers and $T_a=\\sum_{y\\in A_0}X_a(y)$,"
+   },
+   {
+    "anchor": "stmt-lem-hier-fixed-point",
+    "claim_id": "claim-forward-fixed-point-truncation",
+    "statement": "For every fixed column multiplier $0\\leq g\\leq1$,"
+   },
+   {
+    "anchor": "stmt-lem-hier-pilot-bounds",
+    "claim_id": "claim-pilot-actual-domination",
+    "statement": "All pilot and actual inputs and corrections are nonnegative and strictly forward. For $1\\leq i\\leq k_*$, $$\\begin{aligned}\n G_i\\mathbf 1,\\ \\widehat E_i\\mathbf 1,\n     \\ G'_i\\mathbf 1,\\ E_i\\mathbf 1&\\leq i\\mathbf 1,\\\\\n G_i(x,y),\\ \\widehat E_i(x,y),\n     \\ G'_i(x,y),\\ E_i(x,y)&\\leq if.\n\\end{aligned}$$ Moreover, $$E_{i-1}\\leq E_i\\leq\\widehat E_i,\n \\qquad G'_i\\leq G_i.$$ The row and column supports of every matrix in this statement are contained in $\\mathcal R(C)$ and $\\mathcal T(C)$, respectively."
+   },
+   {
+    "anchor": "stmt-lem-hier-column-test",
+    "claim_id": "claim-overloaded-column-detection",
+    "statement": "Let $$D_{\\rm row}=1+C_{\\rm pair}k_*/\\eta_-.$$ Choose the integer $K\\geq160D_{\\rm row}$, increasing it if necessary for the other finitely many row-gate estimates."
+   },
+   {
+    "anchor": "stmt-lem-hier-residual",
+    "claim_id": "claim-finite-residual-domination",
+    "statement": "For the $k_*$ chosen in Lemma <a href=\"#lem:hier-fixed-point\" data-reference-type=\"ref\" data-reference=\"lem:hier-fixed-point\">5</a>, put $$K_*=k_*+1,\\qquad\n \\varepsilon_{\\rm good}=\\theta_2+q^{-1}/32<q^{-1}/16,\n \\qquad c_{\\rm dom}=\\theta_1/(2k_*).$$"
+   },
+   {
+    "anchor": "stmt-prop-hier-copy-step",
+    "claim_id": "claim-copy-density-reduction",
+    "statement": "Choose the detector rank $J$ large enough that $$J\\geq\\frac{2C_\\pi(D_0-1)k_*(k_*+1)}{\\delta_0},\n \\label{eq:hier-active-J}$$ and then choose $R_*$ as in Equation <a href=\"#eq:hier-column-constants\" data-reference-type=\"eqref\" data-reference=\"eq:hier-column-constants\">[eq:hier-column-constants]</a>."
+   },
+   {
+    "anchor": "stmt-prop-hier-reward-target",
+    "claim_id": "claim-reward-transport-target",
+    "statement": "If $\\bar x_l$ is the all-primary copy of a base vertex $x$,"
+   },
+   {
+    "anchor": "stmt-lem-atom-dense",
+    "claim_id": "claim-dense-atom-normalization",
+    "statement": "For sufficiently large fixed $K$,"
+   },
+   {
+    "anchor": "stmt-lem-hier-bin-products",
+    "claim_id": "claim-fine-product-mass",
+    "statement": "Let $C$ be the transition matrix at the current stage, and let $F$ be any finite pilot or actual correction there."
+   },
+   {
+    "anchor": "stmt-lem-hier-bin-products",
+    "claim_id": "claim-fine-product-mass",
+    "statement": "If a matrix $A_b\\geq0$ on the same vertex set satisfies $A_b\\mathbf 1\\leq\\mathbf 1$ and $A_b(x,y)\\leq c_b b$ for some $b>0$,"
+   },
+   {
+    "anchor": "stmt-lem-hier-bin-products",
+    "claim_id": "claim-fine-product-mass",
+    "statement": "If also $A_b\\leq C$,"
+   },
+   {
+    "anchor": "stmt-lem-atom-correction",
+    "claim_id": "claim-correction-atom-normalization",
+    "statement": "For sufficiently large fixed $K$ and then $K_c$,"
+   },
+   {
+    "anchor": "stmt-lem-atom-correction",
+    "claim_id": "claim-correction-atom-normalization",
+    "statement": "On a true position with $Q(d_y)>0$ and $g_0(y)>0$,"
+   },
+   {
+    "anchor": "stmt-lem-atom-margins",
+    "claim_id": "claim-support-margins",
+    "statement": "Suppose a bounded nonnegative main function $k(v)$ vanishes for $v\\le\\vartheta$."
+   },
+   {
+    "anchor": "stmt-lem-atom-ports",
+    "claim_id": "claim-paired-port-contract",
+    "statement": "These assertions hold separately for every computed version, provided that its values, ranks, scores, and access classes use the same final raw arrays and common task tuple."
+   },
+   {
+    "anchor": "stmt-lem-atom-assembly",
+    "claim_id": "claim-atom-assembly-comparison",
+    "statement": "Compare two versions with the same environment, rates, and task tuple."
+   },
+   {
+    "anchor": "stmt-lem-atom-assembly",
+    "claim_id": "claim-atom-assembly-comparison",
+    "statement": "If $g,g'$ are the prescribed smooth cutoffs of bounded vertex arrays $U_i,U_i'$,"
+   },
+   {
+    "anchor": "stmt-lem-atom-assembly",
+    "claim_id": "claim-atom-assembly-comparison",
+    "statement": "If $V_y,V_y'$ are the detector trials formed from $\\mathcal S_i,\\mathcal S_i'$ by their column order statistic,"
+   },
+   {
+    "anchor": "stmt-lem-env-affine",
+    "claim_id": "claim-affine-uniform-gap",
+    "statement": "Let $G_H=\\mathrm{SL}_H(\\mathbb Z)\\ltimes\\mathbb Z^H$, with fixed $H\\ge3$."
+   },
+   {
+    "anchor": "stmt-lem-env-gap",
+    "claim_id": "claim-conditional-mixing",
+    "statement": "Consider the fixed product of rank channels, conditioned on retention of one specified identifier per conditioned channel."
+   },
+   {
+    "anchor": "stmt-lem-env-gap",
+    "claim_id": "claim-conditional-mixing",
+    "statement": "Include any designated set of independent uniform bits, with length padded to a multiple of $H$, and freeze any remaining independent bits."
+   },
+   {
+    "anchor": "stmt-lem-env-variants",
+    "claim_id": "claim-validated-walk-variants",
+    "statement": "In the admissible implementation range, field elements and identifiers have $O(B)$ bits, the total auxiliary bit string has $O(B)$ bits, and $d=O(B)$."
+   },
+   {
+    "anchor": "stmt-lem-est-true-means",
+    "claim_id": "claim-true-sample-means",
+    "statement": "Using true stochastic tables in Equations"
+   },
+   {
+    "anchor": "stmt-lem-est-loss",
+    "claim_id": "claim-homogeneous-loss",
+    "statement": "If $H\\le C_0G$ for a nonnegative $G$,"
+   },
+   {
+    "anchor": "stmt-lem-est-mean-comparison",
+    "claim_id": "claim-scale-source-comparison",
+    "statement": "Compare a budget-$m$ sample term with the same term using true stochastic inputs."
+   },
+   {
+    "anchor": "stmt-lem-est-omission",
+    "claim_id": "claim-fine-bin-omission",
+    "statement": "If one fine bin is omitted,"
+   },
+   {
+    "anchor": "stmt-lem-est-paths",
+    "claim_id": "claim-immediate-path-descriptors",
+    "statement": "At a row group of slack $d$,"
+   },
+   {
+    "anchor": "stmt-lem-est-paths",
+    "claim_id": "claim-immediate-path-descriptors",
+    "statement": "With exact endpoint grouping"
+   },
+   {
+    "anchor": "stmt-lem-est-mean-prefix",
+    "claim_id": "claim-mean-prefix-error",
+    "statement": "Assume all earlier table and vector bounds with coefficient $C_b$."
+   },
+   {
+    "anchor": "stmt-lem-est-raw-difference",
+    "claim_id": "claim-paired-raw-differences",
+    "statement": "At a slack-$d$ group,"
+   },
+   {
+    "anchor": "stmt-lem-est-raw-difference",
+    "claim_id": "claim-paired-raw-differences",
+    "statement": "if the corresponding child discrepancies are bounded by $2^{-p'_r}\\lambda_r$,"
+   },
+   {
+    "anchor": "stmt-lem-est-prefix",
+    "claim_id": "claim-conditional-prefix-noise",
+    "statement": "Assume exact local grouping, the earlier task error bounds, and that the sample functions depend only on variables varied by the conditional walk."
+   },
+   {
+    "anchor": "stmt-lem-buf-update",
+    "claim_id": "claim-local-compression-update",
+    "statement": "The update has the following properties. It replaces every position of size at most $2u_0$ by the new default, is identity at every position of size at least $3u_0$, and lies coordinatewise between the input and the new default. The default is nondecreasing. The map from the input array and old default to the updated array and new default is uniformly Lipschitz in the sup norm. A list containing all exceptions can be chosen with at most $n_j$ positions, using only the previous list and the new candidates."
+   },
+   {
+    "anchor": "stmt-lem-buf-reference",
+    "claim_id": "claim-stationary-reference",
+    "statement": "Let $L_{j-1}=T_{j-1}-S_{j-1}$ before the first overflow at $j$."
+   },
+   {
+    "anchor": "stmt-lem-buf-relative-stability",
+    "claim_id": "claim-post-overflow-stability",
+    "statement": "At a first overflow in group $j$,"
+   },
+   {
+    "anchor": "stmt-lem-buf-rarity",
+    "claim_id": "claim-heavy-count-rarity",
+    "statement": "At every specified endpoint, $$\\mathbb P(\\Theta_j\\mid X_u(x)=Y_a(y)=1)\n      \\leq\\frac{C}{n_j\\rho_j}.\n \\label{eq:buf-rarity}$$ The same bound holds with the narrower endpoint condition $Y_t(y)=1$. Moreover, for every prefix mean row supremum, $$\\|\\mathbf1_{\\Theta_j}\\beta_i\\|_{L_s(\\mu)}\n      \\leq Cc_*2^{-p+B_1d_i}(n_j\\rho_j)^{-1/s}.\n \\label{eq:buf-masked-mean}$$"
+   },
+   {
+    "anchor": "stmt-prop-buf-error",
+    "claim_id": "claim-integrated-compression-error",
+    "statement": "For fixed sufficiently large $c_1$, then $c_2$, and sufficiently rapid prefix-noise decay $K_n$,"
+   },
+   {
+    "anchor": "stmt-lem-buf-clamping",
+    "claim_id": "claim-range-clamp-preservation",
+    "statement": "For fixed common increments satisfying Equation"
+   },
+   {
+    "anchor": "stmt-prop-est-clean",
+    "claim_id": "claim-exact-grouping-reserve",
+    "statement": "Suppose the earlier row and vector tasks have error bound $C_b2^{-p'}$ and the support and common-parameter properties of the atom section."
+   },
+   {
+    "anchor": "stmt-prop-est-clean",
+    "claim_id": "claim-exact-grouping-reserve",
+    "statement": "Use exact comparisons locally, and vary every variable on which the sample terms depend."
+   },
+   {
+    "anchor": "stmt-lem-fp-hash",
+    "claim_id": "claim-short-fingerprint-family",
+    "statement": "Suppose every endpoint has an injective, fixed-length binary encoding of length $L\\le c_{\\mathrm{ID}}B$."
+   },
+   {
+    "anchor": "stmt-lem-fp-clean",
+    "claim_id": "claim-clean-salt-independence",
+    "statement": "In a task of budget $M\\in\\mathcal I_b$,"
+   },
+   {
+    "anchor": "stmt-lem-fp-envelope",
+    "claim_id": "claim-clean-envelope",
+    "statement": "The set $\\mathcal E_x$ is independent of the present salt and has size at most $2^{C_Eh_*}$ for a fixed $C_E$. All clean nondefault representatives in the small groups belong to this set. Consequently, conditional on the other data, $$\\Pr[\\text{two distinct IDs in $\\mathcal E_x$ have the same key}]\n \\le C\\,2^{2C_Eh_*}B^{-1/2}.\n \\label{eq:fp-envelope-collision}$$"
+   },
+   {
+    "anchor": "stmt-lem-fp-escape",
+    "claim_id": "claim-escaped-candidate-charge",
+    "statement": "Suppose actual–clean child discrepancies at budget $m$ have their prescribed metric bounds $2^{-p_m}\\lambda_m$."
+   },
+   {
+    "anchor": "stmt-lem-fp-buckets",
+    "claim_id": "claim-increment-only-aliasing",
+    "statement": "Consider one small group on $\\mathcal F_x^c$."
+   },
+   {
+    "anchor": "stmt-lem-fp-buckets",
+    "claim_id": "claim-increment-only-aliasing",
+    "statement": "Let $\\Delta_{\\mathrm{ac}}(y),\\Delta_{\\mathrm{cl}}(y)$ be its unaliased increments, namely its true-ID sums using actual and clean children, respectively."
+   },
+   {
+    "anchor": "stmt-lem-fp-direct",
+    "claim_id": "claim-direct-collision-error",
+    "statement": "The direct collision contribution to any final pre-incoming output has norm at most $$2^{-p}\\,2^{C h_*}B^{-1/(2s)},\n \\label{eq:fp-direct-charge}$$ for a fixed $C$ independent of $D_1,D_2,\\epsilon$ introduced below. All remaining contributions on $\\mathcal F_x^c$ are bounded by actual–clean child discrepancy norms with an amplification at most $2^{C d}$ at slack $d$."
+   },
+   {
+    "anchor": "stmt-prop-fp-coupling",
+    "claim_id": "claim-uniform-block-coupling",
+    "statement": "The fixed constants can be chosen so that, for every task of budget $M\\in\\mathcal I_b$ and precision $p$, each prescribed actual–clean output discrepancy, including every pre-incoming score and witness, is at most $$2^{-p}\\lambda_M,\\qquad\n \\lambda_M=2^{-D_1h_*+D_2(M-M_b)}.\n \\label{eq:fp-lambda}$$ The same assertion holds for the ordinary vector metrics. Adding these discrepancies to the clean estimates proves the target error bounds for the actual tables and vectors."
+   },
+   {
+    "anchor": "stmt-thm-fp-estimators",
+    "claim_id": "claim-actual-estimator-errors",
+    "statement": "For every allowed task"
+   },
+   {
+    "anchor": "stmt-lem-fp-catalytic",
+    "claim_id": "claim-restoring-catalytic-equality",
+    "statement": "Let $V\\in\\{0,1\\}^B$ be a shared vector with arbitrary initial contents."
+   },
+   {
+    "anchor": "stmt-lem-fp-catalytic",
+    "claim_id": "claim-restoring-catalytic-equality",
+    "statement": "Suppose an excursion to either of two deterministically specified endpoints returns the cursor, and its path and result are independent of the incoming contents of $V$."
+   },
+   {
+    "anchor": "stmt-lem-arith-residue-stream",
+    "claim_id": "claim-residue-exact-stream",
+    "statement": "Suppose $|z|\\leq1$ and, for each $t\\geq0$, a deterministic integer $N_t(z)$ satisfies $$|N_t(z)-2^tz|<2."
+   },
+   {
+    "anchor": "stmt-lem-arith-gate-evaluation",
+    "claim_id": "claim-regenerated-gate-evaluation",
+    "statement": "Consider a finite Boolean circuit of bounded fan-in, with a specified output gate."
+   },
+   {
+    "anchor": "stmt-lem-arith-gate-evaluation",
+    "claim_id": "claim-regenerated-gate-evaluation",
+    "statement": "Suppose the type and immediate predecessors of a gate, or its operand label and digit place if it is an input gate, can be computed from the root parameters and a path of child choices from the output gate."
+   },
+   {
+    "anchor": "stmt-lem-arith-gate-evaluation",
+    "claim_id": "claim-regenerated-gate-evaluation",
+    "statement": "Suppose these computations use $O(B+t+d)$ scratch bits and make no operand or graph queries."
+   },
+   {
+    "anchor": "stmt-lem-arith-elementary",
+    "claim_id": "claim-elementary-stream-operations",
+    "statement": "The normalized operations of taking a pair average, a maximum or minimum, and a fixed binary shift admit deterministic integers satisfying Equation <a href=\"#eq:arith-approximation\" data-reference-type=\"eqref\" data-reference=\"eq:arith-approximation\">[eq:arith-approximation]</a>. Their residue procedures, for any fixed $q$, have the following properties. There are constants $C_0,C_1$ such that an operand place $j$ obeys $j\\leq t+C_0$, its suspended local record has length at most $C_0+C_1(t-j)$, and the intrinsic local space is $O(t+1)$. Fixed finite compositions of these normalized operations have the same bounds, with enlarged constants. Fixed Boolean operations on returned digit codes, including sign decoding and conditional selection of code bits, add only constant local overhead."
+   },
+   {
+    "anchor": "stmt-lem-arith-multiplication",
+    "claim_id": "claim-stream-multiplication",
+    "statement": "For normalized exact input streams $x$ and $y$,"
+   },
+   {
+    "anchor": "stmt-lem-arith-reciprocal",
+    "claim_id": "claim-positive-interval-reciprocal",
+    "statement": "Fix constants $0<a\\leq b$."
+   },
+   {
+    "anchor": "stmt-lem-arith-reciprocal",
+    "claim_id": "claim-positive-interval-reciprocal",
+    "statement": "On inputs $x\\in[a,b]$,"
+   },
+   {
+    "anchor": "stmt-lem-arith-rank",
+    "claim_id": "claim-indexed-finite-ranks",
+    "statement": "Fix $\\kappa>0$ and $d\\geq1$."
+   },
+   {
+    "anchor": "stmt-lem-arith-rank",
+    "claim_id": "claim-indexed-finite-ranks",
+    "statement": "Consider at most $2^{\\kappa d}$ normalized values, indexed by descriptors of length at most $\\kappa d$, and an order statistic specified by an $O(d)$-bit index."
+   },
+   {
+    "anchor": "stmt-lem-arith-rank",
+    "claim_id": "claim-indexed-finite-ranks",
+    "statement": "The semantic list length $n$ is public; the requested index is in $\\{1,\\ldots,n\\}$, or an out-of-range request returns a prescribed normalized constant."
+   },
+   {
+    "anchor": "stmt-lem-arith-sums-scales",
+    "claim_id": "claim-bounded-sums-scales",
+    "statement": "Suppose an immediate descriptor domain has at most $2^{\\kappa d}$ terms, all required binary scale exponents have magnitude at most $\\kappa d$, and every intermediate output has a known range bound $2^{\\kappa d}$."
+   },
+   {
+    "anchor": "stmt-lem-arith-buffered-test",
+    "claim_id": "claim-buffered-finite-tests",
+    "statement": "Let $d\\geq1$, let $s$ and $u$ have known magnitude bound $2^{\\kappa d}$, and suppose $u\\geq\\rho\\geq2^{-\\kappa d}$."
+   },
+   {
+    "anchor": "stmt-thm-arith-interface",
+    "claim_id": "claim-uniform-numerical-interface",
+    "statement": "Fix the digit alphabet, positive reciprocal intervals, and constants bounding the following recipe class."
+   },
+   {
+    "anchor": "stmt-thm-arith-interface",
+    "claim_id": "claim-uniform-numerical-interface",
+    "statement": "A recipe at slack $d\\geq1$ has a fixed number of stages built from bounded arithmetic operations, fixed piecewise formulas using maxima, minima and clipping, the reciprocals of Lemma <a href=\"#lem:arith-reciprocal\" data-reference-type=\"ref\" data-reference=\"lem:arith-reciprocal\">52</a>, indexed ranks as in Lemma <a href=\"#lem:arith-rank\" data-reference-type=\"ref\" data-reference=\"lem:arith-rank\">53</a>, and sums and known scales as in Lemma <a href=\"#lem:arith-sums-scales\" data-reference-type=\"ref\" data-reference=\"lem:arith-sums-scales\">54</a>."
+   },
+   {
+    "anchor": "stmt-thm-arith-interface",
+    "claim_id": "claim-uniform-numerical-interface",
+    "statement": "The stage and descriptor descriptions are generated from the root parameters by index computations using $O(B+d+t)$ scratch and no operand queries, and the total non-reduction dependency depth is bounded independently of $d$."
+   },
+   {
+    "anchor": "stmt-thm-arith-interface",
+    "claim_id": "claim-uniform-numerical-interface",
+    "statement": "Each indexed domain has size $2^{O(d)}$ and descriptors of length $O(d)$."
+   },
+   {
+    "anchor": "stmt-thm-arith-interface",
+    "claim_id": "claim-uniform-numerical-interface",
+    "statement": "Discrete domain and validity decisions are structural leaves or buffered tests with their own fixed precision conventions."
+   },
+   {
+    "anchor": "stmt-thm-arith-interface",
+    "claim_id": "claim-uniform-numerical-interface",
+    "statement": "Public coefficient leaves have exact normalized digit procedures using $O(B+d+t)$ shared scratch and making no operand or recursive graph queries."
+   },
+   {
+    "anchor": "stmt-thm-ctrl-realization",
+    "claim_id": "claim-total-controller-realization",
+    "statement": "Fix the construction constants and an admissible top budget $M_{\\mathrm{top}}=O(B)$."
+   },
+   {
+    "anchor": "stmt-lem-ctrl-local-graph",
+    "claim_id": "claim-guarded-terminal-graph",
+    "statement": "Suppose a fixed terminal recipe uses the preceding instruction types, has regenerable records, and obeys <a href=\"#eq:ctrl-local-bound\" data-reference-type=\"eqref\" data-reference=\"eq:ctrl-local-bound\">[eq:ctrl-local-bound]</a> on its designated executions."
+   },
+   {
+    "anchor": "stmt-lem-ctrl-local-graph",
+    "claim_id": "claim-guarded-terminal-graph",
+    "statement": "Suppose all its opaque transition queries are already implemented, are total on admissible arguments, and have the stated safe invalid-port behavior."
+   },
+   {
+    "anchor": "stmt-lem-ctrl-local-graph",
+    "claim_id": "claim-guarded-terminal-graph",
+    "statement": "Their returned bits, success flags, cursor outputs and port tokens are independent of incoming scratch and catalytic contents, and they restore the catalyst."
+   },
+   {
+    "anchor": "stmt-lem-ctrl-tour",
+    "claim_id": "claim-inverse-tree-contour",
+    "statement": "Let a finite deterministic graph of the form in Lemma <a href=\"#lem:ctrl-local-graph\" data-reference-type=\"ref\" data-reference=\"lem:ctrl-local-graph\">61</a> have a specified canonical success halt."
+   },
+   {
+    "anchor": "stmt-lem-ctrl-cap",
+    "claim_id": "claim-capped-incoming-motions",
+    "statement": "Let a fixed row class have a constant port alphabet, distinct entries within each row, and a deterministic terminal program which maps its valid row ports to their endpoints."
+   },
+   {
+    "anchor": "stmt-lem-ctrl-cap",
+    "claim_id": "claim-capped-incoming-motions",
+    "statement": "Assume the program is of the form in Lemma"
+   },
+   {
+    "anchor": "stmt-lem-ctrl-score-rank",
+    "claim_id": "claim-incoming-score-rank",
+    "statement": "Let a constant-size forward row class cover every positive entry of a bounded nonnegative score table, with distinct entries in each row."
+   },
+   {
+    "anchor": "stmt-lem-ctrl-score-rank",
+    "claim_id": "claim-incoming-score-rank",
+    "statement": "Suppose pre-incoming score digits are restoring queries, and the class has a terminal program with the preceding interfaces."
+   },
+   {
+    "anchor": "stmt-lem-ctrl-paths",
+    "claim_id": "claim-ordered-terminal-excursions",
+    "statement": "Every unbalanced path required by the estimator has the following ordered form: restoring selection and validity tests; local label maps and, if necessary, a paired left-factor motion; further restoring tests at that midpoint; at most one final terminal delegation; and then only local label completion. An excursion to its endpoint and back, for a pure local action, has regenerable records. It preserves the same allowance and clock bounds as this ordered path, up to fixed factors. No unbalanced spine is retained over a new high-cost query at its endpoint."
+   },
+   {
+    "anchor": "stmt-lem-ctrl-equality",
+    "claim_id": "claim-implemented-endpoint-comparison",
+    "statement": "At slack $d$,"
+   },
+   {
+    "anchor": "stmt-lem-ctrl-recipes",
+    "claim_id": "claim-estimator-recipe-certificates",
+    "statement": "All actual estimator operations admit regenerable records and a fixed finite ordering of operation strata. At a prefix of slack $d$, each ordinary layer has $O(d)$ structural control, and a numerical path to an operand at clock $j$ has suspended record $$\\label{eq:ctrl-recipe-bound}\n c_{\\mathrm{str}}d+c_{\\mathrm{num}}(t-j),\\qquad\n j-t\\le c_{\\mathrm{dig}}d,$$ with fixed coefficients. Beyond the fixed strata of this prefix, a call is to the preceding prefix of slack $2d$, or to an estimator of budget at most $M-d$. The final row and incoming wrappers add a fixed number of strata at $d=1$. Every designated terminal execution obeys the corresponding boundary bounds before guards are imposed."
+   },
+   {
+    "anchor": "stmt-lem-ctrl-replay",
+    "claim_id": "claim-effective-parameter-replay",
+    "statement": "The records in Lemma <a href=\"#lem:ctrl-recipes\" data-reference-type=\"ref\" data-reference=\"lem:ctrl-recipes\">67</a> are regenerable in the sense of Definition <a href=\"#def:ctrl-record\" data-reference-type=\"ref\" data-reference=\"def:ctrl-record\">59</a>. With respect to their own effective environments, actual procedures at a budget in block $b$ ignore all salt blocks later than $b$, including in structural orders, graph universes, guards and predecessor probes. Re-querying a table entry or using a paired port in either direction uses the same effective table tuple."
+   },
+   {
+    "anchor": "stmt-thm-fixed-precision",
+    "claim_id": "claim-fixed-inverse-polynomial-accuracy",
+    "statement": "Fix a randomized machine $\\mathcal M$ with polynomial worst-case running time and $O(\\log(n+2))$ work space, and fix an integer $d\\ge1$."
+   },
+   {
+    "anchor": "stmt-lem-final-majority",
+    "claim_id": "claim-specified-start-tail",
+    "statement": "Let $W\\in[0,1]^V$, and suppose an estimator satisfies $$\\frac1N\\mathbb E\\sum_{v\\in V}\\frac{X_f(v)}f\n |\\bar W(v)-W(v)|^8\\le C_b^8 2^{-8p}.$$"
+   },
+   {
+    "anchor": "stmt-cor-promise-bpl",
+    "claim_id": "claim-promise-logspace-equality",
+    "statement": "Under these conventions,"
+   },
+   {
+    "anchor": "stmt-cor-certified-search",
+    "claim_id": "claim-certified-accepting-search",
+    "statement": "Fix a randomized logarithmic-space machine $\\mathcal M$ that halts within a fixed polynomial bound $T(n)\\ge1$ on every input and every coin sequence, and fix an integer $c\\ge0$."
+   },
+   {
+    "anchor": "stmt-cor-certified-search",
+    "claim_id": "claim-certified-accepting-search",
+    "statement": "If every accepting run of $\\mathcal M$ emits a valid witness for a specified relation,"
+   },
+   {
+    "anchor": "stmt-thm-effective-simulation",
+    "claim_id": "claim-effective-simulation-compiler",
+    "statement": "If, on every input of length $n$ and every random tape, $M$ halts within $(n+2)^a$ steps, uses at most $b\\lceil\\log(n+2)\\rceil$ work bits, and has acceptance probability at most $1/3$ on no inputs and at least $2/3$ on yes inputs, then $D_M$ decides the same language."
+   },
+   {
+    "anchor": "stmt-lem-compiler-interpreter",
+    "claim_id": "claim-total-capped-interpreter",
+    "statement": "On an input with prefix $$\\label{eq:compiler-prefix}\n  1^{d_{\\mathrm{code}}}0\\,z\\,1^n0\\,\n  E_{d_{\\mathrm{code}}}(x),$$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Deterministic probability approximation",
+    "evidence": [
+     {
+      "anchor": "pm-h-6",
+      "quote": "The algorithm estimates $W_L$ in one shared finite random environment $\\sigma$.",
+      "quote_sha256": "4f137af01e68c5c095dad0a33d789065bc89b69756415a3da6498205531abdc6"
+     },
+     {
+      "anchor": "stmt-thm-ctrl-realization",
+      "quote": "Every test or numerical digit query terminates, returns its defined value, and restores the cursor and catalyst.",
+      "quote_sha256": "4daaedc682fd564f7d364df571c4a536ac80394df6ff50d84f5b9e8e43d7cf5a"
+     }
+    ],
+    "requires_concepts": [
+     "Configuration reduction",
+     "Correction and copy hierarchy",
+     "Actual estimator error bounds",
+     "Total restoring controller",
+     "Conditional environment enumeration"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Adaptive fingerprint coupling",
+    "evidence": [
+     {
+      "anchor": "stmt-lem-fp-clean",
+      "quote": "Every clean value and structural choice for block $b$ is independent of that block’s effective salt and of later effective salts.",
+      "quote_sha256": "0638b8a031794cace5fbd0bdcf765cddac72fd3bc9015f64a0d405c039d3dde8"
+     },
+     {
+      "anchor": "stmt-lem-fp-buckets",
+      "quote": "The old full-array discrepancy is added to this bound with coefficient one.",
+      "quote_sha256": "5a00086b6e0392bf5ed47dab323429b4d31659bf72f225352d15235c48d03b02"
+     }
+    ],
+    "requires_concepts": [
+     "Salt visibility",
+     "Clean block independence",
+     "Smooth support witnesses",
+     "Actual incoming cap",
+     "Increment-only aliasing"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Uniform controller space bound",
+    "evidence": [
+     {
+      "anchor": "stmt-lem-ctrl-recipes",
+      "quote": "All actual estimator operations admit regenerable records and a fixed finite ordering of operation strata.",
+      "quote_sha256": "37e22ebebf8d98fbb6e0b386cdfbcbc1dd19904824be5711025d3cc799f9b9e4"
+     },
+     {
+      "anchor": "stmt-lem-ctrl-replay",
+      "quote": "Re-querying a table entry or using a paired port in either direction uses the same effective table tuple.",
+      "quote_sha256": "96c6cbfefe3b8730e10f1546add572b024cbc127d993494991338fb93a8c1b7c"
+     }
+    ],
+    "requires_concepts": [
+     "Regenerable records",
+     "Raw allowance certificate",
+     "Finite recipe strata",
+     "Safe invalid-port entry",
+     "Opaque transition queries"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-logspace-equality",
+   "exact_statement": "$$\\mathsf L=\\mathsf{RL}=\\mathsf{BPL}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-unary-probability-approximation",
+   "exact_statement": "Fix a randomized machine $\\mathcal M$ with polynomial worst-case running time and $O(\\log(n+2))$ work space. Let $p_{\\mathcal M}(x)$ be its acceptance probability on an input $x$ of length $n$. There is a uniform deterministic algorithm which, on input $(x,1^q)$ with $q\\ge1$, outputs an integer $0\\le a\\le2^{q+2}$ satisfying $$\\left|a2^{-(q+2)}-p_{\\mathcal M}(x)\\right|\\le2^{-q}.$$ It uses $O(\\log(n+2)+q)$ work space and $(n+2)^{O(1)}2^{O(q)}$ time. The constants depend only on $\\mathcal M$.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-thm-probability"
+  },
+  {
+   "claim_id": "claim-configuration-reduction",
+   "exact_statement": "Fix a polynomial-time randomized machine using $O(\\log(n+2))$ work space. On an input of length $n$ one can specify, uniformly in logarithmic space, a polynomial-size vertex set $V_0$, a strictly forward substochastic matrix $S$, a vector $e\\in\\{0,1\\}^{V_0}$, and a start vertex $x_0$ with the following properties.*\n\n1.  *The incoming and outgoing port degrees of $S$ are bounded by constants depending only on the machine. Port validity, edge weights, and pairing are computable in logarithmic space.*\n\n2.  *The vector $p_0=(I-S)^{-1}e$ is well defined and belongs to $[0,1]^{V_0}$.*\n\n3.  *The coordinate $p_0(x_0)$ is the acceptance probability of the machine.*\n\n*In particular, an $\\mathsf{RL}$ computation gives the promise $p_0(x_0)=0$ or $p_0(x_0)\\ge1/2$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-model-reduction"
+  },
+  {
+   "claim_id": "claim-rank-channel-estimates",
+   "exact_statement": "There are positive constants $c_\\pi,C_\\pi,C_{\\rm pair},C_{\\rm var}$, depending only on $H,h_0$, with the following properties in every admissible finite range.*\n\n1.  *A specified identifier is retained at rate $a$ with probability $\\pi_a$, where $c_\\pi a\\le\\pi_a\\le C_\\pi a$.*\n\n2.  *For distinct identifiers $x,y$ and any admissible rates $u,a$, $$\\Pr\\{X_a(y)=1\\mid X_u(x)=1\\}\\le C_{\\rm pair}a.$$*\n\n3.  *If $A_0$ is a deterministic set of $q$ distinct identifiers and $T_a=\\sum_{y\\in A_0}X_a(y)$, then $$\\Pr\\{T_a<q\\pi_a/2\\}\\le \\frac{C_{\\rm var}}{q\\pi_a}\n    \\quad(q>0).$$*\n\n4.  *Replacing every channel argument $y$ by the same injective affine map $\\alpha y+\\beta$ leaves the joint law of all evaluations unchanged, provided $\\alpha\\ne0$ in $\\mathbb F_P$. In particular, a common fixed padding suffix leaves their law unchanged.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-env-ranks"
+  },
+  {
+   "claim_id": "claim-forward-fixed-point-truncation",
+   "exact_statement": "For every fixed column multiplier $0\\leq g\\leq1$, there is a unique strictly forward nonnegative solution of $$E_*(x,y)=fQ((C+E_*C)(x,y)/f)g(y).\n \\label{eq:hier-fixed-point}$$ For the recurrence in Equation <a href=\"#eq:hier-fixed-g-iteration\" data-reference-type=\"eqref\" data-reference=\"eq:hier-fixed-g-iteration\">[eq:hier-fixed-g-iteration]</a>, $0\\leq E_i\\leq E_*$, and for every $k\\geq0$, $$\\max_{x,y}\\frac{E_*(x,y)-E_k(x,y)}f\n \\leq\n e^{1/\\theta_1}\\frac{(L_Q/\\theta_1)^k}{k!}.\n \\label{eq:hier-factorial}$$ In particular $k_*$ can be chosen as a fixed integer so that the right side of Equation <a href=\"#eq:hier-factorial\" data-reference-type=\"eqref\" data-reference=\"eq:hier-factorial\">[eq:hier-factorial]</a> at $k=k_*$ is at most $q^{-1}/32$, uniformly in $C,f,V$, and $g$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-hier-fixed-point"
+  },
+  {
+   "claim_id": "claim-pilot-actual-domination",
+   "exact_statement": "All pilot and actual inputs and corrections are nonnegative and strictly forward. For $1\\leq i\\leq k_*$, $$\\begin{aligned}\n G_i\\mathbf 1,\\ \\widehat E_i\\mathbf 1,\n     \\ G'_i\\mathbf 1,\\ E_i\\mathbf 1&\\leq i\\mathbf 1,\\\\\n G_i(x,y),\\ \\widehat E_i(x,y),\n     \\ G'_i(x,y),\\ E_i(x,y)&\\leq if.\n\\end{aligned}$$ Moreover, $$E_{i-1}\\leq E_i\\leq\\widehat E_i,\n \\qquad G'_i\\leq G_i.$$ The row and column supports of every matrix in this statement are contained in $\\mathcal R(C)$ and $\\mathcal T(C)$, respectively.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-hier-pilot-bounds"
+  },
+  {
+   "claim_id": "claim-overloaded-column-detection",
+   "exact_statement": "Let $$D_{\\rm row}=1+C_{\\rm pair}k_*/\\eta_-.$$ Choose the integer $K\\geq160D_{\\rm row}$, increasing it if necessary for the other finitely many row-gate estimates. For any fixed positive integer $J$, choose $$R_*\\geq c_\\pi^{-1}\\max(4J,40C_{\\rm var}).\n \\label{eq:hier-column-constants}$$ Then the pilot has the following properties.*\n\n1.  *If $\\#\\{x:G_i(x,y)\\geq\\delta_1f\\}>R_*/f$, then $U_i(y)\\geq19/20>9/10$.*\n\n2.  *If $U_i(y)>1/4$, then $$\\#\\{x:G_i(x,y)>\\delta_0f\\}\n           >\\frac{J}{4C_\\pi f}.$$*\n\n3.  *For any pilot correction with multiplier $\\widehat g_i(y)>0$, $$\\#\\{x:G_i(x,y)\\geq\\delta_1f\\}\\leq R_*/f.$$ For every actual correction, $g(y)>0$ implies $$\\#\\{x:G'_i(x,y)\\geq\\delta_1f\\}\\leq R_*/f.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-hier-column-test"
+  },
+  {
+   "claim_id": "claim-finite-residual-domination",
+   "exact_statement": "For the $k_*$ chosen in Lemma <a href=\"#lem:hier-fixed-point\" data-reference-type=\"ref\" data-reference=\"lem:hier-fixed-point\">5</a>, put $$K_*=k_*+1,\\qquad\n \\varepsilon_{\\rm good}=\\theta_2+q^{-1}/32<q^{-1}/16,\n \\qquad c_{\\rm dom}=\\theta_1/(2k_*).$$ The matrix $D$ in Equation <a href=\"#eq:hier-residual-definition\" data-reference-type=\"eqref\" data-reference=\"eq:hier-residual-definition\">[eq:hier-residual-definition]</a> is nonnegative, strictly forward, and substochastic. Its entries satisfy $$D(x,y)\\leq K_*f,\n \\qquad\n g(y)=1\\ \\Longrightarrow\\ D(x,y)\\leq\\varepsilon_{\\rm good}f.\n \\label{eq:hier-residual-entry-bounds}$$ Furthermore, $$D\\geq c_{\\rm dom}(C+E+EC).\n \\label{eq:hier-domination}$$ Thus every unsigned term in $C-E+EC$ is bounded by a fixed multiple of $D$. In the formulas $G_i=C+\\widehat E_{i-1}C$ and $G'_i=C+E_{i-1}C$, each unsigned term is bounded by the corresponding input itself. Moreover, $\\mathcal R(D)\\subseteq\\mathcal R(C)$ and $\\mathcal T(D)\\subseteq\\mathcal T(C)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-hier-residual"
+  },
+  {
+   "claim_id": "claim-copy-density-reduction",
+   "exact_statement": "Choose the detector rank $J$ large enough that $$J\\geq\\frac{2C_\\pi(D_0-1)k_*(k_*+1)}{\\delta_0},\n \\label{eq:hier-active-J}$$ and then choose $R_*$ as in Equation <a href=\"#eq:hier-column-constants\" data-reference-type=\"eqref\" data-reference=\"eq:hier-column-constants\">[eq:hier-column-constants]</a>. The matrix $C^+$ is strictly forward and substochastic, and $$C^+(x_i,y_j)\\leq f/q,\n \\qquad |\\mathcal A(C^+)|\\leq2|\\mathcal A(C)|.$$ If $P^r$ is the matrix from $V^+$ to $V$ defined by $$P^r(x_i,x)=r_i(x),\\qquad\n P^r(x_i,z)=0\\quad(z\\ne x),\n \\label{eq:hier-projection}$$ then $$C^+P^r=P^rD.\n \\label{eq:hier-one-step-intertwining}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-hier-copy-step"
+  },
+  {
+   "claim_id": "claim-reward-transport-target",
+   "exact_statement": "For every stage, $$C_lP_l^c=P_l^c-B_l(I-S).\n \\label{eq:hier-reward-algebra}$$ The vectors $W_l=B_le$ satisfy $$0\\leq W_l\\leq1,\\qquad\n W_l=P_l^cp_0-C_lP_l^cp_0,\n \\label{eq:hier-reward-bound}$$ and their updates are $$W_{l+1}(x_i)=r_i(x)\\bigl(W_l(x)+(E_lW_l)(x)\\bigr).\n \\label{eq:hier-reward-update}$$ If $\\bar x_l$ is the all-primary copy of a base vertex $x$, then $$0\\leq p_0(x)-W_l(\\bar x_l)\n       \\leq |V_0|\\,2^{-(H-1)l}.\n \\label{eq:hier-final-error}$$ Consequently there is $L=O(B)$ for which the last upper bound is strictly less than $1/16$ for every base vertex $x$. In particular, $p_0(x)=0$ implies $W_L(\\bar x_L)=0$, and $p_0(x)\\ge1/2$ implies $W_L(\\bar x_L)>7/16$. Every full stage domain has size $2^{O(B)}$ and admits $O(B)$-bit addresses.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-hier-reward-target"
+  },
+  {
+   "claim_id": "claim-dense-atom-normalization",
+   "exact_statement": "For sufficiently large fixed $K$, the table $$\\mathcal B_a(x,y)=\n  \\mathbf1_{\\{Y_t(y)=1\\}}\\frac{k_a(d_y)R}{c(q_y)}\n \\label{eq:atom-dense-table}$$ on retained starts has bounded values and row support. On the slice $X_u(x)=Y_t(y)=1$ its conditional expectation times $a$ equals $G(x,y)\\omega_k(G(x,y))$. The same assertion holds for $\\mathcal B_a^{(j)}$ with the routing fraction included. Apart from its start membership, its true value uses only the terminal channel.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-atom-dense"
+  },
+  {
+   "claim_id": "claim-fine-product-mass",
+   "exact_statement": "Let $C$ be the transition matrix at the current stage, and let $F$ be any finite pilot or actual correction there. If a matrix $A_b\\geq0$ on the same vertex set satisfies $A_b\\mathbf 1\\leq\\mathbf 1$ and $A_b(x,y)\\leq c_b b$ for some $b>0$, then $$(FA_b)\\mathbf 1\\leq k_*\\mathbf 1,\n \\qquad (FA_b)(x,y)\\leq k_*c_b b.$$ If also $A_b\\leq C$, then $FA_b\\leq FC$. These estimates have constants independent of the bin scale $b$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-hier-bin-products"
+  },
+  {
+   "claim_id": "claim-correction-atom-normalization",
+   "exact_statement": "For sufficiently large fixed $K$ and then $K_c$, the conditional mean of $f\\mathcal F(x,y)$ on $X_u(x)=Y_t(y)=1$ is exactly $F(x,y)$. On a true position with $Q(d_y)>0$ and $g_0(y)>0$, $$q_y=\\alpha(x,y):=\n  \\mathbb E[R T_y\\mid X_u(x)=Y_t(y)=1]\\ge3/4.\n \\label{eq:atom-alpha-bound}$$ No lower bound on $q_y$ or $\\alpha(x,y)$ is required when $g_0(y)=0$. The true gates and normalization use only the two role channels $X,Y$; $g_0$ is deterministic.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-atom-correction"
+  },
+  {
+   "claim_id": "claim-support-margins",
+   "exact_statement": "Suppose a bounded nonnegative main function $k(v)$ vanishes for $v\\le\\vartheta$. Its product $k(v)R_{\\vartheta}(\\rho)$ and the preparatory product $h_{\\vartheta}(v)R_{\\vartheta}(\\rho)$ have at most $K-1$ nonzero real entries in a row. They admit a common exposed class $A$, of at most $K-1$ real entries, containing their supports and satisfying $I_{\\vartheta}=1$ throughout $A$. These assertions hold for arbitrary real raw estimates, without a sign or accuracy hypothesis.*\n\n*The auxiliary score $I_{\\vartheta}$ also has at most $K-1$ nonzero real entries and has an exposed row class with a bounded-support smooth witness equal to one on that class.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-atom-margins"
+  },
+  {
+   "claim_id": "claim-paired-port-contract",
+   "exact_statement": "All main and preparatory row tables, auxiliary scores, and the smooth witnesses just constructed have bounded values and bounded row support. Every row access class used for a main or preparatory output, or for access to its auxiliary score, has bounded size and a smooth witness equal to one on every exposed entry, including exposed entries of weight zero. A witness itself is needed as an analytical row function, without an additional requirement to expose its support through a further witness. For a correction or its preparatory table let $A$ be its pre-incoming class from Equation <a href=\"#eq:atom-exposed-class\" data-reference-type=\"eqref\" data-reference=\"eq:atom-exposed-class\">[eq:atom-exposed-class]</a>. Retain an exposed entry $(x,y)\\in A$ only when $$\\#\\{x':X_u(x')=1,\\ (x',y)\\in A\\}\\le K_c.\n \\label{eq:atom-port-cap}$$ This deletion preserves all table values and gives at most $K-1$ outgoing and at most $K_c$ incoming exposed entries.*\n\n*These assertions hold separately for every computed version, provided that its values, ranks, scores, and access classes use the same final raw arrays and common task tuple. Access ports denote distinct entries: the implementation must expose each pair at most once and pair its incoming and outgoing ports consistently. Access to auxiliary scores alone has only the asserted row bound.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-atom-ports"
+  },
+  {
+   "claim_id": "claim-atom-assembly-comparison",
+   "exact_statement": "Compare two versions with the same environment, rates, and task tuple. For a sparse normalized output write $H=P T g$ and $H'=P'T'g'$, where $P,P'$ are the pre-incoming clipped-ratio row functions (including their usage masks), $I,I'$ are their auxiliary scores, and $g,g'$ are their column multipliers. If $g,g'$ are the prescribed smooth cutoffs of bounded vertex arrays $U_i,U_i'$, then $$\\mathfrak d_{u,f}(H,H')^s\n \\le C\\mathfrak d_{u,f}(P,P')^s\n    +C\\mathfrak d_{u,f}(I,I')^s\n    +C\\frac fu\\sum_i\\|U_i-U_i'\\|_{f;s}^s.\n \\label{eq:atom-assembly-bound}$$ For a sparse preparation omit the last term and use its unnormalized pre-incoming row function. The corresponding dense and detector row functions have no incoming or column-multiplier assembly cost.*\n\n\n*If $V_y,V_y'$ are the detector trials formed from $\\mathcal S_i,\\mathcal S_i'$ by their column order statistic, then $$\\|V-V'\\|_{f;s}^s\n   \\le C\\mathfrak d_{f,f}(\\mathcal S_i,\\mathcal S_i')^s.\n \\label{eq:atom-detector-comparison}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-atom-assembly"
+  },
+  {
+   "claim_id": "claim-affine-uniform-gap",
+   "exact_statement": "Let $G_H=\\mathrm{SL}_H(\\mathbb Z)\\ltimes\\mathbb Z^H$, with fixed $H\\ge3$. There is a fixed finite symmetric generating multiset and a lazy rational random walk on it whose action on every finite transitive $G_H$-set has a spectral gap bounded below by a positive constant depending only on $H$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-env-affine"
+  },
+  {
+   "claim_id": "claim-conditional-mixing",
+   "exact_statement": "Consider the fixed product of rank channels, conditioned on retention of one specified identifier per conditioned channel. Include any designated set of independent uniform bits, with length padded to a multiple of $H$, and freeze any remaining independent bits. There is a rational Markov averaging operator $K$ on this conditional space such that its stationary distribution is the indicated uniform conditional law and, for each fixed $2\\le s<\\infty$, $$\\|K^d-\\Pi\\|_{L_s\\to L_s}\\le C_s2^{-c_sd}\n\\qquad(d\\ge0).$$ Here $\\Pi$ is conditional expectation over the variables being averaged. The constants are independent of the field size, retention side lengths, bit lengths, indicated identifiers, and frozen bits.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-env-gap"
+  },
+  {
+   "claim_id": "claim-validated-walk-variants",
+   "exact_statement": "A length-$d$ word in the walk of Lemma <a href=\"#lem:env-gap\" data-reference-type=\"ref\" data-reference=\"lem:env-gap\">20</a> can be expanded into a bounded-alphabet family of variants described by $O(d)$ bits such that:*\n\n1.  *each fixed variant acts bijectively and measure-preservingly on the full environment before any endpoint tests;*\n\n2.  *its transformation is independent of the indicated identifiers;*\n\n3.  *for each walk word and each environment in the required conditional slice, exactly one variant passes the slice and wrap tests at the indicated identifiers, and this variant gives the conditional walk transformation;*\n\n4.  *the sum of valid variants, each with the probability of its original walk word, is exactly the conditional average.*\n\n*The tests can be performed when their indicated vertices are visited. In the admissible implementation range, field elements and identifiers have $O(B)$ bits, the total auxiliary bit string has $O(B)$ bits, and $d=O(B)$. In that range the transformations and tests use $O(B)$ shared scratch space, and the retained description of a variant uses $O(d)$ bits.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-env-variants"
+  },
+  {
+   "claim_id": "claim-true-sample-means",
+   "exact_statement": "Using true stochastic tables in Equations <a href=\"#eq:est-direct\" data-reference-type=\"eqref\" data-reference=\"eq:est-direct\">[eq:est-direct]</a>–<a href=\"#eq:est-reward\" data-reference-type=\"eqref\" data-reference=\"eq:est-reward\">[eq:est-reward]</a> gives, after the indicated conditional averages, the prescribed raw inputs and vector values on their conditioning slices, with the stated zero extensions. In particular, the first row channel has target $d_y=G(x,y)/a$ and the second has target $\\zeta q_y\\mathbf1_{Y_t(y)}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-est-true-means"
+  },
+  {
+   "claim_id": "claim-homogeneous-loss",
+   "exact_statement": "The loss in Equation <a href=\"#eq:est-loss\" data-reference-type=\"eqref\" data-reference=\"eq:est-loss\">[eq:est-loss]</a> is comparable, by constants depending only on $s$, to $|H^{1/s}-(H')^{1/s}|^s$. It contracts under sums and nonnegative mixtures. If $H\\le C_0G$ for a nonnegative $G$, then for every $a>0$ and $H'\\ge0$, $$a\\min\\left\\{1,\\frac{|H-H'|}{a+G}\\right\\}^{s}\n       \\le C\\mathcal L(H,H'),\n \\label{eq:est-relative-loss}$$ where $C$ depends only on $s,C_0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-est-loss"
+  },
+  {
+   "claim_id": "claim-scale-source-comparison",
+   "exact_statement": "Compare a budget-$m$ sample term with the same term using true stochastic inputs. For a first-channel mean contribution use its clipped relative error against $1+d_y$. In the bound for its $s$th-power norm, the scale factor multiplying a child root-discrepancy power is, up to fixed constants, $$\\begin{cases}\n b/a,&b\\ge a,\\\\\n (b/a)^{s-1},&b<a.\n \\end{cases}$$ A child that releases the old source and restarts on a stage-rate $f$ domain costs in addition at most $f/u$ in norm power. Direct children retaining that source have no such factor. The same-scale vector and second-channel comparisons have constant scale cost, with $f/u$ only where a source is released. No independence of estimated factors is required.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-est-mean-comparison"
+  },
+  {
+   "claim_id": "claim-fine-bin-omission",
+   "exact_statement": "If one fine bin is omitted, the norm of its normalized contribution is at most $C(b/a)^{(s-1)/s}$. This applies to direct terms, routed terms, and correction–bin products.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-est-omission"
+  },
+  {
+   "claim_id": "claim-immediate-path-descriptors",
+   "exact_statement": "At a row group of slack $d$, immediate candidates have descriptions of $O(d)$ bits. With exact endpoint grouping their sums equal the specified conditional-walk increments. A product visits its midpoint by a paired correction move before using any factor at that midpoint. Its right-hand task tuple does not depend on the discarded old source. Every child estimator in such a candidate has budget at most $M-d$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-est-paths"
+  },
+  {
+   "claim_id": "claim-mean-prefix-error",
+   "exact_statement": "Assume all earlier table and vector bounds with coefficient $C_b$. For an active task there is a fixed $B_1$, independent of the later choice of $A_*$, such that every mean prefix has norm at most $c_*2^{-p+B_1d_j}$ against its target. For the first channel the norm uses clipped relative discrepancy; for the second and for vectors it uses ordinary absolute discrepancy. The coefficient $c_*$ can be made arbitrarily small by increasing $A_*$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-est-mean-prefix"
+  },
+  {
+   "claim_id": "claim-paired-raw-differences",
+   "exact_statement": "At a slack-$d$ group, the ordinary raw norm of an unaveraged paired difference is at most $$C C_b\\,2^{-p-A_*+C_0d},\n \\label{eq:est-raw-bound}$$ where $C_0$ is fixed independently of the walk length coefficient. For two coupled versions of a budget-$r$ sample term, if the corresponding child discrepancies are bounded by $2^{-p'_r}\\lambda_r$, their normalized raw difference is bounded by $2^{-p+C_0'd}\\lambda_r$, summed over the finitely many child types. For a paired layer at budgets $m$ and $m-1$, apply this estimate to both parts. Its coupled discrepancy is consequently bounded by $2^{-p+C_0'd}(\\lambda_m+\\lambda_{m-1})$, after enlarging the fixed constant, or by the corresponding maximum over all children in the group. Every child in either part has budget at most $M-d$. For a fixed guessed measure-preserving variant and its valid endpoint restriction the same bounds hold. Counting all variants separately may increase $C_0'$ by a constant depending on the chosen walk length.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-est-raw-difference"
+  },
+  {
+   "claim_id": "claim-conditional-prefix-noise",
+   "exact_statement": "Assume exact local grouping, the earlier task error bounds, and that the sample functions depend only on variables varied by the conditional walk. Their uniform slice means are then deterministic at each indicated pair or vertex. Write $S_j^{\\rm mean}$ for a mean prefix and $S_j^{\\rm noise}=S_j-S_j^{\\rm mean}$ for its noise. There are fixed $B_1$ and arbitrarily large prescribed $K_n$ such that $$\\begin{aligned}\n \\left\\|\\min\\left(1,\n       \\frac{|S_j^{1,\\rm mean}-d|}{1+d}\\right)\\right\\|_{u,a;s}\n       &\\le c_*2^{-p+B_1d_j},\n       \\label{eq:est-prefix-mean}\\\\\n \\|S_j^{\\rm noise}\\|_{u,a;s}\n       &\\le c_*2^{-p-K_nd_j}.\n       \\label{eq:est-prefix-noise}\n\\end{aligned}$$ The second-channel mean uses its ordinary absolute norm, extended by zero off its usage domain, and satisfies the first bound. Vector means and noises satisfy the corresponding vertex bounds. The coefficient $c_*$ can be chosen as small as needed by task separation and walk constants.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-est-prefix"
+  },
+  {
+   "claim_id": "claim-local-compression-update",
+   "exact_statement": "The update has the following properties. It replaces every position of size at most $2u_0$ by the new default, is identity at every position of size at least $3u_0$, and lies coordinatewise between the input and the new default. The default is nondecreasing. The map from the input array and old default to the updated array and new default is uniformly Lipschitz in the sup norm. A list containing all exceptions can be chosen with at most $n_j$ positions, using only the previous list and the new candidates.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-buf-update"
+  },
+  {
+   "claim_id": "claim-stationary-reference",
+   "exact_statement": "Let $L_{j-1}=T_{j-1}-S_{j-1}$ before the first overflow at $j$. Then $\\|L_{j-1}\\|_\\infty\\leq6\\sum_{i<j}\\rho_i$, and at every endpoint with $d_y\\geq\\eta$, $$\\max_\\nu|L_{j-1}^\\nu(y)|\n       \\leq C\\sum_{i<j}\\rho_i e_i(y).\n \\label{eq:buf-preloss}$$ Start a reference calculation at the input of group $j$ with the true array $(d,v)+L_{j-1}$, the same preceding default, and no further increments. Every subsequent compression preserves its relevant row outputs. Their root discrepancy from the true outputs is bounded by $C\\sum_{i<j}\\rho_i e_i$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-buf-reference"
+  },
+  {
+   "claim_id": "claim-post-overflow-stability",
+   "exact_statement": "At a first overflow in group $j$, the discrepancy of final row-root outputs from the stationary reference of Lemma <a href=\"#lem:buf-reference\" data-reference-type=\"ref\" data-reference=\"lem:buf-reference\">33</a> is at most $$C\\sum_{i\\geq j} C_1^{m_*-i+1}e_i.\n \\label{eq:buf-relative-propagation}$$ The constant does not depend on the largest true first entry.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-buf-relative-stability"
+  },
+  {
+   "claim_id": "claim-heavy-count-rarity",
+   "exact_statement": "At every specified endpoint, $$\\mathbb P(\\Theta_j\\mid X_u(x)=Y_a(y)=1)\n      \\leq\\frac{C}{n_j\\rho_j}.\n \\label{eq:buf-rarity}$$ The same bound holds with the narrower endpoint condition $Y_t(y)=1$. Moreover, for every prefix mean row supremum, $$\\|\\mathbf1_{\\Theta_j}\\beta_i\\|_{L_s(\\mu)}\n      \\leq Cc_*2^{-p+B_1d_i}(n_j\\rho_j)^{-1/s}.\n \\label{eq:buf-masked-mean}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-buf-rarity"
+  },
+  {
+   "claim_id": "claim-integrated-compression-error",
+   "exact_statement": "For fixed sufficiently large $c_1$, then $c_2$, and sufficiently rapid prefix-noise decay $K_n$, compression preserves the prescribed row error budget, with an arbitrarily small fixed coefficient when $c_*$ is chosen small. More precisely, $$\\left(\\int\\sum_{H\\in\\mathcal H}\\sum_y\n  |H(T_{m_*};y)^{1/s}-H(d,v;y)^{1/s}|^s\\,d\\mu\\right)^{1/s}\n       \\leq C_{\\mathrm{buf}}c_*2^{-p},\n \\label{eq:buf-integrated}$$ where $C_{\\mathrm{buf}}$ is fixed, independent of the number of groups, row width, and requested precision.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-buf-error"
+  },
+  {
+   "claim_id": "claim-range-clamp-preservation",
+   "exact_statement": "For fixed common increments satisfying Equation <a href=\"#eq:buf-clamp-margin\" data-reference-type=\"eqref\" data-reference=\"eq:buf-clamp-margin\">[eq:buf-clamp-margin]</a>, these clamps do not change the final relevant row functions. Each clamp is sup-norm nonexpansive, so in comparisons of two calculations it preserves the uniform Lipschitz propagation bound. The analogous assertion holds for vector sums clipped beyond their final sensitivity range and all remaining additive variation.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-buf-clamping"
+  },
+  {
+   "claim_id": "claim-exact-grouping-reserve",
+   "exact_statement": "Suppose the earlier row and vector tasks have error bound $C_b2^{-p'}$ and the support and common-parameter properties of the atom section. Use exact comparisons locally, and vary every variable on which the sample terms depend. After compression and the range clamps above, all active row outputs, pre-incoming scores, and witnesses have error at most $(C_b/2)2^{-p}$. The same holds for the final clipped vectors and the assembled correction outputs, after choosing the fixed constants in the order specified below.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-est-clean"
+  },
+  {
+   "claim_id": "claim-short-fingerprint-family",
+   "exact_statement": "Suppose every endpoint has an injective, fixed-length binary encoding of length $L\\le c_{\\mathrm{ID}}B$. There is a uniform construction from $O(\\log B)$ independent fair bits of a map $k:\\{\\text{endpoint IDs}\\}\\longrightarrow\\{1,\\ldots,B\\}$ such that, for distinct fixed IDs $v,w$, $$\\Pr[k(v)=k(w)]\\le C/B\\le C B^{-1/2}.\n \\label{eq:fp-pair-collision}$$ Evaluating the map at a presented endpoint needs $O(\\log B)$ arithmetic scratch in addition to access to its encoding.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-fp-hash"
+  },
+  {
+   "claim_id": "claim-clean-salt-independence",
+   "exact_statement": "Every clean value and structural choice for block $b$ is independent of that block’s effective salt and of later effective salts. In a task of budget $M\\in\\mathcal I_b$, the actual and clean row states immediately before the first group with $d\\le2h_*$ are identical and independent of that salt. Their stored lists at this boundary have size $2^{O(h_*)}$. The deterministic slice-mean assertion required by Lemma <a href=\"#lem:est-prefix\" data-reference-type=\"ref\" data-reference=\"lem:est-prefix\">31</a> holds for the clean calculation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-fp-clean"
+  },
+  {
+   "claim_id": "claim-clean-envelope",
+   "exact_statement": "The set $\\mathcal E_x$ is independent of the present salt and has size at most $2^{C_Eh_*}$ for a fixed $C_E$. All clean nondefault representatives in the small groups belong to this set. Consequently, conditional on the other data, $$\\Pr[\\text{two distinct IDs in $\\mathcal E_x$ have the same key}]\n \\le C\\,2^{2C_Eh_*}B^{-1/2}.\n \\label{eq:fp-envelope-collision}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-fp-envelope"
+  },
+  {
+   "claim_id": "claim-escaped-candidate-charge",
+   "exact_statement": "Suppose actual–clean child discrepancies at budget $m$ have their prescribed metric bounds $2^{-p_m}\\lambda_m$. The contribution of $\\mathcal F_x$ to any bounded final pre-incoming row output has norm at most $$2^{-p}\\sum_{\\substack{d\\le2h_*\\\\m\\in\\mathcal I_b,\\ m\\le M-d}}\n                 2^{C d}\\lambda_m,\n \\label{eq:fp-escape-charge}$$ where the sum includes the finitely many dependency types and their descriptor multiplicities in its constant $C$. Equivalently, one may use the maximum of $\\lambda_m$ over the children of each slack group and increase $C$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-fp-escape"
+  },
+  {
+   "claim_id": "claim-increment-only-aliasing",
+   "exact_statement": "Consider one small group on $\\mathcal F_x^c$. Let $\\Delta_{\\mathrm{ac}}(y),\\Delta_{\\mathrm{cl}}(y)$ be its unaliased increments, namely its true-ID sums using actual and clean children, respectively. Let $k_d\\le2^{C d}$ bound its number of immediate descriptors, and let $\\mathcal C_x$ denote a collision on $\\mathcal E_x$. The discrepancy between the actual bucket-distributed increment and the clean true-ID increment is at most $$(k_d+1)\\left(\n       \\sup_y|\\Delta_{\\mathrm{ac}}(y)-\\Delta_{\\mathrm{cl}}(y)|\n       +\\mathbf1_{\\mathcal C_x}\\sup_y|\\Delta_{\\mathrm{cl}}(y)|\n                  \\right)\n \\label{eq:fp-bucket-bound}$$ in sup norm, simultaneously for both channels. The old full-array discrepancy is added to this bound with coefficient one.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-fp-buckets"
+  },
+  {
+   "claim_id": "claim-direct-collision-error",
+   "exact_statement": "The direct collision contribution to any final pre-incoming output has norm at most $$2^{-p}\\,2^{C h_*}B^{-1/(2s)},\n \\label{eq:fp-direct-charge}$$ for a fixed $C$ independent of $D_1,D_2,\\epsilon$ introduced below. All remaining contributions on $\\mathcal F_x^c$ are bounded by actual–clean child discrepancy norms with an amplification at most $2^{C d}$ at slack $d$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-fp-direct"
+  },
+  {
+   "claim_id": "claim-uniform-block-coupling",
+   "exact_statement": "The fixed constants can be chosen so that, for every task of budget $M\\in\\mathcal I_b$ and precision $p$, each prescribed actual–clean output discrepancy, including every pre-incoming score and witness, is at most $$2^{-p}\\lambda_M,\\qquad\n \\lambda_M=2^{-D_1h_*+D_2(M-M_b)}.\n \\label{eq:fp-lambda}$$ The same assertion holds for the ordinary vector metrics. Adding these discrepancies to the clean estimates proves the target error bounds for the actual tables and vectors.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-fp-coupling"
+  },
+  {
+   "claim_id": "claim-actual-estimator-errors",
+   "exact_statement": "For every allowed task, with precision $p$ defined in Equation <a href=\"#eq:est-precision\" data-reference-type=\"eqref\" data-reference=\"eq:est-precision\">[eq:est-precision]</a>, the actual row outputs, including the pre-incoming scores and support witnesses, satisfy $$\\mathfrak d_{u,a}(\\bar H,H)\\le C_b2^{-p}.$$ The clipped vectors have the corresponding ordinary error bound. In particular, every allowed reward query satisfies $$\\frac1N\\mathbb E_\\sigma\\sum_{x\\in V_l}\\frac{X_u(x)}u\n           |\\bar W_l(x)-W_l(x)|^s\\le C_b^s2^{-sp}.\n \\label{eq:fp-reward-bound}$$ These estimates are uniform over the allowed task parameters and stage, and the constants are independent of the input and of $B$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-fp-estimators"
+  },
+  {
+   "claim_id": "claim-restoring-catalytic-equality",
+   "exact_statement": "Let $V\\in\\{0,1\\}^B$ be a shared vector with arbitrary initial contents. Suppose an excursion to either of two deterministically specified endpoints returns the cursor, and its path and result are independent of the incoming contents of $V$. Such excursions may use nested procedures which restore $V$. There is a procedure which xors the bit $\\mathbf1_{k(v)=k(w)}$ into a local result bit, restores $V$, and needs only constant local data across four endpoint excursions.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-fp-catalytic"
+  },
+  {
+   "claim_id": "claim-residue-exact-stream",
+   "exact_statement": "Suppose $|z|\\leq1$ and, for each $t\\geq0$, a deterministic integer $N_t(z)$ satisfies $$|N_t(z)-2^tz|<2.\n \\label{eq:arith-approximation}$$ Set $$z_0=N_0(z),\\qquad z_t=N_t(z)-2N_{t-1}(z)\\quad(t\\geq1).\n \\label{eq:arith-difference-digit}$$ Then $z_t\\in\\mathcal A$ and these digits represent $z$ exactly. For any fixed integer $q\\geq4$, each output digit is determined by the required $N_t$ residues modulo $2^q$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-arith-residue-stream"
+  },
+  {
+   "claim_id": "claim-regenerated-gate-evaluation",
+   "exact_statement": "Consider a finite Boolean circuit of bounded fan-in, with a specified output gate. Conditional gates may evaluate their selector first and then only their selected branch. Suppose the type and immediate predecessors of a gate, or its operand label and digit place if it is an input gate, can be computed from the root parameters and a path of child choices from the output gate. Suppose these computations use $O(B+t+d)$ scratch bits and make no operand or graph queries. Then depth-first evaluation retains $O(1)$ bits per gate on its current path, and requires no saved absolute gate address per gate. Its suspended record above an operand input has length at most a constant times the length of that path, plus any explicitly retained root-local record.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-arith-gate-evaluation"
+  },
+  {
+   "claim_id": "claim-elementary-stream-operations",
+   "exact_statement": "The normalized operations of taking a pair average, a maximum or minimum, and a fixed binary shift admit deterministic integers satisfying Equation <a href=\"#eq:arith-approximation\" data-reference-type=\"eqref\" data-reference=\"eq:arith-approximation\">[eq:arith-approximation]</a>. Their residue procedures, for any fixed $q$, have the following properties. There are constants $C_0,C_1$ such that an operand place $j$ obeys $j\\leq t+C_0$, its suspended local record has length at most $C_0+C_1(t-j)$, and the intrinsic local space is $O(t+1)$. Fixed finite compositions of these normalized operations have the same bounds, with enlarged constants. Fixed Boolean operations on returned digit codes, including sign decoding and conditional selection of code bits, add only constant local overhead.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-arith-elementary"
+  },
+  {
+   "claim_id": "claim-stream-multiplication",
+   "exact_statement": "For normalized exact input streams $x$ and $y$, multiplication has all the conclusions of Lemma <a href=\"#lem:arith-elementary\" data-reference-type=\"ref\" data-reference=\"lem:arith-elementary\">50</a>. In particular, its suspended storage at an operand place $j$ is $O(1)+c(t-j)$, despite the potentially long product expansion.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-arith-multiplication"
+  },
+  {
+   "claim_id": "claim-positive-interval-reciprocal",
+   "exact_statement": "Fix constants $0<a\\leq b$. On inputs $x\\in[a,b]$, a reciprocal, after a fixed known normalization, has the same operand-clock, suspended-record, and intrinsic-space bounds as in Lemma <a href=\"#lem:arith-elementary\" data-reference-type=\"ref\" data-reference=\"lem:arith-elementary\">50</a>. Its local record may contain an $O(t+1)$-bit word only while querying input places $j\\leq\\lfloor t/2\\rfloor+O(1)$.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-arith-reciprocal"
+  },
+  {
+   "claim_id": "claim-indexed-finite-ranks",
+   "exact_statement": "Fix $\\kappa>0$ and $d\\geq1$. Consider at most $2^{\\kappa d}$ normalized values, indexed by descriptors of length at most $\\kappa d$, and an order statistic specified by an $O(d)$-bit index. The semantic list length $n$ is public; the requested index is in $\\{1,\\ldots,n\\}$, or an out-of-range request returns a prescribed normalized constant. Absent descriptors may be assigned prescribed constant dummy values by structural validity predicates. This order statistic has deterministic integer approximations $N_t$ satisfying Equation <a href=\"#eq:arith-approximation\" data-reference-type=\"eqref\" data-reference=\"eq:arith-approximation\">[eq:arith-approximation]</a>. Their residue procedures have constants $a,b,c$, depending only on the descriptor bounds, such that an operand digit query at $j$ obeys $$j\\leq t+cd,\\qquad\n L\\leq ad+b(t-j),\n \\label{eq:arith-local-bound}$$ where $L$ is the total suspended local record length. A structural validity query is assigned clock zero and has suspended length $O(d+t)$. The intrinsic local length is $O(d+t)$.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-arith-rank"
+  },
+  {
+   "claim_id": "claim-bounded-sums-scales",
+   "exact_statement": "Suppose an immediate descriptor domain has at most $2^{\\kappa d}$ terms, all required binary scale exponents have magnitude at most $\\kappa d$, and every intermediate output has a known range bound $2^{\\kappa d}$. A sum over an empty domain is zero, and an average is taken over a public nonempty domain. Balanced sums or averages of these terms, followed by the required known rescalings and bounded clipping, satisfy Equation <a href=\"#eq:arith-local-bound\" data-reference-type=\"eqref\" data-reference=\"eq:arith-local-bound\">[eq:arith-local-bound]</a> and have intrinsic local space $O(d+t)$.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-arith-sums-scales"
+  },
+  {
+   "claim_id": "claim-buffered-finite-tests",
+   "exact_statement": "Let $d\\geq1$, let $s$ and $u$ have known magnitude bound $2^{\\kappa d}$, and suppose $u\\geq\\rho\\geq2^{-\\kappa d}$. There is a deterministic finite test that accepts every $s>2u$ and accepts only $s>u$. It uses $O(d)$-place digit queries after normalization, with intrinsic and suspended local lengths $O(d)$. Its result is independent of any subsequent numerical output clock.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-arith-buffered-test"
+  },
+  {
+   "claim_id": "claim-uniform-numerical-interface",
+   "exact_statement": "Fix the digit alphabet, positive reciprocal intervals, and constants bounding the following recipe class. A recipe at slack $d\\geq1$ has a fixed number of stages built from bounded arithmetic operations, fixed piecewise formulas using maxima, minima and clipping, the reciprocals of Lemma <a href=\"#lem:arith-reciprocal\" data-reference-type=\"ref\" data-reference=\"lem:arith-reciprocal\">52</a>, indexed ranks as in Lemma <a href=\"#lem:arith-rank\" data-reference-type=\"ref\" data-reference=\"lem:arith-rank\">53</a>, and sums and known scales as in Lemma <a href=\"#lem:arith-sums-scales\" data-reference-type=\"ref\" data-reference=\"lem:arith-sums-scales\">54</a>. The stage and descriptor descriptions are generated from the root parameters by index computations using $O(B+d+t)$ scratch and no operand queries, and the total non-reduction dependency depth is bounded independently of $d$. Each indexed domain has size $2^{O(d)}$ and descriptors of length $O(d)$. Discrete domain and validity decisions are structural leaves or buffered tests with their own fixed precision conventions. Public coefficient leaves have exact normalized digit procedures using $O(B+d+t)$ shared scratch and making no operand or recursive graph queries.*\n\n\n*Then each normalized recipe value has a deterministic exact $\\mathcal A$-stream. For its digit at clock $t$ there are uniform constants $a,b,c$ such that every requested operand digit $j$ satisfies $$j\\leq t+cd,\\qquad\n \\text{total suspended local binary record length}\n       \\leq ad+b(t-j).\n \\label{eq:arith-export}$$ An output code bit satisfies the same bounds. A structural leaf is requested at clock zero and has suspended local length at most $ad+bt$. The maximum intrinsic local record length is $O(d+t)$.*\n\n*All gate, digit and descriptor addresses can be regenerated from root parameters and the saved local records using $O(B+d+t)$ shared scratch and no recursive graph calls. When $d,t=O(B)$ this is $O(B)$ scratch. If a public rational coefficient has $O(B)$-bit numerator and denominator that can be generated in $O(B)$ scratch, its queried digits in this clock range also require only that shared $O(B)$ scratch.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-thm-arith-interface"
+  },
+  {
+   "claim_id": "claim-total-controller-realization",
+   "exact_statement": "Fix the construction constants and an admissible top budget $M_{\\mathrm{top}}=O(B)$. For every actual task tuple reachable from it, the row, vector and prefix interfaces defined in the preceding sections admit deterministic uniform implementations by restoring queries and cursor motions. The following assertions hold for every master environment, without an accuracy promise on its estimated values.*\n\n1.  *Every test or numerical digit query terminates, returns its defined value, and restores the cursor and catalyst. Its result is independent of incoming catalyst and scratch contents. Structural port and order choices are independent of a higher numerical request.*\n\n2.  *Terminal motions give the specified endpoints. Their excursions restore the cursor. Capped correction motions are partial paired maps with bounded inverse ports and safe behavior on invalid ports. Incoming score ranks compute the stipulated zero-padded ranks.*\n\n3.  *For a root numerical request at clock $t$, all records retained by the call and its descendants have total length $O(M_{\\mathrm{top}}+t+1)$, and every descendant clock is $O(M_{\\mathrm{top}}+t+1)$; the shared facilities use $O(B+M_{\\mathrm{top}}+t+1)$ space. In particular an actual top request with $t=O(B)$ uses total deterministic $O(B)$ space.*\n\n*These implementations use no estimator oracle and retain no second vertex address across recursive graph operations.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-thm-ctrl-realization"
+  },
+  {
+   "claim_id": "claim-guarded-terminal-graph",
+   "exact_statement": "Suppose a fixed terminal recipe uses the preceding instruction types, has regenerable records, and obeys <a href=\"#eq:ctrl-local-bound\" data-reference-type=\"eqref\" data-reference=\"eq:ctrl-local-bound\">[eq:ctrl-local-bound]</a> on its designated executions. Suppose all its opaque transition queries are already implemented, are total on admissible arguments, and have the stated safe invalid-port behavior. Their returned bits, success flags, cursor outputs and port tokens are independent of incoming scratch and catalytic contents, and they restore the catalyst. Then there is a finite graph with outdegree at most one, uniformly associated with its root tuple, with these properties.*\n\n1.  *Its designated executions are precisely the prescribed terminal executions. Success states have no successor, and initiation and success tags are distinct.*\n\n2.  *Predecessor cases, ordered incidences, and paired edge movement are computable with a bounded number of case labels and one cursor. An opaque predecessor query is made only after its local bound has been checked.*\n\n3.  *If a transition query at $(w',j)$ is probed while the terminal root has parameters $(w,t)$, the complete live local portion of this probe, including a fixed number of edited or saved controller copies, has length $$\\label{eq:ctrl-neighbor-bound}\n      A(w-w')+D(t-j)$$ for fixed enlarged coefficients $A,D$. Shared facilities and the outside stack are not copied.*\n\n*The graph and all its guards are independent of an originating row, an outer stack’s data, and catalytic contents.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-ctrl-local-graph"
+  },
+  {
+   "claim_id": "claim-inverse-tree-contour",
+   "exact_statement": "Let a finite deterministic graph of the form in Lemma <a href=\"#lem:ctrl-local-graph\" data-reference-type=\"ref\" data-reference=\"lem:ctrl-local-graph\">61</a> have a specified canonical success halt. Its undirected component is a tree directed toward that halt. There are mutually inverse next-mark and previous-mark operations on its contour, where the marks are the root sentinel and one distinguished occurrence of each canonical initiation in the component. These operations require the current program state and bounded incidence control, but no saved root or contour-length counter.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-ctrl-tour"
+  },
+  {
+   "claim_id": "claim-capped-incoming-motions",
+   "exact_statement": "Let a fixed row class have a constant port alphabet, distinct entries within each row, and a deterministic terminal program which maps its valid row ports to their endpoints. Assume the program is of the form in Lemma <a href=\"#lem:ctrl-local-graph\" data-reference-type=\"ref\" data-reference=\"lem:ctrl-local-graph\">61</a>. For every fixed $K_c$ there are restoring tests and mutually inverse paired motions for precisely those class entries whose endpoint has at most $K_c$ incoming class entries. The inverse ports belong to $\\{1,\\ldots,K_c\\}$. No additional endpoint address or unbalanced path is held across these operations.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-ctrl-cap"
+  },
+  {
+   "claim_id": "claim-incoming-score-rank",
+   "exact_statement": "Let a constant-size forward row class cover every positive entry of a bounded nonnegative score table, with distinct entries in each row. Suppose pre-incoming score digits are restoring queries, and the class has a terminal program with the preceding interfaces. A fixed incoming $k$th-largest value, with zero padding, has exact redundant digits computed by a restoring procedure. Its local record above a place-$j$ score query at output approximation clock $t$ is $O(1+(t-j)_+)$, with a fixed overshoot $j\\le t+c$, in addition to the structural allowance costs. A complete $O(t+1)$-bit score word is retained only over structural calls.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-ctrl-score-rank"
+  },
+  {
+   "claim_id": "claim-ordered-terminal-excursions",
+   "exact_statement": "Every unbalanced path required by the estimator has the following ordered form: restoring selection and validity tests; local label maps and, if necessary, a paired left-factor motion; further restoring tests at that midpoint; at most one final terminal delegation; and then only local label completion. An excursion to its endpoint and back, for a pure local action, has regenerable records. It preserves the same allowance and clock bounds as this ordered path, up to fixed factors. No unbalanced spine is retained over a new high-cost query at its endpoint.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-ctrl-paths"
+  },
+  {
+   "claim_id": "claim-implemented-endpoint-comparison",
+   "exact_statement": "At slack $d$, comparisons of two valid candidate or old-list endpoints are restoring, catalyst-independent tests with $O(d)$ suspended structural control, in addition to the costs of their lower endpoint visits. They use no saved endpoint address. Their choice between an exact comparison and the designated fingerprint comparison is independent of a surrounding numerical clock.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-ctrl-equality"
+  },
+  {
+   "claim_id": "claim-estimator-recipe-certificates",
+   "exact_statement": "All actual estimator operations admit regenerable records and a fixed finite ordering of operation strata. At a prefix of slack $d$, each ordinary layer has $O(d)$ structural control, and a numerical path to an operand at clock $j$ has suspended record $$\\label{eq:ctrl-recipe-bound}\n c_{\\mathrm{str}}d+c_{\\mathrm{num}}(t-j),\\qquad\n j-t\\le c_{\\mathrm{dig}}d,$$ with fixed coefficients. Beyond the fixed strata of this prefix, a call is to the preceding prefix of slack $2d$, or to an estimator of budget at most $M-d$. The final row and incoming wrappers add a fixed number of strata at $d=1$. Every designated terminal execution obeys the corresponding boundary bounds before guards are imposed.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-ctrl-recipes"
+  },
+  {
+   "claim_id": "claim-effective-parameter-replay",
+   "exact_statement": "The records in Lemma <a href=\"#lem:ctrl-recipes\" data-reference-type=\"ref\" data-reference=\"lem:ctrl-recipes\">67</a> are regenerable in the sense of Definition <a href=\"#def:ctrl-record\" data-reference-type=\"ref\" data-reference=\"def:ctrl-record\">59</a>. With respect to their own effective environments, actual procedures at a budget in block $b$ ignore all salt blocks later than $b$, including in structural orders, graph universes, guards and predecessor probes. Re-querying a table entry or using a paired port in either direction uses the same effective table tuple.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-ctrl-replay"
+  },
+  {
+   "claim_id": "claim-fixed-inverse-polynomial-accuracy",
+   "exact_statement": "Fix a randomized machine $\\mathcal M$ with polynomial worst-case running time and $O(\\log(n+2))$ work space, and fix an integer $d\\ge1$. There is a uniform deterministic transducer that, on every input $x$ of length $n$, outputs a dyadic rational $z_x\\in[0,1]$ with $$|z_x-p_{\\mathcal M}(x)|\\le(n+2)^{-d}.$$ Its work space and output length are $O(\\log(n+2))$, and its running time is polynomial in $n+2$. The constants may depend on $\\mathcal M$ and $d$, but not on the input.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-thm-fixed-precision"
+  },
+  {
+   "claim_id": "claim-specified-start-tail",
+   "exact_statement": "Let $W\\in[0,1]^V$, and suppose an estimator satisfies $$\\frac1N\\mathbb E\\sum_{v\\in V}\\frac{X_f(v)}f\n |\\bar W(v)-W(v)|^8\\le C_b^8 2^{-8p}.$$ For any specified $z\\in V$ and every $\\eta>0$, $$\\begin{aligned}\n\\mathbb E\\bigl[|\\bar W(z)-W(z)|^8\\mid X_f(z)=1\\bigr]\n &\\le N\\frac f{\\pi_f}C_b^8 2^{-8p},\n \\label{eq:final-conditional}\\\\\n\\Pr\\bigl[|\\bar W(z)-W(z)|>\\eta\\mid X_f(z)=1\\bigr]\n &\\le N\\frac f{\\pi_f}C_b^8 2^{-8p}\\eta^{-8}.\n \\label{eq:final-tail}\n\\end{aligned}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-final-majority"
+  },
+  {
+   "claim_id": "claim-promise-logspace-equality",
+   "exact_statement": "Under these conventions, $\\mathsf{PromiseBPL}=\\mathsf{PromiseL}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-promise-bpl"
+  },
+  {
+   "claim_id": "claim-certified-accepting-search",
+   "exact_statement": "Fix a randomized logarithmic-space machine $\\mathcal M$ that halts within a fixed polynomial bound $T(n)\\ge1$ on every input and every coin sequence, and fix an integer $c\\ge0$. There is a uniform deterministic logarithmic-space, polynomial-time transducer that outputs an accepting computation of $\\mathcal M$ whenever $$p_{\\mathcal M}(x)\\ge(n+2)^{-c}.$$ On every other input it outputs either an accepting computation or a failure symbol. If every accepting run of $\\mathcal M$ emits a valid witness for a specified relation, the transducer can instead output such a witness with the same guarantee.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-cor-certified-search"
+  },
+  {
+   "claim_id": "claim-effective-simulation-compiler",
+   "exact_statement": "There is a terminating algorithm which, given a finite randomized machine description $M$ and positive integers $a,b$, emits a deterministic machine $D_M$ and positive integers $K,H,c$ with the following guarantee. If, on every input of length $n$ and every random tape, $M$ halts within $(n+2)^a$ steps, uses at most $b\\lceil\\log(n+2)\\rceil$ work bits, and has acceptance probability at most $1/3$ on no inputs and at least $2/3$ on yes inputs, then $D_M$ decides the same language. On each input, that same execution uses at most $K\\log(n+2)$ work bits and $H(n+2)^c$ elementary bit operations.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-thm-effective-simulation"
+  },
+  {
+   "claim_id": "claim-total-capped-interpreter",
+   "exact_statement": "There is one fixed randomized Turing machine $U$ with polynomial worst-case running time and $O(\\log(m+2))$ counted work bits on every binary input of length $m$, with the following behavior. Set $$\\label{eq:compiler-interpreter-cap}\n \\lambda_m=\\lceil\\log_2(m+2)\\rceil,\n \\qquad\n R(m,d_{\\mathrm{code}})\n   =\\left\\lfloor\\frac{\\lambda_m}\n       {100(d_{\\mathrm{code}}+1)^3}\\right\\rfloor.$$ On an input with prefix $$\\label{eq:compiler-prefix}\n  1^{d_{\\mathrm{code}}}0\\,z\\,1^n0\\,\n  E_{d_{\\mathrm{code}}}(x),$$ it first requires $1\\le d_{\\mathrm{code}}\\le\\lambda_m$ and $R(m,d_{\\mathrm{code}})\\ge1$. It then simulates the encoded machine for at most $m$ transitions, allowing each counted work tape only coordinates in $[-R,R]$. It rejects malformed data, a requested move outside these bounds, or failure to halt by the end of the transition budget. Otherwise it returns the encoded machine’s decision. The suffix after the complete prefix has no parsing significance.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-lem-compiler-interpreter"
+  }
+ ],
+ "paper": "papers/EN-114-000-0000-2-2026-PR-T4-UK-EX-M1-B-AL-H-0226_PM-103.1_Exact_derandomization_of_logarithmic_space_L_RL_BPL.md",
+ "purpose": "Exact derandomization of logarithmic space: L = RL = BPL",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "49efd79a9f588b016ae97d95c7c54a960b4febee90c7e5067090d4dd2dbd05cd",
+   "pm.domains.v2": "07b808b2ffe243fd73000d19c115b8bf557d1fc077ef035701fd2f345336d021",
+   "pm.edges.v2": "126a6a64e7980d41d85a212033efeb243795a0f1a4afe663e3a9710e15703563",
+   "pm.extraction.v2": "1fc365b0b0443e03527ef5b5ec63f77c3c928f4bf51b512e1570be325d78f4bb",
+   "pm.formal.v2": "47a3833e2eefd7ad3dbf7094c0d2fa7824a8fad4516c6e72812482829f6727fe",
+   "pm.limits.v2": "c676aa1f944fee2de97bb95823236bd491d152bc66ce91a63f04c3dabd8b0eab",
+   "pm.node.v2": "e2ba83605e6c2758f0ad133f7868203a36bc74bdee6f8cb13787b064ea5792cc",
+   "pm.objects.v2": "9287f7defc170dd2b41edf97b0ec515bff8968944bc48e5586d63e3ebe23816c",
+   "pm.provenance.v2": "0858288b5ccd30186200fd29e43846439708ecec0c267a315830d4b362daf9ec",
+   "pm.quantities.v2": "815fb6fe3c2c9de067b46cb2e02a6f511777fb0b4b43d2af59e686073588a588",
+   "pm.reading.v2": "ab5564bbf587d3cfb8260a9040ba1e7f5d0646573bb2deab97581c1407176d3c",
+   "pm.roadmap.v2": "4924205d7e24ffa5339da521c8568fbf7098c4d097b1e3b5223e22ea5e26fb41",
+   "pm.search.v1": "d9d59c49caaf7453bdd9c703ac04d5e103aae7017c70819c4116687797413573",
+   "pm.triptych.v2": "21880ba4a81c91c240d8a1abd39793fcaed6287821041be6fe927c07661b46fa"
+  },
+  "canonical_sha256": "4c73492aa7ed643609ba79bd7f13ec350d53568eb5d3df2979e128da01d42f75",
+  "paper_sha256": "28e3dd401a823747e64aa1ffb840cff0afd6d836d18324a9421c104800791954",
+  "repaired_body_sha256": "fa535bd35bf94f626ab032cd24f3f167366dfbce59f75a5d01b2f06e21667e01"
+ },
+ "status": "ACTIVE",
+ "subject_id": 14,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "c307f2f43ca1a71f120a8b3dd15cfca07abbe79509a59ab55a888884154defa4",
+   "receipt_sha256": "7ccf4fbca8ba0a04d7ce2684fb7f78eeee90e8131bdee9ce70b3fef78900944c",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive arbitrary binary vector contents, both result bits, and all ordered key pairs for widths 1, 2, 3, 4, and 6; endpoint excursions are specialized to fixed-index pure operations.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-catalyst-restoration",
+     "oracle_basis": "Every observed final vector mask must equal its independently enumerated initial mask. This decides restoration throughout the tested domain, but does not establish the unrestricted lemma or nested excursion interfaces."
+    },
+    {
+     "checked_domain": "The same exhaustive finite domain includes equal keys, distinct keys, zero vectors, all-one vectors, and arbitrary initial result bits.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-key-equality-xor",
+     "oracle_basis": "The oracle computes the result directly by complementing the initial result for equal indices and retaining it for distinct indices. No candidate instruction sequence is reused."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-missing-first-flip",
+     "observed_exit": 1,
+     "receipt_sha256": "4867870a8deb2c8ad5fd9e021c30ef49f501cdee9c1a298784788808e6cc5d36"
+    },
+    {
+     "id": "mutant-missing-restoration-flip",
+     "observed_exit": 1,
+     "receipt_sha256": "0bb36835ea00b9f98bc3bf1bf5d6186ac48d9f5bb154e940e34a1fbadd1e8ab3"
+    },
+    {
+     "id": "mutant-missing-final-read",
+     "observed_exit": 1,
+     "receipt_sha256": "dc457a7c50cce16f2025c5994049da36c52e58bc2e5df70ef2bee536469d5a6a"
+    }
+   ],
+   "receipt_sha256": "60382127a39ddcdacb8182cc358117eda708d534e7a510dc6c36e952c69a9532",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Exact derandomization of logarithmic space: L = RL = BPL"
+}

@@ -1,0 +1,797 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 638028,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 175844
+ },
+ "coordinate": "EN-115-000-0000-2-2026-PR-T4-UK-EX-M2-B-ML-M-0472",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "implementable",
+   "proposed_domain": "Computable analysis",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "Its algorithm computes the limiting density; it does not search for satisfying assignments to an input formula.",
+     "quote_sha256": "b9a64231b71c36f50c1bba1945e103e9f4bc20e6000ba14b07e938ac55ce3acc"
+    }
+   ],
+   "query": "Find a satisfying assignment for an individual input formula.",
+   "reason": "The computed object is the limiting ensemble density, and the threshold algorithm does not perform assignment search on an input formula."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "The theorem leaves the behavior at $a=\\alpha_3$ open.",
+     "quote_sha256": "8010bc80000b4d2b3982a2efd5c374186803f2ea06cfa04324c3f6b13665daa3"
+    }
+   ],
+   "query": "Determine satisfiability probability at the exact critical density.",
+   "reason": "The theorem establishes strict-side limits and leaves critical-density behavior open."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "We obtain no efficiency bound, and the computability argument concerns clause size three.",
+     "quote_sha256": "dcf512aa0fde3997939959ef9abfa319de33075d10b388c355a4aa171b0556d1"
+    },
+    {
+     "anchor": "proof-stmt-assembly-upper-2",
+     "quote": "The running time of this fixed machine on $1^r$ is itself a total computable function of $r$, obtained by simulating the halting computation; the proof supplies no efficiency estimate for that function.",
+     "quote_sha256": "ada5e91d82d0db6e66fcde8bbc701f3a554bfc97ce25c06c97a8746eed3ceaf5"
+    }
+   ],
+   "query": "Obtain an efficient practical threshold approximation or a finite-size convergence rate.",
+   "reason": "The construction proves termination without an efficiency estimate or a supplied finite-size convergence modulus."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "We obtain no efficiency bound, and the computability argument concerns clause size three.",
+     "quote_sha256": "dcf512aa0fde3997939959ef9abfa319de33075d10b388c355a4aa171b0556d1"
+    }
+   ],
+   "query": "Compute thresholds for other clause sizes by reusing the same proof.",
+   "reason": "The computability argument and the trial functional are specific to the clause size treated here."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "ctr:additive",
+     "quote": "For a general trial, $G_k$ remains a total value; the shared nonroot variables may couple the packets, and we do not use this additivity.",
+     "quote_sha256": "1f68112684cdf5df96d5bab212d09695e551cb0e7e95ce25abf604bca773d3b8"
+    },
+    {
+     "anchor": "proof-stmt-ctr-rpc-2",
+     "quote": "We apply this upper-bound argument only to that class, while later intermediate trials retain their used nonroot shared variables.",
+     "quote_sha256": "4310000ad3fc98e515ce6e0126f033bd5e3eb86c866c84da338d936c85cf23f7"
+    }
+   ],
+   "query": "Use a non-site-only trial as a sound additive pressure upper certificate.",
+   "reason": "The upper-bound argument is restricted to the site-only class, and general shared nonroot sampling can couple packets."
+  }
+ ],
+ "family": "PM-235",
+ "id": "PM-235.4",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "sec:introduction",
+    "claim_id": "claim-computable-threshold",
+    "statement": "For $n\\ge3$, a proper random 3-clause chooses three distinct variables uniformly from $x_1,\\ldots,x_n$ and gives each variable an independent fair sign."
+   },
+   {
+    "anchor": "sec:introduction",
+    "claim_id": "claim-computable-threshold",
+    "statement": "Let $\\Phi(n,m)$ be the conjunction of $m\\ge0$ independent clauses with this law."
+   },
+   {
+    "anchor": "sec:introduction",
+    "claim_id": "claim-computable-threshold",
+    "statement": "Write $$p(n,m)=\\mathbb P\\{\\Phi(n,m)\\text{ is satisfiable}\\}.$$"
+   },
+   {
+    "anchor": "stmt-cert-search",
+    "claim_id": "claim-bilateral-certificate-search",
+    "statement": "Let $\\alpha\\in[0,20]$."
+   },
+   {
+    "anchor": "stmt-cert-search",
+    "claim_id": "claim-bilateral-certificate-search",
+    "statement": "Suppose that $(\\ell_k)_{k\\ge1}$ is a computable sequence of rational numbers satisfying $\\ell_k\\le\\alpha$ for every $k$ and $\\ell_k\\to\\alpha$."
+   },
+   {
+    "anchor": "stmt-cert-search",
+    "claim_id": "claim-bilateral-certificate-search",
+    "statement": "Suppose also that finite descriptions $Q$ form an effectively enumerable class, and that for every positive rational $a$, positive integer $\\beta$, and valid description $Q$, the real number $G(a,\\beta;Q)$ is uniformly computable."
+   },
+   {
+    "anchor": "stmt-cert-search",
+    "claim_id": "claim-bilateral-certificate-search",
+    "statement": "$G(a,\\beta;Q)<0$ implies $\\alpha\\le a$;"
+   },
+   {
+    "anchor": "stmt-cert-search",
+    "claim_id": "claim-bilateral-certificate-search",
+    "statement": "for every rational $a>\\alpha$, some positive integer $\\beta$ and valid description $Q$ satisfy $G(a,\\beta;Q)<0$."
+   },
+   {
+    "anchor": "stmt-cp-deletion-moment",
+    "claim_id": "claim-free-deletion-moment",
+    "statement": "For all integers $n\\ge1$ and $0\\le r\\le n$, and every $v\\in[n]$,"
+   },
+   {
+    "anchor": "stmt-cp-interpolation",
+    "claim_id": "claim-weighted-survival-interpolation",
+    "statement": "For positive integers $n_1,n_2$ and real $t_1,t_2\\ge0$,"
+   },
+   {
+    "anchor": "stmt-cp-lower",
+    "claim_id": "claim-limiting-center-lower-certificate",
+    "statement": "The sequence $f_n/n$ converges to a real number $\\alpha$. For every integer $k\\ge1$, $$\\label{cp:certified-lower}\n \\alpha\\ge\\frac{f_k}{k}-2^{67}k^{-1/6}.$$"
+   },
+   {
+    "anchor": "stmt-cp-threshold",
+    "claim_id": "claim-proper-clause-threshold-transfer",
+    "statement": "The limit $\\alpha$ in Proposition <a href=\"#cp:lower\" data-reference-type=\"ref\" data-reference=\"cp:lower\">5</a> lies in $[1/200,10]$. For every fixed real $a\\ge0$, the relaxed Poisson model satisfies $$P_n(an)\\longrightarrow\n \\begin{cases}\n 1,&0\\le a<\\alpha,\\\\\n 0,&a>\\alpha.\n \\end{cases}$$ The same limits hold for $p(n,\\lfloor an\\rfloor)$ in the proper-clause model defined in the introduction. In particular its limiting density is $\\alpha_3=\\alpha$."
+   },
+   {
+    "anchor": "stmt-cp-finite-computation",
+    "claim_id": "claim-effective-finite-size-integration",
+    "statement": "The real $f_n$ is computable uniformly in the integer $n$. There is an effective enumeration of rational numbers strictly below $\\alpha$ whose supremum is $\\alpha$. In particular, there is a computable rational sequence $(\\ell_n)_{n\\ge1}$ with $\\ell_n<\\alpha$ and $\\ell_n\\to\\alpha$."
+   },
+   {
+    "anchor": "stmt-cp-robust",
+    "claim_id": "claim-linear-deletion-robustness",
+    "statement": "For all integers $n\\ge1$ and $0\\le r\\le n$,"
+   },
+   {
+    "anchor": "stmt-cp-soft-signs",
+    "claim_id": "claim-soft-pressure-signs",
+    "statement": "For every fixed real $0\\le a<\\alpha$ and every fixed $\\beta>0$,"
+   },
+   {
+    "anchor": "stmt-cp-soft-signs",
+    "claim_id": "claim-soft-pressure-signs",
+    "statement": "For every fixed real $a>\\alpha$,"
+   },
+   {
+    "anchor": "stmt-ctr-evaluation",
+    "claim_id": "claim-rational-trial-evaluation",
+    "statement": "For rational $a>0$, a positive integer $\\beta$, and a finite description $Q\\in\\mathcal Q$,"
+   },
+   {
+    "anchor": "stmt-ctr-pressure",
+    "claim_id": "claim-pressure-limit",
+    "statement": "For every $a>0$ and finite $\\beta>0$,"
+   },
+   {
+    "anchor": "stmt-ctr-upper",
+    "claim_id": "claim-sound-site-only-upper-bound",
+    "statement": "For every $a>0$ and finite $\\beta>0$,"
+   },
+   {
+    "anchor": "stmt-ctr-rpc",
+    "claim_id": "claim-cascade-identities",
+    "statement": "For $0<t_1<\\cdots<t_d<1$,"
+   },
+   {
+    "anchor": "stmt-ctr-rpc",
+    "claim_id": "claim-cascade-identities",
+    "statement": "Take any root data independent of the cascade weights."
+   },
+   {
+    "anchor": "stmt-ctr-reservoir",
+    "claim_id": "claim-finite-reservoir-approximation",
+    "statement": "Fix $a>0$ and finite $\\beta>0$."
+   },
+   {
+    "anchor": "stmt-ctr-posterior",
+    "claim_id": "claim-path-posterior",
+    "statement": "Let $Y$ use a collection of old sites and let $X$ use fresh sites in one trial, with both losses bounded conditional on the root data."
+   },
+   {
+    "anchor": "stmt-cs-sensitivity",
+    "claim_id": "claim-depth-independent-sensitivity",
+    "statement": "Suppose $|X|\\le C$ almost surely, where $C\\ge0$."
+   },
+   {
+    "anchor": "stmt-cs-sensitivity",
+    "claim_id": "claim-depth-independent-sensitivity",
+    "statement": "For a single operation and $0\\le t\\le1$,"
+   },
+   {
+    "anchor": "stmt-ct-transition",
+    "claim_id": "claim-structural-transition",
+    "statement": "Fix a density $a>0$, a finite penalty $\\beta>0$, $\\eta\\in(0,1)$, $\\delta>0$, and $m_0>0$."
+   },
+   {
+    "anchor": "stmt-ct-transition",
+    "claim_id": "claim-structural-transition",
+    "statement": "Suppose there is a sequence of active trials of fixed depth $d$ and fixed boundary indices, with horizons $N\\to\\infty$, satisfying $$\\frac{G_N}{N}\\le U+o(1),\\qquad t_1\\ge m_0,\n \\label{ct:input-bound}$$ for a finite $U$."
+   },
+   {
+    "anchor": "stmt-ct-transition",
+    "claim_id": "claim-structural-transition",
+    "statement": "Suppose the old blocks satisfy Equations <a href=\"#ctr:band\" data-reference-type=\"eqref\" data-reference=\"ctr:band\">[ctr:band]</a> and <a href=\"#ctr:record\" data-reference-type=\"eqref\" data-reference=\"ctr:record\">[ctr:record]</a> with fixed finite continuous test families."
+   },
+   {
+    "anchor": "stmt-ct-transition",
+    "claim_id": "claim-structural-transition",
+    "statement": "Fix also a finite nonempty continuous $[0,1]$-valued test family on the type space of the current $S_1$."
+   },
+   {
+    "anchor": "stmt-ct-gaussian",
+    "claim_id": "claim-conditional-gaussian-probing",
+    "statement": "Let $\\mu$ be a probability measure on a standard Borel space."
+   },
+   {
+    "anchor": "stmt-ct-gaussian",
+    "claim_id": "claim-conditional-gaussian-probing",
+    "statement": "Let $(C_l)_{l\\ge1}$ be positive semidefinite measurable kernels with separable Hilbert-space feature representations and $0\\le C_l(\\zeta,\\zeta)\\le1$."
+   },
+   {
+    "anchor": "stmt-ct-gaussian",
+    "claim_id": "claim-conditional-gaussian-probing",
+    "statement": "For $s\\ge1$ and $x_l\\in[1,2]$,"
+   },
+   {
+    "anchor": "stmt-ct-gram-bridge",
+    "claim_id": "claim-off-diagonal-ultrametricity",
+    "statement": "Let $R=(R_{ij})_{i,j\\ge1}$ be a symmetric, weakly exchangeable positive semidefinite array with $R_{ii}=1$."
+   },
+   {
+    "anchor": "stmt-ct-gram-bridge",
+    "claim_id": "claim-off-diagonal-ultrametricity",
+    "statement": "Suppose that for every $n\\ge2$, every bounded Borel function $f$ of the off-diagonal entries among the first $n$ indices, and every bounded Borel function $\\psi$, one has"
+   },
+   {
+    "anchor": "stmt-ct-ordering",
+    "claim_id": "claim-vector-overlap-ordering",
+    "statement": "The support $\\mathcal S$ of the off-diagonal law of $\\mathbf Q$ in <a href=\"#ct:marked-gg\" data-reference-type=\"eqref\" data-reference=\"ct:marked-gg\">[ct:marked-gg]</a> is totally ordered componentwise. The scalar off-diagonal overlaps $$Q(u,v)=J_f^{-1}\\sum_{j=1}^{J_f}Q_j(u,v),\\qquad u\\ne v,$$ satisfy the ultrametric inequalities on triples of distinct indices, and, for $v,v'\\in\\mathcal S$, $$\\label{ct:coordinate-control}\n             |v_j-v'_j|\\le J_f\\left|J_f^{-1}\\sum_i(v_i-v'_i)\\right|.$$"
+   },
+   {
+    "anchor": "stmt-ct-marked-cuts",
+    "claim_id": "claim-marked-cut-representation",
+    "statement": "The nested cut partition has the sample-partition law of an RPC with parameters <a href=\"#ct:cut-parameters\" data-reference-type=\"eqref\" data-reference=\"ct:cut-parameters\">[ct:cut-parameters]</a>. The reindexed decorations $D'_{\\alpha,l,\\xi,i}$ are independent of the full partition and are hierarchically exchangeable in the hidden-cluster and sample coordinates. They retain the independent hierarchical exchangeabilities of the old descendant trees and the simultaneous exchangeability of the sites."
+   },
+   {
+    "anchor": "stmt-ct-empirical",
+    "claim_id": "claim-uniform-empirical-tree-evaluation",
+    "statement": "Let $C\\ge0$, let $B\\ge1$ be an integer, and let $|X|\\le C$ in a hierarchy of fixed depth $d$ with exponents in $(0,1]$."
+   },
+   {
+    "anchor": "stmt-ct-endpoint",
+    "claim_id": "claim-endpoint-passage",
+    "statement": "Equip the represented hierarchy with exponents $$\\label{ct:new-exponents}\n                  mx_1,\\ldots,mx_h,\\ m,\\ t_2,\\ldots,t_d.$$"
+   },
+   {
+    "anchor": "stmt-ct-support",
+    "claim_id": "claim-closed-hilbert-support-bounds",
+    "statement": "Let $V,V'$ be independent random variables with the same law in a separable Hilbert space, and let $\\delta,\\varepsilon\\ge0$.*\n\n1."
+   },
+   {
+    "anchor": "stmt-ct-support",
+    "claim_id": "claim-closed-hilbert-support-bounds",
+    "statement": "If $|\\langle V,V'\\rangle|\\le\\delta^2$ almost surely, then $\\|V\\|\\le\\delta$ almost surely."
+   },
+   {
+    "anchor": "stmt-ct-support",
+    "claim_id": "claim-closed-hilbert-support-bounds",
+    "statement": "If $\\langle V,V'\\rangle$ almost surely belongs to a fixed closed interval of length $\\varepsilon$,"
+   },
+   {
+    "anchor": "stmt-ct-old-records",
+    "claim_id": "claim-preserved-old-records",
+    "statement": "Every old processed block satisfies Equation <a href=\"#ctr:record\" data-reference-type=\"eqref\" data-reference=\"ctr:record\">[ctr:record]</a> in the represented hierarchy, with the same test family and tolerance and with its boundaries shifted by $h$."
+   },
+   {
+    "anchor": "stmt-ct-new-record",
+    "claim_id": "claim-new-processed-record",
+    "statement": "Let $c=h+1$ be the sample level."
+   },
+   {
+    "anchor": "stmt-ct-new-record",
+    "claim_id": "claim-new-processed-record",
+    "statement": "Let $b=1$ if the parent cut is present, and let $b=0$ otherwise."
+   },
+   {
+    "anchor": "stmt-cc-site-law",
+    "claim_id": "claim-finite-tests-for-site-laws",
+    "statement": "Given $e_0>0$ and a finite nonempty list of type spaces,"
+   },
+   {
+    "anchor": "stmt-cc-site-law",
+    "claim_id": "claim-finite-tests-for-site-laws",
+    "statement": "If the structural record holds with $$\\label{cc:delta-choice}\n \\bigl(\\max_j|\\Phi_j|\\bigr)\\delta\\le e_0/2,$$"
+   },
+   {
+    "anchor": "stmt-cc-terminal",
+    "claim_id": "claim-terminal-one-packet-trial",
+    "statement": "Fix $U>P(a,\\beta)$, $0<\\eta,m_0<1$, and an integer $J$ such that $$\\label{cc:stopping-depth}\n (1-\\eta)^J<m_0.$$"
+   },
+   {
+    "anchor": "stmt-cc-terminal",
+    "claim_id": "claim-terminal-one-packet-trial",
+    "statement": "Choose in advance finite nonempty test sets on $K^{(j)}$, $0\\le j\\le J$, and a structural tolerance $\\delta>0$."
+   },
+   {
+    "anchor": "stmt-cc-kernel-collapse",
+    "claim_id": "claim-recorded-kernel-collapse",
+    "statement": "Consider a terminal trial from Proposition <a href=\"#cc:terminal\" data-reference-type=\"ref\" data-reference=\"cc:terminal\">28</a>, whose records imply Equation <a href=\"#cc:site-law-distance\" data-reference-type=\"eqref\" data-reference=\"cc:site-law-distance\">[cc:site-law-distance]</a>."
+   },
+   {
+    "anchor": "stmt-cc-kernel-collapse",
+    "claim_id": "claim-recorded-kernel-collapse",
+    "statement": "Fix a count cutoff $D_0\\ge1$"
+   },
+   {
+    "anchor": "stmt-cc-rational",
+    "claim_id": "claim-finite-rational-completeness",
+    "statement": "For every $a>0$ and finite $\\beta>0$,"
+   },
+   {
+    "anchor": "stmt-assembly-upper",
+    "claim_id": "claim-enumerable-upper-certificates",
+    "statement": "For positive rational $a$, positive integer $\\beta$, and a rational trial $Q$,"
+   },
+   {
+    "anchor": "stmt-assembly-upper",
+    "claim_id": "claim-enumerable-upper-certificates",
+    "statement": "the inequality $G_1(a,\\beta;Q)<0$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Threshold approximation by finite certificates",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-assembly-upper-2",
+      "quote": "Use the sequence from Proposition <a href=\"#cp:finite-computation\" data-reference-type=\"ref\" data-reference=\"cp:finite-computation\">7</a> as the lower sequence in Lemma <a href=\"#cert:search\" data-reference-type=\"ref\" data-reference=\"cert:search\">2</a>, and use $G=G_1$ on the rational trial class.",
+      "quote_sha256": "1b08d7405f36ab7ad951d92276f133d69b7538bfe1b86cac2ce9cb49fcb9e003"
+     },
+     {
+      "anchor": "proof-stmt-assembly-upper-2",
+      "quote": "This class is effectively enumerable by its finite encoding, and Lemma <a href=\"#ctr:evaluation\" data-reference-type=\"ref\" data-reference=\"ctr:evaluation\">10</a> proves uniform computability of its values.",
+      "quote_sha256": "d65bb0337226bbc7ba02621b21abce0fdbcc15d02033ca832dbff11708a657b7"
+     }
+    ],
+    "requires_concepts": [
+     "Proper random clause law",
+     "Capped Poisson stopping times",
+     "Certified rational approximation",
+     "Fair effective enumeration",
+     "Soft-pressure signs",
+     "Finite rational trial completeness"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Sound site-only trial pressure upper bounds",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-ctr-rpc-2",
+      "quote": "The fresh-site factorization just used is the one supplied by the site-only class.",
+      "quote_sha256": "16b56550bda9cb9453ceee383c27a539b917eb23b6807b40854c63735fb90222"
+     }
+    ],
+    "requires_concepts": [
+     "Nested conditional logarithmic transforms",
+     "Ruelle probability cascades",
+     "Fresh reservoir occurrence independence",
+     "Nonnegative cubic interpolation remainder"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Removal of shared nonroot sampling",
+    "evidence": [
+     {
+      "anchor": "cc:section",
+      "quote": "The transition in Lemma <a href=\"#ct:transition\" data-reference-type=\"ref\" data-reference=\"ct:transition\">17</a> keeps the shared variables and preserves the conditional records.",
+      "quote_sha256": "0d94ea7df07ae9edac3e8289d224cb9664cf5861fd7142caee5cbc98b9a92bd6"
+     },
+     {
+      "anchor": "cc:section",
+      "quote": "We now use it finitely many times, then replace the nonroot shared variables by independent site sampling.",
+      "quote_sha256": "b5b6d5b93a308c3264edf49bf0e97c48f1cd5adccaec98479b9f8b80b7421b39"
+     }
+    ],
+    "requires_concepts": [
+     "Marked overlap identities",
+     "Ultrametric finite cuts",
+     "Hierarchical exchangeability",
+     "Pathwise continuation records",
+     "Wasserstein site-law control",
+     "Depth-independent exponent sensitivity"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-computable-threshold",
+   "exact_statement": "There is a real number $\\alpha_3\\in(0,\\infty)$ such that, for every fixed real $a\\ge0$, $$\\lim_{n\\to\\infty}p(n,\\lfloor an\\rfloor)=\n \\begin{cases}1,&a<\\alpha_3,\\\\0,&a>\\alpha_3.\\end{cases}$$ There is one finite deterministic Turing machine which, on input $1^r$ for any integer $r\\ge1$, halts with a rational number $q_r$ satisfying $|q_r-\\alpha_3|\\le2^{-r}$. Its only input is the unary precision $1^r$; it uses no oracle, advice, or noncomputable real constant.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-bilateral-certificate-search",
+   "exact_statement": "Let $\\alpha\\in[0,20]$. Suppose that $(\\ell_k)_{k\\ge1}$ is a computable sequence of rational numbers satisfying $\\ell_k\\le\\alpha$ for every $k$ and $\\ell_k\\to\\alpha$. Suppose also that finite descriptions $Q$ form an effectively enumerable class, and that for every positive rational $a$, positive integer $\\beta$, and valid description $Q$, the real number $G(a,\\beta;Q)$ is uniformly computable. Assume that*\n\n1.  *$G(a,\\beta;Q)<0$ implies $\\alpha\\le a$;*\n\n2.  *for every rational $a>\\alpha$, some positive integer $\\beta$ and valid description $Q$ satisfy $G(a,\\beta;Q)<0$.*\n\n*Then one finite deterministic Turing machine, with only the unary input $1^r$ for $r\\ge1$, returns a rational number within $2^{-r}$ of $\\alpha$. It can encode the output as a binary integer numerator and a positive integer denominator, with separators.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-cert-search"
+  },
+  {
+   "claim_id": "claim-free-deletion-moment",
+   "exact_statement": "For all integers $n\\ge1$ and $0\\le r\\le n$, and every $v\\in[n]$, $$\\label{cp:one-delay}\n \\mathbb E\\bigl[(F_r^{+v}-F_r)^p\\bigr]\\le C,\\qquad C=2^{60}.$$ Consequently, uniformly in $r$, $$\\label{cp:concentration}\n \\mathbb E\\lvert F_r-\\mathbb EF_r\\rvert^p\\le C_1n,\n \\qquad C_1=2^{62}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cp-deletion-moment"
+  },
+  {
+   "claim_id": "claim-weighted-survival-interpolation",
+   "exact_statement": "For positive integers $n_1,n_2$ and real $t_1,t_2\\ge0$, $$\\label{cp:product-survival}\n P_{n_1+n_2}(t_1+t_2)\n \\ge P_{n_1}(t_1)P_{n_2}(t_2).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cp-interpolation"
+  },
+  {
+   "claim_id": "claim-limiting-center-lower-certificate",
+   "exact_statement": "The sequence $f_n/n$ converges to a real number $\\alpha$. For every integer $k\\ge1$, $$\\label{cp:certified-lower}\n \\alpha\\ge\\frac{f_k}{k}-2^{67}k^{-1/6}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cp-lower"
+  },
+  {
+   "claim_id": "claim-proper-clause-threshold-transfer",
+   "exact_statement": "The limit $\\alpha$ in Proposition <a href=\"#cp:lower\" data-reference-type=\"ref\" data-reference=\"cp:lower\">5</a> lies in $[1/200,10]$. For every fixed real $a\\ge0$, the relaxed Poisson model satisfies $$P_n(an)\\longrightarrow\n \\begin{cases}\n 1,&0\\le a<\\alpha,\\\\\n 0,&a>\\alpha.\n \\end{cases}$$ The same limits hold for $p(n,\\lfloor an\\rfloor)$ in the proper-clause model defined in the introduction. In particular its limiting density is $\\alpha_3=\\alpha$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cp-threshold"
+  },
+  {
+   "claim_id": "claim-effective-finite-size-integration",
+   "exact_statement": "The real $f_n$ is computable uniformly in the integer $n$. There is an effective enumeration of rational numbers strictly below $\\alpha$ whose supremum is $\\alpha$. In particular, there is a computable rational sequence $(\\ell_n)_{n\\ge1}$ with $\\ell_n<\\alpha$ and $\\ell_n\\to\\alpha$.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-cp-finite-computation"
+  },
+  {
+   "claim_id": "claim-linear-deletion-robustness",
+   "exact_statement": "For all integers $n\\ge1$ and $0\\le r\\le n$, $$\\label{cp:robust-mean}\n \\frac{\\mathbb EF_r}{n}\\le\\frac{f_n}{n}\n       +C_4(r/n)^{1/6},\\qquad C_4=2^{53}.$$ For every fixed real $a>\\alpha$, there exists $\\epsilon>0$ such that, with probability tending to one, the relaxed formula at time $an$ cannot be made satisfiable by deleting $\\lfloor\\epsilon n\\rfloor$ variables. On the same event every assignment violates more than $\\lfloor\\epsilon n\\rfloor$ clauses.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cp-robust"
+  },
+  {
+   "claim_id": "claim-soft-pressure-signs",
+   "exact_statement": "For every fixed real $0\\le a<\\alpha$ and every fixed $\\beta>0$, $$\\label{cp:soft-below}\n \\liminf_{n\\to\\infty}\\frac1n\\mathbb E\\log Z_n(a,\\beta)\\ge0.$$ For every fixed real $a>\\alpha$, some positive integer $\\beta$ satisfies $$\\label{cp:soft-above}\n \\limsup_{n\\to\\infty}\\frac1n\\mathbb E\\log Z_n(a,\\beta)<0.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cp-soft-signs"
+  },
+  {
+   "claim_id": "claim-rational-trial-evaluation",
+   "exact_statement": "For rational $a>0$, a positive integer $\\beta$, and a finite description $Q\\in\\mathcal Q$, the value $G_1(a,\\beta;Q)$ is uniformly computable from these data. In particular, strict negativity of this value is semidecidable by certified rational upper bounds.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-ctr-evaluation"
+  },
+  {
+   "claim_id": "claim-pressure-limit",
+   "exact_statement": "For every $a>0$ and finite $\\beta>0$, the sequence $L_n$ in Equation <a href=\"#ctr:pressure-data\" data-reference-type=\"eqref\" data-reference=\"ctr:pressure-data\">[ctr:pressure-data]</a> is superadditive. Hence the finite limit $$P(a,\\beta)=\\lim_{n\\to\\infty}\\frac{L_n}{n}\n           =\\sup_{n\\ge1}\\frac{L_n}{n}\n \\label{ctr:pressure-limit}$$ exists and satisfies $\\log2-\\beta a\\le P(a,\\beta)\\le\\log2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ctr-pressure"
+  },
+  {
+   "claim_id": "claim-sound-site-only-upper-bound",
+   "exact_statement": "For every $a>0$ and finite $\\beta>0$, each finite-depth strict site-only trial satisfies $$L_n\\le nG_1\\quad(n\\ge1),\\qquad P(a,\\beta)\\le G_1.\n \\label{ctr:upper-bound}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-ctr-upper"
+  },
+  {
+   "claim_id": "claim-cascade-identities",
+   "exact_statement": "For $0<t_1<\\cdots<t_d<1$, there are random positive weights $(v_\\alpha)_{\\alpha\\in\\mathbb N^d}$ with $\\sum_\\alpha v_\\alpha=1$ and the following properties.*\n\n\n*Independent samples from these weights give nested exchangeable partitions by their common prefixes. Conditional on the partitions of $n\\ge1$ sampled leaves, the probability that the next sample belongs to a specified already seen level-$j$ cluster $C$, for $1\\le j\\le d$, is $$\\frac{n_C-t_j}{n},\n \\label{ctr:prediction}$$ where $n_C$ is the number of samples in $C$. These probabilities, and their differences between parent and child clusters, determine the partition law. The ranked cluster masses are the limiting sample frequencies.*\n\n\n*Take any root data independent of the cascade weights. Conditional on those data, attach independent uniform marks to the nonroot vertices, independently of the weights; any root marks are included in the root data. Each mark may be a vector of uniforms. Let $Y_\\alpha$ be the value of the same bounded measurable function of the path marks and root data. Then $$\\mathbb E\\log\\sum_{\\alpha\\in\\mathbb N^d}v_\\alpha e^{Y_\\alpha}\n   =\\mathbb ET_{t_1}\\cdots T_{t_d}Y_{\\mathrm{path}}.\n \\label{ctr:rpc-log}$$ This identity holds conditionally on the root data. It also holds when $|Y_\\alpha|\\le B$ for all leaves, where $B$ depends only on the root data, is finite almost surely, and satisfies $\\mathbb EB<\\infty$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ctr-rpc"
+  },
+  {
+   "claim_id": "claim-finite-reservoir-approximation",
+   "exact_statement": "Fix $a>0$ and finite $\\beta>0$. For each positive integer $k$ and each $\\epsilon>0$, there is a depth-one trial with $t_1=1$ such that $$\\frac{G_k}{k}\\le P(a,\\beta)+\\epsilon.\n \\label{ctr:reservoir-bound}$$ Consequently there is a sequence of trials, one for each horizon $N\\to\\infty$, with $G_N/N\\le P(a,\\beta)+o(1)$. These trials may use a shared nonroot global variable, and the trial at one horizon need not be the trial at another.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ctr-reservoir"
+  },
+  {
+   "claim_id": "claim-path-posterior",
+   "exact_statement": "Let $Y$ use a collection of old sites and let $X$ use fresh sites in one trial, with both losses bounded conditional on the root data. Define $$Y_\\ell=T_{t_{\\ell+1}}\\cdots T_{t_d}Y\\quad(0\\le\\ell\\le d),\n \\qquad Y_d=Y,\\quad Y_0=\\mathcal TY.$$ The difference $\\mathcal T(Y+X)-\\mathcal TY$ is the nested transform of $X$ when the successive conditional laws at level $\\ell$ are changed by the density $$\\exp\\{t_\\ell(Y_\\ell-Y_{\\ell-1})\\}.\n \\label{ctr:posterior-density}$$ The old site variables may be stored as additional global variables. In this representation all fresh site generators retain their independent uniform laws. Any property of the original fresh-site kernels and their conditional uniform site laws that holds for almost every complete global path survives this change of law.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ctr-posterior"
+  },
+  {
+   "claim_id": "claim-depth-independent-sensitivity",
+   "exact_statement": "Suppose $|X|\\le C$ almost surely, where $C\\ge0$. For any two nondecreasing vectors $\\mathbf t,\\mathbf t'\\in(0,1]^d$, $$\\label{cs:exponent-bound}\n |\\mathcal T_{\\mathbf t}X-\\mathcal T_{\\mathbf t'}X|\n \\le K(C)\\|\\mathbf t-\\mathbf t'\\|_\\infty,\n \\qquad K(C)=\\frac52 C^2e^{4C}.$$ For a single operation and $0\\le t\\le1$, $$\\label{cs:small-exponent}\n 0\\le T_tX-\\mathbb EX\\le\\frac12 C^2e^{2C}t.$$ Both assertions hold conditionally on almost every root value. Their constants are independent of the depth and of the fixed sampling kernels.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cs-sensitivity"
+  },
+  {
+   "claim_id": "claim-structural-transition",
+   "exact_statement": "Fix a density $a>0$, a finite penalty $\\beta>0$, $\\eta\\in(0,1)$, $\\delta>0$, and $m_0>0$. Suppose there is a sequence of active trials of fixed depth $d$ and fixed boundary indices, with horizons $N\\to\\infty$, satisfying $$\\frac{G_N}{N}\\le U+o(1),\\qquad t_1\\ge m_0,\n \\label{ct:input-bound}$$ for a finite $U$. Suppose the old blocks satisfy Equations <a href=\"#ctr:band\" data-reference-type=\"eqref\" data-reference=\"ctr:band\">[ctr:band]</a> and <a href=\"#ctr:record\" data-reference-type=\"eqref\" data-reference=\"ctr:record\">[ctr:record]</a> with fixed finite continuous test families. Fix also a finite nonempty continuous $[0,1]$-valued test family on the type space of the current $S_1$. After passing to a subsequence along which all old exponents converge, for each fixed positive integer $k$ there is a finite-depth trial of horizon $k$ with $G_k/k\\le U$ having the following properties.*\n\n*For some $h\\in\\{0,1,2\\}$, the output has depth $d+h$: the $h$ new levels are inserted above the old first level, which becomes the *sample level* $h+1$. Every old block $(b,c]$ becomes $(b+h,c+h]$ and retains its exponent band, test family, tolerance, and record. One new processed block ends at level $h+1$ and satisfies Equations <a href=\"#ctr:band\" data-reference-type=\"eqref\" data-reference=\"ctr:band\">[ctr:band]</a> and <a href=\"#ctr:record\" data-reference-type=\"eqref\" data-reference=\"ctr:record\">[ctr:record]</a> for the specified new test family. Either this new block starts at the root, making the hierarchy fully processed, or it starts at the new first level and the hierarchy remains active, with first exponent $$0<m_{\\mathrm{new}}\\le(1-\\eta)\\lim t_1.\n \\label{ct:progress}$$ All records hold for almost every complete global path.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ct-transition"
+  },
+  {
+   "claim_id": "claim-conditional-gaussian-probing",
+   "exact_statement": "Let $\\mu$ be a probability measure on a standard Borel space. Let $(C_l)_{l\\ge1}$ be positive semidefinite measurable kernels with separable Hilbert-space feature representations and $0\\le C_l(\\zeta,\\zeta)\\le1$. Put $a_l=2^{-l}$ and let $g_l$ be independent centered Gaussian fields with covariances $C_l$. For $s\\ge1$ and $x_l\\in[1,2]$, set $$\\label{ct:gaussian-tilt}\n h(\\zeta)=s\\sum_{l\\ge1}a_lx_lg_l(\\zeta)\n       -\\frac{s^2}{2}\\sum_{l\\ge1}a_l^2x_l^2 C_l(\\zeta,\\zeta),\n \\qquad\n \\mu^h(\\,\\mathrm d\\zeta)=\\frac{e^{h(\\zeta)}\\mu(\\,\\mathrm d\\zeta)}{\\mu(e^h)}.$$ The normalizer is finite and positive almost surely. Brackets denote conditionally independent samples from $\\mu^h$ given the Gaussian fields, with any additional marks sampled by a kernel depending on those samples and with no further dependence on the fields. Define $$V_l(\\zeta)=\\frac{g_l(\\zeta)}{s a_lx_l}-C_l(\\zeta,\\zeta),\n \\qquad\n e_l=\\mathbb E_g\\left\\langle\n  \\left|V_l(\\zeta^1)-\\mathbb E_g\\langle V_l(\\zeta^1)\\rangle\\right|\n \\right\\rangle.$$ Uniformly in $\\mu$, in the kernels, and in the other parameters, $$\\label{ct:error-integral}\n                         \\int_1^2 e_l\\,\\,\\mathrm dx_l=o_l(1)\n                         \\qquad(s\\longrightarrow\\infty).$$ For every integer $n\\ge1$ and every bounded measurable $f$, $|f|\\le1$, of the first $n$ samples and their marks, $$\\begin{aligned}\n\\label{ct:approx-gg}\n \\bigg|n\\mathbb E_g\\langle fC_l(1,n+1)\\rangle\n   -\\sum_{i=2}^n\\mathbb E_g\\langle fC_l(1,i)\\rangle\n   -\\mathbb E_g\\langle f\\rangle\\mathbb E_g\\langle C_l(1,2)\\rangle\\bigg|\n \\le e_l.\n\\end{aligned}$$ Here $C_l(i,j)=C_l(\\zeta^i,\\zeta^j)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ct-gaussian"
+  },
+  {
+   "claim_id": "claim-off-diagonal-ultrametricity",
+   "exact_statement": "Let $R=(R_{ij})_{i,j\\ge1}$ be a symmetric, weakly exchangeable positive semidefinite array with $R_{ii}=1$. Suppose that for every $n\\ge2$, every bounded Borel function $f$ of the off-diagonal entries among the first $n$ indices, and every bounded Borel function $\\psi$, one has $$n\\mathbb E[f\\psi(R_{1,n+1})]\n =\\mathbb E[f]\\mathbb E[\\psi(R_{12})]+\\sum_{i=2}^n\\mathbb E[f\\psi(R_{1i})].$$ Then $R_{12}\\ge\\min\\{R_{13},R_{23}\\}$ almost surely, and the analogous inequality holds for every triple of distinct indices.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ct-gram-bridge"
+  },
+  {
+   "claim_id": "claim-vector-overlap-ordering",
+   "exact_statement": "The support $\\mathcal S$ of the off-diagonal law of $\\mathbf Q$ in <a href=\"#ct:marked-gg\" data-reference-type=\"eqref\" data-reference=\"ct:marked-gg\">[ct:marked-gg]</a> is totally ordered componentwise. The scalar off-diagonal overlaps $$Q(u,v)=J_f^{-1}\\sum_{j=1}^{J_f}Q_j(u,v),\\qquad u\\ne v,$$ satisfy the ultrametric inequalities on triples of distinct indices, and, for $v,v'\\in\\mathcal S$, $$\\label{ct:coordinate-control}\n             |v_j-v'_j|\\le J_f\\left|J_f^{-1}\\sum_i(v_i-v'_i)\\right|.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ct-ordering"
+  },
+  {
+   "claim_id": "claim-marked-cut-representation",
+   "exact_statement": "The nested cut partition has the sample-partition law of an RPC with parameters <a href=\"#ct:cut-parameters\" data-reference-type=\"eqref\" data-reference=\"ct:cut-parameters\">[ct:cut-parameters]</a>. The reindexed decorations $D'_{\\alpha,l,\\xi,i}$ are independent of the full partition and are hierarchically exchangeable in the hidden-cluster and sample coordinates. They retain the independent hierarchical exchangeabilities of the old descendant trees and the simultaneous exchangeability of the sites.",
+   "kind": "classification",
+   "statement_anchor": "stmt-ct-marked-cuts"
+  },
+  {
+   "claim_id": "claim-uniform-empirical-tree-evaluation",
+   "exact_statement": "Let $C\\ge0$, let $B\\ge1$ be an integer, and let $|X|\\le C$ in a hierarchy of fixed depth $d$ with exponents in $(0,1]$. At every vertex replace its conditional integral by the empirical average over $B$ conditionally independent children. The resulting nested logarithmic transform differs from the exact transform in mean absolute value by at most $$A(C,d)B^{-1/2},$$ uniformly in the conditional sampling kernels, the exponents, and the root data. The same statement holds for finitely many sites sampled jointly at every vertex.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ct-empirical"
+  },
+  {
+   "claim_id": "claim-endpoint-passage",
+   "exact_statement": "Equip the represented hierarchy with exponents $$\\label{ct:new-exponents}\n                  mx_1,\\ldots,mx_h,\\ m,\\ t_2,\\ldots,t_d.$$ For each endpoint of horizon $k$, its expected nested transform is the subsequential limit of the corresponding selected posterior endpoint. In particular its trial functional satisfies $G_k/k\\le U$. The hidden list is omitted when $h=0$, and the old descendant list is omitted when $d=1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ct-endpoint"
+  },
+  {
+   "claim_id": "claim-closed-hilbert-support-bounds",
+   "exact_statement": "Let $V,V'$ be independent random variables with the same law in a separable Hilbert space, and let $\\delta,\\varepsilon\\ge0$.*\n\n1.  *If $|\\langle V,V'\\rangle|\\le\\delta^2$ almost surely, then $\\|V\\|\\le\\delta$ almost surely.*\n\n2.  *If $\\langle V,V'\\rangle$ almost surely belongs to a fixed closed interval of length $\\varepsilon$, then the support of their common law has diameter at most $\\sqrt{2\\varepsilon}$. Consequently $\\|V-\\mathbb EV\\|\\le\\sqrt{2\\varepsilon}$ almost surely whenever the expectation exists.*\n\n*If $V,V'$ are conditionally independent with the same conditional law given a standard Borel random element, the corresponding conclusions hold for almost every conditional law in which the stated pair bound holds.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ct-support"
+  },
+  {
+   "claim_id": "claim-preserved-old-records",
+   "exact_statement": "Every old processed block satisfies Equation <a href=\"#ctr:record\" data-reference-type=\"eqref\" data-reference=\"ctr:record\">[ctr:record]</a> in the represented hierarchy, with the same test family and tolerance and with its boundaries shifted by $h$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ct-old-records"
+  },
+  {
+   "claim_id": "claim-new-processed-record",
+   "exact_statement": "Let $c=h+1$ be the sample level. Let $b=1$ if the parent cut is present, and let $b=0$ otherwise. There is an ancestor-measurable probability-valued type $S_b$ such that $(b,c]$ satisfies Equation <a href=\"#ctr:record\" data-reference-type=\"eqref\" data-reference=\"ctr:record\">[ctr:record]</a> for the specified new test family and tolerance $\\delta$. Its exponents lie in $[m-\\eta,m]$. If the parent cut is present, its exponent belongs to $(0,(1-\\eta)m]$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ct-new-record"
+  },
+  {
+   "claim_id": "claim-finite-tests-for-site-laws",
+   "exact_statement": "Given $e_0>0$ and a finite nonempty list of type spaces, one can choose finite nonempty collections $\\Phi_j$ of $[0,1]$-valued $1$-Lipschitz functions such that, for probability measures $\\nu,S$ on $K^{(j)}$, $$\\label{cc:net-bound}\n W_1(\\nu,S)\n \\le\\max_{\\phi\\in\\Phi_j}|\\nu(\\phi)-S(\\phi)|+e_0/2.$$ If the structural record holds with $$\\label{cc:delta-choice}\n \\bigl(\\max_j|\\Phi_j|\\bigr)\\delta\\le e_0/2,$$ then, for each processed block $(b,c]$ and almost every fixed global path, $$\\label{cc:site-law-distance}\n \\int W_1\\bigl(\\nu_{z,u_{0:b}},S_b(z_{0:b},u_{0:b})\\bigr)\n               \\,\\,\\mathrm du_{0:b}\\le e_0.$$ Here $\\nu_{z,u_{0:b}}$ is the conditional law of $S_c$ obtained by integrating only the fresh site coordinates $u_{b+1:c}$, with all the global coordinates fixed.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cc-site-law"
+  },
+  {
+   "claim_id": "claim-terminal-one-packet-trial",
+   "exact_statement": "Fix $U>P(a,\\beta)$, $0<\\eta,m_0<1$, and an integer $J$ such that $$\\label{cc:stopping-depth}\n (1-\\eta)^J<m_0.$$ Choose in advance finite nonempty test sets on $K^{(j)}$, $0\\le j\\le J$, and a structural tolerance $\\delta>0$. For every $\\rho>0$ there is a trial with $$G_1\\le U+\\rho,$$ at most $J$ processed blocks, and depth at most $2J+1$, which satisfies the chosen structural records and has one of the following forms:*\n\n1.  *the processed blocks start at the root boundary $0$;*\n\n2.  *the processed blocks start at boundary $1$, and the remaining first exponent satisfies $0<m<m_0$.*\n\n*Every processed block has exponent width at most $\\eta$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cc-terminal"
+  },
+  {
+   "claim_id": "claim-recorded-kernel-collapse",
+   "exact_statement": "Consider a terminal trial from Proposition <a href=\"#cc:terminal\" data-reference-type=\"ref\" data-reference=\"cc:terminal\">28</a>, whose records imply Equation <a href=\"#cc:site-law-distance\" data-reference-type=\"eqref\" data-reference=\"cc:site-law-distance\">[cc:site-law-distance]</a>. Fix a count cutoff $D_0\\ge1$ and put $$C=\\log2+\\beta D_0,\\qquad M=3D_0,\n \\qquad\n R=JM e^\\beta e^{2C(2J+2)}e_0.$$ There is a site-only trial, with weakly increasing exponents in $(0,1]$, such that $$\\label{cc:collapse-error}\n |G_1^{\\mathrm{site}}-G_1|\n \\le 2K(C)\\eta+2R+C^2e^{2C}m_0+2\\tau_A+2\\tau_B,$$ where $$\\tau_A=\\mathbb E[(\\log2+\\beta D_A)\\mathbf 1_{\\{D_A>D_0\\}}],\\qquad\n \\tau_B=\\mathbb E[(\\log2+\\beta D_B)\\mathbf 1_{\\{D_B>D_0\\}}],$$ with $D_A\\sim\\operatorname{Poi}(3a)$ and $D_B\\sim\\operatorname{Poi}(2a)$. In the root-terminal case the term containing $m_0$ is unnecessary. The new message kernels are independent of the fresh packet counts and signs.",
+   "kind": "construction",
+   "statement_anchor": "stmt-cc-kernel-collapse"
+  },
+  {
+   "claim_id": "claim-finite-rational-completeness",
+   "exact_statement": "<span id=\"cc:complete\" label=\"cc:complete\"></span> For every $a>0$ and finite $\\beta>0$, $$\\label{cc:finite-infimum}\n P(a,\\beta)=\\inf_{\\mathcal Q}G_1,$$ where $\\mathcal Q$ consists of site-only trials of finite depth whose exponents are strictly increasing rationals in $(0,1)$ and whose message pair is a rational-valued step function on a finite rational rectangular grid in its root and site uniform variables. In particular, this is a countable class with an effective enumeration.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cc-rational"
+  },
+  {
+   "claim_id": "claim-enumerable-upper-certificates",
+   "exact_statement": "For positive rational $a$, positive integer $\\beta$, and a rational trial $Q$, the inequality $G_1(a,\\beta;Q)<0$ certifies $\\alpha\\le a$. Every rational $a>\\alpha$ has such a certificate. The class of certified densities is effectively enumerable.",
+   "kind": "algorithm",
+   "statement_anchor": "stmt-assembly-upper"
+  }
+ ],
+ "paper": "papers/EN-115-000-0000-2-2026-PR-T4-UK-EX-M2-B-ML-M-0472_PM-235.4_Computing_the_Random_3_SAT_Threshold.md",
+ "purpose": "Computing the Random 3-SAT Threshold",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "af3b720fc81fb613493851ef5c10675163f8edea638f658a46f5913a47161741",
+   "pm.domains.v2": "ec680a72b20cc9c5cbf2ec8dc780e71504e25a21a4da9e372abd30623791af9d",
+   "pm.edges.v2": "afab7ec9fb60b8a81001066d78b94218c4bebbf9b6a6d462b3bd744bf46ab837",
+   "pm.extraction.v2": "422b42c2b98d7d540044cdc7fbb0a3e91fa7faf469cd4ac613c12353e43ca149",
+   "pm.formal.v2": "9b8df351dacd130b2e555ce2cd521393115b3f62db618e149a42b0f3bd95e9d9",
+   "pm.limits.v2": "f307952ef2a7b918a85f5162b160a0ca6787c1a0ed6bdcabebec09422ebd6031",
+   "pm.node.v2": "1f91d2f4ecd22872d3bcbab95a29b648db60a4e459027f5e870c5d02bef1e149",
+   "pm.objects.v2": "7d155e56c0aba535651caa3129fe2d1614b1ee772b51cc5ab3e4bebe1d029a38",
+   "pm.provenance.v2": "7b1c8a433bfeeab43765a6447132af4c4cab0c20f481ffcdf2440f0e9d7f9eb0",
+   "pm.quantities.v2": "09ce838ba8c716c1bc0f6776ba8cca10a73cf60ffc7a50f4087055559c8173b2",
+   "pm.reading.v2": "1dfcce8937ec0423ae61273333140181e8e7c8fb044fbce93a53e088a223d286",
+   "pm.roadmap.v2": "a59d44cedd7ec554f6f7043b1770fae762d8d8f7f6a183bcf94ecc6acc9516ea",
+   "pm.search.v1": "6144e07c323a0ca522e8936c012249846269876f2716f895dada42c52733fc3a",
+   "pm.triptych.v2": "e193bf0f5bb8ff159787cc6c665ba095b14a98e5a2f962f5559d39423f28045e"
+  },
+  "canonical_sha256": "aa60bb6556b940ac0cb4147f65435973dfe5b57818ce9de3ced43f853de54f6b",
+  "paper_sha256": "7fa25821c2947ddb1081e192419c5c24562575db05dee79d400e3405141c819a",
+  "repaired_body_sha256": "9a601821f3727a95f2f772d2504eb451f7256db66e7fe751e2d8eae5732b19df"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "5d878ee4171472b463b24eaaca47cc1ea409f903ca66ed251702a6d79516035a",
+   "receipt_sha256": "4f262649b7e1c0dd6a92b6047c6616b1faa946d51ed8507ca30ab25bffef03de",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Every admitted pair: n from 1 through 3 with m from 0 through 2, plus n == 1 and m == 3.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-exact-finite-satisfiability",
+     "oracle_basis": "Independent exact inclusion-exclusion over assignment events; exhaustive vectors cover the admitted finite domain, while the source statement ranges over arbitrary finite parameters."
+    },
+    {
+     "checked_domain": "Ordered signed clauses on n == 1, n == 2, and n == 3, including repeated positions, opposite signs, and repeated clauses.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-relaxed-clause-distribution",
+     "oracle_basis": "The candidate builds the alphabet from position tuples and sign tuples; the oracle builds it from encoded signed literals. Both retain every ordered outcome."
+    },
+    {
+     "checked_domain": "m == 0 for every admitted n.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-empty-formula-satisfiable",
+     "oracle_basis": "The empty conjunction in the candidate and inclusion-exclusion with zeroth powers in the oracle independently yield probability one."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-assignment-universal",
+     "observed_exit": 1,
+     "receipt_sha256": "d31db98edf399ab805889b4c04a01de85744331f476120afa68d30188fbae1bd"
+    },
+    {
+     "id": "mutant-ignore-literal-sign",
+     "observed_exit": 1,
+     "receipt_sha256": "cf7f0fe0e48bc2d5a9d0d3a59dd8fe6598281a83c4cd2a6a68efb48ad396b2f3"
+    },
+    {
+     "id": "mutant-extra-denominator-factor",
+     "observed_exit": 1,
+     "receipt_sha256": "0f1f7c09b00cf80935a3b81067213ac82a3fbd5a250cbe606447b69945dee058"
+    }
+   ],
+   "receipt_sha256": "53e97be4282524725c011df152ee668be8f44e8a8a63a89a4ebec36ec878900d",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Computing the Random 3-SAT Threshold"
+}

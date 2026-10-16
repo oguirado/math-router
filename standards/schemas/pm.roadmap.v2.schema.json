@@ -1,0 +1,141 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "pm.roadmap.v2"
+    },
+    "pm_id": {
+      "type": "string",
+      "pattern": "^PM-[0-9]{3}\\.[0-9]+$"
+    },
+    "generation_status": {
+      "type": "string",
+      "enum": [
+        "GENERATED-PLACEHOLDER",
+        "COMPLETE"
+      ]
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "claim_anchor": {
+            "type": "string"
+          },
+          "proof_anchor": {
+            "type": "string"
+          },
+          "method": {
+            "type": "string"
+          },
+          "inputs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "output": {
+            "type": "string"
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source_id": {
+                  "type": "string"
+                },
+                "anchor": {
+                  "type": "string"
+                },
+                "exact_quote": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_id",
+                "anchor",
+                "exact_quote"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "id",
+          "claim_anchor",
+          "proof_anchor",
+          "method",
+          "inputs",
+          "output",
+          "depends_on",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "nonconstructive_steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step_id": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source_id": {
+                  "type": "string"
+                },
+                "anchor": {
+                  "type": "string"
+                },
+                "exact_quote": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_id",
+                "anchor",
+                "exact_quote"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "step_id",
+          "reason",
+          "evidence"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "pm_id",
+    "generation_status",
+    "steps",
+    "nonconstructive_steps"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pm.roadmap.v2"
+}

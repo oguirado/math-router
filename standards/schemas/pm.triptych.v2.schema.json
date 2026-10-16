@@ -1,0 +1,564 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "pm.triptych.v2"
+    },
+    "pm_id": {
+      "type": "string",
+      "pattern": "^PM-[0-9]{3}\\.[1-9][0-9]*$"
+    },
+    "generation_status": {
+      "type": "string",
+      "enum": [
+        "COMPLETE"
+      ]
+    },
+    "panel1": {
+      "type": "object",
+      "properties": {
+        "invariants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "statement": {
+                "type": "string",
+                "minLength": 1
+              },
+              "hypotheses": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "anchor": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "exact_quote": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "source_object": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "anchor",
+                    "exact_quote",
+                    "source_object"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              },
+              "quantifiers": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "anchor": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "exact_quote": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "source_object": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "anchor",
+                    "exact_quote",
+                    "source_object"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "regime": {
+                "type": "string",
+                "minLength": 1
+              },
+              "basis": {
+                "type": "string",
+                "enum": [
+                  "stated",
+                  "inferred"
+                ]
+              },
+              "verification": {
+                "type": "string",
+                "enum": [
+                  "PENDING",
+                  "SUPPORTED",
+                  "REJECTED"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "statement",
+              "hypotheses",
+              "quantifiers",
+              "regime",
+              "basis",
+              "verification"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "source_anchors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "invariants",
+        "source_anchors"
+      ],
+      "additionalProperties": false
+    },
+    "panel2": {
+      "type": "object",
+      "properties": {
+        "anti_uses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "tempting_use": {
+                "type": "string",
+                "minLength": 1
+              },
+              "failure_mode": {
+                "type": "string",
+                "minLength": 1
+              },
+              "violated_condition": {
+                "type": "string",
+                "minLength": 1
+              },
+              "safer_action": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "anchor": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "exact_quote": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "source_object": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "anchor",
+                    "exact_quote",
+                    "source_object"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 1
+              },
+              "verification": {
+                "type": "string",
+                "enum": [
+                  "PENDING",
+                  "SUPPORTED",
+                  "REJECTED"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "tempting_use",
+              "failure_mode",
+              "violated_condition",
+              "safer_action",
+              "evidence",
+              "verification"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "source_anchors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "anti_uses",
+        "source_anchors"
+      ],
+      "additionalProperties": false
+    },
+    "panel3": {
+      "type": "object",
+      "properties": {
+        "applicability": {
+          "type": "string",
+          "enum": [
+            "constructive",
+            "algorithmic",
+            "not_applicable"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "language": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reference_code": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "input_contract": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "output_contract": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "oracle_code": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "independent_reference": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "test_vectors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "input": {
+                "type": "string",
+                "minLength": 1
+              },
+              "expected": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "input",
+              "expected"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "coverage_map": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "invariant_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "coverage": {
+                "type": "string",
+                "enum": [
+                  "PARTIAL",
+                  "DECIDED"
+                ]
+              },
+              "checked_domain": {
+                "type": "string",
+                "minLength": 1
+              },
+              "oracle_basis": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "invariant_id",
+              "coverage",
+              "checked_domain",
+              "oracle_basis"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "mutants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "mutation": {
+                "type": "string",
+                "minLength": 1
+              },
+              "expected_failure": {
+                "type": "string",
+                "minLength": 1
+              },
+              "observed_exit": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "receipt_sha256": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "mutation",
+              "expected_failure",
+              "observed_exit",
+              "receipt_sha256"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "host_receipt_sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "execution_status": {
+          "type": "string",
+          "enum": [
+            "NOT_APPLICABLE",
+            "PENDING",
+            "PASS",
+            "FAIL"
+          ]
+        }
+      },
+      "required": [
+        "applicability",
+        "reason",
+        "language",
+        "reference_code",
+        "input_contract",
+        "output_contract",
+        "oracle_code",
+        "independent_reference",
+        "test_vectors",
+        "coverage_map",
+        "mutants",
+        "host_receipt_sha256",
+        "execution_status"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "applicability": {
+                "const": "not_applicable"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "language": {
+                "type": "null"
+              },
+              "reference_code": {
+                "type": "null"
+              },
+              "input_contract": {
+                "type": "null"
+              },
+              "output_contract": {
+                "type": "null"
+              },
+              "oracle_code": {
+                "type": "null"
+              },
+              "independent_reference": {
+                "type": "null"
+              },
+              "host_receipt_sha256": {
+                "type": "null"
+              },
+              "execution_status": {
+                "const": "NOT_APPLICABLE"
+              },
+              "mutants": {
+                "maxItems": 0
+              },
+              "test_vectors": {
+                "maxItems": 0
+              },
+              "coverage_map": {
+                "maxItems": 0
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "execution_status": {
+                "const": "PASS"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "language": {
+                "not": {
+                  "type": "null"
+                }
+              },
+              "reference_code": {
+                "not": {
+                  "type": "null"
+                }
+              },
+              "input_contract": {
+                "not": {
+                  "type": "null"
+                }
+              },
+              "output_contract": {
+                "not": {
+                  "type": "null"
+                }
+              },
+              "oracle_code": {
+                "not": {
+                  "type": "null"
+                }
+              },
+              "independent_reference": {
+                "not": {
+                  "type": "null"
+                }
+              },
+              "host_receipt_sha256": {
+                "not": {
+                  "type": "null"
+                }
+              },
+              "mutants": {
+                "minItems": 1
+              },
+              "test_vectors": {
+                "minItems": 1
+              },
+              "coverage_map": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema",
+    "pm_id",
+    "generation_status",
+    "panel1",
+    "panel2",
+    "panel3"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pm.triptych.v2"
+}

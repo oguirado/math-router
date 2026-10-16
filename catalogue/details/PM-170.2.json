@@ -1,0 +1,684 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 648271,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 200156
+ },
+ "coordinate": "EN-113-000-0004-2-2026-PR-T4-UK-EX-M1-B-CO-M-0333",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "Extremal combinatorics and finite projective geometry",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "intro:section",
+     "quote": "The theorem determines the logarithmic exponent. It does not assert that $r(s,t)$ is bounded below by a positive constant times $t^{s-1}/(\\log t)^{s-2}$.",
+     "quote_sha256": "bae4bc6ae8467a3bbdd8b460d9ab63a19f79892e8e773950d6eb3536e1f43642"
+    }
+   ],
+   "query": "Matching constant-prefactor Ramsey lower bound",
+   "reason": "The theorem only determines the logarithmic exponent and expressly excludes this stronger interpretation."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-7",
+     "quote": "We bound message length, not search time.",
+     "quote_sha256": "e5e2fa86a900b7c95a0ddeaa6fcec0da84c7dac4c3c45c7d86ca66450aae620c"
+    }
+   ],
+   "query": "Polynomial-time Ramsey graph generation or production resource budget",
+   "reason": "The paper bounds messages, with no practical search-time or measured memory contract."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-learn-implementation",
+     "quote": "it does not assert that this accepted row has an unbiased true-law distribution.",
+     "quote_sha256": "d189e79dc589696fd9bcc5a14a3d75e30edbca62946f24349227fdc30b674163"
+    }
+   ],
+   "query": "Unbiased selected tuples or accepted proposal rows",
+   "reason": "Selection and acceptance can bias distributions; use the stated domination and readiness bounds."
+  }
+ ],
+ "family": "PM-170",
+ "id": "PM-170.2",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-intro-main",
+    "claim_id": "C01",
+    "statement": "For every fixed integer $s\\ge6$ there is a constant $C_s>0$ such that, for every $\\varepsilon>0$ and every sufficiently large integer $t$,"
+   },
+   {
+    "anchor": "stmt-intro-prime-construction",
+    "claim_id": "C02",
+    "statement": "Fix an integer $d\\ge5$ and a real number $0<\\eta<1/10$. For every sufficiently large prime $q$, with $\\sigma=\\log q$, there is a graph $G$ such that"
+   },
+   {
+    "anchor": "stmt-base-incidence",
+    "claim_id": "C03",
+    "statement": "Let $j\\ge2$, and put $p_j=Q_{j-1}/Q_j=(1-Q_j^{-1})/q$. For any real weights $w_x$ on one of the two projective spaces,"
+   },
+   {
+    "anchor": "stmt-base-flag-graph",
+    "claim_id": "C04",
+    "statement": "Every graph defined by Equation <a href=\"#base:edge-rule\" data-reference-type=\"eqref\" data-reference=\"base:edge-rule\">[base:edge-rule]</a> is $K_{d+1}$-free. Its independent sets, in increasing position order, are exactly its consistent subtuples. Reversing a consistent tuple and interchanging its first and second endpoints preserves consistency."
+   },
+   {
+    "anchor": "stmt-base-rectangles",
+    "claim_id": "C05",
+    "statement": "There is a constant $C_d$ such that, with probability $1-o(1)$, every $\\mathcal R(U)$ contains at most $C_d\\sigma$ positions of the uniform stream. The same event controls rectangles after dual interchange."
+   },
+   {
+    "anchor": "stmt-base-selection-entropy",
+    "claim_id": "C06",
+    "statement": "Let a random stream have law dominated by $C_0$ times the iid uniform flag-stream law, where $C_0$ is independent of $q$. From this stream, using arbitrary dependent auxiliary randomness, extract a tuple $F$ of deterministic length $\\ell=\\Theta(k)$. Its order may be either increasing stream order or reversed stream order with the endpoints interchanged. Then"
+   },
+   {
+    "anchor": "stmt-base-event-transfer",
+    "claim_id": "C07",
+    "statement": "For two probability laws $P,Q$ on the same finite or countable space and an event $E$,"
+   },
+   {
+    "anchor": "stmt-base-tails",
+    "claim_id": "C08",
+    "statement": "If $X$ is binomial or Poisson with mean $\\mu$, then $\\mathbb Ee^{tX}\\le\\exp((e^t-1)\\mu)$ for every real $t$. For each fixed $0<\\delta<1$ there is $c_\\delta>0$ such that"
+   },
+   {
+    "anchor": "stmt-base-scale-comparisons",
+    "claim_id": "C09",
+    "statement": "Uniformly over the interval for $D$ in Equation <a href=\"#base:parameters\" data-reference-type=\"eqref\" data-reference=\"base:parameters\">[base:parameters]</a>,"
+   },
+   {
+    "anchor": "stmt-geom-description",
+    "claim_id": "C10",
+    "statement": "Let $2\\leq j\\leq d$. Let $S,T$ be nonempty sets in opposite point systems of $\\mathop{\\mathrm{PG}}(j,q)$, contained in decoder-known sets $U_S,U_T$. Suppose, for a fixed constant $C_b$, that"
+   },
+   {
+    "anchor": "stmt-geom-validation",
+    "claim_id": "C11",
+    "statement": "Under <a href=\"#geom:sparse-hypotheses\" data-reference-type=\"eqref\" data-reference=\"geom:sparse-hypotheses\">[geom:sparse-hypotheses]</a>, suppose a decoder-known $W\\subseteq U_S$ satisfies <a href=\"#geom:description-output\" data-reference-type=\"eqref\" data-reference=\"geom:description-output\">[geom:description-output]</a>. Further independent tables and a message of length $CqP(d_S+d_T+1)$ produce caps $U_T'\\subseteq U_T$ and $U_S'\\subseteq U_S$, with additional failure probability $Ce^{-cq}$, such that"
+   },
+   {
+    "anchor": "stmt-geom-produced-test",
+    "claim_id": "C12",
+    "statement": "Consider either test in Lemma <a href=\"#geom:validation\" data-reference-type=\"ref\" data-reference=\"geom:validation\">11</a>, conditional on all data making that test ready, but not on any later event. Suppose its hidden source $X_0$ is a subset of an original support $X$ with $|X_0|\\geq c|X|$. For every fixed opposite point $y$,"
+   },
+   {
+    "anchor": "stmt-geom-projection",
+    "claim_id": "C13",
+    "statement": "For $j\\geq4$, assume Lemma <a href=\"#geom:description\" data-reference-type=\"ref\" data-reference=\"geom:description\">10</a> in projective dimension $j-1$, for every fixed value of its hypothesis constant. Then the lemma holds in dimension $j$."
+   },
+   {
+    "anchor": "stmt-geom-preparation",
+    "claim_id": "C14",
+    "statement": "Suppose <a href=\"#geom:sparse-hypotheses\" data-reference-type=\"eqref\" data-reference=\"geom:sparse-hypotheses\">[geom:sparse-hypotheses]</a> holds with $j\\in\\{2,3\\}$ and $n=|S|\\leq|T|$. Either enumeration already proves Lemma <a href=\"#geom:description\" data-reference-type=\"ref\" data-reference=\"geom:description\">10</a>, or the following preparation costs $O(q+\\sigma)$ bits. In dimension three there is also a possible reduction to the dimension-two description lemma, with the same final cost, size, capture, and failure bounds as Lemma <a href=\"#geom:description\" data-reference-type=\"ref\" data-reference=\"geom:description\">10</a>.*\n\n*In the case not resolved by enumeration or that reduction, we have $n>100qP$, a retained set $S'\\subseteq S$ of size $n'\\in[n/2,n]$, and either an empty list or an ordered plane list $\\Pi_1,\\ldots,\\Pi_J$ in $\\mathop{\\mathrm{PG}}(3,q)$. In the latter case the sets"
+   },
+   {
+    "anchor": "stmt-geom-rich-lines",
+    "claim_id": "C15",
+    "statement": "Let $q$ run through sufficiently large primes. Let $\\mathcal S$ be at most $n\\leq Cq^2$ points of $\\mathop{\\mathrm{PG}}(3,q)$, with at most $K_p$ points in every projective plane. Let $M>0$ satisfy"
+   },
+   {
+    "anchor": "stmt-geom-radial",
+    "claim_id": "C16",
+    "statement": "Consider the dimension-three output of Proposition <a href=\"#geom:preparation\" data-reference-type=\"ref\" data-reference=\"geom:preparation\">14</a>. A line $\\ell$ through a query point $x$ has strength"
+   },
+   {
+    "anchor": "stmt-geom-overlap",
+    "claim_id": "C17",
+    "statement": "Use the prepared data of Proposition <a href=\"#geom:preparation\" data-reference-type=\"ref\" data-reference=\"geom:preparation\">14</a> in dimension $j=2$ or $3$. For a query point $x$, let $\\mathcal H_x$ be any family of hyperplanes through $x$ such that"
+   },
+   {
+    "anchor": "stmt-learn-short-row",
+    "claim_id": "C18",
+    "statement": "Fix the constants in <a href=\"#learn:support-hypotheses\" data-reference-type=\"eqref\" data-reference=\"learn:support-hypotheses\">[learn:support-hypotheses]</a>, the bound on $b/K_*$, the bound on $\\tau\\sigma^{100\\beta}$, and $C_0$. For every sufficiently large prime $q$, the prepared input just specified has the following description scheme. Using a fresh public table, it either declares failure or describes a set $W\\subseteq U_S$ satisfying"
+   },
+   {
+    "anchor": "stmt-learn-regular-pencils",
+    "claim_id": "C19",
+    "statement": "There is a deterministic set $D_2$ of size $o(n)$ such that, for $x\\notin D_2$, its pencil contains at most $Be^\\xi$ exceptional hyperplanes and satisfies"
+   },
+   {
+    "anchor": "stmt-learn-empty-exceptional",
+    "claim_id": "C20",
+    "statement": "There is a fixed $c_0>0$ such that, with probability at least $c e^{-8P\\tau}$,"
+   },
+   {
+    "anchor": "stmt-learn-second-moment",
+    "claim_id": "C21",
+    "statement": "If $x\\notin D_0\\cup D_2$, then, conditional on $\\mathcal O_x$,"
+   },
+   {
+    "anchor": "stmt-learn-high-moment",
+    "claim_id": "C22",
+    "statement": "If $x\\notin D_0\\cup D_1\\cup D_2$, then, conditional on $\\mathcal O_x$,"
+   },
+   {
+    "anchor": "stmt-learn-row-success",
+    "claim_id": "C23",
+    "statement": "For the Poisson batches sampled from $S'$, with probability at least $c e^{-8P\\tau}$ their total size is at most $2qP$ and the test <a href=\"#learn:score\" data-reference-type=\"eqref\" data-reference=\"learn:score\">[learn:score]</a>, including all sampled points, captures at least $c n$ points of $S$ and contains at most $n e^{CP}$ ambient points. The integer $z$ and the score are those determined by these same batches."
+   },
+   {
+    "anchor": "stmt-learn-implementation",
+    "claim_id": "C24",
+    "statement": "The true-law success in Lemma <a href=\"#learn:row-success\" data-reference-type=\"ref\" data-reference=\"learn:row-success\">23</a> gives the description scheme of Proposition <a href=\"#learn:short-row\" data-reference-type=\"ref\" data-reference=\"learn:short-row\">18</a>."
+   },
+   {
+    "anchor": "stmt-mark-marking",
+    "claim_id": "C25",
+    "statement": "Under <a href=\"#mark:stage-budget\" data-reference-type=\"eqref\" data-reference=\"mark:stage-budget\">[mark:stage-budget]</a>, both scans together mark at most $h\\le Cq\\sigma$ positions expensive. The old context, the two rank and type masks, and the values of all positions expensive in either scan form a message $\\theta_0$ satisfying"
+   },
+   {
+    "anchor": "stmt-mark-representatives",
+    "claim_id": "C26",
+    "statement": "There is a deterministic round $t<T_1$, depending only on the current joint law, such that, with $\\theta=\\theta_t$, $U=U_t$, and $E=E_t$,"
+   },
+   {
+    "anchor": "stmt-mark-endpoint-mass",
+    "claim_id": "C27",
+    "statement": "At every fixed history and unexposed slot $i$, the probability that either specified endpoint is not good is at most"
+   },
+   {
+    "anchor": "stmt-mark-collision",
+    "claim_id": "C28",
+    "statement": "Fix a history $\\theta$ in the selected pre-round. For unexposed slots $i<j$ in a reciprocal class, write their flags as $(a,b)$ and $(c,y)$. There are symmetric nonnegative numbers $c_{ij}=c_{ji}$, with $c_{ii}=0$, such that"
+   },
+   {
+    "anchor": "stmt-mark-good-indices",
+    "claim_id": "C29",
+    "statement": "In every selected class, the expected proportion of bad unexposed indices is $o(1)$, and so is the expected proportion of bad fresh representatives. At every good index each endpoint is good with probability $1-o(1)$, uniformly over the history and fresh indices. All limits hold for fixed $d,\\eta$ and the stage constants."
+   },
+   {
+    "anchor": "stmt-comp-step",
+    "claim_id": "C30",
+    "statement": "Let $F$ be a consistent tuple of deterministic length $c_0k\\le \\ell\\le k$, for a fixed $c_0>0$, extracted in one of the two orientations from the flag stream. Suppose that the stream law is dominated by a fixed constant times its original independent law and is supported on the rectangle-occupancy event of Lemma <a href=\"#base:rectangles\" data-reference-type=\"ref\" data-reference=\"base:rectangles\">5</a>. Let a discrete context $\\mathsf C$ specify a domain for each slot, with"
+   },
+   {
+    "anchor": "stmt-comp-rich-union",
+    "claim_id": "C31",
+    "statement": "Write $\\mathop{\\mathrm{PG}}(d,q)=\\mathop{\\mathrm{PG}}(\\mathbb F_q^{d+1})$. Let $X\\subseteq\\mathop{\\mathrm{PG}}(d,q)$ and $0<\\delta\\le1$. Let $\\mathcal V$ be any family of nonzero vector subspaces of $\\mathbb F_q^{d+1}$ satisfying"
+   },
+   {
+    "anchor": "stmt-comp-high-rank",
+    "claim_id": "C32",
+    "statement": "Suppose the preparation in Section <a href=\"#mark:section\" data-reference-type=\"ref\" data-reference=\"mark:section\">5</a> produces a high-rank class with fixed vector ranks $r,r'$, where $r+r'>d+1$, and one window of length $\\Theta(k)$. There is a new context of length $O(q\\sigma^{1+\\beta})$ bits whose decoded flag domain has size at most $q^d e^{O(K)}$. With probability bounded below, this domain contains a deterministic number $\\Theta(k)$ of middle targets, retained in their original order. The decoder does not need the old history or any conditional law."
+   },
+   {
+    "anchor": "stmt-comp-supports",
+    "claim_id": "C33",
+    "statement": "At every good index in a reciprocal class, there are auxiliary choices of first and second supports consisting entirely of good endpoints. If $A$ is the first support and $p_i^A$ the conditional first-endpoint law, then"
+   },
+   {
+    "anchor": "stmt-comp-tree-loss",
+    "claim_id": "C34",
+    "statement": "The expected number of middle targets lost through the pre-tree deletions, deleted subtrees, or exclusion by the produced caps is $o(k)$. In particular, a prescribed deterministic number $\\Theta(k)$ of targets can be retained in order with probability bounded below."
+   },
+   {
+    "anchor": "stmt-end-prime-interval",
+    "claim_id": "C35",
+    "statement": "There is a constant $c_0>0$ such that, for every sufficiently large real $x$, a prime $q$ satisfies $c_0x\\le q\\le x$."
+   },
+   {
+    "anchor": "stmt-end-triangle-free",
+    "claim_id": "C36",
+    "statement": "If a triangle-free graph $H$ has $n>0$ vertices and maximum degree at most a real number $D_0\\ge1$, then"
+   },
+   {
+    "anchor": "stmt-end-upper-bound",
+    "claim_id": "C37",
+    "statement": "For every fixed integer $s\\ge2$ there is a constant $C_s$ such that for all sufficiently large integers $t$,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "ordered flag graph",
+    "evidence": [
+     {
+      "anchor": "stmt-base-flag-graph",
+      "quote": "Every graph defined by Equation <a href=\"#base:edge-rule\" data-reference-type=\"eqref\" data-reference=\"base:edge-rule\">[base:edge-rule]</a> is $K_{d+1}$-free. Its independent sets, in increasing position order, are exactly its consistent subtuples. Reversing a consistent tuple and interchanging its first and second endpoints preserves consistency.",
+      "quote_sha256": "ee25864c979c83375a74f2ce5f9f243f476425e4417a8a8b8c2ae7b7068a8108"
+     }
+    ],
+    "requires_concepts": [
+     "finite field",
+     "projective point",
+     "dual point",
+     "incidence",
+     "stream position order"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "sparse-pair description",
+    "evidence": [
+     {
+      "anchor": "stmt-geom-description",
+      "quote": "Let $2\\leq j\\leq d$. Let $S,T$ be nonempty sets in opposite point systems of $\\mathop{\\mathrm{PG}}(j,q)$, contained in decoder-known sets $U_S,U_T$. Suppose, for a fixed constant $C_b$, that $$\\label{geom:sparse-hypotheses}\n |S||T|\\geq q^{j+1}e^{-b},\\qquad\n \\frac{e(S,T)}{|S||T|}\\leq\\frac{\\tau}{q},\\qquad\n 0\\leq b\\leq C_bK_*,\\quad\n 0<\\tau\\leq C_b\\sigma^{-100\\beta}.$$ Write $$d_S=\\log\\frac{|U_S|}{|S|},\\qquad\n d_T=\\log\\frac{|U_T|}{|T|},$$ and orient the systems so that $n=|S|\\leq |T|$. There is a public-table description, of length at most $$CqP(d_S+d_T+P),$$ which, except with probability $Ce^{-cq}$, produces a decoder-known set $W\\subseteq U_S$ satisfying $$\\label{geom:description-output}\n |W|\\leq ne^{CP},\\qquad |W\\cap S|\\geq cn.$$ The probability bound holds conditional on any earlier data independent of the tables used by this invocation.",
+      "quote_sha256": "a9e47898bba77e5846f632020f223f9ca2d94608d861c726b0f087557c45ed79"
+     }
+    ],
+    "requires_concepts": [
+     "projective incidence",
+     "decoder-known supersets",
+     "fresh public random tables",
+     "sparse support-product hypotheses"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C01",
+   "exact_statement": "For every fixed integer $s\\ge6$ there is a constant $C_s>0$ such that, for every $\\varepsilon>0$ and every sufficiently large integer $t$, $$\\frac{t^{s-1}}{(\\log t)^{s-2+\\varepsilon}}\n \\le r(s,t)\n \\le C_s\\frac{t^{s-1}}{(\\log t)^{s-2}}.$$ In particular, $$\\lim_{t\\to\\infty}\n \\frac{(s-1)\\log t-\\log r(s,t)}{\\log\\log t}=s-2.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-intro-main"
+  },
+  {
+   "claim_id": "C02",
+   "exact_statement": "Fix an integer $d\\ge5$ and a real number $0<\\eta<1/10$. For every sufficiently large prime $q$, with $\\sigma=\\log q$, there is a graph $G$ such that $$|V(G)|=\\lfloor q^d\\sigma\\rfloor,\\qquad\n K_{d+1}\\not\\subseteq G,\\qquad\n \\alpha(G)<\\lfloor q\\sigma^{1+\\eta}\\rfloor.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-intro-prime-construction"
+  },
+  {
+   "claim_id": "C03",
+   "exact_statement": "Let $j\\ge2$, and put $p_j=Q_{j-1}/Q_j=(1-Q_j^{-1})/q$. For any real weights $w_x$ on one of the two projective spaces, $$\\sum_y\\left(\\sum_{x\\perp y}w_x-p_j\\sum_xw_x\\right)^2\n =q^{j-1}\\left(\\sum_xw_x^2-\\frac{(\\sum_xw_x)^2}{Q_j}\\right)\n \\le q^{j-1}\\sum_xw_x^2.\n \\label{base:weighted-variance}$$ In particular, for sets $S,T$ in the opposite spaces, $$\\left|e(S,T)-p_j|S||T|\\right|\n \\le q^{(j-1)/2}\\sqrt{|S||T|}.\n \\label{base:mixing}$$ If $S,T$ are nonempty and $e(S,T)/(|S||T|)=o(1/q)$, then $|S||T|\\le Cq^{j+1}$ for all sufficiently large $q$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-base-incidence"
+  },
+  {
+   "claim_id": "C04",
+   "exact_statement": "Every graph defined by Equation <a href=\"#base:edge-rule\" data-reference-type=\"eqref\" data-reference=\"base:edge-rule\">[base:edge-rule]</a> is $K_{d+1}$-free. Its independent sets, in increasing position order, are exactly its consistent subtuples. Reversing a consistent tuple and interchanging its first and second endpoints preserves consistency.",
+   "kind": "bound",
+   "statement_anchor": "stmt-base-flag-graph"
+  },
+  {
+   "claim_id": "C05",
+   "exact_statement": "There is a constant $C_d$ such that, with probability $1-o(1)$, every $\\mathcal R(U)$ contains at most $C_d\\sigma$ positions of the uniform stream. The same event controls rectangles after dual interchange.",
+   "kind": "bound",
+   "statement_anchor": "stmt-base-rectangles"
+  },
+  {
+   "claim_id": "C06",
+   "exact_statement": "Let a random stream have law dominated by $C_0$ times the iid uniform flag-stream law, where $C_0$ is independent of $q$. From this stream, using arbitrary dependent auxiliary randomness, extract a tuple $F$ of deterministic length $\\ell=\\Theta(k)$. Its order may be either increasing stream order or reversed stream order with the endpoints interchanged. Then $$H(F)\\ge d\\sigma\\ell+\\eta\\ell\\log\\sigma-O(k).\n \\label{base:entropy-lower}$$ The implicit constant may depend on $C_0$ and the fixed comparison constants in $\\ell=\\Theta(k)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-base-selection-entropy"
+  },
+  {
+   "claim_id": "C07",
+   "exact_statement": "For two probability laws $P,Q$ on the same finite or countable space and an event $E$, $$Q(E)\\le\\frac{\\mathop{\\mathrm{KL}}(P\\Vert Q)+P(E)}{1-e^{-1}}.\n \\label{base:kl-event}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-base-event-transfer"
+  },
+  {
+   "claim_id": "C08",
+   "exact_statement": "If $X$ is binomial or Poisson with mean $\\mu$, then $\\mathbb Ee^{tX}\\le\\exp((e^t-1)\\mu)$ for every real $t$. For each fixed $0<\\delta<1$ there is $c_\\delta>0$ such that $$\\mathbb P(|X-\\mu|\\ge\\delta\\mu)\\le2e^{-c_\\delta\\mu}.$$ For $h\\ge e\\mu>0$, $$\\mathbb P(X\\ge h)\\le(e\\mu/h)^h.$$ When $\\mu=0$, the variable is zero almost surely.",
+   "kind": "bound",
+   "statement_anchor": "stmt-base-tails"
+  },
+  {
+   "claim_id": "C09",
+   "exact_statement": "Uniformly over the interval for $D$ in Equation <a href=\"#base:parameters\" data-reference-type=\"eqref\" data-reference=\"base:parameters\">[base:parameters]</a>, $$K_*=o(L),\\qquad L=o(P),\\qquad P=o(\\sigma),\\qquad\n R\\log L+\\log\\sigma=o(P).$$ Moreover, for sufficiently large $q$, $D\\sigma^{9\\beta}\\le P\\le4D\\sigma^{9\\beta}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-base-scale-comparisons"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "Let $2\\leq j\\leq d$. Let $S,T$ be nonempty sets in opposite point systems of $\\mathop{\\mathrm{PG}}(j,q)$, contained in decoder-known sets $U_S,U_T$. Suppose, for a fixed constant $C_b$, that $$\\label{geom:sparse-hypotheses}\n |S||T|\\geq q^{j+1}e^{-b},\\qquad\n \\frac{e(S,T)}{|S||T|}\\leq\\frac{\\tau}{q},\\qquad\n 0\\leq b\\leq C_bK_*,\\quad\n 0<\\tau\\leq C_b\\sigma^{-100\\beta}.$$ Write $$d_S=\\log\\frac{|U_S|}{|S|},\\qquad\n d_T=\\log\\frac{|U_T|}{|T|},$$ and orient the systems so that $n=|S|\\leq |T|$. There is a public-table description, of length at most $$CqP(d_S+d_T+P),$$ which, except with probability $Ce^{-cq}$, produces a decoder-known set $W\\subseteq U_S$ satisfying $$\\label{geom:description-output}\n |W|\\leq ne^{CP},\\qquad |W\\cap S|\\geq cn.$$ The probability bound holds conditional on any earlier data independent of the tables used by this invocation.",
+   "kind": "construction",
+   "statement_anchor": "stmt-geom-description"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "Under <a href=\"#geom:sparse-hypotheses\" data-reference-type=\"eqref\" data-reference=\"geom:sparse-hypotheses\">[geom:sparse-hypotheses]</a>, suppose a decoder-known $W\\subseteq U_S$ satisfies <a href=\"#geom:description-output\" data-reference-type=\"eqref\" data-reference=\"geom:description-output\">[geom:description-output]</a>. Further independent tables and a message of length $CqP(d_S+d_T+1)$ produce caps $U_T'\\subseteq U_T$ and $U_S'\\subseteq U_S$, with additional failure probability $Ce^{-cq}$, such that $$\\label{geom:validation-output}\n \\begin{aligned}\n |U_T'|&\\leq \\frac{Cq^{j+1}}{|S|},&\n |U_S'|&\\leq \\frac{Cq^{j+1}}{|T|},\\\\\n |U_T'\\cap T|&\\geq .99|T|,&\n |U_S'\\cap S|&\\geq .99|S|.\n \\end{aligned}$$ Each cap is its input domain intersected with an ambient test: a candidate passes if it is incident with fewer than $h/(5q)$ entries of the transmitted row of length $h$ in the opposite system.",
+   "kind": "construction",
+   "statement_anchor": "stmt-geom-validation"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Consider either test in Lemma <a href=\"#geom:validation\" data-reference-type=\"ref\" data-reference=\"geom:validation\">11</a>, conditional on all data making that test ready, but not on any later event. Suppose its hidden source $X_0$ is a subset of an original support $X$ with $|X_0|\\geq c|X|$. For every fixed opposite point $y$, $$\\label{geom:exclusion-bound}\n \\mathbb P\\{\\text{the test is produced and its ambient test excludes }y\\}\n \\leq Cq\\frac{|X\\cap N(y)|}{|X|}.$$ Conditional on production, the row law is dominated by a constant times the independent uniform row law on $X_0$. The bound <a href=\"#geom:exclusion-bound\" data-reference-type=\"eqref\" data-reference=\"geom:exclusion-bound\">[geom:exclusion-bound]</a> may be averaged over earlier readiness data whenever its right-hand side is fixed.",
+   "kind": "bound",
+   "statement_anchor": "stmt-geom-produced-test"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "For $j\\geq4$, assume Lemma <a href=\"#geom:description\" data-reference-type=\"ref\" data-reference=\"geom:description\">10</a> in projective dimension $j-1$, for every fixed value of its hypothesis constant. Then the lemma holds in dimension $j$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-geom-projection"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "Suppose <a href=\"#geom:sparse-hypotheses\" data-reference-type=\"eqref\" data-reference=\"geom:sparse-hypotheses\">[geom:sparse-hypotheses]</a> holds with $j\\in\\{2,3\\}$ and $n=|S|\\leq|T|$. Either enumeration already proves Lemma <a href=\"#geom:description\" data-reference-type=\"ref\" data-reference=\"geom:description\">10</a>, or the following preparation costs $O(q+\\sigma)$ bits. In dimension three there is also a possible reduction to the dimension-two description lemma, with the same final cost, size, capture, and failure bounds as Lemma <a href=\"#geom:description\" data-reference-type=\"ref\" data-reference=\"geom:description\">10</a>.*\n\n*In the case not resolved by enumeration or that reduction, we have $n>100qP$, a retained set $S'\\subseteq S$ of size $n'\\in[n/2,n]$, and either an empty list or an ordered plane list $\\Pi_1,\\ldots,\\Pi_J$ in $\\mathop{\\mathrm{PG}}(3,q)$. In the latter case the sets $$\\label{geom:cells}\n C_i=(S\\cap\\Pi_i)\\setminus\\bigcup_{h<i}\\Pi_h\n \\quad(1\\leq i\\leq J)$$ partition $S'$, have nonincreasing sizes, and satisfy $|C_i|<.04n'$. The decoder knows the list and all cell sizes, but need not know $S'$ or the cells themselves.*\n\n\n*Write $$\\label{geom:lowdim-parameters}\n n=q^{1+v},\\quad g=(v-1/2)\\sigma,\\quad\n \\chi=P/100,\\quad\\chi_0=P/10000,\\quad B=q^j/n'.$$ For every ambient query point $x$, define $O_x$ to be the cell $C_i$ of its earliest containing listed plane, and $O_x=\\varnothing$ if there is none. Define $$\\label{geom:outside-support}\n f_x=|O_x|/n'\\leq .04,\\qquad\n X_x=S'\\setminus(O_x\\cup\\{x\\}).$$ If no list is present, $O_x=\\varnothing$ for all $x$. When $j=3$ and $g>\\chi_0$, the preparation additionally ensures either*\n\n1.  *every plane meets $S'$ in fewer than $K_p=n^{4/3}q^{-1}e^{-g/5}$ points and the list is empty; or*\n\n2.  *the list is present and $J\\leq n/K_p=q^{1/2}e^{-2g/15}$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-geom-preparation"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "Let $q$ run through sufficiently large primes. Let $\\mathcal S$ be at most $n\\leq Cq^2$ points of $\\mathop{\\mathrm{PG}}(3,q)$, with at most $K_p$ points in every projective plane. Let $M>0$ satisfy $$\\label{geom:rich-regime}\n \\frac{M^3}{n}\\longrightarrow\\infty,\\qquad\n \\frac{M^2}{K_p}\\longrightarrow\\infty,\\qquad\n cq\\leq\\frac nM\\leq Cq^{41/40}.$$ Then at most $Cn/M$ projective lines contain at least $M$ points of $\\mathcal S$. The constant is uniform once the displayed limits hold uniformly in the family under consideration.",
+   "kind": "bound",
+   "statement_anchor": "stmt-geom-rich-lines"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "Consider the dimension-three output of Proposition <a href=\"#geom:preparation\" data-reference-type=\"ref\" data-reference=\"geom:preparation\">14</a>. A line $\\ell$ through a query point $x$ has strength $$a_\\ell(x)=q|X_x\\cap\\ell|/n'.$$ Outside one exceptional set of $o(n)$ ambient points, simultaneously for dyadic $a\\in[q^{-10},2]$, $$\\label{geom:radial-count}\n \\#\\{\\ell\\ni x:a_\\ell(x)\\geq a\\}\n \\leq q^{2-2v}e^\\chi a^{-100}.$$ In addition, whenever $g>\\chi_0$ and $a>e^{-g/20}$ with $0<a\\leq2$, the total number of ambient center–line pairs $(x,\\ell)$ having strength at least $a$ is at most $Cq^2/a^2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-geom-radial"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "Use the prepared data of Proposition <a href=\"#geom:preparation\" data-reference-type=\"ref\" data-reference=\"geom:preparation\">14</a> in dimension $j=2$ or $3$. For a query point $x$, let $\\mathcal H_x$ be any family of hyperplanes through $x$ such that $$\\lambda'_H:=q|X_x\\cap H|/n'\\leq2\\quad(H\\in\\mathcal H_x).$$ For distinct $H,H'\\in\\mathcal H_x$ put $\\theta_{HH'}=q|X_x\\cap H\\cap H'|/n'$. Let $E_a$ be the number of ordered pairs with $\\theta_{HH'}\\geq a$ and let $\\Delta_a$ be the maximum degree of this graph. Outside $o(n)$ ambient centers, simultaneously for dyadic $a\\in[q^{-10},2]$ and for every such family, $$\\label{geom:overlap-bounds}\n E_a\\leq B^2e^{2\\chi}a^{-200},\\qquad\n \\Delta_a\\leq Be^{2\\chi}a^{-200}.$$ Let $p$ be any even integer in $[10000\\sigma/P,10000\\sigma/P+2]$ and put $t_*=1/(100p)$. Outside a further set of at most $ne^{CP}$ ambient centers, also $$\\label{geom:strong-degree}\n \\Delta_{t_*}\\leq Be^{-3P}.$$ The further exceptional set is used only for ambient output-size control, not for support capture.",
+   "kind": "bound",
+   "statement_anchor": "stmt-geom-overlap"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "Fix the constants in <a href=\"#learn:support-hypotheses\" data-reference-type=\"eqref\" data-reference=\"learn:support-hypotheses\">[learn:support-hypotheses]</a>, the bound on $b/K_*$, the bound on $\\tau\\sigma^{100\\beta}$, and $C_0$. For every sufficiently large prime $q$, the prepared input just specified has the following description scheme. Using a fresh public table, it either declares failure or describes a set $W\\subseteq U_S$ satisfying $$|W|\\le n e^{CP},\\qquad |W\\cap S|\\ge c n.$$ Failure has probability at most $C e^{-cq}$, and the message has at most $CqP(d_S+1)+Cq+C\\sigma$ bits. In particular this is within $CqP(d_S+d_T+P)$ for any $d_T\\ge0$. The bounds are uniform in all supports and prepared inputs satisfying the hypotheses, including inputs fixed by earlier random history before the fresh table is sampled. The decoder uses only $U_S$, public parameters, and the new message; it need not know $S$, $T$, or $S'$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-learn-short-row"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "There is a deterministic set $D_2$ of size $o(n)$ such that, for $x\\notin D_2$, its pencil contains at most $Be^\\xi$ exceptional hyperplanes and satisfies $$\\sum_{H\\ni x}\\min\\{1,(\\lambda_H-1)^2\\}\\le Be^\\xi,\n \\qquad\n \\sum_{H\\ni x}\\min\\{1,(\\lambda_{H,C}-f_C)^2\\}\\le Be^\\xi$$ for every cell $C$. The constants and the $o(n)$ estimate are uniform over the prepared inputs. We call these pencils regular. Moreover, for every regular pencil and its typical members, with $$\\label{learn:outside-mass}\n \\lambda'_H=\\frac{q|H\\cap X_x|}{n'},\\qquad\n \\delta'_H=\\lambda'_H-(1-f_x),$$ we have $$\\label{learn:typical-bounds}\n .75\\le\\lambda'_H<2,\\qquad |\\delta'_H|\\le .18,\\qquad\n \\sum_{\\substack{H\\ni x\\\\H\\text{ typical}}}(\\delta'_H)^2\n \\le CBe^\\xi.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-learn-regular-pencils"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "There is a fixed $c_0>0$ such that, with probability at least $c e^{-8P\\tau}$, $$\\label{learn:empty-good-event}\n z\\ge z_{\\min}:=c_0qB e^{-b-8P\\tau},\\qquad\n \\sum_{H\\in Z}\\lambda_H\\le .001z.$$ For every $Z$ satisfying these two inequalities, at least $.99n'$ points of $S'$ have $z_x\\le .1z/q$, whereas all but $O(q^{j+1}/z)$ ambient points have $z_x\\ge .8z/q$. At a regular pencil, the exceptional-hyperplane part of <a href=\"#learn:score\" data-reference-type=\"eqref\" data-reference=\"learn:score\">[learn:score]</a> differs from $(1-b_x)^Rz_x$ by at most $b_xBe^\\xi=o(z_{\\min}/q)$, uniformly in the samples, and $(1-b_x)^R=1-o(1)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-learn-empty-exceptional"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "If $x\\notin D_0\\cup D_2$, then, conditional on $\\mathcal O_x$, $$\\mathbb E\\bigl((T_x^*)^2\\mid\\mathcal O_x\\bigr)\n \\le B^2e^{-.6P}.$$ This assertion does not exclude the set $D_1$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-learn-second-moment"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "If $x\\notin D_0\\cup D_1\\cup D_2$, then, conditional on $\\mathcal O_x$, $$\\mathbb E\\bigl((T_x^*)^p\\mid\\mathcal O_x\\bigr)\n \\le B^p e^{-.1pP}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-learn-high-moment"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "For the Poisson batches sampled from $S'$, with probability at least $c e^{-8P\\tau}$ their total size is at most $2qP$ and the test <a href=\"#learn:score\" data-reference-type=\"eqref\" data-reference=\"learn:score\">[learn:score]</a>, including all sampled points, captures at least $c n$ points of $S$ and contains at most $n e^{CP}$ ambient points. The integer $z$ and the score are those determined by these same batches.",
+   "kind": "bound",
+   "statement_anchor": "stmt-learn-row-success"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "The true-law success in Lemma <a href=\"#learn:row-success\" data-reference-type=\"ref\" data-reference=\"learn:row-success\">23</a> gives the description scheme of Proposition <a href=\"#learn:short-row\" data-reference-type=\"ref\" data-reference=\"learn:short-row\">18</a>.",
+   "kind": "construction",
+   "statement_anchor": "stmt-learn-implementation"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "Under <a href=\"#mark:stage-budget\" data-reference-type=\"eqref\" data-reference=\"mark:stage-budget\">[mark:stage-budget]</a>, both scans together mark at most $h\\le Cq\\sigma$ positions expensive. The old context, the two rank and type masks, and the values of all positions expensive in either scan form a message $\\theta_0$ satisfying $$\\label{mark:message-cost}\n H(\\theta_0)\\le\\Lambda+O(k)\n       +(d\\sigma+\\Delta+O(1))\\mathbb Eh.$$ At a fixed $\\theta_0$, every unspecified flag has a known joint domain of size at most $e^{J_0}$, where $J_0=d\\sigma+O(1)$ is deterministic. For the set $U$ of unspecified slots, and every $\\theta_0$-determined subset $S\\subseteq U$, $$\\label{mark:subset-deficit}\n 0\\le \\mathbb E\\bigl[|S|J_0-H_{\\theta_0}(F_S)\\bigr]\n       \\le C(\\Lambda+k+\\Delta q\\sigma).$$ Here $H_{\\theta_0}$ means entropy in the conditional law at the specified value of $\\theta_0$. Independently of the extraction entropy lower bound, the same message gives $$\\label{mark:entropy-upper}\n H(F)\\le d\\sigma\\ell+\\Lambda+O(k)+O(\\Delta q\\sigma).$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-mark-marking"
+  },
+  {
+   "claim_id": "C26",
+   "exact_statement": "There is a deterministic round $t<T_1$, depending only on the current joint law, such that, with $\\theta=\\theta_t$, $U=U_t$, and $E=E_t$, $$\\label{mark:representative-bounds}\n \\begin{aligned}\n \\mathbb E\\sum_{i\\in U}\\delta_i&\\le\\mathcal B,&\n \\mathbb E\\sum_{i\\in U}M_i&\\le C\\mathcal B/T_1,\\\\\n \\mathbb E\\sum_{i\\in E}\\delta_i&\\le C\\mathcal B/m,&\n \\mathbb E\\sum_{i\\in E}M_i&\\le C\\mathcal B/(mT_1).\n \\end{aligned}$$ All four expectations refer to the same pre-round history and fresh indices. No values $F_E$ have yet been exposed.",
+   "kind": "bound",
+   "statement_anchor": "stmt-mark-representatives"
+  },
+  {
+   "claim_id": "C27",
+   "exact_statement": "At every fixed history and unexposed slot $i$, the probability that either specified endpoint is not good is at most $$\\label{mark:bad-endpoints}\n C\\left(e^{-K}+\\frac{\\delta_i+1}{K}\\right).$$ This holds for both reciprocal and high classes, with their stated marginal caps.",
+   "kind": "bound",
+   "statement_anchor": "stmt-mark-endpoint-mass"
+  },
+  {
+   "claim_id": "C28",
+   "exact_statement": "Fix a history $\\theta$ in the selected pre-round. For unexposed slots $i<j$ in a reciprocal class, write their flags as $(a,b)$ and $(c,y)$. There are symmetric nonnegative numbers $c_{ij}=c_{ji}$, with $c_{ii}=0$, such that $$\\label{mark:incidence-charge}\n \\mathbb P_{\\mathrm{prod}}(a,y\\text{ good},\\ a\\perp y)\n                   \\le C(I_{ij}+c_{ij}),\n \\qquad \\sum_{i<j}c_{ij}\\le C\\sigma k.$$ Here the product law is the product of the two conditional flag marginals at $\\theta$. In an open band $c_{ij}=0$. In an integer band, $c_{ij}$ is the conditional probability of a specified pair event placing both flags in one rectangle. For high classes set $c_{ij}=0$; no incidence estimate is asserted for them.",
+   "kind": "bound",
+   "statement_anchor": "stmt-mark-collision"
+  },
+  {
+   "claim_id": "C29",
+   "exact_statement": "In every selected class, the expected proportion of bad unexposed indices is $o(1)$, and so is the expected proportion of bad fresh representatives. At every good index each endpoint is good with probability $1-o(1)$, uniformly over the history and fresh indices. All limits hold for fixed $d,\\eta$ and the stage constants.",
+   "kind": "bound",
+   "statement_anchor": "stmt-mark-good-indices"
+  },
+  {
+   "claim_id": "C30",
+   "exact_statement": "Let $F$ be a consistent tuple of deterministic length $c_0k\\le \\ell\\le k$, for a fixed $c_0>0$, extracted in one of the two orientations from the flag stream. Suppose that the stream law is dominated by a fixed constant times its original independent law and is supported on the rectangle-occupancy event of Lemma <a href=\"#base:rectangles\" data-reference-type=\"ref\" data-reference=\"base:rectangles\">5</a>. Let a discrete context $\\mathsf C$ specify a domain for each slot, with $$H(\\mathsf C)\\le\\Lambda,\\qquad\n |\\text{domain of each slot}|\\le Cq^d e^\\Delta,\n \\qquad \\Lambda,\\Delta\\ge0.$$ Define, as in <a href=\"#mark:parameters\" data-reference-type=\"eqref\" data-reference=\"mark:parameters\">[mark:parameters]</a>, $$D=\\sigma^\\beta(1+\\Lambda/k+\\Delta\\sigma^{-\\eta}),\n \\qquad \\sigma^\\beta\\le D\\le\\sigma^{1-\\eta/2}.$$ There is an extraction of a consistent tuple $F'$ of deterministic length $\\ell'=\\Theta(k)$, still in one of the two stream orientations, and a new discrete context $\\mathsf C'$ for which $$\\label{comp:step-bounds}\n\\begin{split}\n H(\\mathsf C')&\\le\\Lambda'\n     \\le CqP\\log(w+2)(\\sigma+wP)+Cw\\sigma,\\\\\n |\\text{domain of each slot of }F'|\n     &\\le Cq^d e^{\\Delta'},\\qquad\n       \\Delta'\\le CK_*,\\\\\n &\\hspace{1em}1\\le w\\le C\\sigma^{1+\\eta/2}/D.\n\\end{split}$$ Here $w$ is a deterministic integer fixed during the preparation of the step. The new decoder uses only $\\mathsf C'$, fixed public parameters, and fixed public tables; it does not use $\\mathsf C$. The extraction is obtained by conditioning on an event of probability bounded below by a positive constant. Consequently its stream law still has constant domination and satisfies the same occupancy bound. All constants, including the retained proportion, are independent of $q$. They and the sufficiently-large-$q$ threshold are uniform over the input laws and contexts: they depend only on $d,\\eta,c_0$ and fixed numerical bounds for the domination constant and the domain prefactor, not on the realized history or on $\\Lambda,\\Delta$ within the stated admissible range.",
+   "kind": "construction",
+   "statement_anchor": "stmt-comp-step"
+  },
+  {
+   "claim_id": "C31",
+   "exact_statement": "Write $\\mathop{\\mathrm{PG}}(d,q)=\\mathop{\\mathrm{PG}}(\\mathbb F_q^{d+1})$. Let $X\\subseteq\\mathop{\\mathrm{PG}}(d,q)$ and $0<\\delta\\le1$. Let $\\mathcal V$ be any family of nonzero vector subspaces of $\\mathbb F_q^{d+1}$ satisfying $$|X\\cap\\mathop{\\mathrm{PG}}(V)|\\ge\\delta|\\mathop{\\mathrm{PG}}(V)|\\qquad(V\\in\\mathcal V).$$ Then $$\\left|\\bigcup_{V\\in\\mathcal V}\\mathop{\\mathrm{PG}}(V)\\right|\n       \\le C_d\\delta^{-(d+1)}|X|.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-comp-rich-union"
+  },
+  {
+   "claim_id": "C32",
+   "exact_statement": "Suppose the preparation in Section <a href=\"#mark:section\" data-reference-type=\"ref\" data-reference=\"mark:section\">5</a> produces a high-rank class with fixed vector ranks $r,r'$, where $r+r'>d+1$, and one window of length $\\Theta(k)$. There is a new context of length $O(q\\sigma^{1+\\beta})$ bits whose decoded flag domain has size at most $q^d e^{O(K)}$. With probability bounded below, this domain contains a deterministic number $\\Theta(k)$ of middle targets, retained in their original order. The decoder does not need the old history or any conditional law.",
+   "kind": "construction",
+   "statement_anchor": "stmt-comp-high-rank"
+  },
+  {
+   "claim_id": "C33",
+   "exact_statement": "At every good index in a reciprocal class, there are auxiliary choices of first and second supports consisting entirely of good endpoints. If $A$ is the first support and $p_i^A$ the conditional first-endpoint law, then $$\\label{comp:support-measure}\n \\tfrac12 A_{\\max,i}e^{-K}\\le |A|\\le A_{\\max,i},\n \\qquad\n \\mathbb E\\frac{\\boldsymbol 1_{\\{a\\in A\\}}}{|A|}\n       \\le C p_i^A(a).$$ The analogous assertions hold for the second support $B$. All such support choices can be made mutually independently, conditional on the history and indices.",
+   "kind": "construction",
+   "statement_anchor": "stmt-comp-supports"
+  },
+  {
+   "claim_id": "C34",
+   "exact_statement": "The expected number of middle targets lost through the pre-tree deletions, deleted subtrees, or exclusion by the produced caps is $o(k)$. In particular, a prescribed deterministic number $\\Theta(k)$ of targets can be retained in order with probability bounded below.",
+   "kind": "bound",
+   "statement_anchor": "stmt-comp-tree-loss"
+  },
+  {
+   "claim_id": "C35",
+   "exact_statement": "There is a constant $c_0>0$ such that, for every sufficiently large real $x$, a prime $q$ satisfies $c_0x\\le q\\le x$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-end-prime-interval"
+  },
+  {
+   "claim_id": "C36",
+   "exact_statement": "If a triangle-free graph $H$ has $n>0$ vertices and maximum degree at most a real number $D_0\\ge1$, then $$\\alpha(H)\\ge\\frac{n\\log(D_0+1)}{8(D_0+1)}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-end-triangle-free"
+  },
+  {
+   "claim_id": "C37",
+   "exact_statement": "For every fixed integer $s\\ge2$ there is a constant $C_s$ such that for all sufficiently large integers $t$, $$r(s,t)\\le C_s\\frac{t^{s-1}}{(\\log t)^{s-2}}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-end-upper-bound"
+  }
+ ],
+ "paper": "papers/EN-113-000-0004-2-2026-PR-T4-UK-EX-M1-B-CO-M-0333_PM-170.2_Sharp_logarithmic_exponents_for_fixed_off_diagonal_Ramsey_numbers.md",
+ "purpose": "Sharp logarithmic exponents for fixed off-diagonal Ramsey numbers",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "003cbef78ebb5a19b3f45016eb7156a0df4fad8901a5e019c5f2556272707b3a",
+   "pm.domains.v2": "8f62d7cd3e21938ca0fa19248db8add5123b9c86fca4d056ad2d8679f6954dfb",
+   "pm.edges.v2": "735b9ccdfaba8e22a2d9f0428f46ed126e73439c947b61380f88da12f7d03438",
+   "pm.extraction.v2": "61a20f4f1a41204e76bb740ecb381a19b6cf2913c76ff353905036500443c2ad",
+   "pm.formal.v2": "3355e7c3f73a7bf9deeae169fae00de1407a20710517e7398444e320ca1f4911",
+   "pm.limits.v2": "6e657433afe6f8300ea70f75a4f343964c6496e9c0ea1ea6b5be8644da294e7f",
+   "pm.node.v2": "f52fda15b4259ffa77e0e8936360b714a49763608f59e8f5966ef1120fad75fb",
+   "pm.objects.v2": "ff77e3e8f479053a69878864329db01cc729ede8ddc8ec0c1f64bcb30adcd8b4",
+   "pm.provenance.v2": "22f81938fecfec43c20679c1c06ce3e8ac43b6cdd2ecf01b5a6c6076533b23e5",
+   "pm.quantities.v2": "ece2aaf8f717a189113bdaf7ceaf5de14fe9886fa90e8aec8f74086c32c2c1ff",
+   "pm.reading.v2": "4bc41e986f86425ae7676ee924991e5dc7e21cb585a61b6527f4ddd69e426935",
+   "pm.roadmap.v2": "64131242146956548e839e1e0c0315004d52c33bead33409062b8c7ff11c0f3c",
+   "pm.search.v1": "353f1293c2d5577afe11e240366b342c57951ca40517eb7244c925c4e6090c1d",
+   "pm.triptych.v2": "80445462edafdffc40cded3404165332c5b96baddce7b9fdb5d1d6128d3eebc9"
+  },
+  "canonical_sha256": "f456dc8e6ca2a0f00df2fe08d9000cf179dfc861d093e9e818f959e717662ee3",
+  "paper_sha256": "e9d94a13b633b15faa790c04ef6ca55c136922af221efe0e17d263c494334587",
+  "repaired_body_sha256": "4c4463c10860a867bccb53fe5e51ff91d215b4658ac0550b0a153f8713ef623f"
+ },
+ "status": "ACTIVE",
+ "subject_id": 13,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "d4235fa61fbbc88c70e0e726879ba3fb3f295fddd86151ca4e112e47039f5a9e",
+   "receipt_sha256": "a19c5c41e66a7e70ad81b7eb92272f1cfdc3a9c713c850cefb463eb1afab7582",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive normalized incident streams over PG(1,2) through length 4, PG(2,2) through length 2, PG(1,3) through length 3; selected dimension-5 boundaries.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I1",
+     "oracle_basis": "SymPy integer matrix incidence and NetworkX exhaustive clique enumeration, all witnesses rechecked with exact Python."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M1",
+     "observed_exit": 1,
+     "receipt_sha256": "1e8fb9d6836052fc6570889b9cf8a26909b02389fe368d3bab1d5a5bea694c4c"
+    },
+    {
+     "id": "M2",
+     "observed_exit": 1,
+     "receipt_sha256": "5fea0fc2a490fca0b2af833fa7b3c12569fd236e47479d623206ae3d035948ff"
+    },
+    {
+     "id": "M3",
+     "observed_exit": 1,
+     "receipt_sha256": "778d28f5355613c5ed56d4ca40ab38cc64e316c0723692ef706026d62c7e817f"
+    },
+    {
+     "id": "M4",
+     "observed_exit": 1,
+     "receipt_sha256": "29104e4e06fb037d9683914a6589d09e53bfe6e43af670ab2f6f5cddd5154d2c"
+    }
+   ],
+   "receipt_sha256": "a3b8ce61099df8853692ee6726fa70540474fd4336966a283daf3b4c4fcfa88f",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Sharp logarithmic exponents for fixed off-diagonal Ramsey numbers"
+}

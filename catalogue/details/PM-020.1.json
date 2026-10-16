@@ -1,0 +1,787 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 564815,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 159252
+ },
+ "coordinate": "EN-101-000-0022-2-2026-PR-T4-UK-EX-M1-B-ML-H-0057",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Exact computational verification of arithmetic parameter inequalities",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-cor-cyclotomic-density",
+     "quote": "Consequently, for every sufficiently large real $N$, $$\\#\\{n\\in\\mathbb Z:N\\le n\\le2N,\\ n^4+1\\text{ is squarefree}\\}\n \\ge N/2.$$",
+     "quote_sha256": "543e7efa7dc713dc29e2cb56c0dade3e5793d180c99df5edd772fc669a7c1962"
+    }
+   ],
+   "query": "A guaranteed finite-window squarefree sampler",
+   "reason": "The density theorem is asymptotic and does not supply a finite-window success certificate or an explicit uniform cutoff."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-cor-all-degrees",
+     "quote": "Let $f\\in\\mathbb Z[x]$ be irreducible over $\\mathbb Q$ of degree $d\\ge4$, and put $k=d-2$.",
+     "quote_sha256": "6a13aad2961f500eb0bd5af3819c6fcf64fef4d1c393b3fbd92551a93a5989f2"
+    }
+   ],
+   "query": "Squarefree values of every higher-degree irreducible polynomial",
+   "reason": "The guaranteed exponent is tied to degree; the higher-degree conclusion is power-freeness at the stated exponent."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-cor-separable-products",
+     "quote": "Factors may be shared by different $F_i$.",
+     "quote_sha256": "7925a68ee64872982c62eb907ca306e51aa3e1b85a84a9a474c02fca0e86c47c"
+    },
+    {
+     "anchor": "stmt-cor-separable-products",
+     "quote": "Put $$\\Omega_p=\\{a\\in\\mathbb Z/p^k\\mathbb Z:p^k\\mid F_i(a)\\text{ for at least one }i\\}.$$",
+     "quote_sha256": "85b8ff05bb62c03f01a832a3c27312ce4ee818cba929254665a16ba135963e57"
+    }
+   ],
+   "query": "Multiplying individual densities for simultaneous polynomial values",
+   "reason": "Shared factors and overlapping local root classes require the joint forbidden set."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "eq:sieve-content-factor",
+     "quote": "Local admissibility forces $e<k$, and $$\\rho_f(p^k)=p^e\\rho_g(p^{k-e}),\\qquad\n 1-\\frac{\\rho_f(p^k)}{p^k}\n =1-\\frac{\\rho_g(p^{k-e})}{p^{k-e}}.\n \\label{eq:sieve-content-factor}$$",
+     "quote_sha256": "ada6f703664f4607d91710a525a59e1ab51fb405087ea755e969ab07be0010f6"
+    }
+   ],
+   "query": "Removing polynomial content while leaving all density factors unchanged",
+   "reason": "At content primes the root-count modulus changes; the original local factors must be restored exactly."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-49",
+     "quote": "This is a bound on an approximating matrix, not an exact rank bound on the analytic evaluations.",
+     "quote_sha256": "9d199bccce218233cc52af87a46999a25c91af58a0093ba1a8f7fd38248dbebd"
+    }
+   ],
+   "query": "Treating an analytic approximate rank bound as exact evaluation dependence",
+   "reason": "The conditional analytic construction controls an approximating matrix; the main pure-component determinant instead uses an exact polynomial relation."
+  }
+ ],
+ "family": "PM-020",
+ "id": "PM-020.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-density",
+    "claim_id": "claim-low-degree-density",
+    "statement": "Let $f\\in\\mathbb Z[x]$ be irreducible over $\\mathbb Q$, of degree $d$ with $4\\le d\\le8$, and put $k=d-2$."
+   },
+   {
+    "anchor": "eq:local-admissibility",
+    "claim_id": "claim-low-degree-density",
+    "statement": "The necessary local condition is $$\\rho_f(p^k)<p^k\\quad\\text{for every prime }p.\n \\label{eq:local-admissibility}$$"
+   },
+   {
+    "anchor": "stmt-cor-all-degrees",
+    "claim_id": "claim-all-degrees-density",
+    "statement": "Let $f\\in\\mathbb Z[x]$ be irreducible over $\\mathbb Q$ of degree $d\\ge4$, and put $k=d-2$."
+   },
+   {
+    "anchor": "stmt-cor-all-degrees",
+    "claim_id": "claim-all-degrees-density",
+    "statement": "If $f$ has no fixed prime $k$th-power divisor,"
+   },
+   {
+    "anchor": "stmt-cor-separable-products",
+    "claim_id": "claim-separable-and-simultaneous-density",
+    "statement": "Fix an integer $k\\ge2$."
+   },
+   {
+    "anchor": "stmt-cor-separable-products",
+    "claim_id": "claim-separable-and-simultaneous-density",
+    "statement": "Let $F\\in\\mathbb Z[x]\\setminus\\{0\\}$ be separable over $\\mathbb Q$, with every nonconstant irreducible factor of degree at most $k+2$."
+   },
+   {
+    "anchor": "stmt-cor-separable-products",
+    "claim_id": "claim-separable-and-simultaneous-density",
+    "statement": "If $\\rho_F(p^k)<p^k$ for every prime $p$,"
+   },
+   {
+    "anchor": "stmt-cor-separable-products",
+    "claim_id": "claim-separable-and-simultaneous-density",
+    "statement": "More generally, let $\\mathbf F=(F_1,\\ldots,F_r)$, with $r\\ge1$, be a fixed family of nonzero integer polynomials, each separable over $\\mathbb Q$ with all nonconstant irreducible factors of degree at most $k+2$."
+   },
+   {
+    "anchor": "stmt-cor-separable-products",
+    "claim_id": "claim-separable-and-simultaneous-density",
+    "statement": "If $\\#\\Omega_p<p^k$ for every prime $p$,"
+   },
+   {
+    "anchor": "stmt-prop-large-prime-tail",
+    "claim_id": "claim-large-prime-tail",
+    "statement": "Let $f\\in\\mathbb Z[x]$ be primitive and irreducible, with positive leading coefficient and degree $4\\le d\\le8$."
+   },
+   {
+    "anchor": "stmt-prop-large-prime-tail",
+    "claim_id": "claim-large-prime-tail",
+    "statement": "Put $k=d-2$."
+   },
+   {
+    "anchor": "stmt-prop-sieve-transfer",
+    "claim_id": "claim-sieve-transfer",
+    "statement": "Let $f\\in\\mathbb Z[x]$ be irreducible over $\\mathbb Q$, of degree $d\\ge2$, and let $k\\ge2$."
+   },
+   {
+    "anchor": "stmt-prop-sieve-transfer",
+    "claim_id": "claim-sieve-transfer",
+    "statement": "Suppose that $\\rho_f(p^k)<p^k$ for every prime $p$."
+   },
+   {
+    "anchor": "stmt-prop-sieve-transfer",
+    "claim_id": "claim-sieve-transfer",
+    "statement": "$$T_g(X):=\\#\\{n\\in\\mathbb Z:X<n\\le2X,\\ p^k\\mid g(n)\n                 \\text{ for some prime }p>X\\}=o_{g,k}(X).\n \\label{eq:sieve-tail-hypothesis}$$"
+   },
+   {
+    "anchor": "stmt-lem-density-content",
+    "claim_id": "claim-sign-content-transfer",
+    "statement": "Let $f\\in\\mathbb Z[x]$ be irreducible over $\\mathbb Q$, of degree at least two, and let $k\\ge2$."
+   },
+   {
+    "anchor": "stmt-lem-density-content",
+    "claim_id": "claim-sign-content-transfer",
+    "statement": "Suppose that $\\rho_f(p^k)<p^k$ for every prime $p$,"
+   },
+   {
+    "anchor": "stmt-lem-density-content",
+    "claim_id": "claim-sign-content-transfer",
+    "statement": "If $$S_{g,k}(N)=c_{g,k}N+o_{g,k}(N),\\qquad\n c_{g,k}=\\prod_p\\left(1-\\frac{\\rho_g(p^k)}{p^k}\\right),$$"
+   },
+   {
+    "anchor": "stmt-thm-affine-counting",
+    "claim_id": "claim-uniform-affine-counting",
+    "statement": "Fix integers $1\\le r\\le N$, a degree bound $e_0$, a constant $C$, positive coordinate weights $\\omega_l$, and positive numbers $\\delta_1,\\ldots,\\delta_r$."
+   },
+   {
+    "anchor": "stmt-thm-affine-counting",
+    "claim_id": "claim-uniform-affine-counting",
+    "statement": "For $X\\ge2$, let $S\\subseteq\\mathbb Z^N$ satisfy $$|z_l|\\le C X^{\\omega_l}\\quad(z\\in S),$$ and suppose $S$ lies on an algebraic set $Z$ of degree at most $e_0$ and dimension at most $r$."
+   },
+   {
+    "anchor": "stmt-thm-affine-counting",
+    "claim_id": "claim-uniform-affine-counting",
+    "statement": "The constants in these alternatives are uniform in $X,Z,S,A$."
+   },
+   {
+    "anchor": "stmt-lem-affine-patches",
+    "claim_id": "claim-controlled-affine-patches",
+    "statement": "Let $S$ satisfy the box bound in Theorem <a href=\"#thm:affine-counting\" data-reference-type=\"ref\" data-reference=\"thm:affine-counting\">8</a>."
+   },
+   {
+    "anchor": "stmt-lem-affine-residue-cut",
+    "claim_id": "claim-simultaneous-residue-cut",
+    "statement": "Fix $\\nu>0$ and a bound on the degree of a patch $(A,G,\\Delta)$ and its equations, with $h=\\dim A>0$."
+   },
+   {
+    "anchor": "stmt-lem-affine-residue-cut",
+    "claim_id": "claim-simultaneous-residue-cut",
+    "statement": "Suppose $A$ satisfies <a href=\"#eq:affine-hilbert-input\" data-reference-type=\"eqref\" data-reference=\"eq:affine-hilbert-input\">[eq:affine-hilbert-input]</a>."
+   },
+   {
+    "anchor": "stmt-lem-affine-residue-cut",
+    "claim_id": "claim-simultaneous-residue-cut",
+    "statement": "Let $z\\in S\\cap A$ be covered by the patch, and let $\\mathcal Q$ be distinct primes such that $$q\\nmid\\Delta(z)\\quad(q\\in\\mathcal Q),\\qquad\n \\prod_{q\\in\\mathcal Q}q\\ge X^{\\delta_h+\\nu}.$$"
+   },
+   {
+    "anchor": "stmt-lem-affine-deletion",
+    "claim_id": "claim-adaptive-prime-deletion",
+    "statement": "Fix $z\\in S$, all blocks except the $i$-th, and a prime pool $\\mathcal P_i$ disjoint from those blocks, whose primes lie between $X^\\zeta$ and $C_rX^\\zeta$, where $\\zeta>0$ is fixed and $|\\mathcal P_i|\\longrightarrow\\infty$."
+   },
+   {
+    "anchor": "stmt-lem-affine-deletion",
+    "claim_id": "claim-adaptive-prime-deletion",
+    "statement": "Choose $t$ uniformly among $T_0$ consecutive positive integers $\\ell,\\ldots,\\ell+T_0-1$, fixed independently of $X$, and then choose $\\mathcal B_i$ uniformly among the $t$-subsets of the pool."
+   },
+   {
+    "anchor": "sec:arithmetic-boxes",
+    "claim_id": "claim-balanced-number-field-factors",
+    "statement": "Throughout this section, $f\\in\\mathbb Z[T]$ is primitive and irreducible, has degree $d$ and positive leading coefficient $c$, and $k=d-2\\ge2$."
+   },
+   {
+    "anchor": "sec:arithmetic-boxes",
+    "claim_id": "claim-balanced-number-field-factors",
+    "statement": "We consider $$X<n\\le2X,\\qquad P\\le p\\le2P,\\qquad p>X,\\qquad p^k\\mid f(n),\n \\qquad P=X^\\eta,$$ and put $b=d-k\\eta$."
+   },
+   {
+    "anchor": "stmt-lem-paired-boxes",
+    "claim_id": "claim-paired-analytic-boxes",
+    "statement": "Fix $0<w<1$ and an integer $M\\asymp X^w$."
+   },
+   {
+    "anchor": "stmt-lem-paired-boxes",
+    "claim_id": "claim-paired-analytic-boxes",
+    "statement": "Partition each of the $s$- and $t$-cubes into grid boxes of side $M^{-1}$."
+   },
+   {
+    "anchor": "pm-h-16",
+    "claim_id": "claim-prime-bicone-hilbert-polynomial",
+    "statement": "Fix the distinct roots $\\theta_1,\\ldots,\\theta_d$, and put $k=d-2$."
+   },
+   {
+    "anchor": "stmt-lem-bicone",
+    "claim_id": "claim-prime-bicone-hilbert-polynomial",
+    "statement": "If $A,B$ tend to infinity with fixed positive rational ratio $B/A$,"
+   },
+   {
+    "anchor": "stmt-prop-archimedean-cuts",
+    "claim_id": "claim-archimedean-mixed-and-pure-cuts",
+    "statement": "Fix positive upper exponents $\\eta_+,b_+$."
+   },
+   {
+    "anchor": "stmt-prop-archimedean-cuts",
+    "claim_id": "claim-archimedean-mixed-and-pure-cuts",
+    "statement": "Assume that its normalized chart variables have width $O(X^{-w})$, that $z=1/n=O(X^{-1})$, and that the forward and reverse analytic chart functions have the uniform derivative bounds of that lemma."
+   },
+   {
+    "anchor": "stmt-prop-archimedean-cuts",
+    "claim_id": "claim-archimedean-mixed-and-pure-cuts",
+    "statement": "Let $t_*,w>0$ be fixed rational numbers satisfying $$\\begin{split}\n w^{d-1}H(t_*)&>\n \\left(\\frac{(d+1)(\\eta_++b_+t_*)}{d^2}\\right)^d,\\\\\n w^{d-2}\\min\\{H_a(t_*),H_b(t_*)\\}&>\n \\left(\\frac{\\eta_++b_+t_*}{d-1}\\right)^{d-1}.\n \\end{split}\n \\label{eq:cut-conditions}$$"
+   },
+   {
+    "anchor": "stmt-lem-lattice-basis",
+    "claim_id": "claim-lattice-basis-coordinate-control",
+    "statement": "Let $\\Lambda\\subset\\mathbb R^d$ be a full lattice of covolume $\\Delta$, and let $\\lambda_1$ be its shortest nonzero Euclidean length."
+   },
+   {
+    "anchor": "stmt-prop-lattice-boxes",
+    "claim_id": "claim-paired-lattice-box-ranges",
+    "statement": "For the paired boxes of Lemma <a href=\"#lem:paired-boxes\" data-reference-type=\"ref\" data-reference=\"lem:paired-boxes\">13</a>, assume the coordinate bounds above and fix parameters satisfying <a href=\"#eq:lattice-parameters\" data-reference-type=\"eqref\" data-reference=\"eq:lattice-parameters\">[eq:lattice-parameters]</a>."
+   },
+   {
+    "anchor": "eq:lattice-parameters",
+    "claim_id": "claim-paired-lattice-box-ranges",
+    "statement": "Use a prime $M\\asymp X^w$ for the approximation grid."
+   },
+   {
+    "anchor": "stmt-lem-quartic-fibers",
+    "claim_id": "claim-quartic-infinite-fiber-removal",
+    "statement": "Suppose $d=4$, and let $Z$ be an initial bounded-degree set from Proposition <a href=\"#prop:archimedean-cuts\" data-reference-type=\"ref\" data-reference=\"prop:archimedean-cuts\">15</a>, restricted to the open $a_1a_2a_3a_4\\ne0$."
+   },
+   {
+    "anchor": "stmt-lem-quartic-fibers",
+    "claim_id": "claim-quartic-infinite-fiber-removal",
+    "statement": "Assume either that $\\dim Z\\le3$, or that $Z$ has the irreducible equation $F(a,n)=0$ with positive degree in $n$."
+   },
+   {
+    "anchor": "sec:hilbert-bounds",
+    "claim_id": "claim-selected-pair-weighted-hilbert",
+    "statement": "Give every $a_i$ weight $U>0$ and every $b_i$ weight $V>0$, where $U,V$ are fixed rational numbers."
+   },
+   {
+    "anchor": "sec:hilbert-bounds",
+    "claim_id": "claim-selected-pair-weighted-hilbert",
+    "statement": "Let $Y$ be an irreducible subvariety of the affine equations $$a_i^kb_i=n-\\theta_i\\qquad(1\\leq i\\leq d),$$ of dimension $2\\leq h\\leq d$, with a nonempty open where all $a_i\\ne0$."
+   },
+   {
+    "anchor": "sec:hilbert-bounds",
+    "claim_id": "claim-selected-pair-weighted-hilbert",
+    "statement": "Assume that $n$ is nonconstant."
+   },
+   {
+    "anchor": "stmt-prop-quartic-surface",
+    "claim_id": "claim-quartic-surface-hilbert",
+    "statement": "Let $Y$ be a geometrically irreducible surface defined over $\\mathbb Q$ in the rational coordinates of the arithmetic boxes."
+   },
+   {
+    "anchor": "stmt-prop-quartic-surface",
+    "claim_id": "claim-quartic-surface-hilbert",
+    "statement": "Suppose that it meets the open $a_1a_2a_3a_4\\ne0$, satisfies $$a_i^2b_i=n-\\theta_i\\qquad(1\\le i\\le4),$$ and that $n$ is nonconstant and algebraic over the field generated by $a_1,\\ldots,a_4$."
+   },
+   {
+    "anchor": "stmt-prop-quartic-surface",
+    "claim_id": "claim-quartic-surface-hilbert",
+    "statement": "Give the two coordinate blocks positive rational weights $U,V$,"
+   },
+   {
+    "anchor": "stmt-prop-quintic-discard",
+    "claim_id": "claim-global-quintic-exceptional-set",
+    "statement": "if $N(s)\\in L[s]$ has degree five and distinct critical points $\\tau_1,\\ldots,\\tau_4\\in L$ with $N(\\tau_i)=\\theta_i$,"
+   },
+   {
+    "anchor": "stmt-lem-rational-values",
+    "claim_id": "claim-uniform-integral-rational-values",
+    "statement": "Fix a positive integer $D$ and positive constants $A,B,C_0$."
+   },
+   {
+    "anchor": "stmt-lem-rational-values",
+    "claim_id": "claim-uniform-integral-rational-values",
+    "statement": "let $R\\in\\mathbb Q(s)$ be a nonpolynomial rational function whose reduced numerator and denominator have degrees at most $D$."
+   },
+   {
+    "anchor": "stmt-prop-curve-alternatives",
+    "claim_id": "claim-arithmetic-curve-alternatives",
+    "statement": "Fix a degree bound $E$, and let $C$ be a geometrically irreducible curve of degree at most $E$, defined over $\\mathbb Q$, in the arithmetic variety $a_i^k b_i=n-\\theta_i$ in the coordinates just described."
+   },
+   {
+    "anchor": "eq:curve-input-function",
+    "claim_id": "claim-arithmetic-curve-alternatives",
+    "statement": "Let $S$ denote any resulting selected set, with the global exceptional values of Proposition <a href=\"#prop:quintic-discard\" data-reference-type=\"ref\" data-reference=\"prop:quintic-discard\">21</a> removed when $d=4$."
+   },
+   {
+    "anchor": "sec:parameters",
+    "claim_id": "claim-exact-parameter-choice-and-shift",
+    "statement": "Throughout this section, $4\\le d\\le8$, $k=d-2$, and $$K_0=3000,\\qquad G_0=100000,\\qquad \\tau=\\frac1{50000}.$$"
+   },
+   {
+    "anchor": "stmt-prop-parameter-certificate",
+    "claim_id": "claim-exact-parameter-choice-and-shift",
+    "statement": "for either fixed mode,"
+   },
+   {
+    "anchor": "stmt-prop-parameter-certificate",
+    "claim_id": "claim-exact-parameter-choice-and-shift",
+    "statement": "with $3/20\\le V/U\\le5$"
+   },
+   {
+    "anchor": "stmt-cor-cyclotomic-density",
+    "claim_id": "claim-cyclotomic-squarefree-density",
+    "statement": "Put $$c_8=\\prod_{p\\equiv1\\pmod8}\\left(1-\\frac4{p^2}\\right).$$"
+   },
+   {
+    "anchor": "stmt-prop-cyclotomic-central",
+    "claim_id": "claim-cyclotomic-central-prime-saving",
+    "statement": "With $\\epsilon_0=10^{-6}$,"
+   },
+   {
+    "anchor": "stmt-lem-cyclotomic-pell",
+    "claim_id": "claim-uniform-cyclotomic-pell-count",
+    "statement": "with $N\\le n\\le2N$ and $n^4+1=Dq^2$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Exact positive power-free density",
+    "evidence": [
+     {
+      "anchor": "stmt-prop-sieve-transfer",
+      "quote": "Suppose that $\\rho_f(p^k)<p^k$ for every prime $p$.",
+      "quote_sha256": "e3be5469941cc4ae8a2da9e8ec1d772ac4489027909f80f28519d7c7e10b4939"
+     },
+     {
+      "anchor": "stmt-prop-sieve-transfer",
+      "quote": "Assume that $$T_g(X):=\\#\\{n\\in\\mathbb Z:X<n\\le2X,\\ p^k\\mid g(n)\n                 \\text{ for some prime }p>X\\}=o_{g,k}(X).\n \\label{eq:sieve-tail-hypothesis}$$",
+      "quote_sha256": "90f0fd804a853fe601bb96990d520e3f165697be833c0f4f800583c33040240e"
+     }
+    ],
+    "requires_concepts": [
+     "Local root counts",
+     "Local admissibility",
+     "Primitive-part normalization",
+     "Finite congruence sieve",
+     "Negligible large-prime tail"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Uniform affine counting with adaptive primes",
+    "evidence": [
+     {
+      "anchor": "eq:affine-cumulative-product",
+      "quote": "This cumulative product includes primes chosen before the current parent was constructed.",
+      "quote_sha256": "74271c5ddda1546037144beab59f682f9eca0f950fb9b5b76d82605755628eb4"
+     },
+     {
+      "anchor": "eq:affine-exponent-accounting",
+      "quote": "After $r$ stages every nonexceptional leaf is zero-dimensional and contains boundedly many points.",
+      "quote_sha256": "5e41566b3767b1e39e5ef48be9f52f67b7637fe3b11bc4db9f3d0014f34472d7"
+     }
+    ],
+    "requires_concepts": [
+     "Weighted Hilbert dimension",
+     "Smooth affine patches",
+     "Prime-adic determinant divisibility",
+     "Deterministic evaluation kernels",
+     "Deletion estimate",
+     "Cumulative good-prime products"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Quartic curve threshold after exceptional-value removal",
+    "evidence": [
+     {
+      "anchor": "eq:curve-polynomial-degrees",
+      "quote": "The exceptional set was removed once, before choosing curves; its bound is not charged separately to different lines or boxes.",
+      "quote_sha256": "ca52dbc5c879d5006fd045fcfb6f96ef0cfead2b1cdd8a4fa6581cfe87efd8f2"
+     }
+    ],
+    "requires_concepts": [
+     "Balanced conjugate line coordinates",
+     "Integral values of rational functions",
+     "Prescribed critical values",
+     "Global normalized quintic family"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-low-degree-density",
+   "exact_statement": "Let $f\\in\\mathbb Z[x]$ be irreducible over $\\mathbb Q$, of degree $d$ with $4\\le d\\le8$, and put $k=d-2$. If <a href=\"#eq:local-admissibility\" data-reference-type=\"eqref\" data-reference=\"eq:local-admissibility\">[eq:local-admissibility]</a> holds, then $$S_{f,k}(X)=c_{f,k}X+o_f(X),\\qquad\n c_{f,k}=\\prod_p\\left(1-\\frac{\\rho_f(p^k)}{p^k}\\right)>0.$$ No primitivity or sign condition on the leading coefficient is required.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-density"
+  },
+  {
+   "claim_id": "claim-all-degrees-density",
+   "exact_statement": "Let $f\\in\\mathbb Z[x]$ be irreducible over $\\mathbb Q$ of degree $d\\ge4$, and put $k=d-2$. If $f$ has no fixed prime $k$th-power divisor, then $$S_{f,k}(X)=c_{f,k}X+o_f(X),\\qquad\n c_{f,k}=\\prod_p\\left(1-\\frac{\\rho_f(p^k)}{p^k}\\right)>0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-all-degrees"
+  },
+  {
+   "claim_id": "claim-separable-and-simultaneous-density",
+   "exact_statement": "Fix an integer $k\\ge2$. Let $F\\in\\mathbb Z[x]\\setminus\\{0\\}$ be separable over $\\mathbb Q$, with every nonconstant irreducible factor of degree at most $k+2$. If $\\rho_F(p^k)<p^k$ for every prime $p$, then $$S_{F,k}(N)=c_{F,k}N+o_{F,k}(N),\\qquad\n c_{F,k}=\\prod_p\\left(1-\\frac{\\rho_F(p^k)}{p^k}\\right)>0.$$ More generally, let $\\mathbf F=(F_1,\\ldots,F_r)$, with $r\\ge1$, be a fixed family of nonzero integer polynomials, each separable over $\\mathbb Q$ with all nonconstant irreducible factors of degree at most $k+2$. Factors may be shared by different $F_i$. Put $$\\Omega_p=\\{a\\in\\mathbb Z/p^k\\mathbb Z:p^k\\mid F_i(a)\\text{ for at least one }i\\}.$$ Let $S_{\\mathbf F,k}(N)$ count the integers $1\\le n\\le N$ for which every $F_i(n)$ is $k$-power-free. If $\\#\\Omega_p<p^k$ for every prime $p$, then $$S_{\\mathbf F,k}(N)=c_{\\mathbf F,k}N+o_{\\mathbf F,k}(N),\\qquad\n c_{\\mathbf F,k}=\\prod_p\\left(1-\\frac{\\#\\Omega_p}{p^k}\\right)>0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-separable-products"
+  },
+  {
+   "claim_id": "claim-large-prime-tail",
+   "exact_statement": "Let $f\\in\\mathbb Z[x]$ be primitive and irreducible, with positive leading coefficient and degree $4\\le d\\le8$. Put $k=d-2$. There exists $\\delta=\\delta_f>0$ such that $$\\#\\{n\\in\\mathbb Z:X<n\\le2X,\\ p^k\\mid f(n)\n          \\text{ for some prime }p>X\\}\n \\ll_f X^{1-\\delta}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-large-prime-tail"
+  },
+  {
+   "claim_id": "claim-sieve-transfer",
+   "exact_statement": "Let $f\\in\\mathbb Z[x]$ be irreducible over $\\mathbb Q$, of degree $d\\ge2$, and let $k\\ge2$. Suppose that $\\rho_f(p^k)<p^k$ for every prime $p$. Write $$f=s c g,\\qquad s\\in\\{-1,1\\},\\quad c\\in\\mathbb N,$$ where $c$ is the positive content of $f$ and $g\\in\\mathbb Z[x]$ is primitive with positive leading coefficient. Assume that $$T_g(X):=\\#\\{n\\in\\mathbb Z:X<n\\le2X,\\ p^k\\mid g(n)\n                 \\text{ for some prime }p>X\\}=o_{g,k}(X).\n \\label{eq:sieve-tail-hypothesis}$$ Then $$S_{f,k}(N)=c_{f,k}N+o_{f,k}(N),\\qquad\n c_{f,k}=\\prod_p\\left(1-\\frac{\\rho_f(p^k)}{p^k}\\right)>0.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-sieve-transfer"
+  },
+  {
+   "claim_id": "claim-sign-content-transfer",
+   "exact_statement": "Let $f\\in\\mathbb Z[x]$ be irreducible over $\\mathbb Q$, of degree at least two, and let $k\\ge2$. Suppose that $\\rho_f(p^k)<p^k$ for every prime $p$, and write $f=s c g$, where $s\\in\\{-1,1\\}$, $c$ is the positive content, and $g$ is primitive with positive leading coefficient. If $$S_{g,k}(N)=c_{g,k}N+o_{g,k}(N),\\qquad\n c_{g,k}=\\prod_p\\left(1-\\frac{\\rho_g(p^k)}{p^k}\\right),$$ then $S_{f,k}(N)=c_{f,k}N+o_{f,k}(N)$ with the Euler product $c_{f,k}>0$ of Proposition <a href=\"#prop:sieve-transfer\" data-reference-type=\"ref\" data-reference=\"prop:sieve-transfer\">5</a>.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-density-content"
+  },
+  {
+   "claim_id": "claim-uniform-affine-counting",
+   "exact_statement": "Fix integers $1\\le r\\le N$, a degree bound $e_0$, a constant $C$, positive coordinate weights $\\omega_l$, and positive numbers $\\delta_1,\\ldots,\\delta_r$. For $X\\ge2$, let $S\\subseteq\\mathbb Z^N$ satisfy $$|z_l|\\le C X^{\\omega_l}\\quad(z\\in S),$$ and suppose $S$ lies on an algebraic set $Z$ of degree at most $e_0$ and dimension at most $r$. Assume the following uniform alternative. For every fixed degree bound $e$, each irreducible subvariety $A\\subseteq Z$ defined over $\\mathbb Q$, of degree at most $e$ and dimension $h>0$, meeting $S$, satisfies either $$\\label{eq:affine-exception}\n |S\\cap A|\\ll_{e,\\alpha} X^\\alpha\n \\quad\\text{for every fixed }\\alpha>0,$$ or $$\\label{eq:affine-hilbert-input}\n H_A(T)\\ge \\frac{T^h}{h!\\delta_h^h}-C_eT^{h-1}\n \\quad(T\\ge1).$$ The constants in these alternatives are uniform in $X,Z,S,A$. Put $E_h=\\max_{h\\le s\\le r}\\delta_s$. Then, for every $\\varepsilon>0$, $$\\label{eq:affine-counting-conclusion}\n |S|\\ll_\\varepsilon X^{E_1+\\cdots+E_r+\\varepsilon}.$$ The implied constant depends only on the fixed data and the uniform constants in the hypotheses. In particular, no bound on the coefficients initially defining $Z$ is required.",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-affine-counting"
+  },
+  {
+   "claim_id": "claim-controlled-affine-patches",
+   "exact_statement": "Let $S$ satisfy the box bound in Theorem <a href=\"#thm:affine-counting\" data-reference-type=\"ref\" data-reference=\"thm:affine-counting\">8</a>. For every algebraic set $Z'\\subseteq\\mathbb C^N$ of degree at most $e$, there is a list of boundedly many patches $(A,G,\\Delta)$ with $A\\subseteq Z'$ that covers $S\\cap Z'$. Their degrees are bounded, and all coefficients of $G$ and $\\Delta$ are bounded by $C'X^{C'}$, where the bounds depend only on $e,N,C$ and the weights. In particular, at a covered point $z$, the integer $\\Delta(z)$ is nonzero and has absolute value at most $C''X^{C''}$ with the same uniform dependence. The construction can be fixed as a function of $Z'$ and $S$ alone.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-affine-patches"
+  },
+  {
+   "claim_id": "claim-simultaneous-residue-cut",
+   "exact_statement": "Fix $\\nu>0$ and a bound on the degree of a patch $(A,G,\\Delta)$ and its equations, with $h=\\dim A>0$. Suppose $A$ satisfies <a href=\"#eq:affine-hilbert-input\" data-reference-type=\"eqref\" data-reference=\"eq:affine-hilbert-input\">[eq:affine-hilbert-input]</a>. Let $z\\in S\\cap A$ be covered by the patch, and let $\\mathcal Q$ be distinct primes such that $$q\\nmid\\Delta(z)\\quad(q\\in\\mathcal Q),\\qquad\n \\prod_{q\\in\\mathcal Q}q\\ge X^{\\delta_h+\\nu}.$$ For sufficiently large $X$, the set of all points in $S\\cap A$ congruent to $z$ modulo these primes lies on a polynomial of bounded degree that does not vanish identically on $A$. The degree bound is uniform in the patch and primes, with dependence on $\\nu$ and the fixed data. Additional congruence conditions may also be imposed.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-affine-residue-cut"
+  },
+  {
+   "claim_id": "claim-adaptive-prime-deletion",
+   "exact_statement": "Fix $z\\in S$, all blocks except the $i$-th, and a prime pool $\\mathcal P_i$ disjoint from those blocks, whose primes lie between $X^\\zeta$ and $C_rX^\\zeta$, where $\\zeta>0$ is fixed and $|\\mathcal P_i|\\longrightarrow\\infty$. Choose $t$ uniformly among $T_0$ consecutive positive integers $\\ell,\\ldots,\\ell+T_0-1$, fixed independently of $X$, and then choose $\\mathcal B_i$ uniformly among the $t$-subsets of the pool. The expected fraction of primes in $\\mathcal B_i$ dividing at least one of the full-path integers $\\Delta_0(z),\\ldots,\\Delta_r(z)$ is at most $$B_0/T_0+o(1).$$ The error is uniform in $z$ and in the fixed other blocks.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-affine-deletion"
+  },
+  {
+   "claim_id": "claim-balanced-number-field-factors",
+   "exact_statement": "There are a positive integer $\\mu$ and a fixed finite list of integral ideals $\\mathfrak c$ of $K$ with the following property. For all sufficiently large $X$, each pair $(n,p)$ above admits integral elements $\\alpha,\\beta\\in\\mathcal O_K$ and one ideal from the list such that $$\\label{eq:arithmetic-factorization}\n \\alpha^k\\beta=\\mu(n-\\theta),\\qquad\n |N_{K/\\mathbb Q}(\\alpha)|=pN(\\mathfrak c),$$ and, for every embedding $\\sigma_i$, $$\\label{eq:arithmetic-balanced-sizes}\n |\\sigma_i(\\alpha)|\\asymp_f P^{1/d},\\qquad\n |\\sigma_i(\\beta)/\\mu|\\asymp_f X/P^{k/d}.$$ We may select one representation for each $n$ under consideration. For a fixed ideal case and fixed $\\alpha$, there are at most $d$ selected values of $n$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-balanced-factorization"
+  },
+  {
+   "claim_id": "claim-paired-analytic-boxes",
+   "exact_statement": "Fix $0<w<1$ and an integer $M\\asymp X^w$. Partition each of the $s$- and $t$-cubes into grid boxes of side $M^{-1}$. For the selected points in any fixed arithmetic and coordinate chart, the following hold uniformly.*\n\n1.  *The vector $t$ is locally an analytic function of $(s,z)$. Conversely, $s$ is locally given by boundedly many analytic branches in $(t,z)$.*\n\n2.  *The branches needed at a counted point extend to a neighborhood of fixed radius containing the corresponding grid base with last coordinate $z=0$. Derivatives of every fixed order are uniformly bounded there.*\n\n3.  *Every relevant box of either type has $O_f(1)$ partner boxes of the other type. In particular, there are $O_f(M^{d-1})$ relevant pairs of boxes.*\n\n*When $m=(d-1)w$, the last bound is $O_f(X^m)$. No primality assumption on $M$ is needed for this lemma.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-paired-boxes"
+  },
+  {
+   "claim_id": "claim-prime-bicone-hilbert-polynomial",
+   "exact_statement": "The defining ideal of $\\mathcal B$ is prime and is a complete intersection of $d-2$ equations of bidegree $(k,1)$. The dimension of $\\mathcal V$ is $d$. If $A,B$ tend to infinity with fixed positive rational ratio $B/A$, its bihomogeneous coordinate space in degree $(A,B)$ has dimension $$R(A,B)+O(A^{d-1}),$$ where $$R(A,B)=\\frac1{d!}\\sum_{j=1}^{d-1}\n \\binom dj\\binom{d-2}{j-1}k^{j-1}A^{d-j}B^j.\n \\label{eq:hilbert-polynomial}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-bicone"
+  },
+  {
+   "claim_id": "claim-archimedean-mixed-and-pure-cuts",
+   "exact_statement": "Fix positive upper exponents $\\eta_+,b_+$. Consider a paired box as in Lemma <a href=\"#lem:paired-boxes\" data-reference-type=\"ref\" data-reference=\"lem:paired-boxes\">13</a>, with integer coordinates satisfying $$|x_i|\\ll X^{\\eta_+/d},\\qquad |y_i|\\ll X^{b_+/d}.$$ Assume that its normalized chart variables have width $O(X^{-w})$, that $z=1/n=O(X^{-1})$, and that the forward and reverse analytic chart functions have the uniform derivative bounds of that lemma. Let $t_*,w>0$ be fixed rational numbers satisfying $$\\begin{split}\n w^{d-1}H(t_*)&>\n \\left(\\frac{(d+1)(\\eta_++b_+t_*)}{d^2}\\right)^d,\\\\\n w^{d-2}\\min\\{H_a(t_*),H_b(t_*)\\}&>\n \\left(\\frac{\\eta_++b_+t_*}{d-1}\\right)^{d-1}.\n \\end{split}\n \\label{eq:cut-conditions}$$ For sufficiently large $X$, the points in this box lie on a bounded number of bounded-degree algebraic sets of the following two types:*\n\n1.  *a mixed hypersurface section of $\\mathcal V$, whose bicone is a prime complete intersection with one additional equation of bidegree $(\\lambda,s_0)$, where $\\lambda,s_0\\geq1$;*\n\n2.  *a set of biprojective dimension at most $d-2$.*\n\n*On returning to the affine equations $a_i^kb_i=n-\\theta_i$, the corresponding dimensions are $d$ and at most $d-1$. All number and degree bounds are uniform over the boxes and $X$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-archimedean-cuts"
+  },
+  {
+   "claim_id": "claim-lattice-basis-coordinate-control",
+   "exact_statement": "Let $\\Lambda\\subset\\mathbb R^d$ be a full lattice of covolume $\\Delta$, and let $\\lambda_1$ be its shortest nonzero Euclidean length. There is a lattice basis $b_1,\\ldots,b_d$ with $$\\prod_{i=1}^d\\|b_i\\|\\le C_d\\Delta.$$ In this basis, every $v\\in\\Lambda$ with $\\|v\\|\\le C$ has integral coordinates of absolute value at most $CC_d/\\lambda_1$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-lattice-basis"
+  },
+  {
+   "claim_id": "claim-paired-lattice-box-ranges",
+   "exact_statement": "For the paired boxes of Lemma <a href=\"#lem:paired-boxes\" data-reference-type=\"ref\" data-reference=\"lem:paired-boxes\">13</a>, assume the coordinate bounds above and fix parameters satisfying <a href=\"#eq:lattice-parameters\" data-reference-type=\"eqref\" data-reference=\"eq:lattice-parameters\">[eq:lattice-parameters]</a>. The paired boxes can be grouped into finitely many ranges indexed by $j=\\ell\\tau$, $\\ell\\in\\mathbb Z_{\\ge0}$, with $j\\le m/d$. The number of paired boxes in range $j$ is $$\\label{eq:lattice-box-count}\n O\\bigl(X^{m-dj}\\bigr).$$ For each paired box there are integral unimodular changes $x\\leftrightarrow x'$ and $y\\leftrightarrow y'$ such that all its selected points satisfy $$\\label{eq:lattice-coordinate-bounds}\n |x'_i|\\ll X^U,\\qquad |y'_i|\\ll X^V,\n \\qquad U=u+j+\\tau,\\quad V=v+j+\\tau.$$ The matrices of these changes and their inverses have entries bounded by a fixed power of $X$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-lattice-boxes"
+  },
+  {
+   "claim_id": "claim-quartic-infinite-fiber-removal",
+   "exact_statement": "Suppose $d=4$, and let $Z$ be an initial bounded-degree set from Proposition <a href=\"#prop:archimedean-cuts\" data-reference-type=\"ref\" data-reference=\"prop:archimedean-cuts\">15</a>, restricted to the open $a_1a_2a_3a_4\\ne0$. Use coordinates $(a,n)$ there, with $b_i=(n-\\theta_i)/a_i^2$. Assume either that $\\dim Z\\le3$, or that $Z$ has the irreducible equation $F(a,n)=0$ with positive degree in $n$. The set of $a$ for which the $n$-fiber has dimension one has a closure of dimension at most two and bounded degree.*\n\n*In a box satisfying <a href=\"#eq:lattice-coordinate-bounds\" data-reference-type=\"eqref\" data-reference=\"eq:lattice-coordinate-bounds\">[eq:lattice-coordinate-bounds]</a>, deleting all selected points above this base costs $O_f(X^{2U})$ points. On every irreducible subvariety of $Z$ meeting the remaining selected set, $n$ is algebraic over the field generated by the $a_i$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-quartic-fibers"
+  },
+  {
+   "claim_id": "claim-selected-pair-weighted-hilbert",
+   "exact_statement": "For each nonzero coefficient polynomial $f_I$, define $$\\nu_{i,I}=\\operatorname{ord}_{n-\\theta_i}f_I,\\qquad\n e_i=\\min_I(I_i+k\\nu_{i,I}),$$ and put $$D=\\max_I\\{U|I|+(kU+V)\\deg f_I\\}-U\\sum_i e_i.\n \\label{eq:extracted-weight}$$ Then $D>0$, and the weighted filtered Hilbert function of the pair image satisfies $$H_{Y_{\\mathrm{pair}}}(T)=\n \\frac{(kU+V)^{h-1}D}{U^hV^h}\\frac{T^h}{h!}\n +O(T^{h-1}+1).\n \\label{eq:pair-hilbert}$$ This is a lower bound for $H_Y(T)$. If the function field degree of $Y$ over its pair image is at least two, the leading coefficient in this lower bound can be doubled. For fixed weights and bounded degree of $Y$, all error constants are uniform, independently of the coefficients of its equations.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-weighted-hilbert"
+  },
+  {
+   "claim_id": "claim-quartic-surface-hilbert",
+   "exact_statement": "Let $Y$ be a geometrically irreducible surface defined over $\\mathbb Q$ in the rational coordinates of the arithmetic boxes. Suppose that it meets the open $a_1a_2a_3a_4\\ne0$, satisfies $$a_i^2b_i=n-\\theta_i\\qquad(1\\le i\\le4),$$ and that $n$ is nonconstant and algebraic over the field generated by $a_1,\\ldots,a_4$. Give the two coordinate blocks positive rational weights $U,V$, respectively, and put $$D_0=\\min(3U,2V,U+V).$$ Then $$\\label{eq:quartic-surface-hilbert}\n H_Y(T)\\ge \\frac{T^2}{2}\n    \\min\\left\\{\\frac{(2U+V)D_0}{U^2V^2},\\frac3{U^2}\\right\\}-O(T).$$ For fixed weights and a bound on $\\deg Y$, the error is uniform in the moving coordinate changes and defining equations.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-quartic-surface"
+  },
+  {
+   "claim_id": "claim-global-quintic-exceptional-set",
+   "exact_statement": "There are finitely many polynomials $\\Phi\\in L[t]$ of degree five with distinct critical points $z_1=0,z_2=1,z_3,z_4$ satisfying $$\\Phi(z_i)=\\theta_i\\qquad(1\\le i\\le4).$$ Let $\\mathcal F_f$ be this finite family and put $$\\mathcal E_f=\n  \\{n\\in\\mathbb Z:n=\\Phi(z)\\text{ for some }\n                    \\Phi\\in\\mathcal F_f, z\\in L\\}.$$ Then, for $X\\ge1$, $$\\label{eq:quintic-discard-count}\n \\#\\bigl(\\mathcal E_f\\cap[-2X,2X]\\bigr)\\ll_f X^{1/5}.$$ Moreover, if $N(s)\\in L[s]$ has degree five and distinct critical points $\\tau_1,\\ldots,\\tau_4\\in L$ with $N(\\tau_i)=\\theta_i$, every integer value $N(s)$ at $s\\in L$ belongs to $\\mathcal E_f$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-quintic-discard"
+  },
+  {
+   "claim_id": "claim-uniform-integral-rational-values",
+   "exact_statement": "Fix a positive integer $D$ and positive constants $A,B,C_0$. For every $\\varepsilon>0$ and $X\\ge2$, let $R\\in\\mathbb Q(s)$ be a nonpolynomial rational function whose reduced numerator and denominator have degrees at most $D$. Then $$\\#\\{s\\in\\mathbb Z: |s|\\le C_0X^A,\\ R(s)\\in\\mathbb Z,\n                         \\ |R(s)|\\le C_0X^B\\}\n \\ll_{D,A,B,C_0,\\varepsilon}X^\\varepsilon.$$ The constant is independent of the coefficients of $R$. Inputs at which $R$ has a pole are excluded from the set.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-rational-values"
+  },
+  {
+   "claim_id": "claim-arithmetic-curve-alternatives",
+   "exact_statement": "Put $$g=(d-1)(k-1)+\\mathbf 1_{d=4},\\qquad\n \\delta_1(U,V)=\\max\\{U/2,\\min(U,V/g)\\}.$$ Fix a degree bound $E$, and let $C$ be a geometrically irreducible curve of degree at most $E$, defined over $\\mathbb Q$, in the arithmetic variety $a_i^k b_i=n-\\theta_i$ in the coordinates just described. For every $\\varepsilon>0$, either $$|S\\cap C|\\ll_{f,E,\\varepsilon}X^\\varepsilon,$$ or its filtered Hilbert dimension, with weight $U$ on $x'$ and weight $V$ on $y'$, satisfies $$\\label{eq:curve-hilbert-bound}\n H_C(T)\\ge \\frac{T}{\\delta_1(U,V)}-O_{f,E}(1).$$ The implied constants may also depend on a fixed compact subset of $(0,\\infty)$ containing $U,V$. They are otherwise uniform in the weights and in the integral coordinate changes. In particular they are uniform for the weights arising from Proposition <a href=\"#prop:lattice-boxes\" data-reference-type=\"ref\" data-reference=\"prop:lattice-boxes\">17</a>.",
+   "kind": "classification",
+   "statement_anchor": "stmt-prop-curve-alternatives"
+  },
+  {
+   "claim_id": "claim-exact-parameter-choice-and-shift",
+   "exact_statement": "For each $d\\in\\{4,5,6,7,8\\}$, the stopping index in <a href=\"#eq:parameter-stop\" data-reference-type=\"eqref\" data-reference=\"eq:parameter-stop\">[eq:parameter-stop]</a> is the one listed in Table <a href=\"#tab:parameter-certificate\" data-reference-type=\"ref\" data-reference=\"tab:parameter-certificate\">1</a>. For every integer $K_0\\le z<z_d$, there are positive rational numbers $t_*,w$ such that, with $m=(d-1)w$, $$\\begin{gathered}\n 0<m<1,\\qquad \\min(\\eta_-,b_-)>m,\\\\\n w^{d-1}H(t_*)>\n \\left(\\frac{(d+1)(\\eta_++b_+t_*)}{d^2}\\right)^d,\\\\\n w^{d-2}\\min\\{H_a(t_*),H_b(t_*)\\}>\n \\left(\\frac{\\eta_++b_+t_*}{d-1}\\right)^{d-1}.\n\\end{gathered}\n\\label{eq:parameter-cut-inequalities}$$ In particular, the cut conditions <a href=\"#eq:cut-conditions\" data-reference-type=\"eqref\" data-reference=\"eq:cut-conditions\">[eq:cut-conditions]</a> hold. For $$u=\\frac{\\eta_+-m}{d},\\qquad\n v=\\frac{b_+-m}{d},$$ these choices also satisfy $$\\frac3{20}\\le\\frac vu\\le5,\\qquad\n m+\\sum_{h=1}^dE_h(u,v)<\\frac{999}{1000},\n \\qquad\n m+2u<\\frac{999}{1000}\\quad(\\text{mode }\\mathsf Q).\n \\label{eq:parameter-saving}$$ Moreover, for either fixed mode, every $U,V>0$ with $3/20\\le V/U\\le5$ satisfies $$\\delta_h(U+s,V+s)\\le\\delta_h(U,V)+s\n \\quad(s\\ge0,\\ 1\\le h\\le d).\n \\label{eq:parameter-shift}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-parameter-certificate"
+  },
+  {
+   "claim_id": "claim-cyclotomic-squarefree-density",
+   "exact_statement": "Put $$c_8=\\prod_{p\\equiv1\\pmod8}\\left(1-\\frac4{p^2}\\right).$$ Then $c_8>3/4$, and $$\\#\\{1\\le n\\le X:n^4+1\\text{ is squarefree}\\}=c_8X+o(X).$$ Consequently, for every sufficiently large real $N$, $$\\#\\{n\\in\\mathbb Z:N\\le n\\le2N,\\ n^4+1\\text{ is squarefree}\\}\n \\ge N/2.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-cyclotomic-density"
+  },
+  {
+   "claim_id": "claim-cyclotomic-central-prime-saving",
+   "exact_statement": "With $\\epsilon_0=10^{-6}$, there exists $\\delta_0>0$ such that $$\\#\\{n\\in\\mathbb Z:N\\le n\\le2N,\\ p^2\\mid n^4+1\\text{ for some prime }\n       N^{1-\\epsilon_0}\\le p\\le N^{3/2+\\epsilon_0}\\}\n \\ll N^{1-\\delta_0}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-cyclotomic-central"
+  },
+  {
+   "claim_id": "claim-uniform-cyclotomic-pell-count",
+   "exact_statement": "Uniformly in the positive integer $D$, the number of positive integer pairs $(n,q)$ with $N\\le n\\le2N$ and $n^4+1=Dq^2$ is $O(1+\\log N)$. Consequently, for every fixed $\\epsilon>0$, the number of inputs in this interval with $p^2\\mid n^4+1$ for some prime $p>N^{3/2+\\epsilon}$ is $O(N^{1-2\\epsilon}(1+\\log N))$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-cyclotomic-pell"
+  }
+ ],
+ "paper": "papers/EN-101-000-0022-2-2026-PR-T4-UK-EX-M1-B-ML-H-0057_PM-020.1_Squarefree_values_of_quartics_and_power_free_values_of_polynomials.md",
+ "purpose": "Squarefree values of quartics and power-free values of polynomials",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "a1b12bdff57e7ed22cdd7493dcd37167aed1a46ed6471639d8e1d230a1acf2c2",
+   "pm.domains.v2": "ae18d6076e8a8bf9f41025c97ad06675f3f9ab0db343eaddd39a5b59fc561b39",
+   "pm.edges.v2": "6b49afcd7f830ccf5b22cfe6104a258debdf4a3d26e59c2259f2f4e14fd10cc6",
+   "pm.extraction.v2": "57e8f3b55dc7e9145ddc87bc8c420cba18a61d32f9c1b92287040bf6b30e8f4b",
+   "pm.formal.v2": "cfd856588138c904e0418abf557c304179885be8c5ac45db9da22c4944e73d54",
+   "pm.limits.v2": "f07c78b2bb0bca7ff0e94de1ba9d184199e1c4cad453b109827fff7b02ed31e3",
+   "pm.node.v2": "abd98ae3a158265d64e4941b5124181541fc6a29668a0e0686fa1f58929248f6",
+   "pm.objects.v2": "c8d9e273f5787f0a7edf2358866bc7865a2620f2cdcf031e6ee54d1c6a5b02c5",
+   "pm.provenance.v2": "20a79ada1c24a7105b254ad995e00248c9ab1e58ccfe4a224e460cbe774e867e",
+   "pm.quantities.v2": "2a90273b985c88f158a8c4059f8a33ab2fb19e9fae140143d8ce049cb4700834",
+   "pm.reading.v2": "887b703d4246a47638dcf4f6fd64c69e782c3c6b5f98b32dc671f1b4175b9847",
+   "pm.roadmap.v2": "37154a38c61f950f8054daae4597043441add170021bd1b8129425bd7ffac8fa",
+   "pm.search.v1": "65fe887f5092a84ffc43a031d7e943f80a18de33e06ff637c4341ca2ff5bc72f",
+   "pm.triptych.v2": "782d32c56de2e3c30e34b85be20ba4c6d21f1054804493681ffd75f4cf649d9e"
+  },
+  "canonical_sha256": "64e5e24d78e03b29595230c9d05677ad982d64743887b17d26f28b535adec945",
+  "paper_sha256": "85334aad4650f36d5022f462763335c91eb552dd474c2fbac917d5675e56439c",
+  "repaired_body_sha256": "790cc3da21a6cb64042c2efcc80cba23352113af1440c6e6023f1929ed7e27e4"
+ },
+ "status": "ACTIVE",
+ "subject_id": 1,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "e7d2c397a37f3f7524f034ece3d5a3daf8cb0919bb569d515fffc31a7ba69760",
+   "receipt_sha256": "bc2da3655138bce492660b359e1781bfe9513ea8b480b14b3cffc4961f0cacde",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Named vectors zero, exact-interior-root, first-grid-root, and upper-edge test grid denominator 100000 with exponents 1 and 2.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-strict-upward-rounding",
+     "oracle_basis": "Exhaustive integer enumeration decides each supplied input exactly. These tests do not certify every possible rational argument or exponent."
+    },
+    {
+     "checked_domain": "The single enlarged first quartic cell specified in the source, including both strict cut inequalities and all reported box, epsilon, weight, and ratio conditions.",
+     "coverage": "DECIDED",
+     "invariant_id": "invariant-enlarged-cell-cuts",
+     "oracle_basis": "Exact rational evaluation reconstructs all operands and decides each inequality without approximation."
+    },
+    {
+     "checked_domain": "The four rounded thresholds of the enlarged quartic cell in decreasing dimension order.",
+     "coverage": "DECIDED",
+     "invariant_id": "invariant-cumulative-maxima",
+     "oracle_basis": "Independent explicit running-maximum accumulation determines the counting margin and detects replacement by an ordinary sum."
+    },
+    {
+     "checked_domain": "The enlarged-cell counting margin after the common shift and the infinite-fiber margin.",
+     "coverage": "DECIDED",
+     "invariant_id": "invariant-positive-enlarged-cell-margins",
+     "oracle_basis": "Independent exact rational arithmetic checks both source values and their positivity; no asymptotic theorem is tested."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-nonstrict-rounding",
+     "observed_exit": 1,
+     "receipt_sha256": "38f9f6b66a8214fe4fb62152254661dcfcd1ba448edcfe666bda39908bef7a24"
+    },
+    {
+     "id": "mutant-altered-cell-width",
+     "observed_exit": 1,
+     "receipt_sha256": "f8be8efdcd40cbb65b9bbfaeea725fd0cd83e94c27ae4ef3484a4dd77685d163"
+    },
+    {
+     "id": "mutant-ordinary-threshold-sum",
+     "observed_exit": 1,
+     "receipt_sha256": "80089bde3ffe2d171b241e8b3ee759ebe894c0fa081dcff10cc3f48838c55df1"
+    }
+   ],
+   "receipt_sha256": "12a5344521a08728a459be5e7c1f8d848dc27aa615452af92d47924c37da4e2e",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Squarefree values of quartics and power-free values of polynomials"
+}

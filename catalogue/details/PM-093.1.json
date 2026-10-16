@@ -1,0 +1,704 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 667319,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 200743
+ },
+ "coordinate": "EN-108-000-0003-2-2026-PR-T4-UK-EX-M2-C-ML-H-0205",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "every centered log-concave probability measure $\\mu$ with a Lebesgue density on $\\mathbb R^n$",
+     "quote_sha256": "5e425483fda579e2715f813aa345bee0f42f70ecc7d138f23052488e29d76e75"
+    }
+   ],
+   "query": "measures without a Lebesgue density or not log-concave",
+   "reason": "The theorem is stated for centered log-concave measures with a Lebesgue density."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "There is an absolute constant $C<\\infty$ with the following property.",
+     "quote_sha256": "fc0fe121a02fba928c86158843f8e0f089f863462531702031b3098a2da52fa5"
+    }
+   ],
+   "query": "explicit numerical value of the constant",
+   "reason": "The constant is only asserted to be absolute."
+  }
+ ],
+ "family": "PM-093",
+ "id": "PM-093.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-theorem",
+    "statement": "every centered log-concave probability measure $\\mu$ with a Lebesgue density on $\\mathbb R^n$"
+   },
+   {
+    "anchor": "stmt-cor-intro-transport",
+    "claim_id": "claim-transport-corollary",
+    "statement": "Under the assumptions of Theorem"
+   },
+   {
+    "anchor": "stmt-lem-curvature",
+    "claim_id": "claim-curvature-criterion",
+    "statement": "Let $S$ be a positive definite matrix on $\\mathbb R^n$, and let $U$ be a proper lower semicontinuous convex function, possibly taking the value $+\\infty$."
+   },
+   {
+    "anchor": "stmt-lem-dirichlet-core",
+    "claim_id": "claim-dirichlet-core",
+    "statement": "Let $\\pi$ be a smooth, strictly positive probability density on $\\mathbb R^n$."
+   },
+   {
+    "anchor": "stmt-lem-entropy-calculus",
+    "claim_id": "claim-entropy-dissipation",
+    "statement": "if $p_0=q_0\\pi$ has finite relative entropy and $p_u=(P_uq_0)\\pi$"
+   },
+   {
+    "anchor": "stmt-lem-gaussian-signals",
+    "claim_id": "claim-gaussian-signals",
+    "statement": "Let $S$ be an $\\mathbb R^d$-valued random vector with finite second moment, let $U$ be any side information, and let $G$ be standard Gaussian independent of $(S,U)$."
+   },
+   {
+    "anchor": "stmt-lem-critical-normalization",
+    "claim_id": "claim-normalized-counterexamples",
+    "statement": "produces a sequence of centered, compactly supported, full dimensional log-concave probabilities $\\mu$"
+   },
+   {
+    "anchor": "eq:critical-posterior",
+    "claim_id": "claim-regularized-flow-bounds",
+    "statement": "We suppress the counterexample index, but all limits in this section refer to this sequence."
+   },
+   {
+    "anchor": "stmt-lem-critical-defect",
+    "claim_id": "claim-compactness-entropy-defect",
+    "statement": "Fix $s>0$ and a compactly supported probability $\\mu$ on $\\mathbb R^n$, and put $\\nu=\\mu*\\gamma_s$."
+   },
+   {
+    "anchor": "stmt-lem-optimizer",
+    "claim_id": "claim-optimizer-existence",
+    "statement": "Let $\\nu=\\mu*\\gamma_s$, where $s>0$ and $\\mu$ is compactly supported."
+   },
+   {
+    "anchor": "stmt-lem-critical-change-reference",
+    "claim_id": "claim-change-of-reference",
+    "statement": "suppose in addition that $\\nu=e^{-V}$ is log-concave with bounded $K=D^2V$."
+   },
+   {
+    "anchor": "stmt-lem-translation-gain",
+    "claim_id": "claim-translation-gain",
+    "statement": "Fix a compact interval $J\\subset(0,1/2)$."
+   },
+   {
+    "anchor": "stmt-lem-critical-two-alternatives",
+    "claim_id": "claim-critical-fields-two-alternatives",
+    "statement": "Fix $J\\subset(0,1/2)$ compact and $s\\in J$, and put $\\lambda=1/R_s$."
+   },
+   {
+    "anchor": "eq:critical-posterior",
+    "claim_id": "claim-regularized-constants-limit",
+    "statement": "We suppress the counterexample index, but all limits in this section refer to this sequence."
+   },
+   {
+    "anchor": "stmt-prop-critical-sequence",
+    "claim_id": "claim-critical-sequence",
+    "statement": "Fix $s=1/8$"
+   },
+   {
+    "anchor": "stmt-lem-efficient-probes",
+    "claim_id": "claim-efficient-probes",
+    "statement": "In the strict case, let $Y_0\\sim\\eta$ and let $G'$ be an independent standard Gaussian vector in the same Euclidean space."
+   },
+   {
+    "anchor": "stmt-lem-entropy-loss",
+    "claim_id": "claim-entropy-loss",
+    "statement": "Let $p$ and $q$ be smooth strictly positive probability densities on $\\mathbb R^d$, with $q$ log-concave."
+   },
+   {
+    "anchor": "stmt-prop-prediction",
+    "claim_id": "claim-prediction-curve",
+    "statement": "For the strict and gap critical sequences"
+   },
+   {
+    "anchor": "stmt-lem-posterior-outliers",
+    "claim_id": "claim-posterior-outliers",
+    "statement": "Use the critical sequence and notation of Proposition <a href=\"#prop:prediction\" data-reference-type=\"ref\" data-reference=\"prop:prediction\">18</a>, with $I\\to0$ in the gap case."
+   },
+   {
+    "anchor": "stmt-prop-hierarchy",
+    "claim_id": "claim-tensor-hierarchy",
+    "statement": "Consider a sequence of smooth positive probability densities $\\eta$ on finite-dimensional Euclidean spaces, with finite second moments."
+   },
+   {
+    "anchor": "stmt-lem-hierarchy-bessel",
+    "claim_id": "claim-hierarchy-bessel",
+    "statement": "define $g_r(y)=\\mathbb E_G h_r(y+\\sqrt r\\,G)$."
+   },
+   {
+    "anchor": "stmt-lem-hierarchy-smoothing",
+    "claim_id": "claim-cross-covariance-smoothing",
+    "statement": "If $F$ is a square-integrable random variable with values in a finite-dimensional Hilbert space and $Z$ is a centered Euclidean random vector with $\\mathop{\\mathrm{Cov}}Z\\le c\\mathrm{Id}$"
+   },
+   {
+    "anchor": "stmt-prop-hierarchy",
+    "claim_id": "claim-hierarchy-construction",
+    "statement": "Let $A=-\\Delta-D\\log\\eta\\cdot D$, and suppose that $\\eta$ satisfies Poincaré with constant at most $\\lambda^{-1}$, where $\\lambda\\to1$."
+   },
+   {
+    "anchor": "stmt-lem-hermite-expansion",
+    "claim_id": "claim-hermite-expansion",
+    "statement": "For fixed integers $l,m\\ge0$ and fixed $t>0$, set $N=B_t/\\sqrt t$."
+   },
+   {
+    "anchor": "stmt-lem-hierarchy-operator-tails",
+    "claim_id": "claim-operator-tails",
+    "statement": "In the strict branch of Proposition <a href=\"#prop:hierarchy\" data-reference-type=\"ref\" data-reference=\"prop:hierarchy\">20</a>, $Q=Dw$ and the fields $T_l$ constructed in Lemma <a href=\"#lem:hierarchy-construction\" data-reference-type=\"ref\" data-reference=\"lem:hierarchy-construction\">23</a> satisfy the following property."
+   },
+   {
+    "anchor": "stmt-lem-hierarchy-divergence",
+    "claim_id": "claim-weighted-divergence",
+    "statement": "Let $\\eta$ be a smooth positive probability density, let $A=-\\Delta-D\\log\\eta\\cdot D$, and put $H=D^2(-\\log\\eta)$."
+   },
+   {
+    "anchor": "eq:matrix-normalization",
+    "claim_id": "claim-matrix-centering",
+    "statement": "Here $R$ is a positive matrix field, distinct from the scalar log-Sobolev constant $R(\\nu)$."
+   },
+   {
+    "anchor": "stmt-lem-matrix-copied-slots",
+    "claim_id": "claim-copied-slots",
+    "statement": "Let $\\psi$ be a finite direct sum of symmetric tensors, each with at least $k\\ge2$ slots."
+   },
+   {
+    "anchor": "eq:matrix-normalization",
+    "claim_id": "claim-matrix-saturation",
+    "statement": "Here $R$ is a positive matrix field, distinct from the scalar log-Sobolev constant $R(\\nu)$."
+   },
+   {
+    "anchor": "pm-h-23",
+    "claim_id": "claim-bounded-column",
+    "statement": "Throughout the modifications below, $H_i$ denotes the current column;"
+   },
+   {
+    "anchor": "stmt-lem-matrix-index-exchange",
+    "claim_id": "claim-index-exchange",
+    "statement": "For the bounded columns just constructed,"
+   },
+   {
+    "anchor": "stmt-lem-matrix-blocks",
+    "claim_id": "claim-spectral-blocks",
+    "statement": "After enlarging the initial probability space by an independent uniform variable"
+   },
+   {
+    "anchor": "stmt-lem-matrix-gaussian-moments",
+    "claim_id": "claim-gaussian-moments",
+    "statement": "For independent standard Gaussian vectors $N_1,\\ldots,N_q$, independent of the initial data"
+   },
+   {
+    "anchor": "stmt-prop-frozen-law",
+    "claim_id": "claim-frozen-law",
+    "statement": "Let $Y_u$ be the stationary diffusion with invariant law $\\eta$ and driving Brownian motion $B_u$, and fix $t>0$."
+   },
+   {
+    "anchor": "stmt-lem-obs-multipliers",
+    "claim_id": "claim-obs-multipliers",
+    "statement": "For $v,w\\ge0$, not both zero, put"
+   },
+   {
+    "anchor": "eq:obs-covariance-definition",
+    "claim_id": "claim-information-upper",
+    "statement": "Fix $L\\ge1$ and define"
+   },
+   {
+    "anchor": "stmt-lem-obs-integrated-stability",
+    "claim_id": "claim-integrated-stability",
+    "statement": "For $T>0$ let $h_T(v)=\\sqrt{1+f_L(Tv^2)}$, $v\\ge0$"
+   },
+   {
+    "anchor": "stmt-lem-obs-ou-score",
+    "claim_id": "claim-ou-score",
+    "statement": "Let $N$ be a standard Gaussian vector conditional on $\\mathcal D$"
+   },
+   {
+    "anchor": "stmt-lem-obs-block-tests",
+    "claim_id": "claim-block-tests",
+    "statement": "Fix compact intervals $\\mathcal J,\\mathcal X\\subset(0,\\infty)$"
+   },
+   {
+    "anchor": "stmt-lem-obs-polynomial-replacement",
+    "claim_id": "claim-polynomial-replacement",
+    "statement": "In the notation of Lemma <a href=\"#lem:obs-block-tests\" data-reference-type=\"ref\" data-reference=\"lem:obs-block-tests\">39</a>, put $\\widetilde B_{\\beta,x}\n=H_\\beta[(\\widetilde Z_{x/\\beta^2})_\\beta]$."
+   },
+   {
+    "anchor": "stmt-lem-obs-polynomial-density",
+    "claim_id": "claim-polynomial-density",
+    "statement": "Let $\\nu$ be a finite positive measure on $\\mathbb R^k$ with $\\int e^{a|w|}\\,d\\nu(w)<\\infty$ for every $a>0$."
+   },
+   {
+    "anchor": "stmt-lem-obs-nonlinear-trace-law",
+    "claim_id": "claim-nonlinear-trace-law",
+    "statement": "Let $n,g',g$ be independent scalar standard Gaussians and let $n_u=\\alpha n+\\sqrt{1-\\alpha^2}\\,g'$."
+   },
+   {
+    "anchor": "stmt-prop-information-lower",
+    "claim_id": "claim-information-lower",
+    "statement": "and let $n,g$ be independent scalar standard Gaussians."
+   },
+   {
+    "anchor": "stmt-lem-scalar-divergence",
+    "claim_id": "claim-scalar-divergence",
+    "statement": "Let $n,g$ be independent scalar standard Gaussians and, for $t\\ge1$, define"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "dimension-free logarithmic Sobolev inequality for subgaussian log-concave measures",
+    "evidence": [
+     {
+      "anchor": "stmt-lem-curvature",
+      "quote": "Let $S$ be a positive definite matrix on $\\mathbb R^n$, and let $U$ be a proper lower semicontinuous convex function, possibly taking the value $+\\infty$.",
+      "quote_sha256": "7d854ca9e59d803980b36c38eade9ad91dc65a8561f0ae7019b516aa3a695cb2"
+     }
+    ],
+    "requires_concepts": [
+     "Bakry-Emery curvature criterion",
+     "stationary diffusion semigroup",
+     "Gaussian channel prediction identity",
+     "symmetric tensor hierarchy"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-theorem",
+   "exact_statement": "There is an absolute constant $C<\\infty$ with the following property. For every $n\\ge1$, every centered log-concave probability measure $\\mu$ with a Lebesgue density on $\\mathbb R^n$, and every $a>0$ satisfying <a href=\"#eq:intro-subgaussian\" data-reference-type=\"eqref\" data-reference=\"eq:intro-subgaussian\">[eq:intro-subgaussian]</a> for $X\\sim\\mu$, $$\\mathop{\\mathrm{Ent}}_\\mu(f^2)\\le C a^2\\int_{\\mathbb R^n}|Df|^2\\,d\\mu\n \\qquad\\text{for every }f\\in C_c^\\infty(\\mathbb R^n).$$ The same constant works in every dimension.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-transport-corollary",
+   "exact_statement": "Under the assumptions of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, every $\\nu\\in\\mathcal P_2(\\mathbb R^n)$ satisfies $$W_2(\\nu,\\mu)^2\\le Ca^2 H(\\nu\\mid\\mu),$$ with the same absolute constant $C$ as in that theorem.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-intro-transport"
+  },
+  {
+   "claim_id": "claim-curvature-criterion",
+   "exact_statement": "Let $S$ be a positive definite matrix on $\\mathbb R^n$, and let $U$ be a proper lower semicontinuous convex function, possibly taking the value $+\\infty$. Suppose $$d\\pi(x)=Z^{-1}\\exp\\{-\\tfrac12\\langle x,Sx\\rangle-U(x)\\}\\,dx$$ is a probability with a full dimensional support. Then $$\\mathop{\\mathrm{Ent}}_\\pi(f^2)\\le2\\mathbb E_\\pi\\langle Df,S^{-1}Df\\rangle,\n \\qquad\n \\mathop{\\mathrm{Var}}_\\pi(f)\\le\\mathbb E_\\pi\\langle Df,S^{-1}Df\\rangle.$$ The inequalities hold first for compact smooth tests, and then for functions obtained by finite-energy approximation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-curvature"
+  },
+  {
+   "claim_id": "claim-dirichlet-core",
+   "exact_statement": "Let $\\pi$ be a smooth, strictly positive probability density on $\\mathbb R^n$. On $C_c^\\infty(\\mathbb R^n)$ define $$A_\\pi=-\\Delta-D\\log\\pi\\cdot D.$$ This nonnegative symmetric operator is essentially self-adjoint in $L^2(\\pi)$, and $C_c^\\infty$ is a core for its closure. In particular, if $f\\in L^2(\\pi)$ and the distribution $A_\\pi f$ belongs to $L^2(\\pi)$, then $f\\in\\mathop{\\mathrm{Dom}}(A_\\pi)$. Its semigroup $P_u=e^{-uA_\\pi}$ preserves constants and is realized by the stationary diffusion $$\\label{eq:calculus-diffusion}\n dY_u=\\sqrt2\\,dB_u+D\\log\\pi(Y_u)\\,du,\n \\qquad Y_0\\sim\\pi.$$ For $f\\in\\mathop{\\mathrm{Dom}}(A_\\pi)$ the stationary Itô formula holds in $L^2$, with drift $-A_\\pi f$ and martingale integrand $\\sqrt2\\,Df$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-dirichlet-core"
+  },
+  {
+   "claim_id": "claim-entropy-dissipation",
+   "exact_statement": "For the semigroup of Lemma <a href=\"#lem:dirichlet-core\" data-reference-type=\"ref\" data-reference=\"lem:dirichlet-core\">4</a>, if $p_0=q_0\\pi$ has finite relative entropy and $p_u=(P_uq_0)\\pi$, then, for $0\\le a\\le b$, $$\\label{eq:calculus-stationary-entropy}\n H(p_a\\mid\\pi)-H(p_b\\mid\\pi)\n \\ge\\int_a^b\\mathcal I(p_u\\mid\\pi)\\,du.$$ If instead both probability measures evolve by Gaussian convolution, $p_r=p_0*\\gamma_r$ and $q_r=q_0*\\gamma_r$, then $$\\label{eq:calculus-heat-entropy}\n H(p_a\\mid q_a)-H(p_b\\mid q_b)\n \\ge\\frac12\\int_a^b\\mathcal I(p_r\\mid q_r)\\,dr$$ whenever the entropy on the left at time $a$ is finite. Here $\\gamma_r$ is the centered Gaussian with covariance $r\\mathrm{Id}$, and time zero is allowed. For the standard Gaussian Ornstein–Uhlenbeck semigroup, Equation <a href=\"#eq:calculus-stationary-entropy\" data-reference-type=\"eqref\" data-reference=\"eq:calculus-stationary-entropy\">[eq:calculus-stationary-entropy]</a> is an equality, including time zero when the initial entropy is finite. Each assertion also holds after integration over conditioning labels whose noises are independent conditional on those labels.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-entropy-calculus"
+  },
+  {
+   "claim_id": "claim-gaussian-signals",
+   "exact_statement": "Let $S$ be an $\\mathbb R^d$-valued random vector with finite second moment, let $U$ be any side information, and let $G$ be standard Gaussian independent of $(S,U)$. Write $Z_t=\\sqrt tS+G$ and $$d(t)=\\mathbb E_U H(\\mathop{\\mathrm{Law}}(Z_t\\mid U)\\mid\\gamma).$$ Then $d(0)=0$, $d(t)\\le t\\mathbb E|S|^2/2$, and $$\\label{eq:calculus-gaussian-signal}\n d(t)=\\frac12\\int_0^t\n \\mathbb E\\left|\\mathbb E[S\\mid Z_v,U]\\right|^2dv.$$ The integrand is nondecreasing in $v$. The formula without side information is obtained by taking $U$ constant.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-gaussian-signals"
+  },
+  {
+   "claim_id": "claim-normalized-counterexamples",
+   "exact_statement": "Failure of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> produces a sequence of centered, compactly supported, full dimensional log-concave probabilities $\\mu$ such that $$\\label{eq:critical-normalization}\n R(\\mu)=1,\\qquad\n \\sup_{|\\theta|=1}\\mathbb E_\\mu e^{\\langle X,\\theta\\rangle^2/a^2}\n \\le2,\\qquad a\\longrightarrow0.$$ For an absolute constant $C$, they also satisfy $$\\label{eq:critical-linear-mgf}\n \\log\\mathbb E_\\mu e^{v\\cdot X}\\le Ca^2|v|^2,\n \\qquad \\mathop{\\mathrm{Cov}}_\\mu(X)\\le Ca^2\\mathrm{Id}.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-critical-normalization"
+  },
+  {
+   "claim_id": "claim-regularized-flow-bounds",
+   "exact_statement": "The function $s\\mapsto R_s$ is nondecreasing and $1$-Lipschitz on $(0,\\infty)$, and $$\\label{eq:critical-basic-R}\n 1\\le R_s\\le1+s.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-critical-flow-bounds"
+  },
+  {
+   "claim_id": "claim-compactness-entropy-defect",
+   "exact_statement": "Fix $s>0$ and a compactly supported probability $\\mu$ on $\\mathbb R^n$, and put $\\nu=\\mu*\\gamma_s$. Its form domain embeds compactly into $L^2(\\nu)$. For every $\\varepsilon>0$ there is a finite $C_\\varepsilon$, depending on this fixed law, such that $$\\label{eq:critical-defective}\n \\mathop{\\mathrm{Ent}}_\\nu(u^2)\\le2(s+\\varepsilon)\\|Du\\|_2^2\n                  +C_\\varepsilon\\|u\\|_2^2.$$ If $u_j\\to u$ in $L^2(\\nu)$, $\\|u_j\\|_2=1$, and $\\|Du_j\\|_2^2\\to E_*<\\infty$, then $$\\label{eq:critical-entropy-defect}\n \\limsup_j\\mathop{\\mathrm{Ent}}_\\nu(u_j^2)\n \\le\\mathop{\\mathrm{Ent}}_\\nu(u^2)+2s(E_*-\\|Du\\|_2^2).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-critical-defect"
+  },
+  {
+   "claim_id": "claim-optimizer-existence",
+   "exact_statement": "Let $\\nu=\\mu*\\gamma_s$, where $s>0$ and $\\mu$ is compactly supported. Suppose its logarithmic Sobolev and Poincaré constants $R=R(\\nu)$ and $P=R^P(\\nu)$ satisfy $\\infty>R>\\max(P,s)$. Then there is a smooth strictly positive nonconstant $f$ with $$\\label{eq:critical-optimizer}\n \\int f^2d\\nu=1,\\qquad\n \\mathop{\\mathrm{Ent}}_\\nu(f^2)=2R\\int|Df|^2d\\nu,\\qquad\n A_\\nu f=\\lambda f\\log f,\\quad\\lambda=R^{-1}.$$ The last equation is initially distributional and then classical.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-optimizer"
+  },
+  {
+   "claim_id": "claim-change-of-reference",
+   "exact_statement": "Under Lemma <a href=\"#lem:optimizer\" data-reference-type=\"ref\" data-reference=\"lem:optimizer\">10</a>, suppose in addition that $\\nu=e^{-V}$ is log-concave with bounded $K=D^2V$. Define $$\\eta=f^2\\nu,\\qquad h=\\log f^2,\\qquad w=Dh,\\qquad\n I=\\mathbb E_\\eta|w|^2.$$ Then $I=2\\lambda H(\\eta\\mid\\nu)>0$, $R(\\eta)\\le1/\\lambda$, each component of $w$ belongs to $\\mathop{\\mathrm{Dom}}(A_\\eta)$, and $$\\label{eq:critical-score-equation}\n A_\\nu h=\\lambda h+\\tfrac12|w|^2,\n \\qquad A_\\eta w=(\\lambda\\mathrm{Id}-K)w.$$ Moreover, $$\\label{eq:critical-curvature-mean}\n \\mathbb E_\\eta\\langle w,Kw\\rangle\\le\\lambda|\\mathbb E_\\eta w|^2.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-critical-change-reference"
+  },
+  {
+   "claim_id": "claim-translation-gain",
+   "exact_statement": "Let $\\mu$ satisfy Equation <a href=\"#eq:critical-normalization\" data-reference-type=\"eqref\" data-reference=\"eq:critical-normalization\">[eq:critical-normalization]</a>, with $a\\le1$. Fix a compact interval $J\\subset(0,1/2)$. There is a constant $C_J$, independent of the dimension and of the support radius of $\\mu$, with the following property. For $s\\in J$, put $\\lambda=R_s^{-1}$. If $\\sigma$ is any probability with $$D_0=H(\\sigma\\mid\\mu_s)<\\infty,\\qquad\n F_0=\\mathcal I(\\sigma\\mid\\mu_s)<\\infty,\\qquad p=\\mathbb E_\\sigma Y,$$ then $$\\label{eq:critical-translation-gain}\n F_0-2\\lambda D_0\n \\ge(s^{-2}-\\lambda/s)|p|^2\n                   -C_J\\sqrt a\\,(F_0+D_0).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-translation-gain"
+  },
+  {
+   "claim_id": "claim-critical-fields-two-alternatives",
+   "exact_statement": "Fix $J\\subset(0,1/2)$ compact and $s\\in J$, and put $\\lambda=1/R_s$. There are a smooth positive probability $\\eta$ and a smooth vector field $w$, with $0<I:=\\mathbb E_\\eta|w|^2<\\infty$, such that $$\\label{eq:critical-common-identities}\n R(\\eta)\\le\\lambda^{-1},\\qquad\n w\\in\\mathop{\\mathrm{Dom}}(A_\\eta)^n,\\qquad\n A_\\eta w=(\\lambda\\mathrm{Id}-K_s)w.$$ They can be chosen as follows.*\n\n1.  *If $R_s>R_s^P$, take the optimizer $f$ of Lemma <a href=\"#lem:optimizer\" data-reference-type=\"ref\" data-reference=\"lem:optimizer\">10</a> and set $$\\eta=f^2\\mu_s,\\qquad w=D\\log f^2,\n     \\qquad I=2\\lambda H(\\eta\\mid\\mu_s).$$*\n\n2.  *If $R_s=R_s^P$, there is a centered nonconstant gap eigenfunction $\\varphi$ satisfying $A_{\\mu_s}\\varphi=\\lambda\\varphi$. Take $$\\eta=\\mu_s,\\qquad w=D\\varphi,\n     \\qquad I=\\lambda\\mathbb E_{\\mu_s}\\varphi^2.$$*\n\n\n*In either alternative, $$\\label{eq:critical-uniform-smallness}\n |\\mathbb E_\\eta w|^2+\\mathbb E_\\eta|K_sw|^2\\le C_J\\sqrt a\\,I,\n \\qquad\n \\mathbb E_\\eta\\langle w,K_sw\\rangle\\le\\lambda|\\mathbb E_\\eta w|^2.$$ In alternative <span class=\"upright\">(ii)</span> the factor $\\sqrt a$ can be replaced by $a^2$. Coordinates belong to $\\mathop{\\mathrm{Dom}}(A_\\eta)$ in both alternatives.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-critical-two-alternatives"
+  },
+  {
+   "claim_id": "claim-regularized-constants-limit",
+   "exact_statement": "For the sequence in Lemma <a href=\"#lem:critical-normalization\" data-reference-type=\"ref\" data-reference=\"lem:critical-normalization\">7</a>, $$\\label{eq:critical-R-limit}\n R_s\\longrightarrow1\\qquad\\text{for every }0<s<1/2.$$ At every differentiability point of $R_s$, the fields of Lemma <a href=\"#lem:critical-two-alternatives\" data-reference-type=\"ref\" data-reference=\"lem:critical-two-alternatives\">13</a> satisfy the contact identity $$\\label{eq:critical-contact-derivative}\n R_s'=R_s\\,\\frac{\\mathbb E_\\eta\\langle w,K_sw\\rangle}{I}.$$ In particular $0\\le R_s'\\le C_J\\sqrt a$ almost everywhere on each fixed compact $J\\subset(0,1/2)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-regularized-constants"
+  },
+  {
+   "claim_id": "claim-critical-sequence",
+   "exact_statement": "If Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> fails, there is a sequence of dimensions and centered compactly supported log-concave laws $\\mu$ satisfying Equation <a href=\"#eq:critical-normalization\" data-reference-type=\"eqref\" data-reference=\"eq:critical-normalization\">[eq:critical-normalization]</a>. Fix $s=1/8$, form $\\mu_s,b_s,M_s,K_s$ as in Equation <a href=\"#eq:critical-posterior\" data-reference-type=\"eqref\" data-reference=\"eq:critical-posterior\">[eq:critical-posterior]</a>, and put $\\lambda=R_s^{-1}$. After passage to a subsequence there are smooth positive probabilities $\\eta$ and smooth vector fields $w$ such that, with $A=A_\\eta$ and $I=\\mathbb E_\\eta|w|^2$, $$\\begin{gathered}\n \\lambda\\longrightarrow1,\\qquad R(\\eta)\\le\\lambda^{-1},\n \\qquad 0<I<\\infty,\\qquad w\\in\\mathop{\\mathrm{Dom}}(A)^n,\n \\label{eq:critical-sequence-data}\\\\\n A w=(\\lambda\\mathrm{Id}-K_s)w,\\qquad\n \\|(A-1)w\\|_{L^2(\\eta)}+|\\mathbb E_\\eta w|=o(\\sqrt I),\n \\label{eq:critical-near-eigenfunction}\\\\\n \\mathbb E_\\eta|K_sw|^2=o(I),\\qquad\n \\mathbb E_\\eta|Dw|^2=(1+o(1))I.\n \\label{eq:critical-sequence-energy}\n\\end{gathered}$$ The spectral gap of $A$ is at least $\\lambda$. Each coordinate function belongs to $\\mathop{\\mathrm{Dom}}(A)$. Exactly one of the following constructions can be used throughout the subsequence:*\n\n1.  *$R_s>R_s^P$, $\\eta=f^2\\mu_s$ for the positive unit-norm optimizer, $w=D\\log f^2$, and $I=2\\lambda H(\\eta\\mid\\mu_s)$. The exact deficit identity in Equation <a href=\"#eq:critical-exact-deficit\" data-reference-type=\"eqref\" data-reference=\"eq:critical-exact-deficit\">[eq:critical-exact-deficit]</a> holds for compact square-root tests relative to $\\eta$, and $A Y=(Y-b_s)/s-w$.*\n\n2.  *$R_s=R_s^P$, $\\eta=\\mu_s$, $A\\varphi=\\lambda\\varphi$, $\\mathbb E_\\eta\\varphi=0$, $w=D\\varphi$, and $I=\\lambda\\mathbb E_\\eta\\varphi^2$. One may rescale $\\varphi$ so that $I\\to0$.*\n\n*All $o$-terms refer to the counterexample sequence with fixed finite parameters. In particular no relation between dimension, $I$, and the rate of convergence is asserted or needed here.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-critical-sequence"
+  },
+  {
+   "claim_id": "claim-efficient-probes",
+   "exact_statement": "In the strict case, let $Y_0\\sim\\eta$ and let $G'$ be an independent standard Gaussian vector in the same Euclidean space. For $T\\ge0$ define $$L_T=\\sqrt T\\,w(Y_0)+G',\\qquad\n d(T)=H(\\mathop{\\mathrm{Law}}(L_T)\\mid\\gamma),$$ where $\\gamma$ is standard Gaussian measure. For every finite $M$, $$\\sup_{0\\le T\\le M}d(T)=o(I).\n \\label{eq:efficient-probes}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-efficient-probes"
+  },
+  {
+   "claim_id": "claim-entropy-loss",
+   "exact_statement": "Let $p$ and $q$ be smooth strictly positive probability densities on $\\mathbb R^d$, with $q$ log-concave. Suppose $$H_0=H(p\\mid q)<\\infty,\\qquad\n w=D\\log(p/q),\\qquad I=\\mathbb E_p|w|^2<\\infty,\n \\qquad \\mathbb E_p e^{c|Y|^2}<\\infty$$ for some $c>0$, where $Y\\sim p$. Let $G$ be a standard Gaussian vector independent of $Y$. For $r>0$, let $U_r=Y+\\sqrt rG$, let $p_r$ and $q_r$ be the Gaussian convolutions of $p$ and $q$, and put $\\bar w_r(U_r)=\\mathbb E_p[w(Y)\\mid U_r]$ and $H_r=H(p_r\\mid q_r)$. Then, for every $z>0$, $$2(H_0-H_z)\\le\\int_0^z\\mathbb E_p|\\bar w_r(U_r)|^2\\,dr.\n \\label{eq:prediction-entropy-loss}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-entropy-loss"
+  },
+  {
+   "claim_id": "claim-prediction-curve",
+   "exact_statement": "For the strict and gap critical sequences, for every fixed $0<r<1/4$, $$m(r)\\longrightarrow e^{-r}.\n \\label{eq:prediction-curve}$$ In the strict case, for every fixed finite $T\\ge0$ one also has $p_T(r)\\to e^{-r}$. In the gap case the eigenfunction may be rescaled so that $I\\to0$, without changing Equation <a href=\"#eq:prediction-curve\" data-reference-type=\"eqref\" data-reference=\"eq:prediction-curve\">[eq:prediction-curve]</a> or Equation <a href=\"#eq:prediction-input\" data-reference-type=\"eqref\" data-reference=\"eq:prediction-input\">[eq:prediction-input]</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-prediction"
+  },
+  {
+   "claim_id": "claim-posterior-outliers",
+   "exact_statement": "Use the critical sequence and notation of Proposition <a href=\"#prop:prediction\" data-reference-type=\"ref\" data-reference=\"prop:prediction\">18</a>, with $I\\to0$ in the gap case. The following assertions hold.*\n\n\n1.  *For every fixed $c<\\infty$, uniformly over deterministic orthogonal projections $\\Pi$ with $\\mathop{\\mathrm{rank}}\\Pi\\le cI$, $$\\mathbb E|\\Pi w|^2=o(I).\n     \\label{eq:prediction-small-subspaces}$$*\n\n\n2.  *For every $\\epsilon>0$, for all sufficiently far members of the sequence there is a deterministic subspace $V_\\epsilon$ of dimension at most $C_\\epsilon I$ such that, for every $v\\perp V_\\epsilon$, $$v^*(\\mathbb Eww^*)v\\le\\epsilon|v|^2,\\qquad\n     v^*(\\mathbb Eb_sb_s^*)v\\le\\epsilon|v|^2,\\qquad\n     v^*(\\mathbb EM_s)v\\le\\epsilon|v|^2.\n     \\label{eq:prediction-outlier-subspaces}$$ In the gap case $V_\\epsilon$ may be taken to be zero, and $\\|\\mathbb Eb_sb_s^*\\|_{\\mathrm{op}}+\\|\\mathbb EM_s\\|_{\\mathrm{op}}=o(1)$.*\n\n\n3.  *In the strict case, for every fixed $r\\in(0,1/4)$ and $\\epsilon>0$, the conditional covariance $C_r=\\mathop{\\mathrm{Cov}}(w(Y_0)\\mid U_r)$ satisfies $$\\mathbb E\\mathop{\\mathrm{tr}}\\bigl(C_r\\mathbf 1_{\\{C_r>\\epsilon\\mathrm{Id}\\}}\\bigr)=o(I).\n     \\label{eq:conditional-tail}$$ The indicator denotes the spectral projection. No assertion about additional Gaussian probes or Equation <a href=\"#eq:conditional-tail\" data-reference-type=\"eqref\" data-reference=\"eq:conditional-tail\">[eq:conditional-tail]</a> is needed for the gap case.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-posterior-outliers"
+  },
+  {
+   "claim_id": "claim-tensor-hierarchy",
+   "exact_statement": "Consider a sequence of smooth positive probability densities $\\eta$ on finite-dimensional Euclidean spaces, with finite second moments. Let $A=-\\Delta-D\\log\\eta\\cdot D$, and suppose that $\\eta$ satisfies Poincaré with constant at most $\\lambda^{-1}$, where $\\lambda\\to1$. Fix $s=1/8$. Suppose smooth vector fields $b,w$ and a symmetric matrix field $K$ satisfy $$D\\log\\eta=-\\frac{y-b(y)}s+\\omega(y),\\qquad\n Db=\\mathrm{Id}-sK,\\qquad 0\\le K\\le s^{-1}\\mathrm{Id},$$ where either $\\omega=w$ throughout the sequence or $\\omega=0$ throughout the sequence. Assume $b,w\\in L^2(\\eta)$, $w$ is a gradient, and, with $I=\\|w\\|_2^2>0$, $$\\label{eq:hierarchy-initial}\n w\\in\\mathop{\\mathrm{Dom}}A,\\qquad\n \\|(A-1)w\\|_2=o(\\sqrt I),\\qquad\n |\\mathbb E_\\eta w|=o(\\sqrt I),\\qquad\n \\langle w,Kw\\rangle_2=o(I).$$ Assume also the following prediction and projection properties.*\n\n1.  *For $Y\\sim\\eta$ and an independent standard Gaussian $G$, set $$U_r=Y+\\sqrt r\\,G,\\quad h_r(u)=\\mathbb E[w(Y)\\mid U_r=u],\\quad\n     m(r)=I^{-1}\\mathbb E|h_r(U_r)|^2.$$ For every fixed $0<r<1/4$, one has $m(r)\\to e^{-r}$.*\n\n\n\n2.  *For every fixed $c<\\infty$, $$\\label{eq:hierarchy-input-projection}\n     \\sup_{\\substack{\\Pi^2=\\Pi=\\Pi^*\\ \\mathrm{deterministic}\\\\\n                       \\mathop{\\mathrm{rank}}\\Pi\\le cI}}\n           \\|\\Pi w\\|_2^2=o(I).$$ For every $\\epsilon>0$ there is a deterministic projection $\\Pi_\\epsilon$ of rank at most $C_\\epsilon I$ such that $$\\label{eq:hierarchy-input-outliers}\n     \\left\\|\\mathbb E[(1-\\Pi_\\epsilon)bb^*(1-\\Pi_\\epsilon)]\\right\\|_{\\mathrm{op}}\n     +\\left\\|\\mathbb E[(1-\\Pi_\\epsilon)\\omega\\omega^*\n                      (1-\\Pi_\\epsilon)]\\right\\|_{\\mathrm{op}}\\le\\epsilon$$ eventually along the sequence.*\n\n\n3.  *If $\\omega=w$, the conditional covariance $C_r=\\mathop{\\mathrm{Cov}}(w(Y)\\mid U_r)$ satisfies, for every fixed $r\\in(0,1/4)$ and $a>0$, $$\\label{eq:hierarchy-input-tail}\n     \\mathbb E\\mathop{\\mathrm{tr}}\\bigl(C_r\\mathbf 1_{\\{C_r>a\\}}\\bigr)=o(I).$$ No conditional covariance-tail assumption is made when $\\omega=0$.*\n\n\n\n\n*Then there are totally symmetric tensor fields $T_l$ of order $l+1$, for every fixed integer $l\\ge0$, with $T_0=w$, such that $$\\label{eq:hierarchy-eigen}\n \\begin{gathered}\n \\|T_l\\|_2^2=(1+o(1))I,\\qquad\n \\|(A-1)T_l\\|_2=o(\\sqrt I),\\\\\n \\|DT_l-T_{l+1}\\|_2=o(\\sqrt I).\n \\end{gathered}$$ $$\\label{eq:hierarchy-curvature}\n \\langle T_l,K_1T_l\\rangle_2=o(I).$$ $$\\label{eq:hierarchy-projection}\n \\sup_{\\substack{\\Pi^2=\\Pi=\\Pi^*\\ \\mathrm{deterministic}\\\\\n                   \\mathop{\\mathrm{rank}}\\Pi\\le cI}}\n      \\|\\Pi_1T_l\\|_2^2=o(I)\n \\qquad\\text{for every fixed }c<\\infty.$$ Every $T_l$ belongs componentwise to $\\mathop{\\mathrm{Dom}}A$. For $l\\ge1$ it can be chosen in $\\bigcap_{p\\ge1}\\mathop{\\mathrm{Dom}}A^p$. By symmetry, the specified slot in Equations <a href=\"#eq:hierarchy-curvature\" data-reference-type=\"eqref\" data-reference=\"eq:hierarchy-curvature\">[eq:hierarchy-curvature]</a> and <a href=\"#eq:hierarchy-projection\" data-reference-type=\"eqref\" data-reference=\"eq:hierarchy-projection\">[eq:hierarchy-projection]</a> may be any slot. All assertions can be made simultaneous for any fixed finite collection of levels and parameters.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-hierarchy"
+  },
+  {
+   "claim_id": "claim-hierarchy-bessel",
+   "exact_statement": "For the data of Proposition <a href=\"#prop:hierarchy\" data-reference-type=\"ref\" data-reference=\"prop:hierarchy\">20</a>, define $g_r(y)=\\mathbb E_G h_r(y+\\sqrt r\\,G)$. For each $r>0$, $$\\label{eq:hierarchy-bessel}\n \\langle w,g_r\\rangle_2=m(r)I,\\qquad\n \\sum_{j\\ge0}\\frac{r^j}{j!}\\|D^jg_r\\|_2^2\\le m(r)I.$$ In particular, every fixed derivative appearing here is in the form domain of $A$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-hierarchy-bessel"
+  },
+  {
+   "claim_id": "claim-cross-covariance-smoothing",
+   "exact_statement": "If $F$ is a square-integrable random variable with values in a finite-dimensional Hilbert space and $Z$ is a centered Euclidean random vector with $\\mathop{\\mathrm{Cov}}Z\\le c\\mathrm{Id}$, then $$\\label{eq:hierarchy-crosscov}\n |\\mathbb E(F\\otimes Z)|_{\\mathrm{HS}}^2\\le c\\mathbb E|F|^2.$$ Next, let $A$ be a sequence of nonnegative Dirichlet operators with kernel the constants and spectral gap at least $\\lambda\\to1$. If fields $S$ in their form domains satisfy $$|\\mathbb ES|^2=o(I),\\qquad \\|S\\|_2^2=(1+o(1))I,\\qquad\n \\|DS\\|_2^2\\le(1+o(1))I,$$ then $\\widetilde S=e^{1-A}S$ satisfies $$\\label{eq:hierarchy-smoothing}\n \\|\\widetilde S-S\\|_2+\\|D(\\widetilde S-S)\\|_2=o(\\sqrt I),\n \\qquad \\|(A-1)\\widetilde S\\|_2=o(\\sqrt I).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-hierarchy-smoothing"
+  },
+  {
+   "claim_id": "claim-hierarchy-construction",
+   "exact_statement": "Under the hypotheses of Proposition <a href=\"#prop:hierarchy\" data-reference-type=\"ref\" data-reference=\"prop:hierarchy\">20</a>, there exist totally symmetric fields $T_l$ satisfying Equations <a href=\"#eq:hierarchy-eigen\" data-reference-type=\"eqref\" data-reference=\"eq:hierarchy-eigen\">[eq:hierarchy-eigen]</a> and <a href=\"#eq:hierarchy-projection\" data-reference-type=\"eqref\" data-reference=\"eq:hierarchy-projection\">[eq:hierarchy-projection]</a>, with the stated operator domains. Moreover $|\\mathbb ET_l|=o(\\sqrt I)$ for every fixed $l$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-hierarchy-construction"
+  },
+  {
+   "claim_id": "claim-hermite-expansion",
+   "exact_statement": "Let symmetric fields $T_l$ satisfy Equation <a href=\"#eq:hierarchy-eigen\" data-reference-type=\"eqref\" data-reference=\"eq:hierarchy-eigen\">[eq:hierarchy-eigen]</a>. For fixed integers $l,m\\ge0$ and fixed $t>0$, set $N=B_t/\\sqrt t$. Then $$\\label{eq:hierarchy-diffusion-expansion}\n T_l(Y_t)=e^{-t}\\sum_{j=0}^m\\frac{(2t)^{j/2}}{j!}\n       T_{l+j}(Y_0):\\mathfrak h_j(N)+\\mathcal E_{l,m,t},$$ where the colon contracts the last $j$ tensor slots and $$\\label{eq:hierarchy-diffusion-remainder}\n \\limsup\\frac{\\|\\mathcal E_{l,m,t}\\|_2}{\\sqrt I}\n \\le\\frac{(2t)^{(m+1)/2}}{\\sqrt{(m+1)!}}.$$ For $0\\le t\\le T<\\infty$ the same bound holds uniformly with $t$ replaced on the right by $T$ and with the expansion at $t=0$ interpreted by continuity. The limits are also simultaneous for any fixed finite set of starting levels. In particular the normalized remainder tends to zero when the sequence limit is followed by $m\\to\\infty$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-hermite-expansion"
+  },
+  {
+   "claim_id": "claim-operator-tails",
+   "exact_statement": "In the strict branch of Proposition <a href=\"#prop:hierarchy\" data-reference-type=\"ref\" data-reference=\"prop:hierarchy\">20</a>, $Q=Dw$ and the fields $T_l$ constructed in Lemma <a href=\"#lem:hierarchy-construction\" data-reference-type=\"ref\" data-reference=\"lem:hierarchy-construction\">23</a> satisfy the following property. For every fixed $\\delta>0$, each one-slot flattening $F$ of $T_l$, $l\\ge1$, and also $F=Q$, obeys $$\\label{eq:hierarchy-operator-tail}\n \\mathbb E\\mathop{\\mathrm{tr}}\\bigl(FF^*\\mathbf 1_{\\{FF^*>\\delta^2\\}}\\bigr)=o(I).$$ Equivalently, clipping every singular value at any fixed positive cutoff changes the field by $o(\\sqrt I)$ in $L^2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-hierarchy-operator-tails"
+  },
+  {
+   "claim_id": "claim-weighted-divergence",
+   "exact_statement": "Let $\\eta$ be a smooth positive probability density, let $A=-\\Delta-D\\log\\eta\\cdot D$, and put $H=D^2(-\\log\\eta)$. Let $P=(P_{i\\alpha})$ have one vector slot $i$ and a finite-dimensional coefficient index $\\alpha$. Suppose every coefficient belongs to $\\mathop{\\mathrm{Dom}}A$ and $HP\\in L^2(\\eta)$. Then the weighted adjoint divergence $$(D^*P)_\\alpha=-\\sum_i\\partial_iP_{i\\alpha}\n                   -\\sum_i(\\partial_i\\log\\eta)P_{i\\alpha}$$ belongs to $L^2(\\eta)$ and satisfies $$\\label{eq:hierarchy-divergence-bound}\n \\|D^*P\\|_2^2\\le\\|DP\\|_2^2+\\langle P,HP\\rangle_2.$$ For every coefficient field $F\\in\\mathop{\\mathrm{Dom}}A$, $$\\label{eq:hierarchy-differentiated-operator}\n \\langle AF,D^*P\\rangle_2\n =\\langle DF,AP\\rangle_2+\\langle DF,HP\\rangle_2.$$ In particular this identity requires $HP\\in L^2$, not $HDF\\in L^2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-hierarchy-divergence"
+  },
+  {
+   "claim_id": "claim-matrix-centering",
+   "exact_statement": "The field $R$ belongs to the Dirichlet form domain and satisfies $$\\|\\mathbb ER\\|_{\\mathrm{HS}}=o(1),\\qquad\n \\liminf\\|DR\\|_2^2\\ge1,\\qquad \\|DR\\|_2^2=O(1).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-matrix-centering"
+  },
+  {
+   "claim_id": "claim-copied-slots",
+   "exact_statement": "Let $\\psi$ be a finite direct sum of symmetric tensors, each with at least $k\\ge2$ slots. Let $\\rho$ be its one-slot reduction and $R=\\sqrt\\rho$. For a self-adjoint matrix $H$, let $H_{\\mathrm{av}}$ act on each component by averaging the action of $H$ over its slots. Then $$\\label{eq:matrix-copied-slots}\n \\|H_{\\mathrm{av}}\\psi\\|^2\n \\le\\mathop{\\mathrm{tr}}(RHRH)+\\frac{2}{k}\\mathop{\\mathrm{tr}}(\\rho H^2).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-matrix-copied-slots"
+  },
+  {
+   "claim_id": "claim-matrix-saturation",
+   "exact_statement": "There are measurable symmetric matrix fields $H_i$, $1\\le i\\le n$, solving $$\\label{eq:matrix-sylvester}\n D_iR=\\frac{H_iR+RH_i}{2},$$ with zero kernel–kernel block, such that $$\\label{eq:matrix-saturation}\n \\|DR\\|_2^2\\longrightarrow1,\\qquad\n \\sum_i\\mathbb E\\|[H_i,R]\\|_{\\mathrm{HS}}^2=o(1),\\qquad\n \\sum_i\\mathbb E\\mathop{\\mathrm{tr}}(R^2H_i^2)\\longrightarrow1.$$ Moreover, $$\\label{eq:matrix-action-errors}\n \\sum_i\\left(\\|D_iR-H_iR\\|_2^2+\n \\|D_i\\Psi-(H_i)_{(1)}\\Psi\\|_2^2\\right)=o(1).$$ The first slot can be replaced by any existing slot in each component.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-matrix-saturation"
+  },
+  {
+   "claim_id": "claim-bounded-column",
+   "exact_statement": "The matrices in Lemma <a href=\"#lem:matrix-saturation\" data-reference-type=\"ref\" data-reference=\"lem:matrix-saturation\">29</a> satisfy $$\\label{eq:matrix-balance}\n \\mathbb E\\left\\|\\sum_iH_i\\rho H_i-\\rho\\right\\|_1=o(1),\\qquad\n \\mathbb E\\left\\|R\\left(\\sum_iH_i^2\\right)R-\\rho\\right\\|_1=o(1).$$ They can be replaced by symmetric matrix fields, still denoted $H_i$, so that Equation <a href=\"#eq:matrix-action-errors\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-action-errors\">[eq:matrix-action-errors]</a>, the commutator conclusion of Equation <a href=\"#eq:matrix-saturation\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-saturation\">[eq:matrix-saturation]</a>, and Equation <a href=\"#eq:matrix-balance\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-balance\">[eq:matrix-balance]</a> hold, and $$\\label{eq:matrix-column-bound}\n S:=\\sum_iH_i^2\\le4\\mathrm{Id},\\qquad\n \\mathbb E\\|(S-1)R\\|_{\\mathrm{HS}}^2=o(1).$$ The total change satisfies $\\sum_i\\mathbb E\\|(H_i^{\\mathrm{new}}-H_i^{\\mathrm{old}})R\\|_{\\mathrm{HS}}^2=o(1)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-matrix-bounded-column"
+  },
+  {
+   "claim_id": "claim-index-exchange",
+   "exact_statement": "For the bounded columns just constructed, $$\\label{eq:matrix-index-exchange}\n \\sum_{i,j}\\mathbb E\\|[H_i,H_j]R\\|_{\\mathrm{HS}}^2=o(1),\\qquad\n \\mathbb E\\sum_{i,a,b}|(H_iR)_{ab}-(H_aR)_{ib}|^2=o(1).$$ These conclusions also hold after a symmetric perturbation satisfying Equation <a href=\"#eq:matrix-weighted-change\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-weighted-change\">[eq:matrix-weighted-change]</a>, provided the new column has a uniform operator bound.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-matrix-index-exchange"
+  },
+  {
+   "claim_id": "claim-spectral-blocks",
+   "exact_statement": "After enlarging the initial probability space by an independent uniform variable, there are a positive block matrix $R_*=\\bigoplus_\\beta\\beta\\mathrm{Id}_\\beta$, with zero on $\\ker R$, and symmetric matrices $H_i$ supported on entries whose row, column, and outer index belong to the same positive block, with the following properties. Their total change satisfies Equation <a href=\"#eq:matrix-weighted-change\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-weighted-change\">[eq:matrix-weighted-change]</a>, $R_*\\le R\\le(1+\\epsilon)R_*$ on the positive support for $\\epsilon\\to0$, and the column bound $S\\le4\\mathrm{Id}$ holds. With the positive weighted trace $$\\label{eq:matrix-weighted-trace}\n \\tau(U)=\\mathbb E\\sum_\\beta\\beta^2\\mathop{\\mathrm{tr}}_\\beta U_\\beta,$$ where the expectation also includes any fresh noises present, we have $\\tau(1)\\to1$ and $$\\label{eq:matrix-tracial-defects}\n \\tau((S-1)^2)=o(1),\\quad\n \\sum_{i,j}\\tau(|[H_i,H_j]|^2)=o(1),\\quad\n \\mathbb E\\sum_\\beta\\beta^2\\sum_{i,a,b\\in\\beta}\n |(H_i)_{ab}-(H_a)_{ib}|^2=o(1).$$ For a vector $v$ in a positive block define $H[v]=\\sum_{i\\in\\beta}v_iH_i$. We can further impose, pointwise, $$\\label{eq:flattening-bound}\n \\|H[v]\\|_{\\mathrm{HS}}\\le2|v|.$$ The bound uses ordinary, unnormalized Hilbert–Schmidt norm. All the derivative-action and balance conclusions above continue to hold for these matrices in the initial coordinates.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-matrix-blocks"
+  },
+  {
+   "claim_id": "claim-gaussian-moments",
+   "exact_statement": "Let the block matrices and $\\tau$ be those of Lemma <a href=\"#lem:matrix-blocks\" data-reference-type=\"ref\" data-reference=\"lem:matrix-blocks\">32</a>. For independent standard Gaussian vectors $N_1,\\ldots,N_q$, independent of the initial data, put $D_r=H[N_r]$. Then, for every fixed word $r_1,\\ldots,r_m$, $$\\label{eq:matrix-gaussian-joint-law}\n \\tau(D_{r_1}\\cdots D_{r_m})\n \\longrightarrow \\mathbb E(Z_{r_1}\\cdots Z_{r_m}),$$ where $Z_1,\\ldots,Z_q$ are independent scalar standard normals. Products of any fixed length can be reordered with error tending to zero in $L^2(\\tau)$. For every integer $p\\ge1$ and real $u\\ge0$, $$\\label{eq:matrix-gaussian-moment-bound}\n \\mathbb E_{N_r}\\mathop{\\mathrm{tr}}_\\beta D_r^{2p}\n \\le4^p(2p-1)!!\\mathop{\\mathrm{tr}}_\\beta1,\n \\qquad\n \\tau(e^{u|D_r|})\\le2e^{2u^2}\\tau(1).$$ If $\\mathfrak h_j$ is the tensor Hermite polynomial of Lemma <a href=\"#lem:hermite-expansion\" data-reference-type=\"ref\" data-reference=\"lem:hermite-expansion\">24</a> and $\\mathfrak h_j^{(1)}$ is its one-dimensional version, then for each fixed $j$, $$\\label{eq:matrix-wick-reduction}\n \\tau\\left(\\left|\n \\sum_{i_1,\\ldots,i_j}H_{i_j}\\cdots H_{i_1}\n      \\mathfrak h_j(N_1)_{i_1\\ldots i_j}\n -\\mathfrak h_j^{(1)}(D_1)\\right|^2\\right)=o(1).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-matrix-gaussian-moments"
+  },
+  {
+   "claim_id": "claim-frozen-law",
+   "exact_statement": "Let $Y_u$ be the stationary diffusion with invariant law $\\eta$ and driving Brownian motion $B_u$, and fix $t>0$. Make the matrix construction of Lemma <a href=\"#lem:matrix-blocks\" data-reference-type=\"ref\" data-reference=\"lem:matrix-blocks\">32</a> at $Y_0$, using an independent random block offset. In its orthonormal frame put $N=B_t/\\sqrt t$; conditionally on the initial data and block offset, $N$ is a standard Gaussian vector. Define, in the initial spatial coordinates, $$\\label{eq:matrix-frozen-covariance}\n \\sigma=\\bigoplus_\\beta\\beta^2\n       \\exp\\bigl(\\sqrt{8t}\\,H[N]-4t\\mathrm{Id}_\\beta\\bigr),$$ and set $\\sigma=0$ on the omitted kernel. Then $$\\label{eq:matrix-frozen-law}\n \\mathbb E\\|R(Y_t)-\\sigma^{1/2}\\|_{\\mathrm{HS}}^2\\longrightarrow0.$$ The matrices defining $\\sigma$ obey the bounded-column and input-map bounds <a href=\"#eq:matrix-column-bound\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-column-bound\">[eq:matrix-column-bound]</a> and <a href=\"#eq:flattening-bound\" data-reference-type=\"eqref\" data-reference=\"eq:flattening-bound\">[eq:flattening-bound]</a>, the weighted defects <a href=\"#eq:matrix-tracial-defects\" data-reference-type=\"eqref\" data-reference=\"eq:matrix-tracial-defects\">[eq:matrix-tracial-defects]</a>, and the mixed moment law of Lemma <a href=\"#lem:matrix-gaussian-moments\" data-reference-type=\"ref\" data-reference=\"lem:matrix-gaussian-moments\">33</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-frozen-law"
+  },
+  {
+   "claim_id": "claim-obs-multipliers",
+   "exact_statement": "For $v,w\\ge0$, not both zero, put $$\\label{eq:obs-multiplier}\n M_L(v,w)=(v+w)^2\\int_0^\\infty\n \\frac{dT}{\n (1+Tv^2/L)(1+Tw^2/L)\n (1+(1+1/L)Tv^2)(1+(1+1/L)Tw^2)}.$$ Set $M_L(0,0)=0$. Then $$\\label{eq:obs-multiplier-bounds}\n M_L(v,w)\\le4\\log(1+L)\n \\quad\\hbox{for all }v,w\\ge0,\n \\qquad\n M_L(v,w)\\le9\n \\quad\\hbox{if }\\tfrac12\\le v/w\\le2.$$ The second bound concerns positive $v,w$ and is independent of $L$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-obs-multipliers"
+  },
+  {
+   "claim_id": "claim-information-upper",
+   "exact_statement": "There is an absolute constant $C_0$ such that, for every fixed $t>0$ and $L\\ge1$, the observations in Equation <a href=\"#eq:obs-covariance-definition\" data-reference-type=\"eqref\" data-reference=\"eq:obs-covariance-definition\">[eq:obs-covariance-definition]</a> satisfy $$\\label{eq:obs-information-upper}\n \\limsup\\int_0^\\infty\\mathsf I(Y_t;Z_T)\\,\\frac{dT}{T^2}\\le C_0.$$ In particular, one may take $C_0=9/4$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-information-upper"
+  },
+  {
+   "claim_id": "claim-integrated-stability",
+   "exact_statement": "For $T>0$ let $h_T(v)=\\sqrt{1+f_L(Tv^2)}$, $v\\ge0$, and put $$K_L=\\int_0^\\infty\n \\frac{dq}{(1+q/L)^3(1+(1+1/L)q)}.$$ Then $0<K_L\\le\\log(1+L)$, and for arbitrary positive semidefinite matrices $A,B$ of the same size, $$\\label{eq:obs-matrix-stability}\n \\int_0^\\infty\\|h_T(A)-h_T(B)\\|_{\\mathrm{HS}}^2\\,\\frac{dT}{T^2}\n \\le K_L\\|A-B\\|_{\\mathrm{HS}}^2.$$ Let $\\sigma$ be the frozen covariance in Proposition <a href=\"#prop:frozen-law\" data-reference-type=\"ref\" data-reference=\"prop:frozen-law\">34</a>, and couple $$\\widetilde Z_T=(\\mathrm{Id}+f_L(T\\sigma))^{1/2}G$$ to $Z_T$ using the same independent Gaussian. For every fixed $t,L$, $$\\label{eq:obs-observation-stability}\n \\int_0^\\infty\\mathbb E|Z_T-\\widetilde Z_T|^2\\,\\frac{dT}{T^2}=o(1).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-obs-integrated-stability"
+  },
+  {
+   "claim_id": "claim-ou-score",
+   "exact_statement": "Let $N$ be a standard Gaussian vector conditional on $\\mathcal D$, and let $Z$ be any observation for which $\\mathsf I(N;Z\\mid\\mathcal D)<\\infty$. With independent standard Gaussian $G'$ set $$N_u=\\alpha N+\\sqrt{1-\\alpha^2}\\,G',\\qquad \\alpha=e^{-u},\\quad u>0.$$ The relative score of its posterior, with respect to the standard Gaussian marginal, is $$\\label{eq:obs-ou-score}\n D\\log\\frac{p_{N_u\\mid Z,\\mathcal D}}{\\gamma}(N_u)\n =\\frac{\\alpha}{1-\\alpha^2}\n   \\mathbb E[N-\\alpha N_u\\mid N_u,Z,\\mathcal D].$$ For every compact interval $\\mathcal J\\subset(0,\\infty)$, $$\\label{eq:obs-ou-information}\n \\mathsf I(N;Z\\mid\\mathcal D)\n \\ge\\int_{\\mathcal J}\\frac{\\alpha^2}{(1-\\alpha^2)^2}\n \\mathbb E\\left|\\mathbb E[N-\\alpha N_u\\mid N_u,Z,\\mathcal D]\\right|^2\\,du.$$ For the covariance observation in Equation <a href=\"#eq:obs-covariance-definition\" data-reference-type=\"eqref\" data-reference=\"eq:obs-covariance-definition\">[eq:obs-covariance-definition]</a>, $$\\label{eq:obs-data-processing}\n \\mathsf I(Y_t;Z_T)\\ge\\mathsf I(N;Z_T\\mid\\mathcal D).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-obs-ou-score"
+  },
+  {
+   "claim_id": "claim-block-tests",
+   "exact_statement": "Fix compact intervals $\\mathcal J,\\mathcal X\\subset(0,\\infty)$, and write $\\kappa(u)=\\alpha^2/(1-\\alpha^2)^2$, where $\\alpha=e^{-u}$. Let $P(u,x,a,b)$ be a real polynomial, evaluated on matrices with any one fixed ordering of each monomial. On each positive block define $$A_\\beta=H_\\beta[N_\\beta],\\qquad\n A_{u,\\beta}=H_\\beta[(N_u)_\\beta],\\qquad\n B_{\\beta,x}=H_\\beta[(Z_{x/\\beta^2})_\\beta],$$ and $P_{\\beta,u,x}=P(u,x,A_{u,\\beta},B_{\\beta,x})$. Then $$\\begin{aligned}\n \\int_0^\\infty\\mathsf I(Y_t;Z_T)\\,\\frac{dT}{T^2}\n \\ge{}&\\int_{\\mathcal J}\\int_{\\mathcal X}\\kappa(u)\n \\mathbb E\\sum_\\beta\\beta^2\\mathop{\\mathrm{tr}}_\\beta\n \\bigl(2(A_\\beta-\\alpha A_{u,\\beta})P_{\\beta,u,x}\n \\notag\\\\[-2pt]\n &\\hspace{43mm}-C_1P_{\\beta,u,x}^*P_{\\beta,u,x}\\bigr)\n \\,\\frac{dx}{x^2}\\,du.\n \\label{eq:obs-block-test-bound}\n\\end{aligned}$$ Here the constant $C_1$ is the absolute constant in Equation <a href=\"#eq:obs-block-bounds\" data-reference-type=\"eqref\" data-reference=\"eq:obs-block-bounds\">[eq:obs-block-bounds]</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-obs-block-tests"
+  },
+  {
+   "claim_id": "claim-polynomial-replacement",
+   "exact_statement": "In the notation of Lemma <a href=\"#lem:obs-block-tests\" data-reference-type=\"ref\" data-reference=\"lem:obs-block-tests\">39</a>, put $\\widetilde B_{\\beta,x}\n=H_\\beta[(\\widetilde Z_{x/\\beta^2})_\\beta]$. For every fixed polynomial in $u,x,A_\\beta,A_{u,\\beta},B_{\\beta,x}$ and their adjoints, its weighted trace integral over $\\mathcal J\\times\\mathcal X$ changes by $o(1)$ if $B_{\\beta,x}$ is replaced by $\\widetilde B_{\\beta,x}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-obs-polynomial-replacement"
+  },
+  {
+   "claim_id": "claim-polynomial-density",
+   "exact_statement": "Let $\\nu$ be a finite positive measure on $\\mathbb R^k$ with $\\int e^{a|w|}\\,d\\nu(w)<\\infty$ for every $a>0$. Polynomials are dense in $L^p(\\nu)$ for every $1\\le p<\\infty$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-obs-polynomial-density"
+  },
+  {
+   "claim_id": "claim-nonlinear-trace-law",
+   "exact_statement": "Let $n,g',g$ be independent scalar standard Gaussians and let $n_u=\\alpha n+\\sqrt{1-\\alpha^2}\\,g'$. For every fixed mixed polynomial, the weighted trace moments of $$\\big(A_\\beta,A_{u,\\beta},\\widetilde B_{\\beta,x}\\big)$$ converge to the corresponding scalar moments of $$\\big(n,n_u,g_x(n)g\\big).$$ The assertion holds after integration over compact positive $u,x$ intervals against $\\kappa(u)\\,du\\,dx/x^2$, and permits fixed polynomial dependence on $u,x$. Adjoints in a matrix word become the identical real scalar factors in its limit.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-obs-nonlinear-trace-law"
+  },
+  {
+   "claim_id": "claim-information-lower",
+   "exact_statement": "For every fixed $t>0$ and $L\\ge1$, let $g_x$ be defined by Equation <a href=\"#eq:obs-g-function\" data-reference-type=\"eqref\" data-reference=\"eq:obs-g-function\">[eq:obs-g-function]</a>, and let $n,g$ be independent scalar standard Gaussians. Then $$\\label{eq:obs-information-lower}\n \\liminf\\int_0^\\infty\\mathsf I(Y_t;Z_T)\\,\\frac{dT}{T^2}\n \\ge C_1^{-1}\\int_0^\\infty\n       \\mathsf I\\big(n;g_x(n)g\\big)\\,\\frac{dx}{x^2}.$$ The constant $C_1$ is universal and is independent of $t,L$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-information-lower"
+  },
+  {
+   "claim_id": "claim-scalar-divergence",
+   "exact_statement": "Let $n,g$ be independent scalar standard Gaussians and, for $t\\ge1$, define $$\\ell=\\exp(\\sqrt{8t}\\,n-4t),\\qquad\n z_x=\\sqrt{1+f_t(x\\ell)}\\,g.$$ There are absolute constants $c>0$ and $h_0\\ge1$ such that, for all $t\\ge h_0$, $$\\label{eq:obs-scalar-divergence}\n \\int_0^\\infty\\mathsf I(n;z_x)\\,\\frac{dx}{x^2}\n \\ge c\\mathbb E\\big[\\ell\\mathbf 1_{\\{\\ell\\ge e^{2t}\\}}\\big]\n                  \\log(t/h_0)\n \\ge\\frac c2\\log(t/h_0).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-scalar-divergence"
+  }
+ ],
+ "paper": "papers/EN-108-000-0003-2-2026-PR-T4-UK-EX-M2-C-ML-H-0205_PM-093.1_A_dimension_free_logarithmic_Sobolev_inequality_for_subgaussian_log_concave_measures.md",
+ "purpose": "A dimension-free logarithmic Sobolev inequality for subgaussian log-concave measures",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "d57052ae5a2eafc453d33f4f4c2f669e763b56ab0076fbd8e02ae8add21daa0f",
+   "pm.domains.v2": "53c393694b1a827af7f5f71731642f32af6f485cd4cbed23591039d533e5f23f",
+   "pm.edges.v2": "3a33661c2de060dd32970e9c07687065a09fd5c6f19f6c94f3ee91bff9a4dd3a",
+   "pm.extraction.v2": "cb9fb9eaa494e13b85b54e0ecfa0120e1bc12adc1143d595f91902da0f142209",
+   "pm.formal.v2": "83d37265f751b3ba577a476439adbdcdebcb34e4f587f6e120fa9da1d5d905e3",
+   "pm.limits.v2": "e35e7cb159811cc3caae932caf2242cc8775ab3940b32134e3cb7a308a4da14e",
+   "pm.node.v2": "a8f35930917030cec69041098d630deab1975325618b8cbc73b30c02453bed1b",
+   "pm.objects.v2": "714f7ebe2058f4cb6637d64aab8eae90d296e62615255b77c7ba14de6b5447a9",
+   "pm.provenance.v2": "01f7b57f380414f8f0e455aa2b6c9ccb67849fe3cddf73991b984e7cdbb84fa2",
+   "pm.quantities.v2": "5c49960e17d4ad43afc09df7b86208f29dd2b6e22f6a428370ac5914d5bedc1a",
+   "pm.reading.v2": "768a64eeb7a28b59a78ecf7edca45363bd09c4f75d7bb4376d768fb35e50c52d",
+   "pm.roadmap.v2": "b427d6ac0741485cbd4c63881cddcf812e139e335a2ca41b0e68bb66d9997925",
+   "pm.search.v1": "295bdb37337826ff7f3b8fba98e8acb0e26c0846daeb6b2d110bbcf844ac318d",
+   "pm.triptych.v2": "54d8a634c702052073f204858fc78ea8ade4f604db33109bc3d5c46231bf10b9"
+  },
+  "canonical_sha256": "e2afc5f7bcfcfc04211e09e85b171d5b25d6c404198ed0fddee4046f41bcdaca",
+  "paper_sha256": "b0c790029893750f2888e48c8824c53f09fc4264e51079d0245507cb0e09a8e6",
+  "repaired_body_sha256": "46f6a6aad012fd75e5bf5c11b2d5767ca894c1d34b00cb44ac4e068f9e82711a"
+ },
+ "status": "ACTIVE",
+ "subject_id": 8,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "0383530a06ed47b7e31a20c30f8ba531f9afcea094734daaf59e3c2a4ad25d0a",
+   "receipt_sha256": "47b5aacb26e9cb907f07ba0516e3c2d85a404b21f083ec8d4da2ba93f5ae01ff",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "A dimension-free logarithmic Sobolev inequality for subgaussian log-concave measures"
+}

@@ -1,0 +1,959 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 724649,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 221390
+ },
+ "coordinate": "EN-116-000-0000-2-2026-PR-T4-UK-EX-M3-B-TO-H-0597",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "Perturbation stability certification for operator-algebraic models (e.g. quantum observable algebras) and formal verification targets",
+   "strength": "weak",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "unital von Neumann algebras with identity $I_H$",
+     "quote_sha256": "d454dfd5787c4fcc2c9472e34828a4703dd9d6758cf31152c754a0252f5e6f86"
+    }
+   ],
+   "query": "stability of norm-separable C*-algebras without weak closure",
+   "reason": "The theorem is only for von Neumann algebras; the introduction treats C*-algebras separately."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-6",
+     "quote": "We write $A\\subset_\\gamma B$ if there is $\\gamma'<\\gamma$ such that every $x\\in A_1$ has $\\operatorname{dist}(x,B)\\le\\gamma'$; the approximant in $B$ need not be contractive.",
+     "quote_sha256": "00d5aa7bb9ef14802473f53d23e6b7b03f14ac7e95d84c6ec180245458cdae4e"
+    }
+   ],
+   "query": "one-sided near inclusions for non-amenable algebras",
+   "reason": "Near inclusions are used here only with amenable algebras; the main statement uses two-sided closeness."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "unital von Neumann algebras with identity $I_H$",
+     "quote_sha256": "d454dfd5787c4fcc2c9472e34828a4703dd9d6758cf31152c754a0252f5e6f86"
+    }
+   ],
+   "query": "algebras with different identities or non-unital algebras",
+   "reason": "The statement requires a common identity."
+  }
+ ],
+ "family": "PM-289",
+ "id": "PM-289.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main",
+    "statement": "unital von Neumann algebras with identity $I_H$"
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main",
+    "statement": "$d(M,N)<\\delta$"
+   },
+   {
+    "anchor": "stmt-thm-amenable",
+    "claim_id": "claim-amenable-near-inclusion",
+    "statement": "Let $R,Q\\subseteq\\mathcal B(H)$ be von Neumann algebras with identity $I$, with $R$ amenable."
+   },
+   {
+    "anchor": "stmt-thm-amenable",
+    "claim_id": "claim-amenable-near-inclusion",
+    "statement": "If $R\\subset_\\gamma Q$ and $\\gamma<1/100$,"
+   },
+   {
+    "anchor": "stmt-lem-commutant-cb",
+    "claim_id": "claim-commutant-cb",
+    "statement": "unital von Neumann algebra $A\\subseteq\\mathcal B(H)$"
+   },
+   {
+    "anchor": "stmt-lem-paired",
+    "claim_id": "claim-close-representations",
+    "statement": "Let $\\rho,\\theta:P\\to\\mathcal B(H)$ be normal unital $*$-representations of a von Neumann algebra."
+   },
+   {
+    "anchor": "stmt-lem-paired",
+    "claim_id": "claim-close-representations",
+    "statement": "$\\lVert\\rho-\\theta\\rVert_{\\mathrm{cb}}\\le e<1/4$"
+   },
+   {
+    "anchor": "stmt-prop-ucp",
+    "claim_id": "claim-ucp-criterion",
+    "statement": "Let $P,Q$ be von Neumann algebras, let $\\rho:P\\to\\mathcal B(H)$ be a faithful normal unital representation, and let $Q\\subseteq\\mathcal B(H)$ have the same identity."
+   },
+   {
+    "anchor": "stmt-prop-ucp",
+    "claim_id": "claim-ucp-criterion",
+    "statement": "Suppose that $F:P\\to Q$ is UCP"
+   },
+   {
+    "anchor": "stmt-lem-tensor-gap",
+    "claim_id": "claim-tensor-gap",
+    "statement": "Let $A,B\\subseteq\\mathcal B(H)$ be unital von Neumann algebras with $d_{\\mathrm{cb}}(A,B)\\le\\gamma$."
+   },
+   {
+    "anchor": "stmt-lem-tensor-gap",
+    "claim_id": "claim-tensor-gap",
+    "statement": "If $K$ is separable,"
+   },
+   {
+    "anchor": "stmt-lem-invariant-mean",
+    "claim_id": "claim-invariant-mean",
+    "statement": "Let $G$ be a discrete amenable group"
+   },
+   {
+    "anchor": "stmt-thm-amplification",
+    "claim_id": "claim-uniform-amplification",
+    "statement": "type $\\mathrm{II}_1$ factor $M\\subseteq\\mathcal B(H)$ on a separable Hilbert space"
+   },
+   {
+    "anchor": "stmt-lem-column-commutator",
+    "claim_id": "claim-column-estimate",
+    "statement": "Let $A\\subseteq\\mathcal B(H)$ be a unital $C^*$-algebra"
+   },
+   {
+    "anchor": "stmt-lem-trace-transfer",
+    "claim_id": "claim-trace-transfer",
+    "statement": "Let $P\\subseteq\\mathcal B(K)$ be a finite von Neumann algebra with faithful normal trace $\\tau$."
+   },
+   {
+    "anchor": "stmt-lem-free-words",
+    "claim_id": "claim-free-words",
+    "statement": "Let $d\\geq d_r$"
+   },
+   {
+    "anchor": "stmt-lem-free-words",
+    "claim_id": "claim-free-words",
+    "statement": "Suppose that $A_1,\\ldots,A_r\\subset\\mathcal A$ are unital copies of $M_d(\\mathbb C)$"
+   },
+   {
+    "anchor": "stmt-cor-through-label",
+    "claim_id": "claim-through-label",
+    "statement": "whenever $d\\geq d_0(N)$"
+   },
+   {
+    "anchor": "stmt-lem-free-lifts",
+    "claim_id": "claim-free-lifts",
+    "statement": "Let $M\\subseteq\\mathcal B(H)$ be a separably acting $\\mathrm{II}_1$ factor"
+   },
+   {
+    "anchor": "stmt-lem-haar-twist",
+    "claim_id": "claim-haar-twist",
+    "statement": "Let $(F,\\tau)$ be a finite tracial von Neumann algebra"
+   },
+   {
+    "anchor": "stmt-lem-boundary-mean",
+    "claim_id": "claim-boundary-mean",
+    "statement": "countable group $G$"
+   },
+   {
+    "anchor": "stmt-lem-boundary-correction",
+    "claim_id": "claim-boundary-correction",
+    "statement": "let $A\\subset\\mathcal B(K)$ be a von Neumann algebra on a separable Hilbert space"
+   },
+   {
+    "anchor": "stmt-lem-boundary-correction",
+    "claim_id": "claim-boundary-correction",
+    "statement": "\\le\\frac1{64}"
+   },
+   {
+    "anchor": "stmt-lem-boundary-intertwiner",
+    "claim_id": "claim-boundary-intertwiner",
+    "statement": "Let $U:\\Gamma\\to\\mathcal U(K)$ be a unitary representation on a separable Hilbert space"
+   },
+   {
+    "anchor": "stmt-lem-boundary-intertwiner",
+    "claim_id": "claim-boundary-intertwiner",
+    "statement": "\\delta<1"
+   },
+   {
+    "anchor": "stmt-lem-boundary-diagonal-unitary",
+    "claim_id": "claim-boundary-diagonal-unitary",
+    "statement": "Let $A$ be a finite von Neumann algebra with faithful normal tracial state $\\tau$ and separable trace Hilbert space $L^2(A,\\tau)$."
+   },
+   {
+    "anchor": "stmt-lem-double-ergodicity",
+    "claim_id": "claim-double-ergodicity",
+    "statement": "let $\\sigma:G\\to\\mathcal U(K)$ be a unitary representation on a separable Hilbert space"
+   },
+   {
+    "anchor": "stmt-thm-finite",
+    "claim_id": "claim-finite-factors",
+    "statement": "Let $H$ be a separable nonzero Hilbert space"
+   },
+   {
+    "anchor": "stmt-thm-finite",
+    "claim_id": "claim-finite-factors",
+    "statement": "let $M\\subseteq\\mathcal B(H)$ be a unital finite factor"
+   },
+   {
+    "anchor": "stmt-lem-finite-neighbor",
+    "claim_id": "claim-finite-neighbor",
+    "statement": "If $M\\subseteq\\mathcal B(H)$ is a unital finite factor"
+   },
+   {
+    "anchor": "stmt-lem-finite-neighbor",
+    "claim_id": "claim-finite-neighbor",
+    "statement": "$d(M,N)<1/10$"
+   },
+   {
+    "anchor": "stmt-lem-irreducible-hyperfinite",
+    "claim_id": "claim-irreducible-hyperfinite",
+    "statement": "Every separable-predual $\\mathrm{II}_1$ factor $M$"
+   },
+   {
+    "anchor": "stmt-prop-finite-common-position",
+    "claim_id": "claim-common-position",
+    "statement": "Let $M,N$ be separable-predual $\\mathrm{II}_1$ factors acting nondegenerately on one Hilbert space, with mutual strict $g$-near inclusions, where $0<g<1.74\\cdot10^{-13}$."
+   },
+   {
+    "anchor": "stmt-prop-finite-common-position",
+    "claim_id": "claim-common-position",
+    "statement": "Suppose that an amenable von Neumann subalgebra $R\\subseteq M\\cap N$ satisfies $R'\\cap M\\subseteq R$."
+   },
+   {
+    "anchor": "stmt-lem-finite-right-action",
+    "claim_id": "claim-finite-right-action",
+    "statement": "In the setting of"
+   },
+   {
+    "anchor": "stmt-lem-finite-ball-tests",
+    "claim_id": "claim-finite-ball-tests",
+    "statement": "Let $M$ be a $\\mathrm{II}_1$ factor"
+   },
+   {
+    "anchor": "stmt-lem-finite-ball-tests",
+    "claim_id": "claim-finite-ball-tests",
+    "statement": "commutes with left and right multiplication by $R$"
+   },
+   {
+    "anchor": "stmt-lem-tracial-conjugations",
+    "claim_id": "claim-tracial-conjugations",
+    "statement": "Let $M,N\\subseteq\\mathcal B(K)$ be $\\mathrm{II}_1$ factors in common standard tracial position with vector $\\Omega$."
+   },
+   {
+    "anchor": "stmt-lem-tracial-conjugations",
+    "claim_id": "claim-tracial-conjugations",
+    "statement": "If $d(M,N)<b$,"
+   },
+   {
+    "anchor": "stmt-lem-jordan-orientation",
+    "claim_id": "claim-jordan-orientation",
+    "statement": "whose target is a factor von Neumann algebra"
+   },
+   {
+    "anchor": "stmt-lem-jordan-orientation",
+    "claim_id": "claim-jordan-orientation",
+    "statement": "A surjective linear Jordan homomorphism between unital complex algebras"
+   },
+   {
+    "anchor": "stmt-prop-finite-standard-isomorphism",
+    "claim_id": "claim-finite-standard-isomorphism",
+    "statement": "type $\\mathrm{II}_1$ factors on a separable Hilbert space"
+   },
+   {
+    "anchor": "stmt-prop-finite-standard-isomorphism",
+    "claim_id": "claim-finite-standard-isomorphism",
+    "statement": "If $d(M,N)<b<b_0$"
+   },
+   {
+    "anchor": "stmt-lem-common-infinite-amplification",
+    "claim_id": "claim-common-infinite-amplification",
+    "statement": "Let $M,N\\subseteq\\mathcal B(H)$ contain the same unital copy of $\\mathcal B(\\ell^2)$."
+   },
+   {
+    "anchor": "stmt-lem-fixed-tensor-factor",
+    "claim_id": "claim-fixed-tensor-factor",
+    "statement": "If $A$ is any factor with separable predual"
+   },
+   {
+    "anchor": "stmt-prop-prepared-pair",
+    "claim_id": "claim-prepared-pair-existence",
+    "statement": "Suppose $M_0,N_0\\subseteq\\mathcal B(H)$ are factors on a separable Hilbert space"
+   },
+   {
+    "anchor": "stmt-prop-prepared-pair",
+    "claim_id": "claim-prepared-pair-existence",
+    "statement": "$d(M_0,N_0)<t<c$"
+   },
+   {
+    "anchor": "stmt-prop-modular-graphs",
+    "claim_id": "claim-modular-graphs",
+    "statement": "every prepared pair with $d_{\\mathrm{cb}}(M,N)\\leq\\gamma$"
+   },
+   {
+    "anchor": "stmt-cor-modular-cuts",
+    "claim_id": "claim-modular-cuts",
+    "statement": "For a prepared pair with $d_{\\mathrm{cb}}(M,N)\\leq\\gamma$"
+   },
+   {
+    "anchor": "stmt-prop-modular-alignment",
+    "claim_id": "claim-modular-alignment",
+    "statement": "Let $(M,N,\\Omega,R)$ be a prepared pair"
+   },
+   {
+    "anchor": "stmt-prop-modular-alignment",
+    "claim_id": "claim-modular-alignment",
+    "statement": "$d_{\\mathrm{cb}}(M,N)<\\gamma<c_{\\rm mod}$"
+   },
+   {
+    "anchor": "stmt-lem-infinite-commutant-bound",
+    "claim_id": "claim-infinite-commutant-bound",
+    "statement": "separably acting properly infinite von Neumann algebra"
+   },
+   {
+    "anchor": "stmt-lem-infinite-commutant-bound",
+    "claim_id": "claim-infinite-commutant-bound",
+    "statement": "$h=h^*\\in\\mathcal B(H)$"
+   },
+   {
+    "anchor": "stmt-lem-local-normalizer-linear",
+    "claim_id": "claim-normalizer-linear",
+    "statement": "separably acting type $\\mathrm{III}$ factor $P\\subset\\mathcal B(H)$"
+   },
+   {
+    "anchor": "stmt-lem-local-normalizer-path",
+    "claim_id": "claim-normalizer-path",
+    "statement": "Let $P\\subset\\mathcal B(H)$ be a separably acting type $\\mathrm{III}$ factor,"
+   },
+   {
+    "anchor": "stmt-lem-local-normalizer-path",
+    "claim_id": "claim-normalizer-path",
+    "statement": "$0\\le e<e_0$"
+   },
+   {
+    "anchor": "stmt-lem-analytic-multiplier",
+    "claim_id": "claim-analytic-multiplier",
+    "statement": "Suppose multiplication by a bounded field $B(t)$ on $L^2(\\mathbb R,H)$ preserves $P_0\\mathcal K$."
+   },
+   {
+    "anchor": "stmt-lem-modular-near-normalizers",
+    "claim_id": "claim-modular-near-normalizers",
+    "statement": "Let $M,N\\subseteq\\mathcal B(H)$ be a prepared pair on a separable Hilbert space"
+   },
+   {
+    "anchor": "stmt-lem-modular-near-normalizers",
+    "claim_id": "claim-modular-near-normalizers",
+    "statement": "$d_{\\mathrm{cb}}(M,N)\\leq\\gamma$"
+   },
+   {
+    "anchor": "stmt-lem-small-exact-normalizer",
+    "claim_id": "claim-small-exact-normalizer",
+    "statement": "$v\\in\\mathcal N_P$"
+   },
+   {
+    "anchor": "stmt-lem-small-exact-normalizer",
+    "claim_id": "claim-small-exact-normalizer",
+    "statement": "$\\lVert v-I\\rVert<r_0$"
+   },
+   {
+    "anchor": "stmt-lem-normalizer-representation-correction",
+    "claim_id": "claim-normalizer-representation-correction",
+    "statement": "Let $P\\subset\\mathcal B(H)$ be a separably acting type $\\mathrm{III}$ factor."
+   },
+   {
+    "anchor": "stmt-lem-normalizer-representation-correction",
+    "claim_id": "claim-normalizer-representation-correction",
+    "statement": "For any family $v_t\\in\\mathcal N_P$, $t\\in\\mathbb R$,"
+   },
+   {
+    "anchor": "stmt-lem-core-fixed-points",
+    "claim_id": "claim-core-fixed-points",
+    "statement": "With this notation,"
+   },
+   {
+    "anchor": "pm-h-50",
+    "claim_id": "claim-core-fixed-points",
+    "statement": "Let $P\\subseteq\\mathcal B(H)$ be a unital von Neumann algebra on a separable Hilbert space"
+   },
+   {
+    "anchor": "stmt-lem-core-gap",
+    "claim_id": "claim-core-gap",
+    "statement": "Let $P,Q\\subseteq\\mathcal B(H)$ be normalized by the same group $U$."
+   },
+   {
+    "anchor": "stmt-lem-core-gap",
+    "claim_id": "claim-core-gap",
+    "statement": "$d_{\\mathrm{cb}}(P,Q)<\\gamma$"
+   },
+   {
+    "anchor": "stmt-prop-core-descent",
+    "claim_id": "claim-core-descent",
+    "statement": "Suppose $P,Q\\subseteq\\mathcal B(H)$ are unital von Neumann algebras on a separable Hilbert space"
+   },
+   {
+    "anchor": "stmt-prop-core-descent",
+    "claim_id": "claim-core-descent",
+    "statement": "If $C(Q,U)$ is a type $\\mathrm{II}_\\infty$ factor"
+   },
+   {
+    "anchor": "stmt-thm-factors",
+    "claim_id": "claim-separable-factors",
+    "statement": "every pair of unital factors $M_0,N_0\\subseteq\\mathcal B(H)$"
+   },
+   {
+    "anchor": "stmt-thm-factors",
+    "claim_id": "claim-separable-factors",
+    "statement": "$d(M_0,N_0)<t<t_{\\rm fac}$"
+   },
+   {
+    "anchor": "stmt-lem-centers-close",
+    "claim_id": "claim-centers-close",
+    "statement": "For unital von Neumann algebras $M,N\\subseteq\\mathcal B(H)$,"
+   },
+   {
+    "anchor": "stmt-lem-centers-close",
+    "claim_id": "claim-centers-close",
+    "statement": "whenever $d(M,N)<g<1/303$"
+   },
+   {
+    "anchor": "stmt-lem-fiber-gap",
+    "claim_id": "claim-fiber-gap",
+    "statement": "Let $M,N\\subseteq\\mathcal B(H)$ act on a separable Hilbert space and have the same center."
+   },
+   {
+    "anchor": "stmt-lem-measurable-implementers",
+    "claim_id": "claim-measurable-implementers",
+    "statement": "suppose that for some $a>0$ and almost every $t$ there is a unitary $v_t\\in\\mathcal B(H_t)$"
+   },
+   {
+    "anchor": "stmt-thm-separable-algebras",
+    "claim_id": "claim-separable-algebras",
+    "statement": "$M,N$ are unital von Neumann algebras on a separable Hilbert space"
+   },
+   {
+    "anchor": "stmt-thm-separable-algebras",
+    "claim_id": "claim-separable-algebras",
+    "statement": "$d(M,N)<\\delta_{\\mathrm{sep}}(a)$"
+   },
+   {
+    "anchor": "stmt-lem-separable-tests",
+    "claim_id": "claim-separable-tests",
+    "statement": "Let $M,N\\subseteq\\mathcal B(H)$ be unital von Neumann algebras, and let $g>d(M,N)$."
+   },
+   {
+    "anchor": "stmt-cor-uniform-matrix-commutant",
+    "claim_id": "claim-uniform-matrix-commutant",
+    "statement": "unital von Neumann algebras $M,N\\subseteq\\mathcal B(H)$ with the same identity"
+   },
+   {
+    "anchor": "stmt-cor-uniform-matrix-commutant",
+    "claim_id": "claim-uniform-matrix-commutant",
+    "statement": "$d(M,N)<\\delta$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "uniform Kadison–Kastler stability",
+    "evidence": [
+     {
+      "anchor": "pm-h-4",
+      "quote": "All tolerances depend only on the requested final unitary displacement.",
+      "quote_sha256": "1e5dfe13f9828ccd5f6df0e5002bfc29e8a2b646dfde040ef8e0b89ee871d1b4"
+     }
+    ],
+    "requires_concepts": [
+     "Kadison–Kastler distance",
+     "completely bounded norm",
+     "amenable near inclusions",
+     "UCP criterion",
+     "uniform amplification of commutators"
+    ],
+    "supporting_pm_ids": [
+     "PM-289.1"
+    ]
+   },
+   {
+    "concept": "modular alignment of infinite factors",
+    "evidence": [
+     {
+      "anchor": "stmt-prop-modular-alignment",
+      "quote": "The algebra $N$ and its modular group are unchanged.",
+      "quote_sha256": "d25e0f624e42ff837f8179caf5764a199fd7f18ec414cbdd3632f1addad1e6d0"
+     }
+    ],
+    "requires_concepts": [
+     "Tomita operator graphs",
+     "bicentralizer",
+     "crossed products",
+     "finite-factor stability"
+    ],
+    "supporting_pm_ids": [
+     "PM-289.1"
+    ]
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main",
+   "exact_statement": "For every $\\varepsilon>0$ there is $\\delta=\\delta(\\varepsilon)>0$ such that the following holds. If $H$ is any complex Hilbert space and $M,N\\subseteq\\mathcal B(H)$ are unital von Neumann algebras with identity $I_H$ and $d(M,N)<\\delta$, there is a unitary $u\\in\\mathcal B(H)$ satisfying $$uMu^*=N,\\qquad \\lVert u-I_H\\rVert<\\varepsilon.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-amenable-near-inclusion",
+   "exact_statement": "Let $R,Q\\subseteq\\mathcal B(H)$ be von Neumann algebras with identity $I$, with $R$ amenable. If $R\\subset_\\gamma Q$ and $\\gamma<1/100$, there is a unitary $v\\in(R\\cup Q)''$ such that $$vRv^*\\subseteq Q,\\qquad \\lVert v-I\\rVert\\le150\\gamma.$$ If also $Q\\subset_\\gamma R$ and $\\gamma<1/101$, the same conclusion holds with $vRv^*=Q$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-amenable"
+  },
+  {
+   "claim_id": "claim-commutant-cb",
+   "exact_statement": "For every unital von Neumann algebra $A\\subseteq\\mathcal B(H)$ and $h\\in\\mathcal B(H)$, $$\\label{eq:commutant-cb}\n \\operatorname{dist}(h,A')\\le\\lVert\\operatorname{ad}_h|_A\\rVert_{\\mathrm{cb}}.$$ Consequently $d_{\\mathrm{cb}}(A,B)\\le\\gamma$ implies $d(A',B')\\le4\\gamma$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-commutant-cb"
+  },
+  {
+   "claim_id": "claim-close-representations",
+   "exact_statement": "Let $\\rho,\\theta:P\\to\\mathcal B(H)$ be normal unital $*$-representations of a von Neumann algebra. If $\\lVert\\rho-\\theta\\rVert_{\\mathrm{cb}}\\le e<1/4$, there is a unitary $u\\in\\mathcal B(H)$ with $$u\\rho(x)u^*=\\theta(x)\\quad(x\\in P),\\qquad \\lVert u-I\\rVert\\le4e.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-paired"
+  },
+  {
+   "claim_id": "claim-ucp-criterion",
+   "exact_statement": "Let $P,Q$ be von Neumann algebras, let $\\rho:P\\to\\mathcal B(H)$ be a faithful normal unital representation, and let $Q\\subseteq\\mathcal B(H)$ have the same identity. Suppose that $F:P\\to Q$ is UCP and $$\\lVert F-\\rho\\rVert_{\\mathrm{cb}}\\le e<10^{-3},\\qquad\n \\sup_{y\\in Q_1}\\operatorname{dist}(y,\\rho(P)_1)\\le g,\\qquad g+e<1.$$ Then there is a normal unital $*$-isomorphism $\\theta:P\\to Q$ and a unitary $u\\in\\mathcal B(H)$ such that $$\\lVert\\theta-\\rho\\rVert_{\\mathrm{cb}}\\le32e,\\qquad\n u\\rho(x)u^*=\\theta(x)\\ (x\\in P),\\qquad \\lVert u-I\\rVert\\le128e.$$ The map $F$ need not be normal.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-ucp"
+  },
+  {
+   "claim_id": "claim-tensor-gap",
+   "exact_statement": "Let $A,B\\subseteq\\mathcal B(H)$ be unital von Neumann algebras with $d_{\\mathrm{cb}}(A,B)\\le\\gamma$. If $K$ is separable, then $$d_{\\mathrm{cb}}(A\\mathbin{\\overline\\otimes}\\mathcal B(K),B\\mathbin{\\overline\\otimes}\\mathcal B(K))\\le\\gamma.$$ If $D\\subseteq\\mathcal B(K)$ is a von Neumann algebra whose commutant is the strong closure of increasing finite-dimensional unital algebras, then $$d_{\\mathrm{cb}}(A\\mathbin{\\overline\\otimes}D,B\\mathbin{\\overline\\otimes}D)\\le\\gamma.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-tensor-gap"
+  },
+  {
+   "claim_id": "claim-invariant-mean",
+   "exact_statement": "Let $G$ be a discrete amenable group and $m$ a left invariant mean on $\\ell^\\infty(G)$: thus $m$ is a positive unital linear functional with $m(f(h^{-1}\\,\\cdot))=m(f)$ for every $h\\in G$. For a bounded family $T_g\\in\\mathcal B(K)$, define $$\\langle (m_gT_g)\\xi,\\eta\\rangle=m_g\\langle T_g\\xi,\\eta\\rangle.$$ This averaging map from bounded operator families to $\\mathcal B(K)$ is UCP, commutes with multiplication on either side by a fixed operator, and preserves weak-operator closed linear subspaces. If $\\lVert T_g-T\\rVert\\le a$ for every $g$, then $\\lVert m_gT_g-T\\rVert\\le a$, also at rectangular matrix levels. No measurability of the family is required.*\n\n*For a unitary representation $g\\mapsto V_g$ on $K$, the map $$E_V(T)=m_gV_gTV_g^*\\qquad(T\\in\\mathcal B(K))$$ is a UCP projection onto $\\{V_g:g\\in G\\}'$. It preserves every von Neumann algebra invariant under these conjugations. More generally, for an action by automorphisms $\\alpha_g$ on a von Neumann algebra $P$, the formula $$\\varphi(E(x))=m_g\\varphi(\\alpha_g(x))\\qquad(\\varphi\\in P_*)$$ defines a UCP map onto $P^G$ fixing that algebra. These averaging maps need not be normal.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-invariant-mean"
+  },
+  {
+   "claim_id": "claim-uniform-amplification",
+   "exact_statement": "There is an absolute constant $C_{\\mathrm{amp}}$ such that, for every type $\\mathrm{II}_1$ factor $M\\subseteq\\mathcal B(H)$ on a separable Hilbert space and every selfadjoint $h\\in\\mathcal B(H)$, $$\\lVert\\operatorname{ad}_h|_M\\rVert_{\\mathrm{cb}}\\le\n C_{\\mathrm{amp}}\\lVert\\operatorname{ad}_h|_M\\rVert.$$ The constant is independent of $M$, its representation, and $H$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-amplification"
+  },
+  {
+   "claim_id": "claim-column-estimate",
+   "exact_statement": "Let $A\\subseteq\\mathcal B(H)$ be a unital $C^*$-algebra, let $h\\in\\mathcal B(H)$, and put $\\delta=\\lVert\\operatorname{ad}_h|_A\\rVert$. Then $$\\lVert([h,a_i])_i\\rVert_{\\mathrm{col}}\n \\le 8\\delta\\,\\lVert(a_i)_i\\rVert_{\\mathrm{col}}\n \\qquad(a_1,\\ldots,a_l\\in A).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-column-commutator"
+  },
+  {
+   "claim_id": "claim-trace-transfer",
+   "exact_statement": "Let $P\\subseteq\\mathcal B(K)$ be a finite von Neumann algebra with faithful normal trace $\\tau$.*\n\n1.  *If $(x_j)$ is bounded and $\\lim_{j\\to\\omega}\\lVert x_j\\rVert_2=0$, then $\\lim_{j\\to\\omega}\\lVert x_j\\xi\\rVert=0$ for every $\\xi\\in K$.*\n\n2.  *If $x=(x_j)_\\omega\\in P^\\omega$, then the weak-operator ultralimit of $x_j$ in this representation is $E_P(x)$, where $E_P:P^\\omega\\to P$ is the trace-preserving conditional expectation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-trace-transfer"
+  },
+  {
+   "claim_id": "claim-free-words",
+   "exact_statement": "For every integer $r\\geq 1$ there are constants $C_r>0$ and an integer $d_r\\geq r$ with the following property. Let $d\\geq d_r$, and let $(\\mathcal A,\\tau)$ be a von Neumann algebra with a faithful normal tracial state. Suppose that $A_1,\\ldots,A_r\\subset\\mathcal A$ are unital copies of $M_d(\\mathbb C)$ which are scalar free: the trace of a product of centered letters from successively different copies is zero. For each $j$, let $(e_a^{(j)})_{a=1}^d$ be the diagonal minimal projections of $A_j$.*\n\n\n*For a multiset $W$ of cardinality $r$ drawn from $\\{1,\\ldots,d\\}$, put $$B_W=\\sum_{\\substack{(a_1,\\ldots,a_r)\\in\\{1,\\ldots,d\\}^r\\\\\n                     \\text{with multiset }W}}\n       e_{a_r}^{(r)}\\cdots e_{a_1}^{(1)}.$$ Then $\\lVert B_W\\rVert\\leq\\beta_W$, where $$\\label{eq:fw-beta}\n \\beta_W=\n \\begin{cases}\n  7\\sqrt{(r-1)!}\\,d^{-(r-1)/2},\n       &\\text{if all labels in $W$ are distinct},\\\\\n  C_r d^{-(r-1)/2},&\\text{otherwise}.\n \\end{cases}$$ The constants and threshold depend only on $r$, not on the ambient algebra, the free copies, or $W$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-free-words"
+  },
+  {
+   "claim_id": "claim-through-label",
+   "exact_statement": "For every integer $N\\geq1$ there is an integer $d_0(N)$ such that, whenever $d\\geq d_0(N)$, the constants <a href=\"#eq:fw-beta\" data-reference-type=\"eqref\" data-reference=\"eq:fw-beta\">[eq:fw-beta]</a> satisfy $$\\label{eq:fw-through-label}\n \\max_{1\\leq a\\leq d}\n \\sum_{\\substack{W\\text{ a multiset from }\\{1,\\ldots,d\\}\\\\\n                 |W|=r,\\ a\\in W}}\n       \\beta_W^2\\leq64\n \\qquad(1\\leq r\\leq N).$$ Membership $a\\in W$ here means that $a$ occurs at least once; each multiset is counted once, regardless of that multiplicity. In particular, for free copies as in <a href=\"#lem:free-words\" data-reference-type=\"ref\" data-reference=\"lem:free-words\">11</a>, the norm bounds and <a href=\"#eq:fw-through-label\" data-reference-type=\"eqref\" data-reference=\"eq:fw-through-label\">[eq:fw-through-label]</a> hold simultaneously through length $N$ after choosing this one threshold for $d$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-through-label"
+  },
+  {
+   "claim_id": "claim-free-lifts",
+   "exact_statement": "Let $M\\subseteq\\mathcal B(H)$ be a separably acting $\\mathrm{II}_1$ factor, let $n\\geq1$, and put $P=M_n(M)$. For every free ultrafilter $\\omega$ there is a Haar unitary $s\\in P^\\omega$ such that $W^*(s)$ and the constant copy of $P$ are scalar free. Moreover, $s$ has unitary representatives $$s=(s_j)_\\omega,\\qquad\n s_j\\in\\mathcal U(M_n(R_j)),$$ where each $R_j\\subseteq M$ is a unital full matrix algebra. Consequently, for every $h=h^*\\in\\mathcal B(H)$, with $\\delta=\\lVert\\operatorname{ad}_h|_M\\rVert$ and $h_n=I_n\\otimes h$, these representatives satisfy $$\\label{eq:free-lift-commutator}\n \\lVert[h_n,s_j]\\rVert\\leq2\\delta\\qquad(j\\geq1).$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-free-lifts"
+  },
+  {
+   "claim_id": "claim-haar-twist",
+   "exact_statement": "Let $(F,\\tau)$ be a finite tracial von Neumann algebra, let $P\\subseteq F$ be a unital von Neumann subalgebra, and let $s\\in F$ be Haar and scalar free from $P$. For every $U\\in\\mathcal U(P)$, both $sU$ and $Us$ are Haar and scalar free from $P$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-haar-twist"
+  },
+  {
+   "claim_id": "claim-boundary-mean",
+   "exact_statement": "For every countable group $G$ there are a standard probability space $(D,\\nu)$ with a nonsingular $G$-action and a positive unital contraction $$m:L^\\infty(G\\times D)\\longrightarrow L^\\infty(D)$$ satisfying $$\\label{eq:boundary-mean-identities}\n m(\\lambda_g F)=\\alpha_g(mF),\\qquad m(fF)=f\\,m(F)\n \\quad(f\\in L^\\infty(D)).$$ There is a mean $m^{(2)}$ with the same properties for the separate $G\\times G$-action on $D\\times D$ and functions on $G^2\\times D^2$. Each mean extends to a contraction on bounded operator fields on any separable $K$. The extension preserves adjoints and von Neumann algebra values, and is a bimodule map over bounded operator fields independent of the group variable: $$\\label{eq:boundary-operator-module}\n m(BFC)=B\\,m(F)\\,C.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-boundary-mean"
+  },
+  {
+   "claim_id": "claim-boundary-correction",
+   "exact_statement": "Let $D$ and $m$ be as in [lem:boundary-mean](#lem:boundary-mean), and let $A\\subset\\mathcal B(K)$ be a von Neumann algebra on a separable Hilbert space. Suppose $V_g\\in L^\\infty(D,\\mathcal U(A))$, $g\\in G$, and $$e=\\sup_{g,h\\in G}\\lVert V_g\\alpha_g(V_h)-V_{gh}\\rVert_\\infty\n \\le\\frac1{64}.$$ Then there are measurable unitary fields $W_g$ with $$\\label{eq:boundary-exact-cocycle}\n W_g\\alpha_g(W_h)=W_{gh},\\qquad\n \\sup_g\\lVert W_g-V_g\\rVert_\\infty\\le 2e.$$ In particular $W_1=I$. The identities hold simultaneously almost everywhere for every $g,h$, and may be used on a $G$-invariant conull subset of $D$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-boundary-correction"
+  },
+  {
+   "claim_id": "claim-boundary-intertwiner",
+   "exact_statement": "Take either $(\\Gamma,Z)=(G,D)$ or $(\\Gamma,Z)=(G^2,D^2)$, with its mean from [lem:boundary-mean](#lem:boundary-mean). Let $U:\\Gamma\\to\\mathcal U(K)$ be a unitary representation on a separable Hilbert space, and let $\\Sigma_s\\in L^\\infty(Z,\\mathcal U(K))$ be an exact cocycle for the given action. If $$\\sup_{s\\in\\Gamma}\\lVert\\Sigma_s-U_s\\rVert_\\infty\\le\\delta<1,$$ there is $L\\in L^\\infty(Z,\\mathcal U(K))$ such that $$\\label{eq:boundary-intertwiner}\n \\lVert L-I\\rVert_\\infty\\le2\\delta,\\qquad\n L(z)U_s=\\Sigma_s(z)L(s^{-1}z).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-boundary-intertwiner"
+  },
+  {
+   "claim_id": "claim-boundary-diagonal-unitary",
+   "exact_statement": "Let $A$ be a finite von Neumann algebra with faithful normal tracial state $\\tau$ and separable trace Hilbert space $L^2(A,\\tau)$. Let $W_g\\in L^\\infty(D,\\mathcal U(A))$ be an exact cocycle. Suppose $$\\sup_{g\\in G}\\mathop{\\rm ess\\,sup}_{x,y\\in D}\n \\lVert W_g(x)W_g(y)^*-I\\rVert\\le r<1.$$ Then there is a measurable field $a:D^2\\to\\mathcal U(A)$ such that $$\\label{eq:boundary-diagonal-unitary}\n \\lVert a-I\\rVert_\\infty\\le2r,\\qquad\n a(x,y)=W_g(x)a(g^{-1}x,g^{-1}y)W_g(y)^*.$$ In particular, if $\\sup_g\\lVert W_g-u_g\\rVert_\\infty\\le\\delta$ for any constant unitaries $u_g$ on a common representation space, the conclusion holds with $\\lVert a-I\\rVert_\\infty\\le4\\delta$ when $2\\delta<1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-boundary-diagonal-unitary"
+  },
+  {
+   "claim_id": "claim-double-ergodicity",
+   "exact_statement": "For the space $D$ constructed in [lem:boundary-mean](#lem:boundary-mean), let $\\sigma:G\\to\\mathcal U(K)$ be a unitary representation on a separable Hilbert space. If a bounded measurable map $f_0:D^2\\to K$ satisfies $$f_0(gx,gy)=\\sigma(g)f_0(x,y)\\quad(g\\in G)$$ almost everywhere, then $f_0$ is almost everywhere a constant vector fixed by every $\\sigma(g)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-double-ergodicity"
+  },
+  {
+   "claim_id": "claim-finite-factors",
+   "exact_statement": "There are a number $t_{\\mathrm{fin}}>0$ and a nondecreasing function $\\eta_{\\mathrm{fin}}:(0,t_{\\mathrm{fin}})\\to(0,\\infty)$, with $\\eta_{\\mathrm{fin}}(t)\\to0$ as $t\\downarrow0$, having the following property. Let $H$ be a separable nonzero Hilbert space, let $M\\subseteq\\mathcal B(H)$ be a unital finite factor, and let $N\\subseteq\\mathcal B(H)$ be a von Neumann algebra with the same identity. If $d(M,N)<t<t_{\\mathrm{fin}}$, then $N$ is a finite factor and there is a unitary $u\\in\\mathcal B(H)$ such that $$uMu^*=N,\\qquad \\lVert u-I_H\\rVert\\le\\eta_{\\mathrm{fin}}(t).$$ The threshold and function are independent of $M,N$ and their representations.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-finite"
+  },
+  {
+   "claim_id": "claim-finite-neighbor",
+   "exact_statement": "If $M\\subseteq\\mathcal B(H)$ is a unital finite factor and $N\\subseteq\\mathcal B(H)$ is a von Neumann algebra with $d(M,N)<1/10$, then $N$ is a finite factor.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-finite-neighbor"
+  },
+  {
+   "claim_id": "claim-irreducible-hyperfinite",
+   "exact_statement": "Every separable-predual $\\mathrm{II}_1$ factor $M$ contains an irreducible unital hyperfinite $\\mathrm{II}_1$ subfactor $R$. One can write $R=(\\bigcup_j Q_j)''$, where $Q_j$ are increasing unital full matrix algebras and their sizes tend to infinity.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-irreducible-hyperfinite"
+  },
+  {
+   "claim_id": "claim-common-position",
+   "exact_statement": "Let $M,N$ be separable-predual $\\mathrm{II}_1$ factors acting nondegenerately on one Hilbert space, with mutual strict $g$-near inclusions, where $0<g<1.74\\cdot10^{-13}$. Suppose that an amenable von Neumann subalgebra $R\\subseteq M\\cap N$ satisfies $R'\\cap M\\subseteq R$. There are faithful normal representations $\\pi:M\\to\\mathcal B(K)$ and $\\rho:N\\to\\mathcal B(K)$, a common unit vector $\\Omega$, and a number $\\beta<50948\\sqrt g$ such that:*\n\n1.  *both images are in standard tracial position with vector $\\Omega$;*\n\n2.  *$\\pi|_R=\\rho|_R$, and the images have mutual strict $\\beta$-near inclusions;*\n\n3.  *for original contractions $x\\in M$, $y\\in N$, $$\\lVert\\pi(x)-\\rho(y)\\rVert\\le\\beta+\\lVert x-y\\rVert;$$*\n\n4.  *if $e_R$ is the projection onto $\\overline{\\pi(R)\\Omega}$, then $(\\pi(M)\\cup\\{e_R\\})''=(\\rho(N)\\cup\\{e_R\\})''$.*\n\n*The space $K$ can be taken separable.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-finite-common-position"
+  },
+  {
+   "claim_id": "claim-finite-right-action",
+   "exact_statement": "In the setting of [prop:finite-common-position](#prop:finite-common-position), the right actions of $R$ agree elementwise: $$J_M rJ_M=J_N rJ_N\\qquad(r\\in R).$$ In particular $T=J_NJ_M-I$ commutes with the left and right actions of $R$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-finite-right-action"
+  },
+  {
+   "claim_id": "claim-finite-ball-tests",
+   "exact_statement": "Let $M$ be a $\\mathrm{II}_1$ factor and let $R=(\\bigcup_jQ_j)''\\subseteq M$ be as in [lem:irreducible-hyperfinite](#lem:irreducible-hyperfinite). If a bounded operator $V$ on $L^2(M,\\tau)$ commutes with left and right multiplication by $R$, then $$\\lVert V\\rVert\\le384\\sup_{a,b\\in M_1}\n       \\lvert\\langle Va\\Omega,b\\Omega\\rangle\\rvert.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-finite-ball-tests"
+  },
+  {
+   "claim_id": "claim-tracial-conjugations",
+   "exact_statement": "Let $M,N\\subseteq\\mathcal B(K)$ be $\\mathrm{II}_1$ factors in common standard tracial position with vector $\\Omega$. Suppose that $R\\subseteq M\\cap N$ is an irreducible hyperfinite subfactor of $M$, presented by increasing matrix algebras, and that its right actions agree. If $d(M,N)<b$, then $$\\lVert J_M-J_N\\rVert\\le C_Jb,\\qquad C_J=768.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-tracial-conjugations"
+  },
+  {
+   "claim_id": "claim-jordan-orientation",
+   "exact_statement": "A surjective linear Jordan homomorphism between unital complex algebras, whose target is a factor von Neumann algebra, is either a homomorphism or an antihomomorphism.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-jordan-orientation"
+  },
+  {
+   "claim_id": "claim-finite-standard-isomorphism",
+   "exact_statement": "There are absolute constants $b_0>0$ and $C_{\\mathrm{st}}>0$ such that the following holds. Let $M,N\\subseteq\\mathcal B(K)$ be type $\\mathrm{II}_1$ factors on a separable Hilbert space in common standard tracial position with vector $\\Omega$. Suppose they contain a common hyperfinite $\\mathrm{II}_1$ subfactor $R$, irreducible in $M$ and generated by increasing matrix algebras, and that $J_MrJ_M=J_NrJ_N$ for every $r\\in R$. If $d(M,N)<b<b_0$, then there is a normal unital star-isomorphism $\\vartheta:M\\to N$ satisfying $$\\sup_{x\\in M_1}\\lVert\\vartheta(x)-x\\rVert\\le C_{\\mathrm{st}}b.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-finite-standard-isomorphism"
+  },
+  {
+   "claim_id": "claim-common-infinite-amplification",
+   "exact_statement": "Let $M,N\\subseteq\\mathcal B(H)$ contain the same unital copy of $\\mathcal B(\\ell^2)$. Then $d_{\\mathrm{cb}}(M,N)=d(M,N)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-common-infinite-amplification"
+  },
+  {
+   "claim_id": "claim-fixed-tensor-factor",
+   "exact_statement": "One has $D_\\rho'\\cap D=\\mathbb C1$. If $A$ is any factor with separable predual, then $A\\mathbin{\\overline\\otimes}D$ is a type $\\mathrm{III}_1$ factor and $$A\\mathbin{\\overline\\otimes}D\\cong(A\\mathbin{\\overline\\otimes}D)\\mathbin{\\overline\\otimes}R_\\lambda,$$ where $R_\\lambda$ is the Powers factor obtained using only $(M_2(\\mathbb C),\\rho_\\lambda)$ sites.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-fixed-tensor-factor"
+  },
+  {
+   "claim_id": "claim-prepared-pair-existence",
+   "exact_statement": "There are absolute constants $c,C>0$ with the following property. Suppose $M_0,N_0\\subseteq\\mathcal B(H)$ are factors on a separable Hilbert space, $M_0$ is infinite, and $d(M_0,N_0)<t<c$. For the fixed $D\\subseteq\\mathcal B(K)$ above, there are unitaries $u_0\\in\\mathcal B(H)$ and $v\\in\\mathcal B(H\\otimes K)$ satisfying $$\\lVert u_0-1\\rVert+\\lVert v-1\\rVert\\leq Ct$$ such that $$M=M_0\\mathbin{\\overline\\otimes}D,\\qquad\n N=v\\bigl((u_0N_0u_0^*)\\mathbin{\\overline\\otimes}D\\bigr)v^*$$ form a prepared pair and $d_{\\mathrm{cb}}(M,N)\\leq Ct$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-prepared-pair"
+  },
+  {
+   "claim_id": "claim-modular-graphs",
+   "exact_statement": "There is an absolute constant $C$ such that every prepared pair with $d_{\\mathrm{cb}}(M,N)\\leq\\gamma$ satisfies $$\\sup_{c>0}\\lVert E_c^M-E_c^N\\rVert\\leq C\\gamma.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-modular-graphs"
+  },
+  {
+   "claim_id": "claim-modular-cuts",
+   "exact_statement": "For a prepared pair with $d_{\\mathrm{cb}}(M,N)\\leq\\gamma$, put $L_P=\\log\\Delta_P$, $P=M,N$. There is an absolute constant $C$ such that, for every $a\\in\\mathbb R$, $$\\lVert 1_{(-\\infty,a-1/2]}(L_N)\n        1_{[a+1/2,\\infty)}(L_M)\\rVert\\leq C\\gamma.$$ The same estimate holds with $M,N$ interchanged.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-modular-cuts"
+  },
+  {
+   "claim_id": "claim-modular-alignment",
+   "exact_statement": "There are absolute constants $c_{\\rm mod},C_{\\rm mod}>0$ with the following property. Let $(M,N,\\Omega,R)$ be a prepared pair as in [def:prepared-pair](#def:prepared-pair), acting on the same separable Hilbert space $H$, and suppose that $d_{\\mathrm{cb}}(M,N)<\\gamma<c_{\\rm mod}$. There is a unitary $q\\in\\mathcal B(H)$ such that $$\\lVert q-I\\rVert\\le C_{\\rm mod}\\gamma,\n \\qquad d_{\\mathrm{cb}}(qMq^*,N)\\le C_{\\rm mod}\\gamma,\n \\qquad\n \\Delta_N^{it}(qMq^*)\\Delta_N^{-it}=qMq^*\n \\quad(t\\in\\mathbb R).$$ The algebra $N$ and its modular group are unchanged.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-modular-alignment"
+  },
+  {
+   "claim_id": "claim-infinite-commutant-bound",
+   "exact_statement": "For a separably acting properly infinite von Neumann algebra $P\\subset\\mathcal B(H)$ and $h=h^*\\in\\mathcal B(H)$, $$\\operatorname{dist}(h,P')\\le4\\lVert\\operatorname{ad}_h|_P\\rVert.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-infinite-commutant-bound"
+  },
+  {
+   "claim_id": "claim-normalizer-linear",
+   "exact_statement": "There is an absolute $K<\\infty$ such that every separably acting type $\\mathrm{III}$ factor $P\\subset\\mathcal B(H)$ and every self-adjoint $h\\in\\mathcal B(H)$ satisfy $$\\operatorname{dist}(h,P+P')\n \\le K\\sup_{x\\in P_1}\\operatorname{dist}([h,x],P).\n \\label{eq:normalizer-linear-bound}$$ The sum $P+P'$ here is a linear subspace; no closedness assertion about that sum is needed.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-local-normalizer-linear"
+  },
+  {
+   "claim_id": "claim-normalizer-path",
+   "exact_statement": "There are absolute constants $e_0,C_{\\rm path}>0$ such that the following holds. Let $P\\subset\\mathcal B(H)$ be a separably acting type $\\mathrm{III}$ factor, let $I\\subset\\mathbb R$ be an interval containing $0$, and let $v:I\\to\\mathcal U(\\mathcal B(H))$ be norm continuous with $v(0)=I$. If $0\\le e<e_0$ and $$\\sup_{t\\in I}\\sup_{x\\in P_1}\\operatorname{dist}(v(t)xv(t)^*,P)\\le e,$$ then $$\\sup_{t\\in I}\\operatorname{dist}(v(t),\\mathcal G_P)\\le C_{\\rm path}e.$$ The constants are independent of the interval’s length.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-local-normalizer-path"
+  },
+  {
+   "claim_id": "claim-analytic-multiplier",
+   "exact_statement": "Suppose multiplication by a bounded field $B(t)$ on $L^2(\\mathbb R,H)$ preserves $P_0\\mathcal K$. Then it is the boundary field of a bounded, operator-norm holomorphic function on the upper half-plane, given by $$\\label{eq:analytic-poisson}\n B(t+ir)=\\int_\\mathbb R\\frac{r}{\\pi((t-s)^2+r^2)}B(s)\\,ds,\n \\qquad r>0.$$ Its norm is at most $\\mathop{\\rm ess\\,sup}_s\\lVert B(s)\\rVert$. For two such fields, and any constant $x\\in\\mathcal B(H)$, the extension of the boundary product $B(s)xS(s)$ is $B(z)xS(z)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-analytic-multiplier"
+  },
+  {
+   "claim_id": "claim-modular-near-normalizers",
+   "exact_statement": "Let $M,N\\subseteq\\mathcal B(H)$ be a prepared pair on a separable Hilbert space, with $M$ of type $\\mathrm{III}$ and $d_{\\mathrm{cb}}(M,N)\\leq\\gamma$. Write $$U_P(t)=e^{itL_P},\\qquad L_P=\\log\\Delta_P\\quad(P=M,N),\n \\qquad W(t)=U_N(t)U_M(t)^*.$$ Assume the separated-cut estimate of [cor:modular-cuts](#cor:modular-cuts), with its universal constant, and the local path estimate of [lem:local-normalizer-path](#lem:local-normalizer-path). There are universal constants $\\gamma_0>0$ and $C$ such that, if $0<\\gamma<\\gamma_0$, then for every $t\\in\\mathbb R$ there is a unitary $n_t$ satisfying $$n_tMn_t^*=M,\\qquad \\lVert n_t-W(t)\\rVert\\leq C\\gamma.$$ No regularity of the choices $t\\mapsto n_t$ is asserted or needed.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-modular-near-normalizers"
+  },
+  {
+   "claim_id": "claim-small-exact-normalizer",
+   "exact_statement": "There are absolute $r_0,C_0>0$ such that, if $P$ is a separably acting type $\\mathrm{III}$ factor, $v\\in\\mathcal N_P$, and $\\lVert v-I\\rVert<r_0$, then $$v=ab',\\qquad a\\in\\mathcal U(P),\\quad b'\\in\\mathcal U(P'),\n \\qquad \\lVert a-I\\rVert+\\lVert b'-I\\rVert\\le C_0\\lVert v-I\\rVert.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-small-exact-normalizer"
+  },
+  {
+   "claim_id": "claim-normalizer-representation-correction",
+   "exact_statement": "There are absolute $e_1,C_1>0$ such that the following holds. Let $P\\subset\\mathcal B(H)$ be a separably acting type $\\mathrm{III}$ factor. For any family $v_t\\in\\mathcal N_P$, $t\\in\\mathbb R$, with $$e:=\\sup_{t,s\\in\\mathbb R}\\lVert v_tv_s-v_{t+s}\\rVert<e_1,$$ there is an exact unitary representation $z:\\mathbb R\\to\\mathcal N_P$ of the discrete group with $$\\sup_t\\lVert z_t-v_t\\rVert\\le C_1e.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-normalizer-representation-correction"
+  },
+  {
+   "claim_id": "claim-core-fixed-points",
+   "exact_statement": "With this notation, $$\\label{eq:core-fixed-description}\n C(P,U)=\n \\bigl(P\\mathbin{\\overline\\otimes}\\mathcal B(L^2(\\mathbb R))\\bigr)^\\alpha,\n \\qquad\n \\alpha_s=\\operatorname{Ad}(U_s\\otimes\\rho_s).$$ For $(Q_a\\xi)(t)=e^{iat}\\xi(t)$, character conjugation $\\beta_a=\\operatorname{Ad}(Q_a)$ preserves $C(P,U)$, and $$\\label{eq:core-character-fixed}\n C(P,U)^\\beta=\\pi(P).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-core-fixed-points"
+  },
+  {
+   "claim_id": "claim-core-gap",
+   "exact_statement": "Let $P,Q\\subseteq\\mathcal B(H)$ be normalized by the same group $U$. If $d_{\\mathrm{cb}}(P,Q)<\\gamma$, then $$d_{\\mathrm{cb}}(C(P,U),C(Q,U))\\le\\gamma.$$ The conclusion holds with any strict upper bound in place of $\\gamma$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-core-gap"
+  },
+  {
+   "claim_id": "claim-core-descent",
+   "exact_statement": "There are an absolute $\\gamma_0>0$ and a nondecreasing function $\\zeta:(0,\\gamma_0)\\to(0,\\infty)$, with $\\zeta(\\gamma)\\to0$ as $\\gamma\\downarrow0$, with the following property. Suppose $P,Q\\subseteq\\mathcal B(H)$ are unital von Neumann algebras on a separable Hilbert space, $d_{\\mathrm{cb}}(P,Q)<\\gamma<\\gamma_0$, and a strongly continuous unitary group $U$ normalizes both. If $C(Q,U)$ is a type $\\mathrm{II}_\\infty$ factor, then a unitary $a\\in\\mathcal B(H)$ satisfies $$aPa^*=Q,\\qquad \\lVert a-I\\rVert\\le\\zeta(\\gamma).$$ No factoriality or modular interpretation of $C(P,U)$ is assumed.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-core-descent"
+  },
+  {
+   "claim_id": "claim-separable-factors",
+   "exact_statement": "There are an absolute $t_{\\rm fac}>0$ and a nondecreasing function $\\eta_{\\rm fac}:(0,t_{\\rm fac})\\to(0,\\infty)$ with $\\eta_{\\rm fac}(t)\\to0$ as $t\\downarrow0$ such that the following holds. For every separable complex Hilbert space $H$ and every pair of unital factors $M_0,N_0\\subseteq\\mathcal B(H)$ with the same identity and $d(M_0,N_0)<t<t_{\\rm fac}$, there is a unitary $u\\in\\mathcal B(H)$ with $$uM_0u^*=N_0,\\qquad \\lVert u-I_H\\rVert\\le\\eta_{\\rm fac}(t).$$ The function and the threshold are independent of the factors, their types, and their representations.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-factors"
+  },
+  {
+   "claim_id": "claim-centers-close",
+   "exact_statement": "For unital von Neumann algebras $M,N\\subseteq\\mathcal B(H)$, $$d\\bigl(Z(M),Z(N)\\bigr)\\leq 3d(M,N).$$ Consequently, whenever $d(M,N)<g<1/303$, there is a unitary $w\\in\\mathcal B(H)$ such that $$wZ(M)w^*=Z(N),\\qquad \\lVert w-I\\rVert\\leq450g.$$ For $N_0=w^*Nw$ one then has $Z(N_0)=Z(M)$ and $d(M,N_0)<901g$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-centers-close"
+  },
+  {
+   "claim_id": "claim-fiber-gap",
+   "exact_statement": "Let $M,N\\subseteq\\mathcal B(H)$ act on a separable Hilbert space and have the same center. In their common central decomposition, $$d(M_t,N_t)\\leq d(M,N)\n \\quad\\text{for almost every }t.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-fiber-gap"
+  },
+  {
+   "claim_id": "claim-measurable-implementers",
+   "exact_statement": "In the setting of [lem:fiber-gap](#lem:fiber-gap), suppose that for some $a>0$ and almost every $t$ there is a unitary $v_t\\in\\mathcal B(H_t)$ satisfying $$v_t M_t v_t^*=N_t,\\qquad\\lVert v_t-I\\rVert<a.$$ Then there is a unitary $v\\in\\mathcal B(H)$ such that $vMv^*=N$ and $\\lVert v-I\\rVert\\leq a$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-measurable-implementers"
+  },
+  {
+   "claim_id": "claim-separable-algebras",
+   "exact_statement": "For every $a>0$ there is $\\delta_{\\mathrm{sep}}(a)>0$ such that whenever $M,N$ are unital von Neumann algebras on a separable Hilbert space and $d(M,N)<\\delta_{\\mathrm{sep}}(a)$, there is a unitary $u$ with $$uMu^*=N,\\qquad \\lVert u-I\\rVert<a.$$ The tolerance is independent of the algebras and the representation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-separable-algebras"
+  },
+  {
+   "claim_id": "claim-separable-tests",
+   "exact_statement": "Let $M,N\\subseteq\\mathcal B(H)$ be unital von Neumann algebras, and let $g>d(M,N)$. Given finite sets $E\\subseteq M$, $F\\subseteq N$, and $V\\subseteq H$ with $V$ containing a nonzero vector, there are separable unital $C^*$-subalgebras $A\\subseteq M$, $B\\subseteq N$ and a nonzero separable closed subspace $K\\subseteq H$ such that:*\n\n1.  *$E\\subseteq A$, $F\\subseteq B$, and $V\\subseteq K$;*\n\n2.  *$K$ reduces both $A$ and $B$;*\n\n3.  *$d(A,B)<g$ and $$d\\bigl((A|_K)'',(B|_K)''\\bigr)<g.$$*\n\n*Here the restriction homomorphisms are not required to be faithful.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-separable-tests"
+  },
+  {
+   "claim_id": "claim-uniform-matrix-commutant",
+   "exact_statement": "For every $\\varepsilon>0$ there is $\\delta>0$, independent of the algebras, their representations, and their Hilbert spaces, such that unital von Neumann algebras $M,N\\subseteq\\mathcal B(H)$ with the same identity and $d(M,N)<\\delta$ satisfy $$d_{\\mathrm{cb}}(M,N)<\\varepsilon,\\qquad d(M',N')<\\varepsilon.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-uniform-matrix-commutant"
+  }
+ ],
+ "paper": "papers/EN-116-000-0000-2-2026-PR-T4-UK-EX-M3-B-TO-H-0597_PM-289.1_Universal_strong_KadisonKastler_stability.md",
+ "purpose": "Universal strong Kadison–Kastler stability",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "50ec63083d3fdfb16157a7263b037fda8e4c4a355a8b964fc6deb7696743e988",
+   "pm.domains.v2": "86f5dcdbee940ffcd1e26f0dd2e79789ce528f6866593338157ff7614bbc7a46",
+   "pm.edges.v2": "556fb118198bbb8efd2edad4419e3ff1f689888f4145f1a1cdff1a6ecce0c89e",
+   "pm.extraction.v2": "99c2a1cf132393cc208833e3d6a201d28e6318c09d40027a3b3d88fb38b56fe9",
+   "pm.formal.v2": "8644ee31429c73ae73d1edeb602740ef76f168a3ec337637f606c0fe63c2b68e",
+   "pm.limits.v2": "07362a2bcd6bdd5f2efe0a6fd19ea83508d78dcbb43556a131a2f64706f37722",
+   "pm.node.v2": "aa96bd8090b7d4f3e2ed309e195655101312536f950b14b64f6bc0ea7f5cebe5",
+   "pm.objects.v2": "fcc4a96f96a3808b302d8e7c3797eea61c3c4c8a992e43711fe610159b53d896",
+   "pm.provenance.v2": "03918b7fb44d1ef3d7a70c4438a351927b6428bf48d223bc801545c1c6b21f41",
+   "pm.quantities.v2": "41df746a43f3578332d218d6c30bf24e598e2a732183b4f9f07212d59fd3d04c",
+   "pm.reading.v2": "d768add0ea1eecd47e1b0696a8d36c7b8051b2602ec556dfd239706a2936fa6c",
+   "pm.roadmap.v2": "1db3ddf524a483be910942b5e6d82e967739dead1930be6da52cdfe52cd39bee",
+   "pm.search.v1": "03a59cf83698ee76c9938a37e9e0b69373e588a65ce9e09ae1265b66554417ba",
+   "pm.triptych.v2": "b988bc6ae50586926b6d632db693824aadf9b12fd786f7ae434ec0bf58ed2df2"
+  },
+  "canonical_sha256": "c2f4f33ee1aa6e302b85b6c10cd5c42d543405f2709c8de1580b5b0ad5910822",
+  "paper_sha256": "27b2d3c0c25de60df072b202a484470b50b58748d8b1356b8d8bf8a5eb745987",
+  "repaired_body_sha256": "66e1eb08d5681f403e22efa32e811c0de9a6cec0528b106a60feeef43fc5b486"
+ },
+ "status": "ACTIVE",
+ "subject_id": 16,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "5d06346458d2124b4868df3f8e398e3c91adbb202504c61c7ce5646ccd785804",
+   "receipt_sha256": "bbb82e3ebc2eb97e235d45147586ac71958e5f3a2ba6b9c2c218d96579242de3",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Universal strong Kadison–Kastler stability"
+}

@@ -1,0 +1,304 @@
+{
+ "type": "object",
+ "properties": {
+  "schema": {
+   "const": "pm.extraction.v2"
+  },
+  "pm_id": {
+   "type": "string",
+   "pattern": "^PM-[0-9]{3}\\.[1-9][0-9]*$"
+  },
+  "generation_status": {
+   "type": "string",
+   "enum": [
+    "ASSEMBLED"
+   ]
+  },
+  "citation_occurrences": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "source_marker": {
+      "type": "string",
+      "minLength": 1
+     },
+     "cite_keys": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      },
+      "minItems": 1
+     },
+     "target_anchors": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      },
+      "minItems": 1
+     },
+     "rendered_anchor": {
+      "type": "string",
+      "minLength": 1
+     },
+     "source_evidence": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "anchor": {
+         "type": "string",
+         "minLength": 1
+        },
+        "exact_quote": {
+         "type": "string",
+         "minLength": 1
+        },
+        "source_object": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "required": [
+        "anchor",
+        "exact_quote",
+        "source_object"
+       ],
+       "additionalProperties": false
+      },
+      "minItems": 1
+     }
+    },
+    "required": [
+     "source_marker",
+     "cite_keys",
+     "target_anchors",
+     "rendered_anchor",
+     "source_evidence"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "bibliography": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "key": {
+      "type": "string",
+      "minLength": 1
+     },
+     "full_entry": {
+      "type": "string",
+      "minLength": 1
+     },
+     "anchor": {
+      "type": "string",
+      "minLength": 1
+     },
+     "cited": {
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "key",
+     "full_entry",
+     "anchor",
+     "cited"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "labels": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "source_label": {
+      "type": "string",
+      "minLength": 1
+     },
+     "target_anchor": {
+      "type": "string",
+      "minLength": 1
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "section",
+       "statement",
+       "equation",
+       "figure",
+       "table",
+       "appendix",
+       "other"
+      ]
+     }
+    },
+    "required": [
+     "source_label",
+     "target_anchor",
+     "kind"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "figures": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "figure_id": {
+      "type": "string",
+      "minLength": 1
+     },
+     "caption": {
+      "type": "string",
+      "minLength": 1
+     },
+     "witness_description": {
+      "type": "string",
+      "minLength": 1
+     },
+     "source_kind": {
+      "type": "string",
+      "enum": [
+       "tikz_pgf",
+       "other"
+      ]
+     },
+     "tikz_pgf_source": {
+      "anyOf": [
+       {
+        "type": "string",
+        "minLength": 1
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "pdf_page": {
+      "anyOf": [
+       {
+        "type": "integer",
+        "minimum": 1
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "source_evidence": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "anchor": {
+         "type": "string",
+         "minLength": 1
+        },
+        "exact_quote": {
+         "type": "string",
+         "minLength": 1
+        },
+        "source_object": {
+         "type": "string",
+         "minLength": 1
+        }
+       },
+       "required": [
+        "anchor",
+        "exact_quote",
+        "source_object"
+       ],
+       "additionalProperties": false
+      },
+      "minItems": 1
+     }
+    },
+    "required": [
+     "figure_id",
+     "caption",
+     "witness_description",
+     "source_kind",
+     "tikz_pgf_source",
+     "pdf_page",
+     "source_evidence"
+    ],
+    "additionalProperties": false
+   }
+  },
+  "unresolved": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "kind": {
+      "type": "string",
+      "enum": [
+       "citation",
+       "bibliography",
+       "label",
+       "figure",
+       "table",
+       "code",
+       "appendix"
+      ]
+     },
+     "source_object": {
+      "type": "string",
+      "minLength": 1
+     },
+     "reason": {
+      "type": "string",
+      "minLength": 1
+     },
+     "labels": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     },
+     "limitation": {
+      "type": "string",
+      "minLength": 1
+     },
+     "reason_code": {
+      "type": "string",
+      "minLength": 1
+     },
+     "cite_keys": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "minLength": 1
+      }
+     }
+    },
+    "required": [
+     "kind",
+     "source_object",
+     "reason"
+    ],
+    "additionalProperties": false
+   }
+  }
+ },
+ "required": [
+  "schema",
+  "pm_id",
+  "generation_status",
+  "citation_occurrences",
+  "bibliography",
+  "labels",
+  "figures",
+  "unresolved"
+ ],
+ "additionalProperties": false,
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "pm.extraction.v2"
+}

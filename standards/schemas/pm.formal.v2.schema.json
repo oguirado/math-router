@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pm.formal.v2",
+  "title": "Formal statement (Lean 4) block",
+  "description": "Inline Lean 4 formal statements copied verbatim from the source corpus comparator challenge. corpus_claim records the corpus status only; our own re-check, if any, is recorded separately in our_check.",
+  "type": "object",
+  "properties": {
+    "schema": {"const": "pm.formal.v2"},
+    "pm_id": {"type": "string", "pattern": "^PM-[0-9]{3}\\.[0-9]+$"},
+    "generation_status": {"type": "string", "enum": ["ASSEMBLED", "COMPLETE"]},
+    "status": {"type": "string", "enum": ["none", "present"]},
+    "reason": {"type": "string"},
+    "toolchain": {"const": "leanprover/lean4:v4.34.1"},
+    "mathlib": {"const": "d13f23b723b8a846827a245b89c10fc7d3f11612"},
+    "scope": {
+      "type": "object",
+      "properties": {
+        "family": {"type": "string", "pattern": "^[0-9]{3}$"},
+        "doc": {"type": "string", "pattern": "^lean/docs/[0-9]{3}\\.md$"},
+        "text": {"type": "string", "minLength": 1}
+      },
+      "required": ["family", "doc", "text"],
+      "additionalProperties": false
+    },
+    "declarations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "kind": {"type": "string", "enum": ["theorem", "lemma", "def", "abbrev", "structure", "class", "inductive", "instance", "axiom", "opaque", "example"]},
+          "statement_lean": {"type": "string", "minLength": 1},
+          "docstring": {"type": ["string", "null"]}
+        },
+        "required": ["name", "kind", "statement_lean", "docstring"],
+        "additionalProperties": false
+      }
+    },
+    "comparator_json": {"type": "object"},
+    "corpus_claim": {"const": "formalized in the source corpus"},
+    "lean_file": {
+      "type": "object",
+      "properties": {
+        "name": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+\\.lean$"},
+        "bytes": {"type": "integer", "minimum": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      },
+      "required": ["name", "bytes", "sha256"],
+      "additionalProperties": false
+    },
+    "inline": {
+      "type": "object",
+      "properties": {
+        "mode": {"type": "string", "enum": ["full", "statements_only"]},
+        "omitted_bytes": {"type": "integer", "minimum": 0}
+      },
+      "required": ["mode", "omitted_bytes"],
+      "additionalProperties": false
+    },
+    "bytes": {"type": "integer", "minimum": 0},
+    "our_check": {
+      "type": "object",
+      "properties": {
+        "tier": {"const": 3},
+        "status": {"type": "string", "enum": ["CERTIFIED_TRUE", "CERTIFIED_FALSE", "INCONCLUSIVE", "ERROR"]},
+        "receipt_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      },
+      "required": ["tier", "status", "receipt_sha256"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["schema", "pm_id", "generation_status", "status"],
+  "additionalProperties": false,
+  "if": {"properties": {"status": {"const": "present"}}},
+  "then": {"required": ["toolchain", "mathlib", "scope", "declarations", "comparator_json", "corpus_claim", "lean_file", "inline", "bytes"]},
+  "else": {"properties": {"declarations": false, "lean_file": false, "inline": false, "comparator_json": false, "scope": false, "our_check": false, "corpus_claim": false}}
+}

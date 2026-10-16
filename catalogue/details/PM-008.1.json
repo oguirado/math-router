@@ -1,0 +1,518 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 443958,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 134567
+ },
+ "coordinate": "EN-101-000-0000-2-2026-PR-T4-UK-EX-M1-B-AL-H-0022",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "formal mathematics",
+   "strength": "moderate",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "sec:algebra",
+     "quote": "No identification of $\\overline L_n$ with the full solution space of equations written over ${\\mathbb F_2}$ is asserted or needed.",
+     "quote_sha256": "8f041fe3c3894a6a2795ff31ddc34c65c9eae6f55b8f00fa797d24c201221fd4"
+    }
+   ],
+   "query": "All characteristic-two solutions lift rationally",
+   "reason": "The argument uses embedded reductions of rational solutions, without identifying the full characteristic-two equation space."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:algebra",
+     "quote": "In particular, ordinary Lie membership is a condition stronger than being primitive in a characteristic-two enveloping algebra.",
+     "quote_sha256": "fba1e8da30b353a7a8d0b49927c08032702d3d1f19216d4d8804db046dff7616"
+    }
+   ],
+   "query": "Primitive elements are ordinary Lie elements in characteristic two",
+   "reason": "Ordinary Lie membership is stronger than primitivity in the reduced enveloping algebra."
+  }
+ ],
+ "family": "PM-008",
+ "id": "PM-008.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "C1",
+    "statement": "There are homogeneous elements $\\sigma_{2k+1}\\in W_{2k+1}$, one for each $k\\ge1$, for which $$\\operatorname{Lie}_{\\mathbb Q}\\langle e_3,e_5,e_7,\\ldots\\rangle\n \\longrightarrow (W,\\{\\, ,\\,\\}),\\qquad\n e_{2k+1}\\longmapsto\\sigma_{2k+1},$$ is an isomorphism of graded Lie algebras. In particular, $W$ is closed under the bracket <a href=\"#eq:ihara\" data-reference-type=\"eqref\" data-reference=\"eq:ihara\">[eq:ihara]</a>. The induced map on completions by weight is a continuous graded isomorphism."
+   },
+   {
+    "anchor": "stmt-lem-low-weights",
+    "claim_id": "C2",
+    "statement": "The solution spaces $W_1$ and $W_2$ are zero."
+   },
+   {
+    "anchor": "stmt-lem-lie-lattice",
+    "claim_id": "C3",
+    "statement": "Let $X$ be a finite alphabet, and let $K(X)$ be the $R$-span of all bracket monomials in the free associative algebra $R\\langle X\\rangle$. It is the free ordinary Lie algebra over $R$. Each multihomogeneous piece is finite free, and its rationalization and reduction are, respectively, $$K(X)\\otimes_R\\mathbb Q=\\operatorname{Lie}_{\\mathbb Q}\\langle X\\rangle,\n \\qquad\n K(X)/2K(X)=\\operatorname{Lie}_{{\\mathbb F_2}}\\langle X\\rangle\n       \\ \\subset\\ {\\mathbb F_2}\\langle X\\rangle.$$ In particular, this reduction is injective in associative words, and free ordinary Lie dimensions in every multidegree agree over $\\mathbb Q$ and ${\\mathbb F_2}$. The same statements hold for an alphabet with positive integer weights and finitely many letters in each bounded weight."
+   },
+   {
+    "anchor": "stmt-lem-free-fiber",
+    "claim_id": "C4",
+    "statement": "The map $\\mathfrak t_q(k)\\longrightarrow\\mathfrak t_{q-1}(k)$ which forgets the last strand is split, and its kernel is the free ordinary Lie algebra on $s_i=t_{iq}$, $1\\leq i<q$. Explicitly, $$\\label{eq:free-fiber}\n \\mathfrak t_q(k)\n  =\\operatorname{Lie}_k\\langle s_1,\\ldots,s_{q-1}\\rangle\n        \\rtimes\\mathfrak t_{q-1}(k),$$ where a base generator $t_{ij}$ acts by the derivation $$\\label{eq:free-fiber-action}\n D_{ij}(s_i)=[s_i,s_j],\\qquad\n D_{ij}(s_j)=[s_j,s_i],\\qquad\n D_{ij}(s_h)=0\\quad(h\\notin\\{i,j\\}).$$ Multiplication gives an isomorphism of $k$-modules $$\\label{eq:enveloping-fiber}\n k\\langle s_1,\\ldots,s_{q-1}\\rangle\n       \\otimes_k U(\\mathfrak t_{q-1}(k))\n       \\xrightarrow{\\ \\sim\\ }U(\\mathfrak t_q(k)).$$ Thus recursive products of free associative fiber words are a basis. Over $R$, the Lie algebra and its enveloping algebra are torsion free, and this normal form commutes with rationalization and reduction."
+   },
+   {
+    "anchor": "stmt-lem-special",
+    "claim_id": "C5",
+    "statement": "Let $\\psi\\in W_n$, where $n>2$. In the free Lie algebra on $a,b$, with $c=-a-b$, one has $$\\label{eq:special}\n [a,\\psi(b,a)]+[c,\\psi(b,c)]=0.$$ In addition, for an extra free letter $T$, $$\\label{eq:special-linearization}\n \\partial_2\\psi(a,-a)T=0,$$ where $\\partial_2$ means the coefficient of a central parameter $t$ in $\\psi(a,-a+tT)$."
+   },
+   {
+    "anchor": "stmt-prop-saturated-reduction",
+    "claim_id": "C6",
+    "statement": "Let $$K_n=\\operatorname{Lie}_R\\langle x,y\\rangle_n,\n \\qquad L_n=W_n\\cap K_n.$$ Then $L_n$ is a saturated finite free $R$-submodule of $K_n$, and its reduction embeds in $K_n/2K_n$. Writing its image as $\\overline L_n$, one has $$\\label{eq:saturated-dimension}\n \\dim_{{\\mathbb F_2}}\\overline L_n=\\dim_{\\mathbb Q}W_n.$$ More generally, for any rational subspace $V_n\\subset W_n$, the lattice $M_n=V_n\\cap K_n$ has an embedded reduction $\\overline M_n\\subset\\overline L_n$ of dimension $\\dim_{\\mathbb Q}V_n$.*\n\n\n*Every element of $\\overline L_n$ satisfies the reductions of the three defining identities. If $n>2$, it also satisfies <a href=\"#eq:special\" data-reference-type=\"eqref\" data-reference=\"eq:special\">[eq:special]</a> and <a href=\"#eq:special-linearization\" data-reference-type=\"eqref\" data-reference=\"eq:special-linearization\">[eq:special-linearization]</a> after reduction, together with all formal coefficient consequences of these identities. In particular, putting $z=x+y$, $$\\label{eq:special-mod-two}\n [x,\\overline\\psi(x,y)+\\overline\\psi(z,y)]\n       +[y,\\overline\\psi(z,y)]=0\n \\qquad(\\overline\\psi\\in\\overline L_n).$$"
+   },
+   {
+    "anchor": "stmt-lem-abc-free",
+    "claim_id": "C7",
+    "statement": "The assignments $$A\\longmapsto x^2,\\qquad C\\longmapsto[x,y],\\qquad B\\longmapsto y$$ define an injective homomorphism ${\\mathbb F_2}\\langle A,C,B\\rangle\\longrightarrow{\\mathbb F_2}\\langle x,y\\rangle$. Its restriction embeds the ordinary free Lie algebra $\\operatorname{Lie}_{{\\mathbb F_2}}\\langle A,C,B\\rangle$ in the latter associative algebra. Every homogeneous element of $\\operatorname{Lie}_{{\\mathbb F_2}}\\langle x,y\\rangle$ of weight greater than one belongs to this embedded Lie algebra."
+   },
+   {
+    "anchor": "stmt-prop-leading-pentagon",
+    "claim_id": "C8",
+    "statement": "Let $\\bar\\psi\\in\\overline L_n$, $n>2$, and suppose its expression $\\Psi(A,C,B)$ lies in $F^r$. Let $\\chi$ be its component of count $r$, and write $n=2m+r$, with $m>0$. In $U(\\mathfrak h)$ let $\\mathcal U_{\\ell,<r}$ be the span of all products of exactly $\\ell$ symbols from $\\{a_i,v_{ij},u_{ij}\\}$ that contain fewer than $r$ symbols $u$. Then $$\\label{eq:leading-pentagon}\n\\begin{split}\n 0\\equiv{}&\\chi(a_1,v_{12}+v_{13},u_{12}+u_{13})\n       +\\chi(a_2+v_{12},v_{23},u_{23})\\\\\n &+\\chi(a_1+a_2+v_{12},v_{13}+v_{23},u_{13}+u_{23})\\\\\n &+\\chi(a_1,v_{12},u_{12})\\pmod{\\mathcal U_{m+r,<r}}.\n\\end{split}$$ For $r=0$ the indicated lower-count subspace is zero."
+   },
+   {
+    "anchor": "stmt-lem-action-tables",
+    "claim_id": "C9",
+    "statement": "All commutators of a base symbol with a fiber symbol are given by the following formulas. In both algebras use the abbreviations $$R_i=[H,U_i],\\qquad Q_i=[H+V_i,U_i],\\qquad\n W_{ij}=[V_i,U_j]+[U_i,V_j].$$ In the source the exact formulas are $$\\begin{aligned}\n&=[H,V_i]+[R_i,U_i],\\notag\\\\\n [a_i,U_i]&=Q_i,& [a_i,U_k]&=0\\quad(k\\ne i),\\notag\\\\\n [a_i,V_i]&=[H,V_i]+[[V_i,U_i],U_i],\\notag\\\\\n [a_i,V_k]&=[Q_i,U_k]\\quad(k\\ne i),\n \\label{eq:source-a-actions}\n\\end{aligned}$$ $$\\begin{aligned}\n&=0,\\notag\\\\\n [u_{ij},U_i]&=[u_{ij},U_j]=[U_i,U_j],\\notag\\\\\n [u_{ij},V_i]&=[u_{ij},V_j]=W_{ij},\\notag\\\\\n [u_{ij},U_k]&=[u_{ij},V_k]=0\\quad(k\\notin\\{i,j\\}),\n \\label{eq:source-u-actions}\n\\end{aligned}$$ and $$\\begin{aligned}\n&=[H,[U_i,U_j]],\\notag\\\\\n [v_{ij},U_i]&=[U_i,V_j],&\n [v_{ij},U_j]&=[U_j,V_i],\\notag\\\\\n [v_{ij},V_i]&=[V_i,V_j]+[W_{ij},U_i]+[U_i,R_j],\\notag\\\\\n [v_{ij},V_j]&=[V_i,V_j]+[W_{ij},U_j]+[U_j,R_i],\\notag\\\\\n [v_{ij},U_k]&=0\\quad(k\\notin\\{i,j\\}),\\notag\\\\\n [v_{ij},V_k]&=[W_{ij},U_k]\\quad(k\\notin\\{i,j\\}).\n \\label{eq:source-v-actions}\n\\end{aligned}$$ In the target the exact formulas are $$\\begin{aligned}\n&=[H,V_i],& [a_i,U_i]&=Q_i,\\notag\\\\\n [a_i,V_i]&=[H,V_i],&\n [a_i,U_k]&=[a_i,V_k]=0\\quad(k\\ne i),\n \\label{eq:target-a-actions}\n\\end{aligned}$$ $$\\begin{aligned}\n&=0,\\notag\\\\\n [u_{ij},U_i]&=[u_{ij},U_j]=[U_i,U_j],\\notag\\\\\n [u_{ij},V_i]&=[u_{ij},V_j]=W_{ij}+[V_i,V_j],\\notag\\\\\n [u_{ij},U_k]&=[u_{ij},V_k]=0\\quad(k\\notin\\{i,j\\}),\n \\label{eq:target-u-actions}\n\\end{aligned}$$ and $$\\begin{aligned}\n&=0,\\notag\\\\\n [v_{ij},U_i]&=[U_i,V_j],&\n [v_{ij},U_j]&=[U_j,V_i],\\notag\\\\\n [v_{ij},V_i]&=[v_{ij},V_j]=[V_i,V_j],\\notag\\\\\n [v_{ij},U_k]&=[v_{ij},V_k]=0\\quad(k\\notin\\{i,j\\}).\n \\label{eq:target-v-actions}\n\\end{aligned}$$ Every source output has at least the count of its input pair; every target output has at most that count. The parts preserving count are identical in the two lists and have symbolic length two."
+   },
+   {
+    "anchor": "stmt-prop-deletion-representation",
+    "claim_id": "C10",
+    "statement": "The assignment $t_H\\mapsto T_H$ defines a representation of $\\mathfrak h_{\\mathbb Z}$ on $E_N$. Equivalently, for every codimension-two flat $X$ and every hyperplane $H_0\\supset X$, $$\\label{eq:deletion-flat}\n \\left[T_{H_0},\\sum_{H\\supset X}T_H\\right]=0.$$ It therefore extends to the ordinary enveloping algebra, over $\\mathbb Z$ and after reduction over ${\\mathbb F_2}$."
+   },
+   {
+    "anchor": "stmt-lem-edge-table",
+    "claim_id": "C11",
+    "statement": "In the integral generator basis $a_i=t_{z_i=0}$, $u_{ij}=t_{z_i-z_j=0}$, $v_{ij}=t_{z_i-z_j=0}+t_{z_i+z_j=0}$, the complete nonzero edge weights are the following linear functionals: $$\\label{eq:deletion-edge-table}\n\\begin{array}{c|c|c}\n\\text{edge}&\\text{$a,v$ part}&\\text{$u$ part}\\\\ \\hline\n0p&0&u_{23}^{*}\\\\\n0w&0&u_{12}^{*}\\\\\n0e&0&0\\\\\nep&a_3^{*}-v_{23}^{*}&0\\\\\new&a_1^{*}-v_{12}^{*}&0\\\\\npw&a_2^{*}+v_{13}^{*}-v_{12}^{*}-v_{23}^{*}&u_{13}^{*}\n\\end{array}$$ Equal-letter edges have weight zero. After reduction modulo two, a word containing $r$ zeros has zero scalar test on every product with fewer than $r$ factors of type $u$. For a product with exactly $r$ such factors, every $u$-factor must delete a zero in any nonzero contribution."
+   },
+   {
+    "anchor": "stmt-lem-deletion-kernel",
+    "claim_id": "C12",
+    "statement": "If $\\chi(0,C,B)=0$, then $\\chi$ belongs to the ordinary free Lie algebra on $A,B$; in particular it has the form $P(A,B)$ with exactly $m$ letters $A$ and $r$ letters $B$."
+   },
+   {
+    "anchor": "stmt-prop-projection-injective",
+    "claim_id": "C13",
+    "statement": "For $n>2$ and every $r\\geq0$, the leading projection $$\\operatorname{gr}^{r}\\overline L_n\\longrightarrow\n \\operatorname{Lie}_{{\\mathbb F_2}}\\langle C,B\\rangle,\\qquad\n \\chi\\longmapsto\\chi(0,C,B)$$ is injective. Its source is zero unless $n=2m+r$ for an integer $m\\geq0$; in that case its image has $C$-count $m$ and $B$-count $r$."
+   },
+   {
+    "anchor": "stmt-lem-even-indices",
+    "claim_id": "C14",
+    "statement": "Suppose that $n>2$, $\\psi\\in F^r\\overline L_n$, and $n=2m+r$. The component of $\\psi$ of original $(x,y)$-bidegree $(m,m+r)$ is an associative linear combination of products $$\\label{eq:swapped-products}\n (\\mathop{\\mathrm{ad}}_y^{j_1}x)\\cdots(\\mathop{\\mathrm{ad}}_y^{j_m}x)$$ in which at least $r$ of the indices $j_1,\\ldots,j_m$ are even, with zero counted as even. Its image under $A=0$ is exactly $f(C,B)$. In particular, if $r>m$, then $f=0$."
+   },
+   {
+    "anchor": "stmt-lem-shift-invariance",
+    "claim_id": "C15",
+    "statement": "For every $f$ obtained as above and every polynomial $s(C)$, $$\\label{eq:polynomial-shift}\n f(C,B+s(C))=f(C,B).$$ The identity holds after adjoining any finite collection of commuting scalar indeterminates to the coefficients; in particular, it is a polynomial identity in the coefficients of $s$."
+   },
+   {
+    "anchor": "stmt-prop-image-bound",
+    "claim_id": "C16",
+    "statement": "Set $g_k=\\mathop{\\mathrm{ad}}_C^kB$ for $k\\geq1$. These elements freely generate an ordinary free Lie algebra inside $\\operatorname{Lie}_{{\\mathbb F_2}}\\langle C,B\\rangle$. For $n>2$, the image of the leading projection of $\\operatorname{gr}^r_F\\overline L_n$ belongs to its weight-$n$, length-$r$ component, where $\\mathop{\\mathrm{wt}}(g_k)=2k+1$ and each $g_k$ has length one. The associated graded piece with $r=0$ is zero."
+   },
+   {
+    "anchor": "stmt-cor-dimension-bound",
+    "claim_id": "C17",
+    "statement": "For every $n$ and $r\\geq0$ there is an injection $$\\operatorname{gr}^r_F\\overline L_n\n \\lhook\\joinrel\\longrightarrow\n \\mathfrak f_{\\mathrm{odd},n,r},$$ obtained by the leading projection and the identification $g_k\\leftrightarrow z_k$. In particular, $$\\label{eq:dimension-upper-bound}\n \\dim_{\\mathbb Q}W_n\n =\\dim_{{\\mathbb F_2}}\\overline L_n\n \\leq\\sum_{r\\geq0}d_{n,r}=d_n.$$"
+   },
+   {
+    "anchor": "stmt-prop-leading-ihara",
+    "claim_id": "C18",
+    "statement": "Let $\\psi\\in F^r\\overline L_n$ and $\\phi\\in F^s\\overline L_{n'}$, where $n,n'>2$ and $r,s\\geq1$. Write $f,g$ for their leading projections at counts $r,s$. Their Ihara bracket, computed in the ambient Lie algebra in $x,y$, belongs to $F^{r+s}$ in the $A,C,B$ presentation, and the projection of its component of count $r+s$ is $$\\label{eq:leading-ihara}\n [f,g].$$ This assertion does not require prior closure of the full solution space under the Ihara bracket."
+   },
+   {
+    "anchor": "stmt-prop-categorical-values",
+    "claim_id": "C19",
+    "statement": "For $n\\geq2$, evaluation $\\delta\\mapsto\\delta(\\alpha)$ takes $\\mathcal D_n(\\mathbb Q)$ into $W_n$. Its images $$V_n=\\{\\delta(\\alpha):\\delta\\in\\mathcal D_n(\\mathbb Q)\\},\\qquad\n V=\\bigoplus_{n\\geq2}V_n,$$ form a rational Lie subalgebra under the Ihara bracket <a href=\"#eq:ihara\" data-reference-type=\"eqref\" data-reference=\"eq:ihara\">[eq:ihara]</a>."
+   },
+   {
+    "anchor": "stmt-lem-rational-descent",
+    "claim_id": "C20",
+    "statement": "For every $n>0$ and every characteristic-zero extension $K/\\mathbb Q$, $$\\mathcal D_n(K)=\\mathcal D_n(\\mathbb Q)\\otimes_{\\mathbb Q}K.$$ For $n\\geq2$, the image of evaluation is $V_n\\otimes_{\\mathbb Q}K$. In particular, if the coefficient of a fixed associative word is nonzero on a complex categorical value of weight $n$, it is nonzero on some rational categorical value of that weight."
+   },
+   {
+    "anchor": "stmt-prop-regularized-holonomy",
+    "claim_id": "C21",
+    "statement": "For the tree endpoints and frames just defined, <a href=\"#eq:holonomy-regularized\" data-reference-type=\"eqref\" data-reference=\"eq:holonomy-regularized\">[eq:holonomy-regularized]</a> has a limit in every weight. The limit is independent of the admissible scale exponents under real interpolation of the endpoint collars. The insertion recipes define coherent operations on the continued path classes, and the limit respects relabeling, outer block insertion, and inner insertion. The same assertions hold for $H_-$. The two transport rules agree on all arity-two paths, including paths reversing the two real points."
+   },
+   {
+    "anchor": "stmt-lem-holonomy-isomorphism",
+    "claim_id": "C22",
+    "statement": "Each of $H_+$ and $H_-$ extends to an isomorphism of the completed linear path categories with $\\mathcal C(I;\\mathbb C)$. Both preserve coproducts and all specified operations, and their associated graded maps are identical."
+   },
+   {
+    "anchor": "stmt-prop-odd-depth-one",
+    "claim_id": "C23",
+    "statement": "For every odd $n\\geq3$ there exists $\\psi_n\\in V_n$ for which the coefficient of $x^{n-1}y$ is nonzero. Equivalently, its ordinary $y$-depth-one part is a nonzero multiple of $\\mathop{\\mathrm{ad}}_x^{n-1}y$."
+   },
+   {
+    "anchor": "stmt-lem-depth-addition",
+    "claim_id": "C24",
+    "statement": "If $\\psi\\in\\mathcal D^p L$ and $\\phi\\in\\mathcal D^q L$, then $$\\{\\psi,\\phi\\}\\in\\mathcal D^{p+q}L.$$ Consequently every Lie word of length at least two in homogeneous elements of weights greater than one has zero depth-one component."
+   },
+   {
+    "anchor": "stmt-lem-hall-saturation",
+    "claim_id": "C25",
+    "statement": "Let $K$ be a finite free $\\mathbb Z_{(2)}$-module, and suppose that $w_1,\\ldots,w_s\\in K$ have linearly independent reductions in $K/2K$. Then they are linearly independent over $\\mathbb Q$, and $$\\left(\\sum_{i=1}^s\\mathbb Qw_i\\right)\\cap K\n   =\\sum_{i=1}^s\\mathbb Z_{(2)}w_i.$$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Leading dimension bound",
+    "evidence": [
+     {
+      "anchor": "stmt-cor-dimension-bound",
+      "quote": "For every $n$ and $r\\geq0$ there is an injection $$\\operatorname{gr}^r_F\\overline L_n\n \\lhook\\joinrel\\longrightarrow\n \\mathfrak f_{\\mathrm{odd},n,r},$$ obtained by the leading projection and the identification $g_k\\leftrightarrow z_k$. In particular, $$\\label{eq:dimension-upper-bound}\n \\dim_{\\mathbb Q}W_n\n =\\dim_{{\\mathbb F_2}}\\overline L_n\n \\leq\\sum_{r\\geq0}d_{n,r}=d_n.$$",
+      "quote_sha256": "bc6aa2de8aa9855c3b0d14e1b567c0d298cf42cd7df63e092ec356abba189ddc"
+     }
+    ],
+    "requires_concepts": [
+     "Ordinary Lie lattice",
+     "Saturated reduction",
+     "Deletion representation",
+     "Polynomial shift invariance"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C1",
+   "exact_statement": "There are homogeneous elements $\\sigma_{2k+1}\\in W_{2k+1}$, one for each $k\\ge1$, for which $$\\operatorname{Lie}_{\\mathbb Q}\\langle e_3,e_5,e_7,\\ldots\\rangle\n \\longrightarrow (W,\\{\\, ,\\,\\}),\\qquad\n e_{2k+1}\\longmapsto\\sigma_{2k+1},$$ is an isomorphism of graded Lie algebras. In particular, $W$ is closed under the bracket <a href=\"#eq:ihara\" data-reference-type=\"eqref\" data-reference=\"eq:ihara\">[eq:ihara]</a>. The induced map on completions by weight is a continuous graded isomorphism.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "C2",
+   "exact_statement": "The solution spaces $W_1$ and $W_2$ are zero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-low-weights"
+  },
+  {
+   "claim_id": "C3",
+   "exact_statement": "Let $X$ be a finite alphabet, and let $K(X)$ be the $R$-span of all bracket monomials in the free associative algebra $R\\langle X\\rangle$. It is the free ordinary Lie algebra over $R$. Each multihomogeneous piece is finite free, and its rationalization and reduction are, respectively, $$K(X)\\otimes_R\\mathbb Q=\\operatorname{Lie}_{\\mathbb Q}\\langle X\\rangle,\n \\qquad\n K(X)/2K(X)=\\operatorname{Lie}_{{\\mathbb F_2}}\\langle X\\rangle\n       \\ \\subset\\ {\\mathbb F_2}\\langle X\\rangle.$$ In particular, this reduction is injective in associative words, and free ordinary Lie dimensions in every multidegree agree over $\\mathbb Q$ and ${\\mathbb F_2}$. The same statements hold for an alphabet with positive integer weights and finitely many letters in each bounded weight.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-lie-lattice"
+  },
+  {
+   "claim_id": "C4",
+   "exact_statement": "The map $\\mathfrak t_q(k)\\longrightarrow\\mathfrak t_{q-1}(k)$ which forgets the last strand is split, and its kernel is the free ordinary Lie algebra on $s_i=t_{iq}$, $1\\leq i<q$. Explicitly, $$\\label{eq:free-fiber}\n \\mathfrak t_q(k)\n  =\\operatorname{Lie}_k\\langle s_1,\\ldots,s_{q-1}\\rangle\n        \\rtimes\\mathfrak t_{q-1}(k),$$ where a base generator $t_{ij}$ acts by the derivation $$\\label{eq:free-fiber-action}\n D_{ij}(s_i)=[s_i,s_j],\\qquad\n D_{ij}(s_j)=[s_j,s_i],\\qquad\n D_{ij}(s_h)=0\\quad(h\\notin\\{i,j\\}).$$ Multiplication gives an isomorphism of $k$-modules $$\\label{eq:enveloping-fiber}\n k\\langle s_1,\\ldots,s_{q-1}\\rangle\n       \\otimes_k U(\\mathfrak t_{q-1}(k))\n       \\xrightarrow{\\ \\sim\\ }U(\\mathfrak t_q(k)).$$ Thus recursive products of free associative fiber words are a basis. Over $R$, the Lie algebra and its enveloping algebra are torsion free, and this normal form commutes with rationalization and reduction.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-free-fiber"
+  },
+  {
+   "claim_id": "C5",
+   "exact_statement": "Let $\\psi\\in W_n$, where $n>2$. In the free Lie algebra on $a,b$, with $c=-a-b$, one has $$\\label{eq:special}\n [a,\\psi(b,a)]+[c,\\psi(b,c)]=0.$$ In addition, for an extra free letter $T$, $$\\label{eq:special-linearization}\n \\partial_2\\psi(a,-a)T=0,$$ where $\\partial_2$ means the coefficient of a central parameter $t$ in $\\psi(a,-a+tT)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-special"
+  },
+  {
+   "claim_id": "C6",
+   "exact_statement": "Let $$K_n=\\operatorname{Lie}_R\\langle x,y\\rangle_n,\n \\qquad L_n=W_n\\cap K_n.$$ Then $L_n$ is a saturated finite free $R$-submodule of $K_n$, and its reduction embeds in $K_n/2K_n$. Writing its image as $\\overline L_n$, one has $$\\label{eq:saturated-dimension}\n \\dim_{{\\mathbb F_2}}\\overline L_n=\\dim_{\\mathbb Q}W_n.$$ More generally, for any rational subspace $V_n\\subset W_n$, the lattice $M_n=V_n\\cap K_n$ has an embedded reduction $\\overline M_n\\subset\\overline L_n$ of dimension $\\dim_{\\mathbb Q}V_n$.*\n\n\n*Every element of $\\overline L_n$ satisfies the reductions of the three defining identities. If $n>2$, it also satisfies <a href=\"#eq:special\" data-reference-type=\"eqref\" data-reference=\"eq:special\">[eq:special]</a> and <a href=\"#eq:special-linearization\" data-reference-type=\"eqref\" data-reference=\"eq:special-linearization\">[eq:special-linearization]</a> after reduction, together with all formal coefficient consequences of these identities. In particular, putting $z=x+y$, $$\\label{eq:special-mod-two}\n [x,\\overline\\psi(x,y)+\\overline\\psi(z,y)]\n       +[y,\\overline\\psi(z,y)]=0\n \\qquad(\\overline\\psi\\in\\overline L_n).$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-saturated-reduction"
+  },
+  {
+   "claim_id": "C7",
+   "exact_statement": "The assignments $$A\\longmapsto x^2,\\qquad C\\longmapsto[x,y],\\qquad B\\longmapsto y$$ define an injective homomorphism ${\\mathbb F_2}\\langle A,C,B\\rangle\\longrightarrow{\\mathbb F_2}\\langle x,y\\rangle$. Its restriction embeds the ordinary free Lie algebra $\\operatorname{Lie}_{{\\mathbb F_2}}\\langle A,C,B\\rangle$ in the latter associative algebra. Every homogeneous element of $\\operatorname{Lie}_{{\\mathbb F_2}}\\langle x,y\\rangle$ of weight greater than one belongs to this embedded Lie algebra.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-abc-free"
+  },
+  {
+   "claim_id": "C8",
+   "exact_statement": "Let $\\bar\\psi\\in\\overline L_n$, $n>2$, and suppose its expression $\\Psi(A,C,B)$ lies in $F^r$. Let $\\chi$ be its component of count $r$, and write $n=2m+r$, with $m>0$. In $U(\\mathfrak h)$ let $\\mathcal U_{\\ell,<r}$ be the span of all products of exactly $\\ell$ symbols from $\\{a_i,v_{ij},u_{ij}\\}$ that contain fewer than $r$ symbols $u$. Then $$\\label{eq:leading-pentagon}\n\\begin{split}\n 0\\equiv{}&\\chi(a_1,v_{12}+v_{13},u_{12}+u_{13})\n       +\\chi(a_2+v_{12},v_{23},u_{23})\\\\\n &+\\chi(a_1+a_2+v_{12},v_{13}+v_{23},u_{13}+u_{23})\\\\\n &+\\chi(a_1,v_{12},u_{12})\\pmod{\\mathcal U_{m+r,<r}}.\n\\end{split}$$ For $r=0$ the indicated lower-count subspace is zero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-leading-pentagon"
+  },
+  {
+   "claim_id": "C9",
+   "exact_statement": "All commutators of a base symbol with a fiber symbol are given by the following formulas. In both algebras use the abbreviations $$R_i=[H,U_i],\\qquad Q_i=[H+V_i,U_i],\\qquad\n W_{ij}=[V_i,U_j]+[U_i,V_j].$$ In the source the exact formulas are $$\\begin{aligned}\n&=[H,V_i]+[R_i,U_i],\\notag\\\\\n [a_i,U_i]&=Q_i,& [a_i,U_k]&=0\\quad(k\\ne i),\\notag\\\\\n [a_i,V_i]&=[H,V_i]+[[V_i,U_i],U_i],\\notag\\\\\n [a_i,V_k]&=[Q_i,U_k]\\quad(k\\ne i),\n \\label{eq:source-a-actions}\n\\end{aligned}$$ $$\\begin{aligned}\n&=0,\\notag\\\\\n [u_{ij},U_i]&=[u_{ij},U_j]=[U_i,U_j],\\notag\\\\\n [u_{ij},V_i]&=[u_{ij},V_j]=W_{ij},\\notag\\\\\n [u_{ij},U_k]&=[u_{ij},V_k]=0\\quad(k\\notin\\{i,j\\}),\n \\label{eq:source-u-actions}\n\\end{aligned}$$ and $$\\begin{aligned}\n&=[H,[U_i,U_j]],\\notag\\\\\n [v_{ij},U_i]&=[U_i,V_j],&\n [v_{ij},U_j]&=[U_j,V_i],\\notag\\\\\n [v_{ij},V_i]&=[V_i,V_j]+[W_{ij},U_i]+[U_i,R_j],\\notag\\\\\n [v_{ij},V_j]&=[V_i,V_j]+[W_{ij},U_j]+[U_j,R_i],\\notag\\\\\n [v_{ij},U_k]&=0\\quad(k\\notin\\{i,j\\}),\\notag\\\\\n [v_{ij},V_k]&=[W_{ij},U_k]\\quad(k\\notin\\{i,j\\}).\n \\label{eq:source-v-actions}\n\\end{aligned}$$ In the target the exact formulas are $$\\begin{aligned}\n&=[H,V_i],& [a_i,U_i]&=Q_i,\\notag\\\\\n [a_i,V_i]&=[H,V_i],&\n [a_i,U_k]&=[a_i,V_k]=0\\quad(k\\ne i),\n \\label{eq:target-a-actions}\n\\end{aligned}$$ $$\\begin{aligned}\n&=0,\\notag\\\\\n [u_{ij},U_i]&=[u_{ij},U_j]=[U_i,U_j],\\notag\\\\\n [u_{ij},V_i]&=[u_{ij},V_j]=W_{ij}+[V_i,V_j],\\notag\\\\\n [u_{ij},U_k]&=[u_{ij},V_k]=0\\quad(k\\notin\\{i,j\\}),\n \\label{eq:target-u-actions}\n\\end{aligned}$$ and $$\\begin{aligned}\n&=0,\\notag\\\\\n [v_{ij},U_i]&=[U_i,V_j],&\n [v_{ij},U_j]&=[U_j,V_i],\\notag\\\\\n [v_{ij},V_i]&=[v_{ij},V_j]=[V_i,V_j],\\notag\\\\\n [v_{ij},U_k]&=[v_{ij},V_k]=0\\quad(k\\notin\\{i,j\\}).\n \\label{eq:target-v-actions}\n\\end{aligned}$$ Every source output has at least the count of its input pair; every target output has at most that count. The parts preserving count are identical in the two lists and have symbolic length two.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-action-tables"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "The assignment $t_H\\mapsto T_H$ defines a representation of $\\mathfrak h_{\\mathbb Z}$ on $E_N$. Equivalently, for every codimension-two flat $X$ and every hyperplane $H_0\\supset X$, $$\\label{eq:deletion-flat}\n \\left[T_{H_0},\\sum_{H\\supset X}T_H\\right]=0.$$ It therefore extends to the ordinary enveloping algebra, over $\\mathbb Z$ and after reduction over ${\\mathbb F_2}$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-deletion-representation"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "In the integral generator basis $a_i=t_{z_i=0}$, $u_{ij}=t_{z_i-z_j=0}$, $v_{ij}=t_{z_i-z_j=0}+t_{z_i+z_j=0}$, the complete nonzero edge weights are the following linear functionals: $$\\label{eq:deletion-edge-table}\n\\begin{array}{c|c|c}\n\\text{edge}&\\text{$a,v$ part}&\\text{$u$ part}\\\\ \\hline\n0p&0&u_{23}^{*}\\\\\n0w&0&u_{12}^{*}\\\\\n0e&0&0\\\\\nep&a_3^{*}-v_{23}^{*}&0\\\\\new&a_1^{*}-v_{12}^{*}&0\\\\\npw&a_2^{*}+v_{13}^{*}-v_{12}^{*}-v_{23}^{*}&u_{13}^{*}\n\\end{array}$$ Equal-letter edges have weight zero. After reduction modulo two, a word containing $r$ zeros has zero scalar test on every product with fewer than $r$ factors of type $u$. For a product with exactly $r$ such factors, every $u$-factor must delete a zero in any nonzero contribution.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-edge-table"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "If $\\chi(0,C,B)=0$, then $\\chi$ belongs to the ordinary free Lie algebra on $A,B$; in particular it has the form $P(A,B)$ with exactly $m$ letters $A$ and $r$ letters $B$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-deletion-kernel"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "For $n>2$ and every $r\\geq0$, the leading projection $$\\operatorname{gr}^{r}\\overline L_n\\longrightarrow\n \\operatorname{Lie}_{{\\mathbb F_2}}\\langle C,B\\rangle,\\qquad\n \\chi\\longmapsto\\chi(0,C,B)$$ is injective. Its source is zero unless $n=2m+r$ for an integer $m\\geq0$; in that case its image has $C$-count $m$ and $B$-count $r$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-projection-injective"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "Suppose that $n>2$, $\\psi\\in F^r\\overline L_n$, and $n=2m+r$. The component of $\\psi$ of original $(x,y)$-bidegree $(m,m+r)$ is an associative linear combination of products $$\\label{eq:swapped-products}\n (\\mathop{\\mathrm{ad}}_y^{j_1}x)\\cdots(\\mathop{\\mathrm{ad}}_y^{j_m}x)$$ in which at least $r$ of the indices $j_1,\\ldots,j_m$ are even, with zero counted as even. Its image under $A=0$ is exactly $f(C,B)$. In particular, if $r>m$, then $f=0$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-even-indices"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "For every $f$ obtained as above and every polynomial $s(C)$, $$\\label{eq:polynomial-shift}\n f(C,B+s(C))=f(C,B).$$ The identity holds after adjoining any finite collection of commuting scalar indeterminates to the coefficients; in particular, it is a polynomial identity in the coefficients of $s$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-shift-invariance"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "Set $g_k=\\mathop{\\mathrm{ad}}_C^kB$ for $k\\geq1$. These elements freely generate an ordinary free Lie algebra inside $\\operatorname{Lie}_{{\\mathbb F_2}}\\langle C,B\\rangle$. For $n>2$, the image of the leading projection of $\\operatorname{gr}^r_F\\overline L_n$ belongs to its weight-$n$, length-$r$ component, where $\\mathop{\\mathrm{wt}}(g_k)=2k+1$ and each $g_k$ has length one. The associated graded piece with $r=0$ is zero.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-image-bound"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "For every $n$ and $r\\geq0$ there is an injection $$\\operatorname{gr}^r_F\\overline L_n\n \\lhook\\joinrel\\longrightarrow\n \\mathfrak f_{\\mathrm{odd},n,r},$$ obtained by the leading projection and the identification $g_k\\leftrightarrow z_k$. In particular, $$\\label{eq:dimension-upper-bound}\n \\dim_{\\mathbb Q}W_n\n =\\dim_{{\\mathbb F_2}}\\overline L_n\n \\leq\\sum_{r\\geq0}d_{n,r}=d_n.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-dimension-bound"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "Let $\\psi\\in F^r\\overline L_n$ and $\\phi\\in F^s\\overline L_{n'}$, where $n,n'>2$ and $r,s\\geq1$. Write $f,g$ for their leading projections at counts $r,s$. Their Ihara bracket, computed in the ambient Lie algebra in $x,y$, belongs to $F^{r+s}$ in the $A,C,B$ presentation, and the projection of its component of count $r+s$ is $$\\label{eq:leading-ihara}\n [f,g].$$ This assertion does not require prior closure of the full solution space under the Ihara bracket.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-leading-ihara"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "For $n\\geq2$, evaluation $\\delta\\mapsto\\delta(\\alpha)$ takes $\\mathcal D_n(\\mathbb Q)$ into $W_n$. Its images $$V_n=\\{\\delta(\\alpha):\\delta\\in\\mathcal D_n(\\mathbb Q)\\},\\qquad\n V=\\bigoplus_{n\\geq2}V_n,$$ form a rational Lie subalgebra under the Ihara bracket <a href=\"#eq:ihara\" data-reference-type=\"eqref\" data-reference=\"eq:ihara\">[eq:ihara]</a>.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-categorical-values"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "For every $n>0$ and every characteristic-zero extension $K/\\mathbb Q$, $$\\mathcal D_n(K)=\\mathcal D_n(\\mathbb Q)\\otimes_{\\mathbb Q}K.$$ For $n\\geq2$, the image of evaluation is $V_n\\otimes_{\\mathbb Q}K$. In particular, if the coefficient of a fixed associative word is nonzero on a complex categorical value of weight $n$, it is nonzero on some rational categorical value of that weight.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-rational-descent"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "For the tree endpoints and frames just defined, <a href=\"#eq:holonomy-regularized\" data-reference-type=\"eqref\" data-reference=\"eq:holonomy-regularized\">[eq:holonomy-regularized]</a> has a limit in every weight. The limit is independent of the admissible scale exponents under real interpolation of the endpoint collars. The insertion recipes define coherent operations on the continued path classes, and the limit respects relabeling, outer block insertion, and inner insertion. The same assertions hold for $H_-$. The two transport rules agree on all arity-two paths, including paths reversing the two real points.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-regularized-holonomy"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "Each of $H_+$ and $H_-$ extends to an isomorphism of the completed linear path categories with $\\mathcal C(I;\\mathbb C)$. Both preserve coproducts and all specified operations, and their associated graded maps are identical.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-holonomy-isomorphism"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "For every odd $n\\geq3$ there exists $\\psi_n\\in V_n$ for which the coefficient of $x^{n-1}y$ is nonzero. Equivalently, its ordinary $y$-depth-one part is a nonzero multiple of $\\mathop{\\mathrm{ad}}_x^{n-1}y$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-odd-depth-one"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "If $\\psi\\in\\mathcal D^p L$ and $\\phi\\in\\mathcal D^q L$, then $$\\{\\psi,\\phi\\}\\in\\mathcal D^{p+q}L.$$ Consequently every Lie word of length at least two in homogeneous elements of weights greater than one has zero depth-one component.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-depth-addition"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "Let $K$ be a finite free $\\mathbb Z_{(2)}$-module, and suppose that $w_1,\\ldots,w_s\\in K$ have linearly independent reductions in $K/2K$. Then they are linearly independent over $\\mathbb Q$, and $$\\left(\\sum_{i=1}^s\\mathbb Qw_i\\right)\\cap K\n   =\\sum_{i=1}^s\\mathbb Z_{(2)}w_i.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-hall-saturation"
+  }
+ ],
+ "paper": "papers/EN-101-000-0000-2-2026-PR-T4-UK-EX-M1-B-AL-H-0022_PM-008.1_The_Deligne_Drinfeld_conjecture.md",
+ "purpose": "The Deligne-Drinfeld conjecture",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "8509c8ee0059f0a6c6ecab6eab9cf598ccd95a7eecdf1abbb924fc8daf2e303a",
+   "pm.domains.v2": "24c83222882b2cc8d56d30e55ca6f0780ded490e0c3a06c9f2f8491d7cbbe5e9",
+   "pm.edges.v2": "42fd42ccf1fb3621841a91322720036b9e48d9e227d2a2848863b0b717d1e67d",
+   "pm.extraction.v2": "f703c43e9cff3f239d91f32dd63ee2d20320d445a52351d1078013bfc846e46e",
+   "pm.formal.v2": "17554fbb824dcf2d968f7de1a9ee4d5d9244f34548544ae6bd298cde5aed1568",
+   "pm.limits.v2": "a0b0ef5ff51304dc4dbed2387230d5924c4dc96a06d970814fc5ac3a57bb6e67",
+   "pm.node.v2": "a3f4e88884d947ad0ce4e059f5eafe51c89b32fe6a3be2440d1a148363723dc7",
+   "pm.objects.v2": "4ed82e55215e7401b834d9ca28bc7dfda12763f48214cc3c5f4c30ee9bb30491",
+   "pm.provenance.v2": "cd09ab2ef2f550c825aea43ca3f1b68b857eefa6875dc4f20aa4304f3ab39303",
+   "pm.quantities.v2": "f40fa510bbbca728568f790bb6cdabba12a84272218daa9340419a28032a0084",
+   "pm.reading.v2": "da9c5b8fef0a1faec3317261ec7899a921124cc5a50bcf9f2ed66dae3de4bdcd",
+   "pm.roadmap.v2": "c8b02932419b2beb237a745a77cd580d088ed845951b618d16b6589fcae669af",
+   "pm.search.v1": "2fd3191f97bcb3fcfb98e2b540681bb1236d3f5add5168905a4fe191baaf3c89",
+   "pm.triptych.v2": "65d9a54ee48d581d84cb05592030b1241b83bf23208ed19607df41886047387a"
+  },
+  "canonical_sha256": "45638da314f8f029de65aa5c3ea62964e1458c302dbca2b5a699b9a9c36082c6",
+  "paper_sha256": "cc300abeae78b15381156ee69d994d8c5b29ef444ac6d394541a861b2d398ad5",
+  "repaired_body_sha256": "264cc51e11b4f0890caa55f557b6976824e7063b07ed91869cf36ba0ac8328ca"
+ },
+ "status": "ACTIVE",
+ "subject_id": 1,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "07e57828a9583449dc0aa60b7ab83967b83ffbf8302aebaff8ec9bf4bd5f51f7",
+   "receipt_sha256": "123a2aaf4fbd429314751ac9d7b8f36c4c6191e0be56a30f2e8e32a114a0b8f9",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive integer indices k = 1,...,8, including both endpoints; exact characteristic-two word coefficients.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I-adjoint",
+     "oracle_basis": "Closed-form binomial parity formula, independently evaluated with exact Python integers; no recurrence shared with the implementation. This checks generator expansion, not algebraic independence or the all-weight theorem."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M1",
+     "observed_exit": 5,
+     "receipt_sha256": "68c48ccf1f2519fc3816df9bc0598f7f6190e3e36314bd15541c8a462094c0be"
+    },
+    {
+     "id": "M2",
+     "observed_exit": 5,
+     "receipt_sha256": "6f5b76fe2bf7465e5d1fb7e494da94897a937b5a77a197dedec1b11a02c6630d"
+    },
+    {
+     "id": "M3",
+     "observed_exit": 5,
+     "receipt_sha256": "91a1d8f7a020c926d3184e0998886c1fe7630c84ef93e4d5f75f27852bd20fa1"
+    }
+   ],
+   "receipt_sha256": "0934fa1bc68f88beeb6adf38b0c8793d7db0e7444fc7bcdff81025b9605900cb",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The Deligne-Drinfeld conjecture"
+}

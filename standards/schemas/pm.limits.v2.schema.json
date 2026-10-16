@@ -1,0 +1,100 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "pm.limits.v2"
+    },
+    "pm_id": {
+      "type": "string",
+      "pattern": "^PM-[0-9]{3}\\.[0-9]+$"
+    },
+    "generation_status": {
+      "type": "string",
+      "enum": [
+        "GENERATED-PLACEHOLDER",
+        "COMPLETE"
+      ]
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "hypothesis",
+              "edge_case",
+              "nonconstructive",
+              "approximation",
+              "counterexample_scope",
+              "formal_scope",
+              "unknown"
+            ]
+          },
+          "statement": {
+            "type": "string"
+          },
+          "blocked_use": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "source_id": {
+                  "type": "string"
+                },
+                "anchor": {
+                  "type": "string"
+                },
+                "exact_quote": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_id",
+                "anchor",
+                "exact_quote"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "support": {
+            "type": "string",
+            "enum": [
+              "stated",
+              "inferred",
+              "ABSENT"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "statement",
+          "blocked_use",
+          "evidence",
+          "support"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "pm_id",
+    "generation_status",
+    "entries"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pm.limits.v2"
+}

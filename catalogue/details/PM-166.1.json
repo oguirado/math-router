@@ -1,0 +1,1232 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1136512,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 314303
+ },
+ "coordinate": "EN-113-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-H-0327",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "Bounds for points on prescribed surfaces, or for distances from a single point, have different hypotheses or conclusions.",
+     "quote_sha256": "22b2ea5d11fcb4996bcc9f8682696e462f62c9d3fa8bac99fbfb3215de2c6c49"
+    }
+   ],
+   "query": "A pinned distance guarantee for an arbitrary chosen center",
+   "reason": "The main result bounds total distinct distances; the source explicitly distinguishes single-center conclusions."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "For every integer $d\\ge3$, there is a constant $c_d>0$ such that every finite set $P\\subset\\mathbb R^d$ of $n\\ge2$ distinct points satisfies $$|\\Delta(P)|\\ge c_d n^{2/d}.$$",
+     "quote_sha256": "4091765817b35eee49e42dbf548e1bfaa33fdd5e473d84b4055b0e3783c3c6d8"
+    },
+    {
+     "anchor": "stmt-ci-planar-distances",
+     "quote": "Every finite set $Q\\subset\\mathbb R^2$ of $n\\ge2$ points determines at least $c n/\\log(2n)$ distinct positive distances.",
+     "quote_sha256": "8a89ebafcd5df73839c2f5039c83df534a80b9ca1afa6cf0a19dce858ba3c83c"
+    }
+   ],
+   "query": "The higher-dimensional constant-factor formula applied to planar samples",
+   "reason": "The main theorem starts in higher dimension, while the paper supplies a different planar lower bound."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-mot-scope",
+     "quote": "For a collinear sample without such a high threshold, infinitely many rotations about its containing line fix every point.",
+     "quote_sha256": "52c0c5e7d4c0e1d25e4d0e1e27231114089384a1c8eb977217ad5702b9409b6e"
+    }
+   ],
+   "query": "An unrestricted finite sum over every spatial isometry of a collinear sample",
+   "reason": "Continuous rotational stabilizers can make such motion families infinite; the line cap and richness threshold are essential."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-4",
+     "quote": "To obtain a constant factor, the proof must exclude every such sequence, without first fixing a power saving.",
+     "quote_sha256": "a3488a1725ba6425d50dadbd913f3bd3b7aa26dca65a89d469c0ccfa55f025e7"
+    }
+   ],
+   "query": "A numerical value of the main dimension-dependent constant for buffer sizing",
+   "reason": "A concrete numerical calibration is ABSENT; the argument establishes positivity by excluding vanishing-ratio sequences."
+  }
+ ],
+ "family": "PM-166",
+ "id": "PM-166.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-distinct-distance-lower-bound",
+    "statement": "$d\\ge3$"
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-distinct-distance-lower-bound",
+    "statement": "$n\\ge2$ distinct points"
+   },
+   {
+    "anchor": "red:regime",
+    "claim_id": "claim-proper-flat-occupancy",
+    "statement": "Suppose that Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> fails, and take the least dimension $d\\ge3$ in which it fails. There is then a sequence of finite sets $P\\subset\\mathbb R^d$ for which, with $$\\label{red:regime}\n N=|P|,\\qquad M=1+|\\Delta(P)|,\\qquad\n B=N^{1/d},\\qquad A=B^2,\n \\qquad N\\longrightarrow\\infty,\\quad M/A\\longrightarrow0.$$ Here and below a statement along the sequence is understood after discarding finitely many terms, if necessary. The fact that $N\\to\\infty$ follows because a set of at least two points determines at least one distance. Adding $1$ to the number of distances does not affect the vanishing ratio."
+   },
+   {
+    "anchor": "stmt-red-directions",
+    "claim_id": "claim-algebraically-controlled-directions",
+    "statement": "After passing to a subsequence,"
+   },
+   {
+    "anchor": "red:regime",
+    "claim_id": "claim-algebraically-controlled-directions",
+    "statement": "Suppose that Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> fails, and take the least dimension $d\\ge3$ in which it fails. There is then a sequence of finite sets $P\\subset\\mathbb R^d$ for which, with $$\\label{red:regime}\n N=|P|,\\qquad M=1+|\\Delta(P)|,\\qquad\n B=N^{1/d},\\qquad A=B^2,\n \\qquad N\\longrightarrow\\infty,\\quad M/A\\longrightarrow0.$$ Here and below a statement along the sequence is understood after discarding finitely many terms, if necessary. The fact that $N\\to\\infty$ follows because a set of at least two points determines at least one distance. Adding $1$ to the number of distances does not affect the vanishing ratio."
+   },
+   {
+    "anchor": "stmt-red-independent-stars",
+    "claim_id": "claim-independent-star-evaluations",
+    "statement": "A further symmetric selection"
+   },
+   {
+    "anchor": "stmt-red-global-concentration",
+    "claim_id": "claim-global-flat-concentration",
+    "statement": "For the retained pair flats,"
+   },
+   {
+    "anchor": "stmt-red-local-concentration",
+    "claim_id": "claim-local-neighbor-concentration",
+    "statement": "on $F_{p,q}$"
+   },
+   {
+    "anchor": "eq:minimum-degree",
+    "claim_id": "claim-sampling-rank-contradiction",
+    "statement": "$$\\label{eq:minimum-degree}\n \\delta(\\mathcal H)\\ge c_3N^2/M,\\qquad\n \\delta(\\mathcal H)/A^{d-1}\\longrightarrow\\infty.$$ Only subsets of the original stars have been retained, so their independence and separators remain valid."
+   },
+   {
+    "anchor": "stmt-poly-separators",
+    "claim_id": "claim-physical-separators",
+    "statement": "Let $P\\subset\\mathbb R^n$ be finite and let $M=1+|\\Delta(P)|$."
+   },
+   {
+    "anchor": "stmt-poly-separators",
+    "claim_id": "claim-physical-separators",
+    "statement": "If $V\\subset\\mathbb C^n$ is a pure $u$-dimensional variety of degree $a$,"
+   },
+   {
+    "anchor": "stmt-poly-socle",
+    "claim_id": "claim-local-determinant-nonvanishing",
+    "statement": "Let $F$ be an algebraically closed field, let $R=F[Z_1,\\ldots,Z_c]_{(Z_1,\\ldots,Z_c)}$, and suppose $f_1,\\ldots,f_c\\in R$ generate an ideal of finite colength."
+   },
+   {
+    "anchor": "stmt-poly-socle",
+    "claim_id": "claim-local-determinant-nonvanishing",
+    "statement": "If $$(f_1,\\ldots,f_c)^{\\mathsf t}\n       =Q(Z)(Z_1,\\ldots,Z_c)^{\\mathsf t},$$"
+   },
+   {
+    "anchor": "stmt-poly-interpolation",
+    "claim_id": "claim-isolated-point-interpolation",
+    "statement": "Let $F$ be algebraically closed, and let $S\\subset F^c$ be any selection of distinct isolated points of the common zero set of polynomials of degree at most $L$, where $L\\ge1$."
+   },
+   {
+    "anchor": "stmt-poly-union-interpolation",
+    "claim_id": "claim-union-list-interpolation",
+    "statement": "Suppose $S$ is the union of finitely many lists $S_\\nu\\subset F^c$, where $S_\\nu$ consists of isolated points of a system of degree at most $L_\\nu\\ge1$."
+   },
+   {
+    "anchor": "stmt-poly-union-interpolation",
+    "claim_id": "claim-union-list-interpolation",
+    "statement": "Put $L_*=\\sum_\\nu L_\\nu$."
+   },
+   {
+    "anchor": "stmt-poly-hilbert",
+    "claim_id": "claim-component-hilbert-bounds",
+    "statement": "Let $V\\subset\\mathbb C^n$ be a finite union of distinct irreducible varieties of pure dimension $k$ and total degree $a$."
+   },
+   {
+    "anchor": "stmt-poly-hilbert",
+    "claim_id": "claim-component-hilbert-bounds",
+    "statement": "Suppose in addition that every member of this family is an irreducible component of a common locus defined by equations of degree at most $L\\ge1$."
+   },
+   {
+    "anchor": "stmt-poly-envelope",
+    "claim_id": "claim-mixed-dimensional-envelope-bounds",
+    "statement": "Let $Z$ be a locus of equations of degree at most $L\\ge1$, and let $a_k$ be the total degree of any chosen subfamily of its $k$-dimensional irreducible components."
+   },
+   {
+    "anchor": "stmt-poly-envelope",
+    "claim_id": "claim-mixed-dimensional-envelope-bounds",
+    "statement": "For an arbitrary reduced union with dimension-by-dimension degrees $a_k$, without a hypothesis on its equations,"
+   },
+   {
+    "anchor": "stmt-poly-regularity",
+    "claim_id": "claim-common-family-regularity",
+    "statement": "Let $V$ be a pure $k$-dimensional family of total degree $a$ as in the lower-bound part of Lemma <a href=\"#poly:hilbert\" data-reference-type=\"ref\" data-reference=\"poly:hilbert\">13</a>, with equation bound $L$."
+   },
+   {
+    "anchor": "stmt-poly-regularity",
+    "claim_id": "claim-common-family-regularity",
+    "statement": "If $D\\ge C_nL$,"
+   },
+   {
+    "anchor": "stmt-poly-pooling",
+    "claim_id": "claim-pooling-proper-cuts",
+    "statement": "Let $V=\\bigcup_iV_i$ be a pure $k$-dimensional family of total degree $a$ satisfying the lower-bound hypotheses of Lemma <a href=\"#poly:hilbert\" data-reference-type=\"ref\" data-reference=\"poly:hilbert\">13</a>, with bound $L$."
+   },
+   {
+    "anchor": "stmt-poly-pooling",
+    "claim_id": "claim-pooling-proper-cuts",
+    "statement": "On each $V_i$ let $h_i$ be a polynomial of degree at most $L'\\ge1$ which does not vanish identically on $V_i$."
+   },
+   {
+    "anchor": "stmt-poly-pooling",
+    "claim_id": "claim-pooling-proper-cuts",
+    "statement": "If $D\\ge C_n\\max\\{L,L'\\}$,"
+   },
+   {
+    "anchor": "stmt-poly-compression",
+    "claim_id": "claim-multiplicity-compression",
+    "statement": "Let $S\\subset\\mathbb C^n$ be finite and let $x_*\\in\\mathbb C^n$."
+   },
+   {
+    "anchor": "stmt-poly-compression",
+    "claim_id": "claim-multiplicity-compression",
+    "statement": "Suppose a polynomial $f$ of degree at most $E$ has order at least $r\\ge1$ at every point of $S$, and $f(x_*)\\ne0$."
+   },
+   {
+    "anchor": "stmt-poly-matrix-multiplicity",
+    "claim_id": "claim-rank-loss-multiplicity",
+    "statement": "Let $A(x)$ be a matrix of polynomials on $\\mathbb C^n$, and let $F(x)$ be a $q$-row, $q$-column minor."
+   },
+   {
+    "anchor": "stmt-poly-matrix-multiplicity",
+    "claim_id": "claim-rank-loss-multiplicity",
+    "statement": "If $\\mathop{\\mathrm{rank}}A(p)\\le q-h$,"
+   },
+   {
+    "anchor": "stmt-poly-projection",
+    "claim_id": "claim-projection-degree-and-multiplicity",
+    "statement": "Let $X\\subset\\mathbb P^n_{\\mathbb C}$ be irreducible of dimension $k\\ge1$ and degree $a$.*\n\n\n1."
+   },
+   {
+    "anchor": "stmt-poly-projection",
+    "claim_id": "claim-projection-degree-and-multiplicity",
+    "statement": "If projection from a point $p$ has image $Y$ of dimension $k$ and generic degree $t$,"
+   },
+   {
+    "anchor": "stmt-poly-projection",
+    "claim_id": "claim-projection-degree-and-multiplicity",
+    "statement": "If $k<n$,"
+   },
+   {
+    "anchor": "stmt-poly-high-multiplicity",
+    "claim_id": "claim-high-multiplicity-test",
+    "statement": "Let $X\\subsetneq\\mathbb C^n$ be irreducible of degree $a$, and let $S\\subset X$ be finite with $\\mathop{\\mathrm{mult}}_pX>a/2$ for every $p\\in S$."
+   },
+   {
+    "anchor": "stmt-poly-tangent-projection",
+    "claim_id": "claim-tangent-projection-loss",
+    "statement": "Let an irreducible affine curve $C$ lie in a variety $X$ smooth at $p\\in C$."
+   },
+   {
+    "anchor": "stmt-poly-tangent-projection",
+    "claim_id": "claim-tangent-projection-loss",
+    "statement": "Suppose $C$ has a point $z$ for which the direction $z-p$ is not in $T_pX$."
+   },
+   {
+    "anchor": "stmt-poly-tangent-projection",
+    "claim_id": "claim-tangent-projection-loss",
+    "statement": "if projection of $C$ from $p$ is nonconstant,"
+   },
+   {
+    "anchor": "stmt-poly-polar",
+    "claim_id": "claim-plane-curve-polar-bound",
+    "statement": "Let $C\\subset\\mathbb P^2_{\\mathbb C}$ be a reduced plane curve of degree $a$."
+   },
+   {
+    "anchor": "stmt-poly-polar",
+    "claim_id": "claim-plane-curve-polar-bound",
+    "statement": "If $m_q=\\mathop{\\mathrm{mult}}_qC$,"
+   },
+   {
+    "anchor": "stmt-geo-secants",
+    "claim_id": "claim-secant-tangent-constraint",
+    "statement": "Let $X,Y\\subset\\mathbb A^d$ be irreducible varieties of dimensions $k,l\\ge1$."
+   },
+   {
+    "anchor": "stmt-geo-secants",
+    "claim_id": "claim-secant-tangent-constraint",
+    "statement": "Suppose that for a general pair $(x,y)\\in X\\times Y$ the connecting direction is in neither $T_xX$ nor $T_yY$."
+   },
+   {
+    "anchor": "stmt-geo-secants",
+    "claim_id": "claim-secant-tangent-constraint",
+    "statement": "Let $Y'$ be another irreducible $l$-dimensional variety, possibly equal to $Y$."
+   },
+   {
+    "anchor": "stmt-geo-secants",
+    "claim_id": "claim-secant-tangent-constraint",
+    "statement": "If a general such line has a further point $z\\in Y'\\setminus\\{x,y\\}$,"
+   },
+   {
+    "anchor": "stmt-geo-generic-depth",
+    "claim_id": "claim-generic-projection-depth",
+    "statement": "Let $\\mathcal X,\\mathcal Y$ be finite families of distinct irreducible carriers of dimensions $k\\ge l\\ge1$, where $k<d$ and $l<d-1$."
+   },
+   {
+    "anchor": "stmt-geo-generic-depth",
+    "claim_id": "claim-generic-projection-depth",
+    "statement": "Assume that every flat member is real."
+   },
+   {
+    "anchor": "stmt-geo-generic-depth",
+    "claim_id": "claim-generic-projection-depth",
+    "statement": "Assume $n_x,n_y\\ge N\\exp(-o(w))$, with $w\\to\\infty$ and $w\\le\\log B$."
+   },
+   {
+    "anchor": "stmt-geo-terminal",
+    "claim_id": "claim-terminal-curve-deletion",
+    "statement": "Assign sample points to finitely many irreducible physical curves $Y_i$, each containing its assigned points."
+   },
+   {
+    "anchor": "stmt-geo-terminal",
+    "claim_id": "claim-terminal-curve-deletion",
+    "statement": "Pool repetitions of a curve, and require every line member to be real."
+   },
+   {
+    "anchor": "pm-h-27",
+    "claim_id": "claim-terminal-curve-deletion",
+    "statement": "Fix, for each $p\\in P$, a union $C_p$ of irreducible curves in $\\mathbb P^{d-1}$, each spanning a projective subspace of dimension at most two, with summed degree at most $$E=\\delta N/A,\\qquad \\delta\\longrightarrow0.$$"
+   },
+   {
+    "anchor": "sec:profiles",
+    "claim_id": "claim-multiscale-profile-partition",
+    "statement": "In this section a further parameter $\\delta\\to0$ is given, and $E=\\delta N/A$."
+   },
+   {
+    "anchor": "stmt-prof-budget",
+    "claim_id": "claim-balanced-profile-budgets",
+    "statement": "For every non-core profile,"
+   },
+   {
+    "anchor": "stmt-prof-regularity",
+    "claim_id": "claim-profile-component-regularity",
+    "statement": "Inside an open plateau,"
+   },
+   {
+    "anchor": "stmt-prof-regularity",
+    "claim_id": "claim-profile-component-regularity",
+    "statement": "provided each piece retains its own assigned masses."
+   },
+   {
+    "anchor": "stmt-prof-product-testing",
+    "claim_id": "claim-product-testing",
+    "statement": "Take two pieces, or the pooled pieces described above, in a common window with the same limiting profile."
+   },
+   {
+    "anchor": "stmt-prof-product-testing",
+    "claim_id": "claim-product-testing",
+    "statement": "On a fixed plateau, fix in each set an assignment of every point to one carrier of its original piece that contains it."
+   },
+   {
+    "anchor": "stmt-prof-product-testing",
+    "claim_id": "claim-product-testing",
+    "statement": "The denominators used in these pullbacks must be nonzero at the actual pairs concerned."
+   },
+   {
+    "anchor": "stmt-prof-pair-selection",
+    "claim_id": "claim-profile-pair-selection",
+    "statement": "For every $p\\in P$, let $C_p$ be a finite family of irreducible projective curves in $\\mathbb P^{d-1}$, each spanning a projective subspace of dimension at most two, with total degree at most $E=\\delta N/A$."
+   },
+   {
+    "anchor": "stmt-prof-pair-selection",
+    "claim_id": "claim-profile-pair-selection",
+    "statement": "Suppose that $1-o(1)$ of the unordered pairs $\\{p,q\\}$ satisfy $\\pi_p(q)\\in C_p$ or $\\pi_q(p)\\in C_q$."
+   },
+   {
+    "anchor": "stmt-sc-theorem",
+    "claim_id": "claim-sparse-cones-impossibility",
+    "statement": "Along a sequence with $M=o(A)$,"
+   },
+   {
+    "anchor": "red:regime",
+    "claim_id": "claim-sparse-cones-impossibility",
+    "statement": "Suppose that Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> fails, and take the least dimension $d\\ge3$ in which it fails. There is then a sequence of finite sets $P\\subset\\mathbb R^d$ for which, with $$\\label{red:regime}\n N=|P|,\\qquad M=1+|\\Delta(P)|,\\qquad\n B=N^{1/d},\\qquad A=B^2,\n \\qquad N\\longrightarrow\\infty,\\quad M/A\\longrightarrow0.$$ Here and below a statement along the sequence is understood after discarding finitely many terms, if necessary. The fact that $N\\to\\infty$ follows because a set of at least two points determines at least one distance. Adding $1$ to the number of distances does not affect the vanishing ratio."
+   },
+   {
+    "anchor": "stmt-sc-retained-products",
+    "claim_id": "claim-retained-product-images",
+    "statement": "Fix a common positive-dimensional plateau after $j$ cuts, of dimension $k=d-j<d-1$, and choose an interior time $\\tau$ on that plateau."
+   },
+   {
+    "anchor": "stmt-sc-retained-products",
+    "claim_id": "claim-retained-product-images",
+    "statement": "Given a fixed $\\varepsilon>0$,"
+   },
+   {
+    "anchor": "stmt-sc-common-rank",
+    "claim_id": "claim-common-window-label-rank",
+    "statement": "Let $\\Gamma\\subset\\{(p,q)\\in S_x\\times S_y:p\\ne q\\}$ be any dense graph on the selected pieces or pool;"
+   },
+   {
+    "anchor": "stmt-sc-common-rank",
+    "claim_id": "claim-common-window-label-rank",
+    "statement": "at an interior testing time before the last cut,"
+   },
+   {
+    "anchor": "stmt-sc-outer-regularity",
+    "claim_id": "claim-outer-endpoint-regular-images",
+    "statement": "For the fixed $\\mathcal R$ and $U$ above,"
+   },
+   {
+    "anchor": "dep:section",
+    "claim_id": "claim-separated-window-projected-degree",
+    "statement": "Thus $v,s\\to\\infty$, both are $o(\\log B)$, and either $v/s\\to0$ or $v/s\\to\\infty$."
+   },
+   {
+    "anchor": "stmt-sc-separated-rank",
+    "claim_id": "claim-separated-window-strict-rank",
+    "statement": "At typical centers,"
+   },
+   {
+    "anchor": "stmt-mot-rich",
+    "claim_id": "claim-very-rich-motion-sum",
+    "statement": "Let $P\\subset\\mathbb R^3$ consist of $N\\ge2$ distinct points, and set $$A=N^{2/3},\\qquad M=1+|\\Delta(P)|.$$"
+   },
+   {
+    "anchor": "stmt-mot-rich",
+    "claim_id": "claim-very-rich-motion-sum",
+    "statement": "If $M\\le A$,"
+   },
+   {
+    "anchor": "stmt-mot-beck",
+    "claim_id": "claim-beck-lines-and-anchors",
+    "statement": "If a finite set of $n$ distinct real points has at most $\\delta_0 n$ points on any line,"
+   },
+   {
+    "anchor": "stmt-mot-effective-planes",
+    "claim_id": "claim-effective-rich-plane-count",
+    "statement": "for a cloud $X\\subset\\mathbb R^3$ with $|X|\\le m$, $m\\ge1$, and $H\\ge C_2m^{2/3}$,"
+   },
+   {
+    "anchor": "stmt-mot-local",
+    "claim_id": "claim-local-nonlinear-motion-count",
+    "statement": "if $m\\ge1$,"
+   },
+   {
+    "anchor": "stmt-mot-local",
+    "claim_id": "claim-local-nonlinear-motion-count",
+    "statement": "$|X|,|Y|\\le m$,"
+   },
+   {
+    "anchor": "stmt-mot-local",
+    "claim_id": "claim-local-nonlinear-motion-count",
+    "statement": "and $\\ell\\ge C_{\\mathrm{loc}}m^{2/3}$,"
+   },
+   {
+    "anchor": "stmt-mot-partition",
+    "claim_id": "claim-cube-hole-subdivision",
+    "statement": "Let $N\\ge1$ and $1\\le r\\le N$, with $r$ allowed to be real."
+   },
+   {
+    "anchor": "stmt-mot-line-images",
+    "claim_id": "claim-prescribed-line-image-motions",
+    "statement": "Let $(L_1,L_2)$ and $(L'_1,L'_2)$ be ordered pairs of distinct affine lines in $\\mathbb R^3$.*\n\n1."
+   },
+   {
+    "anchor": "stmt-mot-line-images",
+    "claim_id": "claim-prescribed-line-image-motions",
+    "statement": "If the source lines are nonparallel,"
+   },
+   {
+    "anchor": "stmt-mot-line-images",
+    "claim_id": "claim-prescribed-line-image-motions",
+    "statement": "If the source lines are parallel,"
+   },
+   {
+    "anchor": "stmt-mot-line-images",
+    "claim_id": "claim-prescribed-line-image-motions",
+    "statement": "If all four lines contain at most $H$ points of their respective clouds,"
+   },
+   {
+    "anchor": "stmt-mot-parallel-pairs",
+    "claim_id": "claim-parallel-line-separation-count",
+    "statement": "Let $\\mathcal L$ be a finite family of at most $L$ distinct lines in $\\mathbb R^3$."
+   },
+   {
+    "anchor": "stmt-conc-theorem",
+    "claim_id": "claim-uniform-evaluation-flat-concentration",
+    "statement": "Fix $C_0\\geq1$."
+   },
+   {
+    "anchor": "stmt-conc-theorem",
+    "claim_id": "claim-uniform-evaluation-flat-concentration",
+    "statement": "Let $A\\geq1$ and let $\\mathcal P$ be a finite set of distinct parameters $[v:y]\\in\\mathcal Q$, all with $v\\ne0$."
+   },
+   {
+    "anchor": "stmt-conc-theorem",
+    "claim_id": "claim-uniform-evaluation-flat-concentration",
+    "statement": "Every projective $\\mathbf P^r\\subset\\mathcal Q$ contains at most $C_0A^{r-1}$ members of $\\mathcal P$."
+   },
+   {
+    "anchor": "stmt-conc-walsh",
+    "claim_id": "claim-approximate-complete-intersection",
+    "statement": "If $V\\subset\\mathbb A^n_{\\mathbb C}$ is irreducible of codimension $c>0$,"
+   },
+   {
+    "anchor": "aci:partial-degrees",
+    "claim_id": "claim-compatible-partial-cuts",
+    "statement": "$$1\\le\\delta_1\\le\\cdots\\le\\delta_c.\n \\label{aci:partial-degrees}$$ We also put $\\delta_0=0$."
+   },
+   {
+    "anchor": "stmt-aci-cuts",
+    "claim_id": "claim-compatible-partial-cuts",
+    "statement": "if $0\\le j<c$"
+   },
+   {
+    "anchor": "stmt-aci-cuts",
+    "claim_id": "claim-compatible-partial-cuts",
+    "statement": "and $\\delta_j\\le m<\\delta_{j+1}$,"
+   },
+   {
+    "anchor": "stmt-conc-separators",
+    "claim_id": "claim-parameter-count-from-separators",
+    "statement": "Under the separator assumption of Theorem 46,"
+   },
+   {
+    "anchor": "stmt-conc-regularity",
+    "claim_id": "claim-controlled-regular-equations",
+    "statement": "Suppose that an irreducible $V\\subset\\mathbb A^n_{\\mathbb C}$ has codimension $c>0$ and is a component of $Z(f_1,\\ldots,f_c)$, where $$\\deg f_i\\leq D,\\qquad\n \\prod_i\\deg f_i\\leq C_n\\deg V,\\qquad D\\geq1,$$ with the dimensional constant from Theorem <a href=\"#conc:walsh\" data-reference-type=\"ref\" data-reference=\"conc:walsh\">47</a>."
+   },
+   {
+    "anchor": "stmt-conc-rulings",
+    "claim_id": "claim-controlled-ruling-incidences",
+    "statement": "Let $V\\subset S$ be irreducible of dimension $k=s_0+h$, with $1\\leq h<r$."
+   },
+   {
+    "anchor": "stmt-conc-rulings",
+    "claim_id": "claim-controlled-ruling-incidences",
+    "statement": "Suppose that $V$ has $c=n-k$ approximate equations as in Lemma <a href=\"#conc:regularity\" data-reference-type=\"ref\" data-reference=\"conc:regularity\">50</a>, of maximum degree at most $D$."
+   },
+   {
+    "anchor": "stmt-conc-degree",
+    "claim_id": "claim-ruling-parameter-degree-and-exception",
+    "statement": "Let $V\\subsetneq S$ be irreducible of dimension $k=s_0+h$, where $1\\le h<r$, and let $\\Gamma$ be a ruling incidence provided by Lemma <a href=\"#conc:rulings\" data-reference-type=\"ref\" data-reference=\"conc:rulings\">51</a>."
+   },
+   {
+    "anchor": "stmt-conc-degree",
+    "claim_id": "claim-ruling-parameter-degree-and-exception",
+    "statement": "If $j=1$,"
+   },
+   {
+    "anchor": "stmt-ci-crossing",
+    "claim_id": "claim-crossing-inequality",
+    "statement": "Suppose a simple graph with $v\\ge1$ vertices and $e\\ge4v$ edges is drawn in the plane, no edge goes through a vertex other than its endpoints, and two edges with a common endpoint have no other intersection."
+   },
+   {
+    "anchor": "stmt-ci-crossing",
+    "claim_id": "claim-crossing-inequality",
+    "statement": "If $X$ counts intersecting pairs of edges away from their endpoints,"
+   },
+   {
+    "anchor": "stmt-ci-st",
+    "claim_id": "claim-real-point-line-incidence",
+    "statement": "For finite sets $Q$ of $n$ points and $\\mathcal L$ of $L$ distinct real lines in the plane,"
+   },
+   {
+    "anchor": "stmt-ci-partition",
+    "claim_id": "claim-polynomial-bisection",
+    "statement": "Given a finite set $S\\subset\\mathbb R^3$ and an integer $r\\ge1$,"
+   },
+   {
+    "anchor": "stmt-ci-flat",
+    "claim_id": "claim-critical-and-flat-line-tests",
+    "statement": "For a square-free polynomial $f$ of degree $D$:"
+   },
+   {
+    "anchor": "stmt-ci-rich-lines",
+    "claim_id": "claim-higher-richness-spatial-lines",
+    "statement": "Let $\\mathcal L$ be $L$ distinct lines in $\\mathbb R^3$, with at most $B_0$ in any affine plane."
+   },
+   {
+    "anchor": "stmt-ci-planar-motions",
+    "claim_id": "claim-planar-rich-motion-count",
+    "statement": "Let $U,V\\subset\\mathbb R^2$ have respective cardinalities $u,v$."
+   },
+   {
+    "anchor": "stmt-ci-planar-motions",
+    "claim_id": "claim-planar-rich-motion-count",
+    "statement": "For $3\\le k\\le\\min(u,v)$,"
+   },
+   {
+    "anchor": "stmt-ci-flecnode",
+    "claim_id": "claim-nonruled-surface-line-count",
+    "statement": "which is not geometrically ruled"
+   },
+   {
+    "anchor": "stmt-ci-ruled-structure",
+    "claim_id": "claim-ruled-surface-generator-structure",
+    "statement": "Let $S$ be an irreducible ruled projective surface over $\\mathbb C$ which is neither a plane nor a smooth quadric."
+   },
+   {
+    "anchor": "stmt-ci-ruled-count",
+    "claim_id": "claim-ruled-surface-intersection-count",
+    "statement": "Let a union of real absolutely irreducible geometrically ruled surfaces have total degree $d\\ge1$, and let $\\mathcal L$ consist of $M\\ge1$ distinct real affine lines contained in that union."
+   },
+   {
+    "anchor": "stmt-ci-ruled-count",
+    "claim_id": "claim-ruled-surface-intersection-count",
+    "statement": "If at most $s$ lines lie in any plane or regulus,"
+   },
+   {
+    "anchor": "stmt-ci-two-rich",
+    "claim_id": "claim-two-rich-spatial-line-count",
+    "statement": "For $m$ distinct real affine lines,"
+   },
+   {
+    "anchor": "stmt-ci-two-rich",
+    "claim_id": "claim-two-rich-spatial-line-count",
+    "statement": "with at most $s\\ge1$ in any plane or regulus,"
+   },
+   {
+    "anchor": "stmt-ci-cayley-caps",
+    "claim_id": "claim-planar-cayley-line-caps",
+    "statement": "For two finite planar sets $U,V$ of sizes $u,v$,"
+   },
+   {
+    "anchor": "stmt-ci-planar-distances",
+    "claim_id": "claim-planar-distinct-distance-base",
+    "statement": "of $n\\ge2$ points"
+   },
+   {
+    "anchor": "stmt-ci-planar-occupancy",
+    "claim_id": "claim-planar-occupancy",
+    "statement": "If a finite set in Euclidean space determines at most $M\\ge1$ positive distances,"
+   },
+   {
+    "anchor": "stmt-ci-planar-occupancy",
+    "claim_id": "claim-planar-occupancy",
+    "statement": "along a sequence with $B\\longrightarrow\\infty$ and $M=o(B^2)$,"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Independent homogeneous evaluations in every selected star",
+    "evidence": [
+     {
+      "anchor": "proof-stmt-red-independent-stars",
+      "quote": "Independent evaluation vectors mean that the evaluation map onto the coordinates indexed by the star is surjective.",
+      "quote_sha256": "5da9c533983f34ca5004a20290d7bf2fc0ee92f7eae2dda57a2b6fcc6bb069cd"
+     },
+     {
+      "anchor": "pm-h-6",
+      "quote": "Once it is excluded, greedy removal of curves containing too many directions leaves a positive fraction of pairs with controlled concentration on every projective variety.",
+      "quote_sha256": "f2287c2343e648ba57870ab31ff5f99a638ee07bab49bb8b6f0704682cb80cd4"
+     }
+    ],
+    "requires_concepts": [
+     "Sparse-cone impossibility",
+     "Algebraic direction concentration",
+     "Component Hilbert lower bounds",
+     "Maximal symmetric independent selection"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Uniform concentration of alternating-form evaluation flats",
+    "evidence": [
+     {
+      "anchor": "conc:section",
+      "quote": "The distinction between the two versions below is essential: the global family has a cardinality bound, whereas a family inside one of its flats need not have one.",
+      "quote_sha256": "a57ade4e65d940d8f6812735c36ae3e2255942559b607da8c4b14e0f77385a23"
+     },
+     {
+      "anchor": "conc:deg-section",
+      "quote": "When $j=1$, the parameter variety has dimension $h+1$, and the separator bound alone would cost one extra factor of $A$.",
+      "quote_sha256": "f2eeb9c5b859dbf08e9f48cb15aa689044409e50d5303f2630ad185c5d6eae99"
+     }
+    ],
+    "requires_concepts": [
+     "Polynomial separators",
+     "Approximate complete intersections",
+     "Controlled regular equations",
+     "Actual ruling incidences",
+     "Parameter degree bounds",
+     "Maximal-isotropic exceptional families"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-distinct-distance-lower-bound",
+   "exact_statement": "For every integer $d\\ge3$, there is a constant $c_d>0$ such that every finite set $P\\subset\\mathbb R^d$ of $n\\ge2$ distinct points satisfies $$|\\Delta(P)|\\ge c_d n^{2/d}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-proper-flat-occupancy",
+   "exact_statement": "In the regime <a href=\"#red:regime\" data-reference-type=\"eqref\" data-reference=\"red:regime\">[red:regime]</a>, a real affine $u$-flat contains at most $$\\begin{cases}\n  1,&u=0,\\\\\n  2M,&u=1,\\\\\n  C M\\log(2M),&u=2,\\\\\n  C_u M^{u/2},&3\\le u<d\n \\end{cases}$$ points of $P$. A circle contains at most $2M$ points. In particular there is a fixed $c_0>0$ such that every proper real affine flat contains at most $N B^{-c_0}$ points for all sufficiently large terms of the sequence. The same assertion holds for a proper complex affine flat when only its real sample points are counted. Planes have the more precise bound $B^{2+o(1)}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-red-flat-caps"
+  },
+  {
+   "claim_id": "claim-algebraically-controlled-directions",
+   "exact_statement": "After passing to a subsequence, there is an undirected graph $\\mathcal G$ on $P$ with at least $cN^2$ edges such that, for every vertex $p$ and every irreducible projective variety $Y\\subset\\mathbb P^{d-1}$ of dimension $a$, $$\\label{eq:direction-count}\n \\#\\{q:\\{p,q\\}\\in\\mathcal G,\\ \\pi_p(q)\\in Y\\}\n \\le C\\,\\deg(Y)A^a.$$ The positive constants $c,C$ are fixed along the subsequence.",
+   "kind": "construction",
+   "statement_anchor": "stmt-red-directions"
+  },
+  {
+   "claim_id": "claim-independent-star-evaluations",
+   "exact_statement": "A further symmetric selection retains at least $c'N^2$ pairs and has the following property: the direction-evaluation vectors of the partners in each star are linearly independent for homogeneous polynomials of degree $D=\\lfloor A\\rfloor$. In particular each selected star admits homogeneous separators of degree $D$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-red-independent-stars"
+  },
+  {
+   "claim_id": "claim-global-flat-concentration",
+   "exact_statement": "For the retained pair flats, an irreducible variety $V$ of dimension $s_0+h$ in skew-form space contains at most $$C\\deg(V)A^h$$ of the flats, for $0\\le h\\le d$, where the endpoint $h=d$ denotes the ambient space.",
+   "kind": "bound",
+   "statement_anchor": "stmt-red-global-concentration"
+  },
+  {
+   "claim_id": "claim-local-neighbor-concentration",
+   "exact_statement": "Every nonzero polynomial of degree at most $A$ on $F_{p,q}$ contains in its zero set at most $C A^{d-1}$ of the neighbor flats in <a href=\"#eq:neighbor-flat\" data-reference-type=\"eqref\" data-reference=\"eq:neighbor-flat\">[eq:neighbor-flat]</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-red-local-concentration"
+  },
+  {
+   "claim_id": "claim-sampling-rank-contradiction",
+   "exact_statement": "The graph $\\mathcal H$ cannot satisfy both bounds in Lemmas <a href=\"#red:global-concentration\" data-reference-type=\"ref\" data-reference=\"red:global-concentration\">5</a> and <a href=\"#red:local-concentration\" data-reference-type=\"ref\" data-reference=\"red:local-concentration\">6</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-red-main-contradiction"
+  },
+  {
+   "claim_id": "claim-physical-separators",
+   "exact_statement": "Let $P\\subset\\mathbb R^n$ be finite and let $M=1+|\\Delta(P)|$. Each $p\\in P$ has a polynomial $s_p$ of degree at most $2(M-1)$ such that $$s_p(p)=1,\\qquad s_p(q)=0\\quad(q\\in P\\setminus\\{p\\}).$$ If $V\\subset\\mathbb C^n$ is a pure $u$-dimensional variety of degree $a$, then $$\\label{poly:physical-count}\n |P\\cap V|\\le C_n aM^u.$$ Moreover, $P$ is precisely the common zero set of a system of polynomials of degree at most $2M+1$. In particular, all its points are isolated components of that system.",
+   "kind": "construction",
+   "statement_anchor": "stmt-poly-separators"
+  },
+  {
+   "claim_id": "claim-local-determinant-nonvanishing",
+   "exact_statement": "Let $F$ be an algebraically closed field, let $R=F[Z_1,\\ldots,Z_c]_{(Z_1,\\ldots,Z_c)}$, and suppose $f_1,\\ldots,f_c\\in R$ generate an ideal of finite colength. If $$(f_1,\\ldots,f_c)^{\\mathsf t}\n       =Q(Z)(Z_1,\\ldots,Z_c)^{\\mathsf t},$$ then the class of $\\det Q$ in $R/(f_1,\\ldots,f_c)$ is nonzero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-poly-socle"
+  },
+  {
+   "claim_id": "claim-isolated-point-interpolation",
+   "exact_statement": "Let $F$ be algebraically closed, and let $S\\subset F^c$ be any selection of distinct isolated points of the common zero set of polynomials of degree at most $L$, where $L\\ge1$. There are polynomials of degree at most $c(L-1)$ separating the points of $S$. In fact a separator for one point can be chosen to vanish at every other common zero of the original system, including its positive-dimensional components.*\n\n*Arbitrary values and all first partial derivatives can be prescribed simultaneously on $S$ by a polynomial of degree at most $C_cL$. Furthermore, $S$ itself is the exact zero set of equations of degree at most $C_cL$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-poly-interpolation"
+  },
+  {
+   "claim_id": "claim-union-list-interpolation",
+   "exact_statement": "Suppose $S$ is the union of finitely many lists $S_\\nu\\subset F^c$, where $S_\\nu$ consists of isolated points of a system of degree at most $L_\\nu\\ge1$. Put $L_*=\\sum_\\nu L_\\nu$. Values and first derivatives on the distinct points of $S$ can be interpolated at degree at most $C_cL_*$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-poly-union-interpolation"
+  },
+  {
+   "claim_id": "claim-component-hilbert-bounds",
+   "exact_statement": "Let $V\\subset\\mathbb C^n$ be a finite union of distinct irreducible varieties of pure dimension $k$ and total degree $a$. For every $D\\ge0$, $$\\label{poly:hilbert-upper}\n H_V(D)\\le a\\binom{D+k}{k}.$$ Suppose in addition that every member of this family is an irreducible component of a common locus defined by equations of degree at most $L\\ge1$. Other components of that locus may have any dimension. There is an integer $q\\le C_nL$ such that, for $D\\ge q$, $$\\label{poly:hilbert-lower}\n H_V(D)\\ge a\\binom{D-q+k}{k}.$$ In particular, $$\\label{poly:hilbert-at-L}\n H_V(L)\\ge c_n aL^k.$$ The same assertions hold for projective varieties, with homogeneous restriction rank.*\n\n*More generally, the lower assertions hold with $L$ replaced by $L_* =\\sum_\\nu L_\\nu$ if the family is a union of lists, the members of the $\\nu$th list being irreducible components of a system of degree at most $L_\\nu$. A component in several lists is counted once.",
+   "kind": "bound",
+   "statement_anchor": "stmt-poly-hilbert"
+  },
+  {
+   "claim_id": "claim-mixed-dimensional-envelope-bounds",
+   "exact_statement": "Let $Z$ be a locus of equations of degree at most $L\\ge1$, and let $a_k$ be the total degree of any chosen subfamily of its $k$-dimensional irreducible components. For their union $V$, $$H_V(L)\\ge c_n\\sum_{k=0}^n a_kL^k.$$ For an arbitrary reduced union with dimension-by-dimension degrees $a_k$, without a hypothesis on its equations, $$H_V(D)\\le\\sum_{k=0}^n a_k\\binom{D+k}{k}.$$ In particular these statements apply to the components of $\\mathop{\\mathrm{Env}}_L(T)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-poly-envelope"
+  },
+  {
+   "claim_id": "claim-common-family-regularity",
+   "exact_statement": "Let $V$ be a pure $k$-dimensional family of total degree $a$ as in the lower-bound part of Lemma <a href=\"#poly:hilbert\" data-reference-type=\"ref\" data-reference=\"poly:hilbert\">13</a>, with equation bound $L$. The union-of-systems version is allowed, with $L=\\sum_\\nu L_\\nu$. If $D\\ge C_nL$, then, except for components of total degree at most $$\\label{poly:regularity-loss}\n C_n aL/D,$$ the equations of degree at most $D$ vanishing on the *whole* family have Jacobian rank $n-k$ generically on every component.*\n\n*There is a finite set of these equations and a polynomial of degree at most $C_nD$, obtained as a linear combination of their maximal Jacobian minors, which is nonzero on each retained component. At points of $V$ where this polynomial is nonzero, their common zero set is locally a smooth $k$-fold, equal locally to $V$. In particular distinct members of the family cannot meet there.",
+   "kind": "construction",
+   "statement_anchor": "stmt-poly-regularity"
+  },
+  {
+   "claim_id": "claim-pooling-proper-cuts",
+   "exact_statement": "Let $V=\\bigcup_iV_i$ be a pure $k$-dimensional family of total degree $a$ satisfying the lower-bound hypotheses of Lemma <a href=\"#poly:hilbert\" data-reference-type=\"ref\" data-reference=\"poly:hilbert\">13</a>, with bound $L$. On each $V_i$ let $h_i$ be a polynomial of degree at most $L'\\ge1$ which does not vanish identically on $V_i$. If $D\\ge C_n\\max\\{L,L'\\}$, there is a polynomial $g$ of degree at most $D$ which vanishes on every proper cut $V_i\\cap\\{h_i=0\\}$ and is not identically zero on any member except possibly a subfamily of total degree at most $$\\label{poly:pooling-loss}\n C_n aL'/D.$$ The union-of-systems version of the family is again allowed.",
+   "kind": "construction",
+   "statement_anchor": "stmt-poly-pooling"
+  },
+  {
+   "claim_id": "claim-multiplicity-compression",
+   "exact_statement": "Let $S\\subset\\mathbb C^n$ be finite and let $x_*\\in\\mathbb C^n$. Suppose a polynomial $f$ of degree at most $E$ has order at least $r\\ge1$ at every point of $S$, and $f(x_*)\\ne0$. There is a polynomial $g$ such that $$\\deg g\\le (n+1)E/r,\\qquad\n g|_S=0,\\qquad g(x_*)\\ne0.$$ The degree bound has no dependence on $|S|$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-poly-compression"
+  },
+  {
+   "claim_id": "claim-rank-loss-multiplicity",
+   "exact_statement": "Let $A(x)$ be a matrix of polynomials on $\\mathbb C^n$, and let $F(x)$ be a $q$-row, $q$-column minor. If $\\mathop{\\mathrm{rank}}A(p)\\le q-h$, then $\\mathop{\\mathrm{mult}}_pF\\ge h$. In particular, if $F$ is nonzero at a test point, has degree at most $E$, and the indicated rank loss occurs at finitely many points, Lemma <a href=\"#poly:compression\" data-reference-type=\"ref\" data-reference=\"poly:compression\">17</a> gives a polynomial of degree at most $(n+1)E/h$ vanishing at those points but not at the test point.",
+   "kind": "bound",
+   "statement_anchor": "stmt-poly-matrix-multiplicity"
+  },
+  {
+   "claim_id": "claim-projection-degree-and-multiplicity",
+   "exact_statement": "Let $X\\subset\\mathbb P^n_{\\mathbb C}$ be irreducible of dimension $k\\ge1$ and degree $a$.*\n\n\n1.  *If projection from a point $p$ has image $Y$ of dimension $k$ and generic degree $t$, then $$\\label{poly:point-projection-formula}\n     t\\deg Y=a-\\mathop{\\mathrm{mult}}_pX.$$*\n\n\n2.  *If $k<n$, there is a generic linear projection to $\\mathbb P^{k+1}$ which is finite and birational on $X$. Its image is an irreducible hypersurface of degree $a$. Given finitely many specified points $p_i\\in X$, the projection can simultaneously be chosen so that their fibers are singletons and $$\\label{poly:projection-multiplicity}\n     \\mathop{\\mathrm{mult}}_{\\pi(p_i)}\\pi(X)\\ge\\mathop{\\mathrm{mult}}_{p_i}X.$$ Given in addition a point $x_*\\notin X$, it can also be required that $\\pi(x_*)\\notin\\pi(X)$.*\n\n*The assertions apply to affine varieties through their projective closures and generic affine charts.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-poly-projection"
+  },
+  {
+   "claim_id": "claim-high-multiplicity-test",
+   "exact_statement": "Let $X\\subsetneq\\mathbb C^n$ be irreducible of degree $a$, and let $S\\subset X$ be finite with $\\mathop{\\mathrm{mult}}_pX>a/2$ for every $p\\in S$. For any specified $x_*\\notin X$, there is a polynomial of degree at most $2(n+1)$ which vanishes on $S$ and is nonzero at $x_*$. In particular the specified high-multiplicity centers lie in a proper hypersurface of degree bounded in terms of the ambient dimension alone.",
+   "kind": "construction",
+   "statement_anchor": "stmt-poly-high-multiplicity"
+  },
+  {
+   "claim_id": "claim-tangent-projection-loss",
+   "exact_statement": "Let an irreducible affine curve $C$ lie in a variety $X$ smooth at $p\\in C$. Suppose $C$ has a point $z$ for which the direction $z-p$ is not in $T_pX$. Then $$\\mathop{\\mathrm{mult}}_pC\\le\\tfrac12\\deg C.$$ Consequently, if projection of $C$ from $p$ is nonconstant, its image degree times its generic map degree is at least $\\tfrac12\\deg C$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-poly-tangent-projection"
+  },
+  {
+   "claim_id": "claim-plane-curve-polar-bound",
+   "exact_statement": "Let $C\\subset\\mathbb P^2_{\\mathbb C}$ be a reduced plane curve of degree $a$. If $m_q=\\mathop{\\mathrm{mult}}_qC$, then $$\\label{poly:polar-sum}\n \\sum_{q:\\,m_q\\ge2}m_q(m_q-1)\\le a(a-1),\n \\qquad\n \\sum_{q:\\,m_q\\ge2}m_q^2\\le2a(a-1).$$ The sums include points on any chosen line at infinity.",
+   "kind": "bound",
+   "statement_anchor": "stmt-poly-polar"
+  },
+  {
+   "claim_id": "claim-secant-tangent-constraint",
+   "exact_statement": "Let $X,Y\\subset\\mathbb A^d$ be irreducible varieties of dimensions $k,l\\ge1$. Suppose that for a general pair $(x,y)\\in X\\times Y$ the connecting direction is in neither $T_xX$ nor $T_yY$. Let $Y'$ be another irreducible $l$-dimensional variety, possibly equal to $Y$. If a general such line has a further point $z\\in Y'\\setminus\\{x,y\\}$, then $k\\le l$. If $k=l$, then $X$ and $Y$ lie in a common affine $(k+1)$-flat. More generally, when $k=l$, equality of the projected tangent spaces at a general pair already implies this common-flat conclusion, without an assumption about a further root.*\n\n*There is also the following local assertion. Suppose $p\\in X$ and $q\\in Y$ are smooth, and the map $$\\psi(x,y)=(x,\\pi_x(y))$$ has differential of rank $k+l$ at $(p,q)$. Suppose a smooth local variety $W$ of dimension $k+l$ at $(p,\\pi_pq)$ contains both product images $\\psi(X\\times Y)$ and $\\psi(X\\times Y')$ locally at the relevant pairs. If $z\\in Y'\\setminus\\{p,q\\}$ has $\\pi_pz=\\pi_pq$, then $$\\overline{T_pX}\\subseteq\\overline{T_qY}\n \\quad\\hbox{in }\\mathbb C^d/\\mathbb C(q-p).\n \\tag{\\ref*{geo:secants}.1}\\label{geo:tangent-inclusion}$$ Here bars denote the images of vector tangent spaces. In particular, if these images have dimensions $k=l$ and are unequal, no such $z$ exists. The same source component $X$ must occur at both roots.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-geo-secants"
+  },
+  {
+   "claim_id": "claim-generic-projection-depth",
+   "exact_statement": "Let $\\mathcal X,\\mathcal Y$ be finite families of distinct irreducible carriers of dimensions $k\\ge l\\ge1$, where $k<d$ and $l<d-1$. Fix assigned sets $$S_X\\subseteq P\\cap X\\quad(X\\in\\mathcal X),\\qquad\n T_Y\\subseteq P\\cap Y\\quad(Y\\in\\mathcal Y),$$ pairwise disjoint within each family. The source and target assignments may overlap with each other. If an initial list contains repeated copies of a carrier, pool those copies and their assigned sets before defining these distinct families and checking the following hypotheses. Put $$n_x=\\sum_{X\\in\\mathcal X}|S_X|,\\qquad\n n_y=\\sum_{Y\\in\\mathcal Y}|T_Y|.$$ The normalized component weights are $|S_X|/n_x$ and $|T_Y|/n_y$, and a component pair has the product of its two weights. Assume $n_x,n_y\\ge N\\exp(-o(w))$, with $w\\to\\infty$ and $w\\le\\log B$. Assume that every flat member is real. Suppose, when $k=l$, that for some number $e$ the number of flat members in each family is at most $e\\exp(o(w))$, and that the normalized weight of each such member is at most $e^{-1}\\exp(o(w))$.*\n\n*For every fixed $\\epsilon>0$, one can discard component pairs of total product weight $o(1)$, and obtain for each remaining source component $X$ a list $\\mathcal Y_X$ of target components, such that: for every $Y\\in\\mathcal Y_X$, at a general pair $(x,y)\\in X\\times Y$ both projected tangents are injective and the number of moving roots on $\\bigcup_{Z\\in\\mathcal Y_X}Z$ over $\\pi_xy$ is at most $\\exp(\\epsilon w)$. This counts the generic map degrees of all listed components sharing that projected image, and excludes the undefined root $x$.*\n\n*The hypotheses apply to the two carrier configurations used below: in a common window, $k=l$, $w=s$, and $e=e_j$; in separated subpower windows, $w=\\log B$, and, when $k=l$, $e=B^{d-l}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-geo-generic-depth"
+  },
+  {
+   "claim_id": "claim-terminal-curve-deletion",
+   "exact_statement": "Assign sample points to finitely many irreducible physical curves $Y_i$, each containing its assigned points. Pool repetitions of a curve, and require every line member to be real. Then the number of ordered pairs $(p,q)$, $p\\ne q$, for which $q$ is assigned to $Y_i$ and $$\\overline{\\pi_pY_i}\\subseteq C_p$$ is $o(N^2)$. The estimate is uniform in the assignment and the curves.",
+   "kind": "bound",
+   "statement_anchor": "stmt-geo-terminal"
+  },
+  {
+   "claim_id": "claim-multiscale-profile-partition",
+   "exact_statement": "There are $s_*\\to\\infty$ and partitions of all but $o(N)$ sample points into a core and non-core pieces with the following properties.*\n\n1.  *The core is simultaneously isolated by equations of a degree $L$ such that $EL^2=o(N)$.*\n\n2.  *Each non-core piece has a dyadic width $s=2^{-a}\\log B\\ge s_*$ and size $n=N\\exp(-o(s))$. Its path has $d$ proper hypersurface cuts. Along any sequence of pieces, after passing to a subsequence, their normalized cut times converge to $$-1\\le b_1\\le\\cdots\\le b_d\\le1,\\qquad\n     \\max_i|b_i|\\ge\\tfrac12.$$ The degree of cut $i$ is at most $D_i\\exp(o(s))$, where $D_i=B\\exp(b_i s)$.*\n\n3.  *Let $b$ lie strictly between consecutive distinct limiting cut times, and let $j=\\#\\{i:b_i<b\\}$ and $l=d-j$. At each point of the piece the current system is pure of local dimension $l$. Uniformly over polynomials of degree $O(T_s(b))$, the number of points where such a polynomial vanishes but contains none of the local carriers is $o(n)$. The same assertion holds before the first cut whenever $T_s(b)\\ge1$ and $b<b_1$, and it is automatic after the last cut.*\n\n*The assertions about error terms and negligible proportions hold along every sequence of pieces. In particular, a violating choice of one piece at each index is not permitted.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prof-partition"
+  },
+  {
+   "claim_id": "claim-balanced-profile-budgets",
+   "exact_statement": "For every non-core profile, $$\\label{prof:balance}\n \\sum_{i=1}^d b_i=0,\\qquad b_1<0<b_d,\\qquad b_1+b_2<0.$$ On a plateau after $j$ cuts, its carrier family has degree at most $e_j\\exp(o(s))$. Every subcollection of total degree $a$ meets the piece in at most $$\\label{prof:mass-budget}\n a\\left(\\prod_{i>j}D_i\\right)\\exp(o(s))$$ points. This counts all points touching those components, whether or not they have been assigned to them. Finally, for every fixed $\\alpha>0$, every subset $S$ of at least $\\alpha n$ piece points has $$\\label{prof:rank-budget}\n H_S(T_s(b))\\ge\\sigma(b)\\exp(-o(s))$$ at each interior testing time, and with the usual limiting interpretation at a cut time.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prof-budget"
+  },
+  {
+   "claim_id": "claim-profile-component-regularity",
+   "exact_statement": "Inside an open plateau, individual proper cuts of degree $O(T_s(b))$ on the different carriers collectively capture only $o(n)$ points. At a slightly later interior testing time there are common equations for the entire carrier family whose Jacobian has full codimension rank at all but $o(n)$ points. At those surviving points the carrier is unique and smooth, and its tangent space is testable by equations and minors of the same interior degree scale.*\n\n*The assertions also hold for the union of two such families, and for unions from $\\exp(o(s))$ pieces with the same limiting profile and width, provided each piece retains its own assigned masses. Common equations vanish on the whole union. In particular, two different members of that union cannot meet at a surviving point where the common Jacobian has full rank. Flat carriers which are not defined over $\\mathbb R$ may be discarded with negligible mass.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prof-regularity"
+  },
+  {
+   "claim_id": "claim-product-testing",
+   "exact_statement": "Take two pieces, or the pooled pieces described above, in a common window with the same limiting profile. On a fixed plateau, fix in each set an assignment of every point to one carrier of its original piece that contains it. These assignments precede the tests below and are retained under later restrictions. Let $X,Y$ denote the assigned carriers of a pair, and fix an interior testing time $b$. A polynomial of degree $O(T_s(b))$ captures only $o(n_xn_y)$ pairs at which it does not vanish identically on $X\\times Y$. The same holds for a number of rational tests bounded independently of the sequence, provided their denominators are nonzero at the pairs concerned and their numerator polynomials have degree $O(T_s(b))$ on the chosen charts, with a common implied constant.*\n\n*Consequently an equation system containing the labels of a dense graph contains the complete assigned component images at all but a negligible fraction of its pairs, whenever the label map has bounded degree on these charts and the cleared numerator polynomials of all pulled-back equations have degree $O(T_s(b))$ with a common implied constant. The denominators used in these pullbacks must be nonzero at the actual pairs concerned. For any collection of rational rank tests whose size is bounded independently of the sequence and which are generically nonzero on the relevant assigned images, the tests are nonzero at all but $o(n_xn_y)$ corresponding actual pairs, provided their denominators are nonzero there and their cleared pullback numerators obey the same degree bound.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prof-product-testing"
+  },
+  {
+   "claim_id": "claim-profile-pair-selection",
+   "exact_statement": "For every $p\\in P$, let $C_p$ be a finite family of irreducible projective curves in $\\mathbb P^{d-1}$, each spanning a projective subspace of dimension at most two, with total degree at most $E=\\delta N/A$. Suppose that $1-o(1)$ of the unordered pairs $\\{p,q\\}$ satisfy $\\pi_p(q)\\in C_p$ or $\\pi_q(p)\\in C_q$. After the global terminal deletion described below, one of the following configurations occurs.*\n\n1.  *A core of positive relative size is covered.*\n\n2.  *Two sequences of non-core pieces have a common dyadic width $s$, the same limiting profile, and an ordered product covered in one orientation with positive relative density.*\n\n3.  *Two sequences of non-core pieces have widths with ratio tending to infinity, both $o(\\log B)$, the same limiting profile, and such a positively covered ordered product.*\n\n*In the common outermost window $s=\\log B$, the two factors may instead be the same pool of pieces in a shrinking profile bin. That pool has size $n\\ge N\\sqrt\\delta$, is the union of $\\exp(o(s))$ pieces, and retains all the preceding degree, mass, regularity, and product-testing conclusions to exponential accuracy. All selected incidences may be required to lie on physical lines containing at most $B^{o(1)}$ sample points.*\n\n*The global terminal deletion means the following. Whenever a target point was assigned to its carrier curve after the $(d-1)$st cut, its projection from the center is not a curve contained in the center’s directional family.",
+   "kind": "classification",
+   "statement_anchor": "stmt-prof-pair-selection"
+  },
+  {
+   "claim_id": "claim-sparse-cones-impossibility",
+   "exact_statement": "Along a sequence with $M=o(A)$, there cannot be families $C_p$, one for each $p\\in P$, of irreducible projective curves, each spanning projective dimension at most two, such that $$\\deg C_p\\le E=\\delta N/A,\\qquad \\delta\\to0,$$ and $1-o(1)$ of the unordered pairs $\\{p,q\\}$ satisfy $\\pi_p(q)\\in C_p$ or $\\pi_q(p)\\in C_q$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-sc-theorem"
+  },
+  {
+   "claim_id": "claim-retained-product-images",
+   "exact_statement": "Fix a common positive-dimensional plateau after $j$ cuts, of dimension $k=d-j<d-1$, and choose an interior time $\\tau$ on that plateau. Write $n_x,n_y$ for the original source and target counts. Given a fixed $\\varepsilon>0$, one may discard $o(n_x)$ source points and $o(n_y)$ target points. Write $m_x,m_y$ for the remaining counts, so $m_x=(1-o(1))n_x$ and $m_y=(1-o(1))n_y$. One may then discard carrier pairs of total assigned product mass $o(m_xm_y)$, with the following conclusions.*\n\n*Each remaining point is assigned to its unique smooth carrier in the union of the two physical families. Repeated carriers are pooled within each family, and every flat carrier with positive assigned mass is real. There are common physical equations for the whole original union whose Jacobian has full codimension rank at these points. A single polynomial $g_{\\rm ph}$, a linear combination of maximal Jacobian minors, is nonzero at every retained point. The equations and this test have degrees $O(T_s(\\tau))$. When the two factors are the same pool, the point deletion and the assignment may be taken to be the same in both roles.*\n\n\n\n*Write $\\mathcal R$ for the retained ordered carrier pairs and $$Z_{X,Y}=\\overline{\\psi(X\\times Y)}\\qquad((X,Y)\\in\\mathcal R).$$ Every $Z_{X,Y}$ has dimension $2k$, and at a general pair the connecting direction is transverse to both physical tangent spaces. Let $U$ be the reduced union of the distinct $Z_{X,Y}$. Then $$\\label{sc:retained-image-upper}\n \\deg U\\le e_j^2\\exp(o(s)).$$ For any subfamily $\\mathcal J$ of these distinct images, including one chosen after further equations have been chosen, its represented carrier pairs have normalized assigned mass at most $$\\label{sc:retained-image-mass}\n \\frac{1}{m_xm_y}\n \\sum_{\\substack{(X,Y)\\in\\mathcal R\\\\Z_{X,Y}\\in\\mathcal J}}n_Xn_Y\n \\le \\frac{\\deg\\bigl(\\bigcup_{Z\\in\\mathcal J}Z\\bigr)}{e_j^2}\n       \\exp(\\varepsilon s+o(s)).$$ Here $n_X,n_Y$ are the assigned masses after the point deletions.",
+   "kind": "construction",
+   "statement_anchor": "stmt-sc-retained-products"
+  },
+  {
+   "claim_id": "claim-common-window-label-rank",
+   "exact_statement": "Let $\\Gamma\\subset\\{(p,q)\\in S_x\\times S_y:p\\ne q\\}$ be any dense graph on the selected pieces or pool; its pairs need not be covered by the $C_p$. For its labels, at an interior testing time before the last cut, $$\\label{sc:label-rank}\n H(T_s(b))\\ge\n \\sigma(b)^2\\min\\left(1,\\frac{T_s(b)}{D_1D_2}\\right)\n \\exp(-o(s)).$$ The convention is a lower limit after dividing the logarithm by $s$; in particular it permits any prescribed fixed positive logarithmic tolerance, uniformly for dense subgraphs.",
+   "kind": "bound",
+   "statement_anchor": "stmt-sc-common-rank"
+  },
+  {
+   "claim_id": "claim-outer-endpoint-regular-images",
+   "exact_statement": "For the fixed $\\mathcal R$ and $U$ above, there is a subfamily $\\mathcal R_{\\rm sm}\\subseteq\\mathcal R$ whose omitted assigned product mass is $o(n^2)$, and one system of label equations of degree at most $B^{2-c}$ for some fixed $c>0$, with the following properties. The equations contain every complete image $Z_{X,Y}$ for $(X,Y)\\in\\mathcal R_{\\rm sm}$. Outside $o(n^2)$ further actual pairs assigned to $\\mathcal R_{\\rm sm}$, their common zero locus is smooth of dimension $2k$ at the label, the product map has differential rank $2k$, and the connecting direction is transverse to both physical tangent spaces. If $k\\ge2$, the two projected tangent spaces are also unequal there. The equations and every polynomial test used for these actual-pair conclusions have degree at most $B^{2-c}$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-sc-outer-regularity"
+  },
+  {
+   "claim_id": "claim-separated-window-projected-degree",
+   "exact_statement": "For each fixed positive tolerance $\\epsilon$, one can discard center–target-component incidences of total normalized weight $o(1)$, and then discard $o(|P_x|)$ centers, so that the following holds. For each remaining center $p$, every target component $Y$ whose incidence $(p,Y)$ remains satisfies $\\dim\\overline{\\pi_pY}=l$. For every subcollection of those components carrying at least a fixed positive fraction of $|P_y|$, the distinct projected components have summed degree at least $$\\label{dep:degree-bound}\n \\frac{e_j}{R}\\exp(-\\epsilon s).$$ The assertion is uniform over those subcollections, including ones chosen after $p$ and after subsequent equations have been chosen. The following values of $R$ are valid: $$\\begin{aligned}\n R&=D_1 &&\\text{in either orientation};\n       \\label{dep:first-R}\\\\\n R&=B\\exp\\left(-s\\sum_{i>j}b_i\\right)\n       &&\\text{if }v/s\\longrightarrow0;\n       \\label{dep:narrow-R}\\\\\n R&=B\\exp(-2s)\n       &&\\text{if }v/s\\longrightarrow\\infty,\n          \\quad b_{j+1}>0,\\quad l<d-1.\n       \\label{dep:wide-R}\n\\end{aligned}$$ In <a href=\"#dep:degree-bound\" data-reference-type=\"eqref\" data-reference=\"dep:degree-bound\">[dep:degree-bound]</a>, “fixed positive fraction” means any constant $\\rho>0$ independent of the sequence. After fixing $\\epsilon$ and any finite batch of plateaux and tolerances, the incidence and center deletions are independent of the later fixed choice of $\\rho$; only the large-index threshold may depend on $\\rho$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-dep-projected-degree"
+  },
+  {
+   "claim_id": "claim-separated-window-strict-rank",
+   "exact_statement": "At typical centers, ranks of directions to arbitrary dense remaining target subsets satisfy $$\\label{sc:strict-rank}\n H(T_s(b))\\ge\\frac{\\sigma(b)T_s(b)}A\\exp(c s)$$ with a fixed $c>0$ through all plateaux up to the final endpoint, except possibly the final one-dimensional plateau when the center window is narrower. The constant may be decreased finitely many times during propagation. The assertion is needed only at fixed interior testing times and their one-sided limiting endpoints.",
+   "kind": "bound",
+   "statement_anchor": "stmt-sc-separated-rank"
+  },
+  {
+   "claim_id": "claim-very-rich-motion-sum",
+   "exact_statement": "There are absolute constants $C_{\\mathrm{rich}},K_{\\mathrm{rich}}>0$ with the following property. Let $P\\subset\\mathbb R^3$ consist of $N\\ge2$ distinct points, and set $$A=N^{2/3},\\qquad M=1+|\\Delta(P)|.$$ If $M\\le A$, then the motions satisfying $k_g\\ge C_{\\mathrm{rich}}A$ form a finite set and $$\\label{mot:rich-sum}\n \\sum_{g:\\,k_g\\ge C_{\\mathrm{rich}}A} k_g^2\n \\le K_{\\mathrm{rich}}\\frac{N^4}{A}.$$ The same estimate holds with $k_g=|gP\\cap Q|$ for any rigidly congruent copy $Q$ of $P$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-mot-rich"
+  },
+  {
+   "claim_id": "claim-beck-lines-and-anchors",
+   "exact_statement": "There are absolute constants $\\delta_0,\\gamma_0>0$ such that the following holds. If a finite set of $n$ distinct real points has at most $\\delta_0 n$ points on any line, then it spans at least $\\gamma_0 n^2$ distinct lines. Moreover at least $\\gamma_0 n$ of its points each lie on at least $\\gamma_0 n$ of these spanned lines. The assertion holds in any fixed real affine space, and in a real projective plane after choosing a generic affine chart.",
+   "kind": "bound",
+   "statement_anchor": "stmt-mot-beck"
+  },
+  {
+   "claim_id": "claim-effective-rich-plane-count",
+   "exact_statement": "There are absolute constants $C_2,K_2>0$ such that, for a cloud $X\\subset\\mathbb R^3$ with $|X|\\le m$, $m\\ge1$, and $H\\ge C_2m^{2/3}$, $$\\#\\{\\Pi:e_X(\\Pi)\\ge H\\}\\le K_2\\frac{m^2}{H^2}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-mot-effective-planes"
+  },
+  {
+   "claim_id": "claim-local-nonlinear-motion-count",
+   "exact_statement": "There are absolute constants $C_{\\mathrm{loc}},K_{\\mathrm{loc}}>0$ such that, if $m\\ge1$, $|X|,|Y|\\le m$, and $\\ell\\ge C_{\\mathrm{loc}}m^{2/3}$, the number of non-line-type motions satisfying $\\ell\\le k_g(X,Y)<2\\ell$ is at most $$K_{\\mathrm{loc}}\\frac{m^3}{\\ell^{3/2}}.$$ Both orientation classes are counted.",
+   "kind": "bound",
+   "statement_anchor": "stmt-mot-local"
+  },
+  {
+   "claim_id": "claim-cube-hole-subdivision",
+   "exact_statement": "Let $N\\ge1$ and $1\\le r\\le N$, with $r$ allowed to be real. For every cloud $X\\subset\\mathbb R^3$ of size at most $N$, there is a half-open cube containing $X$ and a finite partition $\\mathcal R_X$ of that cube such that:*\n\n1.  *every region is a half-open dyadic cube, or the difference $Q\\setminus Q'$ of a half-open dyadic cube and one strict dyadic descendant;*\n\n2.  *$|\\mathcal R_X|\\le19r$, and every region contains at most $8N/r$ points of $X$;*\n\n3.  *there is an absolute constant $K_{\\mathrm{part}}$ such that, for any two partitions obtained this way and every rigid motion $g$, $$\\#\\{(R,R')\\in\\mathcal R_X\\times\\mathcal R_Y:\n                             g(R)\\cap R'\\ne\\varnothing\\}\n     \\le K_{\\mathrm{part}}r.$$*\n\n*In particular the matches of any motion occur in at most $K_{\\mathrm{part}}r$ pairs of regions.",
+   "kind": "construction",
+   "statement_anchor": "stmt-mot-partition"
+  },
+  {
+   "claim_id": "claim-prescribed-line-image-motions",
+   "exact_statement": "Let $(L_1,L_2)$ and $(L'_1,L'_2)$ be ordered pairs of distinct affine lines in $\\mathbb R^3$.*\n\n1.  *If the source lines are nonparallel, at most eight rigid motions map $L_i$ onto $L'_i$ for $i=1,2$.*\n\n\n2.  *If the source lines are parallel, the target lines must be parallel at the same positive separation. There are at most four possible orthogonal linear parts, and for each one the admissible translations form one affine line parallel to the target lines. If all four lines contain at most $H$ points of their respective clouds, then $$\\label{mot:parallel-weight}\n     \\sum_g w_1(g)w_2(g)\\le4H^3,$$ where only motions with positive product are included. That set of motions is finite.*\n\n*Both conclusions allow both orientation classes.",
+   "kind": "bound",
+   "statement_anchor": "stmt-mot-line-images"
+  },
+  {
+   "claim_id": "claim-parallel-line-separation-count",
+   "exact_statement": "Let $\\mathcal L$ be a finite family of at most $L$ distinct lines in $\\mathbb R^3$. For each $\\rho>0$, the number of ordered parallel pairs in $\\mathcal L$ at separation $\\rho$ is $O(L^{3/2})$, with an absolute implicit constant.",
+   "kind": "bound",
+   "statement_anchor": "stmt-mot-parallel-pairs"
+  },
+  {
+   "claim_id": "claim-uniform-evaluation-flat-concentration",
+   "exact_statement": "Fix $C_0\\geq1$. Let $A\\geq1$ and let $\\mathcal P$ be a finite set of distinct parameters $[v:y]\\in\\mathcal Q$, all with $v\\ne0$. Assume:*\n\n1.  *For every $\\lambda\\in\\mathcal P$ there is a homogeneous polynomial of positive degree at most $C_0A$ which is nonzero at $\\lambda$ and zero at every other member of $\\mathcal P$.*\n\n2.  *Every projective $\\mathbf P^r\\subset\\mathcal Q$ contains at most $C_0A^{r-1}$ members of $\\mathcal P$.*\n\n\n*There is a constant $C=C(e,C_0)$ such that $$\\#\\{\\lambda\\in\\mathcal P:F_\\lambda\\subset V\\}\n \\leq C\\deg(V)A^h,\n \\qquad \\dim V=s_0+h,\\quad 1\\leq h<r,\n \\label{conc:bound}$$ for irreducible proper affine varieties $V\\subset S$, in either of these settings:*\n\n1.  *All such $V$ are allowed, and $|\\mathcal P|\\leq C_0A^r$.*\n\n2.  *Only $V$ contained in the zero set of some nonzero polynomial of degree at most $C_0A$ are allowed. No bound on $|\\mathcal P|$ is required.",
+   "kind": "bound",
+   "statement_anchor": "stmt-conc-theorem"
+  },
+  {
+   "claim_id": "claim-approximate-complete-intersection",
+   "exact_statement": "<span id=\"aci:theorem\" label=\"aci:theorem\"></span> For every $n$ there is a constant $C_n$ with the following property. If $V\\subset\\mathbb A^n_{\\mathbb C}$ is irreducible of codimension $c>0$, there are nonconstant polynomials $f_1,\\ldots,f_c\\in I(V)$ such that $V$ is an irreducible component of $Z(f_1,\\ldots,f_c)$ and $$\\prod_{i=1}^c\\deg f_i\\le C_n\\deg V.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-conc-walsh"
+  },
+  {
+   "claim_id": "claim-compatible-partial-cuts",
+   "exact_statement": "There are $f_i\\in I_{\\le\\delta_i}(V)$, $1\\le i\\le c$, such that every component of $Z(f_1,\\ldots,f_i)$ containing $V$ has codimension exactly $i$.*\n\n\n*For any such choice, if $0\\le j<c$ and $\\delta_j\\le m<\\delta_{j+1}$, some component $W$ of $Z(f_1,\\ldots,f_j)$ containing $V$ satisfies $$I_{\\le m}(W)=I_{\\le m}(V),\\qquad H_W(m)=H_V(m).\n \\label{aci:shared-rank}$$ When $j=0$, the prefix zero set and its unique component are $\\mathbb A^n$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-aci-cuts"
+  },
+  {
+   "claim_id": "claim-parameter-count-from-separators",
+   "exact_statement": "Under the separator assumption of Theorem <a href=\"#conc:theorem\" data-reference-type=\"ref\" data-reference=\"conc:theorem\">46</a>, an irreducible projective variety $Y\\subset\\mathbf P(E\\oplus E^*)$ of dimension $a$ contains at most $$C_{e,C_0}\\deg(Y)A^a$$ sample parameters. The variety $Y$ need not be contained in $\\mathcal Q$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-conc-separators"
+  },
+  {
+   "claim_id": "claim-controlled-regular-equations",
+   "exact_statement": "Suppose that an irreducible $V\\subset\\mathbb A^n_{\\mathbb C}$ has codimension $c>0$ and is a component of $Z(f_1,\\ldots,f_c)$, where $$\\deg f_i\\leq D,\\qquad\n \\prod_i\\deg f_i\\leq C_n\\deg V,\\qquad D\\geq1,$$ with the dimensional constant from Theorem <a href=\"#conc:walsh\" data-reference-type=\"ref\" data-reference=\"conc:walsh\">47</a>. There are polynomials $g_1,\\ldots,g_c\\in I(V)$ of degrees $O_n(D)$ whose differentials are independent at the generic point of $V$. Moreover, a polynomial $H_0$ of degree $O_n(D)$, nonzero on $V$, can be chosen so that $V\\setminus Z(H_0)$ is smooth and has tangent space $$T_zV=\\bigcap_{i=1}^c\\ker dg_i(z)\n \\qquad(z\\in V\\setminus Z(H_0)).$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-conc-regularity"
+  },
+  {
+   "claim_id": "claim-controlled-ruling-incidences",
+   "exact_statement": "Let $V\\subset S$ be irreducible of dimension $k=s_0+h$, with $1\\leq h<r$. Suppose that $V$ has $c=n-k$ approximate equations as in Lemma <a href=\"#conc:regularity\" data-reference-type=\"ref\" data-reference=\"conc:regularity\">50</a>, of maximum degree at most $D$. There is a polynomial $H$, nonzero on $V$ and of degree $O_e(D)$, such that, on $\\Omega=V\\setminus Z(H)$, the following hold.*\n\n1.  *There are $O_e(1)$ smooth irreducible ruling incidences $\\Gamma$. Each is closed in $\\Omega\\times\\{v_a=1\\}$ for some $a$ and maps smoothly and dominantly to $\\Omega$.*\n\n2.  *The fibers over $\\Omega$ are either finite of bounded size or affine lines of normalized vectors $v$. Denote the fiber dimension by $j=0$ or $j=1$. The latter is possible only if $c=1$.*\n\n3.  *Every flat $F_\\lambda\\subset V$ meeting $\\Omega$ is represented by at least one incidence. All other contained flats lie in $V\\cap Z(H)$.*\n\n4.  *If $\\Lambda$ is the projective closure of the parameter image of one incidence, then $\\dim\\Lambda=h+j$. Every nonempty parameter fiber is exactly $F_\\lambda\\cap\\Omega$ and has dimension $s_0$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-conc-rulings"
+  },
+  {
+   "claim_id": "claim-ruling-parameter-degree-and-exception",
+   "exact_statement": "Let $V\\subsetneq S$ be irreducible of dimension $k=s_0+h$, where $1\\le h<r$, and let $\\Gamma$ be a ruling incidence provided by Lemma <a href=\"#conc:rulings\" data-reference-type=\"ref\" data-reference=\"conc:rulings\">51</a>. Write $j\\in\\{0,1\\}$ for the dimension of its fibers over the working open subset $\\Omega\\subset V$. Let $\\Lambda$ be the projective closure of its parameter image $$(z,v)\\longmapsto[v:zv]\n \\quad\\hbox{in}\\quad\n \\mathcal Q=\\{[v:y]\\in\\mathbf{P}(E\\oplus E^*):y(v)=0\\}.$$ Then $$\\dim\\Lambda=h+j,\n \\qquad \\deg\\Lambda\\le C_e\\deg V.$$ If $j=1$, then $h=r-1$ and $\\Lambda$ is a linear $\\mathbf{P}^r\\subset\\mathcal Q$, hence a maximal isotropic projective subspace.",
+   "kind": "classification",
+   "statement_anchor": "stmt-conc-degree"
+  },
+  {
+   "claim_id": "claim-crossing-inequality",
+   "exact_statement": "Suppose a simple graph with $v\\ge1$ vertices and $e\\ge4v$ edges is drawn in the plane, no edge goes through a vertex other than its endpoints, and two edges with a common endpoint have no other intersection. If $X$ counts intersecting pairs of edges away from their endpoints, then $X\\ge e^3/(64v^2)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ci-crossing"
+  },
+  {
+   "claim_id": "claim-real-point-line-incidence",
+   "exact_statement": "For finite sets $Q$ of $n$ points and $\\mathcal L$ of $L$ distinct real lines in the plane, $$I(Q,\\mathcal L)\\le C\\bigl(n^{2/3}L^{2/3}+n+L\\bigr).$$ Consequently the number of points incident to at least $k\\ge2$ lines is at most $C(L^2/k^3+L/k)$, and the number of lines containing at least $k\\ge2$ points of an $n$-point set is at most $C(n^2/k^3+n/k)$. The same assertions apply to finite point–line configurations in $\\mathbb R^s$ and in real projective space.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ci-st"
+  },
+  {
+   "claim_id": "claim-polynomial-bisection",
+   "exact_statement": "Given a finite set $S\\subset\\mathbb R^3$ and an integer $r\\ge1$, there is a nonzero real polynomial $f$ of degree at most $C r$ such that $\\mathbb R^3\\setminus Z(f)$ is partitioned into at most $C r^3$ open sets, each containing at most $C|S|/r^3$ points of $S$. Every line not contained in $Z(f)$ meets at most $\\deg f+1$ of these sets. The sets need not be connected.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ci-partition"
+  },
+  {
+   "claim_id": "claim-critical-and-flat-line-tests",
+   "exact_statement": "For a square-free polynomial $f$ of degree $D$:*\n\n1.  *A point lying on three distinct lines contained in $Z(f)$ is critical or flat.*\n\n2.  *There are at most $D(D-1)$ critical lines.*\n\n3.  *A line containing more than $D$ critical points is critical. A line containing more than $3D$ flat points is flat.*\n\n4.  *At most $3D^2$ flat lines fail to lie in a plane component of $Z(f)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ci-flat"
+  },
+  {
+   "claim_id": "claim-higher-richness-spatial-lines",
+   "exact_statement": "Let $\\mathcal L$ be $L$ distinct lines in $\\mathbb R^3$, with at most $B_0$ in any affine plane. For every integer $k\\ge3$, the number $R_k$ of points lying on at least $k$ lines satisfies $$R_k\\le C\\left(\\frac{L^{3/2}}{k^2}\n             +\\frac{LB_0}{k^3}+\\frac Lk\\right).$$ There is no assumption about lines on quadrics in this theorem.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ci-rich-lines"
+  },
+  {
+   "claim_id": "claim-planar-rich-motion-count",
+   "exact_statement": "Let $U,V\\subset\\mathbb R^2$ have respective cardinalities $u,v$. For $3\\le k\\le\\min(u,v)$, at most $C(uv)^{3/2}/k^2$ Euclidean isometries $g$ have $|g(U)\\cap V|\\ge k$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ci-planar-motions"
+  },
+  {
+   "claim_id": "claim-nonruled-surface-line-count",
+   "exact_statement": "An irreducible surface of degree $d$ in $\\mathbb C^3$ which is not geometrically ruled contains at most $17d^2$ affine lines.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ci-flecnode"
+  },
+  {
+   "claim_id": "claim-ruled-surface-generator-structure",
+   "exact_statement": "Let $S$ be an irreducible ruled projective surface over $\\mathbb C$ which is neither a plane nor a smooth quadric. Its lines have a unique one-dimensional irreducible family $\\Gamma$, called the generator family, whose members cover $S$. A generic point of $S$ belongs to exactly one generator. There is at most one point lying on infinitely many contained lines, and at most two contained lines meeting infinitely many other contained lines away from such points. Every line outside $\\Gamma$ is one of these at most two lines.",
+   "kind": "classification",
+   "statement_anchor": "stmt-ci-ruled-structure"
+  },
+  {
+   "claim_id": "claim-ruled-surface-intersection-count",
+   "exact_statement": "Let a union of real absolutely irreducible geometrically ruled surfaces have total degree $d\\ge1$, and let $\\mathcal L$ consist of $M\\ge1$ distinct real affine lines contained in that union. If at most $s$ lines lie in any plane or regulus, then the number of points on at least two lines of $\\mathcal L$ is at most $5dM+sM/2$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ci-ruled-count"
+  },
+  {
+   "claim_id": "claim-two-rich-spatial-line-count",
+   "exact_statement": "For $m$ distinct real affine lines, with at most $s\\ge1$ in any plane or regulus, the number $P_2$ of points lying on at least two lines satisfies $$P_2\\le K\\bigl(m^{3/2}+ms\\bigr)$$ for an absolute constant $K$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ci-two-rich"
+  },
+  {
+   "claim_id": "claim-planar-cayley-line-caps",
+   "exact_statement": "For two finite planar sets $U,V$ of sizes $u,v$, the $uv$ lines <a href=\"#ci:cayley-line\" data-reference-type=\"eqref\" data-reference=\"ci:cayley-line\">[ci:cayley-line]</a> have at most $\\min(u,v)$ members in a plane and at most $6u+2v$ members in a regulus.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ci-cayley-caps"
+  },
+  {
+   "claim_id": "claim-planar-distinct-distance-base",
+   "exact_statement": "Every finite set $Q\\subset\\mathbb R^2$ of $n\\ge2$ points determines at least $c n/\\log(2n)$ distinct positive distances.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ci-planar-distances"
+  },
+  {
+   "claim_id": "claim-planar-occupancy",
+   "exact_statement": "If a finite set in Euclidean space determines at most $M\\ge1$ positive distances, then any affine two-plane contains at most $CM\\log(2M)$ of its points. In particular, along a sequence with $B\\longrightarrow\\infty$ and $M=o(B^2)$, every two-plane has at most $B^{2+o(1)}$ points, uniformly in the plane.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ci-planar-occupancy"
+  }
+ ],
+ "paper": "papers/EN-113-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-H-0327_PM-166.1_The_higher_dimensional_Erdos_distinct_distances_conjecture.md",
+ "purpose": "The higher-dimensional Erdős distinct-distances conjecture",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "50703a48c70f5a56996fd1be525a52e62635d043307c47a608d68ba359b0a4d2",
+   "pm.domains.v2": "a1804cb18fa01b80c40d90d90e12862a2987a352303f4ef5cdfc2aad810e1210",
+   "pm.edges.v2": "5f62e38ffe1cfae7c39b88dd1547e4710f16a32ddcd5a2dacb02e3a12647f927",
+   "pm.extraction.v2": "c1585da2b316395db1276fd09cee8fec36f8be58a5f7b6eda8b2bee6a3646540",
+   "pm.formal.v2": "fad549f9a1145e48eb76cb4d625a08edc155f8a05a6f9eb1b8c610d32726f58d",
+   "pm.limits.v2": "055f392ec9959b82ac2aa69152a18744da89cd6006caa574d51df4cca4c51b8f",
+   "pm.node.v2": "8ed0a72850e022b8774c4b526612886ce84026952ac1061d8f0dc7ff01d43152",
+   "pm.objects.v2": "2f5e2e09fc7b436c1f2fe4abfcd88e7b976357a786a10ef447fe9c259221af49",
+   "pm.provenance.v2": "71e6c8fb989a1125c2537a944f1f2cc2ade67c07704012c10e433191aa4e4b89",
+   "pm.quantities.v2": "810c5cb04f62c7f294a6a3f15ac898aedd05fb806ceef8b67aa1c421fb1d4443",
+   "pm.reading.v2": "512f07b01ee317ae0af5dc8ab0861f4f459c517ee42777513ae0da5ff170f9d8",
+   "pm.roadmap.v2": "cea64a3c300498f54dba56f09e611987b4a8f1aa7eacb5495e151b8f2f2bfbab",
+   "pm.search.v1": "3aaf0ada4cf7884f58d61bb67a1a0d39fd0ee0812e7c7dcf2f3e0b4a04a9e805",
+   "pm.triptych.v2": "75f8ab221a68d9b63ca945516dd1cf0d341e1e984f07857e667a39bcedd06390"
+  },
+  "canonical_sha256": "da2be29cb3c78658c1a3eccf39eb0ffecaacef1ac3cbab095e6a8533396a08fe",
+  "paper_sha256": "d10ddf024b45a539b90eed36cf5066250b947ae6d6992baf2961ffd2649fd3f6",
+  "repaired_body_sha256": "fd880a7a1e12254b6fca9e91eef9162440986cabf177cb0b7cad3d28ba45128a"
+ },
+ "status": "ACTIVE",
+ "subject_id": 13,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "15124284d2a964907ed0e2adb221623c126f4b23df7e469ea179e7f87d1057a0",
+   "receipt_sha256": "7c93aebb83e655cf1f6b61e164020b25aa08b1bfc70c2b616ff6f84bddbf51a0",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "All separators and all ordered sample evaluations for each supplied rational point configuration, including the singleton, pair, repeated-distance, rational-coordinate, planar, and spatial cases.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-physical-separators",
+     "oracle_basis": "Independent symbolic radial products and exact rational evaluation decide the construction on each input. Finite vectors do not decide the source's universal real-coordinate statement."
+    },
+    {
+     "checked_domain": "The complete complex zero set of the explicitly checked isolation system for each supplied rational configuration.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-exact-isolation",
+     "oracle_basis": "Exact symbolic equality verifies the residual and every coordinate equation. At a common zero the residual forces a nonzero separator; its coordinate equations force that zero to be its sample point. Direct evaluation checks the reverse containment. This decides isolation per vector but not the universal statement."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-omit-distance-factors",
+     "observed_exit": 1,
+     "receipt_sha256": "f4cd6cbe10f5c9fc06ca029febf88651e3c1be3abf33f01e79131c53d6850c39"
+    },
+    {
+     "id": "mutant-wrong-radial-constant",
+     "observed_exit": 1,
+     "receipt_sha256": "34d83baa3335e34ffa4f197be08ca5c964dc4ef85d5c0bb59f8f9e525492e0bf"
+    },
+    {
+     "id": "mutant-wrong-normalization-sign",
+     "observed_exit": 1,
+     "receipt_sha256": "b51164ae37530246fa5fb2d8da3b97fdbbc74457bfddecc3fd7c39498e342d99"
+    },
+    {
+     "id": "mutant-wrong-isolation-residual",
+     "observed_exit": 1,
+     "receipt_sha256": "4fd4d4a693cb6deb254f6b13a87e02a3301ccbdc600c7692f2110e5e936da0f8"
+    }
+   ],
+   "receipt_sha256": "bd5b8c4f215a3a9de2b494f48512a8d65a63900107a2ee1d77f92398bf8db1c1",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The higher-dimensional Erdős distinct-distances conjecture"
+}

@@ -1,0 +1,701 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 634425,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 183316
+ },
+ "coordinate": "EN-113-000-0000-2-2026-PR-T4-UK-EX-M1-B-AL-H-0321",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "implementable",
+   "proposed_domain": "Finite graph construction and extremal combinatorics",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "Let $H$ be the incidence graph of the $22$ triples on $13$ points in Table <a href=\"#tab:complex\" data-reference-type=\"ref\" data-reference=\"tab:complex\">1</a>. This bipartite graph has $35$ vertices and $66$ edges. There is a finite simple undirected graph $G$ with at least one edge such that $$t(H,G)<p(G)^{66}.$$",
+     "quote_sha256": "7cd4b9d5b444abb00b461225649564986b597d8e7103279c9dd984b18b083ef8"
+    }
+   ],
+   "query": "Sidorenko lower bounds fail for every bipartite pattern",
+   "reason": "The counterexample specifies one incidence pattern. The discussion retains established positive results for other graph families."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-43",
+     "quote": "The argument supplies one density $p\\in(0,1)$ and does not assert failure of $p$-forcing at every density.",
+     "quote_sha256": "f5b074dbbe2d04c566e5135076f26664c760e0c558b72ab00db508aff747e0f5"
+    }
+   ],
+   "query": "Failure of forcing at every edge density",
+   "reason": "The forcing consequence supplies one density and explicitly avoids a claim at every density."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-prop-singular-tail",
+     "quote": "The bound $D>1641$ is needed here only for the nondirect residual case and is not asserted to be a threshold for the whole proof.",
+     "quote_sha256": "8f3b419b1ea33c5f6d8884b345300e8c252e39d597eb85065e8556aeabc7cdc9"
+    }
+   ],
+   "query": "The transverse dimension condition suffices for the whole counterexample",
+   "reason": "The weighted singular contribution additionally requires the residue dimension threshold and the nondirect residual saving."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "eq:transverse-tail-target",
+     "quote": "The unweighted estimate $\\mathbb P(\\mathcal T^c)=O(q^{-1})$ does not establish Equation <a href=\"#eq:transverse-tail-target\" data-reference-type=\"eqref\" data-reference=\"eq:transverse-tail-target\">[eq:transverse-tail-target]</a>, because the normalized rank-layer indicators grow with $q$.",
+     "quote_sha256": "d7c3954cfe05cac803335f1d267447778046ff4c4b811a593e62df2fce841e23"
+    }
+   ],
+   "query": "Ignore singular configurations because their probability vanishes",
+   "reason": "Normalized rank-layer factors can grow, so their weighted singular contribution needs a separate estimate."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-lem-pinning",
+     "quote": "In particular the maximum has a positive gap from every other such map; no injectivity or adjacency-preservation condition is imposed.",
+     "quote_sha256": "3a0b51d5b5df2948d361ceb8dd614f553cdd15186abc00fba37d7af8ee9e6155"
+    }
+   ],
+   "query": "Treat all part-preserving type maps as injective homomorphisms",
+   "reason": "The density expansion includes repetitions, and the pinning objective imposes neither injectivity nor adjacency preservation."
+  }
+ ],
+ "family": "PM-161",
+ "id": "PM-161.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-sidorenko-counterexample",
+    "statement": "Let $H$ be the incidence graph of the $22$ triples on $13$ points in Table <a href=\"#tab:complex\" data-reference-type=\"ref\" data-reference=\"tab:complex\">1</a>."
+   },
+   {
+    "anchor": "stmt-cor-amplification",
+    "claim_id": "claim-amplification-and-injective-deficit",
+    "statement": "For the same graph $H$ as in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, the following hold.*\n\n1."
+   },
+   {
+    "anchor": "stmt-cor-forcing",
+    "claim_id": "claim-failure-of-forcing",
+    "statement": "For the same connected bipartite graph $H$ of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>,"
+   },
+   {
+    "anchor": "stmt-prop-complex",
+    "claim_id": "claim-complex-certificates",
+    "statement": "The complex has the following properties.*\n\n1.  *Every pair in $E$ lies in exactly two faces, $|E|=33$, and the face-neighbor graph is connected.*\n\n2.  *For each bit position, each of its two classes consists of $11$ faces covering all $13$ points. Each class has an ordering in which every face after the first shares a pair with an earlier face and introduces exactly one new point.*\n\n3.  *Every $a_e$ is at least $1/3$, and some $a_e$ is greater than $1/3$.*\n\n4.  *Color refinement of $H$, starting with a separate color for each part, eventually gives distinct colors to all vertices within either part."
+   },
+   {
+    "anchor": "stmt-lem-rank-layer",
+    "claim_id": "claim-rank-layer-limit",
+    "statement": "Let $X_i$, $i\\in I$, and $Y_j$, $j\\in J$, be independent uniform elements of $\\mathcal S_D$."
+   },
+   {
+    "anchor": "stmt-lem-kernel-expansion",
+    "claim_id": "claim-coordinate-expansion",
+    "statement": "Assume Equation <a href=\"#eq:kernel-zero-moments\" data-reference-type=\"eqref\" data-reference=\"eq:kernel-zero-moments\">[eq:kernel-zero-moments]</a> and fix an even dimension as in Lemma <a href=\"#lem:rank-layer\" data-reference-type=\"ref\" data-reference=\"lem:rank-layer\">5</a>."
+   },
+   {
+    "anchor": "stmt-lem-kernel-expansion",
+    "claim_id": "claim-coordinate-expansion",
+    "statement": "For fixed type laws and activation laws,"
+   },
+   {
+    "anchor": "stmt-lem-kernel-support",
+    "claim_id": "claim-support-forced-negative-term",
+    "statement": "At the identity type assignments $a(i)=i$, $b(j)=j$,"
+   },
+   {
+    "anchor": "stmt-lem-pinning",
+    "claim_id": "claim-color-refinement-pinning",
+    "statement": "Let $F=(P\\sqcup Q,L)$ be a finite bipartite graph for which color refinement, starting with the two part colors, becomes discrete within each part."
+   },
+   {
+    "anchor": "stmt-prop-negative-kernel",
+    "claim_id": "claim-symmetric-negative-kernel",
+    "statement": "Assuming Lemma <a href=\"#lem:rank-layer\" data-reference-type=\"ref\" data-reference=\"lem:rank-layer\">5</a>,"
+   },
+   {
+    "anchor": "stmt-lem-finite-host",
+    "claim_id": "claim-finite-host-transfer",
+    "statement": "Suppose $U$ is a symmetric $[0,1]$-valued kernel on a finite probability space, $\\mu=\\mathbb EU>0$, and $$\\tau=t(H,U),\\qquad \\Delta=\\mu^{66}-\\tau>0.$$"
+   },
+   {
+    "anchor": "stmt-lem-symmetric-counts",
+    "claim_id": "claim-subspace-and-symmetric-counts",
+    "statement": "For $0\\leq k\\leq n$,"
+   },
+   {
+    "anchor": "stmt-lem-symmetric-counts",
+    "claim_id": "claim-subspace-and-symmetric-counts",
+    "statement": "For $1\\leq k\\leq n$,"
+   },
+   {
+    "anchor": "stmt-lem-symmetric-counts",
+    "claim_id": "claim-subspace-and-symmetric-counts",
+    "statement": "Finally, for $0\\leq u\\leq n$,"
+   },
+   {
+    "anchor": "stmt-lem-transverse-split",
+    "claim_id": "claim-split-form-isotropic-count",
+    "statement": "Let $r\\geq1$."
+   },
+   {
+    "anchor": "stmt-lem-transverse-restrictions",
+    "claim_id": "claim-restriction-sign-concentration",
+    "statement": "Let $\\mathcal U$ be any nonempty family of distinct $r$-subspaces of $\\mathbb F_q^D$, with $r\\geq1$, and let $Q$ be a uniform symmetric form."
+   },
+   {
+    "anchor": "stmt-lem-transverse-projection",
+    "claim_id": "claim-complementary-image-projection",
+    "statement": "Suppose $B\\in\\mathcal S_{2r}$ is nonsingular and $A\\in\\mathcal S_{2r}$ has rank $r$."
+   },
+   {
+    "anchor": "stmt-lem-transverse-projection",
+    "claim_id": "claim-complementary-image-projection",
+    "statement": "If $A$ and $A-B$ have discriminant signs $\\xi_1,\\xi_2$, respectively, under these conditions,"
+   },
+   {
+    "anchor": "stmt-lem-local-transverse",
+    "claim_id": "claim-local-transverse-approximation",
+    "statement": "Suppose $r>1$."
+   },
+   {
+    "anchor": "stmt-lem-joint-signs",
+    "claim_id": "claim-joint-determinant-signs",
+    "statement": "For fixed even $D\\geq12$,"
+   },
+   {
+    "anchor": "stmt-prop-transverse-limit",
+    "claim_id": "claim-global-transverse-limit",
+    "statement": "For every fixed even $D\\geq12$,"
+   },
+   {
+    "anchor": "stmt-lem-lagrangian-counts",
+    "claim_id": "claim-lagrangian-counting-formulas",
+    "statement": "In a symplectic $2N$-space, the following formulas hold.*\n\n1."
+   },
+   {
+    "anchor": "stmt-lem-chart-comparison",
+    "claim_id": "claim-signed-chart-comparison",
+    "statement": "Let $B\\subseteq\\mathscr C$ be a set of active incidences, with prescribed signs $\\xi_{ij}$."
+   },
+   {
+    "anchor": "stmt-lem-chart-comparison",
+    "claim_id": "claim-signed-chart-comparison",
+    "statement": "Let $F$ be any nonnegative function of the $35$ Lagrangians indexed by $I\\sqcup J$."
+   },
+   {
+    "anchor": "stmt-prop-triple-orbits",
+    "claim_id": "claim-individual-triple-orbit-mass",
+    "statement": "For three independent uniform Lagrangians,"
+   },
+   {
+    "anchor": "stmt-lem-planted-subspace-cost",
+    "claim_id": "claim-planted-subspace-cost",
+    "statement": "For three independent uniform $r'$-subspaces of a $d$-space,"
+   },
+   {
+    "anchor": "stmt-lem-planted-difference-image",
+    "claim_id": "claim-cyclic-difference-image",
+    "statement": "Let $A_1,A_2,A_3$ be arbitrary subspaces of a vector space, put $Q_i=A_j\\cap A_k$, and put $V=A_1\\cap A_2\\cap A_3$."
+   },
+   {
+    "anchor": "stmt-prop-planted-gain",
+    "claim_id": "claim-three-active-pointwise-gain",
+    "statement": "For a local profile $(h_1,h_2,h_3,c)$,"
+   },
+   {
+    "anchor": "stmt-lem-two-active-gain",
+    "claim_id": "claim-two-active-gain",
+    "statement": "For two active incidences whose point Lagrangians meet in dimension $h$,"
+   },
+   {
+    "anchor": "stmt-prop-global-cost",
+    "claim_id": "claim-global-profile-cost",
+    "statement": "For every prescribed profile"
+   },
+   {
+    "anchor": "stmt-lem-tail-lower-active",
+    "claim_id": "claim-lower-activity-slack",
+    "statement": "Let $h=\\max_{e\\subset j}h_e$."
+   },
+   {
+    "anchor": "stmt-lem-tail-lower-active",
+    "claim_id": "claim-lower-activity-slack",
+    "statement": "If $j$ has at most two active incidences,"
+   },
+   {
+    "anchor": "eq:tail-feasible",
+    "claim_id": "claim-feasible-quadratic-coercivity",
+    "statement": "For a face with three active incidences, retain the notation of Section <a href=\"#sec:planted\" data-reference-type=\"ref\" data-reference=\"sec:planted\">6</a>: $$\\begin{gathered}\n u,\\quad r'=r-u,\\quad\\delta=2u-c=d-2r',\\quad\n s_\\ell=p_\\ell+t_\\ell,\\\\\n P=\\sum_\\ell p_\\ell,\\quad T=\\sum_\\ell t_\\ell,\n \\quad w=\\frac{d-3\\delta}{2}-P+v.\n \\end{gathered}$$ The necessary constraints, which will suffice below, are $$\\label{eq:tail-feasible}\n \\begin{gathered}\n c\\ge|\\delta|,\\qquad P+T\\le d,\\qquad\n p_\\ell,t_\\ell,v\\ge0,\\qquad\n t_\\ell,v\\le p_\\ell+\\delta,\\qquad w\\ge0.\n \\end{gathered}$$ In particular $T\\le P+3\\delta$, and hence $d+3\\delta\\ge P+T+3\\delta\\ge2T\\ge0$. All the dimensions are integers, and $\\delta=2u-c$ with $0\\le u\\le c$."
+   },
+   {
+    "anchor": "stmt-lem-tail-residue",
+    "claim_id": "claim-residual-profile-reduction",
+    "statement": "$\\sum_jg_j\\ge\\mathcal C$"
+   },
+   {
+    "anchor": "stmt-lem-tail-span",
+    "claim_id": "claim-strict-endpoint-span",
+    "statement": "Let $H_e$ be subspaces assigned to distinct pairs $e$ of a simple graph."
+   },
+   {
+    "anchor": "stmt-lem-tail-span",
+    "claim_id": "claim-strict-endpoint-span",
+    "statement": "If the nonzero spaces do not form a direct sum,"
+   },
+   {
+    "anchor": "stmt-lem-tail-residual-counts",
+    "claim_id": "claim-residual-weighted-counts",
+    "statement": "For a profile satisfying Equation <a href=\"#eq:tail-residual-profile\" data-reference-type=\"eqref\" data-reference=\"eq:tail-residual-profile\">[eq:tail-residual-profile]</a>, let $m$ be the number of pairs with $h_e=2$."
+   },
+   {
+    "anchor": "stmt-prop-singular-tail",
+    "claim_id": "claim-weighted-singular-tail-vanishes",
+    "statement": "For every sufficiently large even $D=2r$"
+   },
+   {
+    "anchor": "stmt-prop-singular-tail",
+    "claim_id": "claim-weighted-singular-tail-vanishes",
+    "statement": "as $q\\to\\infty$ through odd primes, with $D$ fixed."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "finite simple counterexample transfer",
+    "evidence": [
+     {
+      "anchor": "stmt-lem-finite-host",
+      "quote": "Suppose $U$ is a symmetric $[0,1]$-valued kernel on a finite probability space, $\\mu=\\mathbb EU>0$, and $$\\tau=t(H,U),\\qquad \\Delta=\\mu^{66}-\\tau>0.$$ For any integer $$n>\\frac{595+66\\mu^{66}}{\\Delta},\n \\label{eq:kernel-host-size}$$ there is a finite simple graph $G$ on $n$ vertices with $t(H,G)<p(G)^{66}$.",
+      "quote_sha256": "8c84ec417e51d42683be185b868355bd095a7597d0d7bc00fd16c6be07643125"
+     }
+    ],
+    "requires_concepts": [
+     "homomorphism density",
+     "finite symmetric probability kernel",
+     "strict density gap",
+     "independent graph sampling",
+     "collision bounds",
+     "convexity"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "signed rank-layer limit",
+    "evidence": [
+     {
+      "anchor": "stmt-lem-rank-layer",
+      "quote": "There is an integer $D_0$ such that, for every fixed even $D\\ge D_0$, the following assertion holds as $q$ tends to infinity through odd primes. Let $X_i$, $i\\in I$, and $Y_j$, $j\\in J$, be independent uniform elements of $\\mathcal S_D$. For every set $B\\subseteq\\mathscr C$ and every choice of signs $\\xi_{ij}\\in\\{1,-1\\}$ on $B$, $$\\mathbb E\\prod_{(i,j)\\in B}K_{\\xi_{ij}}(X_i-Y_j)\n =\\mathbb E_\\eta\\prod_{j\\in J}\n \\prod_{\\substack{e=\\{i,k\\}\\subset j\\\\(i,j),(k,j)\\in B}}\n \\bigl(1+c_0\\eta_e\\xi_{ij}\\xi_{kj}\\bigr)+o(1),\n \\label{eq:rank-layer}$$ where the $\\eta_e$, $e\\in E$, are independent uniform signs. The error is uniform over all such $B$ and sign choices. The same assertion holds with $Y_j-X_i$ in place of $X_i-Y_j$.",
+      "quote_sha256": "c0fb58fd10cc4642c765a154954f7def09ecfe28e3371a6bdb411034b6247e47"
+     },
+     {
+      "anchor": "stmt-prop-singular-tail",
+      "quote": "For every sufficiently large even $D=2r$ and every activity set $B\\subseteq\\mathscr C$, $$\\label{eq:tail-vanishing}\n \\mathbb E_{L,Y}\\left[\n \\mathbf 1_{\\{\\exists e=\\{i,k\\}\\in E:\\,\\dim(L_i\\cap L_k)>0\\}}\n \\prod_{(i,j)\\in B}J(L_i,Y_j)\\right]=o(1)$$ as $q\\to\\infty$ through odd primes, with $D$ fixed. The dimension threshold can be chosen for all activity sets simultaneously.",
+      "quote_sha256": "b4e1514a90057c48b07b3cbbe2e1fab7617eb415a6520ddafe53c7d2ff7163a8"
+     }
+    ],
+    "requires_concepts": [
+     "symmetric forms over finite fields",
+     "discriminant signs",
+     "local transverse approximation",
+     "joint determinant-sign law",
+     "Lagrangian chart comparison",
+     "weighted singular-tail bound"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "type pinning",
+    "evidence": [
+     {
+      "anchor": "stmt-lem-pinning",
+      "quote": "Let $F=(P\\sqcup Q,L)$ be a finite bipartite graph for which color refinement, starting with the two part colors, becomes discrete within each part. There are real vertex scores $s_t$, $t\\in P\\sqcup Q$, and pair scores $s_{ab}$, $(a,b)\\in P\\times Q$, such that the identity is the unique maximizer of $$\\mathcal Q(f)=\\sum_{u\\in P\\sqcup Q}s_{f(u)}\n              +\\sum_{\\{u,v\\}\\in L,\\ u\\in P}s_{f(u)f(v)}\n \\label{eq:kernel-pinning-score}$$ over *all* maps $f$ preserving the two parts. In particular the maximum has a positive gap from every other such map; no injectivity or adjacency-preservation condition is imposed.",
+      "quote_sha256": "e58c3f0a2e7d471a7a7ee194d8ebd24fae9991d91da8441ad0d33d6768f1b5d4"
+     }
+    ],
+    "requires_concepts": [
+     "bipartite part colors",
+     "neighbor-color histograms",
+     "discrete refinement",
+     "round score gaps",
+     "weighted vertex and pair scores"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-sidorenko-counterexample",
+   "exact_statement": "Let $H$ be the incidence graph of the $22$ triples on $13$ points in Table <a href=\"#tab:complex\" data-reference-type=\"ref\" data-reference=\"tab:complex\">1</a>. This bipartite graph has $35$ vertices and $66$ edges. There is a finite simple undirected graph $G$ with at least one edge such that $$t(H,G)<p(G)^{66}.$$",
+   "kind": "counterexample",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-amplification-and-injective-deficit",
+   "exact_statement": "For the same graph $H$ as in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, the following hold.*\n\n1.  *For every $c>0$, there is a finite simple undirected graph $F$ with $p(F)>0$ such that $$t(H,F)<c\\,p(F)^{66}.$$*\n\n2.  *There are $p_*\\in(0,1)$, $\\delta_*>0$, and finite simple undirected graphs $F_s$ of orders $n_s\\to\\infty$ for which $d_s=|E(F_s)|/\\binom{n_s}{2}\\to p_*$ and, for all sufficiently large $s$, $$\\operatorname{Inj}(H,F_s)\n    \\le(1-\\delta_*)(n_s)_{35}d_s^{66}.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-cor-amplification"
+  },
+  {
+   "claim_id": "claim-failure-of-forcing",
+   "exact_statement": "For the same connected bipartite graph $H$ of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, there are $p\\in(0,1)$ and a nonconstant graphon $W$ such that $$t(K_2,W)=p,\\qquad t(H,W)=p^{66}.$$ Consequently, $H$ is not $p$-forcing at this density and hence is not forcing, despite being bipartite and containing a cycle.",
+   "kind": "counterexample",
+   "statement_anchor": "stmt-cor-forcing"
+  },
+  {
+   "claim_id": "claim-complex-certificates",
+   "exact_statement": "The complex has the following properties.*\n\n1.  *Every pair in $E$ lies in exactly two faces, $|E|=33$, and the face-neighbor graph is connected.*\n\n2.  *For each bit position, each of its two classes consists of $11$ faces covering all $13$ points. Each class has an ordering in which every face after the first shares a pair with an earlier face and introduces exactly one new point.*\n\n3.  *Every $a_e$ is at least $1/3$, and some $a_e$ is greater than $1/3$.*\n\n4.  *Color refinement of $H$, starting with a separate color for each part, eventually gives distinct colors to all vertices within either part.",
+   "kind": "classification",
+   "statement_anchor": "stmt-prop-complex"
+  },
+  {
+   "claim_id": "claim-rank-layer-limit",
+   "exact_statement": "There is an integer $D_0$ such that, for every fixed even $D\\ge D_0$, the following assertion holds as $q$ tends to infinity through odd primes. Let $X_i$, $i\\in I$, and $Y_j$, $j\\in J$, be independent uniform elements of $\\mathcal S_D$. For every set $B\\subseteq\\mathscr C$ and every choice of signs $\\xi_{ij}\\in\\{1,-1\\}$ on $B$, $$\\mathbb E\\prod_{(i,j)\\in B}K_{\\xi_{ij}}(X_i-Y_j)\n =\\mathbb E_\\eta\\prod_{j\\in J}\n \\prod_{\\substack{e=\\{i,k\\}\\subset j\\\\(i,j),(k,j)\\in B}}\n \\bigl(1+c_0\\eta_e\\xi_{ij}\\xi_{kj}\\bigr)+o(1),\n \\label{eq:rank-layer}$$ where the $\\eta_e$, $e\\in E$, are independent uniform signs. The error is uniform over all such $B$ and sign choices. The same assertion holds with $Y_j-X_i$ in place of $X_i-Y_j$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-rank-layer"
+  },
+  {
+   "claim_id": "claim-coordinate-expansion",
+   "exact_statement": "Assume Equation <a href=\"#eq:kernel-zero-moments\" data-reference-type=\"eqref\" data-reference=\"eq:kernel-zero-moments\">[eq:kernel-zero-moments]</a> and fix an even dimension as in Lemma <a href=\"#lem:rank-layer\" data-reference-type=\"ref\" data-reference=\"lem:rank-layer\">5</a>. For fixed type laws and activation laws, $$\\begin{aligned}\n t_{I,J}(W_q)&=1+\n \\sum_{a:I\\to\\mathcal A\\,,\\ b:J\\to\\mathcal B}\n \\left(\\prod_{i\\in I}\\pi_{a(i)}\\right)\n \\left(\\prod_{j\\in J}\\nu_{b(j)}\\right)C_A(a,b)+o(1).\n \\label{eq:kernel-expansion}\n\\end{aligned}$$ The corresponding formula for $W_q^\\top$ has type maps $b:I\\to\\mathcal B$, $a:J\\to\\mathcal A$ and the corner factors $A_{a(j)b(i)}$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-kernel-expansion"
+  },
+  {
+   "claim_id": "claim-support-forced-negative-term",
+   "exact_statement": "At the identity type assignments $a(i)=i$, $b(j)=j$, the sum in Equation <a href=\"#eq:kernel-coefficient\" data-reference-type=\"eqref\" data-reference=\"eq:kernel-coefficient\">[eq:kernel-coefficient]</a> for the base laws has exactly one nonzero term. Its labels and value are $$\\alpha_e=U_e\\quad(e\\in E),\\qquad\n C_{A^{\\mathrm{base}}}(\\mathrm{id},\\mathrm{id})\n =-(\\theta/2)^{66}.\n \\label{eq:kernel-negative-term}$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-kernel-support"
+  },
+  {
+   "claim_id": "claim-color-refinement-pinning",
+   "exact_statement": "Let $F=(P\\sqcup Q,L)$ be a finite bipartite graph for which color refinement, starting with the two part colors, becomes discrete within each part. There are real vertex scores $s_t$, $t\\in P\\sqcup Q$, and pair scores $s_{ab}$, $(a,b)\\in P\\times Q$, such that the identity is the unique maximizer of $$\\mathcal Q(f)=\\sum_{u\\in P\\sqcup Q}s_{f(u)}\n              +\\sum_{\\{u,v\\}\\in L,\\ u\\in P}s_{f(u)f(v)}\n \\label{eq:kernel-pinning-score}$$ over *all* maps $f$ preserving the two parts. In particular the maximum has a positive gap from every other such map; no injectivity or adjacency-preservation condition is imposed.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-pinning"
+  },
+  {
+   "claim_id": "claim-symmetric-negative-kernel",
+   "exact_statement": "Assuming Lemma <a href=\"#lem:rank-layer\" data-reference-type=\"ref\" data-reference=\"lem:rank-layer\">5</a>, there is a symmetric kernel $U:\\Omega\\times\\Omega\\to[0,1]$ on a finite probability space with mean $\\mu>0$ such that $$t(H,U)<\\mu^{66}.\n \\label{eq:kernel-symmetric-gap}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-negative-kernel"
+  },
+  {
+   "claim_id": "claim-finite-host-transfer",
+   "exact_statement": "Suppose $U$ is a symmetric $[0,1]$-valued kernel on a finite probability space, $\\mu=\\mathbb EU>0$, and $$\\tau=t(H,U),\\qquad \\Delta=\\mu^{66}-\\tau>0.$$ For any integer $$n>\\frac{595+66\\mu^{66}}{\\Delta},\n \\label{eq:kernel-host-size}$$ there is a finite simple graph $G$ on $n$ vertices with $t(H,G)<p(G)^{66}$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-finite-host"
+  },
+  {
+   "claim_id": "claim-subspace-and-symmetric-counts",
+   "exact_statement": "For $0\\leq k\\leq n$, the number of $k$-dimensional subspaces of $\\mathbb F_q^n$ is $$\\label{eq:transverse-grassmann}\n \\genfrac{[}{]}{0pt}{}{n}{k}_q\n =\\prod_{a=0}^{k-1}\\frac{q^n-q^a}{q^k-q^a}\n =q^{k(n-k)}(1+O(q^{-1})).$$ For a uniform matrix $M\\in\\mathcal S_n$, with $n\\geq 1$, $$\\mathbb P(M\\text{ is nonsingular})=1-O(q^{-1}),\\qquad\n \\mathbb P(\\chi(\\det M)=\\xi)=\\frac12+O(q^{-1})\n \\quad(\\xi\\in\\{+1,-1\\}).$$ For $1\\leq k\\leq n$, the probability of rank $k$ and prescribed discriminant sign is $$\\label{eq:transverse-signed-rank}\n \\left(\\frac12+O(q^{-1})\\right)q^{-b(n-k)}.$$ Finally, for $0\\leq u\\leq n$, $$\\label{eq:transverse-nullity}\n \\mathbb P(\\dim\\ker M\\geq u)=O(q^{-b(u)}).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-symmetric-counts"
+  },
+  {
+   "claim_id": "claim-split-form-isotropic-count",
+   "exact_statement": "Let $r\\geq1$. A nondegenerate symmetric form on a $2r$-dimensional space over $\\mathbb F_q$ has an $r$-dimensional totally isotropic subspace if and only if its determinant character is $c_0=\\chi((-1)^r)$. Such a form is a direct orthogonal sum of $r$ hyperbolic planes. The total number of its $r$-dimensional totally isotropic subspaces is $$\\label{eq:transverse-isotropic-count}\n N_r=\\prod_{a=0}^{r-1}(1+q^a)\n =2q^{r(r-1)/2}(1+O(q^{-1})).$$ The count includes both families of maximal isotropic subspaces.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-transverse-split"
+  },
+  {
+   "claim_id": "claim-restriction-sign-concentration",
+   "exact_statement": "Let $\\mathcal U$ be any nonempty family of distinct $r$-subspaces of $\\mathbb F_q^D$, with $r\\geq1$, and let $Q$ be a uniform symmetric form. For $\\xi\\in\\{+1,-1\\}$ put $$f_\\xi(Q)=\\frac1{|\\mathcal U|}\\sum_{U\\in\\mathcal U}\n \\mathbf 1_{\\{Q|_U\\text{ nonsingular of sign }\\xi\\}}.$$ Uniformly over the family $\\mathcal U$, $$\\label{eq:transverse-restriction-error}\n \\mathbb E\\left|f_\\xi(Q)-\\frac12\\right|\n =O\\left(q^{-1/2}+|\\mathcal U|^{-1/2}\\right).$$ The same bound holds after conditioning $Q$ to be nonsingular, or conditioning both $Q$ and $Q-L$ to be nonsingular, uniformly over every fixed symmetric form $L$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-transverse-restrictions"
+  },
+  {
+   "claim_id": "claim-complementary-image-projection",
+   "exact_statement": "Suppose $B\\in\\mathcal S_{2r}$ is nonsingular and $A\\in\\mathcal S_{2r}$ has rank $r$. Then $$\\label{eq:transverse-projection}\n \\mathop{\\mathrm{rank}}(B-A)=r\\quad\\Longleftrightarrow\\quad AB^{-1}A=A.$$ If $A$ and $A-B$ have discriminant signs $\\xi_1,\\xi_2$, respectively, under these conditions, then $$\\label{eq:transverse-pair-sign}\n \\chi(\\det B)=c_0\\xi_1\\xi_2.$$",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-transverse-projection"
+  },
+  {
+   "claim_id": "claim-local-transverse-approximation",
+   "exact_statement": "Suppose $r>1$. For each face $j$, let $\\mathcal T_j$ be the event that all three differences between its point matrices are nonsingular. Then, uniformly over the activity and sign choices, $$\\label{eq:transverse-local-l1}\n \\mathbb E\\bigl[\\mathbf 1_{\\mathcal T_j}|F_j-G_j|\\bigr]=O(q^{-1/2}).$$ Moreover $0\\leq F_j\\leq C_D$ on $\\mathcal T_j$, for a constant $C_D$ independent of $q$, and $0\\leq G_j\\leq8$ everywhere.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-local-transverse"
+  },
+  {
+   "claim_id": "claim-joint-determinant-signs",
+   "exact_statement": "For fixed even $D\\geq12$, the law of $(\\eta_e^X)_{e\\in E}$ converges in total variation to that of independent uniform signs on $\\{+1,-1\\}^E$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-joint-signs"
+  },
+  {
+   "claim_id": "claim-global-transverse-limit",
+   "exact_statement": "For every fixed even $D\\geq12$, every activity pattern $B\\subseteq\\mathscr C$, and every prescribed set of incidence signs, $$\\label{eq:transverse-limit}\n \\mathbb E\\left[\\mathbf 1_{\\mathcal T}\n       \\prod_{(i,j)\\in B}K_{\\xi_{ij}}(X_i-Y_j)\\right]\n =\\mathbb E_\\eta\\prod_{j\\in J}\\prod_{\\{i,k\\}\\subseteq A_j}\n       (1+c_0\\eta_{\\{i,k\\}}\\xi_{ij}\\xi_{kj})+o(1),$$ where the $\\eta_e$ are independent uniform signs. At each fixed $D$, the error is uniform over all activity patterns and incidence signs.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-transverse-limit"
+  },
+  {
+   "claim_id": "claim-lagrangian-counting-formulas",
+   "exact_statement": "In a symplectic $2N$-space, the following formulas hold.*\n\n1.  *The number of Lagrangians is $L_N$.*\n\n\n2.  *A fixed isotropic $t$-space is contained in exactly $L_{N-t}$ Lagrangians. Consequently its containment probability and the number of isotropic $t$-spaces are, respectively, $$\\vartheta_N(t)=\\frac{L_{N-t}}{L_N},\\qquad\n     I_N(t)=\\frac{L_N}{L_{N-t}}\\genfrac{[}{]}{0pt}{}{N}{t}_q.\n     \\label{eq:orbits-containment}$$*\n\n\n3.  *For a fixed Lagrangian $A$, the number of Lagrangians $B$ with $\\dim(A\\cap B)=h$ is $\\genfrac{[}{]}{0pt}{}{N}{h}_q q^{b(N-h)}$. Thus $$\\pi_{N,h}:=\\mathbb P\\{\\dim(A\\cap B)=h\\}\n     =\\frac{\\genfrac{[}{]}{0pt}{}{N}{h}_q q^{b(N-h)}}{L_N}.\n     \\label{eq:orbits-pair-probability}$$ All ordered pairs with the same intersection dimension belong to one symplectic orbit.*\n\n*For fixed $N$, these formulas give $$\\begin{aligned}\n L_N&=(1+O_N(q^{-1}))q^{b(N)},\n &\\genfrac{[}{]}{0pt}{}{n}{t}_q&=(1+O_n(q^{-1}))q^{t(n-t)},\\\\\n \\vartheta_N(t)&\\asymp_N q^{-Nt+\\binom t2},\n &I_N(t)&\\asymp_N q^{2Nt-(3t^2-t)/2},\\\\\n \\pi_{N,h}&\\asymp_N q^{-b(h)}.\n \\label{eq:orbits-count-exponents}\n\\end{aligned}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-lagrangian-counts"
+  },
+  {
+   "claim_id": "claim-signed-chart-comparison",
+   "exact_statement": "Let $B\\subseteq\\mathscr C$ be a set of active incidences, with prescribed signs $\\xi_{ij}$. Let $F$ be any nonnegative function of the $35$ Lagrangians indexed by $I\\sqcup J$. For independent uniform matrices $X_i,Y_j\\in\\mathcal S_D$ and independent uniform Lagrangians $L_i,M_j$, $$\\begin{aligned}\n &\\mathbb E\\left[\n F((\\Gamma_{X_i})_i,(\\Gamma_{Y_j})_j)\n \\prod_{(i,j)\\in B}K_{\\xi_{ij}}(X_i-Y_j)\\right]\\notag\\\\\n &\\qquad\\le\n \\beta_D^{-35}\\prod_{(i,j)\\in B}\\frac{\\pi_{D,r}}{p_{\\xi_{ij}}}\n \\ \\mathbb E\\left[F((L_i)_i,(M_j)_j)\n \\prod_{(i,j)\\in B}J(L_i,M_j)\\right].\n \\label{eq:orbits-chart-comparison}\n\\end{aligned}$$ The multiplier is bounded in terms of $D$ alone for all sufficiently large $q$, uniformly in the active set and its signs. In particular, this comparison applies with $F$ the indicator that some pair in $E$ has positive intersection dimension, or the indicator of any specified intersection profile.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-chart-comparison"
+  },
+  {
+   "claim_id": "claim-individual-triple-orbit-mass",
+   "exact_statement": "For three independent uniform Lagrangians, every feasible dimensional profile has probability $O_D(q^{-C})$. More strongly, there is a constant $\\kappa_D>0$, independent of $q$ and of the particular orbit, such that for every occurring ordered symplectic orbit $\\mathcal O$ of that profile, $$\\kappa_D q^{-C}\\le\n \\mathbb P\\{(L_1,L_2,L_3)\\in\\mathcal O\\}\n \\le \\kappa_D^{-1}q^{-C}.\n \\label{eq:orbits-orbit-mass}$$ The constant can be chosen for all odd primes. Moreover, conditional on any fixed ordered pair having intersection dimension $h$, the probability that an independent third Lagrangian completes a specified dimensional profile is $$O_D(q^{-C+b(h)}).\n \\label{eq:orbits-conditional-profile}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-triple-orbits"
+  },
+  {
+   "claim_id": "claim-planted-subspace-cost",
+   "exact_statement": "For three independent uniform $r'$-subspaces of a $d$-space, the event of common intersection zero, opposite pair dimensions $p_i$, and span codimension $v$ has probability $$\\label{eq:planted-subspace-cost}\n O\\left(q^{-\\delta P-\\sum_i p_i^2-vw}\\right).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-planted-subspace-cost"
+  },
+  {
+   "claim_id": "claim-cyclic-difference-image",
+   "exact_statement": "Let $A_1,A_2,A_3$ be arbitrary subspaces of a vector space, put $Q_i=A_j\\cap A_k$, and put $V=A_1\\cap A_2\\cap A_3$. The image of the cyclic difference map on symmetric forms is exactly $$\\label{eq:planted-difference-image}\n \\left\\{(D_1,D_2,D_3):\n       D_1|_V+D_2|_V+D_3|_V=0\\right\\}.$$ Its codimension in the product of the three form spaces on the $Q_i$ is $b(\\dim V)$. Independent uniform $F_i$ give the uniform law on this image.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-planted-difference-image"
+  },
+  {
+   "claim_id": "claim-three-active-pointwise-gain",
+   "exact_statement": "For a local profile $(h_1,h_2,h_3,c)$, we choose one pointwise gain exponent independent of $q$ as follows. Let $\\mathcal U$ be the union, over all odd prime fields and all ordered orbits of this profile, of the parameter tuples arising from actual quadruples $(L_1,L_2,L_3,Y)$ with the stated point profile and $\\dim(L_i\\cap Y)=r$, using Equations <a href=\"#eq:planted-reduced-parameters\" data-reference-type=\"eqref\" data-reference=\"eq:planted-reduced-parameters\">[eq:planted-reduced-parameters]</a> and <a href=\"#eq:planted-subspace-parameters\" data-reference-type=\"eqref\" data-reference=\"eq:planted-subspace-parameters\">[eq:planted-subspace-parameters]</a>. Their integer entries are bounded at fixed $D$, so $\\mathcal U$ is finite. If $\\mathcal U$ is empty, the face factor is zero over every odd prime field. Otherwise the face factor with three active incidences is $O(q^g)$ uniformly over all triples in the profile, where $$\\label{eq:planted-gain}\n g=\\max_{\\text{tuple}\\in\\mathcal U}\\left\\{\n g_C+\\sum_i b(s_i)-\\delta P-\\sum_i p_i^2-vw\n                   -\\sum_i b(t_i)+b(v)\\right\\},$$ so the selected exponent is independent of $q$.*\n\n\n*Every tuple in $\\mathcal U$ satisfies the following necessary constraints: $$\\label{eq:planted-feasibility}\n \\begin{gathered}\n 0\\le u\\le\\min(c,r),\\quad 0\\le r'=r-u\\le d,\n \\quad |\\delta|\\le c,\\quad d-\\delta=2r',\\\\\n P+T=\\sum_i s_i\\le d,\\qquad\n 0\\le t_i\\le p_i+\\delta,\\qquad\n 0\\le v\\le p_i+\\delta\\quad(1\\le i\\le3),\\qquad w\\ge0.\n \\end{gathered}$$ In particular $T\\le P+3\\delta$ and $d+3\\delta\\ge0$. These conditions are not claimed sufficient for realizability.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-planted-gain"
+  },
+  {
+   "claim_id": "claim-two-active-gain",
+   "exact_statement": "For two active incidences whose point Lagrangians meet in dimension $h$, a valid gain exponent is $$\\label{eq:planted-two-active-gain}\n g_2(h)\n =\\max_{\\substack{p+t=h\\,;\\ 0\\le t\\le p\\le r}}\n      \\{b(h)-p^2-b(t)\\}\n =b(\\lfloor h/2\\rfloor).$$ For zero or one active incidence, the face factor is exactly one.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-two-active-gain"
+  },
+  {
+   "claim_id": "claim-global-profile-cost",
+   "exact_statement": "For every prescribed profile, its probability is $O_D(q^{-\\mathcal C})$, where $$\\label{eq:global-cost}\n \\mathcal C=\\frac12\\left(\n \\sum_{j\\in J}C_j-\\sum_{e\\in E}(1-a_e)b(h_e)\\right).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-global-cost"
+  },
+  {
+   "claim_id": "claim-lower-activity-slack",
+   "exact_statement": "Let $h=\\max_{e\\subset j}h_e$. If $j$ has at most two active incidences, then $$\\label{eq:tail-lower-active}\n S_j\\ge0,\n \\qquad S_j\\ge\\frac{h^2}{24}-\\frac h{12}.$$ Equality $S_j=0$ requires $c_j=0$ and either all three pair dimensions zero or exactly one pair dimension equal to $2$. The latter case requires exactly two active incidences, at that pair’s endpoints.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-tail-lower-active"
+  },
+  {
+   "claim_id": "claim-feasible-quadratic-coercivity",
+   "exact_statement": "Every tuple satisfying Equation <a href=\"#eq:tail-feasible\" data-reference-type=\"eqref\" data-reference=\"eq:tail-feasible\">[eq:tail-feasible]</a> satisfies $$\\label{eq:coercivity}\n Q\\ge\\frac1{342}(P^2+T^2+\\delta^2).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-coercivity"
+  },
+  {
+   "claim_id": "claim-residual-profile-reduction",
+   "exact_statement": "There is an even-dimensional threshold such that, for every even $D$ above it, every feasible profile and every activity set for which $\\sum_jg_j\\ge\\mathcal C$ has the following properties: $$\\label{eq:tail-residual-profile}\n c_j=0\\quad(j\\in J),\\qquad h_e\\in\\{0,2\\}\\quad(e\\in E),\n \\qquad\\sum_jg_j\\le\\frac23\\sum_{e\\in E}b(h_e).$$",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-tail-residue"
+  },
+  {
+   "claim_id": "claim-strict-endpoint-span",
+   "exact_statement": "Let $H_e$ be subspaces assigned to distinct pairs $e$ of a simple graph. Set $$k=\\dim\\sum_e H_e,\\qquad k_i=\\dim\\sum_{e\\ni i}H_e.$$ Then $\\sum_i k_i\\ge2k$. If the nonzero spaces do not form a direct sum, then $\\sum_i k_i\\ge2k+1$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-tail-span"
+  },
+  {
+   "claim_id": "claim-residual-weighted-counts",
+   "exact_statement": "For a profile satisfying Equation <a href=\"#eq:tail-residual-profile\" data-reference-type=\"eqref\" data-reference=\"eq:tail-residual-profile\">[eq:tail-residual-profile]</a>, let $m$ be the number of pairs with $h_e=2$. The contribution of configurations whose pair spaces are not direct is $O_D(q^{-D+1641})$. The contribution of configurations whose pair spaces are direct is $$O_D\\left(q^{-\\frac13\\sum_e b(h_e)}\\right).$$ Here “contribution” includes the product of the center factors. The numerical remainder $1641$ is independent of $D$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-tail-residual-counts"
+  },
+  {
+   "claim_id": "claim-weighted-singular-tail-vanishes",
+   "exact_statement": "For every sufficiently large even $D=2r$ and every activity set $B\\subseteq\\mathscr C$, $$\\label{eq:tail-vanishing}\n \\mathbb E_{L,Y}\\left[\n \\mathbf 1_{\\{\\exists e=\\{i,k\\}\\in E:\\,\\dim(L_i\\cap L_k)>0\\}}\n \\prod_{(i,j)\\in B}J(L_i,Y_j)\\right]=o(1)$$ as $q\\to\\infty$ through odd primes, with $D$ fixed. The dimension threshold can be chosen for all activity sets simultaneously.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-singular-tail"
+  }
+ ],
+ "paper": "papers/EN-113-000-0000-2-2026-PR-T4-UK-EX-M1-B-AL-H-0321_PM-161.1_A_counterexample_to_Sidorenko_s_conjecture.md",
+ "purpose": "A counterexample to Sidorenko's conjecture",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "4d31a46d8ca04018117e0b3cbb69869d27b69bca95d02866cd6306b6ad47dfe8",
+   "pm.domains.v2": "9f50ec850800b3168f446aad6671a2eade3821854ed8fb10b1c78098a3d4d2f9",
+   "pm.edges.v2": "77b999f37e5179c873037eb54f18aa9642ee996b54614aa3d17c1d2ab9a1035f",
+   "pm.extraction.v2": "8d1a158dfe6a00781081411deceb9b940f33b37bc81d5b26ac31205843f4237e",
+   "pm.formal.v2": "ddb3b375c9862fa7fb17c9c48f843d68541cc1e83cc78422c179a05772457d20",
+   "pm.limits.v2": "67af6600c746194a60050a68e5a2a34973677265df3ef3974c765f041dfa3a97",
+   "pm.node.v2": "240cd7325335fbc5563f658fa954598414814f7b03f7733a9bb96d9ca3db0be2",
+   "pm.objects.v2": "275bd24421ef585a2b3fb63b42f8de4c0b14b443bb2b91ce7e1fa27e00e4d485",
+   "pm.provenance.v2": "1020ea5e587b840b846e3b6a40b673371c8827faed269e4370de17dad70963ad",
+   "pm.quantities.v2": "1805a5386707d0ce5d2c813478216ffe69541f2b1570e33104bbfb4949ca033d",
+   "pm.reading.v2": "6e6fd4071e46fed4c36a8931b7e7b55d1033734e02ad2e24196e64078e05ee61",
+   "pm.roadmap.v2": "9fc3233e198202c67bb17e7114c66cfacca10b7243e202e7c571366d7ea88a73",
+   "pm.search.v1": "e6835f4e834be03fc9e4551cbf128a37aec5bd9d2f8946d072cefcca0d9a96c9",
+   "pm.triptych.v2": "3845487abc06244b91b0100430b656b94f1b3ba4c9777133232c6100a725fa9e"
+  },
+  "canonical_sha256": "94cf17d516d4476792e4310bb29e895b1d45f833259d7f24cbb1ac86b2c92dc8",
+  "paper_sha256": "a4b2b6c766a9118bfbc485716b4b95cf7688e1bc560102dba12480fe5a62b55f",
+  "repaired_body_sha256": "631ed39e649a95b7c8f1e679e8d4b54b612159b54d242ac0757bfcf2e720bd09"
+ },
+ "status": "ACTIVE",
+ "subject_id": 13,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "b06b8fd2bfd6cf0b89af960b3387eaf1ccd295c0821b7f11ef46932a5207984a",
+   "receipt_sha256": "6de62a1a09946319eefe9d7284a08022254c113e7bbda9a9d8cf86400df718f3",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "The listed valid integer inputs, including h=0, odd h, even h and h=2*r. For each input the oracle exhaustively enumerates every admissible p,t pair.",
+     "coverage": "PARTIAL",
+     "invariant_id": "invariant-two-active-integer-maximum",
+     "oracle_basis": "Exact enumeration of the original objective under p+t=h and 0<=t<=p<=r, independently of the closed form. Agreement on these finite vectors does not prove the identity for all dimensions."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mutant-round-half-up",
+     "observed_exit": 1,
+     "receipt_sha256": "da377940fb6a2999ce320428786e021020e0ddaf43818242e804c9110b7ed6f0"
+    },
+    {
+     "id": "mutant-remove-linear-triangular-term",
+     "observed_exit": 1,
+     "receipt_sha256": "14d95b3aa45896ec367f99dabd5fe367855114d9a65edbd1506f12e55644f24b"
+    },
+    {
+     "id": "mutant-discard-full-intersection",
+     "observed_exit": 1,
+     "receipt_sha256": "84d15c46f7ef326d67ff4ec33bb9c4292bf9f212432c16bf4713f5d0f68f7c9b"
+    }
+   ],
+   "receipt_sha256": "3ba4de9c0e0311f68aa5dff2fb30be9a514ad9600c5d17c148d2b575abab49a1",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "A counterexample to Sidorenko's conjecture"
+}

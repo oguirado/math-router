@@ -1,0 +1,641 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 652720,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 187118
+ },
+ "coordinate": "EN-114-000-0007-2-2026-PR-T4-UK-EX-M1-B-AL-H-0238",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "no computational-efficiency claim for the policy",
+     "quote_sha256": "781f69d29e0a9b1405f24f2940c8d8add6f50fdb93213df5712cfe5144ff079c"
+    }
+   ],
+   "query": "polynomial-time implementation of the policy",
+   "reason": "The paper gives an existence result and makes no computational-efficiency claim for the policy."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "the usual oblivious-adversary model",
+     "quote_sha256": "95241aac87c1b25aafd4711271863d2b740ecd6df2c3f9da7c0c9ba243886d43"
+    }
+   ],
+   "query": "adaptive adversary guarantee",
+   "reason": "Requests are fixed independently of the policy's random choices."
+  }
+ ],
+ "family": "PM-110",
+ "id": "PM-110.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-theorem",
+    "statement": "There is an absolute constant $C<\\infty$ such that, for every integer $k\\ge2$, every metric space $(X,d)$ with at least $k+1$ points, and every $s\\in X^k$, there exist a randomized online policy $A$ and a finite $B\\ge0$ satisfying $$\\label{eq:main}\n \\mathbb E\\,\\mathop{\\mathrm{cost}}_{A,s}(\\sigma)\n \\le C\\bigl(\\log(k+1)\\bigr)^2\\mathop{\\mathrm{OPT}}_{X,d,k,s}(\\sigma)+B$$ for every finite request sequence $\\sigma$."
+   },
+   {
+    "anchor": "stmt-lem-lazy-simulation",
+    "claim_id": "claim-lazy-simulation",
+    "statement": "Suppose a causal sequence of simulated configurations $C_0,C_1,\\ldots,C_H$ contains the request $r_t$ at each time $t\\ge1$."
+   },
+   {
+    "anchor": "stmt-prop-finite-law",
+    "claim_id": "claim-finite-law-estimate",
+    "statement": "For every finite metric $Y$ of positive diameter, every $k\\ge2$, and every start $s\\in Y^k$, there is a finite $D_0=D_0(Y,k,s)$ such that, for every finite horizon $H$ and every probability law on $Y^H$, there is a causal strongly lazy policy satisfying $$\\label{eq:finite-law}\n             \\mathbb E\\,\\mathop{\\mathrm{cost}}\\le a\\ell^2\\mathbb E\\,\\mathop{\\mathrm{OPT}}+D_0 .$$"
+   },
+   {
+    "anchor": "stmt-lem-scale-logarithms",
+    "claim_id": "claim-ball-mass-telescope",
+    "statement": "a nonnegative measure $\\mu$, and an offset $c_0\\ge0$"
+   },
+   {
+    "anchor": "stmt-thm-allocation",
+    "claim_id": "claim-dominated-allocation",
+    "statement": "There are absolute constants $C_0,C_1$ and $\\tau_0$ with the following property."
+   },
+   {
+    "anchor": "stmt-lem-rank-functions",
+    "claim_id": "claim-rank-functions",
+    "statement": "There are absolute constants $p_*,s_*,\\epsilon_*>0$, with $p_*<s_*<1$, and functions $l^\\beta:[0,1]\\to[0,1]$ for $3\\le\\beta\\le3+\\epsilon_*$ such that:*\n\n1."
+   },
+   {
+    "anchor": "stmt-lem-superadditivity",
+    "claim_id": "claim-superadditivity",
+    "statement": "For every internal vertex $v$ and every allowed $\\beta$, $$\\label{eq:rank-superadditivity}\n \\sum_{i\\prec v}L_i^\\beta\\le L_v^\\beta,\\qquad\n \\sum_{i\\prec v}M_i\\le M_v\\le m_v.$$"
+   },
+   {
+    "anchor": "stmt-lem-rank-tracking",
+    "claim_id": "claim-rank-tracking",
+    "statement": "Let $p_t,p_t^-\\in[0,1]$ obey $\\mathbb E[p_t^-\\mid\\mathcal F_{t-1}]=p_{t-1}$, and let $\\mathcal E=\\mathbb E\\sum_t|p_t-p_t^-|$."
+   },
+   {
+    "anchor": "stmt-lem-parameter-gaps",
+    "claim_id": "claim-parameter-gaps",
+    "statement": "The data above satisfy, for an absolute constant $C$ and a finite $D_v^{\\mathrm{data}}$ depending only on the fixed star and $k$, $$\\label{eq:coarse-data-budget}\n             \\mathbb E\\sum_t C_{v,t}\\le C E_v+D_v^{\\mathrm{data}}.$$"
+   },
+   {
+    "anchor": "stmt-lem-caps",
+    "claim_id": "claim-caps",
+    "statement": "Given a sufficiently small absolute $\\epsilon_b>0$, the remaining absolute tolerances can be chosen so that there are caps $d_i=n_i+b_i$, zero on inactive children, with $$\\label{eq:cap-feasibility}\n \\begin{aligned}\n f_i^{\\beta_i}\\le b_i\\le f_i^{\\beta_v}\n                                      &&(i\\text{ regular}),\\\\\n T:=f_o^{\\beta_v}\\le b_o\\le(1+\\epsilon_b/\\ell)T,\n \\qquad c_DT\\le D\\le C_DT\n                                      &&(o\\text{ dominant}).\n \\end{aligned}$$ Here $c_D,C_D>0$ are absolute, fixed independently of $\\epsilon_b$ and the fine tolerances; in particular $D=0$ if and only if $T=0$."
+   },
+   {
+    "anchor": "stmt-lem-denominators",
+    "claim_id": "claim-denominator-estimates",
+    "statement": "For every nonsingleton domain above, $$\\label{eq:denominator-estimates}\n  \\int_0^\\infty\\frac{dy}{F_i(y)}\\le C,\n  \\qquad\n  \\sum_{i\\in I}\\alpha_i F_i\\bigl(\\log(1/\\alpha_i)\\bigr)\n       \\le C\\sum_{i\\in I}\\alpha_i h_i$$ for every $\\alpha$ in its unit simplex."
+   },
+   {
+    "anchor": "stmt-lem-alpha-tracker",
+    "claim_id": "claim-simplex-update",
+    "statement": "Choose $C_\\alpha$ sufficiently large after fixing $c_t$."
+   },
+   {
+    "anchor": "stmt-lem-side-tracker",
+    "claim_id": "claim-side-update",
+    "statement": "Choose the absolute multiplier $C'_w$ sufficiently large after fixing the small constants."
+   },
+   {
+    "anchor": "stmt-lem-adaptive-proportions",
+    "claim_id": "claim-adaptive-proportion-movement",
+    "statement": "There is a causal update schedule satisfying <a href=\"#eq:alpha-feasibility\" data-reference-type=\"eqref\" data-reference=\"eq:alpha-feasibility\">[eq:alpha-feasibility]</a> and <a href=\"#eq:side-feasibility\" data-reference-type=\"eqref\" data-reference=\"eq:side-feasibility\">[eq:side-feasibility]</a> after every step, such that $$\\label{eq:proportion-movement}\n \\mathbb E\\sum_{t\\text{ not wholesale}}\n   \\left(S_t\\|\\alpha_t-\\alpha_{t-1}\\|_1\n        +D_t\\|w_t-w_{t-1}\\|_1\\right)\n       \\le C\\ell E_v+D'_v.$$"
+   },
+   {
+    "anchor": "stmt-lem-output-feasibility",
+    "claim_id": "claim-output-feasibility",
+    "statement": "Suppose $q_v\\ge L_v^{\\beta_v}$."
+   },
+   {
+    "anchor": "stmt-lem-star-movement",
+    "claim_id": "claim-star-movement",
+    "statement": "For the outputs above and a fixed star $v$, there is a finite $D_v^{\\mathrm{out}}$, depending only on its fixed finite structure and $k$, such that $$\\mathbb E\\sum_t\\sum_{i\\text{ child of }v}|q_i(t)-q_i(t-1)|\n \\le C_{\\mathrm{par}}\\mathbb E\\sum_t|q_v(t)-q_v(t-1)|\n       +C\\ell E_v+D_v^{\\mathrm{out}}.\n \\label{eq:star-output-movement}$$ Here $C_{\\mathrm{par}}$ and $C$ are absolute, independent of $k$, degree, depth, and $\\tau$."
+   },
+   {
+    "anchor": "stmt-lem-pilot-compact",
+    "claim_id": "claim-pilot-compact",
+    "statement": "For every nonnegative measure $\\mu$ on the finite space $Y$, the minimum in <a href=\"#eq:pilot-potential\" data-reference-type=\"eqref\" data-reference=\"eq:pilot-potential\">[eq:pilot-potential]</a> exists."
+   },
+   {
+    "anchor": "stmt-lem-pilot-local",
+    "claim_id": "claim-pilot-local",
+    "statement": "Assume $h\\le\\delta$, and let $z$ be any minimizer in <a href=\"#eq:pilot-potential\" data-reference-type=\"eqref\" data-reference=\"eq:pilot-potential\">[eq:pilot-potential]</a>."
+   },
+   {
+    "anchor": "stmt-lem-pilot-drift",
+    "claim_id": "claim-pilot-drift",
+    "statement": "Fix a template and constants as in <a href=\"#eq:pilot-concentration-constants\" data-reference-type=\"eqref\" data-reference=\"eq:pilot-concentration-constants\">[eq:pilot-concentration-constants]</a>."
+   },
+   {
+    "anchor": "stmt-cor-pilot-edits",
+    "claim_id": "claim-pilot-edit-budget",
+    "statement": "Let templates be indexed by a finite or countable set $I$, with fixed weights $\\omega_\\alpha\\ge0$."
+   },
+   {
+    "anchor": "stmt-prop-embedded-cost",
+    "claim_id": "claim-embedded-cost",
+    "statement": "There are finite alphabets $\\mathcal A_1,\\ldots,\\mathcal A_J$, depending only on $Y,k$ and the fixed constants, and online random maps $$\\xi_t:Y\\longrightarrow\\mathcal A_1\\times\\cdots\\times\\mathcal A_J$$ with the following properties."
+   },
+   {
+    "anchor": "stmt-lem-heavy-edits",
+    "claim_id": "claim-heavy-edits",
+    "statement": "The expected sum of $r_j$ times overall level-key changes caused by heavy edits, evaluated at the hidden members’ old physical positions with the base structures held fixed, is at most $C\\ell Q+D_H''$."
+   },
+   {
+    "anchor": "stmt-lem-roster-count",
+    "claim_id": "claim-roster-count",
+    "statement": "In a subset of $Y$ of diameter at most $20r$, there are at most $A$ chronological entries of age less than the positive integer $A$."
+   },
+   {
+    "anchor": "stmt-lem-fixed-alphabet",
+    "claim_id": "claim-fixed-alphabet",
+    "statement": "The construction can use fixed finite label pools at each level, independent of the input law and horizon."
+   },
+   {
+    "anchor": "stmt-lem-first-hit",
+    "claim_id": "claim-first-hit",
+    "statement": "Fix a true input, a roster at a fixed step, and points $x,y$ with $d=d(x,y)<r/4$."
+   },
+   {
+    "anchor": "stmt-lem-tier-edits",
+    "claim_id": "claim-tier-edits",
+    "statement": "The expected sum of $r_j$ times overall level-key changes due to roster edits, evaluated at the old physical positions in the stated edit order, is at most $C\\ell Q+D_L'$."
+   },
+   {
+    "anchor": "stmt-lem-park-variation",
+    "claim_id": "claim-park-variation",
+    "statement": "At every step, $$\\label{eq:park-variation}\n \\sum_v r_{|v|}\\lvert\\Delta p_v^{\\circ}\\rvert\n \\le \\left(1+\\frac1\\tau\\right)\n       \\sum_{v\\ne\\mathrm{root}}r_{|v|-1}\\lvert\\Delta q_v\\rvert.$$"
+   },
+   {
+    "anchor": "stmt-prop-anchor-travel",
+    "claim_id": "claim-anchor-travel",
+    "statement": "There is an absolute constant $C$ and a finite constant $D_{\\rm anchor}$, independent of the input law and horizon, such that $$\\label{eq:anchor-travel-bound}\n T_{\\rm anchor}\\le C\\bigl(V+\\ell P+\\ell Q\\bigr)+D_{\\rm anchor}.$$"
+   },
+   {
+    "anchor": "stmt-lem-key-size-refresh",
+    "claim_id": "claim-key-size-refresh",
+    "statement": "If $R_{t,j,\\lambda}$ denotes a refresh, then $$\\label{eq:key-size-refresh-budget}\n \\mathbb E\\sum_{t,j,\\lambda\\in\\Lambda_j^H}\n r_j\\bigl(\\widehat m_{t-1,j,\\lambda}\n            +\\widehat m_{t,j,\\lambda}\\bigr)\\mathbf 1_{R_{t,j,\\lambda}}\n \\le C\\ell P+D_{\\rm size},$$ where $C$ is absolute and $D_{\\rm size}$ depends only on the fixed metric, scales, $k$, and label pools."
+   },
+   {
+    "anchor": "stmt-lem-park-coefficients",
+    "claim_id": "claim-park-coefficients",
+    "statement": "Fix any completed fractional state and any $y\\in Y$."
+   },
+   {
+    "anchor": "stmt-lem-rounding-star",
+    "claim_id": "claim-rounding-star",
+    "statement": "Let $a,b\\in[0,\\infty)^d$, and let $X\\in\\mathbb Z_{\\ge0}^d$ be a random vector with $$X_i\\in\\{\\lfloor a_i\\rfloor,\\lceil a_i\\rceil\\},\n \\qquad \\mathbb EX_i=a_i.$$"
+   },
+   {
+    "anchor": "stmt-prop-rounding",
+    "claim_id": "claim-rounding-realization",
+    "statement": "Assume the fractional allocations and anchors constructed in the preceding sections, with $\\tau\\ge22$."
+   },
+   {
+    "anchor": "stmt-lem-amplification",
+    "claim_id": "claim-episode-amplification",
+    "statement": "Let $Y$ be a finite metric space, let $k\\ge2$, and let $s=(s_1,\\ldots,s_k)\\in Y^k$ have distinct entries."
+   },
+   {
+    "anchor": "stmt-lem-finite-minimax",
+    "claim_id": "claim-finite-minimax",
+    "statement": "For every finite collection $\\sigma_1,\\ldots,\\sigma_m$ of finite request sequences in $X$, there is a behavioral policy $p$ from $s$ satisfying $$\\mathbb E\\mathop{\\mathrm{cost}}_{p,s}(\\sigma_i)\\le\\alpha\\mathop{\\mathrm{OPT}}_s(\\sigma_i)\n       \\qquad(1\\le i\\le m).\n \\label{eq:finite-family-bound}$$ Its behavioral choices can be defined on all decision histories in $X$."
+   },
+   {
+    "anchor": "stmt-lem-compact-policy",
+    "claim_id": "claim-compact-policy",
+    "statement": "For every metric space $X$ and every distinct tuple $s\\in X^k$, there is a single randomized causal policy $A_s$ such that $$\\mathbb E\\mathop{\\mathrm{cost}}_{A_s,s}(\\sigma)\\le\\alpha\\mathop{\\mathrm{OPT}}_s(\\sigma)\n       \\qquad\\text{for every finite request sequence }\\sigma\\text{ in }X.\n \\label{eq:all-inputs-distinct}$$ For each fixed input its decisions and cost are measurable functions of its internal randomness."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "squared-logarithmic randomized k-server bound",
+    "evidence": [
+     {
+      "anchor": "pm-h-9",
+      "quote": "#### Organization\n\nSection <a href=\"#sec:setup\" data-reference-type=\"ref\" data-reference=\"sec:setup\">2</a> fixes the probabilistic conventions and the movement accounting.",
+      "quote_sha256": "424c91f402d1248c6352553d22e4b399217a8d0cd7651b53d03542adc93801c9"
+     }
+    ],
+    "requires_concepts": [
+     "lazy simulation",
+     "tree allocation",
+     "pilot potential",
+     "partition edits",
+     "rounding",
+     "minimax and compactness"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-theorem",
+   "exact_statement": "There is an absolute constant $C<\\infty$ such that, for every integer $k\\ge2$, every metric space $(X,d)$ with at least $k+1$ points, and every $s\\in X^k$, there exist a randomized online policy $A$ and a finite $B\\ge0$ satisfying $$\\label{eq:main}\n \\mathbb E\\,\\mathop{\\mathrm{cost}}_{A,s}(\\sigma)\n \\le C\\bigl(\\log(k+1)\\bigr)^2\\mathop{\\mathrm{OPT}}_{X,d,k,s}(\\sigma)+B$$ for every finite request sequence $\\sigma$. The constant $C$ is independent of every property of the metric. The number $B$ may depend on $(X,d),k,s$, but not on the sequence or its length. The same policy serves all finite sequences and horizons. If the initial positions are distinct, one may take $B=0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-lazy-simulation",
+   "exact_statement": "Suppose a causal sequence of simulated configurations $C_0,C_1,\\ldots,C_H$ contains the request $r_t$ at each time $t\\ge1$. From any actual start $A_0$, a strongly lazy policy serves the same requests and satisfies, pathwise, $$\\mathop{\\mathrm{cost}}(A_0;r_1,\\ldots,r_H)\n \\le \\mathsf M(A_0,C_0)+\\sum_{t=1}^H\\mathsf M(C_{t-1},C_t).$$ The conclusion also holds if the matching distances on the right are replaced by any larger specified movement costs.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-lazy-simulation"
+  },
+  {
+   "claim_id": "claim-finite-law-estimate",
+   "exact_statement": "There is an absolute $a<\\infty$ with the following property. For every finite metric $Y$ of positive diameter, every $k\\ge2$, and every start $s\\in Y^k$, there is a finite $D_0=D_0(Y,k,s)$ such that, for every finite horizon $H$ and every probability law on $Y^H$, there is a causal strongly lazy policy satisfying $$\\label{eq:finite-law}\n             \\mathbb E\\,\\mathop{\\mathrm{cost}}\\le a\\ell^2\\mathbb E\\,\\mathop{\\mathrm{OPT}}+D_0 .$$ The policy may depend on the law and horizon. The number $D_0$ does not.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-finite-law"
+  },
+  {
+   "claim_id": "claim-ball-mass-telescope",
+   "exact_statement": "Fix $0<a<b$, a nonnegative measure $\\mu$, and an offset $c_0\\ge0$. On a consecutive finite interval of scale indices suppose $$c\\le A_j:=c_0+\\mu(B(x,ar_j))\n \\le B_j:=c_0+\\mu(B(x,br_j))\\le K,\n \\qquad c>0.$$ If $p\\ge1$ is an integer with $\\tau^p a\\ge b$, then $$\\sum_j\\log(B_j/A_j)\\le p\\log(K/c).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-scale-logarithms"
+  },
+  {
+   "claim_id": "claim-dominated-allocation",
+   "exact_statement": "There are absolute constants $C_0,C_1$ and $\\tau_0$ with the following property. For $\\tau\\ge\\tau_0$, the observed histories determine amounts $q_v(t)$ satisfying $$\\label{eq:allocation-constraints}\n q_{\\mathrm{root}}=k,\\qquad\n 0\\le q_v\\le C_0m_v,\\qquad\n \\sum_{i\\prec v}q_i\\le q_v,\\qquad q_{x_t}\\ge1.$$ Moreover, with $\\ell=1+\\log(k+1)$, $$\\label{eq:allocation-bound}\n V:=\\mathbb E\\sum_{t\\ge1}\\sum_{v\\ne\\mathrm{root}}\n       r_{|v|-1}|q_v(t)-q_v(t-1)|\n \\le C_1\\ell P+D_{\\mathcal T}.$$ Here sums stop at the chosen finite horizon. The finite constant $D_{\\mathcal T}$ depends only on the fixed tree, radii, and $k$; it can be chosen independently of the input law, horizon, and number of histories. No initial allocation is prescribed.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-allocation"
+  },
+  {
+   "claim_id": "claim-rank-functions",
+   "exact_statement": "There are absolute constants $p_*,s_*,\\epsilon_*>0$, with $p_*<s_*<1$, and functions $l^\\beta:[0,1]\\to[0,1]$ for $3\\le\\beta\\le3+\\epsilon_*$ such that:*\n\n1.  *$l^\\beta$ is convex and nonincreasing, equals $1-\\beta p$ on $[0,p_*]$, is positive on $[0,s_*)$, and is zero on $[s_*,1]$;*\n\n2.  *$l^\\beta$ is affine and nonincreasing in $\\beta$, and the square roots $\\sqrt{l^\\beta}$ have a common absolute Lipschitz constant;*\n\n\n3.  *if $g(p)=-\\partial_\\beta l^\\beta(p)$, then $$\\label{eq:rank-derivative}\n     \\frac1{96}l^\\beta(p)\\le g(p)\\le l^\\beta(p)\n           \\qquad(p\\in[p_*/4,1]).$$*\n\n*One may take $p_*=1/24$, $s_*=5/8$, and $\\epsilon_*=1/100$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-rank-functions"
+  },
+  {
+   "claim_id": "claim-superadditivity",
+   "exact_statement": "For every internal vertex $v$ and every allowed $\\beta$, $$\\label{eq:rank-superadditivity}\n \\sum_{i\\prec v}L_i^\\beta\\le L_v^\\beta,\\qquad\n \\sum_{i\\prec v}M_i\\le M_v\\le m_v.$$ No independence between child counts is required.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-superadditivity"
+  },
+  {
+   "claim_id": "claim-rank-tracking",
+   "exact_statement": "Let $p_t,p_t^-\\in[0,1]$ obey $\\mathbb E[p_t^-\\mid\\mathcal F_{t-1}]=p_{t-1}$, and let $\\mathcal E=\\mathbb E\\sum_t|p_t-p_t^-|$. If $f\\ge0$ has an absolutely bounded Lipschitz constant for $\\sqrt f$, then for $0<\\xi<1/2$ there is a held estimate $\\widehat f_t$ with $$\\label{eq:rank-relative-tracker}\n (1+\\xi)^{-1}f(p_t)\\le\\widehat f_t\\le(1+\\xi)f(p_t),\\qquad\n \\mathbb E\\sum_t|\\widehat f_t-\\widehat f_{t-1}|\n       \\le\\frac{C}{\\xi}(\\mathcal E+1).$$ In particular zeros are tracked exactly. A held estimate $\\widehat p_t$ refreshed when $|p_t-\\widehat p_{t-1}|>\\delta$ has expected number of refreshes at most $\\delta^{-2}(\\mathcal E+1)$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-rank-tracking"
+  },
+  {
+   "claim_id": "claim-parameter-gaps",
+   "exact_statement": "The data above satisfy, for an absolute constant $C$ and a finite $D_v^{\\mathrm{data}}$ depending only on the fixed star and $k$, $$\\label{eq:coarse-data-budget}\n             \\mathbb E\\sum_t C_{v,t}\\le C E_v+D_v^{\\mathrm{data}}.$$ The constant is uniform in the law and horizon. Every active child obeys $$\\label{eq:parameter-gap}\n        0\\le h_i\\le C\\ell,\\qquad\n        \\beta_i-\\beta_v\\ge\\frac{c_g h_i}{\\ell}$$ for an absolute $c_g>0$. If a dominant index and sides are present, then $0<u<1/4$, and with $H=1+\\log(1/u)$ every side satisfies $h_i\\ge cH$ for an absolute $c>0$. In addition, $n_i+B_i+\\sup_\\beta f_i^\\beta\\le C a_i$ at active children, and all these quantities vanish at inactive children.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-parameter-gaps"
+  },
+  {
+   "claim_id": "claim-caps",
+   "exact_statement": "Given a sufficiently small absolute $\\epsilon_b>0$, the remaining absolute tolerances can be chosen so that there are caps $d_i=n_i+b_i$, zero on inactive children, with $$\\label{eq:cap-feasibility}\n \\begin{aligned}\n f_i^{\\beta_i}\\le b_i\\le f_i^{\\beta_v}\n                                      &&(i\\text{ regular}),\\\\\n T:=f_o^{\\beta_v}\\le b_o\\le(1+\\epsilon_b/\\ell)T,\n \\qquad c_DT\\le D\\le C_DT\n                                      &&(o\\text{ dominant}).\n \\end{aligned}$$ Here $c_D,C_D>0$ are absolute, fixed independently of $\\epsilon_b$ and the fine tolerances; in particular $D=0$ if and only if $T=0$. At every child $d_i\\le C M_i\\le C m_i$. Their variation away from wholesale changes satisfies $$\\label{eq:fine-cap-budget}\n \\mathbb E\\sum_{t\\notin\\mathcal W_v}\\sum_i|d_i(t)-d_i(t-1)|\n          \\le C\\ell E_v+D_v^{\\mathrm{cap}},$$ where $D_v^{\\mathrm{cap}}$ is uniform in the law and horizon. At wholesale changes the old plus new caps are bounded by $C$ times the old plus new active totals.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-caps"
+  },
+  {
+   "claim_id": "claim-denominator-estimates",
+   "exact_statement": "For every nonsingleton domain above, $$\\label{eq:denominator-estimates}\n  \\int_0^\\infty\\frac{dy}{F_i(y)}\\le C,\n  \\qquad\n  \\sum_{i\\in I}\\alpha_i F_i\\bigl(\\log(1/\\alpha_i)\\bigr)\n       \\le C\\sum_{i\\in I}\\alpha_i h_i$$ for every $\\alpha$ in its unit simplex. A summand at $\\alpha_i=0$ means its continuous extension, which is zero. All constants are uniform as $u$ tends to zero.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-denominators"
+  },
+  {
+   "claim_id": "claim-simplex-update",
+   "exact_statement": "Choose $C_\\alpha$ sufficiently large after fixing $c_t$. For any old vector $\\alpha^0$ in the same simplex, a global minimizer $$\\label{eq:alpha-minimization}\n \\alpha^1\\in\\mathop{\\mathrm{arg\\,min}}_\\alpha\n       \\left\\{G^\\alpha(\\alpha;B)+S\\|\\alpha-\\alpha^0\\|_1\\right\\}$$ satisfies <a href=\"#eq:alpha-feasibility\" data-reference-type=\"eqref\" data-reference=\"eq:alpha-feasibility\">[eq:alpha-feasibility]</a> and $$\\label{eq:alpha-update-payment}\n S\\|\\alpha^1-\\alpha^0\\|_1\n       \\le G^\\alpha(\\alpha^0;B)-G^\\alpha(\\alpha^1;B).$$ The same assertions hold with the automatic singleton rule.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-alpha-tracker"
+  },
+  {
+   "claim_id": "claim-side-update",
+   "exact_statement": "Choose the absolute multiplier $C'_w$ sufficiently large after fixing the small constants. For every old vector $w^0$ in the side domain, a global minimizer $$\\label{eq:side-minimization}\n w^1\\in\\mathop{\\mathrm{arg\\,min}}_w\\left\\{G^w(w;B,D)+D\\|w-w^0\\|_1\\right\\}$$ satisfies <a href=\"#eq:side-feasibility\" data-reference-type=\"eqref\" data-reference=\"eq:side-feasibility\">[eq:side-feasibility]</a>, and $$\\label{eq:side-update-payment}\n D\\|w^1-w^0\\|_1\\le G^w(w^0;B,D)-G^w(w^1;B,D).$$ This holds for arbitrary nonnegative $B,D$ with $S=\\sum_iB_i$, without a requirement that they arise from ranks.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-side-tracker"
+  },
+  {
+   "claim_id": "claim-adaptive-proportion-movement",
+   "exact_statement": "There is a causal update schedule satisfying <a href=\"#eq:alpha-feasibility\" data-reference-type=\"eqref\" data-reference=\"eq:alpha-feasibility\">[eq:alpha-feasibility]</a> and <a href=\"#eq:side-feasibility\" data-reference-type=\"eqref\" data-reference=\"eq:side-feasibility\">[eq:side-feasibility]</a> after every step, such that $$\\label{eq:proportion-movement}\n \\mathbb E\\sum_{t\\text{ not wholesale}}\n   \\left(S_t\\|\\alpha_t-\\alpha_{t-1}\\|_1\n        +D_t\\|w_t-w_{t-1}\\|_1\\right)\n       \\le C\\ell E_v+D'_v.$$ Vectors are extended by zero to the fixed child set. The side term is zero without a dominant child. The simplex term includes the automatic singleton state; an empty active domain contributes zero. The finite constant $D'_v$ is uniform in the law and horizon.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-adaptive-proportions"
+  },
+  {
+   "claim_id": "claim-output-feasibility",
+   "exact_statement": "Suppose $q_v\\ge L_v^{\\beta_v}$. The selected output rule satisfies $$L_i^{\\beta_i}\\le q_i\\le d_i\\le C M_i\\le C m_i,\n \\qquad \\sum_iq_i\\le q_v,$$ with an absolute constant $C$. In particular every child output is nonnegative. The conclusions include empty active sets, empty side sets, and vanishing values of $S,D,T$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-output-feasibility"
+  },
+  {
+   "claim_id": "claim-star-movement",
+   "exact_statement": "For the outputs above and a fixed star $v$, there is a finite $D_v^{\\mathrm{out}}$, depending only on its fixed finite structure and $k$, such that $$\\mathbb E\\sum_t\\sum_{i\\text{ child of }v}|q_i(t)-q_i(t-1)|\n \\le C_{\\mathrm{par}}\\mathbb E\\sum_t|q_v(t)-q_v(t-1)|\n       +C\\ell E_v+D_v^{\\mathrm{out}}.\n \\label{eq:star-output-movement}$$ Here $C_{\\mathrm{par}}$ and $C$ are absolute, independent of $k$, degree, depth, and $\\tau$. In fact the output estimates below allow $C_{\\mathrm{par}}=1$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-star-movement"
+  },
+  {
+   "claim_id": "claim-pilot-compact",
+   "exact_statement": "For every nonnegative measure $\\mu$ on the finite space $Y$, the minimum in <a href=\"#eq:pilot-potential\" data-reference-type=\"eqref\" data-reference=\"eq:pilot-potential\">[eq:pilot-potential]</a> exists. For fixed $g$, the function $\\mu\\mapsto\\mathcal L_r(\\mu,g)$ is concave, and $$0\\le\\mathcal L_r(\\mu,g)\\le2r\\mu(Y).\n \\label{eq:pilot-size}$$ Every feasible integrand satisfies $$0\\le F_z^g\\le514,\\qquad\n r\\mathop{\\mathrm{Lip}}(F_z^g)\\le\\Lambda:=L+1026/\\sigma.\n \\label{eq:pilot-global-bounds}$$ Moreover, the positive supports of the functions $b_s$ with $z_s>0$ are pairwise disjoint.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-pilot-compact"
+  },
+  {
+   "claim_id": "claim-pilot-local",
+   "exact_statement": "Assume $h\\le\\delta$, and let $z$ be any minimizer in <a href=\"#eq:pilot-potential\" data-reference-type=\"eqref\" data-reference=\"eq:pilot-potential\">[eq:pilot-potential]</a>. Then the following assertions hold.*\n\n1.  *A center $s$ with $\\sigma r/4\\le d(s,x)\\le Rr/2$ has $z_s=0$.*\n\n\n2.  *There is a unique positive center $s$ with $d(s,x)<\\sigma r/4$. Its weight $z_s$ and normalized displacement $w=d(s,x)/r$ satisfy $$z_s\\ge\\tfrac34,\\qquad\n           1-z_s\\le\\frac{512\\gamma}{\\sigma^2}t+514h,\n           \\qquad w\\le(5+L)(h+t).\n           \\label{eq:pilot-local-structure}$$*\n\n\n3.  *If $d(x,y)<\\sigma r/8$, then $$_+\n              \\le C_{\\mathrm{loc}}(h+t)\\frac{d(x,y)}r,\n           \\label{eq:pilot-local-slope}$$ where one admissible constant is $$C_{\\mathrm{loc}}\n           =(L+1024/\\sigma)(514+8/\\sigma)\n               +\\frac{1024(5+L)}{\\sigma^2}.\n           \\label{eq:pilot-local-constant}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-pilot-local"
+  },
+  {
+   "claim_id": "claim-pilot-drift",
+   "exact_statement": "Fix a template and constants as in <a href=\"#eq:pilot-concentration-constants\" data-reference-type=\"eqref\" data-reference=\"eq:pilot-concentration-constants\">[eq:pilot-concentration-constants]</a>. At each radius let $g_j$ be any function with $0\\le g_j\\le1$ and $r_j\\mathop{\\mathrm{Lip}}(g_j)\\le L$. For measures satisfying <a href=\"#eq:pilot-mover\" data-reference-type=\"eqref\" data-reference=\"eq:pilot-mover\">[eq:pilot-mover]</a>, $$\\sum_{j=1}^J\n [\\mathcal L_{r_j}(\\mu^+,g_j)\n        -\\mathcal L_{r_j}(\\mu^-,g_j)]_+\n \\le C_{\\mathrm{dr}}\\ell e_x.\n \\label{eq:pilot-drift}$$ The constant is independent of $Y$, $k$, $J$, and $\\tau\\ge2$. For example, set $$\\begin{aligned}\n p_0&=\\left\\lceil\\log_2(D_1/\\gamma)\\right\\rceil,\\nonumber\\\\\n C_{\\mathrm{dr}}\n   &=\\frac{2056}{\\gamma}+\\frac{8224}{\\sigma}\n       +\\frac{2\\Lambda p_0}{\\delta\\log2}\n       +2C_{\\mathrm{loc}}\n                   \\left(\\frac{p_0}{\\log2}+2\\gamma\\right).\n \\label{eq:pilot-drift-constant}\n\\end{aligned}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-pilot-drift"
+  },
+  {
+   "claim_id": "claim-pilot-edit-budget",
+   "exact_statement": "Let templates be indexed by a finite or countable set $I$, with fixed weights $\\omega_\\alpha\\ge0$. Each template has fixed admissible parameters and the drift constant $C_{\\mathrm{dr},\\alpha}$ of Lemma <a href=\"#lem:pilot-drift\" data-reference-type=\"ref\" data-reference=\"lem:pilot-drift\">19</a>. Assume $$A:=\\sum_{\\alpha\\in I}\\omega_\\alpha<\\infty,\n \\qquad\n B:=\\sum_{\\alpha\\in I}\\omega_\\alpha C_{\\mathrm{dr},\\alpha}<\\infty.$$ At each step, filter and drift the counting measure while keeping the previous functions $g_{\\alpha,j}$ fixed. Then edit these functions using the new history, retaining their template bounds. Suppose the weighted total potential drop in the edit stage is at least a nonnegative charge $c_t$, taking $c_t=0$ on steps without edits. Then $$\\mathbb E\\sum_t c_t\n \\le B\\ell Q+2kA\\sum_{j=1}^Jr_j\n \\le B\\ell Q+\\frac{2kr_0A}{\\tau-1}.\n \\label{eq:pilot-edit-budget}$$ In particular, if $A,B$ are absolute constants, the multiplicative budget is $O(\\ell Q)$ and the additive bound is independent of the input law and horizon.",
+   "kind": "bound",
+   "statement_anchor": "stmt-cor-pilot-edits"
+  },
+  {
+   "claim_id": "claim-embedded-cost",
+   "exact_statement": "There are finite alphabets $\\mathcal A_1,\\ldots,\\mathcal A_J$, depending only on $Y,k$ and the fixed constants, and online random maps $$\\xi_t:Y\\longrightarrow\\mathcal A_1\\times\\cdots\\times\\mathcal A_J$$ with the following properties. Each coordinate cell at level $j$ has diameter at most $40r_j$ and an anchor within $20r_j$ of all its points. Thus $\\xi_t$ is injective. Give the full alphabet tree the leaf distance $r_{j-1}$ when the first differing coordinate is $j$. For the selected hidden members $X_t^1,\\ldots,X_t^k$, $$\\label{eq:embedded-cost}\n P:=\\mathbb E\\sum_t\\sum_{a=1}^k\n d_{\\mathcal T}\\bigl(\\xi_{t-1}(X_{t-1}^a),\\xi_t(X_t^a)\\bigr)\n \\le C\\ell Q+D_{\\rm part}.$$ Here $C$ is absolute and $D_{\\rm part}<\\infty$ is independent of the input law and its horizon. A coordinate label common to successive maps has a fixed anchor, except for the explicit heavy-ball reuse below, when its anchor moves by at most $40r_j$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-embedded-cost"
+  },
+  {
+   "claim_id": "claim-heavy-edits",
+   "exact_statement": "The expected sum of $r_j$ times overall level-key changes caused by heavy edits, evaluated at the hidden members’ old physical positions with the base structures held fixed, is at most $C\\ell Q+D_H''$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-heavy-edits"
+  },
+  {
+   "claim_id": "claim-roster-count",
+   "exact_statement": "In a subset of $Y$ of diameter at most $20r$, there are at most $A$ chronological entries of age less than the positive integer $A$. In particular the bounds are $K$ and $K^2$ at the two age cutoffs, regardless of how many entries have already retired.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-roster-count"
+  },
+  {
+   "claim_id": "claim-fixed-alphabet",
+   "exact_statement": "The construction can use fixed finite label pools at each level, independent of the input law and horizon. Labels can be assigned so that distinct current records have distinct labels, including shadowed records, and a freshly chosen label was absent throughout the preceding step and all earlier intermediate states of the current step. The sole exception is the prescribed heavy-ball reuse. Every point with a given current label is within $20r$ of its anchor; its cell has diameter at most $40r$. A label common to consecutive maps has the same anchor or is a reused heavy label with anchor displacement at most $40r$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-fixed-alphabet"
+  },
+  {
+   "claim_id": "claim-first-hit",
+   "exact_statement": "Fix a true input, a roster at a fixed step, and points $x,y$ with $d=d(x,y)<r/4$. The probability that the earliest present ball covering either point covers exactly one is at most $Chd/r$. The expectation is over the partition tape.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-first-hit"
+  },
+  {
+   "claim_id": "claim-tier-edits",
+   "exact_statement": "The expected sum of $r_j$ times overall level-key changes due to roster edits, evaluated at the old physical positions in the stated edit order, is at most $C\\ell Q+D_L'$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-tier-edits"
+  },
+  {
+   "claim_id": "claim-park-variation",
+   "exact_statement": "At every step, $$\\label{eq:park-variation}\n \\sum_v r_{|v|}\\lvert\\Delta p_v^{\\circ}\\rvert\n \\le \\left(1+\\frac1\\tau\\right)\n       \\sum_{v\\ne\\mathrm{root}}r_{|v|-1}\\lvert\\Delta q_v\\rvert.$$ If $q_{t,v}>0$, there is a point of $Y$ whose current key string has prefix $v$. Such a point is called a validity witness for $v$. If $|v|=j\\ge1$, every validity witness is within $20r_j$ of the anchor of the last key of $v$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-park-variation"
+  },
+  {
+   "claim_id": "claim-anchor-travel",
+   "exact_statement": "There is an absolute constant $C$ and a finite constant $D_{\\rm anchor}$, independent of the input law and horizon, such that $$\\label{eq:anchor-travel-bound}\n T_{\\rm anchor}\\le C\\bigl(V+\\ell P+\\ell Q\\bigr)+D_{\\rm anchor}.$$ Consequently the expected cost of moving the new parked masses with their retained anchors is at most $40T_{\\rm anchor}$. No multiplicative constant in this statement depends on the number of levels or on $k$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-anchor-travel"
+  },
+  {
+   "claim_id": "claim-key-size-refresh",
+   "exact_statement": "If $R_{t,j,\\lambda}$ denotes a refresh, then $$\\label{eq:key-size-refresh-budget}\n \\mathbb E\\sum_{t,j,\\lambda\\in\\Lambda_j^H}\n r_j\\bigl(\\widehat m_{t-1,j,\\lambda}\n            +\\widehat m_{t,j,\\lambda}\\bigr)\\mathbf 1_{R_{t,j,\\lambda}}\n \\le C\\ell P+D_{\\rm size},$$ where $C$ is absolute and $D_{\\rm size}$ depends only on the fixed metric, scales, $k$, and label pools.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-key-size-refresh"
+  },
+  {
+   "claim_id": "claim-park-coefficients",
+   "exact_statement": "Fix any completed fractional state and any $y\\in Y$. At each level whose heavy-center set has a center within $7r_j$ of $y$, let $\\lambda_j$ be its label. Such a center is unique. Then $$\\label{eq:pointwise-park-coefficients}\n \\sum_{\\substack{j:\\ d(y,a_{j,\\lambda_j})\\le7r_j}}\n                \\frac{b_{j,\\lambda_j}}{\\widehat m_{j,\\lambda_j}}\n \\le C\\ell,$$ with an absolute $C$, independent of the state and the number of levels.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-park-coefficients"
+  },
+  {
+   "claim_id": "claim-rounding-star",
+   "exact_statement": "Let $a,b\\in[0,\\infty)^d$, and let $X\\in\\mathbb Z_{\\ge0}^d$ be a random vector with $$X_i\\in\\{\\lfloor a_i\\rfloor,\\lceil a_i\\rceil\\},\n \\qquad \\mathbb EX_i=a_i.$$ Put $M=\\sum_iX_i$. Let $N$ be any random integer, arbitrarily correlated with $X$, such that $$N\\in\\left\\{\\left\\lfloor\\sum_i b_i\\right\\rfloor,\n                 \\left\\lceil\\sum_i b_i\\right\\rceil\\right\\},\n \\qquad \\mathbb EN=\\sum_i b_i.$$ There is a randomized kernel from the finite set of states $(X,N)$ to vectors $X'$ such that, in every state and every outcome of the kernel, $$X'_i\\in\\{\\lfloor b_i\\rfloor,\\lceil b_i\\rceil\\},\n \\qquad \\sum_iX'_i=N.$$ Its coordinate means, averaged over both the original state and the kernel, satisfy $$\\mathbb EX'_i=b_i.$$ With $$T=\\sum_i|a_i-b_i|,\n \\qquad I=\\mathbb E|N-M|,$$ the kernel can be chosen to satisfy $$\\label{eq:rounding-star-bound}\n             \\mathbb E\\|X'-X\\|_1\\le32T+11I.$$ Moreover, for any balanced random total $N$ with the displayed mean, a balanced vector with total $N$ and coordinate means $b_i$ exists without specifying an old vector $X$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-rounding-star"
+  },
+  {
+   "claim_id": "claim-rounding-realization",
+   "exact_statement": "Assume the fractional allocations and anchors constructed in the preceding sections, with $\\tau\\ge22$. They admit a causal rounding satisfying <a href=\"#eq:rounding-invariants\" data-reference-type=\"eqref\" data-reference=\"eq:rounding-invariants\">[eq:rounding-invariants]</a> for which $$\\label{eq:rounding-global}\n N_{\\rm rnd}:=\\mathbb E\\sum_{t=1}^H\\sum_{v\\ne{\\rm root}}\n                 r_{|v|-1}|n_v(t)-n_v(t-1)|\\le132V.$$ Placing the integer parks at their current anchors gives simulated configurations $S_t$ of exactly $k$ members containing each current request. There is a matching of consecutive configurations with expected total cost at most $$\\label{eq:rounding-realization}\n                         120N_{\\rm rnd}+40T_{\\rm anchor}.$$ Consequently their expected movement is at most $C(V+\\ell P+\\ell Q)+D$ for an absolute $C$ and a finite additive term $D$ depending only on the fixed finite structure.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-rounding"
+  },
+  {
+   "claim_id": "claim-episode-amplification",
+   "exact_statement": "Let $Y$ be a finite metric space, let $k\\ge2$, and let $s=(s_1,\\ldots,s_k)\\in Y^k$ have distinct entries. For every finite-support probability law $\\lambda$ on finite request sequences in $Y$, there is a causal randomized policy $A_\\lambda$ starting from $s$ such that $$\\mathbb E_{\\sigma\\sim\\lambda}\\mathbb E\\bigl[\\mathop{\\mathrm{cost}}_{A_\\lambda,s}(\\sigma)\\bigr]\n \\le \\alpha\\,\n      \\mathbb E_{\\sigma\\sim\\lambda}\\bigl[\\mathop{\\mathrm{OPT}}_s(\\sigma)\\bigr].\n \\label{eq:additive-free-law}$$ The policy can be strongly lazy. The constant $c_{\\mathrm{tr}}$ in <a href=\"#eq:transfer-alpha\" data-reference-type=\"eqref\" data-reference=\"eq:transfer-alpha\">[eq:transfer-alpha]</a> is the same for all $Y$, $s$, and $\\lambda$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-amplification"
+  },
+  {
+   "claim_id": "claim-finite-minimax",
+   "exact_statement": "For every finite collection $\\sigma_1,\\ldots,\\sigma_m$ of finite request sequences in $X$, there is a behavioral policy $p$ from $s$ satisfying $$\\mathbb E\\mathop{\\mathrm{cost}}_{p,s}(\\sigma_i)\\le\\alpha\\mathop{\\mathrm{OPT}}_s(\\sigma_i)\n       \\qquad(1\\le i\\le m).\n \\label{eq:finite-family-bound}$$ Its behavioral choices can be defined on all decision histories in $X$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-finite-minimax"
+  },
+  {
+   "claim_id": "claim-compact-policy",
+   "exact_statement": "For every metric space $X$ and every distinct tuple $s\\in X^k$, there is a single randomized causal policy $A_s$ such that $$\\mathbb E\\mathop{\\mathrm{cost}}_{A_s,s}(\\sigma)\\le\\alpha\\mathop{\\mathrm{OPT}}_s(\\sigma)\n       \\qquad\\text{for every finite request sequence }\\sigma\\text{ in }X.\n \\label{eq:all-inputs-distinct}$$ For each fixed input its decisions and cost are measurable functions of its internal randomness. Neither its rule nor its randomization depends on an eventual horizon.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-compact-policy"
+  }
+ ],
+ "paper": "papers/EN-114-000-0007-2-2026-PR-T4-UK-EX-M1-B-AL-H-0238_PM-110.1_Squared_logarithmic_randomized_k_server_on_arbitrary_metrics.md",
+ "purpose": "Squared-logarithmic randomized k-server on arbitrary metrics",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "3cb639b72851cbb1adab410fcbc5667fc5dc6aec4c1a162118eabf263d9800a6",
+   "pm.domains.v2": "7278cf3d1c390f63772990e588b499275d5a622fde2e1dff27f584c7f4cd192b",
+   "pm.edges.v2": "5cba8a91fcef91e137b8fbd8f625aaf653f2aa3c0b11e95a0d33dceba48e5a87",
+   "pm.extraction.v2": "4d13343d0b08d443a1dc748e4f82191fd62867271888872db770680fcb46c475",
+   "pm.formal.v2": "a8d4321bd30ca31e921777c9f7ccb570d4ee891f956bccaa8e88a73540782726",
+   "pm.limits.v2": "f80020492009d070d457044b25e354edb8f533f68abb28fb9fe041bc5923022d",
+   "pm.node.v2": "f72a6d98d8340f9bf31e85c34b2f88fc1cdf599979ac9426b1f3c63a1aab86b5",
+   "pm.objects.v2": "89c09abc17f9006fdd14f273492d60bb2711c54bade6073c4674e7c2282f8814",
+   "pm.provenance.v2": "66b2025228827c7e757ccc661bac53aca152750bd61fcd999c39ecd01fe1eee0",
+   "pm.quantities.v2": "20f7f5c6d7abc5c1c62de075f4bc517350f12103683cad919cf77a5faae08bae",
+   "pm.reading.v2": "70bda0e7f42d1fad88ca1588b88be853ebfe1fc15ede2824341bef7c801a5c15",
+   "pm.roadmap.v2": "884da3f8ce72196694158817c72bfce2bf9567df99e90d324ce6268bbbc612ff",
+   "pm.search.v1": "fead31deb7b253ce3f34c33dcc56c5ab65cf1b53cb76455bcaa57c4489d1757f",
+   "pm.triptych.v2": "9d43f15c2dccde03e5b07c85bbd02e8f6591f9ecdf1594e0f4b41a93f3249b26"
+  },
+  "canonical_sha256": "d6b7324406588fa895a33797ea542bd84869845ef0644b346521b9f94d036c1f",
+  "paper_sha256": "01bcfc8c3760a9e747167af8257cc1a9c1d823677a836849055f41f161b171cc",
+  "repaired_body_sha256": "2b0c23838a9dc976d6f8b2d44d0890f304d8cbb6a9765333b3037256d3622edd"
+ },
+ "status": "ACTIVE",
+ "subject_id": 14,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "e10dd55f82fa5e474d72d387b6c102f87e2e91df39a7c2783f48cb18fdbe896e",
+   "receipt_sha256": "d7668c629a668580ca43e36a3ce12d644b628c7dcbac6ce06ca5d3f112e1170b",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "integer points on a line, k in {2,3}, H in {1,2,3}, hand-chosen vectors",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-lazy-pathwise-bound",
+     "oracle_basis": "Sorted-order matching bound recomputed independently, plus replay of the reported moves and cost comparison against the bound."
+    },
+    {
+     "checked_domain": "same vectors, including steps where the request is already occupied",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-strongly-lazy-moves",
+     "oracle_basis": "Replay checks no move when occupied and exactly one move onto the request otherwise."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-drop-initial-mismatch",
+     "observed_exit": 1,
+     "receipt_sha256": "e1bb8569954cc833c5bff5aeb791722fc3dfded942b76303982eecb19030ada1"
+    },
+    {
+     "id": "mut-drop-last-step",
+     "observed_exit": 1,
+     "receipt_sha256": "7450b13931733eec5bb3aa2d111823f6ad8104f015e3cb5f2f62e771b7e5670c"
+    },
+    {
+     "id": "mut-double-cost",
+     "observed_exit": 1,
+     "receipt_sha256": "effc86c95a35a61656857f4df2690c13a7974fe19f4cbdc302bb03dfed3c448f"
+    },
+    {
+     "id": "mut-not-lazy",
+     "observed_exit": 1,
+     "receipt_sha256": "1c162f82e67299594e8c6f8c6ee33f355bcc45546b126dfbc3941be04609f452"
+    }
+   ],
+   "receipt_sha256": "5c82a08bb569308504fb4ea10607515d944c44522c0f654cb728ac3059f2d129",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Squared-logarithmic randomized k-server on arbitrary metrics"
+}

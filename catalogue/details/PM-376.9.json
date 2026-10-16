@@ -1,0 +1,1077 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 844391,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 230675
+ },
+ "coordinate": "EN-109-000-0000-2-2026-PR-T4-UK-EX-M2-B-PH-M-0744",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "theory of computation and dynamical systems",
+   "strength": "moderate",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "We do not assert a regularity theorem for arbitrary fluid data.",
+     "quote_sha256": "5c8d6e7a7907b911e9866425d451959ebd6c37c529dd2bece83a8e414ed3d7da"
+    }
+   ],
+   "query": "regularity theorem for arbitrary fluid data",
+   "reason": "The paper explicitly does not assert one."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-4",
+     "quote": "No uniform precision tolerance for an unbounded computation is asserted.",
+     "quote_sha256": "bfdd8526702ddf42da064670faccc3cef4b384c6d94c21c1195b4d563d42ed6c"
+    }
+   ],
+   "query": "uniform precision tolerance for unbounded computation",
+   "reason": "No such tolerance is asserted."
+  }
+ ],
+ "family": "PM-376",
+ "id": "PM-376.9",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-lem-b-gradient",
+    "claim_id": "claim-gradient-orthogonality",
+    "statement": "If $w,g\\in L^2(\\mathbb R^3;\\mathbb R^3)$ satisfy $\\operatorname{div}w=0$ and $\\operatorname{curl}g=0$ in distributions, then $\\langle w,g\\rangle_{L^2}=0$."
+   },
+   {
+    "anchor": "stmt-lem-p2-realization",
+    "claim_id": "claim-residual-realization-uniqueness",
+    "statement": "<span id=\"lem:b-comparison\" label=\"lem:b-comparison\"></span>Let $\\nu>0$ and let $U$ be a prescribed smooth divergence-free velocity on $[0,\\infty)\\times\\mathbb R^3$, with $U(0)=0$."
+   },
+   {
+    "anchor": "stmt-lem-p2-chart",
+    "claim_id": "claim-physical-scaling",
+    "statement": "For $a,b>0$, $x=x_0+ay$, and $s=bt$, let $U(t,x)=abV(bt,(x-x_0)/a)$."
+   },
+   {
+    "anchor": "stmt-prop-projection-l2",
+    "claim_id": "claim-torus-projection",
+    "statement": "Let $g$ be a smooth force on $[0,\\infty)\\times\\mathbb T_L^3$ with zero spatial mean at each time."
+   },
+   {
+    "anchor": "stmt-lem-bb-curl",
+    "claim_id": "claim-box-curl-field",
+    "statement": "Let $K_i(t)=c_i(t)+D_i(t)K_i^0$, $1\\le i\\le N$, where $K_i^0$ is an axis-parallel box, possibly with zero side lengths, and $D_i(t)$ is positive diagonal with determinant one."
+   },
+   {
+    "anchor": "stmt-prop-bb-realization",
+    "claim_id": "claim-fluid-realization-of-pulses",
+    "statement": "Fix $\\nu>0$."
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-lift-and-parking-schedules",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "stmt-lem-bb-balanced-box-routing",
+    "claim_id": "claim-balanced-box-routing",
+    "statement": "Let $Q_i=a_i+\\prod_{j=1}^3[-h_{ij},h_{ij}]$ and $Q_i'=b_i+\\prod_{j=1}^3[-k_{ij},k_{ij}]$ be rational solid boxes, with positive half-widths, each family pairwise disjoint."
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-balanced-three-stack",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "stmt-lem-bb-mid-prefix",
+    "claim_id": "claim-one-cell-rectangles",
+    "statement": "<span id=\"lem:bb-onecell\" label=\"lem:bb-onecell\"></span>Give an alphabet of size $m$ digits separated by at least two, between $0$ and $B-2$."
+   },
+   {
+    "anchor": "pm-h-13",
+    "claim_id": "claim-move-first-recorder",
+    "statement": "Its two incoming conditions are: the new control determines the displacement, and the new control together with the written letter determines the entire old control and read letter."
+   },
+   {
+    "anchor": "stmt-lem-bb-mid-mark-compiler",
+    "claim_id": "claim-direction-recorder",
+    "statement": "<span id=\"lem:bb-direction\" label=\"lem:bb-direction\"></span>Let $D=\\{-1,0,1\\}$ and let $O$ be either a singleton or $\\{0,1\\}$."
+   },
+   {
+    "anchor": "pm-h-13",
+    "claim_id": "claim-left-frontier-recorders",
+    "statement": "Its two incoming conditions are: the new control determines the displacement, and the new control together with the written letter determines the entire old control and read letter."
+   },
+   {
+    "anchor": "pm-h-13",
+    "claim_id": "claim-guarded-window-recorder",
+    "statement": "Its two incoming conditions are: the new control determines the displacement, and the new control together with the written letter determines the entire old control and read letter."
+   },
+   {
+    "anchor": "stmt-lem-bb-window-rectangles",
+    "claim_id": "claim-window-rectangles",
+    "statement": "Suppose a finite partial injective local tape map reads and writes only indices $[-a,b-1]$, then shifts the cursor by $e$, where $-a\\le e\\le b$."
+   },
+   {
+    "anchor": "pm-h-13",
+    "claim_id": "claim-six-rule-recorder",
+    "statement": "Its two incoming conditions are: the new control determines the displacement, and the new control together with the written letter determines the entire old control and read letter."
+   },
+   {
+    "anchor": "stmt-ba-rectangles",
+    "claim_id": "claim-separated-rectangle-codes",
+    "statement": "Let a deterministic partial tape table on an alphabet $\\Gamma$ of size $m$ have the two incoming properties of Lemma <a href=\"#lem:bb-onecell\" data-reference-type=\"ref\" data-reference=\"lem:bb-onecell\">[lem:bb-onecell]</a>."
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-finite-forcing-mechanisms",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "stmt-ba-two-interpolations",
+    "claim_id": "claim-two-interpolations",
+    "statement": "Let $S_i,T_i\\subset\\mathbb R^2$, $1\\le i\\le N$, be closed rational rectangles of positive side lengths."
+   },
+   {
+    "anchor": "stmt-ba-plate-routing",
+    "claim_id": "claim-plate-routing",
+    "statement": "Let $P_i,Q_i\\subset\\mathbb R^2$ be finite families of closed rectangles, separately pairwise disjoint, and let assigned positive diagonal affine maps $F_i$ satisfy $F_i(P_i)\\subseteq Q_i$."
+   },
+   {
+    "anchor": "stmt-ba-realization",
+    "claim_id": "claim-residual-forcing-processors",
+    "statement": "Fix computable $\\nu>0$."
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-torus-move-first-test",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-torus-window-test",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-direction-placements",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-loaded-torus",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-periodic-torus",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-unit-periodic-initializer",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-periodic-prefix-box",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "stmt-ba-log-clock",
+    "claim_id": "claim-log-clock",
+    "statement": "Let $W(s,x)$ be a smooth solenoidal field for $s\\ge0$, initially zero, with every mixed derivative bounded and support in one compact set $K$."
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-euclidean-two-processors",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-left-frontier-realizations",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "stmt-ba-persistent-compiler",
+    "claim_id": "claim-persistent-mark-recorder",
+    "statement": "Let a machine have work alphabet $\\Gamma$, halt state $h$, and instructions $\\gamma=(q,a)\\mapsto(q^+_\\gamma,a^+_\\gamma,d_\\gamma)$, where $q\\ne h$ and $d_\\gamma\\in\\{-1,0,1\\}$."
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-input-dependent-entry",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-fresh-tail-recorder",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-fresh-tail-flow",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "stmt-ba-occupied-compiler",
+    "claim_id": "claim-occupied-prefix-recorder",
+    "statement": "Let a machine have state set $Q$, halting set $H$, alphabet $\\Gamma$, and instructions $\\tau=(q,a)\\mapsto(q^+_\\tau,w_\\tau,d_\\tau)$."
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-occupied-cylinders",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-occupied-torus",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-shuttle-periodic",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-marked-window",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-direction-shuttle",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-guarded-history",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-two-pass-parking",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-guarded-torus",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-halfline-table",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-halfline-transport",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-halfline-event",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-four-stage",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "stmt-ba-bounded-box-tests",
+    "claim_id": "claim-bounded-box-tests",
+    "statement": "Fix a positive computable viscosity $\\nu$."
+   },
+   {
+    "anchor": "stmt-ba-torus-plates",
+    "claim_id": "claim-torus-plates",
+    "statement": "Fix a positive computable $\\nu$."
+   },
+   {
+    "anchor": "stmt-ba-zero-blank-code",
+    "claim_id": "claim-zero-blank-code",
+    "statement": "Let an alphabet of size $m>1$ have digits $0,\\ldots,m-1$, with full blank digit zero."
+   },
+   {
+    "anchor": "stmt-ba-parking",
+    "claim_id": "claim-evacuation-parking",
+    "statement": "Suppose $A_i:D_i\\to E_i$, $1\\le i\\le N$, are the rational reciprocal rectangle maps of Lemma <a href=\"#ba:four-stage\" data-reference-type=\"ref\" data-reference=\"ba:four-stage\">49</a>, with $N\\ge1$ and every $D_i\\subset\\{x_1<0\\}$."
+   },
+   {
+    "anchor": "stmt-ba-periodic-parking",
+    "claim_id": "claim-periodic-parking",
+    "statement": "Fix a positive computable $\\nu$."
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-split-mark-recorder",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-bounded-box-euclidean",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-phasewise-flow",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "stmt-bc-ordered",
+    "claim_id": "claim-ordered-transport",
+    "statement": "Let $D_i,S_i$ be finite families of closed rational axis-aligned boxes in $\\mathbb R^3$ with positive side lengths, pairwise disjoint within each family."
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-positive-height",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "stmt-bc-simultaneous",
+    "claim_id": "claim-simultaneous-transport",
+    "statement": "Suppose finite planar source and target rectangle families $S_i,T_i$ have positive side lengths and endpoints on the grid $B^{-2}\\mathbb Z^2$, with integer $B\\ge2$, and are separately disjoint."
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-zero-blank-halfspace",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "stmt-bc-expanded-height-routing",
+    "claim_id": "claim-expanded-height-routing",
+    "statement": "Let the source and target families be finite collections of full rational axis-aligned solid boxes, each family pairwise disjoint."
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-expanded-height-event",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "stmt-bc-columns",
+    "claim_id": "claim-column-transport",
+    "statement": "Let $S_i,T_i$ be finite rational planar rectangle families of positive side lengths, each separately disjoint, with endpoints on the $B^{-2}$ grid, where $B\\ge2$ is an integer."
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-column-event",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-delayed-column-event",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-recorded-pointer-event",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-guarded-planar-event",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-scaled-torus",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-direct-torus",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-thin-sheet-torus",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-height-separated-event",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-late-logclock",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   },
+   {
+    "anchor": "pm-h-4",
+    "claim_id": "claim-input-offset-event",
+    "statement": "Throughout $\\nu>0$ is fixed, $\\mathbb T=\\mathbb R/\\mathbb Z$, and the fluid equation on $\\mathbb R^3$ or the flat unit torus is"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "zero-data forced solution",
+    "evidence": [
+     {
+      "anchor": "stmt-lem-b-gradient",
+      "quote": "If $w,g\\in L^2(\\mathbb R^3;\\mathbb R^3)$ satisfy $\\operatorname{div}w=0$ and $\\operatorname{curl}g=0$ in distributions, then $\\langle w,g\\rangle_{L^2}=0$.",
+      "quote_sha256": "c345b021e6953ec94ba3800ddd414175fdb31a931366ab9c583d969836068b10"
+     }
+    ],
+    "requires_concepts": [
+     "residual force",
+     "energy comparison",
+     "orthogonality of gradients"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "box routing",
+    "evidence": [
+     {
+      "anchor": "stmt-lem-bb-curl",
+      "quote": "Let $K_i(t)=c_i(t)+D_i(t)K_i^0$, $1\\le i\\le N$, where $K_i^0$ is an axis-parallel box, possibly with zero side lengths, and $D_i(t)$ is positive diagonal with determinant one.",
+      "quote_sha256": "03dd7cbd95ba7a410454941588fc2b3e22d748b565ba2d9d5a95e2e5c8b7806c"
+     }
+    ],
+    "requires_concepts": [
+     "curl localization",
+     "determinant-one diagonal maps"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-gradient-orthogonality",
+   "exact_statement": "If $w,g\\in L^2(\\mathbb R^3;\\mathbb R^3)$ satisfy $\\operatorname{div}w=0$ and $\\operatorname{curl}g=0$ in distributions, then $\\langle w,g\\rangle_{L^2}=0$. In particular, any distributional gradient $g=\\nabla p\\in L^2$ has zero pairing with $w$, without an assumption that $p\\in L^2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-b-gradient"
+  },
+  {
+   "claim_id": "claim-residual-realization-uniqueness",
+   "exact_statement": "<span id=\"lem:b-comparison\" label=\"lem:b-comparison\"></span>Let $\\nu>0$ and let $U$ be a prescribed smooth divergence-free velocity on $[0,\\infty)\\times\\mathbb R^3$, with $U(0)=0$. On each finite interval, assume $U\\in CH^2\\cap C^1L^2$ and $U,\\nabla U$ are bounded. Put $f=\\mathcal F_\\nu[U]$. Then $(U,0)$ is a solution. Its velocity is unique in each of the following separately stated comparison classes, with the same force and initial data:*\n\n1.  *Smooth classical $v\\in CH^2\\cap C^1L^2$, with bounded $v$, and a pressure representative $p\\in CH^1$.*\n\n2.  *Smooth classical $v\\in CH^2\\cap C^1L^2$, with bounded $v,\\nabla v$, and an $H^1$ pressure representative at each time, with no required time continuity in that pressure norm.*\n\n3.  *Strong solutions with $v\\in CH^4\\cap C^1H^2$ and distributional $\\nabla p\\in CL^2$.*\n\n4.  *Smooth classical $v\\in CH^2\\cap C^1L^2$, with bounded $v,\\nabla v$, and a pressure representative $p\\in CL^2$.*\n\n5.  *Smooth classical $v\\in CH^2\\cap C^1L^2$, with bounded $v,\\nabla v$, without an additional integrability or normalization condition on pressure.*\n\n*The pressure gradient is unique. An $L^2$ pressure representative, when specified, is zero; otherwise pressure is determined up to a function of time. The reference material flow is a smooth diffeomorphism at every finite time and exists for every finite forward time.*\n\n*On a flat torus $\\mathbb T_L^3$, the same conclusion holds in the classical class where $v,v_t$, spatial derivatives through order two, and $p,\\nabla p$ are continuous on finite closed cylinders, with periodic mean-zero pressure. No Sobolev conditions at infinity are involved in that assertion.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-p2-realization"
+  },
+  {
+   "claim_id": "claim-physical-scaling",
+   "exact_statement": "For $a,b>0$, $x=x_0+ay$, and $s=bt$, let $U(t,x)=abV(bt,(x-x_0)/a)$. Then trajectories are transformed by this change of variables, incompressibility is preserved, and at the prescribed physical viscosity $\\nu$, $$\\mathcal F_\\nu[U](t,x)=ab^2\\left[\n V_s+(V\\cdot\\nabla_y)V-\\frac{\\nu}{a^2b}\\Delta_yV\n \\right](bt,(x-x_0)/a).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-p2-chart"
+  },
+  {
+   "claim_id": "claim-torus-projection",
+   "exact_statement": "Let $g$ be a smooth force on $[0,\\infty)\\times\\mathbb T_L^3$ with zero spatial mean at each time. There is a unique smooth mean-zero potential $\\phi$ satisfying $\\Delta\\phi=\\operatorname{div}g$. Put $Qg=\\nabla\\phi$ and $Pg=g-Qg$. Then $Pg$ is solenoidal and mean zero, and replacing $(g,p)$ by $(Pg,p-\\phi)$ preserves the velocity and the pressure normalization.*\n\n\n*Use normalized spatial measure, frequencies $\\xi_k=2\\pi k/L$, and norms $$\\|G\\|_{H^s}^2=\\sum_{k\\in\\mathbb Z^3}(1+|\\xi_k|^2)^s|\\widehat G(k)|^2,\n \\qquad\n \\|G\\|_{C^r}=\\max_{|\\beta|\\le r}\\|\\partial_x^\\beta G\\|_\\infty.$$ For all integers $h,r\\ge0$, at each time, $$\\label{eq:projection-estimate}\n \\begin{aligned}\n \\max\\{\\|\\partial_t^h Pg\\|_{C^r},\\|\\partial_t^h Qg\\|_{C^r}\\}\n     &\\le S_L\\|\\partial_t^h g\\|_{H^{r+2}},\\\\\n \\|\\partial_t^h\\phi\\|_{C^{r+1}}\n     &\\le S_Ld_L\\|\\partial_t^h g\\|_{H^{r+2}},\n \\end{aligned}$$ where $S_L=(1+52(L/(2\\pi))^4)^{1/2}$ and $d_L=(1+(L/(2\\pi))^2)^{1/2}$.*\n\n*Uniform bounds, temporal $L^2$ bounds on spatial suprema, and qualitative uniform decay of all mixed derivatives pass from $g$ to $Pg,Qg,\\phi$. A quantitative envelope for time order $h$ and output spatial order $r$ passes to $Pg,Qg$ through order $r$ and to $\\phi$ through order $r+1$ when the input derivatives through spatial order $r+2$ satisfy that envelope. The constants may depend on the derivative order. Periodicity and stationarity, including either property on a time tail, are preserved on their respective intervals.*\n\n*For computable $L>0$, effective mixed-derivative evaluation and effective derivative bounds for $g$ on finite time slabs give effective evaluation and such bounds for $Pg,Qg,\\phi$. Corresponding supplied global input bounds give effective global bounds in each assertion above.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-projection-l2"
+  },
+  {
+   "claim_id": "claim-box-curl-field",
+   "exact_statement": "Let $K_i(t)=c_i(t)+D_i(t)K_i^0$, $1\\le i\\le N$, where $K_i^0$ is an axis-parallel box, possibly with zero side lengths, and $D_i(t)$ is positive diagonal with determinant one. Suppose the centers and scales are smooth and constant near the ends of a compact time interval. For the effective conclusion, assume computable endpoints for the initial boxes $K_i^0$, effective evaluation of the centers’ and scales’ derivatives, bounds for those derivatives, and positive lower bounds for every scale on that interval. If the coordinatewise $2\\eta$ enlargements of the moving boxes are pairwise disjoint and bounded, for a known $\\eta>0$, a compactly supported smooth divergence-free field realizes these motions on open neighborhoods of the initial boxes. It vanishes near the time endpoints. When all enlarged boxes lie in an interior torus chart, the field extends to a mean-zero field on that torus. The field is effective under the effective-data assumptions above; smooth existence itself does not require computable data.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-bb-curl"
+  },
+  {
+   "claim_id": "claim-fluid-realization-of-pulses",
+   "exact_statement": "Fix $\\nu>0$. A finite collection of the preceding motions, repeated with period one, or preceded by one finite loading interval, yields a smooth prescribed velocity $U$ with $U(0)=0$. Suppose its spatial support is contained in one compact set in $\\mathbb R^3$, or its potentials are contained in interior torus charts. Then $$\\label{eq:bb-residual}\n f=U_t+(U\\cdot\\nabla)U-\\nu\\Delta U$$ has the same support and time periodicity and bounded mixed derivatives of every order. The solution is $(U,0)$, with the uniqueness and material-flow conclusions of Lemma <a href=\"#lem:p2-realization\" data-reference-type=\"ref\" data-reference=\"lem:p2-realization\">2</a>. In $\\mathbb R^3$ its uniqueness statement also holds when the competing pressure has an $H^1$ representative at each time, without requiring continuity into $H^1$, while the other velocity hypotheses of Section <a href=\"#sec:model\" data-reference-type=\"ref\" data-reference=\"sec:model\">2</a> are retained. On the torus $U$ and $f$ have zero mean. Under the effective-data assumptions of Lemma <a href=\"#lem:bb-curl\" data-reference-type=\"ref\" data-reference=\"lem:bb-curl\">5</a>, the formula is $f_0+\\nu f_1$ with effective coefficients; evaluation is effective for computable $\\nu$, and relative to $\\nu$ otherwise.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-bb-realization"
+  },
+  {
+   "claim_id": "claim-lift-and-parking-schedules",
+   "exact_statement": "These reciprocal maps have the following smooth compactly supported unit-time realizations, stationary on time collars. They are effective under the rational-data assumptions just stated.*\n\n\n1.  *For the products $P_i\\times[z_0-h,z_0+h]$, with common $h\\ge0$ and $z_0\\in\\mathbb R$, lift all boxes with their source projections fixed, transfer them at sufficiently separated private heights, and lower them with their target projections fixed. The middle motion may use $g_i(s)=\\lambda_i^s$ or $g_i(s)=1+s(\\lambda_i-1)$ and matrix $\\operatorname{diag}(g_i,g_i^{-1},1)$, with the center interpolated linearly in $s$. Each horizontal width stays between its endpoint widths. In the linear case every point satisfies $$\\label{eq:bb-convex-coordinate}\n     X_1(s)=(1-s)X_1(0)+sX_1(1).$$*\n\n2.  *Alternatively, choose disjoint parking rectangles away from both families. Move every source to its parking site before delivering any target, using an upward, horizontal, and downward translation. Reshape at the parking sites, then deliver by the same three translations. This uses $7N$ motions. The same schedule applies to assigned onto positive diagonal determinant-one maps between rational solid boxes whose centers lie in a common horizontal plane and whose source and target horizontal projections are separately disjoint. Require both horizontal widths during reshaping to stay inside their reserved parking rectangles and the travel height above the common plane to exceed twice the largest vertical half-width.*\n\n*Both constructions act on neighborhoods of the whole source boxes.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-bb-lift-parking"
+  },
+  {
+   "claim_id": "claim-balanced-box-routing",
+   "exact_statement": "Let $Q_i=a_i+\\prod_{j=1}^3[-h_{ij},h_{ij}]$ and $Q_i'=b_i+\\prod_{j=1}^3[-k_{ij},k_{ij}]$ be rational solid boxes, with positive half-widths, each family pairwise disjoint. Suppose $s_{ij}=k_{ij}/h_{ij}$ and $\\prod_js_{ij}=1$. An effective compactly supported smooth solenoidal field, zero outside the time interval $[1/4,3/4]$, has time-one map $$a_i+y\\longmapsto b_i+\\operatorname{diag}(s_{i1},s_{i2},s_{i3})y$$ on a neighborhood of each $Q_i$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-bb-balanced-box-routing"
+  },
+  {
+   "claim_id": "claim-balanced-three-stack",
+   "exact_statement": "For every machine and finite input, there are effective coefficients $f_0,f_1$ such that $f=f_0+\\nu f_1$ on $\\mathbb R^3$ has an explicit zero-data solution $(U,0)$. Force and velocity have one compact spatial support and bounded mixed derivatives of every order, and are one-periodic after $t=1$. At the fixed label $x_*=(4,0,0)$, $$\\exists t\\ge0:\\quad X(t;x_*)\\in(-1,2)^3\n \\quad\\Longleftrightarrow\\quad\\text{the machine halts}.$$ For a fixed machine its repeated field is independent of the input. The comparison class is $u\\in C H^2\\cap C^1L^2$, bounded $u,\\nabla u$ on finite intervals, and pressure modulo constants in $C H^1$. The formula is valid for every fixed real $\\nu>0$, with effective evaluation when $\\nu$ is computable and relative evaluation otherwise.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-bb-balanced-three-stack"
+  },
+  {
+   "claim_id": "claim-one-cell-rectangles",
+   "exact_statement": "<span id=\"lem:bb-onecell\" label=\"lem:bb-onecell\"></span>Give an alphabet of size $m$ digits separated by at least two, between $0$ and $B-2$. Put $$E(A)=\\sum_{j\\ge1}d(A_j)B^{-j},\\qquad\nI(v)=\\sum_{j=1}^{|v|}d(v_j)B^{-j}+[0,B^{-|v|}].$$ For a head-relative tape $(a_j)_{j\\in\\mathbb Z}$ use the coordinates $$(x,y)=\\big(E(a_{-1}a_{-2}\\cdots),E(a_0a_1\\cdots)\\big).$$ After writing at cell zero, a displacement $e$ makes the old cell $e$ the new cell zero. A deterministic partial one-cell table satisfying the incoming conditions acts, after separate state translations, by a finite list of reciprocal affine maps on full closed rectangles. Each source family and each target family is separately disjoint. For a rule reading $a$, writing $b$, and moving by $e$, the branches are $$\\label{eq:bb-one-cell-branches}\n\\begin{array}{c|c|c|c}\ne&\\text{source}&\\text{target}&(x',y')\\\\\\hline\n1 &[0,1]\\times I(a)&I(b)\\times[0,1]\n &((d(b)+x)/B,By-d(a))\\\\\n0 &[0,1]\\times I(a)&[0,1]\\times I(b)\n &(x,y+(d(b)-d(a))/B)\\\\\n-1&I(c)\\times I(a)&[0,1]\\times(d(c)+I(b))/B\n &(Bx-d(c),[d(c)+(d(b)+By-d(a))/B]/B).\n\\end{array}$$ The last row is split over every letter $c$. Each linear part is $\\operatorname{diag}(B^{-e},B^e)$. With odd digits $1,3,\\ldots,2m-1$ and $B\\in\\{2m+1,2m+2\\}$, every code lies in the interior of its applicable rectangle, and unscaled within-family gaps are at least $B^{-2}$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-bb-mid-prefix"
+  },
+  {
+   "claim_id": "claim-move-first-recorder",
+   "exact_statement": "<span id=\"lem:bb-movefirst\" label=\"lem:bb-movefirst\"></span>There is an effective one-cell table satisfying the incoming conditions whose checkpoint configurations simulate the work machine. After $n$ work steps its frontier is at $n+2$, its records occupy $2,\\ldots,n+1$, and its temporary marks are all zero. Each nonhalting checkpoint has a finite positive continuation to the next one, with no intervening checkpoint.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-bb-mid-right-compiler"
+  },
+  {
+   "claim_id": "claim-direction-recorder",
+   "exact_statement": "<span id=\"lem:bb-direction\" label=\"lem:bb-direction\"></span>Let $D=\\{-1,0,1\\}$ and let $O$ be either a singleton or $\\{0,1\\}$. An effective one-cell table on $\\Gamma\\times(\\{\\bot,F\\}\\sqcup\\mathcal R)\\times\\{0,1\\}\\times O$, where $\\mathcal R=\\{(q,e,a):q\\text{ nonhalting},e\\in D,a\\in\\Gamma\\}$, satisfies the incoming conditions. It preserves the $O$ track in its physical cells. Starting with frontier at one, its checkpoint at work step $n$ has frontier $n+1$, records at $1,\\ldots,n$, zero marks, and the correct work configuration. A step from head $i$ takes $5+2(n-i)$ local rules.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-bb-mid-mark-compiler"
+  },
+  {
+   "claim_id": "claim-left-frontier-recorders",
+   "exact_statement": "There are two effective incoming-separated tables: a stopping table, and a table which continues with idle work steps after halting. At checkpoint $n$ their frontier is $f_n=-2-n$ and their marks vanish. If the next work move ends at $i'$, the next checkpoint is reached after $4+2(i'-f_n)$ local rules.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-bb-mid-left-compiler"
+  },
+  {
+   "claim_id": "claim-guarded-window-recorder",
+   "exact_statement": "There is a finite partial injective map on relative tapes with controls $\\mathrm{Ready}(q,e)$, $\\mathrm{Go}(r)$ and $\\mathrm{Back}(q,d)$. Here $r=(q,e,a)$ records an instruction, with $\\delta(q,a)=(p(r),b(r),d(r))$. Use work, history and mark tracks $A,H,J$. At cursor position $i$, the Ready row has $a=A_i$ and $r=(q,e,a)$. The entire table is $$\\begin{array}{c|l|l}\n\\text{control}&\\text{test}&\\text{action}\\\\\\hline\n\\mathrm{Ready}(q,e)&q\\text{ nonhalting},J_i=0\n &A_i\\gets b(r),\\ J_i\\gets1,\\ \\mathrm{Go}(r),+1\\\\\n\\mathrm{Go}(r)&J_i=0,H_i\\ne P&\\mathrm{Go}(r),+1\\\\\n\\mathrm{Go}(r)&J_i=0,H_i=P,H_{i+1}=E\n &H_i\\gets r,H_{i+1}\\gets P,\\ \\mathrm{Back}(p(r),d(r)),-1\\\\\n\\mathrm{Back}(q,d)&J_i=0,H_{i+1}\\ne P&\\mathrm{Back}(q,d),-1\\\\\n\\mathrm{Back}(q,d)&J_i=1&J_i\\gets0,\\ \\mathrm{Ready}(q,d),d.\n\\end{array}$$ Unmentioned cells and tracks are copied. Initialized with frontier at $r_0\\in\\{1,2\\}$, other history $E$, zero marks and $\\mathrm{Ready}(q_0,0)$, the checkpoint at step $n$ has frontier $p_n=n+r_0$ and correct head $h_n$. Its next work step uses exactly $2(p_n-h_n)+1\\le4n+2r_0+1$ local rules.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-bb-window-compiler"
+  },
+  {
+   "claim_id": "claim-window-rectangles",
+   "exact_statement": "Suppose a finite partial injective local tape map reads and writes only indices $[-a,b-1]$, then shifts the cursor by $e$, where $-a\\le e\\le b$. Split its domain by every complete word in that window. With gapped radix coding the input prefix lengths are $(a,b)$ and output lengths $(a+e,b-e)$; the affine branch has linear part $\\operatorname{diag}(B^{-e},B^e)$. Both full rectangle families are separately disjoint.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-bb-window-rectangles"
+  },
+  {
+   "claim_id": "claim-six-rule-recorder",
+   "exact_statement": "For $r_0=1$ or $r_0=2$, there is a partial table with the two incoming properties of Lemma <a href=\"#lem:bb-onecell\" data-reference-type=\"ref\" data-reference=\"lem:bb-onecell\">[lem:bb-onecell]</a>, frontier $r_0+n$ at checkpoint $n$, and checkpoint control recording both the work state and the preceding work displacement. Its next checkpoint takes $2(r_0+n-h_n)+3$ instructions. The work head moves only on the last instruction.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ba-six-compiler"
+  },
+  {
+   "claim_id": "claim-separated-rectangle-codes",
+   "exact_statement": "Let a deterministic partial tape table on an alphabet $\\Gamma$ of size $m$ have the two incoming properties of Lemma <a href=\"#lem:bb-onecell\" data-reference-type=\"ref\" data-reference=\"lem:bb-onecell\">[lem:bb-onecell]</a>. Assign distinct odd digits $e(a)\\in\\{1,3,\\ldots,2m-1\\}$ and choose an integer $B\\ge2m+1$. Its local rules admit effective positive diagonal affine maps of determinant one between finite families of closed planar rectangles. Sources are pairwise separated, as are targets. Both the minimal subdivision and the subdivision by both adjacent letters given below realize every tape in their full symbolic cylinders.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-rectangles"
+  },
+  {
+   "claim_id": "claim-finite-forcing-mechanisms",
+   "exact_statement": "A finite family of the preceding pulses, joined with flat time collars, can be used once for initialization and repeated with period one thereafter. It gives a smooth effective velocity and residual force with all mixed derivatives uniformly bounded. In $\\mathbb R^3$ both have one fixed compact spatial support, and the velocity has uniformly bounded kinetic energy. In a torus chart, periodized curl or planar Hamiltonian pulses have zero spatial mean, as does their residual force. Initial velocity and pressure are zero. Uniqueness holds in the comparison classes of Section <a href=\"#sec:model\" data-reference-type=\"ref\" data-reference=\"sec:model\">2</a>; in the whole-space class the competitor’s gradient bound can be omitted if the remaining conditions are retained.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-analytic"
+  },
+  {
+   "claim_id": "claim-two-interpolations",
+   "exact_statement": "Let $S_i,T_i\\subset\\mathbb R^2$, $1\\le i\\le N$, be closed rational rectangles of positive side lengths. Suppose each list is pairwise disjoint and $$F_i(y)=c_i^T+\\operatorname{diag}(\\lambda_i,\\lambda_i^{-1})(y-c_i^S),\n \\qquad\\lambda_i\\in\\mathbb Q_{>0},$$ maps $S_i$ onto $T_i$, with $c_i^S,c_i^T$ their centers. There is a smooth nondecreasing switch $\\eta:[0,1]\\to[0,1]$, zero near 0 and one near 1, for which either scale path $r_i=\\lambda_i^\\eta$ or $r_i=1-\\eta+\\eta\\lambda_i$ yields an effective smooth compactly supported solenoidal unit-time field, zero on time collars, realizing $(y,z)\\mapsto(F_i(y),z)$ on the whole box $S_i\\times[-1,1]$ and a neighborhood of it. The paths are affine; each horizontal half-width remains between its endpoint values, and the horizontal sweep of each original box lies in the coordinate bounding rectangle of $S_i$ and $T_i$. With the linear choice, a particle’s first coordinate is the convex interpolation of its endpoint first coordinates.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-two-interpolations"
+  },
+  {
+   "claim_id": "claim-plate-routing",
+   "exact_statement": "Let $P_i,Q_i\\subset\\mathbb R^2$ be finite families of closed rectangles, separately pairwise disjoint, and let assigned positive diagonal affine maps $F_i$ satisfy $F_i(P_i)\\subseteq Q_i$. Write their diagonal factors as $\\lambda_{i1}^*,\\lambda_{i2}^*>0$ with product one. There is a smooth compactly supported solenoidal unit-time field, zero on time collars, whose endpoint map is $(y,z)\\mapsto(F_i(y),z)$ on a neighborhood of each entire plate $P_i\\times\\{0\\}$. During the horizontal phase both planar factors interpolate linearly, while the normal factor compensates their product. Each planar coordinate of a point on the plate is its convex endpoint interpolation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-plate-routing"
+  },
+  {
+   "claim_id": "claim-residual-forcing-processors",
+   "exact_statement": "Fix computable $\\nu>0$. Let $W$ be smooth, solenoidal, initially zero, with support in one compact subset of $\\mathbb R^3$ and every mixed derivative bounded. Then $$\\label{ba:residual}\n F_W=W_t+(W\\cdot\\nabla)W-\\nu\\Delta W$$ has the same support and derivative properties. The zero-data solution $(W,0)$ is unique among smooth solutions with $u\\in C_tH^2\\cap C_t^1L^2$, bounded $u$ on finite intervals, and $p\\in C_tH^1$. The corresponding torus assertion holds in the classical comparison class of Section <a href=\"#sec:model\" data-reference-type=\"ref\" data-reference=\"sec:model\">2</a>. A sum of curls in a torus chart gives both $W$ and $F_W$ mean zero. Finite formulas from the effective-data instances of the preceding constructions, finite loading, and repetition of one cycle give effective evaluation of every force derivative.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-realization"
+  },
+  {
+   "claim_id": "claim-torus-move-first-test",
+   "exact_statement": "The move-first recorder has a unit-torus realization, periodic after $t=1$, whose fixed label $(1/4,1/2,1/4)$ enters $\\{x_1\\in(1/2,1)\\pmod1\\}$ exactly when the work machine halts. For a fixed machine only the loading interval depends on the input.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-bb-torus33"
+  },
+  {
+   "claim_id": "claim-torus-window-test",
+   "exact_statement": "The table of Lemma <a href=\"#lem:bb-window-compiler\" data-reference-type=\"ref\" data-reference=\"lem:bb-window-compiler\">14</a> has a unit-torus realization, periodic after $t=1$, with fixed label $(1/4,1/4,1/4)$ and event $x_1\\in(1/2,7/8)\\pmod1$, occurring exactly when the work machine halts. At work step $n$ its next checkpoint occurs after exactly $2(p_n-h_n)+1\\le4n+5$ unit periods.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-bb-window37"
+  },
+  {
+   "claim_id": "claim-direction-placements",
+   "exact_statement": "<span id=\"thm:bb-aligned38\" label=\"thm:bb-aligned38\"></span>The direction recorder gives both of the following realizations.*\n\n1.  *On $\\mathbb R^3$, with its passive origin bit, there is a force periodic from time zero and a fixed-origin event $X_1(t;0)<-5$. Input dependence can be confined to two translations of the state charts. On every implemented full box the first coordinate is a convex combination of its endpoint first coordinates.*\n\n2.  *On the unit torus, without the passive track, a force periodic after $t=1$ has fixed label $(1/8,1/8,1/4)$ and event $x_1\\in(1/2,7/8)\\pmod1$. For a fixed machine its repeated part is independent of the input.*\n\n*Both events are equivalent to halting.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-bb-direction39"
+  },
+  {
+   "claim_id": "claim-loaded-torus",
+   "exact_statement": "For every machine and finite input and every fixed computable $\\nu>0$, there is an effective smooth mean-zero force, one-periodic for $t\\ge1$ with bounded mixed derivatives, whose unique smooth zero-data solution with zero normalized pressure satisfies $$\\exists t\\ge0:\\ \\Phi_t(1/2,1/2,1/4)\n       \\in(1/16,1/4)\\times\\mathbb T^2\n \\quad\\Longleftrightarrow\\quad\\text{halting}.$$ Uniqueness holds in the classical class of Section <a href=\"#sec:model\" data-reference-type=\"ref\" data-reference=\"sec:model\">2</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-loaded-torus"
+  },
+  {
+   "claim_id": "claim-periodic-torus",
+   "exact_statement": "For every finite machine and input, and every fixed computable $\\nu>0$, there is an effective smooth mean-zero force on the unit flat torus, one-periodic from time zero, with all mixed derivatives bounded. Its zero-data solution has pressure zero, is unique in the classical class of Section <a href=\"#sec:model\" data-reference-type=\"ref\" data-reference=\"sec:model\">2</a>, and satisfies $$\\exists t\\ge0:\\ \\Phi_t(1/8,1/8,1/4)\n             \\in\\{5/8<X_1<7/8\\}\n \\quad\\Longleftrightarrow\\quad\\text{the machine halts}.$$ The one repeated cycle implements all instruction branches and its loading branch.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-periodic-torus"
+  },
+  {
+   "claim_id": "claim-unit-periodic-initializer",
+   "exact_statement": "There is an effective halting realization on $\\mathbb T^3$ with fixed label $a_*=(3/8,1/4,1/2)$ and fixed strip $5/8<x_1<7/8$, using a smooth mean-zero general force of period one from time zero. Its initial velocity and prescribed pressure are zero, every mixed derivative is bounded, and its kinetic energy is uniformly bounded. The solution is unique in the torus comparison class.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-unit-periodic-event"
+  },
+  {
+   "claim_id": "claim-periodic-prefix-box",
+   "exact_statement": "For every deterministic machine and finite input, a compactly supported smooth force on $\\mathbb R^3$, periodic with period one from time zero, realizes the fixed-origin halting event $$\\exists t\\ge0:\\quad X(t;0)\\in(-4,-1)\\times(-1,2)\\times(-1,1)\n \\quad\\Longleftrightarrow\\quad\\text{halting}.$$ The force has bounded mixed derivatives and the unique zero-data solution in the class of Proposition <a href=\"#prop:bb-realization\" data-reference-type=\"ref\" data-reference=\"prop:bb-realization\">6</a>. Its finite program uses full volume-preserving boxes; no solenoidal condition is imposed on the force itself.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-bb-prefix29"
+  },
+  {
+   "claim_id": "claim-log-clock",
+   "exact_statement": "Let $W(s,x)$ be a smooth solenoidal field for $s\\ge0$, initially zero, with every mixed derivative bounded and support in one compact set $K$. For fixed computable $\\nu>0$, set $$s(t)=\\log(1+t),\\quad \\rho(t)=(1+t)^{-1},\\quad\n U(t,x)=\\rho(t)W(s(t),x),\\quad\n F=U_t+(U\\cdot\\nabla)U-\\nu\\Delta U.$$ Every derivative $\\partial_t^k\\partial_x^\\alpha U$ and $\\partial_t^k\\partial_x^\\alpha F$ is uniformly $O((1+t)^{-1-k})$ and belongs to space-time $L^2$. Both supports lie in $K$. If $\\Xi$ is the material flow of $W$, that of $U$ is $\\Xi(s(t),a)$, so every fixed spatial reachability event is unchanged. Effective finite formulas for $W$ give effective formulas for $U,F$ and all derivatives.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-log-clock"
+  },
+  {
+   "claim_id": "claim-euclidean-two-processors",
+   "exact_statement": "For every finite machine and input, and every fixed computable $\\nu>0$, either the move-first recorder of Lemma <a href=\"#lem:bb-movefirst\" data-reference-type=\"ref\" data-reference=\"lem:bb-movefirst\">[lem:bb-movefirst]</a> or the six-rule recorder of Lemma <a href=\"#ba:six-compiler\" data-reference-type=\"ref\" data-reference=\"ba:six-compiler\">16</a> yields effective smooth forcing on $\\mathbb R^3$ with one compact spatial support, all mixed derivatives bounded, and period one for $t\\ge1$, such that $$\\exists t\\ge0:\\ (\\Phi_t(0))_1<-1\n \\quad\\Longleftrightarrow\\quad\\text{halting}.$$ The zero-data solution is unique in Lemma <a href=\"#ba:realization\" data-reference-type=\"ref\" data-reference=\"ba:realization\">21</a>’s class, has pressure zero and uniformly bounded energy. Separately, the six-rule processor admits a force square-integrable on all space-time with the same support and event.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-euclidean-boxes"
+  },
+  {
+   "claim_id": "claim-left-frontier-realizations",
+   "exact_statement": "<span id=\"prop:bb-mid-stream\" label=\"prop:bb-mid-stream\"></span>Both left-frontier tables have compact whole-space realizations, periodic after $t=1$, with fixed label zero and event $X_1(t;0)<-1/2$. The stopping version can use distinct-height stream functions and has uniqueness with pointwise-in-time $H^1$ comparison pressure. The continuing version transports full solid boxes by evacuation, reshaping and delivery, and represents every local step, including post-halt idle computation. It has in particular uniqueness with comparison pressure in $C([0,T];H^1)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-bb-mid-parking"
+  },
+  {
+   "claim_id": "claim-persistent-mark-recorder",
+   "exact_statement": "Let a machine have work alphabet $\\Gamma$, halt state $h$, and instructions $\\gamma=(q,a)\\mapsto(q^+_\\gamma,a^+_\\gamma,d_\\gamma)$, where $q\\ne h$ and $d_\\gamma\\in\\{-1,0,1\\}$. There is an effective finite partial one-head table with these properties. At the checkpoint after $n$ work steps, it has the correct work tape, state and head, a unique mark at that head, and a history pointer at $p_n=n+2$. Each target control determines the incoming displacement; the target control and written full cell symbol determine the source control and read full symbol on the entire partial domain. If the next work-head position is $w'=w_n+d_\\gamma$, the next checkpoint is reached after exactly $2(p_n-w')+4$ local steps.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ba-persistent-compiler"
+  },
+  {
+   "claim_id": "claim-input-dependent-entry",
+   "exact_statement": "For each machine and finite input, and each fixed positive computable viscosity $\\nu$, there is an effective smooth force on $\\mathbb R^3$ with one compact spatial support, bounded mixed derivatives, and period one from time zero, whose zero-data solution satisfies $$\\exists t\\ge0:\\ X_1(t;(2,0,0))<0\n \\quad\\Longleftrightarrow\\quad\\text{the machine halts}.$$ The solution is smooth with pressure zero and is unique among smooth solutions for which, on every finite interval, $u\\in C_tH^2\\cap C_t^1L^2$, $u$ and $\\nabla u$ are bounded, and $p\\in C_tH^1$. As a separate force choice, the same event is realized with every mixed derivative of velocity and force in space-time $L^2$ and bounded by a derivative-dependent multiple of $(1+t)^{-1}$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-periodic-entry"
+  },
+  {
+   "claim_id": "claim-fresh-tail-recorder",
+   "exact_statement": "There is an effective partial rule on cells at offsets $-1,0,1$ that simulates the machine, is injective on its entire domain of relative tapes, and has incoming displacement determined by the target state. Its allowed cylinders admit separately separated closed-rectangle maps with linear parts $\\operatorname{diag}(B^{-d},B^d)$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ba-fresh-recorder"
+  },
+  {
+   "claim_id": "claim-fresh-tail-flow",
+   "exact_statement": "The fresh-tail recorder has an effective compactly supported smooth realization on $\\mathbb R^3$, with zero initial velocity and force periodic after one unit of loading, whose event $\\exists t\\ge0:(\\Phi_t(0))_1<-1$ is equivalent to halting. A separate choice, with the same event and one compact support, satisfies for every $k\\ge0$ and spatial multi-index $\\alpha$ $$\\label{ba:fresh-decay}\n \\sup_x\\bigl(|\\partial_t^k\\partial_x^\\alpha u|+\n             |\\partial_t^k\\partial_x^\\alpha F|\\bigr)\n \\le C_{k,\\alpha}(1+t)^{-1-k}.$$ Every displayed derivative is space-time square-integrable. Both forces have the unique zero-pressure solution of Lemma <a href=\"#ba:realization\" data-reference-type=\"ref\" data-reference=\"ba:realization\">21</a> at the fixed computable viscosity.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-fresh-flow"
+  },
+  {
+   "claim_id": "claim-occupied-prefix-recorder",
+   "exact_statement": "Let a machine have state set $Q$, halting set $H$, alphabet $\\Gamma$, and instructions $\\tau=(q,a)\\mapsto(q^+_\\tau,w_\\tau,d_\\tau)$. There is an effective partial injective map on head-relative tapes whose domain depends only on the control and full cells at offsets $-1,0,1$. With the initialization below, occupied history at checkpoint $n$ consists exactly of the absolute indices less than $F_n=n+2$. A work step ending at head position $j$ takes exactly $2(F_n-j)+2$ local steps. Halting at a checkpoint, including the initial one, is equivalent to halting of the original machine.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ba-occupied-compiler"
+  },
+  {
+   "claim_id": "claim-occupied-cylinders",
+   "exact_statement": "The recorder of Lemma <a href=\"#ba:occupied-compiler\" data-reference-type=\"ref\" data-reference=\"ba:occupied-compiler\">37</a> admits a finite effective list of positive-area closed source and target rectangles, separately pairwise disjoint. If $\\mathcal A$ is its full alphabet and $B=2|\\mathcal A|+1$, a branch of displacement $d$ has an exact affine map with linear part $\\operatorname{diag}(B^{-d},B^d)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-occupied-cylinders"
+  },
+  {
+   "claim_id": "claim-occupied-torus",
+   "exact_statement": "For each machine and finite input, at any fixed positive computable viscosity there is an effective smooth mean-zero force on the unit flat three-torus, with bounded mixed derivatives and period one for $t\\ge1$, whose smooth zero-data solution has pressure zero and satisfies $$\\exists t\\ge0:\\ X(t;[(-1/16,0,0)])\\in\n \\{[x]:x_1\\bmod1\\in(0,1/2)\\}\n \\quad\\Longleftrightarrow\\quad\\text{the machine halts}.$$ The pressure is normalized to mean zero, and the solution is unique in the classical torus comparison class of Section <a href=\"#sec:model\" data-reference-type=\"ref\" data-reference=\"sec:model\">2</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-occupied-torus"
+  },
+  {
+   "claim_id": "claim-shuttle-periodic",
+   "exact_statement": "On the unit torus there is an effective smooth mean-zero force, periodic from time zero with period one and with bounded mixed derivatives, whose unique zero-data classical solution has $$\\exists t\\ge0:\\quad X_1(t;0)\\pmod1\\in(1/16,1/4)\n \\quad\\Longleftrightarrow\\quad\\text{halting}.$$ The constructed pressure is zero. Alternatively the force may be projected to a solenoidal force with the same velocity and event, and with the correspondingly changed mean-zero pressure.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-bb-shuttle-periodic"
+  },
+  {
+   "claim_id": "claim-marked-window",
+   "exact_statement": "There is a unit-torus realization, periodic for $t\\ge1$, with fixed label $a_*=(1/4,1/4,1/4)$. Its event $$\\exists t\\ge0:\\quad X_1(t;a_*)\\pmod1\\in(2/3,5/6)$$ occurs exactly when the machine halts. It uses an injective marked-head table whose cursor shifts may equal two. Its force is effective, smooth and mean zero, with bounded mixed derivatives and the zero-data uniqueness class of Proposition <a href=\"#prop:bb-realization\" data-reference-type=\"ref\" data-reference=\"prop:bb-realization\">6</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-bb-marked-window"
+  },
+  {
+   "claim_id": "claim-direction-shuttle",
+   "exact_statement": "On $\\mathbb R^3$ an effective compactly supported force with bounded mixed derivatives and period one after $t=1$ realizes the halting event $X_1(t;(1,0,0))<0$. Uniqueness holds with bounded $u,\\nabla u$, $u\\in C H^2\\cap C^1L^2$ and pressure modulo constants in $C H^1$ on each finite interval. An alternative force is square-integrable in space-time, with the same label, event, support and derivative bounds.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-bb-direction-shuttle"
+  },
+  {
+   "claim_id": "claim-guarded-history",
+   "exact_statement": "An effective smooth force on $\\mathbb R^3$, periodic from time zero, with one compact spatial support and bounded mixed derivatives, realizes the fixed event $$\\exists t\\ge0:\\quad X(t;(2,0,0))\\in(-2,-1)\\times(0,1)\\times(-1,1)\n \\quad\\Longleftrightarrow\\quad\\text{halting}.$$ Velocity is unique in the class $u\\in C([0,T];H^4)\\cap C^1([0,T];H^2)$, $\\nabla p\\in C([0,T];L^2)$ for every finite $T$, allowing a distributional pressure gradient. Alternatively the force belongs to $L^2([0,\\infty);H^j)$ for every integer $j\\ge0$, with all the same support, event and comparison-class conclusions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-bb-guarded-history"
+  },
+  {
+   "claim_id": "claim-two-pass-parking",
+   "exact_statement": "For any machine and finitely specified initial tape, an effective smooth force on $\\mathbb R^3$, periodic from time zero, with one compact spatial support and bounded mixed derivatives, realizes the event $$\\exists t\\ge0:\\quad X(t;0)\\in(-6,-4)\\times(-1,1)\\times(-1,1)\n \\quad\\Longleftrightarrow\\quad\\text{halting}.$$ The zero-data velocity is unique among classical smooth solutions with bounded $u,\\nabla u$, $u\\in C H^2\\cap C^1L^2$ and $p\\in C L^2$ on every finite interval. The prescribed solution has uniformly bounded kinetic energy.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-bb-two-pass-parking"
+  },
+  {
+   "claim_id": "claim-guarded-torus",
+   "exact_statement": "On the unit torus, the fixed label $(1/8,0,0)$ and the strip $\\{x:x_1\\pmod1\\in(-1/4,0)\\}$ realize halting by a general mean-zero force with zero initial velocity and pressure. It is periodic after time one and all its mixed derivatives are bounded. The torus comparison class gives uniqueness.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-guarded-torus"
+  },
+  {
+   "claim_id": "claim-halfline-table",
+   "exact_statement": "A finite guarded table has a full-domain inverse and simulates the original machine from a tape with a separately constant tail in each direction. At checkpoint $n$ its nonempty history cells are exactly the absolute indices below $2+n$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-bc-halfline-table"
+  },
+  {
+   "claim_id": "claim-halfline-transport",
+   "exact_statement": "The preceding full rectangles at height $z_*$ have an effective mean-zero solenoidal realization on the unit torus. Every tracked first coordinate is between its endpoint values throughout the transition.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-halfline-transport"
+  },
+  {
+   "claim_id": "claim-halfline-event",
+   "exact_statement": "On $\\mathbb T^3$, the fixed label $(1/8,1/4,1/4)$ and strip $2/3<x_1<15/16$ realize halting by a general mean-zero force, with zero initial velocity and pressure, bounded mixed derivatives and period one after time one. For a fixed machine only the loading field depends on the input. The material maps are volume-preserving diffeomorphisms, and the velocity and material-acceleration identities of Lemma <a href=\"#lem:p2-realization\" data-reference-type=\"ref\" data-reference=\"lem:p2-realization\">2</a> hold.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-halfline-event"
+  },
+  {
+   "claim_id": "claim-four-stage",
+   "exact_statement": "The rectangle data determine effectively a smooth divergence-free field $W(s,x)$ supported in a compact subset of $(0,1)\\times\\mathbb R^3$. Its time-one map is $(b,z)\\mapsto(A_i(b),z)$ on a neighborhood of each $D_i\\times\\{0\\}$. For a point of that plate, every planar motion occurs at height $4i$, while ascent and descent preserve its source and target planar coordinates, respectively. The scaling can use either linear interpolation of its positive first factor or linear interpolation of the logarithm of that factor.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-four-stage"
+  },
+  {
+   "claim_id": "claim-bounded-box-tests",
+   "exact_statement": "Fix a positive computable viscosity $\\nu$. A deterministic one-tape machine and finite input effectively determine each of the following general body forces on $[0,\\infty)\\times\\mathbb R^3$. Both have zero initial velocity, a unique global smooth velocity in <a href=\"#ba:euclidean-comparison-class\" data-reference-type=\"eqref\" data-reference=\"ba:euclidean-comparison-class\">[ba:euclidean-comparison-class]</a>, and constructed pressure zero.*\n\n1.  *The force and velocity have one fixed compact spatial support, all mixed derivatives bounded, and period one for $t\\ge1$. The particle from $0$ enters $(-5,-2)\\times(-1,2)\\times(-1,1)$ exactly when the machine halts.*\n\n\n2.  *The force and velocity have one fixed compact spatial support and, for all $k\\ge0$ and spatial multi-indices $\\alpha$, satisfy $$\\label{ba:eighteen-decay}\n     \\|\\partial_t^k\\partial_x^\\alpha u(t)\\|_\\infty+\n     \\|\\partial_t^k\\partial_x^\\alpha f(t)\\|_\\infty\n     \\le C_{k,\\alpha}(1+t)^{-1-k}.$$ The particle from $(2,0,0)$ enters $(-1/2,3/2)\\times(-1/2,3/2)\\times(-1/2,1/2)$ exactly when the machine halts. In particular $f\\in L^2([0,\\infty);H^m(\\mathbb R^3))$ for every integer $m\\ge0$.*\n\n*The supports and constants may depend on the machine and input. The labels and observers do not. All force derivatives admit evaluation to any prescribed rational error by a finite program.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-bounded-box-tests"
+  },
+  {
+   "claim_id": "claim-torus-plates",
+   "exact_statement": "Fix a positive computable $\\nu$. Every deterministic one-tape machine with finitely specified tape, blank outside a finite set, effectively determines a smooth mean-zero general force on $\\mathbb T^3=\\mathbb R^3/\\mathbb Z^3$, with bounded mixed derivatives and period one for $t\\ge1$. Its zero-data Navier–Stokes solution is globally smooth and unique among smooth solutions, with pressure normalized to mean zero and constructed pressure zero. For $P_*=(1/4,1/2,1/4)$ and $X(t)=\\Phi_t(P_*)$, the event $$\\label{ba:torus-plate-event}\n \\exists t\\ge0:\\quad X_1(t)\\pmod1\\in(1/2,7/8)$$ is equivalent to halting.*\n\n\n*A separate effective force has the same zero data, event, uniqueness and mean-zero property, is supported in one compact sub-box of $(0,1)^3$, has all mixed derivatives bounded, and satisfies $$\\label{ba:cube-rate}\n \\|\\widehat f(t,\\cdot)\\|_\\infty=O((1+t)^{-2/3}).$$ In particular $\\widehat f\\in L^2([0,\\infty)\\times\\mathbb T^3)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-torus-plates"
+  },
+  {
+   "claim_id": "claim-zero-blank-code",
+   "exact_statement": "Let an alphabet of size $m>1$ have digits $0,\\ldots,m-1$, with full blank digit zero. Set $B=m+1$, $\\kappa=(m-1)/m$, and $$\\operatorname{val}(a_0a_1\\cdots)=\\sum_{r\\ge0}a_rB^{-r-1},\\qquad\n I_a=\\frac{a+[0,\\kappa]}B,\\qquad I_{a,b}=\\frac{a+I_b}B.$$ The code is injective, takes values in $[0,\\kappa]$, and its distinct one-letter and two-letter cylinders have positive rational gaps. For a deterministic partial table with target-state-determined incoming direction and incoming rule determined by target state and written symbol, separated state translates of $[0,\\kappa]^2$ yield separately disjoint full source and target rectangles by the following maps in state-relative coordinates: $$\\label{ba:zero-digit-maps}\n \\begin{array}{c|c|c|c}\n d&\\text{source}&(\\xi',\\eta')&\\text{target}\\\\\\hline\n 1&[0,\\kappa]\\times I_a&((b+\\xi)/B,B\\eta-a)&I_b\\times[0,\\kappa]\\\\\n 0&[0,\\kappa]\\times I_a&(\\xi,\\eta+(b-a)/B)&[0,\\kappa]\\times I_b\\\\\n -1&I_c\\times I_a&(B\\xi-c,c/B+(b+B\\eta-a)/B^2)&\n                                      [0,\\kappa]\\times I_{c,b}.\n \\end{array}$$ The last row is split over all $c$. Each map has positive diagonal linear part of determinant one and acts exactly on the full rectangle.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-zero-blank-code"
+  },
+  {
+   "claim_id": "claim-evacuation-parking",
+   "exact_statement": "Suppose $A_i:D_i\\to E_i$, $1\\le i\\le N$, are the rational reciprocal rectangle maps of Lemma <a href=\"#ba:four-stage\" data-reference-type=\"ref\" data-reference=\"ba:four-stage\">49</a>, with $N\\ge1$ and every $D_i\\subset\\{x_1<0\\}$. There is an effective smooth divergence-free field on $\\mathbb R\\times\\mathbb R^3$, one-periodic in time, zero near each integer time, and uniformly compactly supported in space, whose one-period map is $(b,z)\\mapsto(A_i(b),z)$ on a neighborhood of every $D_i\\times\\{0\\}$. If $E_i\\subset\\{x_1<0\\}$, the entire one-period path of each point in $D_i\\times\\{0\\}$ remains in that half-space.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-parking"
+  },
+  {
+   "claim_id": "claim-periodic-parking",
+   "exact_statement": "Fix a positive computable $\\nu$. A deterministic one-tape machine and finite input word in cells $0,\\ldots,L-1$, with other cells blank and initial head zero, effectively determine a general body force on $\\mathbb R^3$ extending smoothly and one-periodically to all real times. It has uniformly compact spatial support and bounded mixed derivatives. Its zero-data solution has a unique global smooth velocity in <a href=\"#ba:euclidean-comparison-class\" data-reference-type=\"eqref\" data-reference=\"ba:euclidean-comparison-class\">[ba:euclidean-comparison-class]</a>, with constructed pressure zero, and $$\\exists t\\ge0:\\quad (\\Phi_t((-2,0,0)))_1>0\n \\quad\\Longleftrightarrow\\quad\\text{the machine halts}.$$ The fixed label is already the initial code; periodicity begins at zero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-periodic-parking"
+  },
+  {
+   "claim_id": "claim-split-mark-recorder",
+   "exact_statement": "In the notation of Lemma <a href=\"#ba:persistent-compiler\" data-reference-type=\"ref\" data-reference=\"ba:persistent-compiler\">33</a>, there is an effective partial finite table with a persistent checkpoint mark, pointer at $p_n=n+2$, and both full-domain incoming properties of Lemma <a href=\"#ba:rectangles\" data-reference-type=\"ref\" data-reference=\"ba:rectangles\">17</a>. A work step ending at $w'$ takes $2(p_n-w')+4+\\mathbf1_{\\{d_\\tau\\ne0\\}}$ local steps.",
+   "kind": "construction",
+   "statement_anchor": "stmt-ba-split-mark-compiler"
+  },
+  {
+   "claim_id": "claim-bounded-box-euclidean",
+   "exact_statement": "For every machine and finite input, and fixed positive computable viscosity, there is an effective smooth force on $\\mathbb R^3$ with uniformly compact spatial support, bounded mixed derivatives and period one for $t\\ge1$, whose zero-data solution satisfies $$\\exists t\\ge0:\\ X(t;(2,0,0))\\in(0,1)\\times(0,1)\\times(-1,1)\n \\quad\\Longleftrightarrow\\quad\\text{the machine halts}.$$ The constructed solution is smooth with pressure zero. It is unique among smooth solutions with $u\\in C_tH^2\\cap C_t^1L^2$, bounded $u$ on each finite interval, and $p\\in C_tH^1$. This comparison class requires no bound on the competing velocity’s spatial gradient.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-bounded-box-euclidean"
+  },
+  {
+   "claim_id": "claim-phasewise-flow",
+   "exact_statement": "At fixed computable $\\nu>0$ there is an effective force on $\\mathbb R^3$ with one compact spatial support and all mixed derivatives of time order $k$ bounded by $C_{k,\\alpha}(1+t)^{-1-k}$, whose unique smooth zero-data solution satisfies $$\\exists t\\ge0:\\ (\\Phi_t(0))_1<-1/2\n \\quad\\Longleftrightarrow\\quad\\text{halting}.$$ It uses the six-rule recorder with initial frontier 1, full subdivision of the rectangles, and separate vertical-translation and planar Hamiltonian potentials. The constructed pressure is zero and uniqueness is in Lemma <a href=\"#ba:realization\" data-reference-type=\"ref\" data-reference=\"ba:realization\">21</a>’s whole-space class.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-phasewise-flow"
+  },
+  {
+   "claim_id": "claim-ordered-transport",
+   "exact_statement": "Let $D_i,S_i$ be finite families of closed rational axis-aligned boxes in $\\mathbb R^3$ with positive side lengths, pairwise disjoint within each family. Suppose the assigned center-to-center affine map $F_i$ satisfies $F_i(D_i)=S_i$ and has positive diagonal linear part $A_i$ of determinant one. There is an effective compactly supported solenoidal unit-time field, zero near the time endpoints, whose time-one map has this action on every full $D_i$. If both centers of a pair have negative third coordinate, every point of $D_i$ whose third coordinate equals that of its center follows a path with negative third coordinate.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-ordered"
+  },
+  {
+   "claim_id": "claim-positive-height",
+   "exact_statement": "On $\\mathbb R^3$, the fixed label $0$ and observation $\\{x_3>0\\}$ realize halting effectively by a compactly supported general force with zero initial velocity and pressure, bounded mixed derivatives, and period one after time one. The force has a separate alternative in $L^2(0,\\infty;H^j)$ for every $j$, tending to zero in every spatial supremum norm at rate $O((1+t)^{-1})$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-positive-height"
+  },
+  {
+   "claim_id": "claim-simultaneous-transport",
+   "exact_statement": "Suppose finite planar source and target rectangle families $S_i,T_i$ have positive side lengths and endpoints on the grid $B^{-2}\\mathbb Z^2$, with integer $B\\ge2$, and are separately disjoint. Require their assigned center-to-center maps to satisfy $F_i(S_i)=T_i$ and to have linear part $\\mathop{\\mathrm{diag}}(\\lambda_i,\\lambda_i^{-1})$ with $\\lambda_i\\in\\{B^{-1},1,B\\}$. There is an effective solenoidal motion of the full boxes obtained by taking the product with $[-1,1]$. For every transported point its first coordinate is a convex combination of its initial and final first coordinates at every time.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-simultaneous"
+  },
+  {
+   "claim_id": "claim-zero-blank-halfspace",
+   "exact_statement": "The fixed label $0$ and event $\\{x_1<-1\\}$ in $\\mathbb R^3$ realize halting with the force and comparison conclusions of Theorem <a href=\"#bc:positive-height\" data-reference-type=\"ref\" data-reference=\"bc:positive-height\">59</a>. This construction uses a zero joint-blank digit, so every initial tape coordinate is a finite radix sum. Its temporal alternative belongs to $L^2(0,\\infty;H^j)$ for every $j$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-zero-blank"
+  },
+  {
+   "claim_id": "claim-expanded-height-routing",
+   "exact_statement": "Let the source and target families be finite collections of full rational axis-aligned solid boxes, each family pairwise disjoint. Write their centers as $a_i,b_i$ and their positive half-widths as $r_{i,j},w_{i,j}$. Require each prescribed affine map to send its entire source box onto its specified target box: $$F_i(a_i+h)=b_i+D_i h,\\qquad\n D_i=\\mathop{\\mathrm{diag}}(w_{i,1}/r_{i,1},w_{i,2}/r_{i,2},w_{i,3}/r_{i,3}),\n \\qquad \\det D_i=1.$$ Suppose every source center has height at most $-1$, and every target center has height at most $-1$ or exactly $1$. They admit an effective compactly supported solenoidal unit-time realization. If a target center has negative height, every point $a_i+h$ of its source box with $h_3=0$ remains at negative height throughout. A rational bound for the entire support is computable from the boxes.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-expanded-height-routing"
+  },
+  {
+   "claim_id": "claim-expanded-height-event",
+   "exact_statement": "On the unit torus, the fixed label $o=(1/2,1/2,1/2)$ and event $$\\label{bc:expanded-height-fixed-event}\n \\{x:x_3\\pmod1\\in(1/2,1)\\}$$ realize halting by a smooth general mean-zero force, periodic after time one, with zero initial velocity and pressure and bounded mixed derivatives. The repeated mechanism depends on the machine alone; only initialization depends on its finite input. The solution is unique in the torus class.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-expanded-height-event"
+  },
+  {
+   "claim_id": "claim-column-transport",
+   "exact_statement": "Let $S_i,T_i$ be finite rational planar rectangle families of positive side lengths, each separately disjoint, with endpoints on the $B^{-2}$ grid, where $B\\ge2$ is an integer. Let their assigned center-to-center positive reciprocal diagonal affine maps satisfy $F_i(S_i)=T_i$. A finite effective solenoidal field in $\\mathbb R^3$ realizes all these maps on the rectangles in $z=0$. Along each tracked path the first coordinate stays between its initial and final values. The field has compact support and flat time collars.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-columns"
+  },
+  {
+   "claim_id": "claim-column-event",
+   "exact_statement": "On $\\mathbb R^3$, the frontier recorder with odd digits in base $2m+1$ realizes halting from the fixed label $0$ by the event $x_1<-1$. It gives a compactly supported general force, periodic after time one, with zero initial velocity and pressure and all mixed derivatives bounded.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-column-event"
+  },
+  {
+   "claim_id": "claim-delayed-column-event",
+   "exact_statement": "The table of Lemma <a href=\"#lem:bb-direction\" data-reference-type=\"ref\" data-reference=\"lem:bb-direction\">[lem:bb-direction]</a> has a realization on $\\mathbb R^3$ with fixed label $0$ and detector $x_1<-1$, compact spatial support, period one after time one, bounded mixed derivatives and uniformly bounded kinetic energy. The prescribed pressure is zero. Uniqueness holds in the whole-space comparison class, in particular when the competitor and its first spatial derivatives are bounded on every finite time interval.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-delayed-column-event"
+  },
+  {
+   "claim_id": "claim-recorded-pointer-event",
+   "exact_statement": "On $\\mathbb R^3$, the fixed label $(2,0,0)$ and open box $(0,1)^2\\times(-1/2,1/2)$ realize halting by an effective general force with compact spatial support, zero initial velocity and pressure, bounded mixed derivatives, and period one after time one. The construction moves whole solid boxes. Uniqueness holds among smooth competitors with $$u\\in C^1([0,T];L^2),\\quad \\nabla u,\\Delta u\\in C([0,T];L^2),\n \\quad p,\\nabla p\\in C([0,T];L^2),\\quad\n \\sup_{[0,T]\\times\\mathbb R^3}(|u|+|\\nabla u|)<\\infty$$ for every finite $T$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-recorded-pointer-event"
+  },
+  {
+   "claim_id": "claim-guarded-planar-event",
+   "exact_statement": "On $\\mathbb R^3$, the fixed label $(-4,0,0)$ and fixed box $(-1,2)^2\\times(-1,1)$ realize halting by a compactly supported general force with zero initial velocity and prescribed pressure and all mixed derivatives bounded. One choice is periodic after time one. A separate choice satisfies $\\|f(t)\\|_\\infty=O((1+t)^{-2/3})$ and $f\\in L^2([0,\\infty)\\times\\mathbb R^3)$. Uniqueness holds among smooth competitors with $u\\in C([0,T];H^2)\\cap C^1([0,T];L^2)$ and bounded $u,\\nabla u$ on each finite interval, without any spatial integrability condition on pressure. Pressure is unique modulo a function of time.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-guarded-planar-event"
+  },
+  {
+   "claim_id": "claim-scaled-torus",
+   "exact_statement": "The direction recorder without its passive track has a unit-torus realization periodic after $t=1$, with fixed label $(1/8,0,0)$ and halting event $x_1\\in(-1/4,0)\\pmod1$. Each period acts on full solid boxes; the pressure is zero and the force has zero mean.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-bb-mid-scaled-torus"
+  },
+  {
+   "claim_id": "claim-direct-torus",
+   "exact_statement": "The move-first recorder has a unit-torus realization periodic after one loading interval, with fixed label $(1/4,1/4,1/4)$ and halting event $x_1\\in(2/3,5/6)\\pmod1$. The repeated motion acts on thickened closed rectangles and their neighborhoods. Its mean-zero residual has the form $f_0+\\nu f_1$ with coefficients independent of $\\nu$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-bb-mid-direct-torus"
+  },
+  {
+   "claim_id": "claim-thin-sheet-torus",
+   "exact_statement": "At each fixed positive computable viscosity, every machine and finite input has an effective smooth mean-zero force on the unit flat three-torus, with bounded mixed derivatives and period one for $t\\ge1$, whose smooth zero-data solution satisfies $$\\exists t\\ge0:\\ X(t;(1/4,1/4,1/4))\\in\n (2/3,5/6)\\times\\mathbb T^2\n \\quad\\Longleftrightarrow\\quad\\text{the machine halts}.$$ The normalized pressure is zero and the solution is unique in the classical torus comparison class of Section <a href=\"#sec:model\" data-reference-type=\"ref\" data-reference=\"sec:model\">2</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-ba-thin-sheet-torus"
+  },
+  {
+   "claim_id": "claim-height-separated-event",
+   "exact_statement": "On the unit torus, the fixed label $(1/8,3/8,1/4)$ and strip $2/3<x_1<7/8$ realize halting by a smooth mean-zero general force, periodic after time one, with zero initial velocity and pressure and bounded mixed derivatives. A permanent tape track identifies the original absolute origin. For a fixed machine the repeated field is independent of the input.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-height-separated-event"
+  },
+  {
+   "claim_id": "claim-late-logclock",
+   "exact_statement": "The template of Theorem <a href=\"#thm:bb-direction-shuttle\" data-reference-type=\"ref\" data-reference=\"thm:bb-direction-shuttle\">42</a> admits a force in $L^2([0,\\infty)\\times\\mathbb R^3)$ with the same material label and event. The template of Theorem <a href=\"#thm:bb-guarded-history\" data-reference-type=\"ref\" data-reference=\"thm:bb-guarded-history\">43</a> admits a force in $L^2([0,\\infty);H^j(\\mathbb R^3))$ for every integer $j\\ge0$. Both retain uniform compact support, zero initial velocity, bounded mixed derivatives, their stated pressure and velocity comparison classes, and finite effective prescriptions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-bb-late-logclock"
+  },
+  {
+   "claim_id": "claim-input-offset-event",
+   "exact_statement": "On $\\mathbb T^3$, the fixed label $P=(1/4,1/4,0)$ and strip $O=\\{1/32<Y<1/8\\}$ realize halting from zero velocity by two effective mean-zero general forces. One is stationary after time one. The other tends to zero uniformly and has every mixed-derivative spatial supremum norm in $L^2(0,\\infty)$. Both have bounded mixed derivatives, zero prescribed pressure, uniformly bounded kinetic energy, and uniqueness in the torus comparison class.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-bc-input-offset-event"
+  }
+ ],
+ "paper": "papers/EN-109-000-0000-2-2026-PR-T4-UK-EX-M2-B-PH-M-0744_PM-376.9_Incompressible_Box_Transport_and_Finite_Computation.md",
+ "purpose": "Incompressible Box Transport and Finite Computation",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "cd4656e4684e396cc1babbe2ae9070b8c0a55a7963594a4d7dfcb0a04d129148",
+   "pm.domains.v2": "4e1d68acbc4ec415ba5c31968428cb5e4c1cee1820ab001766b2319b1e95719f",
+   "pm.edges.v2": "45623db9d629506a26ed1ebba52084f1d2404d8c33f0d5f2d6761e20f6f07cb8",
+   "pm.extraction.v2": "50faf30b9c144d40d28f9a32da5b3eadfaccf2e5e4b547af50d16fb76ff3320f",
+   "pm.formal.v2": "b3e3aa51264cdbb3773521d31ad1335bb3d9cf26c649e41dedb99a1c89bd067d",
+   "pm.limits.v2": "425d6950e43f79a41d83f7b32e63fe6bf08c87dc0dbd435697e475a99ca53455",
+   "pm.node.v2": "4131a4498099495188280c1567ad5f11ed0cf31d04ead2b1a18813b8ed10ae65",
+   "pm.objects.v2": "afc9c8de4206f1302aa6bad5e4101891af8d81bbfd2fb7ee8c5c0a5fd47a3887",
+   "pm.provenance.v2": "13117e584a7ab47e99d4e2a5e6a3cd5b2bddc4c7fe5472d6550c4d6d25ac4bc2",
+   "pm.quantities.v2": "308c7e435589726e9df916c6a28cb479f635488526eec76af5b3b5d76c46cd4d",
+   "pm.reading.v2": "e578669cee4d070f805375f800c73058f42dbf628ff9092821d3b633cd70f9ae",
+   "pm.roadmap.v2": "f4a16760171558f3f334843f4c637125d54307297985b03b48dc973c61047722",
+   "pm.search.v1": "8b72bd86e75723ac2015bbaacf30d8e7d84b391b7e063b69f18f0fc3435eceea",
+   "pm.triptych.v2": "fc487f99ea06d6a646df852e69093cf250035278156f24241c7718da7457190b"
+  },
+  "canonical_sha256": "4420820058e64613809871fa33a178fa35cf1a230ebeffc9a975d38732b0c7f2",
+  "paper_sha256": "53458bace6cc62741d368f37e2ff2666415edf9f1441830b21004dca6cc910ee",
+  "repaired_body_sha256": "7a0197cacbf5f79c08dfb228ad4baa4b88220f3be32168cfc4f66f7c8e89195a"
+ },
+ "status": "ACTIVE",
+ "subject_id": 9,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "fdbe4b35c8955f3abda11428c2dc4a3ebe91830b6a84c153333277b29c58de7b",
+   "receipt_sha256": "d85ceaeafe7d3a7965bd3d5f8e0993f5748fdcab19757dc8db3a89142e9caee0",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Bases 3, 5, 7, prefix lengths 0 to 3, tails of length 0 to 3, three stacks.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-prefix-slope",
+     "oracle_basis": "Direct integer evaluation of the concatenated word compared with the affine image."
+    },
+    {
+     "checked_domain": "Same finite vectors, exact rational equality of the image code and the code of target prefix plus tail.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-code-identity",
+     "oracle_basis": "Independent concatenation-based code value."
+    },
+    {
+     "checked_domain": "Balanced vectors giving determinant one and one unbalanced vector giving base to a nonzero power.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-det-one",
+     "oracle_basis": "Determinant recomputed as base raised to the sum of length differences."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "m-slope-sign",
+     "observed_exit": 1,
+     "receipt_sha256": "2d5e9a1f2a7796392246c3103f00ef4eebf2b7266755718c70d0ae917d58fc9b"
+    },
+    {
+     "id": "m-drop-origin",
+     "observed_exit": 1,
+     "receipt_sha256": "65236836714d3e476eab18c01aa3192582e40a9280a213381f19f4879c7dec69"
+    },
+    {
+     "id": "m-det-ignored",
+     "observed_exit": 1,
+     "receipt_sha256": "c681eb230b56cb6d5607c6c0a684c0dbff6532db548371ee21600e61c14575e3"
+    },
+    {
+     "id": "m-digit-weight",
+     "observed_exit": 1,
+     "receipt_sha256": "fa0f2430ad9e4d038e746cec510565facb41823b1e532f30331016542963a202"
+    }
+   ],
+   "receipt_sha256": "b7a61902d9a462414a27a83b7775f838c59d527fa0dd8fa25e367d745deeaa0e",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Incompressible Box Transport and Finite Computation"
+}

@@ -1,0 +1,542 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 492651,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 133069
+ },
+ "coordinate": "EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-C-ML-M-0440",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "Critical planar percolation and asymptotic amplitude analysis",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-ass-cardy",
+     "quote": "For every bounded Jordan quadrilateral $Q$ with four distinct marked boundary points, the critical crossing probability converges, as $\\varepsilon\\downarrow0$, to Cardy’s conformally invariant value.",
+     "quote_sha256": "1520caaaad16ee991bfa229af398c351d8d03cb2a8ebfb1af67c25511a774768"
+    }
+   ],
+   "query": "unconditional Cardy formula for Voronoi percolation",
+   "reason": "The scalar Cardy limit is an assumption rather than a conclusion."
+  }
+ ],
+ "family": "PM-224",
+ "id": "PM-224.2",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "thm:main",
+    "statement": "Under Assumption <a href=\"#ass:cardy\" data-reference-type=\"ref\" data-reference=\"ass:cardy\">1</a>, there exists a constant $c_V\\in(0,\\infty)$ such that $$\\lim_{\\varepsilon\\downarrow0}\\varepsilon^{3/4}\\mathbb EN_\\varepsilon=c_V.$$ Consequently, the inverse expected pivotal count is asymptotic to $c_V^{-1}\\varepsilon^{3/4}$."
+   },
+   {
+    "anchor": "stmt-in-arms",
+    "claim_id": "in:arms",
+    "statement": "There are $g\\in(1,2)$, $\\alpha,\\beta>0$, and constants $C,c>0$ such that, for $b_*\\le r<s<t$, $$\\begin{aligned}\n c(r/s)^g&\\le A(r,s)\\le C(r/s)^{1+\\alpha},\\label{in:power}\\\\\n C^{-1}A(r,s)A(s,t)&\\le A(r,t)\\le C A(r,s)A(s,t).\n \\label{in:quasimult}\n\\end{aligned}$$ The one-arm probability is at most $C(r/s)^\\beta$. The probability of three alternating arms in a straight half-plane is at most $C(r/s)^2$.*\n\n*For a collar of diameter comparable to $s$, an event determined by the Poisson points in a slightly enlarged collar makes the graph and all vertex stars in the smaller collar local to those points, with mesh smaller than any prescribed fixed fraction of $s$. Its failure probability is at most $C\\exp(-cs^2)$. The widths and constants can depend on that fraction. Such events may be chosen rotation equivariant about the center. Events with disjoint enlarged supports use independent Poisson variables."
+   },
+   {
+    "anchor": "stmt-in-limits",
+    "claim_id": "in:limits",
+    "statement": "Under Assumption <a href=\"#ass:cardy\" data-reference-type=\"ref\" data-reference=\"ass:cardy\">1</a>, the following consequences hold.*\n\n1.  *From every sequence of Poisson meshes tending to zero one can extract, after coupling, a further subsequence along which the graphs almost surely form a deterministic good sequence in the sense of [[V](#ref-V), Lemma 2.5]. Along such a sequence, critical crossings of Jordan quadrilaterals converge, also for graph domains whose boundaries and marked points converge in curve order. Finite joint crossing tests and tests with finitely many separated prescribed squares have the common triangular-percolation limit.*\n\n2.  *Chordal color explorations in converging Jordan graph domains converge to chordal $\\mathrm{SLE}_6$. At a pre-query stop on a crosscut, the remaining target face, its boundary banks, and its conformal maps converge in the sense of the stopped-domain results of [[V](#ref-V)]. A bank is an individual boundary arc in prime-end order; distinct banks may have touching physical images. Each relevant bank is individually simple.*\n\n3.  *For some $c_0>0$, in the mesh-first limit the probability of four bulk arms with any specified color order is at most $C(r/s)^{1+c_0}$, and that of six bulk arms with any specified color order is at most $C(r/s)^{2+c_0}$. Three free arms at a regular boundary, measured in a conformal chart, have an upper bound with exponent strictly larger than one."
+   },
+   {
+    "anchor": "stmt-in-calibration",
+    "claim_id": "in:calibration",
+    "statement": "There are constants $c,B\\in(0,\\infty)$ such that $$\\label{in:calibration-eq}\n m_\\varepsilon q_\\varepsilon S_\\varepsilon\\longrightarrow c,\n \\qquad q_\\varepsilon\\mathbb EN_\\varepsilon\\longrightarrow B.$$ Moreover, $$\\label{in:comparison}\n f(R)\\asymp A(b_*,R).$$"
+   },
+   {
+    "anchor": "stmt-in-exponent",
+    "claim_id": "in:exponent",
+    "statement": "Under Assumption <a href=\"#ass:cardy\" data-reference-type=\"ref\" data-reference=\"ass:cardy\">1</a>, $$\\label{in:exponent-eq}\n f(R)=R^{-5/4+o(1)}\\qquad(R\\to\\infty).$$"
+   },
+   {
+    "anchor": "stmt-an-caps",
+    "claim_id": "an:caps",
+    "statement": "For every coloring of the annulus, $$\\label{an:cap-equation}\n H_{\\mathsf b}-H_{\\mathsf w}=\\mathbf 1_{\\mathcal T}.$$ Consequently the signed difference between the two inner cap states is transferred to the same signed difference at the outer cycle, multiplied by the indicator of four-interface transmission. The identity remains valid under composition across several cycles."
+   },
+   {
+    "anchor": "stmt-an-back-lobes",
+    "claim_id": "an:back-lobes",
+    "statement": "Suppose graph annuli consist of an open annular back and finitely many Jordan lobes attached to it along open seam intervals. Assume that the backs are Jordan annuli whose two complete boundary traversals converge in curve order to those of a fixed Jordan annulus, the seam endpoints converge in that order and the limiting seams remain open, and each lobe converges as a Jordan domain with its boundary traversal. The seam incidences and cyclic order are fixed; lobes are glued only along their specified seams, and their interiors are disjoint from the back and from one another. Suppose the resulting limiting domain is an annulus, its hole and a separating open part of the back persist, and the two boundary components stay physically apart. Different limiting lobes may touch in projection but have disjoint interiors. Then the annular uniformizations converge uniformly on their closures, with the stated accesses and traversal order. In particular, if the marked accesses converge and remain distinct, these domains have admissible boundary convergence."
+   },
+   {
+    "anchor": "stmt-an-motion",
+    "claim_id": "an:motion",
+    "statement": "For a sequence with admissible boundary convergence, move either cycle slightly into the annulus in round coordinates, and move its switches slightly with it. Couple all unchanged free colors. The probability that either capped connection test changes tends to zero as the size of the motion tends to zero, after taking the mesh limit. The assertion also holds for small piecewise smooth motions in spare space around an inset annulus. It is uniform along any convergent sequence of admissible data with distinct limiting switches. More precisely, if $H_n$ and $H_{n,\\delta}$ are either capped indicators before and after a motion of size at most $\\delta$, preserving the run order and its labels away from the moving switches, then $$\\label{an:motion-limit}\n \\lim_{\\delta\\downarrow0}\\limsup_{n\\to\\infty}\n \\mathbb P(H_n\\ne H_{n,\\delta})=0.$$"
+   },
+   {
+    "anchor": "stmt-an-ordinary",
+    "claim_id": "an:ordinary",
+    "statement": "In an annular open set compactly inside the parameter annulus, the joint limiting law of any countable collection of regular ordinary quad tests is conformally invariant. The tests may be chosen from a countable dense family of polygon or piecewise smooth quads with positive margins."
+   },
+   {
+    "anchor": "stmt-an-limit",
+    "claim_id": "an:limit",
+    "statement": "For every sequence with admissible boundary convergence, the probability of $\\mathcal T$ has a limit depending only on the round data $(p,x,y)$ and the choice of inner colors. Denote these limits by $$T^+(p,x,y),\\qquad T^-(p,x,y).$$ They are continuous for $p>0$ and distinct switches. The same convergence holds for each capped connection probability. In particular, it applies to random remaining domains whenever, conditional on their geometry and explored boundary, their interior colors are fresh and their marked domains have admissible convergence almost surely in a subsequential coupling. In that case the difference between the conditional transmission probability and $T^\\pm$ evaluated at the actual annular conformal data tends to zero in mean absolute value."
+   },
+   {
+    "anchor": "stmt-an-collision",
+    "claim_id": "an:collision",
+    "statement": "The functions $T^\\pm$ extend continuously by zero when switches collide on either boundary, uniformly for $p$ in compact subsets of $(0,\\infty)$. They are invariant under simultaneous rotation of $x$ and $y$ and under global color reversal. Cyclic relabeling by one switch in either tuple interchanges $T^+$ and $T^-$."
+   },
+   {
+    "anchor": "stmt-sp-annular-pde",
+    "claim_id": "sp:annular-pde",
+    "statement": "The functions $T^\\pm$ are smooth on $(0,\\infty)\\times\\mathcal X$ and satisfy $$\\label{sp:pde}\n \\partial_pT=(L+B_p\\cdot\\nabla)T,\n \\qquad\n L=\\frac18\\sum_{w=x,y}\n \\left(3\\sum_{i=1}^4\\partial_{w_iw_i}\n +\\sum_{i=1}^4\\sum_{j\\ne i}\n       \\cot\\frac{w_i-w_j}{2}\\,\\partial_{w_i}\\right).$$ For every $p_0>0$ and every fixed finite derivative order $k$, the vector field $B_p$ extends smoothly across angle collisions and $$\\|B_p\\|_{C^k}\\le C_{k,p_0}e^{-p}\\qquad(p\\ge p_0).$$ It is equivariant under permutations within either tuple, common rotations, and cyclic relabelings. In particular, its normal component at every collision face is zero."
+   },
+   {
+    "anchor": "stmt-sp-smoothing",
+    "claim_id": "sp:smoothing",
+    "statement": "Fix $p_0>0$. For either transmission function, or its sum or difference, the transformed solution satisfies $$\\label{sp:uniform-smoothing}\n \\|W(p)\\|_\\infty+\\operatorname{Lip}(W(p))\\le C_{p_0}\n \\qquad(p\\ge p_0+2).$$ The semigroup $P_t$ of $D$ is symmetric on $L^2(\\mu)$ and, for every $q>1$, maps $L^q(\\mu)$ to bounded functions at every fixed positive time. At unit time the evolution in <a href=\"#sp:transformed-pde\" data-reference-type=\"eqref\" data-reference=\"sp:transformed-pde\">[sp:transformed-pde]</a> maps bounded functions to Lipschitz functions with a constant uniform in the starting modulus $p\\ge p_0$."
+   },
+   {
+    "anchor": "stmt-sp-gaps",
+    "claim_id": "sp:gaps",
+    "statement": "The relative-angle diffusion for one tuple has Poincaré gap at least $1/2$. Consider the subspace of $L^2(\\mu)$ consisting of functions invariant under simultaneous rotation of the two tuples and changing sign under one cyclic relabeling of either tuple. On this subspace $-D$ has gap at least $3/4$. On its subspace with both center frequencies zero the gap is at least $1$."
+   },
+   {
+    "anchor": "stmt-sp-transmission-asymptotics",
+    "claim_id": "sp:transmission-asymptotics",
+    "statement": "There are constants $K\\ge0$, $\\sigma>0$, and $C<\\infty$ such that, uniformly over the open angle chamber and all sufficiently large $p$, $$\\begin{aligned}\n \\|W_-(p)\\|_\\infty&\\le Ce^{-3p/4},\n &\\|\\Pi W_-(p)\\|_\\infty&\\le C(1+p)e^{-p},\n \\label{sp:odd-decay}\\\\\n T^\\pm(p,x,y)&=e^{-\\lambda p}\n                   \\bigl(Kh(x,y)+O(e^{-\\sigma p})\\bigr).\n \\label{sp:rank-one-round}\n\\end{aligned}$$ Moreover, $$\\label{sp:odd-regularity}\n \\operatorname{Lip}(W_-(p))\\le Ce^{-3p/4},\\qquad\n \\|W_-(p+\\ell)-W_-(p)\\|_\\infty\n        \\le Ce^{-3p/4}\\sqrt\\ell\\quad(0\\le\\ell\\le1).$$ The function $h$ is uniformly $1/3$-Hölder on the closed chamber."
+   },
+   {
+    "anchor": "stmt-sh-comparison",
+    "claim_id": "sh:comparison",
+    "statement": "Let $(p,x,y)$ be the modulus and marked angles in a uniformization of $U_o\\setminus K_i$, with angular direction the same on both boundary components. Put $p'=\\log(l_o/l_i)$. The common rotational normalization of the annulus map can be chosen so that $$\\label{sh:comparison-estimate}\n |p-p'|\\le C\\frac ab,\\qquad\n |x-x^0|+|y-y^0|\n       \\le C\\bigl(1+\\log(b/a)\\bigr)\\frac ab.$$ Distances in the second inequality use compatible cyclic lifts. The constant is uniform over all Jordan boundaries satisfying <a href=\"#sh:shape-hypotheses\" data-reference-type=\"eqref\" data-reference=\"sh:shape-hypotheses\">[sh:shape-hypotheses]</a>, including all placements of the marks."
+   },
+   {
+    "anchor": "stmt-sh-separated-ends",
+    "claim_id": "sh:separated-ends",
+    "statement": "There are constants $\\sigma_1,\\sigma_2>0$ and $C<\\infty$, depending only on the fixed constants in <a href=\"#sh:shape-hypotheses\" data-reference-type=\"eqref\" data-reference=\"sh:shape-hypotheses\">[sh:shape-hypotheses]</a>, such that the transmission probabilities of every such marked annulus satisfy $$\\label{sh:rank-one}\n \\left|T^\\pm-\n K\\,l_i^\\lambda J(y^0)^{1/3}\\,\n       l_o^{-\\lambda}J(x^0)^{1/3}\\right|\n \\le C(a/b)^{\\lambda+\\sigma_1}.$$ Here $K$ is the common constant in Proposition <a href=\"#sp:transmission-asymptotics\" data-reference-type=\"ref\" data-reference=\"sp:transmission-asymptotics\">17</a>. If one rotates the inner end, with its marks and prescribed colors, through angle $\\phi$ about $0$ while keeping the outer end fixed, then $$\\label{sh:rotation-average}\n \\left|\\frac1{2\\pi}\\int_0^{2\\pi}\n                 \\bigl(T^+_\\phi-T^-_\\phi\\bigr)\\,d\\phi\\right|\n       \\le C(a/b)^{2+\\sigma_2}.$$ The same conclusion holds if the outer end is rotated instead. Both estimates remain uniform for Jordan approximants to the prime-end boundaries of Section <a href=\"#sec:annuli\" data-reference-type=\"ref\" data-reference=\"sec:annuli\">3</a>, provided they satisfy <a href=\"#sh:shape-hypotheses\" data-reference-type=\"eqref\" data-reference=\"sh:shape-hypotheses\">[sh:shape-hypotheses]</a> with the same fixed constants."
+   },
+   {
+    "anchor": "stmt-tr-block",
+    "claim_id": "tr:block",
+    "statement": "There are $\\delta>0$ and $C<\\infty$ with the following property. For every sufficiently large integer $n$, set $L=2^n$. There is a threshold $r_0(L)$ such that, for $r\\ge r_0(L)$, the transfer $M=M_{r,Lr}$ satisfies $$\\begin{aligned}\n \\|M\\|&\\le C L^{-\\lambda}, \\label{tr:block-size}\\\\\n M&=M_1+E,\\qquad \\operatorname{rank}M_1\\le1,\n       \\qquad \\|E\\|\\le C L^{-\\lambda-\\delta},\n       \\label{tr:block-rank}\\\\\n \\|M|_{\\mathcal B_r^{\\mathrm{even,iso}}}\\|\n       &\\le C L^{-2-\\delta}.\n       \\label{tr:block-cancellation}\n\\end{aligned}$$ The constants $C,\\delta$ do not depend on $L$ or $r$. Every norm in the conclusion includes the essential supremum over successful output seams, including their colors. The rank-one operator may depend on $r$ and $L$."
+   },
+   {
+    "anchor": "stmt-tr-domination",
+    "claim_id": "tr:domination",
+    "statement": "Suppose a contribution to $M_{r,Lr}v$ is expressed, after exploring from the auxiliary starting cycles, as an integral of an inner scalar coefficient, a bounded middle test, and an outer signed state measure. If the middle test is replaced with absolute error $F\\ge0$, where $F$ depends only on the independent region just described, then the error in output norm is at most $$C\\|v\\|_r\\,\\mathbb E_{\\mathrm{core}}F+o(1)\\|v\\|_r.\n\\label{tr:domination-bound}$$ The same bound applies to discarding an event there, by taking $F$ to be its indicator. The expectation is under the unweighted full-plane comparison law; the bound is uniform over successful output seams."
+   },
+   {
+    "anchor": "stmt-tr-frontier",
+    "claim_id": "tr:frontier",
+    "statement": "For either end experiment, outside an event whose probability tends to zero as the permitted separation of tips tends to zero, mesh first, the tips at each of finitely many fixed-scale barriers have distinct limiting positions. The boundary facing the unqueried barrier is a simple site cycle whose switches are exactly these tips. In particular:*\n\n1.  *If there are zero or two tips, the induced map on zero-mass connection-state measures is zero.*\n\n2.  *If there are at least six tips, six disjoint bulk arms cross the region from the starting cycle to the barrier, after fixed-factor crops at the two ends.*\n\n*All probabilistic assertions are made under the unweighted exploration law, before conditioning on a particular history."
+   },
+   {
+    "anchor": "stmt-tr-admissible",
+    "claim_id": "tr:admissible",
+    "statement": "At a fixed barrier, restrict the unweighted exploration law to the event of exactly four surviving tips. Along subsequences with good geometry as in [[V](#ref-V), Section 2], the four monochromatic frontier arcs are tight in curve order. In every coupled subsequential limit, after constant pauses are erased, each arc is simple and meets the stopping circle only at its two prescribed endpoints. The four endpoints are distinct.*\n\n\n*For two such experiments ending at well-separated barriers, their residual annulus satisfies the admissibility conditions of Proposition <a href=\"#an:limit\" data-reference-type=\"ref\" data-reference=\"an:limit\">12</a>. If $t_r$ is the discrete through-transmission probability conditional on the complete geometry and the two end histories, and $T_r$ is the continuum transmission function evaluated on its actual conformal data, then, for fixed $L$ and the fixed finite list of barriers, $$\\mathbb E_{\\mathrm{core}}\\!\\left[\n          \\boldsymbol 1_{\\{\\text{four tips at both ends}\\}}\n                              |t_r-T_r|\\right]=o(1).\n\\label{tr:mean-limit}$$ The expectation concerns unweighted histories, not a uniform conditional estimate for all possible histories."
+   },
+   {
+    "anchor": "stmt-tr-tails",
+    "claim_id": "tr:tails",
+    "statement": "For fixed $L$, the end-history subprobability masses satisfy, in the mesh-first limit, $$\\|\\rho_j^{\\rm in}\\|_{\\mathrm{TV}}\n \\operatorname*{ess\\,sup}_{\\Sigma_{Lr}}\n         \\|\\rho_k^{\\rm out}(\\cdot\\mid\\Sigma_{Lr})\\|_{\\mathrm{TV}}\n      \\le C 2^{-(2+\\tau)j}2^{-(2+\\tau)k}+o(1)\n\\label{tr:history-weight}$$ for each used pair $(j,k)$. Consequently, after inserting arbitrary middle tests of modulus at most one, the same bound up to a constant holds for the corresponding operator contribution on inputs of norm at most one. The part of the transfer not represented by used pairs has norm at most $$C(n+1)^2L^{-2-\\tau}+o(1).\n\\label{tr:unused}$$ Both estimates are uniform for input messages of norm at most one and for successful output seams."
+   },
+   {
+    "anchor": "stmt-tr-insertion",
+    "claim_id": "tr:insertion",
+    "statement": "There are $0<\\nu<1$ and $C<\\infty$ such that the following holds. Insert a nucleus at the center of a cut, with an independent fair color. At a seam of radius $s$, take the difference of the inside state laws “with this insertion” minus “without this insertion,” conditional on the seam and with its screen success imposed. Its message $I_s$ satisfies $$\\|I_s\\|_s\\le C s^{-2-\\nu}\n\\label{tr:insertion-bound}$$ for all sufficiently large $s$. The estimate remains valid in the presence of fixed data outside the screened collar that do not enter its inside. The seam tests and the selected cycle are those of the base process, without the insertion."
+   },
+   {
+    "anchor": "stmt-tr-wedge",
+    "claim_id": "tr:wedge",
+    "statement": "There are $\\nu'>0$, $s_0<\\infty$, and a fixed ratio $L>1$ such that, for $r\\ge s_0$ and $s/r=L^N$, the transfer $$\\mathcal M=M_{s/L,s}\\cdots M_{r,Lr}$$ with all intermediate seam successes imposed satisfies $$\\|\\mathcal M u\\wedge\\mathcal M v\\|_\\pi\n       \\le C(s/r)^{-2\\lambda-\\nu'}\\|u\\|_r\\|v\\|_r\n\\label{tr:wedge-bound}$$ for any two zero-mass input messages $u,v\\in\\mathcal B_r$. Here $u\\wedge v=u\\otimes v-v\\otimes u$ and $\\|\\cdot\\|_\\pi$ is the projective tensor norm. Fixed-factor unused intervals at the two ends change only the constant. No assertion of this contraction through a failed intermediate cut is made."
+   },
+   {
+    "anchor": "stmt-cl-derivative",
+    "claim_id": "cl:derivative",
+    "statement": "The function $f$ is continuously differentiable on $(0,\\infty)$. For every $R>0$, $K_R$ is absolutely integrable and $$\\label{cl:derivative-eq}\n \\frac R2 f'(R)=\\int_{\\mathbb R^2}K_R(y)\\,dy.$$"
+   },
+   {
+    "anchor": "stmt-cl-tail",
+    "claim_id": "cl:tail",
+    "statement": "There are constants $\\xi>0$, $m_0<\\infty$, and $C<\\infty$ such that for $m_0\\le m\\le R/100$, $$\\label{cl:tail-eq}\n \\int_{|y|>m}|K_R(y)|\\,dy\n \\le C f(R)\\bigl(m^{-\\xi}+R^{-\\xi}\\bigr).$$"
+   },
+   {
+    "anchor": "stmt-cl-determinant",
+    "claim_id": "cl:determinant",
+    "statement": "Let $\\nu'>0$ be the exponent in Corollary <a href=\"#tr:wedge\" data-reference-type=\"ref\" data-reference=\"tr:wedge\">26</a>. There are constants $C,c>0$ such that, for sufficiently large $m$, $100m\\le R\\le R'\\le2R$, and almost every $0<|y|\\le m$, $$\\label{cl:determinant-eq}\n \\bigl|K_R(y)f(R')-K_{R'}(y)f(R)\\bigr|\n \\le C(m/R)^{2\\lambda+\\nu'}+Ce^{-cm^2}.$$ The constants are independent of the distance from $y$ to the origin."
+   },
+   {
+    "anchor": "stmt-cl-log-derivative",
+    "claim_id": "cl:log-derivative",
+    "statement": "There are constants $\\alpha>0$ and $C<\\infty$ such that $$\\label{cl:log-derivative-eq}\n \\left|\\frac{Rf'(R)}{f(R)}+\\lambda\\right|\n \\le CR^{-\\alpha}$$ for all sufficiently large $R$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "pivotal amplitude",
+    "evidence": [
+     {
+      "anchor": "sec:inputs",
+      "quote": "previously proved inputs, not additional hypotheses and not conclusions of scalar convergence alone without further argument.",
+      "quote_sha256": "56a32262707620b614d9bc3427fff2e7fb38a2b6e35de77546a3dd3deb428c89"
+     }
+    ],
+    "requires_concepts": [
+     "scalar Cardy crossing limit",
+     "critical arm estimates",
+     "calibration",
+     "signed annular transfer"
+    ],
+    "supporting_pm_ids": [
+     "PM-224.1"
+    ]
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "thm:main",
+   "exact_statement": "Under Assumption <a href=\"#ass:cardy\" data-reference-type=\"ref\" data-reference=\"ass:cardy\">1</a>, there exists a constant $c_V\\in(0,\\infty)$ such that $$\\lim_{\\varepsilon\\downarrow0}\\varepsilon^{3/4}\\mathbb EN_\\varepsilon=c_V.$$ Consequently, the inverse expected pivotal count is asymptotic to $c_V^{-1}\\varepsilon^{3/4}$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "in:arms",
+   "exact_statement": "There are $g\\in(1,2)$, $\\alpha,\\beta>0$, and constants $C,c>0$ such that, for $b_*\\le r<s<t$, $$\\begin{aligned}\n c(r/s)^g&\\le A(r,s)\\le C(r/s)^{1+\\alpha},\\label{in:power}\\\\\n C^{-1}A(r,s)A(s,t)&\\le A(r,t)\\le C A(r,s)A(s,t).\n \\label{in:quasimult}\n\\end{aligned}$$ The one-arm probability is at most $C(r/s)^\\beta$. The probability of three alternating arms in a straight half-plane is at most $C(r/s)^2$.*\n\n*For a collar of diameter comparable to $s$, an event determined by the Poisson points in a slightly enlarged collar makes the graph and all vertex stars in the smaller collar local to those points, with mesh smaller than any prescribed fixed fraction of $s$. Its failure probability is at most $C\\exp(-cs^2)$. The widths and constants can depend on that fraction. Such events may be chosen rotation equivariant about the center. Events with disjoint enlarged supports use independent Poisson variables.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-in-arms"
+  },
+  {
+   "claim_id": "in:limits",
+   "exact_statement": "Under Assumption <a href=\"#ass:cardy\" data-reference-type=\"ref\" data-reference=\"ass:cardy\">1</a>, the following consequences hold.*\n\n1.  *From every sequence of Poisson meshes tending to zero one can extract, after coupling, a further subsequence along which the graphs almost surely form a deterministic good sequence in the sense of [[V](#ref-V), Lemma 2.5]. Along such a sequence, critical crossings of Jordan quadrilaterals converge, also for graph domains whose boundaries and marked points converge in curve order. Finite joint crossing tests and tests with finitely many separated prescribed squares have the common triangular-percolation limit.*\n\n2.  *Chordal color explorations in converging Jordan graph domains converge to chordal $\\mathrm{SLE}_6$. At a pre-query stop on a crosscut, the remaining target face, its boundary banks, and its conformal maps converge in the sense of the stopped-domain results of [[V](#ref-V)]. A bank is an individual boundary arc in prime-end order; distinct banks may have touching physical images. Each relevant bank is individually simple.*\n\n3.  *For some $c_0>0$, in the mesh-first limit the probability of four bulk arms with any specified color order is at most $C(r/s)^{1+c_0}$, and that of six bulk arms with any specified color order is at most $C(r/s)^{2+c_0}$. Three free arms at a regular boundary, measured in a conformal chart, have an upper bound with exponent strictly larger than one.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-in-limits"
+  },
+  {
+   "claim_id": "in:calibration",
+   "exact_statement": "There are constants $c,B\\in(0,\\infty)$ such that $$\\label{in:calibration-eq}\n m_\\varepsilon q_\\varepsilon S_\\varepsilon\\longrightarrow c,\n \\qquad q_\\varepsilon\\mathbb EN_\\varepsilon\\longrightarrow B.$$ Moreover, $$\\label{in:comparison}\n f(R)\\asymp A(b_*,R).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-in-calibration"
+  },
+  {
+   "claim_id": "in:exponent",
+   "exact_statement": "Under Assumption <a href=\"#ass:cardy\" data-reference-type=\"ref\" data-reference=\"ass:cardy\">1</a>, $$\\label{in:exponent-eq}\n f(R)=R^{-5/4+o(1)}\\qquad(R\\to\\infty).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-in-exponent"
+  },
+  {
+   "claim_id": "an:caps",
+   "exact_statement": "For every coloring of the annulus, $$\\label{an:cap-equation}\n H_{\\mathsf b}-H_{\\mathsf w}=\\mathbf 1_{\\mathcal T}.$$ Consequently the signed difference between the two inner cap states is transferred to the same signed difference at the outer cycle, multiplied by the indicator of four-interface transmission. The identity remains valid under composition across several cycles.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-an-caps"
+  },
+  {
+   "claim_id": "an:back-lobes",
+   "exact_statement": "Suppose graph annuli consist of an open annular back and finitely many Jordan lobes attached to it along open seam intervals. Assume that the backs are Jordan annuli whose two complete boundary traversals converge in curve order to those of a fixed Jordan annulus, the seam endpoints converge in that order and the limiting seams remain open, and each lobe converges as a Jordan domain with its boundary traversal. The seam incidences and cyclic order are fixed; lobes are glued only along their specified seams, and their interiors are disjoint from the back and from one another. Suppose the resulting limiting domain is an annulus, its hole and a separating open part of the back persist, and the two boundary components stay physically apart. Different limiting lobes may touch in projection but have disjoint interiors. Then the annular uniformizations converge uniformly on their closures, with the stated accesses and traversal order. In particular, if the marked accesses converge and remain distinct, these domains have admissible boundary convergence.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-an-back-lobes"
+  },
+  {
+   "claim_id": "an:motion",
+   "exact_statement": "For a sequence with admissible boundary convergence, move either cycle slightly into the annulus in round coordinates, and move its switches slightly with it. Couple all unchanged free colors. The probability that either capped connection test changes tends to zero as the size of the motion tends to zero, after taking the mesh limit. The assertion also holds for small piecewise smooth motions in spare space around an inset annulus. It is uniform along any convergent sequence of admissible data with distinct limiting switches. More precisely, if $H_n$ and $H_{n,\\delta}$ are either capped indicators before and after a motion of size at most $\\delta$, preserving the run order and its labels away from the moving switches, then $$\\label{an:motion-limit}\n \\lim_{\\delta\\downarrow0}\\limsup_{n\\to\\infty}\n \\mathbb P(H_n\\ne H_{n,\\delta})=0.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-an-motion"
+  },
+  {
+   "claim_id": "an:ordinary",
+   "exact_statement": "In an annular open set compactly inside the parameter annulus, the joint limiting law of any countable collection of regular ordinary quad tests is conformally invariant. The tests may be chosen from a countable dense family of polygon or piecewise smooth quads with positive margins.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-an-ordinary"
+  },
+  {
+   "claim_id": "an:limit",
+   "exact_statement": "For every sequence with admissible boundary convergence, the probability of $\\mathcal T$ has a limit depending only on the round data $(p,x,y)$ and the choice of inner colors. Denote these limits by $$T^+(p,x,y),\\qquad T^-(p,x,y).$$ They are continuous for $p>0$ and distinct switches. The same convergence holds for each capped connection probability. In particular, it applies to random remaining domains whenever, conditional on their geometry and explored boundary, their interior colors are fresh and their marked domains have admissible convergence almost surely in a subsequential coupling. In that case the difference between the conditional transmission probability and $T^\\pm$ evaluated at the actual annular conformal data tends to zero in mean absolute value.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-an-limit"
+  },
+  {
+   "claim_id": "an:collision",
+   "exact_statement": "The functions $T^\\pm$ extend continuously by zero when switches collide on either boundary, uniformly for $p$ in compact subsets of $(0,\\infty)$. They are invariant under simultaneous rotation of $x$ and $y$ and under global color reversal. Cyclic relabeling by one switch in either tuple interchanges $T^+$ and $T^-$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-an-collision"
+  },
+  {
+   "claim_id": "sp:annular-pde",
+   "exact_statement": "The functions $T^\\pm$ are smooth on $(0,\\infty)\\times\\mathcal X$ and satisfy $$\\label{sp:pde}\n \\partial_pT=(L+B_p\\cdot\\nabla)T,\n \\qquad\n L=\\frac18\\sum_{w=x,y}\n \\left(3\\sum_{i=1}^4\\partial_{w_iw_i}\n +\\sum_{i=1}^4\\sum_{j\\ne i}\n       \\cot\\frac{w_i-w_j}{2}\\,\\partial_{w_i}\\right).$$ For every $p_0>0$ and every fixed finite derivative order $k$, the vector field $B_p$ extends smoothly across angle collisions and $$\\|B_p\\|_{C^k}\\le C_{k,p_0}e^{-p}\\qquad(p\\ge p_0).$$ It is equivariant under permutations within either tuple, common rotations, and cyclic relabelings. In particular, its normal component at every collision face is zero.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-sp-annular-pde"
+  },
+  {
+   "claim_id": "sp:smoothing",
+   "exact_statement": "Fix $p_0>0$. For either transmission function, or its sum or difference, the transformed solution satisfies $$\\label{sp:uniform-smoothing}\n \\|W(p)\\|_\\infty+\\operatorname{Lip}(W(p))\\le C_{p_0}\n \\qquad(p\\ge p_0+2).$$ The semigroup $P_t$ of $D$ is symmetric on $L^2(\\mu)$ and, for every $q>1$, maps $L^q(\\mu)$ to bounded functions at every fixed positive time. At unit time the evolution in <a href=\"#sp:transformed-pde\" data-reference-type=\"eqref\" data-reference=\"sp:transformed-pde\">[sp:transformed-pde]</a> maps bounded functions to Lipschitz functions with a constant uniform in the starting modulus $p\\ge p_0$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-sp-smoothing"
+  },
+  {
+   "claim_id": "sp:gaps",
+   "exact_statement": "The relative-angle diffusion for one tuple has Poincaré gap at least $1/2$. Consider the subspace of $L^2(\\mu)$ consisting of functions invariant under simultaneous rotation of the two tuples and changing sign under one cyclic relabeling of either tuple. On this subspace $-D$ has gap at least $3/4$. On its subspace with both center frequencies zero the gap is at least $1$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-sp-gaps"
+  },
+  {
+   "claim_id": "sp:transmission-asymptotics",
+   "exact_statement": "There are constants $K\\ge0$, $\\sigma>0$, and $C<\\infty$ such that, uniformly over the open angle chamber and all sufficiently large $p$, $$\\begin{aligned}\n \\|W_-(p)\\|_\\infty&\\le Ce^{-3p/4},\n &\\|\\Pi W_-(p)\\|_\\infty&\\le C(1+p)e^{-p},\n \\label{sp:odd-decay}\\\\\n T^\\pm(p,x,y)&=e^{-\\lambda p}\n                   \\bigl(Kh(x,y)+O(e^{-\\sigma p})\\bigr).\n \\label{sp:rank-one-round}\n\\end{aligned}$$ Moreover, $$\\label{sp:odd-regularity}\n \\operatorname{Lip}(W_-(p))\\le Ce^{-3p/4},\\qquad\n \\|W_-(p+\\ell)-W_-(p)\\|_\\infty\n        \\le Ce^{-3p/4}\\sqrt\\ell\\quad(0\\le\\ell\\le1).$$ The function $h$ is uniformly $1/3$-Hölder on the closed chamber.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-sp-transmission-asymptotics"
+  },
+  {
+   "claim_id": "sh:comparison",
+   "exact_statement": "Let $(p,x,y)$ be the modulus and marked angles in a uniformization of $U_o\\setminus K_i$, with angular direction the same on both boundary components. Put $p'=\\log(l_o/l_i)$. The common rotational normalization of the annulus map can be chosen so that $$\\label{sh:comparison-estimate}\n |p-p'|\\le C\\frac ab,\\qquad\n |x-x^0|+|y-y^0|\n       \\le C\\bigl(1+\\log(b/a)\\bigr)\\frac ab.$$ Distances in the second inequality use compatible cyclic lifts. The constant is uniform over all Jordan boundaries satisfying <a href=\"#sh:shape-hypotheses\" data-reference-type=\"eqref\" data-reference=\"sh:shape-hypotheses\">[sh:shape-hypotheses]</a>, including all placements of the marks.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-sh-comparison"
+  },
+  {
+   "claim_id": "sh:separated-ends",
+   "exact_statement": "There are constants $\\sigma_1,\\sigma_2>0$ and $C<\\infty$, depending only on the fixed constants in <a href=\"#sh:shape-hypotheses\" data-reference-type=\"eqref\" data-reference=\"sh:shape-hypotheses\">[sh:shape-hypotheses]</a>, such that the transmission probabilities of every such marked annulus satisfy $$\\label{sh:rank-one}\n \\left|T^\\pm-\n K\\,l_i^\\lambda J(y^0)^{1/3}\\,\n       l_o^{-\\lambda}J(x^0)^{1/3}\\right|\n \\le C(a/b)^{\\lambda+\\sigma_1}.$$ Here $K$ is the common constant in Proposition <a href=\"#sp:transmission-asymptotics\" data-reference-type=\"ref\" data-reference=\"sp:transmission-asymptotics\">17</a>. If one rotates the inner end, with its marks and prescribed colors, through angle $\\phi$ about $0$ while keeping the outer end fixed, then $$\\label{sh:rotation-average}\n \\left|\\frac1{2\\pi}\\int_0^{2\\pi}\n                 \\bigl(T^+_\\phi-T^-_\\phi\\bigr)\\,d\\phi\\right|\n       \\le C(a/b)^{2+\\sigma_2}.$$ The same conclusion holds if the outer end is rotated instead. Both estimates remain uniform for Jordan approximants to the prime-end boundaries of Section <a href=\"#sec:annuli\" data-reference-type=\"ref\" data-reference=\"sec:annuli\">3</a>, provided they satisfy <a href=\"#sh:shape-hypotheses\" data-reference-type=\"eqref\" data-reference=\"sh:shape-hypotheses\">[sh:shape-hypotheses]</a> with the same fixed constants.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-sh-separated-ends"
+  },
+  {
+   "claim_id": "tr:block",
+   "exact_statement": "There are $\\delta>0$ and $C<\\infty$ with the following property. For every sufficiently large integer $n$, set $L=2^n$. There is a threshold $r_0(L)$ such that, for $r\\ge r_0(L)$, the transfer $M=M_{r,Lr}$ satisfies $$\\begin{aligned}\n \\|M\\|&\\le C L^{-\\lambda}, \\label{tr:block-size}\\\\\n M&=M_1+E,\\qquad \\operatorname{rank}M_1\\le1,\n       \\qquad \\|E\\|\\le C L^{-\\lambda-\\delta},\n       \\label{tr:block-rank}\\\\\n \\|M|_{\\mathcal B_r^{\\mathrm{even,iso}}}\\|\n       &\\le C L^{-2-\\delta}.\n       \\label{tr:block-cancellation}\n\\end{aligned}$$ The constants $C,\\delta$ do not depend on $L$ or $r$. Every norm in the conclusion includes the essential supremum over successful output seams, including their colors. The rank-one operator may depend on $r$ and $L$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tr-block"
+  },
+  {
+   "claim_id": "tr:domination",
+   "exact_statement": "Suppose a contribution to $M_{r,Lr}v$ is expressed, after exploring from the auxiliary starting cycles, as an integral of an inner scalar coefficient, a bounded middle test, and an outer signed state measure. If the middle test is replaced with absolute error $F\\ge0$, where $F$ depends only on the independent region just described, then the error in output norm is at most $$C\\|v\\|_r\\,\\mathbb E_{\\mathrm{core}}F+o(1)\\|v\\|_r.\n\\label{tr:domination-bound}$$ The same bound applies to discarding an event there, by taking $F$ to be its indicator. The expectation is under the unweighted full-plane comparison law; the bound is uniform over successful output seams.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tr-domination"
+  },
+  {
+   "claim_id": "tr:frontier",
+   "exact_statement": "For either end experiment, outside an event whose probability tends to zero as the permitted separation of tips tends to zero, mesh first, the tips at each of finitely many fixed-scale barriers have distinct limiting positions. The boundary facing the unqueried barrier is a simple site cycle whose switches are exactly these tips. In particular:*\n\n1.  *If there are zero or two tips, the induced map on zero-mass connection-state measures is zero.*\n\n2.  *If there are at least six tips, six disjoint bulk arms cross the region from the starting cycle to the barrier, after fixed-factor crops at the two ends.*\n\n*All probabilistic assertions are made under the unweighted exploration law, before conditioning on a particular history.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tr-frontier"
+  },
+  {
+   "claim_id": "tr:admissible",
+   "exact_statement": "At a fixed barrier, restrict the unweighted exploration law to the event of exactly four surviving tips. Along subsequences with good geometry as in [[V](#ref-V), Section 2], the four monochromatic frontier arcs are tight in curve order. In every coupled subsequential limit, after constant pauses are erased, each arc is simple and meets the stopping circle only at its two prescribed endpoints. The four endpoints are distinct.*\n\n\n*For two such experiments ending at well-separated barriers, their residual annulus satisfies the admissibility conditions of Proposition <a href=\"#an:limit\" data-reference-type=\"ref\" data-reference=\"an:limit\">12</a>. If $t_r$ is the discrete through-transmission probability conditional on the complete geometry and the two end histories, and $T_r$ is the continuum transmission function evaluated on its actual conformal data, then, for fixed $L$ and the fixed finite list of barriers, $$\\mathbb E_{\\mathrm{core}}\\!\\left[\n          \\boldsymbol 1_{\\{\\text{four tips at both ends}\\}}\n                              |t_r-T_r|\\right]=o(1).\n\\label{tr:mean-limit}$$ The expectation concerns unweighted histories, not a uniform conditional estimate for all possible histories.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tr-admissible"
+  },
+  {
+   "claim_id": "tr:tails",
+   "exact_statement": "For fixed $L$, the end-history subprobability masses satisfy, in the mesh-first limit, $$\\|\\rho_j^{\\rm in}\\|_{\\mathrm{TV}}\n \\operatorname*{ess\\,sup}_{\\Sigma_{Lr}}\n         \\|\\rho_k^{\\rm out}(\\cdot\\mid\\Sigma_{Lr})\\|_{\\mathrm{TV}}\n      \\le C 2^{-(2+\\tau)j}2^{-(2+\\tau)k}+o(1)\n\\label{tr:history-weight}$$ for each used pair $(j,k)$. Consequently, after inserting arbitrary middle tests of modulus at most one, the same bound up to a constant holds for the corresponding operator contribution on inputs of norm at most one. The part of the transfer not represented by used pairs has norm at most $$C(n+1)^2L^{-2-\\tau}+o(1).\n\\label{tr:unused}$$ Both estimates are uniform for input messages of norm at most one and for successful output seams.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tr-tails"
+  },
+  {
+   "claim_id": "tr:insertion",
+   "exact_statement": "There are $0<\\nu<1$ and $C<\\infty$ such that the following holds. Insert a nucleus at the center of a cut, with an independent fair color. At a seam of radius $s$, take the difference of the inside state laws “with this insertion” minus “without this insertion,” conditional on the seam and with its screen success imposed. Its message $I_s$ satisfies $$\\|I_s\\|_s\\le C s^{-2-\\nu}\n\\label{tr:insertion-bound}$$ for all sufficiently large $s$. The estimate remains valid in the presence of fixed data outside the screened collar that do not enter its inside. The seam tests and the selected cycle are those of the base process, without the insertion.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tr-insertion"
+  },
+  {
+   "claim_id": "tr:wedge",
+   "exact_statement": "There are $\\nu'>0$, $s_0<\\infty$, and a fixed ratio $L>1$ such that, for $r\\ge s_0$ and $s/r=L^N$, the transfer $$\\mathcal M=M_{s/L,s}\\cdots M_{r,Lr}$$ with all intermediate seam successes imposed satisfies $$\\|\\mathcal M u\\wedge\\mathcal M v\\|_\\pi\n       \\le C(s/r)^{-2\\lambda-\\nu'}\\|u\\|_r\\|v\\|_r\n\\label{tr:wedge-bound}$$ for any two zero-mass input messages $u,v\\in\\mathcal B_r$. Here $u\\wedge v=u\\otimes v-v\\otimes u$ and $\\|\\cdot\\|_\\pi$ is the projective tensor norm. Fixed-factor unused intervals at the two ends change only the constant. No assertion of this contraction through a failed intermediate cut is made.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-tr-wedge"
+  },
+  {
+   "claim_id": "cl:derivative",
+   "exact_statement": "The function $f$ is continuously differentiable on $(0,\\infty)$. For every $R>0$, $K_R$ is absolutely integrable and $$\\label{cl:derivative-eq}\n \\frac R2 f'(R)=\\int_{\\mathbb R^2}K_R(y)\\,dy.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cl-derivative"
+  },
+  {
+   "claim_id": "cl:tail",
+   "exact_statement": "There are constants $\\xi>0$, $m_0<\\infty$, and $C<\\infty$ such that for $m_0\\le m\\le R/100$, $$\\label{cl:tail-eq}\n \\int_{|y|>m}|K_R(y)|\\,dy\n \\le C f(R)\\bigl(m^{-\\xi}+R^{-\\xi}\\bigr).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cl-tail"
+  },
+  {
+   "claim_id": "cl:determinant",
+   "exact_statement": "Let $\\nu'>0$ be the exponent in Corollary <a href=\"#tr:wedge\" data-reference-type=\"ref\" data-reference=\"tr:wedge\">26</a>. There are constants $C,c>0$ such that, for sufficiently large $m$, $100m\\le R\\le R'\\le2R$, and almost every $0<|y|\\le m$, $$\\label{cl:determinant-eq}\n \\bigl|K_R(y)f(R')-K_{R'}(y)f(R)\\bigr|\n \\le C(m/R)^{2\\lambda+\\nu'}+Ce^{-cm^2}.$$ The constants are independent of the distance from $y$ to the origin.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cl-determinant"
+  },
+  {
+   "claim_id": "cl:log-derivative",
+   "exact_statement": "There are constants $\\alpha>0$ and $C<\\infty$ such that $$\\label{cl:log-derivative-eq}\n \\left|\\frac{Rf'(R)}{f(R)}+\\lambda\\right|\n \\le CR^{-\\alpha}$$ for all sufficiently large $R$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cl-log-derivative"
+  }
+ ],
+ "paper": "papers/EN-115-000-0003-2-2026-PR-T4-UK-EX-M2-C-ML-M-0440_PM-224.2_A_Pivotal_Amplitude_for_Voronoi_Percolation_from_Cardy_s_Formula.md",
+ "purpose": "A Pivotal Amplitude for Voronoi Percolation from Cardy's Formula",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "43c70b933bdd7b2fc0f5015a89208ac8d91e179696b317c68630111e53e9a76c",
+   "pm.domains.v2": "2f93343ecbefd56d84148574401d5eb91a7f1416854f1c4abd91ff223b4afd58",
+   "pm.edges.v2": "b9bb34f1331fc27cb2c0f1648510a5aba923483a2372c2d47ec743a3ecbd30ff",
+   "pm.extraction.v2": "d8b5ef2ab4ec6ed278752a54dd496d4f046d67aed315bf3226efe6831d7e2433",
+   "pm.formal.v2": "b52ff4bfafebd50db31cf217603c9104e45fff51f2e9ff33e7f97d2cab8122f1",
+   "pm.limits.v2": "ee201cf8126ff8807f4ac8452e5d0f6823f64b672e4358f269750c27a3194cd2",
+   "pm.node.v2": "c7ba6252fb91c491a5f307cca4a4780739a41f7d0c5161991da0bc174c1c1ff2",
+   "pm.objects.v2": "379dbbaafd768b229a2a478b9bc6337a40caeb46c78b6104ab933c4687305b3f",
+   "pm.provenance.v2": "59efbc83288e4171d704fd1eb9fa4562dc2a3edfd5c77e5c36307c7a4c9892ef",
+   "pm.quantities.v2": "94c1892e2570d3d543a706af4b87b89b8581715b430e3d6de257524da60495d8",
+   "pm.reading.v2": "7edc1a85e735920c11ceca3c291c17f8a75232887b30b984756d4ad20eee965f",
+   "pm.roadmap.v2": "d4feb97000111d8ef29e7461dc1402d838869ff9c3f335e2347fa53131c51078",
+   "pm.search.v1": "33256944b801f160c74146bf03cbd86f8d889ced161c02efa65c61399054c905",
+   "pm.triptych.v2": "c09ce3850cee4b0184f548484b27e7929b71d52f0ae6f46906d40a240dcdee4f"
+  },
+  "canonical_sha256": "5916962e9607d7fb1fbe6b1154253e65e85176a90afdf6e42c3dc58ed80011f1",
+  "paper_sha256": "b47a919a23841288c958d653d4236c3ba845ec0f2315c5c66088bfc6d52561f8",
+  "repaired_body_sha256": "968711ff7a4f84bcfed3b9d45e7d00363102d45bdc9563fa2171bae0bab6a685"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "d435bcfe511486c45b5fc4792f3c9898c0c58f5b116446a04ab4d37c061e8c15",
+   "receipt_sha256": "7764d68bb0b8863ca097f683a7e78fe0a0eb3cbe1629c2fe2f09fd110fa1bc86",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive rational matrix representatives in dimension 2: A entries in {-1,0,1} with rank<=1; E diagonal in {-1,0,1}; u,v each zero or signed coordinate vectors (7425 cases), plus dimension 1 and 3 boundary examples.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I3",
+     "oracle_basis": "Candidate evaluates exact fmpq images and wedge minors; independent Fraction oracle contracts explicit Kronecker coefficients with u tensor v minus v tensor u and rechecks all rank minors. No solver witnesses. This covers finite algebra only, not Banach-space norms or asymptotic decay."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M1",
+     "observed_exit": 6,
+     "receipt_sha256": "97a6d6acaef654af491d20fe1c8de003266d705939d41d5b7f0e1e0372b2ca4f"
+    },
+    {
+     "id": "M2",
+     "observed_exit": 6,
+     "receipt_sha256": "d38d77904557b2980e04514e0dcd8e907add64fe2c778575f50d098bbfc290fb"
+    },
+    {
+     "id": "M3",
+     "observed_exit": 6,
+     "receipt_sha256": "7e2c74d734cbf699b0249a95bfadf5cb166892fe176700941ab8de6aa3ec25a4"
+    }
+   ],
+   "receipt_sha256": "5f7f14af5ffe94872743dde552068ee33dc148bcbb56e1e2a43433cfc9bcaf7b",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "A Pivotal Amplitude for Voronoi Percolation from Cardy's Formula"
+}

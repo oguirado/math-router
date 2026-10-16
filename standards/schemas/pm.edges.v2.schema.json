@@ -1,0 +1,117 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "pm.edges.v2"
+    },
+    "pm_id": {
+      "type": "string",
+      "pattern": "^PM-[0-9]{3}\\.[1-9][0-9]*$"
+    },
+    "generation_status": {
+      "type": "string",
+      "enum": [
+        "COMPLETE"
+      ]
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_pm_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "target_pm_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "relation": {
+            "type": "string",
+            "enum": [
+              "prerequisite",
+              "uses",
+              "generalises",
+              "specialises",
+              "shared_technique",
+              "shared_constant",
+              "contradicts",
+              "supersedes"
+            ]
+          },
+          "direction": {
+            "type": "string",
+            "enum": [
+              "directed",
+              "symmetric"
+            ]
+          },
+          "source_anchor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "target_anchor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_quote": {
+            "type": "string",
+            "minLength": 1
+          },
+          "target_quote": {
+            "type": "string",
+            "minLength": 1
+          },
+          "explanation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "basis": {
+            "type": "string",
+            "enum": [
+              "stated",
+              "inferred"
+            ]
+          },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "PENDING",
+              "SUPPORTED",
+              "REJECTED"
+            ]
+          }
+        },
+        "required": [
+          "source_pm_id",
+          "target_pm_id",
+          "relation",
+          "direction",
+          "source_anchor",
+          "target_anchor",
+          "source_quote",
+          "target_quote",
+          "explanation",
+          "basis",
+          "verification"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "graph_revision": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema",
+    "pm_id",
+    "generation_status",
+    "edges",
+    "graph_revision"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pm.edges.v2"
+}

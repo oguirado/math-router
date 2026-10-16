@@ -1,0 +1,551 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 609008,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 201311
+ },
+ "coordinate": "EN-111-000-0000-2-2026-PR-T4-UK-EX-M3-B-ML-M-0660",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "inspirational",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Banach-space metric geometry",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-met-joint-lens-lemma-2",
+     "quote": "no identification with the full infinite-height dual is required.",
+     "quote_sha256": "947635a64bb793ad628d5f885475d3321b7e99301b04c703736c214a6ffb3c1e"
+    }
+   ],
+   "query": "Full infinite-height dual distortion bound",
+   "reason": "The infinite-height theorem applies to the closed coordinate span with its own norm and approximation facts."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-met-f-sum",
+     "quote": "This choice records positivity, not a numerical power law in $\\varepsilon$.",
+     "quote_sha256": "13c4072c77f77307eedfd5fc6c9cc72ebc60d0438d76967f3379151f994d7abd"
+    }
+   ],
+   "query": "Polynomial rate from the qualitative free-root lens gap",
+   "reason": "The free-root propagation argument records positivity without a numerical power law."
+  }
+ ],
+ "family": "PM-331",
+ "id": "PM-331.3",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-met-joint-distortion",
+    "claim_id": "C1",
+    "statement": "For every integer $k\\ge0$, every distortion-$D$ embedding of $\\mathcal D_k$ into either $X$ or $B_\\infty$ satisfies $$D^2\\ge1+k/4.$$"
+   },
+   {
+    "anchor": "stmt-met-finite-pair",
+    "claim_id": "C2",
+    "statement": "Let $X$ be a Banach space, $R>0$, and let $(z_i)_{i\\in\\mathbb N}$ satisfy $\\|x\\pm z_i\\|\\le R$ with $\\|z_i-z_j\\|\\ge\\varepsilon>0$ for $i\\ne j$. Every half-difference $w=(z_i-z_j)/2$ with $i\\ne j$ satisfies $\\|w\\|\\ge\\varepsilon/2$ and $\\|x\\pm w\\|\\le R$. Fix $\\eta>0$. The following two selections are available.*\n\n\n1.  *Suppose $p$ has finite support, $\\|p-x\\|<\\eta$, and $P$ is a bounded finite-rank coordinate projection satisfying $Pp=p$. There are distinct $i,j$ for which, with $w=(z_i-z_j)/2$ and $y=w-Pw$, $$\\label{met:pair-errors}\n     \\|Pw\\|<\\eta,\\quad\n     \\|y\\|\\ge\\varepsilon/2-\\eta,\\quad\n     \\|p\\|\\ge\\|x\\|-\\eta,\\quad\n    \\|p\\pm y\\|\\le R+2\\eta.$$*\n\n2.  *If $F$ is a closed finite-codimensional subspace, there are distinct $i,j$ whose half-difference satisfies $\\operatorname{dist}(w,F)<\\eta$. This selection requires no coordinate structure on $X$."
+   },
+   {
+    "anchor": "stmt-met-joint-lens-lemma",
+    "claim_id": "C3",
+    "statement": "In the finite-height segment forest dual, every infinite $\\varepsilon$-separated symmetric $R$-lens satisfies $$\\label{met:joint-lens}\n \\|x\\|^2+\\varepsilon^2/16\\le R^2.$$ The same lens conclusion holds for the infinite-height closed coordinate span with its own segment-dual norm and finite-head approximation theorem."
+   },
+   {
+    "anchor": "stmt-dir-atomic-atoms",
+    "claim_id": "C4",
+    "statement": "The spaces $J$ and $X$ are reflexive, and finite coordinate arrays are dense in both. If a set $B\\subset T$ meets each segment in either a segment or the empty set, its coordinate projection $P_B$ is contractive on both spaces. For an antichain $V$, the coordinate space supported on $V$ has its $\\ell_2(V)$ norm in both spaces. In particular, $$\\label{dir:atomic:atom-bound}\n \\left\\|\\sum_{I\\in\\mathcal I}\\lambda_I s_I^*\\right\\|_X\n \\le\\left(\\sum_{I\\in\\mathcal I}\\lambda_I^2\\right)^{1/2}$$ for every disjoint segment family. Call a vector on the left with $\\sum_I\\lambda_I^2\\le1$ an atom. The unit ball of $X$ is the norm-closed convex hull of the atoms. If $S$ is finite and ancestral, the unit ball of $P_SX$ is the convex hull of atoms whose segments lie in $S$; every point has a finite convex representation."
+   },
+   {
+    "anchor": "stmt-dir-root-correction",
+    "claim_id": "C5",
+    "statement": "Suppose $v,u\\in c_{00}(T)$, $v=P_Av$, and $u=Q_Au$, where $A$ is finite and ancestral. There is $c=Q_Ac\\in c_{00}(T)$ such that $$\\label{dir:correction-cost}\n \\rho(c)\\le\\rho(u),\\qquad\n \\rho(v+c+r u)^2\\le\\rho(v)^2+16\\rho(u)^2\n \\quad(r\\in\\{-1,1\\}).$$"
+   },
+   {
+    "anchor": "stmt-dir-deterministic-descent",
+    "claim_id": "C6",
+    "statement": "Every embedding of $\\mathcal D_k$ into $X$ with distortion at most $D$ satisfies $k\\le256D^2$."
+   },
+   {
+    "anchor": "stmt-dir-bin-descent",
+    "claim_id": "C7",
+    "statement": "Every noncontracting $D$-Lipschitz embedding of $\\mathcal D_k$ into $X$ satisfies $D>\\sqrt{k}/144$ for $k\\ge1$."
+   },
+   {
+    "anchor": "stmt-dir-atomic-obstruction",
+    "claim_id": "C8",
+    "statement": "For the real space $X$ defined by <a href=\"#dir:atomic:forest-norm\" data-reference-type=\"eqref\" data-reference=\"dir:atomic:forest-norm\">[dir:atomic:forest-norm]</a>, no finite $D$ has the following property: for every $k\\ge1$ there are a map $f_k:\\mathcal D_k\\to X$ and a scalar $a_k>0$ such that $$a_k d_k(u,v)\\le\\|f_k(u)-f_k(v)\\|_X\\le D a_k d_k(u,v)\n \\qquad(u,v\\in\\mathcal D_k).$$"
+   },
+   {
+    "anchor": "stmt-dir-atomic-preparation",
+    "claim_id": "C9",
+    "statement": "Suppose a depth-$k$ embedding satisfies <a href=\"#dir:atomic:normalization\" data-reference-type=\"eqref\" data-reference=\"dir:atomic:normalization\">[dir:atomic:normalization]</a>. For every $0<\\eta<1/(4D)$ one can select a fair binary slope martingale $(M_i)_{i=0}^k$, nested finite ancestral sets $S_0\\subseteq\\cdots\\subseteq S_k$, and a finitely valued random atom $Z$ supported in $S_k$, such that, with $E_i=\\mathbb E[\\,\\cdot\\mid\\mathcal F_i]$ and $U_i=E_iZ=P_{S_k}M_i$, $$\\label{dir:atomic:preparation-bounds}\n \\|Q_{S_{i-1}}U_{i-1}\\|<\\eta,\\qquad\n \\|P_{S_i\\setminus S_{i-1}}U_i\\|\\ge1/D-4\\eta\n \\quad(1\\le i\\le k).$$ The unprojected slopes also satisfy $\\|Q_{S_i}M_i\\|<\\eta$ for $0\\le i\\le k$. Every $M_i$ and $U_i$ has norm at most one. The additional terminal sampling used to produce $Z$ is excluded from each $\\mathcal F_i$, including $\\mathcal F_k$."
+   },
+   {
+    "anchor": "stmt-met-tail-to-lens",
+    "claim_id": "C10",
+    "statement": "Let $X$ have a specified coordinate system with dense finite-support vectors. Fix a family $\\mathcal P$ of bounded finite-rank coordinate projections such that every finite support is contained in the range of some $P\\in\\mathcal P$. Consider separately the following two hypotheses, each imposed for every $P\\in\\mathcal P$, all pure head and tail vectors $p=Pp$, $Py=0$, and every $R>0$: $$\\begin{aligned}\n \\|y\\|^2&\\le C^2 R(R-\\|p\\|)\n &&\\text{if }\\|p\\pm y\\|\\le R, \\label{met:radial-input}\\\\\n \\|p\\|^2+a\\|y\\|^2&\\le R^2\n &&\\text{if }\\|p\\pm y\\|\\le R. \\label{met:square-input}\n\\end{aligned}$$ Here $C>0$, respectively $a>0$, is uniform over $\\mathcal P$, the vectors, and $R$. No uniform bound on $\\|P\\|$ or $\\|I-P\\|$ is assumed. For $R>0$ and $\\varepsilon>0$, an infinite $\\varepsilon$-separated family in the symmetric $R$-lens at $x$ then satisfies, respectively, $$\\begin{aligned}\n \\varepsilon^2/4&\\le C^2R(R-\\|x\\|),\\label{met:radial-lens}\\\\\n \\|x\\|^2+a\\varepsilon^2/4&\\le R^2.\\label{met:square-lens}\n\\end{aligned}$$"
+   },
+   {
+    "anchor": "stmt-met-squared-transfer",
+    "claim_id": "C11",
+    "statement": "If every infinite $\\varepsilon$-separated symmetric $R$-lens satisfies $\\|x\\|^2\\le R^2-b\\varepsilon^2$ for some $b>0$, then every embedding <a href=\"#met:all-pairs\" data-reference-type=\"eqref\" data-reference=\"met:all-pairs\">[met:all-pairs]</a> satisfies $D^2\\ge1+4bk$. If instead <a href=\"#met:radial-lens\" data-reference-type=\"eqref\" data-reference=\"met:radial-lens\">[met:radial-lens]</a> holds, then $$\\label{met:additive-bound}\n k\\le C^2D(D-1).$$"
+   },
+   {
+    "anchor": "stmt-met-power-transfer",
+    "claim_id": "C12",
+    "statement": "Assume the density and projection-family hypotheses of Proposition <a href=\"#met:tail-to-lens\" data-reference-type=\"ref\" data-reference=\"met:tail-to-lens\">10</a>. Let $q\\ge2$ and $c>0$. Suppose that for every admissible projection, every pure head–tail pair $p,y$, and every $R>0$, $$\\|p\\pm y\\|\\le R\n \\quad\\Longrightarrow\\quad\n \\|p\\|^2+cR^{2-q}\\|y\\|^q\\le R^2.$$ Then every distortion-$D$ embedding of $\\mathcal D_k$ satisfies $$ck\\le D^{q-2}(D^2-1).$$"
+   },
+   {
+    "anchor": "stmt-met-parametric",
+    "claim_id": "C13",
+    "statement": "Assume the density and projection-family hypotheses of Proposition <a href=\"#met:tail-to-lens\" data-reference-type=\"ref\" data-reference=\"met:tail-to-lens\">10</a>. Fix constants $a,b>0$. Suppose that for every admissible projection and every pure head–tail pair $p,y$, the following estimate holds for all $\\lambda>0$: $$\\max_\\pm\\|p\\pm y\\|\\ge\n \\frac{\\|p\\|+a\\lambda\\|y\\|}{\\sqrt{1+b\\lambda^2}}.$$ Put $Q=\\sqrt{1+b\\lambda^2}$. For noncontracting diamond slopes bounded above by $D$, the stage suprema satisfy $$R_j\\le Q R_{j+1}-a\\lambda\n \\le R_{j+1}-\\bigl(a\\lambda-(Q-1)D\\bigr).$$ In particular, whenever $\\Delta=a\\lambda-(Q-1)D>0$, one has $1+k\\Delta\\le D$."
+   },
+   {
+    "anchor": "stmt-met-backward",
+    "claim_id": "C14",
+    "statement": "Fix $0<\\alpha\\le1$. Suppose some $0\\le\\rho<1$ has the following property: whenever $\\|x\\pm z_i\\|\\le1$ and $\\|z_i-z_j\\|\\ge2\\alpha$ for $i\\ne j$, one has $\\|x\\|\\le\\rho$. An embedding with lower factor $\\alpha$ and upper factor one must satisfy $$\\label{met:backward-bound}\n \\alpha\\le\\rho^k,$$ where the empty product $\\rho^0$ is one."
+   },
+   {
+    "anchor": "stmt-met-bridge-enlarged-backward",
+    "claim_id": "C15",
+    "statement": "Let $D\\ge1$ and $\\delta>0$. If $(1+\\delta)^k>D$, every noncontracting embedding with upper factor $D$ has a parent edge all of whose child slopes have norm at most $(1+\\delta)$ times its own slope norm. If, for every unit $u$, the enlarged lens $$M(u,\\delta)=\\{z:\\max_\\pm\\|u\\pm z\\|\\le1+\\delta\\}$$ contains no infinite $2/D$-separated family, then every such embedding satisfies $$\\label{met:bridge:enlarged-depth}\n 1\\le \\frac{D}{(1+\\delta)^k}.$$"
+   },
+   {
+    "anchor": "stmt-met-packing",
+    "claim_id": "C16",
+    "statement": "Let $P$ be bounded and finite rank, let $A\\subset X$ be bounded, and let $b\\ge0$ and $\\varepsilon>0$. If $\\|(I-P)v\\|\\le b$ for all $v\\in A$, then $A$ contains no infinite $\\varepsilon$-separated family when $2b<\\varepsilon$. Consequently the following two inputs have different graph conclusions.*\n\n1.  *Let $0<\\delta<1$. For each $\\|x\\|>1-\\delta$, suppose one such $P$ bounds by $b(\\delta)$ the tails of every $v$ with $\\|x\\pm v\\|\\le1$. If $2b(\\delta)<2/D$, backward contraction gives $D^{-1}\\le(1-\\delta)^k$.*\n\n2.  *Let $\\delta>0$. For every unit $x$, suppose one such $P$ bounds by $b(\\delta)$ the tails of every $v$ with $\\|x\\pm v\\|\\le1+\\delta$. If $2b(\\delta)<2/D$, actual-child selection gives $D\\ge(1+\\delta)^k$.*\n\n*The same conclusions hold when the bound is on the first endpoint of every pair with $(u+v)/2=x$: take $u,v\\in B_X$ in case (1), and $u,v\\in(1+\\delta)B_X$ in case (2)."
+   },
+   {
+    "anchor": "stmt-met-bridge-sequential-lens",
+    "claim_id": "C17",
+    "statement": "Assume the density and projection-family hypotheses of Proposition <a href=\"#met:tail-to-lens\" data-reference-type=\"ref\" data-reference=\"met:tail-to-lens\">10</a>. Suppose that whenever admissible heads $P_n\\in\\mathcal P$ and vectors $p_n,y_n$ satisfy $$P_np_n=p_n,\\qquad P_ny_n=0,\\qquad\n \\|p_n\\pm y_n\\|\\le1,\\qquad \\|p_n\\|\\longrightarrow1,$$ one has $\\|y_n\\|\\longrightarrow0$. The heads are allowed to vary with $n$. Then, for each $\\varepsilon>0$, there is $0<\\rho<1$ such that every infinite $\\varepsilon$-separated symmetric unit lens has center norm at most $\\rho$."
+   },
+   {
+    "anchor": "stmt-met-quotient-transfer",
+    "claim_id": "C18",
+    "statement": "Suppose that for some $t>0$ and $g>0$, every unit vector $u\\in X$ admits a closed finite-codimensional subspace $F_u$ such that $$y\\in F_u,\\quad\\|y\\|\\ge t\n \\quad\\Longrightarrow\\quad\n \\max\\{\\|u+y\\|,\\|u-y\\|\\}\\ge1+g.$$ If $D\\ge1$ and $t\\le1/(2D)$, every noncontracting embedding of $\\mathcal D_k$ with upper factor $D$ satisfies $D\\ge(1+g/2)^k$."
+   },
+   {
+    "anchor": "stmt-met-full-gain",
+    "claim_id": "C19",
+    "statement": "Assume the finite-codimensional hypothesis of Proposition <a href=\"#met:quotient-transfer\" data-reference-type=\"ref\" data-reference=\"met:quotient-transfer\">18</a>. Consider a noncontracting embedding with upper factor $D\\ge1$. If $t\\le1/D$ and all child slopes of one parent have norm at most $L$, then $\\|x\\|\\le L/(1+g)$. Consequently every depth-$k$ embedding with upper factor $D$ satisfies $1\\le D/(1+g)^k$."
+   },
+   {
+    "anchor": "stmt-met-bridge-local-amuc",
+    "claim_id": "C20",
+    "statement": "Let $R>0$ and put $t=R/4$. Suppose $\\gamma>0$ is such that every unit $u$ admits a closed finite-codimensional subspace $F_u$ with $$\\label{met:bridge:local-amuc-input}\n \\max_\\pm\\|u\\pm t y\\|\\ge1+\\gamma\n \\qquad(y\\in F_u,\\ \\|y\\|=1).$$ Then $\\beta=\\gamma/2$ excludes infinite $R$-separated families in $M(u,\\beta)$, uniformly over unit $u$."
+   },
+   {
+    "anchor": "stmt-met-bridge-equivalent-amuc",
+    "claim_id": "C21",
+    "statement": "If a Banach space admits an equivalent asymptotically midpoint uniformly convex norm, then the family $(\\mathcal D_k)_{k\\ge0}$ does not embed into it with uniformly bounded distortion. Write $\\operatorname{cof}(X)$ for the closed finite-codimensional linear subspaces of $X$. In infinite dimension, midpoint convexity may be expressed by positivity of the maximum modulus $$\\label{met:bridge:max-modulus}\n \\delta_N^{\\max}(t)=\n \\inf_{N(u)=1}\\ \n \\sup_{F\\in\\operatorname{cof}(X)}\\ \n \\inf_{\\substack{y\\in F\\\\N(y)=1}}\n \\bigl(\\max_\\pm N(u\\pm t y)-1\\bigr)>0\n \\qquad(0<t<1).$$"
+   },
+   {
+    "anchor": "stmt-met-f-sixth",
+    "claim_id": "C22",
+    "statement": "For $X_{\\mathrm v}$ one has $$\\label{met:f:sixth-input}\n S-2\\|x\\|_{\\mathrm v}^2\n \\ge c_6S^{-2}\\|y\\|_{\\mathrm v}^6,\n \\qquad\n S=\\|x+y\\|_{\\mathrm v}^2+\\|x-y\\|_{\\mathrm v}^2,\n \\qquad c_6=2\\exp(-(\\mathrm e-1))4^{-6},$$ whenever $x$ is supported on a finite head and $y$ vanishes there. The right side is interpreted as zero when $S=0$. Every distortion-$D$ embedding of $\\mathcal D_k$ into this norm satisfies $$\\label{met:f:sixth-power-depth}\n \\frac{c_6 k}{8}\\le D^6-D^4.$$ For $0<\\varepsilon\\le1$, put $$\\label{met:f:sixth-q}\n q_6(\\varepsilon)=\n \\left(1-\\frac{c_6\\varepsilon^6}{512}\\right)^{1/2}.$$ Every infinite family satisfying $$\\|x+u_j\\|_{\\mathrm v},\\ \\|x-u_j\\|_{\\mathrm v}\\le1,\n \\qquad \\|u_j-u_l\\|_{\\mathrm v}\\ge\\varepsilon\\quad(j\\ne l)$$ has $\\|x\\|_{\\mathrm v}\\le q_6(\\varepsilon)$. Keeping a fixed unit-lens contraction gives the additional form $$\\label{met:f:sixth-depth}\n D^{-1}\\le q_6(D^{-1})^k.$$"
+   },
+   {
+    "anchor": "stmt-met-f-cubic-weak",
+    "claim_id": "C23",
+    "statement": "The dual $X_{\\mathrm v}^*$ is separable, and under the same finite-head support conditions as above one has $$\\label{met:f:cubic-input}\n \\|x\\pm y\\|_{\\mathrm v}\\le R\n \\quad\\Longrightarrow\\quad\n R^2\\ge\\|x\\|_{\\mathrm v}^2+\n       \\frac{c_3}{2\\sqrt2\\,R}\\|y\\|_{\\mathrm v}^3,\n \\qquad R>0,\\quad c_3=(6\\mathrm e)^{-3}.$$ Consequently every distortion-$D$ embedding of $\\mathcal D_k$ satisfies $$\\label{met:f:cubic-power-depth}\n \\frac{c_3 k}{2\\sqrt2}\\le D^3-D.$$ For $0<\\varepsilon\\le1$, define $$\\label{met:f:cubic-theta}\n \\theta(\\varepsilon)=\n \\left(1-\\frac{c_3\\varepsilon^3}{2\\sqrt2}\\right)^{1/2}.$$ If $(h_j)$ is weakly null, $\\|h_j\\|_{\\mathrm v}\\ge\\varepsilon$, and $\\|x\\pm h_j\\|_{\\mathrm v}\\le1$, then $\\|x\\|_{\\mathrm v}\\le\\theta(\\varepsilon)$. Every distortion-$D$ embedding of the depth-$k$ countably branching diamond into $X_{\\mathrm v}$ satisfies $$\\label{met:f:cubic-depth}\n 1\\le D\\theta(D^{-1})^k.$$"
+   },
+   {
+    "anchor": "stmt-met-f-sum",
+    "claim_id": "C24",
+    "statement": "For every $0<\\varepsilon\\le2$ there is $\\eta(\\varepsilon)\\in(0,1)$ such that $$N_J(x\\pm z_j)\\le1,\n \\qquad N_J(z_j-z_l)\\ge\\varepsilon\\quad(j\\ne l)\n \\quad\\Longrightarrow\\quad\n N_J(x)\\le1-\\eta(\\varepsilon).$$ For $\\varepsilon>2$ the hypotheses are impossible, so any $\\eta(\\varepsilon)\\in(0,1)$ is admissible. An embedding of the depth-$k$ countably branching diamond into $X_J$ with distortion at most $D$ therefore satisfies $$\\label{met:f:sum-depth}\n D^{-1}\\le\\bigl(1-\\eta(2/D)\\bigr)^k.$$"
+   },
+   {
+    "anchor": "stmt-met-f-zero",
+    "claim_id": "C25",
+    "statement": "If the depth-$k$ countably branching diamond admits an embedding into $X_0$ with distortion at most $D\\ge1$, then $$\\label{met:f:zero-depth}\n k\\le4608D^3(1-D^{-1}).$$"
+   },
+   {
+    "anchor": "stmt-met-atomic-distortion",
+    "claim_id": "C26",
+    "statement": "For the segment forest space $X$, every map satisfying <a href=\"#met:all-pairs\" data-reference-type=\"eqref\" data-reference=\"met:all-pairs\">[met:all-pairs]</a> has $D^2\\ge1+k/16$."
+   },
+   {
+    "anchor": "stmt-met-bridge-fixed-bound",
+    "claim_id": "C27",
+    "statement": "If a target satisfies <a href=\"#met:bridge:fixed-bound-input\" data-reference-type=\"eqref\" data-reference=\"met:bridge:fixed-bound-input\">[met:bridge:fixed-bound-input]</a>, every noncontracting embedding of $\\mathcal D_k$ with upper factor $D$ obeys $$1+kc_D\\le D.$$"
+   },
+   {
+    "anchor": "stmt-met-bridge-normer-first",
+    "claim_id": "C28",
+    "statement": "For every $\\varepsilon>0$ there is $0<\\rho<1$ such that an infinite $\\varepsilon$-separated symmetric unit lens in the segment forest space has center norm at most $\\rho$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Diamond distortion from midpoint estimates",
+    "evidence": [
+     {
+      "anchor": "met:section",
+      "quote": "A symmetric midpoint estimate becomes a graph obstruction because each edge of a countably branching diamond has infinitely many replacement midpoints.",
+      "quote_sha256": "7b1e9333032e55acbf594db1c8e973791f4936c4730c2151a8e66f979f9db07c"
+     }
+    ],
+    "requires_concepts": [
+     "Normalized diamond metric",
+     "All-pairs embedding distortion",
+     "Symmetric lenses",
+     "Finite-dimensional pair selection"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "C1",
+   "exact_statement": "**Theorem 1**. *<span id=\"met:intro-main\" label=\"met:intro-main\"></span>For every integer $k\\ge0$, every distortion-$D$ embedding of $\\mathcal D_k$ into either $X$ or $B_\\infty$ satisfies $$D^2\\ge1+k/4.$$*",
+   "kind": "theorem",
+   "statement_anchor": "stmt-met-joint-distortion"
+  },
+  {
+   "claim_id": "C2",
+   "exact_statement": "Let $X$ be a Banach space, $R>0$, and let $(z_i)_{i\\in\\mathbb N}$ satisfy $\\|x\\pm z_i\\|\\le R$ with $\\|z_i-z_j\\|\\ge\\varepsilon>0$ for $i\\ne j$. Every half-difference $w=(z_i-z_j)/2$ with $i\\ne j$ satisfies $\\|w\\|\\ge\\varepsilon/2$ and $\\|x\\pm w\\|\\le R$. Fix $\\eta>0$. The following two selections are available.*\n\n\n1.  *Suppose $p$ has finite support, $\\|p-x\\|<\\eta$, and $P$ is a bounded finite-rank coordinate projection satisfying $Pp=p$. There are distinct $i,j$ for which, with $w=(z_i-z_j)/2$ and $y=w-Pw$, $$\\label{met:pair-errors}\n     \\|Pw\\|<\\eta,\\quad\n     \\|y\\|\\ge\\varepsilon/2-\\eta,\\quad\n     \\|p\\|\\ge\\|x\\|-\\eta,\\quad\n    \\|p\\pm y\\|\\le R+2\\eta.$$*\n\n2.  *If $F$ is a closed finite-codimensional subspace, there are distinct $i,j$ whose half-difference satisfies $\\operatorname{dist}(w,F)<\\eta$. This selection requires no coordinate structure on $X$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-finite-pair"
+  },
+  {
+   "claim_id": "C3",
+   "exact_statement": "In the finite-height segment forest dual, every infinite $\\varepsilon$-separated symmetric $R$-lens satisfies $$\\label{met:joint-lens}\n \\|x\\|^2+\\varepsilon^2/16\\le R^2.$$ The same lens conclusion holds for the infinite-height closed coordinate span with its own segment-dual norm and finite-head approximation theorem.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-joint-lens-lemma"
+  },
+  {
+   "claim_id": "C4",
+   "exact_statement": "The spaces $J$ and $X$ are reflexive, and finite coordinate arrays are dense in both. If a set $B\\subset T$ meets each segment in either a segment or the empty set, its coordinate projection $P_B$ is contractive on both spaces. For an antichain $V$, the coordinate space supported on $V$ has its $\\ell_2(V)$ norm in both spaces. In particular, $$\\label{dir:atomic:atom-bound}\n \\left\\|\\sum_{I\\in\\mathcal I}\\lambda_I s_I^*\\right\\|_X\n \\le\\left(\\sum_{I\\in\\mathcal I}\\lambda_I^2\\right)^{1/2}$$ for every disjoint segment family. Call a vector on the left with $\\sum_I\\lambda_I^2\\le1$ an atom. The unit ball of $X$ is the norm-closed convex hull of the atoms. If $S$ is finite and ancestral, the unit ball of $P_SX$ is the convex hull of atoms whose segments lie in $S$; every point has a finite convex representation.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-dir-atomic-atoms"
+  },
+  {
+   "claim_id": "C5",
+   "exact_statement": "Suppose $v,u\\in c_{00}(T)$, $v=P_Av$, and $u=Q_Au$, where $A$ is finite and ancestral. There is $c=Q_Ac\\in c_{00}(T)$ such that $$\\label{dir:correction-cost}\n \\rho(c)\\le\\rho(u),\\qquad\n \\rho(v+c+r u)^2\\le\\rho(v)^2+16\\rho(u)^2\n \\quad(r\\in\\{-1,1\\}).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-dir-root-correction"
+  },
+  {
+   "claim_id": "C6",
+   "exact_statement": "Every embedding of $\\mathcal D_k$ into $X$ with distortion at most $D$ satisfies $k\\le256D^2$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-dir-deterministic-descent"
+  },
+  {
+   "claim_id": "C7",
+   "exact_statement": "Every noncontracting $D$-Lipschitz embedding of $\\mathcal D_k$ into $X$ satisfies $D>\\sqrt{k}/144$ for $k\\ge1$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-dir-bin-descent"
+  },
+  {
+   "claim_id": "C8",
+   "exact_statement": "For the real space $X$ defined by <a href=\"#dir:atomic:forest-norm\" data-reference-type=\"eqref\" data-reference=\"dir:atomic:forest-norm\">[dir:atomic:forest-norm]</a>, no finite $D$ has the following property: for every $k\\ge1$ there are a map $f_k:\\mathcal D_k\\to X$ and a scalar $a_k>0$ such that $$a_k d_k(u,v)\\le\\|f_k(u)-f_k(v)\\|_X\\le D a_k d_k(u,v)\n \\qquad(u,v\\in\\mathcal D_k).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-dir-atomic-obstruction"
+  },
+  {
+   "claim_id": "C9",
+   "exact_statement": "Suppose a depth-$k$ embedding satisfies <a href=\"#dir:atomic:normalization\" data-reference-type=\"eqref\" data-reference=\"dir:atomic:normalization\">[dir:atomic:normalization]</a>. For every $0<\\eta<1/(4D)$ one can select a fair binary slope martingale $(M_i)_{i=0}^k$, nested finite ancestral sets $S_0\\subseteq\\cdots\\subseteq S_k$, and a finitely valued random atom $Z$ supported in $S_k$, such that, with $E_i=\\mathbb E[\\,\\cdot\\mid\\mathcal F_i]$ and $U_i=E_iZ=P_{S_k}M_i$, $$\\label{dir:atomic:preparation-bounds}\n \\|Q_{S_{i-1}}U_{i-1}\\|<\\eta,\\qquad\n \\|P_{S_i\\setminus S_{i-1}}U_i\\|\\ge1/D-4\\eta\n \\quad(1\\le i\\le k).$$ The unprojected slopes also satisfy $\\|Q_{S_i}M_i\\|<\\eta$ for $0\\le i\\le k$. Every $M_i$ and $U_i$ has norm at most one. The additional terminal sampling used to produce $Z$ is excluded from each $\\mathcal F_i$, including $\\mathcal F_k$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-dir-atomic-preparation"
+  },
+  {
+   "claim_id": "C10",
+   "exact_statement": "Let $X$ have a specified coordinate system with dense finite-support vectors. Fix a family $\\mathcal P$ of bounded finite-rank coordinate projections such that every finite support is contained in the range of some $P\\in\\mathcal P$. Consider separately the following two hypotheses, each imposed for every $P\\in\\mathcal P$, all pure head and tail vectors $p=Pp$, $Py=0$, and every $R>0$: $$\\begin{aligned}\n \\|y\\|^2&\\le C^2 R(R-\\|p\\|)\n &&\\text{if }\\|p\\pm y\\|\\le R, \\label{met:radial-input}\\\\\n \\|p\\|^2+a\\|y\\|^2&\\le R^2\n &&\\text{if }\\|p\\pm y\\|\\le R. \\label{met:square-input}\n\\end{aligned}$$ Here $C>0$, respectively $a>0$, is uniform over $\\mathcal P$, the vectors, and $R$. No uniform bound on $\\|P\\|$ or $\\|I-P\\|$ is assumed. For $R>0$ and $\\varepsilon>0$, an infinite $\\varepsilon$-separated family in the symmetric $R$-lens at $x$ then satisfies, respectively, $$\\begin{aligned}\n \\varepsilon^2/4&\\le C^2R(R-\\|x\\|),\\label{met:radial-lens}\\\\\n \\|x\\|^2+a\\varepsilon^2/4&\\le R^2.\\label{met:square-lens}\n\\end{aligned}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-tail-to-lens"
+  },
+  {
+   "claim_id": "C11",
+   "exact_statement": "If every infinite $\\varepsilon$-separated symmetric $R$-lens satisfies $\\|x\\|^2\\le R^2-b\\varepsilon^2$ for some $b>0$, then every embedding <a href=\"#met:all-pairs\" data-reference-type=\"eqref\" data-reference=\"met:all-pairs\">[met:all-pairs]</a> satisfies $D^2\\ge1+4bk$. If instead <a href=\"#met:radial-lens\" data-reference-type=\"eqref\" data-reference=\"met:radial-lens\">[met:radial-lens]</a> holds, then $$\\label{met:additive-bound}\n k\\le C^2D(D-1).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-met-squared-transfer"
+  },
+  {
+   "claim_id": "C12",
+   "exact_statement": "Assume the density and projection-family hypotheses of Proposition <a href=\"#met:tail-to-lens\" data-reference-type=\"ref\" data-reference=\"met:tail-to-lens\">10</a>. Let $q\\ge2$ and $c>0$. Suppose that for every admissible projection, every pure head–tail pair $p,y$, and every $R>0$, $$\\|p\\pm y\\|\\le R\n \\quad\\Longrightarrow\\quad\n \\|p\\|^2+cR^{2-q}\\|y\\|^q\\le R^2.$$ Then every distortion-$D$ embedding of $\\mathcal D_k$ satisfies $$ck\\le D^{q-2}(D^2-1).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-met-power-transfer"
+  },
+  {
+   "claim_id": "C13",
+   "exact_statement": "Assume the density and projection-family hypotheses of Proposition <a href=\"#met:tail-to-lens\" data-reference-type=\"ref\" data-reference=\"met:tail-to-lens\">10</a>. Fix constants $a,b>0$. Suppose that for every admissible projection and every pure head–tail pair $p,y$, the following estimate holds for all $\\lambda>0$: $$\\max_\\pm\\|p\\pm y\\|\\ge\n \\frac{\\|p\\|+a\\lambda\\|y\\|}{\\sqrt{1+b\\lambda^2}}.$$ Put $Q=\\sqrt{1+b\\lambda^2}$. For noncontracting diamond slopes bounded above by $D$, the stage suprema satisfy $$R_j\\le Q R_{j+1}-a\\lambda\n \\le R_{j+1}-\\bigl(a\\lambda-(Q-1)D\\bigr).$$ In particular, whenever $\\Delta=a\\lambda-(Q-1)D>0$, one has $1+k\\Delta\\le D$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-parametric"
+  },
+  {
+   "claim_id": "C14",
+   "exact_statement": "Fix $0<\\alpha\\le1$. Suppose some $0\\le\\rho<1$ has the following property: whenever $\\|x\\pm z_i\\|\\le1$ and $\\|z_i-z_j\\|\\ge2\\alpha$ for $i\\ne j$, one has $\\|x\\|\\le\\rho$. An embedding with lower factor $\\alpha$ and upper factor one must satisfy $$\\label{met:backward-bound}\n \\alpha\\le\\rho^k,$$ where the empty product $\\rho^0$ is one.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-backward"
+  },
+  {
+   "claim_id": "C15",
+   "exact_statement": "If, for every unit $u$, the enlarged lens $$M(u,\\delta)=\\{z:\\max_\\pm\\|u\\pm z\\|\\le1+\\delta\\}$$ contains no infinite $2/D$-separated family, then every such embedding satisfies $$\\label{met:bridge:enlarged-depth}\n 1\\le \\frac{D}{(1+\\delta)^k}.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-bridge-enlarged-backward"
+  },
+  {
+   "claim_id": "C16",
+   "exact_statement": "Let $P$ be bounded and finite rank, let $A\\subset X$ be bounded, and let $b\\ge0$ and $\\varepsilon>0$. If $\\|(I-P)v\\|\\le b$ for all $v\\in A$, then $A$ contains no infinite $\\varepsilon$-separated family when $2b<\\varepsilon$. Consequently the following two inputs have different graph conclusions.*\n\n1.  *Let $0<\\delta<1$. For each $\\|x\\|>1-\\delta$, suppose one such $P$ bounds by $b(\\delta)$ the tails of every $v$ with $\\|x\\pm v\\|\\le1$. If $2b(\\delta)<2/D$, backward contraction gives $D^{-1}\\le(1-\\delta)^k$.*\n\n2.  *Let $\\delta>0$. For every unit $x$, suppose one such $P$ bounds by $b(\\delta)$ the tails of every $v$ with $\\|x\\pm v\\|\\le1+\\delta$. If $2b(\\delta)<2/D$, actual-child selection gives $D\\ge(1+\\delta)^k$.*\n\n*The same conclusions hold when the bound is on the first endpoint of every pair with $(u+v)/2=x$: take $u,v\\in B_X$ in case (1), and $u,v\\in(1+\\delta)B_X$ in case (2).",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-packing"
+  },
+  {
+   "claim_id": "C17",
+   "exact_statement": "Assume the density and projection-family hypotheses of Proposition <a href=\"#met:tail-to-lens\" data-reference-type=\"ref\" data-reference=\"met:tail-to-lens\">10</a>. Suppose that whenever admissible heads $P_n\\in\\mathcal P$ and vectors $p_n,y_n$ satisfy $$P_np_n=p_n,\\qquad P_ny_n=0,\\qquad\n \\|p_n\\pm y_n\\|\\le1,\\qquad \\|p_n\\|\\longrightarrow1,$$ one has $\\|y_n\\|\\longrightarrow0$. The heads are allowed to vary with $n$. Then, for each $\\varepsilon>0$, there is $0<\\rho<1$ such that every infinite $\\varepsilon$-separated symmetric unit lens has center norm at most $\\rho$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-bridge-sequential-lens"
+  },
+  {
+   "claim_id": "C18",
+   "exact_statement": "Suppose that for some $t>0$ and $g>0$, every unit vector $u\\in X$ admits a closed finite-codimensional subspace $F_u$ such that $$y\\in F_u,\\quad\\|y\\|\\ge t\n \\quad\\Longrightarrow\\quad\n \\max\\{\\|u+y\\|,\\|u-y\\|\\}\\ge1+g.$$ If $D\\ge1$ and $t\\le1/(2D)$, every noncontracting embedding of $\\mathcal D_k$ with upper factor $D$ satisfies $D\\ge(1+g/2)^k$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-quotient-transfer"
+  },
+  {
+   "claim_id": "C19",
+   "exact_statement": "Assume the finite-codimensional hypothesis of Proposition <a href=\"#met:quotient-transfer\" data-reference-type=\"ref\" data-reference=\"met:quotient-transfer\">18</a>. Consider a noncontracting embedding with upper factor $D\\ge1$. If $t\\le1/D$ and all child slopes of one parent have norm at most $L$, then $\\|x\\|\\le L/(1+g)$. Consequently every depth-$k$ embedding with upper factor $D$ satisfies $1\\le D/(1+g)^k$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-full-gain"
+  },
+  {
+   "claim_id": "C20",
+   "exact_statement": "Let $R>0$ and put $t=R/4$. Suppose $\\gamma>0$ is such that every unit $u$ admits a closed finite-codimensional subspace $F_u$ with $$\\label{met:bridge:local-amuc-input}\n \\max_\\pm\\|u\\pm t y\\|\\ge1+\\gamma\n \\qquad(y\\in F_u,\\ \\|y\\|=1).$$ Then $\\beta=\\gamma/2$ excludes infinite $R$-separated families in $M(u,\\beta)$, uniformly over unit $u$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-bridge-local-amuc"
+  },
+  {
+   "claim_id": "C21",
+   "exact_statement": "If a Banach space admits an equivalent asymptotically midpoint uniformly convex norm, then the family $(\\mathcal D_k)_{k\\ge0}$ does not embed into it with uniformly bounded distortion. Write $\\operatorname{cof}(X)$ for the closed finite-codimensional linear subspaces of $X$. In infinite dimension, midpoint convexity may be expressed by positivity of the maximum modulus $$\\label{met:bridge:max-modulus}\n \\delta_N^{\\max}(t)=\n \\inf_{N(u)=1}\\ \n \\sup_{F\\in\\operatorname{cof}(X)}\\ \n \\inf_{\\substack{y\\in F\\\\N(y)=1}}\n \\bigl(\\max_\\pm N(u\\pm t y)-1\\bigr)>0\n \\qquad(0<t<1).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-met-bridge-equivalent-amuc"
+  },
+  {
+   "claim_id": "C22",
+   "exact_statement": "For $X_{\\mathrm v}$ one has $$\\label{met:f:sixth-input}\n S-2\\|x\\|_{\\mathrm v}^2\n \\ge c_6S^{-2}\\|y\\|_{\\mathrm v}^6,\n \\qquad\n S=\\|x+y\\|_{\\mathrm v}^2+\\|x-y\\|_{\\mathrm v}^2,\n \\qquad c_6=2\\exp(-(\\mathrm e-1))4^{-6},$$ whenever $x$ is supported on a finite head and $y$ vanishes there. The right side is interpreted as zero when $S=0$. Every distortion-$D$ embedding of $\\mathcal D_k$ into this norm satisfies $$\\label{met:f:sixth-power-depth}\n \\frac{c_6 k}{8}\\le D^6-D^4.$$ For $0<\\varepsilon\\le1$, put $$\\label{met:f:sixth-q}\n q_6(\\varepsilon)=\n \\left(1-\\frac{c_6\\varepsilon^6}{512}\\right)^{1/2}.$$ Every infinite family satisfying $$\\|x+u_j\\|_{\\mathrm v},\\ \\|x-u_j\\|_{\\mathrm v}\\le1,\n \\qquad \\|u_j-u_l\\|_{\\mathrm v}\\ge\\varepsilon\\quad(j\\ne l)$$ has $\\|x\\|_{\\mathrm v}\\le q_6(\\varepsilon)$. Keeping a fixed unit-lens contraction gives the additional form $$\\label{met:f:sixth-depth}\n D^{-1}\\le q_6(D^{-1})^k.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-f-sixth"
+  },
+  {
+   "claim_id": "C23",
+   "exact_statement": "The dual $X_{\\mathrm v}^*$ is separable, and under the same finite-head support conditions as above one has $$\\label{met:f:cubic-input}\n \\|x\\pm y\\|_{\\mathrm v}\\le R\n \\quad\\Longrightarrow\\quad\n R^2\\ge\\|x\\|_{\\mathrm v}^2+\n       \\frac{c_3}{2\\sqrt2\\,R}\\|y\\|_{\\mathrm v}^3,\n \\qquad R>0,\\quad c_3=(6\\mathrm e)^{-3}.$$ Consequently every distortion-$D$ embedding of $\\mathcal D_k$ satisfies $$\\label{met:f:cubic-power-depth}\n \\frac{c_3 k}{2\\sqrt2}\\le D^3-D.$$ For $0<\\varepsilon\\le1$, define $$\\label{met:f:cubic-theta}\n \\theta(\\varepsilon)=\n \\left(1-\\frac{c_3\\varepsilon^3}{2\\sqrt2}\\right)^{1/2}.$$ If $(h_j)$ is weakly null, $\\|h_j\\|_{\\mathrm v}\\ge\\varepsilon$, and $\\|x\\pm h_j\\|_{\\mathrm v}\\le1$, then $\\|x\\|_{\\mathrm v}\\le\\theta(\\varepsilon)$. Every distortion-$D$ embedding of the depth-$k$ countably branching diamond into $X_{\\mathrm v}$ satisfies $$\\label{met:f:cubic-depth}\n 1\\le D\\theta(D^{-1})^k.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-f-cubic-weak"
+  },
+  {
+   "claim_id": "C24",
+   "exact_statement": "For every $0<\\varepsilon\\le2$ there is $\\eta(\\varepsilon)\\in(0,1)$ such that $$N_J(x\\pm z_j)\\le1,\n \\qquad N_J(z_j-z_l)\\ge\\varepsilon\\quad(j\\ne l)\n \\quad\\Longrightarrow\\quad\n N_J(x)\\le1-\\eta(\\varepsilon).$$ For $\\varepsilon>2$ the hypotheses are impossible, so any $\\eta(\\varepsilon)\\in(0,1)$ is admissible. An embedding of the depth-$k$ countably branching diamond into $X_J$ with distortion at most $D$ therefore satisfies $$\\label{met:f:sum-depth}\n D^{-1}\\le\\bigl(1-\\eta(2/D)\\bigr)^k.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-f-sum"
+  },
+  {
+   "claim_id": "C25",
+   "exact_statement": "If the depth-$k$ countably branching diamond admits an embedding into $X_0$ with distortion at most $D\\ge1$, then $$\\label{met:f:zero-depth}\n k\\le4608D^3(1-D^{-1}).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-f-zero"
+  },
+  {
+   "claim_id": "C26",
+   "exact_statement": "For the segment forest space $X$, every map satisfying <a href=\"#met:all-pairs\" data-reference-type=\"eqref\" data-reference=\"met:all-pairs\">[met:all-pairs]</a> has $D^2\\ge1+k/16$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-atomic-distortion"
+  },
+  {
+   "claim_id": "C27",
+   "exact_statement": "If a target satisfies <a href=\"#met:bridge:fixed-bound-input\" data-reference-type=\"eqref\" data-reference=\"met:bridge:fixed-bound-input\">[met:bridge:fixed-bound-input]</a>, every noncontracting embedding of $\\mathcal D_k$ with upper factor $D$ obeys $$1+kc_D\\le D.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-bridge-fixed-bound"
+  },
+  {
+   "claim_id": "C28",
+   "exact_statement": "For every $\\varepsilon>0$ there is $0<\\rho<1$ such that an infinite $\\varepsilon$-separated symmetric unit lens in the segment forest space has center norm at most $\\rho$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-met-bridge-normer-first"
+  }
+ ],
+ "paper": "papers/EN-111-000-0000-2-2026-PR-T4-UK-EX-M3-B-ML-M-0660_PM-331.3_Distortion_of_countably_branching_diamonds_from_midpoint_and_tree_energies.md",
+ "purpose": "Distortion of countably branching diamonds from midpoint and tree energies",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "296621d69976343aafe5d791dc57fb353e70f4a8135d5ade5cb9f11c8720360b",
+   "pm.domains.v2": "4df22049b2bb3e988a47025e3fc146648febcada83291a89e25f176eb304cfa4",
+   "pm.edges.v2": "6e2b21c630ff468e2dd6f2f1a5aee5250051d202aa6c1d74d6c396763be93c16",
+   "pm.extraction.v2": "d548485d0d44b7afc48af1f0d7cbfbdedf4f422a5e72f1e4f162ab244daf764c",
+   "pm.formal.v2": "dcd5f3cf42c04dae94e0d8077d47043b4b22df9d65e4dee8fd37b6a5116577ba",
+   "pm.limits.v2": "037f7ba5a020fd486bf19f88d6aacae315bee032e103074a7d210a6e7da1499b",
+   "pm.node.v2": "777d5c953db76c59edd213da22e1a0e4d7fe6d64a6fc18e0a279d91205684f23",
+   "pm.objects.v2": "19c26c67806e268e998ddc1040862ff03948c133c9eddf4b9d030a2de031c01d",
+   "pm.provenance.v2": "706716d17bab816ae687ac665c92cc2000a10fcfccfff8665c0c7477d8527132",
+   "pm.quantities.v2": "9a1bd3783cd224fb329436064f3c7af56eccdea3d43e138c3b1c85536780f1b5",
+   "pm.reading.v2": "2c38851bc08955233a4d5743dc90797f05bde63381f8a017c869017b78f76e4e",
+   "pm.roadmap.v2": "7508b507b6f9f873949c9df448668004754d2fbd31757c51f9f7ae88773cd310",
+   "pm.search.v1": "93bfa5becc6146009a4b9e025e3973d47de7e8ef506079ff356f35eef230b207",
+   "pm.triptych.v2": "a5ad05910f709fee4fc8a08d0b34ad243593cbc4667b7a9590ff16b53e84515b"
+  },
+  "canonical_sha256": "0bd3c24c7cd989e202682bec77118dbd40ecd45ed18bddc8df8728d9ffbd4b85",
+  "paper_sha256": "1bac0648b53984c794f392b4b940ab6500acc3319ce4e616f60ce6fb13d23fd0",
+  "repaired_body_sha256": "a842a940ef2aa2a8be3c0880ffd842a00dfb42da8098da454cf05243708d139e"
+ },
+ "status": "ACTIVE",
+ "subject_id": 11,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "5508695a9a7f324919d246fb1e78aeedc7a3e5961290206cb9753eecdabc6b22",
+   "receipt_sha256": "b6a3ddc950dcfc4de7323381c66b945758a50b6b58a06f3e989b55e399a860f8",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Exhaustive integer coefficients in {-3,-1,0,1,3} on five trees of at most four nodes; ancestral heads specified in the vectors; tail supported only on first exterior roots.",
+     "coverage": "PARTIAL",
+     "invariant_id": "root-correction",
+     "oracle_basis": "Independent enumeration of ancestor suffixes reconstructs the correction; exhaustive pairwise-disjoint segment families compute exact squared primal norms and re-check both signs."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M-sign",
+     "observed_exit": 6,
+     "receipt_sha256": "dabbe7d40112f0c22bf1d3b44f76d061d1040288c983e37a79d10837f95cae48"
+    },
+    {
+     "id": "M-threshold",
+     "observed_exit": 6,
+     "receipt_sha256": "02c455ea16360b34ba289512ad2e1449d3f72187190caffc862ed807bc32861f"
+    },
+    {
+     "id": "M-order",
+     "observed_exit": 6,
+     "receipt_sha256": "b59af8c65174c4c43e4ce354cbb6c9036344ff46e05c1d13427f746d629c4826"
+    }
+   ],
+   "receipt_sha256": "03448df8ac8e44cefb4f635aa3832f4d1db69ff1bbf27083c5c437f4c595a643",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Distortion of countably branching diamonds from midpoint and tree energies"
+}

@@ -1,0 +1,616 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 1027217,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 455867
+ },
+ "coordinate": "EN-113-000-0004-2-2026-PR-T4-UK-EX-M1-B-CO-M-0317",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "implementable",
+   "proposed_domain": null,
+   "strength": "strong",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "stated",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "Extremal graph theory",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-thm-recursive-woven-2",
+     "quote": "Thus the absolute integer $C=2(Q+6K)$ has all the claimed uniformity.",
+     "quote_sha256": "0e798498dd1041e80b162eee587df9332f585452f0c08de9282598e560736ee1"
+    }
+   ],
+   "query": "Explicit universal list-coloring coefficient",
+   "reason": "The proof chooses constants through dependencies and cutoffs without giving a numerical universal coefficient."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "Its linear relaxation asks whether an absolute constant can replace the coefficient one.",
+     "quote_sha256": "ea444d263be104c8122286710cebda57a4f1a678de3b55fb88d0a69c0cbc8310"
+    }
+   ],
+   "query": "Optimal coefficient for ordinary Hadwiger coloring",
+   "reason": "A linear relaxation does not establish the ordinary coefficient-one assertion."
+  }
+ ],
+ "family": "PM-157",
+ "id": "PM-157.3",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-thm-main",
+    "statement": "There is an absolute integer $C\\ge1$ such that every finite nonempty simple graph $G$ satisfies $$\\ell(G)\\le C h(G).$$"
+   },
+   {
+    "anchor": "stmt-cor-ordinary",
+    "claim_id": "claim-cor-ordinary",
+    "statement": "Every finite nonempty simple graph $G$ satisfies $\\chi(G)\\le C h(G)$, with the constant $C$ in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>."
+   },
+   {
+    "anchor": "stmt-thm-fractional",
+    "claim_id": "claim-thm-fractional",
+    "statement": "Every graph $P$ satisfies $f(P)\\le4h(P)$."
+   },
+   {
+    "anchor": "stmt-thm-ordinary-extraction",
+    "claim_id": "claim-thm-ordinary-extraction",
+    "statement": "If $k\\ge1$ is an integer and $\\chi(P)\\ge7k$, then $P$ has a $k$-connected subgraph $J$ with $\\chi(J)\\ge\\chi(P)-6k$."
+   },
+   {
+    "anchor": "stmt-thm-grouping",
+    "claim_id": "claim-thm-grouping",
+    "statement": "There is an absolute integer $\\gamma\\ge1$ such that the following holds. In a $\\gamma m$-connected graph, every partition of $m\\ge1$ distinct terminals into nonempty groups can be realized by pairwise disjoint connected vertex sets, one containing each group."
+   },
+   {
+    "anchor": "stmt-lem-bounded",
+    "claim_id": "claim-lem-bounded",
+    "statement": "Suppose $|V(P)|\\le n$, where $n\\ge1$, and $f(P)\\le r$, where $r\\ge1$. There is a distribution on stable sets $I$ such that $$|I|\\le\\lceil n/r\\rceil,\n \\qquad \\Pr(v\\in I)=\\frac1{2r}\\quad(v\\in V(P)).$$"
+   },
+   {
+    "anchor": "stmt-lem-concentration",
+    "claim_id": "claim-lem-concentration",
+    "statement": "Let $Z$ be a function of $s\\ge1$ independent finite random variables. If changing one variable changes $Z$ by at most $b>0$, then $$\\Pr\\bigl(|Z-\\mathbb EZ|\\ge u\\bigr)\n \\le2\\exp\\bigl(-u^2/(2sb^2)\\bigr)\\qquad(u>0).$$"
+   },
+   {
+    "anchor": "stmt-lem-cut-test",
+    "claim_id": "claim-lem-cut-test",
+    "statement": "Let $P$ be a $k$-connected graph on at most $n$ vertices, where $k$ is a sufficiently large integer. Set $$s=\\left\\lceil10(n/k)\\log(2n)\\right\\rceil.$$ There is a family of at most $(n+1)^{s+1}$ matchings, each of size $\\lfloor k/8\\rfloor$, with the following property. If $U\\subseteq V(P)$, every vertex of $P$ has at least $k/2$ neighbors outside $U$, and fewer than $k/32$ endpoints of each matching belong to $U$, then $P-U$ is $\\lfloor k/32\\rfloor$-connected."
+   },
+   {
+    "anchor": "stmt-prop-small-list",
+    "claim_id": "claim-prop-small-list",
+    "statement": "There are an absolute positive integer $L$ and an absolute integer $t_0$ such that, for every integer $t\\ge t_0$ and every graph $G$, $$h(G)<t,\\qquad |V(G)|\\le t^{11/10}\n \\quad\\Longrightarrow\\quad \\ell(G)\\le Lt.$$"
+   },
+   {
+    "anchor": "stmt-small-eligible-thinning",
+    "claim_id": "claim-small-eligible-thinning",
+    "statement": "There is an absolute positive integer $B$ such that the following holds for all sufficiently large integers $t$. Let $n,r$ be real parameters with $$1\\le n\\le t^{11/10},\\qquad \\frac{t}{\\log t}\\le r\\le4t,$$ and let $P$ be a graph with $|V(P)|\\le n$, $h(P)<t$, and $f(P)\\le r$. Set $$N=\\left\\lceil Br\\log\\bigl(2\\max\\{1,t/r\\}\\bigr)\\right\\rceil.$$ Suppose $E_1,\\ldots,E_N\\subseteq V(P)$ contain every vertex at least $N/2$ times. There are stable sets $I_1,\\ldots,I_N$ of $P$, each of size at most $\\lceil n/r\\rceil$, such that $$f\\left(P-\\bigcup_{j=1}^N(I_j\\cap E_j)\\right)\\le r/2.$$ The cutoff for $t$ is uniform over $P,n,r$ and the eligibility sets."
+   },
+   {
+    "anchor": "stmt-small-concentration",
+    "claim_id": "claim-small-concentration",
+    "statement": "Take at most $q$ independent copies of the experiment <a href=\"#small:remainder\" data-reference-type=\"eqref\" data-reference=\"small:remainder\">[small:remainder]</a>. Let $Z$ be any one of the following quantities, where the vertex set $A\\subseteq V(P)$ is fixed before sampling: $$|A\\cap W_i|,\\qquad\n \\left|A\\cap\\bigcup_iW_i\\right|,\\qquad\n f(P[A\\cap W_i]).$$ For each fixed $\\delta>0$, and all sufficiently large $t$, $$\\label{small:uniform-tail}\n \\Pr\\bigl(|Z-\\mathbb EZ|\\ge\\delta r\\bigr)\n \\le2\\exp(-t^{7/10}),$$ uniformly over all the data in <a href=\"#small:range\" data-reference-type=\"eqref\" data-reference=\"small:range\">[small:range]</a> and all eligibility sets satisfying the stated condition."
+   },
+   {
+    "anchor": "stmt-small-fixed-region",
+    "claim_id": "claim-small-fixed-region",
+    "statement": "Suppose that every outcome of the experiment <a href=\"#small:remainder\" data-reference-type=\"eqref\" data-reference=\"small:remainder\">[small:remainder]</a> having positive probability satisfies $f(P[W])>r/2$. Then there is a fixed induced $k$-connected subgraph $H\\subseteq P$ such that $$\\label{small:region-expectation}\n \\mathbb E f(H[W\\cap V(H)])>r/4.$$ The subgraph $H$ is chosen before any fresh copies of the experiment are sampled."
+   },
+   {
+    "anchor": "stmt-small-private",
+    "claim_id": "claim-small-private",
+    "statement": "With failure probability at most $4q(q-1)p+o(1)$, every $H[T_i]$ has fractional chromatic number greater than $r/8$, and hence contains a $K_{2x}$ model."
+   },
+   {
+    "anchor": "stmt-small-complement",
+    "claim_id": "claim-small-complement",
+    "statement": "With probability $1-o(1)$, every vertex of $H$ has at least $k/2$ neighbors in $H-U$, and $H-U$ is $\\lfloor k/32\\rfloor$-connected."
+   },
+   {
+    "anchor": "stmt-lem-list-extraction",
+    "claim_id": "claim-lem-list-extraction",
+    "statement": "For every integer $k\\ge1$, if $\\ell(P)>6k$, then some induced $k$-connected subgraph $H$ of $P$ satisfies $$\\ell(H)\\ge\\ell(P)-6k.$$"
+   },
+   {
+    "anchor": "stmt-list-high-neighbor-count",
+    "claim_id": "claim-list-high-neighbor-count",
+    "statement": "Let $t\\ge2$ be an integer, let $h(P)<t$, and let $X\\subseteq V(P)$. Then $$\\bigl|\\{v\\in V(P)\\setminus X:|N_P(v)\\cap X|\\ge t\\}\\bigr|\n\\le\\binom{|X|}{2}.$$"
+   },
+   {
+    "anchor": "stmt-lem-coarse-density",
+    "claim_id": "claim-lem-coarse-density",
+    "statement": "There is an absolute constant $C_*>0$, for example $C_*=10^4$, such that, for every integer $t\\ge2$ and every nonempty graph $P$ with $h(P)<t$, $$d(P)\\le C_*t\\log(2t).$$ Consequently, every graph $P$ with $h(P)<t$ satisfies $$\\ell(P)\\le 2C_*t\\log(2t)+1.$$"
+   },
+   {
+    "anchor": "stmt-lem-incidence",
+    "claim_id": "claim-lem-incidence",
+    "statement": "There is an absolute positive integer $B_*$ such that, for all sufficiently large integers $t$, every graph $P$ with $h(P)<t$ and disjoint vertex sets $A,T$ satisfies $$\\label{density:incidence-bound}\n \\sum_{\\substack{v\\in T\\\\ |N_P(v)\\cap A|\\ge B_*t}}\n       |N_P(v)\\cap A|\n \\le t^{1+2\\epsilon}|A|.$$ In particular, $$\\bigl|\\{v\\in T:|N_P(v)\\cap A|\\ge B_*t\\}\\bigr|\n \\le t^{2\\epsilon}|A|.$$"
+   },
+   {
+    "anchor": "stmt-density-connectivity",
+    "claim_id": "claim-density-connectivity",
+    "statement": "For every positive integer $k$, a graph of density greater than $2k$ contains an induced $k$-connected subgraph."
+   },
+   {
+    "anchor": "stmt-lem-district",
+    "claim_id": "claim-lem-district",
+    "statement": "For every fixed positive integer $K$, there is an integer $$D_K>\\max(400B_*,12800K)$$ such that, for all sufficiently large integers $t$, every nonempty graph $P$ with $$h(P)<t,\\qquad d(P)\\ge D_Kt$$ contains an induced $(Kt)$-connected subgraph of order at most $t^{1.06}$."
+   },
+   {
+    "anchor": "stmt-density-list-district",
+    "claim_id": "claim-density-list-district",
+    "statement": "Fix $K$ and $D_K$ as in Lemma <a href=\"#lem:district\" data-reference-type=\"ref\" data-reference=\"lem:district\">23</a>. For all sufficiently large integers $t$, if $$h(P)<t,\\qquad \\ell(P)>2D_Kt+2,$$ then $P$ contains an induced $(Kt)$-connected subgraph of order at most $t^{1.06}$."
+   },
+   {
+    "anchor": "stmt-lem-packing",
+    "claim_id": "claim-lem-packing",
+    "statement": "Let $A,B$ be disjoint vertex sets in a graph $P$, and let $j\\ge1$ be an integer. Suppose that for every $X\\subseteq V(P)$ with $|X|<j$, the graph $P-X$ contains a path from $A\\setminus X$ to $B\\setminus X$. Then there are $j$ pairwise vertex-disjoint paths from distinct vertices of $A$ to distinct vertices of $B$. Each path can be chosen to meet $A\\cup B$ only at its two ends."
+   },
+   {
+    "anchor": "stmt-lem-double-packing",
+    "claim_id": "claim-lem-double-packing",
+    "statement": "Let $A,B$ be disjoint vertex sets in a graph $P$, where $r=|A|\\ge1$. If $P$ is $2r$-connected and $|B|\\ge2r$, there are two paths starting at each vertex of $A$, ending at $2r$ distinct vertices of $B$, with no intersections other than the two paths sharing their prescribed start. Their internal vertices lie outside $A\\cup B$."
+   },
+   {
+    "anchor": "stmt-lem-rooting",
+    "claim_id": "claim-lem-rooting",
+    "statement": "Let $k\\ge1$. If $P$ is $2k$-connected and $h(P)\\ge4k$, then any given $k$ distinct vertices are roots of a $K_k$ model: its bags can be indexed by the given vertices so that each bag contains its indexing root."
+   },
+   {
+    "anchor": "stmt-lem-small-woven",
+    "claim_id": "claim-lem-small-woven",
+    "statement": "For all sufficiently large integers $t$, every $(K_0t)$-connected graph $J$ of order at most $t^{1.06}$ is $(s,3t)$-woven whenever $$1\\le s\\le 2\\left\\lceil\\frac{t}{(\\log t)^2}\\right\\rceil.$$ The cutoff is absolute and uniform in $s$ and $J$. No minor-exclusion hypothesis on $J$ is required."
+   },
+   {
+    "anchor": "stmt-lem-separability",
+    "claim_id": "claim-lem-separability",
+    "statement": "There is an absolute positive integer $S$ such that, for all sufficiently large integers $t$, every graph $G$ satisfying $$h(G)<t,\\qquad r=\\ell(G)\\ge 2St$$ has two vertex-disjoint induced subgraphs $G_1,G_2$ with $$\\ell(G_1),\\ell(G_2)\\ge r-St.$$"
+   },
+   {
+    "anchor": "stmt-thm-recursive-woven",
+    "claim_id": "claim-thm-recursive-woven",
+    "statement": "There are absolute positive integers $K,Q$ such that, for every integer $a\\ge1$, every $Ka$-connected graph $P$ with $\\ell(P)\\ge Qa$ is $(a,3a)$-woven."
+   },
+   {
+    "anchor": "stmt-list-elementary",
+    "claim_id": "claim-list-elementary",
+    "statement": "The following hold for every finite graph $P$.*\n\n1.  *If $H$ is a subgraph of $P$, then $\\ell(H)\\le \\ell(P)$.*\n\n2.  *For every $Z\\subseteq V(P)$, $$\\ell(P-Z)\\ge \\ell(P)-|Z|.$$*\n\n3.  *If $P$ is $q$-degenerate, where $q$ is a nonnegative integer, then $\\ell(P)\\le q+1$."
+   },
+   {
+    "anchor": "stmt-list-constrained-coloring",
+    "claim_id": "claim-list-constrained-coloring",
+    "statement": "Let $k\\ge1$ and $m\\ge0$ be integers. Suppose every induced $k$-connected subgraph of $P$ has list chromatic number at most $m$. Give each vertex $v$ a list $\\mathcal L(v)$ of size at least $m+6k$. Suppose also that:*\n\n1.  *a set $A\\subseteq V(P)$ has a proper list precoloring $\\varphi$;*\n\n2.  *for each $v\\notin A$, a finite set $B_v$ of forbidden colors is specified, with $|B_v|<k$;*\n\n3.  *the constraints satisfy $$\\label{list:eq-budget}\n    k|A|+\\sum_{v\\notin A}|B_v|\\le2k^2.$$*\n\n*Then $P$ has a proper $\\mathcal L$-coloring extending $\\varphi$ and avoiding $B_v$ at every $v\\notin A$."
+   },
+   {
+    "anchor": "stmt-lem-additive-deletion",
+    "claim_id": "claim-lem-additive-deletion",
+    "statement": "Let $L\\ge1$ be the integer constant in Proposition <a href=\"#prop:small-list\" data-reference-type=\"ref\" data-reference=\"prop:small-list\">9</a>. For each fixed integer $d\\ge0$, put $$c_d=4L+d+5.$$ For every sufficiently large integer $t$, the following holds. Suppose $h(P)<t$ and $X,Y\\subseteq V(P)$ are disjoint sets such that*\n\n1.  *$|X|\\le t^{11/10}$;*\n\n2.  *$P[Y]$ is $dt$-degenerate;*\n\n3.  *every vertex outside $X\\cup Y$ has at most $dt$ neighbors in $Y$.*\n\n*Then $$\\ell(P-X-Y)\\ge\\ell(P)-c_dt.$$ The cutoff is independent of $P$, its order, and all list assignments and their palettes."
+   },
+   {
+    "anchor": "stmt-lem-rerouting",
+    "claim_id": "claim-lem-rerouting",
+    "statement": "Let $J$ be an $(a,b)$-woven subgraph of a graph $P$, and prescribe $a$ distinct roots in $J$. Let $Q_1,\\ldots,Q_q$ be vertex-disjoint paths in $P$, where $q\\le b$. Orient each path arbitrarily. For every path meeting $J$, let $x_i,y_i$ be its first and last vertices in $J$. There are vertex-disjoint paths $Q'_1,\\ldots,Q'_q$ with the same respective endpoints, and a model rooted at the prescribed roots in $J$, such that the following properties hold:*\n\n1.  *every vertex added to a path belongs to $J$; more precisely, $V(Q'_i)\\setminus V(J)\\subseteq V(Q_i)\\setminus V(J)$;*\n\n2.  *a path originally disjoint from $J$ is unchanged;*\n\n3.  *the intersection of $Q'_i$ with the model is contained in the prescribed roots among $x_i,y_i$.*\n\n*The construction can be applied successively in disjoint districts. If some prescribed roots are endpoints of the original path system, the bags for these roots meet the resulting paths only at their own roots, including after all subsequent replacements in other districts."
+   },
+   {
+    "anchor": "stmt-lem-path-minimization",
+    "claim_id": "claim-lem-path-minimization",
+    "statement": "Let $A,B$ be disjoint vertex sets in a graph $P$. Suppose that a system of one of the two types above is feasible, and choose one of minimum total length. Let $q$ be its number of paths and $U$ its vertex union. Then:*\n\n1.  *the paths have no internal vertices in $A\\cup B$;*\n\n2.  *each vertex of $V(P)\\setminus U$ has at most three neighbors on any one path;*\n\n3.  *$P[U\\setminus A]$ is $2q$-degenerate for type <span class=\"upright\">(1)</span>, and $P[U]$ is $2q$-degenerate for type <span class=\"upright\">(2)</span>."
+   },
+   {
+    "anchor": "stmt-lem-combine",
+    "claim_id": "claim-lem-combine",
+    "statement": "Let $Z,D,V(H)$ be pairwise disjoint vertex sets in a graph $P$, and let $m\\ge1$. Suppose there are:*\n\n1.  *two paths from each vertex of $Z$ to distinct vertices of $D$, with all target ends distinct, with intersections only at their prescribed repeated starts, and avoiding $V(H)$;*\n\n2.  *$2m$ vertex-disjoint paths from distinct vertices of $H$ to distinct vertices of $D$, avoiding $Z$ and meeting $H$ only at their starting vertices.*\n\n*Then, using only vertices of these two families, one can obtain $|Z|+m$ vertex-disjoint paths to distinct vertices of $D$, one starting at each vertex of $Z$ and one starting at each of $m$ distinct vertices of $H$. These paths meet $D$ and $H$ only at their appropriate ends. Moreover, after any partition of the $2m$ second-family starts into $m$ pairs, the $m$ selected starts in $H$ can be required to include exactly one vertex from each pair. No unselected second-family start is visited by any of the resulting paths."
+   },
+   {
+    "anchor": "stmt-separate-footprint",
+    "claim_id": "claim-separate-footprint",
+    "statement": "Let $h(G)<t$. Start with $F_0=W_0$, where $|W_0|=t$, and perform at most $R_t$ rounds with the following rules. At the start of a round there is a footprint $F$ and a set $W\\subseteq F$ of $t$ tips.*\n\n1.  *Choose disjoint sets $J,D\\subseteq V(G)\\setminus F$, each of size at most $t^{1.06}$, and a set $R\\subseteq J$ of at most $t$ vertices. Put $Z=W\\cup R$.*\n\n2.  *In the induced graph $G-(F\\setminus W)$, choose a minimum-total-length double system $\\mathcal Q_1$ from $Z$ to $D$: two paths from each vertex of $Z$, otherwise vertex-disjoint, with distinct target ends. Set $$F^- =F\\cup J\\cup D\\cup V(\\mathcal Q_1).$$*\n\n3.  *Choose a source set $A\\subseteq V(G)\\setminus F^-$. In the induced graph $G-(F\\cup R)$, choose a minimum-total-length system $\\mathcal Q_2$ of $2t$ vertex-disjoint paths from arbitrary distinct vertices of $A$ to arbitrary distinct vertices of $D$. Set $$F^+=F^-\\cup V(\\mathcal Q_2),$$ and choose $t$ tips $W^+\\subseteq F^+$ for the next round.*\n\n*Only histories in which the indicated systems exist are considered. The final round may end after step <span class=\"upright\">(ii)</span>.*\n\n*There is an absolute integer $$\\label{separate:cf}\n c_f=c_{6B_*+20}=4L+6B_*+25$$ such that, for all sufficiently large $t$, every final footprint $F_{\\rm last}$ of such a history satisfies $$\\ell(G-F_{\\rm last})\\ge\\ell(G)-c_ft.$$ The same assertion holds for the initial footprint."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "woven graph",
+    "evidence": [
+     {
+      "anchor": "stmt-def-woven",
+      "quote": "For integers $a\\ge1$ and $b\\ge0$, a graph $J$ is *$(a,b)$-woven* if the following holds. Prescribe $a$ distinct roots $R=\\{r_1,\\ldots,r_a\\}$ and at most $b$ pairs $(x_1,y_1),\\ldots,(x_p,y_p)$ of vertices of $J$. The endpoint sets $\\{x_i,y_i\\}$ must be disjoint for different $i$, but $x_i=y_i$ is allowed, and endpoints may belong to $R$. Then there are a $K_a$ model with bags $M_1,\\ldots,M_a$ satisfying $r_j\\in M_j$, and pairwise vertex-disjoint $x_i$–$y_i$ paths $Q_i$, such that $$V(Q_i)\\cap\\bigcup_{j=1}^a M_j\n \\ \\subseteq\\ R\\cap\\{x_i,y_i\\}\\qquad(1\\le i\\le p).$$ For a coincident pair the path is the single prescribed vertex. Because the model bags are disjoint and contain all the roots, any allowed intersection at $r_j$ belongs to the designated bag $M_j$.",
+      "quote_sha256": "6ab4648dd09c05bcce2e0bd7696910356830cfa1251dc68edae154699bf6f520"
+     }
+    ],
+    "requires_concepts": [
+     "clique model",
+     "vertex connectivity",
+     "vertex-disjoint paths"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-thm-main",
+   "exact_statement": "There is an absolute integer $C\\ge1$ such that every finite nonempty simple graph $G$ satisfies $$\\ell(G)\\le C h(G).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-cor-ordinary",
+   "exact_statement": "Every finite nonempty simple graph $G$ satisfies $\\chi(G)\\le C h(G)$, with the constant $C$ in Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cor-ordinary"
+  },
+  {
+   "claim_id": "claim-thm-fractional",
+   "exact_statement": "Every graph $P$ satisfies $f(P)\\le4h(P)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-fractional"
+  },
+  {
+   "claim_id": "claim-thm-ordinary-extraction",
+   "exact_statement": "If $k\\ge1$ is an integer and $\\chi(P)\\ge7k$, then $P$ has a $k$-connected subgraph $J$ with $\\chi(J)\\ge\\chi(P)-6k$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-ordinary-extraction"
+  },
+  {
+   "claim_id": "claim-thm-grouping",
+   "exact_statement": "There is an absolute integer $\\gamma\\ge1$ such that the following holds. In a $\\gamma m$-connected graph, every partition of $m\\ge1$ distinct terminals into nonempty groups can be realized by pairwise disjoint connected vertex sets, one containing each group.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-grouping"
+  },
+  {
+   "claim_id": "claim-lem-bounded",
+   "exact_statement": "Suppose $|V(P)|\\le n$, where $n\\ge1$, and $f(P)\\le r$, where $r\\ge1$. There is a distribution on stable sets $I$ such that $$|I|\\le\\lceil n/r\\rceil,\n \\qquad \\Pr(v\\in I)=\\frac1{2r}\\quad(v\\in V(P)).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-bounded"
+  },
+  {
+   "claim_id": "claim-lem-concentration",
+   "exact_statement": "Let $Z$ be a function of $s\\ge1$ independent finite random variables. If changing one variable changes $Z$ by at most $b>0$, then $$\\Pr\\bigl(|Z-\\mathbb EZ|\\ge u\\bigr)\n \\le2\\exp\\bigl(-u^2/(2sb^2)\\bigr)\\qquad(u>0).$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-concentration"
+  },
+  {
+   "claim_id": "claim-lem-cut-test",
+   "exact_statement": "Let $P$ be a $k$-connected graph on at most $n$ vertices, where $k$ is a sufficiently large integer. Set $$s=\\left\\lceil10(n/k)\\log(2n)\\right\\rceil.$$ There is a family of at most $(n+1)^{s+1}$ matchings, each of size $\\lfloor k/8\\rfloor$, with the following property. If $U\\subseteq V(P)$, every vertex of $P$ has at least $k/2$ neighbors outside $U$, and fewer than $k/32$ endpoints of each matching belong to $U$, then $P-U$ is $\\lfloor k/32\\rfloor$-connected.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-cut-test"
+  },
+  {
+   "claim_id": "claim-prop-small-list",
+   "exact_statement": "There are an absolute positive integer $L$ and an absolute integer $t_0$ such that, for every integer $t\\ge t_0$ and every graph $G$, $$h(G)<t,\\qquad |V(G)|\\le t^{11/10}\n \\quad\\Longrightarrow\\quad \\ell(G)\\le Lt.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-small-list"
+  },
+  {
+   "claim_id": "claim-small-eligible-thinning",
+   "exact_statement": "There is an absolute positive integer $B$ such that the following holds for all sufficiently large integers $t$. Let $n,r$ be real parameters with $$1\\le n\\le t^{11/10},\\qquad \\frac{t}{\\log t}\\le r\\le4t,$$ and let $P$ be a graph with $|V(P)|\\le n$, $h(P)<t$, and $f(P)\\le r$. Set $$N=\\left\\lceil Br\\log\\bigl(2\\max\\{1,t/r\\}\\bigr)\\right\\rceil.$$ Suppose $E_1,\\ldots,E_N\\subseteq V(P)$ contain every vertex at least $N/2$ times. There are stable sets $I_1,\\ldots,I_N$ of $P$, each of size at most $\\lceil n/r\\rceil$, such that $$f\\left(P-\\bigcup_{j=1}^N(I_j\\cap E_j)\\right)\\le r/2.$$ The cutoff for $t$ is uniform over $P,n,r$ and the eligibility sets.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-small-eligible-thinning"
+  },
+  {
+   "claim_id": "claim-small-concentration",
+   "exact_statement": "Take at most $q$ independent copies of the experiment <a href=\"#small:remainder\" data-reference-type=\"eqref\" data-reference=\"small:remainder\">[small:remainder]</a>. Let $Z$ be any one of the following quantities, where the vertex set $A\\subseteq V(P)$ is fixed before sampling: $$|A\\cap W_i|,\\qquad\n \\left|A\\cap\\bigcup_iW_i\\right|,\\qquad\n f(P[A\\cap W_i]).$$ For each fixed $\\delta>0$, and all sufficiently large $t$, $$\\label{small:uniform-tail}\n \\Pr\\bigl(|Z-\\mathbb EZ|\\ge\\delta r\\bigr)\n \\le2\\exp(-t^{7/10}),$$ uniformly over all the data in <a href=\"#small:range\" data-reference-type=\"eqref\" data-reference=\"small:range\">[small:range]</a> and all eligibility sets satisfying the stated condition.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-small-concentration"
+  },
+  {
+   "claim_id": "claim-small-fixed-region",
+   "exact_statement": "Suppose that every outcome of the experiment <a href=\"#small:remainder\" data-reference-type=\"eqref\" data-reference=\"small:remainder\">[small:remainder]</a> having positive probability satisfies $f(P[W])>r/2$. Then there is a fixed induced $k$-connected subgraph $H\\subseteq P$ such that $$\\label{small:region-expectation}\n \\mathbb E f(H[W\\cap V(H)])>r/4.$$ The subgraph $H$ is chosen before any fresh copies of the experiment are sampled.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-small-fixed-region"
+  },
+  {
+   "claim_id": "claim-small-private",
+   "exact_statement": "With failure probability at most $4q(q-1)p+o(1)$, every $H[T_i]$ has fractional chromatic number greater than $r/8$, and hence contains a $K_{2x}$ model.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-small-private"
+  },
+  {
+   "claim_id": "claim-small-complement",
+   "exact_statement": "With probability $1-o(1)$, every vertex of $H$ has at least $k/2$ neighbors in $H-U$, and $H-U$ is $\\lfloor k/32\\rfloor$-connected.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-small-complement"
+  },
+  {
+   "claim_id": "claim-lem-list-extraction",
+   "exact_statement": "For every integer $k\\ge1$, if $\\ell(P)>6k$, then some induced $k$-connected subgraph $H$ of $P$ satisfies $$\\ell(H)\\ge\\ell(P)-6k.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-list-extraction"
+  },
+  {
+   "claim_id": "claim-list-high-neighbor-count",
+   "exact_statement": "Let $t\\ge2$ be an integer, let $h(P)<t$, and let $X\\subseteq V(P)$. Then $$\\bigl|\\{v\\in V(P)\\setminus X:|N_P(v)\\cap X|\\ge t\\}\\bigr|\n\\le\\binom{|X|}{2}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-list-high-neighbor-count"
+  },
+  {
+   "claim_id": "claim-lem-coarse-density",
+   "exact_statement": "There is an absolute constant $C_*>0$, for example $C_*=10^4$, such that, for every integer $t\\ge2$ and every nonempty graph $P$ with $h(P)<t$, $$d(P)\\le C_*t\\log(2t).$$ Consequently, every graph $P$ with $h(P)<t$ satisfies $$\\ell(P)\\le 2C_*t\\log(2t)+1.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-coarse-density"
+  },
+  {
+   "claim_id": "claim-lem-incidence",
+   "exact_statement": "There is an absolute positive integer $B_*$ such that, for all sufficiently large integers $t$, every graph $P$ with $h(P)<t$ and disjoint vertex sets $A,T$ satisfies $$\\label{density:incidence-bound}\n \\sum_{\\substack{v\\in T\\\\ |N_P(v)\\cap A|\\ge B_*t}}\n       |N_P(v)\\cap A|\n \\le t^{1+2\\epsilon}|A|.$$ In particular, $$\\bigl|\\{v\\in T:|N_P(v)\\cap A|\\ge B_*t\\}\\bigr|\n \\le t^{2\\epsilon}|A|.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-incidence"
+  },
+  {
+   "claim_id": "claim-density-connectivity",
+   "exact_statement": "For every positive integer $k$, a graph of density greater than $2k$ contains an induced $k$-connected subgraph.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-density-connectivity"
+  },
+  {
+   "claim_id": "claim-lem-district",
+   "exact_statement": "For every fixed positive integer $K$, there is an integer $$D_K>\\max(400B_*,12800K)$$ such that, for all sufficiently large integers $t$, every nonempty graph $P$ with $$h(P)<t,\\qquad d(P)\\ge D_Kt$$ contains an induced $(Kt)$-connected subgraph of order at most $t^{1.06}$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-district"
+  },
+  {
+   "claim_id": "claim-density-list-district",
+   "exact_statement": "Fix $K$ and $D_K$ as in Lemma <a href=\"#lem:district\" data-reference-type=\"ref\" data-reference=\"lem:district\">23</a>. For all sufficiently large integers $t$, if $$h(P)<t,\\qquad \\ell(P)>2D_Kt+2,$$ then $P$ contains an induced $(Kt)$-connected subgraph of order at most $t^{1.06}$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-density-list-district"
+  },
+  {
+   "claim_id": "claim-lem-packing",
+   "exact_statement": "Let $A,B$ be disjoint vertex sets in a graph $P$, and let $j\\ge1$ be an integer. Suppose that for every $X\\subseteq V(P)$ with $|X|<j$, the graph $P-X$ contains a path from $A\\setminus X$ to $B\\setminus X$. Then there are $j$ pairwise vertex-disjoint paths from distinct vertices of $A$ to distinct vertices of $B$. Each path can be chosen to meet $A\\cup B$ only at its two ends.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-packing"
+  },
+  {
+   "claim_id": "claim-lem-double-packing",
+   "exact_statement": "Let $A,B$ be disjoint vertex sets in a graph $P$, where $r=|A|\\ge1$. If $P$ is $2r$-connected and $|B|\\ge2r$, there are two paths starting at each vertex of $A$, ending at $2r$ distinct vertices of $B$, with no intersections other than the two paths sharing their prescribed start. Their internal vertices lie outside $A\\cup B$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-double-packing"
+  },
+  {
+   "claim_id": "claim-lem-rooting",
+   "exact_statement": "Let $k\\ge1$. If $P$ is $2k$-connected and $h(P)\\ge4k$, then any given $k$ distinct vertices are roots of a $K_k$ model: its bags can be indexed by the given vertices so that each bag contains its indexing root.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-rooting"
+  },
+  {
+   "claim_id": "claim-lem-small-woven",
+   "exact_statement": "For all sufficiently large integers $t$, every $(K_0t)$-connected graph $J$ of order at most $t^{1.06}$ is $(s,3t)$-woven whenever $$1\\le s\\le 2\\left\\lceil\\frac{t}{(\\log t)^2}\\right\\rceil.$$ The cutoff is absolute and uniform in $s$ and $J$. No minor-exclusion hypothesis on $J$ is required.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-small-woven"
+  },
+  {
+   "claim_id": "claim-lem-separability",
+   "exact_statement": "There is an absolute positive integer $S$ such that, for all sufficiently large integers $t$, every graph $G$ satisfying $$h(G)<t,\\qquad r=\\ell(G)\\ge 2St$$ has two vertex-disjoint induced subgraphs $G_1,G_2$ with $$\\ell(G_1),\\ell(G_2)\\ge r-St.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-separability"
+  },
+  {
+   "claim_id": "claim-thm-recursive-woven",
+   "exact_statement": "There are absolute positive integers $K,Q$ such that, for every integer $a\\ge1$, every $Ka$-connected graph $P$ with $\\ell(P)\\ge Qa$ is $(a,3a)$-woven.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-recursive-woven"
+  },
+  {
+   "claim_id": "claim-list-elementary",
+   "exact_statement": "The following hold for every finite graph $P$.*\n\n1.  *If $H$ is a subgraph of $P$, then $\\ell(H)\\le \\ell(P)$.*\n\n2.  *For every $Z\\subseteq V(P)$, $$\\ell(P-Z)\\ge \\ell(P)-|Z|.$$*\n\n3.  *If $P$ is $q$-degenerate, where $q$ is a nonnegative integer, then $\\ell(P)\\le q+1$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-list-elementary"
+  },
+  {
+   "claim_id": "claim-list-constrained-coloring",
+   "exact_statement": "Let $k\\ge1$ and $m\\ge0$ be integers. Suppose every induced $k$-connected subgraph of $P$ has list chromatic number at most $m$. Give each vertex $v$ a list $\\mathcal L(v)$ of size at least $m+6k$. Suppose also that:*\n\n1.  *a set $A\\subseteq V(P)$ has a proper list precoloring $\\varphi$;*\n\n2.  *for each $v\\notin A$, a finite set $B_v$ of forbidden colors is specified, with $|B_v|<k$;*\n\n3.  *the constraints satisfy $$\\label{list:eq-budget}\n    k|A|+\\sum_{v\\notin A}|B_v|\\le2k^2.$$*\n\n*Then $P$ has a proper $\\mathcal L$-coloring extending $\\varphi$ and avoiding $B_v$ at every $v\\notin A$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-list-constrained-coloring"
+  },
+  {
+   "claim_id": "claim-lem-additive-deletion",
+   "exact_statement": "Let $L\\ge1$ be the integer constant in Proposition <a href=\"#prop:small-list\" data-reference-type=\"ref\" data-reference=\"prop:small-list\">9</a>. For each fixed integer $d\\ge0$, put $$c_d=4L+d+5.$$ For every sufficiently large integer $t$, the following holds. Suppose $h(P)<t$ and $X,Y\\subseteq V(P)$ are disjoint sets such that*\n\n1.  *$|X|\\le t^{11/10}$;*\n\n2.  *$P[Y]$ is $dt$-degenerate;*\n\n3.  *every vertex outside $X\\cup Y$ has at most $dt$ neighbors in $Y$.*\n\n*Then $$\\ell(P-X-Y)\\ge\\ell(P)-c_dt.$$ The cutoff is independent of $P$, its order, and all list assignments and their palettes.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-additive-deletion"
+  },
+  {
+   "claim_id": "claim-lem-rerouting",
+   "exact_statement": "Let $J$ be an $(a,b)$-woven subgraph of a graph $P$, and prescribe $a$ distinct roots in $J$. Let $Q_1,\\ldots,Q_q$ be vertex-disjoint paths in $P$, where $q\\le b$. Orient each path arbitrarily. For every path meeting $J$, let $x_i,y_i$ be its first and last vertices in $J$. There are vertex-disjoint paths $Q'_1,\\ldots,Q'_q$ with the same respective endpoints, and a model rooted at the prescribed roots in $J$, such that the following properties hold:*\n\n1.  *every vertex added to a path belongs to $J$; more precisely, $V(Q'_i)\\setminus V(J)\\subseteq V(Q_i)\\setminus V(J)$;*\n\n2.  *a path originally disjoint from $J$ is unchanged;*\n\n3.  *the intersection of $Q'_i$ with the model is contained in the prescribed roots among $x_i,y_i$.*\n\n*The construction can be applied successively in disjoint districts. If some prescribed roots are endpoints of the original path system, the bags for these roots meet the resulting paths only at their own roots, including after all subsequent replacements in other districts.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-rerouting"
+  },
+  {
+   "claim_id": "claim-lem-path-minimization",
+   "exact_statement": "Let $A,B$ be disjoint vertex sets in a graph $P$. Suppose that a system of one of the two types above is feasible, and choose one of minimum total length. Let $q$ be its number of paths and $U$ its vertex union. Then:*\n\n1.  *the paths have no internal vertices in $A\\cup B$;*\n\n2.  *each vertex of $V(P)\\setminus U$ has at most three neighbors on any one path;*\n\n3.  *$P[U\\setminus A]$ is $2q$-degenerate for type <span class=\"upright\">(1)</span>, and $P[U]$ is $2q$-degenerate for type <span class=\"upright\">(2)</span>.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-path-minimization"
+  },
+  {
+   "claim_id": "claim-lem-combine",
+   "exact_statement": "Let $Z,D,V(H)$ be pairwise disjoint vertex sets in a graph $P$, and let $m\\ge1$. Suppose there are:*\n\n1.  *two paths from each vertex of $Z$ to distinct vertices of $D$, with all target ends distinct, with intersections only at their prescribed repeated starts, and avoiding $V(H)$;*\n\n2.  *$2m$ vertex-disjoint paths from distinct vertices of $H$ to distinct vertices of $D$, avoiding $Z$ and meeting $H$ only at their starting vertices.*\n\n*Then, using only vertices of these two families, one can obtain $|Z|+m$ vertex-disjoint paths to distinct vertices of $D$, one starting at each vertex of $Z$ and one starting at each of $m$ distinct vertices of $H$. These paths meet $D$ and $H$ only at their appropriate ends. Moreover, after any partition of the $2m$ second-family starts into $m$ pairs, the $m$ selected starts in $H$ can be required to include exactly one vertex from each pair. No unselected second-family start is visited by any of the resulting paths.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-combine"
+  },
+  {
+   "claim_id": "claim-separate-footprint",
+   "exact_statement": "Let $h(G)<t$. Start with $F_0=W_0$, where $|W_0|=t$, and perform at most $R_t$ rounds with the following rules. At the start of a round there is a footprint $F$ and a set $W\\subseteq F$ of $t$ tips.*\n\n1.  *Choose disjoint sets $J,D\\subseteq V(G)\\setminus F$, each of size at most $t^{1.06}$, and a set $R\\subseteq J$ of at most $t$ vertices. Put $Z=W\\cup R$.*\n\n2.  *In the induced graph $G-(F\\setminus W)$, choose a minimum-total-length double system $\\mathcal Q_1$ from $Z$ to $D$: two paths from each vertex of $Z$, otherwise vertex-disjoint, with distinct target ends. Set $$F^- =F\\cup J\\cup D\\cup V(\\mathcal Q_1).$$*\n\n3.  *Choose a source set $A\\subseteq V(G)\\setminus F^-$. In the induced graph $G-(F\\cup R)$, choose a minimum-total-length system $\\mathcal Q_2$ of $2t$ vertex-disjoint paths from arbitrary distinct vertices of $A$ to arbitrary distinct vertices of $D$. Set $$F^+=F^-\\cup V(\\mathcal Q_2),$$ and choose $t$ tips $W^+\\subseteq F^+$ for the next round.*\n\n*Only histories in which the indicated systems exist are considered. The final round may end after step <span class=\"upright\">(ii)</span>.*\n\n*There is an absolute integer $$\\label{separate:cf}\n c_f=c_{6B_*+20}=4L+6B_*+25$$ such that, for all sufficiently large $t$, every final footprint $F_{\\rm last}$ of such a history satisfies $$\\ell(G-F_{\\rm last})\\ge\\ell(G)-c_ft.$$ The same assertion holds for the initial footprint.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-separate-footprint"
+  }
+ ],
+ "paper": "papers/EN-113-000-0004-2-2026-PR-T4-UK-EX-M1-B-CO-M-0317_PM-157.3_A_linear_list_coloring_bound_in_terms_of_the_Hadwiger_number.md",
+ "purpose": "A linear list-coloring bound in terms of the Hadwiger number",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "71ef66040e1d16b35a5193618b13588342edef7e4f86a8544a3f0d8eed28bc75",
+   "pm.domains.v2": "d63368cae955976a128cb386b8e148ecc7e783c48ea6b55d6a339987b156f157",
+   "pm.edges.v2": "3d693c60711ff3d1429380351c4c08f1da14c0816430114d123e50ec7f6d0d90",
+   "pm.extraction.v2": "ca911e69fd45bfc6d063ff85f8f3ed9d46261dcfe4c33c4aad8fd55ddee4ba79",
+   "pm.formal.v2": "c0f089c4052b66c05ee5fde458abfb4e905a9dead5abce887c7b782163715aa5",
+   "pm.limits.v2": "91b841f791672e1a36e807f0cf011107d30dcfc384fc45f8a69e3ee498ba7292",
+   "pm.node.v2": "a7086a9e252f916bf4d0b3f96abb2258d85a2eacac5be29ba8a93b235bbee6fe",
+   "pm.objects.v2": "16df75abf9fe48b10ea76828c6127f4900039cf21198f4a4fb731dd6c52a2167",
+   "pm.provenance.v2": "292b36daf7a69dfa6081f26310e6e045e046869e84271a41080a3869d4c93e76",
+   "pm.quantities.v2": "0f23652139ade0b303176617067a28aeca55958a019c561863b58e68386bbecc",
+   "pm.reading.v2": "cbb2c1e0f63654c794b9e0ccc69f0a8ab92ba02ce6aa2dad7f601cb5f2abddf3",
+   "pm.roadmap.v2": "064c70d380ad19826052157a6d1ff26f6f4c8f1d3c4534f78060fda23d94565d",
+   "pm.search.v1": "2bd8f4c8e8714566c8f23d41326fb1b78883c3a665efd7623f9f383f8362b278",
+   "pm.triptych.v2": "6eb81e524485b65e9650ae6869a086e3794d1976896caef8295f5f1e5305680e"
+  },
+  "canonical_sha256": "1382c50348b6144ea01886a64d44fbe651382b1c68e594277625714f8f57b2fa",
+  "paper_sha256": "bd41d6645dfc42cccee79628f0ff1cab9f227109e0d221a6e1ef5fa80d9c4098",
+  "repaired_body_sha256": "a48b30e44d40a75412301f96d5d0e0a01e4ab2e6a7ac2e1264df377dce26969a"
+ },
+ "status": "ACTIVE",
+ "subject_id": 13,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "e0a89908c8894636271141009b2cf4d350510f67a1a940407abd1d2274732d7a",
+   "receipt_sha256": "b1024345199d2b260f8c5f9b2555f6de10a9e12a6ccdc0f9bfefbe3e9ccf6b84",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "All 3300 labeled simple graphs with nonempty disjoint terminal assignments on orders 2 through 4, each with j=1 and j=2; six boundary or targeted instances. Graphs may recur across assignments.",
+     "coverage": "PARTIAL",
+     "invariant_id": "I-packing",
+     "oracle_basis": "Exhaustive enumeration of every vertex-deletion set determines the minimum separator; exact Python validates every witness for adjacency, simplicity, disjointness and endpoint-only terminal visits."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "M1",
+     "observed_exit": 6,
+     "receipt_sha256": "1c45a00768382fe70e1416f4d6098b1907cfaded07d88f6c5531a140a174be14"
+    },
+    {
+     "id": "M2",
+     "observed_exit": 6,
+     "receipt_sha256": "185035c893bbd2ee36299028094ddee2df921125795349f21cf13409eb3a92c1"
+    },
+    {
+     "id": "M3",
+     "observed_exit": 6,
+     "receipt_sha256": "4ac0475a1eb6f0f3f86a96333cba8377a9ffdcef2c7ebac94e3b084e67a1e6c9"
+    }
+   ],
+   "receipt_sha256": "52d76e9d0affd6d52eff1a103bd35224dd6c86dd9743865de37d60fc860cf7fb",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "A linear list-coloring bound in terms of the Hadwiger number"
+}

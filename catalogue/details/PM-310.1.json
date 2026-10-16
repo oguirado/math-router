@@ -1,0 +1,627 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 591202,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 171691
+ },
+ "coordinate": "EN-104-000-0021-2-2026-PR-T4-UK-EX-M3-C-AL-H-0631",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "computer algebra and formal verification of finite group properties",
+   "strength": "weak",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "For every finite group $G$ and every prime $p$",
+     "quote_sha256": "553c68e564687d5241908ba4616eeb979d5738da7ce94bc55e4f69615daa172e"
+    }
+   ],
+   "query": "infinite or topological groups",
+   "reason": "The main theorem is stated for finite groups only."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-5",
+     "quote": "This proves nonvanishing without requiring $A$ to have the largest possible elementary rank in $G$.",
+     "quote_sha256": "02aa9b10bfd50e084120da6a5c1757962acb410b367e11db7f38764560efc650"
+    }
+   ],
+   "query": "top-degree homology for every group at the prime two",
+   "reason": "At two the proof gives nonvanishing in some degree via propagation, not the largest degree."
+  }
+ ],
+ "family": "PM-310",
+ "id": "PM-310.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-main-theorem",
+    "statement": "if $O_p(G)=1$"
+   },
+   {
+    "anchor": "stmt-thm-reduction-two",
+    "claim_id": "claim-reduction-two",
+    "statement": "Let $G$ be a minimal-order counterexample to <a href=\"#eq:HQC\" data-reference-type=\"eqref\" data-reference=\"eq:HQC\">[eq:HQC]</a> for $p=2$."
+   },
+   {
+    "anchor": "stmt-thm-reduction-odd",
+    "claim_id": "claim-reduction-odd",
+    "statement": "Suppose that, for every odd prime $p$, every odd prime power $q$ with $p\\mid q+1$, and every simple $L=\\mathop{\\mathrm{PSU}}_n(q)$ with $n\\geq5$, each elementary $p$-extension of $L$ inside $\\mathop{\\mathrm{Aut}}(L)$ has the Quillen dimension property."
+   },
+   {
+    "anchor": "stmt-lem-component-core",
+    "claim_id": "claim-component-core",
+    "statement": "Let $G$ be a finite group, let $p$ be a prime, and let $L$ be a nonabelian simple component of $G$."
+   },
+   {
+    "anchor": "stmt-lem-faithfulness-upgrade",
+    "claim_id": "claim-faithfulness-upgrade",
+    "statement": "Let $A$ be a faithful configuration for a nonabelian simple component $L$ of $G$."
+   },
+   {
+    "anchor": "stmt-lem-faithfulness-upgrade",
+    "claim_id": "claim-faithfulness-upgrade",
+    "statement": "every element of order $p$ in $C_L(A)$ belongs to $A$"
+   },
+   {
+    "anchor": "stmt-lem-saturated-residue",
+    "claim_id": "claim-saturated-residue",
+    "statement": "Let $X$ be a subposet of $\\mathcal A_p(G)$"
+   },
+   {
+    "anchor": "pm-h-14",
+    "claim_id": "claim-product-shuffle",
+    "statement": "Suppose $H,K\\le G$ commute and $H\\cap K=1$."
+   },
+   {
+    "anchor": "stmt-lem-propagation",
+    "claim_id": "claim-propagation",
+    "statement": "Let $G$ be a finite group and $p$ a prime."
+   },
+   {
+    "anchor": "stmt-cor-maximal-family",
+    "claim_id": "claim-maximal-family",
+    "statement": "Assume the inductive hypothesis on proper subgroups of $G$ in Lemma <a href=\"#lem:propagation\" data-reference-type=\"ref\" data-reference=\"lem:propagation\">9</a>, and let $L$ be a nonabelian simple component with $p\\mid|L|$."
+   },
+   {
+    "anchor": "stmt-thm-frame-bound",
+    "claim_id": "claim-frame-bound",
+    "statement": "Let $W$ have dimension $h\\geq2$ and one of the four structures above, and suppose that $W$ admits an allowed frame."
+   },
+   {
+    "anchor": "stmt-lem-merger-coefficients",
+    "claim_id": "claim-merger-coefficients",
+    "statement": "For a full flag in $\\mathcal D(W)$ ending at a frame $\\mathcal D$, complete its sequence of binary mergers by the final, implicit merger to the one-block partition."
+   },
+   {
+    "anchor": "stmt-lem-frame-lie-identification",
+    "claim_id": "claim-frame-lie-identification",
+    "statement": "For every admissible $W$ of dimension at least two"
+   },
+   {
+    "anchor": "stmt-lem-frame-marked-factor",
+    "claim_id": "claim-frame-marked-factor",
+    "statement": "The nonnegative series above"
+   },
+   {
+    "anchor": "stmt-rem-frame-cherry",
+    "claim_id": "claim-frame-cherry-remark",
+    "statement": "Fix all other leaves and the surrounding brackets."
+   },
+   {
+    "anchor": "stmt-lem-decorations",
+    "claim_id": "claim-ordinary-decorations",
+    "statement": "Let $M$ be a finite group, let $p$ be a prime, and let $h\\geq2$ and $t\\geq0$."
+   },
+   {
+    "anchor": "stmt-lem-quaternion-decoration",
+    "claim_id": "claim-quaternion-decoration",
+    "statement": "Let $M$ be a finite group, $h\\geq2$, $r=h-1$, and $\\varepsilon\\in\\{0,1\\}$."
+   },
+   {
+    "anchor": "stmt-lem-opposite-chamber",
+    "claim_id": "claim-opposite-chamber",
+    "statement": "Let $V$ be an $m$-dimensional vector space over $\\mathbb F_p$, with $m\\geq1$, and let $\\mathcal B(V)$ be its poset of proper nonzero subspaces."
+   },
+   {
+    "anchor": "stmt-lem-restriction",
+    "claim_id": "claim-restriction",
+    "statement": "Let $M$ be a finite group, $H\\leq M$, and $p$ a prime."
+   },
+   {
+    "anchor": "stmt-lem-projective-rank",
+    "claim_id": "claim-projective-rank",
+    "statement": "Let $D$ be an elementary abelian $p$-subgroup of $\\mathop{\\mathrm{PGL}}(V)$, where $\\dim V=n$ and the characteristic of the field is different from $p$."
+   },
+   {
+    "anchor": "stmt-lem-linear-sign-centralizer",
+    "claim_id": "claim-linear-sign-centralizer",
+    "statement": "Suppose $q$ is odd and $n\\ge5$."
+   },
+   {
+    "anchor": "stmt-prop-linear-two",
+    "claim_id": "claim-linear-unitary-two",
+    "statement": "Let $G$ have least order among finite groups with $O_2(G)=1$ and $\\widetilde H_*(\\mathcal A_2(G);\\mathbb Q)=0$."
+   },
+   {
+    "anchor": "stmt-prop-unitary-odd",
+    "claim_id": "claim-unitary-odd",
+    "statement": "Let $p$ be an odd prime, let $q$ be odd with $p\\mid q+1$, and let $L=\\mathop{\\mathrm{PSU}}_n(q)$ with $n\\ge5$."
+   },
+   {
+    "anchor": "stmt-prop-symplectic",
+    "claim_id": "claim-symplectic-exclusion",
+    "statement": "Throughout this section, $V$ is a $2n$-dimensional vector space over $\\mathbb F_q$ with nondegenerate alternating form $\\omega$, and $L=\\mathop{\\mathrm{PSp}}(V)$."
+   },
+   {
+    "anchor": "stmt-lem-symp-centralizer",
+    "claim_id": "claim-symp-centralizer",
+    "statement": "For $n\\geq3$ and a pair $(\\mathcal D,T)$ as above"
+   },
+   {
+    "anchor": "stmt-lem-symp-descent",
+    "claim_id": "claim-symp-descent",
+    "statement": "Let $T=\\langle\\overline I,\\overline J\\rangle$ satisfy <a href=\"#eq:symp-quaternion\" data-reference-type=\"eqref\" data-reference=\"eq:symp-quaternion\">[eq:symp-quaternion]</a>, and let the projective semilinear involution $b$ centralize $S(\\mathcal D)T$ and induce $\\sigma\\in\\mathop{\\mathrm{Gal}}(\\mathbb F_q/\\mathbb F_s)$, where $q=s^2$."
+   },
+   {
+    "anchor": "stmt-lem-symp-completions",
+    "claim_id": "claim-symp-completions",
+    "statement": "Let $u$ be as in <a href=\"#eq:symp-field-parameter\" data-reference-type=\"eqref\" data-reference=\"eq:symp-field-parameter\">[eq:symp-field-parameter]</a>, and let $\\chi_u$ denote the quadratic character of $\\mathbb F_u^\\times$."
+   },
+   {
+    "anchor": "stmt-prop-orthogonal",
+    "claim_id": "claim-orthogonal-exclusion",
+    "statement": "Let $G$ be a minimal-order counterexample to rational augmented reduced homology nonvanishing at the prime two."
+   },
+   {
+    "anchor": "stmt-lem-orthogonal-centralizer",
+    "claim_id": "claim-orthogonal-centralizer",
+    "statement": "Let $T=T(\\mathcal D)$ distinguish all $N$ positions and satisfy $\\mathop{\\mathrm{rk}}T>N/2$."
+   },
+   {
+    "anchor": "stmt-lem-orthogonal-eight-naturality",
+    "claim_id": "claim-orthogonal-eight-naturality",
+    "statement": "Let $V$ be a nondegenerate symmetric space of dimension eight over $\\mathbb F_q$, with defining characteristic at least five, and put $L=\\mathrm P\\Omega(V)$."
+   },
+   {
+    "anchor": "stmt-lem-orthogonal-descent",
+    "claim_id": "claim-orthogonal-descent",
+    "statement": "Suppose an involution $b$ of the natural projective semilinear group has nontrivial field action and preserves every line of a nondegenerate orthogonal frame of $V$."
+   },
+   {
+    "anchor": "stmt-lem-orthogonal-five-colors",
+    "claim_id": "claim-orthogonal-five-colors",
+    "statement": "Let $V$ be a square-determinant symmetric space over $\\mathbb F_5$, of odd dimension $N\\ge5$ or even dimension $N\\ge8$."
+   },
+   {
+    "anchor": "stmt-lem-psl45-intermediate-core",
+    "claim_id": "claim-psl45-intermediate-core",
+    "statement": "Let $J\\trianglelefteq H\\leq G$ be finite groups, and suppose that $H/J$ is a $p$-group."
+   },
+   {
+    "anchor": "stmt-lem-psl45-homology",
+    "claim_id": "claim-psl45-homology",
+    "statement": "For $L=\\mathop{\\mathrm{PSL}}_4(5)$,"
+   },
+   {
+    "anchor": "stmt-thm-psl45-equivalent-poset",
+    "claim_id": "claim-psl45-equivalent-poset",
+    "statement": "Let $G$ be a finite group, let $p$ be a prime, and let $L$ be a centerless component of $G$ with $p\\mid |L|$."
+   },
+   {
+    "anchor": "stmt-prop-psl45",
+    "claim_id": "claim-psl45-exclusion",
+    "statement": "A minimal-order counterexample to the rational homological implication at $p=2$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "homological Quillen conjecture",
+    "evidence": [
+     {
+      "anchor": "pm-h-8",
+      "quote": "We use the augmented chain complex",
+      "quote_sha256": "78bce3647bd6482987f40e50af927cffe778dd7db1a3296e6e48fa23f95c340d"
+     }
+    ],
+    "requires_concepts": [
+     "order complex",
+     "augmented reduced homology",
+     "p-core",
+     "components of finite groups"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "frame cycle dimension bound",
+    "evidence": [
+     {
+      "anchor": "pm-h-20",
+      "quote": "We use the characteristic-zero super PBW theorem",
+      "quote_sha256": "2f86361b3607e952d43197e634c81815a0a1032b6c0b36cbd390636cfca70c79"
+     }
+    ],
+    "requires_concepts": [
+     "Lie superalgebra",
+     "PBW theorem",
+     "merger trees",
+     "formal series"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-main-theorem",
+   "exact_statement": "For every finite group $G$ and every prime $p$, if $O_p(G)=1$, then $$\\widetilde H_*(\\mathcal A_p(G);\\mathbb Q)\\ne0.$$ Here reduced homology is augmented, so that the empty poset has $\\widetilde H_{-1}(\\varnothing;\\mathbb Q)=\\mathbb Q$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-reduction-two",
+   "exact_statement": "Let $G$ be a minimal-order counterexample to <a href=\"#eq:HQC\" data-reference-type=\"eqref\" data-reference=\"eq:HQC\">[eq:HQC]</a> for $p=2$. Then $G$ has a simple component $L$ in the following list, where the field parameter $q$ has characteristic at least five: $$\\begin{array}{ll}\n\\mathop{\\mathrm{PSL}}_n(q),\\ \\mathop{\\mathrm{PSU}}_n(q)& n\\geq4,\\\\\n\\mathop{\\mathrm{PSp}}_{2n}(q)& n\\geq3,\\\\\n\\Omega_{2n+1}(q)& n\\geq2,\\\\\n\\mathrm P\\Omega_{2n}^{\\pm}(q)& n\\geq4.\n\\end{array}$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-thm-reduction-two"
+  },
+  {
+   "claim_id": "claim-reduction-odd",
+   "exact_statement": "Suppose that, for every odd prime $p$, every odd prime power $q$ with $p\\mid q+1$, and every simple $L=\\mathop{\\mathrm{PSU}}_n(q)$ with $n\\geq5$, each elementary $p$-extension of $L$ inside $\\mathop{\\mathrm{Aut}}(L)$ has the Quillen dimension property. Then <a href=\"#eq:HQC\" data-reference-type=\"eqref\" data-reference=\"eq:HQC\">[eq:HQC]</a> holds for every finite group and every odd prime.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-thm-reduction-odd"
+  },
+  {
+   "claim_id": "claim-component-core",
+   "exact_statement": "Let $G$ be a finite group, let $p$ be a prime, and let $L$ be a nonabelian simple component of $G$. If $O_p(G)=1$, then $$O_p(C_G(L))=1.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-component-core"
+  },
+  {
+   "claim_id": "claim-faithfulness-upgrade",
+   "exact_statement": "Let $A$ be a faithful configuration for a nonabelian simple component $L$ of $G$. Suppose every element of order $p$ in $C_L(A)$ belongs to $A$. If $D\\in\\mathcal A_p(G)$ contains $A$, then $D\\le N_G(L)$. Moreover, $$C_D(L)=1\\quad\\Longrightarrow\\quad C_{LD}(L)=1.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-faithfulness-upgrade"
+  },
+  {
+   "claim_id": "claim-saturated-residue",
+   "exact_statement": "Let $X$ be a subposet of $\\mathcal A_p(G)$, and suppose $X$ contains the flag $$\\sigma=[A_1<\\cdots<A_r=A],\\qquad \\mathop{\\mathrm{rk}}(A_i)=i.$$ Define a linear map $$R_\\sigma:\\widetilde C_n(\\Delta X;\\mathbb Q)\n       \\longrightarrow\n       \\widetilde C_{n-r}(\\Delta X_{>A};\\mathbb Q)$$ as follows: a chain containing $\\sigma$ is sent to its strict continuation after $A$, and every other chain is sent to zero. The continuation of $\\sigma$ itself is $[\\,]$. Chain groups in degrees below $-1$ are zero. Then $$\\label{eq:residue-boundary}\n R_\\sigma\\partial=(-1)^r\\partial R_\\sigma.$$ In particular, residues of cycles are cycles, and residues of boundaries are boundaries, including in degree $-1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-saturated-residue"
+  },
+  {
+   "claim_id": "claim-product-shuffle",
+   "exact_statement": "With this notation there is a bilinear operation $$\\boxtimes:\\widetilde C_a(\\Delta X;\\mathbb Q)\n       \\otimes\\widetilde C_b(\\Delta Y;\\mathbb Q)\n       \\longrightarrow\n       \\widetilde C_{a+b+1}(\\Delta\\mathcal P(H,K);\\mathbb Q)$$ for $a,b\\ge-1$, satisfying $$\\label{eq:product-boundary}\n \\partial(u\\boxtimes v)\n   =(\\partial u)\\boxtimes v+(-1)^{a+1}u\\boxtimes\\partial v.$$ It is the chain construction for the subdivision of the join $\\Delta X*\\Delta Y$ by the product poset. The empty chain is an identity for this operation.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-product-shuffle"
+  },
+  {
+   "claim_id": "claim-propagation",
+   "exact_statement": "Let $G$ be a finite group and $p$ a prime. Assume that every proper subgroup $T<G$ with $O_p(T)=1$ satisfies $$\\widetilde H_*(\\Delta\\mathcal A_p(T);\\mathbb Q)\\ne0.$$ Let $L$ be a nonabelian simple component of $G$ with $p\\mid |L|$, and let $A$ be a faithful configuration for $L$ in $G$. Write $H=LA$ and $r=\\mathop{\\mathrm{rk}}(A)$. Assume the following three conditions.*\n\n1.  *Every element of order $p$ in $C_L(A)$ belongs to $A$.*\n\n2.  *There is no $D\\in\\mathcal A_p(G)$ with $D>A$ for which $LD$ acts faithfully on $L$ and $O_p(C_G(LD))=1$.*\n\n3.  *There is a cycle $\\alpha\\in\\widetilde C_{r-1}(\\Delta\\mathcal A_p(H);\\mathbb Q)$ whose coefficient on some flag $\\sigma=[A_1<\\cdots<A_r=A]$, with $\\mathop{\\mathrm{rk}}(A_i)=i$, is nonzero.*\n\n*Then $\\widetilde H_*(\\Delta\\mathcal A_p(G);\\mathbb Q)\\ne0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-propagation"
+  },
+  {
+   "claim_id": "claim-maximal-family",
+   "exact_statement": "Assume the inductive hypothesis on proper subgroups of $G$ in Lemma <a href=\"#lem:propagation\" data-reference-type=\"ref\" data-reference=\"lem:propagation\">9</a>, and let $L$ be a nonabelian simple component with $p\\mid|L|$. Let $\\mathcal F$ be a nonempty family of faithful configurations for $L$ in $G$ such that $$A\\in\\mathcal F,\\quad D\\in\\mathcal A_p(G),\\quad D>A,\n \\quad D\\text{ a faithful configuration}\n \\quad\\Longrightarrow\\quad D\\in\\mathcal F.$$ Let $r$ be the largest rank of a member of $\\mathcal F$. If some $A\\in\\mathcal F$ of rank $r$ is the final subgroup of a saturated flag having nonzero coefficient in a cycle of degree $r-1$ in $\\Delta\\mathcal A_p(LA)$, then $\\widetilde H_*(\\Delta\\mathcal A_p(G);\\mathbb Q)\\ne0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-maximal-family"
+  },
+  {
+   "claim_id": "claim-frame-bound",
+   "exact_statement": "Let $W$ have dimension $h\\geq2$ and one of the four structures above, and suppose that $W$ admits an allowed frame. The space $\\mathcal Z(W)\\subseteq\\bigoplus_{\\mathcal D\\in\\mathfrak F(W)}V_{\\mathcal D}$ consists of cycles of degree $h-2$, each supported on full flags ending at sign groups of rank $h-1$. Moreover, $$\\label{eq:frame-bound}\n \\dim\\mathcal Z(W)\\ \\geq\\\n F_h\\,|\\mathfrak F(W)|(h-1)!.$$ The following choices of $F_h$ are valid for each individual isometry type of $W$.*\n\n1.  *In the no-form case over $\\mathbb F_u$, and in the hermitian case over $\\mathbb F_{u^2}$, set $$\\rho=\\frac1{u(u+1)}\\quad\\hbox{and}\\quad\n     \\rho=\\frac1{u(u-1)},\n     \\quad\\hbox{respectively},\\qquad\n     y=\\frac{1+\\sqrt{1-4\\rho}}2.$$ For $u\\geq5$ one may take $F_h=y^h+(1-y)^h\\geq(17/25)^h$.*\n\n\n2.  *For a symmetric space over $\\mathbb F_u$, with both line types allowed and $u\\geq5$ odd, put $$x=\\frac{1+\\sqrt{1-4u/(u^2-1)}}2.$$ One may take $$\\label{eq:symmetric-frame-fraction}\n     F_h=x^h+(1-x)^h-\\mathbf1_{2\\mid h}\\,2(u^2-1)^{-h/2}\n     \\ \\geq\\ (17/25)^h.$$ In particular $F_3\\geq3/8$.*\n\n3.  *For a symmetric space over $\\mathbb F_u$ with one fixed line type, where $u\\geq7$ is odd, write $\\chi$ for the quadratic character of $\\mathbb F_u^\\times$ and set $$\\rho=\\frac2{u-\\chi(-1)},\\qquad\n     y=\\frac{1+\\sqrt{1-4\\rho}}2.$$ One may take $F_h=y^h+(1-y)^h>0$.*\n\n*The same statements hold for any realization by projective sign subgroups in which coarsened decompositions give the indicated subgroup flags and the complete flags ending at the full frames remain distinct.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-frame-bound"
+  },
+  {
+   "claim_id": "claim-merger-coefficients",
+   "exact_statement": "For a full flag in $\\mathcal D(W)$ ending at a frame $\\mathcal D$, complete its sequence of binary mergers by the final, implicit merger to the one-block partition. Its coefficient in $\\sum_w f(w)a_w$ is, up to one sign depending on the flag and the chosen child orders, the evaluation of $f$ on the associated iterated superbracket. All iterated brackets on the letters of $\\mathcal D$ occur in this way. Their span has dimension $(h-1)!$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-merger-coefficients"
+  },
+  {
+   "claim_id": "claim-frame-lie-identification",
+   "exact_statement": "For every admissible $W$ of dimension at least two, the coefficient construction has image of dimension $\\dim P(W)$: $$\\dim\\mathcal Z(W)=\\dim P(W).$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-frame-lie-identification"
+  },
+  {
+   "claim_id": "claim-frame-marked-factor",
+   "exact_statement": "The nonnegative series above satisfy $$\\label{eq:frame-marked-factor}\n D\\mathsf C\\ \\geq\\ (D\\mathsf P)\\mathsf C$$ coefficientwise in every isometry type.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-frame-marked-factor"
+  },
+  {
+   "claim_id": "claim-frame-cherry-remark",
+   "exact_statement": "The coefficient description gives a useful relation at every bottom pair of a merger tree. Fix all other leaves and the surrounding brackets. Replacing the bracket $[e_A,e_B]$ by the sum of these brackets over the unordered frames of the same plane gives zero in $P$, by <a href=\"#eq:frame-rq\" data-reference-type=\"eqref\" data-reference=\"eq:frame-rq\">[eq:frame-rq]</a>. Every functional representing a member of $\\mathcal Z(W)$ therefore satisfies this relation on the actual tree coefficients. For example, when $u=5$, a plane with square determinant has exactly one unordered frame of each homogeneous color, and a plane with nonsquare determinant has three unordered mixed frames. These counts follow from <a href=\"#eq:orthogonal-plane-order\" data-reference-type=\"eqref\" data-reference=\"eq:orthogonal-plane-order\">[eq:orthogonal-plane-order]</a>: the respective group orders are $8$ and $12$, and an ordered line-frame stabilizer has order $4$. For a homogeneous color one divides its two ordered frames by $2$; for a mixed frame the two possible orders have different color patterns. Thus the bottom-pair relation has respectively two and three unordered terms. This observation will allow coefficients on specified color counts to be detected later.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rem-frame-cherry"
+  },
+  {
+   "claim_id": "claim-ordinary-decorations",
+   "exact_statement": "Let $M$ be a finite group, let $p$ be a prime, and let $h\\geq2$ and $t\\geq0$. Consider a finite nonempty set $\\mathcal X$ of data $$(\\mathcal F,\\delta),\\qquad\n \\delta=(D_1,\\ldots,D_t),$$ where $S_{\\mathcal F}\\leq M$ is a projective sign group of rank $r=h-1$, the labelled $D_i\\leq M$ have order $p$, and $$E_{\\mathcal F,\\delta}\n   =S_{\\mathcal F}\\times D_1\\times\\cdots\\times D_t$$ is an internal direct product. Suppose the following hold.*\n\n1.  *The local coefficient space $V_{\\mathcal F}$ satisfies <a href=\"#eq:chain-local-dimension\" data-reference-type=\"eqref\" data-reference=\"eq:chain-local-dimension\">[eq:chain-local-dimension]</a> and is the same whenever the same frame occurs with different decorations. For each fixed tuple $\\delta$, its compatible frames form a set $\\mathfrak F_\\delta$ with a subspace $Z_\\delta$ satisfying <a href=\"#eq:chain-frame-input\" data-reference-type=\"eqref\" data-reference=\"eq:chain-frame-input\">[eq:chain-frame-input]</a>, with a common real number $F>0$. The boundary equality remains valid in the subgroup poset of $M$.*\n\n\n2.  *Put $\\mathcal Z=\\bigoplus_\\delta Z_\\delta$. The linear map $$\\label{eq:chain-detection-map}\n     \\Phi:\\mathcal Z\\longrightarrow\n           \\widetilde C_{r+t-1}(\\mathcal A_p(M)),\\qquad\n     \\Phi(x)=\\sum_{(\\mathcal F,\\delta)\\in\\mathcal X}\n     x_{\\mathcal F,\\delta}\\boxtimes a(\\delta)$$ is injective.*\n\n3.  *For every $i\\in\\{1,\\ldots,t\\}$, each partial datum $(\\mathcal F,D_1,\\ldots,\\widehat D_i,\\ldots,D_t)$ that occurs has at least $k_i>0$ completions in $\\mathcal X$.*\n\n\n*Write $N=|\\mathcal X|$. Then the image of $\\Phi$ contains a space of cycles of dimension at least $$\\label{eq:chain-decoration-dimension}\n Nq_h\\left(F-\\sum_{i=1}^t\\frac1{k_i}\\right).$$ In particular, if $F>\\sum_i1/k_i$, there is a nonzero cycle of degree $r+t-1$, supported on full flags ending at the rank-$r+t$ groups $E_{\\mathcal F,\\delta}$. At least one such full flag has a nonzero actual coefficient. When $t=0$, the sum is zero and there are no completion conditions.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-decorations"
+  },
+  {
+   "claim_id": "claim-quaternion-decoration",
+   "exact_statement": "Let $M$ be a finite group, $h\\geq2$, $r=h-1$, and $\\varepsilon\\in\\{0,1\\}$. Consider a finite nonempty set $\\mathcal X$ of data $(\\mathcal F,T)$ if $\\varepsilon=0$, or $(\\mathcal F,T,B)$ if $\\varepsilon=1$, where $$E=S_{\\mathcal F}\\times T\\times B,\n \\qquad \\mathop{\\mathrm{rk}}S_{\\mathcal F}=r,\\quad T\\cong C_2^2,\n \\quad \\mathop{\\mathrm{rk}}B=\\varepsilon.$$ For $\\varepsilon=0$, set $B=1$ and omit it from the data. For each fixed $(T,B)$, assume its compatible frames have a space $Z_{T,B}$ satisfying <a href=\"#eq:chain-frame-input\" data-reference-type=\"eqref\" data-reference=\"eq:chain-frame-input\">[eq:chain-frame-input]</a>, with a uniform lower bound $F>0$ and local bound $q_h=(h-1)!$. Assume that the map $$\\label{eq:chain-quaternion-detection}\n \\bigoplus_{(T,B)} Z_{T,B}\\otimes Q_T\n \\longrightarrow \\widetilde C_{r+1+\\varepsilon}\n                       (\\mathcal A_2(M))$$ which sends a simple tensor to the sum of the split chains $x_{\\mathcal F,T,B}\\boxtimes q\\boxtimes[B]$ is injective. When $B=1$, replace $[B]$ here by the empty simplex.*\n\n\n*For every occurring partial datum consisting of a frame, a retained line $\\ell<T$, and $B$ when present, assume there are at least $k_T>0$ completions to full data. If $\\varepsilon=1$, assume also that every occurring $(\\mathcal F,T)$ has at least $k_B>0$ completions to a datum $(\\mathcal F,T,B)$. Then the image in <a href=\"#eq:chain-quaternion-detection\" data-reference-type=\"eqref\" data-reference=\"eq:chain-quaternion-detection\">[eq:chain-quaternion-detection]</a> contains a cycle space of dimension at least $$\\label{eq:chain-quaternion-dimension}\n 2|\\mathcal X|q_h\n \\left(F-\\frac{3}{2k_T}-\\frac{\\varepsilon}{k_B}\\right),$$ where the last term is omitted if $\\varepsilon=0$. If the expression in parentheses is positive, there is a nonzero cycle on full flags ending at groups of rank $r+2+\\varepsilon=h+1+\\varepsilon$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-quaternion-decoration"
+  },
+  {
+   "claim_id": "claim-opposite-chamber",
+   "exact_statement": "Let $V$ be an $m$-dimensional vector space over $\\mathbb F_p$, with $m\\geq1$, and let $\\mathcal B(V)$ be its poset of proper nonzero subspaces. Let $$0=F_0<F_1<\\cdots<F_m=V,\\qquad \\dim F_j=j,$$ be a fixed full flag with its endpoints adjoined. Every nonzero cycle $z\\in\\widetilde C_{m-2}(\\mathcal B(V))$ has a supported chamber $W_1<\\cdots<W_{m-1}$ such that, on putting $W_0=0$ and $W_m=V$, $$\\label{eq:chain-opposition}\n \\dim(W_i\\cap F_j)=\\max\\{0,i+j-m\\}\n       \\quad(0\\leq i,j\\leq m).$$ In particular, if $0<c<m$ and $F_{m-c}=K$, then $W_c$ is a complement to $K$ in $V$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-opposite-chamber"
+  },
+  {
+   "claim_id": "claim-restriction",
+   "exact_statement": "Let $M$ be a finite group, $H\\leq M$, and $p$ a prime. Let $m\\geq1$ and let $\\alpha\\in\\widetilde C_{m-1}(\\mathcal A_p(M))$ be a cycle supported on full flags ending at rank-$m$ elementary abelian groups. Denote by $\\mathcal E(\\alpha)$ the set of top groups of flags with nonzero coefficient in $\\alpha$. Suppose that an integer $c$ satisfies $$0\\leq c<m,\n \\qquad [E':E'\\cap H]\\leq p^c\n      \\quad(E'\\in\\mathcal E(\\alpha)),$$ and that a specified $E\\in\\mathcal E(\\alpha)$ satisfies $[E:E\\cap H]=p^c$. Then there is a nonzero cycle $$\\beta\\in\\widetilde C_{m-c-1}(\\mathcal A_p(H))$$ supported on full flags of rank $m-c$, with a nonzero coefficient at a full flag ending at $E\\cap H$. If $m-c=m_p(H)$, this cycle represents a nonzero homology class.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-restriction"
+  },
+  {
+   "claim_id": "claim-projective-rank",
+   "exact_statement": "Let $D$ be an elementary abelian $p$-subgroup of $\\mathop{\\mathrm{PGL}}(V)$, where $\\dim V=n$ and the characteristic of the field is different from $p$. The scalar commutators of representatives define an alternating bilinear pairing on $D$ with values in the $p$th roots of unity. If this pairing has rank $2a$, then $$p^a\\mid n,\n \\qquad\n \\mathop{\\mathrm{rk}}D\\le 2a+\\frac{n}{p^a}-1.$$ In particular, for odd $p$, $n\\ge5$, and $a>0$, $$\\label{eq:odd-pairing-strict}\n \\mathop{\\mathrm{rk}}D<n-2.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-projective-rank"
+  },
+  {
+   "claim_id": "claim-linear-sign-centralizer",
+   "exact_statement": "Suppose $q$ is odd and $n\\ge5$. Set $S=S(\\mathcal D)$ and $S_L=S\\cap L$ for a line frame as above, using $p=2$. Every automorphism centralizing $S_L$ preserves each line of $\\mathcal D$, or matches it with the corresponding line of the dual frame when it is a correlation. It centralizes $S$. Every involution in $M$ centralizing $S_L$ belongs to $S$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-linear-sign-centralizer"
+  },
+  {
+   "claim_id": "claim-linear-unitary-two",
+   "exact_statement": "Let $G$ have least order among finite groups with $O_2(G)=1$ and $\\widetilde H_*(\\mathcal A_2(G);\\mathbb Q)=0$. Then $G$ has no simple component isomorphic to $\\mathop{\\mathrm{PSL}}_n(q)$ or $\\mathop{\\mathrm{PSU}}_n(q)$ with $n\\ge5$ and $q$ of characteristic at least five.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-linear-two"
+  },
+  {
+   "claim_id": "claim-unitary-odd",
+   "exact_statement": "Let $p$ be an odd prime, let $q$ be odd with $p\\mid q+1$, and let $L=\\mathop{\\mathrm{PSU}}_n(q)$ with $n\\ge5$. If $L\\le H\\le\\mathop{\\mathrm{Aut}}(L)$ and $H/L$ is elementary abelian of $p$-power order, then $$\\widetilde H_{m_p(H)-1}(\\mathcal A_p(H);\\mathbb Q)\\ne0.$$ Here $m_p(H)$ denotes the maximum rank of an elementary abelian $p$-subgroup of $H$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-unitary-odd"
+  },
+  {
+   "claim_id": "claim-symplectic-exclusion",
+   "exact_statement": "A minimal-order counterexample to <a href=\"#eq:HQC\" data-reference-type=\"eqref\" data-reference=\"eq:HQC\">[eq:HQC]</a> at $p=2$ cannot have a simple component isomorphic to $\\mathop{\\mathrm{PSp}}_{2n}(q)$, where $n\\geq3$ and $q$ has characteristic at least five.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-symplectic"
+  },
+  {
+   "claim_id": "claim-symp-centralizer",
+   "exact_statement": "For $n\\geq3$ and a pair $(\\mathcal D,T)$ as above, $$C_M\\bigl(A_0(\\mathcal D,T)\\bigr)=A_0(\\mathcal D,T).$$ Every semilinear projective transformation centralizing $S(\\mathcal D)$ preserves each plane of $\\mathcal D$ individually.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-symp-centralizer"
+  },
+  {
+   "claim_id": "claim-symp-descent",
+   "exact_statement": "Let $T=\\langle\\overline I,\\overline J\\rangle$ satisfy <a href=\"#eq:symp-quaternion\" data-reference-type=\"eqref\" data-reference=\"eq:symp-quaternion\">[eq:symp-quaternion]</a>, and let the projective semilinear involution $b$ centralize $S(\\mathcal D)T$ and induce $\\sigma\\in\\mathop{\\mathrm{Gal}}(\\mathbb F_q/\\mathbb F_s)$, where $q=s^2$. Replacing $b$ by $tb$ for some $t\\in T$ leaves $\\langle S(\\mathcal D),T,b\\rangle$ unchanged and permits a semilinear representative $B$ with $$B^2=\\mathop{\\mathrm{id}}_V,\\qquad BI=IB,\\qquad BJ=JB.$$ After scaling $\\omega$, its restriction to $V_0=\\{v:Bv=v\\}$ is a nondegenerate alternating form over $\\mathbb F_s$, and $I,J$ descend to symplectic operators on $V_0$. For fixed $T,b$ satisfying these exact commutation conditions, the compatible plane decompositions are all orthogonal nondegenerate line frames of a symmetric $n$-dimensional space over $\\mathbb F_s$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-symp-descent"
+  },
+  {
+   "claim_id": "claim-symp-completions",
+   "exact_statement": "Let $u$ be as in <a href=\"#eq:symp-field-parameter\" data-reference-type=\"eqref\" data-reference=\"eq:symp-field-parameter\">[eq:symp-field-parameter]</a>, and let $\\chi_u$ denote the quadratic character of $\\mathbb F_u^\\times$. A fixed plane frame and retained line of a compatible quaternion four-group, together with a fixed admissible field axis when present, have at least $$k_T=\\frac{(u-\\chi_u(-1))^n}{4}\\geq4^{n-1}$$ completions to admissible full data. In the field case, every retained pair $(\\mathcal D,T)$ that occurs has at least $k_b=2^{n-1}$ admissible field-axis completions in $H\\setminus L$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-symp-completions"
+  },
+  {
+   "claim_id": "claim-orthogonal-exclusion",
+   "exact_statement": "Let $G$ be a minimal-order counterexample to rational augmented reduced homology nonvanishing at the prime two. Thus $O_2(G)=1$ and $\\widetilde H_*(\\mathcal A_2(G);\\mathbb Q)=0$, whereas the asserted nonvanishing holds for smaller groups with trivial $2$-core. Then $G$ has no simple component $L=\\mathrm P\\Omega(V)$, where $V$ is a nondegenerate symmetric space over $\\mathbb F_q$, the characteristic of $\\mathbb F_q$ is at least five, and its dimension $N$ is odd with $N\\ge5$, even with $N\\ge8$, or equal to six, except possibly when $N=6$, $q=5$, and the determinant of the form is a square. In odd dimension $\\mathrm P\\Omega(V)=\\Omega(V)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-orthogonal"
+  },
+  {
+   "claim_id": "claim-orthogonal-centralizer",
+   "exact_statement": "Let $T=T(\\mathcal D)$ distinguish all $N$ positions and satisfy $\\mathop{\\mathrm{rk}}T>N/2$. Then every natural semilinear similarity centralizing $T$ projectively preserves each line of $\\mathcal D$. Its linear centralizer is exactly $S(\\mathcal D)$. In dimension eight the same conclusions hold for the full automorphism centralizer if some color class has at least three members. Every elementary abelian subgroup of $\\mathop{\\mathrm{Aut}}(L)$ containing $T$ therefore lies in the natural semilinear group, centralizes $S(\\mathcal D)$, and has at most one direction beyond its subgroup in $S(\\mathcal D)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-orthogonal-centralizer"
+  },
+  {
+   "claim_id": "claim-orthogonal-eight-naturality",
+   "exact_statement": "Let $V$ be a nondegenerate symmetric space of dimension eight over $\\mathbb F_q$, with defining characteristic at least five, and put $L=\\mathrm P\\Omega(V)$. If $V$ has minus type, every automorphism of $L$ is induced by a natural semilinear similarity of $V$.*\n\n*If $V$ has plus type, let $\\ell_1,\\ell_2,\\ell_3$ be mutually orthogonal nondegenerate lines of the same norm square class. Let $x,y$ be the projective isometries changing the signs on $\\ell_1\\oplus\\ell_2$ and $\\ell_2\\oplus\\ell_3$, respectively, and fixing their orthogonal complements. Then $x,y\\in L$, and every automorphism of $L$ centralizing both is induced by a natural semilinear similarity of $V$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-orthogonal-eight-naturality"
+  },
+  {
+   "claim_id": "claim-orthogonal-descent",
+   "exact_statement": "Suppose an involution $b$ of the natural projective semilinear group has nontrivial field action and preserves every line of a nondegenerate orthogonal frame of $V$. Then $q=s^2$, and after scalar normalization a representative of $b$ is an involutory semilinear map $B$ with fixed space $V_0$ over $\\mathbb F_s$. A scalar multiple of the form descends to a nondegenerate symmetric form on $V_0$. The compatible frames are exactly the scalar extensions of its nondegenerate orthogonal frames. All their lines have one common norm square class over $\\mathbb F_q$. In particular, when $N$ is even the determinant over $\\mathbb F_q$ is square.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-orthogonal-descent"
+  },
+  {
+   "claim_id": "claim-orthogonal-five-colors",
+   "exact_statement": "Let $V$ be a square-determinant symmetric space over $\\mathbb F_5$, of odd dimension $N\\ge5$ or even dimension $N\\ge8$. The space of actual sign cycle coefficients produced by Theorem <a href=\"#thm:frame-bound\" data-reference-type=\"ref\" data-reference=\"thm:frame-bound\">11</a> contains an assignment with a nonzero full-flag coefficient at an admissible frame as defined above.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-orthogonal-five-colors"
+  },
+  {
+   "claim_id": "claim-psl45-intermediate-core",
+   "exact_statement": "Let $J\\trianglelefteq H\\leq G$ be finite groups, and suppose that $H/J$ is a $p$-group. If $O_p(C_G(H))=1$, then $O_p(C_G(J))=1$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-psl45-intermediate-core"
+  },
+  {
+   "claim_id": "claim-psl45-homology",
+   "exact_statement": "For $L=\\mathop{\\mathrm{PSL}}_4(5)$, $$\\widetilde\\chi(\\mathcal A_2(L))\\equiv-1\\pmod5.$$ In particular $\\widetilde H_*(\\mathcal A_2(L);\\mathbb Q)\\ne0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-psl45-homology"
+  },
+  {
+   "claim_id": "claim-psl45-equivalent-poset",
+   "exact_statement": "Let $G$ be a finite group, let $p$ be a prime, and let $L$ be a centerless component of $G$ with $p\\mid |L|$. Put $K=C_G(L)$ and $$\\mathcal Q=\n \\bigl((\\mathcal A_p(L)\\cup\\{1\\})\\times\n             (\\mathcal A_p(K)\\cup\\{1\\})\\bigr)\\setminus\\{(1,1)\\},\n \\qquad\n \\mathcal F=\\{F\\in\\mathcal A_p(G):F\\cap LK=1\\}.$$ Give $\\mathcal Q$ the coordinatewise order and $\\mathcal F$ the inclusion order. Define $$\\mathcal F_0=\n \\{F\\in\\mathcal F:F\\leq N_G(L),\\\n                         O_p(C_G(LF))\\ne1\\}.$$ The disjoint union $\\mathcal X=\\mathcal Q\\sqcup\\mathcal F$ is ordered by these orders and by the following crossed comparisons: $$\\label{eq:psl45-cross}\n F<(U,V)\n \\quad\\Longleftrightarrow\\quad\n \\begin{cases}\n C_{UV}(F)\\ne1,\\\\\n C_{UV}(F)\\not\\leq L&\\text{if }F\\in\\mathcal F_0.\n \\end{cases}$$ There are no comparisons directed from $\\mathcal Q$ to $\\mathcal F$. These rules define a poset, and $\\mathcal X\\simeq\\mathcal A_p(G)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-psl45-equivalent-poset"
+  },
+  {
+   "claim_id": "claim-psl45-exclusion",
+   "exact_statement": "A minimal-order counterexample to the rational homological implication at $p=2$ has no simple component isomorphic to $\\mathop{\\mathrm{PSL}}_4(5)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-psl45"
+  }
+ ],
+ "paper": "papers/EN-104-000-0021-2-2026-PR-T4-UK-EX-M3-C-AL-H-0631_PM-310.1_Rational_homology_and_Quillen_s_conjecture.md",
+ "purpose": "Rational homology and Quillen's conjecture",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "57a04e9ff9c806ee56560d7ee9ebb72064fd923570c55f8bb449e71873073100",
+   "pm.domains.v2": "92c562a7b31c5c640e990333669514cb666aea671a3532b0f5165239f540559c",
+   "pm.edges.v2": "000a49b9b69e5be2f28e02db7ca1a0eaac6a9043a1a877ba3fead31b9038bea0",
+   "pm.extraction.v2": "3c2f8a971bf6d0adbaaeff2d1a5940b4791f33a13cebf7e627ded20911c3b36e",
+   "pm.formal.v2": "ec4d30e2f010ed0b8509fa9ee72fcf0aa2b68e0546b9bb97801cbfe033b27922",
+   "pm.limits.v2": "4a27c285209fd2411526060d10a12f31293fefba0e8a989930c2c8ed312fe0f4",
+   "pm.node.v2": "4c9adf8f549949f37fd8c02d613e9af1bb33434651966e28daa155e8c9e5ebde",
+   "pm.objects.v2": "8071883c3b25e40e3e4237548d0dca93dc38547135b093698534e05e6395b25e",
+   "pm.provenance.v2": "1b3fc47568a3c90098cf603b76b0fe8dfc64fec3bfa2e96266ab2ffd8254ef02",
+   "pm.quantities.v2": "939ff5fb41582752ae84d5aa9192de2bfabdb1ee8d72646a02aec65d858ce18b",
+   "pm.reading.v2": "b6ab56575da91dfe4a802aa4a9f3753c1db44dbd50734172971f7318429490bd",
+   "pm.roadmap.v2": "e0ed9d2ac067f7ae73e91391181aeb4cfd722970a2fa32c3fc2442de7417c34c",
+   "pm.search.v1": "f059be6941759799324730c60e26569acb2545a6845966e8ebbb11976c4aba67",
+   "pm.triptych.v2": "b27ab331273f2554cfdb6ce34518356795bcade8e8e7a5e738f419c14439b58c"
+  },
+  "canonical_sha256": "3282afd3cd45acb41e2689127a5f3a17a37d1a4a772308022f3356f49c57d864",
+  "paper_sha256": "c0e01a591113115394d2163dd9a6c5e203f8742f2ea5c96aa0a15c318ac3d97a",
+  "repaired_body_sha256": "f86eee003100f0d015ffb105c53bd5ab425e90f24ae91120ae4acd6707c08f94"
+ },
+ "status": "ACTIVE",
+ "subject_id": 4,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "94818826603d478e79cad7902640aa1b3ca3ce31afb423abd99fd5d7f6ee72ec",
+   "receipt_sha256": "6c5a0b44e7eff78c5adb310e92d33980bfc8269a45b1013d24f494dbf464f209",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Rational homology and Quillen's conjecture"
+}

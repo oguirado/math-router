@@ -1,0 +1,734 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 689312,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 192056
+ },
+ "coordinate": "EN-109-000-0000-2-2026-PR-T4-UK-EX-M2-B-PH-H-0722",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "If $$\\langle\\Lambda_{g_1,A_1,\\Gamma}f,h\\rangle\n =\\langle\\Lambda_{g_2,A_2,\\Gamma}f,h\\rangle\n \\quad\\text{for all }f,h\\in C_c^\\infty(\\Gamma;\\mathbb C^2),$$",
+     "quote_sha256": "5bfc82403205a79d9e00fccefa91baed162dbdaff65018282efc585eeadcacf2"
+    }
+   ],
+   "query": "Finite-data numerical reconstruction with certified runtime",
+   "reason": "The source proves exact continuum uniqueness using complete boundary pairings and analytic continuation; it supplies no finite-data reconstruction or runtime contract."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "For $j=1,2$, let $g_j$ be a smooth Riemannian metric on $M$ and let $A_j\\in C^\\infty(M;T^*M\\otimes\\mathfrak u(2))$.",
+     "quote_sha256": "9f84822daa68567614dd9d7cab3f0a9391cd339395241f324aace85bac61790f"
+    }
+   ],
+   "query": "Uniqueness for rough metric or connection coefficients",
+   "reason": "The main theorem requires smooth metrics and smooth unitary connection forms; it does not establish the corresponding rough-coefficient statement."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-cross-initial",
+     "quote": "The constants in Proposition <a href=\"#cross:initial\" data-reference-type=\"ref\" data-reference=\"cross:initial\">10</a> may deteriorate as $d\\downarrow0$.",
+     "quote_sha256": "196d99c1e5cb1ea5cc74afdf7b8b2a99a893563e4487b57897db69d476761aae"
+    },
+    {
+     "anchor": "stmt-ang-density",
+     "quote": "For all sufficiently small spatial dilations there is a constant $C$, independent of the dilation and $\\delta$,",
+     "quote_sha256": "c5226e85770f78e68dc618d8be6d716cff2d992278006ab71481502e44492797"
+    }
+   ],
+   "query": "Uniform Green continuation estimates all the way to the diagonal",
+   "reason": "Fixed-separation initialization permits deterioration as separation decreases. Shrinking-family control comes from the distinct transfer-density estimate."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-3",
+     "quote": "The scalar uniqueness theorem itself is not applied to the matrix-valued boundary data.",
+     "quote_sha256": "bc9547a37527f7345f2216dfa26b4094e76ef106ab1d92b023f5dd3bef011545"
+    }
+   ],
+   "query": "Direct application of scalar inverse uniqueness to matrix boundary data",
+   "reason": "The source explicitly excludes that shortcut and instead extends the required analytic arguments to scalar-principal systems."
+  }
+ ],
+ "family": "PM-365",
+ "id": "PM-365.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-joint-same-patch-uniqueness",
+    "statement": "Let $M$ and $\\Gamma$ be as above."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-joint-same-patch-uniqueness",
+    "statement": "For $j=1,2$, let $g_j$ be a smooth Riemannian metric on $M$ and let $A_j\\in C^\\infty(M;T^*M\\otimes\\mathfrak u(2))$."
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-joint-same-patch-uniqueness",
+    "statement": "If $$\\langle\\Lambda_{g_1,A_1,\\Gamma}f,h\\rangle\n =\\langle\\Lambda_{g_2,A_2,\\Gamma}f,h\\rangle\n \\quad\\text{for all }f,h\\in C_c^\\infty(\\Gamma;\\mathbb C^2),$$"
+   },
+   {
+    "anchor": "stmt-bdy-jets",
+    "claim_id": "claim-boundary-metric-connection-jets",
+    "statement": "Suppose the local energy forms of $(g_1,A_1)$ and $(g_2,A_2)$ agree on $\\Gamma$."
+   },
+   {
+    "anchor": "stmt-bdy-cap",
+    "claim_id": "claim-common-exterior-green-data",
+    "statement": "We prove that zero-frequency boundary measurements on any nonempty open boundary patch determine both a smooth Riemannian metric and a smooth unitary connection on the trivial Hermitian rank-two bundle over a compact connected smooth manifold of dimension at least three with smooth boundary."
+   },
+   {
+    "anchor": "stmt-bdy-jets",
+    "claim_id": "claim-common-exterior-green-data",
+    "statement": "Suppose the local energy forms of $(g_1,A_1)$ and $(g_2,A_2)$ agree on $\\Gamma$."
+   },
+   {
+    "anchor": "bdy:common-green",
+    "claim_id": "claim-common-exterior-green-data",
+    "statement": "For each $f\\in C_c^\\infty(E;\\mathbb C^2)$"
+   },
+   {
+    "anchor": "stmt-bdy-evaluations",
+    "claim_id": "claim-source-values-and-harmonic-jets",
+    "statement": "Let $N$ be a compact connected smooth manifold of dimension $n\\ge2$ with nonempty boundary, let $L=d_A^{*g}d_A$, and let $U\\Subset N^\\circ$ be a nonempty open source set."
+   },
+   {
+    "anchor": "stmt-bdy-evaluations",
+    "claim_id": "claim-source-values-and-harmonic-jets",
+    "statement": "If $p\\notin\\overline U$,"
+   },
+   {
+    "anchor": "stmt-bdy-matches",
+    "claim_id": "claim-unique-maximal-match",
+    "statement": "All matches agree on overlaps and are injective on base points. Their union is a unique maximal match $(\\Phi,J)$ on a connected open set $W\\subset N_2^\\circ$. On this set, $$\\label{bdy:matched-green}\n G_1(\\Phi(p),\\Phi(q))\n       =J(p)G_2(p,q)J(q)^*\\qquad(p,q\\in W,\\ p\\ne q).$$"
+   },
+   {
+    "anchor": "stmt-bdy-contact",
+    "claim_id": "claim-frontier-contact-data",
+    "statement": "If the maximal domain $W$ has an interior frontier,"
+   },
+   {
+    "anchor": "stmt-cross-series",
+    "claim_id": "claim-product-extension-from-cross",
+    "statement": "Let $D_i$ be bounded connected coordinate domains, and let $S_i\\Subset D_i$ be nonempty open sets."
+   },
+   {
+    "anchor": "stmt-cross-series",
+    "claim_id": "claim-product-extension-from-cross",
+    "statement": "Suppose a product solution $F$ is given consistently on $$(D_1\\times S_2)\\cup(S_1\\times D_2),$$ with the sum of its two $L^2$ norms at most $M$."
+   },
+   {
+    "anchor": "stmt-cross-series",
+    "claim_id": "claim-product-extension-from-cross",
+    "statement": "Suppose $O_i\\Subset D_i$ are open sets and every $V_i$-valued solution $w$ of $\\mathsf L_iw=0$ on $D_i$ satisfies $$\\label{cross:interpolation-input}\n \\|w\\|_{L^2(O_i)}\n \\le C\\|w\\|_{L^2(S_i)}^{\\gamma_i}\n          \\|w\\|_{L^2(D_i)}^{1-\\gamma_i},\n \\qquad 0<\\gamma_i<1,\\qquad \\gamma_1+\\gamma_2>1.$$"
+   },
+   {
+    "anchor": "stmt-cross-criterion",
+    "claim_id": "claim-strict-product-hessian-extension",
+    "statement": "Let $\\rho$ be smooth near $z_0=(x_0,y_0)$, with $\\rho(z_0)=0$ and $d_x\\rho,d_y\\rho\\ne0$."
+   },
+   {
+    "anchor": "stmt-cross-criterion",
+    "claim_id": "claim-strict-product-hessian-extension",
+    "statement": "Suppose that at $z_0$ $$\\label{cross:hessian-test}\n H((a_1,-a_2),(a_1,-a_2))\n +H((v_1,v_2),(v_1,v_2))>0\n \\quad\n \\left(v_i\\perp a_i,\\ |v_i|=|a_i|\\right).$$"
+   },
+   {
+    "anchor": "stmt-cross-propagation",
+    "claim_id": "claim-compact-cylinder-propagation",
+    "statement": "Suppose a region in a product patch has smooth coordinates $(z,a)$ near $B\\times[a_-,a_+]$, where $B$ is a compact base, possibly with boundary or corners."
+   },
+   {
+    "anchor": "stmt-cross-propagation",
+    "claim_id": "claim-compact-cylinder-propagation",
+    "statement": "A single product solution is given on an open set $\\mathcal S$ containing neighborhoods of the top and lateral boundary."
+   },
+   {
+    "anchor": "stmt-cross-propagation",
+    "claim_id": "claim-compact-cylinder-propagation",
+    "statement": "Assume that $\\mathcal S$ is upward closed in $a$ at fixed $z$."
+   },
+   {
+    "anchor": "stmt-cross-propagation",
+    "claim_id": "claim-compact-cylinder-propagation",
+    "statement": "If every level $a=\\text{constant}$ satisfies Proposition <a href=\"#cross:criterion\" data-reference-type=\"ref\" data-reference=\"cross:criterion\">8</a> outside $\\mathcal S$, with the positive side pointing toward increasing $a$,"
+   },
+   {
+    "anchor": "stmt-cross-initial",
+    "claim_id": "claim-fixed-separation-initialization",
+    "statement": "In this setting, let $n\\ge3$ and fix $B>0$, $d>0$ and $\\eta>0$."
+   },
+   {
+    "anchor": "sph:radius",
+    "claim_id": "claim-uniform-shrinking-radius-profiles",
+    "statement": "For an integer $p_*\\ge2$, an amplitude $R_*>0$, and $0<\\delta\\le1$, put $$\\label{sph:radius}\n \\ell_\\delta(t)=\\delta\\log(1+e^{t/\\delta}),\\qquad\n r_\\delta(y)=R_*\\ell_\\delta(t(y))^{p_*},\\qquad\n f_*=\\log r_\\delta,\\qquad \\beta=|df_*|_\\gamma.$$"
+   },
+   {
+    "anchor": "stmt-sph-strict",
+    "claim_id": "claim-strict-moving-sphere-geometry",
+    "statement": "Let $r=r_\\delta$ satisfy <a href=\"#sph:profile-bounds\" data-reference-type=\"eqref\" data-reference=\"sph:profile-bounds\">[sph:profile-bounds]</a>, <a href=\"#sph:smallness\" data-reference-type=\"eqref\" data-reference=\"sph:smallness\">[sph:smallness]</a>, and <a href=\"#sph:radius-smallness\" data-reference-type=\"eqref\" data-reference=\"sph:radius-smallness\">[sph:radius-smallness]</a>."
+   },
+   {
+    "anchor": "stmt-sph-strict",
+    "claim_id": "claim-strict-moving-sphere-geometry",
+    "statement": "For $p_*$ sufficiently large and $\\varepsilon$ sufficiently small,"
+   },
+   {
+    "anchor": "stmt-sph-continuation",
+    "claim_id": "claim-green-continuation-to-shrinking-spheres",
+    "statement": "Make the choices of Remark <a href=\"#sph:choices\" data-reference-type=\"ref\" data-reference=\"sph:choices\">12</a>."
+   },
+   {
+    "anchor": "sph:smallness",
+    "claim_id": "claim-green-continuation-to-shrinking-spheres",
+    "statement": "We will use the following temporary metric comparison: $$\\label{sph:smallness}\n H_8(y):=\\sum_{|\\alpha|\\le8}|\\partial^\\alpha h(y)|\n       \\le\\varepsilon r_\\delta(y)\\qquad(y\\in Y).$$ Coordinate norms in this definition are uniformly equivalent to the reference-metric norms. This condition will later be improved and then removed by a continuity argument."
+   },
+   {
+    "anchor": "stmt-sph-transfer",
+    "claim_id": "claim-matrix-harmonic-transfer",
+    "statement": "Under the assumptions of Proposition 14, there is a smooth matrix function $\\psi=\\psi_\\delta$ on the unit sphere bundle over $Y^\\circ$ such that |\n| [stmt-sph-cutoff-bounds](#stmt-sph-cutoff-bounds) | lemma | `sph:cutoff-bounds` | 16 | After the choices in Remark 12, for every fixed integer $m$ the angular $H^m$ norms of $\\psi_\\delta$ and its first base derivatives on $\\operatorname{supp}(d\\chi)$ are bounded independently of admissi |\n| [stmt-ang-trace](#stmt-ang-trace) | lemma | `ang:trace` | 17 | Under [ang:profile-bounds]–[ang:smallness], |\n| [stmt-ang-raising](#stmt-ang-raising) | lemma | `ang:raising` | 18 | Let $n\\ge3$, and suppose [ang:profile-bounds] holds on a fixed base region with uniformly bounded reference geometry."
+   },
+   {
+    "anchor": "stmt-sph-cutoff-bounds",
+    "claim_id": "claim-cutoff-density-regularity",
+    "statement": "After the choices in Remark 12, for every fixed integer $m$ the angular $H^m$ norms of $\\psi_\\delta$ and its first base derivatives on $\\operatorname{supp}(d\\chi)$ are bounded independently of admissi |\n| [stmt-ang-trace](#stmt-ang-trace) | lemma | `ang:trace` | 17 | Under [ang:profile-bounds]–[ang:smallness], |\n| [stmt-ang-raising](#stmt-ang-raising) | lemma | `ang:raising` | 18 | Let $n\\ge3$, and suppose [ang:profile-bounds] holds on a fixed base region with uniformly bounded reference geometry."
+   },
+   {
+    "anchor": "ang:profile-bounds",
+    "claim_id": "claim-moving-trace-expansions",
+    "statement": "Use the reference metric and normalized inverse matrices from <a href=\"#sph:normalization\" data-reference-type=\"eqref\" data-reference=\"sph:normalization\">[sph:normalization]</a>. The harmonic-frame convention <a href=\"#bdy:harmonic-normalization\" data-reference-type=\"eqref\" data-reference=\"bdy:harmonic-normalization\">[bdy:harmonic-normalization]</a>, with the multipliers $c_j$ in <a href=\"#sph:frame-normalization\" data-reference-type=\"eqref\" data-reference=\"sph:frame-normalization\">[sph:frame-normalization]</a>, gives equations whose second-derivative coefficient matrices are positive definite: $$\\label{ang:frame-equations}\n \\mathcal L_1=a^{ij}\\partial_i\\partial_j+B_1^i\\partial_i,\n \\qquad\n \\mathcal L_2=Q^{ij}\\partial_i\\partial_j+B_2^i\\partial_i.$$ The $B_j^i$ are complex $2\\times2$ matrices acting on columns from the left. There is no zeroth-order term because each column of the defining frame $F_j$ is harmonic. All coefficients have uniform smooth bounds on the fixed coordinate neighborhood for sufficiently small spatial dilations. Suppress the dilation and shrinking parameters for now, and write $$r=r_\\delta,\\qquad f_*=\\log r,\\qquad\n \\beta=|df_*|_\\gamma,\\qquad f_i=\\nabla_i f_*.$$ The profile bounds supplied by Lemma <a href=\"#sph:profiles\" data-reference-type=\"ref\" data-reference=\"sph:profiles\">11</a> have the form $$\\label{ang:profile-bounds}\n \\beta\\ge\\beta_0,\\qquad\n \\operatorname{Hess}_\\gamma f_*\\le-c_0\\beta\\gamma,\\qquad\n |\\nabla^j f_*|\\le C_j\\beta^j\\quad(1\\le j\\le8).$$ The lower threshold $\\beta_0$ can be increased by increasing $p_*$. Throughout this section we impose $$\\label{ang:smallness}\n \\sum_{|\\alpha|\\le8}|\\partial_y^\\alpha h|\\le\\varepsilon r,\n \\qquad r\\beta^2\\le\\varepsilon.$$ The first is the bootstrap assumption of Section <a href=\"#sec:spheres\" data-reference-type=\"ref\" data-reference=\"sec:spheres\">4</a>; the second is ensured by the choice of radius amplitude."
+   },
+   {
+    "anchor": "ang:smallness",
+    "claim_id": "claim-moving-trace-expansions",
+    "statement": "Use the reference metric and normalized inverse matrices from <a href=\"#sph:normalization\" data-reference-type=\"eqref\" data-reference=\"sph:normalization\">[sph:normalization]</a>. The harmonic-frame convention <a href=\"#bdy:harmonic-normalization\" data-reference-type=\"eqref\" data-reference=\"bdy:harmonic-normalization\">[bdy:harmonic-normalization]</a>, with the multipliers $c_j$ in <a href=\"#sph:frame-normalization\" data-reference-type=\"eqref\" data-reference=\"sph:frame-normalization\">[sph:frame-normalization]</a>, gives equations whose second-derivative coefficient matrices are positive definite: $$\\label{ang:frame-equations}\n \\mathcal L_1=a^{ij}\\partial_i\\partial_j+B_1^i\\partial_i,\n \\qquad\n \\mathcal L_2=Q^{ij}\\partial_i\\partial_j+B_2^i\\partial_i.$$ The $B_j^i$ are complex $2\\times2$ matrices acting on columns from the left. There is no zeroth-order term because each column of the defining frame $F_j$ is harmonic. All coefficients have uniform smooth bounds on the fixed coordinate neighborhood for sufficiently small spatial dilations. Suppress the dilation and shrinking parameters for now, and write $$r=r_\\delta,\\qquad f_*=\\log r,\\qquad\n \\beta=|df_*|_\\gamma,\\qquad f_i=\\nabla_i f_*.$$ The profile bounds supplied by Lemma <a href=\"#sph:profiles\" data-reference-type=\"ref\" data-reference=\"sph:profiles\">11</a> have the form $$\\label{ang:profile-bounds}\n \\beta\\ge\\beta_0,\\qquad\n \\operatorname{Hess}_\\gamma f_*\\le-c_0\\beta\\gamma,\\qquad\n |\\nabla^j f_*|\\le C_j\\beta^j\\quad(1\\le j\\le8).$$ The lower threshold $\\beta_0$ can be increased by increasing $p_*$. Throughout this section we impose $$\\label{ang:smallness}\n \\sum_{|\\alpha|\\le8}|\\partial_y^\\alpha h|\\le\\varepsilon r,\n \\qquad r\\beta^2\\le\\varepsilon.$$ The first is the bootstrap assumption of Section <a href=\"#sec:spheres\" data-reference-type=\"ref\" data-reference=\"sec:spheres\">4</a>; the second is ensured by the choice of radius amplitude."
+   },
+   {
+    "anchor": "stmt-ang-raising",
+    "claim_id": "claim-weighted-angular-raising",
+    "statement": "Let $n\\ge3$, and suppose <a href=\"#ang:profile-bounds\" data-reference-type=\"eqref\" data-reference=\"ang:profile-bounds\">[ang:profile-bounds]</a> holds on a fixed base region with uniformly bounded reference geometry."
+   },
+   {
+    "anchor": "stmt-ang-scalar-coercivity",
+    "claim_id": "claim-scalar-angular-coercivity",
+    "statement": "Fix uniform smooth bounds for the reference geometry and scalar comparison equations, and the constants in"
+   },
+   {
+    "anchor": "stmt-ang-scalar-coercivity",
+    "claim_id": "claim-scalar-angular-coercivity",
+    "statement": "Suppose $P_0$ is the scalar operator <a href=\"#ang:P0\" data-reference-type=\"eqref\" data-reference=\"ang:P0\">[ang:P0]</a>, with the scalar trace operators of Lemma"
+   },
+   {
+    "anchor": "ang:smallness",
+    "claim_id": "claim-scalar-angular-coercivity",
+    "statement": "Use the reference metric and normalized inverse matrices from <a href=\"#sph:normalization\" data-reference-type=\"eqref\" data-reference=\"sph:normalization\">[sph:normalization]</a>. The harmonic-frame convention <a href=\"#bdy:harmonic-normalization\" data-reference-type=\"eqref\" data-reference=\"bdy:harmonic-normalization\">[bdy:harmonic-normalization]</a>, with the multipliers $c_j$ in <a href=\"#sph:frame-normalization\" data-reference-type=\"eqref\" data-reference=\"sph:frame-normalization\">[sph:frame-normalization]</a>, gives equations whose second-derivative coefficient matrices are positive definite: $$\\label{ang:frame-equations}\n \\mathcal L_1=a^{ij}\\partial_i\\partial_j+B_1^i\\partial_i,\n \\qquad\n \\mathcal L_2=Q^{ij}\\partial_i\\partial_j+B_2^i\\partial_i.$$ The $B_j^i$ are complex $2\\times2$ matrices acting on columns from the left. There is no zeroth-order term because each column of the defining frame $F_j$ is harmonic. All coefficients have uniform smooth bounds on the fixed coordinate neighborhood for sufficiently small spatial dilations. Suppress the dilation and shrinking parameters for now, and write $$r=r_\\delta,\\qquad f_*=\\log r,\\qquad\n \\beta=|df_*|_\\gamma,\\qquad f_i=\\nabla_i f_*.$$ The profile bounds supplied by Lemma <a href=\"#sph:profiles\" data-reference-type=\"ref\" data-reference=\"sph:profiles\">11</a> have the form $$\\label{ang:profile-bounds}\n \\beta\\ge\\beta_0,\\qquad\n \\operatorname{Hess}_\\gamma f_*\\le-c_0\\beta\\gamma,\\qquad\n |\\nabla^j f_*|\\le C_j\\beta^j\\quad(1\\le j\\le8).$$ The lower threshold $\\beta_0$ can be increased by increasing $p_*$. Throughout this section we impose $$\\label{ang:smallness}\n \\sum_{|\\alpha|\\le8}|\\partial_y^\\alpha h|\\le\\varepsilon r,\n \\qquad r\\beta^2\\le\\varepsilon.$$ The first is the bootstrap assumption of Section <a href=\"#sec:spheres\" data-reference-type=\"ref\" data-reference=\"sec:spheres\">4</a>; the second is ensured by the choice of radius amplitude."
+   },
+   {
+    "anchor": "stmt-ang-scalar-coercivity",
+    "claim_id": "claim-scalar-angular-coercivity",
+    "statement": "with $\\varepsilon\\le\\varepsilon_0$"
+   },
+   {
+    "anchor": "stmt-ang-system-coercivity",
+    "claim_id": "claim-matrix-angular-coercivity",
+    "statement": "Fix uniform smooth bounds for the harmonic-frame systems and the reference geometry, and the constants in"
+   },
+   {
+    "anchor": "ang:smallness",
+    "claim_id": "claim-matrix-angular-coercivity",
+    "statement": "Use the reference metric and normalized inverse matrices from <a href=\"#sph:normalization\" data-reference-type=\"eqref\" data-reference=\"sph:normalization\">[sph:normalization]</a>. The harmonic-frame convention <a href=\"#bdy:harmonic-normalization\" data-reference-type=\"eqref\" data-reference=\"bdy:harmonic-normalization\">[bdy:harmonic-normalization]</a>, with the multipliers $c_j$ in <a href=\"#sph:frame-normalization\" data-reference-type=\"eqref\" data-reference=\"sph:frame-normalization\">[sph:frame-normalization]</a>, gives equations whose second-derivative coefficient matrices are positive definite: $$\\label{ang:frame-equations}\n \\mathcal L_1=a^{ij}\\partial_i\\partial_j+B_1^i\\partial_i,\n \\qquad\n \\mathcal L_2=Q^{ij}\\partial_i\\partial_j+B_2^i\\partial_i.$$ The $B_j^i$ are complex $2\\times2$ matrices acting on columns from the left. There is no zeroth-order term because each column of the defining frame $F_j$ is harmonic. All coefficients have uniform smooth bounds on the fixed coordinate neighborhood for sufficiently small spatial dilations. Suppress the dilation and shrinking parameters for now, and write $$r=r_\\delta,\\qquad f_*=\\log r,\\qquad\n \\beta=|df_*|_\\gamma,\\qquad f_i=\\nabla_i f_*.$$ The profile bounds supplied by Lemma <a href=\"#sph:profiles\" data-reference-type=\"ref\" data-reference=\"sph:profiles\">11</a> have the form $$\\label{ang:profile-bounds}\n \\beta\\ge\\beta_0,\\qquad\n \\operatorname{Hess}_\\gamma f_*\\le-c_0\\beta\\gamma,\\qquad\n |\\nabla^j f_*|\\le C_j\\beta^j\\quad(1\\le j\\le8).$$ The lower threshold $\\beta_0$ can be increased by increasing $p_*$. Throughout this section we impose $$\\label{ang:smallness}\n \\sum_{|\\alpha|\\le8}|\\partial_y^\\alpha h|\\le\\varepsilon r,\n \\qquad r\\beta^2\\le\\varepsilon.$$ The first is the bootstrap assumption of Section <a href=\"#sec:spheres\" data-reference-type=\"ref\" data-reference=\"sec:spheres\">4</a>; the second is ensured by the choice of radius amplitude."
+   },
+   {
+    "anchor": "stmt-ang-system-coercivity",
+    "claim_id": "claim-matrix-angular-coercivity",
+    "statement": "with $\\varepsilon\\le\\varepsilon_0$"
+   },
+   {
+    "anchor": "stmt-ang-density",
+    "claim_id": "claim-uniform-matrix-transfer-density",
+    "statement": "Choose the fixed geometry as in Section <a href=\"#sec:spheres\" data-reference-type=\"ref\" data-reference=\"sec:spheres\">4</a>, then choose $p_*$ sufficiently large, $\\varepsilon>0$ sufficiently small, and the radius amplitude $R_*>0$ sufficiently small that $r_\\delta\\beta_\\delta^2\\le\\varepsilon$ for $0<\\delta\\le1$."
+   },
+   {
+    "anchor": "stmt-ang-density",
+    "claim_id": "claim-uniform-matrix-transfer-density",
+    "statement": "whenever $\\sum_{|\\alpha|\\le8}|\\partial^\\alpha h|\n\\le\\varepsilon r_\\delta$ on $Y$."
+   },
+   {
+    "anchor": "stmt-mat-spanning",
+    "claim_id": "claim-uniform-selected-harmonic-jet-spanning",
+    "statement": "For all sufficiently small $\\lambda$ and every $y\\in Y$"
+   },
+   {
+    "anchor": "mat:provisional",
+    "claim_id": "claim-weighted-displacement-moments",
+    "statement": "Throughout the next three subsections we fix $0<\\delta\\le1$ and assume the provisional comparison $$H_8(y):=\\sum_{|\\alpha|\\le8}|\\partial^\\alpha h(y)|\n                    \\le\\varepsilon r_\\delta(y),\\qquad y\\in Y.\n \\label{mat:provisional}$$ Write $r=r_\\delta$. Since $r_{\\delta'}\\ge r_\\delta$ when $\\delta'\\ge\\delta$, the bound <a href=\"#mat:provisional\" data-reference-type=\"eqref\" data-reference=\"mat:provisional\">[mat:provisional]</a> also holds with every intermediate radius used to continue from $\\delta'=1$ to $\\delta'=\\delta$. Proposition <a href=\"#sph:transfer\" data-reference-type=\"ref\" data-reference=\"sph:transfer\">15</a> and Proposition <a href=\"#ang:density\" data-reference-type=\"ref\" data-reference=\"ang:density\">21</a> give $$\\begin{split}\n v_{2,\\nu}(y)\n    &=\\int_{S_y}\\psi(y,\\omega)\\,\n          v_{1,\\nu}\\big(\\exp_y^\\gamma(r(y)\\omega)\\big)\n          \\,d\\sigma_y(\\omega),\\\\\n \\int_{S_y}\\psi(y,\\omega)\\,d\\sigma_y(\\omega)&=I,\n \\qquad \\|\\chi\\psi\\|_{L^2(Y\\times S_y)}\\le C.\n \\end{split}\n \\label{mat:transfer-input}$$ The constant is independent of $\\delta$ and of sufficiently small $\\lambda$. The measure in the last norm is $dV_\\gamma(y)d\\sigma_y(\\omega)$; on the fixed coordinate range it is uniformly equivalent to the corresponding Euclidean base measure."
+   },
+   {
+    "anchor": "stmt-mat-interpolation",
+    "claim_id": "claim-pointwise-moment-interpolation",
+    "statement": "Choose $$d_*=10+\\frac n2,\\qquad \\eta=\\frac1{2d_*},\\qquad\n p_*>2d_*,\\qquad m\\ge\\lceil10+3d_*\\rceil.$$"
+   },
+   {
+    "anchor": "stmt-mat-interpolation",
+    "claim_id": "claim-pointwise-moment-interpolation",
+    "statement": "if $y\\in K$ and $r(y)<\\rho_0$,"
+   },
+   {
+    "anchor": "mat:provisional",
+    "claim_id": "claim-projected-matrix-displacement-equation",
+    "statement": "Throughout the next three subsections we fix $0<\\delta\\le1$ and assume the provisional comparison $$H_8(y):=\\sum_{|\\alpha|\\le8}|\\partial^\\alpha h(y)|\n                    \\le\\varepsilon r_\\delta(y),\\qquad y\\in Y.\n \\label{mat:provisional}$$ Write $r=r_\\delta$. Since $r_{\\delta'}\\ge r_\\delta$ when $\\delta'\\ge\\delta$, the bound <a href=\"#mat:provisional\" data-reference-type=\"eqref\" data-reference=\"mat:provisional\">[mat:provisional]</a> also holds with every intermediate radius used to continue from $\\delta'=1$ to $\\delta'=\\delta$. Proposition <a href=\"#sph:transfer\" data-reference-type=\"ref\" data-reference=\"sph:transfer\">15</a> and Proposition <a href=\"#ang:density\" data-reference-type=\"ref\" data-reference=\"ang:density\">21</a> give $$\\begin{split}\n v_{2,\\nu}(y)\n    &=\\int_{S_y}\\psi(y,\\omega)\\,\n          v_{1,\\nu}\\big(\\exp_y^\\gamma(r(y)\\omega)\\big)\n          \\,d\\sigma_y(\\omega),\\\\\n \\int_{S_y}\\psi(y,\\omega)\\,d\\sigma_y(\\omega)&=I,\n \\qquad \\|\\chi\\psi\\|_{L^2(Y\\times S_y)}\\le C.\n \\end{split}\n \\label{mat:transfer-input}$$ The constant is independent of $\\delta$ and of sufficiently small $\\lambda$. The measure in the last norm is $dV_\\gamma(y)d\\sigma_y(\\omega)$; on the fixed coordinate range it is uniformly equivalent to the corresponding Euclidean base measure."
+   },
+   {
+    "anchor": "stmt-mat-projected-equation",
+    "claim_id": "claim-projected-matrix-displacement-equation",
+    "statement": "For $y\\in K$ with $r(y)<\\rho_0$,"
+   },
+   {
+    "anchor": "stmt-mat-finite-type",
+    "claim_id": "claim-conformal-killing-finite-type-prolongation",
+    "statement": "Let $n\\ge3$, let $a=\\gamma^{-1}$ be a smooth positive definite tensor on a coordinate domain, and let $V$ be a finite-dimensional real vector space."
+   },
+   {
+    "anchor": "stmt-mat-finite-type",
+    "claim_id": "claim-conformal-killing-finite-type-prolongation",
+    "statement": "Suppose that a $V$-valued vector field $W$ satisfies $$\\Pi\\big(a^{li}\\partial_lW^j+a^{lj}\\partial_lW^i\\big)\n                          +C^{ij}(W)=E^{ij},$$ where $C$ is a smooth real-linear zeroth-order operator."
+   },
+   {
+    "anchor": "stmt-mat-improvement",
+    "claim_id": "claim-strict-principal-tensor-improvement",
+    "statement": "With the fixed choices in Lemma 24, there are constants $C$ and $\\rho_0>0$, uniform for sufficiently small $\\lambda$, such that [mat:provisional] implies |\n| [stmt-mat-local](#stmt-mat-local) | proposition | `mat:local` | 28 | In the contact coordinates and harmonic frames of Proposition 6, there is a neighborhood of the origin on which the two metrics are smoothly conformal and the harmonic-frame equations, multiplied by t |\n| [stmt-glob-conformal](#stmt-glob-conformal) | lemma | `glob:conformal` | 29 | In the contact coordinates and unitary frames of Proposition 6, suppose that on a connected neighborhood $\\Omega$ of zero the metrics satisfy $g_2=e^{2\\omega}g_1$, and that the equations in the harmon |\n| [stmt-glob-interior](#stmt-glob-interior) | proposition | `glob:interior` | 30 | The maximal match of Lemma 5 is defined on $N_2^\\circ$, and its base map is an onto isometry $\\Phi:N_2^\\circ\\to N_1^\\circ$.* |\n| [stmt-glob-boundary](#stmt-glob-boundary) | proposition | `glob:boundary` | 31 | The interior maps $(\\Phi,J)$ extend smoothly to the extended manifolds, with $\\Phi:N_2\\to N_1$ a diffeomorphism and $J$ a unitary bundle map intertwining the connections."
+   },
+   {
+    "anchor": "mat:provisional",
+    "claim_id": "claim-strict-principal-tensor-improvement",
+    "statement": "Throughout the next three subsections we fix $0<\\delta\\le1$ and assume the provisional comparison $$H_8(y):=\\sum_{|\\alpha|\\le8}|\\partial^\\alpha h(y)|\n                    \\le\\varepsilon r_\\delta(y),\\qquad y\\in Y.\n \\label{mat:provisional}$$ Write $r=r_\\delta$. Since $r_{\\delta'}\\ge r_\\delta$ when $\\delta'\\ge\\delta$, the bound <a href=\"#mat:provisional\" data-reference-type=\"eqref\" data-reference=\"mat:provisional\">[mat:provisional]</a> also holds with every intermediate radius used to continue from $\\delta'=1$ to $\\delta'=\\delta$. Proposition <a href=\"#sph:transfer\" data-reference-type=\"ref\" data-reference=\"sph:transfer\">15</a> and Proposition <a href=\"#ang:density\" data-reference-type=\"ref\" data-reference=\"ang:density\">21</a> give $$\\begin{split}\n v_{2,\\nu}(y)\n    &=\\int_{S_y}\\psi(y,\\omega)\\,\n          v_{1,\\nu}\\big(\\exp_y^\\gamma(r(y)\\omega)\\big)\n          \\,d\\sigma_y(\\omega),\\\\\n \\int_{S_y}\\psi(y,\\omega)\\,d\\sigma_y(\\omega)&=I,\n \\qquad \\|\\chi\\psi\\|_{L^2(Y\\times S_y)}\\le C.\n \\end{split}\n \\label{mat:transfer-input}$$ The constant is independent of $\\delta$ and of sufficiently small $\\lambda$. The measure in the last norm is $dV_\\gamma(y)d\\sigma_y(\\omega)$; on the fixed coordinate range it is uniformly equivalent to the corresponding Euclidean base measure."
+   },
+   {
+    "anchor": "stmt-mat-improvement",
+    "claim_id": "claim-strict-principal-tensor-improvement",
+    "statement": "if }y\\in K\\text{ and }r_\\delta(y)<\\rho_0."
+   },
+   {
+    "anchor": "stmt-mat-local",
+    "claim_id": "claim-local-normalized-operator-equality",
+    "statement": "In the contact coordinates and harmonic frames of Proposition 6, there is a neighborhood of the origin on which the two metrics are smoothly conformal and the harmonic-frame equations, multiplied by t |\n| [stmt-glob-conformal](#stmt-glob-conformal) | lemma | `glob:conformal` | 29 | In the contact coordinates and unitary frames of Proposition 6, suppose that on a connected neighborhood $\\Omega$ of zero the metrics satisfy $g_2=e^{2\\omega}g_1$, and that the equations in the harmon |\n| [stmt-glob-interior](#stmt-glob-interior) | proposition | `glob:interior` | 30 | The maximal match of Lemma 5 is defined on $N_2^\\circ$, and its base map is an onto isometry $\\Phi:N_2^\\circ\\to N_1^\\circ$.* |\n| [stmt-glob-boundary](#stmt-glob-boundary) | proposition | `glob:boundary` | 31 | The interior maps $(\\Phi,J)$ extend smoothly to the extended manifolds, with $\\Phi:N_2\\to N_1$ a diffeomorphism and $J$ a unitary bundle map intertwining the connections."
+   },
+   {
+    "anchor": "stmt-glob-conformal",
+    "claim_id": "claim-exact-local-unitary-identification",
+    "statement": "suppose that on a connected neighborhood $\\Omega$ of zero the metrics satisfy $g_2=e^{2\\omega}g_1$, and that the equations in the harmonic frames $F_j$, after scalar normalization to the same principal part, have equal first-order coefficients."
+   },
+   {
+    "anchor": "stmt-glob-interior",
+    "claim_id": "claim-global-interior-isometry",
+    "statement": "The maximal match of Lemma <a href=\"#bdy:matches\" data-reference-type=\"ref\" data-reference=\"bdy:matches\">5</a> is defined on $N_2^\\circ$, and its base map is an onto isometry $\\Phi:N_2^\\circ\\to N_1^\\circ$."
+   },
+   {
+    "anchor": "stmt-glob-boundary",
+    "claim_id": "claim-smooth-boundary-completion-and-patch-identity",
+    "statement": "The interior maps $(\\Phi,J)$ extend smoothly to the extended manifolds, with $\\Phi:N_2\\to N_1$ a diffeomorphism and $J$ a unitary bundle map intertwining the connections. They preserve the original copies of $M$ and satisfy $$\\Phi|_\\Gamma=\\operatorname{Id},\\qquad J|_\\Gamma=I.$$"
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Joint boundary recovery",
+    "evidence": [
+     {
+      "anchor": "pm-h-4",
+      "quote": "Boundary symbol factorization first determines all metric and connection jets on $\\Gamma$, after imposing normal gauge.",
+      "quote_sha256": "f21800f273d070471ab465b698d9a2efd13a5dd2671c53f551d149701be6b0fc"
+     },
+     {
+      "anchor": "pm-h-6",
+      "quote": "We also use open-set unique continuation for systems with a smooth, real scalar elliptic principal part and smooth matrix lower-order terms;",
+      "quote_sha256": "5b7b1d6a6274c2f98ec15f6e4735f790f9735d7793a776bad7934fac080f708b"
+     }
+    ],
+    "requires_concepts": [
+     "Connection Laplacian",
+     "Localized boundary energy form",
+     "Boundary-normal coordinates",
+     "Unitary gauge action",
+     "Elliptic unique continuation"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "Matrix continuation across an interior frontier",
+    "evidence": [
+     {
+      "anchor": "pm-h-3",
+      "quote": "The present proof uses its product continuation, sphere geometry, and scalar angular estimate (OpenAI 2026, secs. 3–5)",
+      "quote_sha256": "816f55e03154f45bfd0bf259028b599f7ac8cc4e6fba23efc90f88d9f8c15b42"
+     },
+     {
+      "anchor": "pm-h-3",
+      "quote": "In dimension at least three this symbol is of finite type: two prolongations determine all third derivatives from lower jets.",
+      "quote_sha256": "0ab7c1f1844d620ed370e94a787f054812668664fd93fef4328bfc3af03f037b"
+     }
+    ],
+    "requires_concepts": [
+     "Product solutions",
+     "Strict Carleman weights",
+     "Shrinking geodesic spheres",
+     "Matrix harmonic transfer",
+     "Angular coercivity",
+     "Conformal Killing finite type"
+    ],
+    "supporting_pm_ids": [
+     "PM-365.2"
+    ]
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-joint-same-patch-uniqueness",
+   "exact_statement": "Let $M$ and $\\Gamma$ be as above. For $j=1,2$, let $g_j$ be a smooth Riemannian metric on $M$ and let $A_j\\in C^\\infty(M;T^*M\\otimes\\mathfrak u(2))$. If $$\\langle\\Lambda_{g_1,A_1,\\Gamma}f,h\\rangle\n =\\langle\\Lambda_{g_2,A_2,\\Gamma}f,h\\rangle\n \\quad\\text{for all }f,h\\in C_c^\\infty(\\Gamma;\\mathbb C^2),$$ then there are a smooth diffeomorphism $\\Phi:M\\longrightarrow M$ and a smooth map $U:M\\longrightarrow U(2)$ such that $$\\label{eq:main-conclusion}\n \\Phi|_\\Gamma=\\mathop{\\mathrm{Id}},\\qquad U|_\\Gamma=I,\\qquad\n g_2=\\Phi^*g_1,\\qquad\n A_2=U^{-1}(\\Phi^*A_1)U+U^{-1}dU.$$ Here $I$ denotes the $2\\times2$ identity matrix.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-boundary-metric-connection-jets",
+   "exact_statement": "Suppose the local energy forms of $(g_1,A_1)$ and $(g_2,A_2)$ agree on $\\Gamma$. In their respective boundary-normal coordinates, based on the same boundary coordinates, and in the normal gauges just constructed, the full Taylor jets of $g_1,A_1$ and $g_2,A_2$ agree at every point of $\\Gamma$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-bdy-jets"
+  },
+  {
+   "claim_id": "claim-common-exterior-green-data",
+   "exact_statement": "There are compact connected smooth extensions $N_j$ of the original manifold, with nonempty smooth boundary, and a common connected open exterior cap $E\\subset N_j^\\circ$, attached through a nonempty open patch $P\\Subset\\Gamma$, such that the extended metrics and connections agree on $E$. For each $f\\in C_c^\\infty(E;\\mathbb C^2)$, the solutions $L_{j,D}^{-1}f$ agree on $E$. The Dirichlet Green matrices, normalized using metric volume, satisfy $$\\label{bdy:common-green}\n G_1(x,y)=G_2(x,y)\\quad(x,y\\in E,\\ x\\ne y),\n \\qquad G_j(x,y)=G_j(y,x)^*.$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-bdy-cap"
+  },
+  {
+   "claim_id": "claim-source-values-and-harmonic-jets",
+   "exact_statement": "Let $N$ be a compact connected smooth manifold of dimension $n\\ge2$ with nonempty boundary, let $L=d_A^{*g}d_A$, and let $U\\Subset N^\\circ$ be a nonempty open source set.*\n\n1.  *At each interior point, $f\\mapsto L_D^{-1}f(p)$ is onto $\\mathbb C^2$. At any two distinct interior points the two values are jointly onto $\\mathbb C^2\\oplus\\mathbb C^2$.*\n\n2.  *If $p\\notin\\overline U$, the second jets of $L_D^{-1}f$ at $p$ fill exactly the linear space of jets satisfying $Lu(p)=0$.*\n\n3.  *Each evaluation is zero on $\\partial N$, and for fixed $f$ varies continuously up to that boundary.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-bdy-evaluations"
+  },
+  {
+   "claim_id": "claim-unique-maximal-match",
+   "exact_statement": "All matches agree on overlaps and are injective on base points. Their union is a unique maximal match $(\\Phi,J)$ on a connected open set $W\\subset N_2^\\circ$. On this set, $$\\label{bdy:matched-green}\n G_1(\\Phi(p),\\Phi(q))\n       =J(p)G_2(p,q)J(q)^*\\qquad(p,q\\in W,\\ p\\ne q).$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-bdy-matches"
+  },
+  {
+   "claim_id": "claim-frontier-contact-data",
+   "exact_statement": "If the maximal domain $W$ has an interior frontier, there are a point $p\\in\\partial W\\cap N_2^\\circ$, a point $q\\in N_1^\\circ$, and charts about $p,q$, both with coordinate range a neighborhood of $0\\in\\mathbb R^n$, with the following properties.*\n\n1.  *Both charts avoid $\\overline{U_0}$. The old match is coordinate identity on its domain in these charts. That domain contains a region $x_n<\\kappa(x')$, where $\\kappa$ is smooth, $\\kappa(0)=0$, and [(bdy:limit-match)](#bdy:limit-match)$d\\kappa(0)=0$.*\n\n2.  *In smooth local unitary frames, the metrics, connection matrices, and Green matrices agree on the known region (for the Green matrices, on its square off the diagonal), and $g_1(0)=g_2(0)=I_n$.*\n\n\n3.  *There are invertible matrix functions $F_j$ with harmonic columns, chosen as corresponding source solutions. In these harmonic frames there are corresponding harmonic matrix functions $X_j^l$, $1\\le l\\le n$, satisfying $$\\label{bdy:trace-coordinates}\n     \\tfrac12\\operatorname{Re}\\operatorname{tr}X_j^l(x)=x^l,\n     \\qquad X_j^l(0)=0,\n     \\qquad \\partial_iX_j^l(0)=\\delta_i^l I.$$*\n\n4.  *There are finitely many further corresponding harmonic column functions with zero value and gradient at $0$, whose Hessians at $0$ span the space of symmetric $\\mathbb C^2$-valued tensors $H$ satisfying $\\sum_i H_{ii}=0$. All these paired functions, including the frames, agree on the known region and have identical jets at $0$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-bdy-contact"
+  },
+  {
+   "claim_id": "claim-product-extension-from-cross",
+   "exact_statement": "Let $D_i$ be bounded connected coordinate domains, and let $S_i\\Subset D_i$ be nonempty open sets. Suppose a product solution $F$ is given consistently on $$(D_1\\times S_2)\\cup(S_1\\times D_2),$$ with the sum of its two $L^2$ norms at most $M$. Suppose $O_i\\Subset D_i$ are open sets and every $V_i$-valued solution $w$ of $\\mathsf L_iw=0$ on $D_i$ satisfies $$\\label{cross:interpolation-input}\n \\|w\\|_{L^2(O_i)}\n \\le C\\|w\\|_{L^2(S_i)}^{\\gamma_i}\n          \\|w\\|_{L^2(D_i)}^{1-\\gamma_i},\n \\qquad 0<\\gamma_i<1,\\qquad \\gamma_1+\\gamma_2>1.$$ Then $F$ extends as a product solution to $O_1\\times O_2$, agreeing with the two given pieces on their intersections. Its $C^m$ norm on every compact subset of the output product is at most $C_mM$. These constants are uniform when geometric margins, ellipticity, the required coefficient bounds, interpolation constants, and a positive lower bound for $\\gamma_1+\\gamma_2-1$ are uniform. A specified output order requires only finitely many coefficient bounds.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cross-series"
+  },
+  {
+   "claim_id": "claim-strict-product-hessian-extension",
+   "exact_statement": "Let $\\rho$ be smooth near $z_0=(x_0,y_0)$, with $\\rho(z_0)=0$ and $d_x\\rho,d_y\\rho\\ne0$. Put $$a_i=\\frac{\\nabla_i\\rho}{|\\nabla_i\\rho|^2},\\qquad H=\\operatorname{Hess}\\rho.$$ Suppose that at $z_0$ $$\\label{cross:hessian-test}\n H((a_1,-a_2),(a_1,-a_2))\n +H((v_1,v_2),(v_1,v_2))>0\n \\quad\n \\left(v_i\\perp a_i,\\ |v_i|=|a_i|\\right).$$ Every product solution given on $\\{\\rho>0\\}$ near $z_0$ extends to a neighborhood of $z_0$, agreeing on a smaller part of that side. In fact, the construction uses only two compact product sets in $\\{\\rho>\\varepsilon\\}$ for some $\\varepsilon>0$. The neighborhoods and estimates on smaller neighborhoods are uniform under small smooth perturbations preserving the strict hypotheses, provided the data on those compact sets are bounded.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cross-criterion"
+  },
+  {
+   "claim_id": "claim-compact-cylinder-propagation",
+   "exact_statement": "Suppose a region in a product patch has smooth coordinates $(z,a)$ near $B\\times[a_-,a_+]$, where $B$ is a compact base, possibly with boundary or corners. A single product solution is given on an open set $\\mathcal S$ containing neighborhoods of the top and lateral boundary. Assume that $\\mathcal S$ is upward closed in $a$ at fixed $z$. If every level $a=\\text{constant}$ satisfies Proposition <a href=\"#cross:criterion\" data-reference-type=\"ref\" data-reference=\"cross:criterion\">8</a> outside $\\mathcal S$, with the positive side pointing toward increasing $a$, the solution extends to a neighborhood of the cylinder, agreeing on $\\mathcal S$. For fixed coordinates, compact sets and strict reference inequalities, the extension has uniform compact-subset bounds under small smooth perturbations, in terms of bounds on finitely many compact subsets of the initially given region.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cross-propagation"
+  },
+  {
+   "claim_id": "claim-fixed-separation-initialization",
+   "exact_statement": "In this setting, let $n\\ge3$ and fix $B>0$, $d>0$ and $\\eta>0$. For all sufficiently small $\\lambda$, the data <a href=\"#cross:mixed-data\" data-reference-type=\"eqref\" data-reference=\"cross:mixed-data\">[cross:mixed-data]</a> have a product-solution continuation to a neighborhood of $$\\{(x,y):|x|,|y|\\le B,\\ |x-y|\\ge d\\}.$$ Every fixed $C^m$ norm on a smaller neighborhood is bounded uniformly in $\\lambda$. It agrees with $G_{1,\\lambda}$ when $y\\in W_\\lambda$ and with $G_{2,\\lambda}$ when $x\\in W_\\lambda$, on the corresponding overlaps. In particular these agreements hold on the fixed truncated lower strips $y_n<-\\eta$ and $x_n<-\\eta$, respectively. The smallness threshold for $\\lambda$ and the constants may depend on $B,d,\\eta,m$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-cross-initial"
+  },
+  {
+   "claim_id": "claim-uniform-shrinking-radius-profiles",
+   "exact_statement": "For the geometry just fixed and all sufficiently small $\\lambda$, the profiles <a href=\"#sph:radius\" data-reference-type=\"eqref\" data-reference=\"sph:radius\">[sph:radius]</a> satisfy $$\\label{sph:profile-bounds}\n \\beta\\ge cp_*,\\qquad\n \\operatorname{Hess}_\\gamma f_*\\le-c\\beta\\gamma,\n \\qquad |\\partial^j f_*|\\le C_j\\beta^j\\quad(j\\ge1),$$ uniformly in $0<\\delta\\le1$. The constants $c,C_j$ are independent of $p_*\\ge2$. For fixed $p_*,R_*$, the functions $r_\\delta^{1/p_*}$ have a uniform Lipschitz bound. The radii increase strictly with $\\delta$, converge to zero where $t\\le0$, and obey $$\\label{sph:amplitude-smallness}\n \\sup_{0<\\delta\\le1,\\ y\\in Y}r_\\delta\\beta^2\n \\longrightarrow0\\quad\\hbox{as }R_*\\downarrow0$$ for each fixed $p_*$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-sph-profiles"
+  },
+  {
+   "claim_id": "claim-strict-moving-sphere-geometry",
+   "exact_statement": "Let $r=r_\\delta$ satisfy <a href=\"#sph:profile-bounds\" data-reference-type=\"eqref\" data-reference=\"sph:profile-bounds\">[sph:profile-bounds]</a>, <a href=\"#sph:smallness\" data-reference-type=\"eqref\" data-reference=\"sph:smallness\">[sph:smallness]</a>, and <a href=\"#sph:radius-smallness\" data-reference-type=\"eqref\" data-reference=\"sph:radius-smallness\">[sph:radius-smallness]</a>. For $p_*$ sufficiently large and $\\varepsilon$ sufficiently small, the hypersurface $$\\rho(x,y)=\\tfrac12\\bigl(d_\\gamma(x,y)^2-r(y)^2\\bigr)=0$$ satisfies the strict criterion of Proposition <a href=\"#cross:criterion\" data-reference-type=\"ref\" data-reference=\"cross:criterion\">8</a> for principal metrics $\\gamma$ in the first factor and $Q^{-1}$ in the second. Both partial gradients are nonzero, and the positive side is the exterior of the moving ball.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-sph-strict"
+  },
+  {
+   "claim_id": "claim-green-continuation-to-shrinking-spheres",
+   "exact_statement": "Make the choices of Remark <a href=\"#sph:choices\" data-reference-type=\"ref\" data-reference=\"sph:choices\">12</a>. For all sufficiently small $\\lambda$ and every $0<\\delta\\le1$ satisfying <a href=\"#sph:smallness\" data-reference-type=\"eqref\" data-reference=\"sph:smallness\">[sph:smallness]</a>, the mixed Green matrix extends to a neighborhood of $$\\{(x,y):y\\in Y,\\ d_\\gamma(x,y)=r_\\delta(y)\\}.$$ It solves the first system in $x$ and the conjugate second system in the second tensor index. On the lower center region $y_n<-1/4$ it agrees with $G_1$, and on the prescribed positive-depth region $t>t_b$ it agrees with the fixed-separation continuation of Proposition <a href=\"#cross:initial\" data-reference-type=\"ref\" data-reference=\"cross:initial\">10</a>. The extension is smooth for each positive $\\delta$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-sph-continuation"
+  },
+  {
+   "claim_id": "claim-matrix-harmonic-transfer",
+   "exact_statement": "Under the assumptions of Proposition <a href=\"#sph:continuation\" data-reference-type=\"ref\" data-reference=\"sph:continuation\">14</a>, there is a smooth matrix function $\\psi=\\psi_\\delta$ on the unit sphere bundle over $Y^\\circ$ such that $$\\label{sph:density-representation}\n T_yv=\\int_{S_y}\\psi(y,\\omega)\n       v\\bigl(\\exp_y^\\gamma(r(y)\\omega)\\bigr)\\,d\\sigma_y(\\omega).$$ For every $y_0\\in Y^\\circ$ and every first harmonic-frame function $v$ defined near $\\overline{B_\\gamma(y_0,r(y_0))}$, the function $y\\mapsto T_yv$ is second harmonic-frame harmonic on a neighborhood of $y_0$. For each pair $(v_1,v_2)$ of first and second harmonic-frame functions defined on the fixed coordinate neighborhoods and agreeing on the known side, $$\\label{sph:reproduction}\n \\int_{S_y}\\psi(y,\\omega)\\,d\\sigma_y(\\omega)=I,\n \\qquad T_yv_1=v_2(y).$$",
+   "kind": "construction",
+   "statement_anchor": "stmt-sph-transfer"
+  },
+  {
+   "claim_id": "claim-cutoff-density-regularity",
+   "exact_statement": "After the choices in Remark <a href=\"#sph:choices\" data-reference-type=\"ref\" data-reference=\"sph:choices\">12</a>, for every fixed integer $m$ the angular $H^m$ norms of $\\psi_\\delta$ and its first base derivatives on $\\operatorname{supp}(d\\chi)$ are bounded independently of admissible $\\delta$ and sufficiently small $\\lambda$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-sph-cutoff-bounds"
+  },
+  {
+   "claim_id": "claim-moving-trace-expansions",
+   "exact_statement": "Under <a href=\"#ang:profile-bounds\" data-reference-type=\"eqref\" data-reference=\"ang:profile-bounds\">[ang:profile-bounds]</a>–<a href=\"#ang:smallness\" data-reference-type=\"eqref\" data-reference=\"ang:smallness\">[ang:smallness]</a>, $$\\label{ang:C-expansion}\n \\mathcal C_{i,0}^*\n =r^{-1}\\mathsf A_i^*+f_i\\mathsf B+E_i+F_i,\n \\qquad E_i\\in r\\Psi^1,\\quad F_i\\in\\Psi^0.$$ The normalized remainders $r^{-1}E_i,F_i$ have the allowance $C_j\\beta^j$ through six base derivatives. Moreover, on rows, $$\\label{ang:trace-difference}\n K_i:=\\mathcal C_i^t-\\mathcal C_{i,0}^*\n       \\in\\Psi^0,\\qquad \\nabla K_i\\in\\beta\\Psi^0.$$ All constants depend on fixed smooth background bounds, not on the lower threshold $\\beta_0$ once $\\beta_0\\ge1$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ang-trace"
+  },
+  {
+   "claim_id": "claim-weighted-angular-raising",
+   "exact_statement": "Let $n\\ge3$, and suppose <a href=\"#ang:profile-bounds\" data-reference-type=\"eqref\" data-reference=\"ang:profile-bounds\">[ang:profile-bounds]</a> holds on a fixed base region with uniformly bounded reference geometry. There are $\\beta_0$ and $c>0$, depending only on that geometry and the constants in <a href=\"#ang:profile-bounds\" data-reference-type=\"eqref\" data-reference=\"ang:profile-bounds\">[ang:profile-bounds]</a>, such that every smooth, compactly base-supported function with zero fiber mean satisfies $$\\label{ang:raising-estimate}\n \\|T\\varphi\\|^2-\\|T^\\flat\\varphi\\|^2\n       \\ge c\\,\\mathcal N(\\varphi)^2.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-ang-raising"
+  },
+  {
+   "claim_id": "claim-scalar-angular-coercivity",
+   "exact_statement": "Fix uniform smooth bounds for the reference geometry and scalar comparison equations, and the constants in <a href=\"#ang:profile-bounds\" data-reference-type=\"eqref\" data-reference=\"ang:profile-bounds\">[ang:profile-bounds]</a>. Suppose $P_0$ is the scalar operator <a href=\"#ang:P0\" data-reference-type=\"eqref\" data-reference=\"ang:P0\">[ang:P0]</a>, with the scalar trace operators of Lemma <a href=\"#ang:trace\" data-reference-type=\"ref\" data-reference=\"ang:trace\">17</a>. There exist $\\beta_0$ sufficiently large, $\\varepsilon_0>0$ and $C<\\infty$, depending only on these fixed bounds, such that <a href=\"#ang:smallness\" data-reference-type=\"eqref\" data-reference=\"ang:smallness\">[ang:smallness]</a> with $\\varepsilon\\le\\varepsilon_0$ implies $$\\label{ang:coercive-estimate}\n \\mathcal N(\\varphi)\\le C\\|P_0\\varphi\\|$$ for every smooth, compactly base-supported function $\\varphi$ with zero mean on each sphere. These constants are independent of the shrinking parameter. Only the eight indicated derivatives of the small tensor $h$ are required.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ang-scalar-coercivity"
+  },
+  {
+   "claim_id": "claim-matrix-angular-coercivity",
+   "exact_statement": "Fix uniform smooth bounds for the harmonic-frame systems and the reference geometry, and the constants in <a href=\"#ang:profile-bounds\" data-reference-type=\"eqref\" data-reference=\"ang:profile-bounds\">[ang:profile-bounds]</a>. There are $\\beta_0$ sufficiently large, $\\varepsilon_0>0$, and $C$, depending only on these bounds, such that <a href=\"#ang:smallness\" data-reference-type=\"eqref\" data-reference=\"ang:smallness\">[ang:smallness]</a> with $\\varepsilon\\le\\varepsilon_0$ implies $$\\mathcal N(\\varphi)\\le C\\|P\\varphi\\|_{L^2}$$ for every smooth compactly base-supported matrix function $\\varphi$ with zero fiber mean. The constants are independent of the shrinking parameter and of sufficiently small spatial dilations.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ang-system-coercivity"
+  },
+  {
+   "claim_id": "claim-uniform-matrix-transfer-density",
+   "exact_statement": "Choose the fixed geometry as in Section <a href=\"#sec:spheres\" data-reference-type=\"ref\" data-reference=\"sec:spheres\">4</a>, then choose $p_*$ sufficiently large, $\\varepsilon>0$ sufficiently small, and the radius amplitude $R_*>0$ sufficiently small that $r_\\delta\\beta_\\delta^2\\le\\varepsilon$ for $0<\\delta\\le1$. For all sufficiently small spatial dilations there is a constant $C$, independent of the dilation and $\\delta$, such that $$\\label{ang:density-bound}\n \\|\\chi\\psi_\\delta\\|_{L^2(S_\\gamma Y)}\\le C$$ whenever $\\sum_{|\\alpha|\\le8}|\\partial^\\alpha h|\n\\le\\varepsilon r_\\delta$ on $Y$. Here $\\chi$ is the fixed cutoff from <a href=\"#sph:cutoff\" data-reference-type=\"eqref\" data-reference=\"sph:cutoff\">[sph:cutoff]</a> and $\\psi_\\delta$ is the left-acting matrix density of Proposition <a href=\"#sph:transfer\" data-reference-type=\"ref\" data-reference=\"sph:transfer\">15</a>.",
+   "kind": "bound",
+   "statement_anchor": "stmt-ang-density"
+  },
+  {
+   "claim_id": "claim-uniform-selected-harmonic-jet-spanning",
+   "exact_statement": "For all sufficiently small $\\lambda$ and every $y\\in Y$, the vectors $$\\big(\\partial_i v_{1,\\nu}(y),\n             \\partial_i\\partial_j v_{1,\\nu}(y)\\big),\n \\qquad 1\\le\\nu\\le N,$$ span, over $\\mathbb C$, the space of pairs $(p,H)$ with $p_i\\in\\mathbb C^2$ and $H_{ij}=H_{ji}\\in\\mathbb C^2$ satisfying $$a^{ij}H_{ij}+B_1^ip_i=0.\n \\label{mat:jet-constraint}$$ The coefficients realizing prescribed such data may be chosen by a smooth right inverse, with uniform bounds to every fixed order.",
+   "kind": "construction",
+   "statement_anchor": "stmt-mat-spanning"
+  },
+  {
+   "claim_id": "claim-weighted-displacement-moments",
+   "exact_statement": "Under <a href=\"#mat:provisional\" data-reference-type=\"eqref\" data-reference=\"mat:provisional\">[mat:provisional]</a>, $$\\|\\chi D/r\\|_{L^2(Y)}\\le C,\n \\qquad\n \\|\\chi R_\\nu/r^2\\|_{L^2(Y)}\\le C,\n                   \\qquad 1\\le\\nu\\le N.\n \\label{mat:weighted-moments}$$ The constants are uniform in $\\delta$ and small $\\lambda$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-mat-moments"
+  },
+  {
+   "claim_id": "claim-pointwise-moment-interpolation",
+   "exact_statement": "Choose $$d_*=10+\\frac n2,\\qquad \\eta=\\frac1{2d_*},\\qquad\n p_*>2d_*,\\qquad m\\ge\\lceil10+3d_*\\rceil.$$ There is a fixed $\\rho_0>0$ such that, if $y\\in K$ and $r(y)<\\rho_0$, then $$\\sum_{|\\alpha|\\le10}|\\partial^\\alpha D(y)|\\le Cr(y)^{1/2},\n \\qquad\n \\sum_{|\\alpha|\\le10}|\\partial^\\alpha R_\\nu(y)|\n                                      \\le Cr(y)^{3/2}.\n \\label{mat:pointwise}$$ The threshold and constants are independent of $\\delta$ and small $\\lambda$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-mat-interpolation"
+  },
+  {
+   "claim_id": "claim-projected-matrix-displacement-equation",
+   "exact_statement": "There is a smooth matrix-valued symmetric tensor $\\mathcal E$ such that $$h^{ij}I+\n \\Pi\\big(a^{li}\\partial_lD^j+a^{lj}\\partial_lD^i\n                           +\\mathcal B^{ij}(D)\\big)\n                     =\\mathcal E^{ij}.\n \\label{mat:projected}$$ For $y\\in K$ with $r(y)<\\rho_0$, $$\\sum_{|\\alpha|\\le8}|\\partial^\\alpha\\mathcal E(y)|\n                                      \\le Cr(y)^{3/2}.\n \\label{mat:E-bound}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-mat-projected-equation"
+  },
+  {
+   "claim_id": "claim-conformal-killing-finite-type-prolongation",
+   "exact_statement": "Let $n\\ge3$, let $a=\\gamma^{-1}$ be a smooth positive definite tensor on a coordinate domain, and let $V$ be a finite-dimensional real vector space. Suppose that a $V$-valued vector field $W$ satisfies $$\\Pi\\big(a^{li}\\partial_lW^j+a^{lj}\\partial_lW^i\\big)\n                          +C^{ij}(W)=E^{ij},$$ where $C$ is a smooth real-linear zeroth-order operator. Every third derivative of $W$ is then a smooth linear combination of derivatives of $W$ through order two and derivatives of $E$ through order two. The coefficient bounds are uniform when $a$ is uniformly elliptic and the indicated background coefficients range in bounded smooth sets.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-mat-finite-type"
+  },
+  {
+   "claim_id": "claim-strict-principal-tensor-improvement",
+   "exact_statement": "With the fixed choices in Lemma <a href=\"#mat:interpolation\" data-reference-type=\"ref\" data-reference=\"mat:interpolation\">24</a>, there are constants $C$ and $\\rho_0>0$, uniform for sufficiently small $\\lambda$, such that <a href=\"#mat:provisional\" data-reference-type=\"eqref\" data-reference=\"mat:provisional\">[mat:provisional]</a> implies $$H_8(y)\\le C r_\\delta(y)^{3/2}\n       \\qquad\\text{if }y\\in K\\text{ and }r_\\delta(y)<\\rho_0.\n \\label{mat:improved-h}$$ On the same set, the derivatives of $D$ through order nine are bounded by $Cr_\\delta^{3/2}$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-mat-improvement"
+  },
+  {
+   "claim_id": "claim-local-normalized-operator-equality",
+   "exact_statement": "In the contact coordinates and harmonic frames of Proposition <a href=\"#bdy:contact\" data-reference-type=\"ref\" data-reference=\"bdy:contact\">6</a>, there is a neighborhood of the origin on which the two metrics are smoothly conformal and the harmonic-frame equations, multiplied by the positive scalars making their principal tensors equal, coincide. All the finitely many selected pairs of harmonic-frame columns agree on that neighborhood.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-mat-local"
+  },
+  {
+   "claim_id": "claim-exact-local-unitary-identification",
+   "exact_statement": "In the contact coordinates and unitary frames of Proposition <a href=\"#bdy:contact\" data-reference-type=\"ref\" data-reference=\"bdy:contact\">6</a>, suppose that on a connected neighborhood $\\Omega$ of zero the metrics satisfy $g_2=e^{2\\omega}g_1$, and that the equations in the harmonic frames $F_j$, after scalar normalization to the same principal part, have equal first-order coefficients. Then $$g_2=g_1,\\qquad J_{\\mathrm{loc}}=F_1F_2^{-1}\\in U(2),\\qquad\n d_{A_1}(J_{\\mathrm{loc}}u)=J_{\\mathrm{loc}}d_{A_2}u\n                         \\quad\\text{on }\\Omega.$$ Moreover this identification agrees with the old match on the known side and matches all corresponding source evaluations throughout $\\Omega$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-glob-conformal"
+  },
+  {
+   "claim_id": "claim-global-interior-isometry",
+   "exact_statement": "The maximal match of Lemma <a href=\"#bdy:matches\" data-reference-type=\"ref\" data-reference=\"bdy:matches\">5</a> is defined on $N_2^\\circ$, and its base map is an onto isometry $\\Phi:N_2^\\circ\\to N_1^\\circ$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-glob-interior"
+  },
+  {
+   "claim_id": "claim-smooth-boundary-completion-and-patch-identity",
+   "exact_statement": "The interior maps $(\\Phi,J)$ extend smoothly to the extended manifolds, with $\\Phi:N_2\\to N_1$ a diffeomorphism and $J$ a unitary bundle map intertwining the connections. They preserve the original copies of $M$ and satisfy $$\\Phi|_\\Gamma=\\operatorname{Id},\\qquad J|_\\Gamma=I.$$",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-glob-boundary"
+  }
+ ],
+ "paper": "papers/EN-109-000-0000-2-2026-PR-T4-UK-EX-M2-B-PH-H-0722_PM-365.1_Determination_of_a_metric_and_a_unitary_connection_from_one_boundary_patch.md",
+ "purpose": "Determination of a metric and a unitary connection from one boundary patch",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "7450f2215f42b9258aa9aaa34563866976a0a9f3ae267ba01912b680201ace64",
+   "pm.domains.v2": "e36f949d66e601d29ba0aa2f9274113fa1ada717b85643ec5866f206d5710bf8",
+   "pm.edges.v2": "a09441271c7cd6c7dc59219bbb1abe879bd17dda06446f8da29981efa4f9b40e",
+   "pm.extraction.v2": "953cdef0311fe0bdd809fd2131bdf114ff38d8fb8a833aea17f6a2c907492d98",
+   "pm.formal.v2": "b91c42c50a7f45803ed28638a90beea10584974bc49998df17a8a4895c506e7e",
+   "pm.limits.v2": "d5d678af341ea318e44e064cde44353e4a54f29d69cd1672fca22343a019179d",
+   "pm.node.v2": "4523d5959fb86c8103acdeb996c8a8d0b101c48cf6ab217690d9d7c93134e155",
+   "pm.objects.v2": "0a316d5952cfe706d0d47fee28663944b81cc0b2052ec669e044e306cc3d5561",
+   "pm.provenance.v2": "827144de4ee31a2f452eac5e3d638b0a75005a174eae1d1bacf3d0c14531fed7",
+   "pm.quantities.v2": "1712c568035c380fbfaf3acba0707da5d46a4e996cf42c2ef69564db42703aea",
+   "pm.reading.v2": "bd9b30d0b314507512242b3304b835c173baab339b52dbf2d05462e094d6d260",
+   "pm.roadmap.v2": "26303cc7133112b96467b8abbdb14e48e9ad5ef97102b3eb96b06544f09e54ec",
+   "pm.search.v1": "48a4d8dc51ae433d3961c73164ab2c8910c23304d596572e94dd66334c06715c",
+   "pm.triptych.v2": "4c54a02fa8c42e503cf515fe5e66572cf436e8616c5c780de90c5eb3b79594e9"
+  },
+  "canonical_sha256": "5ec7a8fec513de711df5d4e14948981cb2e55ddb3151057ea0c04b4df6a9afba",
+  "paper_sha256": "a60685653073f917b420c417b623a9c2bbb2ccfe0cc49a3ec02d7ac01dd955b0",
+  "repaired_body_sha256": "6a39ea77324c4851691b7036d5d2d2812be46a4727c8ab47b5b9e443d8519f84"
+ },
+ "status": "ACTIVE",
+ "subject_id": 9,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "a4be7d5a810b55b390384e39dd3c748ec2d5dde2d952ab16e7c193180190a7e9",
+   "receipt_sha256": "4da923810e49bfaa49443fd44d497e0ef38d7b32eaead2cd292682cf2189e603",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Determination of a metric and a unitary connection from one boundary patch"
+}

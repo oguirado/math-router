@@ -1,0 +1,922 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 989447,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 275060
+ },
+ "coordinate": "EN-101-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-M-0004",
+ "domains": [
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "adaptable",
+   "proposed_domain": "Exact commutative algebra",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "For every elliptic curve $A_0/\\mathbb Q$, every prime $p$, and $r\\in\\{0,1\\}$, $$s_p(A_0)=r\n \\quad\\Longrightarrow\\quad\n a(A_0)=\\mathop{\\mathrm{rank}}_{\\mathbb Z}A_0(\\mathbb Q)=r,\n \\qquad \\#\\operatorname{Sha}(A_0/\\mathbb Q)<\\infty.$$",
+     "quote_sha256": "585593e645127dd4fb6aa3438ec6280402af2d8c9bff40782b6c2c680aac0991"
+    }
+   ],
+   "query": "Determine ranks from higher full Selmer corank.",
+   "reason": "The main implication is restricted to the stated low-corank regime."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-thm-main",
+     "quote": "The theorem gives rank equality and finiteness; it does not evaluate the leading coefficient in the refined Birch–Swinnerton-Dyer formula.",
+     "quote_sha256": "ed68a4931d941a00298dd71933724001d1f306df036677fb65ac3db4049d5609"
+    }
+   ],
+   "query": "Compute the exact refined Birch–Swinnerton-Dyer leading coefficient or exact Tate–Shafarevich order.",
+   "reason": "The conclusion gives rank equality and finiteness without evaluating the refined leading coefficient."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "sec:introduction",
+     "quote": "Thus its corank measures both the Mordell–Weil rank and any divisible $p$-primary contribution from $\\operatorname{Sha}$.",
+     "quote_sha256": "1fc7fde562e0c795ff1eb578095b0f835d18ffb1bc659e0a3430e14fa1fbfff5"
+    }
+   ],
+   "query": "Infer full Selmer corank from Mordell–Weil rank alone.",
+   "reason": "The full Selmer corank also includes a possible divisible primary contribution from the Tate–Shafarevich group."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-cor-sylvester",
+     "quote": "In particular, there are $x,y\\in\\mathbb Q$ such that $x^3+y^3=\\ell$.",
+     "quote_sha256": "677c67fb2e475ba49fd19825b7ddf2049fe7a72754c20eec96098b57bd1bc84a"
+    }
+   ],
+   "query": "Obtain an explicit rational cube-sum representation from the stated existence corollary.",
+   "reason": "The corollary proves existence through non-torsion rational points and supplies no finite point-search bound."
+  }
+ ],
+ "family": "PM-002",
+ "id": "PM-002.2",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-unrestricted-selmer-converse",
+    "statement": "every elliptic curve $A_0/\\mathbb Q$,"
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-unrestricted-selmer-converse",
+    "statement": "every prime $p$,"
+   },
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-unrestricted-selmer-converse",
+    "statement": "$r\\in\\{0,1\\}$,"
+   },
+   {
+    "anchor": "stmt-thm-two-converse-input",
+    "claim_id": "claim-established-even-prime-converse",
+    "statement": "If $E/\\mathbb Q$ is any elliptic curve"
+   },
+   {
+    "anchor": "stmt-thm-two-converse-input",
+    "claim_id": "claim-established-even-prime-converse",
+    "statement": "\\mathop{\\mathrm{corank}}_{\\mathbb Z_2}\\mathop{\\mathrm{Sel}}_{2^\\infty}(E/\\mathbb Q)=r\\in\\{0,1\\}"
+   },
+   {
+    "anchor": "stmt-thm-twist-density-input",
+    "claim_id": "claim-analytic-twist-densities",
+    "statement": "For any elliptic curve $E/\\mathbb Q$,"
+   },
+   {
+    "anchor": "stmt-thm-twist-density-input",
+    "claim_id": "claim-analytic-twist-densities",
+    "statement": "among nonzero squarefree integers $d$ ordered by $|d|$,"
+   },
+   {
+    "anchor": "pm-cite-27",
+    "claim_id": "claim-compatible-auxiliary-fields",
+    "statement": "Write $N$ for the conductor and $V=V_pA_0$."
+   },
+   {
+    "anchor": "stmt-prop-arithmetic-reduction",
+    "claim_id": "claim-heegner-arithmetic-reduction",
+    "statement": "With these choices,"
+   },
+   {
+    "anchor": "stmt-prop-arithmetic-reduction",
+    "claim_id": "claim-heegner-arithmetic-reduction",
+    "statement": "If $y$ is non-torsion,"
+   },
+   {
+    "anchor": "stmt-lem-base-green",
+    "claim_id": "claim-base-greenberg-dichotomy",
+    "statement": "If the compact Selmer line of $W/K$ has nonzero localization,"
+   },
+   {
+    "anchor": "pm-h-14",
+    "claim_id": "claim-controlled-tame-primes",
+    "statement": "In the prime construction and cohomological calculations of this section, Galois Frobenius elements are arithmetic Frobenius elements."
+   },
+   {
+    "anchor": "stmt-lem-admissible-specialization",
+    "claim_id": "claim-admissible-specialization-and-division",
+    "statement": "For constant coefficients $V$,"
+   },
+   {
+    "anchor": "stmt-lem-admissible-specialization",
+    "claim_id": "claim-admissible-specialization-and-division",
+    "statement": "when unramifiedness at the moving primes is imposed."
+   },
+   {
+    "anchor": "stmt-lem-obstruction-necessary",
+    "claim_id": "claim-necessary-obstruction-vanishing",
+    "statement": "If a nonzero class $x\\in H^1_{\\mathop{\\mathrm{Gr}}}(K,V\\otimes k)$ is the specialization of an admissible class in $H^1_{\\mathrm{Gr}}(K,M_2^{\\eta})$, then"
+   },
+   {
+    "anchor": "stmt-lem-nonzero-obstruction",
+    "claim_id": "claim-nondegenerate-tame-obstruction",
+    "statement": "The element $\\gamma$ in <a href=\"#prop:tame-primes\" data-reference-type=\"ref\" data-reference=\"prop:tame-primes\">7</a> can be chosen so that, in the bases of <a href=\"#eq:base-green-bases\" data-reference-type=\"ref\" data-reference=\"eq:base-green-bases\">[eq:base-green-bases]</a>, the obstruction matrix is $$\\label{eq:obstruction-matrix}\n \\begin{pmatrix}0&\\kappa\\\\-\\kappa&0\\end{pmatrix},\n \\qquad \\kappa\\in\\mathbb Q_p^\\times.$$ Thus no nonzero base Greenberg class lifts to order two."
+   },
+   {
+    "anchor": "stmt-prop-green-length",
+    "claim_id": "claim-uniform-greenberg-length",
+    "statement": "For the primes of <a href=\"#prop:tame-primes\" data-reference-type=\"ref\" data-reference=\"prop:tame-primes\">7</a>, chosen in the strict case as in <a href=\"#lem:nonzero-obstruction\" data-reference-type=\"ref\" data-reference=\"lem:nonzero-obstruction\">11</a>, every fixed $b\\ge1$,"
+   },
+   {
+    "anchor": "stmt-prop-green-length",
+    "claim_id": "claim-uniform-greenberg-length",
+    "statement": "and either $\\eta=1$ or $\\eta=-1$,"
+   },
+   {
+    "anchor": "stmt-lem-uniform-local-log",
+    "claim_id": "claim-uniform-unramified-logarithms",
+    "statement": "Fix an integer $d_0\\ge0$."
+   },
+   {
+    "anchor": "stmt-lem-uniform-local-log",
+    "claim_id": "claim-uniform-unramified-logarithms",
+    "statement": "If $P\\in A_0(E)$"
+   },
+   {
+    "anchor": "stmt-lem-uniform-local-log",
+    "claim_id": "claim-uniform-unramified-logarithms",
+    "statement": "where $C,n\\ge0$ are integers,"
+   },
+   {
+    "anchor": "stmt-prop-heegner-log",
+    "claim_id": "claim-weighted-heegner-logarithm-vanishing",
+    "statement": "At the distinguished place over $p$,"
+   },
+   {
+    "anchor": "stmt-lem-split-u-operators",
+    "claim_id": "claim-split-parabolic-eigenvalues",
+    "statement": "Every test <a href=\"#eq:p-pivot-test\" data-reference-type=\"eqref\" data-reference=\"eq:p-pivot-test\">[eq:p-pivot-test]</a> satisfies $U_2\\Phi_p=p^2\\Phi_p$ and $U_3\\Phi_p=p^2\\Phi_p$. Thus both operators $p^{-2}U_j$ have value $1$ on the theta form of weight <a href=\"#eq:theta-weight\" data-reference-type=\"eqref\" data-reference=\"eq:theta-weight\">[eq:theta-weight]</a>."
+   },
+   {
+    "anchor": "stmt-lem-theta-eigenparameters",
+    "claim_id": "claim-theta-spherical-parameter",
+    "statement": "At a split spherical place"
+   },
+   {
+    "anchor": "stmt-prop-theta-family",
+    "claim_id": "claim-integral-holomorphic-theta-family",
+    "statement": "For the characters <a href=\"#eq:theta-character\" data-reference-type=\"eqref\" data-reference=\"eq:theta-character\">[eq:theta-character]</a> and every sufficiently large positive $m$ on the prescribed branch,"
+   },
+   {
+    "anchor": "stmt-lem-unary-moments",
+    "claim_id": "claim-bounded-unary-position-measures",
+    "statement": "Fix the integral position supports, the locally constant tests at $p$, and their levels."
+   },
+   {
+    "anchor": "stmt-lem-unary-moments",
+    "claim_id": "claim-bounded-unary-position-measures",
+    "statement": "At a fixed ordinary CM test object,"
+   },
+   {
+    "anchor": "stmt-lem-mixed-expansions",
+    "claim_id": "claim-uniform-mixed-expansion-denominators",
+    "statement": "in algebraic ordinary differential frames"
+   },
+   {
+    "anchor": "stmt-lem-mixed-expansions",
+    "claim_id": "claim-uniform-mixed-expansion-denominators",
+    "statement": "and in the monomial-dual lattice,"
+   },
+   {
+    "anchor": "stmt-prop-constant-term-small",
+    "claim_id": "claim-small-constant-terms",
+    "statement": "Assume that the conductor-one Heegner point $y$ is torsion."
+   },
+   {
+    "anchor": "stmt-lem-cleared-period-comparison",
+    "claim_id": "claim-cleared-binary-period-comparison",
+    "statement": "after taking $m$ sufficiently close to zero on its branch,"
+   },
+   {
+    "anchor": "pm-h-43",
+    "claim_id": "claim-positive-index-unfolding",
+    "statement": "Use the Fourier–Jacobi index represented by $x=e_1\\in A$, and let $T=U(Le_2)\\subset U(A)$ be its stabilizer."
+   },
+   {
+    "anchor": "eq:primitive-monomial",
+    "claim_id": "claim-positive-index-unfolding",
+    "statement": "For $d_1,d_2\\geq0$ satisfying $d_1+d_2=m-1$, take at each real embedding the polynomial coefficient $$\\label{eq:primitive-monomial}\n [e,B_1]^{d_1}[e,B_2]^{d_2}.$$"
+   },
+   {
+    "anchor": "stmt-lem-simultaneous-unary-nonvanishing",
+    "claim_id": "claim-simultaneous-unary-nonvanishing",
+    "statement": "The fixed finite-order parts of $\\xi_1,\\xi_2$ can be chosen, preserving <a href=\"#eq:unary-character-product\" data-reference-type=\"eqref\" data-reference=\"eq:unary-character-product\">[eq:unary-character-product]</a>, so that suitable permitted local tests give $T_j(d_{j0})\\ne0$ at positive classical cut weights $d_{10},d_{20}$. The weights can be chosen so that $d_{10}+d_{20}+1$ is divisible by every prescribed torsion order and a prescribed sufficiently large fixed power of $p$."
+   },
+   {
+    "anchor": "stmt-lem-bounded-uncontrolled-content",
+    "claim_id": "claim-bounded-uncontrolled-positive-content",
+    "statement": "Before imposing the additional fixed-place controls,"
+   },
+   {
+    "anchor": "stmt-lem-fixed-place-spanning",
+    "claim_id": "claim-bounded-fixed-place-spanning",
+    "statement": "At each such fixed split place,"
+   },
+   {
+    "anchor": "stmt-lem-fixed-place-spanning",
+    "claim_id": "claim-bounded-fixed-place-spanning",
+    "statement": "For weights tending to zero,"
+   },
+   {
+    "anchor": "stmt-prop-bounded-content",
+    "claim_id": "claim-combined-theta-output",
+    "statement": "Fix the truncation $b_*$ selected in Section <a href=\"#sec:tame\" data-reference-type=\"ref\" data-reference=\"sec:tame\">3</a>."
+   },
+   {
+    "anchor": "stmt-lem-canonical-ordinary-level",
+    "claim_id": "claim-canonical-ordinary-branch",
+    "statement": "Over the ordinary formal completion,"
+   },
+   {
+    "anchor": "stmt-lem-dual-fock-functor",
+    "claim_id": "claim-integral-dual-fock-operations",
+    "statement": "If a map on $\\mathcal H$ is diagonal with entries $c_1,c_2,c_3$,"
+   },
+   {
+    "anchor": "stmt-lem-cusp-base-change",
+    "claim_id": "claim-cusp-base-change",
+    "statement": "An ordinary section modulo $p^M$ on the canonical branch whose constant terms vanish, extended by zero on the other branches,"
+   },
+   {
+    "anchor": "stmt-lem-ordinary-trace",
+    "claim_id": "claim-integral-normalized-ordinary-traces",
+    "statement": "on the canonical ordinary branch"
+   },
+   {
+    "anchor": "stmt-lem-artin-content-cancellation",
+    "claim_id": "claim-uniform-artin-content-cancellation",
+    "statement": "Let $K'/k$ be a finite extension,"
+   },
+   {
+    "anchor": "stmt-lem-artin-content-cancellation",
+    "claim_id": "claim-uniform-artin-content-cancellation",
+    "statement": "and let $a(t)\\in\\mathcal O_{K'}[t]/(t^b)$ satisfy $v_p(a(0))\\leq C$, where $C$ is a fixed nonnegative integer."
+   },
+   {
+    "anchor": "stmt-lem-artin-content-cancellation",
+    "claim_id": "claim-uniform-artin-content-cancellation",
+    "statement": "If $a(t)r(t)$ belongs to $p^M\\mathcal O_{K'}[t]/(t^b)$, then"
+   },
+   {
+    "anchor": "stmt-prop-cusp-congruence",
+    "claim_id": "claim-full-ring-classical-cusp-congruence",
+    "statement": "After reducing $M_i$ by a fixed constant and relabeling it,"
+   },
+   {
+    "anchor": "subsec:simultaneous-transfer",
+    "claim_id": "claim-weak-transfer-full-infinite-characters",
+    "statement": "Put $G=\\mathop{\\mathrm{U}}(B\\oplus\\mathbb H)$, with the Hermitian space and conventions of <a href=\"#sec:theta\" data-reference-type=\"ref\" data-reference=\"sec:theta\">4</a>."
+   },
+   {
+    "anchor": "subsec:simultaneous-transfer",
+    "claim_id": "claim-weak-transfer-full-infinite-characters",
+    "statement": "Let $\\pi$ be a cuspidal automorphic representation occurring in <a href=\"#prop:cusp-congruence\" data-reference-type=\"ref\" data-reference=\"prop:cusp-congruence\">33</a>."
+   },
+   {
+    "anchor": "stmt-lem-transfer-algebraicity",
+    "claim_id": "claim-algebraic-transfer-factors",
+    "statement": "Every cuspidal factor in <a href=\"#lem:weak-transfer\" data-reference-type=\"ref\" data-reference=\"lem:weak-transfer\">34</a> is conjugate-self-dual and tempered at infinity. After a unitary parity-correcting character twist it is regular algebraic. The formal parameter is elliptic: its conjugate-self-dual blocks occur without repetition."
+   },
+   {
+    "anchor": "stmt-thm-racsd-galois-input",
+    "claim_id": "claim-established-racsd-galois-input",
+    "statement": "Let $\\Pi$ be a regular algebraic conjugate-self-dual cuspidal representation of $\\mathop{\\mathrm{GL}}_d(\\mathbb A_L)$ and fix $\\iota:\\overline{\\mathbb Q}_p\\simeq\\mathbb C$."
+   },
+   {
+    "anchor": "stmt-prop-galois-package",
+    "claim_id": "claim-cusp-system-galois-package",
+    "statement": "For every characteristic-zero cusp eigensystem in <a href=\"#prop:cusp-congruence\" data-reference-type=\"ref\" data-reference=\"prop:cusp-congruence\">33</a>, there is a continuous semisimple representation"
+   },
+   {
+    "anchor": "stmt-lem-two-contacts",
+    "claim_id": "claim-local-hodge-newton-flags",
+    "statement": "At each distinguished $w\\mid p$,"
+   },
+   {
+    "anchor": "stmt-lem-binary-inertia",
+    "claim_id": "claim-separated-binary-inertia",
+    "statement": "On any characteristic-zero system where $\\Delta\\ne0$,"
+   },
+   {
+    "anchor": "stmt-lem-steinberg-control",
+    "claim_id": "claim-steinberg-inertia-rank",
+    "statement": "At a split place with the specified $(3,1)$ parahoric level,"
+   },
+   {
+    "anchor": "stmt-prop-nilpotent-control",
+    "claim_id": "claim-uniform-operator-nilpotent-control",
+    "statement": "Let $T_i$ be the image of $T_i^0$ in its characteristic-zero cusp eigensystems."
+   },
+   {
+    "anchor": "pm-h-61",
+    "claim_id": "claim-uniform-matrix-algebra-generators",
+    "statement": "For each $i$, take the product of the Galois representations of <a href=\"#prop:galois-package\" data-reference-type=\"ref\" data-reference=\"prop:galois-package\">38</a> over all characteristic-zero systems of $T_i$, and denote it by $\\rho_i$."
+   },
+   {
+    "anchor": "pm-h-61",
+    "claim_id": "claim-uniform-matrix-algebra-generators",
+    "statement": "Put $B_i=T_i[\\rho_i]$."
+   },
+   {
+    "anchor": "stmt-lem-finite-value-admissibility",
+    "claim_id": "claim-finite-value-admissibility",
+    "statement": "If $\\Phi:B\\to M_4(R_b)$ is a $T$-linear algebra homomorphism with scalar map $\\lambda$,"
+   },
+   {
+    "anchor": "stmt-lem-corner-minors",
+    "claim_id": "claim-intrinsic-corner-minors",
+    "statement": "Choose four rows of a stack of $4\\times4$ matrices in $B$, with column indices $1,2,x,y$."
+   },
+   {
+    "anchor": "stmt-lem-corner-minors",
+    "claim_id": "claim-intrinsic-corner-minors",
+    "statement": "If the row indices consist of the column indices with $y$ replaced by $u$,"
+   },
+   {
+    "anchor": "stmt-lem-corner-minors",
+    "claim_id": "claim-intrinsic-corner-minors",
+    "statement": "If the ordinary determinant is zero in every ambient field,"
+   },
+   {
+    "anchor": "stmt-prop-cyclotomic-corner",
+    "claim_id": "claim-cyclotomic-corner-factorization",
+    "statement": "The corner modules satisfy $$D_{xy}=D_{xf}D_{fy}.\n \\label{eq:xy-factorization}$$"
+   },
+   {
+    "anchor": "stmt-lem-no-stable-y-line",
+    "claim_id": "claim-no-stable-last-line",
+    "statement": "The image of $D_{fy}$ is nonzero at every field evaluation of $\\mathcal R$."
+   },
+   {
+    "anchor": "stmt-cor-fitting-vanishing",
+    "claim_id": "claim-vanishing-corner-fitting-ideal",
+    "statement": "One has $$\\mathop{\\mathrm{Fitt}}_{0,T}(D_{fy})=0.\n \\label{eq:fitting-vanishing}$$"
+   },
+   {
+    "anchor": "stmt-cor-sylvester",
+    "claim_id": "claim-sylvester-positive-prime-cases",
+    "statement": "Let $\\ell$ be a rational prime with $\\ell\\equiv4,7,8\\pmod 9$, and equip the projective cubic $$E_\\ell:\\quad X^3+Y^3=\\ell Z^3$$ with origin $(1:-1:0)$."
+   },
+   {
+    "anchor": "stmt-lem-global-torus-factor",
+    "claim_id": "claim-normalized-global-torus-factor",
+    "statement": "Let $K=\\mathbb F_q(X)$, where $X$ is a smooth projective geometrically connected curve of genus $g$, and let $\\Gamma_K$ be its absolute Galois group."
+   },
+   {
+    "anchor": "stmt-lem-global-torus-factor",
+    "claim_id": "claim-normalized-global-torus-factor",
+    "statement": "Let $T_1,T_2$ be $K$-tori with isomorphic rational character modules as Galois representations, and let $\\ell:\\operatorname{Lie}T_1\\simeq\\operatorname{Lie}T_2$ be a $K$-linear isomorphism."
+   },
+   {
+    "anchor": "stmt-lem-global-torus-factor",
+    "claim_id": "claim-normalized-global-torus-factor",
+    "statement": "Choose local Haar measures $\\eta_{i,v}$ compatible under $\\ell$ on the Lie algebras, and give the smooth integral compact subgroups volume one at almost all places."
+   },
+   {
+    "anchor": "stmt-lem-nonstandard-change-characteristic",
+    "claim_id": "claim-nonstandard-change-of-characteristic",
+    "statement": "Fix a finite collection of paired based root data with rational root-ray maps $\\psi$, matching Levi data, and compatible finite cyclic outer actions."
+   },
+   {
+    "anchor": "stmt-lem-nonstandard-change-characteristic",
+    "claim_id": "claim-nonstandard-change-of-characteristic",
+    "statement": "Suppose the nonstandard weighted fundamental lemma holds over local fields of sufficiently large positive characteristic for their unramified forms, including all cyclic-generator variants."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "Odd-prime arithmetic reduction",
+    "evidence": [
+     {
+      "anchor": "stmt-thm-twist-density-input",
+      "quote": "For any elliptic curve $E/\\mathbb Q$, among nonzero squarefree integers $d$ ordered by $|d|$, the quadratic twists $E^{(d)}$ of analytic rank zero and one each have density $1/2$.",
+      "quote_sha256": "1804ca5a1b5f84f074ff056068ec1b2704f6a68d2f9bfb3d8da786ff06cb5b17"
+     },
+     {
+      "anchor": "proof-stmt-prop-arithmetic-reduction",
+      "quote": "Since the second factor has order $1-r$, a non-torsion $y$ implies $a(A_0)=r$.",
+      "quote_sha256": "65d1f9e062de91b1a48553db46cf0db3f8d82b2932abb25ba16b93bc109cf979"
+     }
+    ],
+    "requires_concepts": [
+     "Analytic quadratic twist densities",
+     "Root-number parity",
+     "Compact Selmer decomposition",
+     "Gross–Zagier and Kolyvagin"
+    ],
+    "supporting_pm_ids": [
+     "PM-006.1"
+    ]
+   },
+   {
+    "concept": "Full-ring Greenberg extension extraction",
+    "evidence": [
+     {
+      "anchor": "stmt-prop-extension-extraction",
+      "quote": "There is an injective $R_b$-linear map $$\\mathop{\\mathrm{Hom}}_{R_b}(D_{fy}\\otimes_{T,\\lambda}R_b,R_b)\n       \\hookrightarrow\n H^1_{\\mathrm{Gr}}(L,V\\otimes\\psi^{\\pm1}).\n \\label{eq:green-injection}$$ Its source has $R_b$-length at least $b$.",
+      "quote_sha256": "6968102126dc0b20a6a312f21cfd7c28f147a8601dfb1bd0b03e7c4c3c8619fa"
+     },
+     {
+      "anchor": "stmt-prop-extension-extraction",
+      "quote": "Its source has $R_b$-length at least $b$.",
+      "quote_sha256": "ab0cf7c133211f002e0dd3458f55294c6cfc43c2d6a9e7170192beb27b750e01"
+     }
+    ],
+    "requires_concepts": [
+     "Admissible cohomology",
+     "Classical cusp congruence",
+     "Local Galois flags",
+     "Corner determinant identities",
+     "Vanishing Fitting ideal"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-unrestricted-selmer-converse",
+   "exact_statement": "For every elliptic curve $A_0/\\mathbb Q$, every prime $p$, and $r\\in\\{0,1\\}$, $$s_p(A_0)=r\n \\quad\\Longrightarrow\\quad\n a(A_0)=\\mathop{\\mathrm{rank}}_{\\mathbb Z}A_0(\\mathbb Q)=r,\n \\qquad \\#\\operatorname{Sha}(A_0/\\mathbb Q)<\\infty.$$ There is no restriction on reduction type, complex multiplication, the residual representation, rational torsion, or rational isogenies.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "claim-established-even-prime-converse",
+   "exact_statement": "If $E/\\mathbb Q$ is any elliptic curve and $\\mathop{\\mathrm{corank}}_{\\mathbb Z_2}\\mathop{\\mathrm{Sel}}_{2^\\infty}(E/\\mathbb Q)=r\\in\\{0,1\\}$, then $$\\mathop{\\mathrm{ord}}_{s=1}L(E,s)=\\mathop{\\mathrm{rank}}E(\\mathbb Q)=r,\n \\qquad \\operatorname{Sha}(E/\\mathbb Q)\\text{ is finite}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-two-converse-input"
+  },
+  {
+   "claim_id": "claim-analytic-twist-densities",
+   "exact_statement": "For any elliptic curve $E/\\mathbb Q$, among nonzero squarefree integers $d$ ordered by $|d|$, the quadratic twists $E^{(d)}$ of analytic rank zero and one each have density $1/2$. In particular the exceptional set of twists of analytic rank at least two has density zero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-twist-density-input"
+  },
+  {
+   "claim_id": "claim-compatible-auxiliary-fields",
+   "exact_statement": "There are coprime negative odd fundamental discriminants $D,D'$ such that every prime dividing $2Np$ splits in both quadratic fields, $$\\left(\\frac{D}{|D'|}\\right)=1,$$ and each of $A_0^D,A_0^{D'},A_0^{DD'}$ has the smallest analytic rank permitted by its sign. They may also be chosen so that $$K=\\mathbb Q(\\sqrt D),\\qquad F=\\mathbb Q(\\sqrt{DD'}),\\qquad\n L=\\mathbb Q(\\sqrt D,\\sqrt{D'})$$ satisfy the following properties: $L/F$ is CM and unramified at every finite prime, $L$ has only the roots of unity $\\{\\pm1\\}$, and $L$ does not contain the CM field of $A_0$ if $A_0$ has CM.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-auxiliary-fields"
+  },
+  {
+   "claim_id": "claim-heegner-arithmetic-reduction",
+   "exact_statement": "With these choices, $$\\dim H^1_f(K,V)=1,\n \\qquad\n \\dim H^1_f(K,V^{DD'})=1.$$ The second line localizes nontrivially at both places of $K$ over $p$. Let $y\\in A_0(K)$ be the norm of the conductor-one Heegner point under a modular parametrization taking the cusp $\\infty$ to zero. If $y$ is non-torsion, Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a> follows.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-arithmetic-reduction"
+  },
+  {
+   "claim_id": "claim-base-greenberg-dichotomy",
+   "exact_statement": "If the compact Selmer line of $W/K$ has nonzero localization, then $H^1_{\\mathop{\\mathrm{Gr}}}(K,W)=H^1_{\\overline{\\mathop{\\mathrm{Gr}}}}(K,W)=0$. The only remaining possibility is the following *strict case* in the $V$ summand: $r=1$, and the compact Selmer space is generated by a class $a$ such that $a^c=a$ and every localization of $a$ is zero. In that case $$\\label{eq:base-green-bases}\n H^1_{\\mathop{\\mathrm{Gr}}}(K,V)=\\langle a,h\\rangle,\n \\qquad\n H^1_{\\overline{\\mathop{\\mathrm{Gr}}}}(K,V)=\\langle a,h^c\\rangle,$$ where $h$ has nonzero localization at $v$ and zero localization at $v^c$. The $V^{DD'}$ summand always has zero Greenberg space.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-base-green"
+  },
+  {
+   "claim_id": "claim-controlled-tame-primes",
+   "exact_statement": "There are rational primes $q_i\\notin S$, split completely in $L$, distinguished places $\\mathfrak q_i$ of $K$ above them, cyclic $p$-quotients $\\Delta_i$ of the ring class group of conductor $q_i$, and surjections $$\\ell_i:G_K\\longrightarrow\\Delta_i\\simeq\\mathbb Z/p^{n_i}\\mathbb Z,\n \\qquad n_i\\longrightarrow\\infty,$$ with the following properties.*\n\n1.  *$\\ell_i$ is unramified outside the pair above $q_i$, its restriction to inertia at $\\mathfrak q_i$ is surjective, $\\ell_i^c=-\\ell_i$, and $\\ell_i|_{G_{K_s}}=0$ for every $s\\in S$.*\n\n2.  *$v_p(q_i-1)-n_i$ is bounded. At either place above $p$, the full ring class field of conductor $q_i$ is unramified and its local degree has bounded $p$-part.*\n\n3.  *Frobenius at $\\mathfrak q_i$, on all fixed data unramified outside $S$, tends to an element $\\gamma\\in G_L$ such that $$\\epsilon(\\gamma)=1,\\qquad\n     \\det(V(\\gamma)-1)\\ne0,\\qquad\n     \\mathcal C(\\gamma)\\text{ is not a root of unity}.$$ Moreover $\\gamma$ fixes all $p$-power radicals of a fixed, conjugation-stable finite list in $K^\\times$ spanning $\\mathcal O_{K,S}^{\\times}\\otimes\\mathbb Q_p$ under the Kummer map.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-tame-primes"
+  },
+  {
+   "claim_id": "claim-admissible-specialization-and-division",
+   "exact_statement": "For constant coefficients $V$, admissible $H^1$ is precisely $H^1(G_{K,S},V)$, and likewise over $L$. For $\\mathbb Q_p(1)$ the same assertion holds when unramifiedness at the moving primes is imposed. The fixed local conditions specialize to the usual rational local conditions. Coefficient reduction and multiplication by $t$ give short exact sequences of admissible cochain complexes $$\\label{eq:coefficient-sequence}\n 0\\longrightarrow C^\\bullet(M_{b-1}^{\\eta})\n \\xrightarrow{\\ t\\ } C^\\bullet(M_b^{\\eta})\n \\longrightarrow C^\\bullet(V\\otimes k)\\longrightarrow0.$$ Zero local conditions at $p$ and local Kummer conditions are preserved by the resulting division of a class with zero specialization by $t$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-admissible-specialization"
+  },
+  {
+   "claim_id": "claim-necessary-obstruction-vanishing",
+   "exact_statement": "The expression $H_\\gamma$ is independent of the primitive and bilinear. If a nonzero class $x\\in H^1_{\\mathop{\\mathrm{Gr}}}(K,V\\otimes k)$ is the specialization of an admissible class in $H^1_{\\mathrm{Gr}}(K,M_2^{\\eta})$, then $$\\label{eq:obstruction-vanishing}\n H_\\gamma(x,d)=0\n \\quad\\text{for every }d\\in H^1_{\\overline{\\mathop{\\mathrm{Gr}}}}(K,V\\otimes k).$$ The same necessary condition holds for either $\\eta$.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-obstruction-necessary"
+  },
+  {
+   "claim_id": "claim-nondegenerate-tame-obstruction",
+   "exact_statement": "The element $\\gamma$ in <a href=\"#prop:tame-primes\" data-reference-type=\"ref\" data-reference=\"prop:tame-primes\">7</a> can be chosen so that, in the bases of <a href=\"#eq:base-green-bases\" data-reference-type=\"ref\" data-reference=\"eq:base-green-bases\">[eq:base-green-bases]</a>, the obstruction matrix is $$\\label{eq:obstruction-matrix}\n \\begin{pmatrix}0&\\kappa\\\\-\\kappa&0\\end{pmatrix},\n \\qquad \\kappa\\in\\mathbb Q_p^\\times.$$ Thus no nonzero base Greenberg class lifts to order two.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-nonzero-obstruction"
+  },
+  {
+   "claim_id": "claim-uniform-greenberg-length",
+   "exact_statement": "For the primes of <a href=\"#prop:tame-primes\" data-reference-type=\"ref\" data-reference=\"prop:tame-primes\">7</a>, chosen in the strict case as in <a href=\"#lem:nonzero-obstruction\" data-reference-type=\"ref\" data-reference=\"lem:nonzero-obstruction\">11</a>, every fixed $b\\ge1$, and either $\\eta=1$ or $\\eta=-1$, one has $$\\label{eq:green-length}\n \\mathop{\\mathrm{length}}_{R_b}H^1_{\\mathrm{Gr}}(L,V\\otimes\\psi^{\\eta})\n \\begin{cases}\n =0,&\\text{outside the strict case},\\\\\n \\le2,&\\text{in the strict case}.\n \\end{cases}$$ In the strict case this module is killed by $t$ and is the image of its two-dimensional base space under multiplication by $t^{b-1}$. Put $$\\label{eq:b-star}\n b_*=1\\quad\\text{outside the strict case},\\qquad\n b_*=3\\quad\\text{in the strict case}.$$ Thus in both cases the length in <a href=\"#eq:green-length\" data-reference-type=\"ref\" data-reference=\"eq:green-length\">[eq:green-length]</a> is strictly smaller than $b_*$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-green-length"
+  },
+  {
+   "claim_id": "claim-uniform-unramified-logarithms",
+   "exact_statement": "Fix an integer $d_0\\ge0$. There is a constant $c$ such that, for every finite unramified extension $E/\\mathbb Q_p$ with $v_p([E:\\mathbb Q_p])\\le d_0$, $$\\label{eq:uniform-local-log}\n \\log_{A_0,p}(A_0(E))\\subseteq p^{-c}\\mathcal O_E.$$ If $P\\in A_0(E)$ and the Kummer class of $p^C P$ vanishes in $H^1(E,A_0[p^n])$, where $C,n\\ge0$ are integers, then $$v_p(\\log_{A_0,p}P)\\ge n-C-c.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-uniform-local-log"
+  },
+  {
+   "claim_id": "claim-weighted-heegner-logarithm-vanishing",
+   "exact_statement": "At the distinguished place over $p$, and for either sign, $$\\label{eq:heegner-log}\n \\sum_{g\\in\\mathcal G_i}(1+t)^{\\pm\\ell_i(g)}\n       \\log_{A_0,p}(y_i^g)\n       \\longrightarrow0\\pmod {t^{b_*}}.$$ More precisely, every coefficient of degree less than $b_*$ has valuation tending to $+\\infty$ along $\\mathcal U$. The coefficients through any other fixed degree have a common lower valuation bound. These assertions hold in a common $p$-adic algebraic closure, with its fixed extension of the valuation.",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-heegner-log"
+  },
+  {
+   "claim_id": "claim-split-parabolic-eigenvalues",
+   "exact_statement": "Every test <a href=\"#eq:p-pivot-test\" data-reference-type=\"eqref\" data-reference=\"eq:p-pivot-test\">[eq:p-pivot-test]</a> satisfies $U_2\\Phi_p=p^2\\Phi_p$ and $U_3\\Phi_p=p^2\\Phi_p$. Thus both operators $p^{-2}U_j$ have value $1$ on the theta form of weight <a href=\"#eq:theta-weight\" data-reference-type=\"eqref\" data-reference=\"eq:theta-weight\">[eq:theta-weight]</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-split-u-operators"
+  },
+  {
+   "claim_id": "claim-theta-spherical-parameter",
+   "exact_statement": "At a split spherical place the standard parameter of the theta form, in unitary normalization, is $$\\label{eq:theta-eigenparameters}\n (\\pi\\otimes\\eta)\\ \\oplus\\ |\\cdot|^{-1/2}\n                       \\ \\oplus\\ |\\cdot|^{1/2}.$$ Here $\\pi\\otimes\\eta$ means tensoring the standard two-dimensional parameter by the determinant-twist character.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-theta-eigenparameters"
+  },
+  {
+   "claim_id": "claim-integral-holomorphic-theta-family",
+   "exact_statement": "For the characters <a href=\"#eq:theta-character\" data-reference-type=\"eqref\" data-reference=\"eq:theta-character\">[eq:theta-character]</a> and every sufficiently large positive $m$ on the prescribed branch, the theta construction gives holomorphic algebraic forms $\\Theta_{i,m}$ of weight <a href=\"#eq:theta-weight\" data-reference-type=\"eqref\" data-reference=\"eq:theta-weight\">[eq:theta-weight]</a>. In the canonical ordinary monomial-dual lattice their coefficients have a common bounded denominator, coefficientwise in the tame group algebra and in every fixed truncated substitution $R_b$. They have spherical parameters <a href=\"#eq:theta-eigenparameters\" data-reference-type=\"eqref\" data-reference=\"eq:theta-eigenparameters\">[eq:theta-eigenparameters]</a>, and at both distinguished $p$-places they satisfy $$p^{-2}U_2\\Theta_{i,m}=\\Theta_{i,m},\\qquad\n  p^{-2}U_3\\Theta_{i,m}=\\Theta_{i,m}.$$ These assertions allow arbitrary fixed split tests of the stipulated bounded levels. They remain valid for the particular tests with all the finite local controls in Proposition <a href=\"#prop:bounded-content\" data-reference-type=\"ref\" data-reference=\"prop:bounded-content\">27</a>.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-theta-family"
+  },
+  {
+   "claim_id": "claim-bounded-unary-position-measures",
+   "exact_statement": "Fix the integral position supports, the locally constant tests at $p$, and their levels. At a fixed ordinary CM test object, the period-normalized unary jets, in the frames of Convention <a href=\"#conv:scaled-support\" data-reference-type=\"ref\" data-reference=\"conv:scaled-support\">18</a>, are the moments of a bounded measure on the product of their integral position lattices. Its norm is bounded in terms of the coefficients of the fixed tests and their $p$-levels. The bound is independent of the moment degrees and of the moving tame level $q_i$.*\n\n*Cutting a position measure to units gives at classical degrees the theta jet with the corresponding unit cut on the finite position test. The corresponding moments converge to these unit moments when every degree tends to infinity and converges on its fixed $p$-adic branch. On a sufficiently narrow branch the unit moments, including the fixed CM unit-scale powers, are analytic functions of the degrees.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-unary-moments"
+  },
+  {
+   "claim_id": "claim-uniform-mixed-expansion-denominators",
+   "exact_statement": "The mixed Fourier–Jacobi expansions of <a href=\"#eq:upper-theta-integral\" data-reference-type=\"eqref\" data-reference=\"eq:upper-theta-integral\">[eq:upper-theta-integral]</a>, in algebraic ordinary differential frames and in the monomial-dual lattice, have a common bounded denominator. The bound is independent of $m$, $i$, and the tame character, and is coefficientwise in the tame group ring. The same assertion holds after substitution into any fixed $R_b$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-mixed-expansions"
+  },
+  {
+   "claim_id": "claim-small-constant-terms",
+   "exact_statement": "Assume that the conductor-one Heegner point $y$ is torsion. The positive weights $m_i$ in Proposition <a href=\"#prop:theta-family\" data-reference-type=\"ref\" data-reference=\"prop:theta-family\">17</a> can be chosen with $m_i\\to+\\infty$ and $m_i\\to0$ on the prescribed $p$-adic branch so that every constant Fourier–Jacobi coefficient of the upper theta form tends coefficientwise to zero modulo $t^{b_*}$. The assertion holds in bounded algebraic ordinary differential bases, uniformly over all boundary representatives and all polynomial components. The weights may be required to satisfy any additional lower bounds and any further $p$-adic approximation conditions tending to zero.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-prop-constant-term-small"
+  },
+  {
+   "claim_id": "claim-cleared-binary-period-comparison",
+   "exact_statement": "There are group-ring polynomial factors $A_i(m),B_i(m)$ with uniformly bounded coefficients such that $$\\label{eq:cleared-period-comparison}\n A_i(m)S_i(m)^2\n   =B_i(m)P_{0,i}(m)^2P_{1,i}(m)^2.$$ For each $i$, after taking $m$ sufficiently close to zero on its branch, $A_i(m)$ has nonzero augmentation whose valuation is bounded above by a constant independent of $i$. The required neighborhood of zero may depend on $i$. The identity holds in the full characteristic-zero tame group algebra, including at zeros of the global central $L$-values.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-cleared-period-comparison"
+  },
+  {
+   "claim_id": "claim-positive-index-unfolding",
+   "exact_statement": "There are finite tests satisfying the $p$- and $q_i$-requirements of Section <a href=\"#sec:theta\" data-reference-type=\"ref\" data-reference=\"sec:theta\">4</a> for which the coefficient <a href=\"#eq:primitive-monomial\" data-reference-type=\"eqref\" data-reference=\"eq:primitive-monomial\">[eq:primitive-monomial]</a>, at index $(e_1,e_1)$, unfolds into the product of a fixed row-one Heisenberg theta function and $$\\label{eq:row-two-unfolding}\n  \\int_{[T]}\\varphi(s)\\eta^{-1}(s)\n       \\vartheta_{1,d_1}(sb_1)\\vartheta_{2,d_2}(sb_2)\\,ds.$$ Here $b_1,b_2\\in U(1)(\\mathbb A_F)$ translate the binary lines, and known splitting-character factors in $b_j$ have been removed. At $q_i$ the only additional row-two condition is a unit cut in the first binary column. The unfolding introduces a fixed nonzero volume factor and no factor $q_i-1$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-one-index-unfolding"
+  },
+  {
+   "claim_id": "claim-simultaneous-unary-nonvanishing",
+   "exact_statement": "The fixed finite-order parts of $\\xi_1,\\xi_2$ can be chosen, preserving <a href=\"#eq:unary-character-product\" data-reference-type=\"eqref\" data-reference=\"eq:unary-character-product\">[eq:unary-character-product]</a>, so that suitable permitted local tests give $T_j(d_{j0})\\ne0$ at positive classical cut weights $d_{10},d_{20}$. The weights can be chosen so that $d_{10}+d_{20}+1$ is divisible by every prescribed torsion order and a prescribed sufficiently large fixed power of $p$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-simultaneous-unary-nonvanishing"
+  },
+  {
+   "claim_id": "claim-bounded-uncontrolled-positive-content",
+   "exact_statement": "Before imposing the additional fixed-place controls, there are positive $d_{1i},d_{2i}$, with $m_i=d_{1i}+d_{2i}+1$ tending to zero $p$-adically and to infinity archimedeanly, for which the theta forms have a nonconstant Fourier–Jacobi coefficient of valuation bounded above at augmentation. The choices can simultaneously satisfy the constant-term precision of Proposition <a href=\"#prop:constant-term-small\" data-reference-type=\"ref\" data-reference=\"prop:constant-term-small\">21</a>.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-bounded-uncontrolled-content"
+  },
+  {
+   "claim_id": "claim-bounded-fixed-place-spanning",
+   "exact_statement": "At each such fixed split place, the tests just prescribed and their translates span the tests used in Lemma <a href=\"#lem:bounded-uncontrolled-content\" data-reference-type=\"ref\" data-reference=\"lem:bounded-uncontrolled-content\">25</a> in theta coinvariants, after inverting a Laurent polynomial nonzero at weight zero. For weights tending to zero, this spanning uses finitely many translates and a common bounded denominator. All replacements can be made independently while leaving the $p$- and $q_i$-tests unchanged.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-fixed-place-spanning"
+  },
+  {
+   "claim_id": "claim-combined-theta-output",
+   "exact_statement": "Fix the truncation $b_*$ selected in Section <a href=\"#sec:tame\" data-reference-type=\"ref\" data-reference=\"sec:tame\">3</a>. There exist positive integers $m_i\\to\\infty$, tending $p$-adically to zero on the prescribed torsion branch, and theta forms $\\Theta_i$ of weight $(m_i,m_i,1;-1)$ with the following simultaneous properties.*\n\n1.  *Their ordinary monomial-dual lattices have a uniform denominator bound, coefficientwise in the full tame group algebra and after every fixed truncated substitution used in the argument. One fixed scaling clears this bound.*\n\n2.  *All constant Fourier–Jacobi coefficients tend to zero through degree $b_*-1$ of the tame variable, in compatible ordinary differential bases, uniformly at the boundary representatives. This is a full-ring estimate in $R_{b_*}$.*\n\n3.  *At augmentation, a nonconstant Fourier–Jacobi coefficient has an integral-frame evaluation of valuation bounded above by a constant independent of $i$. Thus the forms do not acquire unbounded common content.*\n\n4.  *At both distinguished places above $p$, the fixed canonical $(2,1,1)$ level is $J$ and the operators $p^{-2}U_2,p^{-2}U_3$ have value $1$. At every controlled upper $(2,2)$ place, including $q_i$, the expanding center is invertible and the last binary spherical data are those of the final pair in <a href=\"#eq:theta-eigenparameters\" data-reference-type=\"eqref\" data-reference=\"eq:theta-eigenparameters\">[eq:theta-eigenparameters]</a>. At the specified unramified Steinberg places the level is $(3,1)$ parahoric, without an additional refinement. All nonsplit finite places are hyperspecial.*\n\n5.  *At split good spherical places the Hecke parameters are <a href=\"#eq:theta-eigenparameters\" data-reference-type=\"eqref\" data-reference=\"eq:theta-eigenparameters\">[eq:theta-eigenparameters]</a> with $\\eta=\\mathcal C^{m_i}\\nu_i$.*\n\n*All constants may depend on the fixed original data, the fixed local tests and $b_*$, but not on $i,q_i,n_i$ or the growing weights.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-bounded-content"
+  },
+  {
+   "claim_id": "claim-canonical-ordinary-branch",
+   "exact_statement": "Over the ordinary formal completion, the locus on which the rank-three flag equals the multiplicative subgroup is an open and closed branch of $Y^{\\mathrm{tor}}$. Its residual flag and frame data are finite etale data on the Cartier-dual character group. On a toroidal cusp chart this branch adds finite etale covers of the abelian extension-data scheme and does not ramify the center Fourier variable.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-canonical-ordinary-level"
+  },
+  {
+   "claim_id": "claim-integral-dual-fock-operations",
+   "exact_statement": "The functor $\\mathcal D_d$ is finite locally free and commutes with base change. Integral changes of Hodge frame preserve its lattice. If a map on $\\mathcal H$ is diagonal with entries $c_1,c_2,c_3$, its action on the basis dual to the minor monomials has entries $$(c_1c_2)^{a_{12}}(c_1c_3)^{a_{13}}\n          (c_2c_3)^{a_{23}},\n       \\qquad a_{12}+a_{13}+a_{23}=d.$$ A filtration of $\\mathcal H$ by subbundles with constant locally free graded pieces induces such a filtration on $\\mathcal D_d(\\mathcal H)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-dual-fock-functor"
+  },
+  {
+   "claim_id": "claim-cusp-base-change",
+   "exact_statement": "An ordinary section modulo $p^M$ on the canonical branch whose constant terms vanish, extended by zero on the other branches, is a section of $\\mathcal M_\\lambda/p^M$ over the ordinary open. The assertion remains true with coefficients in $\\mathcal O[t]/(p^M,t^b)$ and after finite extension of coefficients.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-cusp-base-change"
+  },
+  {
+   "claim_id": "claim-integral-normalized-ordinary-traces",
+   "exact_statement": "The operators in <a href=\"#eq:ordinary-normalization\" data-reference-type=\"ref\" data-reference=\"eq:ordinary-normalization\">[eq:ordinary-normalization]</a> preserve the dual-Fock differential lattice on the canonical ordinary branch and its reductions modulo every power of $p$. After the Hasse shift, both comparison eigenvalues are $1$ modulo the prescribed precision.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-ordinary-trace"
+  },
+  {
+   "claim_id": "claim-uniform-artin-content-cancellation",
+   "exact_statement": "Let $K'/k$ be a finite extension, and let $a(t)\\in\\mathcal O_{K'}[t]/(t^b)$ satisfy $v_p(a(0))\\leq C$, where $C$ is a fixed nonnegative integer. If $a(t)r(t)$ belongs to $p^M\\mathcal O_{K'}[t]/(t^b)$, then $$r(t)\\in p^{M-bC}\\mathcal O_{K'}[t]/(t^b).$$ The bound is independent of the extension and of $a$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-artin-content-cancellation"
+  },
+  {
+   "claim_id": "claim-full-ring-classical-cusp-congruence",
+   "exact_statement": "After reducing $M_i$ by a fixed constant and relabeling it, there are homomorphisms of $\\mathcal O$-algebras $$\\lambda_i^0:T_i^0\\longrightarrow\n                  (\\mathcal O/p^{M_i}\\mathcal O)[t]/(t^{b_*}),\n \\qquad M_i\\longrightarrow\\infty,\n \\label{eq:hecke-congruence}$$ which send every indicated operator to its theta comparison eigenvalue, in the full truncated ring. The weights are <a href=\"#eq:shifted-weight\" data-reference-type=\"ref\" data-reference=\"eq:shifted-weight\">[eq:shifted-weight]</a>, and the two normalized $p$-operators have value $1$ at each distinguished place. One may restrict $T_i^0$ to the local summand determined by the residual augmentation system. In that summand both normalized $p$-operators are units. No reduction of the operator algebra is asserted here.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-cusp-congruence"
+  },
+  {
+   "claim_id": "claim-weak-transfer-full-infinite-characters",
+   "exact_statement": "There is a conjugate-dual formal parameter $$\\Psi=\\boxplus_\\beta\\tau_\\beta[a_\\beta],\n \\qquad \\sum_\\beta d_\\beta a_\\beta=4,$$ with unitary cuspidal factors, the standard transferred full infinitesimal character of $\\pi$ at both real places, and the transferred Satake parameter at every finite place outside a finite set $S$ whose finite places split in $L/F$. Every cuspidal factor is unramified at every nonsplit finite place.",
+   "kind": "construction",
+   "statement_anchor": "stmt-lem-weak-transfer"
+  },
+  {
+   "claim_id": "claim-algebraic-transfer-factors",
+   "exact_statement": "Every cuspidal factor in <a href=\"#lem:weak-transfer\" data-reference-type=\"ref\" data-reference=\"lem:weak-transfer\">34</a> is conjugate-self-dual and tempered at infinity. After a unitary parity-correcting character twist it is regular algebraic. The formal parameter is elliptic: its conjugate-self-dual blocks occur without repetition.",
+   "kind": "classification",
+   "statement_anchor": "stmt-lem-transfer-algebraicity"
+  },
+  {
+   "claim_id": "claim-simultaneous-local-global-transfer",
+   "exact_statement": "There is a formal parameter $$\\Psi=\\boxplus_\\beta\\tau_\\beta[a_\\beta],\n \\qquad \\sum_\\beta d_\\beta a_\\beta=4,$$ with unitary cuspidal factors on $\\mathop{\\mathrm{GL}}_{d_\\beta}(\\mathbb A_L)$, such that:*\n\n1.  *its archimedean infinitesimal character is the standard transfer of that of $\\pi$;*\n\n2.  *at every split finite place $v=ww^c$, the representation $\\pi_v$, viewed on $\\mathop{\\mathrm{GL}}_4(F_v)$ using $w$, is the representation attached to $\\Psi_w$;*\n\n3.  *at every nonsplit finite place, the standard local parameter is unramified and has zero monodromy.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-simultaneous-transfer"
+  },
+  {
+   "claim_id": "claim-established-racsd-galois-input",
+   "exact_statement": "Let $\\Pi$ be a regular algebraic conjugate-self-dual cuspidal representation of $\\mathop{\\mathrm{GL}}_d(\\mathbb A_L)$ and fix $\\iota:\\overline{\\mathbb Q}_p\\simeq\\mathbb C$. There is a continuous semisimple representation $r_p(\\Pi)$ of $G_L$, with $$r_p(\\Pi)^c\\simeq r_p(\\Pi)^\\vee\\epsilon^{1-d}.$$ It is de Rham above $p$. If its first infinitesimal coordinates at an embedding are $b_1,\\ldots,b_d$, its de Rham weights there are $(d-1)/2-b_j$. At every finite place $w$, $$\\iota\\mathop{\\mathrm{WD}}\\bigl(r_p(\\Pi)|_{G_{L_w}}\\bigr)^{\\mathrm{F\\text{-}ss}}\n \\preceq\n \\operatorname{rec}_w\n     \\bigl(\\Pi_w\\otimes|\\det|_w^{(1-d)/2}\\bigr).\n \\label{eq:racsd-compatibility}$$ Here $\\preceq$ means equality after semisimplifying the Weil representation and domination of monodromy partitions on each inertial class. At spherical places away from $p$ the representation is unramified, and at spherical places above $p$ it is crystalline.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-racsd-galois-input"
+  },
+  {
+   "claim_id": "claim-cusp-system-galois-package",
+   "exact_statement": "For every characteristic-zero cusp eigensystem in <a href=\"#prop:cusp-congruence\" data-reference-type=\"ref\" data-reference=\"prop:cusp-congruence\">33</a>, there is a continuous semisimple representation $$\\rho_\\pi:G_L\\longrightarrow\\mathop{\\mathrm{GL}}_4(\\overline{\\mathbb Q}_p),\n \\qquad\n \\rho_\\pi^c\\simeq\\rho_\\pi^\\vee\\epsilon^{-3}.$$ It is unramified at every finite place nonsplit over $F$. At every split finite place $v=ww^c$, $$\\iota\\mathop{\\mathrm{WD}}\\bigl(\\rho_\\pi|_{G_{L_w}}\\bigr)^{\\mathrm{F\\text{-}ss}}\n \\preceq\n \\operatorname{rec}_w\n        \\bigl(\\pi_v\\otimes|\\det|_w^{-3/2}\\bigr).\n \\label{eq:four-dimensional-compatibility}$$ The representation is de Rham above $p$, and its increasing weights at either distinguished $w\\mid p$ are $$(h_1,h_2,h_3,h_4)\n  =(1-\\lambda'_1,\\,2-\\lambda'_2,\\,\n    3-\\lambda'_3,\\,-\\lambda'_4).\n \\label{eq:hodge-weights}$$ The gaps $h_3-h_2$ and $h_4-h_3$ tend to infinity with the choices in <a href=\"#eq:shifted-weight\" data-reference-type=\"ref\" data-reference=\"eq:shifted-weight\">[eq:shifted-weight]</a>.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-galois-package"
+  },
+  {
+   "claim_id": "claim-local-hodge-newton-flags",
+   "exact_statement": "At each distinguished $w\\mid p$, every $\\rho_\\pi$ under consideration has a $G_{L_w}$-stable flag of dimensions $2,3,4$. Its last quotient is $$X_w=\\epsilon^{-h_4}\\operatorname{unr}(\\widetilde U_3^{-1}),\n \\label{eq:last-character}$$ where $\\operatorname{unr}(a)$ takes geometric Frobenius to $a$. At the conjugate place it has a first subline of character $$Y_{\\bar w}=X_w^{-c}\\epsilon^{-3}.\n \\label{eq:first-character}$$ Under <a href=\"#eq:hecke-congruence\" data-reference-type=\"ref\" data-reference=\"eq:hecke-congruence\">[eq:hecke-congruence]</a> their values tend, uniformly on local Galois elements and coefficientwise in $t$, to $x=\\epsilon^{-1}$ and $y=\\epsilon^{-2}$, respectively.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-two-contacts"
+  },
+  {
+   "claim_id": "claim-separated-binary-inertia",
+   "exact_statement": "The augmentation values of $\\Delta$ are nonzero with uniformly bounded valuation. On any characteristic-zero system where $\\Delta\\ne0$, the Frobenius primary projection $P_v^{\\mathrm{bin}}$ onto the roots of $A_v$ is defined and satisfies $$(\\rho_\\pi(\\iota)-1)P_v^{\\mathrm{bin}}=0\n  \\qquad(\\iota\\in I_{L_v}).\n \\label{eq:binary-inertia-identity}$$ The assertion concerns actual inertia, without a semisimplicity assumption on Frobenius.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-binary-inertia"
+  },
+  {
+   "claim_id": "claim-steinberg-inertia-rank",
+   "exact_statement": "At a split place with the specified $(3,1)$ parahoric level, $\\rho_\\pi|_I$ is unipotent and $$\\mathop{\\mathrm{rank}}(\\rho_\\pi(\\iota)-1)\\leq1\\qquad(\\iota\\in I).$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-steinberg-control"
+  },
+  {
+   "claim_id": "claim-uniform-operator-nilpotent-control",
+   "exact_statement": "Let $T_i$ be the image of $T_i^0$ in its characteristic-zero cusp eigensystems. There is an integer $C$, independent of $i$, the weights and $q_i$, such that $$\\Delta^C\\ker(T_i^0\\longrightarrow T_i)=0.\n \\label{eq:nilpotent-annihilation}$$ After decreasing the precisions by a fixed constant, <a href=\"#eq:hecke-congruence\" data-reference-type=\"ref\" data-reference=\"eq:hecke-congruence\">[eq:hecke-congruence]</a> descends to $$\\lambda_i:T_i\\longrightarrow\n       \\mathcal O/(p^{M_i})[t]/(t^{b_*}),\\qquad M_i\\longrightarrow\\infty.\n \\label{eq:reduced-hecke-congruence}$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-prop-nilpotent-control"
+  },
+  {
+   "claim_id": "claim-uniform-matrix-algebra-generators",
+   "exact_statement": "There is an integer $N$ independent of $i$ such that the $T_i$-module $B_i$ is generated by $N$ monomials in images of Galois elements.",
+   "kind": "bound",
+   "statement_anchor": "stmt-lem-bounded-algebra-generators"
+  },
+  {
+   "claim_id": "claim-finite-value-admissibility",
+   "exact_statement": "If $\\Phi:B\\to M_4(R_b)$ is a $T$-linear algebra homomorphism with scalar map $\\lambda$, then $\\Phi\\rho_*$ has admissible matrix coefficients. The same holds with $k$ in place of $R_b$. Algebraic local identities holding on all local sequences have the uniform increasing-precision meaning in <a href=\"#def:admissible\" data-reference-type=\"ref\" data-reference=\"def:admissible\">8</a>.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-finite-value-admissibility"
+  },
+  {
+   "claim_id": "claim-intrinsic-corner-minors",
+   "exact_statement": "Choose four rows of a stack of $4\\times4$ matrices in $B$, with column indices $1,2,x,y$. If the row indices consist of the column indices with $y$ replaced by $u$, then its signed determinant is a well-defined element of $D_{uy}$. The same assertion holds for a square minor whenever canceling common row and column indices leaves precisely one surplus row and one surplus column; if no indices remain, its value lies in $T$. If the ordinary determinant is zero in every ambient field, this corner element is zero. Its identity is preserved by algebra maps out of $B$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-corner-minors"
+  },
+  {
+   "claim_id": "claim-cyclotomic-corner-factorization",
+   "exact_statement": "The corner modules satisfy $$D_{xy}=D_{xf}D_{fy}.\n \\label{eq:xy-factorization}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-prop-cyclotomic-corner"
+  },
+  {
+   "claim_id": "claim-no-stable-last-line",
+   "exact_statement": "The image of $D_{fy}$ is nonzero at every field evaluation of $\\mathcal R$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-no-stable-y-line"
+  },
+  {
+   "claim_id": "claim-vanishing-corner-fitting-ideal",
+   "exact_statement": "One has $$\\mathop{\\mathrm{Fitt}}_{0,T}(D_{fy})=0.\n \\label{eq:fitting-vanishing}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-fitting-vanishing"
+  },
+  {
+   "claim_id": "claim-greenberg-extension-extraction",
+   "exact_statement": "There is an injective $R_b$-linear map $$\\mathop{\\mathrm{Hom}}_{R_b}(D_{fy}\\otimes_{T,\\lambda}R_b,R_b)\n       \\hookrightarrow\n H^1_{\\mathrm{Gr}}(L,V\\otimes\\psi^{\\pm1}).\n \\label{eq:green-injection}$$ Its source has $R_b$-length at least $b$.",
+   "kind": "construction",
+   "statement_anchor": "stmt-prop-extension-extraction"
+  },
+  {
+   "claim_id": "claim-sylvester-positive-prime-cases",
+   "exact_statement": "Let $\\ell$ be a rational prime with $\\ell\\equiv4,7,8\\pmod 9$, and equip the projective cubic $$E_\\ell:\\quad X^3+Y^3=\\ell Z^3$$ with origin $(1:-1:0)$. Then $$\\mathop{\\mathrm{ord}}_{s=1}L(E_\\ell,s)=\\mathop{\\mathrm{rank}}_\\mathbb ZE_\\ell(\\mathbb Q)=1,\n \\qquad \\#\\operatorname{Sha}(E_\\ell/\\mathbb Q)<\\infty.$$ In particular, there are $x,y\\in\\mathbb Q$ such that $x^3+y^3=\\ell$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cor-sylvester"
+  },
+  {
+   "claim_id": "claim-normalized-global-torus-factor",
+   "exact_statement": "Let $K=\\mathbb F_q(X)$, where $X$ is a smooth projective geometrically connected curve of genus $g$, and let $\\Gamma_K$ be its absolute Galois group. Let $T_1,T_2$ be $K$-tori with isomorphic rational character modules as Galois representations, and let $\\ell:\\operatorname{Lie}T_1\\simeq\\operatorname{Lie}T_2$ be a $K$-linear isomorphism. Choose local Haar measures $\\eta_{i,v}$ compatible under $\\ell$ on the Lie algebras, and give the smooth integral compact subgroups volume one at almost all places. Write $\\eta_i$ for the resulting adelic measures, using counting measure on $T_i(K)$.*\n\n\n*For a torus $T$, put $Y=X^*(T)$, $r=\\operatorname{rank}Y^{\\Gamma_K}$, and $$\\deg_T(t)(\\chi)=\\sum_v [k(v):\\mathbb F_q]\\,\n                         v\\bigl(\\chi(t_v)\\bigr),\\qquad\n I(T)=\\bigl[\\operatorname{Hom}(Y^{\\Gamma_K},\\mathbb Z):\n                       \\deg_T T(\\mathbb A_K)\\bigr].$$ Let $T(\\mathbb A_K)^1=\\ker\\deg_T$, and set $$\\operatorname{Sha}^1(K,T)=\\ker\\!\\left(H^1(K,T)\\longrightarrow\n                                      \\prod_v H^1(K_v,T)\\right),\n \\qquad b(T)=\\bigl|\\pi_0(\\widehat T^{\\Gamma_K})\\bigr|.$$ If $$c_{\\eta}(T)=\n  \\operatorname{vol}_{\\eta}\\bigl(T(K)\\backslash T(\\mathbb A_K)^1\\bigr)\n  \\,|\\operatorname{Sha}^1(K,T)|,$$ then $$\\label{eq:torus-factor-degree-index}\n \\frac{c_{\\eta_1}(T_1)/b(T_1)}{c_{\\eta_2}(T_2)/b(T_2)}\n       =\\frac{I(T_1)}{I(T_2)}.$$ In particular the two normalized factors agree if each torus splits at a place of degree one. The places may be different.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-lem-global-torus-factor"
+  },
+  {
+   "claim_id": "claim-nonstandard-change-of-characteristic",
+   "exact_statement": "Fix a finite collection of paired based root data with rational root-ray maps $\\psi$, matching Levi data, and compatible finite cyclic outer actions. Suppose the nonstandard weighted fundamental lemma holds over local fields of sufficiently large positive characteristic for their unramified forms, including all cyclic-generator variants. Then it holds over characteristic-zero local fields of sufficiently large residue characteristic, uniformly for this collection and for all integral generically regular matching parameters.*\n\n*Here the ambient hyperspecial subgroups have volume one; the Arthur weight-space measures are transported through $\\psi$; and the paired regular-centralizer measures are transported through the induced Lie-algebra isomorphism.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-lem-nonstandard-change-characteristic"
+  }
+ ],
+ "paper": "papers/EN-101-000-0000-2-2026-PR-T4-UK-EX-M1-C-AL-M-0004_PM-002.2_The_Selmer_converse_for_elliptic_curves_at_every_prime.md",
+ "purpose": "The Selmer converse for elliptic curves at every prime",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "23f1155c12278de162487f472e6980e19cf2f0337af2d69fbbb14f64b84c1cc3",
+   "pm.domains.v2": "75ffcbd618643cd82370ac218314527fcaff5457c606b5403dab34ac7fda0a5c",
+   "pm.edges.v2": "bbece95d0f237d2aa1c1fa5c8253c6c9c69c9afb4b42ec11f609f3c981733b50",
+   "pm.extraction.v2": "bebfbae976acc92b3a19e8fca51f0a047a853a22804ede881fb5d0312c4b94d3",
+   "pm.formal.v2": "846a392d57045ac4a95c70856fca6852e02e095377c5c03acfcccc948b8ce252",
+   "pm.limits.v2": "365a63e8df08998e2dcff31f2d272aabad9fcf258611e2e4795a91495ec722f3",
+   "pm.node.v2": "b4067caa80c0ec06373bb972ce722c2bc6b8d2efd1b702bc3c202a5d6cf6576f",
+   "pm.objects.v2": "831dd1d7081cedfa695de02cbeea042c032a6e7ac20e4fdea9625c9833a28fe6",
+   "pm.provenance.v2": "e7067665f13b630bb32810bfc8d8b612b16bafc4ea0e361a477e6222a9e21f19",
+   "pm.quantities.v2": "d2e63d278aedb8537fae024cc0fdca1f7d9246f3d24e01878996f310926cba5a",
+   "pm.reading.v2": "da6dad8913099cb11808c06e54289e5671f883cc6d94979bc2bc627ca63ce232",
+   "pm.roadmap.v2": "d791eb172494ca381acbb47595ea9adea5d9f3e62c78e7a8b2c45fc41253bd3d",
+   "pm.search.v1": "8fda6da04f75c0f7b514e4434f263046a955b609fd1b5c474c34bc8d895adb6f",
+   "pm.triptych.v2": "e32ff88fc7736a446afa924862d01dc4ba7dba0d21894ea7f3edf355d038e73e"
+  },
+  "canonical_sha256": "8cf514ffe8d6cba44ff3c1a968d3f00aca8e226842d9a3b9c2bb3ac8a59355a6",
+  "paper_sha256": "8161f1910f339417ba85b8853d58b59823ff98eb5a69d60b63b70569276e40de",
+  "repaired_body_sha256": "50fcf4117dbd7f3bf613a61499d19c85e892590af4e63d0ee57ee1181c05de5b"
+ },
+ "status": "ACTIVE",
+ "subject_id": 1,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "9ba316839494aee4a390bcfc6e09ad3c48188af2acee0c6499582f0c7b62bb57",
+   "receipt_sha256": "de6be4c345d1a14a9134760a7f470c296dff38a890707a160936da972c7ddad9",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "The Selmer converse for elliptic curves at every prime"
+}

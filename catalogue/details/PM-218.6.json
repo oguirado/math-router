@@ -1,0 +1,715 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 612630,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 162592
+ },
+ "coordinate": "EN-115-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-M-0422",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "weak",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "stmt-fd-mtp2",
+     "quote": "Let $p(a,b)>0$ be a marginal of a finite ferromagnetic Ising law with arbitrary fields, on two disjoint sets of spins.",
+     "quote_sha256": "dc5a3a493d1705bd18c580d5a39f1e1750c265219683f19dc299dd292c28a803"
+    }
+   ],
+   "query": "antiferromagnetic or frustrated couplings",
+   "reason": "The extreme-rectangle reduction is stated for ferromagnetic marginals."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-5",
+     "quote": "The positive width of every comparison collar is a fixed geometric hypothesis; the constants may depend on it.",
+     "quote_sha256": "b8817f1ce9d8136c23e40aaff43b61dfae563cb67a5d99b09443491b40259441"
+    }
+   ],
+   "query": "touching terminals without a collar",
+   "reason": "The positive width of every comparison collar is a hypothesis and the constants depend on it."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "proof-stmt-fd-conditional-rsw",
+     "quote": "with planar duality for dual crossings.",
+     "quote_sha256": "77beb01e49b86399efbf5e81b59e5eed7753284d7c1d9d744a157f85582ce13b"
+    }
+   ],
+   "query": "higher-dimensional lattices",
+   "reason": "The crossing estimates used for the dual circuits rely on planar duality."
+  }
+ ],
+ "family": "PM-218",
+ "id": "PM-218.6",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "pm-h-3",
+    "claim_id": "claim-finite-graph-comparison",
+    "statement": "Let $I,J,F$ be disjoint, with $I,J$ nonempty, and prescribe common spins on $F$."
+   },
+   {
+    "anchor": "stmt-in-resolution",
+    "claim_id": "claim-finite-conditional-resolution",
+    "statement": "Fix the preceding band geometry and use the critical plus-boundary law in a larger reference square."
+   },
+   {
+    "anchor": "stmt-fd-mtp2",
+    "claim_id": "claim-extreme-rectangle",
+    "statement": "Let $p(a,b)>0$ be a marginal of a finite ferromagnetic Ising law with arbitrary fields, on two disjoint sets of spins."
+   },
+   {
+    "anchor": "stmt-fd-ratio",
+    "claim_id": "claim-pointwise-ratio-common-pins",
+    "statement": "Consider a finite ferromagnetic Ising graph, disjoint nonempty vertex sets $I,J$, and any fixed spins on a third set $F$."
+   },
+   {
+    "anchor": "stmt-fd-conditional-rsw",
+    "claim_id": "claim-conditional-crossing-tests",
+    "statement": "Fix $A\\ge1$."
+   },
+   {
+    "anchor": "stmt-fd-patch-ratio",
+    "claim_id": "claim-buffered-small-patch",
+    "statement": "Fix $c>0$."
+   },
+   {
+    "anchor": "stmt-fd-finite-cover",
+    "claim_id": "claim-local-charts-finite-cover",
+    "statement": "provided the local graph and the common prescribed boundary spins agree in the compared laws."
+   },
+   {
+    "anchor": "stmt-fd-finite-cover",
+    "claim_id": "claim-local-charts-finite-cover",
+    "statement": "More generally, suppose the observed set is partitioned into at most $m$ patches."
+   },
+   {
+    "anchor": "stmt-fd-static-correlations",
+    "claim_id": "claim-static-correlations",
+    "statement": "The following statements hold with constants depending only on the indicated fixed bulk separations and aspect ratios.*\n\n1."
+   },
+   {
+    "anchor": "stmt-fd-fk-product",
+    "claim_id": "claim-product-arm-bound",
+    "statement": "Let $Q$ be a lattice square with an ordinary FK bond law under arbitrary boundary wiring."
+   },
+   {
+    "anchor": "stmt-fd-fk-product",
+    "claim_id": "claim-product-arm-bound",
+    "statement": "Suppose $x_1,\\ldots,x_n$ lie a distance at least $cs$ from $\\partial Q$ and in a set of diameter at most $As$, where $n\\ge2$."
+   },
+   {
+    "anchor": "stmt-fd-moments",
+    "claim_id": "claim-buffered-moments",
+    "statement": "Fix $A,c>0$, an integer $p\\ge1$, and $\\nu\\in\\{1,2\\}$."
+   },
+   {
+    "anchor": "stmt-fd-moments",
+    "claim_id": "claim-buffered-moments",
+    "statement": "Assume the Ising law has a free square-lattice neighborhood of width $cs$ about $S$, with arbitrary pins beyond that neighborhood."
+   },
+   {
+    "anchor": "stmt-tr-transmission",
+    "claim_id": "claim-transmission",
+    "statement": "Prescribe two ordered configurations on $S$, use identical common pins elsewhere,"
+   },
+   {
+    "anchor": "stmt-tr-transmission",
+    "claim_id": "claim-transmission",
+    "statement": "For an admissible separating cut at scales $w,s$, a bounded observable $h$ supported on $T$, and $w$ sufficiently large,"
+   },
+   {
+    "anchor": "stmt-tr-doubled-coupling",
+    "claim_id": "claim-doubled-representation",
+    "statement": "With partition sums at couplings $J_e=2K_e$,"
+   },
+   {
+    "anchor": "stmt-tr-site-gain",
+    "claim_id": "claim-site-gain",
+    "statement": "Fix a set $P$ of pinned vertices, couplings $J_e\\geq0$, and let $Z_{P,\\tau}(H)$ be the Ising partition sum on the induced graph with vertex set $P\\cup H$, with signs $\\tau$ on $P$."
+   },
+   {
+    "anchor": "stmt-tr-increasing-conditioning",
+    "claim_id": "claim-association-increasing-conditioning",
+    "statement": "if $\\mathcal E$ is any increasing event of positive probability and $f$ is any increasing function,"
+   },
+   {
+    "anchor": "stmt-tr-local-domination",
+    "claim_id": "claim-local-domination",
+    "statement": "Let $Q\\subseteq W$ contain no pins."
+   },
+   {
+    "anchor": "stmt-tr-many-sites",
+    "claim_id": "claim-many-sites-joined",
+    "statement": "Consider two independent plus-boundary Ising configurations in a rectangle of scale $w$ and fixed aspect ratio, and their auxiliary disagreement bonds."
+   },
+   {
+    "anchor": "stmt-tr-circuit",
+    "claim_id": "claim-surrounding-circuit",
+    "statement": "In the doubled plus-boundary model on $B_{16w}$,"
+   },
+   {
+    "anchor": "stmt-tr-mass",
+    "claim_id": "claim-source-connected-mass",
+    "statement": "Fix $a>0$."
+   },
+   {
+    "anchor": "stmt-tr-mass",
+    "claim_id": "claim-source-connected-mass",
+    "statement": "Suppose $z+B_{16w}$ is a free square-lattice neighborhood: it contains no common or disagreement pins."
+   },
+   {
+    "anchor": "stmt-tr-signed-transmission",
+    "claim_id": "claim-random-signed-sources",
+    "statement": "In particular, let $\\mu$ be a Gibbs law with common pins and let $q=q(\\sigma_S)$ be an order-positive centered density for its source marginal."
+   },
+   {
+    "anchor": "stmt-tr-ordered-tv",
+    "claim_id": "claim-ordered-tv",
+    "statement": "Suppose two ordered Ising laws, possibly defined by different sets of pins or different volumes, have a common free source contour $S_0$ such that their conditional continuation from $S_0$ toward a target $T$ is the same."
+   },
+   {
+    "anchor": "stmt-tr-ordered-tv",
+    "claim_id": "claim-ordered-tv",
+    "statement": "Let an admissible cut $J$ lie between $S_0$ and $T$."
+   },
+   {
+    "anchor": "stmt-tr-line-difference",
+    "claim_id": "claim-nearby-line-differences",
+    "statement": "Let $J_s,J'_s$ be two parallel horizontal or vertical lattice segments of lengths $O(s)$ whose matching portions differ by a displacement of length at most $Cw$ and whose unmatched end pieces have total length $O(w)$."
+   },
+   {
+    "anchor": "stmt-tr-line-regularity",
+    "claim_id": "claim-prediction-nearby-contour",
+    "statement": "let $F$ be a sigma-field containing the spins of $J'_s$,"
+   },
+   {
+    "anchor": "stmt-if-resolution-convergence",
+    "claim_id": "claim-resolution-convergence",
+    "statement": "In a plus Jordan domain whose lattice boundary converges uniformly modulo parametrization,"
+   },
+   {
+    "anchor": "stmt-if-stopping",
+    "claim_id": "claim-stopping-property",
+    "statement": "For each $\\delta>0$"
+   },
+   {
+    "anchor": "stmt-if-visible-data",
+    "claim_id": "claim-visible-data-continuity",
+    "statement": "For almost every choice of the two contour radii"
+   },
+   {
+    "anchor": "stmt-if-erosion",
+    "claim_id": "claim-local-ordered-erosion",
+    "statement": "Fix an admissible facing datum $d$, the band geometry, a target beyond the band with a free collar, and $\\varepsilon>0$."
+   },
+   {
+    "anchor": "stmt-if-chart",
+    "claim_id": "claim-slit-chart",
+    "statement": "Let a Jordan base have finitely many disjoint attached simple arcs at distinct roots."
+   },
+   {
+    "anchor": "stmt-if-regularization",
+    "claim_id": "claim-outline-regularization",
+    "statement": "A Jordan outline, finitely many marked points on it, and a sufficiently small surrounding Jordan collar"
+   },
+   {
+    "anchor": "stmt-if-marked-convergence",
+    "claim_id": "claim-marked-convergence",
+    "statement": "Let $D$ be a disk or annulus bounded on one side by an admissible slit datum and, in the annular case, on the other side by a fixed disjoint Jordan wall carrying a fixed finite collection of nondegenerate signed arcs."
+   },
+   {
+    "anchor": "stmt-if-incidence-order",
+    "claim_id": "claim-incidence-ordering",
+    "statement": "Let $\\mu_0,\\mu_1$ be two ferromagnetic Ising laws with the same interactions and possibly different pin sets."
+   },
+   {
+    "anchor": "stmt-if-triangle-incidence",
+    "claim_id": "claim-examined-triangles-sign",
+    "statement": "Fix an admissible limiting datum and disjoint small neighborhoods of its roots and tips."
+   },
+   {
+    "anchor": "stmt-fd-outer-wall-weight",
+    "claim_id": "claim-distant-wall-weight",
+    "statement": "Let $C$ and $W$ be nested lattice square contours, with a fixed positive macroscopic collar between them."
+   },
+   {
+    "anchor": "stmt-if-barrier-buffer",
+    "claim_id": "claim-barrier-buffer",
+    "statement": "In the inward setting, let a regular signed contour $\\Gamma$ have already been fully pinned, and let $V^\\delta$ be the entire free component it encloses, with its pinned boundary layer excluded."
+   },
+   {
+    "anchor": "stmt-if-band-transfer",
+    "claim_id": "claim-stopping-band-transfer",
+    "statement": "Fix an inward or outward band, target, and ambient square chart as in Section <a href=\"#if:section\" data-reference-type=\"ref\" data-reference=\"if:section\">7</a>, with all the stated positive clearances."
+   },
+   {
+    "anchor": "stmt-if-descriptor-averages",
+    "claim_id": "claim-lookup-approximation",
+    "statement": "In the outward setting of Theorem <a href=\"#if:band-transfer\" data-reference-type=\"ref\" data-reference=\"if:band-transfer\">41</a>, let $\\mathcal F^\\delta$ be the stopping information."
+   },
+   {
+    "anchor": "stmt-if-random-levels",
+    "claim_id": "claim-random-levels-probes",
+    "statement": "when the two contour radii are drawn with a bounded density in a fixed compact rectangle of separated radii lying strictly inside the permitted windows."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "finite-graph pointwise comparison",
+    "evidence": [
+     {
+      "anchor": "stmt-fd-mtp2",
+      "quote": "Let $p(a,b)>0$ be a marginal of a finite ferromagnetic Ising law with arbitrary fields, on two disjoint sets of spins.",
+      "quote_sha256": "dc5a3a493d1705bd18c580d5a39f1e1750c265219683f19dc299dd292c28a803"
+     }
+    ],
+    "requires_concepts": [
+     "log-supermodularity of ferromagnetic marginals",
+     "Ding–Song–Sun covariance inequality",
+     "zero-field Edwards–Sokal identity"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "stopping-band approximation",
+    "evidence": [
+     {
+      "anchor": "stmt-if-band-transfer",
+      "quote": "Use the critical plus-boundary law in the fixed larger reference square.",
+      "quote_sha256": "44cc397b38dd1aa34a87ee7b171837fdec7f2ccde1ca853c3013765d423cfe08"
+     }
+    ],
+    "requires_concepts": [
+     "ordered transmission across a cut",
+     "convergence of complete resolutions to nested loops",
+     "local ordered erosion"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-finite-graph-comparison",
+   "exact_statement": "For every two configurations $b,b'$ on $J$ and every configuration $a$ on $I$, $$e^{-4\\operatorname{arctanh}q_0}\n \\leq\n \\frac{\\mu(\\sigma_I=a\\mid\\sigma_J=b,\\sigma_F)}\n      {\\mu(\\sigma_I=a\\mid\\sigma_J=b',\\sigma_F)}\n \\leq e^{4\\operatorname{arctanh}q_0}.$$ Either conditional law may be replaced by an arbitrary mixture of these laws. The bound is symmetric in the two terminal sets.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-in-comparison"
+  },
+  {
+   "claim_id": "claim-finite-conditional-resolution",
+   "exact_statement": "Fix the preceding band geometry and use the critical plus-boundary law in a larger reference square. For every $\\epsilon,\\eta>0$, one can choose contour levels in any prescribed separated subwindows, a finite descriptor $Z^\\delta\\in\\{0,1,\\ldots,m\\}$, and regular signed barriers $\\Gamma_1,\\ldots,\\Gamma_m$ with the following properties for all sufficiently fine meshes.*\n\n*The exceptional state $0$ has probability at most $\\epsilon$. For every transcript in a good state $i\\in\\{1,\\ldots,m\\}$, insert the plus pins of $\\Gamma_i$ and then its minus pins. The sum of the two resulting total-variation changes on the target is at most $\\eta$. The final target-side law $Q_{i,\\delta}$ is the same for every transcript in that state. Consequently this conclusion holds simultaneously for all bounded target observables, including mesh-dependent observables. For any fixed finite list of bands the descriptors have convergent joint laws.*\n\n*The finite list of barriers and its positive geometric clearances are chosen before the mesh threshold. If another law has band density at most $K$ times the reference density, its exceptional probability is at most $K\\epsilon$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-in-resolution"
+  },
+  {
+   "claim_id": "claim-extreme-rectangle",
+   "exact_statement": "Let $p(a,b)>0$ be a marginal of a finite ferromagnetic Ising law with arbitrary fields, on two disjoint sets of spins. Set $f=\\log p$ and $$L=f(+,+)+f(-,-)-f(+,-)-f(-,+).$$ For every four configurations $a,a',b,b'$, $$\\left|f(a,b)+f(a',b')-f(a,b')-f(a',b)\\right|\\le L.\n \\label{fd:extreme-rectangle}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-fd-mtp2"
+  },
+  {
+   "claim_id": "claim-pointwise-ratio-common-pins",
+   "exact_statement": "Consider a finite ferromagnetic Ising graph, disjoint nonempty vertex sets $I,J$, and any fixed spins on a third set $F$. Delete $F$, retaining its contribution as fields, and contract $I$ and $J$ separately. Let $q_0$ be the zero-field FK probability that the two contracted vertices are connected on this contracted, vertex-deleted graph. Then every two conditional spin laws on $I$, obtained by prescribing arbitrary configurations $b,b'$ on $J$, satisfy $$\\exp(-4\\operatorname{arctanh}q_0)\n \\le\\frac{\\mu(\\sigma_I=a\\mid\\sigma_J=b,\\sigma_F)}\n            {\\mu(\\sigma_I=a\\mid\\sigma_J=b',\\sigma_F)}\n \\le\\exp(4\\operatorname{arctanh}q_0)\n \\quad\\text{for every }a.\n \\label{fd:pointwise-ratio}$$ The same inequalities hold if either conditional law is replaced by any mixture of these laws. The assertion remains valid in the presence of additional arbitrary finite external fields; those fields are set to zero in the definition of $q_0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-fd-ratio"
+  },
+  {
+   "claim_id": "claim-conditional-crossing-tests",
+   "exact_statement": "Fix $A\\ge1$. There is $c_A>0$ such that a lattice rectangle with both side lengths at least one and aspect ratio in $[A^{-1},A]$ has probability at least $c_A$ of either specified open crossing, and of either specified dual crossing, at criticality under any boundary wiring. Changing each side by a bounded number of lattice spacings only changes the constant.*\n\n*These lower bounds also apply to a decreasing dual-crossing test in a vertex-deleted graph, conditional on all bonds outside its full rectangular test region, provided no terminal identification has vertices in the interior of that region. Additional vertex deletions preserve the bound. For finitely many tests with disjoint sets of unexposed edges, the conditional bounds may be multiplied.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-fd-conditional-rsw"
+  },
+  {
+   "claim_id": "claim-buffered-small-patch",
+   "exact_statement": "<span id=\"fd:buffered-ratio\" label=\"fd:buffered-ratio\"></span>Fix $c>0$. There is $K_c<\\infty$ such that, on the square lattice, $I\\subseteq z+B_R$ and $J\\subseteq(z+B_{(1+c)R})^c$ imply pointwise density ratios in $[K_c^{-1},K_c]$ for the conditional laws in Lemma <a href=\"#fd:ratio\" data-reference-type=\"ref\" data-reference=\"fd:ratio\">4</a>. Other common pins may occur anywhere off $I\\cup J$.*\n\n*There are absolute $K<\\infty$ and $\\delta>0$ such that, if $I\\subseteq z+B_w$, $J\\subseteq(z+B_R)^c$, and $R\\ge8w\\ge8$, the logarithm of every such conditional density ratio has absolute value at most $$K(w/R)^\\delta.\n \\label{fd:patch-power}$$ In particular the total variation distance is at most $K'(w/R)^\\delta$, and the expectation difference of a bounded test function is at most $2K'\\|h\\|_\\infty(w/R)^\\delta$. No free neighborhood of the source patch $I$ is required.*\n\n*The buffered comparison also holds between laws from different domains, including plane, torus, or cylinder laws, whenever their common collar is an isometric square-lattice chart and all differing data lie beyond it. It holds after applying the same conditional randomization kernel to local spins, in particular internal Edwards–Sokal bond sampling.",
+   "kind": "bound",
+   "statement_anchor": "stmt-fd-patch-ratio"
+  },
+  {
+   "claim_id": "claim-local-charts-finite-cover",
+   "exact_statement": "The preceding buffered and patch bounds remain valid in a chart clipped by a free or a fixed physical boundary, provided the local graph and the common prescribed boundary spins agree in the compared laws. Deleted vertices and missing edges may occur in the chart. For laws on different domains, assume that conditioning on spins beyond the common chart gives the same local interaction and pinning rule.*\n\n*More generally, suppose the observed set is partitioned into at most $m$ patches. If each patch has a square-lattice chart separating it from every changed datum by a fixed positive relative distance, the whole observed law has a pointwise density comparison with constant equal to the product of the patch constants. The same conclusion holds if instead the changed source set has such a partition, with each source patch separated from the whole observed set. Constants depend on $m$ and the fixed chart clearances. Polygonal and rotated collars are therefore allowed whenever they admit such a finite cover.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-fd-finite-cover"
+  },
+  {
+   "claim_id": "claim-static-correlations",
+   "exact_statement": "The following statements hold with constants depending only on the indicated fixed bulk separations and aspect ratios.*\n\n1.  *In a square of radius $r$, under any FK boundary wiring, $$c r^{-1/8}\\le\n     \\phi(x\\longleftrightarrow\\partial B_r)\n     \\le C r^{-1/8}$$ for $x$ in a fixed central subsquare. In the plus Ising law this is the corresponding magnetization estimate.*\n\n2.  *In a plus rectangle of scale $r$ and fixed aspect ratio, for two distinct points in separated fixed compact bulk sets, $$c r^{-1/4}\\le\\operatorname{Cov}_+(\\sigma_x,\\sigma_y)\n     \\le C r^{-1/4}.$$*\n\n3.  *The infinite-volume zero-field law on $\\mathbb Z^2$ is unique and spin-flip symmetric. For a lattice-dependent constant $c_\\sigma>0$, $$\\mathbb E(\\sigma_x\\sigma_y)\n       =c_\\sigma |x-y|^{-1/4}(1+o(1))\n           \\quad (|x-y|\\longrightarrow\\infty),\n     \\qquad\n     0\\le\\mathbb E(\\sigma_x\\sigma_y)\n           \\le C(1+|x-y|)^{-1/4}.$$ The asymptotic is uniform in direction.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-fd-static-correlations"
+  },
+  {
+   "claim_id": "claim-product-arm-bound",
+   "exact_statement": "Let $Q$ be a lattice square with an ordinary FK bond law under arbitrary boundary wiring. After sampling the bonds, assign each cluster touching the boundary any sign, and give every other cluster an independent fair sign. Conditional on the bonds, all nonboundary cluster signs are mutually independent and independent of the entire collection of boundary-cluster signs. Boundary-cluster signs may have any joint law conditional on the bonds; the bonds are not further conditioned on compatibility with prescribed mixed signs. Suppose $x_1,\\ldots,x_n$ lie a distance at least $cs$ from $\\partial Q$ and in a set of diameter at most $As$, where $n\\ge2$. For $$r_i=\\max\\left(1,\\left\\lfloor\n       \\min\\left(\\tfrac{cs}{4},\n             \\tfrac14\\min_{j\\ne i}\\|x_i-x_j\\|_\\infty\\right)\n                         \\right\\rfloor\\right),$$ one has $$\\left|\\mathbb E\\prod_{i=1}^n\\sigma_{x_i}\\right|\n \\le C_{n,c}\\prod_{i=1}^n r_i^{-1/8}.$$ The same bound holds conditionally on arbitrary bonds exterior to $Q$, with the induced wiring, before cluster colors are sampled.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-fd-fk-product"
+  },
+  {
+   "claim_id": "claim-buffered-moments",
+   "exact_statement": "Fix $A,c>0$, an integer $p\\ge1$, and $\\nu\\in\\{1,2\\}$. Let $S$ be a set of lattice points of diameter at most $As$ such that $$|S\\cap B_t(x)|\\le A(t+1)^\\nu\\quad(t\\ge0),\n \\qquad |S|\\le A s^\\nu.$$ Assume the Ising law has a free square-lattice neighborhood of width $cs$ about $S$, with arbitrary pins beyond that neighborhood. Then, for weights $|a_x|\\le1$, $$\\mathbb E\\left|\\sum_{x\\in S}a_x\\sigma_x\\right|^{2p}\n \\le C_{p,A,c}\\,s^{2p(\\nu-1/8)}.\n \\label{fd:moment-bound}$$ This includes a fixed number of line segments or square contours $(\\nu=1)$, and area sums $(\\nu=2)$. It applies as well in a buffered chart of a torus or cylinder. No pin on $S$ is allowed in this assertion.",
+   "kind": "bound",
+   "statement_anchor": "stmt-fd-moments"
+  },
+  {
+   "claim_id": "claim-transmission",
+   "exact_statement": "There is an exponent $\\delta\\in(0,1/8)$, chosen by decreasing the exponent of Corollary <a href=\"#fd:patch-ratio\" data-reference-type=\"ref\" data-reference=\"fd:patch-ratio\">7</a> if necessary, with the following property. Prescribe two ordered configurations on $S$, use identical common pins elsewhere, and let $\\Delta$ denote higher-law expectation minus lower-law expectation. For an admissible separating cut at scales $w,s$, a bounded observable $h$ supported on $T$, and $w$ sufficiently large, $$\\label{tr:transmission-eq}\n |\\Delta h|\n \\leq C\\|h\\|_\\infty (w/s)^{-7/8+\\delta}\\Delta M_J.$$ Equivalently, if $\\|h\\|_\\infty\\leq H$ for fixed $H>0$, $$\\label{tr:transmission-lower}\n \\Delta M_J\\geq c_H (w/s)^{7/8-\\delta}|\\Delta h|.$$ The constants are uniform as $w/s$ decreases within the stated geometry.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tr-transmission"
+  },
+  {
+   "claim_id": "claim-doubled-representation",
+   "exact_statement": "With partition sums at couplings $J_e=2K_e$, the law of $G$ is $$\\label{tr:doubled-weight}\n \\mu_\\tau(G)\\ \\propto\\ Z_{U,+}(G)\\,Z_{A,\\tau}(W\\setminus G).$$ Conditional on $G$, the spins $\\eta=-\\xi$ on $G\\cup U$ form the first Ising law in <a href=\"#tr:doubled-weight\" data-reference-type=\"eqref\" data-reference=\"tr:doubled-weight\">[tr:doubled-weight]</a>, independently of the common spins on its complement. Put FK bonds $\\omega$ on $G\\cup U$. There is a coupling of the original two Ising marginals, denoted again by $(\\eta,\\xi)$, for which $\\eta\\geq\\xi$ and $$\\label{tr:mean-connection}\n \\eta_x-\\xi_x=2\\mathbf1_{\\{x\\longleftrightarrow U\\}},\n \\qquad\n \\mathbb E\\eta_x-\\mathbb E\\xi_x\n =2\\mathbb P(x\\longleftrightarrow U).$$ Here and below a connection to $U$ uses actual open edges, and is false for $x\\notin G\\cup U$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tr-doubled-coupling"
+  },
+  {
+   "claim_id": "claim-site-gain",
+   "exact_statement": "Fix a set $P$ of pinned vertices, couplings $J_e\\geq0$, and let $Z_{P,\\tau}(H)$ be the Ising partition sum on the induced graph with vertex set $P\\cup H$, with signs $\\tau$ on $P$. Here $H\\subseteq V\\setminus P$ is the retained free set. Then the following assertions hold.*\n\n1.  *With all pins plus, every spin-product expectation is nonnegative and increases when nonnegative couplings are increased, free vertices and their incident ferromagnetic edges are added, or additional spins are pinned plus. The product in question involves only vertices present before the change.*\n\n\n2.  *For every finite set $Q\\subseteq P\\cup H$, $$\\label{tr:mixed-product}\n     \\left|\\mathbb E_{P,\\tau,H}\\prod_{x\\in Q}\\sigma_x\\right|\n     \\leq \\mathbb E_{P,+,H}\\prod_{x\\in Q}\\sigma_x.$$*\n\n\n3.  *The function $H\\mapsto Z_{P,+}(H)$ is log-supermodular. Moreover, for $v\\notin P\\cup H$, the site gains satisfy $$\\label{tr:gain-comparison}\n     \\frac{Z_{P,\\tau}(H\\cup\\{v\\})}{Z_{P,\\tau}(H)}\n     \\leq\n     \\frac{Z_{P,+}(H\\cup\\{v\\})}{Z_{P,+}(H)}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tr-site-gain"
+  },
+  {
+   "claim_id": "claim-association-increasing-conditioning",
+   "exact_statement": "The plus-agreement reference law of $(G,\\omega)$ is positively associated. The mixed-agreement law has an increasing density, depending only on $G$, relative to this reference. Consequently, if $\\mathcal E$ is any increasing event of positive probability and $f$ is any increasing function, then $$\\label{tr:conditional-reference}\n \\mathbb E_\\tau[f\\mid\\mathcal E]\\geq\\mathbb E_+[f].$$ There is no restriction on the number or placement of the pins in this finite-graph assertion.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-tr-increasing-conditioning"
+  },
+  {
+   "claim_id": "claim-local-domination",
+   "exact_statement": "Let $Q\\subseteq W$ contain no pins. In $Q$, form the doubled model from two independent Ising configurations with plus signs on every exterior neighbor of $Q$, with the original couplings $K_e$. Call its auxiliary set-and-bond law $\\mathbb P_Q^{++}$. For every increasing function $f$ of the auxiliary set and bonds internal to $Q$, and every positive-probability increasing event $\\mathcal E$ in the original doubled model, $$\\label{tr:local-domination-eq}\n \\mathbb E_\\tau[f\\mid\\mathcal E]\\geq\\mathbb E_Q^{++}[f].$$ The same statement holds with $\\mathcal E$ the sure event.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tr-local-domination"
+  },
+  {
+   "claim_id": "claim-many-sites-joined",
+   "exact_statement": "Consider two independent plus-boundary Ising configurations in a rectangle of scale $w$ and fixed aspect ratio, and their auxiliary disagreement bonds. Let $L_1,L_2$ be straight lattice segments of lengths comparable to $w$, in fixed compact bulk subsets of the rectangle, mutually separated by a distance comparable to $w$. There are constants $c,p>0$, depending only on this geometry, such that $$\\label{tr:many-sites-eq}\n \\mathbb P_Q^{++}\\bigl(\n |\\{x\\in L_1:x\\longleftrightarrow L_2\\}|\\geq c w^{7/8}\n \\bigr)\\geq p.$$ In particular a disagreement-bond connection between the segments has probability bounded below.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tr-many-sites"
+  },
+  {
+   "claim_id": "claim-surrounding-circuit",
+   "exact_statement": "In the doubled plus-boundary model on $B_{16w}$, a circuit of actual disagreement bonds in $B_{4w}\\setminus B_{3w/2}$ surrounding $B_{3w/2}$ has probability at least a constant $p_0>0$ for all sufficiently large $w$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tr-circuit"
+  },
+  {
+   "claim_id": "claim-source-connected-mass",
+   "exact_statement": "Fix $a>0$. Let $b_0\\subseteq z+B_w$, and let $L\\subseteq z+B_w$ be a horizontal or vertical lattice segment of length at least $aw$ and at most $2w$. Suppose $z+B_{16w}$ is a free square-lattice neighborhood: it contains no common or disagreement pins. Then in the doubled model with arbitrary ordered pins outside this square, $$\\label{tr:mass-eq}\n \\sum_{x\\in L}\\mathbb P(x\\longleftrightarrow U)\n \\geq c_a w^{7/8}\\mathbb P(U\\longleftrightarrow b_0).$$ The constant and lower threshold for $w$ depend only on $a$. The same statement holds inside an isometric planar chart of a torus or cylinder.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tr-mass"
+  },
+  {
+   "claim_id": "claim-random-signed-sources",
+   "exact_statement": "The conclusions of Proposition <a href=\"#tr:transmission\" data-reference-type=\"ref\" data-reference=\"tr:transmission\">13</a> hold after averaging over any ordered coupling of two random source configurations, with the appropriate common Gibbs continuation given each source. In particular, let $\\mu$ be a Gibbs law with common pins and let $q=q(\\sigma_S)$ be an order-positive centered density for its source marginal. Then $$\\label{tr:signed-transmission-eq}\n \\left|\\mathbb E_\\mu[qh]\\right|\n \\leq C\\|h\\|_\\infty(w/s)^{-7/8+\\delta}\n                    \\mathbb E_\\mu[qM_J].$$ The constants do not depend on the mass of the positive part of $q$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tr-signed-transmission"
+  },
+  {
+   "claim_id": "claim-ordered-tv",
+   "exact_statement": "Suppose two ordered Ising laws, possibly defined by different sets of pins or different volumes, have a common free source contour $S_0$ such that their conditional continuation from $S_0$ toward a target $T$ is the same. Let an admissible cut $J$ lie between $S_0$ and $T$. Then <a href=\"#tr:transmission-eq\" data-reference-type=\"eqref\" data-reference=\"tr:transmission-eq\">[tr:transmission-eq]</a> holds for their expectation differences. In particular, with total variation defined as the supremum of event probability differences, $$\\label{tr:ordered-tv-eq}\n \\|\\mu_T^+-\\mu_T^-\\|_{\\rm TV}\n \\leq C(w/s)^{-7/8+\\delta}\n       \\bigl(\\mathbb E_{\\mu^+}M_J-\\mathbb E_{\\mu^-}M_J\\bigr).$$ At fixed positive $w/s$, convergence of the magnetic difference to zero therefore implies convergence in total variation on the buffered target.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tr-ordered-tv"
+  },
+  {
+   "claim_id": "claim-nearby-line-differences",
+   "exact_statement": "Let $J_s,J'_s$ be two parallel horizontal or vertical lattice segments of lengths $O(s)$ whose matching portions differ by a displacement of length at most $Cw$ and whose unmatched end pieces have total length $O(w)$. The same statement is allowed for two concentric square contours of radii comparable to $s$ and radius difference at most $Cw$, by matching their four sides. Assume the union has a free neighborhood of width $cs$ and is covered by a fixed number of buffered planar charts. Set $$M_{J_s}=s^{-7/8}\\sum_{J_s}\\sigma_x,\n \\qquad M_{J'_s}=s^{-7/8}\\sum_{J'_s}\\sigma_x.$$ There is a constant $C_0$, depending only on the fixed geometry and the buffer, such that, for each fixed $h=w/s\\in(0,h_0]$, $$\\label{tr:line-difference-eq}\n \\limsup_{s\\to\\infty}\n       \\|M_{J_s}-M_{J'_s}\\|_2\\leq C_0 h^{3/8}.$$ The law may have arbitrary common pins beyond the buffer or be a mixture of such laws. The same conclusion holds for nearby full periodic rows of period $W$, normalized by $s^{-7/8}$, when $W/s$ is fixed and positive; its constant may depend on this ratio.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tr-line-difference"
+  },
+  {
+   "claim_id": "claim-prediction-nearby-contour",
+   "exact_statement": "In the setting of Proposition <a href=\"#tr:line-difference\" data-reference-type=\"ref\" data-reference=\"tr:line-difference\">24</a>, let $F$ be a sigma-field containing the spins of $J'_s$, and write $P_FX=\\mathbb E[X\\mid F]$. Then $$\\label{tr:line-regularity-eq}\n \\limsup_{s\\to\\infty}\\|M_{J_s}-P_FM_{J_s}\\|_2\n \\leq C_0(w/s)^{3/8}.$$ The normalization on the approximating sum remains $s^{-7/8}$ even when the two contours have different lengths.",
+   "kind": "bound",
+   "statement_anchor": "stmt-tr-line-regularity"
+  },
+  {
+   "claim_id": "claim-resolution-convergence",
+   "exact_statement": "In a plus Jordan domain whose lattice boundary converges uniformly modulo parametrization, every complete resolution of the spin disagreement edges converges to the same oriented nested $\\mathrm{CLE}_3$ collection. This assertion is uniform over the choice of the resolution. In particular it applies to a fixed choice of diagonal in every square face.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-if-resolution-convergence"
+  },
+  {
+   "claim_id": "claim-stopping-property",
+   "exact_statement": "For each $\\delta>0$, this is a finite adaptive spin reveal. Conditional on its complete information, the unexamined spins have the Ising Gibbs law with the examined spins fixed. The revealed set lies on the starting side and in an $O(\\delta)$ enlargement of the band. The traced strands, their side signs, and the target-facing boundary datum defined below can be computed from the band spins alone.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-if-stopping"
+  },
+  {
+   "claim_id": "claim-visible-data-continuity",
+   "exact_statement": "For almost every choice of the two contour radii, the continuum construction from nested $\\mathrm{CLE}_3$ yields an admissible facing datum. Its base may contain infinitely many returning chords but is a Jordan curve. The lattice data converge to it in $\\mathcal X_{\\mathrm{band}}$. These assertions hold jointly for any fixed finite collection of bands.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-if-visible-data"
+  },
+  {
+   "claim_id": "claim-local-ordered-erosion",
+   "exact_statement": "Fix an admissible facing datum $d$, the band geometry, a target beyond the band with a free collar, and $\\varepsilon>0$. There exist a neighborhood $U_d$ of $d$ in $\\mathcal X_{\\mathrm{band}}$, a regular Jordan contour $\\Gamma_d$ on the fresh side of the datum with finitely many signed arcs, and $\\delta_d>0$ with the following property.*\n\n*For every $0<\\delta<\\delta_d$ and every realizable stopping transcript whose datum belongs to $U_d$, the lattice boundary layer following $\\Gamma_d$ is free in the original conditional law. Let $\\mu^0$ be that law, let $\\mu^+$ be obtained by inserting its prescribed plus pins, and let $\\mu^{\\mathrm f}$ be obtained by then inserting its prescribed minus pins. The two changes are ordered, and $$\\label{if:erosion-tv}\n \\|\\mu^0|_{\\mathrm{target}}-\\mu^+|_{\\mathrm{target}}\\|_{\\mathrm{TV}}\n +\\|\\mu^+|_{\\mathrm{target}}-\\mu^{\\mathrm f}|_{\\mathrm{target}}\\|_{\\mathrm{TV}}\n                   <\\varepsilon.$$ On the fresh side of the full contour, $\\mu^{\\mathrm f}$ is exactly the Gibbs law determined by this contour and, in the outward case, the unchanged distant wall. In particular it depends on the chosen contour, the mesh, and the unchanged distant wall, and not on the transcript within $U_d$.*\n\n*The contour can be chosen polygonal or smooth, with its sign switches on smooth portions. Its positive clearances, the neighborhood, and the mesh threshold may depend on $d$ and $\\varepsilon$, but not on the remaining conditional spins or on the chosen transcript.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-if-erosion"
+  },
+  {
+   "claim_id": "claim-slit-chart",
+   "exact_statement": "Let a Jordan base have finitely many disjoint attached simple arcs at distinct roots. There is a homeomorphism on a neighborhood of this graph which makes the base a regular circular line and makes the arcs disjoint straight segments on its fresh side. The chart may be chosen with a further open collar beyond every tip. A fixed compact target disjoint from the graph remains outside a sufficiently small neighborhood used for this construction.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-if-chart"
+  },
+  {
+   "claim_id": "claim-outline-regularization",
+   "exact_statement": "A Jordan outline, finitely many marked points on it, and a sufficiently small surrounding Jordan collar admit a polygonal or smooth replacement through an ambient homeomorphism supported in that collar. Its displacement can be made arbitrarily small. The marked points retain their cyclic order and can be placed on straight grid-aligned portions of the replacement. Finitely many disjoint outlines can be treated simultaneously.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-if-regularization"
+  },
+  {
+   "claim_id": "claim-marked-convergence",
+   "exact_statement": "Let $D$ be a disk or annulus bounded on one side by an admissible slit datum and, in the annular case, on the other side by a fixed disjoint Jordan wall carrying a fixed finite collection of nondegenerate signed arcs. Replace each slit by a ribbon, with width and displacement tending to zero in the chart of Lemma <a href=\"#if:chart\" data-reference-type=\"ref\" data-reference=\"if:chart\">34</a>, and offset the base by a quantity tending to zero. Use straight strips away from nodes and fixed polygonal templates, scaled to the offset size, at the finitely many nodes. The templates are chosen with no narrowing neck beyond a fixed fraction of their scale. Approximate the resulting outlines by smooth or polygonal Jordan curves through homeomorphisms whose physical displacement tends to zero, as in Lemma <a href=\"#if:regularization\" data-reference-type=\"ref\" data-reference=\"if:regularization\">35</a>. Preserve boundary-component labels and the cyclic order of the side signs. Put one sign-switch mark on each cap, tending in the chart to its designated slit tip. One may also retain finitely many additional sign-switch marks on the base away from slit roots, tracking them by their boundary parametrization.*\n\n\n*Then the resulting domains $D_q$ converge to $D$ in the marked Carathéodory sense. Normalized uniformizing maps converge uniformly up to the boundary, after radial identification of their source annuli when necessary. Every cap mark converges to the prime end at its slit tip. If $m_q$ and $m$ are the corresponding continuum critical Ising one-point functions, then, for every $K\\Subset D$, $$\\label{if:mean-continuity}\n       \\sup_{z\\in K}|m_q(z)-m(z)|\\longrightarrow0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-if-marked-convergence"
+  },
+  {
+   "claim_id": "claim-incidence-ordering",
+   "exact_statement": "Let $\\mu_0,\\mu_1$ be two ferromagnetic Ising laws with the same interactions and possibly different pin sets. Let $C$ be the component of the vertices free in both models which contains a specified connected target. Suppose that, for every edge $xy$ with $x\\in C$ and $y\\notin C$, at least one of the following holds:*\n\n1.  *$y$ is pinned minus in model $0$;*\n\n2.  *$y$ is pinned plus in model $1$;*\n\n3.  *$y$ is pinned to the same sign in both models.*\n\n*Then $\\mu_0|_C\\preceq\\mu_1|_C$. The same assertion holds for a union of target components with the corresponding incidence condition.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-if-incidence-order"
+  },
+  {
+   "claim_id": "claim-examined-triangles-sign",
+   "exact_statement": "Fix an admissible limiting datum and disjoint small neighborhoods of its roots and tips. For sufficiently close resolved data and sufficiently fine mesh, an edge from a free vertex in the target component to an examined neighbor, outside those neighborhoods, sees the prescribed sign of the corresponding accessible face of the ideal datum. The short approach to the realized wall has length $O(\\delta)$ in the physical plane. Its identification with a limiting wall face also uses the datum tolerance and the fixed chart’s modulus of continuity.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-if-triangle-incidence"
+  },
+  {
+   "claim_id": "claim-distant-wall-weight",
+   "exact_statement": "Let $C$ and $W$ be nested lattice square contours, with a fixed positive macroscopic collar between them. The graph in this collar is the critical nearest-neighbor square lattice. Let $T$ be a set strictly inside $C$, and let $\\nu_1,\\nu_2$ be two laws with plus spins prescribed on $W$. The laws may have different prescribed spins inside $C$, but have the same interactions and pinning rule on and outside $C$, where $C$ is free. Write $\\nu_i^b$ for the corresponding laws after replacing the plus wall by any assignment $b$ on $W$.*\n\n*There is a positive function $w_b$ of the spins on $C$, independent of the data strictly inside $C$, such that $$d\\nu_i^b\\big|_{T\\cup C}\n =\\frac{w_b\\,d\\nu_i\\big|_{T\\cup C}}{\\nu_i(w_b)},\n \\qquad\n \\frac{\\sup w_b}{\\inf w_b}\\le K.$$ The constant $K$ depends only on the fixed collar geometry, uniformly in the mesh and in $b$. Consequently $$\\|\\nu_1^b|_T-\\nu_2^b|_T\\|_{\\mathrm{TV}}\n \\le 2K\\,\n \\|\\nu_1|_{T\\cup C}-\\nu_2|_{T\\cup C}\\|_{\\mathrm{TV}}.$$",
+   "kind": "bound",
+   "statement_anchor": "stmt-fd-outer-wall-weight"
+  },
+  {
+   "claim_id": "claim-barrier-buffer",
+   "exact_statement": "In the inward setting, let a regular signed contour $\\Gamma$ have already been fully pinned, and let $V^\\delta$ be the entire free component it encloses, with its pinned boundary layer excluded. Assume that a positive exterior collar of $\\Gamma$ contains no other pins, as supplied by Lemma <a href=\"#if:erosion\" data-reference-type=\"ref\" data-reference=\"if:erosion\">33</a>. For any compact target on its inner side and any $\\varepsilon>0$, one can choose a regular surrounding contour $\\widehat\\Gamma$ at a positive distance from $\\Gamma$, with corresponding signs, so that the following two steps on the marginal on $V^\\delta$ each change the target law by less than $\\varepsilon$:*\n\n1.  *remove the old plus pins on $\\Gamma$;*\n\n2.  *remove the old minus pins on $\\Gamma$.*\n\n*Here the farther pins on $\\widehat\\Gamma$ are present from the start. They initially have no effect on $V^\\delta$. The first step is downward and the second upward. After both, the kept volume $V^\\delta$ is separated from every fixed pin by a positive macroscopic distance, uniform for sufficiently fine meshes.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-if-barrier-buffer"
+  },
+  {
+   "claim_id": "claim-stopping-band-transfer",
+   "exact_statement": "Fix an inward or outward band, target, and ambient square chart as in Section <a href=\"#if:section\" data-reference-type=\"ref\" data-reference=\"if:section\">7</a>, with all the stated positive clearances. Use the critical plus-boundary law in the fixed larger reference square. For every exceptional probability $\\epsilon>0$ and target error $\\eta>0$, generic contour levels can be chosen in any prescribed separated subwindows so that the following hold for all sufficiently fine meshes.*\n\n1.  *The stopping observation of Lemma <a href=\"#if:stopping\" data-reference-type=\"ref\" data-reference=\"if:stopping\">29</a> has a finite descriptor $Z^\\delta\\in\\{0,1,\\ldots,m\\}$, computed from band spins. State $0$ is exceptional and has probability at most $\\epsilon$ in the fixed reference chart.*\n\n2.  *Every good state $i$ has a deterministic regular signed barrier $\\Gamma_i$. For every realizable transcript with $Z^\\delta=i$, adding its plus pins and then its minus pins changes the target law by a sum of at most $\\eta$ in total variation. The resulting target-side Gibbs law, denoted $Q_{i,\\delta}$, is the same for every such transcript. This assertion is uniform over all bounded observables on the target.*\n\n3.  *In the inward case one may also move the full barrier to a slightly farther signed contour, retaining the entire enclosed free component as the kept volume. Counting the two old-pin removals as well, the sum of target errors can still be made at most $\\eta$. The final kept volume has a positive macroscopic buffer from its fixed boundary. All geometric clearances have positive minima over the good states.*\n\n4.  *For a fixed finite list of bands the descriptors have convergent joint laws. The bins can be chosen to be continuity sets of the limiting data law; hence this finite-space convergence is in total variation.*\n\n*The number of states, their barriers, and their positive clearances depend on the fixed geometry and on $\\epsilon,\\eta$, not on the mesh. The threshold for the mesh is chosen afterward. If a different law, possibly conditional on remote pins, has band density at most $K$ times that of the reference chart by Corollary <a href=\"#fd:buffered-ratio\" data-reference-type=\"ref\" data-reference=\"fd:buffered-ratio\">[fd:buffered-ratio]</a>, its exceptional probability is at most $K\\epsilon$. The same applies to mixtures of those conditional laws.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-if-band-transfer"
+  },
+  {
+   "claim_id": "claim-lookup-approximation",
+   "exact_statement": "In the outward setting of Theorem <a href=\"#if:band-transfer\" data-reference-type=\"ref\" data-reference=\"if:band-transfer\">41</a>, let $\\mathcal F^\\delta$ be the stopping information. For any family of target observables $h_\\delta$ satisfying $|h_\\delta|\\le H$, define $$a_i(\\delta)=\\mathbb E_{Q_{i,\\delta}}h_\\delta\n             \\quad (i\\ge1),$$ and choose any exceptional-bin value in $[-H,H]$. Then, on every good transcript, $$\\label{if:lookup-pointwise}\n  \\left|\\mathbb E[h_\\delta\\mid\\mathcal F^\\delta]\n             -a_{Z^\\delta}(\\delta)\\right|\\le 2H\\eta.$$ In particular, in the reference chart, $$\\label{if:lookup-ltwo}\n  \\mathbb E\\left|\\mathbb E[h_\\delta\\mid\\mathcal F^\\delta]\n             -a_{Z^\\delta}(\\delta)\\right|^2\n                  \\le 4H^2(\\eta^2+\\epsilon).$$ The good bins, barriers, and mesh threshold work for all these observables simultaneously. Neither the observables nor their lookup values need converge as $\\delta\\downarrow0$. More explicitly, fix a reference continuation law $\\nu$ and regard $f_\\delta^\\nu(T)=\\mathbb E_\\nu[h_\\delta\\mid\\mathcal F^\\delta=T]$ as a function of the stopping transcript $T$. Evaluating this same function under any buffered band distribution with density bound $K$ gives the integrated estimate with exceptional term $K\\epsilon$. It is the reference conditional-average function that is transferred. It also equals the conditional average for the new law when that law has the same continuation and distant wall given $T$. If the distant wall is changed to an assignment $b$, the uniform wall extension in Lemma <a href=\"#if:erosion\" data-reference-type=\"ref\" data-reference=\"if:erosion\">33</a> supplies the corresponding completed laws $Q_{i,\\delta}^{b}$. The conditional averages for this continuation use the separate lookup values $a_i^{b}(\\delta)=\\mathbb E_{Q_{i,\\delta}^{b}}h_\\delta$.",
+   "kind": "bound",
+   "statement_anchor": "stmt-if-descriptor-averages"
+  },
+  {
+   "claim_id": "claim-random-levels-probes",
+   "exact_statement": "Theorem <a href=\"#if:band-transfer\" data-reference-type=\"ref\" data-reference=\"if:band-transfer\">41</a> and Corollary <a href=\"#if:descriptor-averages\" data-reference-type=\"ref\" data-reference=\"if:descriptor-averages\">42</a> remain valid when the two contour radii are drawn with a bounded density in a fixed compact rectangle of separated radii lying strictly inside the permitted windows. Different band observations may use independent draws. Their joint data laws converge, including the auxiliary randomness.*\n\n*Fix a countable dense collection of marked rational-walk prototypes in the ambient space $\\widehat{\\mathcal X}$ of Definition <a href=\"#if:datum\" data-reference-type=\"ref\" data-reference=\"if:datum\">30</a>; probe balls are intersected with the admissible-data space $\\mathcal X_{\\mathrm{band}}$. Allow a probe to test whether the data lie within distance $r$ of one prototype, where $r$ is drawn uniformly in a rational interval with closure in $(0,1)$. For any prescribed $\\epsilon,\\eta$, finitely many such probes suffice to obtain the lookup approximation in Corollary <a href=\"#if:descriptor-averages\" data-reference-type=\"ref\" data-reference=\"if:descriptor-averages\">42</a>, with adjusted exceptional probability at most $\\epsilon$. The finite probe list depends only on the reference local geometry, the radius rectangle, and the requested tolerances. It is independent of the bounded observables and of the size of an ambient buffered array.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-if-random-levels"
+  }
+ ],
+ "paper": "papers/EN-115-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-M-0422_PM-218.6_Buffered_comparison_and_stopping_band_resolution_in_critical_Ising.md",
+ "purpose": "Buffered comparison and stopping-band resolution in critical Ising",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "93dc0814614a33a1045ef49d00d29e42e4657acce4c719a7de8ce42dcc3e2e95",
+   "pm.domains.v2": "63fe906fa7e740256ce84b1607ce3260add751b178fbb443e0c03df60a6d51c0",
+   "pm.edges.v2": "f8f03ad65c192bf65bf8eb03ff663966770a35c9e0b594d6bdb0aa7787c3a394",
+   "pm.extraction.v2": "a903b9ee6da1bb7f373df383f20679a277e52321da7cc5f61091073be7b5ba5b",
+   "pm.formal.v2": "48e31080b07521ee19f5d1c2fa501d6617bebbbbe66e8c6a960c5adf1112da54",
+   "pm.limits.v2": "f155478e7aeccd7e895faa7f5722a55f2c00e3de47e276e4b4d19cdc0372b685",
+   "pm.node.v2": "1637f67bbf2aea0ef0ee06ea0495eec276b6a990c167f71355c8ed05f10568f7",
+   "pm.objects.v2": "6ec7b0b4ae03fe3590b46239957363495848691d0d9a6bab4dff1e7bbb19bcc8",
+   "pm.provenance.v2": "149427e838017578a6b9ddfdccbd19fe0ddaaadef8ab7dcde2625ec384e4ad45",
+   "pm.quantities.v2": "16ca978aa2fa299c2def806c3bcb2098af92aa1180f4f5ee978a0e1eac7c990a",
+   "pm.reading.v2": "6c6803ac33c36e4a07a07ca57359735a9610a07f33dfda366c2f747e8f7f22c5",
+   "pm.roadmap.v2": "de6d4b5e6037d9cbaa5347175a8f75523d956d1015f065e3569364b86b634d6e",
+   "pm.search.v1": "97aa23ad378c294304e076cd678ce7d9a1e710a3d4e2b6134b4e53c8df9929b0",
+   "pm.triptych.v2": "5aa4ae211cf3019f8c5a45d2aceb1b8331c0a2ee21b498ce19469d4a4808c45e"
+  },
+  "canonical_sha256": "8135b09619e13b7d9a28cc87a71adf70145e554f89dbe4740be2212115e4323a",
+  "paper_sha256": "fe410b883fc85523164692bc8843df554c59da1daf850733c7f044dc38ad54da",
+  "repaired_body_sha256": "993f34d6304c4a2cc0e4e785a828a4b0b9b32d1d4465055532feea33cd093311"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "3004b93159ff6ed77836c124bb1bd36407aba1153a5b3c6b0439b0cfd1cca025",
+   "receipt_sha256": "4afae3e06b25236141fcc43b6b5db24536f44aa63c0c3a7a0e9c83147380a12a",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [
+    {
+     "checked_domain": "Graphs with at most 8 vertices and 12 edges, couplings up to 2, I and J of size at most 2, with and without fields and pinned vertices in F.",
+     "coverage": "PARTIAL",
+     "invariant_id": "inv-pointwise-ratio-bound",
+     "oracle_basis": "Exhaustive enumeration of all spin configurations with an independent computation of q0 as a spin correlation of the contracted graph."
+    }
+   ],
+   "mutant_receipts": [
+    {
+     "id": "mut-factor-two",
+     "observed_exit": 1,
+     "receipt_sha256": "2e7d689fe035990ce27f3ab079511fa88b8eb05fafac03a8fe1210838263bdc5"
+    },
+    {
+     "id": "mut-edge-parameter",
+     "observed_exit": 1,
+     "receipt_sha256": "02c16344ef826e40e808f1c5d933b8eca6b062cffb7b7a9d22801246b4646658"
+    },
+    {
+     "id": "mut-cluster-weight",
+     "observed_exit": 1,
+     "receipt_sha256": "78b76630df3945a9ff5f7ddd9e76a6159bf1cca6f84fae94654f2d67dde7c766"
+    },
+    {
+     "id": "mut-parallel-couplings",
+     "observed_exit": 1,
+     "receipt_sha256": "4e2c91ac66fa444c56eb9084850b055aceedeae4f4a5846bca2c91f37d947770"
+    },
+    {
+     "id": "mut-fields-ignored",
+     "observed_exit": 1,
+     "receipt_sha256": "858cee6000b79272c74d9ee67270b4074e645632545f67b2729a9ecd20975e8d"
+    },
+    {
+     "id": "mut-pinned-sign",
+     "observed_exit": 1,
+     "receipt_sha256": "3962bee910bf8434f89e9d23c9830d7baea196121f4f69195d83f7706adf9b04"
+    },
+    {
+     "id": "mut-no-normalisation",
+     "observed_exit": 1,
+     "receipt_sha256": "fae689396a4425d9259cbcc5243abae92de2a7e0e93792866524ef3d98f067a7"
+    }
+   ],
+   "receipt_sha256": "bf5879fd0b4db104f05a8e1d23503ecffb273b663149bfe15853cd5697cabba7",
+   "status": "PASS"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "Buffered comparison and stopping-band resolution in critical Ising"
+}

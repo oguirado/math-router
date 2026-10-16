@@ -1,0 +1,642 @@
+{
+ "claim_status": "CORPUS_CLAIMED",
+ "context": {
+  "bytes": 689088,
+  "reading_anchor": "pm-s7",
+  "tier": "T4",
+  "tokenizer": "o200k_base",
+  "tokens": 204946
+ },
+ "coordinate": "EN-115-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-H-0468",
+ "domains": [
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "software",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "games_simulation",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "tools",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "algorithms",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "data_structures",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "hardware_accelerators",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "crypto_security",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "machine_learning",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "optimisation_operations_research",
+   "maturity": "adaptable",
+   "proposed_domain": null,
+   "strength": "moderate",
+   "verification": "PENDING"
+  },
+  {
+   "applies": false,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "distributed_systems",
+   "maturity": "not_applicable",
+   "proposed_domain": null,
+   "strength": "none",
+   "verification": "PENDING"
+  },
+  {
+   "applies": true,
+   "basis": "inferred",
+   "contract_anchor": "pm-s5",
+   "domain": "other",
+   "maturity": "inspirational",
+   "proposed_domain": "statistical physics and random matrix theory",
+   "strength": "strong",
+   "verification": "PENDING"
+  }
+ ],
+ "exclusions": [
+  {
+   "evidence": [
+    {
+     "anchor": "pm-h-34",
+     "quote": "The bounded-edge hypothesis cannot be replaced by the assertion that all eigenvalues lie in the support of a possibly unbounded limiting law.",
+     "quote_sha256": "7a4e031d5065dd89a37cf7f4c176b061558c2b9a8c1706d53972a718ab55a43a"
+    }
+   ],
+   "query": "unbounded spectral support or outlier eigenvalues",
+   "reason": "A counterexample shows the pressure has no limit when only weak convergence on an unbounded support is assumed."
+  },
+  {
+   "evidence": [
+    {
+     "anchor": "eq:pressure",
+     "quote": "Let $\\Lambda_N=\\mathop{\\mathrm{diag}}(\\lambda_{1,N},\\ldots,\\lambda_{N,N})$ be deterministic, and let $U_N$ be Haar distributed on the orthogonal group $O(N)$.",
+     "quote_sha256": "5d726364b75ea772d9fda9bee47099b4badfaa98089e1108b5aee38dc3f9a8cc"
+    }
+   ],
+   "query": "non-Haar or sparse interaction matrices",
+   "reason": "The result is stated for Haar distributed eigenvectors."
+  }
+ ],
+ "family": "PM-234",
+ "id": "PM-234.1",
+ "inputs": {
+  "hypotheses": [
+   {
+    "anchor": "stmt-thm-main",
+    "claim_id": "claim-limiting-pressure",
+    "statement": "Let $\\Lambda_N$ be deterministic real diagonal matrices whose empirical spectral measures converge weakly to a compactly supported probability law $\\mu$."
+   },
+   {
+    "anchor": "stmt-arr-invariance",
+    "claim_id": "lemma-gg-invariance",
+    "statement": "Let $R$ be a bounded symmetric weakly exchangeable array satisfying <a href=\"#arr:gg\" data-reference-type=\"eqref\" data-reference=\"arr:gg\">[arr:gg]</a>."
+   },
+   {
+    "anchor": "stmt-arr-duplication",
+    "claim_id": "lemma-duplication",
+    "statement": "Let $R$ satisfy the hypotheses of Lemma <a href=\"#arr:invariance\" data-reference-type=\"ref\" data-reference=\"arr:invariance\">2</a>."
+   },
+   {
+    "anchor": "stmt-arr-structure",
+    "claim_id": "prop-array-structure",
+    "statement": "Let $\\mathbf R=(R^1,\\ldots,R^m)$ be bounded, jointly weakly exchangeable Gram arrays with deterministic diagonals, satisfying <a href=\"#arr:gg\" data-reference-type=\"eqref\" data-reference=\"arr:gg\">[arr:gg]</a>."
+   },
+   {
+    "anchor": "stmt-arr-rpc",
+    "claim_id": "prop-marked-cascade",
+    "statement": "Give the root a random mark $\\eta_0$."
+   },
+   {
+    "anchor": "stmt-arr-rpc-gg",
+    "claim_id": "lemma-cascade-gg",
+    "statement": "For the common levels $L_{lj}$ of independently sampled cascade leaves"
+   },
+   {
+    "anchor": "stmt-arr-finite-replica",
+    "claim_id": "lemma-finite-replica",
+    "statement": "For a sequence of random probability priors, draw conditionally independent replicas and form their overlap arrays."
+   },
+   {
+    "anchor": "stmt-arr-gaussian-calculus",
+    "claim_id": "lemma-gaussian-differentiation",
+    "statement": "Let $\\pi$ be a probability prior, possibly random."
+   },
+   {
+    "anchor": "pm-h-12",
+    "claim_id": "prop-field-derivative",
+    "statement": "Fix weights $w_i>0$, endpoints $\\zeta_i$, and covariance levels $0\\leq h_0\\leq\\cdots\\leq h_{k-1}$."
+   },
+   {
+    "anchor": "stmt-fld-mixed",
+    "claim_id": "lemma-mixed-monotone",
+    "statement": "On the strict covariance cone"
+   },
+   {
+    "anchor": "stmt-fld-radial",
+    "claim_id": "lemma-radial-monotone",
+    "statement": "For each fixed monotone covariance vector $h$"
+   },
+   {
+    "anchor": "stmt-fld-concavity",
+    "claim_id": "thm-field-concavity",
+    "statement": "For fixed interval weights"
+   },
+   {
+    "anchor": "stmt-fld-domain",
+    "claim_id": "lemma-domain-of-S",
+    "statement": "For $p\\in\\mathcal P$, put $d=\\int_0^1(1-p(s))\\,ds$."
+   },
+   {
+    "anchor": "stmt-rot-concentration",
+    "claim_id": "lemma-concentration",
+    "statement": "For the preceding models, fix the cascade partition and a bound on $h_{k-1}$."
+   },
+   {
+    "anchor": "stmt-rot-gg",
+    "claim_id": "prop-perturbation-gg",
+    "statement": "Use <a href=\"#rot:perturbation\" data-reference-type=\"eqref\" data-reference=\"rot:perturbation\">[rot:perturbation]</a>, and fix the finite cascade partition and a compact range of the other parameters."
+   },
+   {
+    "anchor": "stmt-rot-ward",
+    "claim_id": "prop-spectral-ward",
+    "statement": "Consider a subsequential overlap limit supplied by Proposition <a href=\"#rot:gg\" data-reference-type=\"ref\" data-reference=\"rot:gg\">15</a>, and suppose $t_N\\to t\\in[0,1]$."
+   },
+   {
+    "anchor": "stmt-rot-product",
+    "claim_id": "lemma-replica-product",
+    "statement": "For the synchronized paths $L_a=(d_a,p_a)$ and $L_b=(d_b,p_b)$"
+   },
+   {
+    "anchor": "stmt-rot-paths",
+    "claim_id": "prop-projected-paths",
+    "statement": "Under the hypotheses of Proposition <a href=\"#rot:ward\" data-reference-type=\"ref\" data-reference=\"rot:ward\">16</a>, let $p$ be the quantile of the total overlap."
+   },
+   {
+    "anchor": "stmt-up-energy",
+    "claim_id": "lemma-energy-tail-order",
+    "statement": "For $t\\in[0,1]$ and $p\\in\\mathcal P$, define"
+   },
+   {
+    "anchor": "stmt-up-bound",
+    "claim_id": "prop-finite-upper-bound",
+    "statement": "Suppose the deterministic eigenvalues belong to a fixed finite set $\\{\\lambda_1,\\ldots,\\lambda_m\\}$, and their proportions converge to $\\rho_a>0$."
+   },
+   {
+    "anchor": "stmt-cav-coupling",
+    "claim_id": "lemma-cavity-coupling",
+    "statement": "There is a coupling of the full interaction of size $N+n$ and an interaction of size $N$"
+   },
+   {
+    "anchor": "stmt-cav-comparison",
+    "claim_id": "lemma-cavity-comparison",
+    "statement": "There are deterministic $\\delta_N\\downarrow0$, uniform over the perturbation parameters, such that"
+   },
+   {
+    "anchor": "stmt-cav-quadratic",
+    "claim_id": "lemma-quadratic-tilt",
+    "statement": "Let $\\mu=\\sum_{a=1}^m\\rho_a\\delta_{\\lambda_a}$, where $\\rho_a>0$ and $\\sum_a\\rho_a=1$, and put $\\lambda_+=\\max_a\\lambda_a$."
+   },
+   {
+    "anchor": "stmt-cav-cutoffs",
+    "claim_id": "lemma-cutoff-removal",
+    "statement": "For the fixed finite alphabet and fixed $n$"
+   },
+   {
+    "anchor": "stmt-cav-evaluation",
+    "claim_id": "prop-cavity-evaluation",
+    "statement": "For every finite step quantile $p$"
+   },
+   {
+    "anchor": "stmt-cav-self-consistency",
+    "claim_id": "prop-self-consistency",
+    "statement": "Let $p$ be a limiting total-overlap quantile along any sequence $\\theta_N\\in\\mathcal G_N$ used in <a href=\"#cav:preliminary-lower\" data-reference-type=\"eqref\" data-reference=\"cav:preliminary-lower\">[cav:preliminary-lower]</a>."
+   },
+   {
+    "anchor": "stmt-cav-lower",
+    "claim_id": "prop-finite-lower-bound",
+    "statement": "Let $\\mu=\\sum_{a=1}^m\\rho_a\\delta_{\\lambda_a}$ have positive rational proportions."
+   },
+   {
+    "anchor": "stmt-gen-r-continuity",
+    "claim_id": "lemma-R-continuity",
+    "statement": "Let $\\nu_j$ and $\\nu$ be probability measures supported in a common interval $[-K,K]$."
+   },
+   {
+    "anchor": "stmt-gen-counts",
+    "claim_id": "lemma-count-comparison",
+    "statement": "Fix distinct real numbers $\\lambda_1,\\ldots,\\lambda_m$, and let $L=\\max_a\\lambda_a-\\min_a\\lambda_a$."
+   },
+   {
+    "anchor": "stmt-gen-approximation",
+    "claim_id": "prop-general-approximation",
+    "statement": "Let $\\Lambda_N$ be deterministic diagonal matrices."
+   },
+   {
+    "anchor": "stmt-gen-random",
+    "claim_id": "prop-random-spectra",
+    "statement": "Let $J_N$ be random real symmetric matrices whose conditional law, given their eigenvalues, is the orthogonal orbit measure."
+   },
+   {
+    "anchor": "stmt-gen-ground-state",
+    "claim_id": "cor-ground-state",
+    "statement": "Let $J_N=U_N^{\\mathsf T}\\Lambda_NU_N$ satisfy the deterministic spectral hypotheses of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, with limiting law $\\mu$."
+   },
+   {
+    "anchor": "gen:wishart-pressure",
+    "claim_id": "cor-gaussian-patterns",
+    "statement": "Fix $\\alpha>0$, put $m_N=\\lfloor\\alpha N\\rfloor$, and let $G_N$ be an $m_N$-by-$N$ matrix of independent standard real Gaussian variables."
+   },
+   {
+    "anchor": "stmt-mag-theorem",
+    "claim_id": "thm-magnetic-field",
+    "statement": "Assume the deterministic spectral hypotheses of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, with limiting compactly supported law $\\mu$."
+   },
+   {
+    "anchor": "stmt-mag-random-data",
+    "claim_id": "remark-random-data",
+    "statement": "Let the spectrum and the field vector both be random."
+   },
+   {
+    "anchor": "stmt-mag-concavity",
+    "claim_id": "prop-constrained-concavity",
+    "statement": "Fix $s\\in(-1,1)$ and positive interval weights $w_0,\\ldots,w_{k-1}$."
+   },
+   {
+    "anchor": "stmt-mag-replacement",
+    "claim_id": "lemma-block-replacement",
+    "statement": "Fix an interior rational $\\mathbf m$, positive rational proportions $\\gamma_j$, and a height bound $H<\\infty$."
+   }
+  ],
+  "prerequisites": [
+   {
+    "concept": "variational pressure formula",
+    "evidence": [
+     {
+      "anchor": "stmt-thm-main",
+      "quote": "Let $\\Lambda_N$ be deterministic real diagonal matrices whose empirical spectral measures converge weakly to a compactly supported probability law $\\mu$.",
+      "quote_sha256": "26047da73b601edc6f11290b49d1d7bf71ea003f3c01f972b61b8433f633cec9"
+     }
+    ],
+    "requires_concepts": [
+     "Ghirlanda-Guerra identities",
+     "Ruelle probability cascade",
+     "cavity comparison",
+     "edge-extended R-transform"
+    ],
+    "supporting_pm_ids": []
+   },
+   {
+    "concept": "magnetic field extension",
+    "evidence": [
+     {
+      "anchor": "stmt-mag-theorem",
+      "quote": "Assume the deterministic spectral hypotheses of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, with limiting compactly supported law $\\mu$.",
+      "quote_sha256": "33a3fc96bab277ad110021b8ce170aeb9612b7c66f047c0ecfd113bbd03db4e4"
+     }
+    ],
+    "requires_concepts": [
+     "constrained single-site functional",
+     "first-moment transport distance"
+    ],
+    "supporting_pm_ids": []
+   }
+  ]
+ },
+ "outputs": [
+  {
+   "claim_id": "claim-limiting-pressure",
+   "exact_statement": "Let $\\Lambda_N$ be deterministic real diagonal matrices whose empirical spectral measures converge weakly to a compactly supported probability law $\\mu$. Assume that their smallest and largest eigenvalues converge to the respective edges of $\\mathop{\\mathrm{supp}}\\mu$. Let $U_N$ be Haar distributed on $O(N)$, and define $P_N$ using the uniform spin probability in Equation <a href=\"#eq:pressure\" data-reference-type=\"eqref\" data-reference=\"eq:pressure\">[eq:pressure]</a>. With $S$ and $G_1$ as in Equations <a href=\"#eq:S\" data-reference-type=\"eqref\" data-reference=\"eq:S\">[eq:S]</a>–<a href=\"#eq:G\" data-reference-type=\"eqref\" data-reference=\"eq:G\">[eq:G]</a>, $$\\lim_{N\\to\\infty}\\mathbb EP_N\n =\\lim_{N\\to\\infty}P_N\n =\\mathcal F(\\mu)\n :=\\inf_{p\\in\\mathcal P}\\{S(p)+G_1(p)\\},\n \\label{eq:variational}$$ where the second limit holds almost surely. No independence of the matrices $U_N$ across dimensions is required.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-thm-main"
+  },
+  {
+   "claim_id": "lemma-gg-invariance",
+   "exact_statement": "Let $R$ be a bounded symmetric weakly exchangeable array satisfying <a href=\"#arr:gg\" data-reference-type=\"eqref\" data-reference=\"arr:gg\">[arr:gg]</a>. Fix $n\\geq2$ and bounded measurable functions $f_1,\\ldots,f_n$. Define $$H_l=\\sum_{i=1}^n f_i(R_{il}),\\qquad\n H'_j=H_j-f_j(R_{jj})+\\mathbb Ef_j(R_{12})\\quad(1\\leq j\\leq n).$$ For real $t$, let $Z(t)$ be the limiting empirical mean of $e^{tH_l}$ over $l>n$. Then, for every bounded $\\mathcal F_n$-measurable $\\Phi$, $$\\label{arr:invariance-eq}\n \\mathbb E\\Phi\n =\\mathbb E\\left[\n  \\frac{\\Phi\\exp(t\\sum_{j=1}^n H'_j)}{Z(t)^n}\n \\right].$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-arr-invariance"
+  },
+  {
+   "claim_id": "lemma-duplication",
+   "exact_statement": "Let $R$ satisfy the hypotheses of Lemma <a href=\"#arr:invariance\" data-reference-type=\"ref\" data-reference=\"arr:invariance\">2</a>. Suppose an event $\\mathcal A$ of positive probability prescribes open tolerances for the off-diagonal entries among $n\\geq2$ replicas. Assume that its requirements on the pairs $(i,n)$, $i<n$, are intervals $I_i\\subset(-\\infty,u)$. Then $$\\mathbb P\\bigl(\\mathcal A,\\ R_{i,n+1}\\in I_i\\ (i<n),\\\n                         R_{n,n+1}<u\\bigr)>0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-arr-duplication"
+  },
+  {
+   "claim_id": "prop-array-structure",
+   "exact_statement": "Let $\\mathbf R=(R^1,\\ldots,R^m)$ be bounded, jointly weakly exchangeable Gram arrays with deterministic diagonals, satisfying <a href=\"#arr:gg\" data-reference-type=\"eqref\" data-reference=\"arr:gg\">[arr:gg]</a>. Each scalar component has nonnegative off-diagonal entries and is ultrametric: $$R^a_{23}\\geq\\min(R^a_{12},R^a_{13})\\quad\\hbox{almost surely}.$$ The support of the law of $\\mathbf R_{12}$ is ordered coordinatewise. Hence this law has a representation by simultaneous nondecreasing quantiles $p_a:(0,1)\\to\\mathbb R_+$. If $Q=\\sum_a R^a$ and $p$ is its off-diagonal quantile, then $p=\\sum_a p_a$, and every $p_a$ is a measurable function of $p$. In particular, each $p_a$ is constant almost everywhere on every interval on which $p$ is constant.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-arr-structure"
+  },
+  {
+   "claim_id": "prop-marked-cascade",
+   "exact_statement": "Give the root a random mark $\\eta_0$. Conditional on ancestor marks, give each child at level $i$ a mark with probability kernel $K_i(d\\eta_i\\mid\\eta_0,\\ldots,\\eta_{i-1})$, independently for distinct children, for $1\\leq i\\leq k-1$. All marks are independent of the Poisson processes conditional on their ancestors. One may also integrate a residual mark $\\eta_k$ at each leaf, with kernel $K_k$, afresh on every visit to that leaf.*\n\n\n\n*For a measurable payoff $X(\\eta_0,\\ldots,\\eta_k)$ define $$X_{k-1}=\\log\\int e^X\\,dK_k,\n \\qquad\n X_{i-1}=\\frac1{\\zeta_i}\\log\\int e^{\\zeta_i X_i}\\,dK_i\n \\quad(i=k-1,\\ldots,1).$$ Here $X=-\\infty$ is allowed on excluded residual states, so the leaf integral can impose a hard constraint without renormalizing its prior; the integral itself must be strictly positive and finite. If there is no residual mark, set $X_{k-1}=X$ instead. Assume that all these quantities are finite real numbers almost surely under the original path law, and that $\\mathbb E|X_0|<\\infty$. Then $$\\label{arr:rpc-log}\n \\mathbb E\\log\\sum_\\alpha\\nu_\\alpha e^{X_{k-1}(\\alpha)}=\\mathbb EX_0.$$ After tilting the leaf masses by $e^{X_{k-1}}$, the unmarked cascade has its original law up to tree relabeling. Conditional on the branching of sampled leaves, their marks use the kernels $$\\label{arr:rpc-kernels}\n d\\widetilde K_i\n =e^{\\zeta_i(X_i-X_{i-1})}\\,dK_i\n \\quad(1\\leq i\\leq k-1),\n \\qquad\n d\\widetilde K_k=e^{X-X_{k-1}}\\,dK_k.$$ The root mark keeps its original law: the Gibbs probability is normalized for each fixed root mark, and the outer expectation still averages that mark under its original distribution. Different branches use conditionally independent marks, and separate visits use independent residual marks even when their leaf labels coincide. These assertions hold for every bounded measurable test of the sampled branching and marks.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-arr-rpc"
+  },
+  {
+   "claim_id": "lemma-cascade-gg",
+   "exact_statement": "For the common levels $L_{lj}$ of independently sampled cascade leaves, $$\\mathbb P(L_{12}=i)=w_i\\quad(0\\leq i\\leq k-1),$$ and the common-level array satisfies the Ghirlanda–Guerra identities. Any bounded symmetric weakly exchangeable scalar ultrametric array satisfying those identities is uniquely determined in law by its off-diagonal distribution and its fixed diagonal. Consequently a nondecreasing finite-valued rounding of its off-diagonal entries, with the fixed diagonal retained separately, has the cascade law prescribed by its rounded quantile.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-arr-rpc-gg"
+  },
+  {
+   "claim_id": "lemma-finite-replica",
+   "exact_statement": "For a sequence of random probability priors, draw conditionally independent replicas and form their overlap arrays. Suppose the finite-dimensional laws of these bounded overlap arrays and their Gaussian covariance arrays converge jointly, and the covariance diagonals are uniformly bounded. Conditional on these arrays, let the additional marks be centered Gaussian vectors with those covariances. Then their joint finite-replica laws converge. Moreover, the following quantities pass to the limit whenever the factors and tests are bounded continuous functions of the corresponding finite-replica data:*\n\n1.  *the expected logarithm of a one-replica Gibbs integral of a factor $f$ satisfying $0<\\delta\\leq f\\leq M<\\infty$;*\n\n2.  *any bounded finite-replica test under reweighting by such a factor.*\n\n*The same conclusion holds for finite-step cascade approximations whose overlap and covariance arrays converge in this sense.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-arr-finite-replica"
+  },
+  {
+   "claim_id": "lemma-gaussian-differentiation",
+   "exact_statement": "Let $\\pi$ be a probability prior, possibly random. Conditional on the prior and its other disorder, let $X_t(\\sigma)$ be a centered Gaussian field with differentiable covariance $C_t(\\sigma,\\tau)$, and let $V_t(\\sigma)$ be a differentiable deterministic exponent. Assume, on each compact parameter interval, uniform bounds on $C_t(\\sigma,\\sigma)$, $|\\dot C_t(\\sigma,\\tau)|$, $|V_t(\\sigma)|$, and $|\\dot V_t(\\sigma)|$, and uniform continuity in $t$ of the derivatives. Then $$\\label{arr:gaussian-pressure}\n \\frac{d}{dt}\\mathbb E\\log\\int e^{X_t+V_t}\\,d\\pi\n =\\frac12\\mathbb E\\langle\\dot C_t(1,1)-\\dot C_t(1,2)\\rangle_t\n   +\\mathbb E\\langle\\dot V_t(1)\\rangle_t.$$ For a bounded test $\\Phi$ of $n$ replicas with no explicit dependence on these Gaussian variables or on $t$, $$\\label{arr:gaussian-test}\n \\left|\\frac{d}{dt}\\mathbb E\\langle\\Phi\\rangle_t\\right|\n \\leq\\|\\Phi\\|_\\infty\n \\left(2n(n+1)\\|\\dot C_t\\|_\\infty\n                    +2n\\|\\dot V_t\\|_\\infty\\right).$$ These formulas apply to the finite cascades above, including at one-sided parameter endpoints by integration and continuity.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-arr-gaussian-calculus"
+  },
+  {
+   "claim_id": "prop-field-derivative",
+   "exact_statement": "The variables $m_i(Z_i)$ are the conditional means of $\\tanh Z_{k-1}$ along the tilted chain. In particular, $0\\leq B_0(h)\\leq\\cdots\\leq B_{k-1}(h)\\leq1$, and $B_i$ is the expected product of two Ising spins whose fields have common level $i$. For fixed weights, covariance differentiation gives $$\\label{fld:gradient}\n d\\ell(h)=-\\frac12\\sum_{i=0}^{k-1}w_iB_i(h)\\,dh_i.$$ The formula holds on the strict cone $0<h_0<\\cdots<h_{k-1}$ and, by continuity, for one-sided derivatives along line segments in the closed cone. Subdividing an interval on which $h$ is constant leaves $\\ell$ unchanged and repeats its value of $B$ on the resulting intervals.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-fld-derivative"
+  },
+  {
+   "claim_id": "lemma-mixed-monotone",
+   "exact_statement": "On the strict covariance cone, for every $i<j$, $$\\partial_{h_j}B_i(h)\\leq0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-fld-mixed"
+  },
+  {
+   "claim_id": "lemma-radial-monotone",
+   "exact_statement": "For each fixed monotone covariance vector $h$, $B_i(ch)$ is nondecreasing in $c>0$. On the strict cone, therefore, $$\\label{fld:radial-derivative}\n \\sum_jh_j\\partial_{h_j}B_i(h)\\geq0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-fld-radial"
+  },
+  {
+   "claim_id": "thm-field-concavity",
+   "exact_statement": "For fixed interval weights, $\\ell$ is concave on the closed cone of nonnegative nondecreasing covariance levels. For any two such step paths $h,v$, represented on a common subdivision, $$\\label{fld:tangent}\n \\ell(v)\\leq\\ell(h)\n   -\\frac12\\int_0^1B_h(s)(v(s)-h(s))\\,ds,$$ where $B_h$ is the step path with values $B_i(h)$. Furthermore, $$\\label{fld:lipschitz}\n |\\ell(h)-\\ell(v)|\\leq\\frac12\\|h-v\\|_{L^1(0,1)}.$$ Thus $\\ell$ has a unique Lipschitz extension to bounded nonnegative nondecreasing paths, independent of the step approximations used.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-fld-concavity"
+  },
+  {
+   "claim_id": "lemma-domain-of-S",
+   "exact_statement": "For $p\\in\\mathcal P$, put $d=\\int_0^1(1-p(s))\\,ds$. If $d>0$, then $$\\label{fld:domain-bound}\n 0\\leq S(p)\\leq(d^{-1}-1)\\log2.$$ If $d=0$, so that $p=1$ almost everywhere, then $S(p)=+\\infty$. Moreover $S$ is increasing in the pointwise order on quantiles.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-fld-domain"
+  },
+  {
+   "claim_id": "lemma-concentration",
+   "exact_statement": "For the preceding models, fix the cascade partition and a bound on $h_{k-1}$. There is a constant independent of $N$, of the deterministic prior, and of the remaining parameters in their stated ranges such that $$\\label{rot:variance}\n \\mathop{\\mathrm{Var}}(P_N^{\\mathrm{enr}})\\le \\frac CN.$$ The same assertion holds on any fixed slightly enlarged bounded interval for the perturbation parameters. For the pressure of the original Haar model, without Gaussian enrichment or perturbations, $$\\label{rot:fourth}\n \\mathbb E|P_N-\\mathbb EP_N|^4\\le \\frac C{N^2}.$$ The constants are independent of deterministic weights in the spin prior.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rot-concentration"
+  },
+  {
+   "claim_id": "prop-perturbation-gg",
+   "exact_statement": "Use <a href=\"#rot:perturbation\" data-reference-type=\"eqref\" data-reference=\"rot:perturbation\">[rot:perturbation]</a>, and fix the finite cascade partition and a compact range of the other parameters. The following two procedures give limiting arrays with deterministic diagonals and joint Ghirlanda–Guerra identities for $(A^1,\\ldots,A^m,T)$.*\n\n1.  *Choose a deterministic minimum of $$-\\mathbb EP_N^{\\mathrm{enr}}(t,h,u,v)+J_N(t,h)\n           +\\Pi_N(u,v),\n     \\qquad\n     \\Pi_N=\\sum_{j\\le N}2^{-j}(u_j-3/2)^2\n                 +\\sum_a(v_a-3/2)^2,$$ over any compact set of the other parameters and $(u,v)\\in[1,2]^{N+m}$; here $J_N$ is independent of $u,v$. Every subsequential overlap limit at these minima, after a further subsequence for the diagonal means, has the stated properties.*\n\n2.  *Fix any deterministic sequence of the other parameters and integrate over product uniform probability $\\eta$ on $\\Theta=[1,2]^{\\mathbb N}\\times[1,2]^m$, ignoring $u_j$ for $j>N$. There are measurable sets $\\mathcal G_N\\subset\\Theta$ with $\\eta(\\mathcal G_N)\\to1$ such that every sequence $\\theta_N\\in\\mathcal G_N$ has the same properties at each subsequential overlap limit, after selecting convergent diagonal means.*\n\n*These assertions hold for every deterministic prior described above. They remain valid when $t=t_N$ and the bounded enrichment parameters vary with $N$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rot-gg"
+  },
+  {
+   "claim_id": "prop-spectral-ward",
+   "exact_statement": "Consider a subsequential overlap limit supplied by Proposition <a href=\"#rot:gg\" data-reference-type=\"ref\" data-reference=\"rot:gg\">15</a>, and suppose $t_N\\to t\\in[0,1]$. For distinct group indices $a,b$, and every bounded continuous $\\Phi\\colon[-1,1]\\to\\mathbb R$, $$\\begin{aligned}\n \\mathbb E\\!\\left[\\Phi(Q_{12})\n        (\\rho_b A^a_{12}-\\rho_a A^b_{12})\\right]\n ={}&t(\\lambda_a-\\lambda_b)\n \\mathbb E\\!\\left[\\Phi(Q_{12})\n        (d_a A^b_{12}+A^a_{12}d_b-2A^a_{13}A^b_{23})\\right],\n \\label{rot:ward-off}\\\\\n \\rho_b d_a-\\rho_a d_b\n ={}&t(\\lambda_a-\\lambda_b)\n       \\left(d_a d_b-\\mathbb E[A^a_{12}A^b_{12}]\\right).\n \\label{rot:ward-diag}\n\\end{aligned}$$ The assertion includes equal eigenvalues in distinct groups.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rot-ward"
+  },
+  {
+   "claim_id": "lemma-replica-product",
+   "exact_statement": "For the synchronized paths $L_a=(d_a,p_a)$ and $L_b=(d_b,p_b)$, the diagonal and conditional off-diagonal expressions on the right of <a href=\"#rot:ward-diag\" data-reference-type=\"eqref\" data-reference=\"rot:ward-diag\">[rot:ward-diag]</a> and <a href=\"#rot:ward-off\" data-reference-type=\"eqref\" data-reference=\"rot:ward-off\">[rot:ward-off]</a>, respectively, form a path $L_a\\star L_b$ with diagonal $$d_a d_b-\\int_0^1p_a(u)p_b(u)\\,du$$ and off-diagonal $$\\label{rot:product-path}\n \\widehat L_a(s)p_b(s)+p_a(s)\\widehat L_b(s)\n       +sp_a(s)p_b(s)-\\int_0^s p_a(u)p_b(u)\\,du.$$ Its symbol and root are $$\\begin{aligned}\n \\widehat{L_a\\star L_b}&=\\widehat L_a\\,\\widehat L_b,\\\\\n (L_a\\star L_b)(0+)\n   &=\\widehat L_a(0+)p_b(0+)+p_a(0+)\\widehat L_b(0+).\n\\end{aligned}$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rot-product"
+  },
+  {
+   "claim_id": "prop-projected-paths",
+   "exact_statement": "Under the hypotheses of Proposition <a href=\"#rot:ward\" data-reference-type=\"ref\" data-reference=\"rot:ward\">16</a>, let $p$ be the quantile of the total overlap. Then the entire group path is determined by $p$: $$\\label{rot:full-paths}\n p_a(s)=\\int_0^{p(s)}f_a'(D_p(r))\\,dr,\\qquad\n d_a=\\int_0^1f_a'(D_p(r))\\,dr .$$ These formulas hold at $t=0$, for repeated eigenvalues, and when $D_p(p(s))=0$. More generally, for a smooth scalar or matrix function $f$ on $[0,1]$, the path $$\\label{rot:function-path}\n l_f(s)=\\int_0^{p(s)}f'(D_p(r))\\,dr,\\qquad\n d_f=f(0)+\\int_0^1f'(D_p(r))\\,dr$$ has symbol $f(D_p(p(s)))$ and root $p(0+)f'(D_p(p(0+)))$. Symbol and root uniquely determine a bounded-variation path.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-rot-paths"
+  },
+  {
+   "claim_id": "lemma-energy-tail-order",
+   "exact_statement": "For $t\\in[0,1]$ and $p\\in\\mathcal P$, define $$F_t(x)=xR(tx),\\qquad\n \\mathcal E_t(p)=\\frac12\\int_0^1F_t'(D_p(r))\\,dr.$$ At a limit satisfying Proposition <a href=\"#rot:paths\" data-reference-type=\"ref\" data-reference=\"rot:paths\">18</a>, $\\mathcal E_t(p)$ is the expected interaction energy per spin with coefficient $\\Lambda_N$, before multiplication by $t$. The function $F_t$ is convex on $[0,1]$. In particular, $$\\label{up:tail-order}\n \\int_s^1p(u)\\,du\\ge\\int_s^1q(u)\\,du\n \\quad(0\\le s\\le1)\n \\quad\\Longrightarrow\\quad\n \\mathcal E_t(p)\\le\\mathcal E_t(q).$$ Moreover, $$\\label{up:primitive}\n \\int_0^t\\mathcal E_u(q)\\,du\n =G_t(q)=\\frac12\\int_0^1tR(tD_q(r))\\,dr.$$ Writing $L=\\max_a|\\lambda_a|$, one has $\\lvert\\mathcal E_t(p)\\rvert\\le L/2$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-up-energy"
+  },
+  {
+   "claim_id": "prop-finite-upper-bound",
+   "exact_statement": "Suppose the deterministic eigenvalues belong to a fixed finite set $\\{\\lambda_1,\\ldots,\\lambda_m\\}$, and their proportions converge to $\\rho_a>0$. Then $$\\limsup_{N\\to\\infty}\\mathbb EP_N\n \\le\\inf_{p\\in\\mathcal P}\\{S(p)+G_1(p)\\}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-up-bound"
+  },
+  {
+   "claim_id": "lemma-cavity-coupling",
+   "exact_statement": "There is a coupling of the full interaction of size $N+n$ and an interaction of size $N$ with the spectral counts in <a href=\"#cav:counts\" data-reference-type=\"eqref\" data-reference=\"cav:counts\">[cav:counts]</a> with the following properties. There are $d$ orthonormal special axes in the first $N$ coordinates and matrices $$\\label{cav:blocks}\n \\begin{pmatrix}A_N&L_N\\\\L_N^{\\mathsf T}&C_N\\end{pmatrix}\n \\longrightarrow\n \\begin{pmatrix}A&L\\\\L^{\\mathsf T}&C\\end{pmatrix}\n \\quad\\text{in probability},\n \\qquad C=\\Big(\\sum_a\\rho_a\\lambda_a\\Big)I_n,$$ where $A_N,A$ act on $\\mathbb R^d$. Fix a diagonal matrix $A_0$ with $n-s_a$ copies of $\\lambda_a$. If $y\\in\\mathbb R^d$ is the projection of a base spin $\\sigma$ onto the special axes, then adjoining $\\varepsilon\\in\\{-1,1\\}^n$ changes the main exponent by $$\\label{cav:factor}\n \\log W_N(y,\\varepsilon)\n =\\frac12y^{\\mathsf T}(A_N-A_0)y\n   +y^{\\mathsf T}L_N\\varepsilon\n   +\\frac12\\varepsilon^{\\mathsf T}C_N\\varepsilon.$$ Conditional on the base spectral projectors, the special axes assigned to group $a$ form a uniform orthonormal $(n-s_a)$-frame in that group. They may be taken independent of the base perturbations given those projectors. For finitely many base replicas, their projection variables converge jointly with any overlap limit to centered Gaussian marks, independent across the axes conditional on the overlap array, with covariance $A^a_{lj}/\\rho_a$ for an axis assigned to group $a$. Moreover, for every fixed $q>0$, $$\\label{cav:base-moments}\n \\sup_{N,\\theta}\\mathbb E\\langle |y|^q\\rangle_{N,\\theta}<\\infty.$$ Here the brackets denote the base Gibbs probability and the expectation also includes the special frames.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cav-coupling"
+  },
+  {
+   "claim_id": "lemma-cavity-comparison",
+   "exact_statement": "There are deterministic $\\delta_N\\downarrow0$, uniform over the perturbation parameters, such that $$\\label{cav:increment-comparison}\n \\mathcal F_{N+n}(\\theta)-\\mathcal F_N(\\theta)\n \\ge\n \\mathbb E\\log\\big\\langle\n W_N(y,\\varepsilon)e^{-\\delta_N(1+|y|^2)}\n \\big\\rangle_0.$$ The right-hand side is bounded below uniformly in $N$ and $\\theta$. In addition, any bounded continuous test of the two-replica total overlap and the cavity spins in the full system can be evaluated, up to an error that vanishes first as $N\\to\\infty$ and then as $B\\to\\infty$, using the base probability reweighted by $W_N\\mathbf 1_{\\{|y|\\le B\\}}$ and the base total overlap.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cav-comparison"
+  },
+  {
+   "claim_id": "lemma-quadratic-tilt",
+   "exact_statement": "Let $\\mu=\\sum_{a=1}^m\\rho_a\\delta_{\\lambda_a}$, where $\\rho_a>0$ and $\\sum_a\\rho_a=1$, and put $\\lambda_+=\\max_a\\lambda_a$. For $0<x\\leq1$, let $b(x)>\\lambda_+$ be the solution of $\\sum_a\\rho_a/(b(x)-\\lambda_a)=x$. Let $A_0,A$ be symmetric $d\\times d$ matrices whose eigenvalues are at most $\\lambda_+$, and define $$\\label{cav:q-def}\n K=A-A_0,\\qquad H(x)=(b(x)\\mathop{\\mathrm{Id}}-A_0)^{-1}\\quad(x>0),\\qquad H(0)=0.$$ Let $p\\in\\mathcal P$ be constant with value $p_i$ on intervals of lengths $w_i>0$, for $0\\leq i<k$, where $0\\leq p_0\\leq\\cdots\\leq p_{k-1}\\leq1$ and $\\sum_iw_i=1$. Set $\\zeta_i=\\sum_{j<i}w_j$, so that $\\zeta_0=0$ and $\\zeta_k=1$.*\n\n\n\n*On the corresponding Ruelle probability cascade, construct the marks from centered Gaussian increments independent of one another and of the unmarked cascade, with off-diagonal covariance path and diagonal covariance $$\\label{cav:q-path}\n Q_H(s)=\\int_0^{p(s)}H'(D_p(r))\\,dr,\n \\qquad V_H=\\int_0^1H'(D_p(r))\\,dr.$$ Here the covariance shared by two sampled paths whose last common level is $i$ is $Q_H(s)$ for $s$ in interval $i$. Any diagonal excess is an independent Gaussian residual, integrated separately at each visit to a leaf. More explicitly, write $v_\\alpha$ for the cascade weights and $y_\\alpha$ for the sum of the common and branching Gaussian increments. If $\\gamma_\\Sigma$ denotes the centered Gaussian probability measure with covariance $\\Sigma$, set $$Z_K=\\sum_\\alpha v_\\alpha\n       \\int\\exp\\left(\\frac12(y_\\alpha+z)^{\\mathsf T}\n                              K(y_\\alpha+z)\\right)\n              \\gamma_{V_H-Q_H(1-)}(dz).$$ Then $Z_K$ is positive and finite almost surely, its logarithm is integrable, and $$\\label{cav:q-log}\n \\mathbb E\\log Z_K\n =-\\frac12\\int_0^1\n   \\left.\\frac{d}{dx}\\log\\det(\\mathop{\\mathrm{Id}}-H(x)K)\\right|_{x=D_p(r)}\\,dr.$$*\n\n\n*After normalizing this quadratic tilt and relabeling the tree, the cascade weights have their original law. The terminal marks can be represented by independent Gaussian increments, independent of the unmarked cascade, with the covariance convention <a href=\"#cav:q-path\" data-reference-type=\"eqref\" data-reference=\"cav:q-path\">[cav:q-path]</a> using $$\\label{cav:q-transform}\n \\widetilde H(x)=(\\mathop{\\mathrm{Id}}-H(x)K)^{-1}H(x)\n               =(b(x)\\mathop{\\mathrm{Id}}-A)^{-1}\\quad(x>0),\n \\qquad \\widetilde H(0)=0$$ in place of $H$. This representation includes the tilted residual draws and hence applies to joint sampling of any finite number of terminal marks. The derivatives and integrands at zero in these formulas mean their smooth limits. For $d=0$, determinants equal one and all Gaussian marks are the unique vector in $\\mathbb R^0$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cav-quadratic"
+  },
+  {
+   "claim_id": "lemma-cutoff-removal",
+   "exact_statement": "For the fixed finite alphabet and fixed $n$, and every $r>0$, $$\\label{cav:tilted-moments}\n \\sup_{q\\ \\mathrm{finite\\ step}}\n \\mathbb E\\langle |y|^r\\rangle_{q,W}<\\infty.$$ Consequently the error in the expected logarithm from replacing $W$ by $\\min(W,e^T)$ tends uniformly to zero as $T\\to\\infty$. The error in a bounded replica test from restricting to $|y|\\le B$ tends uniformly to zero as $B\\to\\infty$, with any fixed bounded convention if the restricted normalizer is zero.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cav-cutoffs"
+  },
+  {
+   "claim_id": "prop-cavity-evaluation",
+   "exact_statement": "For every finite step quantile $p$, the cascade factor constructed above satisfies $$\\label{cav:evaluated}\n \\frac1n\\mathbb E\\log\\langle W\\rangle_p\n =\\ell(h_p)+\\frac12\\int_0^1p(s)h_p(s)\\,ds+G_1(p).$$ For a fixed cavity site $j$ and a bounded continuous function $\\phi$, the same tilted calculation satisfies $$\\label{cav:spin-test}\n \\mathbb E\\langle\\phi(Q_{12})\\varepsilon_j^1\\varepsilon_j^2\\rangle_{p,W}\n =\\int_0^1\\phi(p(s))B_{h_p}(s)\\,ds,$$ where $Q_{12}$ is the common-level value prescribed by $p$ and $B_{h_p}$ is the conditional two-spin product from Proposition <a href=\"#fld:derivative\" data-reference-type=\"ref\" data-reference=\"fld:derivative\">9</a>. The common-level distribution itself is unchanged by the tilt.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cav-evaluation"
+  },
+  {
+   "claim_id": "prop-self-consistency",
+   "exact_statement": "Let $p$ be a limiting total-overlap quantile along any sequence $\\theta_N\\in\\mathcal G_N$ used in <a href=\"#cav:preliminary-lower\" data-reference-type=\"eqref\" data-reference=\"cav:preliminary-lower\">[cav:preliminary-lower]</a>. For value roundings $\\bar p\\to p$ as above, $$\\label{cav:B-limit}\n B_{h_{\\bar p}}\\longrightarrow p\\quad\\text{in }L^1(0,1).$$ Consequently $$\\label{cav:supremum}\n S(p)=\\ell(h_p)+\\frac12\\int_0^1p(s)h_p(s)\\,ds.$$ Thus $h_p$ attains the field supremum in the bounded-path completion.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cav-self-consistency"
+  },
+  {
+   "claim_id": "prop-finite-lower-bound",
+   "exact_statement": "Let $\\mu=\\sum_{a=1}^m\\rho_a\\delta_{\\lambda_a}$ have positive rational proportions. Fix $n$ with $n\\rho_a\\in\\mathbb N$ for every $a$, and a progression of dimensions and spectral counts satisfying <a href=\"#cav:counts\" data-reference-type=\"eqref\" data-reference=\"cav:counts\">[cav:counts]</a>. Along this progression, the unperturbed pressure satisfies $$\\liminf_{N\\to\\infty}\\mathbb EP_N\n \\ge\\inf_{p\\in\\mathcal P}\\{S(p)+G_1(p)\\}.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-cav-lower"
+  },
+  {
+   "claim_id": "lemma-R-continuity",
+   "exact_statement": "Let $\\nu_j$ and $\\nu$ be probability measures supported in a common interval $[-K,K]$. Suppose that $\\nu_j$ converges weakly to $\\nu$ and that $$e_j:=\\max\\mathop{\\mathrm{supp}}\\nu_j\\longrightarrow e:=\\max\\mathop{\\mathrm{supp}}\\nu.$$ Define $b_{\\nu_j}$ and $R_{\\nu_j}$ by the edge convention of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, and likewise for $\\nu$. Then $$\\label{gen:R-uniform}\n \\sup_{0\\le x\\le1}|R_{\\nu_j}(x)-R_\\nu(x)|\\longrightarrow0.$$ Consequently, $$\\label{gen:variational-continuity}\n |\\mathcal F(\\nu_j)-\\mathcal F(\\nu)|\n \\le \\frac12\\sup_{0\\le x\\le1}|R_{\\nu_j}(x)-R_\\nu(x)|\n \\longrightarrow0.$$",
+   "kind": "theorem",
+   "statement_anchor": "stmt-gen-r-continuity"
+  },
+  {
+   "claim_id": "lemma-count-comparison",
+   "exact_statement": "Fix distinct real numbers $\\lambda_1,\\ldots,\\lambda_m$, and let $L=\\max_a\\lambda_a-\\min_a\\lambda_a$. Let $k_a$ and $\\widetilde k_a$ be positive integers whose sums are both $N$. For diagonal matrices $\\Lambda$ and $\\widetilde\\Lambda$ with these multiplicities, $$\\label{gen:count-comparison}\n \\left|\\mathbb EP_N(\\Lambda,U)-\\mathbb EP_N(\\widetilde\\Lambda,U)\\right|\n \\le\\frac L2\\max_a\n \\frac{|k_a-\\widetilde k_a|}{\\min(k_a,\\widetilde k_a)}.$$ The same inequality holds for any fixed spin prior on the cube, including a prior with deterministic external fields.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-gen-counts"
+  },
+  {
+   "claim_id": "prop-general-approximation",
+   "exact_statement": "Let $\\Lambda_N$ be deterministic diagonal matrices. Suppose that their empirical measures converge weakly to a compactly supported probability measure $\\mu$, and write $a=\\min\\mathop{\\mathrm{supp}}\\mu$ and $b=\\max\\mathop{\\mathrm{supp}}\\mu$. Assume $$\\liminf_{N\\to\\infty}\\lambda_{\\min}(\\Lambda_N)\\ge a,\n \\qquad\n \\limsup_{N\\to\\infty}\\lambda_{\\max}(\\Lambda_N)\\le b.$$ Then $\\mathbb EP_N\\to\\mathcal F(\\mu)$.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-gen-approximation"
+  },
+  {
+   "claim_id": "prop-random-spectra",
+   "exact_statement": "Let $J_N$ be random real symmetric matrices whose conditional law, given their eigenvalues, is the orthogonal orbit measure. Let $\\mu$ be a fixed compactly supported probability measure. If the empirical spectral measures converge weakly to $\\mu$ in probability and the two edge excesses in Proposition <a href=\"#gen:approximation\" data-reference-type=\"ref\" data-reference=\"gen:approximation\">30</a> tend to zero in probability, then $P_N\\to\\mathcal F(\\mu)$ in probability. If these spectral hypotheses hold almost surely, the pressure convergence holds almost surely. In either case, if the random variables $P_N$ are uniformly integrable, then $\\mathbb EP_N\\to\\mathcal F(\\mu)$. A sufficient condition for this last hypothesis is uniform integrability of $\\|J_N\\|_{\\mathrm{op}}$, in particular a uniform deterministic bound on these norms.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-gen-random"
+  },
+  {
+   "claim_id": "cor-ground-state",
+   "exact_statement": "Let $J_N=U_N^{\\mathsf T}\\Lambda_NU_N$ satisfy the deterministic spectral hypotheses of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, with limiting law $\\mu$. Define its maximum energy per spin by $$M_N=\\frac1{2N}\\max_{\\sigma\\in\\{-1,1\\}^N}\n                         \\sigma^{\\mathsf T}J_N\\sigma.$$ For $\\beta>0$, let $\\mu_\\beta$ be the image of $\\mu$ under $\\lambda\\mapsto\\beta\\lambda$. Then, almost surely and in expectation, $$\\label{gen:ground-state-formula}\n M_N\\longrightarrow\n \\lim_{\\beta\\to\\infty}\\frac{\\mathcal F(\\mu_\\beta)}\\beta.$$ In particular, the limit on the right exists.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-gen-ground-state"
+  },
+  {
+   "claim_id": "cor-gaussian-patterns",
+   "exact_statement": "For every fixed $c\\in\\mathbb R$, $$\\label{gen:wishart-limit}\n p_N(c)\\longrightarrow\\mathcal F(\\mu_{\\alpha,c})$$ in probability and in $L^1$, and hence in expectation. The subsequent zero-temperature limits $$\\label{gen:wishart-zero-temperature}\n e_\\pm(\\alpha):=\n \\lim_{\\beta\\to\\infty}\\frac{\\mathcal F(\\mu_{\\alpha,\\pm\\beta})}{\\beta}$$ exist, with $e_+(\\alpha)\\ge0$ and $e_-(\\alpha)\\le0$. If $g_{N,1},\\ldots,g_{N,N}\\in\\mathbb R^{m_N}$ are the columns of $G_N$, then $$\\begin{aligned}\n \\frac{\\|G_N\\|_{\\infty\\to2}}N\n &=\\frac{\\|G_N^{\\mathsf T}\\|_{2\\to1}}N\n \\longrightarrow\\sqrt{2e_+(\\alpha)}, \\label{gen:gaussian-max-norm}\\\\\n \\frac1N\\min_{\\sigma\\in\\{-1,1\\}^N}\n \\left\\|\\sum_{i=1}^N\\sigma_i g_{N,i}\\right\\|_2\n &\\longrightarrow\\sqrt{-2e_-(\\alpha)}. \\label{gen:gaussian-min-sum}\n\\end{aligned}$$ Both limits hold in probability and in $L^1$. The operator norms are from $\\ell_\\infty^N$ to $\\ell_2^{m_N}$ and from $\\ell_2^{m_N}$ to $\\ell_1^N$, respectively.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-gen-wishart"
+  },
+  {
+   "claim_id": "thm-magnetic-field",
+   "exact_statement": "Assume the deterministic spectral hypotheses of Theorem <a href=\"#thm:main\" data-reference-type=\"ref\" data-reference=\"thm:main\">1</a>, with limiting compactly supported law $\\mu$. Suppose first that the field values belong to a fixed finite alphabet $c_1,\\ldots,c_J\\in\\mathbb R$, and that the proportion of sites with value $c_j$ tends to a positive rational number $\\gamma_j$. Then $P_N(c^{(N)})$ converges in expectation and almost surely to $$\\label{mag:finite-formula}\n \\mathcal F_\\mu\\left(\\sum_{j=1}^J\\gamma_j\\delta_{c_j}\\right)\n =\\sup_{\\mathbf m\\in((-1,1)\\cap\\mathbb Q)^J}\n   \\left\\{\\sum_{j=1}^J\\gamma_jc_jm_j\n    +\\inf_{p\\in\\mathcal P}\\bigl[S_{\\mathbf m}(p)+G_1(p)\\bigr]\\right\\}.$$ More generally, suppose the empirical field laws converge in the first-moment transport metric $W_1$ to a probability law $\\nu$ on $\\mathbb R$ with finite absolute first moment. Then the same modes of convergence hold, with limit $\\mathcal F_\\mu(\\nu)$, where $$\\label{mag:W1-formula}\n \\mathcal F_\\mu(\\nu)\n   =\\lim_{q\\to\\infty}\\mathcal F_\\mu(\\nu_q)$$ for any finite-support laws $\\nu_q$ with positive rational masses such that $W_1(\\nu_q,\\nu)\\to0$. This limit exists and is independent of the approximating sequence.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-mag-theorem"
+  },
+  {
+   "claim_id": "remark-random-data",
+   "exact_statement": "Let the spectrum and the field vector both be random. Conditional jointly on these data, assume that the interaction has the Haar orbit law with the prescribed spectrum. Let $\\mu$ be a fixed compactly supported spectral law and $\\nu$ a fixed field law with finite absolute first moment. If the spectral hypotheses of Equation <a href=\"#eq:spectral-assumptions\" data-reference-type=\"eqref\" data-reference=\"eq:spectral-assumptions\">[eq:spectral-assumptions]</a> and convergence of the empirical field laws to $\\nu$ in $W_1$ hold in probability, then $P_N(c^{(N)})\\to\\mathcal F_\\mu(\\nu)$ in probability. If both data convergences hold almost surely, the pressure convergence also holds almost surely. In either case, uniform integrability of the pressures implies convergence of their expectations.\n\nIndeed, condition on both data sets and apply the deterministic theorem along convergent data sequences. The subsequence argument and localized fourth-moment concentration in Proposition <a href=\"#gen:random\" data-reference-type=\"ref\" data-reference=\"gen:random\">31</a> apply unchanged, since the Haar Lipschitz constant is independent of the external field. The conditional Haar hypothesis remains essential when the fields and the interaction are dependent.",
+   "kind": "conditional_result",
+   "statement_anchor": "stmt-mag-random-data"
+  },
+  {
+   "claim_id": "prop-constrained-concavity",
+   "exact_statement": "Fix $s\\in(-1,1)$ and positive interval weights $w_0,\\ldots,w_{k-1}$. The function $\\ell^{[s]}$ is concave on $0\\le h_0\\le\\cdots\\le h_{k-1}<\\infty$. Its minimizing bias $b_s(h)$ in <a href=\"#mag:constrained-functional\" data-reference-type=\"eqref\" data-reference=\"mag:constrained-functional\">[mag:constrained-functional]</a> is unique. On strict level data, set $$B_i(h,s)=\\mathcal B_i(h,b_s(h)).$$ Then $$\\label{mag:envelope-derivative}\n \\partial_{h_i}\\ell^{[s]}(h)=-\\frac{w_i}{2}B_i(h,s).$$ The associated supporting inequalities extend to boundary level data and are unchanged by subdivision of intervals with tied covariance levels. The function is $1/2$-Lipschitz in the $L^1$ distance between bounded nonnegative nondecreasing paths.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-mag-concavity"
+  },
+  {
+   "claim_id": "lemma-block-replacement",
+   "exact_statement": "Fix an interior rational $\\mathbf m$, positive rational proportions $\\gamma_j$, and a height bound $H<\\infty$. Along integers $n$ for which the block constraints are attainable, $$\\label{mag:replacement-estimates}\n \\sup_{\\substack{h\\in\\mathcal H\\\\\\|h\\|_\\infty\\le H}}\n       |\\ell^{(n)}(h)-\\ell^{[\\mathbf m]}(h)|\\longrightarrow0,\n \\qquad\n \\sup_{\\substack{h\\in\\mathcal H\\\\\\|h\\|_\\infty\\le H}}\n       \\max_i|B_i^{(n)}(h)-B_i^*(h)|\\longrightarrow0.$$ The estimates are uniform in the number of steps and their positive weights.",
+   "kind": "theorem",
+   "statement_anchor": "stmt-mag-replacement"
+  }
+ ],
+ "paper": "papers/EN-115-000-0020-2-2026-PR-T4-UK-EX-M2-B-PH-H-0468_PM-234.1_All_temperature_pressure_for_orthogonally_invariant_Ising_spin_glasses.md",
+ "purpose": "All-temperature pressure for orthogonally invariant Ising spin glasses",
+ "schema": "pm.connector.v1",
+ "source_hashes": {
+  "blocks_sha256": {
+   "pm.claims.v2": "a0e0e8279447cc4fd1dc50affc4c548f853933973027864ed21b26064e9dc0c5",
+   "pm.domains.v2": "f0e73405d5d90c0335837e35c65faaa7acc18371266444d01e8d82b5bedfaa47",
+   "pm.edges.v2": "c5feed912b7676e827000bc1dcedee12a183b746947de35bfd554536b01b189a",
+   "pm.extraction.v2": "7dbebf783ee07b171bda398c25687ea44013d579815a05705477a7564ba14b4f",
+   "pm.formal.v2": "965c23ea1393dad5ce7075e1a715c2bf6f54375a615883fe60125d08393f7c8e",
+   "pm.limits.v2": "1359656ed4252346abb6cc19e6a5e5232ea7782efe2bb6cadbd9415bb3df0ae1",
+   "pm.node.v2": "6f4d759cb157be015f8002cdd10c986fd7f29790b411ae34b8e51484987995ff",
+   "pm.objects.v2": "d4712ea137c5f9150810c2965cb67cbe7452d6dbdd4193325b37fbe3a344de51",
+   "pm.provenance.v2": "03fe620e3c01803fe3d35797d201729061f4dafe0ae3bb3624db16d6f9d8abe6",
+   "pm.quantities.v2": "2ad25ba4c264ba7a5248f291794c6ca969589304505eb972150afd72e5ed9aae",
+   "pm.reading.v2": "2c8ea289358e963c1ab4f19c71e55b1b51334316ec6afef28626aacaffbd011f",
+   "pm.roadmap.v2": "3b2844e8805241242e9de5214429b6cc9a756063a0a2f12fc8393760839e05fe",
+   "pm.search.v1": "9f79e9d19cbf35289480dd10caa21478c70f23af8deb0965b0f246984ecf8e9e",
+   "pm.triptych.v2": "4c110b8b60d100e9a3a72e306b73657a66eb118b5678235bfc4b55007d842faa"
+  },
+  "canonical_sha256": "82009ab35a8dc0a094afd02d4daf35046351f87281bbb2e29020ebd604c1b150",
+  "paper_sha256": "1b407f677b7409bb225ff3977fa2a5b1a06446e4e327e9d117b2e883b442778e",
+  "repaired_body_sha256": "392364c85234a557396be6c563da43808fb4af412e0f86b765ed1a398363c3e8"
+ },
+ "status": "ACTIVE",
+ "subject_id": 15,
+ "synergies": [],
+ "telemetry": {
+  "fidelity": {
+   "coverage_manifest_sha256": "6869d36c2141ccb03974e110ba46f442472170b55593d06a6e0080f331714e64",
+   "receipt_sha256": "f49f8c8b222ff0104b57cc30e038241210954ae48b7f08717678da868b18bdbd",
+   "status": "PASS"
+  },
+  "oracle": {
+   "coverage": [],
+   "mutant_receipts": [],
+   "receipt_sha256": null,
+   "status": "NOT_APPLICABLE"
+  },
+  "retrieval": {
+   "metrics": [],
+   "receipt_sha256": null,
+   "snapshot_sha256": null
+  }
+ },
+ "title": "All-temperature pressure for orthogonally invariant Ising spin glasses"
+}
