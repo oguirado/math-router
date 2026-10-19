@@ -1,19 +1,32 @@
 # Secret-scan configuration for CI (gitleaks v8.18.4). The default rules stay on for every file, including papers/.
-# Every generic-api-key finding of the first CI scans (4,115) was a public identifier inside papers/: bibliography citation keys
-# ("key": "Bowditch1998Topological"), Lean declaration names (OAI.*), kebab-case anchor ids, sha256 content hashes and paper coordinates.
-# The allowlist skips only LINES of those forms (papers keep one JSON key per line); any other line, in papers/ or elsewhere, is scanned.
-# Do not allowlist papers/ by path.
+# The first CI scans (4,115 generic-api-key findings) were public identifiers inside papers/: bibliography citation keys,
+# Lean declaration names, access-anchor ids, and (as a precaution) sha256 content hashes and paper coordinates.
+# gitleaks 8.18.4 cannot scope an allowlist by path AND regex together (paths and regexes in one allowlist are alternatives),
+# so papers/ is NOT allowlisted by path. Exemptions are limited by their own shape instead, in two parts:
+#   1. regexes, matched against the WHOLE LINE (regexTarget = "line"), each anchored with ^ and $ so that extra text on the
+#      line (for example a token appended to a hash line) makes the line scannable again. Exactly three line forms, each a
+#      single JSON field of a paper's machine-readable blocks:
+#        "key": "<citation key>"                          (letters, digits, - : _ +)
+#        "<name>sha256": "<64 lowercase hex>"             (and "expected": "<64 hex>")
+#        "coordinate" / "source_coordinate": "EN-..."     (the paper coordinate grammar)
+#   2. stopwords, matched against the SECRET VALUE only (never the rest of the line): the Lean namespace prefix and the
+#      three access-anchor ids that appear inside Lean statements and prose of two papers.
+# Residual: a credential written in exactly one of the three line forms (for example as a citation key) is not detected.
+# CI plants three credentials that must all be detected with this config (see .github/workflows/ci.yml).
 [extend]
 useDefault = true
 
 [allowlist]
-description = "public identifiers in paper text: bibliography keys, Lean names, anchor ids, sha256 hashes, coordinates"
-# Matched against the whole LINE (regexTarget = "line"), so only lines of these exact forms are skipped.
+description = "public identifiers in papers: citation keys, sha256 hashes, paper coordinates (whole-line forms); Lean namespace and access-anchor ids (secret-value stopwords)"
 regexTarget = "line"
 regexes = [
-  '''"key"\s*:\s*"[A-Za-z][A-Za-z0-9_.'+-]{0,100}"''',
-  '''\bOAI(\.[A-Za-z][A-Za-z0-9_]*)+\b''',
-  '''\b[0-9a-f]{64}\b''',
-  '''\bEN-[0-9]{3}-[0-9]{3}-[0-9]{4}-[0-9]-[0-9]{4}-[A-Z]{2}-T[0-9]-''',
-  '''(access|anchor|key)[a-z_-]*"?\s*[:=]\s*"?[a-z]+(-[a-z]+)+"?''',
+  '''^\s*"key"\s*:\s*"[A-Za-z][A-Za-z0-9_:+-]{0,100}"\s*,?\s*$''',
+  '''^\s*"(?:[a-z0-9]+_)*(?:sha256|expected)"\s*:\s*"[0-9a-f]{64}"\s*,?\s*$''',
+  '''^\s*"(?:source_)?coordinate"\s*:\s*"EN-[0-9]{3}-[0-9]{3}-[0-9]{4}-[0-9]-[0-9]{4}-[A-Z]{2}-T[0-9](?:-[A-Z0-9]+)+"\s*,?\s*$''',
+]
+stopwords = [
+  "oai.editapproximation.",
+  "physical-identity",
+  "horizontal-hyp",
+  "horizontal-submotion",
 ]

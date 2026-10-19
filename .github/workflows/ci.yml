@@ -24,10 +24,14 @@ jobs:
         run: python3 -I tools/build_index_v2.py --root . --out out/index --check
       - name: Router gates
         run: python3 -I tools/gates_v2.py --all --root "$PWD" --index out/index --params out/params.json --dev eval/dev.jsonl --out "${TMPDIR:-/tmp}/gates.json"
+      - name: Gate receipt is reproduced
+        run: cmp "${TMPDIR:-/tmp}/gates.json" out/gates_v2.0.1.json   # the receipt has no volatile fields (no time, host or path)
       - name: Reproduce TEST metrics
         run: sh tools/reproduce_test.sh
       - name: Reproduce DEV tuning
         run: sh tools/reproduce_dev.sh
+      - name: Bootstrap confidence intervals
+        run: python3 -I tools/bootstrap_ci.py --check
       - name: Unit tests
         run: python3 -I -m unittest discover -s tests -p 'test_*.py'
       - name: Documentation claims
@@ -42,13 +46,30 @@ jobs:
           fetch-depth: 0
       - name: Secret scan (gitleaks v8.18.4, checksum verified)
         run: |
-          curl -sSfL -o "$RUNNER_TEMP/gitleaks.tgz" https://github.com/gitleaks/gitleaks/releases/download/v8.18.4/gitleaks_8.18.4_linux_x64.tar.gz
+          curl -sSfL --retry 3 --retry-all-errors -o "$RUNNER_TEMP/gitleaks.tgz" https://github.com/gitleaks/gitleaks/releases/download/v8.18.4/gitleaks_8.18.4_linux_x64.tar.gz
           echo "ba6dbb656933921c775ee5a2d1c13a91046e7952e9d919f9bac4cec61d628e7d  $RUNNER_TEMP/gitleaks.tgz" | sha256sum -c -
           tar -xzf "$RUNNER_TEMP/gitleaks.tgz" -C "$RUNNER_TEMP" gitleaks
           rc=0; "$RUNNER_TEMP/gitleaks" detect --source . --config .gitleaks.toml --redact --no-banner --exit-code 1 --report-format json --report-path "$RUNNER_TEMP/gl.json" || rc=$?
-          python3 -I -c 'import json,sys,collections; r=json.load(open(sys.argv[1])); c=collections.Counter((x["RuleID"], x["File"].split("/")[0]) for x in r); [print(n, k[0], k[1]) for k, n in c.most_common(25)]' "$RUNNER_TEMP/gl.json" || true
+          if [ "$rc" != 0 ] && [ -s "$RUNNER_TEMP/gl.json" ]; then
+            python3 -I -c 'import json,sys,collections; r=json.load(open(sys.argv[1])); c=collections.Counter((x["RuleID"], x["File"].split("/")[0]) for x in r); [print(n, k[0], k[1]) for k, n in c.most_common(25)]' "$RUNNER_TEMP/gl.json"
+          fi
           [ "$rc" = 0 ] || exit "$rc"
-          # negative control: the same binary and config must still catch a planted credential outside the allowlisted forms
-          mkdir -p "$RUNNER_TEMP/nc" && printf 'token = "ghp_%s"\n' "$(head -c 64 /dev/urandom | base64 | tr -dc A-Za-z0-9 | head -c 36)" > "$RUNNER_TEMP/nc/creds.txt"   # random, never committed
-          if "$RUNNER_TEMP/gitleaks" detect --no-git --source "$RUNNER_TEMP/nc" --config .gitleaks.toml --redact --no-banner --exit-code 1; then echo "negative control NOT detected"; exit 1; fi
-          echo "negative control detected"
+          # Negative controls: the same binary and config must detect each planted credential. Values are random, never committed.
+          rnd() { head -c 256 /dev/urandom | base64 | tr -dc A-Za-z0-9 | head -c "$1"; }
+          mkdir -p "$RUNNER_TEMP/nc/a" "$RUNNER_TEMP/nc/b" "$RUNNER_TEMP/nc/c"
+          # (a) a GitHub-token-shaped value
+          printf 'token = "ghp_%s"\n' "$(rnd 36)" > "$RUNNER_TEMP/nc/a/creds.txt"
+          # (b) a random 64-hex value (entropy >= 3.7, above the rule's 3.5 floor) assigned to secret_key, in a file outside papers/
+          python3 -I -c 'import secrets,math,collections as c; e=lambda h: -sum(v/64*math.log2(v/64) for v in c.Counter(h).values()); print("secret_key = \"%s\"" % next(h for h in iter(lambda: secrets.token_hex(32), None) if e(h) >= 3.7))' > "$RUNNER_TEMP/nc/b/settings.txt"
+          # (c) a token appended to a copy of a real sha256 line of a paper (a line the allowlist skips when it stands alone)
+          real=$(grep -h -m1 -E '^ *"sha256": "[0-9a-f]{64}",?$' papers/*.md | head -n1)
+          [ -n "$real" ] || { echo "no sha256 line found"; exit 1; }
+          printf '%s ghp_%s\n' "$real" "$(rnd 36)" > "$RUNNER_TEMP/nc/c/appended.txt"
+          for c in a b c; do
+            rm -f "$RUNNER_TEMP/nc.json"
+            "$RUNNER_TEMP/gitleaks" detect --no-git --source "$RUNNER_TEMP/nc/$c" --config .gitleaks.toml --redact --no-banner --exit-code 7 --report-format json --report-path "$RUNNER_TEMP/nc.json" || true
+            n=$(python3 -I -c 'import json,sys; print(len(json.load(open(sys.argv[1]))))' "$RUNNER_TEMP/nc.json" 2>/dev/null || echo 0)
+            [ "$n" -ge 1 ] || { echo "negative control $c NOT detected"; exit 1; }
+            echo "negative control $c detected ($n finding(s))"
+            rm -f "$RUNNER_TEMP/nc.json"
+          done
