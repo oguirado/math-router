@@ -47,4 +47,8 @@ jobs:
           tar -xzf "$RUNNER_TEMP/gitleaks.tgz" -C "$RUNNER_TEMP" gitleaks
           rc=0; "$RUNNER_TEMP/gitleaks" detect --source . --config .gitleaks.toml --redact --no-banner --exit-code 1 --report-format json --report-path "$RUNNER_TEMP/gl.json" || rc=$?
           python3 -I -c 'import json,sys,collections; r=json.load(open(sys.argv[1])); c=collections.Counter((x["RuleID"], x["File"].split("/")[0]) for x in r); [print(n, k[0], k[1]) for k, n in c.most_common(25)]' "$RUNNER_TEMP/gl.json" || true
-          exit $rc
+          [ "$rc" = 0 ] || exit "$rc"
+          # negative control: the same binary and config must still catch a planted credential outside the allowlisted forms
+          mkdir -p "$RUNNER_TEMP/nc" && printf 'aws_secret_access_key = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYzEXAMPLEKEY"\n' > "$RUNNER_TEMP/nc/creds.txt"
+          if "$RUNNER_TEMP/gitleaks" detect --no-git --source "$RUNNER_TEMP/nc" --config .gitleaks.toml --redact --no-banner --exit-code 1; then echo "negative control NOT detected"; exit 1; fi
+          echo "negative control detected"
