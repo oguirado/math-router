@@ -55,7 +55,7 @@ jobs:
           fi
           [ "$rc" = 0 ] || exit "$rc"
           # Negative controls: the same binary and config must detect each planted credential. Values are random, never committed.
-          rnd() { head -c 256 /dev/urandom | base64 | tr -dc A-Za-z0-9 | head -c "$1"; }
+          rnd() { python3 -I -c 'import secrets,string,sys; print("".join(secrets.choice(string.ascii_letters + string.digits) for _ in range(int(sys.argv[1]))))' "$1"; }
           mkdir -p "$RUNNER_TEMP/nc/a" "$RUNNER_TEMP/nc/b" "$RUNNER_TEMP/nc/c"
           # (a) a GitHub-token-shaped value
           printf 'token = "ghp_%s"\n' "$(rnd 36)" > "$RUNNER_TEMP/nc/a/creds.txt"
@@ -68,7 +68,7 @@ jobs:
           for c in a b c; do
             rm -f "$RUNNER_TEMP/nc.json"
             "$RUNNER_TEMP/gitleaks" detect --no-git --source "$RUNNER_TEMP/nc/$c" --config .gitleaks.toml --redact --no-banner --exit-code 7 --report-format json --report-path "$RUNNER_TEMP/nc.json" || true
-            n=$(python3 -I -c 'import json,sys; print(len(json.load(open(sys.argv[1]))))' "$RUNNER_TEMP/nc.json" 2>/dev/null || echo 0)
+            n=$(python3 -I -c 'import json,os,sys; p = sys.argv[1]; print(len(json.load(open(p))) if os.path.exists(p) else 0)' "$RUNNER_TEMP/nc.json")
             [ "$n" -ge 1 ] || { echo "negative control $c NOT detected"; exit 1; }
             echo "negative control $c detected ($n finding(s))"
             rm -f "$RUNNER_TEMP/nc.json"
