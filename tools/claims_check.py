@@ -5,6 +5,8 @@ Exit 0: every claim resolves. Exit 1: at least one dead claim (listed on stdout)
 Stdlib only. Scans backticked spans and fenced code blocks of the top-level docs. It also compares the benchmark
 numbers quoted in the docs (metric tables, "R@1 0.222"-style phrases, byte sizes, latencies, gate count, hash prefixes)
 with test_eval/test_run_v2.0.1.json, test_eval/cold_latency_TEST.json, out/gates_v2.0.1.json and the index manifest.
+It also recomputes Cohen's kappa of the two graders from the benchmark files (binary relevance, pooled pairs) and checks the
+quoted kappa values, and requires the pull request template to carry the CONTRIBUTING.md commands verbatim.
 """
 import hashlib
 import json
@@ -15,7 +17,8 @@ import re
 import sys
 
 DOCS = ["README.md", "ARCHITECTURE.md", "AGENTS.md", "CONTRIBUTING.md", "SECURITY.md", "CODE_OF_CONDUCT.md",
-        "CHANGELOG.md", "CATALOGUE.md", "llms.txt", "docs/*.md", "catalogue/README.md"]
+        "CHANGELOG.md", "CATALOGUE.md", "llms.txt", "docs/*.md", "catalogue/README.md", "NOTICE",
+        ".github/pull_request_template.md"]
 EXT = (".py", ".sh", ".md", ".json", ".jsonl", ".tsv", ".yml", ".yaml", ".txt", ".sql", ".cff")
 ALLOWED = set()
 ROOTS = ("papers", "catalogue", "tools", "tests", "docs", "out", "eval", "test_eval", "standards",
@@ -216,6 +219,54 @@ def check_numbers(root, rel, text, t, lat, gates, hashes):
     return errs
 
 
+BENCHES = ("test_eval/bench_test_graded.jsonl", "eval/dev.jsonl")
+
+
+def kappa_of(root, rel):
+    """Cohen's kappa between graders a1 and a2 over pooled (query, paper) pairs, relevant = grade >= 2; None if unavailable."""
+    n = agree = c1 = c2 = 0
+    try:
+        with open(os.path.join(root, rel), encoding="utf-8") as f:
+            for line in f:
+                if not line.strip():
+                    continue
+                adj = json.loads(line)["adjudication"]
+                for d in set(adj["a1"]) & set(adj["a2"]):
+                    x, y = adj["a1"][d] >= 2, adj["a2"][d] >= 2
+                    n += 1
+                    agree += x == y
+                    c1 += x
+                    c2 += y
+    except (OSError, ValueError, KeyError):
+        return None
+    if not n:
+        return None
+    pe = (c1 / n) * (c2 / n) + (1 - c1 / n) * (1 - c2 / n)
+    return (agree / n - pe) / (1 - pe) if pe < 1 else None
+
+
+def check_kappa(root, rel, text):
+    errs = []
+    ks = [k for k in (kappa_of(root, b) for b in BENCHES) if k is not None]
+    for m in re.finditer(r"(?i)kappa(?:\s+is|\s+of)?\s*(\d\.\d+)", text):
+        v = num(m.group(1))
+        if not any(close(k, v[0], v[1]) for k in ks):
+            errs.append("%s: kappa %s matches neither benchmark file (%s)" % (rel, m.group(1), ", ".join(BENCHES)))
+    return errs
+
+
+def check_pr_template(root):
+    """Every command of the CONTRIBUTING.md check block must appear verbatim as a checklist item of the template."""
+    try:
+        contrib = open(os.path.join(root, "CONTRIBUTING.md"), encoding="utf-8").read()
+        tmpl = open(os.path.join(root, ".github/pull_request_template.md"), encoding="utf-8").read()
+    except OSError:
+        return []
+    block = FENCE.search(contrib)
+    cmds = [l.strip() for l in block.group(1).splitlines() if l.strip()] if block else []
+    return [".github/pull_request_template.md: missing CONTRIBUTING.md command: %s" % c for c in cmds if "- [ ] `%s`" % c not in tmpl]
+
+
 def known_hashes(root, rec):
     hs = set()
     man = load(root, "out/index/manifest.json") or {}
@@ -246,6 +297,8 @@ def main():
         errs += check(root, rel)
         if t:
             errs += check_numbers(root, rel, open(os.path.join(root, rel), encoding="utf-8").read(), t, lat, gates, hashes)
+        errs += check_kappa(root, rel, open(os.path.join(root, rel), encoding="utf-8").read())
+    errs += check_pr_template(root)
     errs = sorted(set(errs))
     for e in errs:
         print(e)

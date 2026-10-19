@@ -1,0 +1,49 @@
+{
+ "schema": "math-router.receipt-regeneration.v1",
+ "cause": "the source label of the 60 brainstormed DEV rows in eval/dev.jsonl (and the matching enum in docs/schemas/ctx.bench.v1.schema.json) was renamed to themed_brainstorm; nothing else in eval/dev.jsonl changed",
+ "changed_fields": [
+  {
+   "file": "test_eval/test_run_v2.0.1.json",
+   "field": "freeze_sha256",
+   "before": "642b4b047b32412fa925ca2bc0792c9be0d64722299ace435144b65e1b1ddcfd",
+   "after": "e34503a4f029619501d9fe427d0651e392dfc69abdeb6141147faf54bcc5790d"
+  },
+  {
+   "file": "test_eval/test_run_v2.0.1.json",
+   "field": "params_sha256",
+   "before": "c696caaf9f2e6a3eb87a63a88a16817e105169195b2bfe95faa43a80401a9414",
+   "after": "ad1c42c79dad98fadd867cd9649f12f3096cb08be93cdc208f3872f10dbf06de"
+  },
+  {
+   "file": "out/params.json",
+   "field": "dev_sha256",
+   "before": "7875f64841b2739c2aa3f64b9e3aa44cae1fc2cfbba9637224983493e7d8a4b4",
+   "after": "f5a0168f955a44b3eacd6a387430839954eb1dffe674681ae62f41d2683751b4"
+  },
+  {
+   "file": "out/run_DEV_v2.0.1.json",
+   "field": "bench_sha256",
+   "before": "7875f64841b2739c2aa3f64b9e3aa44cae1fc2cfbba9637224983493e7d8a4b4",
+   "after": "f5a0168f955a44b3eacd6a387430839954eb1dffe674681ae62f41d2683751b4"
+  },
+  {
+   "file": "out/run_DEV_v2.0.1.json",
+   "field": "freeze_sha256",
+   "before": "b8c3ec09cbb26fb54f5c0ae8a1b3d0659fd330d507b72c037f2fa1baf58d970d",
+   "after": "e34503a4f029619501d9fe427d0651e392dfc69abdeb6141147faf54bcc5790d"
+  },
+  {
+   "file": "out/run_DEV_v2.0.1.json",
+   "field": "params_sha256",
+   "before": "c696caaf9f2e6a3eb87a63a88a16817e105169195b2bfe95faa43a80401a9414",
+   "after": "ad1c42c79dad98fadd867cd9649f12f3096cb08be93cdc208f3872f10dbf06de"
+  }
+ ],
+ "identical_after_regeneration": [
+  "every metric, per-query ranking and abstention figure of test_eval/test_run_v2.0.1.json (the whole systems section)",
+  "bench_sha256 and index_sha256 of the TEST receipt",
+  "out/tune_report.json (byte for byte)",
+  "every other field of out/params.json and out/run_DEV_v2.0.1.json"
+ ],
+ "note": "freeze_sha256 is the hash of a freeze record (hashes of tools, standards, parameters and the DEV file at run time) that is not shipped; tools were edited after that record was written, so freeze_sha256 is informational. tools/reproduce_test.sh and tools/reproduce_dev.sh verify the metrics and the tuning from the shipped files."
+}

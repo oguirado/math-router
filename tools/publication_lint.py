@@ -5,8 +5,7 @@ Usage: python3 -I tools/publication_lint.py [ROOT]
 Errors (exit 1): absolute home-directory paths, e-mail addresses outside Contact.md, private-key headers,
 well-known credential token shapes. Warnings (exit 0): file names that are not plain ASCII English words.
 Findings print the rule, the repository-relative file and the line number, never the matched text.
-This is separate from the router gates (tools/gates_v2.py) and from the maintainer's release scan
-(tools/release_gate.py, which needs an externally supplied policy).
+This is separate from the router gates (tools/gates_v2.py).
 """
 import os
 import re

@@ -521,11 +521,27 @@ def write_log(logdir, agent, q, ans, R):
         os.close(fd)
 
 
+def resolve_paths(ans):
+    """Map each returned paper id to papers/<file>#<anchor> using catalogue/routes.tsv of this repository."""
+    routes = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "catalogue", "routes.tsv")
+    want = {r[0]: r[1] for r in ans["r"]}
+    out = {}
+    try:
+        with open(routes, encoding="utf-8") as f:
+            for line in f:
+                cols = line.rstrip("\n").split("\t")
+                if len(cols) >= 3 and cols[0] in want:
+                    out[cols[0]] = "%s#%s" % (cols[2], want[cols[0]])
+    except OSError:
+        pass
+    return out
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--q", required=True)
-    ap.add_argument("--index", required=True)
-    ap.add_argument("--params")
+    ap.add_argument("--index", help="index directory (default: out/index of this repository)")
+    ap.add_argument("--params", help="parameters file (default with the default index: out/params.json; otherwise built-in defaults)")
     ap.add_argument("--intent", choices=INTENTS)
     ap.add_argument("--k", type=int, default=20)
     ap.add_argument("--budget", type=int, default=BUDGET)
@@ -533,6 +549,8 @@ def main(argv=None):
     ap.add_argument("--log")
     ap.add_argument("--agent", default="anon")
     ap.add_argument("--no-abstain", action="store_true")
+    ap.add_argument("--paths", action="store_true",
+                    help="add \"files\": {id: papers/<file>#<anchor>} from catalogue/routes.tsv (not part of the 2,000-byte budget)")
     ap.add_argument("--verify", metavar="ROOT")
     try:
         a = ap.parse_args(argv)
@@ -540,6 +558,11 @@ def main(argv=None):
         return 2
     if not 1 <= a.k <= 20 or a.budget < 1:
         return 2
+    if a.index is None:
+        repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        a.index = os.path.join(repo, "out", "index")
+        if a.params is None:
+            a.params = os.path.join(repo, "out", "params.json")
     try:
         params, pr = load_params(a.params)
         ix = Index(a.index)
@@ -579,6 +602,8 @@ def main(argv=None):
         return 6
     if a.log:
         write_log(a.log, a.agent, a.q, ans, R)
+    if a.paths:
+        ans["files"] = resolve_paths(ans)
     sys.stdout.write(dumps(ans) + "\n")
     return 0
 
