@@ -48,7 +48,7 @@ release root
 |   |-- thesaurus.json         router vocabulary
 |   `-- grid.json              parameter grid
 |-- tools/
-|   |-- release_gate.py        publication lint
+|   |-- publication_lint.py    publication lint
 |   |-- claims_check.py        documentation claims check (CI)
 |   `-- build_index_v2.py      deterministic index builder, `--check` verifies the shipped index
 |-- search/
@@ -188,11 +188,11 @@ Complete readable Markdown replaces encoded PDF, whole TeX archives, Lean projec
 
 Each paper carries original title, slug, date and the explicit modified-source attribution. A missing original field blocks publication until resolved; it is not invented. The upstream Apache-2.0 licence is copied unchanged. Applicable upstream notices are inventoried independently and retained, with modifications recorded in `NOTICE`. A generic draft notice is not proof that notice retention is complete.
 
-`tools/release_gate.py` is the maintainer's release scan. It checks filenames and all text, including code comments and JSON values, for absolute paths, contacts, credentials, configured private identifiers and non-English prose heuristics. It rejects binary/source archives, symlinks and unreadable or bounded-out input. Findings contain only file-name hashes, categories and line numbers. Private deny-policy digests are supplied from outside the release tree; the public scanner contains no private identifier inventory.
+The maintainer's release scan is a stricter, policy-driven tool that is not shipped in this repository (the public check is `tools/publication_lint.py`). It checks filenames and all text, including code comments and JSON values, for absolute paths, contacts, credentials, configured private identifiers and non-English prose heuristics. It rejects binary/source archives, symlinks and unreadable or bounded-out input. Findings contain only file-name hashes, categories and line numbers. Private deny-policy digests are supplied from outside the release tree; the public scanner contains no private identifier inventory.
 
 The path rule permits only the exact portable Python interpreter shebang on the opening line of a Python script. Extra text on that line is scanned normally. This is a standard executable entry point, not a private environment path. No other code, comment or JSON path exemption is applied. Findings are unique by file, category and line across raw and decoded text views.
 
-Release mode requires an exact Git-index scan, reviewed external policy, actual repository name, unchanged source licence and nonempty notice. A source label that conflicted with the release identity was renamed; required upstream attribution is never removed to clear a scanner conflict. The public CI workflow (`.github/workflows/ci.yml`) runs the generic `tools/publication_lint.py`; the stricter `tools/release_gate.py` scan, which needs an externally supplied policy, is run by the maintainer on the staged tree before each release. A scanner result cannot alone prove English fluency, exhaustive privacy inventory, licence completeness or mathematical correctness; those remain independent admission gates.
+Release mode requires an exact Git-index scan, reviewed external policy, actual repository name, unchanged source licence and nonempty notice. A source label that conflicted with the release identity was renamed; required upstream attribution is never removed to clear a scanner conflict. The public CI workflow (`.github/workflows/ci.yml`) runs the generic `tools/publication_lint.py`; the stricter maintainer scan, which needs an externally supplied policy, is run on the staged tree before each release. A scanner result cannot alone prove English fluency, exhaustive privacy inventory, licence completeness or mathematical correctness; those remain independent admission gates.
 
 The initial public repository is created from a clean export with fresh Git history. Private staging history is not pushed. The scanner excludes Git object storage because it inspects a candidate snapshot; a clean snapshot does not clear earlier commits. Every later public commit passes the staged-tree gate. Importing an existing history requires a separate complete history audit.
 

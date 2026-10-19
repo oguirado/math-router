@@ -7,8 +7,8 @@ Find the right theorem in 719 preprints without reading them. All commands are o
 | Rung | Action | Cost |
 |---|---|---|
 | 0 | Read `llms.txt` | ~100 tokens |
-| 1 | `python3 tools/route_v2.py --q "<question>" --index out/index --params out/params.json` | one JSON line, <= 2,000 bytes |
-| 2 | Resolve the paper path: `awk -F'\t' '$1=="PM-005.1"{print $3}' catalogue/routes.tsv` | one line |
+| 1 | `python3 tools/route_v2.py --q "<question>"` (defaults: `out/index`, `out/params.json`) | one JSON line, <= 2,000 bytes |
+| 2 | Resolve the paper path: add `--paths` to rung 1 (`files` maps id to `papers/<file>#<anchor>`), or `awk -F'\t' '$1=="PM-005.1"{print $3}' catalogue/routes.tsv` (columns in `catalogue/README.md`) | one line |
 | 3 | Open the paper and jump to the anchor returned in rung 1 (`<a id="ANCHOR"></a>`) | one statement |
 | 4 | Read the paper's reading map, then only the sections the task needs | bounded slice |
 | 5 | Browse by topic: `catalogue/subjects.json` -> subject shard -> family/node records | fallback |
@@ -41,11 +41,13 @@ Inline paper text is authoritative. A router score, a catalogue entry or a model
 ## Verify and rebuild
 
 ```bash
-python3 -I tools/route_v2.py --q "..." --index out/index --params out/params.json --verify .   # fails if the index is stale
+python3 -I tools/route_v2.py --q "..." --verify .   # fails if the index is stale
 python3 -I tools/build_index_v2.py --root . --out out/index --check
 python3 -I tools/gates_v2.py --all --root "$PWD" --index out/index --params out/params.json --dev eval/dev.jsonl --out "${TMPDIR:-/tmp}/gates.json"
+cmp "${TMPDIR:-/tmp}/gates.json" out/gates_v2.0.1.json
 sh tools/reproduce_test.sh
 sh tools/reproduce_dev.sh
+python3 -I tools/bootstrap_ci.py --check
 python3 -I -m unittest discover -s tests -p 'test_*.py'
 python3 -I tools/claims_check.py
 python3 -I tools/publication_lint.py .

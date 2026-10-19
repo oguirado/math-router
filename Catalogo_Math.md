@@ -12,7 +12,7 @@ Navigation catalogue of the mathematical paper library. Generated deterministica
 | `standards/schemas/connector-node.v1.schema.json` | catalogue node projection |
 | `standards/schemas/connector-ref.v1.schema.json` | pointer for a node stored in `catalogue/details/` |
 | `catalogue/measurements.json` | measured token and byte sizes of every generated shard |
-| `tools/release_gate.py` | public-release scanner |
+| `tools/publication_lint.py` | public-release scanner |
 
 ## 0. Dimensions and conventions
 

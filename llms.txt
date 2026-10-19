@@ -1,6 +1,6 @@
 # math-router
 Routable edition of 719 OpenAI math preprints (Apache-2.0). Unofficial. Python >= 3.10, stdlib only.
-Route: python3 tools/route_v2.py --q "<question>" --index out/index --params out/params.json
+Route: python3 tools/route_v2.py --q "<question>"   (add --paths to get file#anchor per row; defaults: --index out/index --params out/params.json)
 Output: JSON shortlist [paper_id, anchor, score], <=2000 bytes; abstain.flag=true means weak match: check the top rows before concluding there is none.
-Then open papers/ via catalogue/routes.tsv (id -> path); jump to the anchor.
+Then open papers/ via the files map (--paths) or catalogue/routes.tsv (id -> path); jump to the anchor.
 Browse: catalogue/subjects.json. Protocol: AGENTS.md. Contact: Contact.md
