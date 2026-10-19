@@ -29,4 +29,6 @@ jobs:
         run: |
           curl -sSfL -o "$RUNNER_TEMP/gitleaks.tgz" https://github.com/gitleaks/gitleaks/releases/download/v8.18.4/gitleaks_8.18.4_linux_x64.tar.gz
           tar -xzf "$RUNNER_TEMP/gitleaks.tgz" -C "$RUNNER_TEMP" gitleaks
-          "$RUNNER_TEMP/gitleaks" detect --source . --redact --no-banner --exit-code 1
+          rc=0; "$RUNNER_TEMP/gitleaks" detect --source . --redact --no-banner --exit-code 1 --report-format json --report-path "$RUNNER_TEMP/gl.json" || rc=$?
+          python3 -I -c 'import json,sys,collections; r=json.load(open(sys.argv[1])); c=collections.Counter((x["RuleID"], x["File"].split("/")[0]) for x in r); [print(n, k[0], k[1]) for k, n in c.most_common(25)]' "$RUNNER_TEMP/gl.json" || true
+          exit $rc
