@@ -1,10 +1,16 @@
-# Secret-scan configuration for CI (gitleaks v8). The default rules stay on for every file.
-# papers/ holds the 719 upstream mathematical papers with their sha256 content hashes and coordinates; every one of the
-# 4,115 findings of the first CI scan was rule generic-api-key on those hashes inside papers/ (false positives).
-# papers/ is still checked by the maintainer's release gate (privacy and secrets) before each release.
+# Secret-scan configuration for CI (gitleaks v8.18.4). The default rules stay on for every file, including papers/.
+# The first CI scan reported 4,115 generic-api-key findings, all on two kinds of public identifiers inside papers/:
+# 64-hex sha256 content hashes and paper coordinate tokens. Only values of exactly those shapes are allowlisted below;
+# the allowlist matches the finding's secret, so a real credential on the same line or in the same file is still reported.
+# Fallback if CI still reports false positives: gitleaks >= 8.19 supports `regexTarget = "line"` and per-rule allowlists;
+# narrow the allowlist to the rule `generic-api-key` there instead of widening it to paths. Do not allowlist papers/ by path.
 [extend]
 useDefault = true
 
 [allowlist]
-description = "upstream paper text with content hashes"
-paths = ['''^papers/''']
+description = "sha256 content hashes and paper coordinate tokens (public identifiers)"
+regexes = [
+  '''^[0-9a-f]{64}$''',
+  '''^EN-[0-9]{3}-[0-9]{3}-[0-9]{4}-[0-9]-[0-9]{4}-[A-Z]{2}-T[0-9]-[A-Z]{2}-[A-Z]{2}-M[0-9]-[A-Z]-[A-Z]{2}-[A-Z]-[0-9]{4}$''',
+  '''^EN-[0-9]{3}-[0-9]{3}-[0-9]{4}-[0-9]-[0-9]{4}-[A-Z]{2}-T[0-9]-[A-Z]{2}-[A-Z]{2}-M[0-9]-[A-Z]-[A-Z]{2}-[A-Z]-[0-9]{4}_PM-[0-9]{3}\.[0-9]+_[A-Za-z0-9_.-]+\.md$''',
+]

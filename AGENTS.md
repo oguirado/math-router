@@ -1,6 +1,6 @@
 # Agent protocol
 
-Find the right theorem in 719 preprints without reading them. All commands are offline, Python 3 standard library only, run from the repository root.
+Find the right theorem in 719 preprints without reading them. All commands are offline, Python >= 3.10 standard library only, run from the repository root.
 
 ## Ladder (stop at the first rung that answers the task)
 
@@ -30,9 +30,9 @@ Never build a filename from an identifier; always take the path from `catalogue/
 `abstain.flag = true` means the query has little lexical support in the corpus. Reasons: `no_query_term`, `low_term_match`, `below_tau` (`exact_id` marks a direct identifier lookup). When it is set:
 1. Rephrase with the mathematical objects named explicitly (not the application) and retry once.
 2. Otherwise browse `catalogue/subjects.json`.
-3. Otherwise report that the corpus has no match. Do not guess an identifier.
+3. Otherwise, before concluding "no match", inspect the top 3 rows of `r` (rows are still returned for `low_term_match` and `below_tau`; `no_query_term` returns none) and report only what those papers actually state. Do not guess an identifier.
 
-The flag is a heuristic: on the shipped TEST split it catches 67% of unanswerable queries at 63% precision (see README). `flag = false` does not prove the corpus answers the question.
+The flag is a heuristic: on the shipped TEST split it catches 67% of unanswerable queries at 63% precision, and it also flags about 33% of answerable queries (13 of 39); see `docs/RESULTS.md`. A set flag therefore means weak lexical support, not absence, and `flag = false` does not prove the corpus answers the question.
 
 ## Evidence rules
 
@@ -41,12 +41,17 @@ Inline paper text is authoritative. A router score, a catalogue entry or a model
 ## Verify and rebuild
 
 ```bash
-python3 tools/route_v2.py --q "..." --index out/index --params out/params.json --verify .   # fails if the index is stale
-python3 tools/build_index_v2.py --root . --out out/index --check                             # prints "byte-identical"
-python3 tools/gates_v2.py --all --root "$PWD" --index out/index --params out/params.json --dev eval/dev.jsonl --out /tmp/gates.json
-sh tools/reproduce_test.sh                                                                   # reproduce the TEST metrics
-python3 -m unittest discover -s tests -p 'test_*.py'
+python3 -I tools/route_v2.py --q "..." --index out/index --params out/params.json --verify .   # fails if the index is stale
+python3 -I tools/build_index_v2.py --root . --out out/index --check
+python3 -I tools/gates_v2.py --all --root "$PWD" --index out/index --params out/params.json --dev eval/dev.jsonl --out "${TMPDIR:-/tmp}/gates.json"
+sh tools/reproduce_test.sh
+sh tools/reproduce_dev.sh
+python3 -I -m unittest discover -s tests -p 'test_*.py'
+python3 -I tools/claims_check.py
+python3 -I tools/publication_lint.py .
 ```
+
+Benchmark figures live in `docs/RESULTS.md` (definitions of R@k, MRR, nDCG and abstention included).
 
 ## Editing rules
 

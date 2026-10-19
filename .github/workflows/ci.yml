@@ -8,27 +8,43 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
     steps:
-      - uses: actions/checkout@v4
+      # actions are pinned to full commit SHAs (checkout v4.2.2, setup-python v5.6.0)
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
-          python-version: "3.11"
+          python-version: ${{ matrix.python-version }}
       - name: Index is byte-identical to a rebuild
         run: python3 -I tools/build_index_v2.py --root . --out out/index --check
-      - name: Release gates
-        run: python3 -I tools/gates_v2.py --all --root "$PWD" --index out/index --params out/params.json --dev eval/dev.jsonl --out "$RUNNER_TEMP/gates.json"
+      - name: Router gates
+        run: python3 -I tools/gates_v2.py --all --root "$PWD" --index out/index --params out/params.json --dev eval/dev.jsonl --out "${TMPDIR:-/tmp}/gates.json"
       - name: Reproduce TEST metrics
         run: sh tools/reproduce_test.sh
+      - name: Reproduce DEV tuning
+        run: sh tools/reproduce_dev.sh
       - name: Unit tests
-        run: python3 -m unittest discover -s tests
+        run: python3 -I -m unittest discover -s tests -p 'test_*.py'
       - name: Documentation claims
         run: python3 -I tools/claims_check.py
-      - name: Secret scan (gitleaks, pinned version)
+      - name: Publication lint
+        run: python3 -I tools/publication_lint.py .
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Secret scan (gitleaks v8.18.4, checksum verified)
         run: |
           curl -sSfL -o "$RUNNER_TEMP/gitleaks.tgz" https://github.com/gitleaks/gitleaks/releases/download/v8.18.4/gitleaks_8.18.4_linux_x64.tar.gz
+          echo "ba6dbb656933921c775ee5a2d1c13a91046e7952e9d919f9bac4cec61d628e7d  $RUNNER_TEMP/gitleaks.tgz" | sha256sum -c -
           tar -xzf "$RUNNER_TEMP/gitleaks.tgz" -C "$RUNNER_TEMP" gitleaks
-          rc=0; "$RUNNER_TEMP/gitleaks" detect --source . --redact --no-banner --exit-code 1 --report-format json --report-path "$RUNNER_TEMP/gl.json" || rc=$?
+          rc=0; "$RUNNER_TEMP/gitleaks" detect --source . --config .gitleaks.toml --redact --no-banner --exit-code 1 --report-format json --report-path "$RUNNER_TEMP/gl.json" || rc=$?
           python3 -I -c 'import json,sys,collections; r=json.load(open(sys.argv[1])); c=collections.Counter((x["RuleID"], x["File"].split("/")[0]) for x in r); [print(n, k[0], k[1]) for k, n in c.most_common(25)]' "$RUNNER_TEMP/gl.json" || true
           exit $rc
