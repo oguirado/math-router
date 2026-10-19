@@ -28,6 +28,8 @@ Abstention (positive = unanswerable; 33 unanswerable, 39 answerable): v2.0.1 pre
 
 Recall at rank 1 is 0.22. Abstention is a lexical heuristic. DS has no answerable TEST query and SYS has one, so per-class numbers are anecdotal. Every judged pair comes from a pool of candidates retrieved by the evaluated systems; the unjudged top-5 count for v2 is 0.
 
+One DEV pair remains unjudged (query W-R12, paper PM-101.1, `out/unjudged_pairs.jsonl`); it is disclosed as is and no judgement was invented for it.
+
 ## Note on the receipts
 
 The receipts were regenerated from the files in this repository after the benchmark's `source` value `w11_brainstorm` was renamed `themed_brainstorm` (schema and data) and the DEV hash pinned in `out/params.json` was updated accordingly. The ranking metrics are identical to the original run; only hashes of the renamed inputs differ.

@@ -6,7 +6,7 @@ A flat list of preprints does not expose the conditions under which their result
 
 The release therefore needs separate navigation and authority. A small entry plane selects a subject and a paper. Complete Markdown preserves the paper. Machine records expose inputs, outputs, negative applicability and evidence without replacing proofs.
 
-## Dual-tier solution and proposed release tree
+## Dual-tier solution and release tree
 
 ```text
 release root
@@ -27,28 +27,25 @@ release root
 |   |-- details/<pm_id>.json    full node when too large for a page
 |   |-- families/<family_id>.json
 |   |-- routes.tsv             compact derived path ledger
-|   `-- graph.jsonl            supported typed edges
+|   `-- README.md              mount note and edge location
 |-- standards/
-|   |-- schemas/               exact paper and connector schemas
-|   |-- grammar.json           preserved coordinate grammar
-|   `-- naming.md              dimensions and final-token rules
+|   |-- schemas/               exact paper, connector and router schemas
+|   |-- thesaurus.json         router vocabulary
+|   `-- grid.json              parameter grid
 |-- tools/
-|   |-- release_gate.py        implemented publication lint
-|   |-- validate.py            proposed complete release validator
-|   |-- compile_catalogue.py   proposed deterministic compiler
-|   `-- build_search.py        proposed optional index builder
+|   |-- release_gate.py        publication lint
+|   |-- claims_check.py        documentation claims check (CI)
+|   `-- build_index_v2.py      deterministic index builder, `--check` verifies the shipped index
 |-- search/
 |   `-- schema.sql             optional standard SQLite interface
 |-- eval/
-|   |-- gold.jsonl             source-anchored held-out questions
-|   `-- protocol.md            frozen comparisons and scope
+|   `-- dev.jsonl              DEV benchmark with final graded labels
 `-- release/
     |-- manifest.json          external artifact hashes and counts
-    |-- fidelity.json          per-paper gate verdict and receipt hash (catalogue telemetry)
-    `-- receipts/<sha256>.json public-clean verification evidence
+    `-- fidelity.json          per-paper gate verdict and receipt hash (catalogue telemetry)
 ```
 
-The tree is a proposed production contract. Only the draft documents, connector schema and publication scanner supplied with this design are implemented here. Optional databases are rebuilt locally and are not committed binary payloads. Model briefs, quota records, private policy inventories, local logs and failed fixtures remain outside the release tree.
+The tree describes the shipped repository; tools not listed here (router, evaluation, gates) are documented in `AGENTS.md` and `README.md`. Optional databases are rebuilt locally and are not committed binary payloads. Model briefs, quota records, private policy inventories, local logs and failed fixtures remain outside the release tree.
 
 ```text
 TIER 1: gateway                 TIER 2: connectable nodes
@@ -155,7 +152,7 @@ No host substrate, private producer names, quota data or unpublished workspace p
        schemas -> source coverage -> oracle/mutants -> release lint
                   | FAIL                       | PASS
                   v                            v
-       retain last accepted revision      compile catalogue/index
+       retain last accepted revision      build out/index
                   |                            |
                   `---------- receipts + held-out eval ----------'
 ```
@@ -180,7 +177,7 @@ Each paper carries original title, slug, date and the explicit modified-source a
 
 The path rule permits only the exact portable Python interpreter shebang on the opening line of a Python script. Extra text on that line is scanned normally. This is a standard executable entry point, not a private environment path. No other code, comment or JSON path exemption is applied. Findings are unique by file, category and line across raw and decoded text views.
 
-Release mode requires an exact Git-index scan, reviewed external policy, actual repository name, unchanged source licence and nonempty notice. The paper-only name rule applies to the supplied release identity; the mandated upstream attribution remains present. Choose a distinct release identity rather than removing required attribution to clear a conflict. A local hook and a protected CI check both run before publication. A scanner result cannot alone prove English fluency, exhaustive privacy inventory, licence completeness or mathematical correctness; those remain independent admission gates.
+Release mode requires an exact Git-index scan, reviewed external policy, actual repository name, unchanged source licence and nonempty notice. The paper-only name rule applies to the supplied release identity; the mandated upstream attribution remains present. Choose a distinct release identity rather than removing required attribution to clear a conflict. The same scan is not part of the public CI workflow (`.github/workflows/ci.yml`), which runs the index check, the gates, `tools/reproduce_test.sh`, the unit tests, `tools/claims_check.py` and a secret scan; the release lint is run by the maintainer on the staged tree before each release. A scanner result cannot alone prove English fluency, exhaustive privacy inventory, licence completeness or mathematical correctness; those remain independent admission gates.
 
 The initial public repository is created from a clean export with fresh Git history. Private staging history is not pushed. The scanner excludes Git object storage because it inspects a candidate snapshot; a clean snapshot does not clear earlier commits. Every later public commit passes the staged-tree gate. Importing an existing history requires a separate complete history audit.
 

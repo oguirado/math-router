@@ -1225,7 +1225,7 @@ Final filenames are `<coordinate>_<pm_id>_<Title_Slug>.md`. The coordinate keeps
 
 ## 4. Relations and negative routing
 
-Supported typed edges: `catalogue/graph.jsonl` (only independently verified edges with a verifier receipt). Exclusions stay inside each node (`exclusions[]`) and form a separate negative filter; they never raise a positive rank.
+Supported typed edges: none are shipped as a separate file in v2.0.1 (`graph_edges` is 0 in `release/manifest.json`); the per-node relations that the router reads are compiled into `out/index/edges.json`. Exclusions stay inside each node (`exclusions[]`) and form a separate negative filter; they never raise a positive rank.
 
 ## 5. Version notices and verification
 

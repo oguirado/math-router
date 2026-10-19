@@ -1,0 +1,32 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Index is byte-identical to a rebuild
+        run: python3 -I tools/build_index_v2.py --root . --out out/index --check
+      - name: Release gates
+        run: python3 -I tools/gates_v2.py --all --root "$PWD" --index out/index --params out/params.json --dev eval/dev.jsonl --out "$RUNNER_TEMP/gates.json"
+      - name: Reproduce TEST metrics
+        run: sh tools/reproduce_test.sh
+      - name: Unit tests
+        run: python3 -m unittest discover -s tests
+      - name: Documentation claims
+        run: python3 -I tools/claims_check.py
+      - name: Secret scan (gitleaks, pinned version)
+        run: |
+          curl -sSfL -o "$RUNNER_TEMP/gitleaks.tgz" https://github.com/gitleaks/gitleaks/releases/download/v8.18.4/gitleaks_8.18.4_linux_x64.tar.gz
+          tar -xzf "$RUNNER_TEMP/gitleaks.tgz" -C "$RUNNER_TEMP" gitleaks
+          "$RUNNER_TEMP/gitleaks" detect --source . --redact --no-banner --exit-code 1
